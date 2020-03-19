@@ -6,8 +6,8 @@ import DrillMenageATrois from './DrillMenageATrois';
 import DrillSquare from './DrillSquare';
 
 /** Display a drill and enables to animate it using buttons (play, next step, previous step)
-  * 
-  * TODO: 
+  *
+  * TODO:
   * - when moving to a given step stepId, put back all displayed elements to their position prior stepId
   * - when restarting the complete animation, if the elements are not in their initial positions, add an empty animation to move the elements to their initial position before starting the animation
   * - fix the ratio of a drill (otherwise the display of a drill may be distorted)
@@ -42,7 +42,7 @@ class Animation extends React.Component{
 
     /** Create the DisplayedElement used in the drill and set them to their initial position */
     _initDrill(){
-        
+
         /* For each element displayed in the current drill */
         for(var elemId = 0; elemId < this._elemCount(); ++elemId){
 
@@ -52,10 +52,10 @@ class Animation extends React.Component{
 
         /* Set all the elements to their initial positions */
         this._initPositions();
-        
+
     }
 
-    /** Convert a position (x, y) in percentages in a position (x2, y2) in pixels 
+    /** Convert a position (x, y) in percentages in a position (x2, y2) in pixels
      * x: horizontal position in percentages (=0 left edge, =1 right edge)
      * y: vertical position in percentages (=0 top, =1 bottom)
      * x2: corresponding horizontal position in pixel (=0 if centered)
@@ -71,12 +71,12 @@ class Animation extends React.Component{
     _initPositions(){
         /* For each element */
 	for(var i = 0; i < this.state.de.length; i++){
-            
+
 	    var element = this.state.de[i];
 
             /* Get its position in pixel (it is represented in percentage in the drill) */
             var pixelPosition = this._positionPercentToPixel(this.state.drill.positions[i][0][0][0], this.state.drill.positions[i][0][0][1]);
-	    
+
 	    element.setPosition(pixelPosition[0], pixelPosition[1]);
 	}
 
@@ -87,7 +87,7 @@ class Animation extends React.Component{
 
         /* Get the dimension of the screen and then initialize the drill */
 	var {height, width} = Dimensions.get('window');
-        
+
         this.setState({
             screenH: height,
             screenW: width
@@ -107,7 +107,7 @@ class Animation extends React.Component{
 	    completeSequence.push(Animated.parallel(this._getStepAnimation(stepId, true)));
 
 	Animated.sequence(completeSequence).start();
-        
+
     }
 
     /** Get back to the previous step */
@@ -120,24 +120,24 @@ class Animation extends React.Component{
     }
 
     /** Go to the next step */
-    _nextStep(){   
-        
+    _nextStep(){
+
         if(this.state.currentStep !== this._stepCount() - 1){
 	    this.setState({currentStep: this.state.currentStep+1}, () => {
                 Animated.parallel(this._getStepAnimation(this.state.currentStep, true)).start();
             });
         }
     }
-    
+
     /** Returns the animation to a given step for all displayed elements */
     _getStepAnimation(stepId, isForward){
-        
+
 	/* Animation of all the elements at step stepId */
 	var stepAnimation = [];
 
 	/* For each displayed element */
 	for(var elemId = 0; elemId < this.state.drill.positions.length; elemId++){
-	    
+
             /* Get the position of the element at step stepId */
             var nextPosition = this.state.drill.positions[elemId][stepId];
 
@@ -156,13 +156,13 @@ class Animation extends React.Component{
             while(nextPosition == undefined && !allStepChecked){
 
                 nextPosition = this.state.drill.positions[elemId][stepToCheck];
-                
+
                 stepToCheck -= 1;
 
                 if(stepToCheck == this.state.currentStep)
                     allStepChecked = true;
             }
-	    
+
 	    /* If this element must change its position */
 	    if(nextPosition !== undefined) {
 
@@ -185,7 +185,7 @@ class Animation extends React.Component{
 		if(playSubSteps){
 
 		    if(isForward){
-			
+
 			/* For each substep of element de in step stepId */
 			for(var substep = 0; substep < substepCount; substep++){
 
@@ -196,14 +196,14 @@ class Animation extends React.Component{
 
 			    /* Get the corresponding animation */
 			    var anim = currentDE.getAnimation(pixelPosition[0], pixelPosition[1], this.state.stepLength/substepCount);
-			    
+
 			    deStepAnimation.push(anim);
 			}
 		    }
 
 		    /* If the step must be played backward */
 		    else{
-			
+
 			/* For each substep of element de in step stepId */
 			for(var substep = substepCount - 1; substep >=0; substep--){
 
@@ -214,11 +214,11 @@ class Animation extends React.Component{
 
 			    /* Get the corresponding animation */
 			    var anim = currentDE.getAnimation(pixelPosition[0], pixelPosition[1], this.state.stepLength/substepCount);
-			    
+
 			    deStepAnimation.push(anim);
 			}
-			
-			
+
+
 		    }
 		}
 
@@ -232,21 +232,21 @@ class Animation extends React.Component{
 
 		    /* Get the corresponding animation */
 		    var anim = currentDE.getAnimation(pixelPosition[0], pixelPosition[1], this.state.stepLength);
-		    
+
 		    deStepAnimation.push(anim);
 		}
-                
+
 		stepAnimation.push(Animated.sequence(deStepAnimation));
 	    }
 	}
 
-        return stepAnimation; 
+        return stepAnimation;
     }
 
     _displayElement(item){
 	return item.render();
     }
-    
+
     render(){
 	return(
 		<View style={styles.main_container}>

@@ -1,10 +1,10 @@
 
 
 /** Square drill
-  * 
+  *
   *  Each drill has an attribute "positions" which is a 4D array:
   * - positions[i][j][k][l]: coordinate l at substep k of step j for element to display number i
-  * 
+  *
   * Remark1: positions[i][0] is the initial position which must be defined for each element i
   * Remark2: positions[i][j] is undefined if  element i position does not change between steps j-1 and j
   */
@@ -19,7 +19,7 @@ class DrillSquare{
 	this.texts = ["", "", "", "", "", "", "", "", "1", "2", "3", "4", "5", ""];
 
 	/* Definition of the position of each element at each step */
-	stepCount = 6;
+	const stepCount = 6;
 
 	var discPositions = new Array(stepCount);
 	var p1Positions = new Array(stepCount);
@@ -40,7 +40,7 @@ class DrillSquare{
 	var discDeltaN = -.02;
 
 	// Initial positions
-	discPositions[0] = [[.30+discDeltaP, .30+discDeltaP]]; 
+	discPositions[0] = [[.30+discDeltaP, .30+discDeltaP]];
 	p1Positions[0] = [[.30, .30]];
 	p2Positions[0] = [[.16, .30]];
 	p3Positions[0] = [[.60, .30]];
@@ -57,10 +57,10 @@ class DrillSquare{
 
 	// Step 1 - p2 first cut
 	p2Positions[1] = [[.45, .20]];
-	
+
 	// Step 2 - p2 counter-cut, p1 throws, p3 first cut
 	p2Positions[2] = [[.60, .30]];
-	p3Positions[2] = [[.70, .45]]; 
+	p3Positions[2] = [[.70, .45]];
 	discPositions[2] = [[.60+discDeltaN, .30+discDeltaP]];
 
 	// Step 3 - p3 counter-cut, p2 throws, p4 first cut
@@ -72,13 +72,13 @@ class DrillSquare{
 	p4Positions[4] = [[.30, .60]];
 	p5Positions[4] = [[.20, .45]];
 	discPositions[4] = [[.30+discDeltaP, .60+discDeltaN]];
-	
+
 	// Step 5 - p5 counter-cut, p4 throws, p1 first cut
 	p5Positions[5] = [[.30, .30]];
 	p1Positions[5] = [[.45, .20]];
 	discPositions[5] = [[.30+discDeltaP, .30+discDeltaP]];
 
-	// Warning: the elements must be in the same order in this.positions than in this.ids and this.texts	
+	// Warning: the elements must be in the same order in this.positions than in this.ids and this.texts
 	this.positions = Array(this.ids.length);
 	this.positions[0] = triangle1;
 	this.positions[1] = triangle2;

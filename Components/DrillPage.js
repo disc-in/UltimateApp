@@ -3,6 +3,7 @@
 import React from 'react'
 import { StyleSheet, View, Text, ActivityIndicator, ScrollView, Image, TouchableOpacity } from 'react-native'
 import { connect } from 'react-redux'
+import Animation from './Animation'
 
 class DrillPage extends React.Component {
 
@@ -10,6 +11,7 @@ class DrillPage extends React.Component {
     return (
       <View style={styles.main_container}>
         <Text> Hello Drill {this.props.route.params.drill.id} </Text>
+        <Animation/>
       </View>
     )
   }

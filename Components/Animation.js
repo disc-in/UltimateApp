@@ -2,8 +2,6 @@ import React from 'react';
 import { Text, Button, StyleSheet, Easing, Animated, Dimensions, View } from 'react-native';
 
 import DisplayedElement from './DisplayedElement';
-import DrillMenageATrois from './DrillMenageATrois';
-import DrillSquare from './DrillSquare';
 
 /** Display a drill and enables to animate it using buttons (play, next step, previous step)
   *
@@ -21,8 +19,8 @@ class Animation extends React.Component{
 	    screenH: 1, // Height of the animation space
 	    screenW: 0, // Width of the animation space
 	    stepLength: 1000, // Duration of a step in milliseconds
-            drill: new DrillSquare(), // The drill to display
-            de: [], // The graphical elments displayed in the drill
+        drill: props.animation,
+        de: [], // The graphical elments displayed in the drill
 	    currentStep: 0, // Current step displayed on the phone
         };
 

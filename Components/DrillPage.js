@@ -1,15 +1,47 @@
 import React from 'react'
-import { StyleSheet, View, Text, ActivityIndicator, ScrollView, Image, TouchableOpacity } from 'react-native'
+import { StyleSheet, View, Text, FlatList, Image, TouchableOpacity } from 'react-native'
 import { connect } from 'react-redux'
 import Animation from './Animation'
 
 class DrillPage extends React.Component {
 
+  constructor(props) {
+    super(props)
+    this.state = {
+      currentStep: props.route.params.drill.steps[0]
+    }
+  }
+
   render() {
+    const drill = this.props.route.params.drill
+    const currentStep = this.state.currentStep
+
     return (
       <View style={styles.main_container}>
-        <Text> Hello Drill {this.props.route.params.drill.id} </Text>
-        <Animation/>
+        <View style={styles.content_container}>
+        {
+          currentStep.animation ? <Animation animation={currentStep.animation}/>
+          : currentStep.video ? <Text>Soon a Video here</Text>
+          : currentStep.webview ? <Text>Soon a Webpage here</Text>
+          : <Text>No visual content for this step</Text>
+        }
+        </View>
+        <View style={styles.steps_list}>
+          <FlatList
+          data={drill.steps}
+          // keyExtractor={(item) => item.id.toString()}
+          renderItem={({item}) => (
+            <TouchableOpacity
+              style={[styles.step, currentStep == item ? styles.current_step: styles.other_step ]}
+              onPress={() => this.setState({currentStep: item})}>
+              <Text style={styles.title_text}>{item.title}</Text>
+              <Text style={styles.description_text}>{item.subtitle}</Text>
+            </TouchableOpacity>
+          )}
+          onEndReachedThreshold={0.5}
+          onEndReached={() => {}}
+        />
+        </View>
       </View>
     )
   }
@@ -18,6 +50,24 @@ class DrillPage extends React.Component {
 const styles = StyleSheet.create({
   main_container: {
     flex: 1
+  },
+  item_container: {
+    flex: 1
+  },
+  content_container: {
+    flex: 6
+  },
+  steps_list: {
+    flex: 4,
+    backgroundColor: 'lightgrey'
+  },
+  step: {
+    backgroundColor: 'lightgrey',
+    borderTopColor: 'black',
+    borderTopWidth: 1
+  },
+  current_step: {
+    backgroundColor: 'white',
   },
   loading_container: {
     position: 'absolute',
@@ -37,7 +87,7 @@ const styles = StyleSheet.create({
   },
   title_text: {
     fontWeight: 'bold',
-    fontSize: 35,
+    fontSize: 20,
     flex: 1,
     flexWrap: 'wrap',
     marginLeft: 5,
@@ -45,7 +95,6 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 10,
     color: '#000000',
-    textAlign: 'center'
   },
   description_text: {
     fontStyle: 'italic',

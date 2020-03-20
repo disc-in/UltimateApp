@@ -48,7 +48,7 @@ export default connect(mapStateToProps)(DrillListPage)
 
 const styles = StyleSheet.create({
   drillListPage: {
-    padding: '16px',
+    padding: 16,
     backgroundColor: '#fff',
     height: '100%'
   },
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
   },
   counter: {
     color: '#767676',
-    marginBottom: '16px',
+    marginBottom: 16,
   },
   image: {
     width: 120,

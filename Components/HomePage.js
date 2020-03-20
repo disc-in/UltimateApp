@@ -1,8 +1,7 @@
 import React from 'react'
 import { StyleSheet, View, TextInput, Button, Text, FlatList, ActivityIndicator } from 'react-native'
-import FilmItem from './FilmItem'
-import { getFilmsFromApiWithSearchedText } from '../API/TMDBApi'
 import { connect } from 'react-redux'
+import { getFilmsFromApiWithSearchedText } from '../API/TMDBApi'
 
 export default class HomePage extends React.Component {
 

@@ -1,5 +1,3 @@
-// Components/FilmDetail.js
-
 import React from 'react'
 import { StyleSheet, View, Text, ActivityIndicator, ScrollView, Image, TouchableOpacity } from 'react-native'
 import { connect } from 'react-redux'

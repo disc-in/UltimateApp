@@ -1,14 +1,10 @@
-// Navigation/Navigation.js
-
-// import { createAppContainer } from 'react-navigation';
-// import { createStackNavigator} from 'react-navigation-stack';
 import React from 'react'
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import HomePage from '../Components/HomePage'
 import DrillListPage from '../Components/DrillListPage'
 import DrillPage from '../Components/DrillPage'
 
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
 
 const Stack = createStackNavigator();
 

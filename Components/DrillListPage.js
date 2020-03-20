@@ -15,28 +15,25 @@ const DrillListPage = (props) => {
   const {drills, navigation} = props
 
   return (
-    <View style={styles.main_container}>
+    <View style={styles.drillListPage}>
+      <Text style={styles.counter}>{drills.length} Frisbee drills</Text>
       <FlatList
         data={drills}
         keyExtractor={(item) => item.id.toString()}
         renderItem={({item}) => (
           <TouchableOpacity
-            style={styles.main_container}
+            style={styles.drill}
             onPress={() => navigation.navigate('DrillPage', {drill: item})}>
             <Image
               style={styles.image}
               source={{uri: item.img}}
             />
             <View style={styles.content_container}>
-              <View style={styles.header_container}>
-                <Text style={styles.title_text}>{item.title}</Text>
+              <View style={styles.drillSource}>
+                <Text style={styles.source_text}>{item.source}</Text>
               </View>
-              <View style={styles.description_container}>
-                <Text style={styles.description_text} numberOfLines={6}>{item.description}</Text>
-              </View>
-              <View style={styles.date_container}>
-                <Text style={styles.date_text}>Sorti le 13/12/2017</Text>
-              </View>
+              <Text style={styles.title_text}>{item.title}</Text>
+              <Text style={styles.players_text}>Duration: {item.duration} - min players: {item.nbPlayers}</Text>
             </View>
           </TouchableOpacity>
         )}
@@ -50,47 +47,42 @@ const DrillListPage = (props) => {
 export default connect(mapStateToProps)(DrillListPage)
 
 const styles = StyleSheet.create({
-  main_container: {
-    height: 190,
+  drillListPage: {
+    padding: '16px',
+    backgroundColor: '#fff',
+    height: '100%'
+  },
+  drill: {
+    height: 140,
     flexDirection: 'row'
+  },
+  counter: {
+    color: '#767676',
+    marginBottom: '16px',
   },
   image: {
     width: 120,
-    height: 180,
-    margin: 5
+    height: 120,
+    marginRight: 5
   },
   content_container: {
-    flex: 1,
-    margin: 5
+    padding: 16,
   },
-  header_container: {
-    flex: 3,
-    flexDirection: 'row'
+  drillSource: {
+    flex: 2
   },
   title_text: {
+    flex: 3,
     fontWeight: 'bold',
     fontSize: 20,
-    flex: 1,
     flexWrap: 'wrap',
-    paddingRight: 5
   },
-  vote_text: {
-    fontWeight: 'bold',
-    fontSize: 26,
-    color: '#666666'
+  source_text: {
+    color: '#A6A6A6'
   },
-  description_container: {
-    flex: 7
-  },
-  description_text: {
-    fontStyle: 'italic',
-    color: '#666666'
-  },
-  date_container: {
-    flex: 1
-  },
-  date_text: {
-    textAlign: 'right',
+  players_text: {
+    flex: 2,
+    color: '#AFAFAF',
     fontSize: 14
   },
   favorite_image: {

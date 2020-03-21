@@ -1,75 +1,96 @@
-import React, { useState } from 'react';
-import {
-  StyleSheet,
-  View,
-  Text,
-  FlatList,
-  TouchableOpacity,
-} from 'react-native';
-import { connect } from 'react-redux';
+import React, { Component } from 'react';
+import { StyleSheet, View, Text, FlatList, Image, TouchableOpacity } from 'react-native'
+import { connect } from 'react-redux'
 import Animation from './Animation';
+import { WebView } from 'react-native-webview';
 
-const DrillPage = ({ route }) => {
-  const [currentStep, setCurrentStep] = useState(route.params.drill.steps[0]);
-  const drill = route.params.drill;
+class DrillPage extends React.Component {
 
-  return (
-    <View style={styles.mainContainer}>
-      <View style={styles.contentContainer}>
-        {currentStep.animation ? (
-          <Animation animation={currentStep.animation} />
-        ) : currentStep.video ? (
-          <Text>Soon a Video here</Text>
-        ) : currentStep.webview ? (
-          <Text>Soon a Webpage here</Text>
-        ) : (
-          <Text>No visual content for this step</Text>
-        )}
-      </View>
-      <View style={styles.stepsList}>
-        <FlatList
+  constructor(props) {
+    super(props)
+    this.state = {
+      currentStep: props.route.params.drill.steps[0]
+    }
+  }
+
+  render() {
+    const drill = this.props.route.params.drill
+    const currentStep = this.state.currentStep
+
+    return (
+      <View style={styles.main_container}>
+        <View style={styles.content_container}>
+        <WebView
+      source={{ uri: 'https://www.youtube.com/watch?v=oN1bzPCKkGE' }}
+      style={{ marginTop: 20 }}
+    />
+        {/* {
+          currentStep.animation ? <Animation animation={currentStep.animation}/>
+          : currentStep.video ? <Text>Soon a Video here</Text>
+          : currentStep.webview ? <Text>Soon a Webpage here</Text>
+          : <Text>No visual content for this step</Text>
+        } */}
+        </View>
+        <View style={styles.steps_list}>
+          <FlatList
           data={drill.steps}
           // keyExtractor={(item) => item.id.toString()}
-          renderItem={({ item }) => (
+          renderItem={({item}) => (
             <TouchableOpacity
-              style={[
-                styles.step,
-                currentStep === item ? styles.currentStep : styles.other_step,
-              ]}
-              onPress={() => setCurrentStep(item)}
-            >
-              <Text style={styles.titleText}>{item.title}</Text>
-              <Text style={styles.descriptionText}>{item.subtitle}</Text>
+              style={[styles.step, currentStep == item ? styles.current_step: styles.other_step ]}
+              onPress={() => this.setState({currentStep: item})}>
+              <Text style={styles.title_text}>{item.title}</Text>
+              <Text style={styles.description_text}>{item.subtitle}</Text>
             </TouchableOpacity>
           )}
           onEndReachedThreshold={0.5}
           onEndReached={() => {}}
         />
+        </View>
       </View>
-    </View>
-  );
-};
+    )
+  }
+}
 
 const styles = StyleSheet.create({
-  mainContainer: {
-    flex: 1,
+  main_container: {
+    flex: 1
   },
-  contentContainer: {
-    flex: 6,
+  item_container: {
+    flex: 1
   },
-  stepsList: {
+  content_container: {
+    flex: 6
+  },
+  steps_list: {
     flex: 4,
-    backgroundColor: 'lightgrey',
+    backgroundColor: 'lightgrey'
   },
   step: {
     backgroundColor: 'lightgrey',
     borderTopColor: 'black',
-    borderTopWidth: 1,
+    borderTopWidth: 1
   },
-  currentStep: {
+  current_step: {
     backgroundColor: 'white',
   },
-  titleText: {
+  loading_container: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  scrollview_container: {
+    flex: 1
+  },
+  image: {
+    height: 169,
+    margin: 5
+  },
+  title_text: {
     fontWeight: 'bold',
     fontSize: 20,
     flex: 1,
@@ -80,18 +101,30 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     color: '#000000',
   },
-  descriptionText: {
+  description_text: {
     fontStyle: 'italic',
     color: '#666666',
     margin: 5,
-    marginBottom: 15,
+    marginBottom: 15
   },
-});
+  default_text: {
+    marginLeft: 5,
+    marginRight: 5,
+    marginTop: 5,
+  },
+  favorite_container: {
+    alignItems: 'center', // Alignement des components enfants sur l'axe secondaire, X ici
+},
+  favorite_image: {
+   width: 40,
+   height: 40
+  }
+})
 
-const mapStateToProps = (state, _props) => {
+const mapStateToProps = (state, props) => {
   return {
-    favoritesFilm: state.favoritesFilm,
-  };
-};
+    favoritesFilm: state.favoritesFilm
+  }
+}
 
-export default connect(mapStateToProps)(DrillPage);
+export default connect(mapStateToProps)(DrillPage)

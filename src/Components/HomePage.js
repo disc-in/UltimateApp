@@ -17,9 +17,8 @@ export default class HomePage extends React.Component {
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
+    justifyContent: 'space-around',
+    padding: 20,
   },
 
-  button: {
-    padding: '10',
-  },
 });

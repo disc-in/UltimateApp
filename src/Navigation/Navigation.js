@@ -11,16 +11,8 @@ export const Navigation = () => (
   <NavigationContainer>
     <Stack.Navigator>
       <Stack.Screen name="HomePage" component={HomePage} />
-      <Stack.Screen
-        name="DrillListPage"
-        component={DrillListPage}
-        options={{ title: 'Drill List' }}
-      />
-      <Stack.Screen
-        name="DrillPage"
-        component={DrillPage}
-        options={{ title: 'Drill Page' }}
-      />
+      <Stack.Screen name="DrillListPage" component={DrillListPage} options={{ title: 'Drill List' }} />
+      <Stack.Screen name="DrillPage" component={DrillPage} options={{ title: 'Drill Page' }} />
     </Stack.Navigator>
   </NavigationContainer>
 );

@@ -8,8 +8,7 @@ export default {
       type: 'fitness', // vs technical vs collectif
       source: 'Rise Up',
       title: 'Hot Box',
-      img:
-        'https://gazettesports.fr/wp-content/uploads/2018/11/ultimate_frisbee_gloves.jpg',
+      img: 'https://gazettesports.fr/wp-content/uploads/2018/11/ultimate_frisbee_gloves.jpg',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
       nbPlayers: 2,
@@ -39,8 +38,7 @@ export default {
       type: 'tactics', // vs technical vs collectif
       source: 'Flikulti',
       title: 'Defense Positioning',
-      img:
-        'https://gazettesports.fr/wp-content/uploads/2018/11/ultimate_frisbee_gloves.jpg',
+      img: 'https://gazettesports.fr/wp-content/uploads/2018/11/ultimate_frisbee_gloves.jpg',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
       nbPlayers: 2,

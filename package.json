@@ -29,6 +29,7 @@
     "react-native-safe-area-context": "0.6.0",
     "react-native-screens": "2.0.0-alpha.12",
     "react-native-web": "~0.11.7",
+    "react-native-webview": "^9.0.1",
     "react-navigation": "^4.1.1",
     "react-navigation-stack": "^2.1.1",
     "react-redux": "^7.2.0",
@@ -42,8 +43,20 @@
     "eslint-config-universe": "^2.3.0",
     "eslint-plugin-react-hooks": "^2.5.1",
     "eslint-plugin-react-native": "^3.8.1",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
     "prettier": "^1.19.1",
     "typescript": "^3.8.3"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,json,css}": [
+      "npm run prettier-fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "private": true
 }

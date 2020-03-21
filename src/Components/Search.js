@@ -1,14 +1,7 @@
 // Components/Search.js
 
 import React from 'react';
-import {
-  ActivityIndicator,
-  Button,
-  FlatList,
-  StyleSheet,
-  TextInput,
-  View,
-} from 'react-native';
+import { ActivityIndicator, Button, FlatList, StyleSheet, TextInput, View } from 'react-native';
 import { connect } from 'react-redux';
 import { getFilmsFromApiWithSearchedText } from '../API/TMDBApi';
 import FilmItem from './FilmItem';
@@ -28,16 +21,14 @@ class Search extends React.Component {
   _loadFilms() {
     if (this.searchedText.length > 0) {
       this.setState({ isLoading: true });
-      getFilmsFromApiWithSearchedText(this.searchedText, this.page + 1).then(
-        data => {
-          this.page = data.page;
-          this.totalPages = data.total_pages;
-          this.setState(({ films }) => ({
-            films: [...films, ...data.results],
-            isLoading: false,
-          }));
-        },
-      );
+      getFilmsFromApiWithSearchedText(this.searchedText, this.page + 1).then(data => {
+        this.page = data.page;
+        this.totalPages = data.total_pages;
+        this.setState(({ films }) => ({
+          films: [...films, ...data.results],
+          isLoading: false,
+        }));
+      });
     }
   }
 
@@ -92,11 +83,7 @@ class Search extends React.Component {
             <FilmItem
               film={item}
               // Ajout d'une props isFilmFavorite pour indiquer à l'item d'afficher un 🖤 ou non
-              isFilmFavorite={
-                this.props.favoritesFilm.findIndex(
-                  film => film.id === item.id,
-                ) !== -1
-              }
+              isFilmFavorite={this.props.favoritesFilm.findIndex(film => film.id === item.id) !== -1}
               displayDetailForFilm={this._displayDetailForFilm}
             />
           )}

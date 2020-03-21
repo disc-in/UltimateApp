@@ -5,10 +5,7 @@ export default class HomePage extends React.Component {
   render() {
     return (
       <View style={styles.mainContainer}>
-        <Button
-          title="DrillList"
-          onPress={() => this.props.navigation.navigate('DrillListPage')}
-        />
+        <Button title="DrillList" onPress={() => this.props.navigation.navigate('DrillListPage')} />
       </View>
     );
   }

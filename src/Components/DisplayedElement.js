@@ -33,11 +33,7 @@ class DisplayedElement extends React.Component {
       case 'defense':
         return (
           <Animated.Text
-            style={[
-              styles.defense,
-              { top: this.state.currentPosition.y },
-              { left: this.state.currentPosition.x },
-            ]}
+            style={[styles.defense, { top: this.state.currentPosition.y }, { left: this.state.currentPosition.x }]}
             key={this.props.key}
           >
             {this.props.number}
@@ -47,11 +43,7 @@ class DisplayedElement extends React.Component {
       case 'offense':
         return (
           <Animated.Text
-            style={[
-              styles.offense,
-              { top: this.state.currentPosition.y },
-              { left: this.state.currentPosition.x },
-            ]}
+            style={[styles.offense, { top: this.state.currentPosition.y }, { left: this.state.currentPosition.x }]}
             key={this.props.key}
           >
             {this.props.number}
@@ -61,11 +53,7 @@ class DisplayedElement extends React.Component {
       case 'disc':
         return (
           <Animated.View
-            style={[
-              styles.disc,
-              { top: this.state.currentPosition.y },
-              { left: this.state.currentPosition.x },
-            ]}
+            style={[styles.disc, { top: this.state.currentPosition.y }, { left: this.state.currentPosition.x }]}
             key={this.props.key}
           />
         );
@@ -73,11 +61,7 @@ class DisplayedElement extends React.Component {
       case 'triangle':
         return (
           <Animated.View
-            style={[
-              styles.triangle,
-              { top: this.state.currentPosition.y },
-              { left: this.state.currentPosition.x },
-            ]}
+            style={[styles.triangle, { top: this.state.currentPosition.y }, { left: this.state.currentPosition.x }]}
             key={this.props.key}
           />
         );

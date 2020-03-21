@@ -20,16 +20,16 @@ class DrillPage extends React.Component {
     return (
       <View style={styles.main_container}>
         <View style={styles.content_container}>
- {/*        <WebView
+        <WebView
       source={{ uri: 'https://www.youtube.com/watch?v=oN1bzPCKkGE' }}
       style={{ marginTop: 20 }}
-    /> */}
-         {
+    />
+        {/* {
           currentStep.animation ? <Animation animation={currentStep.animation}/>
           : currentStep.video ? <Text>Soon a Video here</Text>
           : currentStep.webview ? <Text>Soon a Webpage here</Text>
           : <Text>No visual content for this step</Text>
-        } 
+        } */}
         </View>
         <View style={styles.steps_list}>
           <FlatList

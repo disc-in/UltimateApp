@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  StyleSheet,
-  View,
-  Text,
-  Image,
-  TouchableOpacity,
-  FlatList,
-} from 'react-native';
+import { StyleSheet, View, Text, Image, TouchableOpacity, FlatList } from 'react-native';
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => {
@@ -25,10 +18,7 @@ const DrillListPage = props => {
         data={drills}
         keyExtractor={item => item.id.toString()}
         renderItem={({ item }) => (
-          <TouchableOpacity
-            style={styles.drill}
-            onPress={() => navigation.navigate('DrillPage', { drill: item })}
-          >
+          <TouchableOpacity style={styles.drill} onPress={() => navigation.navigate('DrillPage', { drill: item })}>
             <Image style={styles.image} source={{ uri: item.img }} />
             <View style={styles.contentContainer}>
               <View style={styles.drillSource}>

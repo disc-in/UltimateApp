@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  Text,
-  Button,
-  StyleSheet,
-  Easing,
-  Animated,
-  Dimensions,
-  View,
-} from 'react-native';
+import { Text, Button, StyleSheet, Easing, Animated, Dimensions, View } from 'react-native';
 
 import DisplayedElement from './DisplayedElement';
 
@@ -119,9 +111,7 @@ class Animation extends React.Component {
 
     /* For each step (start at step 1 as step 0 corresponds to the initial positions)*/
     for (let stepId = 1; stepId < this._stepCount(); stepId++)
-      completeSequence.push(
-        Animated.parallel(this._getStepAnimation(stepId, true)),
-      );
+      completeSequence.push(Animated.parallel(this._getStepAnimation(stepId, true)));
 
     Animated.sequence(completeSequence).start();
   }
@@ -132,9 +122,7 @@ class Animation extends React.Component {
       this.setState(
         ({ currentStep }) => ({ currentStep: currentStep - 1 }),
         () => {
-          Animated.parallel(
-            this._getStepAnimation(this.state.currentStep, false),
-          ).start();
+          Animated.parallel(this._getStepAnimation(this.state.currentStep, false)).start();
         },
       );
     }
@@ -146,9 +134,7 @@ class Animation extends React.Component {
       this.setState(
         ({ currentStep }) => ({ currentStep: currentStep + 1 }),
         () => {
-          Animated.parallel(
-            this._getStepAnimation(this.state.currentStep, true),
-          ).start();
+          Animated.parallel(this._getStepAnimation(this.state.currentStep, true)).start();
         },
       );
     }
@@ -168,11 +154,7 @@ class Animation extends React.Component {
 	       Otherwise, we just move the element to its previous position without playing the substeps of this position */
       let playSubSteps = true;
 
-      if (
-        nextPosition === undefined ||
-        (nextPosition !== undefined && !isForward)
-      )
-        playSubSteps = false;
+      if (nextPosition === undefined || (nextPosition !== undefined && !isForward)) playSubSteps = false;
 
       /* If the element does not change its position at step stepId, find its last previous position */
       let stepToCheck = stepId - 1;
@@ -211,10 +193,7 @@ class Animation extends React.Component {
               let currentDE = this.state.de[elemId];
 
               /* Get the position of the element at this substep */
-              let pixelPosition = this._positionPercentToPixel(
-                nextPosition[substep][0],
-                nextPosition[substep][1],
-              );
+              let pixelPosition = this._positionPercentToPixel(nextPosition[substep][0], nextPosition[substep][1]);
 
               /* Get the corresponding animation */
               let anim = currentDE.getAnimation(
@@ -232,10 +211,7 @@ class Animation extends React.Component {
               let currentDE = this.state.de[elemId];
 
               /* Get the position of the element at this substep */
-              let pixelPosition = this._positionPercentToPixel(
-                nextPosition[substep][0],
-                nextPosition[substep][1],
-              );
+              let pixelPosition = this._positionPercentToPixel(nextPosition[substep][0], nextPosition[substep][1]);
 
               /* Get the corresponding animation */
               let anim = currentDE.getAnimation(
@@ -258,11 +234,7 @@ class Animation extends React.Component {
           );
 
           /* Get the corresponding animation */
-          let anim = currentDE.getAnimation(
-            pixelPosition[0],
-            pixelPosition[1],
-            this.state.stepLength,
-          );
+          let anim = currentDE.getAnimation(pixelPosition[0], pixelPosition[1], this.state.stepLength);
 
           deStepAnimation.push(anim);
         }
@@ -286,23 +258,11 @@ class Animation extends React.Component {
           Step {this.state.currentStep + 1}/{this._stepCount()}
         </Text>
         <View style={{ flex: 0.1 }} />
-        <Button
-          style={{ flex: 1 }}
-          title=" < "
-          onPress={() => this._previousStep()}
-        />
+        <Button style={{ flex: 1 }} title=" < " onPress={() => this._previousStep()} />
         <View style={{ flex: 0.1 }} />
-        <Button
-          style={{ flex: 1 }}
-          title="Lancer"
-          onPress={() => this._restart()}
-        />
+        <Button style={{ flex: 1 }} title="Lancer" onPress={() => this._restart()} />
         <View style={{ flex: 0.1 }} />
-        <Button
-          title=" > "
-          style={{ flex: 1 }}
-          onPress={() => this._nextStep()}
-        />
+        <Button title=" > " style={{ flex: 1 }} onPress={() => this._nextStep()} />
       </View>
     );
   }

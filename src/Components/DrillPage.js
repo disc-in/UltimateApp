@@ -1,12 +1,5 @@
 import React, { Component } from 'react';
-import {
-  StyleSheet,
-  View,
-  Text,
-  FlatList,
-  Image,
-  TouchableOpacity,
-} from 'react-native';
+import { StyleSheet, View, Text, FlatList, Image, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 import Animation from './Animation';
 import { WebView } from 'react-native-webview';
@@ -26,10 +19,7 @@ class DrillPage extends React.Component {
     return (
       <View style={styles.main_container}>
         <View style={styles.content_container}>
-          <WebView
-            source={{ uri: 'https://www.youtube.com/watch?v=oN1bzPCKkGE' }}
-            style={{ marginTop: 20 }}
-          />
+          <WebView source={{ uri: 'https://www.youtube.com/watch?v=oN1bzPCKkGE' }} style={{ marginTop: 20 }} />
           {/* {
           currentStep.animation ? <Animation animation={currentStep.animation}/>
           : currentStep.video ? <Text>Soon a Video here</Text>
@@ -43,10 +33,7 @@ class DrillPage extends React.Component {
             // keyExtractor={(item) => item.id.toString()}
             renderItem={({ item }) => (
               <TouchableOpacity
-                style={[
-                  styles.step,
-                  currentStep == item ? styles.current_step : styles.other_step,
-                ]}
+                style={[styles.step, currentStep == item ? styles.current_step : styles.other_step]}
                 onPress={() => this.setState({ currentStep: item })}
               >
                 <Text style={styles.title_text}>{item.title}</Text>

@@ -9,7 +9,9 @@ const mapStateToProps = state => {
 };
 
 const DrillListPage = props => {
-  const { drills, navigation } = props;
+  const { navigation } = props
+  const type = props.route.params.type
+  const drills = props.drills.filter(d => d.type === type)
 
   return (
     <View style={styles.drillListPage}>

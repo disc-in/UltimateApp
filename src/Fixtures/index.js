@@ -35,7 +35,7 @@ export default {
     },
     {
       id: 2,
-      type: 'tactics', // vs technical vs collectif
+      type: 'technical', // vs technical vs collectif
       source: 'Flikulti',
       title: 'Defense Positioning',
       img: 'https://gazettesports.fr/wp-content/uploads/2018/11/ultimate_frisbee_gloves.jpg',

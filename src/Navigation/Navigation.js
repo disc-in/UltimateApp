@@ -10,7 +10,7 @@ const Stack = createStackNavigator();
 export const Navigation = () => (
   <NavigationContainer>
     <Stack.Navigator>
-      <Stack.Screen name="HomePage" component={HomePage} />
+      <Stack.Screen name="HomePage" component={HomePage} options={{ title: 'Ultimate Coaching app' }} />
       <Stack.Screen
         name="DrillListPage"
         component={DrillListPage}

@@ -5,10 +5,14 @@ export default class HomePage extends React.Component {
   render() {
     return (
       <View style={styles.mainContainer}>
-      
-        <Button title="Technical Drill List" onPress={() => this.props.navigation.navigate('DrillListPage', { type: 'technical'})} />
-        <Button title="Fitness Drill List" onPress={() => this.props.navigation.navigate('DrillListPage', { type: 'fitness' })} />
-
+        <Button
+          title="Technical Drill List"
+          onPress={() => this.props.navigation.navigate('DrillListPage', { type: 'technical' })}
+        />
+        <Button
+          title="Fitness Drill List"
+          onPress={() => this.props.navigation.navigate('DrillListPage', { type: 'fitness' })}
+        />
       </View>
     );
   }
@@ -20,5 +24,4 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     padding: 20,
   },
-
 });

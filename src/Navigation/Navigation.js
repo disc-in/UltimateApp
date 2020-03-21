@@ -19,7 +19,6 @@ export const Navigation = () => (
         })}
       />
       <Stack.Screen name="DrillPage" component={DrillPage} options={{ title: 'Drill Page' }} />
-
     </Stack.Navigator>
   </NavigationContainer>
 );

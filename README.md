@@ -11,5 +11,5 @@ git clone git@github.com:UltimateApp/UltimateApp.git
 cd UltimateApp
 npm install -g expo-cli
 npm install
-expo start
+npm run start
 ```

@@ -50,8 +50,7 @@
   },
   "lint-staged": {
     "**/*.{js,jsx,json,css}": [
-      "npm run prettier-fix",
-      "git add"
+      "npm run prettier-fix"
     ]
   },
   "husky": {

@@ -17,16 +17,19 @@ export default {
       level: ['intermediate'],
       steps: [
         {
+          key: '1',
           title: 'Warmup',
           subtitle: 'Text',
           video: 'http://google.com',
         },
         {
+          key: '2',
           title: 'Do the drill',
           subtitle: 'Text',
           animation: animationMenageATrois,
         },
         {
+          key: '3',
           title: 'Last step',
           subtitle: 'Text',
           webview: 'http://google.com',
@@ -47,6 +50,7 @@ export default {
       level: ['intermediate'],
       steps: [
         {
+          key: '1',
           title: 'Only the animation',
           subtitle: 'Text',
           animation: animationSquare,

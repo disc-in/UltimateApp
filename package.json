@@ -5,7 +5,11 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "lint": "eslint src --max-warnings=0 --ext .js,.jsx",
+    "lint-fix": "eslint src --fix --ext .js,.jsx",
+    "prettier": "prettier 'src/**/*.{ts,tsx,js,jsx}' --list-different",
+    "prettier-fix": "prettier 'src/**/*.{ts,tsx,js,jsx}' --write"
   },
   "dependencies": {
     "@react-native-community/masked-view": "0.1.5",
@@ -32,8 +36,14 @@
     "watchman": "^1.0.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.0.0",
     "babel-preset-expo": "~8.0.0",
-    "@babel/core": "^7.0.0"
+    "eslint": "^6.8.0",
+    "eslint-config-universe": "^2.3.0",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "eslint-plugin-react-native": "^3.8.1",
+    "prettier": "^1.19.1",
+    "typescript": "^3.8.3"
   },
   "private": true
 }

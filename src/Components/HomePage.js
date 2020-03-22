@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   menuItem: {
-    height: '25%',
+    height: '30%',
     marginBottom: 5,
   },
   image: {

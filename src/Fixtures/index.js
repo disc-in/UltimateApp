@@ -18,17 +18,17 @@ export default {
       steps: [
         {
           title: 'Warmup',
-          subtitle: 'Text',
-          video: 'http://google.com',
+          subtitle: 'This is a subtitle',
+          video: 'https://www.youtube.com/embed/oN1bzPCKkGE',
         },
         {
           title: 'Do the drill',
-          subtitle: 'Text',
+          subtitle: 'This is a subtitle',
           animation: animationMenageATrois,
         },
         {
           title: 'Last step',
-          subtitle: 'Text',
+          subtitle: 'This is a subtitle',
           webview: 'http://google.com',
         },
       ],
@@ -48,7 +48,7 @@ export default {
       steps: [
         {
           title: 'Only the animation',
-          subtitle: 'Text',
+          subtitle: 'This is a subtitle',
           animation: animationSquare,
         },
       ],

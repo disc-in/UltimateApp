@@ -80,9 +80,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  scrollview_container: {
-    flex: 1,
-  },
   image: {
     height: 169,
     margin: 5,
@@ -103,18 +100,6 @@ const styles = StyleSheet.create({
     color: '#666666',
     margin: 5,
     marginBottom: 15,
-  },
-  default_text: {
-    marginLeft: 5,
-    marginRight: 5,
-    marginTop: 5,
-  },
-  favorite_container: {
-    alignItems: 'center', // Alignement des components enfants sur l'axe secondaire, X ici
-  },
-  favorite_image: {
-    width: 40,
-    height: 40,
   },
 });
 

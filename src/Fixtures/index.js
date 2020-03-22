@@ -18,17 +18,14 @@ export default {
       animation: animationMenageATrois,
       steps: [
         {
-          key: '1',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
         },
         {
-          key: '2',
           title: 'Do the drill',
           subtitle: 'This is a subtitle',
         },
         {
-          key: '3',
           title: 'Last step',
           subtitle: 'This is a subtitle',
         },
@@ -164,7 +161,12 @@ export default {
       duration: 20, // minutes
       goals: ['Defense', 'Positionning'],
       level: ['intermediate'],
-      steps: [],
+      steps: [
+        {
+          title: 'Only the animation',
+          subtitle: 'This is a subtitle',
+        },
+      ],
     },
     {
       id: 9,

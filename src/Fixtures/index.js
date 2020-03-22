@@ -62,17 +62,14 @@ export default {
       video: 'https://www.youtube.com/embed/oN1bzPCKkGE',
       steps: [
         {
-          key: '1',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
         },
         {
-          key: '2',
           title: 'Do the drill',
           subtitle: 'This is a subtitle',
         },
         {
-          key: '3',
           title: 'Last step',
           subtitle: 'This is a subtitle',
         },
@@ -198,17 +195,14 @@ export default {
       video: 'https://www.youtube.com/embed/oN1bzPCKkGE',
       steps: [
         {
-          key: '1',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
         },
         {
-          key: '2',
           title: 'Do the drill',
           subtitle: 'This is a subtitle',
         },
         {
-          key: '3',
           title: 'Last step',
           subtitle: 'This is a subtitle',
         },
@@ -229,17 +223,14 @@ export default {
       video: 'https://www.youtube.com/embed/oN1bzPCKkGE',
       steps: [
         {
-          key: '1',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
         },
         {
-          key: '2',
           title: 'Do the drill',
           subtitle: 'This is a subtitle',
         },
         {
-          key: '3',
           title: 'Last step',
           subtitle: 'This is a subtitle',
         },
@@ -259,17 +250,14 @@ export default {
       level: ['intermediate'],
       steps: [
         {
-          key: '1',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
         },
         {
-          key: '2',
           title: 'Do the drill',
           subtitle: 'This is a subtitle',
         },
         {
-          key: '3',
           title: 'Last step',
           subtitle: 'This is a subtitle',
         },

@@ -15,7 +15,7 @@ const DrillListPage = props => {
 
   return (
     <View style={styles.drillListPage}>
-      <Text style={styles.counter}>{drills.length} Frisbee drills</Text>
+      <Text style={styles.counter}>{drills.length} Drills</Text>
       <FlatList
         data={drills}
         keyExtractor={item => item.id.toString()}

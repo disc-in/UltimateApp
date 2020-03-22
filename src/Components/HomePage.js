@@ -8,6 +8,7 @@ export default class HomePage extends React.Component {
       
         <Button title="Technical Drill List" onPress={() => this.props.navigation.navigate('DrillListPage', { type: 'technical'})} />
         <Button title="Fitness Drill List" onPress={() => this.props.navigation.navigate('DrillListPage', { type: 'fitness' })} />
+        <Button title="Training List" onPress={() => this.props.navigation.navigate('DrillListPage', { type: 'collectif' })} />
 
       </View>
     );

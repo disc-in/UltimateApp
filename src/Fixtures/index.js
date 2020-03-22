@@ -19,19 +19,19 @@ export default {
         {
           key: '1',
           title: 'Warmup',
-          subtitle: 'Text',
-          video: 'http://google.com',
+          subtitle: 'This is a subtitle',
+          video: 'https://www.youtube.com/embed/oN1bzPCKkGE',
         },
         {
           key: '2',
           title: 'Do the drill',
-          subtitle: 'Text',
+          subtitle: 'This is a subtitle',
           animation: animationMenageATrois,
         },
         {
           key: '3',
           title: 'Last step',
-          subtitle: 'Text',
+          subtitle: 'This is a subtitle',
           webview: 'http://google.com',
         },
       ],
@@ -52,7 +52,7 @@ export default {
         {
           key: '1',
           title: 'Only the animation',
-          subtitle: 'Text',
+          subtitle: 'This is a subtitle',
           animation: animationSquare,
         },
       ],

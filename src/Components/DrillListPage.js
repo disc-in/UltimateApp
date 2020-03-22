@@ -11,11 +11,11 @@ const mapStateToProps = state => {
 const DrillListPage = props => {
   const { navigation } = props;
   const type = props.route.params.type;
-  const drills = props.drills.filter(d => d.type === type);
+  const drills = props.drills.filter(drill => drill.type === type);
 
   return (
     <View style={styles.drillListPage}>
-      <Text style={styles.counter}>{drills.length} Drills</Text>
+      <Text style={styles.counter}>{drills.length} drills available</Text>
       <FlatList
         data={drills}
         keyExtractor={item => item.id.toString()}
@@ -23,11 +23,9 @@ const DrillListPage = props => {
           <TouchableOpacity style={styles.drill} onPress={() => navigation.navigate('DrillPage', { drill: item })}>
             <Image style={styles.image} source={{ uri: item.img }} />
             <View style={styles.contentContainer}>
-              <View style={styles.drillSource}>
-                <Text style={styles.sourceText}>{item.source}</Text>
-              </View>
-              <Text style={styles.titleText}>{item.title}</Text>
-              <Text style={styles.playersText}>
+              <Text style={styles.source}>{item.source}</Text>
+              <Text style={styles.title}>{item.title}</Text>
+              <Text style={styles.numberOfPlayers}>
                 Duration: {item.duration} - min players: {item.nbPlayers}
               </Text>
             </View>
@@ -44,39 +42,39 @@ export default connect(mapStateToProps)(DrillListPage);
 
 const styles = StyleSheet.create({
   drillListPage: {
-    padding: 16,
+    padding: 20,
     backgroundColor: '#fff',
     height: '100%',
   },
-  drill: {
-    height: 140,
-    flexDirection: 'row',
-  },
   counter: {
     color: '#767676',
-    marginBottom: 16,
+    marginBottom: 20,
+  },
+  drill: {
+    height: 80,
+    flexDirection: 'row',
+    marginBottom: 20,
   },
   image: {
-    width: 120,
-    height: 120,
-    marginRight: 5,
+    width: 80,
+    height: 80,
+    marginRight: 10,
+    borderRadius: 5,
   },
   contentContainer: {
-    padding: 16,
+    paddingBottom: 10,
   },
-  drillSource: {
-    flex: 2,
-  },
-  titleText: {
+  title: {
     flex: 3,
     fontWeight: 'bold',
     fontSize: 20,
     flexWrap: 'wrap',
   },
-  sourceText: {
+  source: {
+    flex: 2,
     color: '#A6A6A6',
   },
-  playersText: {
+  numberOfPlayers: {
     flex: 2,
     color: '#AFAFAF',
     fontSize: 14,

@@ -180,7 +180,7 @@ export default {
       level: ['intermediate'],
       steps: [
         {
-          key: '1'
+          key: '1',
           title: 'Only the animation',
           subtitle: 'This is a subtitle',
           animation: animationSquare,

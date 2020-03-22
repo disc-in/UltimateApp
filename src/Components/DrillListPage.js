@@ -48,6 +48,7 @@ export default connect(mapStateToProps)(DrillListPage);
 
 const styles = StyleSheet.create({
   drillListPage: {
+    paddingTop: 10,
     paddingLeft: 20,
     backgroundColor: '#fff',
     height: '100%',

@@ -48,7 +48,7 @@ export default connect(mapStateToProps)(DrillListPage);
 
 const styles = StyleSheet.create({
   drillListPage: {
-    padding: 20,
+    paddingLeft: 20,
     backgroundColor: '#fff',
     height: '100%',
   },
@@ -68,6 +68,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   contentContainer: {
+    padding: 5,
     paddingBottom: 10,
   },
   title: {
@@ -84,10 +85,5 @@ const styles = StyleSheet.create({
     flex: 2,
     color: '#AFAFAF',
     fontSize: 14,
-  },
-  favoriteImage: {
-    width: 25,
-    height: 25,
-    marginRight: 5,
   },
 });

@@ -8,12 +8,6 @@ const mapStateToProps = state => {
   };
 };
 
-const secondsToMinutes = seconds => {
-  const date = new Date();
-  date.setSeconds(seconds);
-  return date.getMinutes();
-};
-
 const DrillListPage = props => {
   const { navigation } = props;
   const type = props.route.params.type;
@@ -32,7 +26,7 @@ const DrillListPage = props => {
               <Text style={styles.source}>{item.source}</Text>
               <Text style={styles.title}>{item.title}</Text>
               <Text style={styles.numberOfPlayers}>
-                Duration: {secondsToMinutes(item.duration)} min - players: {item.nbPlayers}
+                Duration: {item.durationInMinutes} min - players: {item.nbPlayers}
               </Text>
             </View>
           </TouchableOpacity>

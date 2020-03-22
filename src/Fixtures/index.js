@@ -17,16 +17,19 @@ export default {
       level: ['intermediate'],
       steps: [
         {
+          key: '1',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
           video: 'https://www.youtube.com/embed/oN1bzPCKkGE',
         },
         {
+          key: '2',
           title: 'Do the drill',
           subtitle: 'This is a subtitle',
           animation: animationMenageATrois,
         },
         {
+          key: '3',
           title: 'Last step',
           subtitle: 'This is a subtitle',
           webview: 'http://google.com',
@@ -177,6 +180,7 @@ export default {
       level: ['intermediate'],
       steps: [
         {
+          key: '1'
           title: 'Only the animation',
           subtitle: 'This is a subtitle',
           animation: animationSquare,
@@ -197,6 +201,7 @@ export default {
       level: ['intermediate'],
       steps: [
         {
+          key: '1',
           title: 'Only the animation',
           subtitle: 'This is a subtitle',
           animation: animationSquare,

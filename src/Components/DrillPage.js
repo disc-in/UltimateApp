@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Text, FlatList, Image, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
-import Animation from './Animation';
 import { WebView } from 'react-native-webview';
 
 class DrillPage extends React.Component {
@@ -15,16 +14,17 @@ class DrillPage extends React.Component {
   render() {
     const drill = this.props.route.params.drill;
     const currentStep = this.state.currentStep;
+    const { navigation } = this.props;
 
     return (
-      <View style={styles.main_container}>
-        <View style={styles.content_container}>
-          <WebView source={{ uri: 'https://www.youtube.com/embed/oN1bzPCKkGE' }} style={{ marginTop: 20 }} />
-          {/*           currentStep.animation ? <Animation animation={currentStep.animation}/>
-          : currentStep.video ? <Text>Soon a Video here</Text>
-          : currentStep.webview ? <Text>Soon a Webpage here</Text>
-          : <Text>No visual content for this step</Text> */}
-        </View>
+      <View style={styles.DrillPage}>
+        <TouchableOpacity
+          style={styles.drill}
+          onPress={() => navigation.navigate('DrillAnimationPage', { drill: drill })}
+        >
+          <Text style={styles.title_text}>Video</Text>
+        </TouchableOpacity>
+
         <View style={styles.steps_list}>
           <FlatList
             data={drill.steps}
@@ -48,8 +48,8 @@ class DrillPage extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  main_container: {
-    flex: 1,
+  DrillPage: {
+    backgroundColor: '#fff',
   },
   item_container: {
     flex: 1,

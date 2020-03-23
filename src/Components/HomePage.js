@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Text, ImageBackground, TouchableHighlight } from 'react-native';
 import fitness from '../../assets/HomePage/fitness.png';
-import frisbeeGlove from '../../assets/HomePage/frisbeeGlove.png';
+import frisbeeGlove from '../../assets/HomePage/frisbeeglove.png';
 import huddle from '../../assets/HomePage/huddle.png';
 
 export default class HomePage extends React.Component {

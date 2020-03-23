@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, FlatList, ImageBackground, TouchableOpacity } from 'react-native';
+import { ScrollView, StyleSheet, View, Text, FlatList, ImageBackground, TouchableOpacity } from 'react-native';
 import { WebView } from 'react-native-webview';
 
 class DrillPage extends React.Component {
@@ -8,12 +8,14 @@ class DrillPage extends React.Component {
     const { navigation } = this.props;
 
     return (
-      <View style={styles.DrillPage}>
-        <ImageBackground source={{ uri: drill.image }} style={styles.image}>
+      <ScrollView style={styles.DrillPage}>
+        <ImageBackground source={{ uri: drill.image }} style={styles.image} imageStyle={styles.imageOpacity}>
           <Text style={styles.title}>{drill.title}</Text>
           <View style={styles.infoWrapper}>
             <Text style={styles.info}>{drill.durationInMinutes} minutes</Text>
+            <View style={styles.separator} />
             <Text style={styles.info}>{drill.nbPlayers} players</Text>
+            <View style={styles.separator} />
             <Text style={styles.info}>{drill.level} level</Text>
           </View>
           <TouchableOpacity
@@ -42,7 +44,7 @@ class DrillPage extends React.Component {
             <Text style={styles.descriptionText}>{drill.description}</Text>
           </View>
         </View>
-      </View>
+      </ScrollView>
     );
   }
 }
@@ -52,36 +54,42 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   image: {
-    height: 400,
     padding: 20,
     alignItems: 'center',
+    backgroundColor: 'rgb(0,0,0)',
+  },
+  imageOpacity: {
+    opacity: 0.5,
   },
   title: {
-    paddingTop: 100,
-    paddingBottom: 100,
+    marginTop: 100,
+    marginBottom: 100,
     color: '#fff',
-    fontSize: 36,
-    fontWeight: 'bold',
+    fontSize: 48,
     textAlign: 'center',
   },
   infoWrapper: {
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
   },
   info: {
     color: '#fff',
-    paddingLeft: 20,
-    paddingRight: 20,
+    paddingLeft: 30,
+    paddingRight: 30,
     fontSize: 18,
+  },
+  separator: {
+    height: 10,
     borderRightWidth: 1,
     borderRightColor: '#fff',
   },
   videoLink: {
-    margin: 20,
+    margin: 40,
     width: 100,
     height: 100,
     borderRadius: 50,
-    backgroundColor: '#F2F2F2',
+    backgroundColor: '#f2f2f2',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -92,22 +100,23 @@ const styles = StyleSheet.create({
   },
   description: {
     backgroundColor: '#fff',
+    padding: 20,
   },
   descriptionItem: {
-    marginBottom: 10,
+    marginBottom: 30,
   },
   descriptionTitle: {
-    textTransform: 'uppercase',
+    marginBottom: 10,
     textAlign: 'center',
+    textTransform: 'uppercase',
     fontWeight: 'bold',
     fontSize: 20,
     color: '#000000',
   },
   descriptionText: {
-    fontStyle: 'italic',
-    color: '#666666',
-    margin: 5,
-    marginBottom: 15,
+    color: '#909090',
+    textAlign: 'center',
+    fontSize: 16,
   },
 });
 

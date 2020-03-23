@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, FlatList, Image, TouchableOpacity } from 'react-native';
-import { connect } from 'react-redux';
+import { StyleSheet, View, Text, FlatList, ImageBackground, TouchableOpacity } from 'react-native';
 import { WebView } from 'react-native-webview';
 
 class DrillPage extends React.Component {
@@ -18,6 +17,11 @@ class DrillPage extends React.Component {
 
     return (
       <View style={styles.DrillPage}>
+        <ImageBackground source={{ uri: drill.image }} style={styles.image}>
+          <View style={styles.wrapper}>
+            <Text style={styles.title}>{drill.title}</Text>
+          </View>
+        </ImageBackground>
         <TouchableOpacity
           style={styles.drill}
           onPress={() => navigation.navigate('DrillAnimationPage', { drill: drill })}
@@ -50,37 +54,32 @@ class DrillPage extends React.Component {
 const styles = StyleSheet.create({
   DrillPage: {
     backgroundColor: '#fff',
+    height: '100%',
   },
-  item_container: {
-    flex: 1,
+  image: {
+    height: 400,
   },
-  content_container: {
-    flex: 6,
+  wrapper: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
+  title: {
+    color: '#fff',
+    fontSize: 36,
+    fontWeight: 'bold',
+  },
+
   steps_list: {
     flex: 4,
     backgroundColor: 'lightgrey',
   },
-  step: {
-    backgroundColor: 'lightgrey',
-    borderTopColor: 'black',
-    borderTopWidth: 1,
-  },
   current_step: {
     backgroundColor: 'white',
-  },
-  loading_container: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 0,
-    bottom: 0,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  image: {
-    height: 169,
-    margin: 5,
   },
   title_text: {
     fontWeight: 'bold',
@@ -101,10 +100,4 @@ const styles = StyleSheet.create({
   },
 });
 
-const mapStateToProps = (state, props) => {
-  return {
-    favoritesFilm: state.favoritesFilm,
-  };
-};
-
-export default connect(mapStateToProps)(DrillPage);
+export default DrillPage;

@@ -3,16 +3,8 @@ import { StyleSheet, View, Text, FlatList, ImageBackground, TouchableOpacity } f
 import { WebView } from 'react-native-webview';
 
 class DrillPage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      currentStep: props.route.params.drill.steps[0],
-    };
-  }
-
   render() {
     const drill = this.props.route.params.drill;
-    const currentStep = this.state.currentStep;
     const { navigation } = this.props;
 
     return (
@@ -24,30 +16,31 @@ class DrillPage extends React.Component {
             <Text style={styles.info}>{drill.nbPlayers} players</Text>
             <Text style={styles.info}>{drill.level} level</Text>
           </View>
+          <TouchableOpacity
+            style={styles.videoLink}
+            onPress={() => navigation.navigate('DrillAnimationPage', { drill: drill })}
+          >
+            <Text style={styles.videoLinkText}>Video</Text>
+          </TouchableOpacity>
         </ImageBackground>
-        <TouchableOpacity
-          style={styles.drill}
-          onPress={() => navigation.navigate('DrillAnimationPage', { drill: drill })}
-        >
-          <Text style={styles.title_text}>Video</Text>
-        </TouchableOpacity>
 
-        <View style={styles.steps_list}>
-          <FlatList
-            data={drill.steps}
-            keyExtractor={(item, index) => index.toString()}
-            renderItem={({ item }) => (
-              <TouchableOpacity
-                style={[styles.step, currentStep == item ? styles.current_step : styles.other_step]}
-                onPress={() => this.setState({ currentStep: item })}
-              >
-                <Text style={styles.title_text}>{item.title}</Text>
-                <Text style={styles.description_text}>{item.subtitle}</Text>
-              </TouchableOpacity>
-            )}
-            onEndReachedThreshold={0.5}
-            onEndReached={() => {}}
-          />
+        <View style={styles.description}>
+          <View style={styles.descriptionItem}>
+            <Text style={styles.descriptionTitle}>Goals</Text>
+            {drill.goals.map((goal, index) => (
+              <Text key={index} style={styles.descriptionText}>
+                {goal}
+              </Text>
+            ))}
+          </View>
+          <View style={styles.descriptionItem}>
+            <Text style={styles.descriptionTitle}>Equipment</Text>
+            <Text style={styles.descriptionText}>{drill.equipment}</Text>
+          </View>
+          <View style={styles.descriptionItem}>
+            <Text style={styles.descriptionTitle}>Description</Text>
+            <Text style={styles.descriptionText}>{drill.description}</Text>
+          </View>
         </View>
       </View>
     );
@@ -57,11 +50,11 @@ class DrillPage extends React.Component {
 const styles = StyleSheet.create({
   DrillPage: {
     backgroundColor: '#fff',
-    height: '100%',
   },
   image: {
     height: 400,
     padding: 20,
+    alignItems: 'center',
   },
   title: {
     paddingTop: 100,
@@ -83,26 +76,34 @@ const styles = StyleSheet.create({
     borderRightWidth: 1,
     borderRightColor: '#fff',
   },
-
-  steps_list: {
-    flex: 4,
-    backgroundColor: 'lightgrey',
+  videoLink: {
+    margin: 20,
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    backgroundColor: '#F2F2F2',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  current_step: {
-    backgroundColor: 'white',
+  videoLinkText: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    textTransform: 'uppercase',
   },
-  title_text: {
+  description: {
+    backgroundColor: '#fff',
+  },
+  descriptionItem: {
+    marginBottom: 10,
+  },
+  descriptionTitle: {
+    textTransform: 'uppercase',
+    textAlign: 'center',
     fontWeight: 'bold',
     fontSize: 20,
-    flex: 1,
-    flexWrap: 'wrap',
-    marginLeft: 5,
-    marginRight: 5,
-    marginTop: 10,
-    marginBottom: 10,
     color: '#000000',
   },
-  description_text: {
+  descriptionText: {
     fontStyle: 'italic',
     color: '#666666',
     margin: 5,

@@ -18,8 +18,11 @@ class DrillPage extends React.Component {
     return (
       <View style={styles.DrillPage}>
         <ImageBackground source={{ uri: drill.image }} style={styles.image}>
-          <View style={styles.wrapper}>
-            <Text style={styles.title}>{drill.title}</Text>
+          <Text style={styles.title}>{drill.title}</Text>
+          <View style={styles.infoWrapper}>
+            <Text style={styles.info}>{drill.durationInMinutes} minutes</Text>
+            <Text style={styles.info}>{drill.nbPlayers} players</Text>
+            <Text style={styles.info}>{drill.level} level</Text>
           </View>
         </ImageBackground>
         <TouchableOpacity
@@ -58,20 +61,27 @@ const styles = StyleSheet.create({
   },
   image: {
     height: 400,
-  },
-  wrapper: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    justifyContent: 'center',
-    alignItems: 'center',
+    padding: 20,
   },
   title: {
+    paddingTop: 100,
+    paddingBottom: 100,
     color: '#fff',
     fontSize: 36,
     fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  infoWrapper: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+  },
+  info: {
+    color: '#fff',
+    paddingLeft: 20,
+    paddingRight: 20,
+    fontSize: 18,
+    borderRightWidth: 1,
+    borderRightColor: '#fff',
   },
 
   steps_list: {

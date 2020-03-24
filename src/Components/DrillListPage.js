@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, View, Text, Image, TouchableOpacity, FlatList } from 'react-native';
 import { connect } from 'react-redux';
 
@@ -12,6 +12,7 @@ const DrillListPage = props => {
   const { navigation } = props;
   const type = props.route.params.type;
   const drills = props.drills.filter(drill => drill.type === type);
+  const [displayFilters, setDisplayFilters] = useState(false);
 
   return (
     <View style={styles.drillListPage}>
@@ -31,9 +32,10 @@ const DrillListPage = props => {
             </View>
           </TouchableOpacity>
         )}
-        onEndReachedThreshold={0.5}
-        onEndReached={() => {}}
       />
+      <TouchableOpacity style={styles.filterButton} onPress={() => setDisplayFilters(true)}>
+        <Text style={styles.filterButtonText}>Filter</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -80,5 +82,21 @@ const styles = StyleSheet.create({
     flex: 2,
     color: '#AFAFAF',
     fontSize: 14,
+  },
+  filterButton: {
+    position: 'absolute',
+    bottom: '5%',
+    right: '5%',
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    backgroundColor: '#f2f2f2',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  filterButtonText: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    textTransform: 'uppercase',
   },
 });

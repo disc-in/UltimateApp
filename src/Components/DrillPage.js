@@ -1,110 +1,123 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, FlatList, Image, TouchableOpacity } from 'react-native';
-import { connect } from 'react-redux';
-import Animation from './Animation';
+import { ScrollView, StyleSheet, View, Text, FlatList, ImageBackground, TouchableOpacity } from 'react-native';
 import { WebView } from 'react-native-webview';
 
 class DrillPage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      currentStep: props.route.params.drill.steps[0],
-    };
-  }
-
   render() {
     const drill = this.props.route.params.drill;
-    const currentStep = this.state.currentStep;
+    const { navigation } = this.props;
 
     return (
-      <View style={styles.main_container}>
-        <View style={styles.content_container}>
-          <WebView source={{ uri: 'https://www.youtube.com/embed/oN1bzPCKkGE' }} style={{ marginTop: 20 }} />
-          {/*           currentStep.animation ? <Animation animation={currentStep.animation}/>
-          : currentStep.video ? <Text>Soon a Video here</Text>
-          : currentStep.webview ? <Text>Soon a Webpage here</Text>
-          : <Text>No visual content for this step</Text> */}
+      <ScrollView style={styles.DrillPage}>
+        <ImageBackground source={{ uri: drill.image }} style={styles.image} imageStyle={styles.imageOpacity}>
+          <Text style={styles.title}>{drill.title}</Text>
+          <View style={styles.infoWrapper}>
+            <Text style={styles.info}>{drill.durationInMinutes} minutes</Text>
+            <View style={styles.separator} />
+            <Text style={styles.info}>{drill.nbPlayers} players</Text>
+            <View style={styles.separator} />
+            <Text style={styles.info}>{drill.level} level</Text>
+          </View>
+          <TouchableOpacity
+            style={styles.videoLink}
+            onPress={() => navigation.navigate('DrillAnimationPage', { drill: drill })}
+          >
+            <Text style={styles.videoLinkText}>Video</Text>
+          </TouchableOpacity>
+        </ImageBackground>
+
+        <View style={styles.description}>
+          <View style={styles.descriptionItem}>
+            <Text style={styles.descriptionTitle}>Goals</Text>
+            {drill.goals.map((goal, index) => (
+              <Text key={index} style={styles.descriptionText}>
+                {goal}
+              </Text>
+            ))}
+          </View>
+          <View style={styles.descriptionItem}>
+            <Text style={styles.descriptionTitle}>Equipment</Text>
+            <Text style={styles.descriptionText}>{drill.equipment}</Text>
+          </View>
+          <View style={styles.descriptionItem}>
+            <Text style={styles.descriptionTitle}>Description</Text>
+            <Text style={styles.descriptionText}>{drill.description}</Text>
+          </View>
         </View>
-        <View style={styles.steps_list}>
-          <FlatList
-            data={drill.steps}
-            keyExtractor={(item, index) => index.toString()}
-            renderItem={({ item }) => (
-              <TouchableOpacity
-                style={[styles.step, currentStep == item ? styles.current_step : styles.other_step]}
-                onPress={() => this.setState({ currentStep: item })}
-              >
-                <Text style={styles.title_text}>{item.title}</Text>
-                <Text style={styles.description_text}>{item.subtitle}</Text>
-              </TouchableOpacity>
-            )}
-            onEndReachedThreshold={0.5}
-            onEndReached={() => {}}
-          />
-        </View>
-      </View>
+      </ScrollView>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  main_container: {
-    flex: 1,
-  },
-  item_container: {
-    flex: 1,
-  },
-  content_container: {
-    flex: 6,
-  },
-  steps_list: {
-    flex: 4,
-    backgroundColor: 'lightgrey',
-  },
-  step: {
-    backgroundColor: 'lightgrey',
-    borderTopColor: 'black',
-    borderTopWidth: 1,
-  },
-  current_step: {
-    backgroundColor: 'white',
-  },
-  loading_container: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 0,
-    bottom: 0,
-    alignItems: 'center',
-    justifyContent: 'center',
+  DrillPage: {
+    backgroundColor: '#fff',
   },
   image: {
-    height: 169,
-    margin: 5,
+    padding: 20,
+    alignItems: 'center',
+    backgroundColor: 'rgb(0,0,0)',
   },
-  title_text: {
+  imageOpacity: {
+    opacity: 0.5,
+  },
+  title: {
+    marginTop: 100,
+    marginBottom: 100,
+    color: '#fff',
+    fontSize: 48,
+    textAlign: 'center',
+  },
+  infoWrapper: {
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+  },
+  info: {
+    color: '#fff',
+    paddingLeft: 30,
+    paddingRight: 30,
+    fontSize: 18,
+  },
+  separator: {
+    height: 10,
+    borderRightWidth: 1,
+    borderRightColor: '#fff',
+  },
+  videoLink: {
+    margin: 40,
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    backgroundColor: '#f2f2f2',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  videoLinkText: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    textTransform: 'uppercase',
+  },
+  description: {
+    backgroundColor: '#fff',
+    padding: 20,
+  },
+  descriptionItem: {
+    marginBottom: 30,
+  },
+  descriptionTitle: {
+    marginBottom: 10,
+    textAlign: 'center',
+    textTransform: 'uppercase',
     fontWeight: 'bold',
     fontSize: 20,
-    flex: 1,
-    flexWrap: 'wrap',
-    marginLeft: 5,
-    marginRight: 5,
-    marginTop: 10,
-    marginBottom: 10,
     color: '#000000',
   },
-  description_text: {
-    fontStyle: 'italic',
-    color: '#666666',
-    margin: 5,
-    marginBottom: 15,
+  descriptionText: {
+    color: '#909090',
+    textAlign: 'center',
+    fontSize: 16,
   },
 });
 
-const mapStateToProps = (state, props) => {
-  return {
-    favoritesFilm: state.favoritesFilm,
-  };
-};
-
-export default connect(mapStateToProps)(DrillPage);
+export default DrillPage;

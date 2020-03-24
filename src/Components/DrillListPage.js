@@ -21,7 +21,7 @@ const DrillListPage = props => {
         keyExtractor={item => item.id.toString()}
         renderItem={({ item }) => (
           <TouchableOpacity style={styles.drill} onPress={() => navigation.navigate('DrillPage', { drill: item })}>
-            <Image style={styles.image} source={{ uri: item.img }} />
+            <Image style={styles.image} source={{ uri: item.image }} />
             <View style={styles.contentContainer}>
               <Text style={styles.source}>{item.source}</Text>
               <Text style={styles.title}>{item.title}</Text>

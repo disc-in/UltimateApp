@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Text, Image, TouchableOpacity, FlatList } from 'react-native';
 import { connect } from 'react-redux';
+import Filters from './Filters';
 
 const mapStateToProps = state => {
   return {
@@ -17,22 +18,26 @@ const DrillListPage = props => {
   return (
     <View style={styles.drillListPage}>
       <Text style={styles.counter}>{drills.length} drills available</Text>
-      <FlatList
-        data={drills}
-        keyExtractor={item => item.id.toString()}
-        renderItem={({ item }) => (
-          <TouchableOpacity style={styles.drill} onPress={() => navigation.navigate('DrillPage', { drill: item })}>
-            <Image style={styles.image} source={{ uri: item.image }} />
-            <View style={styles.contentContainer}>
-              <Text style={styles.source}>{item.source}</Text>
-              <Text style={styles.title}>{item.title}</Text>
-              <Text style={styles.numberOfPlayers}>
-                Duration: {item.durationInMinutes} min - players: {item.nbPlayers}
-              </Text>
-            </View>
-          </TouchableOpacity>
-        )}
-      />
+      {displayFilters ? (
+        <Filters onConfirm={() => setDisplayFilters(false)} />
+      ) : (
+        <FlatList
+          data={drills}
+          keyExtractor={item => item.id.toString()}
+          renderItem={({ item }) => (
+            <TouchableOpacity style={styles.drill} onPress={() => navigation.navigate('DrillPage', { drill: item })}>
+              <Image style={styles.image} source={{ uri: item.image }} />
+              <View style={styles.contentContainer}>
+                <Text style={styles.source}>{item.source}</Text>
+                <Text style={styles.title}>{item.title}</Text>
+                <Text style={styles.numberOfPlayers}>
+                  Duration: {item.durationInMinutes} min - players: {item.nbPlayers}
+                </Text>
+              </View>
+            </TouchableOpacity>
+          )}
+        />
+      )}
       <TouchableOpacity style={styles.filterButton} onPress={() => setDisplayFilters(true)}>
         <Text style={styles.filterButtonText}>Filter</Text>
       </TouchableOpacity>

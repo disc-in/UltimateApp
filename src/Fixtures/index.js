@@ -15,7 +15,7 @@ export default {
       equipment: 'One disc, 2 cones, 3 players',
       durationInMinutes: 8,
       goals: ['abdos', 'Handling'],
-      level: ['intermediate'],
+      level: 'intermediate',
       animation: animationMenageATrois,
       steps: [
         {
@@ -45,7 +45,7 @@ export default {
       equipment: 'One disc, 2 cones, 3 players',
       durationInMinutes: 10,
       goals: ['Defense', 'Handling'],
-      level: ['Beginner'],
+      level: 'beginner',
       animation: animationSquare,
       steps: [],
     },
@@ -61,7 +61,7 @@ export default {
       equipment: 'One disc, 2 cones, 3 players',
       durationInMinutes: 10,
       goals: ['Catch', 'Handling'],
-      level: ['intermediate'],
+      level: 'intermediate',
       video: 'https://www.youtube.com/embed/oN1bzPCKkGE',
       steps: [
         {
@@ -90,7 +90,7 @@ export default {
       equipment: 'One disc, 2 cones, 3 players',
       durationInMinutes: 15,
       goals: ['Technical'],
-      level: ['Beginner'],
+      level: 'beginner',
       animation: animationSquare,
       steps: [
         {
@@ -112,7 +112,7 @@ export default {
       equipment: 'One disc, 2 cones, 3 players',
       durationInMinutes: 20,
       goals: ['Defense', 'Fast break'],
-      level: ['intermediate'],
+      level: 'intermediate',
       steps: [],
     },
     {
@@ -128,7 +128,7 @@ export default {
       equipment: 'One disc, 2 cones, 3 players',
       durationInMinutes: 18,
       goals: ['Offense', 'Handling'],
-      level: ['Beginner'],
+      level: 'beginner',
       steps: [
         {
           title: 'Only the animation',
@@ -148,7 +148,7 @@ export default {
       equipment: 'One disc, 2 cones, 3 players',
       durationInMinutes: 12,
       goals: ['Throwing', 'Offense'],
-      level: ['intermediate'],
+      level: 'intermediate',
       animation: animationSquare,
       steps: [],
     },
@@ -165,7 +165,7 @@ export default {
       equipment: 'One disc, 2 cones, 3 players',
       durationInMinutes: 20,
       goals: ['Defense', 'Positionning'],
-      level: ['intermediate'],
+      level: 'intermediate',
       steps: [
         {
           title: 'Only the animation',
@@ -186,7 +186,7 @@ export default {
       equipment: 'One disc, 2 cones, 3 players',
       durationInMinutes: 14,
       goals: ['Catch', 'Throwing'],
-      level: ['intermediate'],
+      level: 'intermediate',
       steps: [],
     },
     {
@@ -201,7 +201,7 @@ export default {
       equipment: 'One disc, 2 cones, 3 players',
       durationInMinutes: 15,
       goals: ['Catch', 'Handling'],
-      level: ['intermediate'],
+      level: 'intermediate',
       video: 'https://www.youtube.com/embed/oN1bzPCKkGE',
       steps: [
         {
@@ -230,7 +230,7 @@ export default {
       equipment: 'One disc, 2 cones, 3 players',
       durationInMinutes: 10,
       goals: ['Catch', 'Handling'],
-      level: ['intermediate'],
+      level: 'intermediate',
       video: 'https://www.youtube.com/embed/oN1bzPCKkGE',
       steps: [
         {
@@ -259,7 +259,7 @@ export default {
       equipment: 'One disc, 2 cones, 3 players',
       durationInMinutes: 10,
       goals: ['Catch', 'Handling'],
-      level: ['intermediate'],
+      level: 'intermediate',
       steps: [
         {
           title: 'Warmup',
@@ -287,7 +287,7 @@ export default {
       equipment: 'One disc, 2 cones, 3 players',
       durationInMinutes: 10,
       goals: ['Catch', 'Handling'],
-      level: ['intermediate'],
+      level: 'intermediate',
       video: 'https://www.youtube.com/embed/oN1bzPCKkGE',
       steps: [],
     },
@@ -304,7 +304,7 @@ export default {
       equipment: 'One disc, 2 cones, 3 players',
       durationInMinutes: 15,
       goals: ['Catch', 'Handling'],
-      level: ['intermediate'],
+      level: 'intermediate',
       drills: [1, 2, 3, 4],
     },
     {
@@ -319,7 +319,7 @@ export default {
       equipment: 'One disc, 2 cones, 3 players',
       durationInMinutes: 15,
       goals: ['Catch', 'Handling'],
-      level: ['intermediate'],
+      level: 'intermediate',
       drills: [5, 6, 7, 8],
     },
   ],

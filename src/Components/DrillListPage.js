@@ -13,16 +13,22 @@ const DrillListPage = props => {
   const { navigation } = props;
   const type = props.route.params.type;
   const drills = props.drills.filter(drill => drill.type === type);
+
+  const [data, setData] = useState(drills);
   const [displayFilters, setDisplayFilters] = useState(false);
 
   return (
     <View style={styles.drillListPage}>
-      <Text style={styles.counter}>{drills.length} drills available</Text>
+      <Text style={styles.counter}>{data.length} drills available</Text>
       {displayFilters ? (
-        <Filters onConfirm={() => setDisplayFilters(false)} />
+        <Filters
+          onConfirm={() => setDisplayFilters(false)}
+          onFiltered={drills => setData(drills)}
+          initialData={drills}
+        />
       ) : (
         <FlatList
-          data={drills}
+          data={data}
           keyExtractor={item => item.id.toString()}
           renderItem={({ item }) => (
             <TouchableOpacity style={styles.drill} onPress={() => navigation.navigate('DrillPage', { drill: item })}>

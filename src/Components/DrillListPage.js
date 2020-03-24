@@ -44,9 +44,11 @@ const DrillListPage = props => {
           )}
         />
       )}
-      <TouchableOpacity style={styles.filterButton} onPress={() => setDisplayFilters(true)}>
-        <Text style={styles.filterButtonText}>Filter</Text>
-      </TouchableOpacity>
+      {!displayFilters && (
+        <TouchableOpacity style={styles.filterButton} onPress={() => setDisplayFilters(true)}>
+          <Text style={styles.filterButtonText}>Filter</Text>
+        </TouchableOpacity>
+      )}
     </View>
   );
 };

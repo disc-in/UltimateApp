@@ -75,8 +75,7 @@ const styles = StyleSheet.create({
   },
   info: {
     color: '#fff',
-    paddingLeft: 30,
-    paddingRight: 30,
+    paddingHorizontal: 30,
     fontSize: 18,
   },
   separator: {

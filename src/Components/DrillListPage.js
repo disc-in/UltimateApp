@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, View, Text, Image, TouchableOpacity, FlatList } from 'react-native';
 import { connect } from 'react-redux';
+import Filters from './Filters';
 
 const mapStateToProps = state => {
   return {
@@ -13,27 +14,41 @@ const DrillListPage = props => {
   const type = props.route.params.type;
   const drills = props.drills.filter(drill => drill.type === type);
 
+  const [data, setData] = useState(drills);
+  const [displayFilters, setDisplayFilters] = useState(false);
+
   return (
     <View style={styles.drillListPage}>
-      <Text style={styles.counter}>{drills.length} drills available</Text>
-      <FlatList
-        data={drills}
-        keyExtractor={item => item.id.toString()}
-        renderItem={({ item }) => (
-          <TouchableOpacity style={styles.drill} onPress={() => navigation.navigate('DrillPage', { drill: item })}>
-            <Image style={styles.image} source={{ uri: item.image }} />
-            <View style={styles.contentContainer}>
-              <Text style={styles.source}>{item.source}</Text>
-              <Text style={styles.title}>{item.title}</Text>
-              <Text style={styles.numberOfPlayers}>
-                Duration: {item.durationInMinutes} min - players: {item.nbPlayers}
-              </Text>
-            </View>
-          </TouchableOpacity>
-        )}
-        onEndReachedThreshold={0.5}
-        onEndReached={() => {}}
-      />
+      <Text style={styles.counter}>{data.length} drills available</Text>
+      {displayFilters ? (
+        <Filters
+          onConfirm={() => setDisplayFilters(false)}
+          onFiltered={drills => setData(drills)}
+          initialData={drills}
+        />
+      ) : (
+        <FlatList
+          data={data}
+          keyExtractor={item => item.id.toString()}
+          renderItem={({ item }) => (
+            <TouchableOpacity style={styles.drill} onPress={() => navigation.navigate('DrillPage', { drill: item })}>
+              <Image style={styles.image} source={{ uri: item.image }} />
+              <View style={styles.contentContainer}>
+                <Text style={styles.source}>{item.source}</Text>
+                <Text style={styles.title}>{item.title}</Text>
+                <Text style={styles.numberOfPlayers}>
+                  Duration: {item.durationInMinutes} min - players: {item.nbPlayers}
+                </Text>
+              </View>
+            </TouchableOpacity>
+          )}
+        />
+      )}
+      {!displayFilters && (
+        <TouchableOpacity style={styles.filterButton} onPress={() => setDisplayFilters(true)}>
+          <Text style={styles.filterButtonText}>Filter</Text>
+        </TouchableOpacity>
+      )}
     </View>
   );
 };
@@ -80,5 +95,21 @@ const styles = StyleSheet.create({
     flex: 2,
     color: '#AFAFAF',
     fontSize: 14,
+  },
+  filterButton: {
+    position: 'absolute',
+    bottom: '5%',
+    right: '5%',
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    backgroundColor: '#f2f2f2',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  filterButtonText: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    textTransform: 'uppercase',
   },
 });

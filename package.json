@@ -43,7 +43,8 @@
     "typescript": "^3.8.3"
   },
   "lint-staged": {
-    "**/*.{js,jsx,json,css}": [
+    "**/*.{js,jsx,css}": [
+      "npm run lint-fix",
       "npm run prettier-fix"
     ]
   },

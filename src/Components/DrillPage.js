@@ -5,7 +5,8 @@ import { connect } from 'react-redux';
 class DrillPage extends React.Component {
 
 _toggleFavorite() {
-  const action = { type: "TOGGLE_FAVORITE", value: this.state.dr }
+  console.log("TOGGLE FAVORITE function ", this.state.drill)
+  const action = { type: "TOGGLE_FAVORITE", value: this.state.drill }
   this.props.dispatch(action)
 }
 
@@ -40,7 +41,7 @@ componentDidUpdate() {
         </ImageBackground>
         <View style={styles.separator} />
 
-        <Button title="Favoris" onPress={() => this._toggleFavorite()}/>
+        <Button title="Favoris" onPress={() => this.props.toggleFavorite(drill)}/>
 
         
         <View style={styles.description}>
@@ -145,7 +146,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    dispatch: (action) => { dispatch(action) }
+            toggleFavorite: (drill) => dispatch({ type: "TOGGLE_FAVORITE", value: drill })
   }
 }
 

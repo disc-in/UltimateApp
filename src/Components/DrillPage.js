@@ -2,23 +2,20 @@ import React, { Component } from 'react';
 import { ScrollView, StyleSheet, View, Text, Button, ImageBackground, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 
-class DrillPage extends React.Component {
+class DrillPage extends Component {
+  _toggleFavorite() {
+    const action = { type: 'TOGGLE_FAVORITE', value: this.state.dr };
+    this.props.dispatch(action);
+  }
 
-_toggleFavorite() {
-  const action = { type: "TOGGLE_FAVORITE", value: this.state.dr }
-  this.props.dispatch(action)
-}
-
-componentDidUpdate() {
-  console.log("componentDidUpdate : ")
-  console.log(this.props.favoritesDrill)
-}
+  componentDidUpdate() {
+    console.log('componentDidUpdate : ');
+    console.log(this.props.favoritesDrill);
+  }
 
   render() {
     const drill = this.props.route.params.drill;
     const { navigation } = this.props;
-
-
 
     return (
       <ScrollView style={styles.DrillPage}>
@@ -33,16 +30,15 @@ componentDidUpdate() {
           </View>
           <TouchableOpacity
             style={styles.videoLink}
-            onPress={() => navigation.navigate('DrillAnimationPage', { drill: drill })}
+            onPress={() => navigation.navigate('DrillAnimationPage', { drill })}
           >
             <Text style={styles.videoLinkText}>Video</Text>
           </TouchableOpacity>
         </ImageBackground>
         <View style={styles.separator} />
 
-        <Button title="Favoris" onPress={() => this._toggleFavorite()}/>
+        <Button title="Favoris" onPress={() => this._toggleFavorite()} />
 
-        
         <View style={styles.description}>
           <View style={styles.descriptionItem}>
             <Text style={styles.descriptionTitle}>Goals</Text>
@@ -136,19 +132,18 @@ const styles = StyleSheet.create({
   },
 });
 
-
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
-    favoritesDrill: state.favoritesDrill
-  }
-}
+    favoritesDrill: state.favoritesDrill,
+  };
+};
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    dispatch: (action) => { dispatch(action) }
-  }
-}
+    dispatch: action => {
+      dispatch(action);
+    },
+  };
+};
 
-
-
-export default connect(mapStateToProps,mapDispatchToProps)(DrillPage);
+export default connect(mapStateToProps, mapDispatchToProps)(DrillPage);

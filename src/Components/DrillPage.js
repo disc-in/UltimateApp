@@ -1,11 +1,24 @@
 import React, { Component } from 'react';
-import { ScrollView, StyleSheet, View, Text, FlatList, ImageBackground, TouchableOpacity } from 'react-native';
-import { WebView } from 'react-native-webview';
+import { ScrollView, StyleSheet, View, Text, Button, ImageBackground, TouchableOpacity } from 'react-native';
+import { connect } from 'react-redux';
 
 class DrillPage extends React.Component {
+
+_toggleFavorite() {
+  const action = { type: "TOGGLE_FAVORITE", value: this.state.dr }
+  this.props.dispatch(action)
+}
+
+componentDidUpdate() {
+  console.log("componentDidUpdate : ")
+  console.log(this.props.favoritesDrill)
+}
+
   render() {
     const drill = this.props.route.params.drill;
     const { navigation } = this.props;
+
+
 
     return (
       <ScrollView style={styles.DrillPage}>
@@ -25,7 +38,11 @@ class DrillPage extends React.Component {
             <Text style={styles.videoLinkText}>Video</Text>
           </TouchableOpacity>
         </ImageBackground>
+        <View style={styles.separator} />
 
+        <Button title="Favoris" onPress={() => this._toggleFavorite()}/>
+
+        
         <View style={styles.description}>
           <View style={styles.descriptionItem}>
             <Text style={styles.descriptionTitle}>Goals</Text>
@@ -119,4 +136,19 @@ const styles = StyleSheet.create({
   },
 });
 
-export default DrillPage;
+
+const mapStateToProps = (state) => {
+  return {
+    favoritesDrill: state.favoritesDrill
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    dispatch: (action) => { dispatch(action) }
+  }
+}
+
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(DrillPage);

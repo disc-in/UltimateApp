@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, View, Text, Image, TouchableOpacity, FlatList } from 'react-native';
 import { connect } from 'react-redux';
 import Filters from './Filters';
+import filterButtonImage from '../../assets/filter.png';
 
 const mapStateToProps = state => {
   return {
@@ -23,7 +24,7 @@ const DrillListPage = props => {
       {displayFilters ? (
         <Filters
           onConfirm={() => setDisplayFilters(false)}
-          onFiltered={drills => setData(drills)}
+          onFiltered={filteredDrills => setData(filteredDrills)}
           initialData={drills}
         />
       ) : (
@@ -46,7 +47,7 @@ const DrillListPage = props => {
       )}
       {!displayFilters && (
         <TouchableOpacity style={styles.filterButton} onPress={() => setDisplayFilters(true)}>
-          <Text style={styles.filterButtonText}>Filter</Text>
+          <Image source={filterButtonImage} style={styles.filterButtonImage} />
         </TouchableOpacity>
       )}
     </View>
@@ -103,13 +104,16 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
     borderRadius: 50,
-    backgroundColor: '#f2f2f2',
-    justifyContent: 'center',
-    alignItems: 'center',
+    shadowOffset: {
+      width: 0,
+      height: 10,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 10,
+    elevation: 10,
   },
-  filterButtonText: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    textTransform: 'uppercase',
+  filterButtonImage: {
+    width: '100%',
+    height: '100%',
   },
 });

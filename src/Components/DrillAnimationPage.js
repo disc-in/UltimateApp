@@ -12,7 +12,7 @@ class DrillPage extends React.Component {
         {drill.animation ? (
           <Animation animation={drill.animation} />
         ) : drill.video ? (
-          <WebView source={{ uri: 'https://www.youtube.com/embed/oN1bzPCKkGE' }} style={{ marginTop: 20 }} />
+          <WebView source={{ uri: drill.video }} style={{ marginTop: 20 }} />
         ) : (
           <Text>No visual content for this drill</Text>
         )}

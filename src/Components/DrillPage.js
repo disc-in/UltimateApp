@@ -1,25 +1,31 @@
 import React, { Component } from 'react';
-import { ScrollView, StyleSheet, View, Text, Button, ImageBackground, TouchableOpacity } from 'react-native';
+import { ScrollView, StyleSheet, View, Text, Image, ImageBackground, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 
 class DrillPage extends React.Component {
+  _toggleFavorite() {
+    console.log('TOGGLE FAVORITE function ', this.state.drill);
+    const action = { type: 'TOGGLE_FAVORITE', value: this.state.drill };
+    this.props.dispatch(action);
+  }
 
-_toggleFavorite() {
-  console.log("TOGGLE FAVORITE function ", this.state.drill)
-  const action = { type: "TOGGLE_FAVORITE", value: this.state.drill }
-  this.props.dispatch(action)
-}
+  componentDidUpdate() {
+    console.log('componentDidUpdate : ');
+    console.log(this.props.favoritesDrill);
+  }
 
-componentDidUpdate() {
-  console.log("componentDidUpdate : ")
-  console.log(this.props.favoritesDrill)
-}
+  _displayFavoriteImage() {
+    var sourceImage = require('../Images/ic_favorite_border.png');
+    if (this.props.favoritesDrill.findIndex(item => item.id === this.state.drill.id) !== -1) {
+      // Film dans nos favoris
+      sourceImage = require('../Images/ic_favorite.png');
+    }
+    return <Image style={styles.favorite_image} source={sourceImage} />;
+  }
 
   render() {
     const drill = this.props.route.params.drill;
     const { navigation } = this.props;
-
-
 
     return (
       <ScrollView style={styles.DrillPage}>
@@ -40,10 +46,13 @@ componentDidUpdate() {
           </TouchableOpacity>
         </ImageBackground>
         <View style={styles.separator} />
-
+        {/* 
         <Button title="Favoris" onPress={() => this.props.toggleFavorite(drill)}/>
+        <Button title="Favoris" onPress={() => this._toggleFavorite()}/> */}
+        <TouchableOpacity style={styles.favorite_container} onPress={() => this.props.toggleFavorite(drill)}>
+          {this._displayFavoriteImage()}
+        </TouchableOpacity>
 
-        
         <View style={styles.description}>
           <View style={styles.descriptionItem}>
             <Text style={styles.descriptionTitle}>Goals</Text>
@@ -135,21 +144,25 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 16,
   },
+  favorite_container: {
+    alignItems: 'center', // Alignement des components enfants sur l'axe secondaire, X ici
+  },
+  favorite_image: {
+    width: 40,
+    height: 40,
+  },
 });
 
-
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
-    favoritesDrill: state.favoritesDrill
-  }
-}
+    favoritesDrill: state.favoritesDrill,
+  };
+};
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-            toggleFavorite: (drill) => dispatch({ type: "TOGGLE_FAVORITE", value: drill })
-  }
-}
+    toggleFavorite: drill => dispatch({ type: 'TOGGLE_FAVORITE', value: drill }),
+  };
+};
 
-
-
-export default connect(mapStateToProps,mapDispatchToProps)(DrillPage);
+export default connect(mapStateToProps, mapDispatchToProps)(DrillPage);

@@ -38,7 +38,7 @@ const DrillListPage = props => {
                 <Text style={styles.source}>{item.source}</Text>
                 <Text style={styles.title}>{item.title}</Text>
                 <Text style={styles.numberOfPlayers}>
-                  Duration: {item.durationInMinutes} min - players: {item.nbPlayers}
+                  Duration: {item.durationInMinutes} min - players: {item.minimalPlayersNumber}
                 </Text>
               </View>
             </TouchableOpacity>

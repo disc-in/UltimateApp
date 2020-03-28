@@ -24,7 +24,7 @@ class DrillPage extends Component {
           <View style={styles.infoWrapper}>
             <Text style={styles.info}>{drill.durationInMinutes} minutes</Text>
             <View style={styles.separator} />
-            <Text style={styles.info}>{drill.nbPlayers} players</Text>
+            <Text style={styles.info}>{drill.minimalPlayersNumber} players</Text>
             <View style={styles.separator} />
             <Text style={styles.info}>{drill.level} level</Text>
           </View>

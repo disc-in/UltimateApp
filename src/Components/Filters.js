@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity, TextInput } from 'react-native';
 
 const Button = props => {
   const activeStyle = props.active ? styles.activeButton : {};
@@ -13,6 +13,7 @@ const Button = props => {
 const Filters = props => {
   const [selectedLevel, setLevel] = useState();
   const [selectedGoal, setGoal] = useState();
+  const [numberOfPlayers, setNumberOfPlayers] = useState();
 
   const onLevelChange = pressedLevel => {
     const newLevel = pressedLevel === selectedLevel ? undefined : pressedLevel;
@@ -21,6 +22,9 @@ const Filters = props => {
   const onGoalChange = pressedGoal => {
     const newGoal = pressedGoal === selectedGoal ? undefined : pressedGoal;
     setGoal(newGoal);
+  };
+  const onNumberOfPlayersChange = value => {
+    setNumberOfPlayers(value);
   };
 
   useEffect(() => {
@@ -36,6 +40,13 @@ const Filters = props => {
       : props.initialData;
     props.onFiltered(newData);
   }, [selectedGoal]);
+
+  useEffect(() => {
+    const newData = numberOfPlayers
+      ? props.initialData.filter(drill => drill.minimalPlayersNumber <= numberOfPlayers)
+      : props.initialData;
+    props.onFiltered(newData);
+  }, [numberOfPlayers]);
 
   return (
     <View style={styles.filters}>
@@ -58,6 +69,14 @@ const Filters = props => {
             <Button key={goal} title={goal} onPress={() => onGoalChange(goal)} active={selectedGoal === goal} />
           ))}
       </View>
+      <Text style={styles.filterTitle}>Number of players</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="How many players do you have?"
+        onChangeText={onNumberOfPlayersChange}
+        value={numberOfPlayers}
+        keyboardType="numeric"
+      />
       <Button title="Validate" onPress={props.onConfirm} />
     </View>
   );
@@ -89,6 +108,16 @@ const styles = StyleSheet.create({
   activeButton: {
     backgroundColor: '#eee',
     borderColor: '#d5d5d5',
+  },
+  input: {
+    marginBottom: 30,
+    padding: 10,
+    paddingHorizontal: 20,
+    fontSize: 16,
+    color: '#444',
+    borderBottomWidth: 1,
+    borderColor: '#ddd',
+    backgroundColor: '#F5F5F5',
   },
 });
 

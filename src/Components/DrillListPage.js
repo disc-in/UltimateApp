@@ -15,21 +15,21 @@ const DrillListPage = props => {
   const type = props.route.params.type;
   const drills = props.drills.filter(drill => drill.type === type);
 
-  const [data, setData] = useState(drills);
-  const [displayFilters, setDisplayFilters] = useState(false);
+  const [displayedDrills, setDisplayedDrills] = useState(drills);
+  const [isDisplayingFilters, setIsDisplayingFilters] = useState(false);
 
   return (
     <View style={styles.drillListPage}>
-      <Text style={styles.counter}>{data.length} drills available</Text>
-      {displayFilters ? (
+      <Text style={styles.counter}>{displayedDrills.length} drills available</Text>
+      {isDisplayingFilters ? (
         <Filters
-          onConfirm={() => setDisplayFilters(false)}
-          onFiltered={filteredDrills => setData(filteredDrills)}
+          onConfirm={() => setIsDisplayingFilters(false)}
+          onFiltered={newDisplayedDrills => setDisplayedDrills(newDisplayedDrills)}
           initialData={drills}
         />
       ) : (
         <FlatList
-          data={data}
+          data={displayedDrills}
           keyExtractor={item => item.id.toString()}
           renderItem={({ item }) => (
             <TouchableOpacity style={styles.drill} onPress={() => navigation.navigate('DrillPage', { drill: item })}>
@@ -45,8 +45,8 @@ const DrillListPage = props => {
           )}
         />
       )}
-      {!displayFilters && (
-        <TouchableOpacity style={styles.filterButton} onPress={() => setDisplayFilters(true)}>
+      {!isDisplayingFilters && (
+        <TouchableOpacity style={styles.filterButton} onPress={() => setIsDisplayingFilters(true)}>
           <Image source={filterButtonImage} style={styles.filterButtonImage} />
         </TouchableOpacity>
       )}

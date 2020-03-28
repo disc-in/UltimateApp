@@ -28,25 +28,12 @@ const Filters = props => {
   };
 
   useEffect(() => {
-    const newData = selectedLevel
-      ? props.initialData.filter(drill => drill.level === selectedLevel)
-      : props.initialData;
+    let newData = props.initialData;
+    if (selectedLevel) newData = newData.filter(drill => drill.level === selectedLevel);
+    if (selectedGoal) newData = newData.filter(drill => drill.goals.includes(selectedGoal));
+    if (numberOfPlayers) newData = newData.filter(drill => drill.minimalPlayersNumber <= numberOfPlayers);
     props.onFiltered(newData);
-  }, [selectedLevel]);
-
-  useEffect(() => {
-    const newData = selectedGoal
-      ? props.initialData.filter(drill => drill.goals.includes(selectedGoal))
-      : props.initialData;
-    props.onFiltered(newData);
-  }, [selectedGoal]);
-
-  useEffect(() => {
-    const newData = numberOfPlayers
-      ? props.initialData.filter(drill => drill.minimalPlayersNumber <= numberOfPlayers)
-      : props.initialData;
-    props.onFiltered(newData);
-  }, [numberOfPlayers]);
+  }, [selectedLevel, selectedGoal, numberOfPlayers]);
 
   return (
     <View style={styles.filters}>

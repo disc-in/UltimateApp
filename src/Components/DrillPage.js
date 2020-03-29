@@ -7,7 +7,6 @@ class DrillPage extends React.Component {
     super(props);
     this.state = { drill: props.drill };
   }
-
   _displayFavoriteImage() {
     var sourceImage = require('../Images/ic_favorite_border.png');
     if (this.props.favoritesDrill.findIndex(item => item.id === this.props.route.params.drill.id) !== -1) {
@@ -45,20 +44,20 @@ class DrillPage extends React.Component {
 
         <View style={styles.description}>
           <View style={styles.descriptionItem}>
-            <Text style={styles.descriptionTitle}>Goals</Text>
-            {drill.goals.map((goal, index) => (
-              <Text key={index} style={styles.descriptionText}>
-                {goal}
-              </Text>
-            ))}
+            <Text style={styles.descriptionTitle}>Description</Text>
+            <Text style={styles.descriptionText}>{drill.description}</Text>
           </View>
           <View style={styles.descriptionItem}>
             <Text style={styles.descriptionTitle}>Equipment</Text>
             <Text style={styles.descriptionText}>{drill.equipment}</Text>
           </View>
           <View style={styles.descriptionItem}>
-            <Text style={styles.descriptionTitle}>Description</Text>
-            <Text style={styles.descriptionText}>{drill.description}</Text>
+            <Text style={styles.descriptionTitle}>Goals</Text>
+            {drill.goals.map((goal, index) => (
+              <Text key={index} style={styles.descriptionText}>
+                {goal}
+              </Text>
+            ))}
           </View>
         </View>
       </ScrollView>
@@ -138,8 +137,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   favoriteImage: {
-    width: 40,
-    height: 40,
+    width: 25.5,
+    height: 30,
   },
 });
 

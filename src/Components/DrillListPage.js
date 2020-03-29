@@ -30,7 +30,7 @@ const DrillListPage = props => {
       ) : (
         <FlatList
           data={data}
-          /*  extraData={this.props.favoritesDrill} */
+          /* extraData={this.props.actions.favoritesDrill} */
           keyExtractor={item => item.id.toString()}
           renderItem={({ item }) => (
             <TouchableOpacity style={styles.drill} onPress={() => navigation.navigate('DrillPage', { drill: item })}>

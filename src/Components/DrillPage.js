@@ -3,21 +3,26 @@ import { ScrollView, StyleSheet, View, Text, Image, ImageBackground, TouchableOp
 import { connect } from 'react-redux';
 
 class DrillPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { drill: props.drill };
+  }
+
   _toggleFavorite() {
     console.log('TOGGLE FAVORITE function ', this.state.drill);
-    const action = { type: 'TOGGLE_FAVORITE', value: this.state.drill };
+    const action = { type: 'TOGGLE_FAVORITE', value: this.props.route.params.drill };
     this.props.dispatch(action);
   }
 
-  componentDidUpdate() {
+  /*   componentDidUpdate() {
     console.log('componentDidUpdate : ');
     console.log(this.props.favoritesDrill);
-  }
+  } */
 
   _displayFavoriteImage() {
     var sourceImage = require('../Images/ic_favorite_border.png');
-    if (this.props.favoritesDrill.findIndex(item => item.id === this.state.drill.id) !== -1) {
-      // Film dans nos favoris
+    if (this.props.favoritesDrill.findIndex(item => item.id === this.props.route.params.drill.id) !== -1) {
+      //  dans nos favoris
       sourceImage = require('../Images/ic_favorite.png');
     }
     return <Image style={styles.favorite_image} source={sourceImage} />;
@@ -47,8 +52,7 @@ class DrillPage extends React.Component {
         </ImageBackground>
         <View style={styles.separator} />
         {/* 
-        <Button title="Favoris" onPress={() => this.props.toggleFavorite(drill)}/>
-        <Button title="Favoris" onPress={() => this._toggleFavorite()}/> */}
+        <Button title="Favoris" onPress={() => this.props.toggleFavorite(drill)}/> */}
         <TouchableOpacity style={styles.favorite_container} onPress={() => this.props.toggleFavorite(drill)}>
           {this._displayFavoriteImage()}
         </TouchableOpacity>

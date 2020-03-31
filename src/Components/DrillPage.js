@@ -1,16 +1,17 @@
 import React from 'react';
 import { ScrollView, StyleSheet, View, Text, Image, ImageBackground, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
+import ic_favorite_border from '../Images/ic_favorite_border.png';
+import ic_favorite from '../Images/ic_favorite.png';
 
 class DrillPage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { drill: props.drill };
-  }
+  state = {
+    drill: this.props.drill,
+  };
   _displayFavoriteImage() {
-    var sourceImage = require('../Images/ic_favorite_border.png');
+    var sourceImage = ic_favorite_border;
     if (this.props.favoritesDrill.findIndex(item => item.id === this.props.route.params.drill.id) !== -1) {
-      sourceImage = require('../Images/ic_favorite.png');
+      sourceImage = ic_favorite;
     }
     return <Image style={styles.favoriteImage} source={sourceImage} />;
   }

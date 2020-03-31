@@ -2,20 +2,25 @@ import animationMenageATrois from './AnimationMenageATrois';
 import animationSquare from './AnimationSquare';
 
 export default {
+  /*   const types: {
+    FITNESS: 'fitness',
+    TECHNICAL: 'technical',
+  }, */
+
   favoritesDrill: [],
   drills: [
     {
       id: 1,
       type: 'fitness', // vs technical
       source: 'MadFit ',
-      title: 'Full body hiit',
+      title: 'Full body HIIT',
       image: 'https://i.insider.com/5a454d9a4aa6b519158b727e?width=600&format=jpeg&auto=webp',
       description:
         'A 20 minute APARTMENT FRIENDLY full body hiit workout AT HOME! Low impact, no jumping, equipment free, and NO REPEAT! ',
       nbPlayers: 1,
       equipment: 'No equipment',
       durationInMinutes: 22,
-      goals: ['Hiit', 'full body'],
+      goals: ['HIIT', 'full body'],
       level: 'Beginner',
       video: 'https://www.youtube.com/embed/JkVHrA5o23o',
       steps: [

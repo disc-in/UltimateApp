@@ -2,17 +2,7 @@ import React, { Component } from 'react';
 import { ScrollView, StyleSheet, View, Text, Button, ImageBackground, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 
-class DrillPage extends Component {
-  _toggleFavorite() {
-    const action = { type: 'TOGGLE_FAVORITE', value: this.state.dr };
-    this.props.dispatch(action);
-  }
-
-  componentDidUpdate() {
-    console.log('componentDidUpdate : ');
-    console.log(this.props.favoritesDrill);
-  }
-
+export class DrillPage extends Component {
   render() {
     const drill = this.props.route.params.drill;
     const { navigation } = this.props;

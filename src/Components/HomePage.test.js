@@ -16,5 +16,13 @@ describe('<HomePage />', () => {
     await fireEvent.press(getByText('Frisbee'));
 
     expect(navigation.navigate).toBeCalledWith('DrillListPage', { type: 'technical' });
+
+    await fireEvent.press(getByText('Fitness'));
+
+    expect(navigation.navigate).toBeCalledWith('DrillListPage', { type: 'fitness' });
+
+    await fireEvent.press(getByText('Trainings'));
+
+    expect(navigation.navigate).toBeCalledWith('DrillListPage', { type: 'collectif' });
   });
 });

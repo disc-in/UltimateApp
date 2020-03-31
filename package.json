@@ -43,8 +43,7 @@
     "jest-expo": "^36.0.1",
     "lint-staged": "^10.0.8",
     "prettier": "^1.19.1",
-    "react-test-renderer": "^16.13.1",
-    "typescript": "^3.8.3"
+    "react-test-renderer": "^16.13.1"
   },
   "lint-staged": {
     "**/*.{js,jsx,css}": [

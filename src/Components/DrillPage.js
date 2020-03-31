@@ -3,16 +3,6 @@ import { ScrollView, StyleSheet, View, Text, Button, ImageBackground, TouchableO
 import { connect } from 'react-redux';
 
 class DrillPage extends Component {
-  _toggleFavorite() {
-    const action = { type: 'TOGGLE_FAVORITE', value: this.state.dr };
-    this.props.dispatch(action);
-  }
-
-  componentDidUpdate() {
-    console.log('componentDidUpdate : ');
-    console.log(this.props.favoritesDrill);
-  }
-
   render() {
     const drill = this.props.route.params.drill;
     const { navigation } = this.props;

@@ -319,7 +319,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           "id": 2,
           "image": "https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg",
           "level": "beginner",
-          "nbPlayers": 2,
+          "minimalPlayersNumber": 2,
           "source": "Flikulti",
           "steps": Array [],
           "title": "Defense Positioning",
@@ -618,7 +618,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           "id": 4,
           "image": "https://conseils.casalsport.com/wp-content/uploads/2019/05/ultimate-frisbee-sport.jpg",
           "level": "beginner",
-          "nbPlayers": 2,
+          "minimalPlayersNumber": 2,
           "source": "Rise up",
           "steps": Array [
             Object {
@@ -923,7 +923,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           "id": 5,
           "image": "https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1",
           "level": "intermediate",
-          "nbPlayers": 5,
+          "minimalPlayersNumber": 5,
           "source": "Moby book",
           "steps": Array [],
           "title": "3 vs 2",
@@ -940,7 +940,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           "id": 6,
           "image": "https://siena.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2020/03/05/node_528988/1877948/public/2020/03/05/B9722816509Z.1_20200305151253_000%2BG2AFL39TF.1-0.jpg?itok=jAQBQG6y1583417579",
           "level": "beginner",
-          "nbPlayers": 10,
+          "minimalPlayersNumber": 10,
           "source": "Haude et Djé",
           "steps": Array [
             Object {
@@ -1245,7 +1245,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           "id": 7,
           "image": "https://d3j2bju5c7tc02.cloudfront.net/2016_44/backhand.jpg",
           "level": "intermediate",
-          "nbPlayers": 2,
+          "minimalPlayersNumber": 2,
           "source": "Moby book",
           "steps": Array [],
           "title": "The big 8",
@@ -1262,7 +1262,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           "id": 8,
           "image": "https://cms.qz.com/wp-content/uploads/2015/08/h_00486649-e1438606606764.jpg?quality=75&strip=all&w=1600&h=900",
           "level": "intermediate",
-          "nbPlayers": 2,
+          "minimalPlayersNumber": 2,
           "source": "Kie",
           "steps": Array [
             Object {
@@ -1284,7 +1284,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           "id": 9,
           "image": "https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg",
           "level": "intermediate",
-          "nbPlayers": 6,
+          "minimalPlayersNumber": 6,
           "source": "Mooncatchers",
           "steps": Array [],
           "title": "Long & dishies",
@@ -1933,30 +1933,32 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "alignItems": "center",
-        "backgroundColor": "#f2f2f2",
         "borderRadius": 50,
         "bottom": "5%",
+        "elevation": 10,
         "height": 100,
-        "justifyContent": "center",
         "opacity": 1,
         "position": "absolute",
         "right": "5%",
+        "shadowOffset": Object {
+          "height": 10,
+          "width": 0,
+        },
+        "shadowOpacity": 0.3,
+        "shadowRadius": 10,
         "width": 100,
       }
     }
   >
-    <Text
+    <Image
+      source={1}
       style={
         Object {
-          "fontSize": 24,
-          "fontWeight": "bold",
-          "textTransform": "uppercase",
+          "height": "100%",
+          "width": "100%",
         }
       }
-    >
-      Filter
-    </Text>
+    />
   </View>
 </View>
 `;
@@ -2023,30 +2025,32 @@ exports[`<DrillListPage /> renders correctly with a drill 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "alignItems": "center",
-        "backgroundColor": "#f2f2f2",
         "borderRadius": 50,
         "bottom": "5%",
+        "elevation": 10,
         "height": 100,
-        "justifyContent": "center",
         "opacity": 1,
         "position": "absolute",
         "right": "5%",
+        "shadowOffset": Object {
+          "height": 10,
+          "width": 0,
+        },
+        "shadowOpacity": 0.3,
+        "shadowRadius": 10,
         "width": 100,
       }
     }
   >
-    <Text
+    <Image
+      source={1}
       style={
         Object {
-          "fontSize": 24,
-          "fontWeight": "bold",
-          "textTransform": "uppercase",
+          "height": "100%",
+          "width": "100%",
         }
       }
-    >
-      Filter
-    </Text>
+    />
   </View>
 </View>
 `;

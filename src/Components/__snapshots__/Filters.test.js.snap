@@ -13,7 +13,7 @@ exports[`<Filters /> renders correctly 1`] = `
     style={
       Object {
         "fontWeight": "bold",
-        "marginTop": 20,
+        "marginTop": 10,
         "textTransform": "uppercase",
       }
     }
@@ -24,6 +24,9 @@ exports[`<Filters /> renders correctly 1`] = `
     style={
       Object {
         "flexDirection": "row",
+        "flexWrap": "wrap",
+        "justifyContent": "center",
+        "marginBottom": 10,
       }
     }
   >
@@ -106,6 +109,111 @@ exports[`<Filters /> renders correctly 1`] = `
       </Text>
     </View>
   </View>
+  <Text
+    style={
+      Object {
+        "fontWeight": "bold",
+        "marginTop": 10,
+        "textTransform": "uppercase",
+      }
+    }
+  >
+    Goals
+  </Text>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "justifyContent": "center",
+        "marginBottom": 10,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "borderColor": "#e5e5e5",
+          "borderWidth": 1,
+          "margin": 5,
+          "opacity": 1,
+          "paddingHorizontal": 20,
+          "paddingVertical": 10,
+        }
+      }
+    >
+      <Text>
+        Catch
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "borderColor": "#e5e5e5",
+          "borderWidth": 1,
+          "margin": 5,
+          "opacity": 1,
+          "paddingHorizontal": 20,
+          "paddingVertical": 10,
+        }
+      }
+    >
+      <Text>
+        Handling
+      </Text>
+    </View>
+  </View>
+  <Text
+    style={
+      Object {
+        "fontWeight": "bold",
+        "marginTop": 10,
+        "textTransform": "uppercase",
+      }
+    }
+  >
+    Number of players
+  </Text>
+  <TextInput
+    allowFontScaling={true}
+    keyboardType="numeric"
+    onChangeText={[Function]}
+    placeholder="How many players do you have?"
+    rejectResponderTermination={true}
+    style={
+      Object {
+        "backgroundColor": "#F5F5F5",
+        "borderBottomWidth": 1,
+        "borderColor": "#ddd",
+        "color": "#444",
+        "fontSize": 16,
+        "marginBottom": 30,
+        "padding": 10,
+        "paddingHorizontal": 20,
+      }
+    }
+    underlineColorAndroid="transparent"
+  />
   <View
     accessible={true}
     focusable={true}

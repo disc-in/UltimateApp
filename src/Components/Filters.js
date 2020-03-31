@@ -50,7 +50,8 @@ const Filters = props => {
       <Text style={styles.filterTitle}>Goals</Text>
       <View style={styles.filter}>
         {props.initialData
-          .flatMap(drill => drill.goals)
+          .map(drill => drill.goals)
+          .reduce((x, y) => x.concat(y), [])
           .filter((goal, index, array) => array.indexOf(goal) === index)
           .map(goal => (
             <Button key={goal} title={goal} onPress={() => onGoalChange(goal)} active={selectedGoal === goal} />

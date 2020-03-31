@@ -1,0 +1,333 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DrillPage /> renders correctly 1`] = `
+<RCTScrollView
+  style={
+    Object {
+      "backgroundColor": "#fff",
+    }
+  }
+>
+  <View>
+    <View
+      accessibilityIgnoresInvertColors={true}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgb(0,0,0)",
+          "padding": 20,
+        }
+      }
+    >
+      <Image
+        source={
+          Object {
+            "uri": "http://www.liberte-fitness.fr/sites/default/files/styles/slider/public/news/tone.jpg?itok=505bme2a",
+          }
+        }
+        style={
+          Array [
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+            Object {
+              "height": undefined,
+              "width": undefined,
+            },
+            Object {
+              "opacity": 0.5,
+            },
+          ]
+        }
+      />
+      <Text
+        style={
+          Object {
+            "color": "#fff",
+            "fontSize": 48,
+            "marginBottom": 100,
+            "marginTop": 100,
+            "textAlign": "center",
+          }
+        }
+      >
+        Hot Box
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-evenly",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#fff",
+              "fontSize": 18,
+              "paddingHorizontal": 30,
+            }
+          }
+        >
+          15
+           minutes
+        </Text>
+        <View
+          style={
+            Object {
+              "borderRightColor": "#fff",
+              "borderRightWidth": 1,
+              "height": 10,
+            }
+          }
+        />
+        <Text
+          style={
+            Object {
+              "color": "#fff",
+              "fontSize": 18,
+              "paddingHorizontal": 30,
+            }
+          }
+        >
+          2
+           players
+        </Text>
+        <View
+          style={
+            Object {
+              "borderRightColor": "#fff",
+              "borderRightWidth": 1,
+              "height": 10,
+            }
+          }
+        />
+        <Text
+          style={
+            Object {
+              "color": "#fff",
+              "fontSize": 18,
+              "paddingHorizontal": 30,
+            }
+          }
+        >
+          intermediate
+           level
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#f2f2f2",
+            "borderRadius": 50,
+            "height": 100,
+            "justifyContent": "center",
+            "margin": 40,
+            "opacity": 1,
+            "width": 100,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "fontSize": 24,
+              "fontWeight": "bold",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Video
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "borderRightColor": "#fff",
+          "borderRightWidth": 1,
+          "height": 10,
+        }
+      }
+    />
+    <View
+      accessibilityRole="button"
+      accessibilityStates={Array []}
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {},
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#007AFF",
+                "fontSize": 18,
+                "padding": 8,
+                "textAlign": "center",
+              },
+            ]
+          }
+        >
+          Favoris
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#fff",
+          "padding": 20,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "marginBottom": 30,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#000000",
+              "fontSize": 20,
+              "fontWeight": "bold",
+              "marginBottom": 10,
+              "textAlign": "center",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Goals
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#909090",
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
+        >
+          Catch
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#909090",
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
+        >
+          Handling
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "marginBottom": 30,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#000000",
+              "fontSize": 20,
+              "fontWeight": "bold",
+              "marginBottom": 10,
+              "textAlign": "center",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Equipment
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#909090",
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
+        >
+          One disc, 2 cones, 3 players
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "marginBottom": 30,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#000000",
+              "fontSize": 20,
+              "fontWeight": "bold",
+              "marginBottom": 10,
+              "textAlign": "center",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Description
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#909090",
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget
+        </Text>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;

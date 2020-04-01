@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Text, ImageBackground, TouchableHighlight } from 'react-native';
+import theme from '../styles/theme.style';
 import fitness from '../../assets/HomePage/fitness.png';
 import frisbeeGlove from '../../assets/HomePage/frisbeeglove.png';
 import huddle from '../../assets/HomePage/huddle.png';
@@ -47,7 +48,7 @@ const styles = StyleSheet.create({
   mainContainer: {
     height: '100%',
     paddingTop: 20,
-    backgroundColor: '#fff',
+    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
   },
   menuItem: {
     height: '30%',
@@ -57,7 +58,7 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   text: {
-    color: '#fff',
+    color: theme.PRIMARY_COLOR_LIGHT,
     fontSize: 28,
     fontWeight: 'bold',
   },

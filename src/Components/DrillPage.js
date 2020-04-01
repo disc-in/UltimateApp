@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { ScrollView, StyleSheet, View, Text, Button, ImageBackground, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
+import theme from '../styles/theme.style';
 
 class DrillPage extends Component {
   _toggleFavorite() {
@@ -64,7 +65,7 @@ class DrillPage extends Component {
 
 const styles = StyleSheet.create({
   DrillPage: {
-    backgroundColor: '#fff',
+    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
   },
   image: {
     padding: 20,
@@ -77,7 +78,7 @@ const styles = StyleSheet.create({
   title: {
     marginTop: 100,
     marginBottom: 100,
-    color: '#fff',
+    color: theme.PRIMARY_COLOR_LIGHT,
     fontSize: 48,
     textAlign: 'center',
   },
@@ -87,21 +88,21 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   info: {
-    color: '#fff',
+    color: theme.PRIMARY_COLOR_LIGHT,
     paddingHorizontal: 30,
     fontSize: 18,
   },
   separator: {
     height: 10,
     borderRightWidth: 1,
-    borderRightColor: '#fff',
+    borderRightColor: theme.PRIMARY_COLOR_LIGHT,
   },
   videoLink: {
     margin: 40,
     width: 100,
     height: 100,
     borderRadius: 50,
-    backgroundColor: '#f2f2f2',
+    backgroundColor: theme.PRIMARY_COLOR_LIGHT,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -111,7 +112,6 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
   },
   description: {
-    backgroundColor: '#fff',
     padding: 20,
   },
   descriptionItem: {
@@ -123,10 +123,10 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
     fontWeight: 'bold',
     fontSize: 20,
-    color: '#000000',
+    color: theme.PRIMARY_COLOR,
   },
   descriptionText: {
-    color: '#909090',
+    color: theme.SECONDARY_COLOR,
     textAlign: 'center',
     fontSize: 16,
   },

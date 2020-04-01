@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   counter: {
-    color: theme.SECONDARY_COLOR,
+    color: theme.COLOR_SECONDARY,
     marginBottom: 20,
   },
   drill: {
@@ -90,12 +90,12 @@ const styles = StyleSheet.create({
   },
   source: {
     flex: 2,
-    color: theme.SECONDARY_COLOR,
+    color: theme.COLOR_SECONDARY,
     fontSize: theme.FONT_SIZE_SMALL,
   },
   numberOfPlayers: {
     flex: 2,
-    color: theme.SECONDARY_COLOR,
+    color: theme.COLOR_SECONDARY,
     fontSize: theme.FONT_SIZE_SMALL,
   },
   filterButton: {

@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   text: {
-    color: theme.PRIMARY_COLOR_LIGHT,
+    color: theme.COLOR_PRIMARY_LIGHT,
     fontSize: 28,
     fontWeight: 'bold',
   },

@@ -51,16 +51,16 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   button: {
-    borderColor: theme.BUTTON_BORDER_COLOR,
-    backgroundColor: theme.BUTTON_BACKGROUND_COLOR,
+    borderColor: theme.BORDER_COLOR_BUTTON,
+    backgroundColor: theme.BACKGROUND_COLOR_BUTTON,
     borderWidth: 1,
     margin: 5,
     paddingVertical: 10,
     paddingHorizontal: 20,
   },
   activeButton: {
-    borderColor: theme.BUTTON_BORDER_COLOR_ACTIVE,
-    backgroundColor: theme.BUTTON_BACKGROUND_COLOR_ACTIVE,
+    borderColor: theme.BORDER_COLOR_BUTTON_ACTIVE,
+    backgroundColor: theme.BACKGROUND_COLOR_BUTTON_ACTIVE,
   },
 });
 

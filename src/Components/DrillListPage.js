@@ -85,17 +85,18 @@ const styles = StyleSheet.create({
   title: {
     flex: 3,
     fontWeight: 'bold',
-    fontSize: 20,
+    fontSize: theme.FONT_SIZE_LARGE,
     flexWrap: 'wrap',
   },
   source: {
     flex: 2,
     color: theme.SECONDARY_COLOR,
+    fontSize: theme.FONT_SIZE_SMALL,
   },
   numberOfPlayers: {
     flex: 2,
     color: theme.SECONDARY_COLOR,
-    fontSize: 14,
+    fontSize: theme.FONT_SIZE_SMALL,
   },
   filterButton: {
     position: 'absolute',

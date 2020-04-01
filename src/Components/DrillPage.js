@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
   info: {
     color: theme.PRIMARY_COLOR_LIGHT,
     paddingHorizontal: 30,
-    fontSize: 18,
+    fontSize: theme.FONT_SIZE_MEDIUM,
   },
   separator: {
     height: 10,
@@ -122,13 +122,13 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     textTransform: 'uppercase',
     fontWeight: 'bold',
-    fontSize: 20,
+    fontSize: theme.FONT_SIZE_LARGE,
     color: theme.PRIMARY_COLOR,
   },
   descriptionText: {
     color: theme.SECONDARY_COLOR,
     textAlign: 'center',
-    fontSize: 16,
+    fontSize: theme.FONT_SIZE_MEDIUM,
   },
 });
 

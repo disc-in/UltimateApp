@@ -30,15 +30,10 @@ const DrillListPage = props => {
       ) : (
         <FlatList
           data={data}
-          /* extraData={this.props.actions.favoritesDrill} */
           keyExtractor={item => item.id.toString()}
           renderItem={({ item }) => (
             <TouchableOpacity style={styles.drill} onPress={() => navigation.navigate('DrillPage', { drill: item })}>
               <Image style={styles.image} source={{ uri: item.image }} />
-              {/* <DrillItem drill={item}
-              isDrillFavorite={(this.props.favoritesDrill.findIndex(drill => drill.id === item.id) !== -1) ? true : false}
-              displayDetailForDrill={this._displayDetailForDrill}
-              /> */}
               <View style={styles.contentContainer}>
                 <Text style={styles.source}>{item.source}</Text>
                 <Text style={styles.title}>{item.title}</Text>

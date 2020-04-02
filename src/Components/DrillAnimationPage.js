@@ -12,7 +12,7 @@ class DrillPage extends React.Component {
         {drill.animation ? (
           <Animation animation={drill.animation} />
         ) : drill.video ? (
-          <WebView source={{ uri: drill.video }} style={{ marginTop: 20 }} />
+          <WebView source={{ uri: drill.video }} style={styles.VideoPresentation} />
         ) : (
           <Text>No visual content for this drill</Text>
         )}
@@ -24,6 +24,9 @@ class DrillPage extends React.Component {
 const styles = StyleSheet.create({
   DrillAnimationPage: {
     height: '100%',
+  },
+  VideoPresentation: {
+    marginTop: 20,
   },
 });
 

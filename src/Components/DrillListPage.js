@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Text, Image, TouchableOpacity, FlatList } from 'react-native';
 import { connect } from 'react-redux';
+import theme from '../styles/theme.style';
 import Filters from './Filters';
 
 const mapStateToProps = state => {
@@ -60,11 +61,11 @@ const styles = StyleSheet.create({
   drillListPage: {
     paddingTop: 10,
     paddingLeft: 20,
-    backgroundColor: '#fff',
+    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     height: '100%',
   },
   counter: {
-    color: '#767676',
+    color: theme.COLOR_SECONDARY,
     marginBottom: 20,
   },
   drill: {
@@ -85,17 +86,18 @@ const styles = StyleSheet.create({
   title: {
     flex: 3,
     fontWeight: 'bold',
-    fontSize: 20,
+    fontSize: theme.FONT_SIZE_LARGE,
     flexWrap: 'wrap',
   },
   source: {
     flex: 2,
-    color: '#A6A6A6',
+    color: theme.COLOR_SECONDARY,
+    fontSize: theme.FONT_SIZE_SMALL,
   },
   numberOfPlayers: {
     flex: 2,
-    color: '#AFAFAF',
-    fontSize: 14,
+    color: theme.COLOR_SECONDARY,
+    fontSize: theme.FONT_SIZE_SMALL,
   },
   filterButton: {
     position: 'absolute',
@@ -104,9 +106,16 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
     borderRadius: 50,
-    backgroundColor: '#f2f2f2',
+    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     justifyContent: 'center',
     alignItems: 'center',
+    shadowOffset: {
+      width: 0,
+      height: 10,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 10,
+    elevation: 10,
   },
   filterButtonText: {
     fontSize: 24,

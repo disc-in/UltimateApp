@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import ic_favorite_border from '../Images/ic_favorite_border.png';
 import ic_favorite from '../Images/ic_favorite.png';
 
+
 class DrillPage extends React.Component {
   state = {
     drill: this.props.drill,
@@ -14,6 +15,7 @@ class DrillPage extends React.Component {
       sourceImage = ic_favorite;
     }
     return <Image style={styles.favoriteImage} source={sourceImage} />;
+
   }
 
   render() {
@@ -42,6 +44,7 @@ class DrillPage extends React.Component {
         <TouchableOpacity style={styles.favoriteContainer} onPress={() => this.props.toggleFavorite(drill)}>
           {this._displayFavoriteImage()}
         </TouchableOpacity>
+
 
         <View style={styles.description}>
           <View style={styles.descriptionItem}>
@@ -151,7 +154,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    toggleFavorite: drill => dispatch({ type: 'TOGGLE_FAVORITE', value: drill }),
+
   };
 };
 

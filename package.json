@@ -1,6 +1,8 @@
 {
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
+    "test": "jest --watch --coverage=false --changedSince=master",
+    "test-ci": "jest --coverage=true",
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
@@ -38,12 +40,15 @@
     "eslint-plugin-react-hooks": "^2.5.1",
     "eslint-plugin-react-native": "^3.8.1",
     "husky": "^4.2.3",
+    "jest-expo": "^36.0.1",
     "lint-staged": "^10.0.8",
     "prettier": "^1.19.1",
+    "react-test-renderer": "^16.13.1",
     "typescript": "^3.8.3"
   },
   "lint-staged": {
-    "**/*.{js,jsx,json,css}": [
+    "**/*.{js,jsx,css}": [
+      "npm run lint-fix",
       "npm run prettier-fix"
     ]
   },
@@ -51,6 +56,12 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "jest": {
+    "preset": "jest-expo",
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base)"
+    ]
   },
   "private": true
 }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import theme from '../styles/theme.style';
 
 const Button = props => {
   const activeStyle = props.active ? styles.activeButton : {};
@@ -50,15 +51,16 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   button: {
-    borderColor: '#e5e5e5',
+    borderColor: theme.BORDER_COLOR_BUTTON,
+    backgroundColor: theme.BACKGROUND_COLOR_BUTTON,
     borderWidth: 1,
     margin: 5,
     paddingVertical: 10,
     paddingHorizontal: 20,
   },
   activeButton: {
-    backgroundColor: '#eee',
-    borderColor: '#d5d5d5',
+    borderColor: theme.BORDER_COLOR_BUTTON_ACTIVE,
+    backgroundColor: theme.BACKGROUND_COLOR_BUTTON_ACTIVE,
   },
 });
 

@@ -4,7 +4,6 @@ const initialState = { favoritesDrill: [] };
 
 function toggleFavorite(state = initialState, action) {
   let nextState;
-
   switch (action.type) {
     case 'TOGGLE_FAVORITE':
       const favoriteDrillIndex = state.favoritesDrill.findIndex(item => item.id === action.value.id);

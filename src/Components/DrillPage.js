@@ -3,6 +3,7 @@ import { ScrollView, StyleSheet, View, Text, Image, ImageBackground, TouchableOp
 import { connect } from 'react-redux';
 import ic_favorite_border from '../Images/ic_favorite_border.png';
 import ic_favorite from '../Images/ic_favorite.png';
+import theme from '../styles/theme.style';
 
 class DrillPage extends React.Component {
   state = {

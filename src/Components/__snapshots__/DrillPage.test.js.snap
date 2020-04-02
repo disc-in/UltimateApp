@@ -168,8 +168,6 @@ exports[`<DrillPage /> renders correctly 1`] = `
       }
     />
     <View
-      accessibilityRole="button"
-      accessibilityStates={Array []}
       accessible={true}
       focusable={true}
       isTVSelectable={true}
@@ -182,32 +180,20 @@ exports[`<DrillPage /> renders correctly 1`] = `
       onStartShouldSetResponder={[Function]}
       style={
         Object {
+          "alignItems": "center",
           "opacity": 1,
         }
       }
     >
-      <View
+      <Image
+        source={1}
         style={
-          Array [
-            Object {},
-          ]
-        }
-      >
-        <Text
-          style={
-            Array [
-              Object {
-                "color": "#007AFF",
-                "fontSize": 18,
-                "padding": 8,
-                "textAlign": "center",
-              },
-            ]
+          Object {
+            "height": 30,
+            "width": 25.5,
           }
-        >
-          Favoris
-        </Text>
-      </View>
+        }
+      />
     </View>
     <View
       style={
@@ -235,7 +221,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
             }
           }
         >
-          Goals
+          Description
         </Text>
         <Text
           style={
@@ -246,18 +232,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
             }
           }
         >
-          Catch
-        </Text>
-        <Text
-          style={
-            Object {
-              "color": "#A6A6A6",
-              "fontSize": 16,
-              "textAlign": "center",
-            }
-          }
-        >
-          Handling
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget
         </Text>
       </View>
       <View
@@ -312,7 +287,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
             }
           }
         >
-          Description
+          Goals
         </Text>
         <Text
           style={
@@ -323,7 +298,18 @@ exports[`<DrillPage /> renders correctly 1`] = `
             }
           }
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget
+          Catch
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#A6A6A6",
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
+        >
+          Handling
         </Text>
       </View>
     </View>

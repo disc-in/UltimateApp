@@ -237,9 +237,9 @@ exports[`<Filters /> renders correctly 1`] = `
     rejectResponderTermination={true}
     style={
       Object {
-        "backgroundColor": "#F5F5F5",
+        "backgroundColor": "#fff",
         "borderBottomWidth": 1,
-        "borderColor": "#ddd",
+        "borderColor": "#e5e5e5",
         "color": "#444",
         "fontSize": 16,
         "marginBottom": 30,

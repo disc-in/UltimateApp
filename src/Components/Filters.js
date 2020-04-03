@@ -120,8 +120,8 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#444',
     borderBottomWidth: 1,
-    borderColor: '#ddd',
-    backgroundColor: '#F5F5F5',
+    borderColor: theme.BORDER_COLOR_BUTTON,
+    backgroundColor: theme.BACKGROUND_COLOR_BUTTON,
   },
 });
 

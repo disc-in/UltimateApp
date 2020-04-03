@@ -10,65 +10,76 @@ const Button = props => {
   );
 };
 
-const Filters = props => {
-  const [selectedLevel, setLevel] = useState();
-  const [selectedGoal, setGoal] = useState();
-  const [numberOfPlayers, setNumberOfPlayers] = useState();
-
-  const onLevelChange = pressedLevel => {
-    const newLevel = pressedLevel === selectedLevel ? undefined : pressedLevel;
-    setLevel(newLevel);
-  };
-  const onGoalChange = pressedGoal => {
-    const newGoal = pressedGoal === selectedGoal ? undefined : pressedGoal;
-    setGoal(newGoal);
-  };
-  const onNumberOfPlayersChange = value => {
-    setNumberOfPlayers(value);
+class Filters extends React.Component {
+  state = {
+    selectedLevel: undefined,
+    selectedGoal: undefined,
+    numberOfPlayers: undefined,
   };
 
-  useEffect(() => {
-    let newData = props.initialData;
+  onPressedChange(target, value) {
+    const newValue = value === this.state[target] ? undefined : value;
+    this.setState({ [target]: newValue }, this.applyFilters);
+  }
+
+  onInputChange(target, value) {
+    this.setState({ [target]: value }, this.applyFilters);
+  }
+
+  applyFilters() {
+    const { selectedLevel, selectedGoal, numberOfPlayers } = this.state;
+    let newData = this.props.initialData;
+
     if (selectedLevel) newData = newData.filter(drill => drill.level === selectedLevel);
     if (selectedGoal) newData = newData.filter(drill => drill.goals.includes(selectedGoal));
     if (numberOfPlayers) newData = newData.filter(drill => drill.minimalPlayersNumber <= numberOfPlayers);
-    props.onFiltered(newData);
-  }, [selectedLevel, selectedGoal, numberOfPlayers]);
 
-  return (
-    <View style={styles.filters}>
-      <Text style={styles.filterTitle}>Level</Text>
-      <View style={styles.filter}>
-        <Button title="Beginner" onPress={() => onLevelChange('beginner')} active={selectedLevel === 'beginner'} />
-        <Button
-          title="Intermediate"
-          onPress={() => onLevelChange('intermediate')}
-          active={selectedLevel === 'intermediate'}
-        />
-        <Button title="Advanced" onPress={() => onLevelChange('advanced')} active={selectedLevel === 'advanced'} />
-      </View>
-      <Text style={styles.filterTitle}>Goals</Text>
-      <View style={styles.filter}>
-        {props.initialData
-          .map(drill => drill.goals)
-          .reduce((x, y) => x.concat(y), [])
-          .filter((goal, index, array) => array.indexOf(goal) === index)
-          .map(goal => (
-            <Button key={goal} title={goal} onPress={() => onGoalChange(goal)} active={selectedGoal === goal} />
+    this.props.onFiltered(newData);
+  }
+
+  render() {
+    const { selectedLevel, selectedGoal, numberOfPlayers } = this.state;
+    return (
+      <View style={styles.filters}>
+        <Text style={styles.filterTitle}>Level</Text>
+        <View style={styles.filter}>
+          {['beginner', 'intermediate', 'advanced'].map(level => (
+            <Button
+              key={level}
+              title={level}
+              onPress={this.onPressedChange.bind(this, 'selectedLevel', level)}
+              active={selectedLevel === level}
+            />
           ))}
+        </View>
+        <Text style={styles.filterTitle}>Goals</Text>
+        <View style={styles.filter}>
+          {this.props.initialData
+            .map(drill => drill.goals)
+            .reduce((x, y) => x.concat(y), [])
+            .filter((goal, index, array) => array.indexOf(goal) === index)
+            .map(goal => (
+              <Button
+                key={goal}
+                title={goal}
+                onPress={this.onPressedChange.bind(this, 'selectedGoal', goal)}
+                active={selectedGoal === goal}
+              />
+            ))}
+        </View>
+        <Text style={styles.filterTitle}>Number of players</Text>
+        <TextInput
+          style={styles.input}
+          placeholder="How many players do you have?"
+          onChangeText={this.onInputChange.bind(this, 'numberOfPlayers')}
+          value={numberOfPlayers}
+          keyboardType="numeric"
+        />
+        <Button title="Validate" onPress={this.props.onConfirm} />
       </View>
-      <Text style={styles.filterTitle}>Number of players</Text>
-      <TextInput
-        style={styles.input}
-        placeholder="How many players do you have?"
-        onChangeText={onNumberOfPlayersChange}
-        value={numberOfPlayers}
-        keyboardType="numeric"
-      />
-      <Button title="Validate" onPress={props.onConfirm} />
-    </View>
-  );
-};
+    );
+  }
+}
 
 const styles = StyleSheet.create({
   filters: {
@@ -96,6 +107,9 @@ const styles = StyleSheet.create({
   activeButton: {
     backgroundColor: '#eee',
     borderColor: '#d5d5d5',
+  },
+  buttonText: {
+    textTransform: 'capitalize',
   },
   input: {
     marginBottom: 30,

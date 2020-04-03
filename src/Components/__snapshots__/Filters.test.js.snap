@@ -52,8 +52,14 @@ exports[`<Filters /> renders correctly 1`] = `
         }
       }
     >
-      <Text>
-        Beginner
+      <Text
+        style={
+          Object {
+            "textTransform": "capitalize",
+          }
+        }
+      >
+        beginner
       </Text>
     </View>
     <View
@@ -78,8 +84,14 @@ exports[`<Filters /> renders correctly 1`] = `
         }
       }
     >
-      <Text>
-        Intermediate
+      <Text
+        style={
+          Object {
+            "textTransform": "capitalize",
+          }
+        }
+      >
+        intermediate
       </Text>
     </View>
     <View
@@ -104,8 +116,14 @@ exports[`<Filters /> renders correctly 1`] = `
         }
       }
     >
-      <Text>
-        Advanced
+      <Text
+        style={
+          Object {
+            "textTransform": "capitalize",
+          }
+        }
+      >
+        advanced
       </Text>
     </View>
   </View>
@@ -152,7 +170,13 @@ exports[`<Filters /> renders correctly 1`] = `
         }
       }
     >
-      <Text>
+      <Text
+        style={
+          Object {
+            "textTransform": "capitalize",
+          }
+        }
+      >
         Catch
       </Text>
     </View>
@@ -178,7 +202,13 @@ exports[`<Filters /> renders correctly 1`] = `
         }
       }
     >
-      <Text>
+      <Text
+        style={
+          Object {
+            "textTransform": "capitalize",
+          }
+        }
+      >
         Handling
       </Text>
     </View>
@@ -236,7 +266,13 @@ exports[`<Filters /> renders correctly 1`] = `
       }
     }
   >
-    <Text>
+    <Text
+      style={
+        Object {
+          "textTransform": "capitalize",
+        }
+      }
+    >
       Validate
     </Text>
   </View>

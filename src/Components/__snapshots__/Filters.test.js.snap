@@ -43,6 +43,7 @@ exports[`<Filters /> renders correctly 1`] = `
       onStartShouldSetResponder={[Function]}
       style={
         Object {
+          "backgroundColor": "#fff",
           "borderColor": "#e5e5e5",
           "borderWidth": 1,
           "margin": 5,
@@ -75,6 +76,7 @@ exports[`<Filters /> renders correctly 1`] = `
       onStartShouldSetResponder={[Function]}
       style={
         Object {
+          "backgroundColor": "#fff",
           "borderColor": "#e5e5e5",
           "borderWidth": 1,
           "margin": 5,
@@ -107,6 +109,7 @@ exports[`<Filters /> renders correctly 1`] = `
       onStartShouldSetResponder={[Function]}
       style={
         Object {
+          "backgroundColor": "#fff",
           "borderColor": "#e5e5e5",
           "borderWidth": 1,
           "margin": 5,
@@ -161,6 +164,7 @@ exports[`<Filters /> renders correctly 1`] = `
       onStartShouldSetResponder={[Function]}
       style={
         Object {
+          "backgroundColor": "#fff",
           "borderColor": "#e5e5e5",
           "borderWidth": 1,
           "margin": 5,
@@ -193,6 +197,7 @@ exports[`<Filters /> renders correctly 1`] = `
       onStartShouldSetResponder={[Function]}
       style={
         Object {
+          "backgroundColor": "#fff",
           "borderColor": "#e5e5e5",
           "borderWidth": 1,
           "margin": 5,
@@ -257,6 +262,7 @@ exports[`<Filters /> renders correctly 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
+        "backgroundColor": "#fff",
         "borderColor": "#e5e5e5",
         "borderWidth": 1,
         "margin": 5,

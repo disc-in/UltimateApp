@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./test/**"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-datasource-mongodb": "^0.2.5",
+    "apollo-server": "^2.11.0",
+    "graphql": "^15.0.0",
+    "mongodb": "^3.5.5"
+  }
+}

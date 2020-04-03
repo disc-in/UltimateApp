@@ -1,0 +1,141 @@
+enum AnimationObjectTypes {
+  triangle
+  offence
+  defence
+  disc
+}
+
+type Animation {
+  # all three fields should have same length
+  ids: [AnimationObjectTypes!]!
+  texts: [String]
+  positions: [# ids length
+  [# steps length
+  [# 2 items - cut and final
+  [# 2 items - X and Y
+  Float]]]]
+}
+
+input InputAnimation {
+  # all three fields should have same length
+  ids: [AnimationObjectTypes!]!
+  texts: [String]
+  positions: [# ids length
+  [# steps length
+  [# 2 items - cut and final
+  [# 2 items - X and Y
+  Float]]]]
+}
+
+type DrillStep {
+  title: String!
+  subtitle: String
+}
+
+enum DrillTypes {
+  FITNESS
+  TECHNICAL
+}
+
+enum Intensities {
+  LOW
+  MODERATE
+  HIGH
+}
+
+enum GoalsFrisbee {
+  DEFENSE
+  HANDLING
+  CUTTING
+  THROWING
+  COMMUNICATION
+  CATCH
+}
+
+enum GoalsFitness {
+  LEGS
+  UPPER
+  FULL_BODY
+  CORE
+  CONDITIONING
+}
+
+enum Levels {
+  BEGINNER
+  INTERMEDIATE
+  ADVANCED
+}
+
+enum SeasonTimings {
+  OFF_SEASON
+  PRE_SEASON
+  IN_SEASON
+  ANYTIME
+}
+
+enum EquipmentLabels {
+  NO_EQUIPMENT
+  BASIC
+  FULL_EQUIPMENT
+}
+
+type Drill {
+  id: ID
+  type: DrillTypes
+  source: String!
+  title: String!
+  image: String!
+  description: String!
+  equipment: String!
+  nbPlayers: Int
+  minNbPlayers: Int
+  maxNbPlayers: Int
+  durationInMinutes: Int!
+  intensity: Intensities!
+  goals: [GoalsFrisbee!]!
+  seasonTiming: SeasonTimings!
+  level: Levels!
+  animation: Animation
+  video: String
+  steps: [DrillStep!]!
+}
+
+input InputDrillStep {
+  startsAt: Int!
+  title: String!
+  subtitle: String
+}
+
+input InputDrill {
+  type: DrillTypes
+  source: String!
+  title: String!
+  image: String!
+  description: String!
+  equipment: String!
+  nbPlayers: Int
+  minNbPlayers: Int
+  maxNbPlayers: Int
+  durationInMinutes: Int!
+  intensity: Intensities!
+  goals: [GoalsFrisbee!]!
+  seasonTiming: SeasonTimings!
+  level: Levels!
+  animation: InputAnimation
+  video: String
+  steps: [InputDrillStep!]!
+}
+
+type Query {
+  drills: [Drill!]!
+  drill(id: ID!): Drill
+}
+
+type Mutation {
+  createDrill(drill: InputDrill): Drill
+}
+
+schema {
+  query: Query
+  mutation: Mutation
+}

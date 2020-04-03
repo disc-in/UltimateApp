@@ -2,6 +2,42 @@ import animationMenageATrois from './AnimationMenageATrois';
 import animationSquare from './AnimationSquare';
 import { DrillTypes, Intensities, GoalsFrisbee, GoalsFitness, Levels, SeasonTimings, EquipmentLabels } from './index';
 
+export const createDrill = (override = {}) => {
+  return {
+    id: 1,
+    type: DrillTypes.FITNESS,
+    source: 'Author',
+    title: 'Fitness Drill Title',
+    image: 'https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg',
+    description: 'Description of the drill',
+    nbPlayers: 1,
+    equipmentLabel: EquipmentLabels.NO_EQUIPMENT,
+    equipment: 'Equipment needs for the drill',
+    durationInMinutes: 10,
+    intensity: Intensities.LOW,
+    goals: [GoalsFitness.FULL_BODY],
+    seasonTiming: SeasonTimings.OFF_SEASON,
+    level: Levels.BEGINNER,
+    video: 'https://www.youtube.com/embed/JkVHrA5o23o',
+    /* animation:, */
+    steps: [
+      {
+        title: 'Warmup',
+        subtitle: 'This is a subtitle',
+      },
+      {
+        title: 'Do the drill',
+        subtitle: 'This is a subtitle',
+      },
+      {
+        title: 'Last step',
+        subtitle: 'This is a subtitle',
+      },
+    ],
+    ...override,
+  };
+};
+
 export default {
   favoritesDrill: [],
   drills: [

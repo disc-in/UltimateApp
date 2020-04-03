@@ -11,7 +11,7 @@ describe('<HomePage />', () => {
 
   it('links to technical drill list', async () => {
     const navigation = { navigate: jest.fn() };
-    const { container, getByText, debug } = render(<HomePage navigation={navigation} />);
+    const { container, getByText } = render(<HomePage navigation={navigation} />);
 
     await fireEvent.press(getByText('Frisbee'));
 

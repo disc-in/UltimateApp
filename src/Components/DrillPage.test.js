@@ -1,8 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
+import { render, fireEvent } from 'react-native-testing-library';
 import store from '../Store/configureStore';
-import { render, fireEvent, waitForElement } from 'react-native-testing-library';
 
 import ConnectedDrillPage, { DrillPage } from './DrillPage';
 
@@ -57,7 +57,7 @@ describe('<DrillPage />', () => {
 
   it('links to video view', async () => {
     const navigation = { navigate: jest.fn() };
-    const { container, getByText, debug } = render(<DrillPage route={route} navigation={navigation} />);
+    const { container, getByText } = render(<DrillPage route={route} navigation={navigation} />);
 
     await fireEvent.press(getByText('Video'));
 

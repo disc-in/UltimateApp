@@ -1980,11 +1980,45 @@ exports[`<DrillListPage /> renders correctly with a drill 1`] = `
       }
     }
   >
-    0
+    1
      drills available
   </Text>
   <RCTScrollView
-    data={Array []}
+    data={
+      Array [
+        Object {
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
+          "durationInMinutes": 15,
+          "equipment": "One disc, 2 cones, 3 players",
+          "goals": Array [
+            "Catch",
+            "Handling",
+          ],
+          "id": 10,
+          "image": "http://www.liberte-fitness.fr/sites/default/files/styles/slider/public/news/tone.jpg?itok=505bme2a",
+          "level": "intermediate",
+          "nbPlayers": 2,
+          "source": "Rise Up",
+          "steps": Array [
+            Object {
+              "subtitle": "This is a subtitle",
+              "title": "Warmup",
+            },
+            Object {
+              "subtitle": "This is a subtitle",
+              "title": "Do the drill",
+            },
+            Object {
+              "subtitle": "This is a subtitle",
+              "title": "Last step",
+            },
+          ],
+          "title": "Hot Box",
+          "type": "technical",
+          "video": "https://www.youtube.com/embed/oN1bzPCKkGE",
+        },
+      ]
+    }
     disableVirtualization={false}
     getItem={[Function]}
     getItemCount={[Function]}
@@ -2008,7 +2042,94 @@ exports[`<DrillListPage /> renders correctly with a drill 1`] = `
     viewabilityConfigCallbackPairs={Array []}
     windowSize={21}
   >
-    <View />
+    <View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "flexDirection": "row",
+              "height": 80,
+              "marginBottom": 20,
+              "opacity": 1,
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "http://www.liberte-fitness.fr/sites/default/files/styles/slider/public/news/tone.jpg?itok=505bme2a",
+              }
+            }
+            style={
+              Object {
+                "borderRadius": 5,
+                "height": 80,
+                "marginRight": 10,
+                "width": 80,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "padding": 5,
+                "paddingBottom": 10,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#A6A6A6",
+                  "flex": 2,
+                }
+              }
+            >
+              Rise Up
+            </Text>
+            <Text
+              style={
+                Object {
+                  "flex": 3,
+                  "flexWrap": "wrap",
+                  "fontSize": 20,
+                  "fontWeight": "bold",
+                }
+              }
+            >
+              Hot Box
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#AFAFAF",
+                  "flex": 2,
+                  "fontSize": 14,
+                }
+              }
+            >
+              Duration: 
+              15
+               min - players: 
+              2
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
   </RCTScrollView>
   <View
     accessible={true}

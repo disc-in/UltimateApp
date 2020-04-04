@@ -2109,6 +2109,7 @@ exports[`<DrillListPage /> renders correctly with a drill 1`] = `
                 Object {
                   "color": "#A6A6A6",
                   "flex": 2,
+                  "fontSize": 14,
                 }
               }
             >
@@ -2129,7 +2130,7 @@ exports[`<DrillListPage /> renders correctly with a drill 1`] = `
             <Text
               style={
                 Object {
-                  "color": "#AFAFAF",
+                  "color": "#A6A6A6",
                   "flex": 2,
                   "fontSize": 14,
                 }

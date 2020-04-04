@@ -18,6 +18,9 @@ export const DrillListPage = props => {
   const [data, setData] = useState(drills);
   const [displayFilters, setDisplayFilters] = useState(false);
 
+  const imageMainData = type === 'technical' ? 'nbPlayers' : 'durationInMinutes';
+  const imageMainDataLegend = type === 'technical' ? 'players' : 'min.';
+
   return (
     <View style={styles.drillListPage}>
       <Text style={styles.counter}>{data.length} drills available</Text>
@@ -34,8 +37,8 @@ export const DrillListPage = props => {
           renderItem={({ item }) => (
             <TouchableOpacity style={styles.drill} onPress={() => navigation.navigate('DrillPage', { drill: item })}>
               <ImageBackground source={{ uri: item.image }} style={styles.image} imageStyle={styles.imageOpacity}>
-                <Text style={{ ...styles.imageText, ...styles.imageTextMain }}>{item.nbPlayers}+</Text>
-                <Text style={styles.imageText}>players</Text>
+                <Text style={{ ...styles.imageText, ...styles.imageTextMain }}>{item[imageMainData]}+</Text>
+                <Text style={styles.imageText}>{imageMainDataLegend}</Text>
               </ImageBackground>
               <View style={styles.contentContainer}>
                 <Text style={styles.source}>{item.source}</Text>

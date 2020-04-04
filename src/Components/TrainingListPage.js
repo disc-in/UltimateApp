@@ -11,7 +11,7 @@ const getTrainingDuration = trainingDrills => {
 
 const getTrainingNbPlayers = trainingDrills => {
   const nbPlayersList = trainingDrills.map(({ nbPlayers }) => nbPlayers);
-  const totalNbPlayers = Math.max(nbPlayersList);
+  const totalNbPlayers = Math.max(...nbPlayersList);
   return totalNbPlayers;
 };
 

@@ -16,6 +16,7 @@ class Filters extends React.Component {
     selectedLevel: undefined,
     selectedGoal: undefined,
     numberOfPlayers: undefined,
+    displayedDrills: this.props.route.params.initialData,
   };
 
   onPressedChange(target, value) {
@@ -35,57 +36,82 @@ class Filters extends React.Component {
     if (selectedGoal) newData = newData.filter(drill => drill.goals.includes(selectedGoal));
     if (numberOfPlayers) newData = newData.filter(drill => drill.minimalPlayersNumber <= numberOfPlayers);
 
-    this.props.route.params.onFiltered(newData);
+    this.setState({ displayedDrills: newData });
+  }
+  componentDidMount() {
+    this.props.route.params.onFiltered(this.state.displayedDrills);
+    this.props.navigation.setOptions({
+      headerRight: () => (
+        <Button
+          onPress={() => {
+            this.props.route.params.onFiltered(this.state.displayedDrills);
+            this.props.navigation.goBack();
+          }}
+          title="OK"
+        />
+      ),
+    });
   }
 
   render() {
     const { selectedLevel, selectedGoal, numberOfPlayers } = this.state;
     return (
-      <View style={styles.filters}>
-        <Text style={styles.filterTitle}>Level</Text>
-        <View style={styles.filter}>
-          {['beginner', 'intermediate', 'advanced'].map(level => (
-            <Button
-              key={level}
-              title={level}
-              onPress={this.onPressedChange.bind(this, 'selectedLevel', level)}
-              active={selectedLevel === level}
-            />
-          ))}
-        </View>
-        <Text style={styles.filterTitle}>Goals</Text>
-        <View style={styles.filter}>
-          {this.props.route.params.initialData
-            .map(drill => drill.goals)
-            .reduce((x, y) => x.concat(y), [])
-            .filter((goal, index, array) => array.indexOf(goal) === index)
-            .map(goal => (
+      <View style={styles.wrapper}>
+        <Text style={styles.counter}>{this.state.displayedDrills.length} drills available</Text>
+        <View style={styles.filters}>
+          <Text style={styles.filterTitle}>Level</Text>
+          <View style={styles.filter}>
+            {['beginner', 'intermediate', 'advanced'].map(level => (
               <Button
-                key={goal}
-                title={goal}
-                onPress={this.onPressedChange.bind(this, 'selectedGoal', goal)}
-                active={selectedGoal === goal}
+                key={level}
+                title={level}
+                onPress={this.onPressedChange.bind(this, 'selectedLevel', level)}
+                active={selectedLevel === level}
               />
             ))}
+          </View>
+          <Text style={styles.filterTitle}>Goals</Text>
+          <View style={styles.filter}>
+            {this.props.route.params.initialData
+              .map(drill => drill.goals)
+              .reduce((x, y) => x.concat(y), [])
+              .filter((goal, index, array) => array.indexOf(goal) === index)
+              .map(goal => (
+                <Button
+                  key={goal}
+                  title={goal}
+                  onPress={this.onPressedChange.bind(this, 'selectedGoal', goal)}
+                  active={selectedGoal === goal}
+                />
+              ))}
+          </View>
+          <Text style={styles.filterTitle}>Number of players</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="How many players do you have?"
+            onChangeText={this.onInputChange.bind(this, 'numberOfPlayers')}
+            value={numberOfPlayers}
+            keyboardType="numeric"
+          />
         </View>
-        <Text style={styles.filterTitle}>Number of players</Text>
-        <TextInput
-          style={styles.input}
-          placeholder="How many players do you have?"
-          onChangeText={this.onInputChange.bind(this, 'numberOfPlayers')}
-          value={numberOfPlayers}
-          keyboardType="numeric"
-        />
-        <Button title="Validate" onPress={() => this.props.navigation.goBack()} />
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  filters: {
+  wrapper: {
     height: '100%',
+    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
+  },
+  filters: {
     alignItems: 'center',
+  },
+  counter: {
+    paddingTop: 10,
+    paddingLeft: 20,
+    color: theme.COLOR_SECONDARY,
+    marginBottom: 20,
   },
   filterTitle: {
     marginTop: 10,

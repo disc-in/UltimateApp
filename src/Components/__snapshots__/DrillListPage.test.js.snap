@@ -2304,7 +2304,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
 </View>
 `;
 
-exports[`<DrillListPage /> renders correctly with a drill 1`] = `
+exports[`<DrillListPage /> renders correctly with a fitness drill 1`] = `
 <View
   style={
     Object {
@@ -2323,11 +2323,45 @@ exports[`<DrillListPage /> renders correctly with a drill 1`] = `
       }
     }
   >
-    0
+    1
      drills available
   </Text>
   <RCTScrollView
-    data={Array []}
+    data={
+      Array [
+        Object {
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
+          "durationInMinutes": 15,
+          "equipment": "One disc, 2 cones, 3 players",
+          "goals": Array [
+            "Catch",
+            "Handling",
+          ],
+          "id": 10,
+          "image": "http://www.liberte-fitness.fr/sites/default/files/styles/slider/public/news/tone.jpg?itok=505bme2a",
+          "level": "intermediate",
+          "nbPlayers": 2,
+          "source": "Rise Up",
+          "steps": Array [
+            Object {
+              "subtitle": "This is a subtitle",
+              "title": "Warmup",
+            },
+            Object {
+              "subtitle": "This is a subtitle",
+              "title": "Do the drill",
+            },
+            Object {
+              "subtitle": "This is a subtitle",
+              "title": "Last step",
+            },
+          ],
+          "title": "Hot Box",
+          "type": "fitness",
+          "video": "https://www.youtube.com/embed/oN1bzPCKkGE",
+        },
+      ]
+    }
     disableVirtualization={false}
     getItem={[Function]}
     getItemCount={[Function]}
@@ -2351,7 +2385,408 @@ exports[`<DrillListPage /> renders correctly with a drill 1`] = `
     viewabilityConfigCallbackPairs={Array []}
     windowSize={21}
   >
-    <View />
+    <View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "flexDirection": "row",
+              "height": 80,
+              "marginBottom": 20,
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            accessibilityIgnoresInvertColors={true}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "rgb(0,0,0)",
+                "borderRadius": 5,
+                "height": 80,
+                "justifyContent": "center",
+                "marginRight": 10,
+                "padding": 10,
+                "width": 80,
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "uri": "http://www.liberte-fitness.fr/sites/default/files/styles/slider/public/news/tone.jpg?itok=505bme2a",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": 80,
+                    "width": 80,
+                  },
+                  Object {
+                    "borderRadius": 5,
+                    "opacity": 0.5,
+                  },
+                ]
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "#e5e5e5",
+                  "fontSize": 20,
+                  "textAlign": "center",
+                }
+              }
+            >
+              15
+              +
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#e5e5e5",
+                  "fontSize": 14,
+                  "textAlign": "center",
+                }
+              }
+            >
+              min.
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "padding": 5,
+                "paddingBottom": 10,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#A6A6A6",
+                  "flex": 2,
+                  "fontSize": 14,
+                }
+              }
+            >
+              Rise Up
+            </Text>
+            <Text
+              style={
+                Object {
+                  "flex": 3,
+                  "flexWrap": "wrap",
+                  "fontSize": 20,
+                  "fontWeight": "bold",
+                }
+              }
+            >
+              Hot Box
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#A6A6A6",
+                  "flex": 2,
+                  "fontSize": 14,
+                }
+              }
+            >
+              Catch, Handling
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+  <View
+    accessible={true}
+    focusable={true}
+    isTVSelectable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "borderRadius": 50,
+        "bottom": "5%",
+        "elevation": 10,
+        "height": 100,
+        "justifyContent": "center",
+        "opacity": 1,
+        "position": "absolute",
+        "right": "5%",
+        "shadowOffset": Object {
+          "height": 10,
+          "width": 0,
+        },
+        "shadowOpacity": 0.3,
+        "shadowRadius": 10,
+        "width": 100,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "fontSize": 24,
+          "fontWeight": "bold",
+          "textTransform": "uppercase",
+        }
+      }
+    >
+      Filter
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`<DrillListPage /> renders correctly with a technical drill 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "height": "100%",
+      "paddingLeft": 20,
+      "paddingTop": 10,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#A6A6A6",
+        "marginBottom": 20,
+      }
+    }
+  >
+    1
+     drills available
+  </Text>
+  <RCTScrollView
+    data={
+      Array [
+        Object {
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
+          "durationInMinutes": 15,
+          "equipment": "One disc, 2 cones, 3 players",
+          "goals": Array [
+            "Catch",
+            "Handling",
+          ],
+          "id": 10,
+          "image": "http://www.liberte-fitness.fr/sites/default/files/styles/slider/public/news/tone.jpg?itok=505bme2a",
+          "level": "intermediate",
+          "nbPlayers": 2,
+          "source": "Rise Up",
+          "steps": Array [
+            Object {
+              "subtitle": "This is a subtitle",
+              "title": "Warmup",
+            },
+            Object {
+              "subtitle": "This is a subtitle",
+              "title": "Do the drill",
+            },
+            Object {
+              "subtitle": "This is a subtitle",
+              "title": "Last step",
+            },
+          ],
+          "title": "Hot Box",
+          "type": "technical",
+          "video": "https://www.youtube.com/embed/oN1bzPCKkGE",
+        },
+      ]
+    }
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    numColumns={1}
+    onContentSizeChange={[Function]}
+    onEndReachedThreshold={2}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={Array []}
+    updateCellsBatchingPeriod={50}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={21}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "flexDirection": "row",
+              "height": 80,
+              "marginBottom": 20,
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            accessibilityIgnoresInvertColors={true}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "rgb(0,0,0)",
+                "borderRadius": 5,
+                "height": 80,
+                "justifyContent": "center",
+                "marginRight": 10,
+                "padding": 10,
+                "width": 80,
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "uri": "http://www.liberte-fitness.fr/sites/default/files/styles/slider/public/news/tone.jpg?itok=505bme2a",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": 80,
+                    "width": 80,
+                  },
+                  Object {
+                    "borderRadius": 5,
+                    "opacity": 0.5,
+                  },
+                ]
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "#e5e5e5",
+                  "fontSize": 20,
+                  "textAlign": "center",
+                }
+              }
+            >
+              2
+              +
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#e5e5e5",
+                  "fontSize": 14,
+                  "textAlign": "center",
+                }
+              }
+            >
+              players
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "padding": 5,
+                "paddingBottom": 10,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#A6A6A6",
+                  "flex": 2,
+                  "fontSize": 14,
+                }
+              }
+            >
+              Rise Up
+            </Text>
+            <Text
+              style={
+                Object {
+                  "flex": 3,
+                  "flexWrap": "wrap",
+                  "fontSize": 20,
+                  "fontWeight": "bold",
+                }
+              }
+            >
+              Hot Box
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#A6A6A6",
+                  "flex": 2,
+                  "fontSize": 14,
+                }
+              }
+            >
+              Catch, Handling
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
   </RCTScrollView>
   <View
     accessible={true}

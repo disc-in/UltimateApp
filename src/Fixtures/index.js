@@ -292,7 +292,7 @@ export default {
       steps: [],
     },
   ],
-  training: [
+  trainings: [
     {
       id: 1,
       source: 'Rise Up',

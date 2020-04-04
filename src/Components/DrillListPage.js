@@ -17,40 +17,37 @@ export const DrillListPage = props => {
   const drills = props.drills.filter(drill => drill.type === type);
 
   const [displayedDrills, setDisplayedDrills] = useState(drills);
-  const [isDisplayingFilters, setIsDisplayingFilters] = useState(false);
 
   return (
     <View style={styles.drillListPage}>
       <Text style={styles.counter}>{displayedDrills.length} drills available</Text>
-      {isDisplayingFilters ? (
-        <Filters
-          onConfirm={() => setIsDisplayingFilters(false)}
-          onFiltered={newDisplayedDrills => setDisplayedDrills(newDisplayedDrills)}
-          initialData={drills}
-        />
-      ) : (
-        <FlatList
-          data={displayedDrills}
-          keyExtractor={item => item.id.toString()}
-          renderItem={({ item }) => (
-            <TouchableOpacity style={styles.drill} onPress={() => navigation.navigate('DrillPage', { drill: item })}>
-              <Image style={styles.image} source={{ uri: item.image }} />
-              <View style={styles.contentContainer}>
-                <Text style={styles.source}>{item.source}</Text>
-                <Text style={styles.title}>{item.title}</Text>
-                <Text style={styles.numberOfPlayers}>
-                  Duration: {item.durationInMinutes} min - players: {item.minimalPlayersNumber}
-                </Text>
-              </View>
-            </TouchableOpacity>
-          )}
-        />
-      )}
-      {!isDisplayingFilters && (
-        <TouchableOpacity style={styles.filterButton} onPress={() => setIsDisplayingFilters(true)}>
-          <Image source={filterButtonImage} style={styles.filterButtonImage} />
-        </TouchableOpacity>
-      )}
+      <FlatList
+        data={displayedDrills}
+        keyExtractor={item => item.id.toString()}
+        renderItem={({ item }) => (
+          <TouchableOpacity style={styles.drill} onPress={() => navigation.navigate('DrillPage', { drill: item })}>
+            <Image style={styles.image} source={{ uri: item.image }} />
+            <View style={styles.contentContainer}>
+              <Text style={styles.source}>{item.source}</Text>
+              <Text style={styles.title}>{item.title}</Text>
+              <Text style={styles.numberOfPlayers}>
+                Duration: {item.durationInMinutes} min - players: {item.minimalPlayersNumber}
+              </Text>
+            </View>
+          </TouchableOpacity>
+        )}
+      />
+      <TouchableOpacity
+        style={styles.filterButton}
+        onPress={() =>
+          navigation.navigate('Filters', {
+            onFiltered: newDisplayedDrills => setDisplayedDrills(newDisplayedDrills),
+            initialData: drills,
+          })
+        }
+      >
+        <Image source={filterButtonImage} style={styles.filterButtonImage} />
+      </TouchableOpacity>
     </View>
   );
 };

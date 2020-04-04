@@ -29,13 +29,13 @@ class Filters extends React.Component {
 
   applyFilters() {
     const { selectedLevel, selectedGoal, numberOfPlayers } = this.state;
-    let newData = this.props.initialData;
+    let newData = this.props.route.params.initialData;
 
     if (selectedLevel) newData = newData.filter(drill => drill.level === selectedLevel);
     if (selectedGoal) newData = newData.filter(drill => drill.goals.includes(selectedGoal));
     if (numberOfPlayers) newData = newData.filter(drill => drill.minimalPlayersNumber <= numberOfPlayers);
 
-    this.props.onFiltered(newData);
+    this.props.route.params.onFiltered(newData);
   }
 
   render() {
@@ -55,7 +55,7 @@ class Filters extends React.Component {
         </View>
         <Text style={styles.filterTitle}>Goals</Text>
         <View style={styles.filter}>
-          {this.props.initialData
+          {this.props.route.params.initialData
             .map(drill => drill.goals)
             .reduce((x, y) => x.concat(y), [])
             .filter((goal, index, array) => array.indexOf(goal) === index)
@@ -76,7 +76,7 @@ class Filters extends React.Component {
           value={numberOfPlayers}
           keyboardType="numeric"
         />
-        <Button title="Validate" onPress={this.props.onConfirm} />
+        <Button title="Validate" onPress={() => this.props.navigation.goBack()} />
       </View>
     );
   }

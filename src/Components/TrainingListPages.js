@@ -16,7 +16,7 @@ export const TrainingListPage = props => {
 
   return (
     <View style={styles.trainingListPage}>
-      <Text style={styles.counter}>{data.length} trainings available</Text>
+      <Text style={styles.counter}>{data.length} training sessions available</Text>
       <FlatList
         data={data}
         keyExtractor={item => item.id.toString()}

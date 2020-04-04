@@ -34,7 +34,7 @@ export const Navigation = () => (
       <Stack.Screen
         name="TrainingListPage"
         component={TrainingListPage}
-        options={({ route }) => ({ title: 'Trainings' })}
+        options={({ route }) => ({ title: 'Training sessions' })}
       />
       <Stack.Screen
         name="TrainingPage"

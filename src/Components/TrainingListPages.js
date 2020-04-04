@@ -3,14 +3,27 @@ import { StyleSheet, View, Text, Image, TouchableOpacity, FlatList } from 'react
 import { connect } from 'react-redux';
 import theme from '../styles/theme.style';
 
+const getTrainingDuration = trainingDrills => {
+  const durationList = trainingDrills.map(({ durationInMinutes }) => durationInMinutes);
+  const totalDurationInMinutes = durationList.reduce((a, b) => a + b, 0);
+  return totalDurationInMinutes;
+};
+
+const getTrainingNbPlayers = trainingDrills => {
+  const nbPlayersList = trainingDrills.map(({ nbPlayers }) => nbPlayers);
+  const totalNbPlayers = Math.max(nbPlayersList);
+  return totalNbPlayers;
+};
+
 const mapStateToProps = state => {
   return {
-    trainingss: state.trainingss,
+    trainings: state.trainings,
+    allDrills: state.drills,
   };
 };
 
 export const TrainingListPage = props => {
-  const { trainings, navigation } = props;
+  const { allDrills, trainings, navigation } = props;
 
   const [data] = useState(trainings);
 
@@ -30,7 +43,8 @@ export const TrainingListPage = props => {
               <Text style={styles.source}>{item.source}</Text>
               <Text style={styles.title}>{item.title}</Text>
               <Text style={styles.numberOfPlayers}>
-                Duration: {item.durationInMinutes} min - players: {item.nbPlayers}
+                Duration: {getTrainingDuration(allDrills.filter(drill => item.drills.includes(drill.id)))} min -
+                players: {getTrainingNbPlayers(allDrills.filter(drill => item.drills.includes(drill.id)))}
               </Text>
             </View>
           </TouchableOpacity>
@@ -83,28 +97,5 @@ const styles = StyleSheet.create({
     flex: 2,
     color: theme.COLOR_SECONDARY,
     fontSize: theme.FONT_SIZE_SMALL,
-  },
-  filterButton: {
-    position: 'absolute',
-    bottom: '5%',
-    right: '5%',
-    width: 100,
-    height: 100,
-    borderRadius: 50,
-    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
-    justifyContent: 'center',
-    alignItems: 'center',
-    shadowOffset: {
-      width: 0,
-      height: 10,
-    },
-    shadowOpacity: 0.3,
-    shadowRadius: 10,
-    elevation: 10,
-  },
-  filterButtonText: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    textTransform: 'uppercase',
   },
 });

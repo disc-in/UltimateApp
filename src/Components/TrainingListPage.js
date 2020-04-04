@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Text, Image, TouchableOpacity, FlatList } from 'react-native';
+import { StyleSheet, View, Text, ImageBackground, TouchableOpacity, FlatList } from 'react-native';
 import { connect } from 'react-redux';
 import theme from '../styles/theme.style';
 import * as list from '../styles/list.style';
@@ -37,7 +37,7 @@ export const TrainingListPage = props => {
             style={styles.training}
             onPress={() => navigation.navigate('TrainingPage', { training: item })}
           >
-            <Image style={styles.image} source={{ uri: item.image }} />
+            <ImageBackground source={{ uri: item.image }} style={styles.image} imageStyle={styles.imageOpacity} />
             <View style={styles.contentContainer}>
               <Text style={styles.source}>{item.source}</Text>
               <Text style={styles.title}>{item.title}</Text>
@@ -70,6 +70,9 @@ const styles = StyleSheet.create({
   },
   image: {
     ...list.image,
+  },
+  imageOpacity: {
+    ...list.imageOpacity,
   },
   contentContainer: {
     ...list.contentContainer,

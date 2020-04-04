@@ -15,6 +15,10 @@ export const image = {
   marginRight: 10,
   borderRadius: 5,
 };
+export const imageOpacity = {
+  borderRadius: 5,
+  opacity: 0.5,
+};
 export const contentContainer = {
   padding: 5,
   paddingBottom: 10,

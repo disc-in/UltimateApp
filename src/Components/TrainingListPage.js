@@ -5,14 +5,12 @@ import theme from '../styles/theme.style';
 
 const getTrainingDuration = trainingDrills => {
   const durationList = trainingDrills.map(({ durationInMinutes }) => durationInMinutes);
-  const totalDurationInMinutes = durationList.reduce((a, b) => a + b, 0);
-  return totalDurationInMinutes;
+  return durationList.reduce((a, b) => a + b, 0);
 };
 
 const getTrainingNbPlayers = trainingDrills => {
   const nbPlayersList = trainingDrills.map(({ nbPlayers }) => nbPlayers);
-  const totalNbPlayers = Math.max(...nbPlayersList);
-  return totalNbPlayers;
+  return Math.max(...nbPlayersList);
 };
 
 const mapStateToProps = state => {

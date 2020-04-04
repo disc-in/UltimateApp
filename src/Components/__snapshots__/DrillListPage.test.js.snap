@@ -14,7 +14,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
   <Text
     style={
       Object {
-        "color": "#767676",
+        "color": "#A6A6A6",
         "marginBottom": 20,
       }
     }
@@ -1368,6 +1368,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
                 Object {
                   "color": "#A6A6A6",
                   "flex": 2,
+                  "fontSize": 14,
                 }
               }
             >
@@ -1388,7 +1389,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
             <Text
               style={
                 Object {
-                  "color": "#AFAFAF",
+                  "color": "#A6A6A6",
                   "flex": 2,
                   "fontSize": 14,
                 }
@@ -1454,6 +1455,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
                 Object {
                   "color": "#A6A6A6",
                   "flex": 2,
+                  "fontSize": 14,
                 }
               }
             >
@@ -1474,7 +1476,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
             <Text
               style={
                 Object {
-                  "color": "#AFAFAF",
+                  "color": "#A6A6A6",
                   "flex": 2,
                   "fontSize": 14,
                 }
@@ -1540,6 +1542,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
                 Object {
                   "color": "#A6A6A6",
                   "flex": 2,
+                  "fontSize": 14,
                 }
               }
             >
@@ -1560,7 +1563,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
             <Text
               style={
                 Object {
-                  "color": "#AFAFAF",
+                  "color": "#A6A6A6",
                   "flex": 2,
                   "fontSize": 14,
                 }
@@ -1626,6 +1629,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
                 Object {
                   "color": "#A6A6A6",
                   "flex": 2,
+                  "fontSize": 14,
                 }
               }
             >
@@ -1646,7 +1650,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
             <Text
               style={
                 Object {
-                  "color": "#AFAFAF",
+                  "color": "#A6A6A6",
                   "flex": 2,
                   "fontSize": 14,
                 }
@@ -1712,6 +1716,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
                 Object {
                   "color": "#A6A6A6",
                   "flex": 2,
+                  "fontSize": 14,
                 }
               }
             >
@@ -1732,7 +1737,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
             <Text
               style={
                 Object {
-                  "color": "#AFAFAF",
+                  "color": "#A6A6A6",
                   "flex": 2,
                   "fontSize": 14,
                 }
@@ -1798,6 +1803,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
                 Object {
                   "color": "#A6A6A6",
                   "flex": 2,
+                  "fontSize": 14,
                 }
               }
             >
@@ -1818,7 +1824,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
             <Text
               style={
                 Object {
-                  "color": "#AFAFAF",
+                  "color": "#A6A6A6",
                   "flex": 2,
                   "fontSize": 14,
                 }
@@ -1884,6 +1890,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
                 Object {
                   "color": "#A6A6A6",
                   "flex": 2,
+                  "fontSize": 14,
                 }
               }
             >
@@ -1904,7 +1911,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
             <Text
               style={
                 Object {
-                  "color": "#AFAFAF",
+                  "color": "#A6A6A6",
                   "flex": 2,
                   "fontSize": 14,
                 }
@@ -1934,14 +1941,21 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#f2f2f2",
+        "backgroundColor": "#fff",
         "borderRadius": 50,
         "bottom": "5%",
+        "elevation": 10,
         "height": 100,
         "justifyContent": "center",
         "opacity": 1,
         "position": "absolute",
         "right": "5%",
+        "shadowOffset": Object {
+          "height": 10,
+          "width": 0,
+        },
+        "shadowOpacity": 0.3,
+        "shadowRadius": 10,
         "width": 100,
       }
     }
@@ -1975,7 +1989,7 @@ exports[`<DrillListPage /> renders correctly with a drill 1`] = `
   <Text
     style={
       Object {
-        "color": "#767676",
+        "color": "#A6A6A6",
         "marginBottom": 20,
       }
     }
@@ -2145,14 +2159,21 @@ exports[`<DrillListPage /> renders correctly with a drill 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#f2f2f2",
+        "backgroundColor": "#fff",
         "borderRadius": 50,
         "bottom": "5%",
+        "elevation": 10,
         "height": 100,
         "justifyContent": "center",
         "opacity": 1,
         "position": "absolute",
         "right": "5%",
+        "shadowOffset": Object {
+          "height": 10,
+          "width": 0,
+        },
+        "shadowOpacity": 0.3,
+        "shadowRadius": 10,
         "width": 100,
       }
     }

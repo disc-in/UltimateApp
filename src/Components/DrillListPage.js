@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Text, Image, TouchableOpacity, FlatList } from 'react-native';
+import { StyleSheet, View, Text, ImageBackground, TouchableOpacity, FlatList } from 'react-native';
 import { connect } from 'react-redux';
 import theme from '../styles/theme.style';
 import Filters from './Filters';
@@ -33,13 +33,14 @@ export const DrillListPage = props => {
           keyExtractor={item => item.id.toString()}
           renderItem={({ item }) => (
             <TouchableOpacity style={styles.drill} onPress={() => navigation.navigate('DrillPage', { drill: item })}>
-              <Image style={styles.image} source={{ uri: item.image }} />
+              <ImageBackground source={{ uri: item.image }} style={styles.image} imageStyle={styles.imageOpacity}>
+                <Text style={{ ...styles.imageText, ...styles.imageTextMain }}>{item.nbPlayers}+</Text>
+                <Text style={styles.imageText}>players</Text>
+              </ImageBackground>
               <View style={styles.contentContainer}>
                 <Text style={styles.source}>{item.source}</Text>
                 <Text style={styles.title}>{item.title}</Text>
-                <Text style={styles.numberOfPlayers}>
-                  Duration: {item.durationInMinutes} min - players: {item.nbPlayers}
-                </Text>
+                <Text style={styles.numberOfPlayers}>{item.goals.join(', ')}</Text>
               </View>
             </TouchableOpacity>
           )}
@@ -77,6 +78,22 @@ const styles = StyleSheet.create({
     height: 80,
     marginRight: 10,
     borderRadius: 5,
+    padding: 10,
+    backgroundColor: 'rgb(0,0,0)',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  imageOpacity: {
+    borderRadius: 5,
+    opacity: 0.5,
+  },
+  imageText: {
+    textAlign: 'center',
+    color: theme.COLOR_SECONDARY_LIGHT,
+    fontSize: theme.FONT_SIZE_SMALL,
+  },
+  imageTextMain: {
+    fontSize: theme.FONT_SIZE_LARGE,
   },
   contentContainer: {
     padding: 5,

@@ -1340,21 +1340,71 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
             }
           }
         >
-          <Image
-            source={
-              Object {
-                "uri": "https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg",
-              }
-            }
+          <View
+            accessibilityIgnoresInvertColors={true}
             style={
               Object {
+                "alignItems": "center",
+                "backgroundColor": "rgb(0,0,0)",
                 "borderRadius": 5,
                 "height": 80,
+                "justifyContent": "center",
                 "marginRight": 10,
+                "padding": 10,
                 "width": 80,
               }
             }
-          />
+          >
+            <Image
+              source={
+                Object {
+                  "uri": "https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": 80,
+                    "width": 80,
+                  },
+                  Object {
+                    "borderRadius": 5,
+                    "opacity": 0.5,
+                  },
+                ]
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "#e5e5e5",
+                  "fontSize": 20,
+                  "textAlign": "center",
+                }
+              }
+            >
+              2
+              +
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#e5e5e5",
+                  "fontSize": 14,
+                  "textAlign": "center",
+                }
+              }
+            >
+              players
+            </Text>
+          </View>
           <View
             style={
               Object {
@@ -1395,10 +1445,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
                 }
               }
             >
-              Duration: 
-              10
-               min - players: 
-              2
+              Defense, Handling
             </Text>
           </View>
         </View>
@@ -1427,21 +1474,71 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
             }
           }
         >
-          <Image
-            source={
-              Object {
-                "uri": "https://conseils.casalsport.com/wp-content/uploads/2019/05/ultimate-frisbee-sport.jpg",
-              }
-            }
+          <View
+            accessibilityIgnoresInvertColors={true}
             style={
               Object {
+                "alignItems": "center",
+                "backgroundColor": "rgb(0,0,0)",
                 "borderRadius": 5,
                 "height": 80,
+                "justifyContent": "center",
                 "marginRight": 10,
+                "padding": 10,
                 "width": 80,
               }
             }
-          />
+          >
+            <Image
+              source={
+                Object {
+                  "uri": "https://conseils.casalsport.com/wp-content/uploads/2019/05/ultimate-frisbee-sport.jpg",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": 80,
+                    "width": 80,
+                  },
+                  Object {
+                    "borderRadius": 5,
+                    "opacity": 0.5,
+                  },
+                ]
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "#e5e5e5",
+                  "fontSize": 20,
+                  "textAlign": "center",
+                }
+              }
+            >
+              2
+              +
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#e5e5e5",
+                  "fontSize": 14,
+                  "textAlign": "center",
+                }
+              }
+            >
+              players
+            </Text>
+          </View>
           <View
             style={
               Object {
@@ -1482,10 +1579,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
                 }
               }
             >
-              Duration: 
-              15
-               min - players: 
-              2
+              Technical
             </Text>
           </View>
         </View>
@@ -1514,21 +1608,71 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
             }
           }
         >
-          <Image
-            source={
-              Object {
-                "uri": "https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1",
-              }
-            }
+          <View
+            accessibilityIgnoresInvertColors={true}
             style={
               Object {
+                "alignItems": "center",
+                "backgroundColor": "rgb(0,0,0)",
                 "borderRadius": 5,
                 "height": 80,
+                "justifyContent": "center",
                 "marginRight": 10,
+                "padding": 10,
                 "width": 80,
               }
             }
-          />
+          >
+            <Image
+              source={
+                Object {
+                  "uri": "https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": 80,
+                    "width": 80,
+                  },
+                  Object {
+                    "borderRadius": 5,
+                    "opacity": 0.5,
+                  },
+                ]
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "#e5e5e5",
+                  "fontSize": 20,
+                  "textAlign": "center",
+                }
+              }
+            >
+              5
+              +
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#e5e5e5",
+                  "fontSize": 14,
+                  "textAlign": "center",
+                }
+              }
+            >
+              players
+            </Text>
+          </View>
           <View
             style={
               Object {
@@ -1569,10 +1713,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
                 }
               }
             >
-              Duration: 
-              20
-               min - players: 
-              5
+              Defense, Fast break
             </Text>
           </View>
         </View>
@@ -1601,21 +1742,71 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
             }
           }
         >
-          <Image
-            source={
-              Object {
-                "uri": "https://siena.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2020/03/05/node_528988/1877948/public/2020/03/05/B9722816509Z.1_20200305151253_000%2BG2AFL39TF.1-0.jpg?itok=jAQBQG6y1583417579",
-              }
-            }
+          <View
+            accessibilityIgnoresInvertColors={true}
             style={
               Object {
+                "alignItems": "center",
+                "backgroundColor": "rgb(0,0,0)",
                 "borderRadius": 5,
                 "height": 80,
+                "justifyContent": "center",
                 "marginRight": 10,
+                "padding": 10,
                 "width": 80,
               }
             }
-          />
+          >
+            <Image
+              source={
+                Object {
+                  "uri": "https://siena.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2020/03/05/node_528988/1877948/public/2020/03/05/B9722816509Z.1_20200305151253_000%2BG2AFL39TF.1-0.jpg?itok=jAQBQG6y1583417579",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": 80,
+                    "width": 80,
+                  },
+                  Object {
+                    "borderRadius": 5,
+                    "opacity": 0.5,
+                  },
+                ]
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "#e5e5e5",
+                  "fontSize": 20,
+                  "textAlign": "center",
+                }
+              }
+            >
+              10
+              +
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#e5e5e5",
+                  "fontSize": 14,
+                  "textAlign": "center",
+                }
+              }
+            >
+              players
+            </Text>
+          </View>
           <View
             style={
               Object {
@@ -1656,10 +1847,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
                 }
               }
             >
-              Duration: 
-              18
-               min - players: 
-              10
+              Offense, Handling
             </Text>
           </View>
         </View>
@@ -1688,21 +1876,71 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
             }
           }
         >
-          <Image
-            source={
-              Object {
-                "uri": "https://d3j2bju5c7tc02.cloudfront.net/2016_44/backhand.jpg",
-              }
-            }
+          <View
+            accessibilityIgnoresInvertColors={true}
             style={
               Object {
+                "alignItems": "center",
+                "backgroundColor": "rgb(0,0,0)",
                 "borderRadius": 5,
                 "height": 80,
+                "justifyContent": "center",
                 "marginRight": 10,
+                "padding": 10,
                 "width": 80,
               }
             }
-          />
+          >
+            <Image
+              source={
+                Object {
+                  "uri": "https://d3j2bju5c7tc02.cloudfront.net/2016_44/backhand.jpg",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": 80,
+                    "width": 80,
+                  },
+                  Object {
+                    "borderRadius": 5,
+                    "opacity": 0.5,
+                  },
+                ]
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "#e5e5e5",
+                  "fontSize": 20,
+                  "textAlign": "center",
+                }
+              }
+            >
+              2
+              +
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#e5e5e5",
+                  "fontSize": 14,
+                  "textAlign": "center",
+                }
+              }
+            >
+              players
+            </Text>
+          </View>
           <View
             style={
               Object {
@@ -1743,10 +1981,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
                 }
               }
             >
-              Duration: 
-              12
-               min - players: 
-              2
+              Throwing, Offense
             </Text>
           </View>
         </View>
@@ -1775,21 +2010,71 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
             }
           }
         >
-          <Image
-            source={
-              Object {
-                "uri": "https://cms.qz.com/wp-content/uploads/2015/08/h_00486649-e1438606606764.jpg?quality=75&strip=all&w=1600&h=900",
-              }
-            }
+          <View
+            accessibilityIgnoresInvertColors={true}
             style={
               Object {
+                "alignItems": "center",
+                "backgroundColor": "rgb(0,0,0)",
                 "borderRadius": 5,
                 "height": 80,
+                "justifyContent": "center",
                 "marginRight": 10,
+                "padding": 10,
                 "width": 80,
               }
             }
-          />
+          >
+            <Image
+              source={
+                Object {
+                  "uri": "https://cms.qz.com/wp-content/uploads/2015/08/h_00486649-e1438606606764.jpg?quality=75&strip=all&w=1600&h=900",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": 80,
+                    "width": 80,
+                  },
+                  Object {
+                    "borderRadius": 5,
+                    "opacity": 0.5,
+                  },
+                ]
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "#e5e5e5",
+                  "fontSize": 20,
+                  "textAlign": "center",
+                }
+              }
+            >
+              2
+              +
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#e5e5e5",
+                  "fontSize": 14,
+                  "textAlign": "center",
+                }
+              }
+            >
+              players
+            </Text>
+          </View>
           <View
             style={
               Object {
@@ -1830,10 +2115,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
                 }
               }
             >
-              Duration: 
-              20
-               min - players: 
-              2
+              Defense, Positionning
             </Text>
           </View>
         </View>
@@ -1862,21 +2144,71 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
             }
           }
         >
-          <Image
-            source={
-              Object {
-                "uri": "https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg",
-              }
-            }
+          <View
+            accessibilityIgnoresInvertColors={true}
             style={
               Object {
+                "alignItems": "center",
+                "backgroundColor": "rgb(0,0,0)",
                 "borderRadius": 5,
                 "height": 80,
+                "justifyContent": "center",
                 "marginRight": 10,
+                "padding": 10,
                 "width": 80,
               }
             }
-          />
+          >
+            <Image
+              source={
+                Object {
+                  "uri": "https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": 80,
+                    "width": 80,
+                  },
+                  Object {
+                    "borderRadius": 5,
+                    "opacity": 0.5,
+                  },
+                ]
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "#e5e5e5",
+                  "fontSize": 20,
+                  "textAlign": "center",
+                }
+              }
+            >
+              6
+              +
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#e5e5e5",
+                  "fontSize": 14,
+                  "textAlign": "center",
+                }
+              }
+            >
+              players
+            </Text>
+          </View>
           <View
             style={
               Object {
@@ -1917,10 +2249,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
                 }
               }
             >
-              Duration: 
-              14
-               min - players: 
-              6
+              Catch, Throwing
             </Text>
           </View>
         </View>

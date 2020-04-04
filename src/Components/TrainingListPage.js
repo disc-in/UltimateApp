@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, View, Text, Image, TouchableOpacity, FlatList } from 'react-native';
 import { connect } from 'react-redux';
 import theme from '../styles/theme.style';
+import * as list from '../styles/list.style';
 
 const getTrainingDuration = trainingDrills => {
   const durationList = trainingDrills.map(({ durationInMinutes }) => durationInMinutes);
@@ -62,38 +63,24 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   counter: {
-    color: theme.COLOR_SECONDARY,
-    marginBottom: 20,
+    ...list.counter,
   },
   training: {
-    height: 80,
-    flexDirection: 'row',
-    marginBottom: 20,
+    ...list.item,
   },
   image: {
-    width: 80,
-    height: 80,
-    marginRight: 10,
-    borderRadius: 5,
+    ...list.image,
   },
   contentContainer: {
-    padding: 5,
-    paddingBottom: 10,
+    ...list.contentContainer,
   },
   title: {
-    flex: 3,
-    fontWeight: 'bold',
-    fontSize: theme.FONT_SIZE_LARGE,
-    flexWrap: 'wrap',
+    ...list.title,
   },
   source: {
-    flex: 2,
-    color: theme.COLOR_SECONDARY,
-    fontSize: theme.FONT_SIZE_SMALL,
+    ...list.source,
   },
   numberOfPlayers: {
-    flex: 2,
-    color: theme.COLOR_SECONDARY,
-    fontSize: theme.FONT_SIZE_SMALL,
+    ...list.numberOfPlayers,
   },
 });

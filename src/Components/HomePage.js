@@ -16,7 +16,7 @@ export default class HomePage extends React.Component {
         >
           <ImageBackground source={frisbeeGlove} style={styles.image}>
             <View style={styles.wrapper}>
-              <Text style={styles.text}>Frisbee</Text>
+              <Text style={styles.text}>Frisbee drills</Text>
             </View>
           </ImageBackground>
         </TouchableHighlight>
@@ -26,7 +26,7 @@ export default class HomePage extends React.Component {
         >
           <ImageBackground source={fitness} style={styles.image}>
             <View style={styles.wrapper}>
-              <Text style={styles.text}>Fitness</Text>
+              <Text style={styles.text}>Fitness drills</Text>
             </View>
           </ImageBackground>
         </TouchableHighlight>

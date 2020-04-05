@@ -15,11 +15,11 @@ describe('<HomePage />', () => {
     const navigation = { navigate: jest.fn() };
     const { container, getByText } = render(<HomePage navigation={navigation} />);
 
-    await fireEvent.press(getByText('Frisbee'));
+    await fireEvent.press(getByText('Frisbee drills'));
 
     expect(navigation.navigate).toBeCalledWith('DrillListPage', { type: DrillTypes.TECHNICAL });
 
-    await fireEvent.press(getByText('Fitness'));
+    await fireEvent.press(getByText('Fitness drills'));
 
     expect(navigation.navigate).toBeCalledWith('DrillListPage', { type: DrillTypes.FITNESS });
 

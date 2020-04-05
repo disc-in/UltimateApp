@@ -14,10 +14,19 @@ export const image = {
   height: 80,
   marginRight: 10,
   borderRadius: 5,
+  padding: 10,
+  backgroundColor: 'rgb(0,0,0)',
+  justifyContent: 'center',
+  alignItems: 'center',
 };
 export const imageOpacity = {
   borderRadius: 5,
   opacity: 0.5,
+};
+export const imageText = {
+  textAlign: 'center',
+  color: theme.COLOR_SECONDARY_LIGHT,
+  fontSize: theme.FONT_SIZE_SMALL,
 };
 export const contentContainer = {
   padding: 5,

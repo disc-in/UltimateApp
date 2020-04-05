@@ -37,14 +37,17 @@ export const TrainingListPage = props => {
             style={styles.training}
             onPress={() => navigation.navigate('TrainingPage', { training: item })}
           >
-            <ImageBackground source={{ uri: item.image }} style={styles.image} imageStyle={styles.imageOpacity} />
+            <ImageBackground source={{ uri: item.image }} style={styles.image} imageStyle={styles.imageOpacity}>
+              <Text style={styles.imageText}>
+                {getTrainingDuration(allDrills.filter(drill => item.drills.includes(drill.id)))} min
+              </Text>
+              <Text style={styles.imageText}>
+                {getTrainingNbPlayers(allDrills.filter(drill => item.drills.includes(drill.id)))}+ players
+              </Text>
+            </ImageBackground>
             <View style={styles.contentContainer}>
               <Text style={styles.source}>{item.source}</Text>
               <Text style={styles.title}>{item.title}</Text>
-              <Text style={styles.numberOfPlayers}>
-                Duration: {getTrainingDuration(allDrills.filter(drill => item.drills.includes(drill.id)))} min -
-                players: {getTrainingNbPlayers(allDrills.filter(drill => item.drills.includes(drill.id)))}
-              </Text>
             </View>
           </TouchableOpacity>
         )}
@@ -73,6 +76,9 @@ const styles = StyleSheet.create({
   },
   imageOpacity: {
     ...list.imageOpacity,
+  },
+  imageText: {
+    ...list.imageText,
   },
   contentContainer: {
     ...list.contentContainer,

@@ -47,13 +47,15 @@ class Filters extends React.Component {
     this.props.route.params.onFiltered(this.state.displayedDrills);
     this.props.navigation.setOptions({
       headerRight: () => (
-        <Button
+        <TouchableOpacity
+          style={styles.headerButton}
           onPress={() => {
             this.props.route.params.onFiltered(this.state.displayedDrills);
             this.props.navigation.goBack();
           }}
-          title="OK"
-        />
+        >
+          <Text style={styles.headerButtonText}>✓</Text>
+        </TouchableOpacity>
       ),
     });
   }
@@ -105,6 +107,12 @@ class Filters extends React.Component {
 }
 
 const styles = StyleSheet.create({
+  headerButton: {
+    paddingRight: 20,
+  },
+  headerButtonText: {
+    fontSize: theme.FONT_SIZE_LARGE,
+  },
   wrapper: {
     height: '100%',
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,

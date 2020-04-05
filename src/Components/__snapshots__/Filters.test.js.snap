@@ -4,7 +4,7 @@ exports[`<Filters /> renders correctly 1`] = `
 <View
   style={
     Object {
-      "alignItems": "center",
+      "backgroundColor": "#fff",
       "height": "100%",
     }
   }
@@ -12,275 +12,230 @@ exports[`<Filters /> renders correctly 1`] = `
   <Text
     style={
       Object {
-        "fontWeight": "bold",
-        "marginTop": 10,
-        "textTransform": "uppercase",
+        "color": "#A6A6A6",
+        "marginBottom": 20,
+        "paddingLeft": 20,
+        "paddingTop": 10,
       }
     }
   >
-    Level
+    1
+     drills available
   </Text>
   <View
     style={
       Object {
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "justifyContent": "center",
-        "marginBottom": 10,
-      }
-    }
-  >
-    <View
-      accessible={true}
-      focusable={true}
-      isTVSelectable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "backgroundColor": "#fff",
-          "borderColor": "#e5e5e5",
-          "borderWidth": 1,
-          "margin": 5,
-          "opacity": 1,
-          "paddingHorizontal": 20,
-          "paddingVertical": 10,
-        }
-      }
-    >
-      <Text
-        style={
-          Object {
-            "textTransform": "capitalize",
-          }
-        }
-      >
-        beginner
-      </Text>
-    </View>
-    <View
-      accessible={true}
-      focusable={true}
-      isTVSelectable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "backgroundColor": "#fff",
-          "borderColor": "#e5e5e5",
-          "borderWidth": 1,
-          "margin": 5,
-          "opacity": 1,
-          "paddingHorizontal": 20,
-          "paddingVertical": 10,
-        }
-      }
-    >
-      <Text
-        style={
-          Object {
-            "textTransform": "capitalize",
-          }
-        }
-      >
-        intermediate
-      </Text>
-    </View>
-    <View
-      accessible={true}
-      focusable={true}
-      isTVSelectable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "backgroundColor": "#fff",
-          "borderColor": "#e5e5e5",
-          "borderWidth": 1,
-          "margin": 5,
-          "opacity": 1,
-          "paddingHorizontal": 20,
-          "paddingVertical": 10,
-        }
-      }
-    >
-      <Text
-        style={
-          Object {
-            "textTransform": "capitalize",
-          }
-        }
-      >
-        advanced
-      </Text>
-    </View>
-  </View>
-  <Text
-    style={
-      Object {
-        "fontWeight": "bold",
-        "marginTop": 10,
-        "textTransform": "uppercase",
-      }
-    }
-  >
-    Goals
-  </Text>
-  <View
-    style={
-      Object {
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "justifyContent": "center",
-        "marginBottom": 10,
-      }
-    }
-  >
-    <View
-      accessible={true}
-      focusable={true}
-      isTVSelectable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "backgroundColor": "#fff",
-          "borderColor": "#e5e5e5",
-          "borderWidth": 1,
-          "margin": 5,
-          "opacity": 1,
-          "paddingHorizontal": 20,
-          "paddingVertical": 10,
-        }
-      }
-    >
-      <Text
-        style={
-          Object {
-            "textTransform": "capitalize",
-          }
-        }
-      >
-        Catch
-      </Text>
-    </View>
-    <View
-      accessible={true}
-      focusable={true}
-      isTVSelectable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "backgroundColor": "#fff",
-          "borderColor": "#e5e5e5",
-          "borderWidth": 1,
-          "margin": 5,
-          "opacity": 1,
-          "paddingHorizontal": 20,
-          "paddingVertical": 10,
-        }
-      }
-    >
-      <Text
-        style={
-          Object {
-            "textTransform": "capitalize",
-          }
-        }
-      >
-        Handling
-      </Text>
-    </View>
-  </View>
-  <Text
-    style={
-      Object {
-        "fontWeight": "bold",
-        "marginTop": 10,
-        "textTransform": "uppercase",
-      }
-    }
-  >
-    Number of players
-  </Text>
-  <TextInput
-    allowFontScaling={true}
-    keyboardType="numeric"
-    onChangeText={[Function]}
-    placeholder="How many players do you have?"
-    rejectResponderTermination={true}
-    style={
-      Object {
-        "backgroundColor": "#fff",
-        "borderBottomWidth": 1,
-        "borderColor": "#e5e5e5",
-        "color": "#444",
-        "fontSize": 16,
-        "marginBottom": 30,
-        "padding": 10,
-        "paddingHorizontal": 20,
-      }
-    }
-    underlineColorAndroid="transparent"
-  />
-  <View
-    accessible={true}
-    focusable={true}
-    isTVSelectable={true}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "backgroundColor": "#fff",
-        "borderColor": "#e5e5e5",
-        "borderWidth": 1,
-        "margin": 5,
-        "opacity": 1,
-        "paddingHorizontal": 20,
-        "paddingVertical": 10,
+        "alignItems": "center",
       }
     }
   >
     <Text
       style={
         Object {
-          "textTransform": "capitalize",
+          "fontWeight": "bold",
+          "marginTop": 10,
+          "textTransform": "uppercase",
         }
       }
     >
-      Validate
+      Level
     </Text>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "flexWrap": "wrap",
+          "justifyContent": "center",
+          "marginBottom": 10,
+        }
+      }
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "borderColor": "#e5e5e5",
+            "borderWidth": 1,
+            "margin": 5,
+            "opacity": 1,
+            "paddingHorizontal": 20,
+            "paddingVertical": 10,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "textTransform": "capitalize",
+            }
+          }
+        >
+          beginner
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "borderColor": "#e5e5e5",
+            "borderWidth": 1,
+            "margin": 5,
+            "opacity": 1,
+            "paddingHorizontal": 20,
+            "paddingVertical": 10,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "textTransform": "capitalize",
+            }
+          }
+        >
+          intermediate
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "borderColor": "#e5e5e5",
+            "borderWidth": 1,
+            "margin": 5,
+            "opacity": 1,
+            "paddingHorizontal": 20,
+            "paddingVertical": 10,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "textTransform": "capitalize",
+            }
+          }
+        >
+          advanced
+        </Text>
+      </View>
+    </View>
+    <Text
+      style={
+        Object {
+          "fontWeight": "bold",
+          "marginTop": 10,
+          "textTransform": "uppercase",
+        }
+      }
+    >
+      Goals
+    </Text>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "flexWrap": "wrap",
+          "justifyContent": "center",
+          "marginBottom": 10,
+        }
+      }
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "borderColor": "#e5e5e5",
+            "borderWidth": 1,
+            "margin": 5,
+            "opacity": 1,
+            "paddingHorizontal": 20,
+            "paddingVertical": 10,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "textTransform": "capitalize",
+            }
+          }
+        >
+          Full body
+        </Text>
+      </View>
+    </View>
+    <Text
+      style={
+        Object {
+          "fontWeight": "bold",
+          "marginTop": 10,
+          "textTransform": "uppercase",
+        }
+      }
+    >
+      Number of players
+    </Text>
+    <TextInput
+      allowFontScaling={true}
+      keyboardType="numeric"
+      onChangeText={[Function]}
+      placeholder="How many players do you have?"
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "backgroundColor": "#fff",
+          "borderBottomWidth": 1,
+          "borderColor": "#e5e5e5",
+          "color": "#444",
+          "fontSize": 16,
+          "marginBottom": 30,
+          "padding": 10,
+          "paddingHorizontal": 20,
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
   </View>
 </View>
 `;

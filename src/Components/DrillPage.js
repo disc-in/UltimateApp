@@ -8,13 +8,14 @@ import {
   ImageBackground,
   TouchableOpacity,
   Dimensions,
+  StatusBar,
 } from 'react-native';
 import { connect } from 'react-redux';
 import theme from '../styles/theme.style';
 
 class DrillPage extends Component {
   _toggleFavorite() {
-    const action = { type: 'TOGGLE_FAVORITE', value: this.state.dr };
+    const action = { type: 'TOGGLE_FAVORITE', value: this.state.drill };
     this.props.dispatch(action);
   }
 
@@ -26,18 +27,28 @@ class DrillPage extends Component {
   render() {
     const drill = this.props.route.params.drill;
     const { navigation } = this.props;
-    let ScreenHeight = Dimensions.get('window').height;
 
     return (
       <ScrollView style={styles.DrillPage}>
         <ImageBackground source={{ uri: drill.image }} style={styles.image} imageStyle={styles.imageOpacity}>
-          <Text style={styles.title}>{drill.title}</Text>
+          <View style={styles.titleContainer}>
+            <Text style={styles.title}>{drill.title}</Text>
+          </View>
           <View style={styles.infoWrapper}>
-            <Text style={styles.info}>{drill.durationInMinutes} minutes</Text>
+            <View style={styles.infoSubWrapper}>
+              <Text style={styles.infoDrill}>{drill.durationInMinutes}</Text>
+              <Text style={styles.info}> minutes</Text>
+            </View>
             <View style={styles.separator} />
-            <Text style={styles.info}>{drill.nbPlayers} players</Text>
+            <View style={styles.infoSubWrapper}>
+              <Text style={styles.infoDrill}>{drill.nbPlayers}</Text>
+              <Text style={styles.info}> players</Text>
+            </View>
             <View style={styles.separator} />
-            <Text style={styles.info}>{drill.level} level</Text>
+            <View style={styles.infoSubWrapper}>
+              <Text style={styles.infoDrill}>{drill.level}</Text>
+              <Text style={styles.info}> level</Text>
+            </View>
           </View>
           <TouchableOpacity
             style={styles.videoLink}
@@ -73,6 +84,7 @@ class DrillPage extends Component {
   }
 }
 
+const screenDimension = Dimensions.get('window');
 const styles = StyleSheet.create({
   DrillPage: {
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
@@ -81,18 +93,24 @@ const styles = StyleSheet.create({
     padding: 20,
     alignItems: 'center',
     backgroundColor: 'rgb(0,0,0)',
+    height: screenDimension.height,
   },
   imageOpacity: {
     opacity: 0.5,
   },
   title: {
-    marginTop: 100,
-    marginBottom: 100,
     color: theme.COLOR_PRIMARY_LIGHT,
-    fontSize: 48,
+    fontSize: 35,
     textAlign: 'center',
   },
+  titleContainer: {
+    height: (screenDimension.height * 2) / 5,
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   infoWrapper: {
+    height: (screenDimension.height * 1) / 5,
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     alignItems: 'center',
@@ -103,12 +121,11 @@ const styles = StyleSheet.create({
     fontSize: theme.FONT_SIZE_MEDIUM,
   },
   separator: {
-    height: 10,
+    height: 15,
     borderRightWidth: 1,
     borderRightColor: theme.COLOR_PRIMARY_LIGHT,
   },
   videoLink: {
-    margin: 40,
     width: 100,
     height: 100,
     borderRadius: 50,
@@ -129,7 +146,6 @@ const styles = StyleSheet.create({
   descriptionTitle: {
     marginBottom: 10,
     textAlign: 'center',
-    textTransform: 'uppercase',
     fontWeight: 'bold',
     fontSize: theme.FONT_SIZE_LARGE,
     color: theme.COLOR_PRIMARY,
@@ -138,6 +154,15 @@ const styles = StyleSheet.create({
     color: theme.COLOR_SECONDARY,
     textAlign: 'center',
     fontSize: theme.FONT_SIZE_MEDIUM,
+  },
+  infoDrill: {
+    color: theme.COLOR_PRIMARY_LIGHT,
+    paddingHorizontal: 30,
+    fontSize: theme.FONT_SIZE_LARGE,
+  },
+  infoSubWrapper: {
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 

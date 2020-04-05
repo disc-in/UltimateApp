@@ -6,13 +6,11 @@ import fixtures from '../Fixtures/TestFixtures';
 
 import ConnectedTrainingListPage, { TrainingListPage } from './TrainingListPage';
 
-const storeInstance = store;
-
 describe('<TrainingListPage />', () => {
   it('renders correctly when connected', () => {
     const tree = renderer
       .create(
-        <Provider store={storeInstance}>
+        <Provider store={store}>
           <ConnectedTrainingListPage />
         </Provider>,
       )

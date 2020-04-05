@@ -34,12 +34,12 @@ export const DrillListPage = props => {
           data={data}
           keyExtractor={item => item.id.toString()}
           renderItem={({ item }) => (
-            <TouchableOpacity style={styles.drill} onPress={() => navigation.navigate('DrillPage', { drill: item })}>
-              <Image style={styles.image} source={{ uri: item.image }} />
-              <View style={styles.contentContainer}>
-                <Text style={styles.source}>{item.source}</Text>
-                <Text style={styles.title}>{item.title}</Text>
-                <Text style={styles.numberOfPlayers}>
+            <TouchableOpacity style={list.item} onPress={() => navigation.navigate('DrillPage', { drill: item })}>
+              <Image style={list.image} source={{ uri: item.image }} />
+              <View style={list.contentContainer}>
+                <Text style={list.source}>{item.source}</Text>
+                <Text style={list.title}>{item.title}</Text>
+                <Text style={list.numberOfPlayers}>
                   Duration: {item.durationInMinutes} min - players: {item.nbPlayers}
                 </Text>
               </View>
@@ -64,27 +64,6 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     height: '100%',
-  },
-  counter: {
-    ...list.counter,
-  },
-  drill: {
-    ...list.item,
-  },
-  image: {
-    ...list.image,
-  },
-  contentContainer: {
-    ...list.contentContainer,
-  },
-  title: {
-    ...list.title,
-  },
-  source: {
-    ...list.source,
-  },
-  numberOfPlayers: {
-    ...list.numberOfPlayers,
   },
   filterButton: {
     position: 'absolute',

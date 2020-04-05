@@ -1,6 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { render, fireEvent, waitForElement } from 'react-native-testing-library';
+import { DrillTypes } from '../Fixtures';
+
 import HomePage from './HomePage';
 
 describe('<HomePage />', () => {
@@ -15,11 +17,11 @@ describe('<HomePage />', () => {
 
     await fireEvent.press(getByText('Frisbee'));
 
-    expect(navigation.navigate).toBeCalledWith('DrillListPage', { type: 'technical' });
+    expect(navigation.navigate).toBeCalledWith('DrillListPage', { type: DrillTypes.TECHNICAL });
 
     await fireEvent.press(getByText('Fitness'));
 
-    expect(navigation.navigate).toBeCalledWith('DrillListPage', { type: 'fitness' });
+    expect(navigation.navigate).toBeCalledWith('DrillListPage', { type: DrillTypes.FITNESS });
 
     await fireEvent.press(getByText('Trainings'));
 

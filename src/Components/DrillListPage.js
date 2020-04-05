@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Text, Image, TouchableOpacity, FlatList } from 'react-native';
+import { StyleSheet, View, Text, ImageBackground, TouchableOpacity, FlatList } from 'react-native';
 import { connect } from 'react-redux';
 import Filters from './Filters';
+import { DrillTypes } from '../Fixtures';
 
 import theme from '../styles/theme.style';
 import * as list from '../styles/list.style';
@@ -20,9 +21,12 @@ export const DrillListPage = props => {
   const [data, setData] = useState(drills);
   const [displayFilters, setDisplayFilters] = useState(false);
 
+  const imageMainData = type === DrillTypes.TECHNICAL ? 'nbPlayers' : 'durationInMinutes';
+  const imageMainDataLegend = type === DrillTypes.TECHNICAL ? 'players' : 'min.';
+
   return (
     <View style={styles.drillListPage}>
-      <Text style={styles.counter}>{data.length} drills available</Text>
+      <Text style={list.counter}>{data.length} drills available</Text>
       {displayFilters ? (
         <Filters
           onConfirm={() => setDisplayFilters(false)}
@@ -35,13 +39,14 @@ export const DrillListPage = props => {
           keyExtractor={item => item.id.toString()}
           renderItem={({ item }) => (
             <TouchableOpacity style={list.item} onPress={() => navigation.navigate('DrillPage', { drill: item })}>
-              <Image style={list.image} source={{ uri: item.image }} />
+              <ImageBackground source={{ uri: item.image }} style={list.image} imageStyle={list.imageOpacity}>
+                <Text style={{ ...list.imageText, ...list.imageTextMain }}>{item[imageMainData]}+</Text>
+                <Text style={list.imageText}>{imageMainDataLegend}</Text>
+              </ImageBackground>
               <View style={list.contentContainer}>
                 <Text style={list.source}>{item.source}</Text>
                 <Text style={list.title}>{item.title}</Text>
-                <Text style={list.numberOfPlayers}>
-                  Duration: {item.durationInMinutes} min - players: {item.nbPlayers}
-                </Text>
+                <Text style={list.numberOfPlayers}>{item.goals.join(', ')}</Text>
               </View>
             </TouchableOpacity>
           )}

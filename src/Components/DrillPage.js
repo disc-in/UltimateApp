@@ -1,5 +1,14 @@
 import React, { Component } from 'react';
-import { ScrollView, StyleSheet, View, Text, Button, ImageBackground, TouchableOpacity } from 'react-native';
+import {
+  ScrollView,
+  StyleSheet,
+  View,
+  Text,
+  Button,
+  ImageBackground,
+  TouchableOpacity,
+  Dimensions,
+} from 'react-native';
 import { connect } from 'react-redux';
 import theme from '../styles/theme.style';
 
@@ -17,6 +26,7 @@ class DrillPage extends Component {
   render() {
     const drill = this.props.route.params.drill;
     const { navigation } = this.props;
+    let ScreenHeight = Dimensions.get('window').height;
 
     return (
       <ScrollView style={styles.DrillPage}>
@@ -33,7 +43,7 @@ class DrillPage extends Component {
             style={styles.videoLink}
             onPress={() => navigation.navigate('DrillAnimationPage', { drill })}
           >
-            <Text style={styles.videoLinkText}>Video</Text>
+            <Text style={styles.videoLinkText}>Start</Text>
           </TouchableOpacity>
         </ImageBackground>
         <View style={styles.separator} />
@@ -102,14 +112,13 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
     borderRadius: 50,
-    backgroundColor: theme.COLOR_PRIMARY_LIGHT,
+    backgroundColor: '#FFF933',
     justifyContent: 'center',
     alignItems: 'center',
   },
   videoLinkText: {
-    fontSize: 24,
+    fontSize: 16,
     fontWeight: 'bold',
-    textTransform: 'uppercase',
   },
   description: {
     padding: 20,

@@ -20,56 +20,43 @@ class DrillPage extends React.Component {
   render() {
     const drill = this.props.route.params.drill;
     const { navigation } = this.props;
-    const {
-      title,
-      infoWrapper,
-      DrillPage,
-      separator,
-      videoLinkText,
-      favoriteContainer,
-      image,
-      imageOpacity,
-      info,
-      videoLink,
-      description,
-      descriptionItem,
-      descriptionText,
-      descriptionTitle,
-    } = styles;
 
     return (
-      <ScrollView style={DrillPage}>
-        <ImageBackground source={{ uri: drill.image }} style={image} imageStyle={imageOpacity}>
-          <Text style={title}>{drill.title}</Text>
-          <View style={infoWrapper}>
-            <Text style={info}>{drill.durationInMinutes} minutes</Text>
-            <View style={separator} />
-            <Text style={info}>{drill.nbPlayers} players</Text>
-            <View style={separator} />
-            <Text style={info}>{drill.level} level</Text>
+      <ScrollView style={styles.drillPage}>
+        <ImageBackground source={{ uri: drill.image }} style={styles.image} imageStyle={styles.imageOpacity}>
+          <Text style={styles.title}>{drill.title}</Text>
+          <View style={styles.infoWrapper}>
+            <Text style={styles.info}>{drill.durationInMinutes} minutes</Text>
+            <View style={styles.separator} />
+            <Text style={styles.info}>{drill.nbPlayers} players</Text>
+            <View style={styles.separator} />
+            <Text style={styles.info}>{drill.level} level</Text>
           </View>
-          <TouchableOpacity style={videoLink} onPress={() => navigation.navigate('DrillAnimationPage', { drill })}>
-            <Text style={videoLinkText}>Video</Text>
+          <TouchableOpacity
+            style={styles.videoLink}
+            onPress={() => navigation.navigate('DrillAnimationPage', { drill })}
+          >
+            <Text style={styles.videoLinkText}>Video</Text>
           </TouchableOpacity>
         </ImageBackground>
-        <View style={separator} />
-        <TouchableOpacity style={favoriteContainer} onPress={() => this.props.toggleFavorite(drill)}>
+        <View style={styles.separator} />
+        <TouchableOpacity style={styles.favoriteContainer} onPress={() => this.props.toggleFavorite(drill)}>
           {this._displayFavoriteImage()}
         </TouchableOpacity>
 
-        <View style={description}>
-          <View style={descriptionItem}>
-            <Text style={descriptionTitle}>Description</Text>
-            <Text style={descriptionText}>{drill.description}</Text>
+        <View style={styles.description}>
+          <View style={styles.descriptionItem}>
+            <Text style={styles.descriptionTitle}>Description</Text>
+            <Text style={styles.descriptionText}>{drill.description}</Text>
           </View>
-          <View style={descriptionItem}>
-            <Text style={descriptionTitle}>Equipment</Text>
-            <Text style={descriptionText}>{drill.equipment}</Text>
+          <View style={styles.descriptionItem}>
+            <Text style={styles.descriptionTitle}>Equipment</Text>
+            <Text style={styles.descriptionText}>{drill.equipment}</Text>
           </View>
-          <View style={descriptionItem}>
-            <Text style={descriptionTitle}>Goals</Text>
+          <View style={styles.descriptionItem}>
+            <Text style={styles.descriptionTitle}>Goals</Text>
             {drill.goals.map((goal, index) => (
-              <Text key={index} style={descriptionText}>
+              <Text key={index} style={styles.descriptionText}>
                 {goal}
               </Text>
             ))}
@@ -81,7 +68,7 @@ class DrillPage extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  DrillPage: {
+  drillPage: {
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
   },
   image: {

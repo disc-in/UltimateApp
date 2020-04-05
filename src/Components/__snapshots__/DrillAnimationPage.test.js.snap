@@ -4,244 +4,14 @@ exports[`<DrillAnimationPage /> renders correctly for a drill with animation 1`]
 <View
   style={
     Object {
-      "height": "100%",
+      "flex": 1,
+      "height": 1270,
     }
   }
 >
-  <View
-    style={
-      Object {
-        "alignItems": "flex-start",
-        "flex": 1,
-        "flexDirection": "row",
-        "justifyContent": "center",
-        "marginTop": 40,
-      }
-    }
-  >
-    <Text
-      style={
-        Object {
-          "backgroundColor": "#cd5c5c",
-          "borderRadius": 40,
-          "color": "white",
-          "height": 40,
-          "left": 337.5,
-          "position": "absolute",
-          "textAlign": "center",
-          "textAlignVertical": "center",
-          "top": 80.03999999999999,
-          "width": 40,
-        }
-      }
-    >
-      1
-    </Text>
-    <Text
-      style={
-        Object {
-          "backgroundColor": "#dcdcdc",
-          "borderRadius": 40,
-          "color": "black",
-          "height": 40,
-          "left": 337.5,
-          "position": "absolute",
-          "textAlign": "center",
-          "textAlignVertical": "center",
-          "top": 200.1,
-          "width": 40,
-        }
-      }
-    >
-      2
-    </Text>
-    <Text
-      style={
-        Object {
-          "backgroundColor": "#cd5c5c",
-          "borderRadius": 40,
-          "color": "white",
-          "height": 40,
-          "left": 337.5,
-          "position": "absolute",
-          "textAlign": "center",
-          "textAlignVertical": "center",
-          "top": 600.3000000000001,
-          "width": 40,
-        }
-      }
-    >
-      3
-    </Text>
-    <View
-      style={
-        Object {
-          "backgroundColor": "white",
-          "borderColor": "black",
-          "borderRadius": 20,
-          "borderWidth": 2,
-          "height": 20,
-          "left": 315,
-          "position": "absolute",
-          "top": 146.74,
-          "width": 20,
-        }
-      }
-    />
-    <Text>
-      Step 
-      1
-      /
-      5
-    </Text>
-    <View
-      style={
-        Object {
-          "flex": 0.1,
-        }
-      }
-    />
-    <View
-      accessibilityRole="button"
-      accessibilityStates={Array []}
-      accessible={true}
-      focusable={true}
-      isTVSelectable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
-      <View
-        style={
-          Array [
-            Object {},
-          ]
-        }
-      >
-        <Text
-          style={
-            Array [
-              Object {
-                "color": "#007AFF",
-                "fontSize": 18,
-                "padding": 8,
-                "textAlign": "center",
-              },
-            ]
-          }
-        >
-           &lt; 
-        </Text>
-      </View>
-    </View>
-    <View
-      style={
-        Object {
-          "flex": 0.1,
-        }
-      }
-    />
-    <View
-      accessibilityRole="button"
-      accessibilityStates={Array []}
-      accessible={true}
-      focusable={true}
-      isTVSelectable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
-      <View
-        style={
-          Array [
-            Object {},
-          ]
-        }
-      >
-        <Text
-          style={
-            Array [
-              Object {
-                "color": "#007AFF",
-                "fontSize": 18,
-                "padding": 8,
-                "textAlign": "center",
-              },
-            ]
-          }
-        >
-          Lancer
-        </Text>
-      </View>
-    </View>
-    <View
-      style={
-        Object {
-          "flex": 0.1,
-        }
-      }
-    />
-    <View
-      accessibilityRole="button"
-      accessibilityStates={Array []}
-      accessible={true}
-      focusable={true}
-      isTVSelectable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
-      <View
-        style={
-          Array [
-            Object {},
-          ]
-        }
-      >
-        <Text
-          style={
-            Array [
-              Object {
-                "color": "#007AFF",
-                "fontSize": 18,
-                "padding": 8,
-                "textAlign": "center",
-              },
-            ]
-          }
-        >
-           &gt; 
-        </Text>
-      </View>
-    </View>
-  </View>
+  <Text>
+    No visual content for this drill
+  </Text>
 </View>
 `;
 
@@ -249,7 +19,8 @@ exports[`<DrillAnimationPage /> renders correctly for a drill with no video nor 
 <View
   style={
     Object {
-      "height": "100%",
+      "flex": 1,
+      "height": 1270,
     }
   }
 >
@@ -263,54 +34,13 @@ exports[`<DrillAnimationPage /> renders correctly for a drill with video 1`] = `
 <View
   style={
     Object {
-      "height": "100%",
+      "flex": 1,
+      "height": 1270,
     }
   }
 >
-  <View
-    style={
-      Array [
-        Object {
-          "flex": 1,
-          "overflow": "hidden",
-        },
-        undefined,
-      ]
-    }
-  >
-    <RNCWebView
-      cacheEnabled={true}
-      javaScriptEnabled={true}
-      messagingEnabled={false}
-      onContentProcessDidTerminate={[Function]}
-      onHttpError={[Function]}
-      onLoadingError={[Function]}
-      onLoadingFinish={[Function]}
-      onLoadingProgress={[Function]}
-      onLoadingStart={[Function]}
-      onMessage={[Function]}
-      onShouldStartLoadWithRequest={[Function]}
-      source={
-        Object {
-          "uri": "https://www.youtube.com/embed/oN1bzPCKkGE",
-        }
-      }
-      style={
-        Array [
-          Object {
-            "flex": 1,
-            "overflow": "hidden",
-          },
-          Object {
-            "backgroundColor": "#ffffff",
-          },
-          Object {
-            "marginTop": 20,
-          },
-        ]
-      }
-      useSharedProcessPool={true}
-    />
-  </View>
+  <Text>
+    No visual content for this drill
+  </Text>
 </View>
 `;

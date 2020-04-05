@@ -15,6 +15,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "rgb(0,0,0)",
+          "height": 1270,
           "padding": 20,
         }
       }
@@ -35,7 +36,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
               "top": 0,
             },
             Object {
-              "height": undefined,
+              "height": 1270,
               "width": undefined,
             },
             Object {
@@ -44,86 +45,153 @@ exports[`<DrillPage /> renders correctly 1`] = `
           ]
         }
       />
-      <Text
+      <View
         style={
           Object {
-            "color": "#fff",
-            "fontSize": 48,
-            "marginBottom": 100,
-            "marginTop": 100,
-            "textAlign": "center",
+            "alignItems": "center",
+            "flex": 1,
+            "height": 533.6,
+            "justifyContent": "center",
           }
         }
       >
-        Fitness Drill Title
-      </Text>
+        <Text
+          style={
+            Object {
+              "color": "#fff",
+              "fontSize": 35,
+              "textAlign": "center",
+            }
+          }
+        >
+          Fitness Drill Title
+        </Text>
+      </View>
       <View
         style={
           Object {
             "alignItems": "center",
             "flexDirection": "row",
+            "height": 266.8,
             "justifyContent": "space-evenly",
           }
         }
       >
-        <Text
+        <View
           style={
             Object {
-              "color": "#fff",
-              "fontSize": 16,
-              "paddingHorizontal": 30,
+              "alignItems": "center",
+              "justifyContent": "center",
             }
           }
         >
-          10
-           minutes
-        </Text>
+          <Text
+            style={
+              Object {
+                "color": "#fff",
+                "fontSize": 20,
+                "paddingHorizontal": 30,
+              }
+            }
+          >
+            10
+          </Text>
+          <Text
+            style={
+              Object {
+                "color": "#fff",
+                "fontSize": 16,
+                "paddingHorizontal": 30,
+              }
+            }
+          >
+             minutes
+          </Text>
+        </View>
         <View
           style={
             Object {
               "borderRightColor": "#fff",
               "borderRightWidth": 1,
-              "height": 10,
+              "height": 15,
             }
           }
         />
-        <Text
+        <View
           style={
             Object {
-              "color": "#fff",
-              "fontSize": 16,
-              "paddingHorizontal": 30,
+              "alignItems": "center",
+              "justifyContent": "center",
             }
           }
         >
-          1
-           players
-        </Text>
+          <Text
+            style={
+              Object {
+                "color": "#fff",
+                "fontSize": 20,
+                "paddingHorizontal": 30,
+              }
+            }
+          >
+            1
+          </Text>
+          <Text
+            style={
+              Object {
+                "color": "#fff",
+                "fontSize": 16,
+                "paddingHorizontal": 30,
+              }
+            }
+          >
+             players
+          </Text>
+        </View>
         <View
           style={
             Object {
               "borderRightColor": "#fff",
               "borderRightWidth": 1,
-              "height": 10,
+              "height": 15,
             }
           }
         />
-        <Text
+        <View
           style={
             Object {
-              "color": "#fff",
-              "fontSize": 16,
-              "paddingHorizontal": 30,
+              "alignItems": "center",
+              "justifyContent": "center",
             }
           }
         >
-          Beginner
-           level
-        </Text>
+          <Text
+            style={
+              Object {
+                "color": "#fff",
+                "fontSize": 20,
+                "paddingHorizontal": 30,
+              }
+            }
+          >
+            Beginner
+          </Text>
+          <Text
+            style={
+              Object {
+                "color": "#fff",
+                "fontSize": 16,
+                "paddingHorizontal": 30,
+              }
+            }
+          >
+             level
+          </Text>
+        </View>
       </View>
       <View
         accessible={true}
-        focusable={true}
+        focusable={false}
         isTVSelectable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
@@ -135,27 +203,55 @@ exports[`<DrillPage /> renders correctly 1`] = `
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#fff",
+            "backgroundColor": "#FFF933",
             "borderRadius": 50,
             "height": 100,
             "justifyContent": "center",
-            "margin": 40,
             "opacity": 1,
             "width": 100,
           }
         }
       >
-        <Text
+        <ViewManagerAdapter_ExpoLinearGradient
+          proxiedProperties={
+            Object {
+              "colors": Array [
+                4287350508,
+                4287994338,
+              ],
+              "endPoint": Array [
+                1,
+                1,
+              ],
+              "locations": undefined,
+              "startPoint": Array [
+                0,
+                1,
+              ],
+            }
+          }
           style={
             Object {
-              "fontSize": 24,
-              "fontWeight": "bold",
-              "textTransform": "uppercase",
+              "alignItems": "center",
+              "borderRadius": 50,
+              "flex": 1,
+              "height": 100,
+              "justifyContent": "center",
+              "width": 100,
             }
           }
         >
-          Video
-        </Text>
+          <Text
+            style={
+              Object {
+                "fontSize": 16,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            Start
+          </Text>
+        </ViewManagerAdapter_ExpoLinearGradient>
       </View>
     </View>
     <View
@@ -163,7 +259,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
         Object {
           "borderRightColor": "#fff",
           "borderRightWidth": 1,
-          "height": 10,
+          "height": 15,
         }
       }
     />
@@ -231,7 +327,6 @@ exports[`<DrillPage /> renders correctly 1`] = `
               "fontWeight": "bold",
               "marginBottom": 10,
               "textAlign": "center",
-              "textTransform": "uppercase",
             }
           }
         >
@@ -264,7 +359,6 @@ exports[`<DrillPage /> renders correctly 1`] = `
               "fontWeight": "bold",
               "marginBottom": 10,
               "textAlign": "center",
-              "textTransform": "uppercase",
             }
           }
         >
@@ -297,7 +391,6 @@ exports[`<DrillPage /> renders correctly 1`] = `
               "fontWeight": "bold",
               "marginBottom": 10,
               "textAlign": "center",
-              "textTransform": "uppercase",
             }
           }
         >
@@ -314,6 +407,66 @@ exports[`<DrillPage /> renders correctly 1`] = `
         >
           Description of the drill
         </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "height": 1270,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "flex": 1,
+                "overflow": "hidden",
+              },
+              undefined,
+            ]
+          }
+        >
+          <RNCWebView
+            cacheEnabled={true}
+            javaScriptEnabled={true}
+            messagingEnabled={false}
+            onContentProcessDidTerminate={[Function]}
+            onHttpError={[Function]}
+            onLoadingError={[Function]}
+            onLoadingFinish={[Function]}
+            onLoadingProgress={[Function]}
+            onLoadingStart={[Function]}
+            onMessage={[Function]}
+            onShouldStartLoadWithRequest={[Function]}
+            source={
+              Object {
+                "uri": "https://www.youtube.com/embed/oN1bzPCKkGE",
+              }
+            }
+            style={
+              Array [
+                Object {
+                  "flex": 1,
+                  "overflow": "hidden",
+                },
+                Object {
+                  "backgroundColor": "#ffffff",
+                },
+                undefined,
+              ]
+            }
+            useSharedProcessPool={true}
+          />
+        </View>
       </View>
     </View>
   </View>

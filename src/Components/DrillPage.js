@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Header } from 'react-navigation-stack';
 import {
   ScrollView,
   StyleSheet,
@@ -8,10 +9,11 @@ import {
   ImageBackground,
   TouchableOpacity,
   Dimensions,
-  StatusBar,
 } from 'react-native';
 import { connect } from 'react-redux';
 import theme from '../styles/theme.style';
+import { LinearGradient } from 'expo-linear-gradient';
+import DrillAnimationPage from './DrillAnimationPage';
 
 class DrillPage extends Component {
   _toggleFavorite() {
@@ -19,14 +21,8 @@ class DrillPage extends Component {
     this.props.dispatch(action);
   }
 
-  componentDidUpdate() {
-    console.log('componentDidUpdate : ');
-    console.log(this.props.favoritesDrill);
-  }
-
   render() {
     const drill = this.props.route.params.drill;
-    const { navigation } = this.props;
 
     return (
       <ScrollView style={styles.DrillPage}>
@@ -50,11 +46,20 @@ class DrillPage extends Component {
               <Text style={styles.info}> level</Text>
             </View>
           </View>
+
           <TouchableOpacity
             style={styles.videoLink}
-            onPress={() => navigation.navigate('DrillAnimationPage', { drill })}
+            /*             onPress={() => navigation.navigate('DrillAnimationPage', { drill })}
+             */
           >
-            <Text style={styles.videoLinkText}>Start</Text>
+            <LinearGradient
+              style={styles.gradient}
+              colors={['#8BC6EC', '#9599E2']}
+              start={{ x: 0, y: 1 }}
+              end={{ x: 1, y: 1 }}
+            >
+              <Text style={styles.videoLinkText}>Start</Text>
+            </LinearGradient>
           </TouchableOpacity>
         </ImageBackground>
         <View style={styles.separator} />
@@ -79,12 +84,16 @@ class DrillPage extends Component {
             <Text style={styles.descriptionText}>{drill.description}</Text>
           </View>
         </View>
+        <View style={styles.animation}>
+          <DrillAnimationPage animation={drill.animation} video={drill.video} />
+        </View>
       </ScrollView>
     );
   }
 }
 
 const screenDimension = Dimensions.get('window');
+const sizeBackground = screenDimension.height - Header.HEIGHT;
 const styles = StyleSheet.create({
   DrillPage: {
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
@@ -93,7 +102,7 @@ const styles = StyleSheet.create({
     padding: 20,
     alignItems: 'center',
     backgroundColor: 'rgb(0,0,0)',
-    height: screenDimension.height,
+    height: sizeBackground,
   },
   imageOpacity: {
     opacity: 0.5,
@@ -163,6 +172,17 @@ const styles = StyleSheet.create({
   infoSubWrapper: {
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  gradient: {
+    flex: 1,
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  animation: {
+    flex: 1,
   },
 });
 

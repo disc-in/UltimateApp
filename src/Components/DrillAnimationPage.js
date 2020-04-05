@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, Dimensions } from 'react-native';
 import Animation from './Animation';
+import { Header } from 'react-navigation-stack';
 import { WebView } from 'react-native-webview';
 
-class DrillPage extends Component {
+class DrillAnimationPage extends Component {
   render() {
-    const drill = this.props.route.params.drill;
-
     return (
-      <View style={styles.DrillAnimationPage}>
-        {drill.animation ? (
-          <Animation animation={drill.animation} />
-        ) : drill.video ? (
-          <WebView source={{ uri: 'https://www.youtube.com/embed/oN1bzPCKkGE' }} style={{ marginTop: 20 }} />
+      <View style={styles.drillAnimationPage}>
+        {this.props.animation ? (
+          <Animation animation={this.props.animation} />
+        ) : this.props.video ? (
+          <WebView source={{ uri: 'https://www.youtube.com/embed/oN1bzPCKkGE' }} />
         ) : (
           <Text>No visual content for this drill</Text>
         )}
@@ -21,10 +20,13 @@ class DrillPage extends Component {
   }
 }
 
+const screenDimension = Dimensions.get('window');
+const sizeBackground = screenDimension.height - Header.HEIGHT;
 const styles = StyleSheet.create({
-  DrillAnimationPage: {
-    height: '100%',
+  drillAnimationPage: {
+    flex: 1,
+    height: sizeBackground,
   },
 });
 
-export default DrillPage;
+export default DrillAnimationPage;

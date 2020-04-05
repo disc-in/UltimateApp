@@ -4,6 +4,11 @@ import { connect } from 'react-redux';
 import theme from '../styles/theme.style';
 
 export class DrillPage extends Component {
+  _toggleFavorite() {
+    const action = { type: 'TOGGLE_FAVORITE', value: this.state.dr };
+    this.props.dispatch(action);
+  }
+
   render() {
     const drill = this.props.route.params.drill;
     const { navigation } = this.props;

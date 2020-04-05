@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity, TextInput } from 'react-native';
 import theme from '../styles/theme.style';
+import { Levels, GoalsFrisbee } from '../Fixtures';
 
 const Button = props => {
   const activeStyle = props.active ? styles.activeButton : {};
@@ -20,8 +21,12 @@ class Filters extends React.Component {
   };
 
   onPressedChange(target, value) {
-    const newValue = value === this.state[target] ? undefined : value;
-    this.setState({ [target]: newValue }, this.applyFilters);
+    this.setState(prevState => {
+      const newValue = value === prevState[target] ? undefined : value;
+      return {
+        [target]: newValue,
+      };
+    }, this.applyFilters);
   }
 
   onInputChange(target, value) {
@@ -61,7 +66,7 @@ class Filters extends React.Component {
         <View style={styles.filters}>
           <Text style={styles.filterTitle}>Level</Text>
           <View style={styles.filter}>
-            {['beginner', 'intermediate', 'advanced'].map(level => (
+            {Object.values(Levels).map(level => (
               <Button
                 key={level}
                 title={level}
@@ -143,7 +148,7 @@ const styles = StyleSheet.create({
     marginBottom: 30,
     padding: 10,
     paddingHorizontal: 20,
-    fontSize: 16,
+    fontSize: theme.FONT_SIZE_MEDIUM,
     color: '#444',
     borderBottomWidth: 1,
     borderColor: theme.BORDER_COLOR_BUTTON,

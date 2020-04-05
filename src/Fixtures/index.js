@@ -813,7 +813,7 @@ export default {
       intensity: Intensities.LOW,
       goals: [GoalsFrisbee.DEFENSE],
       seasonTiming: '',
-      level: Levels.BEGINNER,
+      level: Levels.INTERMEDIATE,
       /* video:, */
       animation: animationSquare,
       steps: [],
@@ -844,7 +844,7 @@ export default {
       intensity: Intensities.LOW,
       goals: [GoalsFrisbee.DEFENSE],
       seasonTiming: '',
-      level: Levels.BEGINNER,
+      level: Levels.ADVANCED,
       /* video:, */
       animation: animationSquare,
       steps: [],

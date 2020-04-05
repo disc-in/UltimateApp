@@ -1,5 +1,3 @@
-// Store/Reducers/favoriteReducer.js
-
 const initialState = { favoritesDrill: [] };
 
 function toggleFavorite(state = initialState, action) {

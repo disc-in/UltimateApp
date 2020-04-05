@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { StyleSheet, View, Text, Image, TouchableOpacity, FlatList } from 'react-native';
 import { connect } from 'react-redux';
 import theme from '../styles/theme.style';
-import Filters from './Filters';
 import filterButtonImage from '../../assets/filter.png';
 
 const mapStateToProps = state => {

@@ -3,6 +3,7 @@ import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import store from '../Store/testStore';
 import { createDrill } from '../Fixtures/TestFixtures';
+import { DrillTypes } from '../Fixtures';
 
 import ConnectedDrillListPage, { DrillListPage } from './DrillListPage';
 
@@ -12,7 +13,7 @@ describe('<DrillListPage />', () => {
   it('renders correctly when connected', () => {
     const route = {
       params: {
-        type: 'technical',
+        type: DrillTypes.TECHNICAL,
       },
     };
     const tree = renderer
@@ -25,13 +26,24 @@ describe('<DrillListPage />', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders correctly with a drill', () => {
+  it('renders correctly with a technical drill', () => {
     const route = {
       params: {
-        type: 'technical',
+        type: DrillTypes.TECHNICAL,
       },
     };
-    const drills = [createDrill()];
+    const drills = [createDrill({ type: DrillTypes.TECHNICAL })];
+    const tree = renderer.create(<DrillListPage route={route} drills={drills} />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders correctly with a fitness drill', () => {
+    const route = {
+      params: {
+        type: DrillTypes.FITNESS,
+      },
+    };
+    const drills = [createDrill({ type: DrillTypes.FITNESS })];
     const tree = renderer.create(<DrillListPage route={route} drills={drills} />).toJSON();
     expect(tree).toMatchSnapshot();
   });

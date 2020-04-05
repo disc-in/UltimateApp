@@ -4,6 +4,16 @@ import { connect } from 'react-redux';
 import DrillList from './DrillList';
 import theme from '../styles/theme.style';
 
+const getGoals = drills => {
+  const nbPlayersList = trainingDrills.map(({ nbPlayers }) => nbPlayers);
+  return Math.max(...nbPlayersList);
+};
+
+const getEquipment = drills => {
+  const nbPlayersList = trainingDrills.map(({ nbPlayers }) => nbPlayers);
+  return Math.max(...nbPlayersList);
+};
+
 const mapStateToProps = state => {
   return {
     drills: state.drills,
@@ -19,7 +29,11 @@ class TrainingPage extends Component {
     return (
       <ScrollView style={styles.trainingPage}>
         <Text style={styles.descriptionText}>{training.description}</Text>
-        <DrillList navigation={navigation} drillsToDisplay={drills} type="technical" />
+        <Text style={styles.descriptionText}>Goals</Text>
+        <Text style={styles.descriptionText}>{getGoals(drills)}}</Text>
+        <Text style={styles.descriptionText}>Required equipment</Text>
+        <Text style={styles.descriptionText}>{getEquipment(drills)}</Text>
+        <DrillList navigation={navigation} drillsToDisplay={drills} />
       </ScrollView>
     );
   }

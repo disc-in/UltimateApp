@@ -31,7 +31,7 @@ export const DrillListPage = props => {
           initialData={drills}
         />
       ) : (
-        <DrillList navigation={navigation} drillsToDisplay={data} type={type} />
+        <DrillList navigation={navigation} drillsToDisplay={data} />
       )}
       {!displayFilters && (
         <TouchableOpacity style={styles.filterButton} onPress={() => setDisplayFilters(true)}>

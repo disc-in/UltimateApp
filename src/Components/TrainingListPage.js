@@ -25,7 +25,6 @@ export const TrainingListPage = props => {
   const { allDrills, trainings, navigation } = props;
 
   const [data] = useState(trainings);
-  console.log(list.counter);
 
   return (
     <View style={styles.trainingListPage}>

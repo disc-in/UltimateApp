@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, View, Text, Image, TouchableOpacity, FlatList } from 'react-native';
 import { connect } from 'react-redux';
 import Filters from './Filters';
+import DrillList from './DrillList';
 
 import theme from '../styles/theme.style';
 import * as list from '../styles/list.style';
@@ -30,22 +31,7 @@ export const DrillListPage = props => {
           initialData={drills}
         />
       ) : (
-        <FlatList
-          data={data}
-          keyExtractor={item => item.id.toString()}
-          renderItem={({ item }) => (
-            <TouchableOpacity style={styles.drill} onPress={() => navigation.navigate('DrillPage', { drill: item })}>
-              <Image style={styles.image} source={{ uri: item.image }} />
-              <View style={styles.contentContainer}>
-                <Text style={styles.source}>{item.source}</Text>
-                <Text style={styles.title}>{item.title}</Text>
-                <Text style={styles.numberOfPlayers}>
-                  Duration: {item.durationInMinutes} min - players: {item.nbPlayers}
-                </Text>
-              </View>
-            </TouchableOpacity>
-          )}
-        />
+        <DrillList navigation={navigation} drillsToDisplay={data} type={type} />
       )}
       {!displayFilters && (
         <TouchableOpacity style={styles.filterButton} onPress={() => setDisplayFilters(true)}>

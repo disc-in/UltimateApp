@@ -3,13 +3,13 @@ import { StyleSheet, View, Text, Image, TouchableOpacity, FlatList } from 'react
 
 import * as list from '../styles/list.style';
 
-export const DrillList = props => {
-  const { navigation } = props;
+const DrillList = props => {
+  const { drillsToDisplay, navigation } = props;
 
   return (
     <View>
       <FlatList
-        data={props.data}
+        data={drillsToDisplay}
         keyExtractor={item => item.id.toString()}
         renderItem={({ item }) => (
           <TouchableOpacity style={styles.drill} onPress={() => navigation.navigate('DrillPage', { drill: item })}>
@@ -51,3 +51,5 @@ const styles = StyleSheet.create({
     ...list.numberOfPlayers,
   },
 });
+
+export default DrillList;

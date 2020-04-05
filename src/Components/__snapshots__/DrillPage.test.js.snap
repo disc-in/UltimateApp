@@ -221,9 +221,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
             }
           }
         >
-
           Description
-
         </Text>
         <Text
           style={
@@ -234,9 +232,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
             }
           }
         >
-
-          Full body
-
+          Description of the drill
         </Text>
       </View>
       <View
@@ -302,9 +298,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
             }
           }
         >
-
-          Description of the drill
-
+          Full body
         </Text>
       </View>
     </View>

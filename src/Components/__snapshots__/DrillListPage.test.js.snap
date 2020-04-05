@@ -1348,9 +1348,13 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
             }
             style={
               Object {
+                "alignItems": "center",
+                "backgroundColor": "rgb(0,0,0)",
                 "borderRadius": 5,
                 "height": 80,
+                "justifyContent": "center",
                 "marginRight": 10,
+                "padding": 10,
                 "width": 80,
               }
             }
@@ -1435,9 +1439,13 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
             }
             style={
               Object {
+                "alignItems": "center",
+                "backgroundColor": "rgb(0,0,0)",
                 "borderRadius": 5,
                 "height": 80,
+                "justifyContent": "center",
                 "marginRight": 10,
+                "padding": 10,
                 "width": 80,
               }
             }
@@ -1522,9 +1530,13 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
             }
             style={
               Object {
+                "alignItems": "center",
+                "backgroundColor": "rgb(0,0,0)",
                 "borderRadius": 5,
                 "height": 80,
+                "justifyContent": "center",
                 "marginRight": 10,
+                "padding": 10,
                 "width": 80,
               }
             }
@@ -1609,9 +1621,13 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
             }
             style={
               Object {
+                "alignItems": "center",
+                "backgroundColor": "rgb(0,0,0)",
                 "borderRadius": 5,
                 "height": 80,
+                "justifyContent": "center",
                 "marginRight": 10,
+                "padding": 10,
                 "width": 80,
               }
             }
@@ -1696,9 +1712,13 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
             }
             style={
               Object {
+                "alignItems": "center",
+                "backgroundColor": "rgb(0,0,0)",
                 "borderRadius": 5,
                 "height": 80,
+                "justifyContent": "center",
                 "marginRight": 10,
+                "padding": 10,
                 "width": 80,
               }
             }
@@ -1783,9 +1803,13 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
             }
             style={
               Object {
+                "alignItems": "center",
+                "backgroundColor": "rgb(0,0,0)",
                 "borderRadius": 5,
                 "height": 80,
+                "justifyContent": "center",
                 "marginRight": 10,
+                "padding": 10,
                 "width": 80,
               }
             }
@@ -1870,9 +1894,13 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
             }
             style={
               Object {
+                "alignItems": "center",
+                "backgroundColor": "rgb(0,0,0)",
                 "borderRadius": 5,
                 "height": 80,
+                "justifyContent": "center",
                 "marginRight": 10,
+                "padding": 10,
                 "width": 80,
               }
             }

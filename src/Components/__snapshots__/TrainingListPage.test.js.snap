@@ -101,21 +101,72 @@ exports[`<TrainingListPage /> renders correctly when connected 1`] = `
             }
           }
         >
-          <Image
-            source={
-              Object {
-                "uri": "https://d3j2bju5c7tc02.cloudfront.net/2016_44/backhand.jpg",
-              }
-            }
+          <View
+            accessibilityIgnoresInvertColors={true}
             style={
               Object {
+                "alignItems": "center",
+                "backgroundColor": "rgb(0,0,0)",
                 "borderRadius": 5,
                 "height": 80,
+                "justifyContent": "center",
                 "marginRight": 10,
+                "padding": 10,
                 "width": 80,
               }
             }
-          />
+          >
+            <Image
+              source={
+                Object {
+                  "uri": "https://d3j2bju5c7tc02.cloudfront.net/2016_44/backhand.jpg",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": 80,
+                    "width": 80,
+                  },
+                  Object {
+                    "borderRadius": 5,
+                    "opacity": 0.5,
+                  },
+                ]
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "#e5e5e5",
+                  "fontSize": 14,
+                  "textAlign": "center",
+                }
+              }
+            >
+              43
+               min
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#e5e5e5",
+                  "fontSize": 14,
+                  "textAlign": "center",
+                }
+              }
+            >
+              2
+              + players
+            </Text>
+          </View>
           <View
             style={
               Object {
@@ -147,20 +198,6 @@ exports[`<TrainingListPage /> renders correctly when connected 1`] = `
             >
               Dump & Swing
             </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#A6A6A6",
-                  "flex": 2,
-                  "fontSize": 14,
-                }
-              }
-            >
-              Duration: 
-              43
-               min - players: 
-              2
-            </Text>
           </View>
         </View>
       </View>
@@ -188,21 +225,72 @@ exports[`<TrainingListPage /> renders correctly when connected 1`] = `
             }
           }
         >
-          <Image
-            source={
-              Object {
-                "uri": "https://cdn3.sportngin.com/attachments/photo/be7e-106813275/Screen_Shot_2018-07-19_at_3.53.39_PM_large.png",
-              }
-            }
+          <View
+            accessibilityIgnoresInvertColors={true}
             style={
               Object {
+                "alignItems": "center",
+                "backgroundColor": "rgb(0,0,0)",
                 "borderRadius": 5,
                 "height": 80,
+                "justifyContent": "center",
                 "marginRight": 10,
+                "padding": 10,
                 "width": 80,
               }
             }
-          />
+          >
+            <Image
+              source={
+                Object {
+                  "uri": "https://cdn3.sportngin.com/attachments/photo/be7e-106813275/Screen_Shot_2018-07-19_at_3.53.39_PM_large.png",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": 80,
+                    "width": 80,
+                  },
+                  Object {
+                    "borderRadius": 5,
+                    "opacity": 0.5,
+                  },
+                ]
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "#e5e5e5",
+                  "fontSize": 14,
+                  "textAlign": "center",
+                }
+              }
+            >
+              70
+               min
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#e5e5e5",
+                  "fontSize": 14,
+                  "textAlign": "center",
+                }
+              }
+            >
+              10
+              + players
+            </Text>
+          </View>
           <View
             style={
               Object {
@@ -233,20 +321,6 @@ exports[`<TrainingListPage /> renders correctly when connected 1`] = `
               }
             >
               First practice
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#A6A6A6",
-                  "flex": 2,
-                  "fontSize": 14,
-                }
-              }
-            >
-              Duration: 
-              70
-               min - players: 
-              10
             </Text>
           </View>
         </View>
@@ -342,21 +416,72 @@ exports[`<TrainingListPage /> renders correctly with a training 1`] = `
             }
           }
         >
-          <Image
-            source={
-              Object {
-                "uri": "https://d3j2bju5c7tc02.cloudfront.net/2016_44/backhand.jpg",
-              }
-            }
+          <View
+            accessibilityIgnoresInvertColors={true}
             style={
               Object {
+                "alignItems": "center",
+                "backgroundColor": "rgb(0,0,0)",
                 "borderRadius": 5,
                 "height": 80,
+                "justifyContent": "center",
                 "marginRight": 10,
+                "padding": 10,
                 "width": 80,
               }
             }
-          />
+          >
+            <Image
+              source={
+                Object {
+                  "uri": "https://d3j2bju5c7tc02.cloudfront.net/2016_44/backhand.jpg",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": 80,
+                    "width": 80,
+                  },
+                  Object {
+                    "borderRadius": 5,
+                    "opacity": 0.5,
+                  },
+                ]
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "#e5e5e5",
+                  "fontSize": 14,
+                  "textAlign": "center",
+                }
+              }
+            >
+              22
+               min
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#e5e5e5",
+                  "fontSize": 14,
+                  "textAlign": "center",
+                }
+              }
+            >
+              2
+              + players
+            </Text>
+          </View>
           <View
             style={
               Object {
@@ -387,20 +512,6 @@ exports[`<TrainingListPage /> renders correctly with a training 1`] = `
               }
             >
               Dump & Swing
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#A6A6A6",
-                  "flex": 2,
-                  "fontSize": 14,
-                }
-              }
-            >
-              Duration: 
-              22
-               min - players: 
-              2
             </Text>
           </View>
         </View>

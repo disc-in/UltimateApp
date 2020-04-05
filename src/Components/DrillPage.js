@@ -20,6 +20,22 @@ class DrillPage extends React.Component {
   render() {
     const drill = this.props.route.params.drill;
     const { navigation } = this.props;
+    const {
+      title,
+      infoWrapper,
+      DrillPage,
+      separator,
+      videoLinkText,
+      favoriteContainer,
+      image,
+      imageOpacity,
+      info,
+      videoLink,
+      description,
+      descriptionItem,
+      descriptionText,
+      descriptionTitle,
+    } = styles;
 
     return (
       <ScrollView style={styles.DrillPage}>

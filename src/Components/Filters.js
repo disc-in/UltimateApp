@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity, TextInput } from 'react-native';
 import theme from '../styles/theme.style';
-import { Levels, GoalsFrisbee } from '../Fixtures';
+import { Levels } from '../Fixtures';
 
 const Button = props => {
   const activeStyle = props.active ? styles.activeButton : {};
@@ -43,6 +43,7 @@ class Filters extends React.Component {
 
     this.setState({ displayedDrills: newData });
   }
+
   componentDidMount() {
     this.props.route.params.onFiltered(this.state.displayedDrills);
     this.props.navigation.setOptions({

@@ -3,6 +3,7 @@ import { StyleSheet, View, Text, ImageBackground, TouchableOpacity, FlatList } f
 import { connect } from 'react-redux';
 import theme from '../styles/theme.style';
 import Filters from './Filters';
+import { DrillTypes } from '../Fixtures';
 
 const mapStateToProps = state => {
   return {
@@ -18,8 +19,8 @@ export const DrillListPage = props => {
   const [data, setData] = useState(drills);
   const [displayFilters, setDisplayFilters] = useState(false);
 
-  const imageMainData = type === 'technical' ? 'nbPlayers' : 'durationInMinutes';
-  const imageMainDataLegend = type === 'technical' ? 'players' : 'min.';
+  const imageMainData = type === DrillTypes.TECHNICAL ? 'nbPlayers' : 'durationInMinutes';
+  const imageMainDataLegend = type === DrillTypes.TECHNICAL ? 'players' : 'min.';
 
   return (
     <View style={styles.drillListPage}>

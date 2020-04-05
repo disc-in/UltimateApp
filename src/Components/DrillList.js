@@ -4,7 +4,9 @@ import { StyleSheet, View, Text, Image, TouchableOpacity, FlatList } from 'react
 import * as list from '../styles/list.style';
 
 const DrillList = props => {
-  const { drillsToDisplay, navigation } = props;
+  const drillsToDisplay = props.drillsToDisplay;
+  const navigation = props.navigation;
+  console.log(navigation);
 
   return (
     <View>

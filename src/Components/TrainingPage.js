@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, ScrollView, Text } from 'react-native';
 import { connect } from 'react-redux';
 import DrillList from './DrillList';
 import theme from '../styles/theme.style';
@@ -12,14 +12,15 @@ const mapStateToProps = state => {
 
 class TrainingPage extends Component {
   render() {
+    const { navigation } = this.props;
     const training = this.props.route.params.training;
     const drills = this.props.drills.filter(drill => training.drills.includes(drill.id));
 
     return (
-      <View style={styles.trainingPage}>
+      <ScrollView style={styles.trainingPage}>
         <Text style={styles.descriptionText}>{training.description}</Text>
-        <DrillList drillsToDisplay={drills} type="technical" />
-      </View>
+        <DrillList navigation={navigation} drillsToDisplay={drills} type="technical" />
+      </ScrollView>
     );
   }
 }
@@ -34,6 +35,7 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   descriptionText: {
+    padding: 20,
     color: theme.COLOR_SECONDARY,
     textAlign: 'center',
     fontSize: theme.FONT_SIZE_MEDIUM,

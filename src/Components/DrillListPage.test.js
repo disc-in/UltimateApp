@@ -8,13 +8,12 @@ import { DrillTypes } from '../Fixtures';
 import ConnectedDrillListPage, { DrillListPage } from './DrillListPage';
 
 describe('<DrillListPage />', () => {
-  const route = {
-    params: {
-      type: DrillTypes.TECHNICAL,
-    },
-  };
-
   it('renders correctly when connected', () => {
+    const route = {
+      params: {
+        type: DrillTypes.TECHNICAL,
+      },
+    };
     const tree = renderer
       .create(
         <Provider store={store}>
@@ -25,8 +24,24 @@ describe('<DrillListPage />', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders correctly with a drill', () => {
-    const drills = [createDrill()];
+  it('renders correctly with a technical drill', () => {
+    const route = {
+      params: {
+        type: DrillTypes.TECHNICAL,
+      },
+    };
+    const drills = [createDrill({ type: DrillTypes.TECHNICAL })];
+    const tree = renderer.create(<DrillListPage route={route} drills={drills} />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders correctly with a fitness drill', () => {
+    const route = {
+      params: {
+        type: DrillTypes.FITNESS,
+      },
+    };
+    const drills = [createDrill({ type: DrillTypes.FITNESS })];
     const tree = renderer.create(<DrillListPage route={route} drills={drills} />).toJSON();
     expect(tree).toMatchSnapshot();
   });

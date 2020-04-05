@@ -151,7 +151,7 @@ exports[`<TrainingListPage /> renders correctly when connected 1`] = `
                 }
               }
             >
-              43
+              65
                min
             </Text>
             <Text
@@ -163,7 +163,7 @@ exports[`<TrainingListPage /> renders correctly when connected 1`] = `
                 }
               }
             >
-              2
+              1
               + players
             </Text>
           </View>
@@ -275,7 +275,7 @@ exports[`<TrainingListPage /> renders correctly when connected 1`] = `
                 }
               }
             >
-              70
+              102
                min
             </Text>
             <Text
@@ -287,7 +287,7 @@ exports[`<TrainingListPage /> renders correctly when connected 1`] = `
                 }
               }
             >
-              10
+              1
               + players
             </Text>
           </View>

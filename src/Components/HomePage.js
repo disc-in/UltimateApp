@@ -21,7 +21,7 @@ export default class HomePage extends React.Component {
           </ImageBackground>
         </TouchableHighlight>
         <TouchableHighlight
-          onPress={() => this.props.navigation.navigate('DrillListPage', { type: DrillTypes.TECHNICAL })}
+          onPress={() => this.props.navigation.navigate('DrillListPage', { type: DrillTypes.FITNESS })}
           style={styles.menuItem}
         >
           <ImageBackground source={fitness} style={styles.image}>

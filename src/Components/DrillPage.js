@@ -1,15 +1,6 @@
 import React, { Component } from 'react';
 import { Header } from 'react-navigation-stack';
-import {
-  ScrollView,
-  StyleSheet,
-  View,
-  Text,
-  Button,
-  ImageBackground,
-  TouchableOpacity,
-  Dimensions,
-} from 'react-native';
+import { ScrollView, StyleSheet, View, Text, ImageBackground, TouchableOpacity, Dimensions } from 'react-native';
 import { connect } from 'react-redux';
 import theme from '../styles/theme.style';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -29,6 +20,7 @@ class DrillPage extends Component {
         <ImageBackground source={{ uri: drill.image }} style={styles.image} imageStyle={styles.imageOpacity}>
           <View style={styles.titleContainer}>
             <Text style={styles.title}>{drill.title}</Text>
+            <Text style={styles.source}>{drill.source}</Text>
           </View>
           <View style={styles.infoWrapper}>
             <View style={styles.infoSubWrapper}>
@@ -68,17 +60,23 @@ class DrillPage extends Component {
 
         <View style={styles.description}>
           <View style={styles.descriptionItem}>
-            <Text style={styles.descriptionTitle}>Goals</Text>
+            <Text style={styles.descriptionGoalsTitle}>Goals</Text>
             {drill.goals.map((goal, index) => (
-              <Text key={index} style={styles.descriptionText}>
+              <Text key={index} style={styles.descriptionGoalsText}>
                 {goal}
               </Text>
             ))}
           </View>
+        </View>
+        <View style={styles.lines} />
+        <View style={styles.description}>
           <View style={styles.descriptionItem}>
             <Text style={styles.descriptionTitle}>Equipment</Text>
             <Text style={styles.descriptionText}>{drill.equipment}</Text>
           </View>
+        </View>
+        <View style={styles.lines} />
+        <View style={styles.description}>
           <View style={styles.descriptionItem}>
             <Text style={styles.descriptionTitle}>Description</Text>
             <Text style={styles.descriptionText}>{drill.description}</Text>
@@ -150,7 +148,7 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   descriptionItem: {
-    marginBottom: 30,
+    marginBottom: 15,
   },
   descriptionTitle: {
     marginBottom: 10,
@@ -184,8 +182,28 @@ const styles = StyleSheet.create({
   animation: {
     flex: 1,
   },
+  source: {
+    color: theme.COLOR_PRIMARY_LIGHT,
+    paddingHorizontal: 30,
+    fontSize: theme.FONT_SIZE_SMALL,
+  },
+  descriptionGoalsTitle: {
+    marginBottom: 10,
+    textAlign: 'center',
+    fontSize: theme.FONT_SIZE_MEDIUM,
+    color: theme.COLOR_SECONDARY,
+  },
+  descriptionGoalsText: {
+    color: theme.COLOR_PRIMARY,
+    textAlign: 'center',
+    fontSize: theme.FONT_SIZE_LARGE,
+    fontWeight: 'bold',
+  },
+  lines: {
+    borderBottomColor: '#DCDCDC',
+    borderBottomWidth: 1,
+  },
 });
-
 const mapStateToProps = state => {
   return {
     favoritesDrill: state.favoritesDrill,

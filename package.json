@@ -18,9 +18,12 @@
     "@react-navigation/native": "^5.1.1",
     "@react-navigation/stack": "^5.2.3",
     "expo": "~36.0.0",
+    "expo-linear-gradient": "~8.0.0",
+    "hr-native": "^1.0.3",
     "react": "~16.9.0",
     "react-dom": "~16.9.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz",
+    "react-native-divider": "^1.0.3",
     "react-native-gesture-handler": "~1.5.0",
     "react-native-kill-packager": "^1.0.0",
     "react-native-reanimated": "~1.4.0",
@@ -32,8 +35,7 @@
     "react-navigation-stack": "^2.3.11",
     "react-redux": "^7.2.0",
     "redux": "^4.0.5",
-    "watchman": "^1.0.0",
-    "expo-linear-gradient": "~8.0.0"
+    "watchman": "^1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

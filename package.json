@@ -25,7 +25,7 @@
     "react-native-kill-packager": "^1.0.0",
     "react-native-reanimated": "~1.4.0",
     "react-native-safe-area-context": "0.6.0",
-    "react-native-screens": "2.0.0-alpha.12",
+    "react-native-screens": "2.4.0",
     "react-native-web": "~0.11.7",
     "react-native-webview": "7.4.3",
     "react-redux": "^7.2.0",
@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
-    "babel-preset-expo": "~8.0.0",
+    "babel-preset-expo": "~8.1.0",
     "eslint": "^6.8.0",
     "eslint-config-universe": "^3.0.0",
     "eslint-plugin-react-hooks": "^2.5.1",

@@ -25,6 +25,6 @@ describe('<HomePage />', () => {
 
     await fireEvent.press(getByText('Trainings'));
 
-    expect(navigation.navigate).toBeCalledWith('DrillListPage', { type: 'collectif' });
+    expect(navigation.navigate).toBeCalledWith('TrainingListPage');
   });
 });

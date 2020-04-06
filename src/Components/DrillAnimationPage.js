@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, Dimensions } from 'react-native';
+import { StyleSheet, View, Text, Dimensions, ScrollView } from 'react-native';
 import Animation from './Animation';
 import { Header } from 'react-navigation-stack';
 import { WebView } from 'react-native-webview';

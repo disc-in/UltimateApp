@@ -64,7 +64,7 @@ class DrillPage extends Component {
         </ImageBackground>
         <View style={styles.separator} />
 
-        <Button title="Favoris" onPress={() => this._toggleFavorite()} />
+        {/* <Button title="Favoris" onPress={() => this._toggleFavorite()} /> */}
 
         <View style={styles.description}>
           <View style={styles.descriptionItem}>

@@ -1,22 +1,44 @@
 import React, { Component } from 'react';
 import { Header } from 'react-navigation-stack';
-import { ScrollView, StyleSheet, View, Text, ImageBackground, TouchableOpacity, Dimensions } from 'react-native';
+import {
+  ScrollView,
+  StyleSheet,
+  View,
+  Text,
+  ImageBackground,
+  TouchableOpacity,
+  Dimensions,
+  findNodeHandle,
+} from 'react-native';
 import { connect } from 'react-redux';
 import theme from '../styles/theme.style';
 import { LinearGradient } from 'expo-linear-gradient';
 import DrillAnimationPage from './DrillAnimationPage';
 
 class DrillPage extends Component {
+  constructor(props) {
+    super(props);
+    this.drillScrollView = React.createRef();
+    this.firstDrill = React.createRef();
+    this._onPressStartButton = this._onPressStartButton.bind(this);
+  }
+
   _toggleFavorite() {
     const action = { type: 'TOGGLE_FAVORITE', value: this.state.drill };
     this.props.dispatch(action);
+  }
+
+  _onPressStartButton() {
+    this.firstDrill.current.measureLayout(findNodeHandle(this.drillScrollView.current), (x, y) => {
+      this.drillScrollView.current.scrollTo({ x: 0, y, animated: true });
+    });
   }
 
   render() {
     const drill = this.props.route.params.drill;
 
     return (
-      <ScrollView style={styles.DrillPage}>
+      <ScrollView ref={this.drillScrollView} style={styles.DrillPage}>
         <ImageBackground source={{ uri: drill.image }} style={styles.image} imageStyle={styles.imageOpacity}>
           <View style={styles.titleContainer}>
             <Text style={styles.title}>{drill.title}</Text>
@@ -39,11 +61,7 @@ class DrillPage extends Component {
             </View>
           </View>
 
-          <TouchableOpacity
-            style={styles.videoLink}
-            /*             onPress={() => navigation.navigate('DrillAnimationPage', { drill })}
-             */
-          >
+          <TouchableOpacity style={styles.videoLink} onPress={this._onPressStartButton}>
             <LinearGradient
               style={styles.gradient}
               colors={['#08AEEA', '#2AF598']}
@@ -82,7 +100,7 @@ class DrillPage extends Component {
             <Text style={styles.descriptionText}>{drill.description}</Text>
           </View>
         </View>
-        <View style={styles.animation}>
+        <View ref={this.firstDrill} style={styles.animation}>
           <DrillAnimationPage animation={drill.animation} video={drill.video} />
         </View>
       </ScrollView>

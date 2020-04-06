@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Text, Image, TouchableOpacity, FlatList } from 'react-native';
+import { StyleSheet, View, Text, ImageBackground, TouchableOpacity, FlatList } from 'react-native';
 import { connect } from 'react-redux';
 import Filters from './Filters';
 import DrillList from './DrillList';
+import { DrillTypes } from '../Fixtures';
 
 import theme from '../styles/theme.style';
 import * as list from '../styles/list.style';
@@ -21,9 +22,12 @@ export const DrillListPage = props => {
   const [data, setData] = useState(drills);
   const [displayFilters, setDisplayFilters] = useState(false);
 
+  const imageMainData = type === DrillTypes.TECHNICAL ? 'nbPlayers' : 'durationInMinutes';
+  const imageMainDataLegend = type === DrillTypes.TECHNICAL ? 'players' : 'min.';
+
   return (
     <View style={styles.drillListPage}>
-      <Text style={styles.counter}>{data.length} drills available</Text>
+      <Text style={list.counter}>{data.length} drills available</Text>
       {displayFilters ? (
         <Filters
           onConfirm={() => setDisplayFilters(false)}
@@ -50,27 +54,6 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     height: '100%',
-  },
-  counter: {
-    ...list.counter,
-  },
-  drill: {
-    ...list.item,
-  },
-  image: {
-    ...list.image,
-  },
-  contentContainer: {
-    ...list.contentContainer,
-  },
-  title: {
-    ...list.title,
-  },
-  source: {
-    ...list.source,
-  },
-  numberOfPlayers: {
-    ...list.numberOfPlayers,
   },
   filterButton: {
     position: 'absolute',

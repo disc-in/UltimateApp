@@ -28,26 +28,23 @@ export const TrainingListPage = props => {
 
   return (
     <View style={styles.trainingListPage}>
-      <Text style={styles.counter}>{data.length} training sessions available</Text>
+      <Text style={list.counter}>{data.length} training sessions available</Text>
       <FlatList
         data={data}
         keyExtractor={item => item.id.toString()}
         renderItem={({ item }) => (
-          <TouchableOpacity
-            style={styles.training}
-            onPress={() => navigation.navigate('TrainingPage', { training: item })}
-          >
-            <ImageBackground source={{ uri: item.image }} style={styles.image} imageStyle={styles.imageOpacity}>
-              <Text style={styles.imageText}>
+          <TouchableOpacity style={list.item} onPress={() => navigation.navigate('TrainingPage', { training: item })}>
+            <ImageBackground source={{ uri: item.image }} style={list.image} imageStyle={list.imageOpacity}>
+              <Text style={list.imageText}>
                 {getTrainingDuration(allDrills.filter(drill => item.drills.includes(drill.id)))} min
               </Text>
-              <Text style={styles.imageText}>
+              <Text style={list.imageText}>
                 {getTrainingNbPlayers(allDrills.filter(drill => item.drills.includes(drill.id)))}+ players
               </Text>
             </ImageBackground>
-            <View style={styles.contentContainer}>
-              <Text style={styles.source}>{item.source}</Text>
-              <Text style={styles.title}>{item.title}</Text>
+            <View style={list.contentContainer}>
+              <Text style={list.source}>{item.source}</Text>
+              <Text style={list.title}>{item.title}</Text>
             </View>
           </TouchableOpacity>
         )}
@@ -64,32 +61,5 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     height: '100%',
-  },
-  counter: {
-    ...list.counter,
-  },
-  training: {
-    ...list.item,
-  },
-  image: {
-    ...list.image,
-  },
-  imageOpacity: {
-    ...list.imageOpacity,
-  },
-  imageText: {
-    ...list.imageText,
-  },
-  contentContainer: {
-    ...list.contentContainer,
-  },
-  title: {
-    ...list.title,
-  },
-  source: {
-    ...list.source,
-  },
-  numberOfPlayers: {
-    ...list.numberOfPlayers,
   },
 });

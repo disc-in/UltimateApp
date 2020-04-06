@@ -28,6 +28,9 @@ export const imageText = {
   color: theme.COLOR_SECONDARY_LIGHT,
   fontSize: theme.FONT_SIZE_SMALL,
 };
+export const imageTextMain = {
+  fontSize: theme.FONT_SIZE_LARGE,
+};
 export const contentContainer = {
   padding: 5,
   paddingBottom: 10,

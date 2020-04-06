@@ -66,6 +66,17 @@ exports[`<DrillPage /> renders correctly 1`] = `
         >
           Fitness Drill Title
         </Text>
+        <Text
+          style={
+            Object {
+              "color": "#fff",
+              "fontSize": 14,
+              "paddingHorizontal": 30,
+            }
+          }
+        >
+          Author
+        </Text>
       </View>
       <View
         style={
@@ -216,16 +227,16 @@ exports[`<DrillPage /> renders correctly 1`] = `
           proxiedProperties={
             Object {
               "colors": Array [
-                4287350508,
-                4287994338,
+                4278759146,
+                4281005464,
               ],
               "endPoint": Array [
-                1,
-                1,
+                0,
+                0,
               ],
               "locations": undefined,
               "startPoint": Array [
-                0,
+                1,
                 1,
               ],
             }
@@ -264,48 +275,6 @@ exports[`<DrillPage /> renders correctly 1`] = `
       }
     />
     <View
-      accessibilityRole="button"
-      accessibilityStates={Array []}
-      accessible={true}
-      focusable={true}
-      isTVSelectable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
-      <View
-        style={
-          Array [
-            Object {},
-          ]
-        }
-      >
-        <Text
-          style={
-            Array [
-              Object {
-                "color": "#007AFF",
-                "fontSize": 18,
-                "padding": 8,
-                "textAlign": "center",
-              },
-            ]
-          }
-        >
-          Favoris
-        </Text>
-      </View>
-    </View>
-    <View
       style={
         Object {
           "padding": 20,
@@ -315,16 +284,15 @@ exports[`<DrillPage /> renders correctly 1`] = `
       <View
         style={
           Object {
-            "marginBottom": 30,
+            "marginBottom": 15,
           }
         }
       >
         <Text
           style={
             Object {
-              "color": "#232b2b",
-              "fontSize": 20,
-              "fontWeight": "bold",
+              "color": "#A6A6A6",
+              "fontSize": 16,
               "marginBottom": 10,
               "textAlign": "center",
             }
@@ -335,8 +303,9 @@ exports[`<DrillPage /> renders correctly 1`] = `
         <Text
           style={
             Object {
-              "color": "#A6A6A6",
-              "fontSize": 16,
+              "color": "#232b2b",
+              "fontSize": 20,
+              "fontWeight": "bold",
               "textAlign": "center",
             }
           }
@@ -344,10 +313,26 @@ exports[`<DrillPage /> renders correctly 1`] = `
           Full body
         </Text>
       </View>
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomColor": "#DCDCDC",
+          "borderBottomWidth": 1,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "padding": 20,
+        }
+      }
+    >
       <View
         style={
           Object {
-            "marginBottom": 30,
+            "marginBottom": 15,
           }
         }
       >
@@ -376,10 +361,26 @@ exports[`<DrillPage /> renders correctly 1`] = `
           Equipment needs for the drill
         </Text>
       </View>
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomColor": "#DCDCDC",
+          "borderBottomWidth": 1,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "padding": 20,
+        }
+      }
+    >
       <View
         style={
           Object {
-            "marginBottom": 30,
+            "marginBottom": 15,
           }
         }
       >

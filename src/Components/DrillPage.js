@@ -46,9 +46,9 @@ class DrillPage extends Component {
           >
             <LinearGradient
               style={styles.gradient}
-              colors={['#8BC6EC', '#9599E2']}
-              start={{ x: 0, y: 1 }}
-              end={{ x: 1, y: 1 }}
+              colors={['#08AEEA', '#2AF598']}
+              start={{ x: 1, y: 1 }}
+              end={{ x: 0, y: 0 }}
             >
               <Text style={styles.videoLinkText}>Start</Text>
             </LinearGradient>
@@ -91,6 +91,7 @@ class DrillPage extends Component {
 }
 
 const screenDimension = Dimensions.get('window');
+
 const sizeBackground = screenDimension.height - Header.HEIGHT;
 const styles = StyleSheet.create({
   DrillPage: {

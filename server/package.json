@@ -1,17 +1,24 @@
 {
-  "name": "server",
-  "version": "1.0.0",
-  "description": "Server",
+  "private": true,
   "main": "index.js",
+  "exports": "./server.js",
+  "module": "server.js",
   "scripts": {
-    "test": "mocha ./test/**"
+    "test": "node ../node_modules/.bin/jest",
+    "start": "node ./index.js "
   },
-  "author": "",
-  "license": "MIT",
   "dependencies": {
     "apollo-datasource-mongodb": "^0.2.5",
     "apollo-server": "^2.11.0",
+    "esm": "^3.2.25",
     "graphql": "^15.0.0",
     "mongodb": "^3.5.5"
+  },
+  "devDependencies": {
+    "apollo-cache-inmemory": "^1.6.5",
+    "apollo-client": "^2.6.8",
+    "apollo-link-http": "^1.5.16",
+    "graphql-tag": "^2.10.3",
+    "node-fetch": "^2.6.0"
   }
 }

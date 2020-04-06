@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
+import { render, fireEvent } from 'react-native-testing-library';
 import store from '../Store/configureStore';
 import fixtures from '../Fixtures/TestFixtures';
 
@@ -23,5 +24,16 @@ describe('<TrainingListPage />', () => {
       .create(<TrainingListPage allDrills={fixtures.drills} trainings={fixtures.trainings} />)
       .toJSON();
     expect(tree).toMatchSnapshot();
+  });
+  it('links to training page', async () => {
+    const training = fixtures.trainings[0];
+    const navigation = { navigate: jest.fn() };
+    const { getByText } = render(
+      <TrainingListPage navigation={navigation} allDrills={fixtures.drills} trainings={fixtures.trainings} />,
+    );
+
+    await fireEvent.press(getByText(fixtures.trainings[0].title));
+
+    expect(navigation.navigate).toBeCalledWith('TrainingPage', { training });
   });
 });

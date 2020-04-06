@@ -62,7 +62,4 @@ const styles = StyleSheet.create({
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     height: '100%',
   },
-  contentContainer: {
-    ...list.contentContainer,
-  },
 });

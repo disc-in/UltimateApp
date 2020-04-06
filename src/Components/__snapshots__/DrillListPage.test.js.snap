@@ -729,6 +729,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
                 }
               }
             >
+              2
               +
             </Text>
             <Text
@@ -862,6 +863,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
                 }
               }
             >
+              2
               +
             </Text>
             <Text
@@ -1393,6 +1395,7 @@ exports[`<DrillListPage /> renders correctly with a technical drill 1`] = `
                 }
               }
             >
+              1
               +
             </Text>
             <Text

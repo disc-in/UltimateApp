@@ -6,31 +6,43 @@ import DrillListPage from '../Components/DrillListPage';
 import DrillPage from '../Components/DrillPage';
 import DrillAnimationPage from '../Components/DrillAnimationPage';
 import Filters from '../Components/Filters';
+import TrainingListPage from '../Components/TrainingListPage';
+import TrainingPage from '../Components/TrainingPage';
 
-const MainStack = createStackNavigator();
+const Stack = createStackNavigator();
 
 export const Navigation = () => (
   <NavigationContainer>
-    <MainStack.Navigator screenOptions={{ cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS }}>
-      <MainStack.Screen name="HomePage" component={HomePage} options={{ title: 'Ultimate Coaching app' }} />
-      <MainStack.Screen
+    <Stack.Navigator screenOptions={{ cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS }}>
+      <Stack.Screen name="HomePage" component={HomePage} options={{ title: 'Ultimate Coaching app' }} />
+      <Stack.Screen
         name="DrillListPage"
         component={DrillListPage}
         options={({ route }) => ({
           title: route.params.type.substr(0, 1).toUpperCase() + route.params.type.substr(1) + ' drills',
         })}
       />
-      <MainStack.Screen name="Filters" component={Filters} />
-      <MainStack.Screen
+      <Stack.Screen name="Filters" component={Filters} />
+      <Stack.Screen
         name="DrillPage"
         component={DrillPage}
         options={({ route }) => ({ title: route.params.drill.title })}
       />
-      <MainStack.Screen
+      <Stack.Screen
         name="DrillAnimationPage"
         component={DrillAnimationPage}
         options={({ route }) => ({ title: route.params.drill.title })}
       />
-    </MainStack.Navigator>
+      <Stack.Screen
+        name="TrainingListPage"
+        component={TrainingListPage}
+        options={({ route }) => ({ title: 'Training sessions' })}
+      />
+      <Stack.Screen
+        name="TrainingPage"
+        component={TrainingPage}
+        options={({ route }) => ({ title: route.params.training.title })}
+      />
+    </Stack.Navigator>
   </NavigationContainer>
 );

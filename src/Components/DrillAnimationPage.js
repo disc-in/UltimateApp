@@ -8,7 +8,7 @@ class DrillPage extends Component {
     const drill = this.props.route.params.drill;
 
     return (
-      <View style={styles.DrillAnimationPage}>
+      <View style={styles.drillAnimationPage}>
         {drill.animation ? (
           <Animation animation={drill.animation} />
         ) : drill.video ? (
@@ -22,7 +22,7 @@ class DrillPage extends Component {
 }
 
 const styles = StyleSheet.create({
-  DrillAnimationPage: {
+  drillAnimationPage: {
     height: '100%',
   },
   videoPresentation: {

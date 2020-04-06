@@ -8,7 +8,6 @@ import { DrillTypes } from '../Fixtures';
 const mapStateToProps = state => {
   return {
     drills: state.drills,
-    favoritesDrill: state.favoritesDrill,
   };
 };
 

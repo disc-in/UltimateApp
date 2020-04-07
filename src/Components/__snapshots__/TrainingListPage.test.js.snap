@@ -1,0 +1,522 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TrainingListPage /> renders correctly when connected 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "height": "100%",
+      "paddingLeft": 20,
+      "paddingTop": 10,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#A6A6A6",
+        "marginBottom": 20,
+      }
+    }
+  >
+    2
+     training sessions available
+  </Text>
+  <RCTScrollView
+    data={
+      Array [
+        Object {
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
+          "drills": Array [
+            1,
+            2,
+            3,
+            4,
+          ],
+          "id": 1,
+          "image": "https://d3j2bju5c7tc02.cloudfront.net/2016_44/backhand.jpg",
+          "source": "Rise Up",
+          "title": "Dump & Swing",
+        },
+        Object {
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
+          "drills": Array [
+            5,
+            6,
+            7,
+            8,
+          ],
+          "id": 2,
+          "image": "https://cdn3.sportngin.com/attachments/photo/be7e-106813275/Screen_Shot_2018-07-19_at_3.53.39_PM_large.png",
+          "source": "** Ultimate App **",
+          "title": "First practice",
+        },
+      ]
+    }
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    numColumns={1}
+    onContentSizeChange={[Function]}
+    onEndReachedThreshold={2}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={Array []}
+    updateCellsBatchingPeriod={50}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={21}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "flexDirection": "row",
+              "height": 80,
+              "marginBottom": 20,
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            accessibilityIgnoresInvertColors={true}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "rgb(0,0,0)",
+                "borderRadius": 5,
+                "height": 80,
+                "justifyContent": "center",
+                "marginRight": 10,
+                "padding": 10,
+                "width": 80,
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "uri": "https://d3j2bju5c7tc02.cloudfront.net/2016_44/backhand.jpg",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": 80,
+                    "width": 80,
+                  },
+                  Object {
+                    "borderRadius": 5,
+                    "opacity": 0.5,
+                  },
+                ]
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "#e5e5e5",
+                  "fontSize": 14,
+                  "textAlign": "center",
+                }
+              }
+            >
+              65
+               min
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#e5e5e5",
+                  "fontSize": 14,
+                  "textAlign": "center",
+                }
+              }
+            >
+              1
+              + players
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "padding": 5,
+                "paddingBottom": 10,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#A6A6A6",
+                  "flex": 2,
+                  "fontSize": 14,
+                }
+              }
+            >
+              Rise Up
+            </Text>
+            <Text
+              style={
+                Object {
+                  "flex": 3,
+                  "flexWrap": "wrap",
+                  "fontSize": 20,
+                  "fontWeight": "bold",
+                }
+              }
+            >
+              Dump & Swing
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "flexDirection": "row",
+              "height": 80,
+              "marginBottom": 20,
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            accessibilityIgnoresInvertColors={true}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "rgb(0,0,0)",
+                "borderRadius": 5,
+                "height": 80,
+                "justifyContent": "center",
+                "marginRight": 10,
+                "padding": 10,
+                "width": 80,
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "uri": "https://cdn3.sportngin.com/attachments/photo/be7e-106813275/Screen_Shot_2018-07-19_at_3.53.39_PM_large.png",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": 80,
+                    "width": 80,
+                  },
+                  Object {
+                    "borderRadius": 5,
+                    "opacity": 0.5,
+                  },
+                ]
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "#e5e5e5",
+                  "fontSize": 14,
+                  "textAlign": "center",
+                }
+              }
+            >
+              102
+               min
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#e5e5e5",
+                  "fontSize": 14,
+                  "textAlign": "center",
+                }
+              }
+            >
+              1
+              + players
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "padding": 5,
+                "paddingBottom": 10,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#A6A6A6",
+                  "flex": 2,
+                  "fontSize": 14,
+                }
+              }
+            >
+              ** Ultimate App **
+            </Text>
+            <Text
+              style={
+                Object {
+                  "flex": 3,
+                  "flexWrap": "wrap",
+                  "fontSize": 20,
+                  "fontWeight": "bold",
+                }
+              }
+            >
+              First practice
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
+
+exports[`<TrainingListPage /> renders correctly with a training 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "height": "100%",
+      "paddingLeft": 20,
+      "paddingTop": 10,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#A6A6A6",
+        "marginBottom": 20,
+      }
+    }
+  >
+    1
+     training sessions available
+  </Text>
+  <RCTScrollView
+    data={
+      Array [
+        Object {
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
+          "drills": Array [
+            2,
+            3,
+          ],
+          "id": 1,
+          "image": "https://d3j2bju5c7tc02.cloudfront.net/2016_44/backhand.jpg",
+          "source": "Rise Up",
+          "title": "Dump & Swing",
+        },
+      ]
+    }
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    numColumns={1}
+    onContentSizeChange={[Function]}
+    onEndReachedThreshold={2}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={Array []}
+    updateCellsBatchingPeriod={50}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={21}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "flexDirection": "row",
+              "height": 80,
+              "marginBottom": 20,
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            accessibilityIgnoresInvertColors={true}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "rgb(0,0,0)",
+                "borderRadius": 5,
+                "height": 80,
+                "justifyContent": "center",
+                "marginRight": 10,
+                "padding": 10,
+                "width": 80,
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "uri": "https://d3j2bju5c7tc02.cloudfront.net/2016_44/backhand.jpg",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": 80,
+                    "width": 80,
+                  },
+                  Object {
+                    "borderRadius": 5,
+                    "opacity": 0.5,
+                  },
+                ]
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "#e5e5e5",
+                  "fontSize": 14,
+                  "textAlign": "center",
+                }
+              }
+            >
+              40
+               min
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#e5e5e5",
+                  "fontSize": 14,
+                  "textAlign": "center",
+                }
+              }
+            >
+              2
+              + players
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "padding": 5,
+                "paddingBottom": 10,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#A6A6A6",
+                  "flex": 2,
+                  "fontSize": 14,
+                }
+              }
+            >
+              Rise Up
+            </Text>
+            <Text
+              style={
+                Object {
+                  "flex": 3,
+                  "flexWrap": "wrap",
+                  "fontSize": 20,
+                  "fontWeight": "bold",
+                }
+              }
+            >
+              Dump & Swing
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

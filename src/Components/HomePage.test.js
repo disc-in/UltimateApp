@@ -13,7 +13,7 @@ describe('<HomePage />', () => {
 
   it('links to technical drill list', async () => {
     const navigation = { navigate: jest.fn() };
-    const { container, getByText } = render(<HomePage navigation={navigation} />);
+    const { getByText } = render(<HomePage navigation={navigation} />);
 
     await fireEvent.press(getByText('Frisbee drills'));
 

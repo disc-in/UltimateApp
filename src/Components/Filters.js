@@ -65,7 +65,9 @@ class Filters extends React.Component {
     const { selectedLevel, selectedGoal, numberOfPlayers } = this.state;
     return (
       <View style={styles.wrapper}>
-        <Text style={styles.counter}>{this.state.displayedDrills.length} drills available</Text>
+        <Text testID="availableDrills" style={styles.counter}>
+          {this.state.displayedDrills.length} drills available
+        </Text>
         <View style={styles.filters}>
           <Text style={styles.filterTitle}>Level</Text>
           <View style={styles.filter}>

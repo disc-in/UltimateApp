@@ -56,12 +56,28 @@ describe('<DrillListPage />', () => {
     const drill = createDrill({ type: DrillTypes.TECHNICAL, title: 'Hot Box' });
     const drills = [drill];
     const navigation = { navigate: jest.fn() };
-    const { container, getByText, debug } = render(
-      <DrillListPage route={route} drills={drills} navigation={navigation} />,
-    );
+    const { getByText } = render(<DrillListPage route={route} drills={drills} navigation={navigation} />);
 
     await fireEvent.press(getByText('Hot Box'));
 
     expect(navigation.navigate).toBeCalledWith('DrillPage', { drill });
+  });
+
+  it('links to filter view on press on the button', async () => {
+    const route = {
+      params: {
+        type: DrillTypes.TECHNICAL,
+      },
+    };
+    const drills = [createDrill({ type: DrillTypes.TECHNICAL, title: 'Hot Box' })];
+    const navigation = { navigate: jest.fn() };
+    const { getByTestId } = render(<DrillListPage route={route} drills={drills} navigation={navigation} />);
+
+    await fireEvent.press(getByTestId('filterButton'));
+
+    expect(navigation.navigate).toBeCalledWith('Filters', {
+      onFiltered: expect.anything(),
+      initialData: drills,
+    });
   });
 });

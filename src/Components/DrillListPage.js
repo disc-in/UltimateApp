@@ -8,12 +8,6 @@ import { DrillTypes } from '../Fixtures';
 import theme from '../styles/theme.style';
 import * as list from '../styles/list.style';
 
-const mapStateToProps = state => {
-  return {
-    drills: state.drills,
-  };
-};
-
 export const DrillListPage = props => {
   const { navigation } = props;
   const type = props.route.params.type;
@@ -52,11 +46,18 @@ export const DrillListPage = props => {
             initialData: drills,
           })
         }
+        testID="filterButton"
       >
         <Image source={filterButtonImage} style={styles.filterButtonImage} />
       </TouchableOpacity>
     </View>
   );
+};
+
+const mapStateToProps = state => {
+  return {
+    drills: state.drills,
+  };
 };
 
 export default connect(mapStateToProps)(DrillListPage);

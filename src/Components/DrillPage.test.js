@@ -28,7 +28,7 @@ describe('<DrillPage />', () => {
 
   it('links to video view', async () => {
     const navigation = { navigate: jest.fn() };
-    const { container, getByText } = render(<DrillPage route={route} navigation={navigation} />);
+    const { getByText } = render(<DrillPage route={route} navigation={navigation} />);
 
     await fireEvent.press(getByText('Video'));
 

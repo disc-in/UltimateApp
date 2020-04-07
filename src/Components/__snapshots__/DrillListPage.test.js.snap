@@ -957,6 +957,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
         "width": 100,
       }
     }
+    testID="filterButton"
   >
     <Image
       source={1}
@@ -1223,6 +1224,7 @@ exports[`<DrillListPage /> renders correctly with a fitness drill 1`] = `
         "width": 100,
       }
     }
+    testID="filterButton"
   >
     <Image
       source={1}
@@ -1489,6 +1491,7 @@ exports[`<DrillListPage /> renders correctly with a technical drill 1`] = `
         "width": 100,
       }
     }
+    testID="filterButton"
   >
     <Image
       source={1}

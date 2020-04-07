@@ -18,8 +18,9 @@ exports[`<Filters /> renders correctly 1`] = `
         "paddingTop": 10,
       }
     }
+    testID="availableDrills"
   >
-    1
+    2
      drills available
   </Text>
   <View

@@ -4,16 +4,16 @@ import { connect } from 'react-redux';
 import ic_favorite_border from '../Images/ic_favorite_border.png';
 import ic_favorite from '../Images/ic_favorite.png';
 import theme from '../styles/theme.style';
+import { toggleFavorite } from '../Store/Actions/favoriteAction';
 
-
-class DrillPage extends React.Component {
+export class DrillPage extends React.Component {
   state = {
     drill: this.props.drill,
   };
 
   _displayFavoriteImage() {
     var sourceImage = ic_favorite_border;
-    if (this.props.favoritesDrill.findIndex(item => item.id === this.props.route.params.drill.id) !== -1) {
+    if (this.props.favoriteDrills.findIndex(item => item.id === this.props.route.params.drill.id) !== -1) {
       sourceImage = ic_favorite;
     }
     return <Image style={styles.favoriteImage} source={sourceImage} />;
@@ -42,7 +42,11 @@ class DrillPage extends React.Component {
           </TouchableOpacity>
         </ImageBackground>
         <View style={styles.separator} />
-        <TouchableOpacity style={styles.favoriteContainer} onPress={() => this.props.toggleFavorite(drill)}>
+        <TouchableOpacity
+          style={styles.favoriteContainer}
+          onPress={() => this.props.toggleFavorite(drill)}
+          testID="favoriteButton"
+        >
           {this._displayFavoriteImage()}
         </TouchableOpacity>
 
@@ -147,14 +151,10 @@ const styles = StyleSheet.create({
 
 const mapStateToProps = state => {
   return {
-    favoritesDrill: state.favoritesDrill,
+    favoriteDrills: state.favoriteDrills,
   };
 };
 
-const mapDispatchToProps = dispatch => {
-  return {
-    toggleFavorite: drill => dispatch({ type: 'TOGGLE_FAVORITE', value: drill }),
-  };
-};
+const mapDispatchToProps = { toggleFavorite };
 
 export default connect(mapStateToProps, mapDispatchToProps)(DrillPage);

@@ -184,6 +184,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
           "opacity": 1,
         }
       }
+      testID="favoriteButton"
     >
       <Image
         source={1}

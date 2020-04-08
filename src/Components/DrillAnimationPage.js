@@ -21,11 +21,10 @@ class DrillAnimationPage extends Component {
 }
 
 const screenDimension = Dimensions.get('window');
-const sizeBackground = screenDimension.height - Header.HEIGHT;
 const styles = StyleSheet.create({
   drillAnimationPage: {
     flex: 1,
-    height: sizeBackground,
+    height: screenDimension.height,
   },
 });
 

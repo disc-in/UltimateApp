@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Header } from 'react-navigation-stack';
+import React, { useRef } from 'react';
+import { useHeaderHeight } from '@react-navigation/stack';
 import {
   ScrollView,
   StyleSheet,
@@ -9,108 +9,92 @@ import {
   TouchableOpacity,
   Dimensions,
   findNodeHandle,
+  Button,
 } from 'react-native';
 import { connect } from 'react-redux';
 import theme from '../styles/theme.style';
 import { LinearGradient } from 'expo-linear-gradient';
 import DrillAnimationPage from './DrillAnimationPage';
-
-class DrillPage extends Component {
-  constructor(props) {
-    super(props);
-    this.drillScrollView = React.createRef();
-    this.firstDrill = React.createRef();
-    this._onPressStartButton = this._onPressStartButton.bind(this);
-  }
-
-  _toggleFavorite() {
-    const action = { type: 'TOGGLE_FAVORITE', value: this.state.drill };
-    this.props.dispatch(action);
-  }
-
-  _onPressStartButton() {
-    this.firstDrill.current.measureLayout(findNodeHandle(this.drillScrollView.current), (x, y) => {
-      this.drillScrollView.current.scrollTo({ x: 0, y, animated: true });
+const DrillPage = props => {
+  const { route } = props;
+  const drillScrollView = useRef(null);
+  const firstDrill = useRef(null);
+  const headerHeight = useHeaderHeight();
+  const screenDimension = Dimensions.get('window');
+  const sizeBackground = screenDimension.height - headerHeight;
+  const imageStyles = { ...styles.image, height: sizeBackground };
+  const drill = route.params.drill;
+  const onPressStartButton = () => {
+    firstDrill.current.measureLayout(findNodeHandle(drillScrollView.current), (x, y) => {
+      drillScrollView.current.scrollTo({ x: 0, y, animated: true });
     });
-  }
-
-  render() {
-    const drill = this.props.route.params.drill;
-
-    return (
-      <ScrollView ref={this.drillScrollView} style={styles.DrillPage}>
-        <ImageBackground source={{ uri: drill.image }} style={styles.image} imageStyle={styles.imageOpacity}>
-          <View style={styles.titleContainer}>
-            <Text style={styles.title}>{drill.title}</Text>
-            <Text style={styles.source}>{drill.source}</Text>
+  };
+  return (
+    <ScrollView ref={drillScrollView} style={styles.DrillPage}>
+      <ImageBackground source={{ uri: drill.image }} style={imageStyles} imageStyle={styles.imageOpacity}>
+        <View style={styles.titleContainer}>
+          <Text style={styles.title}>{drill.title}</Text>
+          <Text style={styles.source}>{drill.source}</Text>
+        </View>
+        <View style={styles.infoWrapper}>
+          <View style={styles.infoSubWrapper}>
+            <Text style={styles.infoDrill}>{drill.durationInMinutes}</Text>
+            <Text style={styles.info}> minutes</Text>
           </View>
-          <View style={styles.infoWrapper}>
-            <View style={styles.infoSubWrapper}>
-              <Text style={styles.infoDrill}>{drill.durationInMinutes}</Text>
-              <Text style={styles.info}> minutes</Text>
-            </View>
-            <View style={styles.separator} />
-            <View style={styles.infoSubWrapper}>
-              <Text style={styles.infoDrill}>{drill.nbPlayers}</Text>
-              <Text style={styles.info}> players</Text>
-            </View>
-            <View style={styles.separator} />
-            <View style={styles.infoSubWrapper}>
-              <Text style={styles.infoDrill}>{drill.level}</Text>
-              <Text style={styles.info}> level</Text>
-            </View>
+          <View style={styles.separator} />
+          <View style={styles.infoSubWrapper}>
+            <Text style={styles.infoDrill}>{drill.nbPlayers}</Text>
+            <Text style={styles.info}> players</Text>
           </View>
-
-          <TouchableOpacity style={styles.videoLink} onPress={this._onPressStartButton}>
-            <LinearGradient
-              style={styles.gradient}
-              colors={['#08AEEA', '#2AF598']}
-              start={{ x: 1, y: 1 }}
-              end={{ x: 0, y: 0 }}
-            >
-              <Text style={styles.videoLinkText}>Start</Text>
-            </LinearGradient>
-          </TouchableOpacity>
-        </ImageBackground>
-        <View style={styles.separator} />
-
-        {/* <Button title="Favoris" onPress={() => this._toggleFavorite()} /> */}
-
-        <View style={styles.description}>
-          <View style={styles.descriptionItem}>
-            <Text style={styles.descriptionGoalsTitle}>Goals</Text>
-            {drill.goals.map((goal, index) => (
-              <Text key={index} style={styles.descriptionGoalsText}>
-                {goal}
-              </Text>
-            ))}
+          <View style={styles.separator} />
+          <View style={styles.infoSubWrapper}>
+            <Text style={styles.infoDrill}>{drill.level}</Text>
+            <Text style={styles.info}> level</Text>
           </View>
         </View>
-        <View style={styles.lines} />
-        <View style={styles.description}>
-          <View style={styles.descriptionItem}>
-            <Text style={styles.descriptionTitle}>Equipment</Text>
-            <Text style={styles.descriptionText}>{drill.equipment}</Text>
-          </View>
+        <TouchableOpacity style={styles.videoLink} onPress={onPressStartButton}>
+          <LinearGradient
+            style={styles.gradient}
+            colors={['#08AEEA', '#2AF598']}
+            start={{ x: 1, y: 1 }}
+            end={{ x: 0, y: 0 }}
+          >
+            <Text style={styles.videoLinkText}>Start</Text>
+          </LinearGradient>
+        </TouchableOpacity>
+      </ImageBackground>
+      <View style={styles.separator} />
+      <Button title="Favoris" onPress={() => toggleFavorite(drill)} />
+      <View style={styles.description}>
+        <View style={styles.descriptionItem}>
+          <Text style={styles.descriptionGoalsTitle}>Goals</Text>
+          {drill.goals.map((goal, index) => (
+            <Text key={index} style={styles.descriptionGoalsText}>
+              {goal}
+            </Text>
+          ))}
         </View>
-        <View style={styles.lines} />
-        <View style={styles.description}>
-          <View style={styles.descriptionItem}>
-            <Text style={styles.descriptionTitle}>Description</Text>
-            <Text style={styles.descriptionText}>{drill.description}</Text>
-          </View>
+      </View>
+      <View style={styles.lines} />
+      <View style={styles.description}>
+        <View style={styles.descriptionItem}>
+          <Text style={styles.descriptionTitle}>Equipment</Text>
+          <Text style={styles.descriptionText}>{drill.equipment}</Text>
         </View>
-        <View ref={this.firstDrill} style={styles.animation}>
-          <DrillAnimationPage animation={drill.animation} video={drill.video} />
+      </View>
+      <View style={styles.lines} />
+      <View style={styles.description}>
+        <View style={styles.descriptionItem}>
+          <Text style={styles.descriptionTitle}>Description</Text>
+          <Text style={styles.descriptionText}>{drill.description}</Text>
         </View>
-      </ScrollView>
-    );
-  }
-}
-
-const screenDimension = Dimensions.get('window');
-
-const sizeBackground = screenDimension.height - Header.HEIGHT;
+      </View>
+      <View ref={firstDrill} style={styles.animation}>
+        <DrillAnimationPage animation={drill.animation} video={drill.video} />
+      </View>
+    </ScrollView>
+  );
+};
 const styles = StyleSheet.create({
   DrillPage: {
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
@@ -119,7 +103,7 @@ const styles = StyleSheet.create({
     padding: 20,
     alignItems: 'center',
     backgroundColor: 'rgb(0,0,0)',
-    height: sizeBackground,
+    height: Dimensions.get('window').height, // will be overwritten
   },
   imageOpacity: {
     opacity: 0.5,
@@ -130,13 +114,13 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   titleContainer: {
-    height: (screenDimension.height * 2) / 5,
+    height: (Dimensions.get('window').height * 2) / 5,
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
   infoWrapper: {
-    height: (screenDimension.height * 1) / 5,
+    height: (Dimensions.get('window').height * 1) / 5,
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     alignItems: 'center',
@@ -228,13 +212,11 @@ const mapStateToProps = state => {
     favoritesDrill: state.favoritesDrill,
   };
 };
-
 const mapDispatchToProps = dispatch => {
   return {
-    dispatch: action => {
-      dispatch(action);
+    toggleFavorite: drill => {
+      dispatch({ type: 'TOGGLE_FAVORITE', value: drill });
     },
   };
 };
-
 export default connect(mapStateToProps, mapDispatchToProps)(DrillPage);

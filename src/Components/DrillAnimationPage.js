@@ -8,11 +8,11 @@ class DrillPage extends Component {
     const drill = this.props.route.params.drill;
 
     return (
-      <View style={styles.DrillAnimationPage}>
+      <View style={styles.drillAnimationPage}>
         {drill.animation ? (
           <Animation animation={drill.animation} />
         ) : drill.video ? (
-          <WebView source={{ uri: 'https://www.youtube.com/embed/oN1bzPCKkGE' }} style={{ marginTop: 20 }} />
+          <WebView source={{ uri: drill.video }} style={styles.videoPresentation} />
         ) : (
           <Text>No visual content for this drill</Text>
         )}
@@ -22,8 +22,11 @@ class DrillPage extends Component {
 }
 
 const styles = StyleSheet.create({
-  DrillAnimationPage: {
+  drillAnimationPage: {
     height: '100%',
+  },
+  videoPresentation: {
+    marginTop: 20,
   },
 });
 

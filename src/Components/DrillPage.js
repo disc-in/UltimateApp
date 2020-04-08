@@ -11,7 +11,7 @@ class DrillPage extends React.Component {
   };
 
   _displayFavoriteImage() {
-    var sourceImage = ic_favorite_border;
+    let sourceImage = ic_favorite_border;
     if (this.props.favoritesDrill.findIndex(item => item.id === this.props.route.params.drill.id) !== -1) {
       sourceImage = ic_favorite;
     }

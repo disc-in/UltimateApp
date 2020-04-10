@@ -1,20 +1,19 @@
-const initialState = { favoritesDrill: [] };
+const initialState = { favoriteDrills: [] };
 
-function toggleFavorite(state = initialState, action) {
+function favoriteReducer(state = initialState, action) {
   let nextState;
   switch (action.type) {
     case 'TOGGLE_FAVORITE':
-      const favoriteDrillIndex = state.favoritesDrill.findIndex(item => item.id === action.value.id);
+      const favoriteDrillIndex = state.favoriteDrills.findIndex(item => item.id === action.value.id);
       if (favoriteDrillIndex !== -1) {
-        // Le drill est déjà dans les favoris, on le supprime de la liste
         nextState = {
           ...state,
-          favoritesDrill: state.favoritesDrill.filter((item, index) => index !== favoriteDrillIndex),
+          favoriteDrills: state.favoriteDrills.filter((item, index) => index !== favoriteDrillIndex),
         };
       } else {
         nextState = {
           ...state,
-          favoritesDrill: [...state.favoritesDrill, action.value],
+          favoriteDrills: [...state.favoriteDrills, action.value],
         };
       }
       return nextState || state;
@@ -23,4 +22,4 @@ function toggleFavorite(state = initialState, action) {
   }
 }
 
-export default toggleFavorite;
+export default favoriteReducer;

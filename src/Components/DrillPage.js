@@ -1,12 +1,22 @@
-import React, { Component } from 'react';
-import { ScrollView, StyleSheet, View, Text, Button, ImageBackground, TouchableOpacity } from 'react-native';
+import React from 'react';
+import { ScrollView, StyleSheet, View, Text, Image, ImageBackground, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
+import ic_favorite_border from '../Images/ic_favorite_border.png';
+import ic_favorite from '../Images/ic_favorite.png';
 import theme from '../styles/theme.style';
+import { toggleFavorite } from '../Store/Actions/favoriteAction';
 
-export class DrillPage extends Component {
-  _toggleFavorite() {
-    const action = { type: 'TOGGLE_FAVORITE', value: this.state.dr };
-    this.props.dispatch(action);
+export class DrillPage extends React.Component {
+  state = {
+    drill: this.props.drill,
+  };
+
+  _displayFavoriteImage() {
+    let sourceImage = ic_favorite_border;
+    if (this.props.favoriteDrills.findIndex(item => item.id === this.props.route.params.drill.id) !== -1) {
+      sourceImage = ic_favorite;
+    }
+    return <Image style={styles.favoriteImage} source={sourceImage} />;
   }
 
   render() {
@@ -14,7 +24,7 @@ export class DrillPage extends Component {
     const { navigation } = this.props;
 
     return (
-      <ScrollView style={styles.DrillPage}>
+      <ScrollView style={styles.drillPage}>
         <ImageBackground source={{ uri: drill.image }} style={styles.image} imageStyle={styles.imageOpacity}>
           <Text style={styles.title}>{drill.title}</Text>
           <View style={styles.infoWrapper}>
@@ -32,10 +42,23 @@ export class DrillPage extends Component {
           </TouchableOpacity>
         </ImageBackground>
         <View style={styles.separator} />
-
-        <Button title="Favoris" onPress={() => this._toggleFavorite()} />
+        <TouchableOpacity
+          style={styles.favoriteContainer}
+          onPress={() => this.props.toggleFavorite(drill)}
+          testID="favoriteButton"
+        >
+          {this._displayFavoriteImage()}
+        </TouchableOpacity>
 
         <View style={styles.description}>
+          <View style={styles.descriptionItem}>
+            <Text style={styles.descriptionTitle}>Description</Text>
+            <Text style={styles.descriptionText}>{drill.description}</Text>
+          </View>
+          <View style={styles.descriptionItem}>
+            <Text style={styles.descriptionTitle}>Equipment</Text>
+            <Text style={styles.descriptionText}>{drill.equipment}</Text>
+          </View>
           <View style={styles.descriptionItem}>
             <Text style={styles.descriptionTitle}>Goals</Text>
             {drill.goals.map((goal, index) => (
@@ -44,14 +67,6 @@ export class DrillPage extends Component {
               </Text>
             ))}
           </View>
-          <View style={styles.descriptionItem}>
-            <Text style={styles.descriptionTitle}>Equipment</Text>
-            <Text style={styles.descriptionText}>{drill.equipment}</Text>
-          </View>
-          <View style={styles.descriptionItem}>
-            <Text style={styles.descriptionTitle}>Description</Text>
-            <Text style={styles.descriptionText}>{drill.description}</Text>
-          </View>
         </View>
       </ScrollView>
     );
@@ -59,7 +74,7 @@ export class DrillPage extends Component {
 }
 
 const styles = StyleSheet.create({
-  DrillPage: {
+  drillPage: {
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
   },
   image: {
@@ -125,20 +140,21 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: theme.FONT_SIZE_MEDIUM,
   },
+  favoriteContainer: {
+    alignItems: 'center',
+  },
+  favoriteImage: {
+    width: 25.5,
+    height: 30,
+  },
 });
 
 const mapStateToProps = state => {
   return {
-    favoritesDrill: state.favoritesDrill,
+    favoriteDrills: state.favoriteDrills,
   };
 };
 
-const mapDispatchToProps = dispatch => {
-  return {
-    dispatch: action => {
-      dispatch(action);
-    },
-  };
-};
+const mapDispatchToProps = { toggleFavorite };
 
 export default connect(mapStateToProps, mapDispatchToProps)(DrillPage);

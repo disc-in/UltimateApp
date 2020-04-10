@@ -54,6 +54,7 @@ class Filters extends React.Component {
             this.props.route.params.onFiltered(this.state.displayedDrills);
             this.props.navigation.goBack();
           }}
+          testID="validateButton"
         >
           <Text style={styles.headerButtonText}>✓</Text>
         </TouchableOpacity>

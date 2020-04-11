@@ -215,27 +215,32 @@ exports[`<Filters /> renders correctly 1`] = `
         }
       }
     >
-      Number of players
+      Number of players: 
     </Text>
-    <TextInput
-      allowFontScaling={true}
-      keyboardType="numeric"
-      onChangeText={[Function]}
-      placeholder="How many players do you have?"
-      rejectResponderTermination={true}
+    <RCTSlider
+      disabled={false}
+      enabled={true}
+      maximumValue={50}
+      minimumValue={1}
+      onChange={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onSlidingComplete={null}
+      onStartShouldSetResponder={[Function]}
+      onValueChange={[Function]}
+      step={1}
       style={
-        Object {
-          "backgroundColor": "#fff",
-          "borderBottomWidth": 1,
-          "borderColor": "#e5e5e5",
-          "color": "#444",
-          "fontSize": 16,
-          "marginBottom": 30,
-          "padding": 10,
-          "paddingHorizontal": 20,
-        }
+        Array [
+          Object {
+            "height": 40,
+          },
+          Object {
+            "marginBottom": 30,
+            "marginTop": 10,
+            "width": "80%",
+          },
+        ]
       }
-      underlineColorAndroid="transparent"
+      value={0}
     />
   </View>
 </View>

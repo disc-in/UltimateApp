@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text, TouchableOpacity, TextInput } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity, TextInput, Slider } from 'react-native';
 import theme from '../styles/theme.style';
 import { Levels } from '../Fixtures';
 
@@ -96,13 +96,14 @@ class Filters extends React.Component {
                 />
               ))}
           </View>
-          <Text style={styles.filterTitle}>Number of players</Text>
-          <TextInput
-            style={styles.input}
-            placeholder="How many players do you have?"
-            onChangeText={this.onInputChange.bind(this, 'numberOfPlayers')}
+          <Text style={styles.filterTitle}>Number of players: {numberOfPlayers}</Text>
+          <Slider
+            minimumValue={1}
+            maximumValue={50}
+            step={1}
             value={numberOfPlayers}
-            keyboardType="numeric"
+            onValueChange={this.onInputChange.bind(this, 'numberOfPlayers')}
+            style={styles.slider}
           />
         </View>
       </View>
@@ -156,15 +157,10 @@ const styles = StyleSheet.create({
   buttonText: {
     textTransform: 'capitalize',
   },
-  input: {
+  slider: {
+    marginTop: 10,
     marginBottom: 30,
-    padding: 10,
-    paddingHorizontal: 20,
-    fontSize: theme.FONT_SIZE_MEDIUM,
-    color: '#444',
-    borderBottomWidth: 1,
-    borderColor: theme.BORDER_COLOR_BUTTON,
-    backgroundColor: theme.BACKGROUND_COLOR_BUTTON,
+    width: '80%',
   },
 });
 

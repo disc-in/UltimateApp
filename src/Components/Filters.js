@@ -6,7 +6,7 @@ import { Levels } from '../Fixtures';
 const Button = props => {
   const activeStyle = props.active ? styles.activeButton : {};
   return (
-    <TouchableOpacity style={{ ...styles.button, ...activeStyle }} key={props.title} onPress={props.onPress}>
+    <TouchableOpacity style={{ ...styles.button, ...activeStyle }} key={props.key} onPress={props.onPress}>
       <Text style={styles.buttonText}>{props.title}</Text>
     </TouchableOpacity>
   );
@@ -71,9 +71,7 @@ class Filters extends React.Component {
     const { selectedLevel, selectedGoal, numberOfPlayers } = this.state;
     return (
       <View style={styles.wrapper}>
-        <Text testID="availableDrills" style={styles.counter}>
-          {this.state.displayedDrills.length} drills available
-        </Text>
+        <Text style={styles.counter}>{this.state.displayedDrills.length} drills available</Text>
         <View style={styles.filters}>
           <Text style={styles.filterTitle}>Level</Text>
           <View style={styles.filter}>
@@ -81,6 +79,7 @@ class Filters extends React.Component {
               <Button
                 title={level}
                 onPress={this.onPressedChange.bind(this, 'selectedLevel', level)}
+                key={level}
                 active={selectedLevel === level}
               />
             ))}
@@ -95,6 +94,7 @@ class Filters extends React.Component {
                 <Button
                   title={goal}
                   onPress={this.onPressedChange.bind(this, 'selectedGoal', goal)}
+                  key={goal}
                   active={selectedGoal === goal}
                 />
               ))}
@@ -107,6 +107,7 @@ class Filters extends React.Component {
             value={numberOfPlayers}
             onValueChange={this.onInputChange.bind(this, 'numberOfPlayers')}
             style={styles.slider}
+            testID="numberOfPlayersSlider"
           />
         </View>
       </View>

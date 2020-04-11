@@ -1,9 +1,11 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { render, fireEvent, waitForElement } from 'react-native-testing-library';
+import { render, fireEvent, cleanup } from 'react-native-testing-library';
 import { DrillTypes } from '../Fixtures';
 
 import HomePage from './HomePage';
+
+afterEach(cleanup);
 
 describe('<HomePage />', () => {
   it('renders correctly', () => {

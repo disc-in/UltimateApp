@@ -1,12 +1,14 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
-import { render, fireEvent } from 'react-native-testing-library';
+import { render, fireEvent, cleanup } from 'react-native-testing-library';
 import store from '../Store/testStore';
 import { createDrill } from '../Fixtures/TestFixtures';
 import { DrillTypes } from '../Fixtures';
 
 import ConnectedDrillListPage, { DrillListPage } from './DrillListPage';
+
+afterEach(cleanup);
 
 describe('<DrillListPage />', () => {
   it('renders correctly when connected', () => {

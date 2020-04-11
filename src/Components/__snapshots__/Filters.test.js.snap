@@ -18,7 +18,6 @@ exports[`<Filters /> renders correctly 1`] = `
         "paddingTop": 10,
       }
     }
-    testID="availableDrills"
   >
     2
      drills available
@@ -240,6 +239,7 @@ exports[`<Filters /> renders correctly 1`] = `
           },
         ]
       }
+      testID="numberOfPlayersSlider"
       value={0}
     />
   </View>

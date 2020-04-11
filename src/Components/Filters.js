@@ -12,6 +12,14 @@ const Button = props => {
   );
 };
 
+const HeaderButton = props => {
+  return (
+    <TouchableOpacity style={styles.headerButton} onPress={props.onPress} testID="validateButton">
+      <Text style={styles.headerButtonText}>✓</Text>
+    </TouchableOpacity>
+  );
+};
+
 class Filters extends React.Component {
   state = {
     selectedLevel: undefined,
@@ -48,16 +56,12 @@ class Filters extends React.Component {
     this.props.route.params.onFiltered(this.state.displayedDrills);
     this.props.navigation.setOptions({
       headerRight: () => (
-        <TouchableOpacity
-          style={styles.headerButton}
+        <HeaderButton
           onPress={() => {
             this.props.route.params.onFiltered(this.state.displayedDrills);
             this.props.navigation.goBack();
           }}
-          testID="validateButton"
-        >
-          <Text style={styles.headerButtonText}>✓</Text>
-        </TouchableOpacity>
+        />
       ),
     });
   }
@@ -99,7 +103,7 @@ class Filters extends React.Component {
           <Text style={styles.filterTitle}>Number of players: {numberOfPlayers}</Text>
           <Slider
             minimumValue={1}
-            maximumValue={50}
+            maximumValue={30}
             step={1}
             value={numberOfPlayers}
             onValueChange={this.onInputChange.bind(this, 'numberOfPlayers')}

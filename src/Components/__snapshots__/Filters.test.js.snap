@@ -220,7 +220,7 @@ exports[`<Filters /> renders correctly 1`] = `
     <RCTSlider
       disabled={false}
       enabled={true}
-      maximumValue={50}
+      maximumValue={30}
       minimumValue={1}
       onChange={[Function]}
       onResponderTerminationRequest={[Function]}

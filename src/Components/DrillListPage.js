@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Text, Image, TouchableOpacity, FlatList } from 'react-native';
+import { StyleSheet, View, Text, ImageBackground, TouchableOpacity, FlatList } from 'react-native';
 import { connect } from 'react-redux';
-import theme from '../styles/theme.style';
 import Filters from './Filters';
+import { DrillTypes } from '../Fixtures';
+
+import theme from '../styles/theme.style';
+import * as list from '../styles/list.style';
 
 const mapStateToProps = state => {
   return {
@@ -18,9 +21,11 @@ export const DrillListPage = props => {
   const [data, setData] = useState(drills);
   const [displayFilters, setDisplayFilters] = useState(false);
 
+  const imageMainData = type === DrillTypes.TECHNICAL ? 'nbPlayers' : 'durationInMinutes';
+  const imageMainDataLegend = type === DrillTypes.TECHNICAL ? 'players' : 'min.';
   return (
     <View style={styles.drillListPage}>
-      <Text style={styles.counter}>{data.length} drills available</Text>
+      <Text style={list.counter}>{data.length} drills available</Text>
       {displayFilters ? (
         <Filters
           onConfirm={() => setDisplayFilters(false)}
@@ -32,14 +37,15 @@ export const DrillListPage = props => {
           data={data}
           keyExtractor={item => item.id.toString()}
           renderItem={({ item }) => (
-            <TouchableOpacity style={styles.drill} onPress={() => navigation.navigate('DrillPage', { drill: item })}>
-              <Image style={styles.image} source={{ uri: item.image }} />
-              <View style={styles.contentContainer}>
-                <Text style={styles.source}>{item.source}</Text>
-                <Text style={styles.title}>{item.title}</Text>
-                <Text style={styles.numberOfPlayers}>
-                  Duration: {item.durationInMinutes} min - players: {item.nbPlayers}
-                </Text>
+            <TouchableOpacity style={list.item} onPress={() => navigation.navigate('DrillPage', { drill: item })}>
+              <ImageBackground source={{ uri: item.image }} style={list.image} imageStyle={list.imageOpacity}>
+                <Text style={{ ...list.imageText, ...list.imageTextMain }}>{item[imageMainData]}+</Text>
+                <Text style={list.imageText}>{imageMainDataLegend}</Text>
+              </ImageBackground>
+              <View style={list.contentContainer}>
+                <Text style={list.source}>{item.source}</Text>
+                <Text style={list.title}>{item.title}</Text>
+                <Text style={list.numberOfPlayers}>{item.goals.join(', ')}</Text>
               </View>
             </TouchableOpacity>
           )}
@@ -62,41 +68,6 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     height: '100%',
-  },
-  counter: {
-    color: theme.COLOR_SECONDARY,
-    marginBottom: 20,
-  },
-  drill: {
-    height: 80,
-    flexDirection: 'row',
-    marginBottom: 20,
-  },
-  image: {
-    width: 80,
-    height: 80,
-    marginRight: 10,
-    borderRadius: 5,
-  },
-  contentContainer: {
-    padding: 5,
-    paddingBottom: 10,
-  },
-  title: {
-    flex: 3,
-    fontWeight: 'bold',
-    fontSize: theme.FONT_SIZE_LARGE,
-    flexWrap: 'wrap',
-  },
-  source: {
-    flex: 2,
-    color: theme.COLOR_SECONDARY,
-    fontSize: theme.FONT_SIZE_SMALL,
-  },
-  numberOfPlayers: {
-    flex: 2,
-    color: theme.COLOR_SECONDARY,
-    fontSize: theme.FONT_SIZE_SMALL,
   },
   filterButton: {
     position: 'absolute',

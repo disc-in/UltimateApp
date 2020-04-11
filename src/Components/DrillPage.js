@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import { useHeaderHeight } from '@react-navigation/stack';
 import {
   ScrollView,
   StyleSheet,
@@ -9,28 +8,50 @@ import {
   TouchableOpacity,
   Dimensions,
   findNodeHandle,
-  Button,
+  Image,
 } from 'react-native';
 import { connect } from 'react-redux';
-import theme from '../styles/theme.style';
+import { useHeaderHeight } from '@react-navigation/stack';
 import { LinearGradient } from 'expo-linear-gradient';
+
 import DrillAnimationPage from './DrillAnimationPage';
-const DrillPage = props => {
+import { toggleFavorite } from '../Store/Actions/favoriteAction';
+
+import theme from '../styles/theme.style';
+
+import iconFavoriteEmpty from '../Images/ic_favorite_border.png';
+import iconFavoriteFull from '../Images/ic_favorite.png';
+
+export const DrillPage = props => {
   const { route } = props;
+  // Create Component refs
   const drillScrollView = useRef(null);
   const firstDrill = useRef(null);
+
+  // Get Header Height
   const headerHeight = useHeaderHeight();
   const screenDimension = Dimensions.get('window');
   const sizeBackground = screenDimension.height - headerHeight;
   const imageStyles = { ...styles.image, height: sizeBackground };
+
   const drill = route.params.drill;
+
   const onPressStartButton = () => {
     firstDrill.current.measureLayout(findNodeHandle(drillScrollView.current), (x, y) => {
       drillScrollView.current.scrollTo({ x: 0, y, animated: true });
     });
   };
+
+  const displayFavoriteImage = () => {
+    let sourceImage = iconFavoriteEmpty;
+    if (props.favoriteDrills.findIndex(item => item.id === props.route.params.drill.id) !== -1) {
+      sourceImage = iconFavoriteFull;
+    }
+    return <Image style={styles.favoriteImage} source={sourceImage} />;
+  };
+
   return (
-    <ScrollView ref={drillScrollView} style={styles.DrillPage}>
+    <ScrollView ref={drillScrollView} style={styles.drillPage}>
       <ImageBackground source={{ uri: drill.image }} style={imageStyles} imageStyle={styles.imageOpacity}>
         <View style={styles.titleContainer}>
           <Text style={styles.title}>{drill.title}</Text>
@@ -64,7 +85,16 @@ const DrillPage = props => {
         </TouchableOpacity>
       </ImageBackground>
       <View style={styles.separator} />
-      <Button title="Favoris" onPress={() => toggleFavorite(drill)} />
+      <TouchableOpacity
+        style={styles.favoriteContainer}
+        onPress={() => {
+          console.log('drill is ', drill);
+          return props.toggleFavorite(drill);
+        }}
+        testID="favoriteButton"
+      >
+        {displayFavoriteImage()}
+      </TouchableOpacity>
       <View style={styles.description}>
         <View style={styles.descriptionItem}>
           <Text style={styles.descriptionGoalsTitle}>Goals</Text>
@@ -95,8 +125,9 @@ const DrillPage = props => {
     </ScrollView>
   );
 };
+
 const styles = StyleSheet.create({
-  DrillPage: {
+  drillPage: {
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
   },
   image: {
@@ -206,17 +237,21 @@ const styles = StyleSheet.create({
     borderBottomColor: '#DCDCDC',
     borderBottomWidth: 1,
   },
+  favoriteContainer: {
+    alignItems: 'center',
+  },
+  favoriteImage: {
+    width: 25.5,
+    height: 30,
+  },
 });
+
 const mapStateToProps = state => {
   return {
-    favoritesDrill: state.favoritesDrill,
+    favoriteDrills: state.favoriteDrills,
   };
 };
-const mapDispatchToProps = dispatch => {
-  return {
-    toggleFavorite: drill => {
-      dispatch({ type: 'TOGGLE_FAVORITE', value: drill });
-    },
-  };
-};
+
+const mapDispatchToProps = { toggleFavorite };
+
 export default connect(mapStateToProps, mapDispatchToProps)(DrillPage);

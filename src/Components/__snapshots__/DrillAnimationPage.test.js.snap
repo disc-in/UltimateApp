@@ -5,7 +5,7 @@ exports[`<DrillAnimationPage /> renders correctly for a drill with animation 1`]
   style={
     Object {
       "flex": 1,
-      "height": 1270,
+      "height": 1334,
     }
   }
 >
@@ -20,7 +20,7 @@ exports[`<DrillAnimationPage /> renders correctly for a drill with no video nor 
   style={
     Object {
       "flex": 1,
-      "height": 1270,
+      "height": 1334,
     }
   }
 >
@@ -35,7 +35,7 @@ exports[`<DrillAnimationPage /> renders correctly for a drill with video 1`] = `
   style={
     Object {
       "flex": 1,
-      "height": 1270,
+      "height": 1334,
     }
   }
 >

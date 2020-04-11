@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Text, Dimensions } from 'react-native';
 import Animation from './Animation';
-import { Header } from 'react-navigation-stack';
 import { WebView } from 'react-native-webview';
 
 class DrillAnimationPage extends Component {
@@ -11,7 +10,7 @@ class DrillAnimationPage extends Component {
         {this.props.animation ? (
           <Animation animation={this.props.animation} />
         ) : this.props.video ? (
-          <WebView source={{ uri: 'https://www.youtube.com/embed/oN1bzPCKkGE' }} />
+          <WebView source={{ uri: this.props.video }} style={styles.videoPresentation} />
         ) : (
           <Text>No visual content for this drill</Text>
         )}
@@ -25,6 +24,9 @@ const styles = StyleSheet.create({
   drillAnimationPage: {
     flex: 1,
     height: screenDimension.height,
+  },
+  videoPresentation: {
+    marginTop: 20,
   },
 });
 

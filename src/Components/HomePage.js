@@ -4,35 +4,33 @@ import theme from '../styles/theme.style';
 import fitness from '../../assets/HomePage/fitness.png';
 import frisbeeGlove from '../../assets/HomePage/frisbeeglove.png';
 import huddle from '../../assets/HomePage/huddle.png';
+import { DrillTypes } from '../Fixtures';
 
 export default class HomePage extends React.Component {
   render() {
     return (
       <View style={styles.mainContainer}>
         <TouchableHighlight
-          onPress={() => this.props.navigation.navigate('DrillListPage', { type: 'technical' })}
+          onPress={() => this.props.navigation.navigate('DrillListPage', { type: DrillTypes.TECHNICAL })}
           style={styles.menuItem}
         >
           <ImageBackground source={frisbeeGlove} style={styles.image}>
             <View style={styles.wrapper}>
-              <Text style={styles.text}>Frisbee</Text>
+              <Text style={styles.text}>Frisbee drills</Text>
             </View>
           </ImageBackground>
         </TouchableHighlight>
         <TouchableHighlight
-          onPress={() => this.props.navigation.navigate('DrillListPage', { type: 'fitness' })}
+          onPress={() => this.props.navigation.navigate('DrillListPage', { type: DrillTypes.FITNESS })}
           style={styles.menuItem}
         >
           <ImageBackground source={fitness} style={styles.image}>
             <View style={styles.wrapper}>
-              <Text style={styles.text}>Fitness</Text>
+              <Text style={styles.text}>Fitness drills</Text>
             </View>
           </ImageBackground>
         </TouchableHighlight>
-        <TouchableHighlight
-          onPress={() => this.props.navigation.navigate('DrillListPage', { type: 'collectif' })}
-          style={styles.menuItem}
-        >
+        <TouchableHighlight onPress={() => this.props.navigation.navigate('TrainingListPage')} style={styles.menuItem}>
           <ImageBackground source={huddle} style={styles.image}>
             <View style={styles.wrapper}>
               <Text style={styles.text}>Trainings</Text>

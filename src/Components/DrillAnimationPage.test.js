@@ -6,36 +6,26 @@ import DrillAnimationPage from './DrillAnimationPage';
 
 describe('<DrillAnimationPage />', () => {
   it('renders correctly for a drill with video', () => {
-    const route = {
-      params: {
-        drill: {
-          video: 'https://www.youtube.com/embed/oN1bzPCKkGE',
-        },
-      },
+    const videoProps = {
+      video: 'https://www.youtube.com/embed/oN1bzPCKkGE',
     };
-    const tree = renderer.create(<DrillAnimationPage route={route} />).toJSON();
+    const tree = renderer.create(<DrillAnimationPage props={videoProps} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('renders correctly for a drill with animation', () => {
-    const route = {
-      params: {
-        drill: {
-          animation: animationMenageATrois,
-        },
-      },
+    const animationProps = {
+      animation: animationMenageATrois,
     };
-    const tree = renderer.create(<DrillAnimationPage route={route} />).toJSON();
+    const tree = renderer.create(<DrillAnimationPage props={animationProps} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('renders correctly for a drill with no video nor animation', () => {
-    const route = {
-      params: {
-        drill: {},
-      },
+    const noProps = {
+      drill: {},
     };
-    const tree = renderer.create(<DrillAnimationPage route={route} />).toJSON();
+    const tree = renderer.create(<DrillAnimationPage props={noProps} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

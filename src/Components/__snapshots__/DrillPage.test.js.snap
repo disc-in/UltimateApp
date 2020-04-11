@@ -436,35 +436,6 @@ exports[`<DrillPage /> renders correctly 1`] = `
                           }
                         />
                         <View
-                          accessible={true}
-                          focusable={true}
-                          isTVSelectable={true}
-                          onClick={[Function]}
-                          onResponderGrant={[Function]}
-                          onResponderMove={[Function]}
-                          onResponderRelease={[Function]}
-                          onResponderTerminate={[Function]}
-                          onResponderTerminationRequest={[Function]}
-                          onStartShouldSetResponder={[Function]}
-                          style={
-                            Object {
-                              "alignItems": "center",
-                              "opacity": 1,
-                            }
-                          }
-                          testID="favoriteButton"
-                        >
-                          <Image
-                            source={1}
-                            style={
-                              Object {
-                                "height": 30,
-                                "width": 25.5,
-                              }
-                            }
-                          />
-                        </View>
-                        <View
                           style={
                             Object {
                               "padding": 20,
@@ -652,9 +623,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                     Object {
                                       "backgroundColor": "#ffffff",
                                     },
-                                    Object {
-                                      "marginTop": 20,
-                                    },
+                                    undefined,
                                   ]
                                 }
                                 useSharedProcessPool={true}
@@ -774,6 +743,50 @@ exports[`<DrillPage /> renders correctly 1`] = `
               >
                 DrillPage
               </Text>
+            </View>
+            <View
+              pointerEvents="box-none"
+              style={
+                Object {
+                  "alignItems": "flex-end",
+                  "bottom": 0,
+                  "justifyContent": "center",
+                  "opacity": 1,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <View
+                accessible={true}
+                focusable={true}
+                isTVSelectable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "marginRight": 15,
+                    "opacity": 1,
+                  }
+                }
+                testID="favoriteButton"
+              >
+                <Image
+                  source={1}
+                  style={
+                    Object {
+                      "height": 30,
+                      "width": 25.5,
+                    }
+                  }
+                />
+              </View>
             </View>
           </View>
         </View>

@@ -23,7 +23,8 @@ import iconFavoriteEmpty from '../Images/ic_favorite_border.png';
 import iconFavoriteFull from '../Images/ic_favorite.png';
 
 export const DrillPage = props => {
-  const { route } = props;
+  const { route, navigation } = props;
+
   // Create Component refs
   const drillScrollView = useRef(null);
   const firstDrill = useRef(null);
@@ -42,13 +43,27 @@ export const DrillPage = props => {
     });
   };
 
-  const displayFavoriteImage = () => {
+  const displayFavoriteButton = () => {
     let sourceImage = iconFavoriteEmpty;
     if (props.favoriteDrills.findIndex(item => item.id === props.route.params.drill.id) !== -1) {
       sourceImage = iconFavoriteFull;
     }
-    return <Image style={styles.favoriteImage} source={sourceImage} />;
+    return (
+      <TouchableOpacity
+        style={styles.favoriteContainer}
+        onPress={() => props.toggleFavorite(drill)}
+        testID="favoriteButton"
+      >
+        <Image style={styles.favoriteImage} source={sourceImage} />
+      </TouchableOpacity>
+    );
   };
+
+  // Set favorite button on header
+  // ToDO - Fix error in test
+  navigation.setOptions({
+    headerRight: () => displayFavoriteButton(),
+  });
 
   return (
     <ScrollView ref={drillScrollView} style={styles.drillPage}>
@@ -85,16 +100,6 @@ export const DrillPage = props => {
         </TouchableOpacity>
       </ImageBackground>
       <View style={styles.separator} />
-      <TouchableOpacity
-        style={styles.favoriteContainer}
-        onPress={() => {
-          console.log('drill is ', drill);
-          return props.toggleFavorite(drill);
-        }}
-        testID="favoriteButton"
-      >
-        {displayFavoriteImage()}
-      </TouchableOpacity>
       <View style={styles.description}>
         <View style={styles.descriptionItem}>
           <Text style={styles.descriptionGoalsTitle}>Goals</Text>
@@ -238,7 +243,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
   },
   favoriteContainer: {
-    alignItems: 'center',
+    marginRight: 15,
   },
   favoriteImage: {
     width: 25.5,

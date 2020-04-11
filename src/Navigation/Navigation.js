@@ -1,5 +1,4 @@
 import React from 'react';
-import { AsyncStorage } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomePage from '../Components/HomePage';
 import DrillListPage from '../Components/DrillListPage';

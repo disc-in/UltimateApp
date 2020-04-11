@@ -32,7 +32,7 @@ describe('<DrillListPage />', () => {
       },
     };
     const drills = [createDrill({ type: DrillTypes.TECHNICAL })];
-    const tree = renderer.create(<DrillListPage route={route} drills={drills} />).toJSON();
+    const tree = renderer.create(<DrillListPage route={route} storeDrills={drills} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
@@ -43,7 +43,7 @@ describe('<DrillListPage />', () => {
       },
     };
     const drills = [createDrill({ type: DrillTypes.FITNESS })];
-    const tree = renderer.create(<DrillListPage route={route} drills={drills} />).toJSON();
+    const tree = renderer.create(<DrillListPage route={route} storeDrills={drills} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
@@ -56,7 +56,7 @@ describe('<DrillListPage />', () => {
     const drill = createDrill({ type: DrillTypes.TECHNICAL, title: 'Hot Box' });
     const drills = [drill];
     const navigation = { navigate: jest.fn() };
-    const { getByText } = render(<DrillListPage route={route} drills={drills} navigation={navigation} />);
+    const { getByText } = render(<DrillListPage route={route} storeDrills={drills} navigation={navigation} />);
 
     await fireEvent.press(getByText('Hot Box'));
 
@@ -65,19 +65,21 @@ describe('<DrillListPage />', () => {
 
   it('links to filter view on press on the button', async () => {
     const route = {
+      name: 'DrillListPage',
       params: {
         type: DrillTypes.TECHNICAL,
       },
     };
     const drills = [createDrill({ type: DrillTypes.TECHNICAL, title: 'Hot Box' })];
     const navigation = { navigate: jest.fn() };
-    const { getByTestId } = render(<DrillListPage route={route} drills={drills} navigation={navigation} />);
+    const { getByTestId } = render(<DrillListPage route={route} storeDrills={drills} navigation={navigation} />);
 
     await fireEvent.press(getByTestId('filterButton'));
 
     expect(navigation.navigate).toBeCalledWith('Filters', {
-      onFiltered: expect.anything(),
       initialData: drills,
+      previousScreen: 'DrillListPage',
+      previousType: DrillTypes.TECHNICAL,
     });
   });
 });

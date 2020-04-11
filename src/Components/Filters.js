@@ -6,7 +6,7 @@ import { Levels } from '../Fixtures';
 const Button = props => {
   const activeStyle = props.active ? styles.activeButton : {};
   return (
-    <TouchableOpacity style={{ ...styles.button, ...activeStyle }} onPress={props.onPress}>
+    <TouchableOpacity style={{ ...styles.button, ...activeStyle }} key={props.title} onPress={props.onPress}>
       <Text style={styles.buttonText}>{props.title}</Text>
     </TouchableOpacity>
   );
@@ -14,7 +14,7 @@ const Button = props => {
 
 const HeaderButton = props => {
   return (
-    <TouchableOpacity style={styles.headerButton} onPress={props.onPress} testID="validateButton">
+    <TouchableOpacity onPress={props.onPress} testID="validateButton">
       <Text style={styles.headerButtonText}>✓</Text>
     </TouchableOpacity>
   );
@@ -53,13 +53,14 @@ class Filters extends React.Component {
   }
 
   componentDidMount() {
-    this.props.route.params.onFiltered(this.state.displayedDrills);
     this.props.navigation.setOptions({
       headerRight: () => (
         <HeaderButton
           onPress={() => {
-            this.props.route.params.onFiltered(this.state.displayedDrills);
-            this.props.navigation.goBack();
+            this.props.navigation.navigate(this.props.route.params.previousScreen, {
+              filteredDrills: this.state.displayedDrills,
+              type: this.props.route.params.previousType,
+            });
           }}
         />
       ),
@@ -78,7 +79,6 @@ class Filters extends React.Component {
           <View style={styles.filter}>
             {Object.values(Levels).map(level => (
               <Button
-                key={level}
                 title={level}
                 onPress={this.onPressedChange.bind(this, 'selectedLevel', level)}
                 active={selectedLevel === level}
@@ -93,7 +93,6 @@ class Filters extends React.Component {
               .filter((goal, index, array) => array.indexOf(goal) === index)
               .map(goal => (
                 <Button
-                  key={goal}
                   title={goal}
                   onPress={this.onPressedChange.bind(this, 'selectedGoal', goal)}
                   active={selectedGoal === goal}
@@ -116,10 +115,8 @@ class Filters extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  headerButton: {
-    paddingRight: 20,
-  },
   headerButtonText: {
+    paddingRight: 20,
     fontSize: theme.FONT_SIZE_LARGE,
   },
   wrapper: {

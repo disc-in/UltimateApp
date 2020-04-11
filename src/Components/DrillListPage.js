@@ -11,9 +11,9 @@ import * as list from '../styles/list.style';
 export const DrillListPage = props => {
   const { navigation } = props;
   const type = props.route.params.type;
-  const drills = props.drills.filter(drill => drill.type === type);
 
-  const [displayedDrills, setDisplayedDrills] = useState(drills);
+  const storeDrills = props.storeDrills.filter(drill => drill.type === type);
+  const displayedDrills = props.route.params.filteredDrills ? props.route.params.filteredDrills : storeDrills;
 
   const imageMainData = type === DrillTypes.TECHNICAL ? 'minimalPlayersNumber' : 'durationInMinutes';
   const imageMainDataLegend = type === DrillTypes.TECHNICAL ? 'players' : 'min.';
@@ -42,8 +42,9 @@ export const DrillListPage = props => {
         style={styles.filterButton}
         onPress={() =>
           navigation.navigate('Filters', {
-            onFiltered: newDisplayedDrills => setDisplayedDrills(newDisplayedDrills),
-            initialData: drills,
+            initialData: storeDrills,
+            previousScreen: props.route.name,
+            previousType: props.route.params.type,
           })
         }
         testID="filterButton"
@@ -56,7 +57,7 @@ export const DrillListPage = props => {
 
 const mapStateToProps = state => {
   return {
-    drills: state.drills,
+    storeDrills: state.drills,
   };
 };
 

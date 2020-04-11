@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrill } from '../Fixtures/TestFixtures';
 import { render, fireEvent } from 'react-native-testing-library';
-import { Levels } from '../Fixtures';
+import { Levels, DrillTypes } from '../Fixtures';
 
 import Filters from './Filters';
 
@@ -14,38 +14,46 @@ describe('<Filters />', () => {
   const drills = [beginnerDrill, advancedDrill];
 
   it('renders correctly', () => {
-    const onFiltered = jest.fn();
     const route = {
       params: {
         initialData: drills,
-        onFiltered,
       },
     };
-    const navigation = { setOptions: jest.fn(), goBack: jest.fn() };
+    const navigation = { setOptions: jest.fn(), navigate: jest.fn() };
     const tree = renderer.create(<Filters route={route} navigation={navigation} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   describe('filtering', () => {
-    it('filters drills by level on press, then updates parent list on validation', async () => {
-      const onFiltered = jest.fn();
-      const route = {
-        params: {
-          initialData: drills,
-          onFiltered,
-        },
-      };
+    it('filters drills by level on press, then goes back to parent list on validation', async () => {
+      const navigate = jest.fn();
+
+      const DummyScreen = props => null;
       const Stack = createStackNavigator();
+
       const { getByText, getByTestId } = render(
         <NavigationContainer>
           <Stack.Navigator>
-            <Stack.Screen name="Filters" component={Filters} initialParams={{ initialData: drills, onFiltered }} />
+            <Stack.Screen
+              name="Filters"
+              component={Filters}
+              initialParams={{
+                initialData: drills,
+                previousScreen: 'DrillListPage',
+                previousType: DrillTypes.TECHNICAL,
+              }}
+              listeners={({ navigation }) => ({
+                transitionStart: e => {
+                  navigation.navigate = navigate;
+                },
+              })}
+            />
+            <Stack.Screen name="DrillListPage" component={DummyScreen} />
           </Stack.Navigator>
         </NavigationContainer>,
       );
 
       expect(getByTestId('availableDrills').props.children.join('')).toEqual('2 drills available');
-      expect(onFiltered).nthCalledWith(1, drills);
 
       await fireEvent.press(getByText(Levels.BEGINNER));
 
@@ -61,10 +69,10 @@ describe('<Filters />', () => {
 
       await fireEvent.press(getByTestId('validateButton'));
 
-      expect(onFiltered).nthCalledWith(2, [advancedDrill]);
-
-      // Following expect is skipped because we found no way to mock navigation
-      // expect(navigation.goBack).toBeCalled();
+      expect(navigate).toBeCalledWith('DrillListPage', {
+        filteredDrills: [advancedDrill],
+        type: DrillTypes.TECHNICAL,
+      });
     });
   });
 });

@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator, CardStyleInterpolators } from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import HomePage from '../Components/HomePage';
 import DrillListPage from '../Components/DrillListPage';
 import DrillPage from '../Components/DrillPage';
@@ -13,7 +13,7 @@ const Stack = createStackNavigator();
 
 export const Navigation = () => (
   <NavigationContainer>
-    <Stack.Navigator screenOptions={{ cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS }}>
+    <Stack.Navigator>
       <Stack.Screen name="HomePage" component={HomePage} options={{ title: 'Ultimate Coaching app' }} />
       <Stack.Screen
         name="DrillListPage"

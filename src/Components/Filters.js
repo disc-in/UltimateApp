@@ -6,7 +6,7 @@ import { Levels } from '../Fixtures';
 const Button = props => {
   const activeStyle = props.active ? styles.activeButton : {};
   return (
-    <TouchableOpacity style={{ ...styles.button, ...activeStyle }} key={props.key} onPress={props.onPress}>
+    <TouchableOpacity style={{ ...styles.button, ...activeStyle }} key={props.title} onPress={props.onPress}>
       <Text style={styles.buttonText}>{props.title}</Text>
     </TouchableOpacity>
   );
@@ -21,12 +21,18 @@ const HeaderButton = props => {
 };
 
 class Filters extends React.Component {
-  state = {
-    selectedLevel: undefined,
-    selectedGoal: undefined,
-    numberOfPlayers: undefined,
-    displayedDrills: this.props.route.params.initialData,
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      selectedLevel: undefined,
+      selectedGoal: undefined,
+      numberOfPlayers: undefined,
+      displayedDrills: this.props.route.params.initialData,
+    };
+
+    this.onNumberOfPlayersChange = this.onInputChange.bind(this, 'numberOfPlayers');
+  }
 
   onPressedChange(target, value) {
     this.setState(prevState => {
@@ -78,7 +84,7 @@ class Filters extends React.Component {
             {Object.values(Levels).map(level => (
               <Button
                 title={level}
-                onPress={this.onPressedChange.bind(this, 'selectedLevel', level)}
+                onPress={() => this.onPressedChange('selectedLevel', level)}
                 key={level}
                 active={selectedLevel === level}
               />
@@ -93,7 +99,7 @@ class Filters extends React.Component {
               .map(goal => (
                 <Button
                   title={goal}
-                  onPress={this.onPressedChange.bind(this, 'selectedGoal', goal)}
+                  onPress={() => this.onPressedChange('selectedGoal', goal)}
                   key={goal}
                   active={selectedGoal === goal}
                 />
@@ -105,7 +111,7 @@ class Filters extends React.Component {
             maximumValue={30}
             step={1}
             value={numberOfPlayers}
-            onValueChange={this.onInputChange.bind(this, 'numberOfPlayers')}
+            onValueChange={this.onNumberOfPlayersChange}
             style={styles.slider}
             testID="numberOfPlayersSlider"
           />

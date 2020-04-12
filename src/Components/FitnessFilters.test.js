@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrill } from '../Fixtures/TestFixtures';
 import { render, fireEvent, cleanup } from 'react-native-testing-library';
-import { Levels, Intensities, GoalsFitness, DrillTypes } from '../Fixtures';
+import { Levels, Intensities, EquipmentLabels, GoalsFitness, DrillTypes } from '../Fixtures';
 
 import FitnessFilters from './FitnessFilters';
 
@@ -126,6 +126,59 @@ describe('<FitnessFilters />', () => {
 
       expect(navigate).toBeCalledWith('DrillListPage', {
         filteredDrills: [highDrill],
+        type: DrillTypes.FITNESS,
+      });
+    });
+
+    it('filters drills by EquipmentLabels', async () => {
+      const noEquimentDrill = createDrill({ id: 1, equipmentLabel: EquipmentLabels.NONE });
+      const fullEquipmentDrill = createDrill({ id: 2, equipmentLabel: EquipmentLabels.FULL });
+      const drills = [noEquimentDrill, fullEquipmentDrill];
+      const navigate = jest.fn();
+
+      const DummyScreen = props => null;
+      const Stack = createStackNavigator();
+
+      const { getByText, getByTestId } = render(
+        <NavigationContainer>
+          <Stack.Navigator>
+            <Stack.Screen
+              name="FitnessFilters"
+              component={FitnessFilters}
+              initialParams={{
+                initialData: drills,
+                previousScreen: 'DrillListPage',
+                previousType: DrillTypes.FITNESS,
+              }}
+              listeners={({ navigation }) => ({
+                transitionStart: e => {
+                  navigation.navigate = navigate;
+                },
+              })}
+            />
+            <Stack.Screen name="DrillListPage" component={DummyScreen} />
+          </Stack.Navigator>
+        </NavigationContainer>,
+      );
+
+      expect(getByText('2 drills available')).toBeDefined();
+
+      await fireEvent.press(getByText(EquipmentLabels.NONE));
+
+      expect(getByText('1 drills available')).toBeDefined();
+
+      await fireEvent.press(getByText(EquipmentLabels.NONE));
+
+      expect(getByText('2 drills available')).toBeDefined();
+
+      await fireEvent.press(getByText(EquipmentLabels.FULL));
+
+      expect(getByText('1 drills available')).toBeDefined();
+
+      await fireEvent.press(getByTestId('validateButton'));
+
+      expect(navigate).toBeCalledWith('DrillListPage', {
+        filteredDrills: [fullEquipmentDrill],
         type: DrillTypes.FITNESS,
       });
     });

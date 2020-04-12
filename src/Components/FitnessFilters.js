@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity, TextInput, Slider } from 'react-native';
 import theme from '../styles/theme.style';
-import { Levels, Intensities } from '../Fixtures';
+import { Levels, Intensities, EquipmentLabels } from '../Fixtures';
 
 const Button = props => {
   const activeStyle = props.active ? styles.activeButton : {};
@@ -20,7 +20,6 @@ const HeaderButton = props => {
   );
 };
 
-// equipement
 // season timing
 
 class FitnessFilters extends React.Component {
@@ -30,6 +29,7 @@ class FitnessFilters extends React.Component {
     this.state = {
       selectedLevel: undefined,
       selectedIntensity: undefined,
+      selectedEquipmentLabel: undefined,
       selectedGoal: undefined,
       durationInMinutes: undefined,
       displayedDrills: this.props.route.params.initialData,
@@ -52,11 +52,12 @@ class FitnessFilters extends React.Component {
   }
 
   applyFilters() {
-    const { selectedLevel, selectedIntensity, selectedGoal, durationInMinutes } = this.state;
+    const { selectedLevel, selectedIntensity, selectedEquipmentLabel, selectedGoal, durationInMinutes } = this.state;
     let newData = this.props.route.params.initialData;
 
     if (selectedLevel) newData = newData.filter(drill => drill.level === selectedLevel);
     if (selectedIntensity) newData = newData.filter(drill => drill.intensity === selectedIntensity);
+    if (selectedEquipmentLabel) newData = newData.filter(drill => drill.equipmentLabel === selectedEquipmentLabel);
     if (selectedGoal) newData = newData.filter(drill => drill.goals.includes(selectedGoal));
     if (durationInMinutes) newData = newData.filter(drill => drill.durationInMinutes <= durationInMinutes);
 
@@ -79,7 +80,7 @@ class FitnessFilters extends React.Component {
   }
 
   render() {
-    const { selectedLevel, selectedIntensity, selectedGoal, durationInMinutes } = this.state;
+    const { selectedLevel, selectedIntensity, selectedEquipmentLabel, selectedGoal, durationInMinutes } = this.state;
     return (
       <View style={styles.wrapper}>
         <Text style={styles.counter}>{this.state.displayedDrills.length} drills available</Text>
@@ -103,6 +104,17 @@ class FitnessFilters extends React.Component {
                 onPress={() => this.onPressedChange('selectedIntensity', intensity)}
                 key={intensity}
                 active={selectedIntensity === intensity}
+              />
+            ))}
+          </View>
+          <Text style={styles.filterTitle}>Equipment</Text>
+          <View style={styles.filter}>
+            {Object.values(EquipmentLabels).map(equipmentLabel => (
+              <Button
+                title={equipmentLabel}
+                onPress={() => this.onPressedChange('selectedEquipmentLabel', equipmentLabel)}
+                key={equipmentLabel}
+                active={selectedEquipmentLabel === equipmentLabel}
               />
             ))}
           </View>

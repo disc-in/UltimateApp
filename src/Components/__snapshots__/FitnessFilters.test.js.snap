@@ -401,6 +401,160 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
         }
       }
     >
+      Season Timing
+    </Text>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "flexWrap": "wrap",
+          "justifyContent": "center",
+          "marginBottom": 10,
+        }
+      }
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "borderColor": "#e5e5e5",
+            "borderWidth": 1,
+            "margin": 5,
+            "opacity": 1,
+            "paddingHorizontal": 20,
+            "paddingVertical": 10,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "textTransform": "capitalize",
+            }
+          }
+        >
+          Off-season
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "borderColor": "#e5e5e5",
+            "borderWidth": 1,
+            "margin": 5,
+            "opacity": 1,
+            "paddingHorizontal": 20,
+            "paddingVertical": 10,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "textTransform": "capitalize",
+            }
+          }
+        >
+          Pre-season
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "borderColor": "#e5e5e5",
+            "borderWidth": 1,
+            "margin": 5,
+            "opacity": 1,
+            "paddingHorizontal": 20,
+            "paddingVertical": 10,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "textTransform": "capitalize",
+            }
+          }
+        >
+          In-season
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "borderColor": "#e5e5e5",
+            "borderWidth": 1,
+            "margin": 5,
+            "opacity": 1,
+            "paddingHorizontal": 20,
+            "paddingVertical": 10,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "textTransform": "capitalize",
+            }
+          }
+        >
+          Anytime
+        </Text>
+      </View>
+    </View>
+    <Text
+      style={
+        Object {
+          "fontWeight": "bold",
+          "marginTop": 10,
+          "textTransform": "uppercase",
+        }
+      }
+    >
       Goals
     </Text>
     <View

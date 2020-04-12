@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrill } from '../Fixtures/TestFixtures';
 import { render, fireEvent, cleanup } from 'react-native-testing-library';
-import { Levels, Intensities, EquipmentLabels, GoalsFitness, DrillTypes } from '../Fixtures';
+import { Levels, Intensities, EquipmentLabels, SeasonTimings, GoalsFitness, DrillTypes } from '../Fixtures';
 
 import FitnessFilters from './FitnessFilters';
 
@@ -183,6 +183,59 @@ describe('<FitnessFilters />', () => {
       });
     });
 
+    it('filters drills by SeasonTimings', async () => {
+      const preDrill = createDrill({ id: 1, seasonTiming: SeasonTimings.PRE_SEASON });
+      const inDrill = createDrill({ id: 2, seasonTiming: SeasonTimings.IN_SEASON });
+      const drills = [preDrill, inDrill];
+      const navigate = jest.fn();
+
+      const DummyScreen = props => null;
+      const Stack = createStackNavigator();
+
+      const { getByText, getByTestId } = render(
+        <NavigationContainer>
+          <Stack.Navigator>
+            <Stack.Screen
+              name="FitnessFilters"
+              component={FitnessFilters}
+              initialParams={{
+                initialData: drills,
+                previousScreen: 'DrillListPage',
+                previousType: DrillTypes.FITNESS,
+              }}
+              listeners={({ navigation }) => ({
+                transitionStart: e => {
+                  navigation.navigate = navigate;
+                },
+              })}
+            />
+            <Stack.Screen name="DrillListPage" component={DummyScreen} />
+          </Stack.Navigator>
+        </NavigationContainer>,
+      );
+
+      expect(getByText('2 drills available')).toBeDefined();
+
+      await fireEvent.press(getByText(SeasonTimings.PRE_SEASON));
+
+      expect(getByText('1 drills available')).toBeDefined();
+
+      await fireEvent.press(getByText(SeasonTimings.PRE_SEASON));
+
+      expect(getByText('2 drills available')).toBeDefined();
+
+      await fireEvent.press(getByText(SeasonTimings.IN_SEASON));
+
+      expect(getByText('1 drills available')).toBeDefined();
+
+      await fireEvent.press(getByTestId('validateButton'));
+
+      expect(navigate).toBeCalledWith('DrillListPage', {
+        filteredDrills: [inDrill],
+        type: DrillTypes.FITNESS,
+      });
+    });
+
     it('filters drills by goal', async () => {
       const legsDrill = createDrill({ id: 1, goals: [GoalsFitness.LEGS] });
       const upperDrill = createDrill({ id: 2, goals: [GoalsFitness.UPPER] });
@@ -237,7 +290,7 @@ describe('<FitnessFilters />', () => {
       });
     });
 
-    it('filters drills by number of players', async () => {
+    it('filters drills by duration', async () => {
       const oneMinuteDrill = createDrill({ id: 1, durationInMinutes: 1 });
       const twoMinutesDrill = createDrill({ id: 2, durationInMinutes: 2 });
       const tenMinutesDrill = createDrill({ id: 3, durationInMinutes: 10 });

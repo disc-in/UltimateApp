@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { StyleSheet, View, Text, ImageBackground, Image, TouchableOpacity, FlatList } from 'react-native';
 import { connect } from 'react-redux';
 import filterButtonImage from '../../assets/filter.png';
-import Filters from './Filters';
 import { DrillTypes } from '../Fixtures';
 
 import theme from '../styles/theme.style';
@@ -40,13 +39,14 @@ export const DrillListPage = props => {
       />
       <TouchableOpacity
         style={styles.filterButton}
-        onPress={() =>
-          navigation.navigate('Filters', {
+        onPress={() => {
+          const filtersPage = props.route.params.type === DrillTypes.TECHNICAL ? 'TechnicalFilters' : 'FitnessFilters';
+          navigation.navigate(filtersPage, {
             initialData: storeDrillsForType,
             previousScreen: route.name,
             previousType: type,
-          })
-        }
+          });
+        }}
         testID="filterButton"
       >
         <Image source={filterButtonImage} style={styles.filterButtonImage} />

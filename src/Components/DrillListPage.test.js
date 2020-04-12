@@ -78,7 +78,7 @@ describe('<DrillListPage />', () => {
 
     await fireEvent.press(getByTestId('filterButton'));
 
-    expect(navigation.navigate).toBeCalledWith('Filters', {
+    expect(navigation.navigate).toBeCalledWith('TechnicalFilters', {
       initialData: drills,
       previousScreen: 'DrillListPage',
       previousType: DrillTypes.TECHNICAL,

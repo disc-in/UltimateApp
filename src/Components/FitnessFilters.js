@@ -20,7 +20,7 @@ const HeaderButton = props => {
   );
 };
 
-class Filters extends React.Component {
+class TechnicalFilters extends React.Component {
   constructor(props) {
     super(props);
 
@@ -172,4 +172,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Filters;
+export default TechnicalFilters;

@@ -6,11 +6,11 @@ import { createDrill } from '../Fixtures/TestFixtures';
 import { render, fireEvent, cleanup } from 'react-native-testing-library';
 import { Levels, GoalsFrisbee, DrillTypes } from '../Fixtures';
 
-import Filters from './Filters';
+import TechnicalFilters from './TechnicalFilters';
 
 afterEach(cleanup);
 
-describe('<Filters />', () => {
+describe('<TechnicalFilters />', () => {
   const beginnerDrill = createDrill({ id: 1, level: Levels.BEGINNER });
   const advancedDrill = createDrill({ id: 2, level: Levels.ADVANCED });
 
@@ -21,7 +21,7 @@ describe('<Filters />', () => {
       },
     };
     const navigation = { setOptions: jest.fn(), navigate: jest.fn() };
-    const tree = renderer.create(<Filters route={route} navigation={navigation} />).toJSON();
+    const tree = renderer.create(<TechnicalFilters route={route} navigation={navigation} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
@@ -37,8 +37,8 @@ describe('<Filters />', () => {
         <NavigationContainer>
           <Stack.Navigator>
             <Stack.Screen
-              name="Filters"
-              component={Filters}
+              name="TechnicalFilters"
+              component={TechnicalFilters}
               initialParams={{
                 initialData: drills,
                 previousScreen: 'DrillListPage',
@@ -91,8 +91,8 @@ describe('<Filters />', () => {
         <NavigationContainer>
           <Stack.Navigator>
             <Stack.Screen
-              name="Filters"
-              component={Filters}
+              name="TechnicalFilters"
+              component={TechnicalFilters}
               initialParams={{
                 initialData: drills,
                 previousScreen: 'DrillListPage',
@@ -145,8 +145,8 @@ describe('<Filters />', () => {
         <NavigationContainer>
           <Stack.Navigator>
             <Stack.Screen
-              name="Filters"
-              component={Filters}
+              name="TechnicalFilters"
+              component={TechnicalFilters}
               initialParams={{
                 initialData: drills,
                 previousScreen: 'DrillListPage',

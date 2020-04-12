@@ -48,6 +48,12 @@ export const EquipmentLabels = {
   FULL_EQUIPMENT: 'Full equipment',
 };
 
+export const Sources = {
+  VIMEO: 'vimeo',
+  YOUTUBE: 'youtube',
+  ANIMATION: 'animation',
+};
+
 export default {
   favoriteDrills: [],
   drills: [
@@ -66,20 +72,30 @@ export default {
       goals: [GoalsFitness.FULL_BODY],
       seasonTiming: SeasonTimings.OFF_SEASON,
       level: Levels.BEGINNER,
-      video: 'https://www.youtube.com/embed/JkVHrA5o23o',
-      /* animation:, */
       steps: [
         {
-          title: 'Warmup',
-          subtitle: 'This is a subtitle',
+          id: 1,
+          title: 'Rower Hamstring',
+          source: Sources.VIMEO,
+          video: '406527746',
+          count: '20',
+          rest: '90s',
         },
         {
-          title: 'Do the drill',
-          subtitle: 'This is a subtitle',
+          id: 2,
+          title: 'Full Clean',
+          source: Sources.VIMEO,
+          video: '406527537',
+          count: '8',
+          rest: '90s',
         },
         {
-          title: 'Last step',
-          subtitle: 'This is a subtitle',
+          id: 3,
+          title: 'Kettlebell Russian Twist',
+          source: Sources.VIMEO,
+          video: '406472362',
+          count: '25',
+          rest: '90s',
         },
       ],
     },

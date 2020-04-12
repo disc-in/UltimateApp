@@ -20,18 +20,22 @@ const HeaderButton = props => {
   );
 };
 
-class TechnicalFilters extends React.Component {
+// intensité
+// equipement
+// season timing
+
+class FitnessFilters extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
       selectedLevel: undefined,
       selectedGoal: undefined,
-      numberOfPlayers: undefined,
+      durationInMinutes: undefined,
       displayedDrills: this.props.route.params.initialData,
     };
 
-    this.onNumberOfPlayersChange = this.onInputChange.bind(this, 'numberOfPlayers');
+    this.onDurationInMinutesChange = this.onInputChange.bind(this, 'durationInMinutes');
   }
 
   onPressedChange(target, value) {
@@ -48,12 +52,12 @@ class TechnicalFilters extends React.Component {
   }
 
   applyFilters() {
-    const { selectedLevel, selectedGoal, numberOfPlayers } = this.state;
+    const { selectedLevel, selectedGoal, durationInMinutes } = this.state;
     let newData = this.props.route.params.initialData;
 
     if (selectedLevel) newData = newData.filter(drill => drill.level === selectedLevel);
     if (selectedGoal) newData = newData.filter(drill => drill.goals.includes(selectedGoal));
-    if (numberOfPlayers) newData = newData.filter(drill => drill.minimalPlayersNumber <= numberOfPlayers);
+    if (durationInMinutes) newData = newData.filter(drill => drill.durationInMinutes <= durationInMinutes);
 
     this.setState({ displayedDrills: newData });
   }
@@ -74,7 +78,7 @@ class TechnicalFilters extends React.Component {
   }
 
   render() {
-    const { selectedLevel, selectedGoal, numberOfPlayers } = this.state;
+    const { selectedLevel, selectedGoal, durationInMinutes } = this.state;
     return (
       <View style={styles.wrapper}>
         <Text style={styles.counter}>{this.state.displayedDrills.length} drills available</Text>
@@ -105,15 +109,15 @@ class TechnicalFilters extends React.Component {
                 />
               ))}
           </View>
-          <Text style={styles.filterTitle}>Number of players: {numberOfPlayers}</Text>
+          <Text style={styles.filterTitle}>Duration: {durationInMinutes || '-'} mins</Text>
           <Slider
             minimumValue={1}
-            maximumValue={30}
+            maximumValue={60}
             step={1}
-            value={numberOfPlayers}
-            onValueChange={this.onNumberOfPlayersChange}
+            value={durationInMinutes}
+            onValueChange={this.onDurationInMinutesChange}
             style={styles.slider}
-            testID="numberOfPlayersSlider"
+            testID="durationSlider"
           />
         </View>
       </View>
@@ -172,4 +176,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default TechnicalFilters;
+export default FitnessFilters;

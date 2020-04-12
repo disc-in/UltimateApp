@@ -22,624 +22,627 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
     2
      drills available
   </Text>
-  <View
-    style={
+  <RCTScrollView
+    contentContainerStyle={
       Object {
         "alignItems": "center",
+        "paddingBottom": 50,
       }
     }
   >
-    <Text
-      style={
-        Object {
-          "fontWeight": "bold",
-          "marginTop": 10,
-          "textTransform": "uppercase",
-        }
-      }
-    >
-      Level
-    </Text>
-    <View
-      style={
-        Object {
-          "flexDirection": "row",
-          "flexWrap": "wrap",
-          "justifyContent": "center",
-          "marginBottom": 10,
-        }
-      }
-    >
-      <View
-        accessible={true}
-        focusable={true}
-        isTVSelectable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
+    <View>
+      <Text
         style={
           Object {
-            "backgroundColor": "#fff",
-            "borderColor": "#e5e5e5",
-            "borderWidth": 1,
-            "margin": 5,
-            "opacity": 1,
-            "paddingHorizontal": 20,
-            "paddingVertical": 10,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "textTransform": "capitalize",
-            }
-          }
-        >
-          Beginner
-        </Text>
-      </View>
-      <View
-        accessible={true}
-        focusable={true}
-        isTVSelectable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "backgroundColor": "#fff",
-            "borderColor": "#e5e5e5",
-            "borderWidth": 1,
-            "margin": 5,
-            "opacity": 1,
-            "paddingHorizontal": 20,
-            "paddingVertical": 10,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "textTransform": "capitalize",
-            }
-          }
-        >
-          Intermediate
-        </Text>
-      </View>
-      <View
-        accessible={true}
-        focusable={true}
-        isTVSelectable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "backgroundColor": "#fff",
-            "borderColor": "#e5e5e5",
-            "borderWidth": 1,
-            "margin": 5,
-            "opacity": 1,
-            "paddingHorizontal": 20,
-            "paddingVertical": 10,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "textTransform": "capitalize",
-            }
-          }
-        >
-          Advanced
-        </Text>
-      </View>
-    </View>
-    <Text
-      style={
-        Object {
-          "fontWeight": "bold",
-          "marginTop": 10,
-          "textTransform": "uppercase",
-        }
-      }
-    >
-      Intensity
-    </Text>
-    <View
-      style={
-        Object {
-          "flexDirection": "row",
-          "flexWrap": "wrap",
-          "justifyContent": "center",
-          "marginBottom": 10,
-        }
-      }
-    >
-      <View
-        accessible={true}
-        focusable={true}
-        isTVSelectable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "backgroundColor": "#fff",
-            "borderColor": "#e5e5e5",
-            "borderWidth": 1,
-            "margin": 5,
-            "opacity": 1,
-            "paddingHorizontal": 20,
-            "paddingVertical": 10,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "textTransform": "capitalize",
-            }
-          }
-        >
-          Low
-        </Text>
-      </View>
-      <View
-        accessible={true}
-        focusable={true}
-        isTVSelectable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "backgroundColor": "#fff",
-            "borderColor": "#e5e5e5",
-            "borderWidth": 1,
-            "margin": 5,
-            "opacity": 1,
-            "paddingHorizontal": 20,
-            "paddingVertical": 10,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "textTransform": "capitalize",
-            }
-          }
-        >
-          Moderate
-        </Text>
-      </View>
-      <View
-        accessible={true}
-        focusable={true}
-        isTVSelectable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "backgroundColor": "#fff",
-            "borderColor": "#e5e5e5",
-            "borderWidth": 1,
-            "margin": 5,
-            "opacity": 1,
-            "paddingHorizontal": 20,
-            "paddingVertical": 10,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "textTransform": "capitalize",
-            }
-          }
-        >
-          High
-        </Text>
-      </View>
-    </View>
-    <Text
-      style={
-        Object {
-          "fontWeight": "bold",
-          "marginTop": 10,
-          "textTransform": "uppercase",
-        }
-      }
-    >
-      Equipment
-    </Text>
-    <View
-      style={
-        Object {
-          "flexDirection": "row",
-          "flexWrap": "wrap",
-          "justifyContent": "center",
-          "marginBottom": 10,
-        }
-      }
-    >
-      <View
-        accessible={true}
-        focusable={true}
-        isTVSelectable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "backgroundColor": "#fff",
-            "borderColor": "#e5e5e5",
-            "borderWidth": 1,
-            "margin": 5,
-            "opacity": 1,
-            "paddingHorizontal": 20,
-            "paddingVertical": 10,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "textTransform": "capitalize",
-            }
-          }
-        >
-          No Equipment
-        </Text>
-      </View>
-      <View
-        accessible={true}
-        focusable={true}
-        isTVSelectable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "backgroundColor": "#fff",
-            "borderColor": "#e5e5e5",
-            "borderWidth": 1,
-            "margin": 5,
-            "opacity": 1,
-            "paddingHorizontal": 20,
-            "paddingVertical": 10,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "textTransform": "capitalize",
-            }
-          }
-        >
-          Basic Equipment
-        </Text>
-      </View>
-      <View
-        accessible={true}
-        focusable={true}
-        isTVSelectable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "backgroundColor": "#fff",
-            "borderColor": "#e5e5e5",
-            "borderWidth": 1,
-            "margin": 5,
-            "opacity": 1,
-            "paddingHorizontal": 20,
-            "paddingVertical": 10,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "textTransform": "capitalize",
-            }
-          }
-        >
-          Full equipment
-        </Text>
-      </View>
-    </View>
-    <Text
-      style={
-        Object {
-          "fontWeight": "bold",
-          "marginTop": 10,
-          "textTransform": "uppercase",
-        }
-      }
-    >
-      Season Timing
-    </Text>
-    <View
-      style={
-        Object {
-          "flexDirection": "row",
-          "flexWrap": "wrap",
-          "justifyContent": "center",
-          "marginBottom": 10,
-        }
-      }
-    >
-      <View
-        accessible={true}
-        focusable={true}
-        isTVSelectable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "backgroundColor": "#fff",
-            "borderColor": "#e5e5e5",
-            "borderWidth": 1,
-            "margin": 5,
-            "opacity": 1,
-            "paddingHorizontal": 20,
-            "paddingVertical": 10,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "textTransform": "capitalize",
-            }
-          }
-        >
-          Off-season
-        </Text>
-      </View>
-      <View
-        accessible={true}
-        focusable={true}
-        isTVSelectable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "backgroundColor": "#fff",
-            "borderColor": "#e5e5e5",
-            "borderWidth": 1,
-            "margin": 5,
-            "opacity": 1,
-            "paddingHorizontal": 20,
-            "paddingVertical": 10,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "textTransform": "capitalize",
-            }
-          }
-        >
-          Pre-season
-        </Text>
-      </View>
-      <View
-        accessible={true}
-        focusable={true}
-        isTVSelectable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "backgroundColor": "#fff",
-            "borderColor": "#e5e5e5",
-            "borderWidth": 1,
-            "margin": 5,
-            "opacity": 1,
-            "paddingHorizontal": 20,
-            "paddingVertical": 10,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "textTransform": "capitalize",
-            }
-          }
-        >
-          In-season
-        </Text>
-      </View>
-      <View
-        accessible={true}
-        focusable={true}
-        isTVSelectable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "backgroundColor": "#fff",
-            "borderColor": "#e5e5e5",
-            "borderWidth": 1,
-            "margin": 5,
-            "opacity": 1,
-            "paddingHorizontal": 20,
-            "paddingVertical": 10,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "textTransform": "capitalize",
-            }
-          }
-        >
-          Anytime
-        </Text>
-      </View>
-    </View>
-    <Text
-      style={
-        Object {
-          "fontWeight": "bold",
-          "marginTop": 10,
-          "textTransform": "uppercase",
-        }
-      }
-    >
-      Goals
-    </Text>
-    <View
-      style={
-        Object {
-          "flexDirection": "row",
-          "flexWrap": "wrap",
-          "justifyContent": "center",
-          "marginBottom": 10,
-        }
-      }
-    >
-      <View
-        accessible={true}
-        focusable={true}
-        isTVSelectable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "backgroundColor": "#fff",
-            "borderColor": "#e5e5e5",
-            "borderWidth": 1,
-            "margin": 5,
-            "opacity": 1,
-            "paddingHorizontal": 20,
-            "paddingVertical": 10,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "textTransform": "capitalize",
-            }
-          }
-        >
-          Full body
-        </Text>
-      </View>
-    </View>
-    <Text
-      style={
-        Object {
-          "fontWeight": "bold",
-          "marginTop": 10,
-          "textTransform": "uppercase",
-        }
-      }
-    >
-      Duration: 
-      -
-       mins
-    </Text>
-    <RCTSlider
-      disabled={false}
-      enabled={true}
-      maximumValue={60}
-      minimumValue={1}
-      onChange={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onSlidingComplete={null}
-      onStartShouldSetResponder={[Function]}
-      onValueChange={[Function]}
-      step={1}
-      style={
-        Array [
-          Object {
-            "height": 40,
-          },
-          Object {
-            "marginBottom": 30,
+            "fontWeight": "bold",
             "marginTop": 10,
-            "width": "80%",
-          },
-        ]
-      }
-      testID="durationSlider"
-      value={0}
-    />
-  </View>
+            "textTransform": "uppercase",
+          }
+        }
+      >
+        Level
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "justifyContent": "center",
+            "marginBottom": 10,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#fff",
+              "borderColor": "#e5e5e5",
+              "borderWidth": 1,
+              "margin": 5,
+              "opacity": 1,
+              "paddingHorizontal": 20,
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "textTransform": "capitalize",
+              }
+            }
+          >
+            Beginner
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#fff",
+              "borderColor": "#e5e5e5",
+              "borderWidth": 1,
+              "margin": 5,
+              "opacity": 1,
+              "paddingHorizontal": 20,
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "textTransform": "capitalize",
+              }
+            }
+          >
+            Intermediate
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#fff",
+              "borderColor": "#e5e5e5",
+              "borderWidth": 1,
+              "margin": 5,
+              "opacity": 1,
+              "paddingHorizontal": 20,
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "textTransform": "capitalize",
+              }
+            }
+          >
+            Advanced
+          </Text>
+        </View>
+      </View>
+      <Text
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginTop": 10,
+            "textTransform": "uppercase",
+          }
+        }
+      >
+        Intensity
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "justifyContent": "center",
+            "marginBottom": 10,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#fff",
+              "borderColor": "#e5e5e5",
+              "borderWidth": 1,
+              "margin": 5,
+              "opacity": 1,
+              "paddingHorizontal": 20,
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "textTransform": "capitalize",
+              }
+            }
+          >
+            Low
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#fff",
+              "borderColor": "#e5e5e5",
+              "borderWidth": 1,
+              "margin": 5,
+              "opacity": 1,
+              "paddingHorizontal": 20,
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "textTransform": "capitalize",
+              }
+            }
+          >
+            Moderate
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#fff",
+              "borderColor": "#e5e5e5",
+              "borderWidth": 1,
+              "margin": 5,
+              "opacity": 1,
+              "paddingHorizontal": 20,
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "textTransform": "capitalize",
+              }
+            }
+          >
+            High
+          </Text>
+        </View>
+      </View>
+      <Text
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginTop": 10,
+            "textTransform": "uppercase",
+          }
+        }
+      >
+        Equipment
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "justifyContent": "center",
+            "marginBottom": 10,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#fff",
+              "borderColor": "#e5e5e5",
+              "borderWidth": 1,
+              "margin": 5,
+              "opacity": 1,
+              "paddingHorizontal": 20,
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "textTransform": "capitalize",
+              }
+            }
+          >
+            No Equipment
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#fff",
+              "borderColor": "#e5e5e5",
+              "borderWidth": 1,
+              "margin": 5,
+              "opacity": 1,
+              "paddingHorizontal": 20,
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "textTransform": "capitalize",
+              }
+            }
+          >
+            Basic Equipment
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#fff",
+              "borderColor": "#e5e5e5",
+              "borderWidth": 1,
+              "margin": 5,
+              "opacity": 1,
+              "paddingHorizontal": 20,
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "textTransform": "capitalize",
+              }
+            }
+          >
+            Full equipment
+          </Text>
+        </View>
+      </View>
+      <Text
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginTop": 10,
+            "textTransform": "uppercase",
+          }
+        }
+      >
+        Season Timing
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "justifyContent": "center",
+            "marginBottom": 10,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#fff",
+              "borderColor": "#e5e5e5",
+              "borderWidth": 1,
+              "margin": 5,
+              "opacity": 1,
+              "paddingHorizontal": 20,
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "textTransform": "capitalize",
+              }
+            }
+          >
+            Off-season
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#fff",
+              "borderColor": "#e5e5e5",
+              "borderWidth": 1,
+              "margin": 5,
+              "opacity": 1,
+              "paddingHorizontal": 20,
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "textTransform": "capitalize",
+              }
+            }
+          >
+            Pre-season
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#fff",
+              "borderColor": "#e5e5e5",
+              "borderWidth": 1,
+              "margin": 5,
+              "opacity": 1,
+              "paddingHorizontal": 20,
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "textTransform": "capitalize",
+              }
+            }
+          >
+            In-season
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#fff",
+              "borderColor": "#e5e5e5",
+              "borderWidth": 1,
+              "margin": 5,
+              "opacity": 1,
+              "paddingHorizontal": 20,
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "textTransform": "capitalize",
+              }
+            }
+          >
+            Anytime
+          </Text>
+        </View>
+      </View>
+      <Text
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginTop": 10,
+            "textTransform": "uppercase",
+          }
+        }
+      >
+        Goals
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "justifyContent": "center",
+            "marginBottom": 10,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#fff",
+              "borderColor": "#e5e5e5",
+              "borderWidth": 1,
+              "margin": 5,
+              "opacity": 1,
+              "paddingHorizontal": 20,
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "textTransform": "capitalize",
+              }
+            }
+          >
+            Full body
+          </Text>
+        </View>
+      </View>
+      <Text
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginTop": 10,
+            "textTransform": "uppercase",
+          }
+        }
+      >
+        Duration: 
+        -
+         mins
+      </Text>
+      <RCTSlider
+        disabled={false}
+        enabled={true}
+        maximumValue={60}
+        minimumValue={1}
+        onChange={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onSlidingComplete={null}
+        onStartShouldSetResponder={[Function]}
+        onValueChange={[Function]}
+        step={1}
+        style={
+          Array [
+            Object {
+              "height": 40,
+            },
+            Object {
+              "marginBottom": 30,
+              "marginTop": 10,
+              "width": "80%",
+            },
+          ]
+        }
+        testID="durationSlider"
+        value={0}
+      />
+    </View>
+  </RCTScrollView>
 </View>
 `;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text, TouchableOpacity, TextInput, Slider } from 'react-native';
+import { StyleSheet, ScrollView, View, Text, TouchableOpacity, TextInput, Slider } from 'react-native';
 import theme from '../styles/theme.style';
 import { Levels } from '../Fixtures';
 
@@ -78,7 +78,7 @@ class TechnicalFilters extends React.Component {
     return (
       <View style={styles.wrapper}>
         <Text style={styles.counter}>{this.state.displayedDrills.length} drills available</Text>
-        <View style={styles.filters}>
+        <ScrollView contentContainerStyle={styles.filters}>
           <Text style={styles.filterTitle}>Level</Text>
           <View style={styles.filter}>
             {Object.values(Levels).map(level => (
@@ -115,7 +115,7 @@ class TechnicalFilters extends React.Component {
             style={styles.slider}
             testID="numberOfPlayersSlider"
           />
-        </View>
+        </ScrollView>
       </View>
     );
   }
@@ -132,6 +132,7 @@ const styles = StyleSheet.create({
   },
   filters: {
     alignItems: 'center',
+    paddingBottom: 50,
   },
   counter: {
     paddingTop: 10,

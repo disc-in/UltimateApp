@@ -159,7 +159,7 @@ export default {
       equipment: 'Equipment needs for the drill',
       durationInMinutes: 35,
       intensity: Intensities.LOW,
-      goals: [GoalsFitness.DEFENSE],
+      goals: [GoalsFitness.UPPER],
       seasonTiming: SeasonTimings.PRE_SEASON,
       level: Levels.BEGINNER,
       video: 'https://www.youtube.com/embed/JkVHrA5o23o',

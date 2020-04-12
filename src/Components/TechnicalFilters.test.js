@@ -163,7 +163,7 @@ describe('<TechnicalFilters />', () => {
         </NavigationContainer>,
       );
 
-      expect(getByText('Number of players: ')).toBeDefined();
+      expect(getByText('Number of players: -')).toBeDefined();
       expect(getByText('3 drills available')).toBeDefined();
 
       await fireEvent(getByTestId('numberOfPlayersSlider'), 'valueChange', 5);

@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrill } from '../Fixtures/TestFixtures';
 import { render, fireEvent, cleanup } from 'react-native-testing-library';
-import { Levels, GoalsFitness, DrillTypes } from '../Fixtures';
+import { Levels, Intensities, GoalsFitness, DrillTypes } from '../Fixtures';
 
 import FitnessFilters from './FitnessFilters';
 
@@ -73,6 +73,59 @@ describe('<FitnessFilters />', () => {
 
       expect(navigate).toBeCalledWith('DrillListPage', {
         filteredDrills: [advancedDrill],
+        type: DrillTypes.FITNESS,
+      });
+    });
+
+    it('filters drills by intensity', async () => {
+      const lowDrill = createDrill({ id: 1, intensity: Intensities.LOW });
+      const highDrill = createDrill({ id: 2, intensity: Intensities.HIGH });
+      const drills = [lowDrill, highDrill];
+      const navigate = jest.fn();
+
+      const DummyScreen = props => null;
+      const Stack = createStackNavigator();
+
+      const { getByText, getByTestId } = render(
+        <NavigationContainer>
+          <Stack.Navigator>
+            <Stack.Screen
+              name="FitnessFilters"
+              component={FitnessFilters}
+              initialParams={{
+                initialData: drills,
+                previousScreen: 'DrillListPage',
+                previousType: DrillTypes.FITNESS,
+              }}
+              listeners={({ navigation }) => ({
+                transitionStart: e => {
+                  navigation.navigate = navigate;
+                },
+              })}
+            />
+            <Stack.Screen name="DrillListPage" component={DummyScreen} />
+          </Stack.Navigator>
+        </NavigationContainer>,
+      );
+
+      expect(getByText('2 drills available')).toBeDefined();
+
+      await fireEvent.press(getByText(Intensities.LOW));
+
+      expect(getByText('1 drills available')).toBeDefined();
+
+      await fireEvent.press(getByText(Intensities.LOW));
+
+      expect(getByText('2 drills available')).toBeDefined();
+
+      await fireEvent.press(getByText(Intensities.HIGH));
+
+      expect(getByText('1 drills available')).toBeDefined();
+
+      await fireEvent.press(getByTestId('validateButton'));
+
+      expect(navigate).toBeCalledWith('DrillListPage', {
+        filteredDrills: [highDrill],
         type: DrillTypes.FITNESS,
       });
     });

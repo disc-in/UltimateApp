@@ -215,6 +215,7 @@ exports[`<TechnicalFilters /> renders correctly 1`] = `
       }
     >
       Number of players: 
+      -
     </Text>
     <RCTSlider
       disabled={false}

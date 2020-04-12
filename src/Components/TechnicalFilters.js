@@ -105,7 +105,7 @@ class TechnicalFilters extends React.Component {
                 />
               ))}
           </View>
-          <Text style={styles.filterTitle}>Number of players: {numberOfPlayers}</Text>
+          <Text style={styles.filterTitle}>Number of players: {numberOfPlayers || '-'}</Text>
           <Slider
             minimumValue={1}
             maximumValue={30}

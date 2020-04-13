@@ -39,7 +39,7 @@ export const createDrill = (override = {}) => {
 };
 
 export default {
-  favoritesDrill: [],
+  favoriteDrills: [],
   drills: [
     {
       id: 1,

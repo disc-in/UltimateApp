@@ -168,8 +168,6 @@ exports[`<DrillPage /> renders correctly 1`] = `
       }
     />
     <View
-      accessibilityRole="button"
-      accessibilityStates={Array []}
       accessible={true}
       focusable={true}
       isTVSelectable={true}
@@ -182,32 +180,21 @@ exports[`<DrillPage /> renders correctly 1`] = `
       onStartShouldSetResponder={[Function]}
       style={
         Object {
+          "alignItems": "center",
           "opacity": 1,
         }
       }
+      testID="favoriteButton"
     >
-      <View
+      <Image
+        source={1}
         style={
-          Array [
-            Object {},
-          ]
-        }
-      >
-        <Text
-          style={
-            Array [
-              Object {
-                "color": "#007AFF",
-                "fontSize": 18,
-                "padding": 8,
-                "textAlign": "center",
-              },
-            ]
+          Object {
+            "height": 30,
+            "width": 25.5,
           }
-        >
-          Favoris
-        </Text>
-      </View>
+        }
+      />
     </View>
     <View
       style={
@@ -235,7 +222,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
             }
           }
         >
-          Goals
+          Description
         </Text>
         <Text
           style={
@@ -246,7 +233,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
             }
           }
         >
-          Full body
+          Description of the drill
         </Text>
       </View>
       <View
@@ -301,7 +288,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
             }
           }
         >
-          Description
+          Goals
         </Text>
         <Text
           style={
@@ -312,7 +299,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
             }
           }
         >
-          Description of the drill
+          Full body
         </Text>
       </View>
     </View>

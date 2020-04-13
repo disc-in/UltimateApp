@@ -7,8 +7,6 @@ import { createDrill } from '../Fixtures/TestFixtures';
 
 import ConnectedDrillPage, { DrillPage } from './DrillPage';
 
-const storeInstance = store;
-
 describe('<DrillPage />', () => {
   const drill = createDrill();
   const route = {
@@ -30,10 +28,25 @@ describe('<DrillPage />', () => {
 
   it('links to video view', async () => {
     const navigation = { navigate: jest.fn() };
-    const { container, getByText } = render(<DrillPage route={route} navigation={navigation} />);
+    const toggleFavorite = jest.fn();
+    const { getByText } = render(
+      <DrillPage route={route} navigation={navigation} favoriteDrills={[]} toggleFavorite={toggleFavorite} />,
+    );
 
     await fireEvent.press(getByText('Video'));
 
     expect(navigation.navigate).toBeCalledWith('DrillAnimationPage', { drill });
+  });
+
+  it('toggles favorite drill', async () => {
+    const navigation = { navigate: jest.fn() };
+    const toggleFavorite = jest.fn();
+    const { getByTestId } = render(
+      <DrillPage route={route} navigation={navigation} favoriteDrills={[]} toggleFavorite={toggleFavorite} />,
+    );
+
+    await fireEvent.press(getByTestId('favoriteButton'));
+
+    expect(toggleFavorite).toBeCalledWith(drill);
   });
 });

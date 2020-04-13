@@ -49,7 +49,7 @@ export const EquipmentLabels = {
 };
 
 export default {
-  favoritesDrill: [],
+  favoriteDrills: [],
   drills: [
     {
       id: 1,

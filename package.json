@@ -20,6 +20,7 @@
     "expo": "~36.0.0",
     "moment": "^2.24.0",
     "numeral": "^2.0.6",
+    "prop-types": "^15.7.2",
     "react": "~16.9.0",
     "react-dom": "~16.9.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz",
@@ -29,12 +30,13 @@
     "react-native-safe-area-context": "0.6.0",
     "react-native-screens": "2.0.0-alpha.12",
     "react-native-web": "~0.11.7",
-    "react-native-webview": "7.4.3",
+    "react-native-webview": "^7.4.3",
     "react-navigation": "^4.1.1",
     "react-navigation-stack": "^2.1.1",
     "react-redux": "^7.2.0",
     "redux": "^4.0.5",
-    "watchman": "^1.0.0"
+    "watchman": "^1.0.0",
+    "react-native-svg": "9.13.3"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

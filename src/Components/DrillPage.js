@@ -2,31 +2,42 @@ import React, { Component } from 'react';
 import { StyleSheet, View, Text, FlatList, Image, TouchableOpacity} from 'react-native';
 import { connect } from 'react-redux';
 import Animation from './Animation';
+import AnimationEditor from './AnimationEditor';
 import { WebView } from 'react-native-webview';
 
+        
+const contentContainerFlex = 6;
+const stepContainerFlex = 4;
+
 class DrillPage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      currentStep: props.route.params.drill.steps[0],
-    };
-  }
+    
+    
+    constructor(props) {
+        super(props);
+        this.state = {
+            currentStep: props.route.params.drill.steps[0],
+        };
+    }
 
-  render() {
-    const drill = this.props.route.params.drill;
-    const currentStep = this.state.currentStep;
 
-    return (
-      <View style={styles.main_container}>
-        <View style={styles.content_container}>
+    render() {
+        const drill = this.props.route.params.drill;
+        const currentStep = this.state.currentStep;
+
+        return (
+            <View style={styles.main_container}>
+		<View style={styles.content_container}>
+	        <AnimationEditor animation={currentStep.animation} heightRatio={stepContainerFlex/(contentContainerFlex+stepContainerFlex)} widthRatio={1} editable={true}/>	
+                {/*
+	        <Animation animation={currentStep.animation} heightRatio={stepContainerFlex/(contentContainerFlex+stepContainerFlex)} widthRatio={1} editable={false}/> 
           <WebView source={{ uri: 'https://www.youtube.com/embed/oN1bzPCKkGE' }} style={{ marginTop: 20 }} />
-{/*           currentStep.animation ? <Animation animation={currentStep.animation}/>
-          : currentStep.video ? <Text>Soon a Video here</Text>
-          : currentStep.webview ? <Text>Soon a Webpage here</Text>
-          : <Text>No visual content for this step</Text> */}
-        </View>
-        <View style={styles.steps_list}>
-          <FlatList
+                   currentStep.animation ? <Animation animation={currentStep.animation}/>
+                   : currentStep.video ? <Text>Soon a Video here</Text>
+                   : currentStep.webview ? <Text>Soon a Webpage here</Text>
+                   : <Text>No visual content for this step</Text> */}
+              </View>
+{/*              <View style={styles.steps_list}>
+                <FlatList
             data={drill.steps}
             // keyExtractor={(item) => item.id.toString()}
             renderItem={({ item }) => (
@@ -41,7 +52,7 @@ class DrillPage extends React.Component {
             onEndReachedThreshold={0.5}
             onEndReached={() => {}}
           />
-        </View>
+          </View>*/}
       </View>
     );
   }
@@ -55,10 +66,10 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   content_container: {
-    flex: 6,
+    flex: contentContainerFlex,
   },
   steps_list: {
-    flex: 4,
+    flex: stepContainerFlex,
     backgroundColor: 'lightgrey',
   },
   step: {

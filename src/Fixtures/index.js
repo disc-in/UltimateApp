@@ -388,5 +388,65 @@ export default {
         },
       ],
     },
+    {
+      id: 16,
+      type: 'collectif', // vs technical vs fitness
+      source: '** Ultimate App **',
+      title: 'Test animation',
+      img: 'https://cdn3.sportngin.com/attachments/photo/be7e-106813275/Screen_Shot_2018-07-19_at_3.53.39_PM_large.png',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
+      nbPlayers: 2,
+      duration: 900, // seconds
+      goals: ['Catch', 'Handling'],
+      level: ['intermediate'],
+      steps: [
+        {
+          title: 'Warmup',
+          subtitle: 'This is a subtitle',
+          animation: animationMenageATrois,
+        },
+        {
+          title: 'Do the drill',
+          subtitle: 'This is a subtitle',
+          video: 'https://www.youtube.com/embed/oN1bzPCKkGE',
+        },
+        {
+          title: 'Last step',
+          subtitle: 'This is a subtitle',
+          webview: 'http://google.com',
+        },
+      ],
+    },
+    {
+      id: 17,
+      type: 'collectif', // vs technical vs fitness
+      source: '** Ultimate App **',
+      title: 'Test animation editor',
+      img: 'https://cdn3.sportngin.com/attachments/photo/be7e-106813275/Screen_Shot_2018-07-19_at_3.53.39_PM_large.png',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
+      nbPlayers: 2,
+      duration: 900, // seconds
+      goals: ['Catch', 'Handling'],
+      level: ['intermediate'],
+      steps: [
+        {
+          title: 'Warmup',
+          subtitle: 'This is a subtitle',
+          animation: animationMenageATrois,
+        },
+        {
+          title: 'Do the drill',
+          subtitle: 'This is a subtitle',
+          video: 'https://www.youtube.com/embed/oN1bzPCKkGE',
+        },
+        {
+          title: 'Last step',
+          subtitle: 'This is a subtitle',
+          webview: 'http://google.com',
+        },
+      ],
+    },
   ],
 };

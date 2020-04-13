@@ -14,7 +14,7 @@ export const Navigation = () => (
       <Stack.Screen
         name="DrillListPage"
         component={DrillListPage}
-        options={({ route }) => ({
+        options={({ route } ) => ({
           title: route.params.type.substr(0, 1).toUpperCase() + route.params.type.substr(1) + ' drills',
         })}
       />

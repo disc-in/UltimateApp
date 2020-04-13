@@ -9,11 +9,11 @@ import theme from '../styles/theme.style';
 import * as list from '../styles/list.style';
 
 export const DrillListPage = props => {
-  const { navigation } = props;
-  const type = props.route.params.type;
+  const { navigation, route, storeDrills } = props;
+  const { type, filteredDrills } = route.params;
 
-  const storeDrills = props.storeDrills.filter(drill => drill.type === type);
-  const displayedDrills = props.route.params.filteredDrills ? props.route.params.filteredDrills : storeDrills;
+  const storeDrillsForType = storeDrills.filter(drill => drill.type === type);
+  const displayedDrills = filteredDrills ? filteredDrills : storeDrillsForType;
 
   const imageMainData = type === DrillTypes.TECHNICAL ? 'minimalPlayersNumber' : 'durationInMinutes';
   const imageMainDataLegend = type === DrillTypes.TECHNICAL ? 'players' : 'min.';
@@ -42,9 +42,9 @@ export const DrillListPage = props => {
         style={styles.filterButton}
         onPress={() =>
           navigation.navigate('Filters', {
-            initialData: storeDrills,
-            previousScreen: props.route.name,
-            previousType: props.route.params.type,
+            initialData: storeDrillsForType,
+            previousScreen: route.name,
+            previousType: type,
           })
         }
         testID="filterButton"

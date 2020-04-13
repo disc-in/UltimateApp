@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Text, ImageBackground, TouchableOpacity, FlatList } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 import Filters from './Filters';
 import DrillList from './DrillList';
-import { DrillTypes } from '../Fixtures';
 
 import theme from '../styles/theme.style';
 import * as list from '../styles/list.style';
@@ -21,9 +20,6 @@ export const DrillListPage = props => {
 
   const [data, setData] = useState(drills);
   const [displayFilters, setDisplayFilters] = useState(false);
-
-  const imageMainData = type === DrillTypes.TECHNICAL ? 'nbPlayers' : 'durationInMinutes';
-  const imageMainDataLegend = type === DrillTypes.TECHNICAL ? 'players' : 'min.';
 
   return (
     <View style={styles.drillListPage}>

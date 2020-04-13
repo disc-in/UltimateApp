@@ -8,13 +8,13 @@ const DrillList = props => {
   const drillsToDisplay = props.drillsToDisplay;
   const navigation = props.navigation;
 
-  const renderItem = ({ item }) => {
+  const renderDrill = ({ item }) => {
     const { title, type, source, image } = item;
 
     const imageMainData = type === DrillTypes.TECHNICAL ? 'nbPlayers' : 'durationInMinutes';
     const imageMainDataLegend = type === DrillTypes.TECHNICAL ? 'players' : 'min.';
     return (
-      <TouchableOpacity style={list.item} onPress={() => navigation.navigate('TrainingPage', { training: item })}>
+      <TouchableOpacity style={list.item} onPress={() => navigation.navigate('DrillPage', { drill: item })}>
         <ImageBackground source={{ uri: image }} style={list.image} imageStyle={list.imageOpacity}>
           <Text style={{ ...list.imageText, ...list.imageTextMain }}>{item[imageMainData]}+</Text>
           <Text style={list.imageText}>{imageMainDataLegend}</Text>
@@ -29,7 +29,7 @@ const DrillList = props => {
 
   return (
     <View>
-      <FlatList data={drillsToDisplay} keyExtractor={item => item.id.toString()} renderItem={renderItem} />
+      <FlatList data={drillsToDisplay} keyExtractor={item => item.id.toString()} renderItem={renderDrill} />
     </View>
   );
 };

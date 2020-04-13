@@ -4,12 +4,12 @@ import { connect } from 'react-redux';
 import DrillList from './DrillList';
 import theme from '../styles/theme.style';
 
-const getGoals = drills => {
+const getGoals = trainingDrills => {
   const nbPlayersList = trainingDrills.map(({ nbPlayers }) => nbPlayers);
   return Math.max(...nbPlayersList);
 };
 
-const getEquipment = drills => {
+const getEquipment = trainingDrills => {
   const nbPlayersList = trainingDrills.map(({ nbPlayers }) => nbPlayers);
   return Math.max(...nbPlayersList);
 };

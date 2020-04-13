@@ -1,10 +1,6 @@
 import theme from '../styles/theme.style';
 
 export default {
-  headerButtonText: {
-    paddingRight: 20,
-    fontSize: theme.FONT_SIZE_LARGE,
-  },
   wrapper: {
     height: '100%',
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
@@ -29,21 +25,6 @@ export default {
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
-  },
-  button: {
-    borderColor: theme.BORDER_COLOR_BUTTON,
-    backgroundColor: theme.BACKGROUND_COLOR_BUTTON,
-    borderWidth: 1,
-    margin: 5,
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-  },
-  activeButton: {
-    borderColor: theme.BORDER_COLOR_BUTTON_ACTIVE,
-    backgroundColor: theme.BACKGROUND_COLOR_BUTTON_ACTIVE,
-  },
-  buttonText: {
-    textTransform: 'capitalize',
   },
   slider: {
     marginTop: 10,

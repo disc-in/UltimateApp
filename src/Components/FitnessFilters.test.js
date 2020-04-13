@@ -69,7 +69,7 @@ describe('<FitnessFilters />', () => {
 
       expect(getByText('1 drills available')).toBeDefined();
 
-      await fireEvent.press(getByTestId('validateButton'));
+      await fireEvent.press(getByTestId('headerButton'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
         filteredDrills: [advancedDrill],
@@ -122,7 +122,7 @@ describe('<FitnessFilters />', () => {
 
       expect(getByText('1 drills available')).toBeDefined();
 
-      await fireEvent.press(getByTestId('validateButton'));
+      await fireEvent.press(getByTestId('headerButton'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
         filteredDrills: [highDrill],
@@ -175,7 +175,7 @@ describe('<FitnessFilters />', () => {
 
       expect(getByText('1 drills available')).toBeDefined();
 
-      await fireEvent.press(getByTestId('validateButton'));
+      await fireEvent.press(getByTestId('headerButton'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
         filteredDrills: [fullEquipmentDrill],
@@ -228,7 +228,7 @@ describe('<FitnessFilters />', () => {
 
       expect(getByText('1 drills available')).toBeDefined();
 
-      await fireEvent.press(getByTestId('validateButton'));
+      await fireEvent.press(getByTestId('headerButton'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
         filteredDrills: [inDrill],
@@ -282,7 +282,7 @@ describe('<FitnessFilters />', () => {
 
       expect(getByText('1 drills available')).toBeDefined();
 
-      await fireEvent.press(getByTestId('validateButton'));
+      await fireEvent.press(getByTestId('headerButton'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
         filteredDrills: [upperDrill],
@@ -330,7 +330,7 @@ describe('<FitnessFilters />', () => {
       expect(getByText('Duration: 5 mins')).toBeDefined();
       expect(getByText('2 drills available')).toBeDefined();
 
-      await fireEvent.press(getByTestId('validateButton'));
+      await fireEvent.press(getByTestId('headerButton'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
         filteredDrills: [oneMinuteDrill, twoMinutesDrill],

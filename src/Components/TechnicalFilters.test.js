@@ -69,7 +69,7 @@ describe('<TechnicalFilters />', () => {
 
       expect(getByText('1 drills available')).toBeDefined();
 
-      await fireEvent.press(getByTestId('validateButton'));
+      await fireEvent.press(getByTestId('headerButton'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
         filteredDrills: [advancedDrill],
@@ -123,7 +123,7 @@ describe('<TechnicalFilters />', () => {
 
       expect(getByText('2 drills available')).toBeDefined();
 
-      await fireEvent.press(getByTestId('validateButton'));
+      await fireEvent.press(getByTestId('headerButton'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
         filteredDrills: [handlingDrill, handlingDefenseDrill],
@@ -171,7 +171,7 @@ describe('<TechnicalFilters />', () => {
       expect(getByText('Number of players: 5')).toBeDefined();
       expect(getByText('2 drills available')).toBeDefined();
 
-      await fireEvent.press(getByTestId('validateButton'));
+      await fireEvent.press(getByTestId('headerButton'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
         filteredDrills: [onePersonDrill, twoPeopleDrill],

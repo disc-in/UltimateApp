@@ -2,23 +2,8 @@ import React from 'react';
 import { StyleSheet, ScrollView, View, Text, TouchableOpacity, TextInput, Slider } from 'react-native';
 import filterStyle from '../styles/filters.style';
 import { Levels, Intensities, EquipmentLabels, SeasonTimings } from '../Fixtures';
-
-const Button = props => {
-  const activeStyle = props.active ? filterStyle.activeButton : {};
-  return (
-    <TouchableOpacity style={{ ...filterStyle.button, ...activeStyle }} key={props.title} onPress={props.onPress}>
-      <Text style={filterStyle.buttonText}>{props.title}</Text>
-    </TouchableOpacity>
-  );
-};
-
-const HeaderButton = props => {
-  return (
-    <TouchableOpacity onPress={props.onPress} testID="validateButton">
-      <Text style={filterStyle.headerButtonText}>✓</Text>
-    </TouchableOpacity>
-  );
-};
+import Button from './shared/FilterButton';
+import HeaderButton from './shared/HeaderButton';
 
 class FitnessFilters extends React.Component {
   constructor(props) {

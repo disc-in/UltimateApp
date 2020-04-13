@@ -9,9 +9,9 @@ const getTrainingDuration = trainingDrills => {
   return durationList.reduce((a, b) => a + b, 0);
 };
 
-const getTrainingNbPlayers = trainingDrills => {
-  const nbPlayersList = trainingDrills.map(({ nbPlayers }) => nbPlayers);
-  return Math.max(...nbPlayersList);
+const getTrainingMinimalPlayersNumber = trainingDrills => {
+  const minimalPlayersNumberList = trainingDrills.map(({ minimalPlayersNumber }) => minimalPlayersNumber);
+  return Math.max(...minimalPlayersNumberList);
 };
 
 const mapStateToProps = state => {
@@ -39,7 +39,7 @@ export const TrainingListPage = props => {
                 {getTrainingDuration(allDrills.filter(drill => item.drills.includes(drill.id)))} min
               </Text>
               <Text style={list.imageText}>
-                {getTrainingNbPlayers(allDrills.filter(drill => item.drills.includes(drill.id)))}+ players
+                {getTrainingMinimalPlayersNumber(allDrills.filter(drill => item.drills.includes(drill.id)))}+ players
               </Text>
             </ImageBackground>
             <View style={list.contentContainer}>

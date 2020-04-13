@@ -4,6 +4,7 @@ import HomePage from '../Components/HomePage';
 import DrillListPage from '../Components/DrillListPage';
 import DrillPage from '../Components/DrillPage';
 import DrillAnimationPage from '../Components/DrillAnimationPage';
+import Filters from '../Components/Filters';
 import TrainingListPage from '../Components/TrainingListPage';
 import TrainingPage from '../Components/TrainingPage';
 
@@ -19,6 +20,7 @@ export const Navigation = () => (
         title: route.params.type.substr(0, 1).toUpperCase() + route.params.type.substr(1) + ' drills',
       })}
     />
+    <Stack.Screen name="Filters" component={Filters} />
     <Stack.Screen
       name="DrillPage"
       component={DrillPage}

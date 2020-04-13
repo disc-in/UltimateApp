@@ -2,20 +2,62 @@ import React, { Component } from 'react';
 import { StyleSheet, View, Text, Dimensions } from 'react-native';
 import Animation from './Animation';
 import { WebView } from 'react-native-webview';
+import { Video } from 'expo-av';
 
 class DrillAnimationPage extends Component {
-  render() {
+  constructor() {
+    super();
+
+    this.state = {
+      TextInput_Data: '',
+    };
+  }
+
+  checkSwitch() {
+    switch (this.props.source) {
+      case 'animation':
+        return this.displayAnimation();
+
+      case 'youtube':
+        return this.displayYoutube();
+
+      case 'vimeo':
+        console.log(this.props.data);
+        return this.displayVimeo();
+
+      default:
+        return <Text>No visual content for this drill</Text>;
+    }
+  }
+
+  displayAnimation() {
+    return <Animation animation={this.props.data} />;
+  }
+
+  displayYoutube() {
+    return <WebView source={{ uri: this.props.data }} />;
+  }
+
+  displayVimeo() {
     return (
-      <View style={styles.drillAnimationPage}>
-        {this.props.animation ? (
-          <Animation animation={this.props.animation} />
-        ) : this.props.video ? (
-          <WebView source={{ uri: this.props.video }} />
-        ) : (
-          <Text>No visual content for this drill</Text>
-        )}
-      </View>
+      <Video
+        source={{
+          uri: this.props.data,
+        }}
+        rate={1.0}
+        volume={1.0}
+        isMuted
+        resizeMode="cover"
+        shouldPlay
+        isLooping
+        useNativeControls
+        style={{ width: screenDimension.width, height: 300 }}
+      />
     );
+  }
+
+  render() {
+    return <View style={styles.drillAnimationPage}>{this.checkSwitch()}</View>;
   }
 }
 

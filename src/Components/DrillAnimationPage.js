@@ -4,7 +4,6 @@ import Animation from './Animation';
 import { WebView } from 'react-native-webview';
 import { Video } from 'expo-av';
 import theme from '../styles/theme.style';
-import { LinearGradient } from 'expo-linear-gradient';
 
 class DrillAnimationPage extends Component {
   constructor() {
@@ -12,11 +11,16 @@ class DrillAnimationPage extends Component {
 
     this.state = {
       TextInput_Data: '',
+      count: 0,
     };
   }
 
+  _incrementCount = () => {
+    this.setState(prevState => ({ count: (prevState.count + 1) % this.props.drill.steps.length }));
+  };
+
   checkSwitch() {
-    switch (this.props.source) {
+    switch (this.props.drill.steps[this.state.count].source) {
       case 'animation':
         return this.displayAnimation();
 
@@ -32,15 +36,14 @@ class DrillAnimationPage extends Component {
   }
 
   displayAnimation() {
-    return <Animation animation={this.props.link} />;
+    return <Animation animation={this.props.drill.steps[this.state.count].link} />;
   }
 
   displayYoutube() {
-    console.log(this.props.link);
     return (
       <WebView
         source={{
-          uri: this.props.link,
+          uri: this.props.drill.steps[this.state.count].link,
         }}
       />
     );
@@ -51,7 +54,7 @@ class DrillAnimationPage extends Component {
       <View style={styles.container}>
         <Video
           source={{
-            uri: this.props.link,
+            uri: this.props.drill.steps[this.state.count].link,
           }}
           rate={1.0}
           volume={1.0}
@@ -62,9 +65,9 @@ class DrillAnimationPage extends Component {
           style={{ width: screenDimension.width, height: 300 }}
         />
         <View style={styles.description}>
-          <Text style={styles.fitness}>{this.props.count}</Text>
-          <Text style={styles.fitness}>{this.props.title}</Text>
-          <TouchableOpacity style={styles.nextVideo} onPress={''}></TouchableOpacity>
+          <Text style={styles.fitness}>{this.props.drill.steps[this.state.count].count}</Text>
+          <Text style={styles.fitness}>{this.props.drill.steps[this.state.count].title}</Text>
+          <TouchableOpacity style={styles.nextVideo} onPress={() => this._incrementCount()}></TouchableOpacity>
         </View>
       </View>
     );

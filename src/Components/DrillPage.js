@@ -59,8 +59,6 @@ export const DrillPage = props => {
     );
   };
 
-  // Set favorite button on header
-  // ToDO - Fix error in test
   navigation.setOptions({
     headerRight: () => displayFavoriteButton(),
   });
@@ -125,13 +123,7 @@ export const DrillPage = props => {
         </View>
       </View>
       <View ref={firstDrill} style={styles.animation}>
-        <DrillAnimationPage
-          source={drill.steps[0].source}
-          link={drill.steps[0].link}
-          count={drill.steps[0].count}
-          rest={drill.steps[0].rest}
-          title={drill.steps[0].title}
-        />
+        <DrillAnimationPage drill={drill} />
       </View>
     </ScrollView>
   );

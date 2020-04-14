@@ -78,7 +78,7 @@ export default {
           title: 'Rower Hamstring',
           source: Sources.VIMEO,
           link:
-            'https://vod-progressive.akamaized.net/exp=1586873988~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1349%2F16%2F406747572%2F1742364123.mp4~hmac=8d894ad6c25f21014dab7a4d40151575cdad72208fef9d8d2b21ed38557bda65/vimeo-prod-skyfire-std-us/01/1349/16/406747572/1742364123.mp4',
+            'https://vod-progressive.akamaized.net/exp=1586882931~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1349%2F16%2F406747553%2F1742362355.mp4~hmac=a1657c999c0abeb3a9bda600085f5c96757874bf9cd858cf539bed4e859eba96/vimeo-prod-skyfire-std-us/01/1349/16/406747553/1742362355.mp4',
           count: '20',
           rest: '90s',
         },
@@ -87,7 +87,7 @@ export default {
           title: 'Full Clean',
           source: Sources.VIMEO,
           link:
-            'https://vod-progressive.akamaized.net/exp=1586786042~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1305%2F16%2F406527537%2F1741432797.mp4~hmac=a73c3100819e25c8a5a29652fed8ae0f654c0d684b0a10da601b7eb78df9f737/vimeo-prod-skyfire-std-us/01/1305/16/406527537/1741432797.mp4',
+            'https://vod-progressive.akamaized.net/exp=1586883478~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1349%2F16%2F406747830%2F1742363192.mp4~hmac=04eeea116139836c1f5311b36a1d37c592423380eed7718ff25de5ca97e02faa/vimeo-prod-skyfire-std-us/01/1349/16/406747830/1742363192.mp4',
           count: '8',
           rest: '90s',
         },
@@ -96,7 +96,7 @@ export default {
           title: 'Kettlebell Russian Twist',
           source: Sources.VIMEO,
           link:
-            'https://vod-progressive.akamaized.net/exp=1586786087~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1294%2F16%2F406472362%2F1741204458.mp4~hmac=6be48c6956eae9cc924d9f634d208b32b69a9aa7f4d92380ba84b094ca707686/vimeo-prod-skyfire-std-us/01/1294/16/406472362/1741204458.mp4',
+            'https://vod-progressive.akamaized.net/exp=1586882931~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1349%2F16%2F406747553%2F1742362355.mp4~hmac=a1657c999c0abeb3a9bda600085f5c96757874bf9cd858cf539bed4e859eba96/vimeo-prod-skyfire-std-us/01/1349/16/406747553/1742362355.mp4',
           count: '25',
           rest: '90s',
         },
@@ -812,7 +812,7 @@ export default {
       id: 1001,
       type: DrillTypes.TECHNICAL,
       source: 'Author',
-      title: 'Frisbee Drill Title',
+      title: 'Exercice à tester',
       image: 'https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
@@ -835,9 +835,35 @@ export default {
       goals: [GoalsFrisbee.DEFENSE],
       seasonTiming: '',
       level: Levels.BEGINNER,
-      /* video:, */
       animation: animationSquare,
-      steps: [],
+      steps: [
+        {
+          id: 1,
+          title: 'Rower Hamstring',
+          source: Sources.ANIMATION,
+          link: animationSquare,
+          count: '20',
+          rest: '90s',
+        },
+        {
+          id: 2,
+          title: 'Full Clean',
+          source: Sources.VIMEO,
+          link:
+            'https://vod-progressive.akamaized.net/exp=1586786042~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1305%2F16%2F406527537%2F1741432797.mp4~hmac=a73c3100819e25c8a5a29652fed8ae0f654c0d684b0a10da601b7eb78df9f737/vimeo-prod-skyfire-std-us/01/1305/16/406527537/1741432797.mp4',
+          count: '8',
+          rest: '90s',
+        },
+        {
+          id: 3,
+          title: 'Kettlebell Russian Twist',
+          source: Sources.VIMEO,
+          link:
+            'https://vod-progressive.akamaized.net/exp=1586786087~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1294%2F16%2F406472362%2F1741204458.mp4~hmac=6be48c6956eae9cc924d9f634d208b32b69a9aa7f4d92380ba84b094ca707686/vimeo-prod-skyfire-std-us/01/1294/16/406472362/1741204458.mp4',
+          count: '25',
+          rest: '90s',
+        },
+      ],
     },
     {
       id: 1002,

@@ -125,7 +125,13 @@ export const DrillPage = props => {
         </View>
       </View>
       <View ref={firstDrill} style={styles.animation}>
-        <DrillAnimationPage source={drill.steps[0].source} data={drill.steps[0].link} />
+        <DrillAnimationPage
+          source={drill.steps[0].source}
+          link={drill.steps[0].link}
+          count={drill.steps[0].count}
+          rest={drill.steps[0].rest}
+          title={drill.steps[0].title}
+        />
       </View>
     </ScrollView>
   );

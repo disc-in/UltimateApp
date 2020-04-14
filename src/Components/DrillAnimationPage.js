@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, Dimensions } from 'react-native';
+import { StyleSheet, View, Text, Dimensions, TouchableOpacity } from 'react-native';
 import Animation from './Animation';
 import { WebView } from 'react-native-webview';
 import { Video } from 'expo-av';
+import theme from '../styles/theme.style';
+import { LinearGradient } from 'expo-linear-gradient';
 
 class DrillAnimationPage extends Component {
   constructor() {
@@ -22,7 +24,6 @@ class DrillAnimationPage extends Component {
         return this.displayYoutube();
 
       case 'vimeo':
-        console.log(this.props.data);
         return this.displayVimeo();
 
       default:
@@ -31,28 +32,41 @@ class DrillAnimationPage extends Component {
   }
 
   displayAnimation() {
-    return <Animation animation={this.props.data} />;
+    return <Animation animation={this.props.link} />;
   }
 
   displayYoutube() {
-    return <WebView source={{ uri: this.props.data }} />;
+    console.log(this.props.link);
+    return (
+      <WebView
+        source={{
+          uri: this.props.link,
+        }}
+      />
+    );
   }
 
   displayVimeo() {
     return (
-      <Video
-        source={{
-          uri: this.props.data,
-        }}
-        rate={1.0}
-        volume={1.0}
-        isMuted
-        resizeMode="cover"
-        shouldPlay
-        isLooping
-        useNativeControls
-        style={{ width: screenDimension.width, height: 300 }}
-      />
+      <View style={styles.container}>
+        <Video
+          source={{
+            uri: this.props.link,
+          }}
+          rate={1.0}
+          volume={1.0}
+          isMuted
+          resizeMode="cover"
+          shouldPlay
+          isLooping
+          style={{ width: screenDimension.width, height: 300 }}
+        />
+        <View style={styles.description}>
+          <Text style={styles.fitness}>{this.props.count}</Text>
+          <Text style={styles.fitness}>{this.props.title}</Text>
+          <TouchableOpacity style={styles.nextVideo} onPress={''}></TouchableOpacity>
+        </View>
+      </View>
     );
   }
 
@@ -65,7 +79,31 @@ const screenDimension = Dimensions.get('window');
 const styles = StyleSheet.create({
   drillAnimationPage: {
     flex: 1,
-    height: screenDimension.height,
+    height: screenDimension.height - 80,
+  },
+  container: { flex: 6, justifyContent: 'center' },
+  description: { flexDirection: 'row', justifyContent: 'space-around' },
+  fitness: {
+    margin: 20,
+    fontSize: theme.FONT_SIZE_LARGE,
+    color: theme.COLOR_PRIMARY,
+    fontWeight: 'bold',
+  },
+  separator: {
+    height: 15,
+    borderRightWidth: 1,
+    borderRightColor: theme.COLOR_PRIMARY_LIGHT,
+  },
+  nextVideo: {
+    margin: 22.5,
+    width: 25,
+    height: 25,
+    borderRadius: 12.5,
+    backgroundColor: '#FFF',
+    borderWidth: 2,
+    borderColor: theme.COLOR_PRIMARY,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 

@@ -78,7 +78,7 @@ export default {
           title: 'Rower Hamstring',
           source: Sources.VIMEO,
           link:
-            'https://vod-progressive.akamaized.net/exp=1586798038~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1349%2F16%2F406747572%2F1742364123.mp4~hmac=7dd38171cd9a209aa2acbe01879ed2b75c5af7aeddff5eaa16ecf0ab441b9267/vimeo-prod-skyfire-std-us/01/1349/16/406747572/1742364123.mp4',
+            'https://vod-progressive.akamaized.net/exp=1586873988~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1349%2F16%2F406747572%2F1742364123.mp4~hmac=8d894ad6c25f21014dab7a4d40151575cdad72208fef9d8d2b21ed38557bda65/vimeo-prod-skyfire-std-us/01/1349/16/406747572/1742364123.mp4',
           count: '20',
           rest: '90s',
         },
@@ -117,12 +117,14 @@ export default {
       goals: [GoalsFitness.LEGS],
       seasonTiming: SeasonTimings.IN_SEASON,
       level: Levels.INTERMEDIATE,
-      video: 'https://www.youtube.com/embed/JkVHrA5o23o',
-      /* animation:, */
       steps: [
         {
-          title: 'Warmup',
-          subtitle: 'This is a subtitle',
+          id: 1,
+          title: 'Rower Hamstring',
+          source: Sources.YOUTUBE,
+          link: 'https://www.youtube.com/embed/JkVHrA5o23o',
+          count: '20',
+          rest: '90s',
         },
         {
           title: 'Do the drill',

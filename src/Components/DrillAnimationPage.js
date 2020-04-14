@@ -64,10 +64,17 @@ class DrillAnimationPage extends Component {
           isLooping
           style={{ width: screenDimension.width, height: 300 }}
         />
-        <View style={styles.description}>
-          <Text style={styles.fitness}>{this.props.drill.steps[this.state.count].count}</Text>
-          <Text style={styles.fitness}>{this.props.drill.steps[this.state.count].title}</Text>
-          <TouchableOpacity style={styles.nextVideo} onPress={() => this._incrementCount()}></TouchableOpacity>
+        <View style={styles.infoWrapper}>
+          <View style={styles.description}>
+            <View style={styles.subWrapper}>
+              <Text style={styles.fitness}>{this.props.drill.steps[this.state.count].count}</Text>
+            </View>
+            <View style={styles.subSubWrapper}>
+              <Text style={styles.fitness}>{this.props.drill.steps[this.state.count].title}</Text>
+            </View>
+            <TouchableOpacity style={styles.buttonNext} onPress={() => this._incrementCount()}></TouchableOpacity>
+          </View>
+          <View style={styles.lines} />
         </View>
       </View>
     );
@@ -84,10 +91,12 @@ const styles = StyleSheet.create({
     flex: 1,
     height: screenDimension.height - 80,
   },
-  container: { flex: 6, justifyContent: 'center' },
-  description: { flexDirection: 'row', justifyContent: 'space-around' },
+  container: { flex: 1 },
+  description: { flexDirection: 'row' },
   fitness: {
-    margin: 20,
+    marginTop: 20,
+    marginBottom: 20,
+    marginLeft: 20,
     fontSize: theme.FONT_SIZE_LARGE,
     color: theme.COLOR_PRIMARY,
     fontWeight: 'bold',
@@ -97,16 +106,28 @@ const styles = StyleSheet.create({
     borderRightWidth: 1,
     borderRightColor: theme.COLOR_PRIMARY_LIGHT,
   },
-  nextVideo: {
+  buttonNext: {
     margin: 22.5,
     width: 25,
     height: 25,
     borderRadius: 12.5,
     backgroundColor: '#FFF',
     borderWidth: 2,
-    borderColor: theme.COLOR_PRIMARY,
+    borderColor: '#808080',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  infoWrapper: {},
+  subWrapper: {
+    flex: 1,
+    alignItems: 'center',
+  },
+  subSubWrapper: {
+    flex: 6,
+  },
+  lines: {
+    borderBottomColor: '#DCDCDC',
+    borderBottomWidth: 1,
   },
 });
 

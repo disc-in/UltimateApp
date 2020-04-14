@@ -78,7 +78,7 @@ export default {
           title: 'Rower Hamstring',
           source: Sources.VIMEO,
           link:
-            'https://vod-progressive.akamaized.net/exp=1586882931~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1349%2F16%2F406747553%2F1742362355.mp4~hmac=a1657c999c0abeb3a9bda600085f5c96757874bf9cd858cf539bed4e859eba96/vimeo-prod-skyfire-std-us/01/1349/16/406747553/1742362355.mp4',
+            'https://vod-progressive.akamaized.net/exp=1586895936~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1349%2F16%2F406747830%2F1742364397.mp4~hmac=aff3cdfcc7f8438e94b7505697797b57ef7766146855ee2eb23774da58100331/vimeo-prod-skyfire-std-us/01/1349/16/406747830/1742364397.mp4',
           count: '20',
           rest: '90s',
         },
@@ -87,7 +87,7 @@ export default {
           title: 'Full Clean',
           source: Sources.VIMEO,
           link:
-            'https://vod-progressive.akamaized.net/exp=1586883478~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1349%2F16%2F406747830%2F1742363192.mp4~hmac=04eeea116139836c1f5311b36a1d37c592423380eed7718ff25de5ca97e02faa/vimeo-prod-skyfire-std-us/01/1349/16/406747830/1742363192.mp4',
+            'https://vod-progressive.akamaized.net/exp=1586895936~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1349%2F16%2F406747830%2F1742364397.mp4~hmac=aff3cdfcc7f8438e94b7505697797b57ef7766146855ee2eb23774da58100331/vimeo-prod-skyfire-std-us/01/1349/16/406747830/1742364397.mp4',
           count: '8',
           rest: '90s',
         },
@@ -96,7 +96,7 @@ export default {
           title: 'Kettlebell Russian Twist',
           source: Sources.VIMEO,
           link:
-            'https://vod-progressive.akamaized.net/exp=1586882931~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1349%2F16%2F406747553%2F1742362355.mp4~hmac=a1657c999c0abeb3a9bda600085f5c96757874bf9cd858cf539bed4e859eba96/vimeo-prod-skyfire-std-us/01/1349/16/406747553/1742362355.mp4',
+            'https://vod-progressive.akamaized.net/exp=1586895936~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1349%2F16%2F406747830%2F1742364397.mp4~hmac=aff3cdfcc7f8438e94b7505697797b57ef7766146855ee2eb23774da58100331/vimeo-prod-skyfire-std-us/01/1349/16/406747830/1742364397.mp4',
           count: '25',
           rest: '90s',
         },

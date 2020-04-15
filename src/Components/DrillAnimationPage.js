@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { Image, StyleSheet, View, Text, Dimensions, TouchableOpacity } from 'react-native';
+import { ScrollView, StyleSheet, View, Text, Dimensions, TouchableOpacity } from 'react-native';
 import Animation from './Animation';
 import { WebView } from 'react-native-webview';
 import { Video } from 'expo-av';
 import theme from '../styles/theme.style';
 import undoArrow from '../Images/undo_arrow.png';
+import { LinearGradient } from 'expo-linear-gradient';
 
 class DrillAnimationPage extends Component {
   constructor() {
@@ -73,14 +74,39 @@ class DrillAnimationPage extends Component {
   displayFinish() {
     return (
       <View>
-        <Text>You have finish the drill</Text>
-        <TouchableOpacity style={styles.buttonNext} onPress={() => this._incrementCount()}></TouchableOpacity>
+        <View style={styles.containerFinish}>
+          <View style={styles.infoWrapper}>
+            <TouchableOpacity style={styles.buttonFinish} onPress={() => this._incrementCount()}>
+              <LinearGradient
+                style={styles.gradient}
+                colors={['#08AEEA', '#2AF598']}
+                start={{ x: 1, y: 1 }}
+                end={{ x: 0, y: 0 }}
+              >
+                <Text style={styles.textAgain}>Do it again</Text>
+              </LinearGradient>
+            </TouchableOpacity>
+          </View>
+        </View>
       </View>
     );
   }
 
   displayAnimation() {
-    return <Animation animation={this.props.drill.steps[this.state.count].link} />;
+    return (
+      <ScrollView style={styles.scrollView}>
+        <View style={styles.pageAnimation}>
+          <Animation animation={this.props.drill.steps[this.state.count].link} />
+        </View>
+        <View style={styles.containerAnimation}>
+          <Text style={styles.fitness}>{this.props.drill.steps[this.state.count].count}</Text>
+          <TouchableOpacity style={styles.buttonNext} onPress={() => this._incrementCount()}></TouchableOpacity>
+        </View>
+        <View style={styles.subSubWrapper}>
+          <Text style={styles.instruction}>{this.props.drill.steps[this.state.count].instruction}</Text>
+        </View>
+      </ScrollView>
+    );
   }
 
   displayYoutube() {
@@ -89,13 +115,14 @@ class DrillAnimationPage extends Component {
         source={{
           uri: this.props.drill.steps[this.state.count].link,
         }}
+        style={styles.drillAnimationPage}
       />
     );
   }
 
   displayVimeo() {
     return (
-      <View style={styles.container}>
+      <View style={styles.drillAnimationPage}>
         <Video
           source={{
             uri: this.props.drill.steps[this.state.count].link,
@@ -126,7 +153,7 @@ class DrillAnimationPage extends Component {
   }
 
   render() {
-    return <View style={styles.drillAnimationPage}>{this.checkSwitch()}</View>;
+    return <View style={styles.container}>{this.checkSwitch()}</View>;
   }
 }
 
@@ -137,7 +164,13 @@ const styles = StyleSheet.create({
     height: screenDimension.height - 80,
   },
   container: { flex: 1 },
+  containerFinish: { flex: 1, justifyContent: 'center', alignItems: 'center', height: screenDimension.height - 80 },
+  containerAnimation: { flexDirection: 'row', alignSelf: 'flex-end' },
   description: { flexDirection: 'row' },
+  pageAnimation: {
+    flex: 1,
+    height: screenDimension.height - 160,
+  },
   fitness: {
     marginTop: 20,
     marginBottom: 20,
@@ -169,6 +202,23 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  buttonFinish: {
+    margin: 20,
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    backgroundColor: '#FFF',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  gradient: {
+    flex: 1,
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   infoWrapper: {},
   subWrapper: {
     flex: 1,
@@ -186,6 +236,28 @@ const styles = StyleSheet.create({
   },
   wrapperFinish: {
     flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  finishMessage: {
+    marginTop: 150,
+    marginBottom: 20,
+    marginLeft: 20,
+    fontSize: theme.FONT_SIZE_LARGE,
+    color: theme.COLOR_PRIMARY,
+    fontWeight: 'bold',
+  },
+  textAgain: {
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  scrollView: {},
+  instruction: {
+    marginTop: 20,
+    marginBottom: 20,
+    marginLeft: 20,
+    fontSize: theme.FONT_SIZE_MEDIUM,
+    color: theme.COLOR_PRIMARY,
     justifyContent: 'center',
     alignItems: 'center',
   },

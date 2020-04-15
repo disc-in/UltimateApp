@@ -1,4 +1,4 @@
-import animationMenageATrois from './AnimationMenageATrois';
+import AnimationMenageATrois from './AnimationMenageATrois';
 import animationSquare from './AnimationSquare';
 
 export const DrillTypes = {
@@ -78,30 +78,30 @@ export default {
           title: 'Rower Hamstring',
           source: Sources.VIMEO,
           link:
-            'https://vod-progressive.akamaized.net/exp=1586895936~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1349%2F16%2F406747830%2F1742364397.mp4~hmac=aff3cdfcc7f8438e94b7505697797b57ef7766146855ee2eb23774da58100331/vimeo-prod-skyfire-std-us/01/1349/16/406747830/1742364397.mp4',
+            'https://vod-progressive.akamaized.net/exp=1586957810~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1305%2F16%2F406527746%2F1741433596.mp4~hmac=4a99a21950d4fb6e5859386f03252a0ba6ffdaa83bfed99d03a899c9c0b202f1/vimeo-prod-skyfire-std-us/01/1305/16/406527746/1741433596.mp4',
           count: '20',
           rest: '90s',
-          explanation: 'blabla bla blabl blalb ',
+          instruction: 'blabla bla blabl blalb ',
         },
         {
           id: 2,
           title: 'Full Clean',
           source: Sources.VIMEO,
           link:
-            'https://vod-progressive.akamaized.net/exp=1586895936~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1349%2F16%2F406747830%2F1742364397.mp4~hmac=aff3cdfcc7f8438e94b7505697797b57ef7766146855ee2eb23774da58100331/vimeo-prod-skyfire-std-us/01/1349/16/406747830/1742364397.mp4',
+            'https://vod-progressive.akamaized.net/exp=1586957863~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1305%2F16%2F406527537%2F1741432792.mp4~hmac=2fe1a3361b7a596ae5f81c7c98e776dbb50190881abd079e485ca31d488c4e1c/vimeo-prod-skyfire-std-us/01/1305/16/406527537/1741432792.mp4',
           count: '8',
           rest: '90s',
-          explanation: 'blabla bla blabl blalb ',
+          instruction: 'blabla bla blabl blalb ',
         },
         {
           id: 3,
           title: 'Kettlebell Russian Twist',
           source: Sources.VIMEO,
           link:
-            'https://vod-progressive.akamaized.net/exp=1586895936~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1349%2F16%2F406747830%2F1742364397.mp4~hmac=aff3cdfcc7f8438e94b7505697797b57ef7766146855ee2eb23774da58100331/vimeo-prod-skyfire-std-us/01/1349/16/406747830/1742364397.mp4',
+            'https://vod-progressive.akamaized.net/exp=1586957914~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1294%2F16%2F406472362%2F1741204455.mp4~hmac=c33d43f8c214fc9325d00b991b2621a401de237ef8aeba71f7cb0bf728d2137e/vimeo-prod-skyfire-std-us/01/1294/16/406472362/1741204455.mp4',
           count: '25',
           rest: '90s',
-          explanation: 'blabla bla blabl blalb ',
+          instruction: 'blabla bla blabl blalb ',
         },
       ],
     },
@@ -822,17 +822,6 @@ export default {
       nbPlayers: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
-      /* [
-        {
-          count: 1,
-          type: 'Disc',
-        },
-        {
-          count: 2,
-          type: 'Cone',
-        },
-      ], */
-
       durationInMinutes: 30,
       intensity: Intensities.LOW,
       goals: [GoalsFrisbee.DEFENSE],
@@ -842,29 +831,30 @@ export default {
       steps: [
         {
           id: 1,
-          title: 'Rower Hamstring',
+          title: '',
           source: Sources.ANIMATION,
           link: animationSquare,
-          count: '20',
+          count: '1',
           rest: '90s',
+          instruction: 'Step 1: Introduce the notion of continuity',
         },
         {
           id: 2,
-          title: 'Full Clean',
-          source: Sources.VIMEO,
-          link:
-            'https://vod-progressive.akamaized.net/exp=1586786042~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1305%2F16%2F406527537%2F1741432797.mp4~hmac=a73c3100819e25c8a5a29652fed8ae0f654c0d684b0a10da601b7eb78df9f737/vimeo-prod-skyfire-std-us/01/1305/16/406527537/1741432797.mp4',
-          count: '8',
+          title: '',
+          source: Sources.ANIMATION,
+          link: AnimationMenageATrois,
+          count: '2',
           rest: '90s',
+          instruction: 'Step 2: Make a small opposition',
         },
         {
           id: 3,
-          title: 'Kettlebell Russian Twist',
-          source: Sources.VIMEO,
-          link:
-            'https://vod-progressive.akamaized.net/exp=1586786087~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1294%2F16%2F406472362%2F1741204458.mp4~hmac=6be48c6956eae9cc924d9f634d208b32b69a9aa7f4d92380ba84b094ca707686/vimeo-prod-skyfire-std-us/01/1294/16/406472362/1741204458.mp4',
-          count: '25',
+          title: '',
+          source: Sources.ANIMATION,
+          link: animationSquare,
+          count: '3',
           rest: '90s',
+          instruction: 'Step 3: Do a long shot',
         },
       ],
     },

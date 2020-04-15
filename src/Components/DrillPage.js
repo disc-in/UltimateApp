@@ -59,8 +59,6 @@ export const DrillPage = props => {
     );
   };
 
-  // Set favorite button on header
-  // ToDO - Fix error in test
   navigation.setOptions({
     headerRight: () => displayFavoriteButton(),
   });

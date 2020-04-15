@@ -14,7 +14,6 @@
     "githubUrl": "https://github.com/UltimateApp/UltimateApp",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "entryPoint": "./App.js",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",

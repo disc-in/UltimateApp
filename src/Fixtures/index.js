@@ -81,6 +81,7 @@ export default {
             'https://vod-progressive.akamaized.net/exp=1586895936~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1349%2F16%2F406747830%2F1742364397.mp4~hmac=aff3cdfcc7f8438e94b7505697797b57ef7766146855ee2eb23774da58100331/vimeo-prod-skyfire-std-us/01/1349/16/406747830/1742364397.mp4',
           count: '20',
           rest: '90s',
+          explanation: 'blabla bla blabl blalb ',
         },
         {
           id: 2,
@@ -90,6 +91,7 @@ export default {
             'https://vod-progressive.akamaized.net/exp=1586895936~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1349%2F16%2F406747830%2F1742364397.mp4~hmac=aff3cdfcc7f8438e94b7505697797b57ef7766146855ee2eb23774da58100331/vimeo-prod-skyfire-std-us/01/1349/16/406747830/1742364397.mp4',
           count: '8',
           rest: '90s',
+          explanation: 'blabla bla blabl blalb ',
         },
         {
           id: 3,
@@ -99,6 +101,7 @@ export default {
             'https://vod-progressive.akamaized.net/exp=1586895936~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1349%2F16%2F406747830%2F1742364397.mp4~hmac=aff3cdfcc7f8438e94b7505697797b57ef7766146855ee2eb23774da58100331/vimeo-prod-skyfire-std-us/01/1349/16/406747830/1742364397.mp4',
           count: '25',
           rest: '90s',
+          explanation: 'blabla bla blabl blalb ',
         },
       ],
     },

@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, Dimensions, TouchableOpacity } from 'react-native';
+import { Image, StyleSheet, View, Text, Dimensions, TouchableOpacity } from 'react-native';
 import Animation from './Animation';
 import { WebView } from 'react-native-webview';
 import { Video } from 'expo-av';
 import theme from '../styles/theme.style';
+import undoArrow from '../Images/undo_arrow.png';
 
 class DrillAnimationPage extends Component {
   constructor() {
@@ -16,23 +17,63 @@ class DrillAnimationPage extends Component {
   }
 
   _incrementCount = () => {
-    this.setState(prevState => ({ count: (prevState.count + 1) % this.props.drill.steps.length }));
+    this.setState(prevState => ({ count: (prevState.count + 1) % (this.props.drill.steps.length + 1) }));
   };
 
-  checkSwitch() {
-    switch (this.props.drill.steps[this.state.count].source) {
-      case 'animation':
-        return this.displayAnimation();
-
-      case 'youtube':
-        return this.displayYoutube();
-
-      case 'vimeo':
-        return this.displayVimeo();
-
-      default:
-        return <Text>No visual content for this drill</Text>;
+  displayNextStep() {
+    if (this.state.count + 1 === this.props.drill.steps.length) {
+      return (
+        <View style={styles.infoWrapper}>
+          <View style={styles.description}>
+            <View style={styles.wrapperFinish}>
+              <Text style={styles.fitnessNext}>Finish</Text>
+            </View>
+          </View>
+          <View style={styles.lines} />
+        </View>
+      );
+    } else {
+      return (
+        <View style={styles.infoWrapper}>
+          <View style={styles.description}>
+            <View style={styles.subWrapper}>
+              <Text style={styles.fitnessNext}>{this.props.drill.steps[this.state.count + 1].count}</Text>
+            </View>
+            <View style={styles.subSubWrapper}>
+              <Text style={styles.fitnessNext}>{this.props.drill.steps[this.state.count + 1].title}</Text>
+            </View>
+            <View style={styles.fakeWrapper} />
+          </View>
+          <View style={styles.lines} />
+        </View>
+      );
     }
+  }
+
+  checkSwitch() {
+    if (this.state.count === this.props.drill.steps.length) {
+      return <Text>Congratulation </Text>;
+    } else {
+      switch (this.props.drill.steps[this.state.count].source) {
+        case 'animation':
+          return this.displayAnimation();
+
+        case 'youtube':
+          return this.displayYoutube();
+
+        case 'vimeo':
+          return this.displayVimeo();
+
+        default:
+          return <Text>No visual content for this drill</Text>;
+      }
+    }
+  }
+
+  displayFinish() {
+    <View>
+      <Text>Congratulation tu es dans la méthode</Text>
+    </View>;
   }
 
   displayAnimation() {
@@ -76,6 +117,7 @@ class DrillAnimationPage extends Component {
           </View>
           <View style={styles.lines} />
         </View>
+        <View style={styles.container}>{this.displayNextStep()}</View>
       </View>
     );
   }
@@ -101,6 +143,13 @@ const styles = StyleSheet.create({
     color: theme.COLOR_PRIMARY,
     fontWeight: 'bold',
   },
+  fitnessNext: {
+    marginTop: 20,
+    marginBottom: 20,
+    marginLeft: 20,
+    fontSize: theme.FONT_SIZE_LARGE,
+    color: theme.COLOR_SECONDARY,
+  },
   separator: {
     height: 15,
     borderRightWidth: 1,
@@ -125,9 +174,17 @@ const styles = StyleSheet.create({
   subSubWrapper: {
     flex: 6,
   },
+  fakeWrapper: {
+    width: 70,
+  },
   lines: {
     borderBottomColor: '#DCDCDC',
     borderBottomWidth: 1,
+  },
+  wrapperFinish: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 

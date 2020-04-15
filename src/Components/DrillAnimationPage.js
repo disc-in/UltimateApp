@@ -52,7 +52,7 @@ class DrillAnimationPage extends Component {
 
   checkSwitch() {
     if (this.state.count === this.props.drill.steps.length) {
-      return <Text>Congratulation </Text>;
+      return this.displayFinish();
     } else {
       switch (this.props.drill.steps[this.state.count].source) {
         case 'animation':
@@ -71,9 +71,12 @@ class DrillAnimationPage extends Component {
   }
 
   displayFinish() {
-    <View>
-      <Text>Congratulation tu es dans la méthode</Text>
-    </View>;
+    return (
+      <View>
+        <Text>You have finish the drill</Text>
+        <TouchableOpacity style={styles.buttonNext} onPress={() => this._incrementCount()}></TouchableOpacity>
+      </View>
+    );
   }
 
   displayAnimation() {

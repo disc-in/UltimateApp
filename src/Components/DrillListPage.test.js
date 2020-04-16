@@ -65,7 +65,7 @@ describe('<DrillListPage />', () => {
     expect(navigation.navigate).toBeCalledWith('DrillPage', { drill });
   });
 
-  it('links to filter view on press on the button', async () => {
+  it('links to the right filters view on press on the button', async () => {
     const route = {
       name: 'DrillListPage',
       params: {
@@ -78,7 +78,7 @@ describe('<DrillListPage />', () => {
 
     await fireEvent.press(getByTestId('filterButton'));
 
-    expect(navigation.navigate).toBeCalledWith('Filters', {
+    expect(navigation.navigate).toBeCalledWith('TechnicalFilters', {
       initialData: drills,
       previousScreen: 'DrillListPage',
       previousType: DrillTypes.TECHNICAL,

@@ -5,7 +5,7 @@ import * as list from '../styles/list.style';
 import { DrillTypes } from '../Fixtures';
 
 const DrillList = props => {
-  const { navigation, drillsToDisplay } = props.drillsToDisplay;
+  const { navigation, drillsToDisplay } = props;
 
   const renderDrill = ({ item }) => {
     const { title, type, source, image, goals } = item;

@@ -23,7 +23,7 @@ export const TrainingPage = props => {
   const trainingDrills = training.drills.map(drillId => drills.find(drill => drill.id === drillId));
 
   return (
-    <ScrollView style={styles.trainingPage}>
+    <ScrollView style={styles.trainingPage} contentContainerStyle={styles.trainingPageContent}>
       <View style={styles.infos}>
         <Text style={styles.descriptionText}>{training.description}</Text>
         <View style={styles.infoDisplay}>
@@ -54,10 +54,12 @@ export default connect(mapStateToProps)(TrainingPage);
 
 const styles = StyleSheet.create({
   trainingPage: {
-    paddingTop: 20,
     paddingLeft: 20,
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     height: '100%',
+  },
+  trainingPageContent: {
+    paddingVertical: 20,
   },
   infos: {
     marginBottom: 20,

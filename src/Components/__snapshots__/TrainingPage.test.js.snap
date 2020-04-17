@@ -2,12 +2,16 @@
 
 exports[`<TrainingPage /> renders correctly with a training 1`] = `
 <RCTScrollView
+  contentContainerStyle={
+    Object {
+      "paddingVertical": 20,
+    }
+  }
   style={
     Object {
       "backgroundColor": "#fff",
       "height": "100%",
       "paddingLeft": 20,
-      "paddingTop": 20,
     }
   }
 >

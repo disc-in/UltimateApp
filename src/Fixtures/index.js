@@ -880,6 +880,25 @@ export default {
       steps: [],
     },
     {
+      id: 1006,
+      type: DrillTypes.TECHNICAL,
+      source: 'Martin',
+      title: '2 columns long shot with defense',
+      image: 'https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1',
+      description:
+        'Basic long passes drill. You want your players to alternate between throwing, running and passing, with offense and defense',
+      minimalPlayersNumber: 18,
+      equipmentLabel: EquipmentLabels.BASIC,
+      equipment: 'around 1 disc for 3 players, 3 cones',
+      durationInMinutes: 30,
+      intensity: Intensities.HIGH,
+      goals: [GoalsFrisbee.THROWING],
+      seasonTiming: SeasonTimings.ANYTIME,
+      level: Levels.INTERMEDIATE,
+      animation: animationSquare,
+      steps: [],
+    },
+    {
       id: 1004,
       type: DrillTypes.TECHNICAL,
       source: 'Author',
@@ -1374,7 +1393,7 @@ export default {
       drills: [1, 1001, 1002, 1003, 2002],
     },
     {
-      id: 3,
+      id: 4,
       source: 'Martin',
       title: 'Coed 2 Long',
       image:
@@ -1382,6 +1401,16 @@ export default {
       description:
         "This training session aims at practicing your mark skills. Don't be broken to easily, generate dangerous passes",
       drills: [1, 1004, 1005, 2003],
+    },
+    {
+      id: 5,
+      source: 'Martin',
+      title: 'Coed 2 Long v2',
+      image:
+        'https://cdn3.sportngin.com/attachments/photo/be7e-106813275/Screen_Shot_2018-07-19_at_3.53.39_PM_large.png',
+      description:
+        "This training session aims at practicing your mark skills. Don't be broken to easily, generate dangerous passes",
+      drills: [1, 1005, 1006, 2003],
     },
   ],
 };

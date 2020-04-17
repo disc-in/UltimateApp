@@ -24,7 +24,7 @@ const mapStateToProps = state => {
   };
 };
 
-class TrainingPage extends Component {
+export class TrainingPage extends Component {
   render() {
     const { navigation } = this.props;
     const training = this.props.route.params.training;

@@ -36,6 +36,18 @@ exports[`<TrainingPage /> renders correctly with a training 1`] = `
     <Text
       style={
         Object {
+          "color": "#232b2b",
+          "fontSize": 16,
+          "fontWeight": "bold",
+          "paddingHorizontal": 30,
+        }
+      }
+    >
+      Players:
+    </Text>
+    <Text
+      style={
+        Object {
           "color": "#A6A6A6",
           "fontSize": 16,
           "paddingHorizontal": 30,
@@ -43,7 +55,7 @@ exports[`<TrainingPage /> renders correctly with a training 1`] = `
       }
     >
       2
-      + players
+      +
     </Text>
   </View>
   <View

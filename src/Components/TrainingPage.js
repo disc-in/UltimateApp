@@ -28,7 +28,7 @@ class TrainingPage extends Component {
   render() {
     const { navigation } = this.props;
     const training = this.props.route.params.training;
-    const drills = this.props.drills.filter(drill => training.drills.includes(drill.id));
+    const drills = training.drills.map(drillId => this.props.drills.find(drill => drill.id === drillId));
 
     return (
       <View style={styles.trainingPage}>

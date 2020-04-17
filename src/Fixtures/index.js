@@ -1498,7 +1498,7 @@ export default {
       title: 'Dump & Swing',
       image: 'https://d3j2bju5c7tc02.cloudfront.net/2016_44/backhand.jpg',
       description: 'This training session aims at........',
-      drills: [1, 2, 3, 4, 21, 1016, 1017, 1018, 1019, 1020],
+      drills: [1015, 4, 1, 2, 3, 21, 1016, 1017, 1018, 1019, 1020],
     },
     {
       id: 2,

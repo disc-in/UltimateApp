@@ -24,14 +24,20 @@ export const TrainingPage = props => {
 
   return (
     <ScrollView style={styles.trainingPage}>
-      <Text style={styles.descriptionText}>{training.description}</Text>
-      <View style={styles.infoDisplay}>
-        <Text style={styles.infoTitle}>Players:</Text>
-        <Text style={styles.info}>{getTrainingMinimalPlayersNumber(trainingDrills)}+</Text>
-      </View>
-      <View style={styles.infoDisplay}>
-        <Text style={styles.infoTitle}>Goals:</Text>
-        <Text style={styles.info}>{getGoals(trainingDrills).join(', ')}</Text>
+      <View style={styles.infos}>
+        <Text style={styles.descriptionText}>{training.description}</Text>
+        <View style={styles.infoDisplay}>
+          <Text style={styles.infoTitle}>Players</Text>
+          <Text style={styles.info}>{getTrainingMinimalPlayersNumber(trainingDrills)}+</Text>
+        </View>
+        <View style={styles.infoDisplay}>
+          <Text style={styles.infoTitle}>Duration</Text>
+          <Text style={styles.info}>{getTrainingDuration(trainingDrills)}+</Text>
+        </View>
+        <View style={styles.infoDisplay}>
+          <Text style={styles.infoTitle}>Goals</Text>
+          <Text style={styles.info}>{getGoals(trainingDrills).join(', ')}</Text>
+        </View>
       </View>
       <DrillList navigation={navigation} drillsToDisplay={trainingDrills} />
     </ScrollView>
@@ -48,32 +54,35 @@ export default connect(mapStateToProps)(TrainingPage);
 
 const styles = StyleSheet.create({
   trainingPage: {
-    paddingTop: 10,
+    paddingTop: 20,
     paddingLeft: 20,
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     height: '100%',
   },
+  infos: {
+    marginBottom: 20,
+  },
   descriptionText: {
-    padding: 20,
     color: theme.COLOR_SECONDARY,
-    textAlign: 'center',
     fontSize: theme.FONT_SIZE_MEDIUM,
   },
   infoDisplay: {
     flexDirection: 'row',
-    justifyContent: 'space-evenly',
-    alignItems: 'center',
-    padding: 10,
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start',
+    paddingVertical: 10,
   },
   infoTitle: {
     color: theme.COLOR_PRIMARY,
-    paddingHorizontal: 30,
     fontSize: theme.FONT_SIZE_MEDIUM,
     fontWeight: 'bold',
+    flexBasis: 1,
+    flexGrow: 1,
   },
   info: {
     color: theme.COLOR_SECONDARY,
-    paddingHorizontal: 30,
     fontSize: theme.FONT_SIZE_MEDIUM,
+    flexBasis: 4,
+    flexGrow: 4,
   },
 });

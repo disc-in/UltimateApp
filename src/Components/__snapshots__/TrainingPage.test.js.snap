@@ -7,91 +7,138 @@ exports[`<TrainingPage /> renders correctly with a training 1`] = `
       "backgroundColor": "#fff",
       "height": "100%",
       "paddingLeft": 20,
-      "paddingTop": 10,
+      "paddingTop": 20,
     }
   }
 >
   <View>
-    <Text
-      style={
-        Object {
-          "color": "#A6A6A6",
-          "fontSize": 16,
-          "padding": 20,
-          "textAlign": "center",
-        }
-      }
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget
-    </Text>
     <View
       style={
         Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "justifyContent": "space-evenly",
-          "padding": 10,
+          "marginBottom": 20,
         }
       }
     >
-      <Text
-        style={
-          Object {
-            "color": "#232b2b",
-            "fontSize": 16,
-            "fontWeight": "bold",
-            "paddingHorizontal": 30,
-          }
-        }
-      >
-        Players:
-      </Text>
       <Text
         style={
           Object {
             "color": "#A6A6A6",
             "fontSize": 16,
-            "paddingHorizontal": 30,
           }
         }
       >
-        2
-        +
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget
       </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "justifyContent": "space-evenly",
-          "padding": 10,
-        }
-      }
-    >
-      <Text
+      <View
         style={
           Object {
-            "color": "#232b2b",
-            "fontSize": 16,
-            "fontWeight": "bold",
-            "paddingHorizontal": 30,
+            "alignItems": "flex-start",
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+            "paddingVertical": 10,
           }
         }
       >
-        Goals:
-      </Text>
-      <Text
+        <Text
+          style={
+            Object {
+              "color": "#232b2b",
+              "flexBasis": 1,
+              "flexGrow": 1,
+              "fontSize": 16,
+              "fontWeight": "bold",
+            }
+          }
+        >
+          Players
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#A6A6A6",
+              "flexBasis": 4,
+              "flexGrow": 4,
+              "fontSize": 16,
+            }
+          }
+        >
+          2
+          +
+        </Text>
+      </View>
+      <View
         style={
           Object {
-            "color": "#A6A6A6",
-            "fontSize": 16,
-            "paddingHorizontal": 30,
+            "alignItems": "flex-start",
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+            "paddingVertical": 10,
           }
         }
       >
-        Legs, Defense
-      </Text>
+        <Text
+          style={
+            Object {
+              "color": "#232b2b",
+              "flexBasis": 1,
+              "flexGrow": 1,
+              "fontSize": 16,
+              "fontWeight": "bold",
+            }
+          }
+        >
+          Duration
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#A6A6A6",
+              "flexBasis": 4,
+              "flexGrow": 4,
+              "fontSize": 16,
+            }
+          }
+        >
+          40
+          +
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "flex-start",
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+            "paddingVertical": 10,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#232b2b",
+              "flexBasis": 1,
+              "flexGrow": 1,
+              "fontSize": 16,
+              "fontWeight": "bold",
+            }
+          }
+        >
+          Goals
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#A6A6A6",
+              "flexBasis": 4,
+              "flexGrow": 4,
+              "fontSize": 16,
+            }
+          }
+        >
+          Legs, Defense
+        </Text>
+      </View>
     </View>
     <View>
       <RCTScrollView

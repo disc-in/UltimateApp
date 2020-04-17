@@ -4,6 +4,8 @@ import HomePage from '../Components/HomePage';
 import DrillListPage from '../Components/DrillListPage';
 import DrillPage from '../Components/DrillPage';
 import DrillAnimationPage from '../Components/DrillAnimationPage';
+import TechnicalFilters from '../Components/TechnicalFilters';
+import FitnessFilters from '../Components/FitnessFilters';
 import TrainingListPage from '../Components/TrainingListPage';
 import TrainingPage from '../Components/TrainingPage';
 
@@ -19,6 +21,8 @@ export const Navigation = () => (
         title: route.params.type.substr(0, 1).toUpperCase() + route.params.type.substr(1) + ' drills',
       })}
     />
+    <Stack.Screen name="TechnicalFilters" component={TechnicalFilters} options={{ title: 'Filters' }} />
+    <Stack.Screen name="FitnessFilters" component={FitnessFilters} options={{ title: 'Filters' }} />
     <Stack.Screen
       name="DrillPage"
       component={DrillPage}
@@ -29,11 +33,7 @@ export const Navigation = () => (
       component={DrillAnimationPage}
       options={({ route }) => ({ title: route.params.drill.title })}
     />
-    <Stack.Screen
-      name="TrainingListPage"
-      component={TrainingListPage}
-      options={({ route }) => ({ title: 'Training sessions' })}
-    />
+    <Stack.Screen name="TrainingListPage" component={TrainingListPage} options={{ title: 'Training sessions' }} />
     <Stack.Screen
       name="TrainingPage"
       component={TrainingPage}

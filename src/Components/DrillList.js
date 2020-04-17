@@ -9,9 +9,9 @@ const DrillList = props => {
   const navigation = props.navigation;
 
   const renderDrill = ({ item }) => {
-    const { title, type, source, image } = item;
+    const { title, type, source, image, goals } = item;
 
-    const imageMainData = type === DrillTypes.TECHNICAL ? 'nbPlayers' : 'durationInMinutes';
+    const imageMainData = type === DrillTypes.TECHNICAL ? 'minimalPlayersNumber' : 'durationInMinutes';
     const imageMainDataLegend = type === DrillTypes.TECHNICAL ? 'players' : 'min.';
     return (
       <TouchableOpacity style={list.item} onPress={() => navigation.navigate('DrillPage', { drill: item })}>
@@ -22,6 +22,7 @@ const DrillList = props => {
         <View style={list.contentContainer}>
           <Text style={list.source}>{source}</Text>
           <Text style={list.title}>{title}</Text>
+          <Text style={list.numberOfPlayers}>{goals.join(', ')}</Text>
         </View>
       </TouchableOpacity>
     );

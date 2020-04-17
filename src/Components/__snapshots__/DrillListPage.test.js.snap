@@ -320,7 +320,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           "image": "https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1",
           "intensity": "Low",
           "level": "Beginner",
-          "nbPlayers": 2,
+          "minimalPlayersNumber": 2,
           "seasonTiming": "",
           "source": "Author",
           "steps": Array [],
@@ -622,7 +622,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           "image": "https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg",
           "intensity": "Low",
           "level": "Beginner",
-          "nbPlayers": 2,
+          "minimalPlayersNumber": 2,
           "seasonTiming": "",
           "source": "Author",
           "steps": Array [],
@@ -957,18 +957,17 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
         "width": 100,
       }
     }
+    testID="filterButton"
   >
-    <Text
+    <Image
+      source={1}
       style={
         Object {
-          "fontSize": 24,
-          "fontWeight": "bold",
-          "textTransform": "uppercase",
+          "height": "100%",
+          "width": "100%",
         }
       }
-    >
-      Filter
-    </Text>
+    />
   </View>
 </View>
 `;
@@ -1010,7 +1009,7 @@ exports[`<DrillListPage /> renders correctly with a fitness drill 1`] = `
           "image": "https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg",
           "intensity": "Low",
           "level": "Beginner",
-          "nbPlayers": 1,
+          "minimalPlayersNumber": 1,
           "seasonTiming": "Off-season",
           "source": "Author",
           "steps": Array [
@@ -1225,18 +1224,17 @@ exports[`<DrillListPage /> renders correctly with a fitness drill 1`] = `
         "width": 100,
       }
     }
+    testID="filterButton"
   >
-    <Text
+    <Image
+      source={1}
       style={
         Object {
-          "fontSize": 24,
-          "fontWeight": "bold",
-          "textTransform": "uppercase",
+          "height": "100%",
+          "width": "100%",
         }
       }
-    >
-      Filter
-    </Text>
+    />
   </View>
 </View>
 `;
@@ -1278,7 +1276,7 @@ exports[`<DrillListPage /> renders correctly with a technical drill 1`] = `
           "image": "https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg",
           "intensity": "Low",
           "level": "Beginner",
-          "nbPlayers": 1,
+          "minimalPlayersNumber": 1,
           "seasonTiming": "Off-season",
           "source": "Author",
           "steps": Array [
@@ -1493,18 +1491,17 @@ exports[`<DrillListPage /> renders correctly with a technical drill 1`] = `
         "width": 100,
       }
     }
+    testID="filterButton"
   >
-    <Text
+    <Image
+      source={1}
       style={
         Object {
-          "fontSize": 24,
-          "fontWeight": "bold",
-          "textTransform": "uppercase",
+          "height": "100%",
+          "width": "100%",
         }
       }
-    >
-      Filter
-    </Text>
+    />
   </View>
 </View>
 `;

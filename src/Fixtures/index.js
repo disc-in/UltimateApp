@@ -43,9 +43,9 @@ export const SeasonTimings = {
 };
 
 export const EquipmentLabels = {
-  NO_EQUIPMENT: 'No Equipment',
+  NONE: 'No Equipment',
   BASIC: 'Basic Equipment',
-  FULL_EQUIPMENT: 'Full equipment',
+  FULL: 'Full equipment',
 };
 
 export default {
@@ -58,8 +58,8 @@ export default {
       title: 'Fitness Drill Title',
       image: 'https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg',
       description: 'Description of the drill',
-      nbPlayers: 1,
-      equipmentLabel: EquipmentLabels.NO_EQUIPMENT,
+      minimalPlayersNumber: 1,
+      equipmentLabel: EquipmentLabels.NONE,
       equipment: 'Equipment needs for the drill',
       durationInMinutes: 10,
       intensity: Intensities.LOW,
@@ -90,8 +90,8 @@ export default {
       title: 'Fitness Drill Title',
       image: 'http://www.liberte-fitness.fr/sites/default/files/styles/slider/public/news/tone.jpg?itok=505bme2a',
       description: 'Description of the drill',
-      nbPlayers: 1,
-      equipmentLabel: EquipmentLabels.FULL_EQUIPMENT,
+      minimalPlayersNumber: 1,
+      equipmentLabel: EquipmentLabels.FULL,
       equipment: 'Equipment needs for the drill',
       durationInMinutes: 10,
       intensity: Intensities.HIGH,
@@ -122,8 +122,8 @@ export default {
       title: 'Fitness Drill Title',
       image: 'https://i.insider.com/5a454d9a4aa6b519158b727e?width=600&format=jpeg&auto=webp',
       description: 'Description of the drill',
-      nbPlayers: 1,
-      equipmentLabel: EquipmentLabels.FULL_EQUIPMENT,
+      minimalPlayersNumber: 1,
+      equipmentLabel: EquipmentLabels.FULL,
       equipment: 'Equipment needs for the drill',
       durationInMinutes: 10,
       intensity: Intensities.MODERATE,
@@ -154,12 +154,12 @@ export default {
       title: 'Fitness Drill Title',
       image: 'https://www.planetfitness.co.za/wp-content/uploads/2019/04/SLP_6767-copy-768x430.jpg',
       description: 'Description of the drill',
-      nbPlayers: 1,
-      equipmentLabel: EquipmentLabels.NO_EQUIPMENT,
+      minimalPlayersNumber: 1,
+      equipmentLabel: EquipmentLabels.NONE,
       equipment: 'Equipment needs for the drill',
       durationInMinutes: 35,
       intensity: Intensities.LOW,
-      goals: [GoalsFitness.DEFENSE],
+      goals: [GoalsFitness.UPPER],
       seasonTiming: SeasonTimings.PRE_SEASON,
       level: Levels.BEGINNER,
       video: 'https://www.youtube.com/embed/JkVHrA5o23o',
@@ -186,7 +186,7 @@ export default {
       title: 'Fitness Drill Title',
       image: 'http://www.liberte-fitness.fr/sites/default/files/styles/slider/public/news/tone.jpg?itok=505bme2a',
       description: 'Description of the drill',
-      nbPlayers: 1,
+      minimalPlayersNumber: 1,
       equipmentLabel: EquipmentLabels.BASIC,
       equipment: 'Equipment needs for the drill',
       durationInMinutes: 35,
@@ -218,8 +218,8 @@ export default {
       title: 'Fitness Drill Title',
       image: 'https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg',
       description: 'Description of the drill',
-      nbPlayers: 1,
-      equipmentLabel: EquipmentLabels.NO_EQUIPMENT,
+      minimalPlayersNumber: 1,
+      equipmentLabel: EquipmentLabels.NONE,
       equipment: 'Equipment needs for the drill',
       durationInMinutes: 10,
       intensity: Intensities.HIGH,
@@ -250,8 +250,8 @@ export default {
       title: 'Fitness Drill Title',
       image: 'https://www.planetfitness.co.za/wp-content/uploads/2019/04/SLP_6767-copy-768x430.jpg',
       description: 'Description of the drill',
-      nbPlayers: 1,
-      equipmentLabel: EquipmentLabels.NO_EQUIPMENT,
+      minimalPlayersNumber: 1,
+      equipmentLabel: EquipmentLabels.NONE,
       equipment: 'Equipment needs for the drill',
       durationInMinutes: 22,
       intensity: Intensities.LOW,
@@ -282,8 +282,8 @@ export default {
       title: 'Fitness Drill Title',
       image: 'https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg',
       description: 'Description of the drill',
-      nbPlayers: 1,
-      equipmentLabel: EquipmentLabels.NO_EQUIPMENT,
+      minimalPlayersNumber: 1,
+      equipmentLabel: EquipmentLabels.NONE,
       equipment: 'Equipment needs for the drill',
       durationInMinutes: 35,
       intensity: Intensities.LOW,
@@ -314,8 +314,8 @@ export default {
       title: 'Fitness Drill Title',
       image: 'http://www.liberte-fitness.fr/sites/default/files/styles/slider/public/news/tone.jpg?itok=505bme2a',
       description: 'Description of the drill',
-      nbPlayers: 1,
-      equipmentLabel: EquipmentLabels.NO_EQUIPMENT,
+      minimalPlayersNumber: 1,
+      equipmentLabel: EquipmentLabels.NONE,
       equipment: 'Equipment needs for the drill',
       durationInMinutes: 35,
       intensity: Intensities.LOW,
@@ -346,8 +346,8 @@ export default {
       title: 'Fitness Drill Title',
       image: 'https://i.insider.com/5a454d9a4aa6b519158b727e?width=600&format=jpeg&auto=webp',
       description: 'Description of the drill',
-      nbPlayers: 1,
-      equipmentLabel: EquipmentLabels.NO_EQUIPMENT,
+      minimalPlayersNumber: 1,
+      equipmentLabel: EquipmentLabels.NONE,
       equipment: 'Equipment needs for the drill',
       durationInMinutes: 10,
       intensity: Intensities.LOW,
@@ -378,8 +378,8 @@ export default {
       title: 'Fitness Drill Title',
       image: 'https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg',
       description: 'Description of the drill',
-      nbPlayers: 1,
-      equipmentLabel: EquipmentLabels.NO_EQUIPMENT,
+      minimalPlayersNumber: 1,
+      equipmentLabel: EquipmentLabels.NONE,
       equipment: 'Equipment needs for the drill',
       durationInMinutes: 35,
       intensity: Intensities.LOW,
@@ -410,8 +410,8 @@ export default {
       title: 'Fitness Drill Title',
       image: 'https://www.planetfitness.co.za/wp-content/uploads/2019/04/SLP_6767-copy-768x430.jpg',
       description: 'Description of the drill',
-      nbPlayers: 1,
-      equipmentLabel: EquipmentLabels.NO_EQUIPMENT,
+      minimalPlayersNumber: 1,
+      equipmentLabel: EquipmentLabels.NONE,
       equipment: 'Equipment needs for the drill',
       durationInMinutes: 22,
       intensity: Intensities.LOW,
@@ -442,8 +442,8 @@ export default {
       title: 'Fitness Drill Title',
       image: 'https://i.insider.com/5a454d9a4aa6b519158b727e?width=600&format=jpeg&auto=webp',
       description: 'Description of the drill',
-      nbPlayers: 1,
-      equipmentLabel: EquipmentLabels.NO_EQUIPMENT,
+      minimalPlayersNumber: 1,
+      equipmentLabel: EquipmentLabels.NONE,
       equipment: 'Equipment needs for the drill',
       durationInMinutes: 35,
       intensity: Intensities.LOW,
@@ -474,8 +474,8 @@ export default {
       title: 'Fitness Drill Title',
       image: 'https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg',
       description: 'Description of the drill',
-      nbPlayers: 1,
-      equipmentLabel: EquipmentLabels.NO_EQUIPMENT,
+      minimalPlayersNumber: 1,
+      equipmentLabel: EquipmentLabels.NONE,
       equipment: 'Equipment needs for the drill',
       durationInMinutes: 35,
       intensity: Intensities.LOW,
@@ -506,8 +506,8 @@ export default {
       title: 'Fitness Drill Title',
       image: 'https://www.planetfitness.co.za/wp-content/uploads/2019/04/SLP_6767-copy-768x430.jpg',
       description: 'Description of the drill',
-      nbPlayers: 1,
-      equipmentLabel: EquipmentLabels.NO_EQUIPMENT,
+      minimalPlayersNumber: 1,
+      equipmentLabel: EquipmentLabels.NONE,
       equipment: 'Equipment needs for the drill',
       durationInMinutes: 10,
       intensity: Intensities.LOW,
@@ -538,8 +538,8 @@ export default {
       title: 'Fitness Drill Title',
       image: 'https://www.planetfitness.co.za/wp-content/uploads/2019/04/SLP_6767-copy-768x430.jpg',
       description: 'Description of the drill',
-      nbPlayers: 1,
-      equipmentLabel: EquipmentLabels.NO_EQUIPMENT,
+      minimalPlayersNumber: 1,
+      equipmentLabel: EquipmentLabels.NONE,
       equipment: 'Equipment needs for the drill',
       durationInMinutes: 22,
       intensity: Intensities.LOW,
@@ -570,8 +570,8 @@ export default {
       title: 'Fitness Drill Title',
       image: 'https://i.insider.com/5a454d9a4aa6b519158b727e?width=600&format=jpeg&auto=webp',
       description: 'Description of the drill',
-      nbPlayers: 1,
-      equipmentLabel: EquipmentLabels.NO_EQUIPMENT,
+      minimalPlayersNumber: 1,
+      equipmentLabel: EquipmentLabels.NONE,
       equipment: 'Equipment needs for the drill',
       durationInMinutes: 10,
       intensity: Intensities.LOW,
@@ -602,8 +602,8 @@ export default {
       title: 'Fitness Drill Title',
       image: 'http://www.liberte-fitness.fr/sites/default/files/styles/slider/public/news/tone.jpg?itok=505bme2a',
       description: 'Description of the drill',
-      nbPlayers: 1,
-      equipmentLabel: EquipmentLabels.NO_EQUIPMENT,
+      minimalPlayersNumber: 1,
+      equipmentLabel: EquipmentLabels.NONE,
       equipment: 'Equipment needs for the drill',
       durationInMinutes: 35,
       intensity: Intensities.LOW,
@@ -634,8 +634,8 @@ export default {
       title: 'Fitness Drill Title',
       image: 'http://www.liberte-fitness.fr/sites/default/files/styles/slider/public/news/tone.jpg?itok=505bme2a',
       description: 'Description of the drill',
-      nbPlayers: 1,
-      equipmentLabel: EquipmentLabels.NO_EQUIPMENT,
+      minimalPlayersNumber: 1,
+      equipmentLabel: EquipmentLabels.NONE,
       equipment: 'Equipment needs for the drill',
       durationInMinutes: 10,
       intensity: Intensities.LOW,
@@ -666,8 +666,8 @@ export default {
       title: 'Fitness Drill Title',
       image: 'https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg',
       description: 'Description of the drill',
-      nbPlayers: 1,
-      equipmentLabel: EquipmentLabels.NO_EQUIPMENT,
+      minimalPlayersNumber: 1,
+      equipmentLabel: EquipmentLabels.NONE,
       equipment: 'Equipment needs for the drill',
       durationInMinutes: 22,
       intensity: Intensities.LOW,
@@ -698,8 +698,8 @@ export default {
       title: 'Fitness Drill Title',
       image: 'https://www.planetfitness.co.za/wp-content/uploads/2019/04/SLP_6767-copy-768x430.jpg',
       description: 'Description of the drill',
-      nbPlayers: 1,
-      equipmentLabel: EquipmentLabels.NO_EQUIPMENT,
+      minimalPlayersNumber: 1,
+      equipmentLabel: EquipmentLabels.NONE,
       equipment: 'Equipment needs for the drill',
       durationInMinutes: 10,
       intensity: Intensities.LOW,
@@ -730,8 +730,8 @@ export default {
       title: 'Fitness Drill Title',
       image: 'https://i.insider.com/5a454d9a4aa6b519158b727e?width=600&format=jpeg&auto=webp',
       description: 'Description of the drill',
-      nbPlayers: 1,
-      equipmentLabel: EquipmentLabels.NO_EQUIPMENT,
+      minimalPlayersNumber: 1,
+      equipmentLabel: EquipmentLabels.NONE,
       equipment: 'Equipment needs for the drill',
       durationInMinutes: 10,
       intensity: Intensities.LOW,
@@ -762,8 +762,8 @@ export default {
       title: 'Fitness Drill Title',
       image: 'https://www.planetfitness.co.za/wp-content/uploads/2019/04/SLP_6767-copy-768x430.jpg',
       description: 'Description of the drill',
-      nbPlayers: 1,
-      equipmentLabel: EquipmentLabels.NO_EQUIPMENT,
+      minimalPlayersNumber: 1,
+      equipmentLabel: EquipmentLabels.NONE,
       equipment: 'Equipment needs for the drill',
       durationInMinutes: 35,
       intensity: Intensities.LOW,
@@ -795,7 +795,7 @@ export default {
       image: 'https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
-      nbPlayers: 2,
+      minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
       /* [
@@ -813,7 +813,7 @@ export default {
       intensity: Intensities.LOW,
       goals: [GoalsFrisbee.DEFENSE],
       seasonTiming: '',
-      level: Levels.BEGINNER,
+      level: Levels.INTERMEDIATE,
       /* video:, */
       animation: animationSquare,
       steps: [],
@@ -827,7 +827,7 @@ export default {
         'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
-      nbPlayers: 2,
+      minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
       /* [
@@ -844,7 +844,7 @@ export default {
       intensity: Intensities.LOW,
       goals: [GoalsFrisbee.DEFENSE],
       seasonTiming: '',
-      level: Levels.BEGINNER,
+      level: Levels.ADVANCED,
       /* video:, */
       animation: animationSquare,
       steps: [],
@@ -857,7 +857,7 @@ export default {
       image: 'https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
-      nbPlayers: 2,
+      minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
       /* [
@@ -888,7 +888,7 @@ export default {
         'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
-      nbPlayers: 2,
+      minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
       /* [
@@ -918,7 +918,7 @@ export default {
       image: 'https://conseils.casalsport.com/wp-content/uploads/2019/05/ultimate-frisbee-sport.jpg',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
-      nbPlayers: 2,
+      minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
       /* [
@@ -948,7 +948,7 @@ export default {
       image: 'https://d3j2bju5c7tc02.cloudfront.net/2016_44/backhand.jpg',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
-      nbPlayers: 2,
+      minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
       /* [
@@ -978,7 +978,7 @@ export default {
       image: 'https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
-      nbPlayers: 2,
+      minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
       /* [
@@ -1009,7 +1009,7 @@ export default {
         'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
-      nbPlayers: 2,
+      minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
       /* [
@@ -1040,7 +1040,7 @@ export default {
         'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
-      nbPlayers: 2,
+      minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
       /* [
@@ -1071,7 +1071,7 @@ export default {
         'https://siena.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2020/03/05/node_528988/1877948/public/2020/03/05/B9722816509Z.1_20200305151253_000%2BG2AFL39TF.1-0.jpg?itok=jAQBQG6y1583417579',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
-      nbPlayers: 2,
+      minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
       /* [
@@ -1101,7 +1101,7 @@ export default {
       image: 'https://conseils.casalsport.com/wp-content/uploads/2019/05/ultimate-frisbee-sport.jpg',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
-      nbPlayers: 2,
+      minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
       /* [
@@ -1131,7 +1131,7 @@ export default {
       image: 'https://d3j2bju5c7tc02.cloudfront.net/2016_44/backhand.jpg',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
-      nbPlayers: 2,
+      minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
       /* [
@@ -1162,7 +1162,7 @@ export default {
         'https://siena.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2020/03/05/node_528988/1877948/public/2020/03/05/B9722816509Z.1_20200305151253_000%2BG2AFL39TF.1-0.jpg?itok=jAQBQG6y1583417579',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
-      nbPlayers: 2,
+      minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
       /* [
@@ -1193,7 +1193,7 @@ export default {
         'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
-      nbPlayers: 2,
+      minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
       /* [
@@ -1223,7 +1223,7 @@ export default {
       image: 'https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
-      nbPlayers: 2,
+      minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
       /* [
@@ -1254,7 +1254,7 @@ export default {
         'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
-      nbPlayers: 2,
+      minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
       /* [
@@ -1285,7 +1285,7 @@ export default {
         'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
-      nbPlayers: 2,
+      minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
       /* [
@@ -1315,7 +1315,7 @@ export default {
       image: 'https://conseils.casalsport.com/wp-content/uploads/2019/05/ultimate-frisbee-sport.jpg',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
-      nbPlayers: 2,
+      minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
       /* [
@@ -1345,7 +1345,7 @@ export default {
       image: 'https://d3j2bju5c7tc02.cloudfront.net/2016_44/backhand.jpg',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
-      nbPlayers: 2,
+      minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
       /* [
@@ -1376,7 +1376,7 @@ export default {
         'https://siena.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2020/03/05/node_528988/1877948/public/2020/03/05/B9722816509Z.1_20200305151253_000%2BG2AFL39TF.1-0.jpg?itok=jAQBQG6y1583417579',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
-      nbPlayers: 2,
+      minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
       /* [
@@ -1407,7 +1407,7 @@ export default {
         'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
-      nbPlayers: 2,
+      minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
       /* [
@@ -1437,7 +1437,7 @@ export default {
       image: 'https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
-      nbPlayers: 2,
+      minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
       /* [
@@ -1468,7 +1468,7 @@ export default {
         'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
-      nbPlayers: 2,
+      minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
       /* [

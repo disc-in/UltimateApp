@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
-import DrillList from './DrillList';
+import DrillList from './shared/DrillList';
 import filterButtonImage from '../../assets/filter.png';
 import { DrillTypes } from '../Fixtures';
 

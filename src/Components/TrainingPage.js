@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import { connect } from 'react-redux';
-import DrillList from './DrillList';
+import DrillList from './shared/DrillList';
 import theme from '../styles/theme.style';
 
 export function getGoals(trainingDrills) {
@@ -34,7 +34,8 @@ export class TrainingPage extends Component {
       <View style={styles.trainingPage}>
         <Text style={styles.descriptionText}>{training.description}</Text>
         <View style={styles.infoDisplay}>
-          <Text style={styles.info}>{getTrainingMinimalPlayersNumber(drills)}+ players</Text>
+          <Text style={styles.infoTitle}>Players:</Text>
+          <Text style={styles.info}>{getTrainingMinimalPlayersNumber(drills)}+</Text>
         </View>
         <View style={styles.infoDisplay}>
           <Text style={styles.infoTitle}>Goals:</Text>

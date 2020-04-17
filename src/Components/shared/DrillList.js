@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, Text, ImageBackground, TouchableOpacity, FlatList } from 'react-native';
 
-import * as list from '../styles/list.style';
-import { DrillTypes } from '../Fixtures';
+import * as list from '../../styles/list.style';
+import { DrillTypes } from '../../Fixtures';
 
 const DrillList = props => {
   const { navigation, drillsToDisplay } = props;

@@ -1497,7 +1497,7 @@ export default {
       source: 'Rise Up',
       title: 'Dump & Swing',
       image: 'https://d3j2bju5c7tc02.cloudfront.net/2016_44/backhand.jpg',
-      description: 'This training session aims at........',
+      description: 'This training session aims at make your team better at Dump & Swing. blabla bla bla bla',
       drills: [1015, 4, 1, 2, 3, 21, 1016, 1017, 1018, 1019, 1020],
     },
     {

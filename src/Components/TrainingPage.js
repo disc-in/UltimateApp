@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
-import { StyleSheet, ScrollView, Text } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 import { connect } from 'react-redux';
 import DrillList from './DrillList';
 import theme from '../styles/theme.style';
 
-const getGoals = trainingDrills => {
-  const nbPlayersList = trainingDrills.map(({ nbPlayers }) => nbPlayers);
-  return Math.max(...nbPlayersList);
-};
+export function getGoals(trainingDrills) {
+  return Array.from(new Set(trainingDrills.flatMap(({ goals }) => goals)));
+}
 
-const getEquipment = trainingDrills => {
-  const nbPlayersList = trainingDrills.map(({ nbPlayers }) => nbPlayers);
-  return Math.max(...nbPlayersList);
-};
+export function getTrainingDuration(trainingDrills) {
+  const durationList = trainingDrills.map(({ durationInMinutes }) => durationInMinutes);
+  return durationList.reduce((a, b) => a + b, 0);
+}
+
+export function getTrainingMinimalPlayersNumber(trainingDrills) {
+  const minimalPlayersNumberList = trainingDrills.map(({ minimalPlayersNumber }) => minimalPlayersNumber);
+  return Math.max(...minimalPlayersNumberList);
+}
 
 const mapStateToProps = state => {
   return {
@@ -27,14 +31,17 @@ class TrainingPage extends Component {
     const drills = this.props.drills.filter(drill => training.drills.includes(drill.id));
 
     return (
-      <ScrollView style={styles.trainingPage}>
+      <View style={styles.trainingPage}>
         <Text style={styles.descriptionText}>{training.description}</Text>
-        <Text style={styles.descriptionText}>Goals</Text>
-        <Text style={styles.descriptionText}>{getGoals(drills)}}</Text>
-        <Text style={styles.descriptionText}>Required equipment</Text>
-        <Text style={styles.descriptionText}>{getEquipment(drills)}</Text>
+        <View style={styles.infoDisplay}>
+          <Text style={styles.info}>{getTrainingMinimalPlayersNumber(drills)}+ players</Text>
+        </View>
+        <View style={styles.infoDisplay}>
+          <Text style={styles.infoTitle}>Goals:</Text>
+          <Text style={styles.info}>{getGoals(drills).join(', ')}</Text>
+        </View>
         <DrillList navigation={navigation} drillsToDisplay={drills} />
-      </ScrollView>
+      </View>
     );
   }
 }
@@ -52,6 +59,23 @@ const styles = StyleSheet.create({
     padding: 20,
     color: theme.COLOR_SECONDARY,
     textAlign: 'center',
+    fontSize: theme.FONT_SIZE_MEDIUM,
+  },
+  infoDisplay: {
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+    padding: 10,
+  },
+  infoTitle: {
+    color: theme.COLOR_PRIMARY,
+    paddingHorizontal: 30,
+    fontSize: theme.FONT_SIZE_MEDIUM,
+    fontWeight: 'bold',
+  },
+  info: {
+    color: theme.COLOR_SECONDARY,
+    paddingHorizontal: 30,
     fontSize: theme.FONT_SIZE_MEDIUM,
   },
 });

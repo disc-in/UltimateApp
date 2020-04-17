@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text, ImageBackground, TouchableOpacity, FlatList } from 'react-native';
+import { View, Text, ImageBackground, TouchableOpacity, FlatList } from 'react-native';
 
 import * as list from '../styles/list.style';
 import { DrillTypes } from '../Fixtures';

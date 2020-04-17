@@ -1,18 +1,10 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Text, ImageBackground, TouchableOpacity, FlatList } from 'react-native';
+
+import { getTrainingDuration, getTrainingMinimalPlayersNumber, getGoals } from './TrainingPage';
 import { connect } from 'react-redux';
 import theme from '../styles/theme.style';
 import * as list from '../styles/list.style';
-
-const getTrainingDuration = trainingDrills => {
-  const durationList = trainingDrills.map(({ durationInMinutes }) => durationInMinutes);
-  return durationList.reduce((a, b) => a + b, 0);
-};
-
-const getTrainingMinimalPlayersNumber = trainingDrills => {
-  const minimalPlayersNumberList = trainingDrills.map(({ minimalPlayersNumber }) => minimalPlayersNumber);
-  return Math.max(...minimalPlayersNumberList);
-};
 
 const mapStateToProps = state => {
   return {
@@ -41,6 +33,9 @@ export const TrainingListPage = props => {
         <View style={list.contentContainer}>
           <Text style={list.source}>{source}</Text>
           <Text style={list.title}>{title}</Text>
+          <Text style={list.numberOfPlayers}>
+            {getGoals(allDrills.filter(drill => drills.includes(drill.id))).join(', ')}
+          </Text>
         </View>
       </TouchableOpacity>
     );

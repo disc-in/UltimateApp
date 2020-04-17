@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import { StyleSheet, View, Text, ImageBackground, Image, TouchableOpacity, FlatList } from 'react-native';
+import React from 'react';
+import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
+import DrillList from './shared/DrillList';
 import filterButtonImage from '../../assets/filter.png';
 import { DrillTypes } from '../Fixtures';
 
@@ -14,29 +15,10 @@ export const DrillListPage = props => {
   const storeDrillsForType = storeDrills.filter(drill => drill.type === type);
   const displayedDrills = filteredDrills ? filteredDrills : storeDrillsForType;
 
-  const imageMainData = type === DrillTypes.TECHNICAL ? 'minimalPlayersNumber' : 'durationInMinutes';
-  const imageMainDataLegend = type === DrillTypes.TECHNICAL ? 'players' : 'min.';
-
   return (
     <View style={styles.drillListPage}>
       <Text style={list.counter}>{displayedDrills.length} drills available</Text>
-      <FlatList
-        data={displayedDrills}
-        keyExtractor={item => item.id.toString()}
-        renderItem={({ item }) => (
-          <TouchableOpacity style={list.item} onPress={() => navigation.navigate('DrillPage', { drill: item })}>
-            <ImageBackground source={{ uri: item.image }} style={list.image} imageStyle={list.imageOpacity}>
-              <Text style={{ ...list.imageText, ...list.imageTextMain }}>{item[imageMainData]}+</Text>
-              <Text style={list.imageText}>{imageMainDataLegend}</Text>
-            </ImageBackground>
-            <View style={list.contentContainer}>
-              <Text style={list.source}>{item.source}</Text>
-              <Text style={list.title}>{item.title}</Text>
-              <Text style={list.numberOfPlayers}>{item.goals.join(', ')}</Text>
-            </View>
-          </TouchableOpacity>
-        )}
-      />
+      <DrillList navigation={navigation} drillsToDisplay={displayedDrills} />
       <TouchableOpacity
         style={styles.filterButton}
         onPress={() => {

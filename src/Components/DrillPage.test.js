@@ -5,7 +5,6 @@ import { connect, Provider } from 'react-redux';
 
 import { render, fireEvent, cleanup } from 'react-native-testing-library';
 import { createStackNavigator } from '@react-navigation/stack';
-
 import store from '../Store/testStore';
 import { createDrill } from '../Fixtures/TestFixtures';
 

@@ -5,7 +5,7 @@ import DrillList from './DrillList';
 import theme from '../styles/theme.style';
 
 export function getGoals(trainingDrills) {
-  return Array.from(new Set(trainingDrills.flatMap(({ goals }) => goals)));
+  return Array.from(new Set(trainingDrills.map(({ goals }) => goals).flat()));
 }
 
 export function getTrainingDuration(trainingDrills) {

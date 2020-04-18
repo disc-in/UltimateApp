@@ -77,8 +77,7 @@ export default {
           id: 1,
           title: 'Rower Hamstring',
           source: Sources.VIMEO,
-          link:
-            'https://vod-progressive.akamaized.net/exp=1586957810~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1305%2F16%2F406527746%2F1741433596.mp4~hmac=4a99a21950d4fb6e5859386f03252a0ba6ffdaa83bfed99d03a899c9c0b202f1/vimeo-prod-skyfire-std-us/01/1305/16/406527746/1741433596.mp4',
+          link: '407999139',
           count: '20',
           rest: '90s',
           instruction: 'blabla bla blabl blalb ',
@@ -87,8 +86,7 @@ export default {
           id: 2,
           title: 'Full Clean',
           source: Sources.VIMEO,
-          link:
-            'https://vod-progressive.akamaized.net/exp=1586957863~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1305%2F16%2F406527537%2F1741432792.mp4~hmac=2fe1a3361b7a596ae5f81c7c98e776dbb50190881abd079e485ca31d488c4e1c/vimeo-prod-skyfire-std-us/01/1305/16/406527537/1741432792.mp4',
+          link: '406747741',
           count: '8',
           rest: '90s',
           instruction: 'blabla bla blabl blalb ',
@@ -97,8 +95,7 @@ export default {
           id: 3,
           title: 'Kettlebell Russian Twist',
           source: Sources.VIMEO,
-          link:
-            'https://vod-progressive.akamaized.net/exp=1586957914~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1294%2F16%2F406472362%2F1741204455.mp4~hmac=c33d43f8c214fc9325d00b991b2621a401de237ef8aeba71f7cb0bf728d2137e/vimeo-prod-skyfire-std-us/01/1294/16/406472362/1741204455.mp4',
+          link: '407999139',
           count: '25',
           rest: '90s',
           instruction: 'blabla bla blabl blalb ',

@@ -1,28 +1,21 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { ScrollView, StyleSheet, View, Text, Dimensions, TouchableOpacity } from 'react-native';
-import Animation from './Animation';
 import { WebView } from 'react-native-webview';
-import { Video } from 'expo-av';
-import theme from '../styles/theme.style';
-import undoArrow from '../Images/undo_arrow.png';
 import { LinearGradient } from 'expo-linear-gradient';
 
-class DrillAnimationPage extends Component {
-  constructor() {
-    super();
+import Animation from './Animation';
+import VimeoVideo from './VimeoVideo';
+import theme from '../styles/theme.style';
 
-    this.state = {
-      TextInput_Data: '',
-      count: 0,
-    };
-  }
+const DrillAnimationPage = props => {
+  const [count, setCount] = useState(0);
 
-  _incrementCount = () => {
-    this.setState(prevState => ({ count: (prevState.count + 1) % (this.props.drill.steps.length + 1) }));
+  const incrementCount = () => {
+    setCount((count + 1) % (props.drill.steps.length + 1));
   };
 
-  displayNextStep() {
-    if (this.state.count + 1 === this.props.drill.steps.length) {
+  const displayNextStep = () => {
+    if (count + 1 === props.drill.steps.length) {
       return (
         <View style={styles.infoWrapper}>
           <View style={styles.description}>
@@ -38,10 +31,10 @@ class DrillAnimationPage extends Component {
         <View style={styles.infoWrapper}>
           <View style={styles.description}>
             <View style={styles.subWrapper}>
-              <Text style={styles.fitnessNext}>{this.props.drill.steps[this.state.count + 1].count}</Text>
+              <Text style={styles.fitnessNext}>{props.drill.steps[count + 1].count}</Text>
             </View>
             <View style={styles.subSubWrapper}>
-              <Text style={styles.fitnessNext}>{this.props.drill.steps[this.state.count + 1].title}</Text>
+              <Text style={styles.fitnessNext}>{props.drill.steps[count + 1].title}</Text>
             </View>
             <View style={styles.fakeWrapper} />
           </View>
@@ -49,34 +42,34 @@ class DrillAnimationPage extends Component {
         </View>
       );
     }
-  }
+  };
 
-  checkSwitch() {
-    if (this.state.count === this.props.drill.steps.length) {
-      return this.displayFinish();
+  const checkSwitch = () => {
+    if (count === props.drill.steps.length) {
+      return displayFinish();
     } else {
-      switch (this.props.drill.steps[this.state.count].source) {
+      switch (props.drill.steps[count].source) {
         case 'animation':
-          return this.displayAnimation();
+          return displayAnimation();
 
         case 'youtube':
-          return this.displayYoutube();
+          return displayYoutube();
 
         case 'vimeo':
-          return this.displayVimeo();
+          return displayVimeo();
 
         default:
           return <Text>No visual content for this drill</Text>;
       }
     }
-  }
+  };
 
-  displayFinish() {
+  const displayFinish = () => {
     return (
       <View>
         <View style={styles.containerFinish}>
           <View style={styles.infoWrapper}>
-            <TouchableOpacity style={styles.buttonFinish} onPress={() => this._incrementCount()}>
+            <TouchableOpacity style={styles.buttonFinish} onPress={() => incrementCount()}>
               <LinearGradient
                 style={styles.gradient}
                 colors={['#08AEEA', '#2AF598']}
@@ -90,72 +83,59 @@ class DrillAnimationPage extends Component {
         </View>
       </View>
     );
-  }
+  };
 
-  displayAnimation() {
+  const displayAnimation = () => {
     return (
       <ScrollView style={styles.scrollView}>
         <View style={styles.pageAnimation}>
-          <Animation animation={this.props.drill.steps[this.state.count].link} />
+          <Animation animation={props.drill.steps[count].link} />
         </View>
         <View style={styles.containerAnimation}>
-          <Text style={styles.fitness}>{this.props.drill.steps[this.state.count].count}</Text>
-          <TouchableOpacity style={styles.buttonNext} onPress={() => this._incrementCount()}></TouchableOpacity>
+          <Text style={styles.fitness}>{props.drill.steps[count].count}</Text>
+          <TouchableOpacity style={styles.buttonNext} onPress={() => incrementCount()} />
         </View>
         <View style={styles.subSubWrapper}>
-          <Text style={styles.instruction}>{this.props.drill.steps[this.state.count].instruction}</Text>
+          <Text style={styles.instruction}>{props.drill.steps[count].instruction}</Text>
         </View>
       </ScrollView>
     );
-  }
+  };
 
-  displayYoutube() {
+  const displayYoutube = () => {
     return (
       <WebView
         source={{
-          uri: this.props.drill.steps[this.state.count].link,
+          uri: props.drill.steps[count].link,
         }}
         style={styles.drillAnimationPage}
       />
     );
-  }
+  };
 
-  displayVimeo() {
+  const displayVimeo = () => {
     return (
       <View style={styles.drillAnimationPage}>
-        <Video
-          source={{
-            uri: this.props.drill.steps[this.state.count].link,
-          }}
-          rate={1.0}
-          volume={1.0}
-          isMuted
-          resizeMode="cover"
-          shouldPlay
-          isLooping
-          style={{ width: screenDimension.width, height: 300 }}
-        />
+        <VimeoVideo vimeoId={props.drill.steps[count].link} screenWidth={screenDimension.width} />
         <View style={styles.infoWrapper}>
           <View style={styles.description}>
             <View style={styles.subWrapper}>
-              <Text style={styles.fitness}>{this.props.drill.steps[this.state.count].count}</Text>
+              <Text style={styles.fitness}>{props.drill.steps[count].count}</Text>
             </View>
             <View style={styles.subSubWrapper}>
-              <Text style={styles.fitness}>{this.props.drill.steps[this.state.count].title}</Text>
+              <Text style={styles.fitness}>{props.drill.steps[count].title}</Text>
             </View>
-            <TouchableOpacity style={styles.buttonNext} onPress={() => this._incrementCount()}></TouchableOpacity>
+            <TouchableOpacity style={styles.buttonNext} onPress={() => incrementCount()} />
           </View>
           <View style={styles.lines} />
         </View>
-        <View style={styles.container}>{this.displayNextStep()}</View>
+        <View style={styles.container}>{displayNextStep()}</View>
       </View>
     );
-  }
+  };
 
-  render() {
-    return <View style={styles.container}>{this.checkSwitch()}</View>;
-  }
-}
+  return <View style={styles.container}>{checkSwitch()}</View>;
+};
 
 const screenDimension = Dimensions.get('window');
 const styles = StyleSheet.create({

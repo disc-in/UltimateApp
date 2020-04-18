@@ -4,6 +4,7 @@ import animationSquare from './AnimationSquare';
 export const DrillTypes = {
   FITNESS: 'fitness',
   TECHNICAL: 'technical',
+  GAME: 'game',
 };
 
 export const Intensities = {
@@ -14,19 +15,23 @@ export const Intensities = {
 
 export const GoalsFrisbee = {
   DEFENSE: 'Defense',
+  MARK: 'Mark',
   HANDLING: 'Handling',
   CUTTING: 'Cutting',
   THROWING: 'Throwing',
+  BREAK: 'Breaking the mark',
   COMMUNICATION: 'Communication',
   CATCH: 'Catch',
+  PLAY: 'Playing time',
 };
 
 export const GoalsFitness = {
   LEGS: 'Legs',
   UPPER: 'Upper',
   FULL_BODY: 'Full body',
-  CORE: 'CORE',
+  CORE: 'Core',
   CONDITIONING: 'Conditioning',
+  WARM_UP: 'Warm-up',
 };
 
 export const Levels = {
@@ -54,32 +59,28 @@ export default {
     {
       id: 1,
       type: DrillTypes.FITNESS,
-      source: 'Author',
-      title: 'Fitness Drill Title',
-      image: 'https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg',
-      description: 'Description of the drill',
-      minimalPlayersNumber: 1,
+      source: 'Martin',
+      title: 'Basic warm up',
+      image:
+        'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
+      description:
+        'The most basic warm-up you may set up for your team : warm-ing up your body with stretching and fitness exercises',
+      minimalPlayersNumber: 2,
       equipmentLabel: EquipmentLabels.NONE,
-      equipment: 'Equipment needs for the drill',
-      durationInMinutes: 10,
+      equipment: '',
+      durationInMinutes: 20,
       intensity: Intensities.LOW,
-      goals: [GoalsFitness.FULL_BODY],
-      seasonTiming: SeasonTimings.OFF_SEASON,
+      goals: [GoalsFitness.CORE],
+      seasonTiming: SeasonTimings.ANYTIME,
       level: Levels.BEGINNER,
-      video: 'https://www.youtube.com/embed/JkVHrA5o23o',
-      /* animation:, */
       steps: [
         {
-          title: 'Warmup',
-          subtitle: 'This is a subtitle',
+          title: '2 field laps',
+          subtitle: 'Run calmly around the field. Perfect time to chat!',
         },
         {
-          title: 'Do the drill',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Last step',
-          subtitle: 'This is a subtitle',
+          title: 'Games',
+          subtitle: 'Gammes',
         },
       ],
     },
@@ -791,91 +792,109 @@ export default {
       id: 1001,
       type: DrillTypes.TECHNICAL,
       source: 'Author',
-      title: 'Frisbee Drill Title',
+      title: 'Chevron passes',
       image: 'https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
-      minimalPlayersNumber: 2,
-      equipmentLabel: '',
-      equipment: 'Equipment needs for the drill',
-      /* [
-        {
-          count: 1,
-          type: 'Disc',
-        },
-        {
-          count: 2,
-          type: 'Cone',
-        },
-      ], */
-
-      durationInMinutes: 30,
-      intensity: Intensities.LOW,
-      goals: [GoalsFrisbee.DEFENSE],
-      seasonTiming: '',
-      level: Levels.INTERMEDIATE,
-      /* video:, */
+      description: 'Cutting in the right timing, catching and passing straight away',
+      minimalPlayersNumber: 8,
+      equipmentLabel: EquipmentLabels.NONE,
+      equipment: 'None',
+      durationInMinutes: 10,
+      intensity: Intensities.HIGH,
+      goals: [GoalsFrisbee.CUTTING, GoalsFrisbee.CATCH, GoalsFrisbee.THROWING],
+      seasonTiming: SeasonTimings.ANYTIME,
+      level: Levels.BEGINNER,
       animation: animationSquare,
       steps: [],
     },
     {
       id: 1002,
       type: DrillTypes.TECHNICAL,
-      source: 'Author',
-      title: 'Frisbee Drill Title',
+      source: 'Martin',
+      title: '3 people mark',
       image:
         'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
+      description: '',
       minimalPlayersNumber: 2,
-      equipmentLabel: '',
-      equipment: 'Equipment needs for the drill',
-      /* [
-        {
-          count: 1,
-          type: 'Disc',
-        },
-        {
-          count: 2,
-          type: 'Cone',
-        },
-      ], */
-      durationInMinutes: 30,
-      intensity: Intensities.LOW,
-      goals: [GoalsFrisbee.DEFENSE],
-      seasonTiming: '',
-      level: Levels.ADVANCED,
-      /* video:, */
+      equipmentLabel: EquipmentLabels.NONE,
+      equipment: 'None',
+      durationInMinutes: 10,
+      intensity: Intensities.MODERATE,
+      goals: [GoalsFrisbee.DEFENSE, GoalsFrisbee.BREAK],
+      seasonTiming: SeasonTimings.ANYTIME,
+      level: Levels.INTERMEDIATE,
       animation: animationSquare,
       steps: [],
     },
     {
       id: 1003,
       type: DrillTypes.TECHNICAL,
-      source: 'Author',
-      title: 'Frisbee Drill Title',
+      source: 'Martin',
+      title: 'Cuts to the break side',
+      image: 'https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1',
+      description: 'Cut from the open side to the break side. The thrower and the mark are working',
+      minimalPlayersNumber: 6,
+      equipmentLabel: EquipmentLabels.NONE,
+      equipment: 'Cones if you have some (not mandatory)',
+      durationInMinutes: 20,
+      intensity: Intensities.MODERATE,
+      goals: [GoalsFrisbee.BREAK, GoalsFrisbee.MARK],
+      seasonTiming: SeasonTimings.ANYTIME,
+      level: Levels.INTERMEDIATE,
+      animation: animationSquare,
+      steps: [],
+    },
+    {
+      id: 1004,
+      type: DrillTypes.TECHNICAL,
+      source: 'Martin',
+      title: 'L drill',
+      image: 'https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1',
+      description: 'Or is it Hell drill?\nTo practice in groups of 8 to 14 players',
+      minimalPlayersNumber: 6,
+      equipmentLabel: EquipmentLabels.BASIC,
+      equipment: '1 disc per player, 3 cones',
+      durationInMinutes: 30,
+      intensity: Intensities.MODERATE,
+      goals: [GoalsFrisbee.THROWING],
+      seasonTiming: SeasonTimings.ANYTIME,
+      level: Levels.INTERMEDIATE,
+      animation: animationSquare,
+      steps: [],
+    },
+    {
+      id: 1005,
+      type: DrillTypes.TECHNICAL,
+      source: 'Martin',
+      title: '3 columns long shot',
+      image: 'https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1',
+      description: 'Basic long passes drill. You want your players to alternate between throwing, running and passing',
+      minimalPlayersNumber: 12,
+      equipmentLabel: EquipmentLabels.BASIC,
+      equipment: 'around 1 disc for 3 players, 3 cones',
+      durationInMinutes: 20,
+      intensity: Intensities.MODERATE,
+      goals: [GoalsFrisbee.THROWING],
+      seasonTiming: SeasonTimings.ANYTIME,
+      level: Levels.INTERMEDIATE,
+      animation: animationSquare,
+      steps: [],
+    },
+    {
+      id: 1006,
+      type: DrillTypes.TECHNICAL,
+      source: 'Martin',
+      title: '2 columns long shot with defense',
       image: 'https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
-      minimalPlayersNumber: 2,
-      equipmentLabel: '',
-      equipment: 'Equipment needs for the drill',
-      /* [
-        {
-          count: 1,
-          type: 'Disc',
-        },
-        {
-          count: 2,
-          type: 'Cone',
-        },
-      ], */
+        'Basic long passes drill. You want your players to alternate between throwing, running and passing, with offense and defense',
+      minimalPlayersNumber: 18,
+      equipmentLabel: EquipmentLabels.BASIC,
+      equipment: 'around 1 disc for 3 players, 3 cones',
       durationInMinutes: 30,
-      intensity: Intensities.LOW,
-      goals: [GoalsFrisbee.DEFENSE],
-      seasonTiming: '',
-      level: Levels.BEGINNER,
-      /* video:, */
+      intensity: Intensities.HIGH,
+      goals: [GoalsFrisbee.THROWING],
+      seasonTiming: SeasonTimings.ANYTIME,
+      level: Levels.INTERMEDIATE,
       animation: animationSquare,
       steps: [],
     },
@@ -891,16 +910,6 @@ export default {
       minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
-      /* [
-        {
-          count: 1,
-          type: 'Disc',
-        },
-        {
-          count: 2,
-          type: 'Cone',
-        },
-      ], */
       durationInMinutes: 10,
       intensity: Intensities.LOW,
       goals: [GoalsFrisbee.DEFENSE],
@@ -921,16 +930,6 @@ export default {
       minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
-      /* [
-        {
-          count: 1,
-          type: 'Disc',
-        },
-        {
-          count: 2,
-          type: 'Cone',
-        },
-      ], */
       durationInMinutes: 20,
       intensity: Intensities.LOW,
       goals: [GoalsFrisbee.DEFENSE],
@@ -951,16 +950,6 @@ export default {
       minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
-      /* [
-        {
-          count: 1,
-          type: 'Disc',
-        },
-        {
-          count: 2,
-          type: 'Cone',
-        },
-      ], */
       durationInMinutes: 20,
       intensity: Intensities.LOW,
       goals: [GoalsFrisbee.DEFENSE],
@@ -981,16 +970,6 @@ export default {
       minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
-      /* [
-        {
-          count: 1,
-          type: 'Disc',
-        },
-        {
-          count: 2,
-          type: 'Cone',
-        },
-      ], */
       durationInMinutes: 30,
       intensity: Intensities.LOW,
       goals: [GoalsFrisbee.DEFENSE],
@@ -1012,16 +991,6 @@ export default {
       minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
-      /* [
-        {
-          count: 1,
-          type: 'Disc',
-        },
-        {
-          count: 2,
-          type: 'Cone',
-        },
-      ], */
       durationInMinutes: 10,
       intensity: Intensities.LOW,
       goals: [GoalsFrisbee.DEFENSE],
@@ -1043,16 +1012,6 @@ export default {
       minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
-      /* [
-        {
-          count: 1,
-          type: 'Disc',
-        },
-        {
-          count: 2,
-          type: 'Cone',
-        },
-      ], */
       durationInMinutes: 30,
       intensity: Intensities.LOW,
       goals: [GoalsFrisbee.DEFENSE],
@@ -1074,16 +1033,6 @@ export default {
       minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
-      /* [
-        {
-          count: 1,
-          type: 'Disc',
-        },
-        {
-          count: 2,
-          type: 'Cone',
-        },
-      ], */
       durationInMinutes: 30,
       intensity: Intensities.LOW,
       goals: [GoalsFrisbee.DEFENSE],
@@ -1104,16 +1053,6 @@ export default {
       minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
-      /* [
-        {
-          count: 1,
-          type: 'Disc',
-        },
-        {
-          count: 2,
-          type: 'Cone',
-        },
-      ], */
       durationInMinutes: 20,
       intensity: Intensities.LOW,
       goals: [GoalsFrisbee.DEFENSE],
@@ -1134,16 +1073,6 @@ export default {
       minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
-      /* [
-        {
-          count: 1,
-          type: 'Disc',
-        },
-        {
-          count: 2,
-          type: 'Cone',
-        },
-      ], */
       durationInMinutes: 10,
       intensity: Intensities.LOW,
       goals: [GoalsFrisbee.DEFENSE],
@@ -1165,16 +1094,6 @@ export default {
       minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
-      /* [
-        {
-          count: 1,
-          type: 'Disc',
-        },
-        {
-          count: 2,
-          type: 'Cone',
-        },
-      ], */
       durationInMinutes: 30,
       intensity: Intensities.LOW,
       goals: [GoalsFrisbee.DEFENSE],
@@ -1196,16 +1115,6 @@ export default {
       minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
-      /* [
-        {
-          count: 1,
-          type: 'Disc',
-        },
-        {
-          count: 2,
-          type: 'Cone',
-        },
-      ], */
       durationInMinutes: 20,
       intensity: Intensities.LOW,
       goals: [GoalsFrisbee.DEFENSE],
@@ -1226,16 +1135,6 @@ export default {
       minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
-      /* [
-        {
-          count: 1,
-          type: 'Disc',
-        },
-        {
-          count: 2,
-          type: 'Cone',
-        },
-      ], */
       durationInMinutes: 20,
       intensity: Intensities.LOW,
       goals: [GoalsFrisbee.DEFENSE],
@@ -1257,16 +1156,6 @@ export default {
       minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
-      /* [
-        {
-          count: 1,
-          type: 'Disc',
-        },
-        {
-          count: 2,
-          type: 'Cone',
-        },
-      ], */
       durationInMinutes: 10,
       intensity: Intensities.LOW,
       goals: [GoalsFrisbee.DEFENSE],
@@ -1288,16 +1177,6 @@ export default {
       minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
-      /* [
-        {
-          count: 1,
-          type: 'Disc',
-        },
-        {
-          count: 2,
-          type: 'Cone',
-        },
-      ], */
       durationInMinutes: 30,
       intensity: Intensities.LOW,
       goals: [GoalsFrisbee.DEFENSE],
@@ -1318,16 +1197,6 @@ export default {
       minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
-      /* [
-        {
-          count: 1,
-          type: 'Disc',
-        },
-        {
-          count: 2,
-          type: 'Cone',
-        },
-      ], */
       durationInMinutes: 30,
       intensity: Intensities.LOW,
       goals: [GoalsFrisbee.DEFENSE],
@@ -1348,16 +1217,6 @@ export default {
       minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
-      /* [
-        {
-          count: 1,
-          type: 'Disc',
-        },
-        {
-          count: 2,
-          type: 'Cone',
-        },
-      ], */
       durationInMinutes: 20,
       intensity: Intensities.LOW,
       goals: [GoalsFrisbee.DEFENSE],
@@ -1379,16 +1238,6 @@ export default {
       minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
-      /* [
-        {
-          count: 1,
-          type: 'Disc',
-        },
-        {
-          count: 2,
-          type: 'Cone',
-        },
-      ], */
       durationInMinutes: 10,
       intensity: Intensities.LOW,
       goals: [GoalsFrisbee.DEFENSE],
@@ -1410,16 +1259,6 @@ export default {
       minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
-      /* [
-        {
-          count: 1,
-          type: 'Disc',
-        },
-        {
-          count: 2,
-          type: 'Cone',
-        },
-      ], */
       durationInMinutes: 20,
       intensity: Intensities.LOW,
       goals: [GoalsFrisbee.DEFENSE],
@@ -1440,16 +1279,6 @@ export default {
       minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
-      /* [
-        {
-          count: 1,
-          type: 'Disc',
-        },
-        {
-          count: 2,
-          type: 'Cone',
-        },
-      ], */
       durationInMinutes: 20,
       intensity: Intensities.LOW,
       goals: [GoalsFrisbee.DEFENSE],
@@ -1471,16 +1300,6 @@ export default {
       minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
-      /* [
-        {
-          count: 1,
-          type: 'Disc',
-        },
-        {
-          count: 2,
-          type: 'Cone',
-        },
-      ], */
       durationInMinutes: 20,
       intensity: Intensities.LOW,
       goals: [GoalsFrisbee.DEFENSE],
@@ -1490,11 +1309,65 @@ export default {
       animation: animationSquare,
       steps: [],
     },
+    {
+      id: 2001,
+      type: DrillTypes.GAME,
+      source: 'Martin',
+      title: '7v7 game',
+      image:
+        'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
+      description:
+        "It's always interesting to have a time to play in game conditions towards the end of a training. That's the perfect moment to use what players have learnt during the training. Keep in mind that players always FORGET everything when they start playing, so remind them what we're to concentrate on",
+      minimalPlayersNumber: 14,
+      equipmentLabel: EquipmentLabels.BASIC,
+      equipment: '8 cones and 1 disc per field',
+      durationInMinutes: 20,
+      intensity: Intensities.LOW,
+      goals: [GoalsFitness.CORE],
+      seasonTiming: SeasonTimings.ANYTIME,
+      level: Levels.BEGINNER,
+    },
+    {
+      id: 2002,
+      type: DrillTypes.GAME,
+      source: 'Martin',
+      title: '3v3 games',
+      image:
+        'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
+      description:
+        "The perfect setup if you have a LOT of players or want your players to touch a lot of frisbees in a short time. This can be quite exhausting so don't forget to set breaks every 5 o 10 minutes.",
+      minimalPlayersNumber: 6,
+      equipmentLabel: EquipmentLabels.BASIC,
+      equipment: '8 cones and 1 disc per field',
+      durationInMinutes: 20,
+      intensity: Intensities.HIGH,
+      goals: [GoalsFrisbee.PLAY],
+      seasonTiming: SeasonTimings.ANYTIME,
+      level: Levels.BEGINNER,
+    },
+    {
+      id: 2003,
+      type: DrillTypes.GAME,
+      source: 'Martin',
+      title: 'Long shots oriented game',
+      image:
+        'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
+      description:
+        'Just a classical game on the whole field. Only exception: a team scores 2 points if there was a successful long shot on the offense that lead to scoring!',
+      minimalPlayersNumber: 6,
+      equipmentLabel: EquipmentLabels.BASIC,
+      equipment: '8 cones and 1 disc per field',
+      durationInMinutes: 20,
+      intensity: Intensities.HIGH,
+      goals: [GoalsFrisbee.PLAY, GoalsFrisbee.THROWING],
+      seasonTiming: SeasonTimings.ANYTIME,
+      level: Levels.INTERMEDIATE,
+    },
   ],
   trainings: [
     {
       id: 1,
-      source: 'Rise Up',
+      source: '** Ultimate App **',
       title: 'Dump & Swing',
       image: 'https://d3j2bju5c7tc02.cloudfront.net/2016_44/backhand.jpg',
       description: 'This training session aims at make your team better at Dump & Swing. blabla bla bla bla',
@@ -1508,6 +1381,36 @@ export default {
         'https://cdn3.sportngin.com/attachments/photo/be7e-106813275/Screen_Shot_2018-07-19_at_3.53.39_PM_large.png',
       description: 'This training session aims at........',
       drills: [5, 6, 7, 8],
+    },
+    {
+      id: 3,
+      source: 'Martin',
+      title: 'Coed 2 Mark',
+      image:
+        'https://cdn3.sportngin.com/attachments/photo/be7e-106813275/Screen_Shot_2018-07-19_at_3.53.39_PM_large.png',
+      description:
+        "This training session aims at practicing your mark skills. Don't be broken to easily, generate dangerous passes",
+      drills: [1, 1001, 1002, 1003, 2002],
+    },
+    {
+      id: 4,
+      source: 'Martin',
+      title: 'Coed 2 Long',
+      image:
+        'https://cdn3.sportngin.com/attachments/photo/be7e-106813275/Screen_Shot_2018-07-19_at_3.53.39_PM_large.png',
+      description:
+        "This training session aims at practicing your mark skills. Don't be broken to easily, generate dangerous passes",
+      drills: [1, 1004, 1005, 2003],
+    },
+    {
+      id: 5,
+      source: 'Martin',
+      title: 'Coed 2 Long v2',
+      image:
+        'https://cdn3.sportngin.com/attachments/photo/be7e-106813275/Screen_Shot_2018-07-19_at_3.53.39_PM_large.png',
+      description:
+        "This training session aims at practicing your mark skills. Don't be broken to easily, generate dangerous passes",
+      drills: [1, 1005, 1006, 2003],
     },
   ],
 };

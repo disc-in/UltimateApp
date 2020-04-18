@@ -1,9 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import { Video } from 'expo-av';
 
 const VimeoVideo = props => {
-  const [urlVideo, setUrlVideo] = useState('');
   const vimeoUrlSource = `https://player.vimeo.com/video/${props.vimeoId}/config`;
   const videoElem = useRef(null);
 
@@ -23,19 +22,19 @@ const VimeoVideo = props => {
           }
         })
         .then(async url => {
-          console.log(' bim url is ', url);
           try {
             await videoElem.current.loadAsync({
               uri: url,
-              intialStatus: {
-                rate: 1.0,
-                isMuted: true,
-                resizeMode: 'cover',
-                shouldPlay: true,
-                isLooping: true,
-              },
-              downloadFirst: true,
             });
+            await videoElem.current.setStatusAsync({
+              rate: 1.0,
+              isMuted: true,
+              resizeMode: Video.RESIZE_MODE_CONTAIN,
+              shouldPlay: true,
+              isLooping: true,
+            });
+            const status = await videoElem.current.getStatusAsync();
+            console.log(' status is ', status);
           } catch (e) {
             console.log('ERROR Loading Video', e);
           }
@@ -48,7 +47,9 @@ const VimeoVideo = props => {
     };
   }, [vimeoUrlSource]);
 
-  return <Video ref={videoElem} style={{ width: props.screenWidth, height: 300 }} />;
+  return (
+    <Video ref={videoElem} resizeMode={Video.RESIZE_MODE_CONTAIN} style={{ width: props.screenWidth, height: 250 }} />
+  );
 };
 
 export default VimeoVideo;

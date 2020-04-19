@@ -26,9 +26,4 @@ export default {
     flexWrap: 'wrap',
     justifyContent: 'space-between',
   },
-  slider: {
-    marginTop: 10,
-    marginBottom: 30,
-    width: '90%',
-  },
 };

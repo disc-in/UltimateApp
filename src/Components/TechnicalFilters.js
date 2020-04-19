@@ -1,9 +1,10 @@
 import React from 'react';
-import { ScrollView, View, Text, TouchableOpacity, TextInput, Slider } from 'react-native';
+import { ScrollView, View, Text, TouchableOpacity, TextInput } from 'react-native';
 import filterStyle from '../styles/filters.style';
 import { Levels } from '../Fixtures';
 import Button from './shared/FilterButton';
 import Checkbox from './shared/Checkbox';
+import Slider from './shared/Slider';
 import HeaderButton from './shared/HeaderButton';
 
 class TechnicalFilters extends React.Component {
@@ -98,7 +99,6 @@ class TechnicalFilters extends React.Component {
             step={1}
             value={numberOfPlayers}
             onValueChange={this.onNumberOfPlayersChange}
-            style={filterStyle.slider}
             testID="numberOfPlayersSlider"
           />
         </ScrollView>

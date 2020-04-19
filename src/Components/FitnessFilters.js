@@ -1,9 +1,10 @@
 import React from 'react';
-import { StyleSheet, ScrollView, View, Text, TouchableOpacity, TextInput, Slider } from 'react-native';
+import { StyleSheet, ScrollView, View, Text, TouchableOpacity, TextInput } from 'react-native';
 import filterStyle from '../styles/filters.style';
 import { Levels, Intensities, EquipmentLabels, SeasonTimings } from '../Fixtures';
 import Button from './shared/FilterButton';
 import Checkbox from './shared/Checkbox';
+import Slider from './shared/Slider';
 import HeaderButton from './shared/HeaderButton';
 
 class FitnessFilters extends React.Component {
@@ -151,7 +152,6 @@ class FitnessFilters extends React.Component {
             step={1}
             value={durationInMinutes}
             onValueChange={this.onDurationInMinutesChange}
-            style={filterStyle.slider}
             testID="durationSlider"
           />
         </ScrollView>

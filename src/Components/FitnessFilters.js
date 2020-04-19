@@ -3,6 +3,7 @@ import { StyleSheet, ScrollView, View, Text, TouchableOpacity, TextInput, Slider
 import filterStyle from '../styles/filters.style';
 import { Levels, Intensities, EquipmentLabels, SeasonTimings } from '../Fixtures';
 import Button from './shared/FilterButton';
+import Checkbox from './shared/Checkbox';
 import HeaderButton from './shared/HeaderButton';
 
 class FitnessFilters extends React.Component {
@@ -135,7 +136,7 @@ class FitnessFilters extends React.Component {
               .reduce((x, y) => x.concat(y), [])
               .filter((goal, index, array) => array.indexOf(goal) === index)
               .map(goal => (
-                <Button
+                <Checkbox
                   title={goal}
                   onPress={() => this.onPressedChange('selectedGoal', goal)}
                   key={goal}

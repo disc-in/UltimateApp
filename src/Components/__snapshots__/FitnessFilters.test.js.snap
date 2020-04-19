@@ -25,8 +25,8 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
   <RCTScrollView
     contentContainerStyle={
       Object {
-        "alignItems": "center",
         "paddingBottom": 50,
+        "paddingHorizontal": 10,
       }
     }
   >
@@ -35,7 +35,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
         style={
           Object {
             "fontWeight": "bold",
-            "marginTop": 10,
+            "marginBottom": 10,
             "textTransform": "uppercase",
           }
         }
@@ -47,8 +47,8 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           Object {
             "flexDirection": "row",
             "flexWrap": "wrap",
-            "justifyContent": "center",
-            "marginBottom": 10,
+            "justifyContent": "space-between",
+            "marginBottom": 20,
           }
         }
       >
@@ -68,7 +68,9 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
               "backgroundColor": "#fff",
               "borderColor": "#e5e5e5",
               "borderWidth": 1,
-              "margin": 5,
+              "flexBasis": "30%",
+              "flexGrow": 1,
+              "marginRight": 5,
               "opacity": 1,
               "paddingHorizontal": 20,
               "paddingVertical": 10,
@@ -78,6 +80,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           <Text
             style={
               Object {
+                "textAlign": "center",
                 "textTransform": "capitalize",
               }
             }
@@ -101,7 +104,9 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
               "backgroundColor": "#fff",
               "borderColor": "#e5e5e5",
               "borderWidth": 1,
-              "margin": 5,
+              "flexBasis": "30%",
+              "flexGrow": 1,
+              "marginRight": 5,
               "opacity": 1,
               "paddingHorizontal": 20,
               "paddingVertical": 10,
@@ -111,6 +116,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           <Text
             style={
               Object {
+                "textAlign": "center",
                 "textTransform": "capitalize",
               }
             }
@@ -134,7 +140,9 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
               "backgroundColor": "#fff",
               "borderColor": "#e5e5e5",
               "borderWidth": 1,
-              "margin": 5,
+              "flexBasis": "30%",
+              "flexGrow": 1,
+              "marginRight": 5,
               "opacity": 1,
               "paddingHorizontal": 20,
               "paddingVertical": 10,
@@ -144,6 +152,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           <Text
             style={
               Object {
+                "textAlign": "center",
                 "textTransform": "capitalize",
               }
             }
@@ -156,7 +165,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
         style={
           Object {
             "fontWeight": "bold",
-            "marginTop": 10,
+            "marginBottom": 10,
             "textTransform": "uppercase",
           }
         }
@@ -168,8 +177,8 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           Object {
             "flexDirection": "row",
             "flexWrap": "wrap",
-            "justifyContent": "center",
-            "marginBottom": 10,
+            "justifyContent": "space-between",
+            "marginBottom": 20,
           }
         }
       >
@@ -189,7 +198,9 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
               "backgroundColor": "#fff",
               "borderColor": "#e5e5e5",
               "borderWidth": 1,
-              "margin": 5,
+              "flexBasis": "30%",
+              "flexGrow": 1,
+              "marginRight": 5,
               "opacity": 1,
               "paddingHorizontal": 20,
               "paddingVertical": 10,
@@ -199,6 +210,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           <Text
             style={
               Object {
+                "textAlign": "center",
                 "textTransform": "capitalize",
               }
             }
@@ -222,7 +234,9 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
               "backgroundColor": "#fff",
               "borderColor": "#e5e5e5",
               "borderWidth": 1,
-              "margin": 5,
+              "flexBasis": "30%",
+              "flexGrow": 1,
+              "marginRight": 5,
               "opacity": 1,
               "paddingHorizontal": 20,
               "paddingVertical": 10,
@@ -232,6 +246,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           <Text
             style={
               Object {
+                "textAlign": "center",
                 "textTransform": "capitalize",
               }
             }
@@ -255,7 +270,9 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
               "backgroundColor": "#fff",
               "borderColor": "#e5e5e5",
               "borderWidth": 1,
-              "margin": 5,
+              "flexBasis": "30%",
+              "flexGrow": 1,
+              "marginRight": 5,
               "opacity": 1,
               "paddingHorizontal": 20,
               "paddingVertical": 10,
@@ -265,6 +282,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           <Text
             style={
               Object {
+                "textAlign": "center",
                 "textTransform": "capitalize",
               }
             }
@@ -277,7 +295,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
         style={
           Object {
             "fontWeight": "bold",
-            "marginTop": 10,
+            "marginBottom": 10,
             "textTransform": "uppercase",
           }
         }
@@ -289,8 +307,8 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           Object {
             "flexDirection": "row",
             "flexWrap": "wrap",
-            "justifyContent": "center",
-            "marginBottom": 10,
+            "justifyContent": "space-between",
+            "marginBottom": 20,
           }
         }
       >
@@ -310,7 +328,9 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
               "backgroundColor": "#fff",
               "borderColor": "#e5e5e5",
               "borderWidth": 1,
-              "margin": 5,
+              "flexBasis": "30%",
+              "flexGrow": 1,
+              "marginRight": 5,
               "opacity": 1,
               "paddingHorizontal": 20,
               "paddingVertical": 10,
@@ -320,11 +340,12 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           <Text
             style={
               Object {
+                "textAlign": "center",
                 "textTransform": "capitalize",
               }
             }
           >
-            No Equipment
+            None
           </Text>
         </View>
         <View
@@ -343,7 +364,9 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
               "backgroundColor": "#fff",
               "borderColor": "#e5e5e5",
               "borderWidth": 1,
-              "margin": 5,
+              "flexBasis": "30%",
+              "flexGrow": 1,
+              "marginRight": 5,
               "opacity": 1,
               "paddingHorizontal": 20,
               "paddingVertical": 10,
@@ -353,11 +376,12 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           <Text
             style={
               Object {
+                "textAlign": "center",
                 "textTransform": "capitalize",
               }
             }
           >
-            Basic Equipment
+            Basic
           </Text>
         </View>
         <View
@@ -376,7 +400,9 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
               "backgroundColor": "#fff",
               "borderColor": "#e5e5e5",
               "borderWidth": 1,
-              "margin": 5,
+              "flexBasis": "30%",
+              "flexGrow": 1,
+              "marginRight": 5,
               "opacity": 1,
               "paddingHorizontal": 20,
               "paddingVertical": 10,
@@ -386,11 +412,12 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           <Text
             style={
               Object {
+                "textAlign": "center",
                 "textTransform": "capitalize",
               }
             }
           >
-            Full equipment
+            Full
           </Text>
         </View>
       </View>
@@ -398,7 +425,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
         style={
           Object {
             "fontWeight": "bold",
-            "marginTop": 10,
+            "marginBottom": 10,
             "textTransform": "uppercase",
           }
         }
@@ -410,8 +437,8 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           Object {
             "flexDirection": "row",
             "flexWrap": "wrap",
-            "justifyContent": "center",
-            "marginBottom": 10,
+            "justifyContent": "space-between",
+            "marginBottom": 20,
           }
         }
       >
@@ -431,7 +458,9 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
               "backgroundColor": "#fff",
               "borderColor": "#e5e5e5",
               "borderWidth": 1,
-              "margin": 5,
+              "flexBasis": "30%",
+              "flexGrow": 1,
+              "marginRight": 5,
               "opacity": 1,
               "paddingHorizontal": 20,
               "paddingVertical": 10,
@@ -441,6 +470,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           <Text
             style={
               Object {
+                "textAlign": "center",
                 "textTransform": "capitalize",
               }
             }
@@ -464,7 +494,9 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
               "backgroundColor": "#fff",
               "borderColor": "#e5e5e5",
               "borderWidth": 1,
-              "margin": 5,
+              "flexBasis": "30%",
+              "flexGrow": 1,
+              "marginRight": 5,
               "opacity": 1,
               "paddingHorizontal": 20,
               "paddingVertical": 10,
@@ -474,6 +506,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           <Text
             style={
               Object {
+                "textAlign": "center",
                 "textTransform": "capitalize",
               }
             }
@@ -497,7 +530,9 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
               "backgroundColor": "#fff",
               "borderColor": "#e5e5e5",
               "borderWidth": 1,
-              "margin": 5,
+              "flexBasis": "30%",
+              "flexGrow": 1,
+              "marginRight": 5,
               "opacity": 1,
               "paddingHorizontal": 20,
               "paddingVertical": 10,
@@ -507,6 +542,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           <Text
             style={
               Object {
+                "textAlign": "center",
                 "textTransform": "capitalize",
               }
             }
@@ -530,7 +566,9 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
               "backgroundColor": "#fff",
               "borderColor": "#e5e5e5",
               "borderWidth": 1,
-              "margin": 5,
+              "flexBasis": "30%",
+              "flexGrow": 1,
+              "marginRight": 5,
               "opacity": 1,
               "paddingHorizontal": 20,
               "paddingVertical": 10,
@@ -540,6 +578,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           <Text
             style={
               Object {
+                "textAlign": "center",
                 "textTransform": "capitalize",
               }
             }
@@ -552,7 +591,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
         style={
           Object {
             "fontWeight": "bold",
-            "marginTop": 10,
+            "marginBottom": 10,
             "textTransform": "uppercase",
           }
         }
@@ -564,50 +603,116 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           Object {
             "flexDirection": "row",
             "flexWrap": "wrap",
-            "justifyContent": "center",
-            "marginBottom": 10,
+            "justifyContent": "space-between",
+            "marginBottom": 20,
           }
         }
       >
         <View
-          accessible={true}
-          focusable={true}
-          isTVSelectable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "backgroundColor": "#fff",
-              "borderColor": "#e5e5e5",
-              "borderWidth": 1,
-              "margin": 5,
-              "opacity": 1,
-              "paddingHorizontal": 20,
-              "paddingVertical": 10,
+              "flexBasis": "50%",
             }
           }
         >
-          <Text
+          <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "textTransform": "capitalize",
+                "backgroundColor": "#fff",
+                "borderColor": "#ededed",
+                "borderRadius": 3,
+                "borderWidth": 0,
+                "margin": 0,
+                "marginLeft": 10,
+                "marginRight": 5,
+                "opacity": 1,
+                "padding": 0,
               }
             }
+            testID="checkbox"
           >
-            Full body
-          </Text>
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "borderWidth": 0,
+                  "flexDirection": "row",
+                  "margin": 0,
+                  "padding": 0,
+                }
+              }
+            >
+              <Text />
+              <Text
+                style={
+                  Object {
+                    "color": "#43484d",
+                    "fontWeight": "bold",
+                    "marginLeft": 10,
+                    "marginRight": 10,
+                    "textTransform": "capitalize",
+                  }
+                }
+                testID="checkboxTitle"
+                theme={
+                  Object {
+                    "colors": Object {
+                      "disabled": "hsl(208, 8%, 90%)",
+                      "divider": "#bcbbc1",
+                      "error": "#ff190c",
+                      "grey0": "#393e42",
+                      "grey1": "#43484d",
+                      "grey2": "#5e6977",
+                      "grey3": "#86939e",
+                      "grey4": "#bdc6cf",
+                      "grey5": "#e1e8ee",
+                      "greyOutline": "#bbb",
+                      "platform": Object {
+                        "android": Object {
+                          "error": "#f44336",
+                          "primary": "#2196f3",
+                          "secondary": "#9C27B0",
+                          "success": "#4caf50",
+                          "warning": "#ffeb3b",
+                        },
+                        "ios": Object {
+                          "error": "#ff3b30",
+                          "primary": "#007aff",
+                          "secondary": "#5856d6",
+                          "success": "#4cd964",
+                          "warning": "#ffcc00",
+                        },
+                      },
+                      "primary": "#2089dc",
+                      "searchBg": "#303337",
+                      "secondary": "#8F0CE8",
+                      "success": "#52c41a",
+                      "warning": "#faad14",
+                    },
+                  }
+                }
+              >
+                Full body
+              </Text>
+            </View>
+          </View>
         </View>
       </View>
       <Text
         style={
           Object {
             "fontWeight": "bold",
-            "marginTop": 10,
+            "marginBottom": 10,
             "textTransform": "uppercase",
           }
         }
@@ -620,7 +725,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
         disabled={false}
         enabled={true}
         maximumValue={60}
-        minimumValue={1}
+        minimumValue={10}
         onChange={[Function]}
         onResponderTerminationRequest={[Function]}
         onSlidingComplete={null}
@@ -635,7 +740,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
             Object {
               "marginBottom": 30,
               "marginTop": 10,
-              "width": "80%",
+              "width": "90%",
             },
           ]
         }

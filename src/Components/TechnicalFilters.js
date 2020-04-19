@@ -3,6 +3,7 @@ import { ScrollView, View, Text, TouchableOpacity, TextInput, Slider } from 'rea
 import filterStyle from '../styles/filters.style';
 import { Levels } from '../Fixtures';
 import Button from './shared/FilterButton';
+import Checkbox from './shared/Checkbox';
 import HeaderButton from './shared/HeaderButton';
 
 class TechnicalFilters extends React.Component {
@@ -82,7 +83,7 @@ class TechnicalFilters extends React.Component {
               .reduce((x, y) => x.concat(y), [])
               .filter((goal, index, array) => array.indexOf(goal) === index)
               .map(goal => (
-                <Button
+                <Checkbox
                   title={goal}
                   onPress={() => this.onPressedChange('selectedGoal', goal)}
                   key={goal}

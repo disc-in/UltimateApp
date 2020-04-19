@@ -7,7 +7,7 @@ export default {
   },
   filters: {
     paddingBottom: 50,
-    paddingLeft: 20,
+    paddingHorizontal: 10,
   },
   counter: {
     paddingTop: 10,
@@ -16,7 +16,7 @@ export default {
     marginBottom: 20,
   },
   filterTitle: {
-    marginBottom: 5,
+    marginBottom: 10,
     textTransform: 'uppercase',
     fontWeight: 'bold',
   },
@@ -29,6 +29,6 @@ export default {
   slider: {
     marginTop: 10,
     marginBottom: 30,
-    width: '80%',
+    width: '90%',
   },
 };

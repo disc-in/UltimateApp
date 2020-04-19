@@ -3,10 +3,10 @@ import { StyleSheet, View, Text, Dimensions } from 'react-native';
 import Animation from './Animation';
 import { WebView } from 'react-native-webview';
 
-class DrillAnimationPage extends Component {
+class DrillAnimation extends Component {
   render() {
     return (
-      <View style={styles.drillAnimationPage}>
+      <View style={styles.drillAnimation}>
         {this.props.animation ? (
           <Animation animation={this.props.animation} />
         ) : this.props.video ? (
@@ -21,10 +21,10 @@ class DrillAnimationPage extends Component {
 
 const screenDimension = Dimensions.get('window');
 const styles = StyleSheet.create({
-  drillAnimationPage: {
+  drillAnimation: {
     flex: 1,
     height: screenDimension.height,
   },
 });
 
-export default DrillAnimationPage;
+export default DrillAnimation;

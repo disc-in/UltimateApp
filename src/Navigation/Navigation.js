@@ -4,7 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import HomePage from '../Components/HomePage';
 import DrillListPage from '../Components/DrillListPage';
 import DrillPage from '../Components/DrillPage';
-import DrillAnimationPage from '../Components/DrillAnimationPage';
+import DrillAnimation from '../Components/DrillAnimation';
 import TrainingListPage from '../Components/TrainingListPage';
 import TrainingPage from '../Components/TrainingPage';
 
@@ -27,8 +27,8 @@ export const Navigation = () => (
         options={({ route }) => ({ title: route.params.drill.title })}
       />
       <Stack.Screen
-        name="DrillAnimationPage"
-        component={DrillAnimationPage}
+        name="DrillAnimation"
+        component={DrillAnimation}
         options={({ route }) => ({ title: route.params.drill.title })}
       />
       <Stack.Screen

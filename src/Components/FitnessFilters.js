@@ -2,9 +2,9 @@ import React from 'react';
 import { StyleSheet, ScrollView, View, Text, TouchableOpacity, TextInput } from 'react-native';
 import filterStyle from '../styles/filters.style';
 import { Levels, Intensities, EquipmentLabels, SeasonTimings } from '../Fixtures';
-import Button from './shared/FilterButton';
-import Checkbox from './shared/Checkbox';
-import Slider from './shared/Slider';
+import Button from './filters/FilterButton';
+import Checkbox from './filters/Checkbox';
+import Slider from './filters/Slider';
 import HeaderButton from './shared/HeaderButton';
 
 class FitnessFilters extends React.Component {

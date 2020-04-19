@@ -48,9 +48,9 @@ export const SeasonTimings = {
 };
 
 export const EquipmentLabels = {
-  NONE: 'No Equipment',
-  BASIC: 'Basic Equipment',
-  FULL: 'Full equipment',
+  NONE: 'None',
+  BASIC: 'Basic',
+  FULL: 'Full',
 };
 
 export default {

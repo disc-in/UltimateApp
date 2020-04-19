@@ -6,8 +6,8 @@ export default {
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
   },
   filters: {
-    alignItems: 'center',
     paddingBottom: 50,
+    paddingLeft: 20,
   },
   counter: {
     paddingTop: 10,
@@ -16,15 +16,15 @@ export default {
     marginBottom: 20,
   },
   filterTitle: {
-    marginTop: 10,
+    marginBottom: 5,
     textTransform: 'uppercase',
     fontWeight: 'bold',
   },
   filter: {
-    marginBottom: 10,
+    marginBottom: 20,
     flexDirection: 'row',
     flexWrap: 'wrap',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
   },
   slider: {
     marginTop: 10,

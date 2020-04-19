@@ -2,40 +2,30 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import animationMenageATrois from '../Fixtures/AnimationMenageATrois';
 
-import DrillAnimationPage from './DrillAnimationPage';
+import DrillAnimation from './DrillAnimation';
 
 describe('<DrillAnimationPage />', () => {
   it('renders correctly for a drill with video', () => {
-    const route = {
-      params: {
-        drill: {
-          video: 'https://www.youtube.com/embed/oN1bzPCKkGE',
-        },
-      },
+    const videoProps = {
+      video: 'https://www.youtube.com/embed/oN1bzPCKkGE',
     };
-    const tree = renderer.create(<DrillAnimationPage route={route} />).toJSON();
+    const tree = renderer.create(<DrillAnimation props={videoProps} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('renders correctly for a drill with animation', () => {
-    const route = {
-      params: {
-        drill: {
-          animation: animationMenageATrois,
-        },
-      },
+    const animationProps = {
+      animation: animationMenageATrois,
     };
-    const tree = renderer.create(<DrillAnimationPage route={route} />).toJSON();
+    const tree = renderer.create(<DrillAnimation props={animationProps} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('renders correctly for a drill with no video nor animation', () => {
-    const route = {
-      params: {
-        drill: {},
-      },
+    const noProps = {
+      drill: {},
     };
-    const tree = renderer.create(<DrillAnimationPage route={route} />).toJSON();
+    const tree = renderer.create(<DrillAnimation props={noProps} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

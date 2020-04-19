@@ -27,6 +27,7 @@
     "react-native-screens": "~2.2.0",
     "react-native-web": "^0.11.7",
     "react-native-webview": "8.1.1",
+    "expo-linear-gradient": "~8.1.0",
     "react-redux": "^7.2.0",
     "redux": "^4.0.5",
     "watchman": "^1.0.0"

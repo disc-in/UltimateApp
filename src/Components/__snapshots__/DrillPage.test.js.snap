@@ -375,7 +375,6 @@ exports[`<DrillPage /> renders correctly 1`] = `
                             style={
                               Object {
                                 "alignItems": "center",
-                                "backgroundColor": "#FFF933",
                                 "borderRadius": 50,
                                 "height": 100,
                                 "justifyContent": "center",
@@ -478,7 +477,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                         <View
                           style={
                             Object {
-                              "borderBottomColor": "#DCDCDC",
+                              "borderBottomColor": "#e5e5e5",
                               "borderBottomWidth": 1,
                             }
                           }
@@ -526,7 +525,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                         <View
                           style={
                             Object {
-                              "borderBottomColor": "#DCDCDC",
+                              "borderBottomColor": "#e5e5e5",
                               "borderBottomWidth": 1,
                             }
                           }

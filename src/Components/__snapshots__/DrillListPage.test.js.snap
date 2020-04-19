@@ -22,909 +22,911 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
     2
      drills available
   </Text>
-  <RCTScrollView
-    data={
-      Array [
-        Object {
-          "animation": Object {
-            "ids": Array [
-              "triangle",
-              "triangle",
-              "triangle",
-              "triangle",
-              "triangle",
-              "triangle",
-              "triangle",
-              "triangle",
-              "offense",
-              "offense",
-              "offense",
-              "offense",
-              "offense",
-              "disc",
+  <View>
+    <RCTScrollView
+      data={
+        Array [
+          Object {
+            "animation": Object {
+              "ids": Array [
+                "triangle",
+                "triangle",
+                "triangle",
+                "triangle",
+                "triangle",
+                "triangle",
+                "triangle",
+                "triangle",
+                "offense",
+                "offense",
+                "offense",
+                "offense",
+                "offense",
+                "disc",
+              ],
+              "positions": Array [
+                Array [
+                  Array [
+                    Array [
+                      0.3,
+                      0.3,
+                    ],
+                  ],
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                ],
+                Array [
+                  Array [
+                    Array [
+                      0.3,
+                      0.6,
+                    ],
+                  ],
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                ],
+                Array [
+                  Array [
+                    Array [
+                      0.6,
+                      0.3,
+                    ],
+                  ],
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                ],
+                Array [
+                  Array [
+                    Array [
+                      0.6,
+                      0.6,
+                    ],
+                  ],
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                ],
+                Array [
+                  Array [
+                    Array [
+                      0.45,
+                      0.2,
+                    ],
+                  ],
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                ],
+                Array [
+                  Array [
+                    Array [
+                      0.2,
+                      0.45,
+                    ],
+                  ],
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                ],
+                Array [
+                  Array [
+                    Array [
+                      0.45,
+                      0.7,
+                    ],
+                  ],
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                ],
+                Array [
+                  Array [
+                    Array [
+                      0.7,
+                      0.45,
+                    ],
+                  ],
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                ],
+                Array [
+                  Array [
+                    Array [
+                      0.3,
+                      0.3,
+                    ],
+                  ],
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  Array [
+                    Array [
+                      0.45,
+                      0.2,
+                    ],
+                  ],
+                ],
+                Array [
+                  Array [
+                    Array [
+                      0.16,
+                      0.3,
+                    ],
+                  ],
+                  Array [
+                    Array [
+                      0.45,
+                      0.2,
+                    ],
+                  ],
+                  Array [
+                    Array [
+                      0.6,
+                      0.3,
+                    ],
+                  ],
+                  undefined,
+                  undefined,
+                  undefined,
+                ],
+                Array [
+                  Array [
+                    Array [
+                      0.6,
+                      0.3,
+                    ],
+                  ],
+                  undefined,
+                  Array [
+                    Array [
+                      0.7,
+                      0.45,
+                    ],
+                  ],
+                  Array [
+                    Array [
+                      0.6,
+                      0.6,
+                    ],
+                  ],
+                  undefined,
+                  undefined,
+                ],
+                Array [
+                  Array [
+                    Array [
+                      0.6,
+                      0.6,
+                    ],
+                  ],
+                  undefined,
+                  undefined,
+                  Array [
+                    Array [
+                      0.45,
+                      0.7,
+                    ],
+                  ],
+                  Array [
+                    Array [
+                      0.3,
+                      0.6,
+                    ],
+                  ],
+                  undefined,
+                ],
+                Array [
+                  Array [
+                    Array [
+                      0.3,
+                      0.6,
+                    ],
+                  ],
+                  undefined,
+                  undefined,
+                  undefined,
+                  Array [
+                    Array [
+                      0.2,
+                      0.45,
+                    ],
+                  ],
+                  Array [
+                    Array [
+                      0.3,
+                      0.3,
+                    ],
+                  ],
+                ],
+                Array [
+                  Array [
+                    Array [
+                      0.36,
+                      0.36,
+                    ],
+                  ],
+                  undefined,
+                  Array [
+                    Array [
+                      0.58,
+                      0.36,
+                    ],
+                  ],
+                  Array [
+                    Array [
+                      0.58,
+                      0.58,
+                    ],
+                  ],
+                  Array [
+                    Array [
+                      0.36,
+                      0.58,
+                    ],
+                  ],
+                  Array [
+                    Array [
+                      0.36,
+                      0.36,
+                    ],
+                  ],
+                ],
+              ],
+              "texts": Array [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "",
+              ],
+            },
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
+            "durationInMinutes": 30,
+            "equipment": "Equipment needs for the drill",
+            "equipmentLabel": "",
+            "goals": Array [
+              "Defense",
             ],
-            "positions": Array [
-              Array [
-                Array [
-                  Array [
-                    0.3,
-                    0.3,
-                  ],
-                ],
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-              ],
-              Array [
-                Array [
-                  Array [
-                    0.3,
-                    0.6,
-                  ],
-                ],
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-              ],
-              Array [
-                Array [
-                  Array [
-                    0.6,
-                    0.3,
-                  ],
-                ],
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-              ],
-              Array [
-                Array [
-                  Array [
-                    0.6,
-                    0.6,
-                  ],
-                ],
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-              ],
-              Array [
-                Array [
-                  Array [
-                    0.45,
-                    0.2,
-                  ],
-                ],
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-              ],
-              Array [
-                Array [
-                  Array [
-                    0.2,
-                    0.45,
-                  ],
-                ],
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-              ],
-              Array [
-                Array [
-                  Array [
-                    0.45,
-                    0.7,
-                  ],
-                ],
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-              ],
-              Array [
-                Array [
-                  Array [
-                    0.7,
-                    0.45,
-                  ],
-                ],
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-              ],
-              Array [
-                Array [
-                  Array [
-                    0.3,
-                    0.3,
-                  ],
-                ],
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-                Array [
-                  Array [
-                    0.45,
-                    0.2,
-                  ],
-                ],
-              ],
-              Array [
-                Array [
-                  Array [
-                    0.16,
-                    0.3,
-                  ],
-                ],
-                Array [
-                  Array [
-                    0.45,
-                    0.2,
-                  ],
-                ],
-                Array [
-                  Array [
-                    0.6,
-                    0.3,
-                  ],
-                ],
-                undefined,
-                undefined,
-                undefined,
-              ],
-              Array [
-                Array [
-                  Array [
-                    0.6,
-                    0.3,
-                  ],
-                ],
-                undefined,
-                Array [
-                  Array [
-                    0.7,
-                    0.45,
-                  ],
-                ],
-                Array [
-                  Array [
-                    0.6,
-                    0.6,
-                  ],
-                ],
-                undefined,
-                undefined,
-              ],
-              Array [
-                Array [
-                  Array [
-                    0.6,
-                    0.6,
-                  ],
-                ],
-                undefined,
-                undefined,
-                Array [
-                  Array [
-                    0.45,
-                    0.7,
-                  ],
-                ],
-                Array [
-                  Array [
-                    0.3,
-                    0.6,
-                  ],
-                ],
-                undefined,
-              ],
-              Array [
-                Array [
-                  Array [
-                    0.3,
-                    0.6,
-                  ],
-                ],
-                undefined,
-                undefined,
-                undefined,
-                Array [
-                  Array [
-                    0.2,
-                    0.45,
-                  ],
-                ],
-                Array [
-                  Array [
-                    0.3,
-                    0.3,
-                  ],
-                ],
-              ],
-              Array [
-                Array [
-                  Array [
-                    0.36,
-                    0.36,
-                  ],
-                ],
-                undefined,
-                Array [
-                  Array [
-                    0.58,
-                    0.36,
-                  ],
-                ],
-                Array [
-                  Array [
-                    0.58,
-                    0.58,
-                  ],
-                ],
-                Array [
-                  Array [
-                    0.36,
-                    0.58,
-                  ],
-                ],
-                Array [
-                  Array [
-                    0.36,
-                    0.36,
-                  ],
-                ],
-              ],
-            ],
-            "texts": Array [
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "1",
-              "2",
-              "3",
-              "4",
-              "5",
-              "",
-            ],
+            "id": 3,
+            "image": "https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1",
+            "intensity": "Low",
+            "level": "Beginner",
+            "minimalPlayersNumber": 2,
+            "seasonTiming": "",
+            "source": "Author",
+            "steps": Array [],
+            "title": "Frisbee Drill Title",
+            "type": "technical",
           },
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
-          "durationInMinutes": 30,
-          "equipment": "Equipment needs for the drill",
-          "equipmentLabel": "",
-          "goals": Array [
-            "Defense",
-          ],
-          "id": 3,
-          "image": "https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1",
-          "intensity": "Low",
-          "level": "Beginner",
-          "nbPlayers": 2,
-          "seasonTiming": "",
-          "source": "Author",
-          "steps": Array [],
-          "title": "Frisbee Drill Title",
-          "type": "technical",
-        },
-        Object {
-          "animation": Object {
-            "ids": Array [
-              "triangle",
-              "triangle",
-              "triangle",
-              "triangle",
-              "triangle",
-              "triangle",
-              "triangle",
-              "triangle",
-              "offense",
-              "offense",
-              "offense",
-              "offense",
-              "offense",
-              "disc",
+          Object {
+            "animation": Object {
+              "ids": Array [
+                "triangle",
+                "triangle",
+                "triangle",
+                "triangle",
+                "triangle",
+                "triangle",
+                "triangle",
+                "triangle",
+                "offense",
+                "offense",
+                "offense",
+                "offense",
+                "offense",
+                "disc",
+              ],
+              "positions": Array [
+                Array [
+                  Array [
+                    Array [
+                      0.3,
+                      0.3,
+                    ],
+                  ],
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                ],
+                Array [
+                  Array [
+                    Array [
+                      0.3,
+                      0.6,
+                    ],
+                  ],
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                ],
+                Array [
+                  Array [
+                    Array [
+                      0.6,
+                      0.3,
+                    ],
+                  ],
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                ],
+                Array [
+                  Array [
+                    Array [
+                      0.6,
+                      0.6,
+                    ],
+                  ],
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                ],
+                Array [
+                  Array [
+                    Array [
+                      0.45,
+                      0.2,
+                    ],
+                  ],
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                ],
+                Array [
+                  Array [
+                    Array [
+                      0.2,
+                      0.45,
+                    ],
+                  ],
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                ],
+                Array [
+                  Array [
+                    Array [
+                      0.45,
+                      0.7,
+                    ],
+                  ],
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                ],
+                Array [
+                  Array [
+                    Array [
+                      0.7,
+                      0.45,
+                    ],
+                  ],
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                ],
+                Array [
+                  Array [
+                    Array [
+                      0.3,
+                      0.3,
+                    ],
+                  ],
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  Array [
+                    Array [
+                      0.45,
+                      0.2,
+                    ],
+                  ],
+                ],
+                Array [
+                  Array [
+                    Array [
+                      0.16,
+                      0.3,
+                    ],
+                  ],
+                  Array [
+                    Array [
+                      0.45,
+                      0.2,
+                    ],
+                  ],
+                  Array [
+                    Array [
+                      0.6,
+                      0.3,
+                    ],
+                  ],
+                  undefined,
+                  undefined,
+                  undefined,
+                ],
+                Array [
+                  Array [
+                    Array [
+                      0.6,
+                      0.3,
+                    ],
+                  ],
+                  undefined,
+                  Array [
+                    Array [
+                      0.7,
+                      0.45,
+                    ],
+                  ],
+                  Array [
+                    Array [
+                      0.6,
+                      0.6,
+                    ],
+                  ],
+                  undefined,
+                  undefined,
+                ],
+                Array [
+                  Array [
+                    Array [
+                      0.6,
+                      0.6,
+                    ],
+                  ],
+                  undefined,
+                  undefined,
+                  Array [
+                    Array [
+                      0.45,
+                      0.7,
+                    ],
+                  ],
+                  Array [
+                    Array [
+                      0.3,
+                      0.6,
+                    ],
+                  ],
+                  undefined,
+                ],
+                Array [
+                  Array [
+                    Array [
+                      0.3,
+                      0.6,
+                    ],
+                  ],
+                  undefined,
+                  undefined,
+                  undefined,
+                  Array [
+                    Array [
+                      0.2,
+                      0.45,
+                    ],
+                  ],
+                  Array [
+                    Array [
+                      0.3,
+                      0.3,
+                    ],
+                  ],
+                ],
+                Array [
+                  Array [
+                    Array [
+                      0.36,
+                      0.36,
+                    ],
+                  ],
+                  undefined,
+                  Array [
+                    Array [
+                      0.58,
+                      0.36,
+                    ],
+                  ],
+                  Array [
+                    Array [
+                      0.58,
+                      0.58,
+                    ],
+                  ],
+                  Array [
+                    Array [
+                      0.36,
+                      0.58,
+                    ],
+                  ],
+                  Array [
+                    Array [
+                      0.36,
+                      0.36,
+                    ],
+                  ],
+                ],
+              ],
+              "texts": Array [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "",
+              ],
+            },
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
+            "durationInMinutes": 30,
+            "equipment": "Equipment needs for the drill",
+            "equipmentLabel": "",
+            "goals": Array [
+              "Defense",
             ],
-            "positions": Array [
-              Array [
-                Array [
-                  Array [
-                    0.3,
-                    0.3,
-                  ],
-                ],
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-              ],
-              Array [
-                Array [
-                  Array [
-                    0.3,
-                    0.6,
-                  ],
-                ],
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-              ],
-              Array [
-                Array [
-                  Array [
-                    0.6,
-                    0.3,
-                  ],
-                ],
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-              ],
-              Array [
-                Array [
-                  Array [
-                    0.6,
-                    0.6,
-                  ],
-                ],
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-              ],
-              Array [
-                Array [
-                  Array [
-                    0.45,
-                    0.2,
-                  ],
-                ],
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-              ],
-              Array [
-                Array [
-                  Array [
-                    0.2,
-                    0.45,
-                  ],
-                ],
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-              ],
-              Array [
-                Array [
-                  Array [
-                    0.45,
-                    0.7,
-                  ],
-                ],
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-              ],
-              Array [
-                Array [
-                  Array [
-                    0.7,
-                    0.45,
-                  ],
-                ],
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-              ],
-              Array [
-                Array [
-                  Array [
-                    0.3,
-                    0.3,
-                  ],
-                ],
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-                Array [
-                  Array [
-                    0.45,
-                    0.2,
-                  ],
-                ],
-              ],
-              Array [
-                Array [
-                  Array [
-                    0.16,
-                    0.3,
-                  ],
-                ],
-                Array [
-                  Array [
-                    0.45,
-                    0.2,
-                  ],
-                ],
-                Array [
-                  Array [
-                    0.6,
-                    0.3,
-                  ],
-                ],
-                undefined,
-                undefined,
-                undefined,
-              ],
-              Array [
-                Array [
-                  Array [
-                    0.6,
-                    0.3,
-                  ],
-                ],
-                undefined,
-                Array [
-                  Array [
-                    0.7,
-                    0.45,
-                  ],
-                ],
-                Array [
-                  Array [
-                    0.6,
-                    0.6,
-                  ],
-                ],
-                undefined,
-                undefined,
-              ],
-              Array [
-                Array [
-                  Array [
-                    0.6,
-                    0.6,
-                  ],
-                ],
-                undefined,
-                undefined,
-                Array [
-                  Array [
-                    0.45,
-                    0.7,
-                  ],
-                ],
-                Array [
-                  Array [
-                    0.3,
-                    0.6,
-                  ],
-                ],
-                undefined,
-              ],
-              Array [
-                Array [
-                  Array [
-                    0.3,
-                    0.6,
-                  ],
-                ],
-                undefined,
-                undefined,
-                undefined,
-                Array [
-                  Array [
-                    0.2,
-                    0.45,
-                  ],
-                ],
-                Array [
-                  Array [
-                    0.3,
-                    0.3,
-                  ],
-                ],
-              ],
-              Array [
-                Array [
-                  Array [
-                    0.36,
-                    0.36,
-                  ],
-                ],
-                undefined,
-                Array [
-                  Array [
-                    0.58,
-                    0.36,
-                  ],
-                ],
-                Array [
-                  Array [
-                    0.58,
-                    0.58,
-                  ],
-                ],
-                Array [
-                  Array [
-                    0.36,
-                    0.58,
-                  ],
-                ],
-                Array [
-                  Array [
-                    0.36,
-                    0.36,
-                  ],
-                ],
-              ],
-            ],
-            "texts": Array [
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "1",
-              "2",
-              "3",
-              "4",
-              "5",
-              "",
-            ],
+            "id": 4,
+            "image": "https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg",
+            "intensity": "Low",
+            "level": "Beginner",
+            "minimalPlayersNumber": 2,
+            "seasonTiming": "",
+            "source": "Author",
+            "steps": Array [],
+            "title": "Frisbee Drill Title",
+            "type": "technical",
           },
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
-          "durationInMinutes": 30,
-          "equipment": "Equipment needs for the drill",
-          "equipmentLabel": "",
-          "goals": Array [
-            "Defense",
-          ],
-          "id": 4,
-          "image": "https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg",
-          "intensity": "Low",
-          "level": "Beginner",
-          "nbPlayers": 2,
-          "seasonTiming": "",
-          "source": "Author",
-          "steps": Array [],
-          "title": "Frisbee Drill Title",
-          "type": "technical",
-        },
-      ]
-    }
-    disableVirtualization={false}
-    getItem={[Function]}
-    getItemCount={[Function]}
-    horizontal={false}
-    initialNumToRender={10}
-    keyExtractor={[Function]}
-    maxToRenderPerBatch={10}
-    numColumns={1}
-    onContentSizeChange={[Function]}
-    onEndReachedThreshold={2}
-    onLayout={[Function]}
-    onMomentumScrollEnd={[Function]}
-    onScroll={[Function]}
-    onScrollBeginDrag={[Function]}
-    onScrollEndDrag={[Function]}
-    removeClippedSubviews={false}
-    renderItem={[Function]}
-    scrollEventThrottle={50}
-    stickyHeaderIndices={Array []}
-    updateCellsBatchingPeriod={50}
-    viewabilityConfigCallbackPairs={Array []}
-    windowSize={21}
-  >
-    <View>
-      <View
-        onLayout={[Function]}
-        style={null}
-      >
+        ]
+      }
+      disableVirtualization={false}
+      getItem={[Function]}
+      getItemCount={[Function]}
+      horizontal={false}
+      initialNumToRender={10}
+      keyExtractor={[Function]}
+      maxToRenderPerBatch={10}
+      numColumns={1}
+      onContentSizeChange={[Function]}
+      onEndReachedThreshold={2}
+      onLayout={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      removeClippedSubviews={false}
+      renderItem={[Function]}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={Array []}
+      updateCellsBatchingPeriod={50}
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={21}
+    >
+      <View>
         <View
-          accessible={true}
-          focusable={true}
-          isTVSelectable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "flexDirection": "row",
-              "height": 80,
-              "marginBottom": 20,
-              "opacity": 1,
-            }
-          }
+          onLayout={[Function]}
+          style={null}
         >
           <View
-            accessibilityIgnoresInvertColors={true}
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "alignItems": "center",
-                "backgroundColor": "rgb(0,0,0)",
-                "borderRadius": 5,
+                "flexDirection": "row",
                 "height": 80,
-                "justifyContent": "center",
-                "marginRight": 10,
-                "padding": 10,
-                "width": 80,
+                "marginBottom": 20,
+                "opacity": 1,
               }
             }
           >
-            <Image
-              source={
-                Object {
-                  "uri": "https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1",
-                }
-              }
-              style={
-                Array [
-                  Object {
-                    "bottom": 0,
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                  },
-                  Object {
-                    "height": 80,
-                    "width": 80,
-                  },
-                  Object {
-                    "borderRadius": 5,
-                    "opacity": 0.5,
-                  },
-                ]
-              }
-            />
-            <Text
+            <View
+              accessibilityIgnoresInvertColors={true}
               style={
                 Object {
-                  "color": "#e5e5e5",
-                  "fontSize": 20,
-                  "textAlign": "center",
+                  "alignItems": "center",
+                  "backgroundColor": "rgb(0,0,0)",
+                  "borderRadius": 5,
+                  "height": 80,
+                  "justifyContent": "center",
+                  "marginRight": 10,
+                  "padding": 10,
+                  "width": 80,
                 }
               }
             >
-              2
-              +
-            </Text>
-            <Text
+              <Image
+                source={
+                  Object {
+                    "uri": "https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1",
+                  }
+                }
+                style={
+                  Array [
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                    Object {
+                      "height": 80,
+                      "width": 80,
+                    },
+                    Object {
+                      "borderRadius": 5,
+                      "opacity": 0.5,
+                    },
+                  ]
+                }
+              />
+              <Text
+                style={
+                  Object {
+                    "color": "#e5e5e5",
+                    "fontSize": 20,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                2
+                +
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#e5e5e5",
+                    "fontSize": 14,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                players
+              </Text>
+            </View>
+            <View
               style={
                 Object {
-                  "color": "#e5e5e5",
-                  "fontSize": 14,
-                  "textAlign": "center",
+                  "padding": 5,
+                  "paddingBottom": 10,
                 }
               }
             >
-              players
-            </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#A6A6A6",
+                    "flex": 2,
+                    "fontSize": 14,
+                  }
+                }
+              >
+                Author
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "flex": 3,
+                    "flexWrap": "wrap",
+                    "fontSize": 20,
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                Frisbee Drill Title
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#A6A6A6",
+                    "flex": 2,
+                    "fontSize": 14,
+                  }
+                }
+              >
+                Defense
+              </Text>
+            </View>
           </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
           <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "padding": 5,
-                "paddingBottom": 10,
+                "flexDirection": "row",
+                "height": 80,
+                "marginBottom": 20,
+                "opacity": 1,
               }
             }
           >
-            <Text
+            <View
+              accessibilityIgnoresInvertColors={true}
               style={
                 Object {
-                  "color": "#A6A6A6",
-                  "flex": 2,
-                  "fontSize": 14,
+                  "alignItems": "center",
+                  "backgroundColor": "rgb(0,0,0)",
+                  "borderRadius": 5,
+                  "height": 80,
+                  "justifyContent": "center",
+                  "marginRight": 10,
+                  "padding": 10,
+                  "width": 80,
                 }
               }
             >
-              Author
-            </Text>
-            <Text
+              <Image
+                source={
+                  Object {
+                    "uri": "https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg",
+                  }
+                }
+                style={
+                  Array [
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                    Object {
+                      "height": 80,
+                      "width": 80,
+                    },
+                    Object {
+                      "borderRadius": 5,
+                      "opacity": 0.5,
+                    },
+                  ]
+                }
+              />
+              <Text
+                style={
+                  Object {
+                    "color": "#e5e5e5",
+                    "fontSize": 20,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                2
+                +
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#e5e5e5",
+                    "fontSize": 14,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                players
+              </Text>
+            </View>
+            <View
               style={
                 Object {
-                  "flex": 3,
-                  "flexWrap": "wrap",
-                  "fontSize": 20,
-                  "fontWeight": "bold",
+                  "padding": 5,
+                  "paddingBottom": 10,
                 }
               }
             >
-              Frisbee Drill Title
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#A6A6A6",
-                  "flex": 2,
-                  "fontSize": 14,
+              <Text
+                style={
+                  Object {
+                    "color": "#A6A6A6",
+                    "flex": 2,
+                    "fontSize": 14,
+                  }
                 }
-              }
-            >
-              Defense
-            </Text>
+              >
+                Author
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "flex": 3,
+                    "flexWrap": "wrap",
+                    "fontSize": 20,
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                Frisbee Drill Title
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#A6A6A6",
+                    "flex": 2,
+                    "fontSize": 14,
+                  }
+                }
+              >
+                Defense
+              </Text>
+            </View>
           </View>
         </View>
       </View>
-      <View
-        onLayout={[Function]}
-        style={null}
-      >
-        <View
-          accessible={true}
-          focusable={true}
-          isTVSelectable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "flexDirection": "row",
-              "height": 80,
-              "marginBottom": 20,
-              "opacity": 1,
-            }
-          }
-        >
-          <View
-            accessibilityIgnoresInvertColors={true}
-            style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "rgb(0,0,0)",
-                "borderRadius": 5,
-                "height": 80,
-                "justifyContent": "center",
-                "marginRight": 10,
-                "padding": 10,
-                "width": 80,
-              }
-            }
-          >
-            <Image
-              source={
-                Object {
-                  "uri": "https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg",
-                }
-              }
-              style={
-                Array [
-                  Object {
-                    "bottom": 0,
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                  },
-                  Object {
-                    "height": 80,
-                    "width": 80,
-                  },
-                  Object {
-                    "borderRadius": 5,
-                    "opacity": 0.5,
-                  },
-                ]
-              }
-            />
-            <Text
-              style={
-                Object {
-                  "color": "#e5e5e5",
-                  "fontSize": 20,
-                  "textAlign": "center",
-                }
-              }
-            >
-              2
-              +
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#e5e5e5",
-                  "fontSize": 14,
-                  "textAlign": "center",
-                }
-              }
-            >
-              players
-            </Text>
-          </View>
-          <View
-            style={
-              Object {
-                "padding": 5,
-                "paddingBottom": 10,
-              }
-            }
-          >
-            <Text
-              style={
-                Object {
-                  "color": "#A6A6A6",
-                  "flex": 2,
-                  "fontSize": 14,
-                }
-              }
-            >
-              Author
-            </Text>
-            <Text
-              style={
-                Object {
-                  "flex": 3,
-                  "flexWrap": "wrap",
-                  "fontSize": 20,
-                  "fontWeight": "bold",
-                }
-              }
-            >
-              Frisbee Drill Title
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#A6A6A6",
-                  "flex": 2,
-                  "fontSize": 14,
-                }
-              }
-            >
-              Defense
-            </Text>
-          </View>
-        </View>
-      </View>
-    </View>
-  </RCTScrollView>
+    </RCTScrollView>
+  </View>
   <View
     accessible={true}
     focusable={true}
@@ -957,18 +959,17 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
         "width": 100,
       }
     }
+    testID="filterButton"
   >
-    <Text
+    <Image
+      source={1}
       style={
         Object {
-          "fontSize": 24,
-          "fontWeight": "bold",
-          "textTransform": "uppercase",
+          "height": "100%",
+          "width": "100%",
         }
       }
-    >
-      Filter
-    </Text>
+    />
   </View>
 </View>
 `;
@@ -995,204 +996,206 @@ exports[`<DrillListPage /> renders correctly with a fitness drill 1`] = `
     1
      drills available
   </Text>
-  <RCTScrollView
-    data={
-      Array [
-        Object {
-          "description": "Description of the drill",
-          "durationInMinutes": 10,
-          "equipment": "Equipment needs for the drill",
-          "equipmentLabel": "No Equipment",
-          "goals": Array [
-            "Full body",
-          ],
-          "id": 1,
-          "image": "https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg",
-          "intensity": "Low",
-          "level": "Beginner",
-          "nbPlayers": 1,
-          "seasonTiming": "Off-season",
-          "source": "Author",
-          "steps": Array [
-            Object {
-              "subtitle": "This is a subtitle",
-              "title": "Warmup",
-            },
-            Object {
-              "subtitle": "This is a subtitle",
-              "title": "Do the drill",
-            },
-            Object {
-              "subtitle": "This is a subtitle",
-              "title": "Last step",
-            },
-          ],
-          "title": "Fitness Drill Title",
-          "type": "fitness",
-          "video": "https://www.youtube.com/embed/JkVHrA5o23o",
-        },
-      ]
-    }
-    disableVirtualization={false}
-    getItem={[Function]}
-    getItemCount={[Function]}
-    horizontal={false}
-    initialNumToRender={10}
-    keyExtractor={[Function]}
-    maxToRenderPerBatch={10}
-    numColumns={1}
-    onContentSizeChange={[Function]}
-    onEndReachedThreshold={2}
-    onLayout={[Function]}
-    onMomentumScrollEnd={[Function]}
-    onScroll={[Function]}
-    onScrollBeginDrag={[Function]}
-    onScrollEndDrag={[Function]}
-    removeClippedSubviews={false}
-    renderItem={[Function]}
-    scrollEventThrottle={50}
-    stickyHeaderIndices={Array []}
-    updateCellsBatchingPeriod={50}
-    viewabilityConfigCallbackPairs={Array []}
-    windowSize={21}
-  >
-    <View>
-      <View
-        onLayout={[Function]}
-        style={null}
-      >
+  <View>
+    <RCTScrollView
+      data={
+        Array [
+          Object {
+            "description": "Description of the drill",
+            "durationInMinutes": 10,
+            "equipment": "Equipment needs for the drill",
+            "equipmentLabel": "No Equipment",
+            "goals": Array [
+              "Full body",
+            ],
+            "id": 1,
+            "image": "https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg",
+            "intensity": "Low",
+            "level": "Beginner",
+            "minimalPlayersNumber": 1,
+            "seasonTiming": "Off-season",
+            "source": "Author",
+            "steps": Array [
+              Object {
+                "subtitle": "This is a subtitle",
+                "title": "Warmup",
+              },
+              Object {
+                "subtitle": "This is a subtitle",
+                "title": "Do the drill",
+              },
+              Object {
+                "subtitle": "This is a subtitle",
+                "title": "Last step",
+              },
+            ],
+            "title": "Fitness Drill Title",
+            "type": "fitness",
+            "video": "https://www.youtube.com/embed/JkVHrA5o23o",
+          },
+        ]
+      }
+      disableVirtualization={false}
+      getItem={[Function]}
+      getItemCount={[Function]}
+      horizontal={false}
+      initialNumToRender={10}
+      keyExtractor={[Function]}
+      maxToRenderPerBatch={10}
+      numColumns={1}
+      onContentSizeChange={[Function]}
+      onEndReachedThreshold={2}
+      onLayout={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      removeClippedSubviews={false}
+      renderItem={[Function]}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={Array []}
+      updateCellsBatchingPeriod={50}
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={21}
+    >
+      <View>
         <View
-          accessible={true}
-          focusable={true}
-          isTVSelectable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "flexDirection": "row",
-              "height": 80,
-              "marginBottom": 20,
-              "opacity": 1,
-            }
-          }
+          onLayout={[Function]}
+          style={null}
         >
           <View
-            accessibilityIgnoresInvertColors={true}
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "alignItems": "center",
-                "backgroundColor": "rgb(0,0,0)",
-                "borderRadius": 5,
+                "flexDirection": "row",
                 "height": 80,
-                "justifyContent": "center",
-                "marginRight": 10,
-                "padding": 10,
-                "width": 80,
+                "marginBottom": 20,
+                "opacity": 1,
               }
             }
           >
-            <Image
-              source={
+            <View
+              accessibilityIgnoresInvertColors={true}
+              style={
                 Object {
-                  "uri": "https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg",
+                  "alignItems": "center",
+                  "backgroundColor": "rgb(0,0,0)",
+                  "borderRadius": 5,
+                  "height": 80,
+                  "justifyContent": "center",
+                  "marginRight": 10,
+                  "padding": 10,
+                  "width": 80,
                 }
               }
-              style={
-                Array [
+            >
+              <Image
+                source={
                   Object {
-                    "bottom": 0,
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                  },
+                    "uri": "https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg",
+                  }
+                }
+                style={
+                  Array [
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                    Object {
+                      "height": 80,
+                      "width": 80,
+                    },
+                    Object {
+                      "borderRadius": 5,
+                      "opacity": 0.5,
+                    },
+                  ]
+                }
+              />
+              <Text
+                style={
                   Object {
-                    "height": 80,
-                    "width": 80,
-                  },
+                    "color": "#e5e5e5",
+                    "fontSize": 20,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                10
+                +
+              </Text>
+              <Text
+                style={
                   Object {
-                    "borderRadius": 5,
-                    "opacity": 0.5,
-                  },
-                ]
-              }
-            />
-            <Text
+                    "color": "#e5e5e5",
+                    "fontSize": 14,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                min.
+              </Text>
+            </View>
+            <View
               style={
                 Object {
-                  "color": "#e5e5e5",
-                  "fontSize": 20,
-                  "textAlign": "center",
+                  "padding": 5,
+                  "paddingBottom": 10,
                 }
               }
             >
-              10
-              +
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#e5e5e5",
-                  "fontSize": 14,
-                  "textAlign": "center",
+              <Text
+                style={
+                  Object {
+                    "color": "#A6A6A6",
+                    "flex": 2,
+                    "fontSize": 14,
+                  }
                 }
-              }
-            >
-              min.
-            </Text>
-          </View>
-          <View
-            style={
-              Object {
-                "padding": 5,
-                "paddingBottom": 10,
-              }
-            }
-          >
-            <Text
-              style={
-                Object {
-                  "color": "#A6A6A6",
-                  "flex": 2,
-                  "fontSize": 14,
+              >
+                Author
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "flex": 3,
+                    "flexWrap": "wrap",
+                    "fontSize": 20,
+                    "fontWeight": "bold",
+                  }
                 }
-              }
-            >
-              Author
-            </Text>
-            <Text
-              style={
-                Object {
-                  "flex": 3,
-                  "flexWrap": "wrap",
-                  "fontSize": 20,
-                  "fontWeight": "bold",
+              >
+                Fitness Drill Title
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#A6A6A6",
+                    "flex": 2,
+                    "fontSize": 14,
+                  }
                 }
-              }
-            >
-              Fitness Drill Title
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#A6A6A6",
-                  "flex": 2,
-                  "fontSize": 14,
-                }
-              }
-            >
-              Full body
-            </Text>
+              >
+                Full body
+              </Text>
+            </View>
           </View>
         </View>
       </View>
-    </View>
-  </RCTScrollView>
+    </RCTScrollView>
+  </View>
   <View
     accessible={true}
     focusable={true}
@@ -1225,18 +1228,17 @@ exports[`<DrillListPage /> renders correctly with a fitness drill 1`] = `
         "width": 100,
       }
     }
+    testID="filterButton"
   >
-    <Text
+    <Image
+      source={1}
       style={
         Object {
-          "fontSize": 24,
-          "fontWeight": "bold",
-          "textTransform": "uppercase",
+          "height": "100%",
+          "width": "100%",
         }
       }
-    >
-      Filter
-    </Text>
+    />
   </View>
 </View>
 `;
@@ -1263,204 +1265,206 @@ exports[`<DrillListPage /> renders correctly with a technical drill 1`] = `
     1
      drills available
   </Text>
-  <RCTScrollView
-    data={
-      Array [
-        Object {
-          "description": "Description of the drill",
-          "durationInMinutes": 10,
-          "equipment": "Equipment needs for the drill",
-          "equipmentLabel": "No Equipment",
-          "goals": Array [
-            "Full body",
-          ],
-          "id": 1,
-          "image": "https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg",
-          "intensity": "Low",
-          "level": "Beginner",
-          "nbPlayers": 1,
-          "seasonTiming": "Off-season",
-          "source": "Author",
-          "steps": Array [
-            Object {
-              "subtitle": "This is a subtitle",
-              "title": "Warmup",
-            },
-            Object {
-              "subtitle": "This is a subtitle",
-              "title": "Do the drill",
-            },
-            Object {
-              "subtitle": "This is a subtitle",
-              "title": "Last step",
-            },
-          ],
-          "title": "Fitness Drill Title",
-          "type": "technical",
-          "video": "https://www.youtube.com/embed/JkVHrA5o23o",
-        },
-      ]
-    }
-    disableVirtualization={false}
-    getItem={[Function]}
-    getItemCount={[Function]}
-    horizontal={false}
-    initialNumToRender={10}
-    keyExtractor={[Function]}
-    maxToRenderPerBatch={10}
-    numColumns={1}
-    onContentSizeChange={[Function]}
-    onEndReachedThreshold={2}
-    onLayout={[Function]}
-    onMomentumScrollEnd={[Function]}
-    onScroll={[Function]}
-    onScrollBeginDrag={[Function]}
-    onScrollEndDrag={[Function]}
-    removeClippedSubviews={false}
-    renderItem={[Function]}
-    scrollEventThrottle={50}
-    stickyHeaderIndices={Array []}
-    updateCellsBatchingPeriod={50}
-    viewabilityConfigCallbackPairs={Array []}
-    windowSize={21}
-  >
-    <View>
-      <View
-        onLayout={[Function]}
-        style={null}
-      >
+  <View>
+    <RCTScrollView
+      data={
+        Array [
+          Object {
+            "description": "Description of the drill",
+            "durationInMinutes": 10,
+            "equipment": "Equipment needs for the drill",
+            "equipmentLabel": "No Equipment",
+            "goals": Array [
+              "Full body",
+            ],
+            "id": 1,
+            "image": "https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg",
+            "intensity": "Low",
+            "level": "Beginner",
+            "minimalPlayersNumber": 1,
+            "seasonTiming": "Off-season",
+            "source": "Author",
+            "steps": Array [
+              Object {
+                "subtitle": "This is a subtitle",
+                "title": "Warmup",
+              },
+              Object {
+                "subtitle": "This is a subtitle",
+                "title": "Do the drill",
+              },
+              Object {
+                "subtitle": "This is a subtitle",
+                "title": "Last step",
+              },
+            ],
+            "title": "Fitness Drill Title",
+            "type": "technical",
+            "video": "https://www.youtube.com/embed/JkVHrA5o23o",
+          },
+        ]
+      }
+      disableVirtualization={false}
+      getItem={[Function]}
+      getItemCount={[Function]}
+      horizontal={false}
+      initialNumToRender={10}
+      keyExtractor={[Function]}
+      maxToRenderPerBatch={10}
+      numColumns={1}
+      onContentSizeChange={[Function]}
+      onEndReachedThreshold={2}
+      onLayout={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      removeClippedSubviews={false}
+      renderItem={[Function]}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={Array []}
+      updateCellsBatchingPeriod={50}
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={21}
+    >
+      <View>
         <View
-          accessible={true}
-          focusable={true}
-          isTVSelectable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "flexDirection": "row",
-              "height": 80,
-              "marginBottom": 20,
-              "opacity": 1,
-            }
-          }
+          onLayout={[Function]}
+          style={null}
         >
           <View
-            accessibilityIgnoresInvertColors={true}
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "alignItems": "center",
-                "backgroundColor": "rgb(0,0,0)",
-                "borderRadius": 5,
+                "flexDirection": "row",
                 "height": 80,
-                "justifyContent": "center",
-                "marginRight": 10,
-                "padding": 10,
-                "width": 80,
+                "marginBottom": 20,
+                "opacity": 1,
               }
             }
           >
-            <Image
-              source={
+            <View
+              accessibilityIgnoresInvertColors={true}
+              style={
                 Object {
-                  "uri": "https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg",
+                  "alignItems": "center",
+                  "backgroundColor": "rgb(0,0,0)",
+                  "borderRadius": 5,
+                  "height": 80,
+                  "justifyContent": "center",
+                  "marginRight": 10,
+                  "padding": 10,
+                  "width": 80,
                 }
               }
-              style={
-                Array [
+            >
+              <Image
+                source={
                   Object {
-                    "bottom": 0,
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                  },
+                    "uri": "https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg",
+                  }
+                }
+                style={
+                  Array [
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                    Object {
+                      "height": 80,
+                      "width": 80,
+                    },
+                    Object {
+                      "borderRadius": 5,
+                      "opacity": 0.5,
+                    },
+                  ]
+                }
+              />
+              <Text
+                style={
                   Object {
-                    "height": 80,
-                    "width": 80,
-                  },
+                    "color": "#e5e5e5",
+                    "fontSize": 20,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                1
+                +
+              </Text>
+              <Text
+                style={
                   Object {
-                    "borderRadius": 5,
-                    "opacity": 0.5,
-                  },
-                ]
-              }
-            />
-            <Text
+                    "color": "#e5e5e5",
+                    "fontSize": 14,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                players
+              </Text>
+            </View>
+            <View
               style={
                 Object {
-                  "color": "#e5e5e5",
-                  "fontSize": 20,
-                  "textAlign": "center",
+                  "padding": 5,
+                  "paddingBottom": 10,
                 }
               }
             >
-              1
-              +
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#e5e5e5",
-                  "fontSize": 14,
-                  "textAlign": "center",
+              <Text
+                style={
+                  Object {
+                    "color": "#A6A6A6",
+                    "flex": 2,
+                    "fontSize": 14,
+                  }
                 }
-              }
-            >
-              players
-            </Text>
-          </View>
-          <View
-            style={
-              Object {
-                "padding": 5,
-                "paddingBottom": 10,
-              }
-            }
-          >
-            <Text
-              style={
-                Object {
-                  "color": "#A6A6A6",
-                  "flex": 2,
-                  "fontSize": 14,
+              >
+                Author
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "flex": 3,
+                    "flexWrap": "wrap",
+                    "fontSize": 20,
+                    "fontWeight": "bold",
+                  }
                 }
-              }
-            >
-              Author
-            </Text>
-            <Text
-              style={
-                Object {
-                  "flex": 3,
-                  "flexWrap": "wrap",
-                  "fontSize": 20,
-                  "fontWeight": "bold",
+              >
+                Fitness Drill Title
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#A6A6A6",
+                    "flex": 2,
+                    "fontSize": 14,
+                  }
                 }
-              }
-            >
-              Fitness Drill Title
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "#A6A6A6",
-                  "flex": 2,
-                  "fontSize": 14,
-                }
-              }
-            >
-              Full body
-            </Text>
+              >
+                Full body
+              </Text>
+            </View>
           </View>
         </View>
       </View>
-    </View>
-  </RCTScrollView>
+    </RCTScrollView>
+  </View>
   <View
     accessible={true}
     focusable={true}
@@ -1493,18 +1497,17 @@ exports[`<DrillListPage /> renders correctly with a technical drill 1`] = `
         "width": 100,
       }
     }
+    testID="filterButton"
   >
-    <Text
+    <Image
+      source={1}
       style={
         Object {
-          "fontSize": 24,
-          "fontWeight": "bold",
-          "textTransform": "uppercase",
+          "height": "100%",
+          "width": "100%",
         }
       }
-    >
-      Filter
-    </Text>
+    />
   </View>
 </View>
 `;

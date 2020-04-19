@@ -225,7 +225,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                 }
                               }
                             >
-                              ________
+                              Fitness Drill Title
                             </Text>
                             <Text
                               style={

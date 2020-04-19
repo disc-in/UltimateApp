@@ -1,17 +1,21 @@
 import React from 'react';
-import renderer, { TestRenderer } from 'react-test-renderer';
-import { Provider } from 'react-redux';
-import { render, fireEvent } from 'react-native-testing-library';
+import renderer from 'react-test-renderer';
+import { NavigationContainer } from '@react-navigation/native';
+import { connect, Provider } from 'react-redux';
+
+import { render, fireEvent, cleanup } from 'react-native-testing-library';
+import { createStackNavigator } from '@react-navigation/stack';
 import store from '../Store/testStore';
 import { createDrill } from '../Fixtures/TestFixtures';
-import { createStackNavigator } from '@react-navigation/stack';
-import { NavigationContainer } from '@react-navigation/native';
 
 import ConnectedDrillPage, { DrillPage } from './DrillPage';
-import * as Actions from '../Store/Actions/favoriteAction';
+
+afterEach(cleanup);
 
 describe('<DrillPage />', () => {
-  const drill = createDrill({ title: '________' });
+  afterEach(() => jest.clearAllMocks());
+
+  const drill = createDrill();
   const route = {
     params: {
       drill,
@@ -34,28 +38,26 @@ describe('<DrillPage />', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  // it('toggles favorite drill', async () => {
-  //   const Stack = createStackNavigator();
+  it('toggles favorite drill', async () => {
+    const toggleFavorite = jest.fn();
 
-  //   const { getByTestId } = render(
-  //     <Provider store={store}>
-  //       <NavigationContainer>
-  //         <Stack.Navigator>
-  //           <Stack.Screen name="DrillPage" component={ConnectedDrillPage} initialParams={{ drill }} />
-  //         </Stack.Navigator>
-  //       </NavigationContainer>
-  //     </Provider>,
-  //   );
-  //   const spy = jest.spyOn(Actions, 'toggleFavorite');
+    const MockedConnectedDrillPage = connect(
+      () => ({ favoriteDrills: [] }),
+      () => ({ toggleFavorite }),
+    )(DrillPage);
+    const Stack = createStackNavigator();
+    const { getByText, getByTestId } = render(
+      <Provider store={store}>
+        <NavigationContainer>
+          <Stack.Navigator>
+            <Stack.Screen name="DrillPage" component={MockedConnectedDrillPage} initialParams={{ drill }} />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </Provider>,
+    );
 
-  //   await fireEvent.press(getByTestId('favoriteButton'));
-  //   expect(spy).toHaveBeenCalled();
-  //   expect(Actions.toggleFavorite).toBeCalledWith(
-  //     expect.objectContaining({
-  //       id: 1,
-  //     }),
-  //   );
+    await fireEvent.press(getByTestId('favoriteButton'));
 
-  //   spy.mockRestore();
-  // });
+    expect(toggleFavorite).toBeCalledWith(drill);
+  });
 });

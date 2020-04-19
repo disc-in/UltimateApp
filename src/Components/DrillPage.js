@@ -59,8 +59,6 @@ export const DrillPage = props => {
     );
   };
 
-  // Set favorite button on header
-  // ToDO - Fix error in test
   navigation.setOptions({
     headerRight: () => displayFavoriteButton(),
   });
@@ -79,7 +77,7 @@ export const DrillPage = props => {
           </View>
           <View style={styles.separator} />
           <View style={styles.infoSubWrapper}>
-            <Text style={styles.infoDrill}>{drill.nbPlayers}</Text>
+            <Text style={styles.infoDrill}>{drill.minimalPlayersNumber}</Text>
             <Text style={styles.info}> players</Text>
           </View>
           <View style={styles.separator} />

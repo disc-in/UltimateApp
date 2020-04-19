@@ -1,11 +1,13 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
-import { render, fireEvent } from 'react-native-testing-library';
-import store from '../Store/configureStore';
+import { render, fireEvent, cleanup } from 'react-native-testing-library';
+import store from '../Store/testStore';
 import fixtures from '../Fixtures/TestFixtures';
 
 import ConnectedTrainingListPage, { TrainingListPage } from './TrainingListPage';
+
+afterEach(cleanup);
 
 describe('<TrainingListPage />', () => {
   it('renders correctly when connected', () => {

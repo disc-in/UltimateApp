@@ -69,10 +69,10 @@ class Animation extends React.Component {
   _initPositions() {
     /* For each element */
     for (let i = 0; i < this.state.de.length; i++) {
-      let element = this.state.de[i];
+      const element = this.state.de[i];
 
       /* Get its position in pixel (it is represented in percentage in the drill) */
-      let pixelPosition = this._positionPercentToPixel(
+      const pixelPosition = this._positionPercentToPixel(
         this.state.drill.positions[i][0][0][0],
         this.state.drill.positions[i][0][0][1],
       );
@@ -85,7 +85,7 @@ class Animation extends React.Component {
 
   componentDidMount() {
     /* Get the dimension of the screen and then initialize the drill */
-    let { height, width } = Dimensions.get('window');
+    const { height, width } = Dimensions.get('window');
 
     this.currentStepAV.addListener(progress => {
       this.setState({ currentStep: progress.value });
@@ -107,7 +107,7 @@ class Animation extends React.Component {
     this._initPositions();
 
     /* Animation of the whole drill */
-    let completeSequence = [];
+    const completeSequence = [];
 
     /* For each step (start at step 1 as step 0 corresponds to the initial positions)*/
     for (let stepId = 1; stepId < this._stepCount(); stepId++)
@@ -143,7 +143,7 @@ class Animation extends React.Component {
   /** Returns the animation to a given step for all displayed elements */
   _getStepAnimation(stepId, isForward) {
     /* Animation of all the elements at step stepId */
-    let stepAnimation = [];
+    const stepAnimation = [];
 
     /* For each displayed element */
     for (let elemId = 0; elemId < this.state.drill.positions.length; elemId++) {
@@ -172,7 +172,7 @@ class Animation extends React.Component {
       /* If this element must change its position */
       if (nextPosition !== undefined) {
         /* Animation of the element at step stepId */
-        let deStepAnimation = [];
+        const deStepAnimation = [];
 
         /* The first animation in the sequence enables to update the current step */
         deStepAnimation.push(
@@ -183,20 +183,20 @@ class Animation extends React.Component {
           }),
         );
 
-        let substepCount = nextPosition.length;
+        const substepCount = nextPosition.length;
 
         /* If the sub steps must be played */
         if (playSubSteps) {
           if (isForward) {
             /* For each substep of element de in step stepId */
             for (let substep = 0; substep < substepCount; substep++) {
-              let currentDE = this.state.de[elemId];
+              const currentDE = this.state.de[elemId];
 
               /* Get the position of the element at this substep */
-              let pixelPosition = this._positionPercentToPixel(nextPosition[substep][0], nextPosition[substep][1]);
+              const pixelPosition = this._positionPercentToPixel(nextPosition[substep][0], nextPosition[substep][1]);
 
               /* Get the corresponding animation */
-              let anim = currentDE.getAnimation(
+              const anim = currentDE.getAnimation(
                 pixelPosition[0],
                 pixelPosition[1],
                 this.state.stepLength / substepCount,
@@ -208,13 +208,13 @@ class Animation extends React.Component {
             /* If the step must be played backward */
             /* For each substep of element de in step stepId */
             for (let substep = substepCount - 1; substep >= 0; substep--) {
-              let currentDE = this.state.de[elemId];
+              const currentDE = this.state.de[elemId];
 
               /* Get the position of the element at this substep */
-              let pixelPosition = this._positionPercentToPixel(nextPosition[substep][0], nextPosition[substep][1]);
+              const pixelPosition = this._positionPercentToPixel(nextPosition[substep][0], nextPosition[substep][1]);
 
               /* Get the corresponding animation */
-              let anim = currentDE.getAnimation(
+              const anim = currentDE.getAnimation(
                 pixelPosition[0],
                 pixelPosition[1],
                 this.state.stepLength / substepCount,
@@ -225,16 +225,16 @@ class Animation extends React.Component {
           }
         } else {
           /* If the sub steps must not be played, just move the element to the last position */
-          let currentDE = this.state.de[elemId];
+          const currentDE = this.state.de[elemId];
 
           /* Get the position of the element at this substep */
-          let pixelPosition = this._positionPercentToPixel(
+          const pixelPosition = this._positionPercentToPixel(
             nextPosition[substepCount - 1][0],
             nextPosition[substepCount - 1][1],
           );
 
           /* Get the corresponding animation */
-          let anim = currentDE.getAnimation(pixelPosition[0], pixelPosition[1], this.state.stepLength);
+          const anim = currentDE.getAnimation(pixelPosition[0], pixelPosition[1], this.state.stepLength);
 
           deStepAnimation.push(anim);
         }

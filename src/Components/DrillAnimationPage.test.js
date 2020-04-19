@@ -2,14 +2,14 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import animationMenageATrois from '../Fixtures/AnimationMenageATrois';
 
-import DrillAnimationPage from './DrillAnimationPage';
+import DrillAnimation from './DrillAnimation';
 
 describe('<DrillAnimationPage />', () => {
   it('renders correctly for a drill with video', () => {
     const videoProps = {
       video: 'https://www.youtube.com/embed/oN1bzPCKkGE',
     };
-    const tree = renderer.create(<DrillAnimationPage props={videoProps} />).toJSON();
+    const tree = renderer.create(<DrillAnimation props={videoProps} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
@@ -17,7 +17,7 @@ describe('<DrillAnimationPage />', () => {
     const animationProps = {
       animation: animationMenageATrois,
     };
-    const tree = renderer.create(<DrillAnimationPage props={animationProps} />).toJSON();
+    const tree = renderer.create(<DrillAnimation props={animationProps} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
@@ -25,7 +25,7 @@ describe('<DrillAnimationPage />', () => {
     const noProps = {
       drill: {},
     };
-    const tree = renderer.create(<DrillAnimationPage props={noProps} />).toJSON();
+    const tree = renderer.create(<DrillAnimation props={noProps} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

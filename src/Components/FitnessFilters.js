@@ -121,14 +121,16 @@ class FitnessFilters extends React.Component {
           </View>
           <Text style={filterStyle.filterTitle}>Season Timing</Text>
           <View style={filterStyle.filter}>
-            {Object.values(SeasonTimings).map(seasonTiming => (
-              <Button
-                title={seasonTiming}
-                onPress={() => this.onPressedChange('selectedSeasonTiming', seasonTiming)}
-                key={seasonTiming}
-                active={selectedSeasonTiming === seasonTiming}
-              />
-            ))}
+            {Object.values(SeasonTimings)
+              .filter(value => value !== SeasonTimings.ANYTIME)
+              .map(seasonTiming => (
+                <Button
+                  title={seasonTiming}
+                  onPress={() => this.onPressedChange('selectedSeasonTiming', seasonTiming)}
+                  key={seasonTiming}
+                  active={selectedSeasonTiming === seasonTiming}
+                />
+              ))}
           </View>
           <Text style={filterStyle.filterTitle}>Goals</Text>
           <View style={filterStyle.filter}>

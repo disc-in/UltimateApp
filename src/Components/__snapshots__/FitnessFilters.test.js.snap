@@ -550,42 +550,6 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
             In-season
           </Text>
         </View>
-        <View
-          accessible={true}
-          focusable={true}
-          isTVSelectable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "backgroundColor": "#fff",
-              "borderColor": "#e5e5e5",
-              "borderWidth": 1,
-              "flexBasis": "30%",
-              "flexGrow": 1,
-              "marginRight": 5,
-              "opacity": 1,
-              "paddingHorizontal": 20,
-              "paddingVertical": 10,
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "textAlign": "center",
-                "textTransform": "capitalize",
-              }
-            }
-          >
-            Anytime
-          </Text>
-        </View>
       </View>
       <Text
         style={

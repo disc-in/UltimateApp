@@ -25,9 +25,9 @@ exports[`<Checkbox /> renders correctly 1`] = `
         "borderColor": "#ededed",
         "borderRadius": 3,
         "borderWidth": 0,
-        "margin": 0,
+        "margin": 5,
         "marginLeft": 10,
-        "marginRight": 5,
+        "marginRight": 10,
         "opacity": 1,
         "padding": 0,
       }
@@ -38,10 +38,7 @@ exports[`<Checkbox /> renders correctly 1`] = `
       style={
         Object {
           "alignItems": "center",
-          "borderWidth": 0,
           "flexDirection": "row",
-          "margin": 0,
-          "padding": 0,
         }
       }
     >
@@ -50,7 +47,7 @@ exports[`<Checkbox /> renders correctly 1`] = `
         style={
           Object {
             "color": "#43484d",
-            "fontWeight": "bold",
+            "fontWeight": "normal",
             "marginLeft": 10,
             "marginRight": 10,
             "textTransform": "capitalize",
@@ -127,9 +124,9 @@ exports[`<Checkbox /> renders correctly when active 1`] = `
         "borderColor": "#ededed",
         "borderRadius": 3,
         "borderWidth": 0,
-        "margin": 0,
+        "margin": 5,
         "marginLeft": 10,
-        "marginRight": 5,
+        "marginRight": 10,
         "opacity": 1,
         "padding": 0,
       }
@@ -140,10 +137,7 @@ exports[`<Checkbox /> renders correctly when active 1`] = `
       style={
         Object {
           "alignItems": "center",
-          "borderWidth": 0,
           "flexDirection": "row",
-          "margin": 0,
-          "padding": 0,
         }
       }
     >
@@ -152,7 +146,7 @@ exports[`<Checkbox /> renders correctly when active 1`] = `
         style={
           Object {
             "color": "#43484d",
-            "fontWeight": "bold",
+            "fontWeight": "normal",
             "marginLeft": 10,
             "marginRight": 10,
             "textTransform": "capitalize",

@@ -12,7 +12,6 @@ const Checkbox = props => {
         key={props.title}
         title={props.title}
         containerStyle={styles.containerStyle}
-        wrapperStyle={styles.wrapperStyle}
         textStyle={styles.textStyle}
         checkedColor={theme.FORM_ELEMENT_COLOR}
       />
@@ -27,17 +26,11 @@ const styles = StyleSheet.create({
   containerStyle: {
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     borderWidth: 0,
-    margin: 0,
     padding: 0,
-    marginRight: 5,
-  },
-  wrapperStyle: {
-    margin: 0,
-    padding: 0,
-    borderWidth: 0,
   },
   textStyle: {
     textTransform: 'capitalize',
+    fontWeight: 'normal',
   },
 });
 

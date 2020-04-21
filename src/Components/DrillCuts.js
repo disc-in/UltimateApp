@@ -27,9 +27,25 @@ class DrillCuts extends React.Component{
          */
         this.cuts = [];
 
-        if(this.props.drill.positions.length > 0){
+        if(this.props.drill.ids.length > 0){
 
-            var elemCount = this.props.drill.positions.length;
+	    
+//	    for(var stepId2 = 0; stepId2 < this.props.drill.positions.length; stepId2++){
+//
+//		console.log("step: " + stepId2);
+//		for(var elemId2 = 0; elemId2 < this.props.drill.positions[stepId2].length; elemId2++){
+//
+//		    console.log("\telem: " + elemId2);
+//
+//		    if(this.props.drill.positions[stepId2][elemId2] == undefined)
+//			console.log("\t\tundefined");
+//		    else
+//			for(var cutId2 = 0; cutId2 < this.props.drill.positions[stepId2][elemId2].length; cutId2++)
+//			    console.log("\t\t cut " + cutId2 + ": " +  this.props.drill.positions[stepId2][elemId2][cutId2]);
+//		}
+//	    }
+
+            var elemCount = this.props.drill.ids.length;
             
             /* For each step (except the last which does not have any cut as the elements are in their final position) */
             for(var stepId = 0; stepId < this.props.drill.stepCount() - 1; stepId++){
@@ -39,12 +55,30 @@ class DrillCuts extends React.Component{
                 /* For each element displayed */
                 for(var elemId = 0; elemId < elemCount; elemId++){
 
+
+//		    console.log("pos step+1 undefined2?: " + (this.props.drill.positions[stepId+1][elemId] == undefined));
+//		    console.log("pos step+1 not undefined2?: " + (this.props.drill.positions[stepId+1][elemId] != undefined));
+		    
                     /* If the element moves at the next step */
-                    if(this.props.drill.positions[elemId][stepId+1] !== undefined){
+                    if(this.props.drill.positions[stepId+1][elemId] != undefined){
 
                         var elemCut = [];
 
                         var positionsAtStep = this.props.drill.getPositionsAtStep(elemId, stepId);
+
+			
+//			console.log("elemCount: " + elemCount);
+//			console.log("stepId: " + stepId);
+//			console.log("elemId: " + elemId);
+//			console.log("posAS.length: " + positionsAtStep.length);
+//			console.log("posAS: " + positionsAtStep);
+//			console.log("pas[length-1] undefined?: " + positionsAtStep[positionsAtStep.length-1] == undefined);
+//			console.log("pos elem 0 at step 0: " + this.props.drill.positions[0][0]);
+//
+//			console.log("pos step: " + this.props.drill.positions[stepId][elemId]);
+//			console.log("pos step+1: " + this.props.drill.positions[stepId+1][elemId]);
+//			console.log("pos step+1 undefined?: " + (this.props.drill.positions[stepId+1][elemId] == undefined));
+//			console.log("pos step+1 not undefined?: " + (this.props.drill.positions[stepId+1][elemId] != undefined));
 
                         /* The cut starting position is its position at step stepId */
                         var pos = this._positionPercentToPixel(positionsAtStep[positionsAtStep.length-1][0], positionsAtStep[positionsAtStep.length-1][1]);
@@ -53,7 +87,7 @@ class DrillCuts extends React.Component{
                         
                         elemCut.push(pos);
 
-                        var positions = this.props.drill.positions[elemId][stepId+1];
+                        var positions = this.props.drill.positions[stepId+1][elemId];
                         
                         /* For each substep in this cut */
                         for(var subStepId = 0; subStepId < positions.length; subStepId++){
@@ -142,7 +176,7 @@ class DrillCuts extends React.Component{
         
 	return(
             <View key="1" style={[{position:'absolute'}]} height="100%" width="100%">
-	      {this.cuts[this.props.currentStep].map(this._displayCut)}
+		{this.cuts.length >= this.props.currentStep && this.cuts[this.props.currentStep] != undefined? this.cuts[this.props.currentStep].map(this._displayCut):undefined}
             </View>
 	);
     }

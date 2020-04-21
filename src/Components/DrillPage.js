@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Animation from './Animation';
 import AnimationEditor from './AnimationEditor';
 import { WebView } from 'react-native-webview';
+import DrillSquare from './DrillSquare';
 
         
 const contentContainerFlex = 6;
@@ -21,16 +22,17 @@ class DrillPage extends React.Component {
 
 
     render() {
-        const drill = this.props.route.params.drill;
+	//        const drill = this.props.route.params.drill;
+	const drill = new DrillSquare();
         const currentStep = this.state.currentStep;
 
         return (
             <View style={styles.main_container}>
 		<View style={styles.content_container}>
-	        <AnimationEditor animation={currentStep.animation} heightRatio={stepContainerFlex/(contentContainerFlex+stepContainerFlex)} widthRatio={1} editable={true}/>	
-                {/*
-	        <Animation animation={currentStep.animation} heightRatio={stepContainerFlex/(contentContainerFlex+stepContainerFlex)} widthRatio={1} editable={false}/> 
-          <WebView source={{ uri: 'https://www.youtube.com/embed/oN1bzPCKkGE' }} style={{ marginTop: 20 }} />
+                {/*	        <AnimationEditor animation={currentStep.animation} heightRatio={stepContainerFlex/(contentContainerFlex+stepContainerFlex)} widthRatio={1} editable={true}/>	*/}
+
+	        <Animation animation={currentStep.animation} heightRatio={stepContainerFlex/(contentContainerFlex+stepContainerFlex)} widthRatio={1} editable={false} drill={drill}/> 
+{/*          <WebView source={{ uri: 'https://www.youtube.com/embed/oN1bzPCKkGE' }} style={{ marginTop: 20 }} />
                    currentStep.animation ? <Animation animation={currentStep.animation}/>
                    : currentStep.video ? <Text>Soon a Video here</Text>
                    : currentStep.webview ? <Text>Soon a Webpage here</Text>

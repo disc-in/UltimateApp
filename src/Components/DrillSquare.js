@@ -1,10 +1,10 @@
 import Drill from './Drill';
 
 // Each drill has an attribute "positions" which is a 4D array:
-// - positions[elemId][stepId][subStepId][coordinateId]
+// - positions[stepId][elemId][subStepId][coordinateId]
 // 
-// Remark1: positions[elemId][0] is the initial position which must be defined for each element
-// Remark2: positions[elemId][stepId] is undefined if  element i position does not change between steps stepId-1 and stepId
+// Remark1: positions[0][elemId] is the initial position which must be defined for each element
+// Remark2: positions[stepId][elemId] is undefined if  element i position does not change between steps stepId-1 and stepId
 class DrillSquare extends Drill{
 
     constructor(){
@@ -18,80 +18,59 @@ class DrillSquare extends Drill{
 	this.texts = ["", "", "", "", "", "", "", "", "1", "2", "3", "4", "5", ""];
 
 	/* Definition of the position of each element at each step */
-	stepCount = 6;
-
-	var discPositions = new Array(stepCount);
-	var p1Positions = new Array(stepCount);
-	var p2Positions = new Array(stepCount);
-	var p3Positions = new Array(stepCount);
-	var p4Positions = new Array(stepCount);
-	var p5Positions = new Array(stepCount);
-	var triangle1 = new Array(stepCount);
-	var triangle2 = new Array(stepCount);
-	var triangle3 = new Array(stepCount);
-	var triangle4 = new Array(stepCount);
-	var triangle5 = new Array(stepCount);
-	var triangle6 = new Array(stepCount);
-	var triangle7 = new Array(stepCount);
-	var triangle8 = new Array(stepCount);
+	var stepCount = 6;
 
 	var discDeltaP =  .06;
 	var discDeltaN = -.02;
 
+	this.positions = new Array(stepCount);
+	
 	// Initial positions
-	discPositions[0] = [[.30+discDeltaP, .30+discDeltaP]]; 
-	p1Positions[0] = [[.30, .30]];
-	p2Positions[0] = [[.16, .30]];
-	p3Positions[0] = [[.60, .30]];
-	p4Positions[0] = [[.60, .60]];
-	p5Positions[0] = [[.30, .60]];
-	triangle1[0] = [[.30, .30]];
-	triangle2[0] = [[.30, .60]];
-	triangle3[0] = [[.60, .30]];
-	triangle4[0] = [[.60, .60]];
-	triangle5[0] = [[.45, .20]];
-	triangle6[0] = [[.20, .45]];
-	triangle7[0] = [[.45, .70]];
-	triangle8[0] = [[.70, .45]];
+	this.positions[0] = new Array(this.texts.length);
+	
+	this.positions[0][13] = [[.30+discDeltaP, .30+discDeltaP]]; 
+	this.positions[0][8] = [[.30, .30]];
+	this.positions[0][9] = [[.16, .30]];
+	this.positions[0][10] = [[.60, .30]];
+	this.positions[0][11] = [[.60, .60]];
+	this.positions[0][12] = [[.30, .60]];
+	this.positions[0][0] = [[.30, .30]];
+	this.positions[0][1] = [[.30, .60]];
+	this.positions[0][2] = [[.60, .30]];
+	this.positions[0][3] = [[.60, .60]];
+	this.positions[0][4] = [[.45, .20]];
+	this.positions[0][5] = [[.20, .45]];
+	this.positions[0][6] = [[.45, .70]];
+	this.positions[0][7] = [[.70, .45]];
 
 	// Step 1 - p2 first cut
-	p2Positions[1] = [[.45, .20]];
+	this.positions[1] = new Array(this.texts.length);
+	this.positions[1][9] = [[.45, .20]];
 	
 	// Step 2 - p2 counter-cut, p1 throws, p3 first cut
-	p2Positions[2] = [[.60, .30]];
-	p3Positions[2] = [[.70, .45]]; 
-	discPositions[2] = [[.60+discDeltaN, .30+discDeltaP]];
+	this.positions[2] = new Array(this.texts.length);
+	this.positions[2][9] = [[.60, .30]];
+	this.positions[2][10] = [[.70, .45]]; 
+	this.positions[2][13] = [[.60+discDeltaN, .30+discDeltaP]];
 
 	// Step 3 - p3 counter-cut, p2 throws, p4 first cut
-	p3Positions[3] = [[.60, .60]];
-	p4Positions[3] = [[.45, .70]];
-	discPositions[3] = [[.60+discDeltaN, .60+discDeltaN]];
+	this.positions[3] = new Array(this.texts.length);
+	this.positions[3][10] = [[.60, .60]];
+	this.positions[3][11] = [[.45, .70]];
+	this.positions[3][13] = [[.60+discDeltaN, .60+discDeltaN]];
 
 	// Step 4 - p4 counter-cut, p3 throws, p5 first cut
-	p4Positions[4] = [[.30, .60]];
-	p5Positions[4] = [[.20, .45]];
-	discPositions[4] = [[.30+discDeltaP, .60+discDeltaN]];
+	this.positions[4] = new Array(this.texts.length);
+	this.positions[4][11] = [[.30, .60]];
+	this.positions[4][12] = [[.20, .45]];
+	this.positions[4][13] = [[.30+discDeltaP, .60+discDeltaN]];
 	
 	// Step 5 - p5 counter-cut, p4 throws, p1 first cut
-	p5Positions[5] = [[.30, .30]];
-	p1Positions[5] = [[.45, .20]];
-	discPositions[5] = [[.30+discDeltaP, .30+discDeltaP]];
+	this.positions[5] = new Array(this.texts.length);
+	this.positions[5][12] = [[.30, .30]];
+	this.positions[5][8] = [[.45, .20]];
+	this.positions[5][13] = [[.30+discDeltaP, .30+discDeltaP]];
 	
-	this.positions.push(triangle1);
-	this.positions.push(triangle2);
-	this.positions.push(triangle3);
-	this.positions.push(triangle4);
-	this.positions.push(triangle5);
-	this.positions.push(triangle6);
-	this.positions.push(triangle7);
-	this.positions.push(triangle8);
-	this.positions.push(p1Positions);
-	this.positions.push(p2Positions);
-	this.positions.push(p3Positions);
-	this.positions.push(p4Positions);
-	this.positions.push(p5Positions);
-	this.positions.push(discPositions);
-
     }
 }
 

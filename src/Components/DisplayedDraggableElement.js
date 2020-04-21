@@ -13,21 +13,14 @@ class DisplayedDraggableElement extends React.Component {
 	var dimensionMin = Math.min(this.props.animationWidth, this.props.animationHeight);
 	this.props.playerRadius = dimensionMin / 12;
         //	this.props.discRadius = this.props.playerRadius / 2;
-        this.props.discRadius = 200; 
 	this.props.coneSize = this.props.playerRadius * 5 / 16;
 	this.props.bottomconeSize = this.props.playerRadius * 10 / 16;
         this.props.borderWidth = this.props.discRadius/10;
         
 	this.state = {
 	    /* Current position of the element in pixels */
-	    currentPosition: new Animated.ValueXY({ x: 10, y: 10 }),
+	    currentPosition: new Animated.ValueXY({ x: 0, y: 0 }),
 	};
-
-	console.log("Constructor DDE this.props.key: " + this.props.key);
-
-	// Add a listener on each coordinate offset to get its value at the end of each move
-	this.state.currentPosition.x.addListener(({value}) => this._value = value);
-	this.state.currentPosition.y.addListener(({value}) => this._value = value);
 
         this.xCut = 10;
         this.yCut = 10;
@@ -90,16 +83,15 @@ class DisplayedDraggableElement extends React.Component {
     }
 
     render() {
-
-        console.log("draggable render, id: " + this.props.id);
-
 	const panStyle = {
 	    transform: this.state.currentPosition.getTranslateTransform()
 	};
 	
 	/* Returns a component according to the element type */
 	switch (this.props.id) {
+	    
 	case 'defense':
+	    
             console.log("Render in defense");
             return (
 		<Animated.Text
@@ -150,8 +142,8 @@ class DisplayedDraggableElement extends React.Component {
 			 {width: 20},
 			 {borderRadius: 20},
 			 {borderWidth: 2}, ]}
-		key={this.props.key}>
-		    </Animated.View>
+		key={this.props.key}/>
+
             );
 
 	case 'triangle':

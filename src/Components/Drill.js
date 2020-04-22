@@ -37,7 +37,7 @@ class Drill{
         var allStepChecked = false;
 
         /* While the position of the element at step stepId has not been found  and all the steps after the current one have been checked */
-        while(nextPosition === null && stepToCheck !== stoppingStep){
+        while((nextPosition === null || nextPosition === undefined) && stepToCheck !== stoppingStep){
 
             nextPosition = this.positions[stepToCheck][elemId];
             stepToCheck -= 1;

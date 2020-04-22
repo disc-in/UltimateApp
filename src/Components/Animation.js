@@ -43,6 +43,10 @@ class Animation extends React.Component{
 
     /** Number of steps in the drill */
     _stepCount = () => {
+
+	console.log("_stepCount");
+	console.log(this.state.drill.positions.length);
+	
 	if(this.state.drill != undefined)
 	    return this.state.drill.positions.length;
 	else

@@ -1,8 +1,10 @@
-// Each drill has an attribute "positions" which is a 4D array:
-// - positions[elemId][stepId][subStepId][coordinateId]
-// 
-// Remark1: positions[elemId][0] is the initial position which must be defined for each element
-// Remark2: positions[elemId][stepId] is undefined if  element i position does not change between steps stepId-1 and stepId
+/** Represents a the successive positions of the elements in a drill
+   Each drill has an attribute "positions" which is a 4D array:
+ - positions[elemId][stepId][subStepId][coordinateId]
+ 
+ Remark1: positions[elemId][0] is the initial position which must be defined for each element
+ Remark2: positions[elemId][stepId] is undefined if  element i position does not change between steps stepId-1 and stepId
+*/
 class Drill{
 
     constructor(animation){
@@ -27,18 +29,6 @@ class Drill{
     /** Get the position of an element at a given step or return null if its position at step stoppingStep is the last one at step stepId */
     getPositionsAtStep(elemId, stepId, stoppingStep){
 
-//	console.log("Drill: getposAtStep");
-
-//	console.log("stepdId: " + stepId + " elemId: " + elemId);
-
-//	console.log("this.pos[step][elem] undefined? ");
-//	console.log(this.positions[stepId][elemId] === undefined);
-	
-//	console.log("this.pos[step][elem] null ? ");
-//	console.log(this.positions[stepId][elemId] === null);
-	
-//	console.log("this.pos[step][elem]: " + this.positions[stepId][elemId] );
-	
         /* Get the position of the element at step stepId */
         var nextPosition = this.positions[stepId][elemId];
         
@@ -49,7 +39,6 @@ class Drill{
         /* While the position of the element at step stepId has not been found  and all the steps after the current one have been checked */
         while(nextPosition === null && stepToCheck !== stoppingStep){
 
-////	    console.log("Step to check: " + stepToCheck);
             nextPosition = this.positions[stepToCheck][elemId];
             stepToCheck -= 1;
         }
@@ -68,11 +57,6 @@ class Drill{
 
     /** Add an element to the drill */
     addElement(element, initialX, initialY){
-
-//	console.log("drill add element at position: " + initialX + "/" + initialY);
-//	console.log("drill positions before update: " + this.positions);
-
-//	console.log("drill element id: " + element.id);
 	
 	// Set its initial position
 	this.positions[0].push([[initialX, initialY]]);
@@ -87,7 +71,6 @@ class Drill{
 	// Add its type
 	this.ids.push(element.props.id);
 
-//	console.log("positions after update: " + this.positions);
     }
 
 }

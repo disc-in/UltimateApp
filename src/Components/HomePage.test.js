@@ -1,9 +1,11 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { render, fireEvent, waitForElement } from 'react-native-testing-library';
+import { render, fireEvent, cleanup } from 'react-native-testing-library';
 import { DrillTypes } from '../Fixtures';
 
 import HomePage from './HomePage';
+
+afterEach(cleanup);
 
 describe('<HomePage />', () => {
   it('renders correctly', () => {
@@ -13,7 +15,7 @@ describe('<HomePage />', () => {
 
   it('links to technical drill list', async () => {
     const navigation = { navigate: jest.fn() };
-    const { container, getByText } = render(<HomePage navigation={navigation} />);
+    const { getByText } = render(<HomePage navigation={navigation} />);
 
     await fireEvent.press(getByText('Frisbee drills'));
 

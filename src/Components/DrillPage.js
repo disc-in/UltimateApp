@@ -14,7 +14,7 @@ import { connect } from 'react-redux';
 import { useHeaderHeight } from '@react-navigation/stack';
 import { LinearGradient } from 'expo-linear-gradient';
 
-import DrillAnimationPage from './DrillAnimationPage';
+import DrillAnimation from './DrillAnimation';
 import { toggleFavorite } from '../Store/Actions/favoriteAction';
 
 import theme from '../styles/theme.style';
@@ -77,7 +77,7 @@ export const DrillPage = props => {
           </View>
           <View style={styles.separator} />
           <View style={styles.infoSubWrapper}>
-            <Text style={styles.infoDrill}>{drill.nbPlayers}</Text>
+            <Text style={styles.infoDrill}>{drill.minimalPlayersNumber}</Text>
             <Text style={styles.info}> players</Text>
           </View>
           <View style={styles.separator} />
@@ -123,7 +123,7 @@ export const DrillPage = props => {
         </View>
       </View>
       <View ref={firstDrill} style={styles.animation}>
-        <DrillAnimationPage drill={drill} />
+        <DrillAnimation drill={drill} />
       </View>
     </ScrollView>
   );
@@ -173,7 +173,6 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
     borderRadius: 50,
-    backgroundColor: '#FFF933',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -237,7 +236,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   lines: {
-    borderBottomColor: '#DCDCDC',
+    borderBottomColor: theme.COLOR_SECONDARY_LIGHT,
     borderBottomWidth: 1,
   },
   favoriteContainer: {

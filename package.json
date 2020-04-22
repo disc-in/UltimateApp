@@ -7,7 +7,6 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject",
     "lint": "eslint src --max-warnings=0 --ext .js,.jsx",
     "lint-fix": "eslint src --fix --ext .js,.jsx",
     "prettier": "prettier 'src/**/*.{ts,tsx,js,jsx}' --list-different",

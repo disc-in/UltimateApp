@@ -1,14 +1,17 @@
 {
   "expo": {
-    "name": "Blank Template",
-    "slug": "CoachingApp",
-    "privacy": "public",
+    "name": "UltimateApp",
+    "description": "Empowering Ultimate coaches to prepare appropriate trainings for their teams",
+    "slug": "ultimate-app",
+    "privacy": "unlisted",
+    "sdkVersion": "37.0.0",
     "platforms": [
       "ios",
       "android",
       "web"
     ],
     "version": "1.0.0",
+    "githubUrl": "https://github.com/UltimateApp/UltimateApp",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -16,11 +19,8 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
     "assetBundlePatterns": [
-      "**/*"
+      "assets/**/*"
     ],
     "ios": {
       "supportsTablet": true

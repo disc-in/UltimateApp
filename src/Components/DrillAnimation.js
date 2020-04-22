@@ -7,7 +7,7 @@ import Animation from './Animation';
 import VimeoVideo from './VimeoVideo';
 import theme from '../styles/theme.style';
 
-const DrillAnimationPage = props => {
+const DrillAnimation = props => {
   const [count, setCount] = useState(0);
 
   const incrementCount = () => {
@@ -45,10 +45,10 @@ const DrillAnimationPage = props => {
   };
 
   const checkSwitch = () => {
-    if (count === props.drill.steps.length) {
+    if (props.drill.steps && count === props.drill.steps.length) {
       return displayFinish();
     } else {
-      switch (props.drill.steps[count].source) {
+      switch (props.drill.steps && props.drill.steps[count].source) {
         case 'animation':
           return displayAnimation();
 
@@ -243,4 +243,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default DrillAnimationPage;
+export default DrillAnimation;

@@ -172,4 +172,11 @@ export default {
       drills: [2, 3],
     },
   ],
+  programs: [
+    {
+      id: 1,
+      title: 'Beginner',
+      trainings: [1],
+    },
+  ],
 };

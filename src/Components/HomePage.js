@@ -30,10 +30,10 @@ export default class HomePage extends React.Component {
             </View>
           </ImageBackground>
         </TouchableHighlight>
-        <TouchableHighlight onPress={() => this.props.navigation.navigate('TrainingListPage')} style={styles.menuItem}>
+        <TouchableHighlight onPress={() => this.props.navigation.navigate('ProgramsPage')} style={styles.menuItem}>
           <ImageBackground source={huddle} style={styles.image}>
             <View style={styles.wrapper}>
-              <Text style={styles.text}>Trainings</Text>
+              <Text style={styles.text}>Training programs</Text>
             </View>
           </ImageBackground>
         </TouchableHighlight>

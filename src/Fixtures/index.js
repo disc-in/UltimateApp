@@ -1369,4 +1369,26 @@ export default {
       trainings: [2, 3, 5],
     },
   ],
+  programs: [
+    {
+      id: 1,
+      title: 'Beginner',
+      trainings: [1],
+    },
+    {
+      id: 2,
+      title: 'Ultimate overwiew',
+      trainings: [1],
+    },
+    {
+      id: 3,
+      title: 'Long throws',
+      trainings: [1],
+    },
+    {
+      id: 4,
+      title: 'Strong defense',
+      trainings: [1],
+    },
+  ],
 };

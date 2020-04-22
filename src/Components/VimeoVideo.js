@@ -12,12 +12,10 @@ const VimeoVideo = props => {
       await fetch(vimeoUrlSource)
         .then(res => res.json())
         .then(res => {
-          // console.log('res from Vimeo ', JSON.stringify(res));
           const videoArray = res.request.files.progressive;
           const videoVimeoQuality = videoArray.find(videoObject => videoObject.quality === '540p');
           console.log('video url for vimeo is ', videoVimeoQuality.url);
           if (videoVimeoQuality) {
-            // setUrlVideo(videoVimeoQuality.url);
             return videoVimeoQuality.url;
           }
         })
@@ -33,8 +31,6 @@ const VimeoVideo = props => {
               shouldPlay: true,
               isLooping: true,
             });
-            const status = await videoElem.current.getStatusAsync();
-            console.log(' status is ', status);
           } catch (e) {
             console.log('ERROR Loading Video', e);
           }

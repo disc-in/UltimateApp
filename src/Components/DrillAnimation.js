@@ -8,7 +8,7 @@ class DrillAnimation extends Component {
     return (
       <View style={styles.drillAnimation}>
         {this.props.animation ? (
-		<Animation widthRatio={1} heightRatio={1/2} animation={this.props.animation} />
+          <Animation widthRatio={1} heightRatio={1 / 2} animation={this.props.animation} />
         ) : this.props.video ? (
           <WebView source={{ uri: this.props.video }} />
         ) : (

@@ -378,10 +378,12 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                 "borderRadius": 50,
                                 "height": 100,
                                 "justifyContent": "center",
+                                "margin": 20,
                                 "opacity": 1,
                                 "width": 100,
                               }
                             }
+                            testID="gradientButton"
                           >
                             <ViewManagerAdapter_ExpoLinearGradient
                               proxiedProperties={
@@ -405,7 +407,6 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                 Object {
                                   "alignItems": "center",
                                   "borderRadius": 50,
-                                  "flex": 1,
                                   "height": 100,
                                   "justifyContent": "center",
                                   "width": 100,
@@ -518,7 +519,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                 }
                               }
                             >
-                              Equipment needs for the drill
+                              No Equipment
                             </Text>
                           </View>
                         </View>

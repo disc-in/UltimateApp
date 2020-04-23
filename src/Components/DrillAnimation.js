@@ -1,23 +1,24 @@
 import React, { useState } from 'react';
 import { ScrollView, StyleSheet, View, Text, Dimensions, TouchableOpacity } from 'react-native';
 import { WebView } from 'react-native-webview';
-import { LinearGradient } from 'expo-linear-gradient';
 
 import Animation from './Animation';
 import VimeoVideo from './VimeoVideo';
+import GradientButton from './shared/GradientButton';
+import { Sources } from '../Fixtures';
 import theme from '../styles/theme.style';
 
 const DrillAnimation = props => {
-  const [count, setCount] = useState(0);
+  const [currentStepIndex, setStepIndex] = useState(0);
 
-  const incrementCount = () => {
-    setCount((count + 1) % (props.drill.steps.length + 1));
+  const incrementStepIndex = () => {
+    setStepIndex((currentStepIndex + 1) % (props.drill.steps.length + 1));
   };
 
   const displayNextStep = () => {
-    if (count + 1 === props.drill.steps.length) {
+    if (currentStepIndex + 1 === props.drill.steps.length) {
       return (
-        <View style={styles.infoWrapper}>
+        <View>
           <View style={styles.description}>
             <View style={styles.wrapperFinish}>
               <Text style={styles.fitnessNext}>Finish</Text>
@@ -28,13 +29,13 @@ const DrillAnimation = props => {
       );
     } else {
       return (
-        <View style={styles.infoWrapper}>
+        <View>
           <View style={styles.description}>
             <View style={styles.subWrapper}>
-              <Text style={styles.fitnessNext}>{props.drill.steps[count + 1].count}</Text>
+              <Text style={styles.fitnessNext}>{props.drill.steps[currentStepIndex + 1].repetition}</Text>
             </View>
             <View style={styles.subSubWrapper}>
-              <Text style={styles.fitnessNext}>{props.drill.steps[count + 1].title}</Text>
+              <Text style={styles.fitnessNext}>{props.drill.steps[currentStepIndex + 1].title}</Text>
             </View>
             <View style={styles.fakeWrapper} />
           </View>
@@ -45,19 +46,16 @@ const DrillAnimation = props => {
   };
 
   const checkSwitch = () => {
-    if (props.drill.steps && count === props.drill.steps.length) {
+    if (props.drill.steps && currentStepIndex === props.drill.steps.length) {
       return displayFinish();
     } else {
-      switch (props.drill.steps && props.drill.steps[count].source) {
-        case 'animation':
-          return displayAnimation();
-
-        case 'youtube':
-          return displayYoutube();
-
-        case 'vimeo':
-          return displayVimeo();
-
+      switch (props.drill.steps && props.drill.steps[currentStepIndex].source) {
+        case Sources.ANIMATION:
+          return displayAnimation(props.drill.steps[currentStepIndex]);
+        case Sources.YOUTUBE:
+          return displayYoutube(props.drill.steps[currentStepIndex]);
+        case Sources.VIMEO:
+          return displayVimeo(props.drill.steps[currentStepIndex]);
         default:
           return <Text>No visual content for this drill</Text>;
       }
@@ -68,64 +66,55 @@ const DrillAnimation = props => {
     return (
       <View>
         <View style={styles.containerFinish}>
-          <View style={styles.infoWrapper}>
-            <TouchableOpacity style={styles.buttonFinish} onPress={() => incrementCount()}>
-              <LinearGradient
-                style={styles.gradient}
-                colors={['#08AEEA', '#2AF598']}
-                start={{ x: 1, y: 1 }}
-                end={{ x: 0, y: 0 }}
-              >
-                <Text style={styles.textAgain}>Do it again</Text>
-              </LinearGradient>
-            </TouchableOpacity>
+          <View>
+            <GradientButton onPress={() => incrementStepIndex()} text="Do it again" />
           </View>
         </View>
       </View>
     );
   };
 
-  const displayAnimation = () => {
+  const displayAnimation = ({ link, repetition, instruction }) => {
     return (
-      <ScrollView style={styles.scrollView}>
+      <ScrollView>
         <View style={styles.pageAnimation}>
-          <Animation animation={props.drill.steps[count].link} />
+          <Animation animation={link} />
         </View>
         <View style={styles.containerAnimation}>
-          <Text style={styles.fitness}>{props.drill.steps[count].count}</Text>
-          <TouchableOpacity style={styles.buttonNext} onPress={() => incrementCount()} />
+          <Text style={styles.fitness}>{repetition}</Text>
+          <TouchableOpacity style={styles.buttonNext} onPress={() => incrementStepIndex()} />
         </View>
         <View style={styles.subSubWrapper}>
-          <Text style={styles.instruction}>{props.drill.steps[count].instruction}</Text>
+          <Text style={styles.instruction}>{instruction}</Text>
         </View>
       </ScrollView>
     );
   };
 
-  const displayYoutube = () => {
+  const displayYoutube = ({ link }) => {
     return (
       <WebView
         source={{
-          uri: props.drill.steps[count].link,
+          uri: link,
         }}
         style={styles.drillAnimationPage}
       />
     );
   };
 
-  const displayVimeo = () => {
+  const displayVimeo = ({ link, repetition, title }) => {
     return (
       <View style={styles.drillAnimationPage}>
-        <VimeoVideo vimeoId={props.drill.steps[count].link} screenWidth={screenDimension.width} />
-        <View style={styles.infoWrapper}>
+        <VimeoVideo vimeoId={link} screenWidth={screenDimension.width} />
+        <View>
           <View style={styles.description}>
             <View style={styles.subWrapper}>
-              <Text style={styles.fitness}>{props.drill.steps[count].count}</Text>
+              <Text style={styles.fitness}>{repetition}</Text>
             </View>
             <View style={styles.subSubWrapper}>
-              <Text style={styles.fitness}>{props.drill.steps[count].title}</Text>
+              <Text style={styles.fitness}>{title}</Text>
             </View>
-            <TouchableOpacity style={styles.buttonNext} onPress={() => incrementCount()} />
+            <TouchableOpacity style={styles.buttonNext} onPress={() => incrementStepIndex()} />
           </View>
           <View style={styles.lines} />
         </View>
@@ -143,10 +132,22 @@ const styles = StyleSheet.create({
     flex: 1,
     height: screenDimension.height - 80,
   },
-  container: { flex: 1 },
-  containerFinish: { flex: 1, justifyContent: 'center', alignItems: 'center', height: screenDimension.height - 80 },
-  containerAnimation: { flexDirection: 'row', alignSelf: 'flex-end' },
-  description: { flexDirection: 'row' },
+  container: {
+    flex: 1,
+  },
+  containerFinish: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: screenDimension.height - 80,
+  },
+  containerAnimation: {
+    flexDirection: 'row',
+    alignSelf: 'flex-end',
+  },
+  description: {
+    flexDirection: 'row',
+  },
   pageAnimation: {
     flex: 1,
     height: screenDimension.height - 160,
@@ -176,30 +177,12 @@ const styles = StyleSheet.create({
     width: 25,
     height: 25,
     borderRadius: 12.5,
-    backgroundColor: '#FFF',
+    backgroundColor: theme.BACKGROUND_COLOR_BUTTON,
     borderWidth: 2,
-    borderColor: '#808080',
+    borderColor: theme.BORDER_COLOR_BUTTON_ACTIVE,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  buttonFinish: {
-    margin: 20,
-    width: 100,
-    height: 100,
-    borderRadius: 50,
-    backgroundColor: '#FFF',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  gradient: {
-    flex: 1,
-    width: 100,
-    height: 100,
-    borderRadius: 50,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  infoWrapper: {},
   subWrapper: {
     flex: 1,
     alignItems: 'center',
@@ -227,11 +210,6 @@ const styles = StyleSheet.create({
     color: theme.COLOR_PRIMARY,
     fontWeight: 'bold',
   },
-  textAgain: {
-    fontSize: 16,
-    fontWeight: 'bold',
-  },
-  scrollView: {},
   instruction: {
     marginTop: 20,
     marginBottom: 20,

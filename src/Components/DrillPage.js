@@ -12,8 +12,8 @@ import {
 } from 'react-native';
 import { connect } from 'react-redux';
 import { useHeaderHeight } from '@react-navigation/stack';
-import { LinearGradient } from 'expo-linear-gradient';
 
+import GradientButton from './shared/GradientButton';
 import DrillAnimation from './DrillAnimation';
 import { toggleFavorite } from '../Store/Actions/favoriteAction';
 
@@ -86,16 +86,7 @@ export const DrillPage = props => {
             <Text style={styles.info}> level</Text>
           </View>
         </View>
-        <TouchableOpacity style={styles.videoLink} onPress={onPressStartButton}>
-          <LinearGradient
-            style={styles.gradient}
-            colors={['#08AEEA', '#2AF598']}
-            start={{ x: 1, y: 1 }}
-            end={{ x: 0, y: 0 }}
-          >
-            <Text style={styles.videoLinkText}>Start</Text>
-          </LinearGradient>
-        </TouchableOpacity>
+        <GradientButton onPress={onPressStartButton} text="Start" />
       </ImageBackground>
       <View style={styles.separator} />
       <View style={styles.description}>
@@ -112,7 +103,7 @@ export const DrillPage = props => {
       <View style={styles.description}>
         <View style={styles.descriptionItem}>
           <Text style={styles.descriptionTitle}>Equipment</Text>
-          <Text style={styles.descriptionText}>{drill.equipment}</Text>
+          <Text style={styles.descriptionText}>{drill.equipmentLabel}</Text>
         </View>
       </View>
       <View style={styles.lines} />

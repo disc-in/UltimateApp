@@ -51,9 +51,7 @@ exports[`<DrillAnimation /> renders correctly for a drill with a video from vime
         }
       />
     </View>
-    <View
-      style={Object {}}
-    >
+    <View>
       <View
         style={
           Object {
@@ -80,9 +78,7 @@ exports[`<DrillAnimation /> renders correctly for a drill with a video from vime
                 "marginTop": 20,
               }
             }
-          >
-            20
-          </Text>
+          />
         </View>
         <View
           style={
@@ -120,8 +116,8 @@ exports[`<DrillAnimation /> renders correctly for a drill with a video from vime
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#FFF",
-              "borderColor": "#808080",
+              "backgroundColor": "#fff",
+              "borderColor": "#d5d5d5",
               "borderRadius": 12.5,
               "borderWidth": 2,
               "height": 25,
@@ -149,9 +145,7 @@ exports[`<DrillAnimation /> renders correctly for a drill with a video from vime
         }
       }
     >
-      <View
-        style={Object {}}
-      >
+      <View>
         <View
           style={
             Object {
@@ -177,9 +171,7 @@ exports[`<DrillAnimation /> renders correctly for a drill with a video from vime
                   "marginTop": 20,
                 }
               }
-            >
-              8
-            </Text>
+            />
           </View>
           <View
             style={

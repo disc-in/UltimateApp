@@ -8,13 +8,11 @@ const VimeoVideo = props => {
 
   useEffect(() => {
     async function fetchVimeoData() {
-      console.log('urlSource is ', vimeoUrlSource);
       await fetch(vimeoUrlSource)
         .then(res => res.json())
         .then(res => {
           const videoArray = res.request.files.progressive;
           const videoVimeoQuality = videoArray.find(videoObject => videoObject.quality === '540p');
-          console.log('video url for vimeo is ', videoVimeoQuality.url);
           if (videoVimeoQuality) {
             return videoVimeoQuality.url;
           }
@@ -37,10 +35,6 @@ const VimeoVideo = props => {
         });
     }
     fetchVimeoData();
-
-    return () => {
-      console.log('Error loading video content');
-    };
   }, [vimeoUrlSource]);
 
   return (

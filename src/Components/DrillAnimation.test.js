@@ -8,7 +8,11 @@ import { createDrill } from '../Fixtures/TestFixtures';
 describe('<DrillAnimation />', () => {
   it('renders correctly for a drill with video', () => {
     const drill = createDrill({
-      video: 'https://www.youtube.com/embed/oN1bzPCKkGE',
+      steps: [
+        {
+          video: 'https://www.youtube.com/embed/oN1bzPCKkGE',
+        },
+      ],
     });
     const tree = renderer.create(<DrillAnimation drill={drill} />).toJSON();
     expect(tree).toMatchSnapshot();
@@ -16,7 +20,11 @@ describe('<DrillAnimation />', () => {
 
   it('renders correctly for a drill with animation', () => {
     const drill = createDrill({
-      animation: animationMenageATrois,
+      steps: [
+        {
+          animation: animationMenageATrois,
+        },
+      ],
     });
     const tree = renderer.create(<DrillAnimation drill={drill} />).toJSON();
     expect(tree).toMatchSnapshot();

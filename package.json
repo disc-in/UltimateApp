@@ -31,8 +31,7 @@
     "react-native-webview": "8.1.1",
     "react-redux": "^7.2.0",
     "redux": "^4.0.5",
-    "watchman": "^1.0.0",
-    "expo-screen-orientation": "~1.0.0"
+    "watchman": "^1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

@@ -227,7 +227,15 @@ exports[`<DrillPage /> renders correctly 1`] = `
                             >
                               Fitness Drill Title
                             </Text>
-                            <Text />
+                            <Text
+                              style={
+                                Object {
+                                  "color": "#fff",
+                                  "fontSize": 14,
+                                  "paddingHorizontal": 30,
+                                }
+                              }
+                            />
                           </View>
                           <View
                             style={

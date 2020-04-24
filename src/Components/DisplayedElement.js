@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Easing, Animated, View, PanResponder } from 'react-native';
+import { elementsSize } from './shared/animationUtils';
 
 /** An element displayed in a drill animation */
 class DisplayedElement extends React.Component {
@@ -18,13 +19,15 @@ class DisplayedElement extends React.Component {
     super(props);
 
     // TODO: put the constant coefficient used in the following somewhere to avoir writing them twice (in this class and in DrillCuts)
-    var dimensionMin = Math.min(this.props.animationWidth, this.props.animationHeight);
-    this.props.playerRadius = dimensionMin / 12;
-    this.props.discRadius = 200;
-    this.props.coneSize = (this.props.playerRadius * 5) / 16;
-
-    this.props.bottomconeSize = (this.props.playerRadius * 10) / 16;
-    this.props.borderWidth = this.props.discRadius / 10;
+    const { playerRadius, discRadius, coneSize, bottomconeSize, borderWidth } = elementsSize(
+      props.animationWidth,
+      props.animationHeight,
+    );
+    this.props.playerRadius = playerRadius;
+    this.props.discRadius = discRadius;
+    this.props.coneSize = coneSize;
+    this.props.bottomconeSize = bottomconeSize;
+    this.props.borderWidth = borderWidth;
 
     /* Current position of the element in pixels */
 

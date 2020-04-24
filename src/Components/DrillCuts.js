@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import Svg, { Line, Circle } from 'react-native-svg';
+import { elementsSize } from './shared/animationUtils';
 
 /** The cuts that must be displayed at each step of a drill */
 class DrillCuts extends React.Component {
@@ -12,11 +13,10 @@ class DrillCuts extends React.Component {
   constructor(props) {
     super(props);
 
-    // TODO: put the constant coefficient used in the following somewhere to avoir writing them twice (in this class and in DisplayedElement)
-    var dimensionMin = Math.min(this.props.animationWidth, this.props.animationHeight);
-    this.playerRadius = dimensionMin / 12;
-    this.discRadius = this.playerRadius / 2;
-    this.coneSize = (this.playerRadius * 5) / 16;
+    const { playerRadius, discRadius, coneSize } = elementsSize(props.animationWidth, props.animationHeight);
+    this.playerRadius = playerRadius;
+    this.discRadius = discRadius;
+    this.coneSize = coneSize;
 
     /* 2D array: this.cuts[stepId][cutId]
      * Each cut contains:

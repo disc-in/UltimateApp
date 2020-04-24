@@ -40,7 +40,7 @@ export const ProgressBar = props => {
         <Animated.View style={[styles.lineFiller, { width }]} />
 
         {range(1, total).map(k => (
-          <Dot idx={k} onPress={() => onDotPress(k - 1)} full={k <= current} />
+          <Dot key={k} idx={k} onPress={() => onDotPress(k - 1)} full={k <= current} />
         ))}
       </View>
     </View>

@@ -66,7 +66,7 @@ export const DrillPageMinimal = props => {
       <View style={styles.description}>
         <View style={styles.descriptionItem}>
           <Text style={styles.descriptionTitle}>Goals</Text>
-          <Text style={styles.descriptionText}>{drill.goals.join(', ')}</Text>
+          <Text style={styles.descriptionText}>{drill.goals ? drill.goals.join(', ') : ''}</Text>
         </View>
       </View>
       <View style={styles.description}>

@@ -27,6 +27,6 @@ describe('<TrainingPage />', () => {
 
     await fireEvent.press(getByText(trainingFirstDrill.title));
 
-    expect(navigation.navigate).toBeCalledWith('DrillPage', { drill: trainingFirstDrill });
+    expect(navigation.navigate).toBeCalledWith('DrillPageMinimal', { drill: trainingFirstDrill, training });
   });
 });

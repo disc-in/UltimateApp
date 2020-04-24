@@ -7,6 +7,7 @@ import DisplayedElement from './DisplayedElement';
 import DrillCuts from './DrillCuts';
 import ProgressBar from './ProgressBar';
 import Drill from './Drill';
+import { sameAnimationDrill } from './shared/animationUtils';
 
 /** Display a drill and enables to animate it using buttons (play, next step, previous step)
  *
@@ -322,69 +323,9 @@ class Animation extends React.Component {
   /** Used to update the animation when a modification is made through the editor */
   static getDerivedStateFromProps(props, state) {
     // Test if the drill has changed
-    var isEqual = true;
-
-    if (props.drill !== undefined && state.drill !== undefined) {
-      var stepId = 0;
-      var elemId = 0;
-      var cutId = 0;
-
-      // Get all the positions in props and stats
-      var pPositions = props.drill.positions;
-      var sPositions = state.drill.positions;
-
-      // If there is not the same number of steps
-      if (pPositions.length !== sPositions.length) isEqual = false;
-
-      // While no difference has been found and all the positions have not been tested
-      while (stepId < pPositions.length && isEqual) {
-        if (pPositions.length !== sPositions.length) isEqual = false;
-
-        if (isEqual && pPositions[stepId].length !== sPositions[stepId].length) isEqual = false;
-
-        if (isEqual && pPositions[stepId].length > elemId) {
-          var pUndefined = pPositions[stepId][elemId] === undefined;
-          var sUndefined = sPositions[stepId][elemId] === undefined;
-
-          var pSize = -1;
-          var sSize = -1;
-
-          if (!pUndefined) pSize = pPositions[stepId][elemId].length;
-
-          if (!sUndefined) sSize = sPositions[stepId][elemId].length;
-
-          // If the position is different
-          if (
-            pSize !== sSize ||
-            (pSize > 0 &&
-              (pPositions[stepId][elemId][cutId][0] !== sPositions[stepId][elemId][cutId][0] ||
-                pPositions[stepId][elemId][cutId][1] !== sPositions[stepId][elemId][cutId][1]))
-          )
-            isEqual = false;
-        }
-
-        // Go to the next position
-        if (pPositions[stepId][elemId] === undefined) {
-          if (pPositions[stepId].length > elemId + 1) elemId++;
-          else {
-            stepId++;
-            elemId = 0;
-            cutId = 0;
-          }
-        } else if (pPositions[stepId][elemId].length > cutId + 1) cutId++;
-        else if (pPositions[stepId].length > elemId + 1) {
-          elemId++;
-          cutId = 0;
-        } else {
-          stepId++;
-          elemId = 0;
-          cutId = 0;
-        }
-      }
-    }
-
-    if (isEqual) return null;
-    else {
+    if (sameAnimationDrill(props.drill, state.drill)) {
+      return null;
+    } else {
       return {
         drill: props.drill,
         de: undefined,

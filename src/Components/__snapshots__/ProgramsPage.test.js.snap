@@ -81,6 +81,39 @@ exports[`<ProgramsPage /> renders correctly when connected 1`] = `
             1/
             1
           </Text>
+          <View
+            style={
+              Object {
+                "backgroundColor": "white",
+                "borderRadius": 5,
+                "height": 10,
+                "marginTop": 5,
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "backgroundColor": "#232b2b",
+                    "borderRadius": 5,
+                    "width": "50%",
+                  },
+                  Object {
+                    "width": "100%",
+                  },
+                ]
+              }
+            />
+          </View>
         </View>
       </View>
     </View>

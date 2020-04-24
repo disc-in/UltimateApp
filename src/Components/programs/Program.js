@@ -6,10 +6,15 @@ import theme from '../../styles/theme.style';
 
 const Program = props => {
   const { id, title, trainings } = props.program;
+  const fakeFirstTodoTraining = 1;
+  const width = `${(fakeFirstTodoTraining * 100) / trainings.length}%`;
   return (
     <View style={styles.program}>
       <Text style={styles.programTitle}>{title}</Text>
       <Text style={styles.completion}>1/{trainings.length}</Text>
+      <View style={styles.progressBar}>
+        <View style={[StyleSheet.absoluteFill, styles.fillProgressBar, { width }]} />
+      </View>
     </View>
   );
 };
@@ -29,5 +34,17 @@ const styles = StyleSheet.create({
   completion: {
     textAlign: 'right',
     fontWeight: 'bold',
+  },
+  progressBar: {
+    marginTop: 5,
+    height: 10,
+    width: '100%',
+    backgroundColor: 'white',
+    borderRadius: 5,
+  },
+  fillProgressBar: {
+    width: '50%',
+    borderRadius: 5,
+    backgroundColor: theme.COLOR_PRIMARY,
   },
 });

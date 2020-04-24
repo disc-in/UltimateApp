@@ -23,11 +23,11 @@ class DisplayedElement extends React.Component {
       props.animationWidth,
       props.animationHeight,
     );
-    this.props.playerRadius = playerRadius;
-    this.props.discRadius = discRadius;
-    this.props.coneSize = coneSize;
-    this.props.bottomconeSize = bottomconeSize;
-    this.props.borderWidth = borderWidth;
+    this.playerRadius = playerRadius;
+    this.discRadius = discRadius;
+    this.coneSize = coneSize;
+    this.bottomconeSize = bottomconeSize;
+    this.borderWidth = borderWidth;
 
     /* Current position of the element in pixels */
 

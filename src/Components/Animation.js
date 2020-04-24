@@ -7,7 +7,7 @@ import DisplayedElement from './DisplayedElement';
 import DrillCuts from './DrillCuts';
 import ProgressBar from './ProgressBar';
 import Drill from './Drill';
-import { sameAnimationDrill } from './shared/animationUtils';
+import { sameAnimationDrill, range } from './shared/animationUtils';
 
 /** Display a drill and enables to animate it using buttons (play, next step, previous step)
  *
@@ -32,11 +32,8 @@ class Animation extends React.Component {
       screenW: width, // Width of the animation space
       stepLength: 1000, // Duration of a step in milliseconds
       drill: new Drill(this.props.animation),
-      de: [], // The graphical elments displayed in the drill
       currentStep: initialStep, // Current step displayed on the phone
     };
-
-    this.state.de = this._createDE();
 
     // Enables to update the current step inside an animation
     this.currentStepAV = new Animated.Value(0);
@@ -47,29 +44,7 @@ class Animation extends React.Component {
 
     // we need a ref to the progress-bar for its opacityAnimation
     this.pbRef = React.createRef();
-  }
-
-  /** Create the Componenets associated to the elements displayed in this drill */
-  _createDE() {
-    var tempDe = [];
-
-    /* For each element displayed in the current drill */
-    for (var elemId = 0; elemId < this.state.drill.elemCount(); ++elemId) {
-      /* Create the displayed element according to the drill */
-      tempDe.push(
-        new DisplayedElement({
-          id: this.state.drill.ids[elemId],
-          number: this.state.drill.texts[elemId],
-          key: elemId,
-          animationWidth: this.animationWidth,
-          animationHeight: this.animationHeight,
-          movable: this.props.editable,
-          onMoveEnd: this.props.onElementMove,
-        }),
-      );
-    }
-
-    return tempDe;
+    this.deRef = [];
   }
 
   /** Convert a position (x, y) in percentages in a position (x2, y2) in pixels
@@ -87,7 +62,7 @@ class Animation extends React.Component {
 
   /** Set each displayed element at its original position */
   _initPositions() {
-    this.state.de.forEach((element, i) => {
+    this.deRef.forEach((element, i) => {
       element.setPosition(
         this.state.drill.positions[0][i][0][0] * this.animationWidth,
         this.state.drill.positions[0][i][0][1] * this.animationHeight,
@@ -195,7 +170,7 @@ class Animation extends React.Component {
       console.log('NextPosition is ', nextPosition);
       console.log('NextPosition is ', nextPosition !== null);
       /* If this element must change its position */
-      if (nextPosition !== undefined) {
+      if (nextPosition !== undefined || nextPosition !== null) {
         /* Animation of the element at step stepId */
         var deStepAnimation = [];
 
@@ -205,7 +180,7 @@ class Animation extends React.Component {
         if (playSubSteps) {
           /* For each substep of element de in step stepId */
           for (var substep = 0; substep < substepCount; substep++) {
-            var currentDE = this.state.de[elemId];
+            var currentDE = this.deRef[elemId];
 
             /* Get the position of the element at this substep */
             var pixelPosition = this._positionPercentToPixel(nextPosition[substep][0], nextPosition[substep][1]);
@@ -217,7 +192,7 @@ class Animation extends React.Component {
           }
         } else {
           /* If the sub steps must not be played, just move the element to its last position */
-          currentDE = this.state.de[elemId];
+          currentDE = this.deRef[elemId];
 
           /* Get the position of the element at this substep */
           pixelPosition = this._positionPercentToPixel(
@@ -238,11 +213,6 @@ class Animation extends React.Component {
     return stepAnimation;
   };
 
-  _display(item) {
-    if (item !== undefined) return item.render();
-    else return <View />;
-  }
-
   render() {
     return (
       <View style={[styles.mainContainer, { height: this.animationHeight }, { width: this.animationWidth }]}>
@@ -253,7 +223,18 @@ class Animation extends React.Component {
           currentStep={Math.floor(this.state.currentStep)}
         />
 
-        {this.state.de === undefined ? <View /> : this.state.de.map(this._display)}
+        {range(0, this.state.drill.elemCount()).map(elemId => (
+          <DisplayedElement
+            ref={instance => (this.deRef[elemId] = instance)}
+            id={this.state.drill.ids[elemId]}
+            number={this.state.drill.texts[elemId]}
+            key={elemId}
+            animationWidth={this.animationWidth}
+            animationHeight={this.animationHeight}
+            movable={this.props.editable}
+            onMoveEnd={this.props.onElementMove}
+          />
+        ))}
 
         <View style={{ flex: 0.1 }} />
         <Button style={{ flex: 1 }} title=" < " onPress={() => this._previousStep()} />
@@ -274,21 +255,6 @@ class Animation extends React.Component {
         />
       </View>
     );
-  }
-
-  /** Used to update the animation when a modification is made through the editor */
-  componentDidUpdate() {
-    if (this.state.de === undefined && this.state.drill !== undefined) {
-      this.setState(
-        {
-          de: this._createDE(),
-        },
-        () => {
-          /* Set all the elements to their initial positions */
-          this._initPositions();
-        },
-      );
-    }
   }
 
   /** Used to update the animation when a modification is made through the editor */

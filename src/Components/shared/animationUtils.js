@@ -1,3 +1,7 @@
+export const range = (min, max) => {
+  return new Array(max - min).fill(0).map((_, i) => min + i);
+};
+
 export const elementsSize = (animationWidth, animationHeight) => {
   const dimensionMin = Math.min(animationWidth, animationHeight);
   const playerRadius = dimensionMin / 12;

@@ -21,7 +21,7 @@ class Animation extends React.Component {
       screenH: 1, // Height of the animation space
       screenW: 1, // Width of the animation space
       stepLength: 1000, // Duration of a step in milliseconds
-      drill: undefined,
+      drill: new Drill(this.props.animation),
       de: [], // The graphical elments displayed in the drill
       currentStep: 0, // Current step displayed on the phone
     };
@@ -41,17 +41,12 @@ class Animation extends React.Component {
 
   /** Number of steps in the drill */
   _stepCount = () => {
-    console.log('_stepCount');
-    console.log(this.state.drill.g);
-
-    if (this.state.drill !== undefined) return this.state.drill.positions.length;
-    else return 0;
+    return (this.state.drill && this.state.drill.stepCount()) || 0;
   };
 
   /** Number of elements displayed in the drill */
   _elemCount = () => {
-    if (this.state.drill !== undefined && this.state.drill.ids.length > 0) return this.state.drill.ids.length;
-    else return 0;
+    return (this.state.drill && this.state.drill.elemCount()) || 0;
   };
 
   /** Create the Componenets associated to the elements displayed in this drill */
@@ -92,18 +87,12 @@ class Animation extends React.Component {
 
   /** Set each displayed element at its original position */
   _initPositions() {
-    /* For each element */
-    for (var i = 0; i < this.state.de.length; i++) {
-      var element = this.state.de[i];
-
-      /* Get its position in pixel (it is represented in percentage in the drill) */
-      var pixelPosition = this._positionPercentToPixel(
-        this.state.drill.positions[0][i][0][0],
-        this.state.drill.positions[0][i][0][1],
+    this.state.de.forEach((element, i) => {
+      element.setPosition(
+        this.state.drill.positions[0][i][0][0] * this.animationWidth,
+        this.state.drill.positions[0][i][0][1] * this.animationHeight,
       );
-
-      element.setPosition(pixelPosition[0], pixelPosition[1]);
-    }
+    });
 
     this.setState({ currentStep: 0 }, () => {
       if (this.props.onStepChange !== undefined) this.props.onStepChange(0);

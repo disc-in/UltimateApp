@@ -33,6 +33,8 @@ class Animation extends React.Component {
       this.setState({ currentStep: progress.value });
     });
 
+    this.pbRef = React.createRef();
+
     this.animationWidth = 100;
     this.animationHeight = 100;
   }
@@ -73,30 +75,6 @@ class Animation extends React.Component {
     }
 
     return tempDe;
-  }
-
-  /** Create the cuts associated to each step of the drill */
-  _initializeCuts() {
-    this.cuts = new DrillCuts({
-      drill: this.state.drill,
-      animationHeight: this.animationHeight,
-      animationWidth: this.animationWidth,
-      currentStep: this.state.currentStep,
-    });
-  }
-
-  /** Create the progress bar */
-  _createPB() {
-    return new ProgressBar({
-      animationWidth: this.animationWidth,
-      animationHeight: this.animationHeight,
-      stepCount: this._stepCount(),
-      currentStepAV: this.currentStepAV,
-      getStepAnimation: this._getStepAnimation,
-      stepLength: this.state.stepLength,
-      onStepChange: this.props.onStepChange,
-      key: 1,
-    });
   }
 
   /** Convert a position (x, y) in percentages in a position (x2, y2) in pixels
@@ -160,9 +138,6 @@ class Animation extends React.Component {
           () => {
             /* Set all the elements to their initial positions */
             this._initPositions();
-
-            this.pb = this._createPB();
-            this._initializeCuts();
           },
         );
       },
@@ -242,7 +217,7 @@ class Animation extends React.Component {
     );
 
     /** Change the opacity of the step dots */
-    if (this.pb !== undefined) stepAnimation = stepAnimation.concat(this.pb.getOpacityAnimation(stepId));
+    if (this.pbRef.current) stepAnimation = stepAnimation.concat(this.pbRef.current.getOpacityAnimation(stepId));
 
     /* For each displayed element */
     for (let elemId = 0; elemId < this.state.drill.ids.length; elemId += 1) {
@@ -308,24 +283,34 @@ class Animation extends React.Component {
   }
 
   render() {
-    this.cutsArray = [];
-
-    if (this.cuts !== undefined) {
-      this.cuts.props.currentStep = Math.floor(this.state.currentStep);
-      this.cutsArray.push(this.cuts);
-    }
-
     return (
       <View style={[styles.mainContainer, { height: this.animationHeight }, { width: this.animationWidth }]}>
-        {this._display(this.cuts)}
+        <DrillCuts
+          drill={this.state.drill}
+          animationHeight={this.animationHeight}
+          animationWidth={this.animationWidth}
+          currentStep={Math.floor(this.state.currentStep)}
+        />
+
         {this.state.de === undefined ? <View /> : this.state.de.map(this._display)}
+
         <View style={{ flex: 0.1 }} />
         <Button style={{ flex: 1 }} title=" < " onPress={() => this._previousStep()} />
         <View style={{ flex: 0.1 }} />
         <Button style={{ flex: 1 }} title="Lancer" onPress={() => this._restart()} />
         <View style={{ flex: 0.1 }} />
         <Button title=" > " style={{ flex: 1 }} onPress={() => this._nextStep()} />
-        {this._display(this.pb)}
+
+        <ProgressBar
+          ref={this.pbRef}
+          animationWidth={this.animationWidth}
+          animationHeight={this.animationHeight}
+          stepCount={this._stepCount()}
+          currentStepAV={this.currentStepAV}
+          getStepAnimation={this._getStepAnimation}
+          stepLength={this.state.stepLength}
+          onStepChange={this.props.onStepChange}
+        />
       </View>
     );
   }
@@ -340,9 +325,6 @@ class Animation extends React.Component {
         () => {
           /* Set all the elements to their initial positions */
           this._initPositions();
-
-          this._initializeCuts();
-          this.pb = this._createPB();
         },
       );
     }

@@ -114,7 +114,7 @@ class DisplayedElement extends React.Component {
           <Animated.Text
             // Use the panResponder in this view
             {...this.panResponder.panHandlers}
-            style={[panStyle, styles.defense, { height: 40 }, { width: 40 }, { borderRadius: 40 }]}
+            style={[panStyle, styles.defense]}
             key={this.props.key}
           >
             {this.props.number}
@@ -126,15 +126,7 @@ class DisplayedElement extends React.Component {
           <Animated.Text
             // Use the panResponder in this view
             {...this.panResponder.panHandlers}
-            style={[
-              panStyle,
-              styles.offense,
-              { height: 40 },
-              { width: 40 },
-              { borderRadius: 40 },
-              { top: this.top },
-              { left: this.left },
-            ]}
+            style={[panStyle, styles.offense, { top: this.top }, { left: this.left }]}
             key={this.props.key}
           >
             {this.props.number}
@@ -146,16 +138,7 @@ class DisplayedElement extends React.Component {
           <Animated.View
             // Use the panResponder in this view
             {...this.panResponder.panHandlers}
-            style={[
-              panStyle,
-              styles.disc,
-              { height: 20 },
-              { width: 20 },
-              { borderRadius: 20 },
-              { borderWidth: 2 },
-              { top: this.top },
-              { left: this.left },
-            ]}
+            style={[panStyle, styles.disc, { top: this.top }, { left: this.left }]}
             key={this.props.key}
           />
         );
@@ -186,6 +169,9 @@ class DisplayedElement extends React.Component {
 
 const styles = StyleSheet.create({
   defense: {
+    width: 40,
+    height: 40,
+    borderRadius: 40,
     position: 'absolute',
     backgroundColor: '#dcdcdc',
     textAlign: 'center',
@@ -194,6 +180,9 @@ const styles = StyleSheet.create({
   },
 
   offense: {
+    width: 40,
+    height: 40,
+    borderRadius: 40,
     position: 'absolute',
     backgroundColor: '#cd5c5c',
     textAlign: 'center',
@@ -205,6 +194,10 @@ const styles = StyleSheet.create({
     position: 'absolute',
     borderColor: 'black',
     backgroundColor: 'white',
+    height: 20,
+    width: 20,
+    borderRadius: 20,
+    borderWidth: 2,
   },
 
   triangle: {

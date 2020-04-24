@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TrainingListPage /> renders correctly when connected 1`] = `
+exports[`<ProgramsPage /> renders correctly when connected 1`] = `
 <View
   style={
     Object {
       "backgroundColor": "#fff",
       "height": "100%",
-      "paddingLeft": 20,
-      "paddingTop": 10,
+      "paddingHorizontal": 10,
+      "paddingVertical": 20,
     }
   }
 >
@@ -51,16 +51,35 @@ exports[`<TrainingListPage /> renders correctly when connected 1`] = `
         onLayout={[Function]}
         style={null}
       >
-        <View>
-          <Text>
-            1
-             - 
+        <View
+          style={
+            Object {
+              "backgroundColor": "#e5e5e5",
+              "marginBottom": 10,
+              "padding": 20,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "fontSize": 20,
+                "fontWeight": "bold",
+              }
+            }
+          >
             Beginner
           </Text>
-          <Text>
-            Includes 
+          <Text
+            style={
+              Object {
+                "fontWeight": "bold",
+                "textAlign": "right",
+              }
+            }
+          >
+            1/
             1
-             trainings
           </Text>
         </View>
       </View>

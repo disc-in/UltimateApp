@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Program /> renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#e5e5e5",
+      "marginBottom": 10,
+      "padding": 20,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "fontSize": 20,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    Beginner
+  </Text>
+  <Text
+    style={
+      Object {
+        "fontWeight": "bold",
+        "textAlign": "right",
+      }
+    }
+  >
+    1/
+    1
+  </Text>
+</View>
+`;

@@ -5,7 +5,7 @@ import store from '../Store/testStore';
 
 import ConnectedProgramPage from './ProgramsPage';
 
-describe('<TrainingListPage />', () => {
+describe('<ProgramsPage />', () => {
   it('renders correctly when connected', () => {
     const tree = renderer
       .create(

@@ -1378,17 +1378,17 @@ export default {
     {
       id: 2,
       title: 'Ultimate overwiew',
-      trainings: [1],
+      trainings: [1, 2, 3, 4],
     },
     {
       id: 3,
       title: 'Long throws',
-      trainings: [1],
+      trainings: [4, 5],
     },
     {
       id: 4,
       title: 'Strong defense',
-      trainings: [1],
+      trainings: [3],
     },
   ],
 };

@@ -33,15 +33,15 @@ class DisplayedElement extends React.Component {
 
     this.currentPosition = new Animated.ValueXY({ x: 0, y: 0 });
 
-    this.xCut = 10;
-    this.yCut = 10;
+    // this.xCut = 10;
+    // this.yCut = 10;
 
     this.top = 0;
     this.left = 0;
 
     // Add a listener on each coordinate offset to get its value at the end of each move
-    this.currentPosition.x.addListener(({ value }) => (this._value = value));
-    this.currentPosition.y.addListener(({ value }) => (this._value = value));
+    // this.currentPosition.x.addListener(({ value }) => (this._value = value));
+    // this.currentPosition.y.addListener(({ value }) => (this._value = value));
 
     // True if the element has already been moved
     this.moved = false;

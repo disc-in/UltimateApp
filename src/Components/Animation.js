@@ -18,14 +18,25 @@ class Animation extends React.Component {
   constructor(props) {
     super(props);
 
+    if (!props.animation) throw new Error('Animation should have an "animation" prop');
+
+    var { height, width } = Dimensions.get('window');
+    this.animationWidth = width * this.props.widthRatio;
+    this.animationHeight = height * this.props.heightRatio;
+
+    // If the current step is fixed by the parent (used in the editor)
+    var initialStep = this.props.currentStep || 0;
+
     this.state = {
-      screenH: 1, // Height of the animation space
-      screenW: 1, // Width of the animation space
+      screenH: height, // Height of the animation space
+      screenW: width, // Width of the animation space
       stepLength: 1000, // Duration of a step in milliseconds
       drill: new Drill(this.props.animation),
       de: [], // The graphical elments displayed in the drill
-      currentStep: 0, // Current step displayed on the phone
+      currentStep: initialStep, // Current step displayed on the phone
     };
+
+    this.state.de = this._createDE();
 
     // Enables to update the current step inside an animation
     this.currentStepAV = new Animated.Value(0);
@@ -34,28 +45,16 @@ class Animation extends React.Component {
       this.setState({ currentStep: progress.value });
     });
 
+    // we need a ref to the progress-bar for its opacityAnimation
     this.pbRef = React.createRef();
-
-    this.animationWidth = 100;
-    this.animationHeight = 100;
   }
-
-  /** Number of steps in the drill */
-  _stepCount = () => {
-    return (this.state.drill && this.state.drill.stepCount()) || 0;
-  };
-
-  /** Number of elements displayed in the drill */
-  _elemCount = () => {
-    return (this.state.drill && this.state.drill.elemCount()) || 0;
-  };
 
   /** Create the Componenets associated to the elements displayed in this drill */
   _createDE() {
     var tempDe = [];
 
     /* For each element displayed in the current drill */
-    for (var elemId = 0; elemId < this._elemCount(); ++elemId) {
+    for (var elemId = 0; elemId < this.state.drill.elemCount(); ++elemId) {
       /* Create the displayed element according to the drill */
       tempDe.push(
         new DisplayedElement({
@@ -102,36 +101,8 @@ class Animation extends React.Component {
 
   /** Once we get the screen size, create the DisplayedElement used in the drill and set them to their initial position */
   componentDidMount() {
-    /* Get the dimension of the screen and then initialize the drill */
-    var { height, width } = Dimensions.get('window');
-
-    this.animationWidth = width * this.props.widthRatio;
-    this.animationHeight = height * this.props.heightRatio;
-    var inputDrill = new Drill(this.props.animation);
-    var initialStep = 0;
-
-    // If the current step is fixed by the parent (used in the editor)
-    if (this.props.currentStep !== undefined) initialStep = this.props.currentStep;
-
-    this.setState(
-      {
-        drill: inputDrill,
-        screenH: height,
-        screenW: width,
-        currentStep: initialStep,
-      },
-      () => {
-        this.setState(
-          {
-            de: this._createDE(),
-          },
-          () => {
-            /* Set all the elements to their initial positions */
-            this._initPositions();
-          },
-        );
-      },
-    );
+    /* Set all the elements to their initial positions */
+    this._initPositions();
   }
 
   /** Play the whole drill */
@@ -150,12 +121,12 @@ class Animation extends React.Component {
     );
 
     /* For each step (start at step 1 as step 0 corresponds to the initial positions)*/
-    for (var stepId = 1; stepId < this._stepCount(); stepId++)
+    for (var stepId = 1; stepId < this.state.drill.stepCount(); stepId++)
       completeSequence.push(Animated.parallel(this._getStepAnimation(stepId, true)));
 
     Animated.sequence(completeSequence).start();
 
-    if (this.props.onStepChange !== undefined) this.props.onStepChange(this._stepCount());
+    if (this.props.onStepChange !== undefined) this.props.onStepChange(this.state.drill.stepCount());
   }
 
   /** Get back to the previous step */
@@ -175,7 +146,7 @@ class Animation extends React.Component {
 
   /** Go to the next step */
   _nextStep() {
-    if (this.state.currentStep !== this._stepCount() - 1) {
+    if (this.state.currentStep !== this.state.drill.stepCount() - 1) {
       this.setState(
         prevState => ({ currentStep: prevState.currentStep + 1 }),
         () => {
@@ -295,7 +266,7 @@ class Animation extends React.Component {
           ref={this.pbRef}
           animationWidth={this.animationWidth}
           animationHeight={this.animationHeight}
-          stepCount={this._stepCount()}
+          stepCount={this.state.drill.stepCount()}
           currentStepAV={this.currentStepAV}
           getStepAnimation={this._getStepAnimation}
           stepLength={this.state.stepLength}

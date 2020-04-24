@@ -14,7 +14,7 @@ import { connect } from 'react-redux';
 import { useHeaderHeight } from '@react-navigation/stack';
 
 import GradientButton from './shared/GradientButton';
-import DrillAnimation from './DrillAnimation';
+import DrillIllustration from './DrillIllustration';
 import { toggleFavorite } from '../Store/Actions/favoriteAction';
 
 import theme from '../styles/theme.style';
@@ -68,7 +68,7 @@ export const DrillPage = props => {
       <ImageBackground source={{ uri: drill.image }} style={imageStyles} imageStyle={styles.imageOpacity}>
         <View style={styles.titleContainer}>
           <Text style={styles.title}>{drill.title}</Text>
-          <Text style={styles.source}>{drill.author}</Text>
+          <Text style={styles.author}>{drill.author}</Text>
         </View>
         <View style={styles.infoWrapper}>
           <View style={styles.infoSubWrapper}>
@@ -114,7 +114,7 @@ export const DrillPage = props => {
         </View>
       </View>
       <View ref={firstDrill} style={styles.animation}>
-        <DrillAnimation drill={drill} />
+        <DrillIllustration drill={drill} />
       </View>
     </ScrollView>
   );

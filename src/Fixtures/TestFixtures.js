@@ -7,7 +7,7 @@ import {
   Levels,
   SeasonTimings,
   EquipmentLabels,
-  SourceType,
+  IllustrationType,
 } from './index';
 
 export const createDrill = (override = {}) => {
@@ -30,7 +30,7 @@ export const createDrill = (override = {}) => {
       {
         title: 'Warmup',
         subtitle: 'This is a subtitle',
-        sourceType: SourceType.YOUTUBE,
+        sourceType: IllustrationType.YOUTUBE,
         source: 'https://www.youtube.com/embed/JkVHrA5o23o',
       },
     ],
@@ -60,19 +60,19 @@ export default {
         {
           title: 'Warmup',
           subtitle: 'This is a subtitle',
-          sourceType: SourceType.YOUTUBE,
+          sourceType: IllustrationType.YOUTUBE,
           source: 'https://www.youtube.com/embed/JkVHrA5o23o',
         },
         {
           title: 'Do the drill',
           subtitle: 'This is a subtitle',
-          sourceType: SourceType.YOUTUBE,
+          sourceType: IllustrationType.YOUTUBE,
           source: 'https://www.youtube.com/embed/JkVHrA5o23o',
         },
         {
           title: 'Last step',
           subtitle: 'This is a subtitle',
-          sourceType: SourceType.YOUTUBE,
+          sourceType: IllustrationType.YOUTUBE,
           source: 'https://www.youtube.com/embed/JkVHrA5o23o',
         },
       ],
@@ -96,19 +96,19 @@ export default {
         {
           title: 'Warmup',
           subtitle: 'This is a subtitle',
-          sourceType: SourceType.YOUTUBE,
+          sourceType: IllustrationType.YOUTUBE,
           source: 'https://www.youtube.com/embed/JkVHrA5o23o',
         },
         {
           title: 'Do the drill',
           subtitle: 'This is a subtitle',
-          sourceType: SourceType.YOUTUBE,
+          sourceType: IllustrationType.YOUTUBE,
           source: 'https://www.youtube.com/embed/JkVHrA5o23o',
         },
         {
           title: 'Last step',
           subtitle: 'This is a subtitle',
-          sourceType: SourceType.YOUTUBE,
+          sourceType: IllustrationType.YOUTUBE,
           source: 'https://www.youtube.com/embed/JkVHrA5o23o',
         },
       ],
@@ -131,7 +131,7 @@ export default {
       level: Levels.BEGINNER,
       steps: [
         {
-          sourceType: SourceType.ANIMATION,
+          sourceType: IllustrationType.ANIMATION,
           source: animationSquare,
         },
       ],
@@ -155,7 +155,7 @@ export default {
       level: Levels.BEGINNER,
       steps: [
         {
-          sourceType: SourceType.ANIMATION,
+          sourceType: IllustrationType.ANIMATION,
           source: animationSquare,
         },
       ],

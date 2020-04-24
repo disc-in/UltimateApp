@@ -2,14 +2,14 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import animationMenageATrois from '../Fixtures/AnimationMenageATrois';
 
-import DrillAnimation from './DrillAnimation';
+import DrillIllustration from './DrillIllustration';
 import { SourceType } from './Fixtures';
 import { createDrill } from '../Fixtures/TestFixtures';
 
-describe('<DrillAnimation />', () => {
+describe('<DrillIllustration />', () => {
   it('renders correctly for a drill with video', () => {
     const drill = createDrill();
-    const tree = renderer.create(<DrillAnimation drill={drill} />).toJSON();
+    const tree = renderer.create(<DrillIllustration drill={drill} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
@@ -17,12 +17,12 @@ describe('<DrillAnimation />', () => {
     const drill = createDrill({
       steps: [
         {
-          sourceType: SourceType.ANIMATION,
+          illustrationType: SourceType.ANIMATION,
           source: animationMenageATrois,
         },
       ],
     });
-    const tree = renderer.create(<DrillAnimation drill={drill} />).toJSON();
+    const tree = renderer.create(<DrillIllustration drill={drill} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
@@ -32,7 +32,7 @@ describe('<DrillAnimation />', () => {
         {
           id: 1,
           title: 'Rower Hamstring',
-          sourceType: 'vimeo',
+          illustrationType: 'vimeo',
           source: '407999139',
           repetition: '20',
           rest: '90s',
@@ -41,7 +41,7 @@ describe('<DrillAnimation />', () => {
         {
           id: 2,
           title: 'Full Clean',
-          sourceType: 'vimeo',
+          illustrationType: 'vimeo',
           source: '406747741',
           repetition: '8',
           rest: '90s',
@@ -49,7 +49,7 @@ describe('<DrillAnimation />', () => {
         },
       ],
     });
-    const tree = renderer.create(<DrillAnimation drill={drill} />).toJSON();
+    const tree = renderer.create(<DrillIllustration drill={drill} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
@@ -57,7 +57,7 @@ describe('<DrillAnimation />', () => {
     const drill = createDrill({
       steps: [],
     });
-    const tree = renderer.create(<DrillAnimation drill={drill} />).toJSON();
+    const tree = renderer.create(<DrillIllustration drill={drill} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

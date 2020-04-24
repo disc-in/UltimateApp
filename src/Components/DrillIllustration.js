@@ -5,10 +5,10 @@ import { WebView } from 'react-native-webview';
 import Animation from './Animation';
 import VimeoVideo from './VimeoVideo';
 import GradientButton from './shared/GradientButton';
-import { SourceType } from '../Fixtures';
+import { IllustrationType } from '../Fixtures';
 import theme from '../styles/theme.style';
 
-const DrillAnimation = props => {
+const DrillIllustration = props => {
   const [currentStepIndex, setStepIndex] = useState(0);
 
   const incrementStepIndex = () => {
@@ -50,11 +50,11 @@ const DrillAnimation = props => {
       return displayFinish();
     } else {
       switch (props.drill.steps[currentStepIndex].sourceType) {
-        case SourceType.ANIMATION:
+        case IllustrationType.ANIMATION:
           return displayAnimation(props.drill.steps[currentStepIndex]);
-        case SourceType.YOUTUBE:
+        case IllustrationType.YOUTUBE:
           return displayYoutube(props.drill.steps[currentStepIndex]);
-        case SourceType.VIMEO:
+        case IllustrationType.VIMEO:
           return displayVimeo(props.drill.steps[currentStepIndex]);
         default:
           return <Text>No visual content for this drill</Text>;
@@ -221,4 +221,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default DrillAnimation;
+export default DrillIllustration;

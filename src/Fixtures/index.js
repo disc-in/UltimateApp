@@ -53,7 +53,7 @@ export const EquipmentLabels = {
   FULL: 'Full equipment',
 };
 
-export const SourceType = {
+export const IllustrationType = {
   VIMEO: 'vimeo',
   YOUTUBE: 'youtube',
   ANIMATION: 'animation',
@@ -81,7 +81,7 @@ export default {
         {
           id: 1,
           title: 'Rower Hamstring',
-          sourceType: SourceType.VIMEO,
+          sourceType: IllustrationType.VIMEO,
           source: '407999139',
           repetition: '20',
           rest: '90s',
@@ -90,7 +90,7 @@ export default {
         {
           id: 2,
           title: 'Full Clean',
-          sourceType: SourceType.VIMEO,
+          sourceType: IllustrationType.VIMEO,
           source: '406747741',
           repetition: '8',
           rest: '90s',
@@ -99,7 +99,7 @@ export default {
         {
           id: 3,
           title: 'Kettlebell Russian Twist',
-          sourceType: SourceType.VIMEO,
+          sourceType: IllustrationType.VIMEO,
           source: '407999139',
           repetition: '25',
           rest: '90s',
@@ -126,7 +126,7 @@ export default {
         {
           id: 1,
           title: 'Rower Hamstring',
-          sourceType: SourceType.YOUTUBE,
+          sourceType: IllustrationType.YOUTUBE,
           source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           repetition: '20',
           rest: '90s',
@@ -151,7 +151,7 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: SourceType.YOUTUBE,
+          sourceType: IllustrationType.YOUTUBE,
           source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
@@ -176,7 +176,7 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: SourceType.YOUTUBE,
+          sourceType: IllustrationType.YOUTUBE,
           source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
@@ -201,7 +201,7 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: SourceType.YOUTUBE,
+          sourceType: IllustrationType.YOUTUBE,
           source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
@@ -226,7 +226,7 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: SourceType.YOUTUBE,
+          sourceType: IllustrationType.YOUTUBE,
           source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
@@ -251,7 +251,7 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: SourceType.YOUTUBE,
+          sourceType: IllustrationType.YOUTUBE,
           source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
@@ -276,7 +276,7 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: SourceType.YOUTUBE,
+          sourceType: IllustrationType.YOUTUBE,
           source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
@@ -301,7 +301,7 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: SourceType.YOUTUBE,
+          sourceType: IllustrationType.YOUTUBE,
           source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
@@ -326,7 +326,7 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: SourceType.YOUTUBE,
+          sourceType: IllustrationType.YOUTUBE,
           source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
@@ -351,7 +351,7 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: SourceType.YOUTUBE,
+          sourceType: IllustrationType.YOUTUBE,
           source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
@@ -376,7 +376,7 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: SourceType.YOUTUBE,
+          sourceType: IllustrationType.YOUTUBE,
           source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
@@ -401,7 +401,7 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: SourceType.YOUTUBE,
+          sourceType: IllustrationType.YOUTUBE,
           source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
@@ -426,7 +426,7 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: SourceType.YOUTUBE,
+          sourceType: IllustrationType.YOUTUBE,
           source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
@@ -451,7 +451,7 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: SourceType.YOUTUBE,
+          sourceType: IllustrationType.YOUTUBE,
           source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
@@ -476,7 +476,7 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: SourceType.YOUTUBE,
+          sourceType: IllustrationType.YOUTUBE,
           source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
@@ -501,7 +501,7 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: SourceType.YOUTUBE,
+          sourceType: IllustrationType.YOUTUBE,
           source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
@@ -526,7 +526,7 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: SourceType.YOUTUBE,
+          sourceType: IllustrationType.YOUTUBE,
           source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
@@ -551,7 +551,7 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: SourceType.YOUTUBE,
+          sourceType: IllustrationType.YOUTUBE,
           source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
@@ -576,7 +576,7 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: SourceType.YOUTUBE,
+          sourceType: IllustrationType.YOUTUBE,
           source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
@@ -601,7 +601,7 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: SourceType.YOUTUBE,
+          sourceType: IllustrationType.YOUTUBE,
           source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
@@ -626,7 +626,7 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: SourceType.YOUTUBE,
+          sourceType: IllustrationType.YOUTUBE,
           source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
@@ -651,7 +651,7 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: SourceType.YOUTUBE,
+          sourceType: IllustrationType.YOUTUBE,
           source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
@@ -677,7 +677,7 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: SourceType.ANIMATION,
+          sourceType: IllustrationType.ANIMATION,
           source: animationSquare,
           repetition: '1',
           rest: '90s',
@@ -686,7 +686,7 @@ export default {
         {
           id: 2,
           title: '',
-          sourceType: SourceType.ANIMATION,
+          sourceType: IllustrationType.ANIMATION,
           source: AnimationMenageATrois,
           repetition: '2',
           rest: '90s',
@@ -695,7 +695,7 @@ export default {
         {
           id: 3,
           title: '',
-          sourceType: SourceType.ANIMATION,
+          sourceType: IllustrationType.ANIMATION,
           source: animationSquare,
           repetition: '3',
           rest: '90s',
@@ -723,7 +723,7 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: SourceType.ANIMATION,
+          sourceType: IllustrationType.ANIMATION,
           source: animationSquare,
           repetition: '1',
           rest: '90s',
@@ -750,7 +750,7 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: SourceType.ANIMATION,
+          sourceType: IllustrationType.ANIMATION,
           source: animationSquare,
           repetition: '1',
           rest: '90s',
@@ -777,7 +777,7 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: SourceType.ANIMATION,
+          sourceType: IllustrationType.ANIMATION,
           source: animationSquare,
           repetition: '1',
           rest: '90s',
@@ -804,7 +804,7 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: SourceType.ANIMATION,
+          sourceType: IllustrationType.ANIMATION,
           source: animationSquare,
           repetition: '1',
           rest: '90s',
@@ -832,7 +832,7 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: SourceType.ANIMATION,
+          sourceType: IllustrationType.ANIMATION,
           source: animationSquare,
           repetition: '1',
           rest: '90s',
@@ -862,7 +862,7 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: SourceType.ANIMATION,
+          sourceType: IllustrationType.ANIMATION,
           source: animationSquare,
           repetition: '1',
           rest: '90s',
@@ -891,7 +891,7 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: SourceType.ANIMATION,
+          sourceType: IllustrationType.ANIMATION,
           source: animationSquare,
           repetition: '1',
           rest: '90s',
@@ -920,7 +920,7 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: SourceType.ANIMATION,
+          sourceType: IllustrationType.ANIMATION,
           source: animationSquare,
           repetition: '1',
           rest: '90s',
@@ -949,7 +949,7 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: SourceType.ANIMATION,
+          sourceType: IllustrationType.ANIMATION,
           source: animationSquare,
           repetition: '1',
           rest: '90s',
@@ -979,7 +979,7 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: SourceType.ANIMATION,
+          sourceType: IllustrationType.ANIMATION,
           source: animationSquare,
           repetition: '1',
           rest: '90s',
@@ -1009,7 +1009,7 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: SourceType.ANIMATION,
+          sourceType: IllustrationType.ANIMATION,
           source: animationSquare,
           repetition: '1',
           rest: '90s',
@@ -1039,7 +1039,7 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: SourceType.ANIMATION,
+          sourceType: IllustrationType.ANIMATION,
           source: animationSquare,
           repetition: '1',
           rest: '90s',
@@ -1068,7 +1068,7 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: SourceType.ANIMATION,
+          sourceType: IllustrationType.ANIMATION,
           source: animationSquare,
           repetition: '1',
           rest: '90s',
@@ -1097,7 +1097,7 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: SourceType.ANIMATION,
+          sourceType: IllustrationType.ANIMATION,
           source: animationSquare,
           repetition: '1',
           rest: '90s',
@@ -1127,7 +1127,7 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: SourceType.ANIMATION,
+          sourceType: IllustrationType.ANIMATION,
           source: animationSquare,
           repetition: '1',
           rest: '90s',
@@ -1157,7 +1157,7 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: SourceType.ANIMATION,
+          sourceType: IllustrationType.ANIMATION,
           source: animationSquare,
           repetition: '1',
           rest: '90s',
@@ -1186,7 +1186,7 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: SourceType.ANIMATION,
+          sourceType: IllustrationType.ANIMATION,
           source: animationSquare,
           repetition: '1',
           rest: '90s',
@@ -1216,7 +1216,7 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: SourceType.ANIMATION,
+          sourceType: IllustrationType.ANIMATION,
           source: animationSquare,
           repetition: '1',
           rest: '90s',
@@ -1246,7 +1246,7 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: SourceType.ANIMATION,
+          sourceType: IllustrationType.ANIMATION,
           source: animationSquare,
           repetition: '1',
           rest: '90s',
@@ -1275,7 +1275,7 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: SourceType.ANIMATION,
+          sourceType: IllustrationType.ANIMATION,
           source: animationSquare,
           repetition: '1',
           rest: '90s',
@@ -1304,7 +1304,7 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: SourceType.ANIMATION,
+          sourceType: IllustrationType.ANIMATION,
           source: animationSquare,
           repetition: '1',
           rest: '90s',
@@ -1334,7 +1334,7 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: SourceType.ANIMATION,
+          sourceType: IllustrationType.ANIMATION,
           source: animationSquare,
           repetition: '1',
           rest: '90s',
@@ -1364,7 +1364,7 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: SourceType.ANIMATION,
+          sourceType: IllustrationType.ANIMATION,
           source: animationSquare,
           repetition: '1',
           rest: '90s',
@@ -1393,7 +1393,7 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: SourceType.ANIMATION,
+          sourceType: IllustrationType.ANIMATION,
           source: animationSquare,
           repetition: '1',
           rest: '90s',
@@ -1423,7 +1423,7 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: SourceType.ANIMATION,
+          sourceType: IllustrationType.ANIMATION,
           source: animationSquare,
           repetition: '1',
           rest: '90s',

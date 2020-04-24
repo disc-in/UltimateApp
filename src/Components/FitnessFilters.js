@@ -88,7 +88,7 @@ class FitnessFilters extends React.Component {
       selectedGoals,
       durationInMinutes,
     } = this.state;
-    console.log(selectedLevels);
+
     return (
       <View style={filterStyle.wrapper}>
         <Text style={filterStyle.counter}>{this.state.displayedDrills.length} drills available</Text>

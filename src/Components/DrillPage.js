@@ -68,7 +68,7 @@ export const DrillPage = props => {
       <ImageBackground source={{ uri: drill.image }} style={imageStyles} imageStyle={styles.imageOpacity}>
         <View style={styles.titleContainer}>
           <Text style={styles.title}>{drill.title}</Text>
-          <Text style={styles.source}>{drill.source}</Text>
+          <Text style={styles.source}>{drill.author}</Text>
         </View>
         <View style={styles.infoWrapper}>
           <View style={styles.infoSubWrapper}>
@@ -209,7 +209,7 @@ const styles = StyleSheet.create({
   animation: {
     flex: 1,
   },
-  source: {
+  author: {
     color: theme.COLOR_PRIMARY_LIGHT,
     paddingHorizontal: 30,
     fontSize: theme.FONT_SIZE_SMALL,

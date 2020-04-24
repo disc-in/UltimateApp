@@ -227,17 +227,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                             >
                               Fitness Drill Title
                             </Text>
-                            <Text
-                              style={
-                                Object {
-                                  "color": "#fff",
-                                  "fontSize": 14,
-                                  "paddingHorizontal": 30,
-                                }
-                              }
-                            >
-                              Author
-                            </Text>
+                            <Text />
                           </View>
                           <View
                             style={
@@ -585,9 +575,52 @@ exports[`<DrillPage /> renders correctly 1`] = `
                               }
                             }
                           >
-                            <Text>
-                              No visual content for this drill
-                            </Text>
+                            <View
+                              style={
+                                Array [
+                                  Object {
+                                    "flex": 1,
+                                    "overflow": "hidden",
+                                  },
+                                  undefined,
+                                ]
+                              }
+                            >
+                              <RNCWebView
+                                cacheEnabled={true}
+                                javaScriptEnabled={true}
+                                messagingEnabled={false}
+                                onContentProcessDidTerminate={[Function]}
+                                onHttpError={[Function]}
+                                onLoadingError={[Function]}
+                                onLoadingFinish={[Function]}
+                                onLoadingProgress={[Function]}
+                                onLoadingStart={[Function]}
+                                onMessage={[Function]}
+                                onShouldStartLoadWithRequest={[Function]}
+                                source={
+                                  Object {
+                                    "uri": "https://www.youtube.com/embed/JkVHrA5o23o",
+                                  }
+                                }
+                                style={
+                                  Array [
+                                    Object {
+                                      "flex": 1,
+                                      "overflow": "hidden",
+                                    },
+                                    Object {
+                                      "backgroundColor": "#ffffff",
+                                    },
+                                    Object {
+                                      "flex": 1,
+                                      "height": 1254,
+                                    },
+                                  ]
+                                }
+                                useSharedProcessPool={true}
+                              />
+                            </View>
                           </View>
                         </View>
                       </View>

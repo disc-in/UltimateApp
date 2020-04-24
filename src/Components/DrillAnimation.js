@@ -5,7 +5,7 @@ import { WebView } from 'react-native-webview';
 import Animation from './Animation';
 import VimeoVideo from './VimeoVideo';
 import GradientButton from './shared/GradientButton';
-import { Sources } from '../Fixtures';
+import { SourceType } from '../Fixtures';
 import theme from '../styles/theme.style';
 
 const DrillAnimation = props => {
@@ -46,15 +46,15 @@ const DrillAnimation = props => {
   };
 
   const checkSwitch = () => {
-    if (props.drill.steps && currentStepIndex === props.drill.steps.length) {
+    if (currentStepIndex === props.drill.steps.length) {
       return displayFinish();
     } else {
-      switch (props.drill.steps && props.drill.steps[currentStepIndex].source) {
-        case Sources.ANIMATION:
+      switch (props.drill.steps[currentStepIndex].sourceType) {
+        case SourceType.ANIMATION:
           return displayAnimation(props.drill.steps[currentStepIndex]);
-        case Sources.YOUTUBE:
+        case SourceType.YOUTUBE:
           return displayYoutube(props.drill.steps[currentStepIndex]);
-        case Sources.VIMEO:
+        case SourceType.VIMEO:
           return displayVimeo(props.drill.steps[currentStepIndex]);
         default:
           return <Text>No visual content for this drill</Text>;
@@ -74,11 +74,11 @@ const DrillAnimation = props => {
     );
   };
 
-  const displayAnimation = ({ link, repetition, instruction }) => {
+  const displayAnimation = ({ source, repetition, instruction }) => {
     return (
       <ScrollView>
         <View style={styles.pageAnimation}>
-          <Animation animation={link} />
+          <Animation animation={source} />
         </View>
         <View style={styles.containerAnimation}>
           <Text style={styles.fitness}>{repetition}</Text>
@@ -91,21 +91,21 @@ const DrillAnimation = props => {
     );
   };
 
-  const displayYoutube = ({ link }) => {
+  const displayYoutube = ({ source }) => {
     return (
       <WebView
         source={{
-          uri: link,
+          uri: source,
         }}
         style={styles.drillAnimationPage}
       />
     );
   };
 
-  const displayVimeo = ({ link, repetition, title }) => {
+  const displayVimeo = ({ source, repetition, title }) => {
     return (
       <View style={styles.drillAnimationPage}>
-        <VimeoVideo vimeoId={link} screenWidth={screenDimension.width} />
+        <VimeoVideo vimeoId={source} screenWidth={screenDimension.width} />
         <View>
           <View style={styles.description}>
             <View style={styles.subWrapper}>

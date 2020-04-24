@@ -22,21 +22,14 @@ exports[`<DrillList /> renders correctly 1`] = `
           "source": "Author",
           "steps": Array [
             Object {
+              "source": "https://www.youtube.com/embed/JkVHrA5o23o",
+              "sourceType": "youtube",
               "subtitle": "This is a subtitle",
               "title": "Warmup",
-            },
-            Object {
-              "subtitle": "This is a subtitle",
-              "title": "Do the drill",
-            },
-            Object {
-              "subtitle": "This is a subtitle",
-              "title": "Last step",
             },
           ],
           "title": "Fitness Drill Title",
           "type": "fitness",
-          "video": "https://www.youtube.com/embed/JkVHrA5o23o",
         },
       ]
     }

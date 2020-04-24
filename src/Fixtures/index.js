@@ -53,7 +53,7 @@ export const EquipmentLabels = {
   FULL: 'Full equipment',
 };
 
-export const Sources = {
+export const SourceType = {
   VIMEO: 'vimeo',
   YOUTUBE: 'youtube',
   ANIMATION: 'animation',
@@ -65,7 +65,7 @@ export default {
     {
       id: 1,
       type: DrillTypes.FITNESS,
-      source: 'Bart & Moby',
+      author: 'Bart & Moby',
       title: 'Vimeo is working',
       image: 'https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg',
       description: 'Description of the drill',
@@ -81,8 +81,8 @@ export default {
         {
           id: 1,
           title: 'Rower Hamstring',
-          source: Sources.VIMEO,
-          link: '407999139',
+          sourceType: SourceType.VIMEO,
+          source: '407999139',
           repetition: '20',
           rest: '90s',
           instruction: 'blabla bla blabl blalb ',
@@ -90,8 +90,8 @@ export default {
         {
           id: 2,
           title: 'Full Clean',
-          source: Sources.VIMEO,
-          link: '406747741',
+          sourceType: SourceType.VIMEO,
+          source: '406747741',
           repetition: '8',
           rest: '90s',
           instruction: 'blabla bla blabl blalb ',
@@ -99,8 +99,8 @@ export default {
         {
           id: 3,
           title: 'Kettlebell Russian Twist',
-          source: Sources.VIMEO,
-          link: '407999139',
+          sourceType: SourceType.VIMEO,
+          source: '407999139',
           repetition: '25',
           rest: '90s',
           instruction: 'blabla bla blabl blalb ',
@@ -110,7 +110,7 @@ export default {
     {
       id: 2,
       type: DrillTypes.FITNESS,
-      source: 'Author',
+      author: 'Author',
       title: 'Fitness Drill Title',
       image: 'http://www.liberte-fitness.fr/sites/default/files/styles/slider/public/news/tone.jpg?itok=505bme2a',
       description: 'Description of the drill',
@@ -126,25 +126,17 @@ export default {
         {
           id: 1,
           title: 'Rower Hamstring',
-          source: Sources.YOUTUBE,
-          link: 'https://www.youtube.com/embed/JkVHrA5o23o',
+          sourceType: SourceType.YOUTUBE,
+          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           repetition: '20',
           rest: '90s',
-        },
-        {
-          title: 'Do the drill',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Last step',
-          subtitle: 'This is a subtitle',
         },
       ],
     },
     {
       id: 3,
       type: DrillTypes.FITNESS,
-      source: 'Author',
+      author: 'Author',
       title: 'Fitness Drill Title',
       image: 'https://i.insider.com/5a454d9a4aa6b519158b727e?width=600&format=jpeg&auto=webp',
       description: 'Description of the drill',
@@ -156,19 +148,12 @@ export default {
       goals: [GoalsFitness.FULL_BODY],
       seasonTiming: SeasonTimings.PRE_SEASON,
       level: Levels.ADVANCED,
-      video: 'https://www.youtube.com/embed/JkVHrA5o23o',
-      /* animation:, */
       steps: [
         {
+          id: 2,
+          sourceType: SourceType.YOUTUBE,
+          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Do the drill',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Last step',
           subtitle: 'This is a subtitle',
         },
       ],
@@ -176,7 +161,7 @@ export default {
     {
       id: 4,
       type: DrillTypes.FITNESS,
-      source: 'Author',
+      author: 'Author',
       title: 'Fitness Drill Title',
       image: 'https://www.planetfitness.co.za/wp-content/uploads/2019/04/SLP_6767-copy-768x430.jpg',
       description: 'Description of the drill',
@@ -188,19 +173,12 @@ export default {
       goals: [GoalsFitness.UPPER],
       seasonTiming: SeasonTimings.PRE_SEASON,
       level: Levels.BEGINNER,
-      video: 'https://www.youtube.com/embed/JkVHrA5o23o',
-      /* animation:, */
       steps: [
         {
+          id: 2,
+          sourceType: SourceType.YOUTUBE,
+          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Do the drill',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Last step',
           subtitle: 'This is a subtitle',
         },
       ],
@@ -208,7 +186,7 @@ export default {
     {
       id: 5,
       type: DrillTypes.FITNESS,
-      source: 'Author',
+      author: 'Author',
       title: 'Fitness Drill Title',
       image: 'http://www.liberte-fitness.fr/sites/default/files/styles/slider/public/news/tone.jpg?itok=505bme2a',
       description: 'Description of the drill',
@@ -220,19 +198,12 @@ export default {
       goals: [GoalsFitness.LEGS],
       seasonTiming: SeasonTimings.PRE_SEASON,
       level: Levels.BEGINNER,
-      video: 'https://www.youtube.com/embed/JkVHrA5o23o',
-      /* animation:, */
       steps: [
         {
+          id: 2,
+          sourceType: SourceType.YOUTUBE,
+          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Do the drill',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Last step',
           subtitle: 'This is a subtitle',
         },
       ],
@@ -240,7 +211,7 @@ export default {
     {
       id: 6,
       type: DrillTypes.FITNESS,
-      source: 'Author',
+      author: 'Author',
       title: 'Fitness Drill Title',
       image: 'https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg',
       description: 'Description of the drill',
@@ -252,19 +223,12 @@ export default {
       goals: [GoalsFitness.UPPER],
       seasonTiming: SeasonTimings.PRE_SEASON,
       level: Levels.BEGINNER,
-      video: 'https://www.youtube.com/embed/JkVHrA5o23o',
-      /* animation:, */
       steps: [
         {
+          id: 2,
+          sourceType: SourceType.YOUTUBE,
+          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Do the drill',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Last step',
           subtitle: 'This is a subtitle',
         },
       ],
@@ -272,7 +236,7 @@ export default {
     {
       id: 7,
       type: DrillTypes.FITNESS,
-      source: 'Author',
+      author: 'Author',
       title: 'Fitness Drill Title',
       image: 'https://www.planetfitness.co.za/wp-content/uploads/2019/04/SLP_6767-copy-768x430.jpg',
       description: 'Description of the drill',
@@ -284,19 +248,12 @@ export default {
       goals: [GoalsFitness.UPPER],
       seasonTiming: SeasonTimings.PRE_SEASON,
       level: Levels.BEGINNER,
-      video: 'https://www.youtube.com/embed/JkVHrA5o23o',
-      /* animation:, */
       steps: [
         {
+          id: 2,
+          sourceType: SourceType.YOUTUBE,
+          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Do the drill',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Last step',
           subtitle: 'This is a subtitle',
         },
       ],
@@ -304,7 +261,7 @@ export default {
     {
       id: 8,
       type: DrillTypes.FITNESS,
-      source: 'Author',
+      author: 'Author',
       title: 'Fitness Drill Title',
       image: 'https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg',
       description: 'Description of the drill',
@@ -316,19 +273,12 @@ export default {
       goals: [GoalsFitness.LEGS],
       seasonTiming: SeasonTimings.PRE_SEASON,
       level: Levels.BEGINNER,
-      video: 'https://www.youtube.com/embed/JkVHrA5o23o',
-      /* animation:, */
       steps: [
         {
+          id: 2,
+          sourceType: SourceType.YOUTUBE,
+          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Do the drill',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Last step',
           subtitle: 'This is a subtitle',
         },
       ],
@@ -336,7 +286,7 @@ export default {
     {
       id: 9,
       type: DrillTypes.FITNESS,
-      source: 'Author',
+      author: 'Author',
       title: 'Fitness Drill Title',
       image: 'http://www.liberte-fitness.fr/sites/default/files/styles/slider/public/news/tone.jpg?itok=505bme2a',
       description: 'Description of the drill',
@@ -348,19 +298,12 @@ export default {
       goals: [GoalsFitness.UPPER],
       seasonTiming: SeasonTimings.PRE_SEASON,
       level: Levels.BEGINNER,
-      video: 'https://www.youtube.com/embed/JkVHrA5o23o',
-      /* animation:, */
       steps: [
         {
+          id: 2,
+          sourceType: SourceType.YOUTUBE,
+          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Do the drill',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Last step',
           subtitle: 'This is a subtitle',
         },
       ],
@@ -368,7 +311,7 @@ export default {
     {
       id: 10,
       type: DrillTypes.FITNESS,
-      source: 'Author',
+      author: 'Author',
       title: 'Fitness Drill Title',
       image: 'https://i.insider.com/5a454d9a4aa6b519158b727e?width=600&format=jpeg&auto=webp',
       description: 'Description of the drill',
@@ -380,19 +323,12 @@ export default {
       goals: [GoalsFitness.LEGS],
       seasonTiming: SeasonTimings.PRE_SEASON,
       level: Levels.BEGINNER,
-      video: 'https://www.youtube.com/embed/JkVHrA5o23o',
-      /* animation:, */
       steps: [
         {
+          id: 2,
+          sourceType: SourceType.YOUTUBE,
+          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Do the drill',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Last step',
           subtitle: 'This is a subtitle',
         },
       ],
@@ -400,7 +336,7 @@ export default {
     {
       id: 11,
       type: DrillTypes.FITNESS,
-      source: 'Author',
+      author: 'Author',
       title: 'Fitness Drill Title',
       image: 'https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg',
       description: 'Description of the drill',
@@ -412,19 +348,12 @@ export default {
       goals: [GoalsFitness.UPPER],
       seasonTiming: SeasonTimings.PRE_SEASON,
       level: Levels.BEGINNER,
-      video: 'https://www.youtube.com/embed/JkVHrA5o23o',
-      /* animation:, */
       steps: [
         {
+          id: 2,
+          sourceType: SourceType.YOUTUBE,
+          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Do the drill',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Last step',
           subtitle: 'This is a subtitle',
         },
       ],
@@ -432,7 +361,7 @@ export default {
     {
       id: 12,
       type: DrillTypes.FITNESS,
-      source: 'Author',
+      author: 'Author',
       title: 'Fitness Drill Title',
       image: 'https://www.planetfitness.co.za/wp-content/uploads/2019/04/SLP_6767-copy-768x430.jpg',
       description: 'Description of the drill',
@@ -444,19 +373,12 @@ export default {
       goals: [GoalsFitness.LEGS],
       seasonTiming: SeasonTimings.PRE_SEASON,
       level: Levels.BEGINNER,
-      video: 'https://www.youtube.com/embed/JkVHrA5o23o',
-      /* animation:, */
       steps: [
         {
+          id: 2,
+          sourceType: SourceType.YOUTUBE,
+          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Do the drill',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Last step',
           subtitle: 'This is a subtitle',
         },
       ],
@@ -464,7 +386,7 @@ export default {
     {
       id: 13,
       type: DrillTypes.FITNESS,
-      source: 'Author',
+      author: 'Author',
       title: 'Fitness Drill Title',
       image: 'https://i.insider.com/5a454d9a4aa6b519158b727e?width=600&format=jpeg&auto=webp',
       description: 'Description of the drill',
@@ -476,19 +398,12 @@ export default {
       goals: [GoalsFitness.LEGS],
       seasonTiming: SeasonTimings.IN_SEASON,
       level: Levels.BEGINNER,
-      video: 'https://www.youtube.com/embed/JkVHrA5o23o',
-      /* animation:, */
       steps: [
         {
+          id: 2,
+          sourceType: SourceType.YOUTUBE,
+          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Do the drill',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Last step',
           subtitle: 'This is a subtitle',
         },
       ],
@@ -496,7 +411,7 @@ export default {
     {
       id: 14,
       type: DrillTypes.FITNESS,
-      source: 'Author',
+      author: 'Author',
       title: 'Fitness Drill Title',
       image: 'https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg',
       description: 'Description of the drill',
@@ -508,19 +423,12 @@ export default {
       goals: [GoalsFitness.UPPER],
       seasonTiming: SeasonTimings.IN_SEASON,
       level: Levels.BEGINNER,
-      video: 'https://www.youtube.com/embed/JkVHrA5o23o',
-      /* animation:, */
       steps: [
         {
+          id: 2,
+          sourceType: SourceType.YOUTUBE,
+          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Do the drill',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Last step',
           subtitle: 'This is a subtitle',
         },
       ],
@@ -528,7 +436,7 @@ export default {
     {
       id: 15,
       type: DrillTypes.FITNESS,
-      source: 'Author',
+      author: 'Author',
       title: 'Fitness Drill Title',
       image: 'https://www.planetfitness.co.za/wp-content/uploads/2019/04/SLP_6767-copy-768x430.jpg',
       description: 'Description of the drill',
@@ -540,19 +448,12 @@ export default {
       goals: [GoalsFitness.LEGS],
       seasonTiming: SeasonTimings.IN_SEASON,
       level: Levels.BEGINNER,
-      video: 'https://www.youtube.com/embed/JkVHrA5o23o',
-      /* animation:, */
       steps: [
         {
+          id: 2,
+          sourceType: SourceType.YOUTUBE,
+          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Do the drill',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Last step',
           subtitle: 'This is a subtitle',
         },
       ],
@@ -560,7 +461,7 @@ export default {
     {
       id: 16,
       type: DrillTypes.FITNESS,
-      source: 'Author',
+      author: 'Author',
       title: 'Fitness Drill Title',
       image: 'https://www.planetfitness.co.za/wp-content/uploads/2019/04/SLP_6767-copy-768x430.jpg',
       description: 'Description of the drill',
@@ -572,19 +473,12 @@ export default {
       goals: [GoalsFitness.LEGS],
       seasonTiming: SeasonTimings.IN_SEASON,
       level: Levels.BEGINNER,
-      video: 'https://www.youtube.com/embed/JkVHrA5o23o',
-      /* animation:, */
       steps: [
         {
+          id: 2,
+          sourceType: SourceType.YOUTUBE,
+          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Do the drill',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Last step',
           subtitle: 'This is a subtitle',
         },
       ],
@@ -592,7 +486,7 @@ export default {
     {
       id: 17,
       type: DrillTypes.FITNESS,
-      source: 'Author',
+      author: 'Author',
       title: 'Fitness Drill Title',
       image: 'https://i.insider.com/5a454d9a4aa6b519158b727e?width=600&format=jpeg&auto=webp',
       description: 'Description of the drill',
@@ -604,19 +498,12 @@ export default {
       goals: [GoalsFitness.UPPER],
       seasonTiming: SeasonTimings.IN_SEASON,
       level: Levels.BEGINNER,
-      video: 'https://www.youtube.com/embed/JkVHrA5o23o',
-      /* animation:, */
       steps: [
         {
+          id: 2,
+          sourceType: SourceType.YOUTUBE,
+          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Do the drill',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Last step',
           subtitle: 'This is a subtitle',
         },
       ],
@@ -624,7 +511,7 @@ export default {
     {
       id: 18,
       type: DrillTypes.FITNESS,
-      source: 'Author',
+      author: 'Author',
       title: 'Fitness Drill Title',
       image: 'http://www.liberte-fitness.fr/sites/default/files/styles/slider/public/news/tone.jpg?itok=505bme2a',
       description: 'Description of the drill',
@@ -636,19 +523,12 @@ export default {
       goals: [GoalsFitness.LEGS],
       seasonTiming: SeasonTimings.IN_SEASON,
       level: Levels.BEGINNER,
-      video: 'https://www.youtube.com/embed/JkVHrA5o23o',
-      /* animation:, */
       steps: [
         {
+          id: 2,
+          sourceType: SourceType.YOUTUBE,
+          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Do the drill',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Last step',
           subtitle: 'This is a subtitle',
         },
       ],
@@ -656,7 +536,7 @@ export default {
     {
       id: 19,
       type: DrillTypes.FITNESS,
-      source: 'Author',
+      author: 'Author',
       title: 'Fitness Drill Title',
       image: 'http://www.liberte-fitness.fr/sites/default/files/styles/slider/public/news/tone.jpg?itok=505bme2a',
       description: 'Description of the drill',
@@ -668,19 +548,12 @@ export default {
       goals: [GoalsFitness.LEGS],
       seasonTiming: SeasonTimings.IN_SEASON,
       level: Levels.BEGINNER,
-      video: 'https://www.youtube.com/embed/JkVHrA5o23o',
-      /* animation:, */
       steps: [
         {
+          id: 2,
+          sourceType: SourceType.YOUTUBE,
+          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Do the drill',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Last step',
           subtitle: 'This is a subtitle',
         },
       ],
@@ -688,7 +561,7 @@ export default {
     {
       id: 20,
       type: DrillTypes.FITNESS,
-      source: 'Author',
+      author: 'Author',
       title: 'Fitness Drill Title',
       image: 'https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg',
       description: 'Description of the drill',
@@ -700,19 +573,12 @@ export default {
       goals: [GoalsFitness.UPPER],
       seasonTiming: SeasonTimings.IN_SEASON,
       level: Levels.BEGINNER,
-      video: 'https://www.youtube.com/embed/JkVHrA5o23o',
-      /* animation:, */
       steps: [
         {
+          id: 2,
+          sourceType: SourceType.YOUTUBE,
+          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Do the drill',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Last step',
           subtitle: 'This is a subtitle',
         },
       ],
@@ -720,7 +586,7 @@ export default {
     {
       id: 21,
       type: DrillTypes.FITNESS,
-      source: 'Author',
+      author: 'Author',
       title: 'Fitness Drill Title',
       image: 'https://www.planetfitness.co.za/wp-content/uploads/2019/04/SLP_6767-copy-768x430.jpg',
       description: 'Description of the drill',
@@ -732,19 +598,12 @@ export default {
       goals: [GoalsFitness.LEGS],
       seasonTiming: SeasonTimings.IN_SEASON,
       level: Levels.BEGINNER,
-      video: 'https://www.youtube.com/embed/JkVHrA5o23o',
-      /* animation:, */
       steps: [
         {
+          id: 2,
+          sourceType: SourceType.YOUTUBE,
+          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Do the drill',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Last step',
           subtitle: 'This is a subtitle',
         },
       ],
@@ -752,7 +611,7 @@ export default {
     {
       id: 22,
       type: DrillTypes.FITNESS,
-      source: 'Author',
+      author: 'Author',
       title: 'Fitness Drill Title',
       image: 'https://i.insider.com/5a454d9a4aa6b519158b727e?width=600&format=jpeg&auto=webp',
       description: 'Description of the drill',
@@ -764,19 +623,12 @@ export default {
       goals: [GoalsFitness.UPPER],
       seasonTiming: SeasonTimings.IN_SEASON,
       level: Levels.BEGINNER,
-      video: 'https://www.youtube.com/embed/JkVHrA5o23o',
-      /* animation:, */
       steps: [
         {
+          id: 2,
+          sourceType: SourceType.YOUTUBE,
+          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Do the drill',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Last step',
           subtitle: 'This is a subtitle',
         },
       ],
@@ -784,7 +636,7 @@ export default {
     {
       id: 23,
       type: DrillTypes.FITNESS,
-      source: 'Author',
+      author: 'Author',
       title: 'Fitness Drill Title',
       image: 'https://www.planetfitness.co.za/wp-content/uploads/2019/04/SLP_6767-copy-768x430.jpg',
       description: 'Description of the drill',
@@ -796,19 +648,12 @@ export default {
       goals: [GoalsFitness.UPPER],
       seasonTiming: SeasonTimings.PRE_SEASON,
       level: Levels.BEGINNER,
-      video: 'https://www.youtube.com/embed/JkVHrA5o23o',
-      /* animation:, */
       steps: [
         {
+          id: 2,
+          sourceType: SourceType.YOUTUBE,
+          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Do the drill',
-          subtitle: 'This is a subtitle',
-        },
-        {
-          title: 'Last step',
           subtitle: 'This is a subtitle',
         },
       ],
@@ -816,7 +661,7 @@ export default {
     {
       id: 1001,
       type: DrillTypes.TECHNICAL,
-      source: 'Author',
+      author: 'Author',
       title: 'Chevron passes',
       image: 'https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1',
       description: 'Cutting in the right timing, catching and passing straight away',
@@ -828,13 +673,12 @@ export default {
       goals: [GoalsFrisbee.CUTTING, GoalsFrisbee.CATCH, GoalsFrisbee.THROWING],
       seasonTiming: SeasonTimings.ANYTIME,
       level: Levels.BEGINNER,
-      animation: animationSquare,
       steps: [
         {
           id: 1,
           title: '',
-          source: Sources.ANIMATION,
-          link: animationSquare,
+          sourceType: SourceType.ANIMATION,
+          source: animationSquare,
           repetition: '1',
           rest: '90s',
           instruction: 'Step 1: Introduce the notion of continuity',
@@ -842,8 +686,8 @@ export default {
         {
           id: 2,
           title: '',
-          source: Sources.ANIMATION,
-          link: AnimationMenageATrois,
+          sourceType: SourceType.ANIMATION,
+          source: AnimationMenageATrois,
           repetition: '2',
           rest: '90s',
           instruction: 'Step 2: Make a small opposition',
@@ -851,8 +695,8 @@ export default {
         {
           id: 3,
           title: '',
-          source: Sources.ANIMATION,
-          link: animationSquare,
+          sourceType: SourceType.ANIMATION,
+          source: animationSquare,
           repetition: '3',
           rest: '90s',
           instruction: 'Step 3: Do a long shot',
@@ -862,7 +706,7 @@ export default {
     {
       id: 1002,
       type: DrillTypes.TECHNICAL,
-      source: 'Martin',
+      author: 'Martin',
       title: '3 people mark',
       image:
         'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
@@ -875,13 +719,22 @@ export default {
       goals: [GoalsFrisbee.DEFENSE, GoalsFrisbee.BREAK],
       seasonTiming: SeasonTimings.ANYTIME,
       level: Levels.INTERMEDIATE,
-      animation: animationSquare,
-      steps: [],
+      steps: [
+        {
+          id: 1,
+          title: '',
+          sourceType: SourceType.ANIMATION,
+          source: animationSquare,
+          repetition: '1',
+          rest: '90s',
+          instruction: 'Step 1: Introduce the notion of continuity',
+        },
+      ],
     },
     {
       id: 1003,
       type: DrillTypes.TECHNICAL,
-      source: 'Martin',
+      author: 'Martin',
       title: 'Cuts to the break side',
       image: 'https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1',
       description: 'Cut from the open side to the break side. The thrower and the mark are working',
@@ -893,13 +746,22 @@ export default {
       goals: [GoalsFrisbee.BREAK, GoalsFrisbee.MARK],
       seasonTiming: SeasonTimings.ANYTIME,
       level: Levels.INTERMEDIATE,
-      animation: animationSquare,
-      steps: [],
+      steps: [
+        {
+          id: 1,
+          title: '',
+          sourceType: SourceType.ANIMATION,
+          source: animationSquare,
+          repetition: '1',
+          rest: '90s',
+          instruction: 'Step 1: Introduce the notion of continuity',
+        },
+      ],
     },
     {
       id: 1004,
       type: DrillTypes.TECHNICAL,
-      source: 'Martin',
+      author: 'Martin',
       title: 'L drill',
       image: 'https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1',
       description: 'Or is it Hell drill?\nTo practice in groups of 8 to 14 players',
@@ -911,13 +773,22 @@ export default {
       goals: [GoalsFrisbee.THROWING],
       seasonTiming: SeasonTimings.ANYTIME,
       level: Levels.INTERMEDIATE,
-      animation: animationSquare,
-      steps: [],
+      steps: [
+        {
+          id: 1,
+          title: '',
+          sourceType: SourceType.ANIMATION,
+          source: animationSquare,
+          repetition: '1',
+          rest: '90s',
+          instruction: 'Step 1: Introduce the notion of continuity',
+        },
+      ],
     },
     {
       id: 1005,
       type: DrillTypes.TECHNICAL,
-      source: 'Martin',
+      author: 'Martin',
       title: '3 columns long shot',
       image: 'https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1',
       description: 'Basic long passes drill. You want your players to alternate between throwing, running and passing',
@@ -929,13 +800,22 @@ export default {
       goals: [GoalsFrisbee.THROWING],
       seasonTiming: SeasonTimings.ANYTIME,
       level: Levels.INTERMEDIATE,
-      animation: animationSquare,
-      steps: [],
+      steps: [
+        {
+          id: 1,
+          title: '',
+          sourceType: SourceType.ANIMATION,
+          source: animationSquare,
+          repetition: '1',
+          rest: '90s',
+          instruction: 'Step 1: Introduce the notion of continuity',
+        },
+      ],
     },
     {
       id: 1006,
       type: DrillTypes.TECHNICAL,
-      source: 'Martin',
+      author: 'Martin',
       title: '2 columns long shot with defense',
       image: 'https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1',
       description:
@@ -948,13 +828,22 @@ export default {
       goals: [GoalsFrisbee.THROWING],
       seasonTiming: SeasonTimings.ANYTIME,
       level: Levels.INTERMEDIATE,
-      animation: animationSquare,
-      steps: [],
+      steps: [
+        {
+          id: 1,
+          title: '',
+          sourceType: SourceType.ANIMATION,
+          source: animationSquare,
+          repetition: '1',
+          rest: '90s',
+          instruction: 'Step 1: Introduce the notion of continuity',
+        },
+      ],
     },
     {
       id: 1004,
       type: DrillTypes.TECHNICAL,
-      source: 'Author',
+      author: 'Author',
       title: 'Frisbee Drill Title',
       image:
         'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
@@ -969,13 +858,22 @@ export default {
       seasonTiming: '',
       level: Levels.BEGINNER,
       /* video:, */
-      animation: animationSquare,
-      steps: [],
+      steps: [
+        {
+          id: 1,
+          title: '',
+          sourceType: SourceType.ANIMATION,
+          source: animationSquare,
+          repetition: '1',
+          rest: '90s',
+          instruction: 'Step 1: Introduce the notion of continuity',
+        },
+      ],
     },
     {
       id: 1005,
       type: DrillTypes.TECHNICAL,
-      source: 'Author',
+      author: 'Author',
       title: 'Frisbee Drill Title',
       image: 'https://conseils.casalsport.com/wp-content/uploads/2019/05/ultimate-frisbee-sport.jpg',
       description:
@@ -989,13 +887,22 @@ export default {
       seasonTiming: '',
       level: Levels.BEGINNER,
       /* video:, */
-      animation: animationSquare,
-      steps: [],
+      steps: [
+        {
+          id: 1,
+          title: '',
+          sourceType: SourceType.ANIMATION,
+          source: animationSquare,
+          repetition: '1',
+          rest: '90s',
+          instruction: 'Step 1: Introduce the notion of continuity',
+        },
+      ],
     },
     {
       id: 1006,
       type: DrillTypes.TECHNICAL,
-      source: 'Author',
+      author: 'Author',
       title: 'Frisbee Drill Title',
       image: 'https://d3j2bju5c7tc02.cloudfront.net/2016_44/backhand.jpg',
       description:
@@ -1009,13 +916,22 @@ export default {
       seasonTiming: '',
       level: Levels.BEGINNER,
       /* video:, */
-      animation: animationSquare,
-      steps: [],
+      steps: [
+        {
+          id: 1,
+          title: '',
+          sourceType: SourceType.ANIMATION,
+          source: animationSquare,
+          repetition: '1',
+          rest: '90s',
+          instruction: 'Step 1: Introduce the notion of continuity',
+        },
+      ],
     },
     {
       id: 1007,
       type: DrillTypes.TECHNICAL,
-      source: 'Author',
+      author: 'Author',
       title: 'Frisbee Drill Title',
       image: 'https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1',
       description:
@@ -1029,13 +945,22 @@ export default {
       seasonTiming: '',
       level: Levels.BEGINNER,
       /* video:, */
-      animation: animationSquare,
-      steps: [],
+      steps: [
+        {
+          id: 1,
+          title: '',
+          sourceType: SourceType.ANIMATION,
+          source: animationSquare,
+          repetition: '1',
+          rest: '90s',
+          instruction: 'Step 1: Introduce the notion of continuity',
+        },
+      ],
     },
     {
       id: 1008,
       type: DrillTypes.TECHNICAL,
-      source: 'Author',
+      author: 'Author',
       title: 'Frisbee Drill Title',
       image:
         'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
@@ -1050,13 +975,22 @@ export default {
       seasonTiming: '',
       level: Levels.BEGINNER,
       /* video:, */
-      animation: animationSquare,
-      steps: [],
+      steps: [
+        {
+          id: 1,
+          title: '',
+          sourceType: SourceType.ANIMATION,
+          source: animationSquare,
+          repetition: '1',
+          rest: '90s',
+          instruction: 'Step 1: Introduce the notion of continuity',
+        },
+      ],
     },
     {
       id: 1009,
       type: DrillTypes.TECHNICAL,
-      source: 'Author',
+      author: 'Author',
       title: 'Frisbee Drill Title',
       image:
         'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
@@ -1071,13 +1005,22 @@ export default {
       seasonTiming: '',
       level: Levels.BEGINNER,
       /* video:, */
-      animation: animationSquare,
-      steps: [],
+      steps: [
+        {
+          id: 1,
+          title: '',
+          sourceType: SourceType.ANIMATION,
+          source: animationSquare,
+          repetition: '1',
+          rest: '90s',
+          instruction: 'Step 1: Introduce the notion of continuity',
+        },
+      ],
     },
     {
       id: 1010,
       type: DrillTypes.TECHNICAL,
-      source: 'Author',
+      author: 'Author',
       title: 'Frisbee Drill Title',
       image:
         'https://siena.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2020/03/05/node_528988/1877948/public/2020/03/05/B9722816509Z.1_20200305151253_000%2BG2AFL39TF.1-0.jpg?itok=jAQBQG6y1583417579',
@@ -1092,13 +1035,22 @@ export default {
       seasonTiming: '',
       level: Levels.BEGINNER,
       /* video:, */
-      animation: animationSquare,
-      steps: [],
+      steps: [
+        {
+          id: 1,
+          title: '',
+          sourceType: SourceType.ANIMATION,
+          source: animationSquare,
+          repetition: '1',
+          rest: '90s',
+          instruction: 'Step 1: Introduce the notion of continuity',
+        },
+      ],
     },
     {
       id: 1011,
       type: DrillTypes.TECHNICAL,
-      source: 'Author',
+      author: 'Author',
       title: 'Frisbee Drill Title',
       image: 'https://conseils.casalsport.com/wp-content/uploads/2019/05/ultimate-frisbee-sport.jpg',
       description:
@@ -1112,13 +1064,22 @@ export default {
       seasonTiming: '',
       level: Levels.BEGINNER,
       /* video:, */
-      animation: animationSquare,
-      steps: [],
+      steps: [
+        {
+          id: 1,
+          title: '',
+          sourceType: SourceType.ANIMATION,
+          source: animationSquare,
+          repetition: '1',
+          rest: '90s',
+          instruction: 'Step 1: Introduce the notion of continuity',
+        },
+      ],
     },
     {
       id: 1012,
       type: DrillTypes.TECHNICAL,
-      source: 'Author',
+      author: 'Author',
       title: 'Frisbee Drill Title',
       image: 'https://d3j2bju5c7tc02.cloudfront.net/2016_44/backhand.jpg',
       description:
@@ -1132,13 +1093,22 @@ export default {
       seasonTiming: '',
       level: Levels.BEGINNER,
       /* video:, */
-      animation: animationSquare,
-      steps: [],
+      steps: [
+        {
+          id: 1,
+          title: '',
+          sourceType: SourceType.ANIMATION,
+          source: animationSquare,
+          repetition: '1',
+          rest: '90s',
+          instruction: 'Step 1: Introduce the notion of continuity',
+        },
+      ],
     },
     {
       id: 1013,
       type: DrillTypes.TECHNICAL,
-      source: 'Author',
+      author: 'Author',
       title: 'Frisbee Drill Title',
       image:
         'https://siena.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2020/03/05/node_528988/1877948/public/2020/03/05/B9722816509Z.1_20200305151253_000%2BG2AFL39TF.1-0.jpg?itok=jAQBQG6y1583417579',
@@ -1153,13 +1123,22 @@ export default {
       seasonTiming: '',
       level: Levels.BEGINNER,
       /* video:, */
-      animation: animationSquare,
-      steps: [],
+      steps: [
+        {
+          id: 1,
+          title: '',
+          sourceType: SourceType.ANIMATION,
+          source: animationSquare,
+          repetition: '1',
+          rest: '90s',
+          instruction: 'Step 1: Introduce the notion of continuity',
+        },
+      ],
     },
     {
       id: 1014,
       type: DrillTypes.TECHNICAL,
-      source: 'Author',
+      author: 'Author',
       title: 'Frisbee Drill Title',
       image:
         'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
@@ -1174,13 +1153,22 @@ export default {
       seasonTiming: '',
       level: Levels.BEGINNER,
       /* video:, */
-      animation: animationSquare,
-      steps: [],
+      steps: [
+        {
+          id: 1,
+          title: '',
+          sourceType: SourceType.ANIMATION,
+          source: animationSquare,
+          repetition: '1',
+          rest: '90s',
+          instruction: 'Step 1: Introduce the notion of continuity',
+        },
+      ],
     },
     {
       id: 1015,
       type: DrillTypes.TECHNICAL,
-      source: 'Author',
+      author: 'Author',
       title: 'Frisbee Drill Title',
       image: 'https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1',
       description:
@@ -1194,13 +1182,22 @@ export default {
       seasonTiming: '',
       level: Levels.BEGINNER,
       /* video:, */
-      animation: animationSquare,
-      steps: [],
+      steps: [
+        {
+          id: 1,
+          title: '',
+          sourceType: SourceType.ANIMATION,
+          source: animationSquare,
+          repetition: '1',
+          rest: '90s',
+          instruction: 'Step 1: Introduce the notion of continuity',
+        },
+      ],
     },
     {
       id: 1016,
       type: DrillTypes.TECHNICAL,
-      source: 'Author',
+      author: 'Author',
       title: 'Frisbee Drill Title',
       image:
         'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
@@ -1215,13 +1212,22 @@ export default {
       seasonTiming: '',
       level: Levels.BEGINNER,
       /* video:, */
-      animation: animationSquare,
-      steps: [],
+      steps: [
+        {
+          id: 1,
+          title: '',
+          sourceType: SourceType.ANIMATION,
+          source: animationSquare,
+          repetition: '1',
+          rest: '90s',
+          instruction: 'Step 1: Introduce the notion of continuity',
+        },
+      ],
     },
     {
       id: 1017,
       type: DrillTypes.TECHNICAL,
-      source: 'Author',
+      author: 'Author',
       title: 'Frisbee Drill Title',
       image:
         'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
@@ -1236,13 +1242,22 @@ export default {
       seasonTiming: '',
       level: Levels.BEGINNER,
       /* video:, */
-      animation: animationSquare,
-      steps: [],
+      steps: [
+        {
+          id: 1,
+          title: '',
+          sourceType: SourceType.ANIMATION,
+          source: animationSquare,
+          repetition: '1',
+          rest: '90s',
+          instruction: 'Step 1: Introduce the notion of continuity',
+        },
+      ],
     },
     {
       id: 1018,
       type: DrillTypes.TECHNICAL,
-      source: 'Author',
+      author: 'Author',
       title: 'Frisbee Drill Title',
       image: 'https://conseils.casalsport.com/wp-content/uploads/2019/05/ultimate-frisbee-sport.jpg',
       description:
@@ -1256,13 +1271,22 @@ export default {
       seasonTiming: '',
       level: Levels.BEGINNER,
       /* video:, */
-      animation: animationSquare,
-      steps: [],
+      steps: [
+        {
+          id: 1,
+          title: '',
+          sourceType: SourceType.ANIMATION,
+          source: animationSquare,
+          repetition: '1',
+          rest: '90s',
+          instruction: 'Step 1: Introduce the notion of continuity',
+        },
+      ],
     },
     {
       id: 1019,
       type: DrillTypes.TECHNICAL,
-      source: 'Author',
+      author: 'Author',
       title: 'Frisbee Drill Title',
       image: 'https://d3j2bju5c7tc02.cloudfront.net/2016_44/backhand.jpg',
       description:
@@ -1276,13 +1300,22 @@ export default {
       seasonTiming: '',
       level: Levels.BEGINNER,
       /* video:, */
-      animation: animationSquare,
-      steps: [],
+      steps: [
+        {
+          id: 1,
+          title: '',
+          sourceType: SourceType.ANIMATION,
+          source: animationSquare,
+          repetition: '1',
+          rest: '90s',
+          instruction: 'Step 1: Introduce the notion of continuity',
+        },
+      ],
     },
     {
       id: 1020,
       type: DrillTypes.TECHNICAL,
-      source: 'Author',
+      author: 'Author',
       title: 'Frisbee Drill Title',
       image:
         'https://siena.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2020/03/05/node_528988/1877948/public/2020/03/05/B9722816509Z.1_20200305151253_000%2BG2AFL39TF.1-0.jpg?itok=jAQBQG6y1583417579',
@@ -1297,13 +1330,22 @@ export default {
       seasonTiming: '',
       level: Levels.BEGINNER,
       /* video:, */
-      animation: animationSquare,
-      steps: [],
+      steps: [
+        {
+          id: 1,
+          title: '',
+          sourceType: SourceType.ANIMATION,
+          source: animationSquare,
+          repetition: '1',
+          rest: '90s',
+          instruction: 'Step 1: Introduce the notion of continuity',
+        },
+      ],
     },
     {
       id: 1021,
       type: DrillTypes.TECHNICAL,
-      source: 'Author',
+      author: 'Author',
       title: 'Frisbee Drill Title',
       image:
         'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
@@ -1318,13 +1360,22 @@ export default {
       seasonTiming: '',
       level: Levels.BEGINNER,
       /* video:, */
-      animation: animationSquare,
-      steps: [],
+      steps: [
+        {
+          id: 1,
+          title: '',
+          sourceType: SourceType.ANIMATION,
+          source: animationSquare,
+          repetition: '1',
+          rest: '90s',
+          instruction: 'Step 1: Introduce the notion of continuity',
+        },
+      ],
     },
     {
       id: 1022,
       type: DrillTypes.TECHNICAL,
-      source: 'Author',
+      author: 'Author',
       title: 'Frisbee Drill Title',
       image: 'https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1',
       description:
@@ -1338,13 +1389,22 @@ export default {
       seasonTiming: '',
       level: Levels.BEGINNER,
       /* video:, */
-      animation: animationSquare,
-      steps: [],
+      steps: [
+        {
+          id: 1,
+          title: '',
+          sourceType: SourceType.ANIMATION,
+          source: animationSquare,
+          repetition: '1',
+          rest: '90s',
+          instruction: 'Step 1: Introduce the notion of continuity',
+        },
+      ],
     },
     {
       id: 1023,
       type: DrillTypes.TECHNICAL,
-      source: 'Author',
+      author: 'Author',
       title: 'Frisbee Drill Title',
       image:
         'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
@@ -1359,13 +1419,22 @@ export default {
       seasonTiming: '',
       level: Levels.BEGINNER,
       /* video:, */
-      animation: animationSquare,
-      steps: [],
+      steps: [
+        {
+          id: 1,
+          title: '',
+          sourceType: SourceType.ANIMATION,
+          source: animationSquare,
+          repetition: '1',
+          rest: '90s',
+          instruction: 'Step 1: Introduce the notion of continuity',
+        },
+      ],
     },
     {
       id: 2001,
       type: DrillTypes.GAME,
-      source: 'Martin',
+      author: 'Martin',
       title: '7v7 game',
       image:
         'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
@@ -1383,7 +1452,7 @@ export default {
     {
       id: 2002,
       type: DrillTypes.GAME,
-      source: 'Martin',
+      author: 'Martin',
       title: '3v3 games',
       image:
         'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
@@ -1401,7 +1470,7 @@ export default {
     {
       id: 2003,
       type: DrillTypes.GAME,
-      source: 'Martin',
+      author: 'Martin',
       title: 'Long shots oriented game',
       image:
         'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
@@ -1420,7 +1489,7 @@ export default {
   trainings: [
     {
       id: 1,
-      source: '** Ultimate App **',
+      sourceType: '** Ultimate App **',
       title: 'Dump & Swing',
       image: 'https://d3j2bju5c7tc02.cloudfront.net/2016_44/backhand.jpg',
       description: 'This training session aims at make your team better at Dump & Swing. blabla bla bla bla',
@@ -1428,7 +1497,7 @@ export default {
     },
     {
       id: 2,
-      source: '** Ultimate App **',
+      sourceType: '** Ultimate App **',
       title: 'First practice',
       image:
         'https://cdn3.sportngin.com/attachments/photo/be7e-106813275/Screen_Shot_2018-07-19_at_3.53.39_PM_large.png',
@@ -1437,7 +1506,7 @@ export default {
     },
     {
       id: 3,
-      source: 'Martin',
+      sourceType: 'Martin',
       title: 'Coed 2 Mark',
       image:
         'https://cdn3.sportngin.com/attachments/photo/be7e-106813275/Screen_Shot_2018-07-19_at_3.53.39_PM_large.png',
@@ -1447,7 +1516,7 @@ export default {
     },
     {
       id: 4,
-      source: 'Martin',
+      sourceType: 'Martin',
       title: 'Coed 2 Long',
       image:
         'https://cdn3.sportngin.com/attachments/photo/be7e-106813275/Screen_Shot_2018-07-19_at_3.53.39_PM_large.png',
@@ -1457,7 +1526,7 @@ export default {
     },
     {
       id: 5,
-      source: 'Martin',
+      sourceType: 'Martin',
       title: 'Coed 2 Long v2',
       image:
         'https://cdn3.sportngin.com/attachments/photo/be7e-106813275/Screen_Shot_2018-07-19_at_3.53.39_PM_large.png',

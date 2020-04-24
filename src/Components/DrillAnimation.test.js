@@ -3,17 +3,12 @@ import renderer from 'react-test-renderer';
 import animationMenageATrois from '../Fixtures/AnimationMenageATrois';
 
 import DrillAnimation from './DrillAnimation';
+import { SourceType } from './Fixtures';
 import { createDrill } from '../Fixtures/TestFixtures';
 
 describe('<DrillAnimation />', () => {
   it('renders correctly for a drill with video', () => {
-    const drill = createDrill({
-      steps: [
-        {
-          video: 'https://www.youtube.com/embed/oN1bzPCKkGE',
-        },
-      ],
-    });
+    const drill = createDrill();
     const tree = renderer.create(<DrillAnimation drill={drill} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -22,7 +17,8 @@ describe('<DrillAnimation />', () => {
     const drill = createDrill({
       steps: [
         {
-          animation: animationMenageATrois,
+          sourceType: SourceType.ANIMATION,
+          source: animationMenageATrois,
         },
       ],
     });
@@ -36,18 +32,18 @@ describe('<DrillAnimation />', () => {
         {
           id: 1,
           title: 'Rower Hamstring',
-          source: 'vimeo',
-          link: '407999139',
-          count: '20',
+          sourceType: 'vimeo',
+          source: '407999139',
+          repetition: '20',
           rest: '90s',
           instruction: 'blabla bla blabl blalb ',
         },
         {
           id: 2,
           title: 'Full Clean',
-          source: 'vimeo',
-          link: '406747741',
-          count: '8',
+          sourceType: 'vimeo',
+          source: '406747741',
+          repetition: '8',
           rest: '90s',
           instruction: 'blabla bla blabl blalb ',
         },
@@ -58,7 +54,9 @@ describe('<DrillAnimation />', () => {
   });
 
   it('renders correctly for a drill with no video nor animation', () => {
-    const drill = {};
+    const drill = createDrill({
+      steps: [],
+    });
     const tree = renderer.create(<DrillAnimation drill={drill} />).toJSON();
     expect(tree).toMatchSnapshot();
   });

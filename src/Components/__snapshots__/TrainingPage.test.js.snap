@@ -165,306 +165,28 @@ exports[`<TrainingPage /> renders correctly with a training 1`] = `
               "source": "Author",
               "steps": Array [
                 Object {
+                  "source": "https://www.youtube.com/embed/JkVHrA5o23o",
+                  "sourceType": "youtube",
                   "subtitle": "This is a subtitle",
                   "title": "Warmup",
                 },
                 Object {
+                  "source": "https://www.youtube.com/embed/JkVHrA5o23o",
+                  "sourceType": "youtube",
                   "subtitle": "This is a subtitle",
                   "title": "Do the drill",
                 },
                 Object {
+                  "source": "https://www.youtube.com/embed/JkVHrA5o23o",
+                  "sourceType": "youtube",
                   "subtitle": "This is a subtitle",
                   "title": "Last step",
                 },
               ],
               "title": "Fitness Drill Title",
               "type": "fitness",
-              "video": "https://www.youtube.com/embed/JkVHrA5o23o",
             },
             Object {
-              "animation": Object {
-                "ids": Array [
-                  "triangle",
-                  "triangle",
-                  "triangle",
-                  "triangle",
-                  "triangle",
-                  "triangle",
-                  "triangle",
-                  "triangle",
-                  "offense",
-                  "offense",
-                  "offense",
-                  "offense",
-                  "offense",
-                  "disc",
-                ],
-                "positions": Array [
-                  Array [
-                    Array [
-                      Array [
-                        0.3,
-                        0.3,
-                      ],
-                    ],
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                  ],
-                  Array [
-                    Array [
-                      Array [
-                        0.3,
-                        0.6,
-                      ],
-                    ],
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                  ],
-                  Array [
-                    Array [
-                      Array [
-                        0.6,
-                        0.3,
-                      ],
-                    ],
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                  ],
-                  Array [
-                    Array [
-                      Array [
-                        0.6,
-                        0.6,
-                      ],
-                    ],
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                  ],
-                  Array [
-                    Array [
-                      Array [
-                        0.45,
-                        0.2,
-                      ],
-                    ],
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                  ],
-                  Array [
-                    Array [
-                      Array [
-                        0.2,
-                        0.45,
-                      ],
-                    ],
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                  ],
-                  Array [
-                    Array [
-                      Array [
-                        0.45,
-                        0.7,
-                      ],
-                    ],
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                  ],
-                  Array [
-                    Array [
-                      Array [
-                        0.7,
-                        0.45,
-                      ],
-                    ],
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                  ],
-                  Array [
-                    Array [
-                      Array [
-                        0.3,
-                        0.3,
-                      ],
-                    ],
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    Array [
-                      Array [
-                        0.45,
-                        0.2,
-                      ],
-                    ],
-                  ],
-                  Array [
-                    Array [
-                      Array [
-                        0.16,
-                        0.3,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.45,
-                        0.2,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.6,
-                        0.3,
-                      ],
-                    ],
-                    undefined,
-                    undefined,
-                    undefined,
-                  ],
-                  Array [
-                    Array [
-                      Array [
-                        0.6,
-                        0.3,
-                      ],
-                    ],
-                    undefined,
-                    Array [
-                      Array [
-                        0.7,
-                        0.45,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.6,
-                        0.6,
-                      ],
-                    ],
-                    undefined,
-                    undefined,
-                  ],
-                  Array [
-                    Array [
-                      Array [
-                        0.6,
-                        0.6,
-                      ],
-                    ],
-                    undefined,
-                    undefined,
-                    Array [
-                      Array [
-                        0.45,
-                        0.7,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.3,
-                        0.6,
-                      ],
-                    ],
-                    undefined,
-                  ],
-                  Array [
-                    Array [
-                      Array [
-                        0.3,
-                        0.6,
-                      ],
-                    ],
-                    undefined,
-                    undefined,
-                    undefined,
-                    Array [
-                      Array [
-                        0.2,
-                        0.45,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.3,
-                        0.3,
-                      ],
-                    ],
-                  ],
-                  Array [
-                    Array [
-                      Array [
-                        0.36,
-                        0.36,
-                      ],
-                    ],
-                    undefined,
-                    Array [
-                      Array [
-                        0.58,
-                        0.36,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.58,
-                        0.58,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.36,
-                        0.58,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.36,
-                        0.36,
-                      ],
-                    ],
-                  ],
-                ],
-                "texts": Array [
-                  "",
-                  "",
-                  "",
-                  "",
-                  "",
-                  "",
-                  "",
-                  "",
-                  "1",
-                  "2",
-                  "3",
-                  "4",
-                  "5",
-                  "",
-                ],
-              },
               "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
               "durationInMinutes": 30,
               "equipment": "Equipment needs for the drill",
@@ -479,7 +201,294 @@ exports[`<TrainingPage /> renders correctly with a training 1`] = `
               "minimalPlayersNumber": 2,
               "seasonTiming": "",
               "source": "Author",
-              "steps": Array [],
+              "steps": Array [
+                Object {
+                  "source": Object {
+                    "ids": Array [
+                      "triangle",
+                      "triangle",
+                      "triangle",
+                      "triangle",
+                      "triangle",
+                      "triangle",
+                      "triangle",
+                      "triangle",
+                      "offense",
+                      "offense",
+                      "offense",
+                      "offense",
+                      "offense",
+                      "disc",
+                    ],
+                    "positions": Array [
+                      Array [
+                        Array [
+                          Array [
+                            0.3,
+                            0.3,
+                          ],
+                        ],
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                      ],
+                      Array [
+                        Array [
+                          Array [
+                            0.3,
+                            0.6,
+                          ],
+                        ],
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                      ],
+                      Array [
+                        Array [
+                          Array [
+                            0.6,
+                            0.3,
+                          ],
+                        ],
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                      ],
+                      Array [
+                        Array [
+                          Array [
+                            0.6,
+                            0.6,
+                          ],
+                        ],
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                      ],
+                      Array [
+                        Array [
+                          Array [
+                            0.45,
+                            0.2,
+                          ],
+                        ],
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                      ],
+                      Array [
+                        Array [
+                          Array [
+                            0.2,
+                            0.45,
+                          ],
+                        ],
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                      ],
+                      Array [
+                        Array [
+                          Array [
+                            0.45,
+                            0.7,
+                          ],
+                        ],
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                      ],
+                      Array [
+                        Array [
+                          Array [
+                            0.7,
+                            0.45,
+                          ],
+                        ],
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                      ],
+                      Array [
+                        Array [
+                          Array [
+                            0.3,
+                            0.3,
+                          ],
+                        ],
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        Array [
+                          Array [
+                            0.45,
+                            0.2,
+                          ],
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          Array [
+                            0.16,
+                            0.3,
+                          ],
+                        ],
+                        Array [
+                          Array [
+                            0.45,
+                            0.2,
+                          ],
+                        ],
+                        Array [
+                          Array [
+                            0.6,
+                            0.3,
+                          ],
+                        ],
+                        undefined,
+                        undefined,
+                        undefined,
+                      ],
+                      Array [
+                        Array [
+                          Array [
+                            0.6,
+                            0.3,
+                          ],
+                        ],
+                        undefined,
+                        Array [
+                          Array [
+                            0.7,
+                            0.45,
+                          ],
+                        ],
+                        Array [
+                          Array [
+                            0.6,
+                            0.6,
+                          ],
+                        ],
+                        undefined,
+                        undefined,
+                      ],
+                      Array [
+                        Array [
+                          Array [
+                            0.6,
+                            0.6,
+                          ],
+                        ],
+                        undefined,
+                        undefined,
+                        Array [
+                          Array [
+                            0.45,
+                            0.7,
+                          ],
+                        ],
+                        Array [
+                          Array [
+                            0.3,
+                            0.6,
+                          ],
+                        ],
+                        undefined,
+                      ],
+                      Array [
+                        Array [
+                          Array [
+                            0.3,
+                            0.6,
+                          ],
+                        ],
+                        undefined,
+                        undefined,
+                        undefined,
+                        Array [
+                          Array [
+                            0.2,
+                            0.45,
+                          ],
+                        ],
+                        Array [
+                          Array [
+                            0.3,
+                            0.3,
+                          ],
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          Array [
+                            0.36,
+                            0.36,
+                          ],
+                        ],
+                        undefined,
+                        Array [
+                          Array [
+                            0.58,
+                            0.36,
+                          ],
+                        ],
+                        Array [
+                          Array [
+                            0.58,
+                            0.58,
+                          ],
+                        ],
+                        Array [
+                          Array [
+                            0.36,
+                            0.58,
+                          ],
+                        ],
+                        Array [
+                          Array [
+                            0.36,
+                            0.36,
+                          ],
+                        ],
+                      ],
+                    ],
+                    "texts": Array [
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "5",
+                      "",
+                    ],
+                  },
+                  "sourceType": "animation",
+                },
+              ],
               "title": "Frisbee Drill Title",
               "type": "technical",
             },

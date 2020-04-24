@@ -1,6 +1,14 @@
-import animationMenageATrois from './AnimationMenageATrois';
 import animationSquare from './AnimationSquare';
-import { DrillTypes, Intensities, GoalsFrisbee, GoalsFitness, Levels, SeasonTimings, EquipmentLabels } from './index';
+import {
+  DrillTypes,
+  Intensities,
+  GoalsFrisbee,
+  GoalsFitness,
+  Levels,
+  SeasonTimings,
+  EquipmentLabels,
+  SourceType,
+} from './index';
 
 export const createDrill = (override = {}) => {
   return {
@@ -18,20 +26,12 @@ export const createDrill = (override = {}) => {
     goals: [GoalsFitness.FULL_BODY],
     seasonTiming: SeasonTimings.OFF_SEASON,
     level: Levels.BEGINNER,
-    video: 'https://www.youtube.com/embed/JkVHrA5o23o',
-    /* animation:, */
     steps: [
       {
         title: 'Warmup',
         subtitle: 'This is a subtitle',
-      },
-      {
-        title: 'Do the drill',
-        subtitle: 'This is a subtitle',
-      },
-      {
-        title: 'Last step',
-        subtitle: 'This is a subtitle',
+        sourceType: SourceType.YOUTUBE,
+        source: 'https://www.youtube.com/embed/JkVHrA5o23o',
       },
     ],
     ...override,
@@ -56,20 +56,24 @@ export default {
       goals: [GoalsFitness.FULL_BODY],
       seasonTiming: SeasonTimings.OFF_SEASON,
       level: Levels.BEGINNER,
-      video: 'https://www.youtube.com/embed/JkVHrA5o23o',
-      /* animation:, */
       steps: [
         {
           title: 'Warmup',
           subtitle: 'This is a subtitle',
+          sourceType: SourceType.YOUTUBE,
+          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
         },
         {
           title: 'Do the drill',
           subtitle: 'This is a subtitle',
+          sourceType: SourceType.YOUTUBE,
+          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
         },
         {
           title: 'Last step',
           subtitle: 'This is a subtitle',
+          sourceType: SourceType.YOUTUBE,
+          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
         },
       ],
     },
@@ -88,20 +92,24 @@ export default {
       goals: [GoalsFitness.LEGS],
       seasonTiming: SeasonTimings.IN_SEASON,
       level: Levels.INTERMEDIATE,
-      video: 'https://www.youtube.com/embed/JkVHrA5o23o',
-      /* animation:, */
       steps: [
         {
           title: 'Warmup',
           subtitle: 'This is a subtitle',
+          sourceType: SourceType.YOUTUBE,
+          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
         },
         {
           title: 'Do the drill',
           subtitle: 'This is a subtitle',
+          sourceType: SourceType.YOUTUBE,
+          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
         },
         {
           title: 'Last step',
           subtitle: 'This is a subtitle',
+          sourceType: SourceType.YOUTUBE,
+          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
         },
       ],
     },
@@ -116,25 +124,17 @@ export default {
       minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
-      /* [
-        {
-          count: 1,
-          type: 'Disc',
-        },
-        {
-          count: 2,
-          type: 'Cone',
-        },
-      ], */
-
       durationInMinutes: 30,
       intensity: Intensities.LOW,
       goals: [GoalsFrisbee.DEFENSE],
       seasonTiming: '',
       level: Levels.BEGINNER,
-      /* video:, */
-      animation: animationSquare,
-      steps: [],
+      steps: [
+        {
+          sourceType: SourceType.ANIMATION,
+          source: animationSquare,
+        },
+      ],
     },
     {
       id: 4,
@@ -148,24 +148,17 @@ export default {
       minimalPlayersNumber: 2,
       equipmentLabel: '',
       equipment: 'Equipment needs for the drill',
-      /* [
-        {
-          count: 1,
-          type: 'Disc',
-        },
-        {
-          count: 2,
-          type: 'Cone',
-        },
-      ], */
       durationInMinutes: 30,
       intensity: Intensities.LOW,
       goals: [GoalsFrisbee.DEFENSE],
       seasonTiming: '',
       level: Levels.BEGINNER,
-      /* video:, */
-      animation: animationSquare,
-      steps: [],
+      steps: [
+        {
+          sourceType: SourceType.ANIMATION,
+          source: animationSquare,
+        },
+      ],
     },
   ],
   trainings: [

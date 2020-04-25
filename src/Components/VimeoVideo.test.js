@@ -45,7 +45,10 @@ describe('<VimeoVideo />', () => {
     await act(async () => {
       await waitForElement(() => scope.isDone());
     });
-    expect(getByText('Oopsie! There was an error loading the video...')).toBeTruthy();
+
+    await act(async () => {
+      await waitForElement(() => getByText('Oopsie! There was an error loading the video...'));
+    });
     expect(toJSON()).toMatchSnapshot();
   });
 });

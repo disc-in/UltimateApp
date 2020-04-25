@@ -11,6 +11,7 @@ const VimeoVideo = ({ vimeoId, screenWidth }) => {
 
   useEffect(() => {
     const vimeoUrlSource = `https://player.vimeo.com/video/${vimeoId}/config`;
+
     fetch(vimeoUrlSource)
       .then(res => res.json())
       .then(res => {
@@ -27,10 +28,12 @@ const VimeoVideo = ({ vimeoId, screenWidth }) => {
           });
         } catch (e) {
           setError(e);
+          setBuffer(false);
         }
       })
       .catch(e => {
         setError(e);
+        setBuffer(false);
       });
   }, [vimeoId]);
 

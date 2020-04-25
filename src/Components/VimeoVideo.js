@@ -1,15 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { View, ActivityIndicator, StyleSheet } from 'react-native';
+import { View, ActivityIndicator, StyleSheet, Text } from 'react-native';
 
 import { Video } from 'expo-av';
 import theme from '../styles/theme.style';
 
 const VimeoVideo = ({ vimeoId, screenWidth }) => {
-  const vimeoUrlSource = `https://player.vimeo.com/video/${vimeoId}/config`;
   const videoElem = useRef(null);
   const [isBuffering, setBuffer] = useState(true);
+  const [error, setError] = useState();
 
   useEffect(() => {
+    const vimeoUrlSource = `https://player.vimeo.com/video/${vimeoId}/config`;
     fetch(vimeoUrlSource)
       .then(res => res.json())
       .then(res => {
@@ -25,10 +26,13 @@ const VimeoVideo = ({ vimeoId, screenWidth }) => {
             uri: url,
           });
         } catch (e) {
-          console.log('ERROR Loading Video', e);
+          setError(e);
         }
+      })
+      .catch(e => {
+        setError(e);
       });
-  }, [vimeoUrlSource]);
+  }, [vimeoId]);
 
   const playVideoLoaded = () => {
     videoElem.current.setStatusAsync({
@@ -42,18 +46,26 @@ const VimeoVideo = ({ vimeoId, screenWidth }) => {
   };
 
   const renderBufferIcon = () => {
-    if (isBuffering) {
-      return (
-        <View style={styles.spinnerStyle}>
-          <ActivityIndicator animating color={theme.COLOR_SECONDARY} size="large" />
-        </View>
-      );
-    }
+    return (
+      <View style={styles.spinnerStyle}>
+        <ActivityIndicator animating color={theme.COLOR_SECONDARY} size="large" />
+        <Text>Loading...</Text>
+      </View>
+    );
+  };
+
+  const renderError = () => {
+    return (
+      <View style={styles.spinnerStyle}>
+        <Text>Oopsie! There was an error loading the video...</Text>
+      </View>
+    );
   };
 
   return (
     <View style={styles.videoContainer}>
-      {renderBufferIcon()}
+      {error && renderError()}
+      {isBuffering && renderBufferIcon()}
       <Video
         ref={videoElem}
         resizeMode={Video.RESIZE_MODE_CONTAIN}

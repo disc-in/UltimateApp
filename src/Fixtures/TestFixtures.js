@@ -10,8 +10,6 @@ import {
   IllustrationType,
 } from './index';
 
-export const VIMEO_VIDEO_ID = '407999139';
-
 export const createDrill = (override = {}) => {
   return {
     id: 1,

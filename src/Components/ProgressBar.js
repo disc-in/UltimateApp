@@ -70,19 +70,31 @@ class ProgressBar extends React.Component{
 												style={[styles.activated_dot, {opacity: this.dotsOpacity[item.key]}, {left: this.progressBarDots[item.key].left}, {top: this.props.animationHeight}]}
 												key={this.progressBarDots[item.key].key+this.progressBarDots.length}/>));
 
-        /* Add the objects used to detect the clicks on the dots */
-//        if(this.props.animationWidth > 50)
-	    this.progressBarComponents = this.progressBarComponents.concat(this.progressBarDots.map(item =>  <TouchableOpacity
-												    style={[{position: 'absolute'}, {height: 40}, {width: 40}, {left: this.progressBarDots[item.key].left-15}, {top: this.props.animationHeight-15}]}
-												    onPress={() => this._stepButtonClicked(item.key)}
-												    key={1000+item.key}/>));
-
 	
         /* Add the step numbers */
 	this.progressBarComponents = this.progressBarComponents.concat(this.progressBarDots.map(item => <Text style={[{position: 'absolute'}, {left: item.left+4}, {top: this.props.animationHeight - 19}]} key={item.key+2*this.progressBarDots.length}>{item.key+1}</Text>));
 
         /* Add the blue bar */
 	this.progressBarComponents.push(<Animated.View style={[styles.activated_progress_bar, {top: this.props.animationHeight + 6}, {width: this.dynamiqueCurrentStep}, {left: 20}]} key={3*this.progressBarComponents.length}/>);
+
+	
+        /* Add the objects used to detect the clicks on the dots */
+//        if(this.props.animationWidth > 50)
+	this.progressBarComponents = this.progressBarComponents.concat(
+	    this.progressBarDots.map(item =>  <TouchableOpacity
+				     hitSlop={{top: 20, right: 20, bottom: 20, left: 20}}
+				     style={[
+					 {position: 'absolute'},
+					 {height: 80},
+					 {width: 80},
+					 {left: this.progressBarDots[item.key].left-15},
+					 {top: this.props.animationHeight-15}
+				     ]}
+				     onPress={() => this._stepButtonClicked(item.key)}
+				     key={1000+item.key}/>
+				    )
+	);
+
                
     }
 
@@ -90,7 +102,7 @@ class ProgressBar extends React.Component{
 	
 	Animated.parallel(this.props.getStepAnimation(this.progressBarDots[key].key, this.props.currentStepAV <= key? true:false)).start();
 
-	if(this.props.onStepChange != undefined)
+	if(this.props.onStepChange !== undefined && this.props.onStepChange !== null)
 	    this.props.onStepChange(key);
     }
 

@@ -39,16 +39,16 @@ class Animation extends React.Component {
 
   /** Number of steps in the drill */
   _stepCount = () => {
-    console.log('_stepCount');
-    console.log(this.state.drill.g);
+//    console.log('_stepCount');
+//    console.log(this.state.drill.g);
 
-    if (this.state.drill !== undefined) return this.state.drill.positions.length;
+    if (this.state.drill !== undefined && this.state.drill !== null) return this.state.drill.positions.length;
     else return 0;
   };
 
   /** Number of elements displayed in the drill */
   _elemCount = () => {
-    if (this.state.drill !== undefined && this.state.drill.ids.length > 0) return this.state.drill.ids.length;
+    if (this.state.drill !== undefined && this.state.drill !== null && this.state.drill.ids.length > 0) return this.state.drill.ids.length;
     else return 0;
   };
 
@@ -128,7 +128,7 @@ class Animation extends React.Component {
     }
 
     this.setState({ currentStep: 0 }, () => {
-      if (this.props.onStepChange !== undefined) this.props.onStepChange(0);
+      if (this.props.onStepChange !== undefined && this.props.onStepChange !== null) this.props.onStepChange(0);
     });
   }
 
@@ -143,7 +143,7 @@ class Animation extends React.Component {
     var initialStep = 0;
 
     // If the current step is fixed by the parent (used in the editor)
-    if (this.props.currentStep !== undefined) initialStep = this.props.currentStep;
+    if (this.props.currentStep !== undefined && this.props.currentStep !== null) initialStep = this.props.currentStep;
 
     this.setState(
       {
@@ -190,7 +190,7 @@ class Animation extends React.Component {
 
     Animated.sequence(completeSequence).start();
 
-    if (this.props.onStepChange !== undefined) this.props.onStepChange(this._stepCount());
+    if (this.props.onStepChange !== undefined && this.props.onStepChange !== null) this.props.onStepChange(this._stepCount());
   }
 
   /** Get back to the previous step */
@@ -202,7 +202,7 @@ class Animation extends React.Component {
           var stepArray = this._getStepAnimation(this.state.currentStep, false);
           Animated.parallel(stepArray).start();
 
-          if (this.props.onStepChange !== undefined) this.props.onStepChange(this.state.currentStep);
+          if (this.props.onStepChange !== undefined && this.props.onStepChange !== null) this.props.onStepChange(this.state.currentStep);
         },
       );
     }
@@ -216,7 +216,7 @@ class Animation extends React.Component {
         () => {
           Animated.parallel(this._getStepAnimation(this.state.currentStep, true)).start();
 
-          if (this.props.onStepChange !== undefined) this.props.onStepChange(this.state.currentStep);
+          if (this.props.onStepChange !== undefined && this.props.onStepChange !== null) this.props.onStepChange(this.state.currentStep);
         },
       );
     }
@@ -242,13 +242,13 @@ class Animation extends React.Component {
     );
 
     /** Change the opacity of the step dots */
-    if (this.pb !== undefined) stepAnimation = stepAnimation.concat(this.pb.getOpacityAnimation(stepId));
+    if (this.pb !== undefined && this.pb !== null) stepAnimation = stepAnimation.concat(this.pb.getOpacityAnimation(stepId));
 
     /* For each displayed element */
     for (let elemId = 0; elemId < this.state.drill.ids.length; elemId += 1) {
       /* Get the position of the element at step stepId */
-      console.log('elemId is ', elemId);
-      console.log('stepId is ', stepId);
+//      console.log('elemId is ', elemId);
+//      console.log('stepId is ', stepId);
       const nextPosition = this.state.drill.getPositionsAtStep(elemId, stepId, this.state.currentStep); //this.state.drill.positions[elemId][stepId];
 
       /* The substeps are played only if the element moves at step stepId.
@@ -256,10 +256,10 @@ class Animation extends React.Component {
       let playSubSteps = true;
       if (nextPosition === undefined || nextPosition === null || !isForward) playSubSteps = false;
 
-      console.log('NextPosition is ', nextPosition);
-      console.log('NextPosition is ', nextPosition !== null);
+//      console.log('NextPosition is ', nextPosition);
+//      console.log('NextPosition is ', nextPosition !== null);
       /* If this element must change its position */
-      if (nextPosition !== undefined) {
+      if (nextPosition !== undefined && nextPosition !== null) {
         /* Animation of the element at step stepId */
         var deStepAnimation = [];
 
@@ -303,14 +303,14 @@ class Animation extends React.Component {
   };
 
   _display(item) {
-    if (item !== undefined) return item.render();
+    if (item !== undefined && item !== null) return item.render();
     else return <View />;
   }
 
   render() {
     this.cutsArray = [];
 
-    if (this.cuts !== undefined) {
+    if (this.cuts !== undefined && this.cuts !== null) {
       this.cuts.props.currentStep = Math.floor(this.state.currentStep);
       this.cutsArray.push(this.cuts);
     }
@@ -318,7 +318,7 @@ class Animation extends React.Component {
     return (
       <View style={[styles.mainContainer, { height: this.animationHeight }, { width: this.animationWidth }]}>
         {this._display(this.cuts)}
-        {this.state.de === undefined ? <View /> : this.state.de.map(this._display)}
+        {this.state.de === undefined || this.state.de === null ? <View /> : this.state.de.map(this._display)}
         <View style={{ flex: 0.1 }} />
         <Button style={{ flex: 1 }} title=" < " onPress={() => this._previousStep()} />
         <View style={{ flex: 0.1 }} />
@@ -372,8 +372,8 @@ class Animation extends React.Component {
         if (isEqual && pPositions[stepId].length !== sPositions[stepId].length) isEqual = false;
 
         if (isEqual && pPositions[stepId].length > elemId) {
-          var pUndefined = pPositions[stepId][elemId] === undefined;
-          var sUndefined = sPositions[stepId][elemId] === undefined;
+          var pUndefined = pPositions[stepId][elemId] === undefined || pPositions[stepId][elemId] === null;
+          var sUndefined = sPositions[stepId][elemId] === undefined || sPositions[stepId][elemId] === null;
 
           var pSize = -1;
           var sSize = -1;
@@ -393,7 +393,7 @@ class Animation extends React.Component {
         }
 
         // Go to the next position
-        if (pPositions[stepId][elemId] === undefined) {
+        if (pPositions[stepId][elemId] === undefined || pPositions[stepId][elemId] === null) {
           if (pPositions[stepId].length > elemId + 1) elemId++;
           else {
             stepId++;

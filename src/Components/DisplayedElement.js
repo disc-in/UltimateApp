@@ -21,11 +21,16 @@ class DisplayedElement extends React.Component {
         // TODO: put the constant coefficient used in the following somewhere to avoir writing them twice (in this class and in DrillCuts)
 	var dimensionMin = Math.min(this.props.animationWidth, this.props.animationHeight);
 	this.props.playerRadius = dimensionMin / 12;
-        this.props.discRadius = 200; 
+        this.props.discRadius = this.props.playerRadius/2; 
 	this.props.coneSize = this.props.playerRadius * 5 / 16;
 
-	this.props.bottomconeSize = this.props.playerRadius * 10 / 16;
-        this.props.borderWidth = this.props.discRadius/10;
+	this.props.bottomconeSize = this.props.playerRadius * 14 / 16;
+        this.props.borderWidth = this.props.discRadius * 8 /10;
+
+	console.log("bottom: " + this.props.bottomconeSize);
+	console.log("border: " + this.props.borderWidth);
+	
+	
 	
 	/* Current position of the element in pixels */ 
 	this.currentPosition = new Animated.ValueXY({ x: 0, y: 0 });
@@ -125,9 +130,12 @@ class DisplayedElement extends React.Component {
                 {...this.panResponder.panHandlers}
 
 		style={[panStyle,styles.defense,
-			{height: 40},
-			{width: 40},
-			{borderRadius: 40},]}
+			{height: this.props.playerRadius},
+			{width: this.props.playerRadius},
+			{borderRadius: this.props.playerRadius},
+			{top: this.top},
+			{left: this.left}
+		       ]}
 		key={this.props.key}
 		    >
 		    {this.props.number}
@@ -142,9 +150,9 @@ class DisplayedElement extends React.Component {
                 {...this.panResponder.panHandlers}
 
 		style={[panStyle,styles.offense,
-			{height: 40},
-			{width: 40},
-			{borderRadius: 40},
+			{height: this.props.playerRadius},
+			{width: this.props.playerRadius},
+			{borderRadius: this.props.playerRadius},
 			{top: this.top},
 			{left: this.left}
 		       ]}
@@ -163,10 +171,10 @@ class DisplayedElement extends React.Component {
                 {...this.panResponder.panHandlers}
 
 		style={[panStyle,styles.disc, 
-			{height: 20},
-			{width: 20},
-			{borderRadius: 20},
-			{borderWidth: 2}, 
+			{height: this.props.discRadius},
+			{width: this.props.discRadius},
+			{borderRadius: this.props.discRadius},
+			{borderWidth: this.props.discRadius/10}, 
 			{top: this.top},
 			{left: this.left}]}
 		key={this.props.key}/>
@@ -180,9 +188,9 @@ class DisplayedElement extends React.Component {
                 {...this.panResponder.panHandlers}
 
 		style={[panStyle,styles.triangle, 
-			{borderLeftWidth: 12},
-			{borderRightWidth: 12},
-			{borderBottomWidth: 25}, 
+			{borderLeftWidth: this.props.borderWidth},
+			{borderRightWidth: this.props.borderWidth},
+			{borderBottomWidth: this.props.bottomconeSize}, 
 			{top: this.top},
 			{left: this.left}
 		       ]}

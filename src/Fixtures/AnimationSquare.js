@@ -1,3 +1,4 @@
+
 // Each drill has an attribute "positions" which is a 4D array:
 // - positions[stepId][elemId][subStepId][coordinateId]
 // 

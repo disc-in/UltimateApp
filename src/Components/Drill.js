@@ -7,7 +7,7 @@
 */
 class Drill {
   constructor(animation) {
-    console.log(' posistions are ', JSON.stringify(animation.positions));
+//    console.log(' posistions are ', JSON.stringify(animation.positions));
     this.positions = animation.positions || [];
     this.ids = animation.ids || [];
     this.texts = animation.texts || [];
@@ -16,7 +16,7 @@ class Drill {
   /** Get the position of an element at a given step or return null if its position at step stoppingStep is the last one at step stepId */
   getPositionsAtStep(elemId, stepId, stoppingStep = -1) {
     /* Get the position of the element at step stepId */
-    console.log('positions are ', JSON.stringify(this.positions[stepId]));
+//    console.log('positions are ', JSON.stringify(this.positions[stepId]));
     let nextPosition = this.positions[stepId][elemId];
 
     /* If the element does not change its position at step stepId, find its last previous position */

@@ -25,8 +25,8 @@ exports[`<TechnicalFilters /> renders correctly 1`] = `
   <RCTScrollView
     contentContainerStyle={
       Object {
-        "alignItems": "center",
         "paddingBottom": 50,
+        "paddingHorizontal": 10,
       }
     }
   >
@@ -35,7 +35,7 @@ exports[`<TechnicalFilters /> renders correctly 1`] = `
         style={
           Object {
             "fontWeight": "bold",
-            "marginTop": 10,
+            "marginBottom": 10,
             "textTransform": "uppercase",
           }
         }
@@ -47,8 +47,8 @@ exports[`<TechnicalFilters /> renders correctly 1`] = `
           Object {
             "flexDirection": "row",
             "flexWrap": "wrap",
-            "justifyContent": "center",
-            "marginBottom": 10,
+            "justifyContent": "space-between",
+            "marginBottom": 20,
           }
         }
       >
@@ -68,7 +68,9 @@ exports[`<TechnicalFilters /> renders correctly 1`] = `
               "backgroundColor": "#fff",
               "borderColor": "#e5e5e5",
               "borderWidth": 1,
-              "margin": 5,
+              "flexBasis": "30%",
+              "flexGrow": 1,
+              "marginRight": 5,
               "opacity": 1,
               "paddingHorizontal": 20,
               "paddingVertical": 10,
@@ -78,6 +80,7 @@ exports[`<TechnicalFilters /> renders correctly 1`] = `
           <Text
             style={
               Object {
+                "textAlign": "center",
                 "textTransform": "capitalize",
               }
             }
@@ -101,7 +104,9 @@ exports[`<TechnicalFilters /> renders correctly 1`] = `
               "backgroundColor": "#fff",
               "borderColor": "#e5e5e5",
               "borderWidth": 1,
-              "margin": 5,
+              "flexBasis": "30%",
+              "flexGrow": 1,
+              "marginRight": 5,
               "opacity": 1,
               "paddingHorizontal": 20,
               "paddingVertical": 10,
@@ -111,6 +116,7 @@ exports[`<TechnicalFilters /> renders correctly 1`] = `
           <Text
             style={
               Object {
+                "textAlign": "center",
                 "textTransform": "capitalize",
               }
             }
@@ -134,7 +140,9 @@ exports[`<TechnicalFilters /> renders correctly 1`] = `
               "backgroundColor": "#fff",
               "borderColor": "#e5e5e5",
               "borderWidth": 1,
-              "margin": 5,
+              "flexBasis": "30%",
+              "flexGrow": 1,
+              "marginRight": 5,
               "opacity": 1,
               "paddingHorizontal": 20,
               "paddingVertical": 10,
@@ -144,6 +152,7 @@ exports[`<TechnicalFilters /> renders correctly 1`] = `
           <Text
             style={
               Object {
+                "textAlign": "center",
                 "textTransform": "capitalize",
               }
             }
@@ -156,7 +165,7 @@ exports[`<TechnicalFilters /> renders correctly 1`] = `
         style={
           Object {
             "fontWeight": "bold",
-            "marginTop": 10,
+            "marginBottom": 10,
             "textTransform": "uppercase",
           }
         }
@@ -168,50 +177,113 @@ exports[`<TechnicalFilters /> renders correctly 1`] = `
           Object {
             "flexDirection": "row",
             "flexWrap": "wrap",
-            "justifyContent": "center",
-            "marginBottom": 10,
+            "justifyContent": "space-between",
+            "marginBottom": 20,
           }
         }
       >
         <View
-          accessible={true}
-          focusable={true}
-          isTVSelectable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "backgroundColor": "#fff",
-              "borderColor": "#e5e5e5",
-              "borderWidth": 1,
-              "margin": 5,
-              "opacity": 1,
-              "paddingHorizontal": 20,
-              "paddingVertical": 10,
+              "flexBasis": "50%",
             }
           }
         >
-          <Text
+          <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "textTransform": "capitalize",
+                "backgroundColor": "#fff",
+                "borderColor": "#ededed",
+                "borderRadius": 3,
+                "borderWidth": 0,
+                "margin": 5,
+                "marginLeft": 10,
+                "marginRight": 10,
+                "opacity": 1,
+                "padding": 0,
               }
             }
+            testID="checkbox"
           >
-            Full body
-          </Text>
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                }
+              }
+            >
+              <Text />
+              <Text
+                style={
+                  Object {
+                    "color": "#43484d",
+                    "fontWeight": "normal",
+                    "marginLeft": 10,
+                    "marginRight": 10,
+                    "textTransform": "capitalize",
+                  }
+                }
+                testID="checkboxTitle"
+                theme={
+                  Object {
+                    "colors": Object {
+                      "disabled": "hsl(208, 8%, 90%)",
+                      "divider": "#bcbbc1",
+                      "error": "#ff190c",
+                      "grey0": "#393e42",
+                      "grey1": "#43484d",
+                      "grey2": "#5e6977",
+                      "grey3": "#86939e",
+                      "grey4": "#bdc6cf",
+                      "grey5": "#e1e8ee",
+                      "greyOutline": "#bbb",
+                      "platform": Object {
+                        "android": Object {
+                          "error": "#f44336",
+                          "primary": "#2196f3",
+                          "secondary": "#9C27B0",
+                          "success": "#4caf50",
+                          "warning": "#ffeb3b",
+                        },
+                        "ios": Object {
+                          "error": "#ff3b30",
+                          "primary": "#007aff",
+                          "secondary": "#5856d6",
+                          "success": "#4cd964",
+                          "warning": "#ffcc00",
+                        },
+                      },
+                      "primary": "#2089dc",
+                      "searchBg": "#303337",
+                      "secondary": "#8F0CE8",
+                      "success": "#52c41a",
+                      "warning": "#faad14",
+                    },
+                  }
+                }
+              >
+                Full body
+              </Text>
+            </View>
+          </View>
         </View>
       </View>
       <Text
         style={
           Object {
             "fontWeight": "bold",
-            "marginTop": 10,
+            "marginBottom": 10,
             "textTransform": "uppercase",
           }
         }
@@ -219,32 +291,164 @@ exports[`<TechnicalFilters /> renders correctly 1`] = `
         Number of players: 
         -
       </Text>
-      <RCTSlider
-        disabled={false}
-        enabled={true}
-        maximumValue={30}
-        minimumValue={1}
-        onChange={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onSlidingComplete={null}
-        onStartShouldSetResponder={[Function]}
-        onValueChange={[Function]}
-        step={1}
+      <View
         style={
-          Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "paddingHorizontal": 10,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "flexGrow": 1,
+              "textAlign": "center",
+            }
+          }
+        >
+          1
+        </Text>
+        <View
+          animationType="timing"
+          onLayout={[Function]}
+          onValueChange={[Function]}
+          step={1}
+          style={
+            Object {
+              "flexGrow": 10,
+              "height": 40,
+              "justifyContent": "center",
+              "marginHorizontal": 10,
+            }
+          }
+          testID="numberOfPlayersSlider"
+          theme={
+            Object {
+              "colors": Object {
+                "disabled": "hsl(208, 8%, 90%)",
+                "divider": "#bcbbc1",
+                "error": "#ff190c",
+                "grey0": "#393e42",
+                "grey1": "#43484d",
+                "grey2": "#5e6977",
+                "grey3": "#86939e",
+                "grey4": "#bdc6cf",
+                "grey5": "#e1e8ee",
+                "greyOutline": "#bbb",
+                "platform": Object {
+                  "android": Object {
+                    "error": "#f44336",
+                    "primary": "#2196f3",
+                    "secondary": "#9C27B0",
+                    "success": "#4caf50",
+                    "warning": "#ffeb3b",
+                  },
+                  "ios": Object {
+                    "error": "#ff3b30",
+                    "primary": "#007aff",
+                    "secondary": "#5856d6",
+                    "success": "#4cd964",
+                    "warning": "#ffcc00",
+                  },
+                },
+                "primary": "#2089dc",
+                "searchBg": "#303337",
+                "secondary": "#8F0CE8",
+                "success": "#52c41a",
+                "warning": "#faad14",
+              },
+            }
+          }
+          thumbTouchSize={
             Object {
               "height": 40,
-            },
+              "width": 40,
+            }
+          }
+          value={0}
+        >
+          <View
+            onLayout={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#b3b3b3",
+                "borderRadius": 2,
+                "height": 2,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "backgroundColor": "#008577",
+                "borderRadius": 2,
+                "height": 0,
+                "marginTop": -0,
+                "position": "absolute",
+                "width": 0,
+              }
+            }
+          />
+          <View
+            onLayout={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#008577",
+                "borderRadius": 10,
+                "height": 0,
+                "position": "absolute",
+                "top": 21,
+                "transform": Array [
+                  Object {
+                    "translateX": 0,
+                  },
+                  Object {
+                    "translateY": -0,
+                  },
+                ],
+                "width": 0,
+              }
+            }
+            testID="sliderThumb"
+          />
+          <View
+            onMoveShouldSetResponder={[Function]}
+            onMoveShouldSetResponderCapture={[Function]}
+            onResponderEnd={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderReject={[Function]}
+            onResponderRelease={[Function]}
+            onResponderStart={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            onStartShouldSetResponderCapture={[Function]}
+            style={
+              Object {
+                "backgroundColor": "transparent",
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          />
+        </View>
+        <Text
+          style={
             Object {
-              "marginBottom": 30,
-              "marginTop": 10,
-              "width": "80%",
-            },
-          ]
-        }
-        testID="numberOfPlayersSlider"
-        value={0}
-      />
+              "flexGrow": 1,
+              "textAlign": "center",
+            }
+          }
+        >
+          30
+        </Text>
+      </View>
     </View>
   </RCTScrollView>
 </View>

@@ -1,8 +1,10 @@
 import React from 'react';
-import { ScrollView, View, Text, TouchableOpacity, TextInput, Slider } from 'react-native';
+import { ScrollView, View, Text, TouchableOpacity, TextInput } from 'react-native';
 import filterStyle from '../styles/filters.style';
 import { Levels } from '../Fixtures';
-import Button from './shared/FilterButton';
+import Button from './filters/FilterButton';
+import Checkbox from './filters/Checkbox';
+import Slider from './filters/Slider';
 import HeaderButton from './shared/HeaderButton';
 
 class TechnicalFilters extends React.Component {
@@ -82,7 +84,7 @@ class TechnicalFilters extends React.Component {
               .reduce((x, y) => x.concat(y), [])
               .filter((goal, index, array) => array.indexOf(goal) === index)
               .map(goal => (
-                <Button
+                <Checkbox
                   title={goal}
                   onPress={() => this.onPressedChange('selectedGoal', goal)}
                   key={goal}
@@ -97,7 +99,6 @@ class TechnicalFilters extends React.Component {
             step={1}
             value={numberOfPlayers}
             onValueChange={this.onNumberOfPlayersChange}
-            style={filterStyle.slider}
             testID="numberOfPlayersSlider"
           />
         </ScrollView>

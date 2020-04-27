@@ -16,9 +16,11 @@ const styles = StyleSheet.create({
     borderColor: theme.BORDER_COLOR_BUTTON,
     backgroundColor: theme.BACKGROUND_COLOR_BUTTON,
     borderWidth: 1,
-    margin: 5,
     paddingVertical: 10,
     paddingHorizontal: 20,
+    marginRight: 5,
+    flexGrow: 1,
+    flexBasis: '30%',
   },
   activeButton: {
     borderColor: theme.BORDER_COLOR_BUTTON_ACTIVE,
@@ -26,6 +28,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     textTransform: 'capitalize',
+    textAlign: 'center',
   },
 });
 

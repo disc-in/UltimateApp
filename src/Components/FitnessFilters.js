@@ -1,8 +1,10 @@
 import React from 'react';
-import { StyleSheet, ScrollView, View, Text, TouchableOpacity, TextInput, Slider } from 'react-native';
+import { StyleSheet, ScrollView, View, Text, TouchableOpacity, TextInput } from 'react-native';
 import filterStyle from '../styles/filters.style';
 import { Levels, Intensities, EquipmentLabels, SeasonTimings } from '../Fixtures';
-import Button from './shared/FilterButton';
+import Button from './filters/FilterButton';
+import Checkbox from './filters/Checkbox';
+import Slider from './filters/Slider';
 import HeaderButton from './shared/HeaderButton';
 
 class FitnessFilters extends React.Component {
@@ -119,14 +121,16 @@ class FitnessFilters extends React.Component {
           </View>
           <Text style={filterStyle.filterTitle}>Season Timing</Text>
           <View style={filterStyle.filter}>
-            {Object.values(SeasonTimings).map(seasonTiming => (
-              <Button
-                title={seasonTiming}
-                onPress={() => this.onPressedChange('selectedSeasonTiming', seasonTiming)}
-                key={seasonTiming}
-                active={selectedSeasonTiming === seasonTiming}
-              />
-            ))}
+            {Object.values(SeasonTimings)
+              .filter(value => value !== SeasonTimings.ANYTIME)
+              .map(seasonTiming => (
+                <Button
+                  title={seasonTiming}
+                  onPress={() => this.onPressedChange('selectedSeasonTiming', seasonTiming)}
+                  key={seasonTiming}
+                  active={selectedSeasonTiming === seasonTiming}
+                />
+              ))}
           </View>
           <Text style={filterStyle.filterTitle}>Goals</Text>
           <View style={filterStyle.filter}>
@@ -135,7 +139,7 @@ class FitnessFilters extends React.Component {
               .reduce((x, y) => x.concat(y), [])
               .filter((goal, index, array) => array.indexOf(goal) === index)
               .map(goal => (
-                <Button
+                <Checkbox
                   title={goal}
                   onPress={() => this.onPressedChange('selectedGoal', goal)}
                   key={goal}
@@ -143,14 +147,14 @@ class FitnessFilters extends React.Component {
                 />
               ))}
           </View>
-          <Text style={filterStyle.filterTitle}>Duration: {durationInMinutes || '-'} mins</Text>
+          <Text style={filterStyle.filterTitle}>Duration</Text>
+          <Text>How much time do you have?   {durationInMinutes || '-'} mins</Text>
           <Slider
-            minimumValue={1}
+            minimumValue={10}
             maximumValue={60}
             step={1}
             value={durationInMinutes}
             onValueChange={this.onDurationInMinutesChange}
-            style={filterStyle.slider}
             testID="durationSlider"
           />
         </ScrollView>

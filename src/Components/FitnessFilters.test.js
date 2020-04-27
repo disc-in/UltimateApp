@@ -322,12 +322,12 @@ describe('<FitnessFilters />', () => {
         </NavigationContainer>,
       );
 
-      expect(getByText('Duration: - mins')).toBeDefined();
+      expect(getByText('How much time do you have?   - mins')).toBeDefined();
       expect(getByText('3 drills available')).toBeDefined();
 
       await fireEvent(getByTestId('durationSlider'), 'valueChange', 5);
 
-      expect(getByText('Duration: 5 mins')).toBeDefined();
+      expect(getByText('How much time do you have?   5 mins')).toBeDefined();
       expect(getByText('2 drills available')).toBeDefined();
 
       await fireEvent.press(getByTestId('headerButton'));

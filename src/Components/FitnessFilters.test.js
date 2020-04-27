@@ -12,7 +12,8 @@ afterEach(cleanup);
 
 describe('<FitnessFilters />', () => {
   const beginnerDrill = createDrill({ id: 1, level: Levels.BEGINNER });
-  const advancedDrill = createDrill({ id: 2, level: Levels.ADVANCED });
+  const intermediateDrill = createDrill({ id: 2, level: Levels.INTERMEDIATE });
+  const advancedDrill = createDrill({ id: 3, level: Levels.ADVANCED });
 
   it('renders correctly', () => {
     const route = {
@@ -27,7 +28,7 @@ describe('<FitnessFilters />', () => {
 
   describe('filtering', () => {
     it('filters drills by level', async () => {
-      const drills = [beginnerDrill, advancedDrill];
+      const drills = [beginnerDrill, intermediateDrill, advancedDrill];
       const navigate = jest.fn();
 
       const DummyScreen = props => null;
@@ -55,19 +56,25 @@ describe('<FitnessFilters />', () => {
         </NavigationContainer>,
       );
 
+      expect(getByText('3 drills available')).toBeDefined();
+
+      await fireEvent.press(getByText(Levels.BEGINNER));
+
+      expect(getByText('1 drills available')).toBeDefined();
+
+      await fireEvent.press(getByText(Levels.INTERMEDIATE));
+
       expect(getByText('2 drills available')).toBeDefined();
 
       await fireEvent.press(getByText(Levels.BEGINNER));
 
       expect(getByText('1 drills available')).toBeDefined();
 
-      await fireEvent.press(getByText(Levels.BEGINNER));
+      await fireEvent.press(getByText(Levels.INTERMEDIATE));
 
-      expect(getByText('2 drills available')).toBeDefined();
+      expect(getByText('3 drills available')).toBeDefined();
 
       await fireEvent.press(getByText(Levels.ADVANCED));
-
-      expect(getByText('1 drills available')).toBeDefined();
 
       await fireEvent.press(getByTestId('headerButton'));
 
@@ -79,8 +86,9 @@ describe('<FitnessFilters />', () => {
 
     it('filters drills by intensity', async () => {
       const lowDrill = createDrill({ id: 1, intensity: Intensities.LOW });
-      const highDrill = createDrill({ id: 2, intensity: Intensities.HIGH });
-      const drills = [lowDrill, highDrill];
+      const moderateDrill = createDrill({ id: 2, intensity: Intensities.MODERATE });
+      const highDrill = createDrill({ id: 3, intensity: Intensities.HIGH });
+      const drills = [lowDrill, moderateDrill, highDrill];
       const navigate = jest.fn();
 
       const DummyScreen = props => null;
@@ -108,19 +116,25 @@ describe('<FitnessFilters />', () => {
         </NavigationContainer>,
       );
 
+      expect(getByText('3 drills available')).toBeDefined();
+
+      await fireEvent.press(getByText(Intensities.LOW));
+
+      expect(getByText('1 drills available')).toBeDefined();
+
+      await fireEvent.press(getByText(Intensities.MODERATE));
+
       expect(getByText('2 drills available')).toBeDefined();
 
       await fireEvent.press(getByText(Intensities.LOW));
 
       expect(getByText('1 drills available')).toBeDefined();
 
-      await fireEvent.press(getByText(Intensities.LOW));
+      await fireEvent.press(getByText(Intensities.MODERATE));
 
-      expect(getByText('2 drills available')).toBeDefined();
+      expect(getByText('3 drills available')).toBeDefined();
 
       await fireEvent.press(getByText(Intensities.HIGH));
-
-      expect(getByText('1 drills available')).toBeDefined();
 
       await fireEvent.press(getByTestId('headerButton'));
 
@@ -132,8 +146,9 @@ describe('<FitnessFilters />', () => {
 
     it('filters drills by EquipmentLabels', async () => {
       const noEquimentDrill = createDrill({ id: 1, equipmentLabel: EquipmentLabels.NONE });
-      const fullEquipmentDrill = createDrill({ id: 2, equipmentLabel: EquipmentLabels.FULL });
-      const drills = [noEquimentDrill, fullEquipmentDrill];
+      const basicEquimentDrill = createDrill({ id: 2, equipmentLabel: EquipmentLabels.BASIC });
+      const fullEquipmentDrill = createDrill({ id: 3, equipmentLabel: EquipmentLabels.FULL });
+      const drills = [noEquimentDrill, basicEquimentDrill, fullEquipmentDrill];
       const navigate = jest.fn();
 
       const DummyScreen = props => null;
@@ -161,19 +176,25 @@ describe('<FitnessFilters />', () => {
         </NavigationContainer>,
       );
 
+      expect(getByText('3 drills available')).toBeDefined();
+
+      await fireEvent.press(getByText(EquipmentLabels.NONE));
+
+      expect(getByText('1 drills available')).toBeDefined();
+
+      await fireEvent.press(getByText(EquipmentLabels.BASIC));
+
       expect(getByText('2 drills available')).toBeDefined();
 
       await fireEvent.press(getByText(EquipmentLabels.NONE));
 
       expect(getByText('1 drills available')).toBeDefined();
 
-      await fireEvent.press(getByText(EquipmentLabels.NONE));
+      await fireEvent.press(getByText(EquipmentLabels.BASIC));
 
-      expect(getByText('2 drills available')).toBeDefined();
+      expect(getByText('3 drills available')).toBeDefined();
 
       await fireEvent.press(getByText(EquipmentLabels.FULL));
-
-      expect(getByText('1 drills available')).toBeDefined();
 
       await fireEvent.press(getByTestId('headerButton'));
 
@@ -185,8 +206,9 @@ describe('<FitnessFilters />', () => {
 
     it('filters drills by SeasonTimings', async () => {
       const preDrill = createDrill({ id: 1, seasonTiming: SeasonTimings.PRE_SEASON });
-      const inDrill = createDrill({ id: 2, seasonTiming: SeasonTimings.IN_SEASON });
-      const drills = [preDrill, inDrill];
+      const offDrill = createDrill({ id: 2, seasonTiming: SeasonTimings.OFF_SEASON });
+      const inDrill = createDrill({ id: 3, seasonTiming: SeasonTimings.IN_SEASON });
+      const drills = [offDrill, preDrill, inDrill];
       const navigate = jest.fn();
 
       const DummyScreen = props => null;
@@ -214,15 +236,23 @@ describe('<FitnessFilters />', () => {
         </NavigationContainer>,
       );
 
-      expect(getByText('2 drills available')).toBeDefined();
+      expect(getByText('3 drills available')).toBeDefined();
 
-      await fireEvent.press(getByText(SeasonTimings.PRE_SEASON));
+      await fireEvent.press(getByText(SeasonTimings.OFF_SEASON));
 
       expect(getByText('1 drills available')).toBeDefined();
 
       await fireEvent.press(getByText(SeasonTimings.PRE_SEASON));
 
       expect(getByText('2 drills available')).toBeDefined();
+
+      await fireEvent.press(getByText(SeasonTimings.OFF_SEASON));
+
+      expect(getByText('1 drills available')).toBeDefined();
+
+      await fireEvent.press(getByText(SeasonTimings.PRE_SEASON));
+
+      expect(getByText('3 drills available')).toBeDefined();
 
       await fireEvent.press(getByText(SeasonTimings.IN_SEASON));
 
@@ -239,8 +269,9 @@ describe('<FitnessFilters />', () => {
     it('filters drills by goal', async () => {
       const legsDrill = createDrill({ id: 1, goals: [GoalsFitness.LEGS] });
       const upperDrill = createDrill({ id: 2, goals: [GoalsFitness.UPPER] });
-      const legsCoreDrill = createDrill({ id: 3, goals: [GoalsFitness.LEGS, GoalsFitness.CORE] });
-      const drills = [legsDrill, upperDrill, legsCoreDrill];
+      const fullDrill = createDrill({ id: 3, goals: [GoalsFitness.FULL_BODY] });
+      const legsCoreDrill = createDrill({ id: 4, goals: [GoalsFitness.LEGS, GoalsFitness.CORE] });
+      const drills = [legsDrill, upperDrill, fullDrill, legsCoreDrill];
       const navigate = jest.fn();
 
       const DummyScreen = props => null;
@@ -268,15 +299,23 @@ describe('<FitnessFilters />', () => {
         </NavigationContainer>,
       );
 
-      expect(getByText('3 drills available')).toBeDefined();
+      expect(getByText('4 drills available')).toBeDefined();
 
       await fireEvent.press(getByText(GoalsFitness.LEGS));
 
       expect(getByText('2 drills available')).toBeDefined();
 
-      await fireEvent.press(getByText(GoalsFitness.LEGS));
+      await fireEvent.press(getByText(GoalsFitness.FULL_BODY));
 
       expect(getByText('3 drills available')).toBeDefined();
+
+      await fireEvent.press(getByText(GoalsFitness.LEGS));
+
+      expect(getByText('1 drills available')).toBeDefined();
+
+      await fireEvent.press(getByText(GoalsFitness.FULL_BODY));
+
+      expect(getByText('4 drills available')).toBeDefined();
 
       await fireEvent.press(getByText(GoalsFitness.UPPER));
 

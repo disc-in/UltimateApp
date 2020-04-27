@@ -12,34 +12,37 @@ class TechnicalFilters extends React.Component {
     super(props);
 
     this.state = {
-      selectedLevel: undefined,
-      selectedGoal: undefined,
+      selectedLevels: [],
+      selectedGoals: [],
       numberOfPlayers: undefined,
       displayedDrills: this.props.route.params.initialData,
     };
 
-    this.onNumberOfPlayersChange = this.onInputChange.bind(this, 'numberOfPlayers');
+    this.onNumberOfPlayersChange = this.onSliderChange.bind(this, 'numberOfPlayers');
   }
 
   onPressedChange(target, value) {
     this.setState(prevState => {
-      const newValue = value === prevState[target] ? undefined : value;
+      const newValue = prevState[target].includes(value)
+        ? prevState[target].filter(v => v !== value)
+        : prevState[target].concat([value]);
       return {
         [target]: newValue,
       };
     }, this.applyFilters);
   }
 
-  onInputChange(target, value) {
+  onSliderChange(target, value) {
     this.setState({ [target]: value }, this.applyFilters);
   }
 
   applyFilters() {
-    const { selectedLevel, selectedGoal, numberOfPlayers } = this.state;
+    const { selectedLevels, selectedGoals, numberOfPlayers } = this.state;
     let newData = this.props.route.params.initialData;
 
-    if (selectedLevel) newData = newData.filter(drill => drill.level === selectedLevel);
-    if (selectedGoal) newData = newData.filter(drill => drill.goals.includes(selectedGoal));
+    if (selectedLevels.length > 0) newData = newData.filter(drill => selectedLevels.includes(drill.level));
+    if (selectedGoals.length > 0)
+      newData = newData.filter(drill => drill.goals.filter(goal => selectedGoals.includes(goal)).length > 0);
     if (numberOfPlayers) newData = newData.filter(drill => drill.minimalPlayersNumber <= numberOfPlayers);
 
     this.setState({ displayedDrills: newData });
@@ -61,7 +64,7 @@ class TechnicalFilters extends React.Component {
   }
 
   render() {
-    const { selectedLevel, selectedGoal, numberOfPlayers } = this.state;
+    const { selectedLevels, selectedGoals, numberOfPlayers } = this.state;
     return (
       <View style={filterStyle.wrapper}>
         <Text style={filterStyle.counter}>{this.state.displayedDrills.length} drills available</Text>
@@ -71,9 +74,9 @@ class TechnicalFilters extends React.Component {
             {Object.values(Levels).map(level => (
               <Button
                 title={level}
-                onPress={() => this.onPressedChange('selectedLevel', level)}
+                onPress={() => this.onPressedChange('selectedLevels', level)}
                 key={level}
-                active={selectedLevel === level}
+                active={selectedLevels.includes(level)}
               />
             ))}
           </View>
@@ -86,9 +89,9 @@ class TechnicalFilters extends React.Component {
               .map(goal => (
                 <Checkbox
                   title={goal}
-                  onPress={() => this.onPressedChange('selectedGoal', goal)}
+                  onPress={() => this.onPressedChange('selectedGoals', goal)}
                   key={goal}
-                  active={selectedGoal === goal}
+                  active={selectedGoals.includes(goal)}
                 />
               ))}
           </View>

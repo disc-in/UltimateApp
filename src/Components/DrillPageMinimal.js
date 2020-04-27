@@ -1,13 +1,13 @@
-import React, { useLayoutEffect } from 'react';
-import { ScrollView, StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native';
+import React, { useLayoutEffect, useCallback } from 'react';
+import { ScrollView, StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 
 import Progress from './ProgressBar2';
-import DrillAnimation from './DrillAnimation';
 
-import iconCheckMark from '../Images/ic_check.png';
+import HeaderButton from './shared/HeaderButton';
 
 import theme from '../styles/theme.style';
+import { MinimalDrill } from './shared/MinimalDrill';
 
 const mapStateToProps = state => {
   return {
@@ -33,27 +33,20 @@ export const DrillPageMinimal = props => {
     navigation.navigate('DrillPage', { drill });
   };
 
+  const onHeaderCheckPress = useCallback(() => {
+    if (currentDrill === totalDrills - 1) {
+      navigation.navigate('TrainingPage', { training });
+    } else {
+      const nextDrill = drills.find(drill => drill.id === training.drills[currentDrill + 1]);
+      navigation.navigate('DrillPageMinimal', { drill: nextDrill, training });
+    }
+  }, [training, currentDrill, drills, navigation, totalDrills]);
+
   useLayoutEffect(() => {
     navigation.setOptions({
-      headerRight: () => {
-        return (
-          <TouchableOpacity
-            style={styles.nextButton}
-            onPress={() => {
-              if (currentDrill === totalDrills - 1) {
-                navigation.navigate('TrainingPage', { training });
-              } else {
-                const nextDrill = drills.find(drill => drill.id === training.drills[currentDrill + 1]);
-                navigation.navigate('DrillPageMinimal', { drill: nextDrill, training });
-              }
-            }}
-          >
-            <Image style={styles.nextButtonImg} source={iconCheckMark} />
-          </TouchableOpacity>
-        );
-      },
+      headerRight: () => <HeaderButton onPress={onHeaderCheckPress} />,
     });
-  }, [drills, training, currentDrill, totalDrills, navigation]);
+  }, [navigation, onHeaderCheckPress]);
 
   return (
     <ScrollView style={styles.drillPage}>
@@ -63,27 +56,7 @@ export const DrillPageMinimal = props => {
         </Text>
         <Progress total={totalDrills} current={currentDrill + 1} onDotPress={onProgressDotPress} />
       </View>
-      <View style={styles.description}>
-        <View style={styles.descriptionItem}>
-          <Text style={styles.descriptionTitle}>Goals</Text>
-          <Text style={styles.descriptionText}>{drill.goals ? drill.goals.join(', ') : ''}</Text>
-        </View>
-      </View>
-      <View style={styles.description}>
-        <View style={styles.descriptionItem}>
-          <Text style={styles.descriptionTitle}>Equipment</Text>
-          <Text style={styles.descriptionText}>{drill.equipment}</Text>
-        </View>
-      </View>
-      <View style={styles.description}>
-        <View style={styles.descriptionItem}>
-          <Text style={styles.descriptionTitle}>Description</Text>
-          <Text style={styles.descriptionText}>{drill.description}</Text>
-        </View>
-      </View>
-      <View style={styles.animation}>
-        <DrillAnimation animation={drill.animation} video={drill.video} />
-      </View>
+      <MinimalDrill drill={drill} />
       <View style={styles.btnMoreContainer}>
         <TouchableOpacity style={styles.btnMore} onPress={goToFullDrill}>
           <Text style={styles.btnMoreContent}>More details on this drill</Text>
@@ -130,9 +103,7 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     color: theme.COLOR_SECONDARY,
   },
-  animation: {
-    flex: 3,
-  },
+
   btnMoreContainer: {
     flex: 1,
     display: 'flex',
@@ -148,12 +119,5 @@ const styles = StyleSheet.create({
   },
   btnMoreContent: {
     color: 'rgb(255, 255, 255)',
-  },
-  nextButton: {
-    marginRight: 15,
-  },
-  nextButtonImg: {
-    width: 30,
-    height: 30,
   },
 });

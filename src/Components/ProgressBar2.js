@@ -1,19 +1,13 @@
 import React, { useRef, useEffect } from 'react';
 import { StyleSheet, Animated, View, TouchableOpacity } from 'react-native';
 
-/** Progress bar displayed with an animation which:
-    - shows the number of step;
-    - shows the current step;
-    - enable to move to a given step by clicking on the associated button
- */
-
 const range = (min, max) => new Array(max - min + 1).fill(0).map((_, i) => min + i);
 
 const Dot = props => {
-  const { idx, full, onPress } = props;
+  const { full, onPress } = props;
   const dotStyles = [styles.dot, full ? styles.dotActivated : styles.dotGrey];
 
-  return <TouchableOpacity style={dotStyles} onPress={onPress} key={idx} />;
+  return <TouchableOpacity style={dotStyles} onPress={onPress} testID="progress-bar-dot" />;
 };
 
 const useAnimation = targetValue => {
@@ -39,8 +33,8 @@ export const ProgressBar = props => {
         <Animated.View style={styles.lineBackground} />
         <Animated.View style={[styles.lineFiller, { width }]} />
 
-        {range(1, total).map(k => (
-          <Dot key={k} idx={k} onPress={() => onDotPress(k - 1)} full={k <= current} />
+        {range(1, total).map(index => (
+          <Dot key={index} onPress={() => onDotPress(index - 1)} full={index <= current} />
         ))}
       </View>
     </View>

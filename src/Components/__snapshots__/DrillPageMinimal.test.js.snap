@@ -99,6 +99,7 @@ exports[`<DrillPageMinimal /> renders correctly with a training and a drill 1`] 
                 "width": 15,
               }
             }
+            testID="progress-bar-dot"
           />
           <View
             accessible={true}
@@ -121,6 +122,7 @@ exports[`<DrillPageMinimal /> renders correctly with a training and a drill 1`] 
                 "width": 15,
               }
             }
+            testID="progress-bar-dot"
           />
         </View>
       </View>

@@ -20,9 +20,9 @@ export const DrillPageMinimal = props => {
   const { drill, training } = route.params;
 
   const totalDrills = training.drills.length;
-  const currentDrill = training.drills.findIndex(id => id === drill.id);
+  const currentDrillIndex = training.drills.findIndex(id => id === drill.id);
 
-  if (currentDrill === -1) navigation.navigate('TrainingPage', { training });
+  if (currentDrillIndex === -1) navigation.navigate('TrainingPage', { training });
 
   const onProgressDotPress = idx => {
     const drill = drills.find(drill => drill.id === training.drills[idx]);
@@ -34,13 +34,13 @@ export const DrillPageMinimal = props => {
   };
 
   const onHeaderCheckPress = useCallback(() => {
-    if (currentDrill === totalDrills - 1) {
+    if (currentDrillIndex === totalDrills - 1) {
       navigation.navigate('TrainingPage', { training });
     } else {
-      const nextDrill = drills.find(drill => drill.id === training.drills[currentDrill + 1]);
+      const nextDrill = drills.find(drill => drill.id === training.drills[currentDrillIndex + 1]);
       navigation.navigate('DrillPageMinimal', { drill: nextDrill, training });
     }
-  }, [training, currentDrill, drills, navigation, totalDrills]);
+  }, [training, currentDrillIndex, drills, navigation, totalDrills]);
 
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -52,9 +52,9 @@ export const DrillPageMinimal = props => {
     <ScrollView style={styles.drillPage}>
       <View style={styles.titleContainer}>
         <Text style={styles.title}>
-          Drill {currentDrill + 1} - {drill.title}
+          Drill {currentDrillIndex + 1} - {drill.title}
         </Text>
-        <Progress total={totalDrills} current={currentDrill + 1} onDotPress={onProgressDotPress} />
+        <Progress total={totalDrills} current={currentDrillIndex + 1} onDotPress={onProgressDotPress} />
       </View>
       <MinimalDrill drill={drill} />
       <View style={styles.btnMoreContainer}>

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Button, StyleSheet, Easing, Animated, Dimensions, View } from 'react-native';
 
-import DisplayedElement from './DisplayedElement';
-import DrillCuts from './DrillCuts';
-import ProgressBar from './ProgressBar';
-import Drill from './Drill';
+import DisplayedElement from './animation/DisplayedElement';
+import DrillCuts from './animation/DrillCuts';
+import ProgressBar from './animation/ProgressBar';
+import Drill from './animation/Drill';
 
 /** Display a drill and enables to animate it using buttons (play, next step, previous step)
  *

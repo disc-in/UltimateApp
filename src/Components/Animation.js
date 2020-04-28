@@ -16,11 +16,11 @@ class Animation extends React.Component {
     super(props);
 
     this.state = {
-      screenH: 1, // Height of the animation space
-      screenW: 1, // Width of the animation space
+      screenHeight: 1, // Height of the animation space
+      screenWidth: 1, // Width of the animation space
       stepLength: 1000, // Duration of a step in milliseconds
       drill: undefined,
-      de: [], // The graphical elments displayed in the drill
+      displayedElements: [], // The graphical elments displayed in the drill
       currentStep: 0, // Current step displayed on the phone
     };
 
@@ -49,13 +49,13 @@ class Animation extends React.Component {
   };
 
   /** Create the Componenets associated to the elements displayed in this drill */
-  _createDE() {
-    var tempDe = [];
+  _createDisplayedElements() {
+    var result = [];
 
     /* For each element displayed in the current drill */
     for (var elemId = 0; elemId < this._elemCount(); ++elemId) {
       /* Create the displayed element according to the drill */
-      tempDe.push(
+      result.push(
         new DisplayedElement({
           id: this.state.drill.ids[elemId],
           number: this.state.drill.texts[elemId],
@@ -68,7 +68,7 @@ class Animation extends React.Component {
       );
     }
 
-    return tempDe;
+    return result;
   }
 
   /** Create the cuts associated to each step of the drill */
@@ -82,7 +82,7 @@ class Animation extends React.Component {
   }
 
   /** Create the progress bar */
-  _createPB() {
+  _createProgressBar() {
     return new ProgressBar({
       animationWidth: this.animationWidth,
       animationHeight: this.animationHeight,
@@ -103,16 +103,16 @@ class Animation extends React.Component {
    */
   _positionPercentToPixel(x, y) {
     return [
-      this.animationWidth * x, // - this.state.screenW/2,
-      this.animationHeight * y, // - this.state.screenH/2
+      this.animationWidth * x, // - this.state.screenWidth/2,
+      this.animationHeight * y, // - this.state.screenHeight/2
     ];
   }
 
   /** Set each displayed element at its original position */
   _initPositions() {
     /* For each element */
-    for (var i = 0; i < this.state.de.length; i++) {
-      var element = this.state.de[i];
+    for (var i = 0; i < this.state.displayedElements.length; i++) {
+      var element = this.state.displayedElements[i];
 
       /* Get its position in pixel (it is represented in percentage in the drill) */
       var pixelPosition = this._positionPercentToPixel(
@@ -144,20 +144,20 @@ class Animation extends React.Component {
     this.setState(
       {
         drill: inputDrill,
-        screenH: height,
-        screenW: width,
+        screenHeight: height,
+        screenWidth: width,
         currentStep: initialStep,
       },
       () => {
         this.setState(
           {
-            de: this._createDE(),
+            displayedElements: this._createDisplayedElements(),
           },
           () => {
             /* Set all the elements to their initial positions */
             this._initPositions();
 
-            this.pb = this._createPB();
+            this.progressBar = this._createProgressBar();
             this._initializeCuts();
           },
         );
@@ -241,8 +241,8 @@ class Animation extends React.Component {
     );
 
     /** Change the opacity of the step dots */
-    if (this.pb !== undefined && this.pb !== null)
-      stepAnimation = stepAnimation.concat(this.pb.getOpacityAnimation(stepId));
+    if (this.progressBar !== undefined && this.progressBar !== null)
+      stepAnimation = stepAnimation.concat(this.progressBar.getOpacityAnimation(stepId));
 
     /* For each displayed element */
     for (let elemId = 0; elemId < this.state.drill.ids.length; elemId += 1) {
@@ -257,7 +257,7 @@ class Animation extends React.Component {
       /* If this element must change its position */
       if (nextPosition !== undefined && nextPosition !== null) {
         /* Animation of the element at step stepId */
-        var deStepAnimation = [];
+        var displayedElementStepAnimation = [];
 
         var substepCount = nextPosition.length;
 
@@ -265,19 +265,23 @@ class Animation extends React.Component {
         if (playSubSteps) {
           /* For each substep of element de in step stepId */
           for (var substep = 0; substep < substepCount; substep++) {
-            var currentDE = this.state.de[elemId];
+            var currentDisplayedElement = this.state.displayedElements[elemId];
 
             /* Get the position of the element at this substep */
             var pixelPosition = this._positionPercentToPixel(nextPosition[substep][0], nextPosition[substep][1]);
 
             /* Get the corresponding animation */
-            var anim = currentDE.getAnimation(pixelPosition[0], pixelPosition[1], this.state.stepLength / substepCount);
+            var anim = currentDisplayedElement.getAnimation(
+              pixelPosition[0],
+              pixelPosition[1],
+              this.state.stepLength / substepCount,
+            );
 
-            deStepAnimation.push(anim);
+            displayedElementStepAnimation.push(anim);
           }
         } else {
           /* If the sub steps must not be played, just move the element to its last position */
-          currentDE = this.state.de[elemId];
+          currentDisplayedElement = this.state.displayedElements[elemId];
 
           /* Get the position of the element at this substep */
           pixelPosition = this._positionPercentToPixel(
@@ -286,12 +290,12 @@ class Animation extends React.Component {
           );
 
           /* Get the corresponding animation */
-          anim = currentDE.getAnimation(pixelPosition[0], pixelPosition[1], this.state.stepLength);
+          anim = currentDisplayedElement.getAnimation(pixelPosition[0], pixelPosition[1], this.state.stepLength);
 
-          deStepAnimation.push(anim);
+          displayedElementStepAnimation.push(anim);
         }
 
-        stepAnimation.push(Animated.sequence(deStepAnimation));
+        stepAnimation.push(Animated.sequence(displayedElementStepAnimation));
       }
     }
 
@@ -314,31 +318,35 @@ class Animation extends React.Component {
     return (
       <View style={[styles.mainContainer, { height: this.animationHeight }, { width: this.animationWidth }]}>
         {this._display(this.cuts)}
-        {this.state.de === undefined || this.state.de === null ? <View /> : this.state.de.map(this._display)}
+        {this.state.displayedElements === undefined || this.state.displayedElements === null ? (
+          <View />
+        ) : (
+          this.state.displayedElements.map(this._display)
+        )}
         <View style={{ flex: 0.1 }} />
         <Button style={{ flex: 1 }} title=" < " onPress={() => this._previousStep()} />
         <View style={{ flex: 0.1 }} />
         <Button style={{ flex: 1 }} title="Lancer" onPress={() => this._restart()} />
         <View style={{ flex: 0.1 }} />
         <Button title=" > " style={{ flex: 1 }} onPress={() => this._nextStep()} />
-        {this._display(this.pb)}
+        {this._display(this.progressBar)}
       </View>
     );
   }
 
   /** Used to update the animation when a modification is made through the editor */
   componentDidUpdate() {
-    if (this.state.de === undefined && this.state.drill !== undefined) {
+    if (this.state.displayedElements === undefined && this.state.drill !== undefined) {
       this.setState(
         {
-          de: this._createDE(),
+          displayedElements: this._createDisplayedElements(),
         },
         () => {
           /* Set all the elements to their initial positions */
           this._initPositions();
 
           this._initializeCuts();
-          this.pb = this._createPB();
+          this.progressBar = this._createProgressBar();
         },
       );
     }
@@ -412,7 +420,7 @@ class Animation extends React.Component {
     else {
       return {
         drill: props.drill,
-        de: undefined,
+        displayedElements: undefined,
       };
     }
   }

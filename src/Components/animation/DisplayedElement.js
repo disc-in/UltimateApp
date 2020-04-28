@@ -51,10 +51,10 @@ class DisplayedElement extends React.Component {
     // Initiate the panResponder
     this.panResponder = PanResponder.create({
       // Ask to be the responder
-      onStartShouldSetPanResponder: (e, gesture) => true,
+      onStartShouldSetPanResponder: (event, gesture) => true,
 
       // Called when the gesture starts
-      onPanResponderGrant: (e, gesture) => {
+      onPanResponderGrant: (event, gesture) => {
         // We always want an element displayed at the original position of the first element.
         // If the current element A is moved for the first time, we create a new element B at the original position of A
         // If A is moved again, we do not do anything. B (or an element created by B) will be at the original position of A.
@@ -109,7 +109,6 @@ class DisplayedElement extends React.Component {
       case 'defense':
         return (
           <Animated.Text
-            // Use the panResponder in this view
             {...this.panResponder.panHandlers}
             style={[
               panStyle,
@@ -129,7 +128,6 @@ class DisplayedElement extends React.Component {
       case 'offense':
         return (
           <Animated.Text
-            // Use the panResponder in this view
             {...this.panResponder.panHandlers}
             style={[
               panStyle,
@@ -149,7 +147,6 @@ class DisplayedElement extends React.Component {
       case 'disc':
         return (
           <Animated.View
-            // Use the panResponder in this view
             {...this.panResponder.panHandlers}
             style={[
               panStyle,

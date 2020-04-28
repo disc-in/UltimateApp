@@ -58,7 +58,7 @@ class DisplayedElement extends React.Component {
         // We always want an element displayed at the original position of the first element.
         // If the current element A is moved for the first time, we create a new element B at the original position of A
         // If A is moved again, we do not do anything. B (or an element created by B) will be at the original position of A.
-        if (this.props.movable && this.props.onClick != undefined && !this.moved) {
+        if (this.props.movable && this.props.onClick !== undefined && !this.moved) {
           this.currentPosition.setOffset({
             x: this._val.x,
             y: this._val.y,
@@ -77,7 +77,7 @@ class DisplayedElement extends React.Component {
         : undefined,
 
       onPanResponderRelease: (evt, gesturestate) => {
-        if (this.props.movable && this.props.onMoveEnd != undefined) {
+        if (this.props.movable && this.props.onMoveEnd !== undefined) {
           this.props.onMoveEnd(this, this.currentPosition.x._value, this.currentPosition.y._value);
           this.currentPosition.setValue({ x: 0, y: 0 });
         }

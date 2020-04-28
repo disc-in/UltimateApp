@@ -26,7 +26,7 @@ class ProgressBar extends React.Component {
 
     for (var i = 0; i < this.props.stepCount; i++)
       // The first step is always visible
-      if (i == 0) this.dotsOpacity.push(new Animated.Value(1));
+      if (i === 0) this.dotsOpacity.push(new Animated.Value(1));
       else this.dotsOpacity.push(new Animated.Value(0));
 
     // Horizontal position of each dot
@@ -63,7 +63,7 @@ class ProgressBar extends React.Component {
     this.progressBarComponents.push(
       <Animated.View
         style={[
-          styles.progress_bar,
+          styles.progressBar,
           { top: this.props.animationHeight + 6 },
           { width: this.progressBarWidth },
           { left: 20 },
@@ -77,7 +77,7 @@ class ProgressBar extends React.Component {
       this.progressBarDots.map(item => (
         <Animated.View
           style={[
-            styles.activated_dot,
+            styles.activatedDot,
             { opacity: this.dotsOpacity[item.key] },
             { left: this.progressBarDots[item.key].left },
             { top: this.props.animationHeight },
@@ -103,7 +103,7 @@ class ProgressBar extends React.Component {
     this.progressBarComponents.push(
       <Animated.View
         style={[
-          styles.activated_progress_bar,
+          styles.activatedProgressBar,
           { top: this.props.animationHeight + 6 },
           { width: this.dynamiqueCurrentStep },
           { left: 20 },
@@ -188,7 +188,7 @@ class ProgressBar extends React.Component {
 export default ProgressBar;
 
 const styles = StyleSheet.create({
-  activated_dot: {
+  activatedDot: {
     position: 'absolute',
     height: 15,
     width: 15,
@@ -204,12 +204,12 @@ const styles = StyleSheet.create({
     borderWidth: 0,
     backgroundColor: 'gray',
   },
-  activated_progress_bar: {
+  activatedProgressBar: {
     position: 'absolute',
     backgroundColor: 'blue',
     height: 3,
   },
-  progress_bar: {
+  progressBar: {
     position: 'absolute',
     backgroundColor: 'gray',
     height: 3,

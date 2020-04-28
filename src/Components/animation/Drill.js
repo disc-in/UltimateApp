@@ -48,7 +48,7 @@ class Drill {
     for (var i = 1; i < this.stepCount(); ++i) this.positions[i].push(undefined);
 
     // Add its text
-    element.props.number == undefined ? this.texts.push('') : this.texts.push(element.props.number);
+    element.props.number === undefined ? this.texts.push('') : this.texts.push(element.props.number);
 
     // Add its type
     this.ids.push(element.props.id);

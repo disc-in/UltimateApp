@@ -119,7 +119,7 @@ class DrillCuts extends React.Component {
 
   _displayCut = cut => {
     /* If there is no counter cut */
-    if (cut.x1 == cut.x2 && cut.y1 == cut.y2)
+    if (cut.x1 === cut.x2 && cut.y1 === cut.y2)
       return (
         <Svg style={[StyleSheet.absoluteFill]} height="100%" width="100%" key={cut.key}>
           <Line x1={cut.x0} y1={cut.y0} x2={cut.x1} y2={cut.y1} stroke="green" strokeWidth="2" strokeDasharray="5, 5" />
@@ -147,7 +147,7 @@ class DrillCuts extends React.Component {
   render() {
     return (
       <View key="1" style={[{ position: 'absolute' }]} height="100%" width="100%">
-        {this.cuts.length >= this.props.currentStep && this.cuts[this.props.currentStep] != undefined
+        {this.cuts.length >= this.props.currentStep && this.cuts[this.props.currentStep] !== undefined
           ? this.cuts[this.props.currentStep].map(this._displayCut)
           : undefined}
       </View>

@@ -19,8 +19,8 @@ import { toggleFavorite } from '../Store/Actions/favoriteAction';
 
 import theme from '../styles/theme.style';
 
-import iconFavoriteEmpty from '../Images/ic_favorite_border.png';
-import iconFavoriteFull from '../Images/ic_favorite.png';
+import iconFavoriteEmpty from '../../assets/ic_favorite_border.png';
+import iconFavoriteFull from '../../assets/ic_favorite.png';
 
 export const DrillPage = props => {
   const { route, navigation } = props;

@@ -10,7 +10,7 @@ exports[`<DrillList /> renders correctly 1`] = `
           "description": "Description of the drill",
           "durationInMinutes": 10,
           "equipment": "Equipment needs for the drill",
-          "equipmentLabel": "No Equipment",
+          "equipmentLabel": "None",
           "goals": Array [
             "Full body",
           ],

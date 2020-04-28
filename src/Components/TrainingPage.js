@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { StyleSheet, ScrollView, View, Text } from 'react-native';
 import { connect } from 'react-redux';
 import DrillList from './shared/DrillList';
@@ -22,6 +22,8 @@ export const TrainingPage = props => {
   const training = route.params.training;
   const trainingDrills = training.drills.map(drillId => drills.find(drill => drill.id === drillId));
 
+  const onDrillPress = drill => navigation.navigate('DrillPageMinimal', { drill, training });
+
   return (
     <ScrollView style={styles.trainingPage} contentContainerStyle={styles.trainingPageContent}>
       <View style={styles.infos}>
@@ -39,7 +41,7 @@ export const TrainingPage = props => {
           <Text style={styles.info}>{getGoals(trainingDrills).join(', ')}</Text>
         </View>
       </View>
-      <DrillList navigation={navigation} drillsToDisplay={trainingDrills} />
+      <DrillList navigation={navigation} drillsToDisplay={trainingDrills} onDrillPress={onDrillPress} />
     </ScrollView>
   );
 };

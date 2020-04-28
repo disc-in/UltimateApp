@@ -1009,7 +1009,7 @@ exports[`<DrillListPage /> renders correctly with a fitness drill 1`] = `
             "description": "Description of the drill",
             "durationInMinutes": 10,
             "equipment": "Equipment needs for the drill",
-            "equipmentLabel": "No Equipment",
+            "equipmentLabel": "None",
             "goals": Array [
               "Full body",
             ],
@@ -1269,7 +1269,7 @@ exports[`<DrillListPage /> renders correctly with a technical drill 1`] = `
             "description": "Description of the drill",
             "durationInMinutes": 10,
             "equipment": "Equipment needs for the drill",
-            "equipmentLabel": "No Equipment",
+            "equipmentLabel": "None",
             "goals": Array [
               "Full body",
             ],

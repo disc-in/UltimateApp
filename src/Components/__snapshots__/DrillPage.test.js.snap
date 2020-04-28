@@ -519,7 +519,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                 }
                               }
                             >
-                              No Equipment
+                              None
                             </Text>
                           </View>
                         </View>

@@ -12,7 +12,8 @@ afterEach(cleanup);
 
 describe('<TechnicalFilters />', () => {
   const beginnerDrill = createDrill({ id: 1, level: Levels.BEGINNER });
-  const advancedDrill = createDrill({ id: 2, level: Levels.ADVANCED });
+  const intermediateDrill = createDrill({ id: 2, level: Levels.INTERMEDIATE });
+  const advancedDrill = createDrill({ id: 3, level: Levels.ADVANCED });
 
   it('renders correctly', () => {
     const route = {
@@ -27,7 +28,7 @@ describe('<TechnicalFilters />', () => {
 
   describe('filtering', () => {
     it('filters drills by level', async () => {
-      const drills = [beginnerDrill, advancedDrill];
+      const drills = [beginnerDrill, intermediateDrill, advancedDrill];
       const navigate = jest.fn();
 
       const DummyScreen = props => null;
@@ -55,19 +56,25 @@ describe('<TechnicalFilters />', () => {
         </NavigationContainer>,
       );
 
+      expect(getByText('3 drills available')).toBeDefined();
+
+      await fireEvent.press(getByText(Levels.BEGINNER));
+
+      expect(getByText('1 drills available')).toBeDefined();
+
+      await fireEvent.press(getByText(Levels.INTERMEDIATE));
+
       expect(getByText('2 drills available')).toBeDefined();
 
       await fireEvent.press(getByText(Levels.BEGINNER));
 
       expect(getByText('1 drills available')).toBeDefined();
 
-      await fireEvent.press(getByText(Levels.BEGINNER));
+      await fireEvent.press(getByText(Levels.INTERMEDIATE));
 
-      expect(getByText('2 drills available')).toBeDefined();
+      expect(getByText('3 drills available')).toBeDefined();
 
       await fireEvent.press(getByText(Levels.ADVANCED));
-
-      expect(getByText('1 drills available')).toBeDefined();
 
       await fireEvent.press(getByTestId('headerButton'));
 
@@ -80,8 +87,9 @@ describe('<TechnicalFilters />', () => {
     it('filters drills by goal', async () => {
       const defenseDrill = createDrill({ id: 1, goals: [GoalsFrisbee.DEFENSE] });
       const handlingDrill = createDrill({ id: 2, goals: [GoalsFrisbee.HANDLING] });
-      const handlingDefenseDrill = createDrill({ id: 3, goals: [GoalsFrisbee.DEFENSE, GoalsFrisbee.HANDLING] });
-      const drills = [defenseDrill, handlingDrill, handlingDefenseDrill];
+      const throwingDrill = createDrill({ id: 3, goals: [GoalsFrisbee.THROWING] });
+      const handlingDefenseDrill = createDrill({ id: 4, goals: [GoalsFrisbee.DEFENSE, GoalsFrisbee.HANDLING] });
+      const drills = [defenseDrill, handlingDrill, throwingDrill, handlingDefenseDrill];
       const navigate = jest.fn();
 
       const DummyScreen = props => null;
@@ -109,15 +117,23 @@ describe('<TechnicalFilters />', () => {
         </NavigationContainer>,
       );
 
-      expect(getByText('3 drills available')).toBeDefined();
+      expect(getByText('4 drills available')).toBeDefined();
 
       await fireEvent.press(getByText(GoalsFrisbee.DEFENSE));
 
       expect(getByText('2 drills available')).toBeDefined();
 
-      await fireEvent.press(getByText(GoalsFrisbee.DEFENSE));
+      await fireEvent.press(getByText(GoalsFrisbee.THROWING));
 
       expect(getByText('3 drills available')).toBeDefined();
+
+      await fireEvent.press(getByText(GoalsFrisbee.DEFENSE));
+
+      expect(getByText('1 drills available')).toBeDefined();
+
+      await fireEvent.press(getByText(GoalsFrisbee.THROWING));
+
+      expect(getByText('4 drills available')).toBeDefined();
 
       await fireEvent.press(getByText(GoalsFrisbee.HANDLING));
 

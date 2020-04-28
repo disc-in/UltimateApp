@@ -48,9 +48,9 @@ export const SeasonTimings = {
 };
 
 export const EquipmentLabels = {
-  NONE: 'No Equipment',
-  BASIC: 'Basic Equipment',
-  FULL: 'Full equipment',
+  NONE: 'None',
+  BASIC: 'Basic',
+  FULL: 'Full',
 };
 
 export default {
@@ -895,67 +895,6 @@ export default {
       goals: [GoalsFrisbee.THROWING],
       seasonTiming: SeasonTimings.ANYTIME,
       level: Levels.INTERMEDIATE,
-      animation: animationSquare,
-      steps: [],
-    },
-    {
-      id: 1004,
-      type: DrillTypes.TECHNICAL,
-      source: 'Author',
-      title: 'Frisbee Drill Title',
-      image:
-        'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
-      minimalPlayersNumber: 2,
-      equipmentLabel: '',
-      equipment: 'Equipment needs for the drill',
-      durationInMinutes: 10,
-      intensity: Intensities.LOW,
-      goals: [GoalsFrisbee.DEFENSE],
-      seasonTiming: '',
-      level: Levels.BEGINNER,
-      /* video:, */
-      animation: animationSquare,
-      steps: [],
-    },
-    {
-      id: 1005,
-      type: DrillTypes.TECHNICAL,
-      source: 'Author',
-      title: 'Frisbee Drill Title',
-      image: 'https://conseils.casalsport.com/wp-content/uploads/2019/05/ultimate-frisbee-sport.jpg',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
-      minimalPlayersNumber: 2,
-      equipmentLabel: '',
-      equipment: 'Equipment needs for the drill',
-      durationInMinutes: 20,
-      intensity: Intensities.LOW,
-      goals: [GoalsFrisbee.DEFENSE],
-      seasonTiming: '',
-      level: Levels.BEGINNER,
-      /* video:, */
-      animation: animationSquare,
-      steps: [],
-    },
-    {
-      id: 1006,
-      type: DrillTypes.TECHNICAL,
-      source: 'Author',
-      title: 'Frisbee Drill Title',
-      image: 'https://d3j2bju5c7tc02.cloudfront.net/2016_44/backhand.jpg',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
-      minimalPlayersNumber: 2,
-      equipmentLabel: '',
-      equipment: 'Equipment needs for the drill',
-      durationInMinutes: 20,
-      intensity: Intensities.LOW,
-      goals: [GoalsFrisbee.DEFENSE],
-      seasonTiming: '',
-      level: Levels.BEGINNER,
-      /* video:, */
       animation: animationSquare,
       steps: [],
     },

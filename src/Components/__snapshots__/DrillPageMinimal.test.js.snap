@@ -1,0 +1,364 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DrillPageMinimal /> renders correctly with a training and a drill 1`] = `
+<RCTScrollView
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "margin": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "fontSize": 20,
+            "textAlign": "center",
+          }
+        }
+      >
+        Drill 
+        1
+         - 
+        Fitness Drill Title
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "width": "80%",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "rgb(150, 150, 150)",
+                "height": 5,
+                "left": 0,
+                "position": "absolute",
+                "top": 5,
+                "width": "100%",
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "backgroundColor": "rgb(0, 0, 0)",
+                "height": 5,
+                "left": 0,
+                "position": "absolute",
+                "top": 5,
+                "width": "0%",
+              }
+            }
+          />
+          <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "backgroundColor": "rgb(0, 0, 0)",
+                "borderRadius": 10,
+                "borderWidth": 0,
+                "height": 15,
+                "opacity": 1,
+                "width": 15,
+              }
+            }
+            testID="progress-bar-dot"
+          />
+          <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "backgroundColor": "rgb(150, 150, 150)",
+                "borderRadius": 10,
+                "borderWidth": 0,
+                "height": 15,
+                "opacity": 1,
+                "width": 15,
+              }
+            }
+            testID="progress-bar-dot"
+          />
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "maxHeight": "20%",
+          "padding": 5,
+          "paddingLeft": 20,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "display": "flex",
+            "flexDirection": "row",
+            "marginBottom": 5,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#232b2b",
+              "flexGrow": 0,
+              "flexShrink": 0,
+              "fontWeight": "bold",
+              "width": "25%",
+            }
+          }
+        >
+          Goals
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#A6A6A6",
+              "flexGrow": 1,
+            }
+          }
+        >
+          Legs
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "maxHeight": "20%",
+          "padding": 5,
+          "paddingLeft": 20,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "display": "flex",
+            "flexDirection": "row",
+            "marginBottom": 5,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#232b2b",
+              "flexGrow": 0,
+              "flexShrink": 0,
+              "fontWeight": "bold",
+              "width": "25%",
+            }
+          }
+        >
+          Equipment
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#A6A6A6",
+              "flexGrow": 1,
+            }
+          }
+        >
+          Equipment needs for the drill
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "maxHeight": "20%",
+          "padding": 5,
+          "paddingLeft": 20,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "display": "flex",
+            "flexDirection": "row",
+            "marginBottom": 5,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#232b2b",
+              "flexGrow": 0,
+              "flexShrink": 0,
+              "fontWeight": "bold",
+              "width": "25%",
+            }
+          }
+        >
+          Description
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#A6A6A6",
+              "flexGrow": 1,
+            }
+          }
+        >
+          Description of the drill
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 3,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "height": 1334,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "flex": 1,
+                "overflow": "hidden",
+              },
+              undefined,
+            ]
+          }
+        >
+          <RNCWebView
+            cacheEnabled={true}
+            javaScriptEnabled={true}
+            messagingEnabled={false}
+            onContentProcessDidTerminate={[Function]}
+            onHttpError={[Function]}
+            onLoadingError={[Function]}
+            onLoadingFinish={[Function]}
+            onLoadingProgress={[Function]}
+            onLoadingStart={[Function]}
+            onMessage={[Function]}
+            onShouldStartLoadWithRequest={[Function]}
+            source={
+              Object {
+                "uri": "https://www.youtube.com/embed/JkVHrA5o23o",
+              }
+            }
+            style={
+              Array [
+                Object {
+                  "flex": 1,
+                  "overflow": "hidden",
+                },
+                Object {
+                  "backgroundColor": "#ffffff",
+                },
+                undefined,
+              ]
+            }
+            useSharedProcessPool={true}
+          />
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#232b2b",
+            "opacity": 1,
+            "padding": 20,
+            "textAlign": "center",
+            "width": "80%",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "rgb(255, 255, 255)",
+            }
+          }
+        >
+          More details on this drill
+        </Text>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;

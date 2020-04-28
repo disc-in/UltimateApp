@@ -17,7 +17,9 @@ exports[`<FilterButton /> renders correctly 1`] = `
       "backgroundColor": "#fff",
       "borderColor": "#e5e5e5",
       "borderWidth": 1,
-      "margin": 5,
+      "flexBasis": "30%",
+      "flexGrow": 1,
+      "marginRight": 5,
       "opacity": 1,
       "paddingHorizontal": 20,
       "paddingVertical": 10,
@@ -27,6 +29,7 @@ exports[`<FilterButton /> renders correctly 1`] = `
   <Text
     style={
       Object {
+        "textAlign": "center",
         "textTransform": "capitalize",
       }
     }
@@ -53,7 +56,9 @@ exports[`<FilterButton /> renders correctly when active 1`] = `
       "backgroundColor": "#eee",
       "borderColor": "#d5d5d5",
       "borderWidth": 1,
-      "margin": 5,
+      "flexBasis": "30%",
+      "flexGrow": 1,
+      "marginRight": 5,
       "opacity": 1,
       "paddingHorizontal": 20,
       "paddingVertical": 10,
@@ -63,6 +68,7 @@ exports[`<FilterButton /> renders correctly when active 1`] = `
   <Text
     style={
       Object {
+        "textAlign": "center",
         "textTransform": "capitalize",
       }
     }

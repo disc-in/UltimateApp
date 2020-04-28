@@ -152,7 +152,7 @@ exports[`<TrainingPage /> renders correctly with a training 1`] = `
               "description": "Description of the drill",
               "durationInMinutes": 10,
               "equipment": "Equipment needs for the drill",
-              "equipmentLabel": "Full equipment",
+              "equipmentLabel": "Full",
               "goals": Array [
                 "Legs",
               ],

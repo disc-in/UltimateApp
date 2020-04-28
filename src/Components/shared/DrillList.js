@@ -6,6 +6,7 @@ import { DrillTypes } from '../../Fixtures';
 
 const DrillList = props => {
   const { navigation, drillsToDisplay } = props;
+  const onDrillPress = props.onDrillPress || (item => navigation.navigate('DrillPage', { drill: item }));
 
   const renderDrill = ({ item }) => {
     const { title, type, source, image, goals } = item;
@@ -13,7 +14,7 @@ const DrillList = props => {
     const imageMainData = type === DrillTypes.TECHNICAL ? 'minimalPlayersNumber' : 'durationInMinutes';
     const imageMainDataLegend = type === DrillTypes.TECHNICAL ? 'players' : 'min.';
     return (
-      <TouchableOpacity style={list.item} onPress={() => navigation.navigate('DrillPage', { drill: item })}>
+      <TouchableOpacity style={list.item} onPress={() => onDrillPress(item)}>
         <ImageBackground source={{ uri: image }} style={list.image} imageStyle={list.imageOpacity}>
           <Text style={{ ...list.imageText, ...list.imageTextMain }}>{item[imageMainData]}+</Text>
           <Text style={list.imageText}>{imageMainDataLegend}</Text>

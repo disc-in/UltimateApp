@@ -1,8 +1,10 @@
 import React from 'react';
-import { StyleSheet, ScrollView, View, Text, TouchableOpacity, TextInput, Slider } from 'react-native';
+import { StyleSheet, ScrollView, View, Text, TouchableOpacity, TextInput } from 'react-native';
 import filterStyle from '../styles/filters.style';
 import { Levels, Intensities, EquipmentLabels, SeasonTimings } from '../Fixtures';
-import Button from './shared/FilterButton';
+import Button from './filters/FilterButton';
+import Checkbox from './filters/Checkbox';
+import Slider from './filters/Slider';
 import HeaderButton from './shared/HeaderButton';
 
 class FitnessFilters extends React.Component {
@@ -10,47 +12,53 @@ class FitnessFilters extends React.Component {
     super(props);
 
     this.state = {
-      selectedLevel: undefined,
-      selectedIntensity: undefined,
-      selectedEquipmentLabel: undefined,
-      selectedSeasonTiming: undefined,
-      selectedGoal: undefined,
+      selectedLevels: [],
+      selectedIntensities: [],
+      selectedEquipmentLabels: [],
+      selectedSeasonTimings: [],
+      selectedGoals: [],
       durationInMinutes: undefined,
       displayedDrills: this.props.route.params.initialData,
     };
 
-    this.onDurationInMinutesChange = this.onInputChange.bind(this, 'durationInMinutes');
+    this.onDurationInMinutesChange = this.onSliderChange.bind(this, 'durationInMinutes');
   }
 
   onPressedChange(target, value) {
     this.setState(prevState => {
-      const newValue = value === prevState[target] ? undefined : value;
+      const newValue = prevState[target].includes(value)
+        ? prevState[target].filter(v => v !== value)
+        : prevState[target].concat([value]);
       return {
         [target]: newValue,
       };
     }, this.applyFilters);
   }
 
-  onInputChange(target, value) {
+  onSliderChange(target, value) {
     this.setState({ [target]: value }, this.applyFilters);
   }
 
   applyFilters() {
     const {
-      selectedLevel,
-      selectedIntensity,
-      selectedEquipmentLabel,
-      selectedSeasonTiming,
-      selectedGoal,
+      selectedLevels,
+      selectedIntensities,
+      selectedEquipmentLabels,
+      selectedSeasonTimings,
+      selectedGoals,
       durationInMinutes,
     } = this.state;
     let newData = this.props.route.params.initialData;
 
-    if (selectedLevel) newData = newData.filter(drill => drill.level === selectedLevel);
-    if (selectedIntensity) newData = newData.filter(drill => drill.intensity === selectedIntensity);
-    if (selectedEquipmentLabel) newData = newData.filter(drill => drill.equipmentLabel === selectedEquipmentLabel);
-    if (selectedSeasonTiming) newData = newData.filter(drill => drill.seasonTiming === selectedSeasonTiming);
-    if (selectedGoal) newData = newData.filter(drill => drill.goals.includes(selectedGoal));
+    if (selectedLevels.length > 0) newData = newData.filter(drill => selectedLevels.includes(drill.level));
+    if (selectedIntensities.length > 0)
+      newData = newData.filter(drill => selectedIntensities.includes(drill.intensity));
+    if (selectedEquipmentLabels.length > 0)
+      newData = newData.filter(drill => selectedEquipmentLabels.includes(drill.equipmentLabel));
+    if (selectedSeasonTimings.length > 0)
+      newData = newData.filter(drill => selectedSeasonTimings.includes(drill.seasonTiming));
+    if (selectedGoals.length > 0)
+      newData = newData.filter(drill => drill.goals.filter(goal => selectedGoals.includes(goal)).length > 0);
     if (durationInMinutes) newData = newData.filter(drill => drill.durationInMinutes <= durationInMinutes);
 
     this.setState({ displayedDrills: newData });
@@ -73,13 +81,14 @@ class FitnessFilters extends React.Component {
 
   render() {
     const {
-      selectedLevel,
-      selectedIntensity,
-      selectedEquipmentLabel,
-      selectedSeasonTiming,
-      selectedGoal,
+      selectedLevels,
+      selectedIntensities,
+      selectedEquipmentLabels,
+      selectedSeasonTimings,
+      selectedGoals,
       durationInMinutes,
     } = this.state;
+
     return (
       <View style={filterStyle.wrapper}>
         <Text style={filterStyle.counter}>{this.state.displayedDrills.length} drills available</Text>
@@ -89,9 +98,9 @@ class FitnessFilters extends React.Component {
             {Object.values(Levels).map(level => (
               <Button
                 title={level}
-                onPress={() => this.onPressedChange('selectedLevel', level)}
+                onPress={() => this.onPressedChange('selectedLevels', level)}
                 key={level}
-                active={selectedLevel === level}
+                active={selectedLevels.includes(level)}
               />
             ))}
           </View>
@@ -100,9 +109,9 @@ class FitnessFilters extends React.Component {
             {Object.values(Intensities).map(intensity => (
               <Button
                 title={intensity}
-                onPress={() => this.onPressedChange('selectedIntensity', intensity)}
+                onPress={() => this.onPressedChange('selectedIntensities', intensity)}
                 key={intensity}
-                active={selectedIntensity === intensity}
+                active={selectedIntensities.includes(intensity)}
               />
             ))}
           </View>
@@ -111,22 +120,24 @@ class FitnessFilters extends React.Component {
             {Object.values(EquipmentLabels).map(equipmentLabel => (
               <Button
                 title={equipmentLabel}
-                onPress={() => this.onPressedChange('selectedEquipmentLabel', equipmentLabel)}
+                onPress={() => this.onPressedChange('selectedEquipmentLabels', equipmentLabel)}
                 key={equipmentLabel}
-                active={selectedEquipmentLabel === equipmentLabel}
+                active={selectedEquipmentLabels.includes(equipmentLabel)}
               />
             ))}
           </View>
           <Text style={filterStyle.filterTitle}>Season Timing</Text>
           <View style={filterStyle.filter}>
-            {Object.values(SeasonTimings).map(seasonTiming => (
-              <Button
-                title={seasonTiming}
-                onPress={() => this.onPressedChange('selectedSeasonTiming', seasonTiming)}
-                key={seasonTiming}
-                active={selectedSeasonTiming === seasonTiming}
-              />
-            ))}
+            {Object.values(SeasonTimings)
+              .filter(value => value !== SeasonTimings.ANYTIME)
+              .map(seasonTiming => (
+                <Button
+                  title={seasonTiming}
+                  onPress={() => this.onPressedChange('selectedSeasonTimings', seasonTiming)}
+                  key={seasonTiming}
+                  active={selectedSeasonTimings.includes(seasonTiming)}
+                />
+              ))}
           </View>
           <Text style={filterStyle.filterTitle}>Goals</Text>
           <View style={filterStyle.filter}>
@@ -135,22 +146,22 @@ class FitnessFilters extends React.Component {
               .reduce((x, y) => x.concat(y), [])
               .filter((goal, index, array) => array.indexOf(goal) === index)
               .map(goal => (
-                <Button
+                <Checkbox
                   title={goal}
-                  onPress={() => this.onPressedChange('selectedGoal', goal)}
+                  onPress={() => this.onPressedChange('selectedGoals', goal)}
                   key={goal}
-                  active={selectedGoal === goal}
+                  active={selectedGoals.includes(goal)}
                 />
               ))}
           </View>
-          <Text style={filterStyle.filterTitle}>Duration: {durationInMinutes || '-'} mins</Text>
+          <Text style={filterStyle.filterTitle}>Duration</Text>
+          <Text>How much time do you have?   {durationInMinutes || '-'} mins</Text>
           <Slider
-            minimumValue={1}
+            minimumValue={10}
             maximumValue={60}
             step={1}
             value={durationInMinutes}
             onValueChange={this.onDurationInMinutesChange}
-            style={filterStyle.slider}
             testID="durationSlider"
           />
         </ScrollView>

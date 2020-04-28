@@ -1,0 +1,190 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProgressBar2 /> renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "width": "80%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "rgb(150, 150, 150)",
+          "height": 5,
+          "left": 0,
+          "position": "absolute",
+          "top": 5,
+          "width": "100%",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "rgb(0, 0, 0)",
+          "height": 5,
+          "left": 0,
+          "position": "absolute",
+          "top": 5,
+          "width": "20%",
+        }
+      }
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "rgb(0, 0, 0)",
+          "borderRadius": 10,
+          "borderWidth": 0,
+          "height": 15,
+          "opacity": 1,
+          "width": 15,
+        }
+      }
+      testID="progress-bar-dot"
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "rgb(0, 0, 0)",
+          "borderRadius": 10,
+          "borderWidth": 0,
+          "height": 15,
+          "opacity": 1,
+          "width": 15,
+        }
+      }
+      testID="progress-bar-dot"
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "rgb(150, 150, 150)",
+          "borderRadius": 10,
+          "borderWidth": 0,
+          "height": 15,
+          "opacity": 1,
+          "width": 15,
+        }
+      }
+      testID="progress-bar-dot"
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "rgb(150, 150, 150)",
+          "borderRadius": 10,
+          "borderWidth": 0,
+          "height": 15,
+          "opacity": 1,
+          "width": 15,
+        }
+      }
+      testID="progress-bar-dot"
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "rgb(150, 150, 150)",
+          "borderRadius": 10,
+          "borderWidth": 0,
+          "height": 15,
+          "opacity": 1,
+          "width": 15,
+        }
+      }
+      testID="progress-bar-dot"
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "rgb(150, 150, 150)",
+          "borderRadius": 10,
+          "borderWidth": 0,
+          "height": 15,
+          "opacity": 1,
+          "width": 15,
+        }
+      }
+      testID="progress-bar-dot"
+    />
+  </View>
+</View>
+`;

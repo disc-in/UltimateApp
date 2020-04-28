@@ -3,6 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import HomePage from '../Components/HomePage';
 import DrillListPage from '../Components/DrillListPage';
 import DrillPage from '../Components/DrillPage';
+import DrillPageMinimal from '../Components/DrillPageMinimal';
 import TechnicalFilters from '../Components/TechnicalFilters';
 import FitnessFilters from '../Components/FitnessFilters';
 import TrainingListPage from '../Components/TrainingListPage';
@@ -32,6 +33,13 @@ export const Navigation = () => (
       name="TrainingPage"
       component={TrainingPage}
       options={({ route }) => ({ title: route.params.training.title })}
+    />
+    <Stack.Screen
+      name="DrillPageMinimal"
+      component={DrillPageMinimal}
+      options={({ route }) => ({
+        title: route.params.training.title + ' Drill',
+      })}
     />
   </Stack.Navigator>
 );

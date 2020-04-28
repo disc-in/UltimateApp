@@ -18,7 +18,7 @@ describe('<DrillIllustration />', () => {
       steps: [
         {
           illustrationType: IllustrationType.ANIMATION,
-          source: animationMenageATrois,
+          illustrationSource: animationMenageATrois,
         },
       ],
     });
@@ -33,7 +33,7 @@ describe('<DrillIllustration />', () => {
           id: 1,
           title: 'Rower Hamstring',
           illustrationType: 'vimeo',
-          source: '407999139',
+          illustrationSource: '407999139',
           repetition: '20',
           rest: '90s',
           instruction: 'blabla bla blabl blalb ',
@@ -42,7 +42,7 @@ describe('<DrillIllustration />', () => {
           id: 2,
           title: 'Full Clean',
           illustrationType: 'vimeo',
-          source: '406747741',
+          illustrationSource: '406747741',
           repetition: '8',
           rest: '90s',
           instruction: 'blabla bla blabl blalb ',

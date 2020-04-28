@@ -149,6 +149,7 @@ exports[`<TrainingPage /> renders correctly with a training 1`] = `
         data={
           Array [
             Object {
+              "author": "Author",
               "description": "Description of the drill",
               "durationInMinutes": 10,
               "equipment": "Equipment needs for the drill",
@@ -162,23 +163,22 @@ exports[`<TrainingPage /> renders correctly with a training 1`] = `
               "level": "Intermediate",
               "minimalPlayersNumber": 1,
               "seasonTiming": "In-season",
-              "source": "Author",
               "steps": Array [
                 Object {
-                  "source": "https://www.youtube.com/embed/JkVHrA5o23o",
-                  "sourceType": "youtube",
+                  "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
+                  "illustrationType": "youtube",
                   "subtitle": "This is a subtitle",
                   "title": "Warmup",
                 },
                 Object {
-                  "source": "https://www.youtube.com/embed/JkVHrA5o23o",
-                  "sourceType": "youtube",
+                  "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
+                  "illustrationType": "youtube",
                   "subtitle": "This is a subtitle",
                   "title": "Do the drill",
                 },
                 Object {
-                  "source": "https://www.youtube.com/embed/JkVHrA5o23o",
-                  "sourceType": "youtube",
+                  "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
+                  "illustrationType": "youtube",
                   "subtitle": "This is a subtitle",
                   "title": "Last step",
                 },
@@ -187,6 +187,7 @@ exports[`<TrainingPage /> renders correctly with a training 1`] = `
               "type": "fitness",
             },
             Object {
+              "author": "Author",
               "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
               "durationInMinutes": 30,
               "equipment": "Equipment needs for the drill",
@@ -200,10 +201,9 @@ exports[`<TrainingPage /> renders correctly with a training 1`] = `
               "level": "Beginner",
               "minimalPlayersNumber": 2,
               "seasonTiming": "",
-              "source": "Author",
               "steps": Array [
                 Object {
-                  "source": Object {
+                  "illustrationSource": Object {
                     "ids": Array [
                       "triangle",
                       "triangle",
@@ -486,7 +486,7 @@ exports[`<TrainingPage /> renders correctly with a training 1`] = `
                       "",
                     ],
                   },
-                  "sourceType": "animation",
+                  "illustrationType": "animation",
                 },
               ],
               "title": "Frisbee Drill Title",
@@ -623,9 +623,7 @@ exports[`<TrainingPage /> renders correctly with a training 1`] = `
                       "fontSize": 14,
                     }
                   }
-                >
-                  Author
-                </Text>
+                />
                 <Text
                   style={
                     Object {
@@ -757,9 +755,7 @@ exports[`<TrainingPage /> renders correctly with a training 1`] = `
                       "fontSize": 14,
                     }
                   }
-                >
-                  Author
-                </Text>
+                />
                 <Text
                   style={
                     Object {

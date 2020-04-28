@@ -14,7 +14,7 @@ export const createDrill = (override = {}) => {
   return {
     id: 1,
     type: DrillTypes.FITNESS,
-    source: 'Author',
+    author: 'Author',
     title: 'Fitness Drill Title',
     image: 'https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg',
     description: 'Description of the drill',
@@ -30,8 +30,8 @@ export const createDrill = (override = {}) => {
       {
         title: 'Warmup',
         subtitle: 'This is a subtitle',
-        sourceType: IllustrationType.YOUTUBE,
-        source: 'https://www.youtube.com/embed/JkVHrA5o23o',
+        illustrationType: IllustrationType.YOUTUBE,
+        illustrationSource: 'https://www.youtube.com/embed/JkVHrA5o23o',
       },
     ],
     ...override,
@@ -44,7 +44,7 @@ export default {
     {
       id: 1,
       type: DrillTypes.FITNESS,
-      source: 'Author',
+      author: 'Author',
       title: 'Fitness Drill Title',
       image: 'https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg',
       description: 'Description of the drill',
@@ -60,27 +60,27 @@ export default {
         {
           title: 'Warmup',
           subtitle: 'This is a subtitle',
-          sourceType: IllustrationType.YOUTUBE,
-          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
+          illustrationType: IllustrationType.YOUTUBE,
+          illustrationSource: 'https://www.youtube.com/embed/JkVHrA5o23o',
         },
         {
           title: 'Do the drill',
           subtitle: 'This is a subtitle',
-          sourceType: IllustrationType.YOUTUBE,
-          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
+          illustrationType: IllustrationType.YOUTUBE,
+          illustrationSource: 'https://www.youtube.com/embed/JkVHrA5o23o',
         },
         {
           title: 'Last step',
           subtitle: 'This is a subtitle',
-          sourceType: IllustrationType.YOUTUBE,
-          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
+          illustrationType: IllustrationType.YOUTUBE,
+          illustrationSource: 'https://www.youtube.com/embed/JkVHrA5o23o',
         },
       ],
     },
     {
       id: 2,
       type: DrillTypes.FITNESS,
-      source: 'Author',
+      author: 'Author',
       title: 'Fitness Drill Title',
       image: 'http://www.liberte-fitness.fr/sites/default/files/styles/slider/public/news/tone.jpg?itok=505bme2a',
       description: 'Description of the drill',
@@ -96,27 +96,27 @@ export default {
         {
           title: 'Warmup',
           subtitle: 'This is a subtitle',
-          sourceType: IllustrationType.YOUTUBE,
-          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
+          illustrationType: IllustrationType.YOUTUBE,
+          illustrationSource: 'https://www.youtube.com/embed/JkVHrA5o23o',
         },
         {
           title: 'Do the drill',
           subtitle: 'This is a subtitle',
-          sourceType: IllustrationType.YOUTUBE,
-          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
+          illustrationType: IllustrationType.YOUTUBE,
+          illustrationSource: 'https://www.youtube.com/embed/JkVHrA5o23o',
         },
         {
           title: 'Last step',
           subtitle: 'This is a subtitle',
-          sourceType: IllustrationType.YOUTUBE,
-          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
+          illustrationType: IllustrationType.YOUTUBE,
+          illustrationSource: 'https://www.youtube.com/embed/JkVHrA5o23o',
         },
       ],
     },
     {
       id: 3,
       type: DrillTypes.TECHNICAL,
-      source: 'Author',
+      author: 'Author',
       title: 'Frisbee Drill Title',
       image: 'https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1',
       description:
@@ -131,15 +131,15 @@ export default {
       level: Levels.BEGINNER,
       steps: [
         {
-          sourceType: IllustrationType.ANIMATION,
-          source: animationSquare,
+          illustrationType: IllustrationType.ANIMATION,
+          illustrationSource: animationSquare,
         },
       ],
     },
     {
       id: 4,
       type: DrillTypes.TECHNICAL,
-      source: 'Author',
+      author: 'Author',
       title: 'Frisbee Drill Title',
       image:
         'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
@@ -155,8 +155,8 @@ export default {
       level: Levels.BEGINNER,
       steps: [
         {
-          sourceType: IllustrationType.ANIMATION,
-          source: animationSquare,
+          illustrationType: IllustrationType.ANIMATION,
+          illustrationSource: animationSquare,
         },
       ],
     },
@@ -164,7 +164,7 @@ export default {
   trainings: [
     {
       id: 1,
-      source: 'Rise Up',
+      illustrationSource: 'Rise Up',
       title: 'Dump & Swing',
       image: 'https://d3j2bju5c7tc02.cloudfront.net/2016_44/backhand.jpg',
       description:

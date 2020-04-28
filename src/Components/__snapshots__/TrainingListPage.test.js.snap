@@ -32,8 +32,8 @@ exports[`<TrainingListPage /> renders correctly when connected 1`] = `
             3,
           ],
           "id": 1,
+          "illustrationSource": "Rise Up",
           "image": "https://d3j2bju5c7tc02.cloudfront.net/2016_44/backhand.jpg",
-          "source": "Rise Up",
           "title": "Dump & Swing",
         },
       ]
@@ -168,9 +168,7 @@ exports[`<TrainingListPage /> renders correctly when connected 1`] = `
                   "fontSize": 14,
                 }
               }
-            >
-              Rise Up
-            </Text>
+            />
             <Text
               style={
                 Object {
@@ -234,8 +232,8 @@ exports[`<TrainingListPage /> renders correctly with a training 1`] = `
             3,
           ],
           "id": 1,
+          "illustrationSource": "Rise Up",
           "image": "https://d3j2bju5c7tc02.cloudfront.net/2016_44/backhand.jpg",
-          "source": "Rise Up",
           "title": "Dump & Swing",
         },
       ]
@@ -370,9 +368,7 @@ exports[`<TrainingListPage /> renders correctly with a training 1`] = `
                   "fontSize": 14,
                 }
               }
-            >
-              Rise Up
-            </Text>
+            />
             <Text
               style={
                 Object {

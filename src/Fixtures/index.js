@@ -81,8 +81,8 @@ export default {
         {
           id: 1,
           title: 'Rower Hamstring',
-          sourceType: IllustrationType.VIMEO,
-          source: '407999139',
+          illustrationType: IllustrationType.VIMEO,
+          illustrationSource: '407999139',
           repetition: '20',
           rest: '90s',
           instruction: 'blabla bla blabl blalb ',
@@ -90,8 +90,8 @@ export default {
         {
           id: 2,
           title: 'Full Clean',
-          sourceType: IllustrationType.VIMEO,
-          source: '406747741',
+          illustrationType: IllustrationType.VIMEO,
+          illustrationSource: '406747741',
           repetition: '8',
           rest: '90s',
           instruction: 'blabla bla blabl blalb ',
@@ -99,8 +99,8 @@ export default {
         {
           id: 3,
           title: 'Kettlebell Russian Twist',
-          sourceType: IllustrationType.VIMEO,
-          source: '407999139',
+          illustrationType: IllustrationType.VIMEO,
+          illustrationSource: '407999139',
           repetition: '25',
           rest: '90s',
           instruction: 'blabla bla blabl blalb ',
@@ -126,8 +126,8 @@ export default {
         {
           id: 1,
           title: 'Rower Hamstring',
-          sourceType: IllustrationType.YOUTUBE,
-          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
+          illustrationType: IllustrationType.YOUTUBE,
+          illustrationSource: 'https://www.youtube.com/embed/JkVHrA5o23o',
           repetition: '20',
           rest: '90s',
         },
@@ -151,8 +151,8 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: IllustrationType.YOUTUBE,
-          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
+          illustrationType: IllustrationType.YOUTUBE,
+          illustrationSource: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
         },
@@ -176,8 +176,8 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: IllustrationType.YOUTUBE,
-          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
+          illustrationType: IllustrationType.YOUTUBE,
+          illustrationSource: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
         },
@@ -201,8 +201,8 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: IllustrationType.YOUTUBE,
-          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
+          illustrationType: IllustrationType.YOUTUBE,
+          illustrationSource: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
         },
@@ -226,8 +226,8 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: IllustrationType.YOUTUBE,
-          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
+          illustrationType: IllustrationType.YOUTUBE,
+          illustrationSource: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
         },
@@ -251,8 +251,8 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: IllustrationType.YOUTUBE,
-          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
+          illustrationType: IllustrationType.YOUTUBE,
+          illustrationSource: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
         },
@@ -276,8 +276,8 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: IllustrationType.YOUTUBE,
-          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
+          illustrationType: IllustrationType.YOUTUBE,
+          illustrationSource: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
         },
@@ -301,8 +301,8 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: IllustrationType.YOUTUBE,
-          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
+          illustrationType: IllustrationType.YOUTUBE,
+          illustrationSource: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
         },
@@ -326,8 +326,8 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: IllustrationType.YOUTUBE,
-          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
+          illustrationType: IllustrationType.YOUTUBE,
+          illustrationSource: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
         },
@@ -351,8 +351,8 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: IllustrationType.YOUTUBE,
-          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
+          illustrationType: IllustrationType.YOUTUBE,
+          illustrationSource: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
         },
@@ -376,8 +376,8 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: IllustrationType.YOUTUBE,
-          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
+          illustrationType: IllustrationType.YOUTUBE,
+          illustrationSource: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
         },
@@ -401,8 +401,8 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: IllustrationType.YOUTUBE,
-          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
+          illustrationType: IllustrationType.YOUTUBE,
+          illustrationSource: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
         },
@@ -426,8 +426,8 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: IllustrationType.YOUTUBE,
-          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
+          illustrationType: IllustrationType.YOUTUBE,
+          illustrationSource: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
         },
@@ -451,8 +451,8 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: IllustrationType.YOUTUBE,
-          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
+          illustrationType: IllustrationType.YOUTUBE,
+          illustrationSource: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
         },
@@ -476,8 +476,8 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: IllustrationType.YOUTUBE,
-          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
+          illustrationType: IllustrationType.YOUTUBE,
+          illustrationSource: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
         },
@@ -501,8 +501,8 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: IllustrationType.YOUTUBE,
-          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
+          illustrationType: IllustrationType.YOUTUBE,
+          illustrationSource: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
         },
@@ -526,8 +526,8 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: IllustrationType.YOUTUBE,
-          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
+          illustrationType: IllustrationType.YOUTUBE,
+          illustrationSource: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
         },
@@ -551,8 +551,8 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: IllustrationType.YOUTUBE,
-          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
+          illustrationType: IllustrationType.YOUTUBE,
+          illustrationSource: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
         },
@@ -576,8 +576,8 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: IllustrationType.YOUTUBE,
-          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
+          illustrationType: IllustrationType.YOUTUBE,
+          illustrationSource: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
         },
@@ -601,8 +601,8 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: IllustrationType.YOUTUBE,
-          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
+          illustrationType: IllustrationType.YOUTUBE,
+          illustrationSource: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
         },
@@ -626,8 +626,8 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: IllustrationType.YOUTUBE,
-          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
+          illustrationType: IllustrationType.YOUTUBE,
+          illustrationSource: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
         },
@@ -651,8 +651,8 @@ export default {
       steps: [
         {
           id: 2,
-          sourceType: IllustrationType.YOUTUBE,
-          source: 'https://www.youtube.com/embed/JkVHrA5o23o',
+          illustrationType: IllustrationType.YOUTUBE,
+          illustrationSource: 'https://www.youtube.com/embed/JkVHrA5o23o',
           title: 'Warmup',
           subtitle: 'This is a subtitle',
         },
@@ -677,8 +677,8 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: IllustrationType.ANIMATION,
-          source: animationSquare,
+          illustrationType: IllustrationType.ANIMATION,
+          illustrationSource: animationSquare,
           repetition: '1',
           rest: '90s',
           instruction: 'Step 1: Introduce the notion of continuity',
@@ -686,8 +686,8 @@ export default {
         {
           id: 2,
           title: '',
-          sourceType: IllustrationType.ANIMATION,
-          source: AnimationMenageATrois,
+          illustrationType: IllustrationType.ANIMATION,
+          illustrationSource: AnimationMenageATrois,
           repetition: '2',
           rest: '90s',
           instruction: 'Step 2: Make a small opposition',
@@ -695,8 +695,8 @@ export default {
         {
           id: 3,
           title: '',
-          sourceType: IllustrationType.ANIMATION,
-          source: animationSquare,
+          illustrationType: IllustrationType.ANIMATION,
+          illustrationSource: animationSquare,
           repetition: '3',
           rest: '90s',
           instruction: 'Step 3: Do a long shot',
@@ -723,8 +723,8 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: IllustrationType.ANIMATION,
-          source: animationSquare,
+          illustrationType: IllustrationType.ANIMATION,
+          illustrationSource: animationSquare,
           repetition: '1',
           rest: '90s',
           instruction: 'Step 1: Introduce the notion of continuity',
@@ -750,8 +750,8 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: IllustrationType.ANIMATION,
-          source: animationSquare,
+          illustrationType: IllustrationType.ANIMATION,
+          illustrationSource: animationSquare,
           repetition: '1',
           rest: '90s',
           instruction: 'Step 1: Introduce the notion of continuity',
@@ -777,8 +777,8 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: IllustrationType.ANIMATION,
-          source: animationSquare,
+          illustrationType: IllustrationType.ANIMATION,
+          illustrationSource: animationSquare,
           repetition: '1',
           rest: '90s',
           instruction: 'Step 1: Introduce the notion of continuity',
@@ -804,8 +804,8 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: IllustrationType.ANIMATION,
-          source: animationSquare,
+          illustrationType: IllustrationType.ANIMATION,
+          illustrationSource: animationSquare,
           repetition: '1',
           rest: '90s',
           instruction: 'Step 1: Introduce the notion of continuity',
@@ -832,8 +832,8 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: IllustrationType.ANIMATION,
-          source: animationSquare,
+          illustrationType: IllustrationType.ANIMATION,
+          illustrationSource: animationSquare,
           repetition: '1',
           rest: '90s',
           instruction: 'Step 1: Introduce the notion of continuity',
@@ -862,8 +862,8 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: IllustrationType.ANIMATION,
-          source: animationSquare,
+          illustrationType: IllustrationType.ANIMATION,
+          illustrationSource: animationSquare,
           repetition: '1',
           rest: '90s',
           instruction: 'Step 1: Introduce the notion of continuity',
@@ -891,8 +891,8 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: IllustrationType.ANIMATION,
-          source: animationSquare,
+          illustrationType: IllustrationType.ANIMATION,
+          illustrationSource: animationSquare,
           repetition: '1',
           rest: '90s',
           instruction: 'Step 1: Introduce the notion of continuity',
@@ -920,8 +920,8 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: IllustrationType.ANIMATION,
-          source: animationSquare,
+          illustrationType: IllustrationType.ANIMATION,
+          illustrationSource: animationSquare,
           repetition: '1',
           rest: '90s',
           instruction: 'Step 1: Introduce the notion of continuity',
@@ -949,8 +949,8 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: IllustrationType.ANIMATION,
-          source: animationSquare,
+          illustrationType: IllustrationType.ANIMATION,
+          illustrationSource: animationSquare,
           repetition: '1',
           rest: '90s',
           instruction: 'Step 1: Introduce the notion of continuity',
@@ -979,8 +979,8 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: IllustrationType.ANIMATION,
-          source: animationSquare,
+          illustrationType: IllustrationType.ANIMATION,
+          illustrationSource: animationSquare,
           repetition: '1',
           rest: '90s',
           instruction: 'Step 1: Introduce the notion of continuity',
@@ -1009,8 +1009,8 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: IllustrationType.ANIMATION,
-          source: animationSquare,
+          illustrationType: IllustrationType.ANIMATION,
+          illustrationSource: animationSquare,
           repetition: '1',
           rest: '90s',
           instruction: 'Step 1: Introduce the notion of continuity',
@@ -1039,8 +1039,8 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: IllustrationType.ANIMATION,
-          source: animationSquare,
+          illustrationType: IllustrationType.ANIMATION,
+          illustrationSource: animationSquare,
           repetition: '1',
           rest: '90s',
           instruction: 'Step 1: Introduce the notion of continuity',
@@ -1068,8 +1068,8 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: IllustrationType.ANIMATION,
-          source: animationSquare,
+          illustrationType: IllustrationType.ANIMATION,
+          illustrationSource: animationSquare,
           repetition: '1',
           rest: '90s',
           instruction: 'Step 1: Introduce the notion of continuity',
@@ -1097,8 +1097,8 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: IllustrationType.ANIMATION,
-          source: animationSquare,
+          illustrationType: IllustrationType.ANIMATION,
+          illustrationSource: animationSquare,
           repetition: '1',
           rest: '90s',
           instruction: 'Step 1: Introduce the notion of continuity',
@@ -1127,8 +1127,8 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: IllustrationType.ANIMATION,
-          source: animationSquare,
+          illustrationType: IllustrationType.ANIMATION,
+          illustrationSource: animationSquare,
           repetition: '1',
           rest: '90s',
           instruction: 'Step 1: Introduce the notion of continuity',
@@ -1157,8 +1157,8 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: IllustrationType.ANIMATION,
-          source: animationSquare,
+          illustrationType: IllustrationType.ANIMATION,
+          illustrationSource: animationSquare,
           repetition: '1',
           rest: '90s',
           instruction: 'Step 1: Introduce the notion of continuity',
@@ -1186,8 +1186,8 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: IllustrationType.ANIMATION,
-          source: animationSquare,
+          illustrationType: IllustrationType.ANIMATION,
+          illustrationSource: animationSquare,
           repetition: '1',
           rest: '90s',
           instruction: 'Step 1: Introduce the notion of continuity',
@@ -1216,8 +1216,8 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: IllustrationType.ANIMATION,
-          source: animationSquare,
+          illustrationType: IllustrationType.ANIMATION,
+          illustrationSource: animationSquare,
           repetition: '1',
           rest: '90s',
           instruction: 'Step 1: Introduce the notion of continuity',
@@ -1246,8 +1246,8 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: IllustrationType.ANIMATION,
-          source: animationSquare,
+          illustrationType: IllustrationType.ANIMATION,
+          illustrationSource: animationSquare,
           repetition: '1',
           rest: '90s',
           instruction: 'Step 1: Introduce the notion of continuity',
@@ -1275,8 +1275,8 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: IllustrationType.ANIMATION,
-          source: animationSquare,
+          illustrationType: IllustrationType.ANIMATION,
+          illustrationSource: animationSquare,
           repetition: '1',
           rest: '90s',
           instruction: 'Step 1: Introduce the notion of continuity',
@@ -1304,8 +1304,8 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: IllustrationType.ANIMATION,
-          source: animationSquare,
+          illustrationType: IllustrationType.ANIMATION,
+          illustrationSource: animationSquare,
           repetition: '1',
           rest: '90s',
           instruction: 'Step 1: Introduce the notion of continuity',
@@ -1334,8 +1334,8 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: IllustrationType.ANIMATION,
-          source: animationSquare,
+          illustrationType: IllustrationType.ANIMATION,
+          illustrationSource: animationSquare,
           repetition: '1',
           rest: '90s',
           instruction: 'Step 1: Introduce the notion of continuity',
@@ -1364,8 +1364,8 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: IllustrationType.ANIMATION,
-          source: animationSquare,
+          illustrationType: IllustrationType.ANIMATION,
+          illustrationSource: animationSquare,
           repetition: '1',
           rest: '90s',
           instruction: 'Step 1: Introduce the notion of continuity',
@@ -1393,8 +1393,8 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: IllustrationType.ANIMATION,
-          source: animationSquare,
+          illustrationType: IllustrationType.ANIMATION,
+          illustrationSource: animationSquare,
           repetition: '1',
           rest: '90s',
           instruction: 'Step 1: Introduce the notion of continuity',
@@ -1423,8 +1423,8 @@ export default {
         {
           id: 1,
           title: '',
-          sourceType: IllustrationType.ANIMATION,
-          source: animationSquare,
+          illustrationType: IllustrationType.ANIMATION,
+          illustrationSource: animationSquare,
           repetition: '1',
           rest: '90s',
           instruction: 'Step 1: Introduce the notion of continuity',
@@ -1489,7 +1489,7 @@ export default {
   trainings: [
     {
       id: 1,
-      sourceType: '** Ultimate App **',
+      illustrationType: '** Ultimate App **',
       title: 'Dump & Swing',
       image: 'https://d3j2bju5c7tc02.cloudfront.net/2016_44/backhand.jpg',
       description: 'This training session aims at make your team better at Dump & Swing. blabla bla bla bla',
@@ -1497,7 +1497,7 @@ export default {
     },
     {
       id: 2,
-      sourceType: '** Ultimate App **',
+      illustrationType: '** Ultimate App **',
       title: 'First practice',
       image:
         'https://cdn3.sportngin.com/attachments/photo/be7e-106813275/Screen_Shot_2018-07-19_at_3.53.39_PM_large.png',
@@ -1506,7 +1506,7 @@ export default {
     },
     {
       id: 3,
-      sourceType: 'Martin',
+      illustrationType: 'Martin',
       title: 'Coed 2 Mark',
       image:
         'https://cdn3.sportngin.com/attachments/photo/be7e-106813275/Screen_Shot_2018-07-19_at_3.53.39_PM_large.png',
@@ -1516,7 +1516,7 @@ export default {
     },
     {
       id: 4,
-      sourceType: 'Martin',
+      illustrationType: 'Martin',
       title: 'Coed 2 Long',
       image:
         'https://cdn3.sportngin.com/attachments/photo/be7e-106813275/Screen_Shot_2018-07-19_at_3.53.39_PM_large.png',
@@ -1526,7 +1526,7 @@ export default {
     },
     {
       id: 5,
-      sourceType: 'Martin',
+      illustrationType: 'Martin',
       title: 'Coed 2 Long v2',
       image:
         'https://cdn3.sportngin.com/attachments/photo/be7e-106813275/Screen_Shot_2018-07-19_at_3.53.39_PM_large.png',

@@ -235,7 +235,9 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                   "paddingHorizontal": 30,
                                 }
                               }
-                            />
+                            >
+                              Author
+                            </Text>
                           </View>
                           <View
                             style={

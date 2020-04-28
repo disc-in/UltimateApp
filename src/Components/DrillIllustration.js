@@ -49,7 +49,7 @@ const DrillIllustration = props => {
     if (currentStepIndex === props.drill.steps.length) {
       return displayFinish();
     } else {
-      switch (props.drill.steps[currentStepIndex].sourceType) {
+      switch (props.drill.steps[currentStepIndex].illustrationType) {
         case IllustrationType.ANIMATION:
           return displayAnimation(props.drill.steps[currentStepIndex]);
         case IllustrationType.YOUTUBE:
@@ -74,11 +74,11 @@ const DrillIllustration = props => {
     );
   };
 
-  const displayAnimation = ({ source, repetition, instruction }) => {
+  const displayAnimation = ({ illustrationSource, repetition, instruction }) => {
     return (
       <ScrollView>
         <View style={styles.pageAnimation}>
-          <Animation animation={source} />
+          <Animation animation={illustrationSource} />
         </View>
         <View style={styles.containerAnimation}>
           <Text style={styles.fitness}>{repetition}</Text>
@@ -91,21 +91,21 @@ const DrillIllustration = props => {
     );
   };
 
-  const displayYoutube = ({ source }) => {
+  const displayYoutube = ({ illustrationSource }) => {
     return (
       <WebView
         source={{
-          uri: source,
+          uri: illustrationSource,
         }}
         style={styles.drillAnimationPage}
       />
     );
   };
 
-  const displayVimeo = ({ source, repetition, title }) => {
+  const displayVimeo = ({ illustrationSource, repetition, title }) => {
     return (
       <View style={styles.drillAnimationPage}>
-        <VimeoVideo vimeoId={source} screenWidth={screenDimension.width} />
+        <VimeoVideo vimeoId={illustrationSource} screenWidth={screenDimension.width} />
         <View>
           <View style={styles.description}>
             <View style={styles.subWrapper}>

@@ -2,8 +2,6 @@ import React from 'react';
 import { Button, StyleSheet, Easing, Animated, Dimensions, View } from 'react-native';
 
 import DisplayedElement from './DisplayedElement';
-// import DrillMenageATrois from './DrillMenageATrois';
-// import DrillSquare from './DrillSquare';
 import DrillCuts from './DrillCuts';
 import ProgressBar from './ProgressBar';
 import Drill from './Drill';
@@ -39,16 +37,14 @@ class Animation extends React.Component {
 
   /** Number of steps in the drill */
   _stepCount = () => {
-//    console.log('_stepCount');
-//    console.log(this.state.drill.g);
-
     if (this.state.drill !== undefined && this.state.drill !== null) return this.state.drill.positions.length;
     else return 0;
   };
 
   /** Number of elements displayed in the drill */
   _elemCount = () => {
-    if (this.state.drill !== undefined && this.state.drill !== null && this.state.drill.ids.length > 0) return this.state.drill.ids.length;
+    if (this.state.drill !== undefined && this.state.drill !== null && this.state.drill.ids.length > 0)
+      return this.state.drill.ids.length;
     else return 0;
   };
 
@@ -190,7 +186,8 @@ class Animation extends React.Component {
 
     Animated.sequence(completeSequence).start();
 
-    if (this.props.onStepChange !== undefined && this.props.onStepChange !== null) this.props.onStepChange(this._stepCount());
+    if (this.props.onStepChange !== undefined && this.props.onStepChange !== null)
+      this.props.onStepChange(this._stepCount());
   }
 
   /** Get back to the previous step */
@@ -202,7 +199,8 @@ class Animation extends React.Component {
           var stepArray = this._getStepAnimation(this.state.currentStep, false);
           Animated.parallel(stepArray).start();
 
-          if (this.props.onStepChange !== undefined && this.props.onStepChange !== null) this.props.onStepChange(this.state.currentStep);
+          if (this.props.onStepChange !== undefined && this.props.onStepChange !== null)
+            this.props.onStepChange(this.state.currentStep);
         },
       );
     }
@@ -216,7 +214,8 @@ class Animation extends React.Component {
         () => {
           Animated.parallel(this._getStepAnimation(this.state.currentStep, true)).start();
 
-          if (this.props.onStepChange !== undefined && this.props.onStepChange !== null) this.props.onStepChange(this.state.currentStep);
+          if (this.props.onStepChange !== undefined && this.props.onStepChange !== null)
+            this.props.onStepChange(this.state.currentStep);
         },
       );
     }
@@ -242,13 +241,12 @@ class Animation extends React.Component {
     );
 
     /** Change the opacity of the step dots */
-    if (this.pb !== undefined && this.pb !== null) stepAnimation = stepAnimation.concat(this.pb.getOpacityAnimation(stepId));
+    if (this.pb !== undefined && this.pb !== null)
+      stepAnimation = stepAnimation.concat(this.pb.getOpacityAnimation(stepId));
 
     /* For each displayed element */
     for (let elemId = 0; elemId < this.state.drill.ids.length; elemId += 1) {
       /* Get the position of the element at step stepId */
-//      console.log('elemId is ', elemId);
-//      console.log('stepId is ', stepId);
       const nextPosition = this.state.drill.getPositionsAtStep(elemId, stepId, this.state.currentStep); //this.state.drill.positions[elemId][stepId];
 
       /* The substeps are played only if the element moves at step stepId.
@@ -256,8 +254,6 @@ class Animation extends React.Component {
       let playSubSteps = true;
       if (nextPosition === undefined || nextPosition === null || !isForward) playSubSteps = false;
 
-//      console.log('NextPosition is ', nextPosition);
-//      console.log('NextPosition is ', nextPosition !== null);
       /* If this element must change its position */
       if (nextPosition !== undefined && nextPosition !== null) {
         /* Animation of the element at step stepId */

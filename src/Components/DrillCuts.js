@@ -30,13 +30,10 @@ class DrillCuts extends React.Component {
 
       /* For each step (except the last which does not have any cut as the elements are in their final position) */
       for (var stepId = 0; stepId < this.props.drill.stepCount() - 1; stepId++) {
-//        console.log('stepId: ' + stepId);
         this.cuts.push([]);
 
         /* For each element displayed */
         for (var elemId = 0; elemId < elemCount; elemId++) {
-//          console.log('\telemId: ' + elemId);
-
           /* If the element moves at the next step */
           if (
             this.props.drill.positions[stepId + 1][elemId] !== null &&
@@ -58,8 +55,6 @@ class DrillCuts extends React.Component {
 
             var positions = this.props.drill.positions[stepId + 1][elemId];
 
-//            console.log('positions: ' + positions);
-
             /* For each substep in this cut */
             for (var subStepId = 0; subStepId < positions.length; subStepId++) {
               /* Add the position(s) of the cut */
@@ -68,8 +63,6 @@ class DrillCuts extends React.Component {
 
               elemCut.push(pos);
             }
-
-//            console.log('positions2: ' + positions);
 
             this.cuts[stepId].push({
               key: elemId,

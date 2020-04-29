@@ -378,10 +378,12 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                 "borderRadius": 50,
                                 "height": 100,
                                 "justifyContent": "center",
+                                "margin": 20,
                                 "opacity": 1,
                                 "width": 100,
                               }
                             }
+                            testID="gradientButton"
                           >
                             <ViewManagerAdapter_ExpoLinearGradient
                               proxiedProperties={
@@ -405,7 +407,6 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                 Object {
                                   "alignItems": "center",
                                   "borderRadius": 50,
-                                  "flex": 1,
                                   "height": 100,
                                   "justifyContent": "center",
                                   "width": 100,
@@ -518,7 +519,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                 }
                               }
                             >
-                              Equipment needs for the drill
+                              None
                             </Text>
                           </View>
                         </View>
@@ -581,7 +582,6 @@ exports[`<DrillPage /> renders correctly 1`] = `
                             style={
                               Object {
                                 "flex": 1,
-                                "height": 1334,
                               }
                             }
                           >
@@ -622,7 +622,10 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                     Object {
                                       "backgroundColor": "#ffffff",
                                     },
-                                    undefined,
+                                    Object {
+                                      "flex": 1,
+                                      "height": 1254,
+                                    },
                                   ]
                                 }
                                 useSharedProcessPool={true}

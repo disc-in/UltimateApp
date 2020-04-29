@@ -267,7 +267,6 @@ exports[`<DrillPageMinimal /> renders correctly with a training and a drill 1`] 
         style={
           Object {
             "flex": 1,
-            "height": 1334,
           }
         }
       >
@@ -308,7 +307,10 @@ exports[`<DrillPageMinimal /> renders correctly with a training and a drill 1`] 
                 Object {
                   "backgroundColor": "#ffffff",
                 },
-                undefined,
+                Object {
+                  "flex": 1,
+                  "height": 1254,
+                },
               ]
             }
             useSharedProcessPool={true}

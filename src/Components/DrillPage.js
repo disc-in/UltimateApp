@@ -12,9 +12,9 @@ import {
 } from 'react-native';
 import { connect } from 'react-redux';
 import { useHeaderHeight } from '@react-navigation/stack';
-import { LinearGradient } from 'expo-linear-gradient';
 
-import DrillAnimation from './DrillAnimation';
+import GradientButton from './shared/GradientButton';
+import DrillIllustration from './DrillIllustration';
 import { toggleFavorite } from '../Store/Actions/favoriteAction';
 
 import theme from '../styles/theme.style';
@@ -68,7 +68,7 @@ export const DrillPage = props => {
       <ImageBackground source={{ uri: drill.image }} style={imageStyles} imageStyle={styles.imageOpacity}>
         <View style={styles.titleContainer}>
           <Text style={styles.title}>{drill.title}</Text>
-          <Text style={styles.source}>{drill.source}</Text>
+          <Text style={styles.author}>{drill.author}</Text>
         </View>
         <View style={styles.infoWrapper}>
           <View style={styles.infoSubWrapper}>
@@ -86,16 +86,7 @@ export const DrillPage = props => {
             <Text style={styles.info}> level</Text>
           </View>
         </View>
-        <TouchableOpacity style={styles.videoLink} onPress={onPressStartButton}>
-          <LinearGradient
-            style={styles.gradient}
-            colors={['#08AEEA', '#2AF598']}
-            start={{ x: 1, y: 1 }}
-            end={{ x: 0, y: 0 }}
-          >
-            <Text style={styles.videoLinkText}>Start</Text>
-          </LinearGradient>
-        </TouchableOpacity>
+        <GradientButton onPress={onPressStartButton} text="Start" />
       </ImageBackground>
       <View style={styles.separator} />
       <View style={styles.description}>
@@ -112,7 +103,7 @@ export const DrillPage = props => {
       <View style={styles.description}>
         <View style={styles.descriptionItem}>
           <Text style={styles.descriptionTitle}>Equipment</Text>
-          <Text style={styles.descriptionText}>{drill.equipment}</Text>
+          <Text style={styles.descriptionText}>{drill.equipmentLabel}</Text>
         </View>
       </View>
       <View style={styles.lines} />
@@ -123,7 +114,7 @@ export const DrillPage = props => {
         </View>
       </View>
       <View ref={firstDrill} style={styles.animation}>
-        <DrillAnimation animation={drill.animation} video={drill.video} />
+        <DrillIllustration drill={drill} />
       </View>
     </ScrollView>
   );
@@ -218,7 +209,7 @@ const styles = StyleSheet.create({
   animation: {
     flex: 1,
   },
-  source: {
+  author: {
     color: theme.COLOR_PRIMARY_LIGHT,
     paddingHorizontal: 30,
     fontSize: theme.FONT_SIZE_SMALL,

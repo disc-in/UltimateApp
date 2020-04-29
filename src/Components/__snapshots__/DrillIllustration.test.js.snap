@@ -267,90 +267,269 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
       >
         <View
           style={
-            Object {
-              "alignItems": "flex-start",
-              "flex": 1,
-              "flexDirection": "row",
-              "justifyContent": "center",
-              "marginTop": 40,
-            }
+            Array [
+              Object {
+                "alignItems": "flex-start",
+                "backgroundColor": "white",
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "marginTop": 40,
+              },
+              Object {
+                "height": 667,
+              },
+              Object {
+                "width": 750,
+              },
+            ]
           }
         >
+          <View
+            height="100%"
+            style={
+              Array [
+                Object {
+                  "position": "absolute",
+                },
+              ]
+            }
+            width="100%"
+          >
+            <RNSVGSvgView
+              bbHeight="100%"
+              bbWidth="100%"
+              focusable={false}
+              height="100%"
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderWidth": 0,
+                  },
+                  Array [
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                  ],
+                  Object {
+                    "flex": 0,
+                    "height": "100%",
+                    "width": "100%",
+                  },
+                ]
+              }
+              width="100%"
+            >
+              <RNSVGGroup>
+                <RNSVGLine
+                  propList={
+                    Array [
+                      "stroke",
+                      "strokeWidth",
+                      "strokeDasharray",
+                    ]
+                  }
+                  stroke={4278222848}
+                  strokeDasharray={
+                    Array [
+                      "5",
+                      "5",
+                    ]
+                  }
+                  strokeWidth="2"
+                  x1={328.8958333333333}
+                  x2={238.89583333333334}
+                  y1={87.26583333333333}
+                  y2={213.99583333333334}
+                />
+                <RNSVGLine
+                  propList={
+                    Array [
+                      "stroke",
+                      "strokeWidth",
+                      "strokeDasharray",
+                    ]
+                  }
+                  stroke={4278222848}
+                  strokeDasharray={
+                    Array [
+                      "5",
+                      "5",
+                    ]
+                  }
+                  strokeWidth="2"
+                  x1={238.89583333333334}
+                  x2={328.8958333333333}
+                  y1={213.99583333333334}
+                  y2={300.7058333333333}
+                />
+                <RNSVGCircle
+                  cx={328.8958333333333}
+                  cy={300.7058333333333}
+                  fill={4278222848}
+                  propList={
+                    Array [
+                      "fill",
+                    ]
+                  }
+                  r={27.791666666666668}
+                />
+              </RNSVGGroup>
+            </RNSVGSvgView>
+          </View>
           <Text
+            onMoveShouldSetResponder={[Function]}
+            onMoveShouldSetResponderCapture={[Function]}
+            onResponderEnd={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderReject={[Function]}
+            onResponderRelease={[Function]}
+            onResponderStart={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            onStartShouldSetResponderCapture={[Function]}
             style={
               Object {
                 "backgroundColor": "#cd5c5c",
-                "borderRadius": 40,
+                "borderRadius": 55.583333333333336,
                 "color": "white",
-                "height": 40,
-                "left": 337.5,
+                "height": 55.583333333333336,
+                "left": 0,
                 "position": "absolute",
                 "textAlign": "center",
                 "textAlignVertical": "center",
-                "top": 80.03999999999999,
-                "width": 40,
+                "top": 0,
+                "transform": Array [
+                  Object {
+                    "translateX": 337.5,
+                  },
+                  Object {
+                    "translateY": 40.019999999999996,
+                  },
+                ],
+                "width": 55.583333333333336,
               }
             }
           >
             1
           </Text>
           <Text
+            onMoveShouldSetResponder={[Function]}
+            onMoveShouldSetResponderCapture={[Function]}
+            onResponderEnd={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderReject={[Function]}
+            onResponderRelease={[Function]}
+            onResponderStart={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            onStartShouldSetResponderCapture={[Function]}
             style={
               Object {
                 "backgroundColor": "#dcdcdc",
-                "borderRadius": 40,
+                "borderRadius": 55.583333333333336,
                 "color": "black",
-                "height": 40,
-                "left": 337.5,
+                "height": 55.583333333333336,
+                "left": 0,
                 "position": "absolute",
                 "textAlign": "center",
                 "textAlignVertical": "center",
-                "top": 200.1,
-                "width": 40,
+                "top": 0,
+                "transform": Array [
+                  Object {
+                    "translateX": 337.5,
+                  },
+                  Object {
+                    "translateY": 100.05,
+                  },
+                ],
+                "width": 55.583333333333336,
               }
             }
           >
             2
           </Text>
           <Text
+            onMoveShouldSetResponder={[Function]}
+            onMoveShouldSetResponderCapture={[Function]}
+            onResponderEnd={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderReject={[Function]}
+            onResponderRelease={[Function]}
+            onResponderStart={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            onStartShouldSetResponderCapture={[Function]}
             style={
               Object {
                 "backgroundColor": "#cd5c5c",
-                "borderRadius": 40,
+                "borderRadius": 55.583333333333336,
                 "color": "white",
-                "height": 40,
-                "left": 337.5,
+                "height": 55.583333333333336,
+                "left": 0,
                 "position": "absolute",
                 "textAlign": "center",
                 "textAlignVertical": "center",
-                "top": 600.3000000000001,
-                "width": 40,
+                "top": 0,
+                "transform": Array [
+                  Object {
+                    "translateX": 337.5,
+                  },
+                  Object {
+                    "translateY": 300.15000000000003,
+                  },
+                ],
+                "width": 55.583333333333336,
               }
             }
           >
             3
           </Text>
           <View
+            onMoveShouldSetResponder={[Function]}
+            onMoveShouldSetResponderCapture={[Function]}
+            onResponderEnd={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderReject={[Function]}
+            onResponderRelease={[Function]}
+            onResponderStart={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            onStartShouldSetResponderCapture={[Function]}
             style={
               Object {
                 "backgroundColor": "white",
                 "borderColor": "black",
-                "borderRadius": 20,
-                "borderWidth": 2,
-                "height": 20,
-                "left": 315,
+                "borderRadius": 27.791666666666668,
+                "borderWidth": 2.779166666666667,
+                "height": 27.791666666666668,
+                "left": 0,
                 "position": "absolute",
-                "top": 146.74,
-                "width": 20,
+                "top": 0,
+                "transform": Array [
+                  Object {
+                    "translateX": 315,
+                  },
+                  Object {
+                    "translateY": 73.37,
+                  },
+                ],
+                "width": 27.791666666666668,
               }
             }
           />
-          <Text>
-            Step 
-            1
-            /
-            5
-          </Text>
           <View
             style={
               Object {
@@ -498,6 +677,276 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
               </Text>
             </View>
           </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "gray",
+                  "borderRadius": 10,
+                  "borderWidth": 0,
+                  "height": 15,
+                  "position": "absolute",
+                  "width": 15,
+                },
+                Object {
+                  "left": 10,
+                },
+                Object {
+                  "top": 667,
+                },
+              ]
+            }
+          />
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "gray",
+                  "borderRadius": 10,
+                  "borderWidth": 0,
+                  "height": 15,
+                  "position": "absolute",
+                  "width": 15,
+                },
+                Object {
+                  "left": 365,
+                },
+                Object {
+                  "top": 667,
+                },
+              ]
+            }
+          />
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "gray",
+                  "borderRadius": 10,
+                  "borderWidth": 0,
+                  "height": 15,
+                  "position": "absolute",
+                  "width": 15,
+                },
+                Object {
+                  "left": 720,
+                },
+                Object {
+                  "top": 667,
+                },
+              ]
+            }
+          />
+          <View
+            style={
+              Object {
+                "backgroundColor": "gray",
+                "height": 3,
+                "left": 20,
+                "position": "absolute",
+                "top": 673,
+                "width": 710,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "backgroundColor": "blue",
+                "borderRadius": 10,
+                "borderWidth": 0,
+                "height": 15,
+                "left": 10,
+                "opacity": 1,
+                "position": "absolute",
+                "top": 667,
+                "width": 15,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "backgroundColor": "blue",
+                "borderRadius": 10,
+                "borderWidth": 0,
+                "height": 15,
+                "left": 365,
+                "opacity": 0,
+                "position": "absolute",
+                "top": 667,
+                "width": 15,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "backgroundColor": "blue",
+                "borderRadius": 10,
+                "borderWidth": 0,
+                "height": 15,
+                "left": 720,
+                "opacity": 0,
+                "position": "absolute",
+                "top": 667,
+                "width": 15,
+              }
+            }
+          />
+          <Text
+            style={
+              Array [
+                Object {
+                  "position": "absolute",
+                },
+                Object {
+                  "left": 14,
+                },
+                Object {
+                  "top": 648,
+                },
+              ]
+            }
+          >
+            1
+          </Text>
+          <Text
+            style={
+              Array [
+                Object {
+                  "position": "absolute",
+                },
+                Object {
+                  "left": 369,
+                },
+                Object {
+                  "top": 648,
+                },
+              ]
+            }
+          >
+            2
+          </Text>
+          <Text
+            style={
+              Array [
+                Object {
+                  "position": "absolute",
+                },
+                Object {
+                  "left": 724,
+                },
+                Object {
+                  "top": 648,
+                },
+              ]
+            }
+          >
+            3
+          </Text>
+          <View
+            style={
+              Object {
+                "backgroundColor": "blue",
+                "height": 3,
+                "left": 20,
+                "position": "absolute",
+                "top": 673,
+                "width": 0,
+              }
+            }
+          />
+          <View
+            accessible={true}
+            focusable={true}
+            hitSlop={
+              Object {
+                "bottom": 20,
+                "left": 20,
+                "right": 20,
+                "top": 20,
+              }
+            }
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "height": 80,
+                "left": -5,
+                "opacity": 1,
+                "position": "absolute",
+                "top": 652,
+                "width": 80,
+              }
+            }
+          />
+          <View
+            accessible={true}
+            focusable={true}
+            hitSlop={
+              Object {
+                "bottom": 20,
+                "left": 20,
+                "right": 20,
+                "top": 20,
+              }
+            }
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "height": 80,
+                "left": 350,
+                "opacity": 1,
+                "position": "absolute",
+                "top": 652,
+                "width": 80,
+              }
+            }
+          />
+          <View
+            accessible={true}
+            focusable={true}
+            hitSlop={
+              Object {
+                "bottom": 20,
+                "left": 20,
+                "right": 20,
+                "top": 20,
+              }
+            }
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "height": 80,
+                "left": 705,
+                "opacity": 1,
+                "position": "absolute",
+                "top": 652,
+                "width": 80,
+              }
+            }
+          />
         </View>
       </View>
       <View

@@ -78,7 +78,7 @@ const DrillIllustration = props => {
     return (
       <ScrollView>
         <View style={styles.pageAnimation}>
-          <Animation animation={illustrationSource} />
+          <Animation widthRatio={1} heightRatio={1 / 2} animation={illustrationSource} />
         </View>
         <View style={styles.containerAnimation}>
           <Text style={styles.fitness}>{repetition}</Text>

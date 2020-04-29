@@ -68,122 +68,54 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
                           0.3,
                         ],
                       ],
-                      undefined,
-                      undefined,
-                      undefined,
-                      undefined,
-                      undefined,
-                    ],
-                    Array [
                       Array [
                         Array [
                           0.3,
                           0.6,
                         ],
                       ],
-                      undefined,
-                      undefined,
-                      undefined,
-                      undefined,
-                      undefined,
-                    ],
-                    Array [
                       Array [
                         Array [
                           0.6,
                           0.3,
                         ],
                       ],
-                      undefined,
-                      undefined,
-                      undefined,
-                      undefined,
-                      undefined,
-                    ],
-                    Array [
                       Array [
                         Array [
                           0.6,
                           0.6,
                         ],
                       ],
-                      undefined,
-                      undefined,
-                      undefined,
-                      undefined,
-                      undefined,
-                    ],
-                    Array [
                       Array [
                         Array [
                           0.45,
                           0.2,
                         ],
                       ],
-                      undefined,
-                      undefined,
-                      undefined,
-                      undefined,
-                      undefined,
-                    ],
-                    Array [
                       Array [
                         Array [
                           0.2,
                           0.45,
                         ],
                       ],
-                      undefined,
-                      undefined,
-                      undefined,
-                      undefined,
-                      undefined,
-                    ],
-                    Array [
                       Array [
                         Array [
                           0.45,
                           0.7,
                         ],
                       ],
-                      undefined,
-                      undefined,
-                      undefined,
-                      undefined,
-                      undefined,
-                    ],
-                    Array [
                       Array [
                         Array [
                           0.7,
                           0.45,
                         ],
                       ],
-                      undefined,
-                      undefined,
-                      undefined,
-                      undefined,
-                      undefined,
-                    ],
-                    Array [
                       Array [
                         Array [
                           0.3,
                           0.3,
                         ],
                       ],
-                      undefined,
-                      undefined,
-                      undefined,
-                      undefined,
-                      Array [
-                        Array [
-                          0.45,
-                          0.2,
-                        ],
-                      ],
-                    ],
-                    Array [
                       Array [
                         Array [
                           0.16,
@@ -192,76 +124,130 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
                       ],
                       Array [
                         Array [
-                          0.45,
-                          0.2,
+                          0.6,
+                          0.3,
                         ],
                       ],
                       Array [
                         Array [
                           0.6,
-                          0.3,
+                          0.6,
                         ],
                       ],
+                      Array [
+                        Array [
+                          0.3,
+                          0.6,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.36,
+                          0.36,
+                        ],
+                      ],
+                    ],
+                    Array [
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      Array [
+                        Array [
+                          0.45,
+                          0.2,
+                        ],
+                      ],
+                      undefined,
                       undefined,
                       undefined,
                       undefined,
                     ],
                     Array [
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
                       Array [
                         Array [
                           0.6,
                           0.3,
                         ],
                       ],
-                      undefined,
                       Array [
                         Array [
                           0.7,
                           0.45,
                         ],
                       ],
+                      undefined,
+                      undefined,
                       Array [
                         Array [
-                          0.6,
-                          0.6,
+                          0.58,
+                          0.36,
                         ],
                       ],
-                      undefined,
-                      undefined,
                     ],
                     Array [
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
                       Array [
                         Array [
                           0.6,
                           0.6,
                         ],
                       ],
-                      undefined,
-                      undefined,
                       Array [
                         Array [
                           0.45,
                           0.7,
                         ],
                       ],
+                      undefined,
                       Array [
                         Array [
-                          0.3,
-                          0.6,
+                          0.58,
+                          0.58,
                         ],
                       ],
-                      undefined,
                     ],
                     Array [
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
                       Array [
                         Array [
                           0.3,
                           0.6,
                         ],
                       ],
-                      undefined,
-                      undefined,
-                      undefined,
                       Array [
                         Array [
                           0.2,
@@ -270,35 +256,33 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
                       ],
                       Array [
                         Array [
-                          0.3,
-                          0.3,
+                          0.36,
+                          0.58,
                         ],
                       ],
                     ],
                     Array [
-                      Array [
-                        Array [
-                          0.36,
-                          0.36,
-                        ],
-                      ],
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
                       undefined,
                       Array [
                         Array [
-                          0.58,
-                          0.36,
+                          0.45,
+                          0.2,
                         ],
                       ],
+                      undefined,
+                      undefined,
+                      undefined,
                       Array [
                         Array [
-                          0.58,
-                          0.58,
-                        ],
-                      ],
-                      Array [
-                        Array [
-                          0.36,
-                          0.58,
+                          0.3,
+                          0.3,
                         ],
                       ],
                       Array [
@@ -374,122 +358,54 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
                           0.3,
                         ],
                       ],
-                      undefined,
-                      undefined,
-                      undefined,
-                      undefined,
-                      undefined,
-                    ],
-                    Array [
                       Array [
                         Array [
                           0.3,
                           0.6,
                         ],
                       ],
-                      undefined,
-                      undefined,
-                      undefined,
-                      undefined,
-                      undefined,
-                    ],
-                    Array [
                       Array [
                         Array [
                           0.6,
                           0.3,
                         ],
                       ],
-                      undefined,
-                      undefined,
-                      undefined,
-                      undefined,
-                      undefined,
-                    ],
-                    Array [
                       Array [
                         Array [
                           0.6,
                           0.6,
                         ],
                       ],
-                      undefined,
-                      undefined,
-                      undefined,
-                      undefined,
-                      undefined,
-                    ],
-                    Array [
                       Array [
                         Array [
                           0.45,
                           0.2,
                         ],
                       ],
-                      undefined,
-                      undefined,
-                      undefined,
-                      undefined,
-                      undefined,
-                    ],
-                    Array [
                       Array [
                         Array [
                           0.2,
                           0.45,
                         ],
                       ],
-                      undefined,
-                      undefined,
-                      undefined,
-                      undefined,
-                      undefined,
-                    ],
-                    Array [
                       Array [
                         Array [
                           0.45,
                           0.7,
                         ],
                       ],
-                      undefined,
-                      undefined,
-                      undefined,
-                      undefined,
-                      undefined,
-                    ],
-                    Array [
                       Array [
                         Array [
                           0.7,
                           0.45,
                         ],
                       ],
-                      undefined,
-                      undefined,
-                      undefined,
-                      undefined,
-                      undefined,
-                    ],
-                    Array [
                       Array [
                         Array [
                           0.3,
                           0.3,
                         ],
                       ],
-                      undefined,
-                      undefined,
-                      undefined,
-                      undefined,
-                      Array [
-                        Array [
-                          0.45,
-                          0.2,
-                        ],
-                      ],
-                    ],
-                    Array [
                       Array [
                         Array [
                           0.16,
@@ -498,76 +414,130 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
                       ],
                       Array [
                         Array [
-                          0.45,
-                          0.2,
+                          0.6,
+                          0.3,
                         ],
                       ],
                       Array [
                         Array [
                           0.6,
-                          0.3,
+                          0.6,
                         ],
                       ],
+                      Array [
+                        Array [
+                          0.3,
+                          0.6,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.36,
+                          0.36,
+                        ],
+                      ],
+                    ],
+                    Array [
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      Array [
+                        Array [
+                          0.45,
+                          0.2,
+                        ],
+                      ],
+                      undefined,
                       undefined,
                       undefined,
                       undefined,
                     ],
                     Array [
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
                       Array [
                         Array [
                           0.6,
                           0.3,
                         ],
                       ],
-                      undefined,
                       Array [
                         Array [
                           0.7,
                           0.45,
                         ],
                       ],
+                      undefined,
+                      undefined,
                       Array [
                         Array [
-                          0.6,
-                          0.6,
+                          0.58,
+                          0.36,
                         ],
                       ],
-                      undefined,
-                      undefined,
                     ],
                     Array [
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
                       Array [
                         Array [
                           0.6,
                           0.6,
                         ],
                       ],
-                      undefined,
-                      undefined,
                       Array [
                         Array [
                           0.45,
                           0.7,
                         ],
                       ],
+                      undefined,
                       Array [
                         Array [
-                          0.3,
-                          0.6,
+                          0.58,
+                          0.58,
                         ],
                       ],
-                      undefined,
                     ],
                     Array [
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
                       Array [
                         Array [
                           0.3,
                           0.6,
                         ],
                       ],
-                      undefined,
-                      undefined,
-                      undefined,
                       Array [
                         Array [
                           0.2,
@@ -576,35 +546,33 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
                       ],
                       Array [
                         Array [
-                          0.3,
-                          0.3,
+                          0.36,
+                          0.58,
                         ],
                       ],
                     ],
                     Array [
-                      Array [
-                        Array [
-                          0.36,
-                          0.36,
-                        ],
-                      ],
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
                       undefined,
                       Array [
                         Array [
-                          0.58,
-                          0.36,
+                          0.45,
+                          0.2,
                         ],
                       ],
+                      undefined,
+                      undefined,
+                      undefined,
                       Array [
                         Array [
-                          0.58,
-                          0.58,
-                        ],
-                      ],
-                      Array [
-                        Array [
-                          0.36,
-                          0.58,
+                          0.3,
+                          0.3,
                         ],
                       ],
                       Array [

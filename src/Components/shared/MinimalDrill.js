@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 
-import DrillAnimation from '../DrillAnimation';
+import DrillIllustration from '../DrillIllustration';
 import theme from '../../styles/theme.style';
 
 export const MinimalDrill = props => {
@@ -27,7 +27,7 @@ export const MinimalDrill = props => {
         </View>
       </View>
       <View style={styles.animation}>
-        <DrillAnimation animation={drill.animation} video={drill.video} />
+        <DrillIllustration drill={drill} />
       </View>
     </>
   );

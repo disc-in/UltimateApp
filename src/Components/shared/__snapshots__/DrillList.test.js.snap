@@ -6,6 +6,7 @@ exports[`<DrillList /> renders correctly 1`] = `
     data={
       Array [
         Object {
+          "author": "Author",
           "description": "Description of the drill",
           "durationInMinutes": 10,
           "equipment": "Equipment needs for the drill",
@@ -19,24 +20,16 @@ exports[`<DrillList /> renders correctly 1`] = `
           "level": "Beginner",
           "minimalPlayersNumber": 1,
           "seasonTiming": "Off-season",
-          "source": "Author",
           "steps": Array [
             Object {
+              "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
+              "illustrationType": "youtube",
               "subtitle": "This is a subtitle",
               "title": "Warmup",
-            },
-            Object {
-              "subtitle": "This is a subtitle",
-              "title": "Do the drill",
-            },
-            Object {
-              "subtitle": "This is a subtitle",
-              "title": "Last step",
             },
           ],
           "title": "Fitness Drill Title",
           "type": "fitness",
-          "video": "https://www.youtube.com/embed/JkVHrA5o23o",
         },
       ]
     }
@@ -169,9 +162,7 @@ exports[`<DrillList /> renders correctly 1`] = `
                   "fontSize": 14,
                 }
               }
-            >
-              Author
-            </Text>
+            />
             <Text
               style={
                 Object {

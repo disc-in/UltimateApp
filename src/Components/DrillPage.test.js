@@ -1,10 +1,11 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { NavigationContainer } from '@react-navigation/native';
 import { connect, Provider } from 'react-redux';
 
 import { render, fireEvent, cleanup } from 'react-native-testing-library';
+import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+
 import store from '../Store/testStore';
 import { createDrill } from '../Fixtures/TestFixtures';
 
@@ -16,11 +17,6 @@ describe('<DrillPage />', () => {
   afterEach(() => jest.clearAllMocks());
 
   const drill = createDrill();
-  const route = {
-    params: {
-      drill,
-    },
-  };
 
   it('renders correctly', () => {
     const Stack = createStackNavigator();
@@ -46,7 +42,7 @@ describe('<DrillPage />', () => {
       () => ({ toggleFavorite }),
     )(DrillPage);
     const Stack = createStackNavigator();
-    const { getByText, getByTestId } = render(
+    const { getByTestId } = render(
       <Provider store={store}>
         <NavigationContainer>
           <Stack.Navigator>

@@ -1,3 +1,6 @@
+// THIS IS NOT A COMPONENT
+// THIS IS NOT USED ANYWHERE (duplicated in fixtures)
+
 import Drill from './Drill';
 
 // Each drill has an attribute "positions" which is a 4D array:

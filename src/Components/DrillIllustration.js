@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ScrollView, StyleSheet, View, Text, Dimensions, TouchableOpacity } from 'react-native';
 import { WebView } from 'react-native-webview';
 
@@ -10,6 +10,13 @@ import theme from '../styles/theme.style';
 
 const DrillIllustration = props => {
   const [currentStepIndex, setStepIndex] = useState(0);
+
+  const currentStep = props.drill.steps[currentStepIndex];
+
+  // back to 0 when drill change
+  useEffect(() => {
+    setStepIndex(0);
+  }, [props.drill]);
 
   const incrementStepIndex = () => {
     setStepIndex((currentStepIndex + 1) % (props.drill.steps.length + 1));
@@ -48,6 +55,8 @@ const DrillIllustration = props => {
   const checkSwitch = () => {
     if (currentStepIndex === props.drill.steps.length) {
       return displayFinish();
+    } else if (!currentStep) {
+      return <View />; // bad state, but let's not crash
     } else {
       switch (props.drill.steps[currentStepIndex].illustrationType) {
         case IllustrationType.ANIMATION:

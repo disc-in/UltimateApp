@@ -29,17 +29,14 @@ class DisplayedElement extends React.Component {
         this.props.borderWidth = this.props.discRadius/10;
 	
 	/* Current position of the element in pixels */ 
-	this.currentPosition = new Animated.ValueXY({ x: 0, y: 0 });
+	this.currentPosition = new Animated.ValueXY({ x: 0, y: 0});
         
         this.xCut = 10;
         this.yCut = 10;
-
-	this.top = 0;
-	this.left = 0;
 	
 	// Add a listener on each coordinate offset to get its value at the end of each move
-	this.currentPosition.x.addListener(({value}) => this._value = value);
-	this.currentPosition.y.addListener(({value}) => this._value = value);
+	this.currentPosition.x.addListener(({value}) => {this._value = value;});
+	this.currentPosition.y.addListener(({value}) => {this._value = value;});
 
 	
         // True if the element has already been moved
@@ -60,19 +57,13 @@ class DisplayedElement extends React.Component {
 
 	    // Called when the gesture starts
 	    onPanResponderGrant: (e, gesture) => {
-
-                // We always want an element displayed at the original position of the first element.
-                // If the current element A is moved for the first time, we create a new element B at the original position of A
-                // If A is moved again, we do not do anything. B (or an element created by B) will be at the original position of A.
-                if(this.props.movable && this.props.onClick != undefined && !this.moved){
+		
+                if(this.props.movable){
                     
 		    this.currentPosition.setOffset({
 			x: this._val.x,
 			y: this._val.y
 		    });
-                    
-		    this.props.onClick();
-		    this.moved = true;
 		     
 		    this.currentPosition.setValue({ x:0, y:0});
                 }
@@ -86,16 +77,15 @@ class DisplayedElement extends React.Component {
 	    onPanResponderRelease: (evt, gesturestate) => {
 
                 
-		if(this.props.movable && this.props.onMoveEnd != undefined){
+		if(this.props.movable && this.props.onMoveEnd !== undefined && this.props.onMoveEnd !== null){
                     this.props.onMoveEnd(this, this.currentPosition.x._value, this.currentPosition.y._value);
 		    this.currentPosition.setValue({ x:0, y:0});
                 }
-                
-                
 	    }
         });
     }
 
+    /** Set the position of the element (the argument are in pixels not in percentage of the screen) */
     setPosition(xArg, yArg) {
 //	console.log("de: set position: " + xArg + "/" + yArg);
 	this.currentPosition.setValue({ x: xArg, y: yArg});
@@ -112,10 +102,10 @@ class DisplayedElement extends React.Component {
 
     render() {
         
-	const panStyle = {
+	var panStyle = {
 	    transform: this.currentPosition.getTranslateTransform()
 	};
-
+	
 	/* Returns a component according to the element type */
 	switch (this.props.id) {
 	    
@@ -128,10 +118,14 @@ class DisplayedElement extends React.Component {
                 // Use the panResponder in this view
                 {...this.panResponder.panHandlers}
 
-		style={[panStyle,styles.defense,
+		style={[panStyle,
+			styles.defense,
 			{height: 40},
 			{width: 40},
-			{borderRadius: 40},]}
+			{borderRadius: 40},
+			{left: 0},
+			{top: 0},
+		       ]}
 		key={this.props.key}
 		    >
 		    {this.props.number}
@@ -139,19 +133,21 @@ class DisplayedElement extends React.Component {
             );
 
 	case 'offense':
-//            console.log("Render in offense");
+//            console.log("Render in offense l/t: " + this.props.left + "/" + this.props.top);
+
             return (
 		    <Animated.Text
 
                 // Use the panResponder in this view
                 {...this.panResponder.panHandlers}
 
-		style={[panStyle,styles.offense,
+		style={[panStyle,
+			styles.offense,
 			{height: 40},
 			{width: 40},
 			{borderRadius: 40},
-			{top: this.top},
-			{left: this.left}
+			{left: 0},
+			{top: 0},
 		       ]}
 		key={this.props.key}
 		    >
@@ -173,8 +169,8 @@ class DisplayedElement extends React.Component {
 			{width: 20},
 			{borderRadius: 20},
 			{borderWidth: 2}, 
-			{top: this.top},
-			{left: this.left}]}
+			{left: 0},
+			{top: 0},]}
 		key={this.props.key}/>
             );
 
@@ -190,8 +186,8 @@ class DisplayedElement extends React.Component {
 			{borderLeftWidth: 12},
 			{borderRightWidth: 12},
 			{borderBottomWidth: 25}, 
-			{top: this.top},
-			{left: this.left}
+			{top: 0},
+			{left: 0}
 		       ]}
 		key={this.props.key}
 		    />

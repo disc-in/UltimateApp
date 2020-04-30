@@ -81,9 +81,9 @@ class Test extends React.Component {
 	    onPanResponderRelease: (evt, gesturestate) => {
 
                 
-		if(this.props.movable && this.props.onMoveEnd != undefined){
+		if(this.props.movable && this.props.onMoveEnd !== undefined && this.props.onMoveEnd !== null){
 
-		    console.log("Test: this.props.id: " + this.props.id);
+//		    console.log("Test: this.props.id: " + this.props.id);
                     this.props.onMoveEnd(this, this.currentPosition.x._value, this.currentPosition.y._value);
 		    this.currentPosition.setValue({ x:0, y:0});
                 }
@@ -117,7 +117,7 @@ class Test extends React.Component {
 	    
 	case 'defense':
 	    
-            console.log("Render in defense");
+//            console.log("Render in defense");
             return (
 		<Animated.Text
 
@@ -135,7 +135,7 @@ class Test extends React.Component {
             );
 
 	case 'offense':
-            console.log("Render in offense");
+//            console.log("Render in offense");
             return (
 		    <Animated.Text
 
@@ -154,7 +154,7 @@ class Test extends React.Component {
             );
 
 	case 'disc':
-            console.log("Render in disc");
+//            console.log("Render in disc");
             return (
 
 		    <Animated.View
@@ -171,7 +171,7 @@ class Test extends React.Component {
             );
 
 	case 'triangle':
-            console.log("Render in triangle");
+//            console.log("Render in triangle");
             return (
 		    <Animated.View
 

@@ -1,57 +1,56 @@
 {
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
+    "test": "jest --watch --coverage=false --changedSince=master",
+    "test-ci": "jest --coverage=true",
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject",
     "lint": "eslint src --max-warnings=0 --ext .js,.jsx",
     "lint-fix": "eslint src --fix --ext .js,.jsx",
     "prettier": "prettier 'src/**/*.{ts,tsx,js,jsx}' --list-different",
     "prettier-fix": "prettier 'src/**/*.{ts,tsx,js,jsx}' --write"
   },
   "dependencies": {
-    "@react-native-community/masked-view": "0.1.5",
-    "@react-navigation/bottom-tabs": "^5.1.1",
-    "@react-navigation/compat": "^5.1.0",
-    "@react-navigation/native": "^5.0.9",
-    "@react-navigation/stack": "^5.1.1",
-    "expo": "~36.0.0",
-    "moment": "^2.24.0",
-    "numeral": "^2.0.6",
-    "prop-types": "^15.7.2",
-    "react": "~16.9.0",
-    "react-dom": "~16.9.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz",
-    "react-native-gesture-handler": "~1.5.0",
+    "@react-native-community/masked-view": "0.1.6",
+    "@react-navigation/native": "^5.1.1",
+    "@react-navigation/stack": "^5.2.9",
+    "expo": "^37.0.0",
+    "expo-linear-gradient": "~8.1.0",
+    "react": "16.9.0",
+    "react-dom": "16.9.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-37.0.0.tar.gz",
+    "react-native-gesture-handler": "~1.6.0",
     "react-native-kill-packager": "^1.0.0",
-    "react-native-reanimated": "~1.4.0",
-    "react-native-safe-area-context": "0.6.0",
-    "react-native-screens": "2.0.0-alpha.12",
-    "react-native-web": "~0.11.7",
-    "react-native-webview": "^7.4.3",
-    "react-navigation": "^4.1.1",
-    "react-navigation-stack": "^2.1.1",
+    "react-native-reanimated": "~1.7.0",
+    "react-native-safe-area-context": "0.7.3",
+    "react-native-screens": "~2.2.0",
+    "react-native-svg": "^9.13.3",
+    "react-native-web": "^0.11.7",
+    "react-native-webview": "8.1.1",
     "react-redux": "^7.2.0",
     "redux": "^4.0.5",
-    "watchman": "^1.0.0",
-    "react-native-svg": "9.13.3"
+    "watchman": "^1.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0",
-    "babel-preset-expo": "~8.0.0",
+    "@babel/core": "^7.9.0",
+    "babel-preset-expo": "^8.1.0",
     "eslint": "^6.8.0",
-    "eslint-config-universe": "^2.3.0",
+    "eslint-config-universe": "^3.0.0",
     "eslint-plugin-react-hooks": "^2.5.1",
     "eslint-plugin-react-native": "^3.8.1",
     "husky": "^4.2.3",
-    "lint-staged": "^10.0.8",
+    "jest-expo": "^37.0.0",
+    "lint-staged": "^10.1.2",
     "prettier": "^1.19.1",
+    "react-native-testing-library": "^1.13.0",
+    "react-test-renderer": "^16.13.1",
     "typescript": "^3.8.3"
   },
   "lint-staged": {
-    "**/*.{js,jsx,json,css}": [
+    "**/*.{js,jsx,css}": [
+      "npm run lint-fix",
       "npm run prettier-fix"
     ]
   },
@@ -59,6 +58,12 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "jest": {
+    "preset": "jest-expo",
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base)"
+    ]
   },
   "private": true
 }

@@ -1,284 +1,241 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Text, Button, StyleSheet, Easing, Animated, Dimensions, View} from 'react-native';
+import { Button, StyleSheet, Easing, Animated, Dimensions, View } from 'react-native';
 
 import DisplayedElement from './DisplayedElement';
-import DrillMenageATrois from './DrillMenageATrois';
-import DrillSquare from './DrillSquare';
+// import DrillMenageATrois from './DrillMenageATrois';
+// import DrillSquare from './DrillSquare';
 import DrillCuts from './DrillCuts';
 import Svg, {Line} from 'react-native-svg';
 import ProgressBar from './ProgressBar';
+import Drill from './Drill';
 
 /** Display a drill and enables to animate it using buttons (play, next step, previous step)
-  * 
-  * TODO: 
-  * - when moving to a given step stepId, put back all displayed elements to their position prior stepId
-  * - when restarting the complete animation, if the elements are not in their initial positions, add an empty animation to move the elements to their initial position before starting the animation
-  * - fix the ratio of a drill (otherwise the display of a drill may be distorted)
-  */
+ * 
+ * TODO: 
+ * - when restarting the complete animation, if the elements are not in their initial positions, add an empty animation to move the elements to their initial position before starting the animation
+ * - fix the ratio of a drill (otherwise the display of a drill may be distorted)
+ */
 class Animation extends React.Component{
 
     constructor(props){
 	super(props);
 
-//	console.log("Animation constructor")
+	//	console.log("Animation constructor")
 	
         this.state = {
-	    screenH: 1, // Height of the animation space
-	    screenW: 0, // Width of the animation space
-	    stepLength: 1000, // Duration of a step in milliseconds
+	    drill: undefined,
             de: [], // The graphical elments displayed in the drill
 	    currentStep: 0, // Current step displayed on the phone
-	    drill: this.props.drill,
+	    animationWidth: this.props.width,
+	    animationHeight: this.props.height,
+	    
         };
+
+	this.stepLength = 1000; // Duration of a step in milliseconds
 	
         // Enables to update the current step inside an animation
-        this.currentStepAV = new Animated.Value(0);
+	if(this.props.currentStepAV !== null && this.props.currentStepAV !== undefined)
+	    this.currentStepAV = this.props.currentStepAV;
+	else
+            this.currentStepAV = new Animated.Value(0);
 
-        this.currentStepAV.addListener((progress) => {
+	this.currentStepAV.addListener(progress => {
             this.setState({currentStep: progress.value});
         });
-
-        this.animationWidth = 100;
-        this.animationHeight = 100;
-
-    }
-
-    static getDerivedStateFromProps(props, state) {
-
-//	console.log("derived state called");
 	
-	// Test if the drill has changed
-	var isEqual = true;
+	// Distance between the top of the window and the animation area
+	this.dTop = 0
 
-	if(props.drill != undefined && state.drill != undefined){
+	if(this.props.dTop !== undefined)
+	    this.dTop = this.props.dTop;
+	
+	// Distance between the left of the window and the animation area
+	this.dLeft = 0
 
-	    var stepId = 0;
-	    var elemId = 0;
-	    var cutId = 0;
-
-	    // Get all the positions in props and stats
-	    var pPositions = props.drill.positions;
-	    var sPositions = state.drill.positions;
-
-	    // If there is not the same number of steps
-	    if(pPositions.length != sPositions.length)
-		isEqual = false;
-
-	    
-
-	    // While no difference has been found and all the positions have not been tested
-	    while(stepId < pPositions.length && isEqual){
-
-		if(pPositions.length != sPositions.length)
-		    isEqual = false;
-		
-		if(isEqual && pPositions[stepId].length != sPositions[stepId].length)
-		    isEqual = false;
-
-		if(isEqual && pPositions[stepId].length > elemId){
-		    var pUndefined = pPositions[stepId][elemId] == undefined;
-		    var sUndefined = sPositions[stepId][elemId] == undefined;
-
-		    var pSize = -1;
-		    var sSize = -1;
-
-		    if(!pUndefined)
-			pSize = pPositions[stepId][elemId].length
-
-		    if(!sUndefined)
-			sSize = sPositions[stepId][elemId].length
-
-		    // If the position is different
-		    if(pSize != sSize
-		       || pSize > 0 && (
-			   pPositions[stepId][elemId][cutId][0] != sPositions[stepId][elemId][cutId][0]
-			       || pPositions[stepId][elemId][cutId][1] != sPositions[stepId][elemId][cutId][1])
-		      )
-			isEqual = false;
-		}
-
-		// Go to the next position
-		if(pPositions[stepId][elemId] == undefined){
-		    if(pPositions[stepId].length > elemId + 1)
-			elemId++;
-		    else{
-			stepId++;
-			elemId = 0;
-			cutId = 0;
-		    }
-		}   
-		else if(pPositions[stepId][elemId].length > cutId + 1)
-		    cutId++;
-		else if(pPositions[stepId].length > elemId + 1){
-		    elemId++;
-		    cutId = 0;
-		}
-		else{
-		    stepId++;
-		    elemId = 0;
-		    cutId = 0;
-		}
-//		console.log(stepId + "/" + elemId + "/" + cutId);
-	    }
-	}
-
-//	console.log("isEqual: " + isEqual);
-
-	if(isEqual)
-	    return null;
-	else{
-	    return {
-		drill: props.drill,
-		de: undefined,
-	    }
-	}
+	if(this.props.dLeft !== undefined)
+	    this.dLeft = this.props.dLeft;
     }
 
+
+
+    /** Number of steps in the drill */
     _stepCount = () => {
-	if(this.state.drill != undefined)
-	    return this.state.drill.positions.length;
-	else
-	    return 0;
-    }
 
+	if (this.state.drill !== undefined && this.state.drill !== null) return this.state.drill.positions.length;
+	else return 0;
+    };
+
+    /** Number of elements displayed in the drill */
     _elemCount = () => {
-	if(this.state.drill != undefined && this.state.drill.positions.length > 0)
-	    return this.state.drill.positions[0].length;
-	else
-	    return 0;
-    }
+	if (this.state.drill !== undefined && this.state.drill !== null && this.state.drill.ids.length > 0) return this.state.drill.ids.length;
+	else return 0;
+    };
 
 
+    /** Create the Componenets associated to the elements displayed in this drill */
     _createDE(){
+
+//	console.log("animation CreateDE: " + this._elemCount() + " elements");
 	var tempDe = [];
 	
         /* For each element displayed in the current drill */
         for(var elemId = 0; elemId < this._elemCount(); ++elemId){
 
-//	    console.log("animation createdE: element id: " + this.state.drill.ids[elemId]);
+	    //	    console.log("animation createdE: element id: " + this.state.drill.ids[elemId]);
 	    
             /* Create the displayed element according to the drill */
-            tempDe.push(new DisplayedElement({
-		id: this.state.drill.ids[elemId],
-		number: this.state.drill.texts[elemId],
-		key: elemId,
-		animationWidth: this.animationWidth,
-		animationHeight: this.animationHeight,
-		movable:this.props.editable,
-		onMoveEnd: this.props.onElementMove,
-//		left: this.state.drill.positions[0][elemId][0][0]*this.state.screenW,
-//		top: this.state.drill.positions[0][elemId][0][1]*this.state.screenH
-	    }));
+	    tempDe.push(
+		new DisplayedElement({
+		    id: this.state.drill.ids[elemId],
+		    number: this.state.drill.texts[elemId],
+		    key: elemId,
+		    eId: elemId,
+		    animationWidth: this.props.animationWidth,
+		    animationHeight: this.props.animationHeight,
+		    movable:this.props.editable,
+		    onMoveEnd: this.props.onElementMove,
+//		    left: this.state.drill.positions[0][elemId][0][0]*this.state.animationWidth + this.dLeft,
+//		    top: this.state.drill.positions[0][elemId][0][1]*this.state.animationHeight + this.dTop
+		}));
         }
+
+//	console.log("animation end createde");
 
 	return tempDe;
     }
-    
-    /** Once we get the screen size, create the DisplayedElement used in the drill and set them to their initial position */
-    _initDrill(){
-
-	
-        this.animationWidth = this.state.screenW * this.props.widthRatio;
-        this.animationHeight = this.state.screenH * this.props.heightRatio;
-
-//        console.log("ratio h/w: " + this.props.heightRatio + "/" + this.props.widthRatio);
-        
-
-	this.setState({
-	    de: this._createDE(),
-	    currentStep: 0
-	}, () => {
-	    
-            /* Set all the elements to their initial positions */
-            this._initPositions();
-
-	    this.pb = this._createPB();
-	    this._initializeCuts();
-	    
-	    if(this.props.onStepChange != undefined)
-		this.props.onStepChange(0);
-	    
-	});
-	
 
 
-    }
-
+    /** Create the cuts associated to each step of the drill */
     _initializeCuts(){
 	this.cuts = new DrillCuts({
 	    drill:this.state.drill,
-	    animationHeight: this.animationHeight,
-	    animationWidth: this.animationWidth,
-	    currentStep: this.state.currentStep
+	    animationHeight: this.state.animationHeight,
+	    animationWidth: this.state.animationWidth,
+	    currentStep: this.state.currentStep,
+	    positionPercentToPixel: this._positionPercentToPixel
 	});
     }
 
+    /** Create the progress bar */
     _createPB(){
-	
+
+//	console.log("Create PB animation width " + this.state.animationWidth);
+
+	if(this.state.animationWidth !== undefined && this.state.animationWidth !== null && this.state.animationHeight !== undefined && this.state.animationHeight !== null)  	
         return new ProgressBar({
-	    animationWidth:this.animationWidth,
-	    animationHeight: this.animationHeight,
+	    animationWidth:this.state.animationWidth,
+	    animationHeight: this.state.animationHeight,
 	    stepCount: this._stepCount(),
 	    currentStepAV: this.currentStepAV,
 	    getStepAnimation: this._getStepAnimation,
-	    stepLength: this.state.stepLength,
+	    stepLength: this.stepLength,
 	    onStepChange: this.props.onStepChange,
-	    key: 1
+	    key: 1,
 	});
+	else
+	    return undefined;
     }
     
-    /** Convert a position (x, y) in percentages in a position (x2, y2) in pixels 
+    /** Convert a position (x, y) in percentages of the animation area in a position (x2, y2) in pixels of the phone screen
      * x: horizontal position in percentages (=0 left edge, =1 right edge)
      * y: vertical position in percentages (=0 top, =1 bottom)
      * x2: corresponding horizontal position in pixel (=0 if centered)
      * y2: corresponding vertical position in pixel (=0 if centered)
      */
-    _positionPercentToPixel(x, y){
-	return [this.animationWidth * x,// - this.state.screenW/2,
-		this.animationHeight * y// - this.state.screenH/2
-	       ];
+    _positionPercentToPixel = (x, y) => {
+
+//	console.log("Animation : positionPercentToPixel, width/height: " + this.state.animationWidth + "/" + this.state.animationHeight);
+//	console.log("Animation : positionPercentToPixel, x/y: " + x + "/" + y);
+	
+	return [
+	    this.state.animationWidth * x + this.dLeft,
+	    this.state.animationHeight * y + this.dTop,
+	];
     }
 
     /** Set each displayed element at its original position */
     _initPositions(){
 
 //	console.log("animation _initposition called");
+
+//	console.log("this.state.de: " + this.state.de);
+//	console.log("this.state.de is null: ");
+//	console.log(this.state.de === null); 
+//	console.log(this.state.de === undefined);
 	
-        /* For each element */
-	for(var i = 0; i < this.state.de.length; i++){
-            
-	    var element = this.state.de[i];
-
-            /* Get its position in pixel (it is represented in percentage in the drill) */
-            var pixelPosition = this._positionPercentToPixel(this.state.drill.positions[0][i][0][0], this.state.drill.positions[0][i][0][1]);
-
-//	    console.log("animation _initposition elemid " + i + " at position pixel: " + pixelPosition + " %: " + this.state.drill.positions[0][i][0][0] + "/" + this.state.drill.positions[0][i][0][1]);
+	if(this.state.de !== undefined && this.state.de !== null){
 	    
-	    element.setPosition(pixelPosition[0], pixelPosition[1]);
+            /* For each element */
+	    for(var i = 0; i < this.state.de.length; i++){
+
+
+//		console.log("element: " + i);
+		
+		var element = this.state.de[i];
+
+
+		
+		/* Get its position in pixel (it is represented in percentage in the drill) */
+		var pixelPosition = this._positionPercentToPixel(
+		    this.state.drill.positions[0][i][0][0],
+		    this.state.drill.positions[0][i][0][1]
+		);
+
+//		console.log("pixelPosition:" + pixelPosition);
+		
+		element.setPosition(pixelPosition[0], pixelPosition[1]);
+	    }
 	}
 
+//	console.log("set step");
+	
 	this.setState({currentStep: 0}, () => {
-	    if(this.props.onStepChange != undefined)
-		this.props.onStepChange(0);
+	    if (this.props.onStepChange !== undefined && this.props.onStepChange !== null) this.props.onStepChange(0);
 	});
     }
 
+    /** Once we get the screen size, create the DisplayedElement used in the drill and set them to their initial position */
     componentDidMount(){
 
-	// If the current step is fixed by the parent
-	if(this.props.currentStep != undefined)
-	    this.setState({currentStep: this.props.currentStep})
-	
-        /* Get the dimension of the screen and then initialize the drill */
-	var {height, width} = Dimensions.get('window');
 
-        console.log("mount called: screen h/w: " + height + "/" + width);
+	var inputDrill = new Drill();
+	var initialStep = 0;
+
+//	console.log("animation component did mount");
+
+
+//	console.log("state.w/h: " + this.state.animationWidth + "/" + this.state.animationHeight);
+
+	// If the current step is fixed by the parent (used in the editor)
+	if (this.props.currentStep !== undefined && this.props.currentStep !== null) initialStep = this.props.currentStep;
         
-        this.setState({
-            screenH: height,
-            screenW: width
-        }, () => {this._initDrill();});
+	this.setState(
+	    {
+		drill: inputDrill,
+		currentStep: initialStep,
+	    },
+	    () => {
+		this.setState(
+		    {
+			de: this._createDE(),
+		    },
+		    () => {
+			/* Set all the elements to their initial positions */
+			this._initPositions();
+
+			this.pb = this._createPB();
+			this._initializeCuts();
+			
+			if(this.props.onStepChange !== undefined && this.props.onStepChange !== null)
+			    this.props.onStepChange(initialStep);
+			
+		    },
+		);
+	    },
+	);
+	
+
+
     }
 
     /** Play the whole drill */
@@ -289,14 +246,13 @@ class Animation extends React.Component{
 	/* Animation of the whole drill */
 	var completeSequence = [];
 
-        completeSequence.push(Animated.timing(
-            this.currentStepAV,
-            {
+	completeSequence.push(
+	    Animated.timing(this.currentStepAV, {
                 toValue: 0,
                 duration: 0,
-                easing: Easing.linear
-            }
-        ));
+		easing: Easing.linear,
+	    }),
+	);
 
 	/* For each step (start at step 1 as step 0 corresponds to the initial positions)*/
 	for(var stepId = 1; stepId < this._stepCount(); stepId++)
@@ -304,43 +260,44 @@ class Animation extends React.Component{
 
 	Animated.sequence(completeSequence).start();
 
-	if(this.props.onStepChange != undefined)
-	    this.props.onStepChange(this._stepCount());
+	if (this.props.onStepChange !== undefined && this.props.onStepChange !== null) this.props.onStepChange(this._stepCount());
         
     }
 
     /** Get back to the previous step */
     _previousStep(){
-        if(this.state.currentStep != 0){
-            
-	    this.setState({currentStep: this.state.currentStep-1}, () => {
-                
-                var stepArray = this._getStepAnimation(this.state.currentStep, false);
-                Animated.parallel(stepArray).start();
+	if (this.state.currentStep !== 0) {
+	    this.setState(
+		prevState => ({ currentStep: prevState.currentStep - 1 }),
+		() => {
+                    
+                    var stepArray = this._getStepAnimation(this.state.currentStep, false);
+                    Animated.parallel(stepArray).start();
 
-		if(this.props.onStepChange != undefined)
-		    this.props.onStepChange(this.state.currentStep);
-            });
+		    if (this.props.onStepChange !== undefined && this.props.onStepChange !== null) this.props.onStepChange(this.state.currentStep);
+		},
+	    );
         }
     }
 
     /** Go to the next step */
     _nextStep(){   
 
-        if(this.state.currentStep != this._stepCount() - 1){
-
-	    this.setState({currentStep: this.state.currentStep+1}, () => {
-                Animated.parallel(this._getStepAnimation(this.state.currentStep, true)).start();
-		
-		if(this.props.onStepChange != undefined)
-		    this.props.onStepChange(this.state.currentStep);
-            });
+	if (this.state.currentStep !== this._stepCount() - 1) {
+	    this.setState(
+		prevState => ({ currentStep: prevState.currentStep + 1 }),
+		() => {
+                    Animated.parallel(this._getStepAnimation(this.state.currentStep, true)).start();
+		    
+		    if (this.props.onStepChange !== undefined && this.props.onStepChange !== null) this.props.onStepChange(this.state.currentStep);
+		},
+	    );
         }
     }
     
     /** Returns the animation to a given step for all displayed elements 
-       The substeps are played if the animation is forward and if the elements moves at step stepId
-     */
+	The substeps are played if the animation is forward and if the elements moves at step stepId
+    */
     _getStepAnimation = (stepId, isForward) =>{
 
 	console.log("Animation: get animation: " + stepId);
@@ -351,52 +308,33 @@ class Animation extends React.Component{
 	var stepAnimation = [];
 
         /* The first animation in the sequence enables to update the current step */
-        stepAnimation.push(Animated.timing(
-            this.currentStepAV,
-            {
+	stepAnimation.push(
+	    Animated.timing(this.currentStepAV, {
                 toValue: stepId,
-                duration: this.state.stepLength,
-                easing: Easing.linear
-            }
-        ));
+                duration: this.stepLength,
+		easing: Easing.linear,
+		key: 0,
+	    }),
+	);
 
 	/** Change the opacity of the step dots */
-        if(this.pb != undefined)
-            stepAnimation = stepAnimation.concat(this.pb.getOpacityAnimation(stepId));
-
-//	console.log("Position in animation _getStepAnimation");
-//	for(var stepId2 = 0; stepId2 < this.state.drill.positions.length; stepId2++){
-//
-//	    console.log("step: " + stepId2);
-//	    for(var elemId2 = 0; elemId2 < this.state.drill.positions[stepId2].length; elemId2++){
-//
-//		console.log("\telem: " + elemId2);
-//
-//		if(this.state.drill.positions[stepId2][elemId2] == undefined)
-//		    console.log("\t\tundefined");
-//		else
-//		    for(var cutId2 = 0; cutId2 < this.state.drill.positions[stepId2][elemId2].length; cutId2++)
-//			console.log("\t\t cut " + cutId2 + ": " +  this.state.drill.positions[stepId2][elemId2][cutId2]);
-//	    }
-//	}
+	if (this.pb !== undefined && this.pb !== null) stepAnimation = stepAnimation.concat(this.pb.getOpacityAnimation(stepId));
         
 	/* For each displayed element */
-	for(var elemId = 0; elemId < this.state.drill.ids.length; elemId++){
-
-//	    console.log("elem id: " + elemId);
+	for (let elemId = 0; elemId < this.state.drill.ids.length; elemId += 1) {
 	    
             /* Get the position of the element at step stepId */
-            var nextPosition = this.state.drill.getPositionsAtStep(elemId, stepId, this.state.currentStep);//this.state.drill.positions[elemId][stepId];   
+	          console.log('elemId is ', elemId);
+	          console.log('stepId is ', stepId);
+	    const nextPosition = this.state.drill.getPositionsAtStep(elemId, stepId, this.state.currentStep); //this.state.drill.positions[elemId][stepId];
 
 	    /* The substeps are played only if the element moves at step stepId.
 	       Otherwise, we just move the element to its previous position without playing the substeps of this position */
-	    var playSubSteps = true;
-
-	    if(nextPosition == undefined || !isForward)
-		playSubSteps = false;
+	    let playSubSteps = true;
+	    if (nextPosition === undefined || nextPosition === null || !isForward) playSubSteps = false;
 	    
 	    /* If this element must change its position */
-	    if(nextPosition != undefined) {
+	    if (nextPosition !== undefined && nextPosition !== null) {
 
 		/* Animation of the element at step stepId */
 		var deStepAnimation = [];
@@ -415,26 +353,23 @@ class Animation extends React.Component{
 			var pixelPosition = this._positionPercentToPixel(nextPosition[substep][0], nextPosition[substep][1]);
 
 			/* Get the corresponding animation */
-			var anim = currentDE.getAnimation(pixelPosition[0], pixelPosition[1], this.state.stepLength/substepCount);
+			var anim = currentDE.getAnimation(pixelPosition[0], pixelPosition[1], this.stepLength/substepCount);
 			
 			deStepAnimation.push(anim);
 		    }
-		}
+		} else {
 
-		/* If the sub steps must not be played, just move the element to its last position */
-		else{
-
-                    if(stepId == 3 && elemId == 11){
-                        console.log("");
-                    }
-                        
+		    /* If the sub steps must not be played, just move the element to its last position */
 		    currentDE = this.state.de[elemId];
 
 		    /* Get the position of the element at this substep */
-		    pixelPosition = this._positionPercentToPixel(nextPosition[substepCount-1][0], nextPosition[substepCount-1][1]);
+		    pixelPosition = this._positionPercentToPixel(
+			nextPosition[substepCount - 1][0],
+			nextPosition[substepCount - 1][1],
+		    );
 
 		    /* Get the corresponding animation */
-		    anim = currentDE.getAnimation(pixelPosition[0], pixelPosition[1], this.state.stepLength);
+		    anim = currentDE.getAnimation(pixelPosition[0], pixelPosition[1], this.stepLength);
 		    
 		    deStepAnimation.push(anim);
 		}
@@ -444,81 +379,170 @@ class Animation extends React.Component{
 	}
 
         return stepAnimation; 
-    }
+    };
 
     _display(item){
-        if(item != undefined)
-            return item.render();
-        else
-            return <View/>;
-    }
-
-    
-    componentDidUpdate(){
-//	console.log("Call component did update");
-
-	if(this.state.de == undefined){
-	    this.setState({
-		de:this._createDE()
-	    }, () => {
-	    
-		/* Set all the elements to their initial positions */
-		this._initPositions();
-		
-		this._initializeCuts();
-		this.pb = this._createPB();
-	    });
-	}
+	if (item !== undefined && item !== null) return item.render();
+	else return <View />;
     }
     
     render(){
 
-//	console.log("render a, step count: " + this.state.drill.positions.length);
+	//	console.log("render a, step count: " + this.state.drill.positions.length);
 
-//	if(this.state.drill.positions.length > 0 && this.state.drill.positions[0] != undefined)
-//	console.log("render a2, elem count: " + this.state.drill.positions[0].length);
+	//	if(this.state.drill.positions.length > 0 && this.state.drill.positions[0] != undefined)
+	//	console.log("render a2, elem count: " + this.state.drill.positions[0].length);
 
-//	if(this.state.drill.positions.length > 0)
-//	    console.log("\telem count: " + this.state.drill.positions[0].length);
-//        console.log("render h/w: " + this.animationHeight + "/" + this.animationWidth);
+	//	if(this.state.drill.positions.length > 0)
+	//	    console.log("\telem count: " + this.state.drill.positions[0].length);
+	//        console.log("render h/w: " + this.state.animationHeight + "/" + this.state.animationWidth);
 	this.cutsArray = [];
 
-	if(this.cuts != undefined){
+	if (this.cuts !== undefined && this.cuts !== null) {
 	    this.cuts.props.currentStep = Math.floor(this.state.currentStep);
 	    this.cutsArray.push(this.cuts);
 	}
 
-//        console.log("animationH/W: " + this.animationWidth + "/" + this.animationHeight);
+	//        console.log("animationH/W: " + this.state.animationWidth + "/" + this.state.animationHeight);
 
 	
 	return(
-	    <View style={[styles.main_container, {height: this.animationHeight},
-                          {width: this.animationWidth}]}>
-              
-	      {this._display(this.cuts)}
-	    {this.state.de == undefined? <View/>:this.state.de.map(this._display)}
-	      <Text>Step {Math.round(this.state.currentStep)+1}/{this.state.drill.positions.length}</Text>
-	      <View style={{flex: 0.1}}/>
-	      <Button style={{flex: 1}} title=' < ' onPress={() => this._previousStep()}/>
-	      <View style={{flex: 0.1}}/>
-	      <Button style={{flex: 1}} title='Lancer' onPress={() => this._restart()}/>
-	      <View style={{flex: 0.1}}/>
-	      <Button  title=' > ' style={{flex: 1}} onPress={() => this._nextStep()}/>
-              {this._display(this.pb)}
+		<View style={[styles.mainContainer, { height: this.state.animationHeight }, { width: this.state.animationWidth }]}>
+		
+	    {this.props.editable?this._display(this.cuts):undefined}
+            {this.state.de === undefined || this.state.de === null ? <View/>:this.state.de.map(this._display)}
+		<View style={{flex: 0.1}}/>
+		<Button style={{ flex: 1 }} title=" < " onPress={() => this._previousStep()} />
+		<View style={{flex: 0.1}}/>
+		<Button style={{ flex: 1 }} title="Lancer" onPress={() => this._restart()} />
+		<View style={{flex: 0.1}}/>
+		<Button title=" > " style={{ flex: 1 }} onPress={() => this._nextStep()} />
+		{this._display(this.pb)}
 	    </View>
 	);
+    }
+
+    /** Used to update the animation when a modification is made through the editor */
+    componentDidUpdate(){
+
+//	console.log("animation component did update");
+	
+	if ((this.state.de === undefined || this.state.de === null) && this.state.drill !== undefined && this.state.drill !== null) {
+	    this.setState(
+		{
+		    de: this._createDE(),
+		},
+		() => {
+
+//		    console.log("finished updatding de");
+		    
+		    /* Set all the elements to their initial positions */
+		    this._initPositions();
+		    
+		    this._initializeCuts();
+		    this.pb = this._createPB();
+		},
+	    );
+	}
+    }
+
+    /** Used to update the animation when a modification is made through the editor */
+    static getDerivedStateFromProps(props, state) {
+
+//		console.log("animation derived state called");
+	
+	// Test if the drill has changed
+	var isEqual = true;
+
+//	console.log("state w/h: " + state.animationWidth + "/"+ state.animationHeight + " props w/h: " + props.animationWidth + "/" + props.height);
+	
+	if(props.width !== state.animationWidth || props.height !== state.animationHeight)
+	    isEqual = false;
+
+	if (isEqual && props.drill !== undefined && state.drill !== undefined) {
+
+	    var stepId = 0;
+	    var elemId = 0;
+	    var cutId = 0;
+
+	    // Get all the positions in props and stats
+	    var pPositions = props.drill.positions;
+	    var sPositions = state.drill.positions;
+
+	    // If there is not the same number of steps
+	    if (pPositions.length !== sPositions.length) isEqual = false;
+
+	    
+
+	    // While no difference has been found and all the positions have not been tested
+	    while(stepId < pPositions.length && isEqual){
+		if (pPositions.length !== sPositions.length) isEqual = false;
+
+		
+		if (isEqual && pPositions[stepId].length !== sPositions[stepId].length) isEqual = false;
+
+		if(isEqual && pPositions[stepId].length > elemId){
+		    var pUndefined = pPositions[stepId][elemId] === undefined || pPositions[stepId][elemId] === null;
+		    var sUndefined = sPositions[stepId][elemId] === undefined || sPositions[stepId][elemId] === null;
+
+		    var pSize = -1;
+		    var sSize = -1;
+
+		    if (!pUndefined) pSize = pPositions[stepId][elemId].length;
+
+		    if (!sUndefined) sSize = sPositions[stepId][elemId].length;
+
+		    // If the position is different
+		    if (
+			pSize !== sSize ||
+			    (pSize > 0 &&
+			     (pPositions[stepId][elemId][cutId][0] !== sPositions[stepId][elemId][cutId][0] ||
+			      pPositions[stepId][elemId][cutId][1] !== sPositions[stepId][elemId][cutId][1]))
+		    )
+			isEqual = false;
+		}
+
+		// Go to the next position
+		if (pPositions[stepId][elemId] === undefined || pPositions[stepId][elemId] === null) {
+		    if (pPositions[stepId].length > elemId + 1) elemId++;
+		    else{
+			stepId++;
+			elemId = 0;
+			cutId = 0;
+		    }
+		} else if (pPositions[stepId][elemId].length > cutId + 1) cutId++;
+		else if(pPositions[stepId].length > elemId + 1){
+		    elemId++;
+		    cutId = 0;
+		} else {
+		    stepId++;
+		    elemId = 0;
+		    cutId = 0;
+		}
+		//		console.log(stepId + "/" + elemId + "/" + cutId);
+	    }
+	}
+
+	if (isEqual) return null;
+	else{
+	    return {
+		drill: props.drill,
+		de: undefined,
+		animationWidth: props.width,
+		animationHeight: props.height
+	    };
+	}
     }
 }
 
 const styles = StyleSheet.create({
 
-    main_container: {
+    mainContainer: {
 	marginTop: 40,
-	alignItems: 'center',
+	alignItems: 'flex-start',
 	flexDirection: 'row',
 	justifyContent: 'center',
-	alignItems: 'flex-start',
-        backgroundColor: 'white'
+	backgroundColor: 'white',
     },
 });
 

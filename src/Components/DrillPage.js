@@ -29,10 +29,10 @@ class DrillPage extends React.Component {
         return (
             <View style={styles.main_container}>
 		<View style={styles.content_container}>
-                {/*	        <AnimationEditor animation={currentStep.animation} heightRatio={stepContainerFlex/(contentContainerFlex+stepContainerFlex)} widthRatio={1} editable={true}/>	*/}
+                	        <AnimationEditor animation={currentStep.animation} heightRatio={stepContainerFlex/(contentContainerFlex+stepContainerFlex)} widthRatio={1} editable={true}/>	
 
-	        <Animation animation={currentStep.animation} heightRatio={stepContainerFlex/(contentContainerFlex+stepContainerFlex)} widthRatio={1} editable={false} drill={drill}/> 
-{/*          <WebView source={{ uri: 'https://www.youtube.com/embed/oN1bzPCKkGE' }} style={{ marginTop: 20 }} />
+{/*	        <Animation animation={currentStep.animation} heightRatio={stepContainerFlex/(contentContainerFlex+stepContainerFlex)} widthRatio={1} editable={false} drill={drill}/> 
+          <WebView source={{ uri: 'https://www.youtube.com/embed/oN1bzPCKkGE' }} style={{ marginTop: 20 }} />
                    currentStep.animation ? <Animation animation={currentStep.animation}/>
                    : currentStep.video ? <Text>Soon a Video here</Text>
                    : currentStep.webview ? <Text>Soon a Webpage here</Text>

@@ -1,49 +1,49 @@
-import Drill from './Drill.js'
+import Drill from './Drill.js';
 
 // Each drill has an attribute "positions" which is a 4D array:
 // - positions[elemId][stepId][subStepId][coordinateId]
-// 
+//
 // Remark1: positions[0][elemId] is the initial position which must be defined for each element
 // Remark2: positions[stepId][elemId] is undefined if  element i position does not change between steps stepId-1 and stepId
-class DrillMenageATrois extends Drill{
+class DrillMenageATrois extends Drill {
+  constructor() {
+    super();
 
-    constructor(){
+    // Define the shape/type of the elements displayed in this drill
+    var p1Id = 'offense';
+    var p2Id = 'defense';
+    var p3Id = 'offense';
+    var discId = 'disc';
 
-	super();
+    this.ids = [p1Id, p2Id, p3Id, discId];
+    this.texts = ['1', '2', '3', ''];
 
-	// Define the shape/type of the elements displayed in this drill
-	var p1Id = "offense";
-	var p2Id = "defense";
-	var p3Id = "offense";
-	var discId = "disc";
+    var stepCount = 3;
 
-	this.ids = [p1Id, p2Id, p3Id, discId];
-	this.texts = ["1", "2", "3", ""];
+    this.positions = new Array(stepCount);
 
-	var stepCount = 3;
+    // Initial position (in percentage of the available space for the animation)
+    // e.g.: [[.45, .03]] means
+    //   - at 45% of the screen starting from the left
+    //   - at  3% of the screen starting from the top
+    this.positions[0] = new Array(this.texts.length);
+    this.positions[0][0] = [[0.45, 0.06]];
+    this.positions[0][1] = [[0.45, 0.15]];
+    this.positions[0][2] = [[0.45, 0.45]];
+    this.positions[0][3] = [[0.42, 0.11]];
 
-	this.positions = new Array(stepCount);
+    // Step 1 - p1 throws the disc
+    this.positions[1] = new Array(this.texts.length);
+    this.positions[1][3] = [
+      [0.3, 0.3],
+      [0.42, 0.43],
+    ];
 
-	// Initial position (in percentage of the available space for the animation)
-	// e.g.: [[.45, .03]] means
-	//   - at 45% of the screen starting from the left
-	//   - at  3% of the screen starting from the top
-	this.positions[0] = new Array(this.texts.length);
-	this.positions[0][0] = [[.45, .06]]; 
-	this.positions[0][1] = [[.45, .15]];
-	this.positions[0][2] = [[.45, .45]];
-	this.positions[0][3] = [[.42, .11]];
-
-	// Step 1 - p1 throws the disc
-	this.positions[1] = new Array(this.texts.length);
-	this.positions[1][3] = [[.30, .30], [.42, .43]];
-	
-	// Step 2 - p1 defends, p2 receives
-	this.positions[2] = new Array(this.texts.length);
-	this.positions[2][0] = [[.45, .36]]; 
-	this.positions[2][1] = [[.45, .06]];
-
-    }
+    // Step 2 - p1 defends, p2 receives
+    this.positions[2] = new Array(this.texts.length);
+    this.positions[2][0] = [[0.45, 0.36]];
+    this.positions[2][1] = [[0.45, 0.06]];
+  }
 }
 
 export default DrillMenageATrois;

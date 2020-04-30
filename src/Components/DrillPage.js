@@ -1,44 +1,45 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, FlatList, Image, TouchableOpacity} from 'react-native';
+import { StyleSheet, View, Text, FlatList, Image, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 import Animation from './Animation';
 import AnimationEditor from './AnimationEditor';
 import { WebView } from 'react-native-webview';
 import DrillSquare from './DrillSquare';
 
-        
 const contentContainerFlex = 6;
 const stepContainerFlex = 4;
 
 class DrillPage extends React.Component {
-    
-    
-    constructor(props) {
-        super(props);
-        this.state = {
-            currentStep: props.route.params.drill.steps[0],
-        };
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentStep: props.route.params.drill.steps[0],
+    };
+  }
 
+  render() {
+    //        const drill = this.props.route.params.drill;
+    const drill = new DrillSquare();
+    const currentStep = this.state.currentStep;
 
-    render() {
-	//        const drill = this.props.route.params.drill;
-	const drill = new DrillSquare();
-        const currentStep = this.state.currentStep;
+    return (
+      <View style={styles.main_container}>
+        <View style={styles.content_container}>
+          <AnimationEditor
+            animation={currentStep.animation}
+            heightRatio={stepContainerFlex / (contentContainerFlex + stepContainerFlex)}
+            widthRatio={1}
+            editable
+          />
 
-        return (
-            <View style={styles.main_container}>
-		<View style={styles.content_container}>
-                	        <AnimationEditor animation={currentStep.animation} heightRatio={stepContainerFlex/(contentContainerFlex+stepContainerFlex)} widthRatio={1} editable={true}/>	
-
-{/*	        <Animation animation={currentStep.animation} heightRatio={stepContainerFlex/(contentContainerFlex+stepContainerFlex)} widthRatio={1} editable={false} drill={drill}/> 
+          {/*	        <Animation animation={currentStep.animation} heightRatio={stepContainerFlex/(contentContainerFlex+stepContainerFlex)} widthRatio={1} editable={false} drill={drill}/>
           <WebView source={{ uri: 'https://www.youtube.com/embed/oN1bzPCKkGE' }} style={{ marginTop: 20 }} />
                    currentStep.animation ? <Animation animation={currentStep.animation}/>
                    : currentStep.video ? <Text>Soon a Video here</Text>
                    : currentStep.webview ? <Text>Soon a Webpage here</Text>
                    : <Text>No visual content for this step</Text> */}
-              </View>
-{/*              <View style={styles.steps_list}>
+        </View>
+        {/*              <View style={styles.steps_list}>
                 <FlatList
             data={drill.steps}
             // keyExtractor={(item) => item.id.toString()}

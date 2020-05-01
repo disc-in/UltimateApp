@@ -819,7 +819,7 @@ export default {
       intensity: Intensities.MODERATE,
       goals: [GoalsFrisbee.DEFENSE, GoalsFrisbee.PLAY, GoalsFrisbee.COMMUNICATION],
       seasonTiming: SeasonTimings.ANYTIME,
-      level: Levels.INTERMEDIATE,
+      level: Levels.BEGINNER,
       steps: [
         {
           id: 1,
@@ -981,7 +981,7 @@ export default {
       intensity: Intensities.LOW,
       goals: [GoalsFrisbee.THROWING, GoalsFrisbee.COMMUNICATION, GoalsFrisbee.PLAY],
       seasonTiming: SeasonTimings.ANYTIME,
-      level: Levels.INTERMEDIATE,
+      level: Levels.BEGINNER,
       steps: [
         {
           id: 1,
@@ -1008,7 +1008,7 @@ export default {
       intensity: Intensities.MODERATE,
       goals: [GoalsFrisbee.THROWING, GoalsFrisbee.HANDLING],
       seasonTiming: SeasonTimings.ANYTIME,
-      level: Levels.INTERMEDIATE,
+      level: Levels.ADVANCED,
       steps: [
         {
           id: 1,
@@ -1089,7 +1089,7 @@ export default {
       intensity: Intensities.LOW,
       goals: [GoalsFrisbee.DEFENSE, GoalsFrisbee.PLAY, GoalsFrisbee.COMMUNICATION],
       seasonTiming: SeasonTimings.ANYTIME,
-      level: Levels.INTERMEDIATE,
+      level: Levels.BEGINNER,
       steps: [
         {
           id: 1,
@@ -1116,7 +1116,7 @@ export default {
       intensity: Intensities.LOW,
       goals: [GoalsFrisbee.THROWING, GoalsFrisbee.DEFENSE, GoalsFrisbee.BREAK],
       seasonTiming: SeasonTimings.ANYTIME,
-      level: Levels.INTERMEDIATE,
+      level: Levels.BEGINNER,
       steps: [
         {
           id: 1,
@@ -1143,7 +1143,7 @@ export default {
       intensity: Intensities.MODERATE,
       goals: [GoalsFrisbee.CUTTING],
       seasonTiming: SeasonTimings.ANYTIME,
-      level: Levels.INTERMEDIATE,
+      level: Levels.BEGINNER,
       steps: [
         {
           id: 1,
@@ -1197,7 +1197,7 @@ export default {
       intensity: Intensities.MODERATE,
       goals: [GoalsFrisbee.THROWING, GoalsFrisbee.CUTTING],
       seasonTiming: SeasonTimings.ANYTIME,
-      level: Levels.INTERMEDIATE,
+      level: Levels.ADVANCED,
       steps: [
         {
           id: 1,
@@ -1224,7 +1224,7 @@ export default {
       intensity: Intensities.HIGH,
       goals: [GoalsFrisbee.THROWING],
       seasonTiming: SeasonTimings.ANYTIME,
-      level: Levels.INTERMEDIATE,
+      level: Levels.BEGINNER,
       steps: [
         {
           id: 1,
@@ -1330,8 +1330,18 @@ export default {
         "This training session aims at practicing your mark skills. Don't be broken to easily, generate dangerous passes",
       drills: [5, 1004, 1005, 2003],
     },
+    {
+      id: 5,
+      illustrationType: 'Martin',
+      title: 'Coed 2 Long v2',
+      image:
+        'https://cdn3.sportngin.com/attachments/photo/be7e-106813275/Screen_Shot_2018-07-19_at_3.53.39_PM_large.png',
+      description:
+        "This training session aims at practicing your mark skills. Don't be broken to easily, generate dangerous passes",
+      drills: [6, 1005, 1006, 2003],
+    },
   ],
-  blocs: [
+  programs: [
     {
       id: 1,
       illustrationType: '** Ultimate App **',

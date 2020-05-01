@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, TouchableOpacity, View, Text, FlatList } from 'react-native';
 
-import { connect } from 'react-redux';
 import theme from '../../styles/theme.style';
 
 const Program = props => {

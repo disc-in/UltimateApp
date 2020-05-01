@@ -151,22 +151,49 @@ class DrillCuts extends React.Component {
         <Svg style={[StyleSheet.absoluteFill]} height="100%" width="100%" key={cut.key}>
           <Line x1={cut.x0} y1={cut.y0} x2={cut.x1} y2={cut.y1} stroke="green" strokeWidth="2" strokeDasharray="5, 5" />
           <Circle
+		cx={(cut.x0 + cut.x1) / 2}
+		cy={(cut.y0 + cut.y1) / 2}
+		r={this.discRadius / 2}
+		fill="white"
+		stroke="green"
+		strokeWidth={this.discRadius / 12}
+		strokeDasharray="3, 3"
+		    />
+		    <Circle
             cx={cut.x1}
             cy={cut.y1}
             r={this.discRadius / 2}
             fill="white"
             stroke="green"
-            strokeWidth={this.discRadius / 8}
+		strokeWidth={this.discRadius / 12}
             strokeDasharray="3, 3"
           />
         </Svg>
       );
-    } else
+	}
+        else
       return (
         <Svg style={[StyleSheet.absoluteFill]} height="100%" width="100%">
           <Line x1={cut.x0} y1={cut.y0} x2={cut.x1} y2={cut.y1} stroke="green" strokeWidth="2" strokeDasharray="5, 5" />
           <Line x1={cut.x1} y1={cut.y1} x2={cut.x2} y2={cut.y2} stroke="green" strokeWidth="2" strokeDasharray="5, 5" />
-          <Circle cx={cut.x2} cy={cut.y2} r={this.discRadius} fill="green" />
+		    <Circle
+		cx={cut.x1}
+		cy={cut.y1}
+		r={this.discRadius / 2}
+		fill="white"
+		stroke="green"
+		strokeWidth={this.discRadius / 12}
+		strokeDasharray="3, 3"
+		    />
+		    <Circle
+		cx={cut.x2}
+		cy={cut.y2}
+		r={this.discRadius / 2}
+		fill="white"
+		stroke="green"
+		strokeWidth={this.discRadius / 12}
+		strokeDasharray="3, 3"
+		    />
         </Svg>
       );
   };
@@ -174,12 +201,25 @@ class DrillCuts extends React.Component {
   render() {
     return (
       <View key="1" style={[{ position: 'absolute' }]} height="100%" width="100%">
-        {this.cuts.length >= this.props.currentStep && this.cuts[this.props.currentStep] !== undefined
+		{this.cuts.length >= this.props.currentStep && this.cuts[this.props.currentStep] !== undefined && this.cuts[this.props.currentStep] !== null
           ? this.cuts[this.props.currentStep].map(this._displayCut)
           : undefined}
       </View>
     );
   }
-}
+  log(){
+
+    for(var stepId = 0; stepId < this.cuts.length; stepId++){
+
+      console.log("step " + stepId);
+
+      for(var cutId = 0; cutId < this.cuts[stepId].length; cutId++)
+        console.log("\tcut " + cutId + "\n\t(" + this.cuts[stepId][cutId].x0 + "/" + this.cuts[stepId][cutId].y0 + ")"
+	  + "\n\t(" + this.cuts[stepId][cutId].x1 + "/" + this.cuts[stepId][cutId].y1 + ")"
+	  + "\n\t(" + this.cuts[stepId][cutId].x2 + "/" + this.cuts[stepId][cutId].y2 + ")"
+	 );
+      }
+  }
+}                         
 
 export default DrillCuts;

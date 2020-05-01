@@ -94,6 +94,7 @@ class Animation extends React.Component {
 
   /** Create the cuts associated to each step of the drill */
   _initializeCuts() {
+    console.log("initialize cut");
     this.cuts = new DrillCuts({
       drill: this.state.drill,
       animationHeight: this.state.animationHeight,
@@ -101,6 +102,7 @@ class Animation extends React.Component {
       currentStep: this.state.currentStep,
       positionPercentToPixel: this._positionPercentToPixel,
     });
+    this.cuts.log();
   }
 
   /** Create the progress bar */
@@ -141,24 +143,38 @@ class Animation extends React.Component {
 
   /** Set each displayed element at its original position */
   _initPositions() {
-    //	console.log("animation _initposition called");
+	this._setPositions(0);
+    }
+
+    _setCurrentPositions(){
+	this._setPositions(this.state.currentStep);
+    }
+
+    /** Set each displayed element at its position at a given step */
+    _setPositions(step){
+
+	console.log("animation _setPositions(" + step + ") called");
 
     //	console.log("this.state.de: " + this.state.de);
     //	console.log("this.state.de is null: ");
     //	console.log(this.state.de === null);
     //	console.log(this.state.de === undefined);
+	var intStep = Math.ceil(step);
+
+	console.log("intStep: " + intStep);
 
     if (this.state.de !== undefined && this.state.de !== null) {
       /* For each element */
       for (var i = 0; i < this.state.de.length; i++) {
-        //		console.log("element: " + i);
+        console.log("element: " + i);
 
         var element = this.state.de[i];
 
+	var iPositions = this.state.drill.getPositionsAtStep(i, intStep);
         /* Get its position in pixel (it is represented in percentage in the drill) */
         var pixelPosition = this._positionPercentToPixel(
-          this.state.drill.positions[0][i][0][0],
-          this.state.drill.positions[0][i][0][1],
+            iPositions[0][0],
+	    iPositions[0][1]
         );
 
         //		console.log("pixelPosition:" + pixelPosition);
@@ -169,8 +185,8 @@ class Animation extends React.Component {
 
     //	console.log("set step");
 
-    this.setState({ currentStep: 0 }, () => {
-      if (this.props.onStepChange !== undefined && this.props.onStepChange !== null) this.props.onStepChange(0);
+    this.setState({ currentStep: intStep }, () => {
+      if (this.props.onStepChange !== undefined && this.props.onStepChange !== null) this.props.onStepChange(intStep);
     });
   }
 
@@ -354,7 +370,7 @@ class Animation extends React.Component {
   }
 
   render() {
-    //	console.log("render a, step count: " + this.state.drill.positions.length);
+    // console.log("render a");
 
     //	if(this.state.drill.positions.length > 0 && this.state.drill.positions[0] != undefined)
     //	console.log("render a2, elem count: " + this.state.drill.positions[0].length);
@@ -363,6 +379,19 @@ class Animation extends React.Component {
     //	    console.log("\telem count: " + this.state.drill.positions[0].length);
     //        console.log("render h/w: " + this.state.animationHeight + "/" + this.state.animationWidth);
     this.cutsArray = [];
+//  if(this.state.drill !== undefined && this.state.drill !== null){
+//    console.log("drill a1: ");
+//   this.state.drill.log()
+//}
+//else
+//    console.log("drill a2: " + this.state.drill);
+
+//  if(this.cuts !== undefined && this.cuts !== null){
+//    console.log("cuts a1: ");
+//    this.cuts.log();
+//  }
+//  else
+//    console.log("cuts a2: " + this.cuts);
 
     if (this.cuts !== undefined && this.cuts !== null) {
       this.cuts.props.currentStep = Math.floor(this.state.currentStep);
@@ -397,6 +426,10 @@ class Animation extends React.Component {
       this.state.drill !== undefined &&
       this.state.drill !== null
     ) {
+
+      this.currentStepAV.addListener(progress => {
+        this.setState({currentStep: progress.value});
+      });
       this.setState(
         {
           de: this._createDE(),
@@ -405,7 +438,7 @@ class Animation extends React.Component {
           //		    console.log("finished updatding de");
 
           /* Set all the elements to their initial positions */
-          this._initPositions();
+          this._setCurrentPositions();
 
           this._initializeCuts();
           this.pb = this._createPB();

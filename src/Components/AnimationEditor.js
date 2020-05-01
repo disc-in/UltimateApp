@@ -172,12 +172,12 @@ class AnimationEditor extends React.Component {
   }
 
   moveElement = (element, xDelta, yDelta) => {
+
     console.log('Animation editor: in move element xD/yD: ' + xDelta + '/' + yDelta);
 
     console.log('currentStep: ' + this.currentStep + ' ceil: ' + Math.ceil(this.currentStep));
 
     var currentPosition = this.state.drill.getPositionsAtStep(element.props.eId, Math.ceil(this.currentStep));
-    console.log('currentPosition is ', currentPosition);
     currentPosition = currentPosition[0];
     var xDeltaPercent = xDelta / (this.state.width * this.wRatio);
     var yDeltaPercent = yDelta / (this.state.height * this.hRatio);

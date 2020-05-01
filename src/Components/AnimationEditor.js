@@ -172,7 +172,6 @@ class AnimationEditor extends React.Component {
   }
 
   moveElement = (element, xDelta, yDelta) => {
-
     console.log('Animation editor: in move element xD/yD: ' + xDelta + '/' + yDelta);
 
     console.log('currentStep: ' + this.currentStep + ' ceil: ' + Math.ceil(this.currentStep));

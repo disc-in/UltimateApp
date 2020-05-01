@@ -237,6 +237,21 @@ class AnimationEditor extends React.Component {
     else return undefined;
   }
 
+    addStep = () => {
+        
+        // Add the element with its initial position
+        var newDrill = this._copyDrill();
+
+        newDrill.addStep();
+
+        this.setState({ drill: newDrill });
+
+    }
+
+    displayStepDescription = () => {
+        // TODO
+    }
+
   render() {
     console.log('render AE');
     console.log('this.currentStep: ' + this.currentStep);
@@ -252,7 +267,9 @@ class AnimationEditor extends React.Component {
           height={this.state.height === undefined ? 300 : this.state.height * this.hRatio}
           width={this.state.width === undefined ? 300 : this.state.width * this.wRatio}
           dTop={this.state.dTop}
-          lTop={this.state.lTop}
+        lTop={this.state.lTop}
+        onStepChange={this.displayStepDescription}
+        onStepAdded={this.addStep}
           currentStepAV={this.currentStepAV}
         />
 

@@ -122,7 +122,9 @@ class Animation extends React.Component {
         currentStepAV: this.currentStepAV,
         getStepAnimation: this._getStepAnimation,
         stepLength: this.stepLength,
-        onStepChange: this.props.onStepChange,
+          onStepChange: this.props.onStepChange,
+          onStepAdded: this.props.onStepAdded,
+          editable:this.props.editable,
         key: 1,
       });
     else return undefined;

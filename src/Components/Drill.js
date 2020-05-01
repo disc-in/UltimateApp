@@ -61,6 +61,11 @@ class Drill {
     //	console.log("positions after update: " + this.positions);
   }
 
+    /** Add a step to the drill */
+    addStep(){
+        this.positions.push(new Array(this.elemCount()));
+    }
+
   log() {
     if (this.positions !== undefined && this.positions !== null) {
       /* For each step */

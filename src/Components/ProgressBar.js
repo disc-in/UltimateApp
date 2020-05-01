@@ -24,111 +24,174 @@ class ProgressBar extends React.Component {
       if (i === 0) this.dotsOpacity.push(new Animated.Value(1));
       else this.dotsOpacity.push(new Animated.Value(0));
 
-    // Horizontal position of each dot
-    this.progressBarDots = [];
+      // Horizontal position of each dot
+      this.progressBarDots = [];
 
-    // Width of the progress bar
-    this.progressBarWidth = this.props.animationWidth - 40;
+      // Width of the progress bar
+      this.progressBarWidth = this.props.animationWidth - 40;
 
-    console.log('Progress bar width: ' + this.progressBarWidth);
+      console.log('Progress bar width: ' + this.progressBarWidth);
 
-    var stepWidth = this.progressBarWidth / (this.props.stepCount - 1);
+      var stepWidth = this.progressBarWidth / (this.props.stepCount - 1);
 
-    //        if(this.props.animationWidth > 50)
-    // Interpolation of the current step which enables to get the current progress bar width
-    this.dynamiqueCurrentStep = this.props.currentStepAV.interpolate({
-      inputRange: [0, 1],
-      outputRange: [0, stepWidth],
-    });
+      // If the bar is in the editor, there is an additional button to add a step
+      if(this.props.editable){
+          stepWidth = this.progressBarWidth / (this.props.stepCount);
+          this.progressBarWidth -= stepWidth;
+      }
 
-    // Set the horizontal position in pixels of each dot on the progress bar
-    for (i = 0; i < this.props.stepCount; i++) {
-      this.progressBarDots = this.appendObjTo(this.progressBarDots, {
-        key: i,
-        left: 10 + i * stepWidth,
+      //        if(this.props.animationWidth > 50)
+      // Interpolation of the current step which enables to get the current progress bar width
+      this.dynamiqueCurrentStep = this.props.currentStepAV.interpolate({
+          inputRange: [0, 1],
+          outputRange: [0, stepWidth],
       });
-    }
 
-    // Contains the graphical components in the progress bar
-    this.progressBarComponents = [];
+      // Set the horizontal position in pixels of each dot on the progress bar
+      for (i = 0; i < this.props.stepCount; i++) {
+          this.progressBarDots = this.appendObjTo(this.progressBarDots, {
+              key: i,
+              left: 10 + i * stepWidth,
+          });
+      }
 
-    /* Add the gray dots */
-    this.progressBarComponents = this.progressBarDots.map(item => (
-      <View style={[styles.dot, { left: item.left }, { top: this.props.animationHeight - 30 }]} key={item.key} />
-    ));
+      // Contains the graphical components in the progress bar
+      this.progressBarComponents = [];
 
-    /* Add the gray bar */
-    this.progressBarComponents.push(
-      <Animated.View
-        style={[
-          styles.progressBar,
-          { top: this.props.animationHeight - 30 + 6 },
-          { width: this.progressBarWidth },
-          { left: 20 },
-        ]}
-        key={3 * this.progressBarComponents.length + 1}
-      />,
-    );
+      /* Add the gray dots */
+      this.progressBarComponents = this.progressBarDots.map(item => (
+              <View style={[styles.dot, { left: item.left }, { top: this.props.animationHeight - 30 }]} key={item.key} />
+      ));
 
-    /* Add the blue dots */
-    this.progressBarComponents = this.progressBarComponents.concat(
-      this.progressBarDots.map(item => (
-        <Animated.View
+      /* Add the gray bar */
+      this.progressBarComponents.push(
+              <Animated.View
           style={[
-            styles.activatedDot,
-            { opacity: this.dotsOpacity[item.key] },
-            { left: this.progressBarDots[item.key].left },
-            { top: this.props.animationHeight - 30 },
+              styles.progressBar,
+              { top: this.props.animationHeight - 30 + 6 },
+              { width: this.progressBarWidth },
+              { left: 20 },
           ]}
-          key={this.progressBarDots[item.key].key + this.progressBarDots.length}
-        />
-      )),
-    );
+          key={3 * this.progressBarComponents.length + 1}
+              />,
+      );
 
-    /* Add the step numbers */
-    this.progressBarComponents = this.progressBarComponents.concat(
-      this.progressBarDots.map(item => (
-        <Text
-          style={[{ position: 'absolute' }, { left: item.left + 4 }, { top: this.props.animationHeight - 30 - 19 }]}
-          key={item.key + 2 * this.progressBarDots.length}
-        >
-          {item.key + 1}
-        </Text>
-      )),
-    );
+      /* Add the blue dots */
+      this.progressBarComponents = this.progressBarComponents.concat(
+          this.progressBarDots.map(item => (
+                  <Animated.View
+              style={[
+                  styles.activatedDot,
+                  { opacity: this.dotsOpacity[item.key] },
+                  { left: this.progressBarDots[item.key].left },
+                  { top: this.props.animationHeight - 30 },
+              ]}
+              key={this.progressBarDots[item.key].key + this.progressBarDots.length}
+                  />
+          )),
+      );
 
-    /* Add the blue bar */
-    this.progressBarComponents.push(
-      <Animated.View
-        style={[
-          styles.activatedProgressBar,
-          { top: this.props.animationHeight - 30 + 6 },
-          { width: this.dynamiqueCurrentStep },
-          { left: 20 },
-        ]}
-        key={3 * this.progressBarComponents.length}
-      />,
-    );
+      /* Add the step numbers */
+      this.progressBarComponents = this.progressBarComponents.concat(
+          this.progressBarDots.map(item => (
+                  <Text
+               style={[{ position: 'absolute' }, 
+                       { left: item.left + 4 },
+                       { top: this.props.animationHeight - 30 - 19 }
+                      ]}
+              key={item.key + 2 * this.progressBarDots.length}
+                  >
+                  {item.key + 1}
+              </Text>
+          )),
+      );
 
-    /* Add the objects used to detect the clicks on the dots */
-    //        if(this.props.animationWidth > 50)
-    this.progressBarComponents = this.progressBarComponents.concat(
-      this.progressBarDots.map(item => (
-        <TouchableOpacity
-          hitSlop={{ top: 20, right: 20, bottom: 20, left: 20 }}
+      /* Add the blue bar */
+      this.progressBarComponents.push(
+              <Animated.View
           style={[
-            { position: 'absolute' },
-            { height: 80 },
-            { width: 80 },
-            { left: this.progressBarDots[item.key].left - 15 },
-            { top: this.props.animationHeight - 15 - 30 },
+              styles.activatedProgressBar,
+              { top: this.props.animationHeight - 30 + 6 },
+              { width: this.dynamiqueCurrentStep },
+              { left: 20 },
           ]}
-          onPress={() => this._stepButtonClicked(item.key)}
-          key={1000 + item.key}
-        />
-      )),
-    );
+          key={3 * this.progressBarComponents.length}
+              />,
+      );
+
+      /* Add the objects used to detect the clicks on the dots */
+      //        if(this.props.animationWidth > 50)
+      this.progressBarComponents = this.progressBarComponents.concat(
+          this.progressBarDots.map(item => (
+                  <TouchableOpacity
+              hitSlop={{ top: 20, right: 20, bottom: 20, left: 20 }}
+              style={[
+                  { position: 'absolute' },
+                  { height: 80 },
+                  { width: 80 },
+                  { left: this.progressBarDots[item.key].left - 15 },
+                  { top: this.props.animationHeight - 15 - 30 },
+              ]}
+              onPress={() => this._stepButtonClicked(item.key)}
+              key={1000 + item.key}
+                  />
+          )),
+      );
+
+      if(this.props.editable){
+          
+          var addDotLeft = 10 + this.props.stepCount * stepWidth;
+
+          /* Add the "add step" dot */
+          this.progressBarComponents = this.progressBarComponents.concat(
+                  <Animated.View
+              style={[
+                  styles.activatedDot,
+                  { left: addDotLeft},
+                  { top: this.props.animationHeight - 30 },
+              ]}
+              key={2001}
+                  />
+          );
+
+          /* Add the text "+" */
+          this.progressBarComponents = this.progressBarComponents.concat(
+              <Text
+              style={[{ position: 'absolute' }, 
+                      { left: addDotLeft + 4 },
+                      { top: this.props.animationHeight - 30 - 3 },
+                      {color:'white'}
+                     ]}
+              key={2002}
+              >
+                {"+"}
+            </Text>
+          );
+
+          /* Add the TouchableOpacity to detect the click */
+          this.progressBarComponents = this.progressBarComponents.concat(
+                  <TouchableOpacity
+              hitSlop={{ top: 20, right: 20, bottom: 20, left: 20 }}
+              style={[
+                  { position: 'absolute' },
+                  { height: 80 },
+                  { width: 80 },
+                  { left: addDotLeft - 15 },
+                  { top: this.props.animationHeight - 15 - 30 },
+              ]}
+              onPress={() => this._addStepButtonClicked()}
+              key={2003}
+                  />
+          );
+      }
   }
+
+    _addStepButtonClicked(){
+
+        if(this.props.onStepAdded() !== undefined && this.props.onStepAdded !== null) this.props.onStepAdded();
+
+        
+    }
 
   _stepButtonClicked = key => {
     console.log('step button cliked');

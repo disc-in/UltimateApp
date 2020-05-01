@@ -1,21 +1,24 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Text, FlatList } from 'react-native';
+import { StyleSheet, TouchableOpacity, View, Text, FlatList } from 'react-native';
 
 import { connect } from 'react-redux';
 import theme from '../../styles/theme.style';
 
 const Program = props => {
   const { id, title, trainings } = props.program;
-  const fakeFirstTodoTraining = 1;
-  const width = `${(fakeFirstTodoTraining * 100) / trainings.length}%`;
+  const firstTodoTrainingIndex = 0; // Faking it for now
+
+  const onPress = item => props.navigation.navigate('TrainingPage', { training: trainings[firstTodoTrainingIndex] });
+  const width = `${(firstTodoTrainingIndex * 100) / trainings.length}%`;
+
   return (
-    <View style={styles.program}>
+    <TouchableOpacity style={styles.program} onPress={() => onPress()}>
       <Text style={styles.programTitle}>{title}</Text>
-      <Text style={styles.completion}>1/{trainings.length}</Text>
+      <Text style={styles.completion}>0/{trainings.length}</Text>
       <View style={styles.progressBar}>
         <View style={[StyleSheet.absoluteFill, styles.fillProgressBar, { width }]} />
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

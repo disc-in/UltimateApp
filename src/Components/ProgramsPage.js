@@ -13,7 +13,7 @@ export const ProgramsPage = props => {
       <FlatList
         data={programs}
         keyExtractor={item => item.id.toString()}
-        renderItem={({ item }) => <Program program={item} />}
+        renderItem={({ item }) => <Program program={item} navigation={navigation} />}
       />
     </View>
   );

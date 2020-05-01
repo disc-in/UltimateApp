@@ -1,6 +1,5 @@
 import React, { useLayoutEffect, useCallback } from 'react';
 import { ScrollView, StyleSheet, View, Text, TouchableOpacity } from 'react-native';
-import { connect } from 'react-redux';
 
 import Progress from './ProgressBar2';
 
@@ -9,23 +8,17 @@ import HeaderButton from './shared/HeaderButton';
 import theme from '../styles/theme.style';
 import { MinimalDrill } from './shared/MinimalDrill';
 
-const mapStateToProps = state => {
-  return {
-    drills: state.drills,
-  };
-};
-
 export const DrillPageMinimal = props => {
-  const { route, navigation, drills } = props;
+  const { route, navigation } = props;
   const { drill, training } = route.params;
 
   const totalDrills = training.drills.length;
-  const currentDrillIndex = training.drills.findIndex(id => id === drill.id);
+  const currentDrillIndex = training.drills.findIndex(trainingDrill => trainingDrill.id === drill.id);
 
   if (currentDrillIndex === -1) navigation.navigate('TrainingPage', { training });
 
   const onProgressDotPress = idx => {
-    const drill = drills.find(drill => drill.id === training.drills[idx]);
+    const drill = training.drills[idx];
     navigation.navigate('DrillPageMinimal', { drill, training });
   };
 
@@ -37,10 +30,10 @@ export const DrillPageMinimal = props => {
     if (currentDrillIndex === totalDrills - 1) {
       navigation.navigate('TrainingPage', { training });
     } else {
-      const nextDrill = drills.find(drill => drill.id === training.drills[currentDrillIndex + 1]);
+      const nextDrill = training.drills[currentDrillIndex + 1];
       navigation.navigate('DrillPageMinimal', { drill: nextDrill, training });
     }
-  }, [training, currentDrillIndex, drills, navigation, totalDrills]);
+  }, [training, currentDrillIndex, navigation, totalDrills]);
 
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -66,7 +59,7 @@ export const DrillPageMinimal = props => {
   );
 };
 
-export default connect(mapStateToProps)(DrillPageMinimal);
+export default DrillPageMinimal;
 
 const styles = StyleSheet.create({
   drillPage: {

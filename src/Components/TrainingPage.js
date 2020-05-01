@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, ScrollView, View, Text } from 'react-native';
-import { connect } from 'react-redux';
 import DrillList from './shared/DrillList';
 import theme from '../styles/theme.style';
 
@@ -18,9 +17,9 @@ export function getTrainingMinimalPlayersNumber(trainingDrills) {
 }
 
 export const TrainingPage = props => {
-  const { navigation, route, drills } = props;
+  const { navigation, route } = props;
   const training = route.params.training;
-  const trainingDrills = training.drills.map(drillId => drills.find(drill => drill.id === drillId));
+  const trainingDrills = training.drills;
 
   const onDrillPress = drill => navigation.navigate('DrillPageMinimal', { drill, training });
 
@@ -46,13 +45,7 @@ export const TrainingPage = props => {
   );
 };
 
-const mapStateToProps = state => {
-  return {
-    drills: state.drills,
-  };
-};
-
-export default connect(mapStateToProps)(TrainingPage);
+export default TrainingPage;
 
 const styles = StyleSheet.create({
   trainingPage: {

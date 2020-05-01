@@ -33,3 +33,8 @@ To get the expected return from Nock, you can run your tests without mocking and
 If you need to understand the basic specifications of the app, have a look at [the wiki](https://github.com/UltimateApp/UltimateApp/wiki).
 
 And feel free to ask questions!
+
+
+## License
+
+The app source code is made available under the [MIT license](LICENSE).

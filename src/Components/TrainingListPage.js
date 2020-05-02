@@ -18,17 +18,17 @@ export const TrainingListPage = props => {
   const [data] = useState(trainings);
 
   const renderTraining = ({ item }) => {
-    const { title, source, image, drills } = item;
+    const { title, source, image } = item;
     return (
       <TouchableOpacity style={list.item} onPress={() => navigation.navigate('TrainingPage', { training: item })}>
         <ImageBackground source={{ uri: image }} style={list.image} imageStyle={list.imageOpacity}>
-          <Text style={list.imageText}>{getTrainingDuration(drills)} min</Text>
-          <Text style={list.imageText}>{getTrainingMinimalPlayersNumber(drills)}+ players</Text>
+          <Text style={list.imageText}>{getTrainingDuration(item)} min</Text>
+          <Text style={list.imageText}>{getTrainingMinimalPlayersNumber(item)}+ players</Text>
         </ImageBackground>
         <View style={list.contentContainer}>
           <Text style={list.source}>{source}</Text>
           <Text style={list.title}>{title}</Text>
-          <Text style={list.numberOfPlayers}>{getGoals(drills).join(', ')}</Text>
+          <Text style={list.numberOfPlayers}>{getGoals(item).join(', ')}</Text>
         </View>
       </TouchableOpacity>
     );

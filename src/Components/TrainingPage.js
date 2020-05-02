@@ -3,23 +3,22 @@ import { StyleSheet, ScrollView, View, Text } from 'react-native';
 import DrillList from './shared/DrillList';
 import theme from '../styles/theme.style';
 
-export function getGoals(trainingDrills) {
-  return Array.from(new Set(trainingDrills.reduce((acc, { goals }) => acc.concat(goals), [])));
+export function getGoals(training) {
+  return Array.from(new Set(training.drills.reduce((acc, { goals }) => acc.concat(goals), [])));
 }
 
-export function getTrainingDuration(trainingDrills) {
-  return trainingDrills.reduce((total, drill) => total + drill.durationInMinutes, 0);
+export function getTrainingDuration(training) {
+  return training.drills.reduce((total, drill) => total + drill.durationInMinutes, 0);
 }
 
-export function getTrainingMinimalPlayersNumber(trainingDrills) {
-  const minimalPlayersNumberList = trainingDrills.map(({ minimalPlayersNumber }) => minimalPlayersNumber);
+export function getTrainingMinimalPlayersNumber(training) {
+  const minimalPlayersNumberList = training.drills.map(({ minimalPlayersNumber }) => minimalPlayersNumber);
   return Math.max(...minimalPlayersNumberList);
 }
 
 export const TrainingPage = props => {
   const { navigation, route } = props;
   const training = route.params.training;
-  const trainingDrills = training.drills;
 
   const onDrillPress = drill => navigation.navigate('DrillPageMinimal', { drill, training });
 
@@ -29,18 +28,18 @@ export const TrainingPage = props => {
         <Text style={styles.descriptionText}>{training.description}</Text>
         <View style={styles.infoDisplay}>
           <Text style={styles.infoTitle}>Players</Text>
-          <Text style={styles.info}>{getTrainingMinimalPlayersNumber(trainingDrills)}+</Text>
+          <Text style={styles.info}>{getTrainingMinimalPlayersNumber(training)}+</Text>
         </View>
         <View style={styles.infoDisplay}>
           <Text style={styles.infoTitle}>Duration</Text>
-          <Text style={styles.info}>{getTrainingDuration(trainingDrills)}+</Text>
+          <Text style={styles.info}>{getTrainingDuration(training)}+</Text>
         </View>
         <View style={styles.infoDisplay}>
           <Text style={styles.infoTitle}>Goals</Text>
-          <Text style={styles.info}>{getGoals(trainingDrills).join(', ')}</Text>
+          <Text style={styles.info}>{getGoals(training).join(', ')}</Text>
         </View>
       </View>
-      <DrillList navigation={navigation} drillsToDisplay={trainingDrills} onDrillPress={onDrillPress} />
+      <DrillList navigation={navigation} drillsToDisplay={training.drills} onDrillPress={onDrillPress} />
     </ScrollView>
   );
 };

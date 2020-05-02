@@ -6,8 +6,9 @@ import DrillPage from '../Components/DrillPage';
 import DrillPageMinimal from '../Components/DrillPageMinimal';
 import TechnicalFilters from '../Components/TechnicalFilters';
 import FitnessFilters from '../Components/FitnessFilters';
-import ProgramsPage from '../Components/ProgramsPage';
+import TrainingListPage from '../Components/TrainingListPage';
 import TrainingPage from '../Components/TrainingPage';
+import ProgramsPage from '../Components/ProgramsPage';
 
 const Stack = createStackNavigator();
 
@@ -28,6 +29,7 @@ export const Navigation = () => (
       component={DrillPage}
       options={({ route }) => ({ title: route.params.drill.title })}
     />
+    <Stack.Screen name="TrainingListPage" component={TrainingListPage} options={{ title: 'Training sessions' }} />
     <Stack.Screen name="ProgramsPage" component={ProgramsPage} options={{ title: 'Choose a program for your team' }} />
     <Stack.Screen
       name="TrainingPage"

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, ScrollView, View, Text } from 'react-native';
+import { StyleSheet, ScrollView, View, Text, TouchableOpacity } from 'react-native';
 import DrillList from './shared/DrillList';
 import theme from '../styles/theme.style';
 
@@ -21,6 +21,7 @@ export const TrainingPage = props => {
   const training = route.params.training;
 
   const onDrillPress = drill => navigation.navigate('DrillPageMinimal', { drill, training });
+  const goToFirstDrill = () => navigation.navigate('DrillPageMinimal', { drill: training.drills[0], training });
 
   return (
     <ScrollView style={styles.trainingPage} contentContainerStyle={styles.trainingPageContent}>
@@ -40,6 +41,9 @@ export const TrainingPage = props => {
         </View>
       </View>
       <DrillList navigation={navigation} drillsToDisplay={training.drills} onDrillPress={onDrillPress} />
+      <TouchableOpacity style={styles.btnStartTraining} onPress={goToFirstDrill}>
+        <Text style={styles.btnStartTrainingContent}>Start training</Text>
+      </TouchableOpacity>
     </ScrollView>
   );
 };
@@ -80,5 +84,14 @@ const styles = StyleSheet.create({
     fontSize: theme.FONT_SIZE_MEDIUM,
     flexBasis: 4,
     flexGrow: 4,
+  },
+  btnStartTraining: {
+    width: '80%',
+    backgroundColor: theme.COLOR_PRIMARY,
+    textAlign: 'center',
+    padding: 20,
+  },
+  btnStartTrainingContent: {
+    color: 'rgb(255, 255, 255)',
   },
 });

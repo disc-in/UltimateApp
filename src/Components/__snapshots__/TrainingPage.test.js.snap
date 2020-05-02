@@ -769,6 +769,37 @@ exports[`<TrainingPage /> renders correctly with a training 1`] = `
         </View>
       </RCTScrollView>
     </View>
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#232b2b",
+          "opacity": 1,
+          "padding": 20,
+          "textAlign": "center",
+          "width": "80%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "rgb(255, 255, 255)",
+          }
+        }
+      >
+        Start training
+      </Text>
+    </View>
   </View>
 </RCTScrollView>
 `;

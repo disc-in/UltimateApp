@@ -6,7 +6,7 @@ import Progress from './ProgressBar2';
 import HeaderButton from './shared/HeaderButton';
 
 import theme from '../styles/theme.style';
-import { MinimalDrill } from './shared/MinimalDrill';
+import MinimalDrill from './shared/MinimalDrill';
 
 export const DrillPageMinimal = props => {
   const { route, navigation } = props;

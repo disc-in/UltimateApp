@@ -14,10 +14,12 @@ describe('<TrainingPage />', () => {
       training,
     },
   };
+
   it('renders correctly with a training', () => {
     const tree = renderer.create(<TrainingPage route={route} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
+
   it('links to drill page', async () => {
     const navigation = { navigate: jest.fn() };
     const trainingFirstDrill = training.drills[0];
@@ -27,5 +29,15 @@ describe('<TrainingPage />', () => {
     await fireEvent.press(getByText(trainingFirstDrill.title));
 
     expect(navigation.navigate).toBeCalledWith('DrillPageMinimal', { drill: trainingFirstDrill, training });
+  });
+
+  it('Start training links to first drill', async () => {
+    const navigation = { navigate: jest.fn() };
+
+    const { getByText } = render(<TrainingPage navigation={navigation} route={route} />);
+
+    await fireEvent.press(getByText('Start training'));
+
+    expect(navigation.navigate).toBeCalledWith('DrillPageMinimal', { drill: training.drills[0], training });
   });
 });

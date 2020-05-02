@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, ScrollView, View, Text, TouchableOpacity, Image } from 'react-native';
 
 import DrillList from './shared/DrillList';
+import Button from './shared/Button';
 import theme from '../styles/theme.style';
 import iconPlayers from '../../assets/ic_players.png';
 import iconClock from '../../assets/ic_clock.png';
@@ -65,9 +66,7 @@ export const TrainingPage = props => {
       <View style={styles.list}>
         <DrillList navigation={navigation} drillsToDisplay={training.drills} onDrillPress={onDrillPress} />
       </View>
-      <TouchableOpacity style={styles.btnStartTraining} onPress={goToFirstDrill}>
-        <Text style={styles.btnStartTrainingContent}>Start training</Text>
-      </TouchableOpacity>
+      <Button onPress={goToFirstDrill} text="Start training" />
     </ScrollView>
   );
 };
@@ -80,7 +79,7 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   trainingPageContent: {
-    paddingBottom: 20,
+    paddingBottom: 50,
   },
   overview: {
     paddingLeft: 20,
@@ -130,14 +129,5 @@ const styles = StyleSheet.create({
   },
   list: {
     paddingLeft: 20,
-  },
-  btnStartTraining: {
-    width: '80%',
-    backgroundColor: theme.COLOR_PRIMARY,
-    textAlign: 'center',
-    padding: 20,
-  },
-  btnStartTrainingContent: {
-    color: 'rgb(255, 255, 255)',
   },
 });

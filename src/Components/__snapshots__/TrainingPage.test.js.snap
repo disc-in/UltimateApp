@@ -4,7 +4,7 @@ exports[`<TrainingPage /> renders correctly with a training 1`] = `
 <RCTScrollView
   contentContainerStyle={
     Object {
-      "paddingBottom": 20,
+      "paddingBottom": 50,
     }
   }
   style={
@@ -819,17 +819,23 @@ exports[`<TrainingPage /> renders correctly with a training 1`] = `
       style={
         Object {
           "backgroundColor": "#232b2b",
+          "borderRadius": 30,
+          "height": 40,
+          "left": "10%",
           "opacity": 1,
-          "padding": 20,
-          "textAlign": "center",
+          "padding": 10,
+          "right": "10%",
           "width": "80%",
         }
       }
+      testID="button"
     >
       <Text
         style={
           Object {
-            "color": "rgb(255, 255, 255)",
+            "color": "#fff",
+            "fontSize": 16,
+            "textAlign": "center",
           }
         }
       >

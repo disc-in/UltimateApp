@@ -326,6 +326,7 @@ exports[`<DrillPageMinimal /> renders correctly with a training and a drill 1`] 
           "flex": 1,
           "flexDirection": "row",
           "justifyContent": "center",
+          "paddingVertical": 10,
         }
       }
     >
@@ -343,17 +344,23 @@ exports[`<DrillPageMinimal /> renders correctly with a training and a drill 1`] 
         style={
           Object {
             "backgroundColor": "#232b2b",
+            "borderRadius": 30,
+            "height": 40,
+            "left": "10%",
             "opacity": 1,
-            "padding": 20,
-            "textAlign": "center",
+            "padding": 10,
+            "right": "10%",
             "width": "80%",
           }
         }
+        testID="button"
       >
         <Text
           style={
             Object {
-              "color": "rgb(255, 255, 255)",
+              "color": "#fff",
+              "fontSize": 16,
+              "textAlign": "center",
             }
           }
         >

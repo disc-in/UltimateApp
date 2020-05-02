@@ -18,7 +18,17 @@ describe('<TrainingPage />', () => {
     },
   };
 
-  it('renders correctly with a training', () => {
+  it('renders correctly with a training outside any program', () => {
+    const route = {
+      params: {
+        training,
+      },
+    };
+    const tree = renderer.create(<TrainingPage route={route} />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders correctly with a training within a program', () => {
     const tree = renderer.create(<TrainingPage route={route} />).toJSON();
     expect(tree).toMatchSnapshot();
   });

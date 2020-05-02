@@ -20,35 +20,39 @@ export const TrainingPage = props => {
   const { navigation, route } = props;
   const { training, program } = route.params;
 
-  const currentTrainingIndex = program.trainings.findIndex(programTraining => programTraining.id === training.id);
-
-  const onNextPress = () =>
-    navigation.navigate('TrainingPage', { training: program.trainings[currentTrainingIndex + 1], program });
-  const onPrevPress = () =>
-    navigation.navigate('TrainingPage', { training: program.trainings[currentTrainingIndex - 1], program });
-
   const onDrillPress = drill => navigation.navigate('DrillPageMinimal', { drill, training });
   const goToFirstDrill = () => navigation.navigate('DrillPageMinimal', { drill: training.drills[0], training });
 
-  const isFirstTraining = currentTrainingIndex !== 0;
-  const isLastTraining = currentTrainingIndex !== program.trainings.length - 1;
+  const programNavigation = () => {
+    const currentTrainingIndex = program.trainings.findIndex(programTraining => programTraining.id === training.id);
+    const isFirstTraining = currentTrainingIndex !== 0;
+    const isLastTraining = currentTrainingIndex !== program.trainings.length - 1;
+
+    const onNextPress = () =>
+      navigation.navigate('TrainingPage', { training: program.trainings[currentTrainingIndex + 1], program });
+    const onPrevPress = () =>
+      navigation.navigate('TrainingPage', { training: program.trainings[currentTrainingIndex - 1], program });
+    return (
+      <View style={styles.programNavigation}>
+        {isFirstTraining && (
+          <TouchableOpacity style={styles.btnPrevNext} onPress={onPrevPress}>
+            <Text style={styles.btnPrevNextContent}>{'<'}</Text>
+          </TouchableOpacity>
+        )}
+        <Text style={styles.title}>Training session {currentTrainingIndex + 1}</Text>
+        {isLastTraining && (
+          <TouchableOpacity style={styles.btnPrevNext} onPress={onNextPress}>
+            <Text style={styles.btnPrevNextContent}>{'>'}</Text>
+          </TouchableOpacity>
+        )}
+      </View>
+    );
+  };
 
   return (
     <ScrollView style={styles.trainingPage} contentContainerStyle={styles.trainingPageContent}>
       <View style={styles.overview}>
-        <View style={styles.titleArea}>
-          {isFirstTraining && (
-            <TouchableOpacity style={styles.btnPrevNext} onPress={onPrevPress}>
-              <Text style={styles.btnPrevNextContent}>{'<'}</Text>
-            </TouchableOpacity>
-          )}
-          <Text style={styles.title}>Training session {currentTrainingIndex + 1}</Text>
-          {isLastTraining && (
-            <TouchableOpacity style={styles.btnPrevNext} onPress={onNextPress}>
-              <Text style={styles.btnPrevNextContent}>{'>'}</Text>
-            </TouchableOpacity>
-          )}
-        </View>
+        {program && programNavigation()}
         <View style={styles.infos}>
           <View style={styles.info}>
             <Image style={styles.infoIcon} source={iconPlayers} />
@@ -84,11 +88,11 @@ const styles = StyleSheet.create({
   overview: {
     paddingLeft: 20,
     paddingBottom: 20,
-    marginBottom: 20,
+    marginVertical: 20,
     borderBottomWidth: 2,
     borderBottomColor: theme.COLOR_SECONDARY_LIGHT,
   },
-  titleArea: {
+  programNavigation: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',

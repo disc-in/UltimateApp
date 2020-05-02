@@ -1,0 +1,507 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProgramsPage /> renders correctly when connected 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "height": "100%",
+      "paddingHorizontal": 10,
+      "paddingVertical": 20,
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    isTVSelectable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "paddingBottom": 20,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "fontSize": 20,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      See all trainings ➔
+    </Text>
+  </View>
+  <Text
+    style={
+      Object {
+        "fontSize": 16,
+        "paddingBottom": 10,
+      }
+    }
+  >
+    Or choose the perfect program for your team :
+  </Text>
+  <RCTScrollView
+    data={
+      Array [
+        Object {
+          "id": 1,
+          "title": "Beginner",
+          "trainings": Array [
+            Object {
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
+              "drills": Array [
+                Object {
+                  "author": "Author",
+                  "description": "Description of the drill",
+                  "durationInMinutes": 10,
+                  "equipment": "Equipment needs for the drill",
+                  "equipmentLabel": "Full",
+                  "goals": Array [
+                    "Legs",
+                  ],
+                  "id": 2,
+                  "image": "http://www.liberte-fitness.fr/sites/default/files/styles/slider/public/news/tone.jpg?itok=505bme2a",
+                  "intensity": "High",
+                  "level": "Intermediate",
+                  "minimalPlayersNumber": 1,
+                  "seasonTiming": "In-season",
+                  "steps": Array [
+                    Object {
+                      "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
+                      "illustrationType": "youtube",
+                      "subtitle": "This is a subtitle",
+                      "title": "Warmup",
+                    },
+                    Object {
+                      "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
+                      "illustrationType": "youtube",
+                      "subtitle": "This is a subtitle",
+                      "title": "Do the drill",
+                    },
+                    Object {
+                      "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
+                      "illustrationType": "youtube",
+                      "subtitle": "This is a subtitle",
+                      "title": "Last step",
+                    },
+                  ],
+                  "title": "Fitness Drill Title",
+                  "type": "fitness",
+                },
+                Object {
+                  "author": "Author",
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
+                  "durationInMinutes": 30,
+                  "equipment": "Equipment needs for the drill",
+                  "equipmentLabel": "",
+                  "goals": Array [
+                    "Defense",
+                  ],
+                  "id": 3,
+                  "image": "https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1",
+                  "intensity": "Low",
+                  "level": "Beginner",
+                  "minimalPlayersNumber": 2,
+                  "seasonTiming": "",
+                  "steps": Array [
+                    Object {
+                      "illustrationSource": Object {
+                        "ids": Array [
+                          "triangle",
+                          "triangle",
+                          "triangle",
+                          "triangle",
+                          "triangle",
+                          "triangle",
+                          "triangle",
+                          "triangle",
+                          "offense",
+                          "offense",
+                          "offense",
+                          "offense",
+                          "offense",
+                          "disc",
+                        ],
+                        "positions": Array [
+                          Array [
+                            Array [
+                              Array [
+                                0.3,
+                                0.3,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.3,
+                                0.6,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.6,
+                                0.3,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.6,
+                                0.6,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.45,
+                                0.2,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.2,
+                                0.45,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.45,
+                                0.7,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.7,
+                                0.45,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.3,
+                                0.3,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.16,
+                                0.3,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.6,
+                                0.3,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.6,
+                                0.6,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.3,
+                                0.6,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.36,
+                                0.36,
+                              ],
+                            ],
+                          ],
+                          Array [
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            Array [
+                              Array [
+                                0.45,
+                                0.2,
+                              ],
+                            ],
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                          ],
+                          Array [
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            Array [
+                              Array [
+                                0.6,
+                                0.3,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.7,
+                                0.45,
+                              ],
+                            ],
+                            undefined,
+                            undefined,
+                            Array [
+                              Array [
+                                0.58,
+                                0.36,
+                              ],
+                            ],
+                          ],
+                          Array [
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            Array [
+                              Array [
+                                0.6,
+                                0.6,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.45,
+                                0.7,
+                              ],
+                            ],
+                            undefined,
+                            Array [
+                              Array [
+                                0.58,
+                                0.58,
+                              ],
+                            ],
+                          ],
+                          Array [
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            Array [
+                              Array [
+                                0.3,
+                                0.6,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.2,
+                                0.45,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.36,
+                                0.58,
+                              ],
+                            ],
+                          ],
+                          Array [
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            Array [
+                              Array [
+                                0.45,
+                                0.2,
+                              ],
+                            ],
+                            undefined,
+                            undefined,
+                            undefined,
+                            Array [
+                              Array [
+                                0.3,
+                                0.3,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.36,
+                                0.36,
+                              ],
+                            ],
+                          ],
+                        ],
+                        "texts": Array [
+                          "",
+                          "",
+                          "",
+                          "",
+                          "",
+                          "",
+                          "",
+                          "",
+                          "1",
+                          "2",
+                          "3",
+                          "4",
+                          "5",
+                          "",
+                        ],
+                      },
+                      "illustrationType": "animation",
+                    },
+                  ],
+                  "title": "Frisbee Drill Title",
+                  "type": "technical",
+                },
+              ],
+              "id": 1,
+              "illustrationSource": "Rise Up",
+              "image": "https://d3j2bju5c7tc02.cloudfront.net/2016_44/backhand.jpg",
+              "title": "Dump & Swing",
+            },
+          ],
+        },
+      ]
+    }
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    numColumns={1}
+    onContentSizeChange={[Function]}
+    onEndReachedThreshold={2}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={Array []}
+    updateCellsBatchingPeriod={50}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={21}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#e5e5e5",
+              "marginBottom": 10,
+              "opacity": 1,
+              "padding": 20,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "fontSize": 20,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            Beginner
+          </Text>
+          <Text
+            style={
+              Object {
+                "fontWeight": "bold",
+                "textAlign": "right",
+              }
+            }
+          >
+            0/
+            1
+          </Text>
+          <View
+            style={
+              Object {
+                "backgroundColor": "white",
+                "borderRadius": 5,
+                "height": 10,
+                "marginTop": 5,
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "backgroundColor": "#232b2b",
+                    "borderRadius": 5,
+                    "width": "50%",
+                  },
+                  Object {
+                    "width": "0%",
+                  },
+                ]
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

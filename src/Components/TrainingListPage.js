@@ -9,33 +9,26 @@ import * as list from '../styles/list.style';
 const mapStateToProps = state => {
   return {
     trainings: state.trainings,
-    allDrills: state.drills,
   };
 };
 
 export const TrainingListPage = props => {
-  const { allDrills, trainings, navigation } = props;
+  const { trainings, navigation } = props;
 
   const [data] = useState(trainings);
 
   const renderTraining = ({ item }) => {
-    const { title, source, image, drills } = item;
+    const { title, source, image } = item;
     return (
       <TouchableOpacity style={list.item} onPress={() => navigation.navigate('TrainingPage', { training: item })}>
         <ImageBackground source={{ uri: image }} style={list.image} imageStyle={list.imageOpacity}>
-          <Text style={list.imageText}>
-            {getTrainingDuration(allDrills.filter(drill => drills.includes(drill.id)))} min
-          </Text>
-          <Text style={list.imageText}>
-            {getTrainingMinimalPlayersNumber(allDrills.filter(drill => drills.includes(drill.id)))}+ players
-          </Text>
+          <Text style={list.imageText}>{getTrainingDuration(item)} min</Text>
+          <Text style={list.imageText}>{getTrainingMinimalPlayersNumber(item)}+ players</Text>
         </ImageBackground>
         <View style={list.contentContainer}>
           <Text style={list.source}>{source}</Text>
           <Text style={list.title}>{title}</Text>
-          <Text style={list.numberOfPlayers}>
-            {getGoals(allDrills.filter(drill => drills.includes(drill.id))).join(', ')}
-          </Text>
+          <Text style={list.numberOfPlayers}>{getGoals(item).join(', ')}</Text>
         </View>
       </TouchableOpacity>
     );

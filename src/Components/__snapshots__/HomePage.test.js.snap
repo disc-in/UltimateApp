@@ -224,7 +224,7 @@ exports[`<HomePage /> renders correctly 1`] = `
             }
           }
         >
-          Trainings
+          Training programs
         </Text>
       </View>
     </View>

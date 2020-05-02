@@ -1,7 +1,10 @@
 import React from 'react';
-import { StyleSheet, ScrollView, View, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, ScrollView, View, Text, TouchableOpacity, Image } from 'react-native';
+
 import DrillList from './shared/DrillList';
 import theme from '../styles/theme.style';
+import iconPlayers from '../../assets/ic_players.png';
+import iconClock from '../../assets/ic_clock.png';
 
 export function getTrainingDuration(training) {
   return training.drills.reduce((total, drill) => total + drill.durationInMinutes, 0);
@@ -46,13 +49,15 @@ export const TrainingPage = props => {
           )}
         </View>
         <View style={styles.infos}>
-          <View>
-            <Text style={styles.infoTitle}>Players</Text>
-            <Text style={styles.infoContent}>{getTrainingMinimalPlayersNumber(training)}+</Text>
+          <View style={styles.info}>
+            <Image style={styles.infoIcon} source={iconPlayers} />
+            <Text style={styles.infoValue}>{getTrainingMinimalPlayersNumber(training)}+</Text>
+            <Text style={styles.infoUnit}>players</Text>
           </View>
-          <View>
-            <Text style={styles.infoTitle}>Duration</Text>
-            <Text style={styles.infoContent}>{getTrainingDuration(training)}+</Text>
+          <View style={styles.info}>
+            <Image style={styles.infoIcon} source={iconClock} />
+            <Text style={styles.infoValue}>{getTrainingDuration(training)}+</Text>
+            <Text style={styles.infoUnit}>minutes</Text>
           </View>
         </View>
         <Text style={styles.descriptionText}>{training.description}</Text>
@@ -89,6 +94,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  title: {
+    fontSize: theme.FONT_SIZE_LARGE,
+  },
   btnPrevNext: {
     color: theme.COLOR_PRIMARY,
     textAlign: 'center',
@@ -105,14 +113,20 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-evenly',
   },
-  infoTitle: {
-    color: theme.COLOR_PRIMARY,
-    fontSize: theme.FONT_SIZE_MEDIUM,
-    fontWeight: 'bold',
+  info: {
+    alignItems: 'center',
   },
-  infoContent: {
+  infoIcon: {
+    width: 20,
+    height: 20,
+  },
+  infoValue: {
     color: theme.COLOR_SECONDARY,
     fontSize: theme.FONT_SIZE_MEDIUM,
+  },
+  infoUnit: {
+    color: theme.COLOR_SECONDARY,
+    fontSize: theme.FONT_SIZE_SMALL,
   },
   list: {
     paddingLeft: 20,

@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { completeTraining } from '../../Store/Actions/programAction';
 import theme from '../../styles/theme.style';
 
-const Program = props => {
+export const Program = props => {
   const { id, title, trainings } = props.program;
   const completeTrainingsCount = props.completeTrainings.filter(
     ({ training, program }) => program.id === props.program.id,
@@ -22,7 +22,8 @@ const Program = props => {
     <TouchableOpacity style={styles.program} onPress={onPress}>
       <Text style={styles.programTitle}>{title}</Text>
       <Text style={styles.completion}>
-        {completeTrainingsCount}/{trainings.length}
+        {completeTrainingsCount}/{trainings.length} trainings
+        {completeTrainingsCount == trainings.length && ' 👍🎉'}
       </Text>
       <View style={styles.progressBar}>
         <View style={[StyleSheet.absoluteFill, styles.fillProgressBar, { width }]} />

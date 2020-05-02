@@ -39,8 +39,10 @@ exports[`<Program /> renders correctly 1`] = `
       }
     }
   >
-    0/
+    0
+    /
     1
+     trainings
   </Text>
   <View
     style={
@@ -70,6 +72,87 @@ exports[`<Program /> renders correctly 1`] = `
           },
           Object {
             "width": "0%",
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`<Program /> renders correctly when finished 1`] = `
+<View
+  accessible={true}
+  focusable={true}
+  isTVSelectable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#e5e5e5",
+      "marginBottom": 10,
+      "opacity": 1,
+      "padding": 20,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "fontSize": 20,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    Beginner
+  </Text>
+  <Text
+    style={
+      Object {
+        "fontWeight": "bold",
+        "textAlign": "right",
+      }
+    }
+  >
+    1
+    /
+    1
+     trainings
+     👍🎉
+  </Text>
+  <View
+    style={
+      Object {
+        "backgroundColor": "white",
+        "borderRadius": 5,
+        "height": 10,
+        "marginTop": 5,
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          Object {
+            "backgroundColor": "#232b2b",
+            "borderRadius": 5,
+            "width": "50%",
+          },
+          Object {
+            "width": "100%",
           },
         ]
       }

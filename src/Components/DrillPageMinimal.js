@@ -33,9 +33,9 @@ export const DrillPageMinimal = props => {
       navigation.navigate('TrainingPage', { training });
     } else {
       const nextDrill = training.drills[currentDrillIndex + 1];
-      navigation.navigate('DrillPageMinimal', { drill: nextDrill, training });
+      navigation.navigate('DrillPageMinimal', { drill: nextDrill, training, program });
     }
-  }, [training, currentDrillIndex, navigation, totalDrills]);
+  }, [training, currentDrillIndex, navigation, totalDrills, program]);
 
   useLayoutEffect(() => {
     navigation.setOptions({

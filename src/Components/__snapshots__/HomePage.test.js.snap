@@ -23,7 +23,7 @@ exports[`<HomePage /> renders correctly 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "height": "20%",
+        "height": "30%",
         "marginBottom": 5,
       }
     }
@@ -96,7 +96,7 @@ exports[`<HomePage /> renders correctly 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "height": "20%",
+        "height": "30%",
         "marginBottom": 5,
       }
     }
@@ -169,80 +169,7 @@ exports[`<HomePage /> renders correctly 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "height": "20%",
-        "marginBottom": 5,
-      }
-    }
-  >
-    <View
-      accessibilityIgnoresInvertColors={true}
-      style={
-        Object {
-          "height": "100%",
-        }
-      }
-    >
-      <Image
-        source={1}
-        style={
-          Array [
-            Object {
-              "bottom": 0,
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-            },
-            Object {
-              "height": "100%",
-              "width": undefined,
-            },
-            undefined,
-          ]
-        }
-      />
-      <View
-        style={
-          Object {
-            "alignItems": "flex-start",
-            "bottom": 0,
-            "justifyContent": "center",
-            "left": 0,
-            "padding": 20,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#fff",
-              "fontSize": 28,
-              "fontWeight": "bold",
-            }
-          }
-        >
-          Trainings
-        </Text>
-      </View>
-    </View>
-  </View>
-  <View
-    accessible={true}
-    focusable={true}
-    isTVSelectable={true}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "height": "20%",
+        "height": "30%",
         "marginBottom": 5,
       }
     }

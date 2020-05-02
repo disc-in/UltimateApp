@@ -30,7 +30,7 @@ export const Navigation = () => (
       options={({ route }) => ({ title: route.params.drill.title })}
     />
     <Stack.Screen name="TrainingListPage" component={TrainingListPage} options={{ title: 'Training sessions' }} />
-    <Stack.Screen name="ProgramsPage" component={ProgramsPage} options={{ title: 'Choose a program for your team' }} />
+    <Stack.Screen name="ProgramsPage" component={ProgramsPage} options={{ title: 'Choose a program' }} />
     <Stack.Screen
       name="TrainingPage"
       component={TrainingPage}

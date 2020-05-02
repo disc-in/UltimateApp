@@ -4,7 +4,6 @@ import theme from '../styles/theme.style';
 import fitness from '../../assets/HomePage/fitness.png';
 import frisbeeGlove from '../../assets/HomePage/frisbeeglove.png';
 import huddle from '../../assets/HomePage/huddle.png';
-import play from '../../assets/HomePage/play.jpg';
 import { DrillTypes } from '../Fixtures';
 
 export default class HomePage extends React.Component {
@@ -31,13 +30,6 @@ export default class HomePage extends React.Component {
             </View>
           </ImageBackground>
         </TouchableHighlight>
-        <TouchableHighlight onPress={() => this.props.navigation.navigate('TrainingListPage')} style={styles.menuItem}>
-          <ImageBackground source={play} style={styles.image}>
-            <View style={styles.wrapper}>
-              <Text style={styles.text}>Trainings</Text>
-            </View>
-          </ImageBackground>
-        </TouchableHighlight>
         <TouchableHighlight onPress={() => this.props.navigation.navigate('ProgramsPage')} style={styles.menuItem}>
           <ImageBackground source={huddle} style={styles.image}>
             <View style={styles.wrapper}>
@@ -57,7 +49,7 @@ const styles = StyleSheet.create({
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
   },
   menuItem: {
-    height: '20%',
+    height: '30%',
     marginBottom: 5,
   },
   image: {

@@ -11,6 +11,44 @@ exports[`<ProgramsPage /> renders correctly when connected 1`] = `
     }
   }
 >
+  <View
+    accessible={true}
+    focusable={true}
+    isTVSelectable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "paddingBottom": 20,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "fontSize": 20,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      See all trainings ➔
+    </Text>
+  </View>
+  <Text
+    style={
+      Object {
+        "fontSize": 16,
+        "paddingBottom": 10,
+      }
+    }
+  >
+    Or choose the perfect program for your team :
+  </Text>
   <RCTScrollView
     data={
       Array [

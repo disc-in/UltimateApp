@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Text, FlatList } from 'react-native';
+import { StyleSheet, View, TouchableHighlight, Text, FlatList } from 'react-native';
 import { connect } from 'react-redux';
 
 import theme from '../styles/theme.style';
@@ -10,6 +10,10 @@ export const ProgramsPage = props => {
 
   return (
     <View style={styles.programPage}>
+      <TouchableHighlight onPress={() => props.navigation.navigate('TrainingListPage')} style={styles.allTrainings}>
+        <Text style={styles.allTrainingsText}>See all trainings ➔</Text>
+      </TouchableHighlight>
+      <Text style={styles.incentive}>Or choose the perfect program for your team :</Text>
       <FlatList
         data={programs}
         keyExtractor={item => item.id.toString()}
@@ -33,5 +37,16 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     height: '100%',
+  },
+  allTrainings: {
+    paddingBottom: 20,
+  },
+  allTrainingsText: {
+    fontSize: theme.FONT_SIZE_LARGE,
+    fontWeight: 'bold',
+  },
+  incentive: {
+    fontSize: theme.FONT_SIZE_MEDIUM,
+    paddingBottom: 10,
   },
 });

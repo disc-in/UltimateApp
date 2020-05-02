@@ -1,19 +1,29 @@
 import React, { useState } from 'react';
 import { StyleSheet, TouchableOpacity, View, Text, FlatList } from 'react-native';
+import { connect } from 'react-redux';
 
+import { completeTraining } from '../../Store/Actions/programAction';
 import theme from '../../styles/theme.style';
 
 const Program = props => {
   const { id, title, trainings } = props.program;
-  const firstTodoTrainingIndex = 0; // Faking it for now
+  const completeTrainingsCount = props.completeTrainings.filter(
+    ({ training, program }) => program.id === props.program.id,
+  ).length;
 
-  const onPress = item => props.navigation.navigate('TrainingPage', { training: trainings[firstTodoTrainingIndex] });
-  const width = `${(firstTodoTrainingIndex * 100) / trainings.length}%`;
+  const onPress = () => {
+    const firstTodoTraining =
+      props.completeTrainings.find(({ training, program }) => program.id === props.program.id) || trainings[0];
+    props.navigation.navigate('TrainingPage', { training: firstTodoTraining, program: props.program });
+  };
+  const width = `${(completeTrainingsCount * 100) / trainings.length}%`;
 
   return (
-    <TouchableOpacity style={styles.program} onPress={() => onPress()}>
+    <TouchableOpacity style={styles.program} onPress={onPress}>
       <Text style={styles.programTitle}>{title}</Text>
-      <Text style={styles.completion}>0/{trainings.length}</Text>
+      <Text style={styles.completion}>
+        {completeTrainingsCount}/{trainings.length}
+      </Text>
       <View style={styles.progressBar}>
         <View style={[StyleSheet.absoluteFill, styles.fillProgressBar, { width }]} />
       </View>
@@ -21,7 +31,13 @@ const Program = props => {
   );
 };
 
-export default Program;
+const mapStateToProps = state => {
+  return {
+    completeTrainings: state.completeTrainings,
+  };
+};
+
+export default connect(mapStateToProps)(Program);
 
 const styles = StyleSheet.create({
   program: {

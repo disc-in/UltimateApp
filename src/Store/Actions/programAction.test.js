@@ -6,6 +6,9 @@ describe('completeTraining', () => {
   const program = createProgram({ trainings: [training] });
 
   it('renders correctly', () => {
-    expect(completeTraining(training, program)).toEqual({ type: 'COMPLETE_TRAINING', value: { training, program } });
+    expect(completeTraining({ training, program })).toEqual({
+      type: 'COMPLETE_TRAINING',
+      value: { training, program },
+    });
   });
 });

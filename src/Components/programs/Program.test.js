@@ -22,6 +22,6 @@ describe('<Program />', () => {
 
     await fireEvent.press(getByText(program.title));
 
-    expect(navigation.navigate).toBeCalledWith('TrainingPage', { training });
+    expect(navigation.navigate).toBeCalledWith('TrainingPage', { training, program });
   });
 });

@@ -7,7 +7,8 @@ const Program = props => {
   const { id, title, trainings } = props.program;
   const firstTodoTrainingIndex = 0; // Faking it for now
 
-  const onPress = item => props.navigation.navigate('TrainingPage', { training: trainings[firstTodoTrainingIndex] });
+  const onPress = item =>
+    props.navigation.navigate('TrainingPage', { training: trainings[firstTodoTrainingIndex], program: props.program });
   const width = `${(firstTodoTrainingIndex * 100) / trainings.length}%`;
 
   return (

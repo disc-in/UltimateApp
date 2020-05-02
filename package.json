@@ -73,5 +73,6 @@
       "./setupJest.js"
     ]
   },
-  "private": true
+  "private": true,
+  "license": "MIT"
 }

@@ -40,6 +40,10 @@ export const TrainingPage = props => {
           </TouchableOpacity>
         )}
         <Text style={styles.title}>{training.title}</Text>
+        <Text style={styles.subtitle}>
+          {' '}
+          ({currentTrainingIndex}/{program.trainings.length}){' '}
+        </Text>
         {isLastTraining && (
           <TouchableOpacity style={styles.btnPrevNext} onPress={onNextPress}>
             <Text style={styles.btnPrevNextContent}>{'>'}</Text>
@@ -98,6 +102,9 @@ const styles = StyleSheet.create({
   title: {
     fontSize: theme.FONT_SIZE_LARGE,
     fontWeight: 'bold',
+  },
+  subtitle: {
+    fontSize: theme.FONT_SIZE_LARGE,
   },
   btnPrevNext: {
     color: theme.COLOR_PRIMARY,

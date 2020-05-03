@@ -1,11 +1,13 @@
 import React from 'react';
 import { StyleSheet, ScrollView, View, Text, TouchableOpacity, Image } from 'react-native';
 
+import filterButtonImage from '../../assets/filter.png';
 import DrillList from './shared/DrillList';
 import Button from './shared/Button';
 import theme from '../styles/theme.style';
 import iconPlayers from '../../assets/ic_players.png';
 import iconClock from '../../assets/ic_clock.png';
+import { RECORDING_OPTION_IOS_BIT_RATE_STRATEGY_VARIABLE_CONSTRAINED } from 'expo-av/build/Audio';
 
 export function getTrainingDuration(training) {
   return training.drills.reduce((total, drill) => total + drill.durationInMinutes, 0);
@@ -54,26 +56,30 @@ export const TrainingPage = props => {
   };
 
   return (
-    <ScrollView style={styles.trainingPage} contentContainerStyle={styles.trainingPageContent}>
-      <View style={styles.overview}>
-        {program && programNavigation()}
-        <View style={styles.infos}>
-          <View style={styles.info}>
-            <Image style={styles.infoIcon} source={iconPlayers} />
-            <Text style={styles.infoValue}>{getTrainingMinimalPlayersNumber(training)}+</Text>
+    <View>
+      <ScrollView style={styles.trainingPage} contentContainerStyle={styles.trainingPageContent}>
+        <View style={styles.overview}>
+          {program && programNavigation()}
+          <View style={styles.infos}>
+            <View style={styles.info}>
+              <Image style={styles.infoIcon} source={iconPlayers} />
+              <Text style={styles.infoValue}>{getTrainingMinimalPlayersNumber(training)}+</Text>
+            </View>
+            <View style={styles.info}>
+              <Image style={styles.infoIcon} source={iconClock} />
+              <Text style={styles.infoValue}>{getTrainingDuration(training)} mins</Text>
+            </View>
           </View>
-          <View style={styles.info}>
-            <Image style={styles.infoIcon} source={iconClock} />
-            <Text style={styles.infoValue}>{getTrainingDuration(training)} mins</Text>
-          </View>
+          <Text style={styles.descriptionText}>{training.description}</Text>
         </View>
-        <Text style={styles.descriptionText}>{training.description}</Text>
+        <View style={styles.list}>
+          <DrillList navigation={navigation} drillsToDisplay={training.drills} onDrillPress={onDrillPress} />
+        </View>
+      </ScrollView>
+      <View style={styles.footer}>
+        <Button style={styles.startButton} onPress={goToFirstDrill} text="Start training" />
       </View>
-      <View style={styles.list}>
-        <DrillList navigation={navigation} drillsToDisplay={training.drills} onDrillPress={onDrillPress} />
-      </View>
-      <Button onPress={goToFirstDrill} text="Start training" />
-    </ScrollView>
+    </View>
   );
 };
 
@@ -135,5 +141,12 @@ const styles = StyleSheet.create({
   },
   list: {
     paddingLeft: 20,
+  },
+  footer: {
+    flexDirection: 'row',
+    flex: 1,
+    position: 'absolute',
+    bottom: '3%',
+    justifyContent: 'center',
   },
 });

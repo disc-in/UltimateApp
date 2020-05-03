@@ -192,16 +192,26 @@ const training = {
   drills: [fitnessDrill2, frisbeeDrill1],
 };
 
+const training2 = {
+  id: 2,
+  illustrationSource: 'Rise Up',
+  title: 'Training 2',
+  image: 'https://d3j2bju5c7tc02.cloudfront.net/2016_44/backhand.jpg',
+  description:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
+  drills: [frisbeeDrill1, frisbeeDrill2],
+};
+
 export default {
   favoriteDrills: [],
   completeTrainings: [],
   drills: [fitnessDrill1, fitnessDrill2, frisbeeDrill1, frisbeeDrill2],
-  trainings: [training],
+  trainings: [training, training2],
   programs: [
     {
       id: 1,
       title: 'Beginner',
-      trainings: [training],
+      trainings: [training, training2],
     },
   ],
 };

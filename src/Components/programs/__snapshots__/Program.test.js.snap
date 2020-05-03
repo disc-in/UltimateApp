@@ -94,7 +94,7 @@ exports[`<Program /> renders correctly when finished 1`] = `
   onStartShouldSetResponder={[Function]}
   style={
     Object {
-      "backgroundColor": "#e5e5e5",
+      "backgroundColor": "#eee",
       "marginBottom": 10,
       "opacity": 1,
       "padding": 20,
@@ -119,9 +119,9 @@ exports[`<Program /> renders correctly when finished 1`] = `
       }
     }
   >
-    1
+    2
     /
-    1
+    2
      trainings
      👍🎉
   </Text>

@@ -7,19 +7,23 @@ import theme from '../../styles/theme.style';
 
 export const Program = props => {
   const { id, title, trainings } = props.program;
-  const completeTrainingsCount = props.completeTrainings.filter(
-    ({ training, program }) => program.id === props.program.id,
-  ).length;
+
+  const programCompleteTrainings = props.completeTrainings
+    .filter(({ training, program }) => program.id === props.program.id)
+    .map(({ training, program }) => training);
+  const completeTrainingsCount = programCompleteTrainings.length;
 
   const onPress = () => {
-    const firstTodoTraining =
-      props.completeTrainings.find(({ training, program }) => program.id === props.program.id) || trainings[0];
-    props.navigation.navigate('TrainingPage', { training: firstTodoTraining, program: props.program });
+    const firstTodoTraining = trainings.find(training => !programCompleteTrainings.includes(training));
+    if (firstTodoTraining !== undefined) {
+      props.navigation.navigate('TrainingPage', { training: firstTodoTraining, program: props.program });
+    }
   };
-  const width = `${(completeTrainingsCount * 100) / trainings.length}%`;
 
+  const width = `${(completeTrainingsCount * 100) / trainings.length}%`;
+  const completeStyle = completeTrainingsCount == trainings.length ? styles.complete : {};
   return (
-    <TouchableOpacity style={styles.program} onPress={onPress}>
+    <TouchableOpacity style={{ ...styles.program, ...completeStyle }} onPress={onPress}>
       <Text style={styles.programTitle}>{title}</Text>
       <Text style={styles.completion}>
         {completeTrainingsCount}/{trainings.length} trainings
@@ -45,6 +49,9 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     padding: 20,
     backgroundColor: theme.COLOR_SECONDARY_LIGHT,
+  },
+  complete: {
+    backgroundColor: theme.BACKGROUND_COLOR_BUTTON_ACTIVE,
   },
   programTitle: {
     fontSize: theme.FONT_SIZE_LARGE,

@@ -87,7 +87,7 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
             }
           >
             40
-            + mins
+             mins
           </Text>
         </View>
       </View>
@@ -821,6 +821,21 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
         >
           Dump & Swing
         </Text>
+        <Text
+          style={
+            Object {
+              "fontSize": 20,
+            }
+          }
+        >
+           
+          (
+          0
+          /
+          2
+          )
+           
+        </Text>
         <View
           accessible={true}
           focusable={true}
@@ -913,7 +928,7 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
             }
           >
             40
-            + mins
+             mins
           </Text>
         </View>
       </View>

@@ -61,16 +61,6 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
             2
             +
           </Text>
-          <Text
-            style={
-              Object {
-                "color": "#A6A6A6",
-                "fontSize": 14,
-              }
-            }
-          >
-            players
-          </Text>
         </View>
         <View
           style={
@@ -97,17 +87,7 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
             }
           >
             40
-            +
-          </Text>
-          <Text
-            style={
-              Object {
-                "color": "#A6A6A6",
-                "fontSize": 14,
-              }
-            }
-          >
-            minutes
+            + mins
           </Text>
         </View>
       </View>
@@ -835,11 +815,11 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
           style={
             Object {
               "fontSize": 20,
+              "fontWeight": "bold",
             }
           }
         >
-          Training session 
-          1
+          Dump & Swing
         </Text>
         <View
           accessible={true}
@@ -907,16 +887,6 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
             2
             +
           </Text>
-          <Text
-            style={
-              Object {
-                "color": "#A6A6A6",
-                "fontSize": 14,
-              }
-            }
-          >
-            players
-          </Text>
         </View>
         <View
           style={
@@ -943,17 +913,7 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
             }
           >
             40
-            +
-          </Text>
-          <Text
-            style={
-              Object {
-                "color": "#A6A6A6",
-                "fontSize": 14,
-              }
-            }
-          >
-            minutes
+            + mins
           </Text>
         </View>
       </View>

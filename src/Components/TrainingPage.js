@@ -39,7 +39,7 @@ export const TrainingPage = props => {
             <Text style={styles.btnPrevNextContent}>{'<'}</Text>
           </TouchableOpacity>
         )}
-        <Text style={styles.title}>Training session {currentTrainingIndex + 1}</Text>
+        <Text style={styles.title}>{training.title}</Text>
         {isLastTraining && (
           <TouchableOpacity style={styles.btnPrevNext} onPress={onNextPress}>
             <Text style={styles.btnPrevNextContent}>{'>'}</Text>
@@ -57,12 +57,10 @@ export const TrainingPage = props => {
           <View style={styles.info}>
             <Image style={styles.infoIcon} source={iconPlayers} />
             <Text style={styles.infoValue}>{getTrainingMinimalPlayersNumber(training)}+</Text>
-            <Text style={styles.infoUnit}>players</Text>
           </View>
           <View style={styles.info}>
             <Image style={styles.infoIcon} source={iconClock} />
-            <Text style={styles.infoValue}>{getTrainingDuration(training)}+</Text>
-            <Text style={styles.infoUnit}>minutes</Text>
+            <Text style={styles.infoValue}>{getTrainingDuration(training)}+ mins</Text>
           </View>
         </View>
         <Text style={styles.descriptionText}>{training.description}</Text>
@@ -99,6 +97,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: theme.FONT_SIZE_LARGE,
+    fontWeight: 'bold',
   },
   btnPrevNext: {
     color: theme.COLOR_PRIMARY,
@@ -126,10 +125,6 @@ const styles = StyleSheet.create({
   infoValue: {
     color: theme.COLOR_SECONDARY,
     fontSize: theme.FONT_SIZE_MEDIUM,
-  },
-  infoUnit: {
-    color: theme.COLOR_SECONDARY,
-    fontSize: theme.FONT_SIZE_SMALL,
   },
   list: {
     paddingLeft: 20,

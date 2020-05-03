@@ -60,7 +60,7 @@ export const TrainingPage = props => {
           </View>
           <View style={styles.info}>
             <Image style={styles.infoIcon} source={iconClock} />
-            <Text style={styles.infoValue}>{getTrainingDuration(training)}+ mins</Text>
+            <Text style={styles.infoValue}>{getTrainingDuration(training)} mins</Text>
           </View>
         </View>
         <Text style={styles.descriptionText}>{training.description}</Text>

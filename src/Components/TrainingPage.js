@@ -43,10 +43,12 @@ export const TrainingPage = props => {
           </TouchableOpacity>
         )}
         <Text style={styles.title}>{training.title}</Text>
-        <Text style={styles.subtitle}>
-          {' '}
-          ({currentTrainingIndex}/{program.trainings.length}){' '}
-        </Text>
+        {program.trainings.length > 1 && (
+          <Text style={styles.subtitle}>
+            {' '}
+            ({currentTrainingIndex + 1}/{program.trainings.length}){' '}
+          </Text>
+        )}
         {isLastTraining && (
           <TouchableOpacity style={styles.btnPrevNext} onPress={onNextPress}>
             <Text style={styles.btnPrevNextContent}>{'>'}</Text>

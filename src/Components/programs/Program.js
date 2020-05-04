@@ -21,9 +21,9 @@ export const Program = props => {
   };
 
   const width = `${(completeTrainingsCount * 100) / trainings.length}%`;
-  const completeStyle = completeTrainingsCount == trainings.length ? styles.complete : {};
+  const completeStyle = completeTrainingsCount === trainings.length ? styles.complete : null;
   return (
-    <TouchableOpacity style={{ ...styles.program, ...completeStyle }} onPress={onPress}>
+    <TouchableOpacity style={[styles.program, completeStyle]} onPress={onPress}>
       <Text style={styles.programTitle}>{title}</Text>
       <Text style={styles.completion}>
         {completeTrainingsCount}/{trainings.length} trainings

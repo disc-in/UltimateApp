@@ -24,14 +24,9 @@ const VimeoVideo = ({ vimeoId, screenWidth }) => {
       })
       .then(url => {
         if (aborted) return;
-        try {
-          videoElem.current.loadAsync({
-            uri: url,
-          });
-        } catch (e) {
-          setError(e);
-          setBuffer(false);
-        }
+        return videoElem.current.loadAsync({
+          uri: url,
+        });
       })
       .catch(e => {
         if (aborted) return;

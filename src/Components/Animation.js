@@ -316,7 +316,7 @@ class Animation extends React.Component {
     }
 
     return (
-      <View style={[styles.mainContainer, { height: this.animationHeight }, { width: this.animationWidth }]}>
+      <View style={[styles.mainContainer, { height: this.animationHeight + 20 }, { width: this.animationWidth }]}>
         {this._display(this.cuts)}
         {this.state.displayedElements === undefined || this.state.displayedElements === null ? (
           <View />

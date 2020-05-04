@@ -23,12 +23,13 @@ export const DrillPageMinimal = props => {
 
   const goToNextDrill = useCallback(() => {
     if (currentDrillIndex === training.drills.length - 1) {
+      props.completeTraining({ training, program });
       navigation.navigate('TrainingPage', { training });
     } else {
       const nextDrill = training.drills[currentDrillIndex + 1];
       navigation.navigate('DrillPageMinimal', { drill: nextDrill, training, program });
     }
-  }, [training, currentDrillIndex, navigation, program]);
+  }, [training, currentDrillIndex, navigation, program, props]);
 
   useLayoutEffect(() => {
     const onProgressDotPress = idx => {

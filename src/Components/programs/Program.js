@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
-import { StyleSheet, TouchableOpacity, View, Text, FlatList } from 'react-native';
+import React from 'react';
+import { StyleSheet, TouchableOpacity, View, Text } from 'react-native';
 import { connect } from 'react-redux';
 
-import { completeTraining } from '../../Store/Actions/programAction';
 import theme from '../../styles/theme.style';
 
 export const Program = props => {
-  const { id, title, trainings } = props.program;
+  const { title, trainings } = props.program;
 
   const programCompleteTrainings = props.completeTrainings
     .filter(({ training, program }) => program.id === props.program.id)
@@ -27,7 +26,7 @@ export const Program = props => {
       <Text style={styles.programTitle}>{title}</Text>
       <Text style={styles.completion}>
         {completeTrainingsCount}/{trainings.length} trainings
-        {completeTrainingsCount == trainings.length && ' 👍🎉'}
+        {completeTrainingsCount === trainings.length && ' 👍🎉'}
       </Text>
       <View style={styles.progressBar}>
         <View style={[StyleSheet.absoluteFill, styles.fillProgressBar, { width }]} />

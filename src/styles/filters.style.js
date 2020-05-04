@@ -19,6 +19,7 @@ export default {
     marginBottom: 10,
     textTransform: 'uppercase',
     fontWeight: 'bold',
+    textAlign: 'center',
   },
   filter: {
     marginBottom: 20,

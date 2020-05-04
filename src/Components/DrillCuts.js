@@ -85,8 +85,8 @@ class DrillCuts extends React.Component {
                 y0: elemCut[0][1],
                 x1: elemCut[1][0],
                 y1: elemCut[1][1],
-                x2: elemCut[elemCut.length - 1][0],
-                y2: elemCut[elemCut.length - 1][1],
+                x2: counterCutX,
+                y2: counterCutY,
                   cutCircle: new MovingCircle({
                       onMoveEnd:this.props.onMoveEnd,
                       elemId: elemId,
@@ -106,7 +106,7 @@ class DrillCuts extends React.Component {
                       cy: counterCutY,
                       radius: this.discRadius / 2,
                       isCounterCut: true
-                  }),
+                  }), 
               });
             }
           }
@@ -145,34 +145,29 @@ class DrillCuts extends React.Component {
     }
     
     _displayCut = cut => {
-
-
-/*        var panStyle = {
-            transform: cut.cutPosition.getTranslateTransform(),
-        };*/
         
     /* If there is no counter cut */
-  /*  if (cut.x1 === cut.x2 && cut.y1 === cut.y2) {*/
-        console.log('cut: ' + cut);
         console.log('pos 0: ' + cut.x0 + '/' + cut.y0);
         console.log('pos 1: ' + cut.x1 + '/' + cut.y1);
+        console.log('pos 2: ' + cut.x2 + '/' + cut.y2);
         console.log('disc radius: ' + this.discRadius);
 
         return (
-            <View key={cut.key+4000}>
+            <View key={cut.key+4000} style={[StyleSheet.absoluteFill]} height="100%" width="100%">
               <Svg style={[StyleSheet.absoluteFill]} height="100%" width="100%">
-                <Line x1={cut.x0} y1={cut.y0} x2={cut.x1} y2={cut.y1} stroke="green" strokeWidth="2" strokeDasharray="5, 5" />
+                <Line x1={cut.x0} y1={cut.y0} x2={cut.x2} y2={cut.y2} stroke="green" strokeWidth="2" strokeDasharray="5, 5" />
                 <Line x1={cut.x1} y1={cut.y1} x2={cut.x2} y2={cut.y2} stroke="green" strokeWidth="2" strokeDasharray="5, 5" /> 
               </Svg>
-              {this._display(cut.cutCircle)}
               {this._display(cut.countercutCircle)}
+            {this._display(cut.cutCircle)}
             </View>
         );
   };
 
   render() {
+        console.log('render drill cut: ');
     return (
-      <View key="1" style={[{ position: 'absolute' }]} height="100%" width="100%">
+        <View key="1" style={[{ position: 'absolute', left: 0, top: 0 }]} height="100%" width="100%">
         {this.cuts.length >= this.props.currentStep &&
         this.cuts[this.props.currentStep] !== undefined &&
         this.cuts[this.props.currentStep] !== null

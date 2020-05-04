@@ -20,8 +20,8 @@ class DisplayedElement extends React.Component {
     // TODO: put the constant coefficient used in the following somewhere to avoir writing them twice (in this class and in DrillCuts)
     var dimensionMin = Math.min(this.props.animationWidth, this.props.animationHeight);
     this.props.playerRadius = dimensionMin / 12;
-    //	this.props.discRadius = this.props.playerRadius / 2;
-    this.props.discRadius = 200;
+    this.props.discRadius = this.props.playerRadius / 2;
+//    this.props.discRadius = 200;
     this.props.coneSize = (this.props.playerRadius * 5) / 16;
 
     this.props.bottomconeSize = (this.props.playerRadius * 10) / 16;

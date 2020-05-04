@@ -12,10 +12,6 @@ class AnimationEditor extends React.Component {
   constructor(props) {
     super(props);
 
-    this.playerRadius = 40;
-    this.discRadius = this.playerRadius / 2;
-    this.triangleSize = (this.playerRadius * 5) / 16;
-
     this.state = {
       draggableElements: [],
       screenH: 1,
@@ -181,8 +177,10 @@ class AnimationEditor extends React.Component {
 
         console.log('Drill before update: ');
         this.state.drill.log();
+
+        var previousStepId = Math.ceil(this.currentStep)-1;
         
-        var previousPositions = this.state.drill.getPositionsAtStep(elemId, Math.ceil(this.currentStep)-1);
+        var previousPositions = this.state.drill.getPositionsAtStep(elemId, previousStepId);
         
         var xDeltaPercent = xDelta / (this.state.width * this.wRatio);
         var yDeltaPercent = yDelta / (this.state.height * this.hRatio);
@@ -209,18 +207,32 @@ class AnimationEditor extends React.Component {
         }
 
         /* Set the starting position */
-        newDrill.positions[Math.ceil(this.currentStep)-1][elemId] = [];
-        newDrill.positions[Math.ceil(this.currentStep)-1][elemId].push([]);
-        newDrill.positions[Math.ceil(this.currentStep)-1][elemId][0].push(previousPositions[0][0] + xCutDelta);
-        newDrill.positions[Math.ceil(this.currentStep)-1][elemId][0].push(previousPositions[0][1] + yCutDelta);
+        newDrill.positions[previousStepId][elemId] = [];
+        newDrill.positions[previousStepId][elemId].push([]);
+        newDrill.positions[previousStepId][elemId][0].push(previousPositions[0][0] + xCutDelta);
+        newDrill.positions[previousStepId][elemId][0].push(previousPositions[0][1] + yCutDelta);
 
         /* If there was a counter-cut or if the counter-cut is moving */
         if(previousPositions.length > 1 || isCounterCut){
 
             /* Set the counter-cut position */
-            newDrill.positions[Math.ceil(this.currentStep)-1][elemId].push([]);
-            newDrill.positions[Math.ceil(this.currentStep)-1][elemId][1].push(previousPositions[1][0] + xCCutDelta);
-            newDrill.positions[Math.ceil(this.currentStep)-1][elemId][1].push(previousPositions[1][1] + yCCutDelta);
+            newDrill.positions[previousStepId][elemId].push([]);
+
+            /* Get the new position of the counter-cut */
+
+            /* 1 - If there was no counter-cut, the move is from (previousPosition + currentPosition) / 2 */
+            var currentPositions = this.state.drill.getPositionsAtStep(elemId, previousStepId+1);
+            var newPositionX = (currentPositions[0][0] + previousPositions[0][0]) / 2 + xCCutDelta;
+            var newPositionY = (currentPositions[0][1] + previousPositions[0][1]) / 2 + yCCutDelta;
+
+            /* 2 - If there was a counter cut, the move is from this counter-cut position */
+            if(previousPositions.length > 1){
+                newPositionX = previousPositions[1][0] + xCCutDelta;
+                newPositionY = previousPositions[1][1] + yCCutDelta;
+            }
+            
+            newDrill.positions[previousStepId][elemId][1].push(newPositionX);
+            newDrill.positions[previousStepId][elemId][1].push(newPositionY);
             
         }
 

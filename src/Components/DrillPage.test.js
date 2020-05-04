@@ -11,6 +11,8 @@ import { createDrill } from '../Fixtures/TestFixtures';
 
 import ConnectedDrillPage, { DrillPage } from './DrillPage';
 
+jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
+
 afterEach(cleanup);
 
 describe('<DrillPage />', () => {

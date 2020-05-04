@@ -8,6 +8,8 @@ import { Levels, Intensities, EquipmentLabels, SeasonTimings, GoalsFitness, Dril
 
 import FitnessFilters from './FitnessFilters';
 
+jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
+
 afterEach(cleanup);
 
 describe('<FitnessFilters />', () => {

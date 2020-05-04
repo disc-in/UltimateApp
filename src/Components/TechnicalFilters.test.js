@@ -8,6 +8,8 @@ import { Levels, GoalsFrisbee, DrillTypes } from '../Fixtures';
 
 import TechnicalFilters from './TechnicalFilters';
 
+jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
+
 afterEach(cleanup);
 
 describe('<TechnicalFilters />', () => {

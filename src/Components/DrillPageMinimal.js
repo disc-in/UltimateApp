@@ -6,7 +6,8 @@ import { completeTraining } from '../Store/Actions/programAction';
 
 import theme from '../styles/theme.style';
 import HeaderButton from './shared/HeaderButton';
-import { MinimalDrill } from './shared/MinimalDrill';
+import MinimalDrill from './shared/MinimalDrill';
+import Button from './shared/Button';
 import Progress from './ProgressBar2';
 
 export const DrillPageMinimal = props => {
@@ -53,9 +54,7 @@ export const DrillPageMinimal = props => {
       </View>
       <MinimalDrill drill={drill} />
       <View style={styles.btnMoreContainer}>
-        <TouchableOpacity style={styles.btnMore} onPress={goToFullDrill}>
-          <Text style={styles.btnMoreContent}>More details on this drill</Text>
-        </TouchableOpacity>
+        <Button onPress={goToFullDrill} text="More details on this drill" />
       </View>
     </ScrollView>
   );
@@ -107,14 +106,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-  },
-  btnMore: {
-    width: '80%',
-    backgroundColor: theme.COLOR_PRIMARY,
-    textAlign: 'center',
-    padding: 20,
-  },
-  btnMoreContent: {
-    color: 'rgb(255, 255, 255)',
+    paddingVertical: 10,
   },
 });

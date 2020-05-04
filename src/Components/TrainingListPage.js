@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Text, ImageBackground, TouchableOpacity, FlatList } from 'react-native';
 
-import { getTrainingDuration, getTrainingMinimalPlayersNumber, getGoals } from './TrainingPage';
+import { getTrainingDuration, getTrainingMinimalPlayersNumber } from './TrainingPage';
 import { connect } from 'react-redux';
 import theme from '../styles/theme.style';
 import * as list from '../styles/list.style';
@@ -11,6 +11,10 @@ const mapStateToProps = state => {
     trainings: state.trainings,
   };
 };
+
+export function getGoals(training) {
+  return Array.from(new Set(training.drills.reduce((acc, { goals }) => acc.concat(goals), [])));
+}
 
 export const TrainingListPage = props => {
   const { trainings, navigation } = props;

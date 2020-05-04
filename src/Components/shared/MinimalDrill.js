@@ -4,7 +4,7 @@ import { StyleSheet, View, Text } from 'react-native';
 import DrillIllustration from '../DrillIllustration';
 import theme from '../../styles/theme.style';
 
-export const MinimalDrill = props => {
+const MinimalDrill = props => {
   const { drill } = props;
   return (
     <>
@@ -32,6 +32,8 @@ export const MinimalDrill = props => {
     </>
   );
 };
+
+export default MinimalDrill;
 
 const styles = StyleSheet.create({
   description: {

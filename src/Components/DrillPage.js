@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useLayoutEffect } from 'react';
 import {
   ScrollView,
   StyleSheet,
@@ -59,9 +59,11 @@ export const DrillPage = props => {
     );
   };
 
-  navigation.setOptions({
-    headerRight: () => displayFavoriteButton(),
-  });
+  useLayoutEffect(() =>
+    navigation.setOptions({
+      headerRight: () => displayFavoriteButton(),
+    }),
+  );
 
   return (
     <ScrollView ref={drillScrollView} style={styles.drillPage}>

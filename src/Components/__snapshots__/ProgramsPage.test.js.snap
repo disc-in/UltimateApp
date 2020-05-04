@@ -393,6 +393,595 @@ exports[`<ProgramsPage /> renders correctly when connected 1`] = `
               "image": "https://d3j2bju5c7tc02.cloudfront.net/2016_44/backhand.jpg",
               "title": "Dump & Swing",
             },
+            Object {
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
+              "drills": Array [
+                Object {
+                  "author": "Author",
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
+                  "durationInMinutes": 30,
+                  "equipment": "Equipment needs for the drill",
+                  "equipmentLabel": "",
+                  "goals": Array [
+                    "Defense",
+                  ],
+                  "id": 3,
+                  "image": "https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1",
+                  "intensity": "Low",
+                  "level": "Beginner",
+                  "minimalPlayersNumber": 2,
+                  "seasonTiming": "",
+                  "steps": Array [
+                    Object {
+                      "illustrationSource": Object {
+                        "ids": Array [
+                          "triangle",
+                          "triangle",
+                          "triangle",
+                          "triangle",
+                          "triangle",
+                          "triangle",
+                          "triangle",
+                          "triangle",
+                          "offense",
+                          "offense",
+                          "offense",
+                          "offense",
+                          "offense",
+                          "disc",
+                        ],
+                        "positions": Array [
+                          Array [
+                            Array [
+                              Array [
+                                0.3,
+                                0.3,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.3,
+                                0.6,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.6,
+                                0.3,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.6,
+                                0.6,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.45,
+                                0.2,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.2,
+                                0.45,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.45,
+                                0.7,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.7,
+                                0.45,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.3,
+                                0.3,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.16,
+                                0.3,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.6,
+                                0.3,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.6,
+                                0.6,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.3,
+                                0.6,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.36,
+                                0.36,
+                              ],
+                            ],
+                          ],
+                          Array [
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            Array [
+                              Array [
+                                0.45,
+                                0.2,
+                              ],
+                            ],
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                          ],
+                          Array [
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            Array [
+                              Array [
+                                0.6,
+                                0.3,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.7,
+                                0.45,
+                              ],
+                            ],
+                            undefined,
+                            undefined,
+                            Array [
+                              Array [
+                                0.58,
+                                0.36,
+                              ],
+                            ],
+                          ],
+                          Array [
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            Array [
+                              Array [
+                                0.6,
+                                0.6,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.45,
+                                0.7,
+                              ],
+                            ],
+                            undefined,
+                            Array [
+                              Array [
+                                0.58,
+                                0.58,
+                              ],
+                            ],
+                          ],
+                          Array [
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            Array [
+                              Array [
+                                0.3,
+                                0.6,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.2,
+                                0.45,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.36,
+                                0.58,
+                              ],
+                            ],
+                          ],
+                          Array [
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            Array [
+                              Array [
+                                0.45,
+                                0.2,
+                              ],
+                            ],
+                            undefined,
+                            undefined,
+                            undefined,
+                            Array [
+                              Array [
+                                0.3,
+                                0.3,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.36,
+                                0.36,
+                              ],
+                            ],
+                          ],
+                        ],
+                        "texts": Array [
+                          "",
+                          "",
+                          "",
+                          "",
+                          "",
+                          "",
+                          "",
+                          "",
+                          "1",
+                          "2",
+                          "3",
+                          "4",
+                          "5",
+                          "",
+                        ],
+                      },
+                      "illustrationType": "animation",
+                    },
+                  ],
+                  "title": "Frisbee Drill Title",
+                  "type": "technical",
+                },
+                Object {
+                  "author": "Author",
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
+                  "durationInMinutes": 30,
+                  "equipment": "Equipment needs for the drill",
+                  "equipmentLabel": "",
+                  "goals": Array [
+                    "Defense",
+                  ],
+                  "id": 4,
+                  "image": "https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg",
+                  "intensity": "Low",
+                  "level": "Beginner",
+                  "minimalPlayersNumber": 2,
+                  "seasonTiming": "",
+                  "steps": Array [
+                    Object {
+                      "illustrationSource": Object {
+                        "ids": Array [
+                          "triangle",
+                          "triangle",
+                          "triangle",
+                          "triangle",
+                          "triangle",
+                          "triangle",
+                          "triangle",
+                          "triangle",
+                          "offense",
+                          "offense",
+                          "offense",
+                          "offense",
+                          "offense",
+                          "disc",
+                        ],
+                        "positions": Array [
+                          Array [
+                            Array [
+                              Array [
+                                0.3,
+                                0.3,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.3,
+                                0.6,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.6,
+                                0.3,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.6,
+                                0.6,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.45,
+                                0.2,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.2,
+                                0.45,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.45,
+                                0.7,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.7,
+                                0.45,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.3,
+                                0.3,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.16,
+                                0.3,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.6,
+                                0.3,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.6,
+                                0.6,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.3,
+                                0.6,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.36,
+                                0.36,
+                              ],
+                            ],
+                          ],
+                          Array [
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            Array [
+                              Array [
+                                0.45,
+                                0.2,
+                              ],
+                            ],
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                          ],
+                          Array [
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            Array [
+                              Array [
+                                0.6,
+                                0.3,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.7,
+                                0.45,
+                              ],
+                            ],
+                            undefined,
+                            undefined,
+                            Array [
+                              Array [
+                                0.58,
+                                0.36,
+                              ],
+                            ],
+                          ],
+                          Array [
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            Array [
+                              Array [
+                                0.6,
+                                0.6,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.45,
+                                0.7,
+                              ],
+                            ],
+                            undefined,
+                            Array [
+                              Array [
+                                0.58,
+                                0.58,
+                              ],
+                            ],
+                          ],
+                          Array [
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            Array [
+                              Array [
+                                0.3,
+                                0.6,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.2,
+                                0.45,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.36,
+                                0.58,
+                              ],
+                            ],
+                          ],
+                          Array [
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            Array [
+                              Array [
+                                0.45,
+                                0.2,
+                              ],
+                            ],
+                            undefined,
+                            undefined,
+                            undefined,
+                            Array [
+                              Array [
+                                0.3,
+                                0.3,
+                              ],
+                            ],
+                            Array [
+                              Array [
+                                0.36,
+                                0.36,
+                              ],
+                            ],
+                          ],
+                        ],
+                        "texts": Array [
+                          "",
+                          "",
+                          "",
+                          "",
+                          "",
+                          "",
+                          "",
+                          "",
+                          "1",
+                          "2",
+                          "3",
+                          "4",
+                          "5",
+                          "",
+                        ],
+                      },
+                      "illustrationType": "animation",
+                    },
+                  ],
+                  "title": "Frisbee Drill Title",
+                  "type": "technical",
+                },
+              ],
+              "id": 2,
+              "illustrationSource": "Rise Up",
+              "image": "https://d3j2bju5c7tc02.cloudfront.net/2016_44/backhand.jpg",
+              "title": "Training 2",
+            },
           ],
         },
       ]
@@ -463,8 +1052,10 @@ exports[`<ProgramsPage /> renders correctly when connected 1`] = `
               }
             }
           >
-            0/
-            1
+            0
+            /
+            2
+             trainings
           </Text>
           <View
             style={

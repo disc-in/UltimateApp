@@ -18,9 +18,9 @@ export function getTrainingMinimalPlayersNumber(training) {
 
 export const TrainingPage = props => {
   const { navigation, route } = props;
-  const training = route.params.training;
+  const { training, program } = route.params;
 
-  const onDrillPress = drill => navigation.navigate('DrillPageMinimal', { drill, training });
+  const onDrillPress = drill => navigation.navigate('DrillPageMinimal', { drill, training, program });
 
   return (
     <ScrollView style={styles.trainingPage} contentContainerStyle={styles.trainingPageContent}>

@@ -1,16 +1,17 @@
 import React, { useLayoutEffect, useCallback } from 'react';
 import { ScrollView, StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import { connect } from 'react-redux';
 
-import Progress from './ProgressBar2';
-
-import HeaderButton from './shared/HeaderButton';
+import { completeTraining } from '../Store/Actions/programAction';
 
 import theme from '../styles/theme.style';
+import HeaderButton from './shared/HeaderButton';
 import { MinimalDrill } from './shared/MinimalDrill';
+import Progress from './ProgressBar2';
 
 export const DrillPageMinimal = props => {
   const { route, navigation } = props;
-  const { drill, training } = route.params;
+  const { drill, training, program } = route.params;
 
   const totalDrills = training.drills.length;
   const currentDrillIndex = training.drills.findIndex(trainingDrill => trainingDrill.id === drill.id);
@@ -28,12 +29,13 @@ export const DrillPageMinimal = props => {
 
   const onHeaderCheckPress = useCallback(() => {
     if (currentDrillIndex === totalDrills - 1) {
+      props.completeTraining({ training, program });
       navigation.navigate('TrainingPage', { training });
     } else {
       const nextDrill = training.drills[currentDrillIndex + 1];
-      navigation.navigate('DrillPageMinimal', { drill: nextDrill, training });
+      navigation.navigate('DrillPageMinimal', { drill: nextDrill, training, program });
     }
-  }, [training, currentDrillIndex, navigation, totalDrills]);
+  }, [training, currentDrillIndex, navigation, totalDrills, program]);
 
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -59,7 +61,9 @@ export const DrillPageMinimal = props => {
   );
 };
 
-export default DrillPageMinimal;
+const mapDispatchToProps = { completeTraining };
+
+export default connect(null, mapDispatchToProps)(DrillPageMinimal);
 
 const styles = StyleSheet.create({
   drillPage: {

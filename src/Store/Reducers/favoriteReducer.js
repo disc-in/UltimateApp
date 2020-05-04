@@ -1,20 +1,14 @@
-const initialState = { favoriteDrills: [] };
+const initialState = [];
 
 function favoriteReducer(state = initialState, action) {
   let nextState;
   switch (action.type) {
     case 'TOGGLE_FAVORITE':
-      const favoriteDrillIndex = state.favoriteDrills.findIndex(item => item.id === action.value.id);
+      const favoriteDrillIndex = state.findIndex(item => item.id === action.value.id);
       if (favoriteDrillIndex !== -1) {
-        nextState = {
-          ...state,
-          favoriteDrills: state.favoriteDrills.filter((item, index) => index !== favoriteDrillIndex),
-        };
+        nextState = state.filter((item, index) => index !== favoriteDrillIndex);
       } else {
-        nextState = {
-          ...state,
-          favoriteDrills: [...state.favoriteDrills, action.value],
-        };
+        nextState = [...state, action.value];
       }
       return nextState || state;
     default:

@@ -1,5 +1,5 @@
 import { createStore } from 'redux';
+import rootReducer from './Reducers';
 import testFixtures from '../Fixtures/TestFixtures';
-import toggleFavorite from './Reducers/favoriteReducer';
 
-export default createStore(toggleFavorite, testFixtures);
+export default createStore(rootReducer, testFixtures);

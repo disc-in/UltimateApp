@@ -1271,6 +1271,17 @@ const normalGame = {
   goals: [GoalsFitness.CORE],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: '',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: animationSquare,
+      repetition: '1',
+      rest: '',
+      instruction: '',
+    },
+  ],
 };
 
 const game3v3 = {
@@ -1290,6 +1301,17 @@ const game3v3 = {
   goals: [GoalsFrisbee.PLAY],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: '',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: animationSquare,
+      repetition: '1',
+      rest: '',
+      instruction: '',
+    },
+  ],
 };
 
 const longShotGame = {
@@ -1309,6 +1331,17 @@ const longShotGame = {
   goals: [GoalsFrisbee.PLAY, GoalsFrisbee.THROWING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: '',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: animationSquare,
+      repetition: '1',
+      rest: '',
+      instruction: '',
+    },
+  ],
 };
 
 const dumpSwingTraining = {
@@ -1361,6 +1394,7 @@ const coed2Long2Training = {
 
 export default {
   favoriteDrills: [],
+  completeTrainings: [],
   drills: [
     // Fitness
     stabilityDrill,

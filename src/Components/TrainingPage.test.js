@@ -76,7 +76,7 @@ describe('<TrainingPage />', () => {
 
     await fireEvent.press(queryByText(trainingFirstDrill.title));
 
-    expect(navigation.navigate).toBeCalledWith('DrillPageMinimal', { drill: trainingFirstDrill, training });
+    expect(navigation.navigate).toBeCalledWith('DrillPageMinimal', { drill: trainingFirstDrill, training, program });
   });
 
   it('starts training links to first drill', async () => {
@@ -84,6 +84,6 @@ describe('<TrainingPage />', () => {
 
     await fireEvent.press(queryByText('Start training'));
 
-    expect(navigation.navigate).toBeCalledWith('DrillPageMinimal', { drill: training.drills[0], training });
+    expect(navigation.navigate).toBeCalledWith('DrillPageMinimal', { drill: training.drills[0], training, program });
   });
 });

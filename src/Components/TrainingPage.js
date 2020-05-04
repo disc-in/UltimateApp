@@ -22,8 +22,9 @@ export const TrainingPage = props => {
   const { navigation, route } = props;
   const { training, program } = route.params;
 
-  const onDrillPress = drill => navigation.navigate('DrillPageMinimal', { drill, training });
-  const goToFirstDrill = () => navigation.navigate('DrillPageMinimal', { drill: training.drills[0], training });
+  const onDrillPress = drill => navigation.navigate('DrillPageMinimal', { drill, training, program });
+  const goToFirstDrill = () =>
+    navigation.navigate('DrillPageMinimal', { drill: training.drills[0], training, program });
 
   const programNavigation = () => {
     const currentTrainingIndex = program.trainings.findIndex(programTraining => programTraining.id === training.id);

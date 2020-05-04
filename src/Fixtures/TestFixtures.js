@@ -204,6 +204,7 @@ const training2 = {
 
 export default {
   favoriteDrills: [],
+  completeTrainings: [],
   drills: [fitnessDrill1, fitnessDrill2, frisbeeDrill1, frisbeeDrill2],
   trainings: [training, training2],
   programs: [

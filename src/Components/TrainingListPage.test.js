@@ -22,17 +22,14 @@ describe('<TrainingListPage />', () => {
   });
 
   it('renders correctly with a training', () => {
-    const tree = renderer
-      .create(<TrainingListPage allDrills={fixtures.drills} trainings={fixtures.trainings} />)
-      .toJSON();
+    const tree = renderer.create(<TrainingListPage trainings={fixtures.trainings} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
+
   it('links to training page', async () => {
     const training = fixtures.trainings[0];
     const navigation = { navigate: jest.fn() };
-    const { getByText } = render(
-      <TrainingListPage navigation={navigation} allDrills={fixtures.drills} trainings={fixtures.trainings} />,
-    );
+    const { getByText } = render(<TrainingListPage navigation={navigation} trainings={fixtures.trainings} />);
 
     await fireEvent.press(getByText(fixtures.trainings[0].title));
 

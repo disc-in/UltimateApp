@@ -34,7 +34,9 @@ export const Navigation = () => (
     <Stack.Screen
       name="TrainingPage"
       component={TrainingPage}
-      options={({ route }) => ({ title: route.params.training.title })}
+      options={({ route }) => ({
+        title: (route.params.program && route.params.program.title) || route.params.training.title,
+      })}
     />
     <Stack.Screen
       name="DrillPageMinimal"

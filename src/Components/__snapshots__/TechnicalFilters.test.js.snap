@@ -36,6 +36,7 @@ exports[`<TechnicalFilters /> renders correctly 1`] = `
           Object {
             "fontWeight": "bold",
             "marginBottom": 10,
+            "textAlign": "center",
             "textTransform": "uppercase",
           }
         }
@@ -166,6 +167,7 @@ exports[`<TechnicalFilters /> renders correctly 1`] = `
           Object {
             "fontWeight": "bold",
             "marginBottom": 10,
+            "textAlign": "center",
             "textTransform": "uppercase",
           }
         }
@@ -284,6 +286,7 @@ exports[`<TechnicalFilters /> renders correctly 1`] = `
           Object {
             "fontWeight": "bold",
             "marginBottom": 10,
+            "textAlign": "center",
             "textTransform": "uppercase",
           }
         }

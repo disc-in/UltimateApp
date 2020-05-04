@@ -11,6 +11,7 @@ const VimeoVideo = ({ vimeoId, screenWidth }) => {
 
   useEffect(() => {
     const vimeoUrlSource = `https://player.vimeo.com/video/${vimeoId}/config`;
+    let aborted = false;
 
     fetch(vimeoUrlSource)
       .then(res => res.json())
@@ -22,6 +23,7 @@ const VimeoVideo = ({ vimeoId, screenWidth }) => {
         }
       })
       .then(url => {
+        if (aborted) return;
         try {
           videoElem.current.loadAsync({
             uri: url,
@@ -35,6 +37,8 @@ const VimeoVideo = ({ vimeoId, screenWidth }) => {
         setError(e);
         setBuffer(false);
       });
+
+    return () => (aborted = true);
   }, [vimeoId]);
 
   const playVideoLoaded = () => {

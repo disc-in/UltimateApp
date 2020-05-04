@@ -34,6 +34,7 @@ const VimeoVideo = ({ vimeoId, screenWidth }) => {
         }
       })
       .catch(e => {
+        if (aborted) return;
         setError(e);
         setBuffer(false);
       });

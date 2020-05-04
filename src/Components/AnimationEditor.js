@@ -171,6 +171,66 @@ class AnimationEditor extends React.Component {
     }));
   }
 
+    cutMove = (elemId, xDelta, yDelta, isCounterCut) => {
+        
+        console.log('Animation editor: in cut move xD/yD: ' + xDelta + '/' + yDelta);
+
+        console.log('previousStep: ' + (this.currentStep-1) + ' ceil: ' + Math.ceil(this.currentStep-1));
+
+        console.log('elemId: ' + elemId);
+
+        console.log('Drill before update: ');
+        this.state.drill.log();
+        
+        var previousPositions = this.state.drill.getPositionsAtStep(elemId, Math.ceil(this.currentStep)-1);
+        
+        var xDeltaPercent = xDelta / (this.state.width * this.wRatio);
+        var yDeltaPercent = yDelta / (this.state.height * this.hRatio);
+
+        console.log(
+            'moved cut element to position: ' + (previousPositions[0][0] + xDeltaPercent) + '/' + (previousPositions[0][1] + yDeltaPercent),
+        );
+        
+
+        var newDrill = this._copyDrill();
+
+        var xCutDelta = xDeltaPercent;
+        var yCutDelta = yDeltaPercent;
+        var xCCutDelta = xDeltaPercent;
+        var yCCutDelta = yDeltaPercent;
+
+        if(isCounterCut){
+            xCutDelta = 0;
+            yCutDelta = 0
+        }
+        else{
+            xCCutDelta = 0;
+            yCCutDelta = 0;
+        }
+
+        /* Set the starting position */
+        newDrill.positions[Math.ceil(this.currentStep)-1][elemId] = [];
+        newDrill.positions[Math.ceil(this.currentStep)-1][elemId].push([]);
+        newDrill.positions[Math.ceil(this.currentStep)-1][elemId][0].push(previousPositions[0][0] + xCutDelta);
+        newDrill.positions[Math.ceil(this.currentStep)-1][elemId][0].push(previousPositions[0][1] + yCutDelta);
+
+        /* If there was a counter-cut or if the counter-cut is moving */
+        if(previousPositions.length > 1 || isCounterCut){
+
+            /* Set the counter-cut position */
+            newDrill.positions[Math.ceil(this.currentStep)-1][elemId].push([]);
+            newDrill.positions[Math.ceil(this.currentStep)-1][elemId][1].push(previousPositions[1][0] + xCCutDelta);
+            newDrill.positions[Math.ceil(this.currentStep)-1][elemId][1].push(previousPositions[1][1] + yCCutDelta);
+            
+        }
+
+        this.setState({ drill: newDrill }, () => {
+            console.log('Drill after update: ');
+            this.state.drill.log();
+        });
+        
+    }
+
   moveElement = (element, xDelta, yDelta) => {
     console.log('Animation editor: in move element xD/yD: ' + xDelta + '/' + yDelta);
 
@@ -193,9 +253,6 @@ class AnimationEditor extends React.Component {
     newDrill.positions[Math.ceil(this.currentStep)][element.props.eId].push([]);
     newDrill.positions[Math.ceil(this.currentStep)][element.props.eId][0].push(currentPosition[0] + xDeltaPercent);
     newDrill.positions[Math.ceil(this.currentStep)][element.props.eId][0].push(currentPosition[1] + yDeltaPercent);
-
-    console.log('newDrill new pos x: ' + newDrill.positions[Math.ceil(this.currentStep)][element.props.eId][0][0]);
-    console.log('newDrill new pos y: ' + newDrill.positions[Math.ceil(this.currentStep)][element.props.eId][0][1]);
 
     this.setState({ drill: newDrill }, () => {
       console.log('Drill after update: ');
@@ -262,7 +319,8 @@ class AnimationEditor extends React.Component {
           style={[{ flex: 10 }]}
           editable
           drill={this.state.drill}
-          onElementMove={this.moveElement}
+        onElementMove={this.moveElement}
+        onCutMove={this.cutMove}
           height={this.state.height === undefined ? 300 : this.state.height * this.hRatio}
           width={this.state.width === undefined ? 300 : this.state.width * this.wRatio}
           dTop={this.state.dTop}
@@ -270,7 +328,7 @@ class AnimationEditor extends React.Component {
         onStepChange={this.displayStepDescription}
         onStepAdded={this.addStep}
           currentStepAV={this.currentStepAV}
-        />
+            />
 
         {this.state.draggableElements.map(function(item) {
           return item.render();
@@ -282,7 +340,7 @@ class AnimationEditor extends React.Component {
           style={[{ flex: 3 }, {}]}
           placeholder="Step description"
           onChangeText={text => this._modifiedText()}
-        />
+            />
       </View>
     );
   }

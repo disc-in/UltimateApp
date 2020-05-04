@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import Svg, { Line, Circle } from 'react-native-svg';
+import { Animated, PanResponder } from 'react-native';
+import MovingCircle from './MovingCircle';
 
 /** The cuts that must be displayed at each step of a drill (a cut correspond to the position of a player at the previous step) */
 class DrillCuts extends React.Component {
@@ -27,20 +29,6 @@ class DrillCuts extends React.Component {
     this.cuts = [];
 
     if (this.props.drill.ids.length > 0) {
-      //	    for(var stepId2 = 0; stepId2 < this.props.drill.positions.length; stepId2++){
-      //
-      //		console.log("step: " + stepId2);
-      //		for(var elemId2 = 0; elemId2 < this.props.drill.positions[stepId2].length; elemId2++){
-      //
-      //		    console.log("\telem: " + elemId2);
-      //
-      //		    if(this.props.drill.positions[stepId2][elemId2] == undefined)
-      //			console.log("\t\tundefined");
-      //		    else
-      //			for(var cutId2 = 0; cutId2 < this.props.drill.positions[stepId2][elemId2].length; cutId2++)
-      //			    console.log("\t\t cut " + cutId2 + ": " +  this.props.drill.positions[stepId2][elemId2][cutId2]);
-      //		}
-      //	    }
 
       var elemCount = this.props.drill.ids.length;
 
@@ -53,28 +41,14 @@ class DrillCuts extends React.Component {
         if (stepId > 0) {
           /* For each element displayed */
           for (var elemId = 0; elemId < elemCount; elemId++) {
-            //		    console.log("pos step+1 undefined2?: " + (this.props.drill.positions[stepId+1][elemId] == undefined));
-            //		    console.log("pos step+1 not undefined2?: " + (this.props.drill.positions[stepId+1][elemId] != undefined));
 
+              console.log("drill cut, elem id: " + elemId);
             /* If the element moves at this step */
             if (
               this.props.drill.positions[stepId][elemId] !== null &&
               this.props.drill.positions[stepId][elemId] !== undefined
             ) {
               var elemCut = [];
-
-              //			console.log("elemCount: " + elemCount);
-              //			console.log("stepId: " + stepId);
-              //			console.log("elemId: " + elemId);
-              //			console.log("posAS.length: " + positionsAtStep.length);
-              //			console.log("posAS: " + positionsAtStep);
-              //			console.log("pas[length-1] undefined?: " + positionsAtStep[positionsAtStep.length-1] == undefined);
-              //			console.log("pos elem 0 at step 0: " + this.props.drill.positions[0][0]);
-              //
-              //			console.log("pos step: " + this.props.drill.positions[stepId][elemId]);
-              //			console.log("pos step+1: " + this.props.drill.positions[stepId+1][elemId]);
-              //			console.log("pos step+1 undefined?: " + (this.props.drill.positions[stepId+1][elemId] == undefined));
-              //			console.log("pos step+1 not undefined?: " + (this.props.drill.positions[stepId+1][elemId] != undefined));
 
               /* The cut starting position is its position at step stepId */
               var pos = this.props.positionPercentToPixel(
@@ -96,8 +70,15 @@ class DrillCuts extends React.Component {
 
                 elemCut.push(pos);
               }
+                
+                var counterCutX = (elemCut[0][0] + elemCut[1][0]) / 2;
+                var counterCutY = (elemCut[0][1] + elemCut[1][1]) / 2;
 
-              //            console.log('positions2: ' + positions);
+                if(elemCut.length > 2){
+                    counterCutX = elemCut[2][0];
+                    counterCutY = elemCut[2][1];
+                }
+                
               this.cuts[stepId].push({
                 key: elemId,
                 x0: elemCut[0][0],
@@ -106,6 +87,26 @@ class DrillCuts extends React.Component {
                 y1: elemCut[1][1],
                 x2: elemCut[elemCut.length - 1][0],
                 y2: elemCut[elemCut.length - 1][1],
+                  cutCircle: new MovingCircle({
+                      onMoveEnd:this.props.onMoveEnd,
+                      elemId: elemId,
+                      animationHeight: this.props.animationHeight,
+                      animationWidth: this.props.animationWidth,
+                      cx: elemCut[1][0],
+                      cy: elemCut[1][1],
+                      radius: this.discRadius / 2,
+                      isCounterCut: false
+                  }),
+                  countercutCircle: new MovingCircle({
+                      onMoveEnd:this.props.onMoveEnd,
+                      elemId: elemId,
+                      animationHeight: this.props.animationHeight,
+                      animationWidth: this.props.animationWidth,
+                      cx: counterCutX,
+                      cy: counterCutY,
+                      radius: this.discRadius / 2,
+                      isCounterCut: true
+                  }),
               });
             }
           }
@@ -139,62 +140,34 @@ class DrillCuts extends React.Component {
     }
   }
 
-  _displayCut = cut => {
-    /* If there is no counter cut */
-    if (cut.x1 === cut.x2 && cut.y1 === cut.y2) {
-      console.log('cut: ' + cut);
-      console.log('pos 0: ' + cut.x0 + '/' + cut.y0);
-      console.log('pos 1: ' + cut.x1 + '/' + cut.y1);
-      console.log('disc radius: ' + this.discRadius);
+    _display(element){
+        return (element.render());
+    }
+    
+    _displayCut = cut => {
 
-      return (
-        <Svg style={[StyleSheet.absoluteFill]} height="100%" width="100%" key={cut.key}>
-          <Line x1={cut.x0} y1={cut.y0} x2={cut.x1} y2={cut.y1} stroke="green" strokeWidth="2" strokeDasharray="5, 5" />
-          <Circle
-            cx={(cut.x0 + cut.x1) / 2}
-            cy={(cut.y0 + cut.y1) / 2}
-            r={this.discRadius / 2}
-            fill="white"
-            stroke="green"
-            strokeWidth={this.discRadius / 12}
-            strokeDasharray="3, 3"
-          />
-          <Circle
-            cx={cut.x1}
-            cy={cut.y1}
-            r={this.discRadius / 2}
-            fill="white"
-            stroke="green"
-            strokeWidth={this.discRadius / 12}
-            strokeDasharray="3, 3"
-          />
-        </Svg>
-      );
-    } else
-      return (
-        <Svg style={[StyleSheet.absoluteFill]} height="100%" width="100%">
-          <Line x1={cut.x0} y1={cut.y0} x2={cut.x1} y2={cut.y1} stroke="green" strokeWidth="2" strokeDasharray="5, 5" />
-          <Line x1={cut.x1} y1={cut.y1} x2={cut.x2} y2={cut.y2} stroke="green" strokeWidth="2" strokeDasharray="5, 5" />
-          <Circle
-            cx={cut.x1}
-            cy={cut.y1}
-            r={this.discRadius / 2}
-            fill="white"
-            stroke="green"
-            strokeWidth={this.discRadius / 12}
-            strokeDasharray="3, 3"
-          />
-          <Circle
-            cx={cut.x2}
-            cy={cut.y2}
-            r={this.discRadius / 2}
-            fill="white"
-            stroke="green"
-            strokeWidth={this.discRadius / 12}
-            strokeDasharray="3, 3"
-          />
-        </Svg>
-      );
+
+/*        var panStyle = {
+            transform: cut.cutPosition.getTranslateTransform(),
+        };*/
+        
+    /* If there is no counter cut */
+  /*  if (cut.x1 === cut.x2 && cut.y1 === cut.y2) {*/
+        console.log('cut: ' + cut);
+        console.log('pos 0: ' + cut.x0 + '/' + cut.y0);
+        console.log('pos 1: ' + cut.x1 + '/' + cut.y1);
+        console.log('disc radius: ' + this.discRadius);
+
+        return (
+            <View key={cut.key+4000}>
+              <Svg style={[StyleSheet.absoluteFill]} height="100%" width="100%">
+                <Line x1={cut.x0} y1={cut.y0} x2={cut.x1} y2={cut.y1} stroke="green" strokeWidth="2" strokeDasharray="5, 5" />
+                <Line x1={cut.x1} y1={cut.y1} x2={cut.x2} y2={cut.y2} stroke="green" strokeWidth="2" strokeDasharray="5, 5" /> 
+              </Svg>
+              {this._display(cut.cutCircle)}
+              {this._display(cut.countercutCircle)}
+            </View>
+        );
   };
 
   render() {
@@ -208,6 +181,7 @@ class DrillCuts extends React.Component {
       </View>
     );
   }
+    
   log() {
     for (var stepId = 0; stepId < this.cuts.length; stepId++) {
       console.log('step ' + stepId);

@@ -31,9 +31,6 @@ class DisplayedElement extends React.Component {
 
     this.currentPosition = new Animated.ValueXY({ x: 0, y: 0 });
 
-    this.xCut = 10;
-    this.yCut = 10;
-
     // Add a listener on each coordinate offset to get its value at the end of each move
     this.currentPosition.x.addListener(({ value }) => {
       this._value = value;
@@ -44,9 +41,7 @@ class DisplayedElement extends React.Component {
 
     // True if the element has already been moved
     this.moved = false;
-    this._val = { x: 0, y: 0 };
-    this.previousX = -1;
-    this.previousY = -1;
+    this._val  = { x: 0, y: 0 };
 
     //	console.log("de movable: " + this.props.movable);
 
@@ -77,8 +72,8 @@ class DisplayedElement extends React.Component {
       onPanResponderRelease: (evt, gesturestate) => {
         if (this.props.movable && this.props.onMoveEnd !== undefined && this.props.onMoveEnd !== null) {
           this.props.onMoveEnd(this, this.currentPosition.x._value, this.currentPosition.y._value);
-          this.currentPosition.setValue({ x: 0, y: 0 });
         }
+          console.log("release: " + this.currentPosition.x._value + "/"+ this.currentPosition.y._value); 
       },
     });
   }

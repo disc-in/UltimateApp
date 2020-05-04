@@ -101,6 +101,7 @@ class Animation extends React.Component {
       animationWidth: this.state.animationWidth,
       currentStep: this.state.currentStep,
       positionPercentToPixel: this._positionPercentToPixel,
+      onMoveEnd: this.props.onCutMove, 
     });
     this.cuts.log();
   }
@@ -410,7 +411,7 @@ class Animation extends React.Component {
         <Button style={{ flex: 1 }} title="Lancer" onPress={() => this._restart()} />
         <View style={{ flex: 0.1 }} />
         <Button title=" > " style={{ flex: 1 }} onPress={() => this._nextStep()} />
-        {this._display(this.pb)}
+            {this._display(this.pb)}
       </View>
     );
   }

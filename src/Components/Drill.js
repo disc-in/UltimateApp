@@ -12,11 +12,13 @@ class Drill {
 
   /** Get the position of an element at a given step or return undefined if its position at step stoppingStep is the last one at step stepId */
   getPositionsAtStep(elemId, stepId, stoppingStep = -1) {
+        
     /* Get the position of the element at step stepId */
     var nextPosition = this.positions[stepId][elemId];
 
     /* If the element does not change its position at step stepId, find its last previous position */
     var stepToCheck = stepId - 1;
+      
     /* While the position of the element at step stepId has not been found  and all the steps after the current one have been checked */
     while ((nextPosition === undefined || nextPosition === null) && stepToCheck !== stoppingStep) {
       nextPosition = this.positions[stepToCheck][elemId];

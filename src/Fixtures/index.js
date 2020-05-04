@@ -786,12 +786,21 @@ const treasureHuntDrill = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: 'Basic Version',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: animationSquare,
-      repetition: '1',
+      repetition: '',
       rest: '',
       instruction: 'If the disc get intercept, it will come back to the line',
+    },
+    {
+      id: 2,
+      title: 'Version more Fun',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: menageATroisDrill,
+      repetition: '',
+      rest: '',
+      instruction: 'Version more Fun instruction',
     },
   ],
 };

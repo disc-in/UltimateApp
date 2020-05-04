@@ -12,6 +12,7 @@ import ConnectedDrillPageMinimal, { DrillPageMinimal } from './DrillPageMinimal'
 
 afterEach(cleanup);
 beforeEach(() => jest.useFakeTimers()); // for Animated
+jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
 
 describe('<DrillPageMinimal />', () => {
   const navigation = { navigate: jest.fn(), setOptions: jest.fn() };

@@ -92,11 +92,7 @@ export const DrillPage = props => {
       <View style={styles.description}>
         <View style={styles.descriptionItem}>
           <Text style={styles.descriptionGoalsTitle}>Goals</Text>
-          {drill.goals.map((goal, index) => (
-            <Text key={index} style={styles.descriptionGoalsText}>
-              {goal}
-            </Text>
-          ))}
+          <Text style={styles.descriptionGoalsText}>{drill.goals ? drill.goals.join(' - ') : ''}</Text>
         </View>
       </View>
       <View style={styles.lines} />

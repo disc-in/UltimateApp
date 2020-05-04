@@ -1393,6 +1393,7 @@ const coed2Long2Training = {
 
 export default {
   favoriteDrills: [],
+  completeTrainings: [],
   drills: [
     // Fitness
     stabilityDrill,

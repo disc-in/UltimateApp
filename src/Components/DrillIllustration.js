@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ScrollView, StyleSheet, View, Text, Dimensions, TouchableOpacity } from 'react-native';
+import { ScrollView, StyleSheet, View, Text, Dimensions, TouchableOpacity, Image } from 'react-native';
 import { WebView } from 'react-native-webview';
 
 import Animation from './Animation';
@@ -7,6 +7,7 @@ import VimeoVideo from './VimeoVideo';
 import GradientButton from './shared/GradientButton';
 import { IllustrationType } from '../Fixtures';
 import theme from '../styles/theme.style';
+import iconRedo from '../../assets/redo_arrow.png';
 
 const DrillIllustration = props => {
   const [currentStepIndex, setStepIndex] = useState(0);
@@ -76,38 +77,65 @@ const DrillIllustration = props => {
       <View>
         <View style={styles.containerFinish}>
           <View>
-            <GradientButton onPress={() => incrementStepIndex()} text="Do it again" />
+            <Text style={styles.redoMessage}> You have seen all the steps of the drill </Text>
+          </View>
+          <View>
+            <TouchableOpacity onPress={() => incrementStepIndex()}>
+              <Image style={styles.favoriteImage} source={iconRedo} />
+            </TouchableOpacity>
           </View>
         </View>
       </View>
     );
   };
 
-  const displayAnimation = ({ illustrationSource, repetition, instruction }) => {
+  const displayStepsAnimation = title => {
+    if (props.drill.steps.length <= 1) {
+      return <View />;
+    } else {
+      return (
+        <View style={styles.descriptionAnimation}>
+          <View style={styles.subSubWrapper}>
+            <Text style={styles.fitness}>{title}</Text>
+          </View>
+          <View style={styles.containerAnimation}>
+            <TouchableOpacity style={styles.buttonNext} onPress={() => incrementStepIndex()} />
+          </View>
+        </View>
+      );
+    }
+  };
+
+  const displayAnimation = ({ illustrationSource, instruction, title }) => {
     return (
       <ScrollView>
         <View style={styles.pageAnimation}>
           <Animation widthRatio={1} heightRatio={1 / 2} animation={illustrationSource} />
         </View>
-        <View style={styles.containerAnimation}>
-          <Text style={styles.fitness}>{repetition}</Text>
-          <TouchableOpacity style={styles.buttonNext} onPress={() => incrementStepIndex()} />
+        <View style={styles.description}>
+          <View style={styles.containerAnimation}>{displayStepsAnimation(title)}</View>
         </View>
-        <View style={styles.subSubWrapper}>
-          <Text style={styles.instruction}>{instruction}</Text>
-        </View>
+        <View style={styles.lines} />
+        <Text style={styles.instruction}>{instruction}</Text>
       </ScrollView>
     );
   };
 
-  const displayYoutube = ({ illustrationSource }) => {
+  const displayYoutube = ({ illustrationSource, title, instruction }) => {
     return (
-      <WebView
-        source={{
-          uri: illustrationSource,
-        }}
-        style={styles.drillAnimationPage}
-      />
+      <ScrollView>
+        <WebView
+          source={{
+            uri: illustrationSource,
+          }}
+          style={styles.drillAnimationPage}
+        />
+        <View style={styles.description}>
+          <View style={styles.containerAnimation}>{displayStepsAnimation(title)}</View>
+        </View>
+        <View style={styles.lines} />
+        <Text style={styles.instruction}>{instruction}</Text>
+      </ScrollView>
     );
   };
 
@@ -146,9 +174,14 @@ const styles = StyleSheet.create({
   },
   containerFinish: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'space-around',
     alignItems: 'center',
     height: screenDimension.height - 80,
+  },
+  redoMessage: {
+    fontSize: theme.FONT_SIZE_MEDIUM,
+    color: theme.COLOR_PRIMARY,
+    fontWeight: 'bold',
   },
   containerAnimation: {
     flexDirection: 'row',
@@ -156,6 +189,10 @@ const styles = StyleSheet.create({
   },
   description: {
     flexDirection: 'row',
+  },
+  descriptionAnimation: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
   pageAnimation: {
     flex: 1,
@@ -227,6 +264,10 @@ const styles = StyleSheet.create({
     color: theme.COLOR_PRIMARY,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  favoriteImage: {
+    width: 60,
+    height: 60,
   },
 });
 

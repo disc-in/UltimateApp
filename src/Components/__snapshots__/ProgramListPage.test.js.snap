@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ProgramsPage /> renders correctly when connected 1`] = `
+exports[`<ProgramListPage /> renders correctly when connected 1`] = `
 <View
   style={
     Object {

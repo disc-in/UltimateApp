@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import theme from '../styles/theme.style';
 import Program from './programs/Program';
 
-export const ProgramsPage = props => {
+export const ProgramListPage = props => {
   const { programs, navigation } = props;
 
   return (
@@ -28,7 +28,7 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(ProgramsPage);
+export default connect(mapStateToProps)(ProgramListPage);
 
 const styles = StyleSheet.create({
   programPage: {

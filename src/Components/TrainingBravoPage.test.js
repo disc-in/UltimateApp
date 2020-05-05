@@ -64,6 +64,6 @@ describe('<TrainingBravoPage />', () => {
 
     await fireEvent.press(getByTestId('button'));
 
-    expect(navigate).toBeCalledWith('ProgramsPage');
+    expect(navigate).toBeCalledWith('ProgramListPage');
   });
 });

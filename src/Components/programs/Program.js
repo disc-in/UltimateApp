@@ -15,7 +15,7 @@ export const Program = props => {
   const onPress = () => {
     const firstTodoTraining = trainings.find(training => !programCompleteTrainings.includes(training));
     if (firstTodoTraining !== undefined) {
-      props.navigation.navigate('TrainingPage', { training: firstTodoTraining, program: props.program });
+      props.navigation.navigate('ProgramPage', { program: props.program });
     }
   };
 

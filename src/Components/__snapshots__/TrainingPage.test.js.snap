@@ -746,6 +746,7 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
         "flexDirection": "row",
         "justifyContent": "center",
         "position": "absolute",
+        "width": "100%",
       }
     }
   >
@@ -1601,6 +1602,7 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
         "flexDirection": "row",
         "justifyContent": "center",
         "position": "absolute",
+        "width": "100%",
       }
     }
   >

@@ -1075,12 +1075,12 @@ const endzoneDameDrill = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: 'Blah blah blah',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: animationSquare,
       repetition: '1',
       rest: '',
-      instruction: '',
+      instruction: 'Blah blah blah',
     },
   ],
 };

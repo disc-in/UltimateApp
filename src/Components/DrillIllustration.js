@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { ScrollView, StyleSheet, View, Text, Dimensions, TouchableOpacity, Image } from 'react-native';
+import { View, StyleSheet, Text, Dimensions, TouchableOpacity, Image } from 'react-native';
 import { WebView } from 'react-native-webview';
 
 import Animation from './Animation';
 import VimeoVideo from './VimeoVideo';
-import GradientButton from './shared/GradientButton';
 import { IllustrationType } from '../Fixtures';
 import theme from '../styles/theme.style';
 import iconRedo from '../../assets/redo_arrow.png';
@@ -26,18 +25,18 @@ const DrillIllustration = props => {
   const displayNextStep = () => {
     if (currentStepIndex + 1 === props.drill.steps.length) {
       return (
-        <View>
+        <>
           <View style={styles.description}>
             <View style={styles.wrapperFinish}>
               <Text style={styles.fitnessNext}>Finish</Text>
             </View>
           </View>
           <View style={styles.lines} />
-        </View>
+        </>
       );
     } else {
       return (
-        <View>
+        <>
           <View style={styles.description}>
             <View style={styles.subWrapper}>
               <Text style={styles.fitnessNext}>{props.drill.steps[currentStepIndex + 1].repetition}</Text>
@@ -48,7 +47,7 @@ const DrillIllustration = props => {
             <View style={styles.fakeWrapper} />
           </View>
           <View style={styles.lines} />
-        </View>
+        </>
       );
     }
   };
@@ -74,18 +73,14 @@ const DrillIllustration = props => {
 
   const displayFinish = () => {
     return (
-      <View>
+      <>
         <View style={styles.containerFinish}>
-          <View>
-            <Text style={styles.redoMessage}> You have seen all the steps of the drill </Text>
-          </View>
-          <View>
-            <TouchableOpacity onPress={() => incrementStepIndex()}>
-              <Image style={styles.favoriteImage} source={iconRedo} />
-            </TouchableOpacity>
-          </View>
+          <Text style={styles.redoMessage}> You have seen all the steps of the drill </Text>
+          <TouchableOpacity style={styles.redoButton} onPress={() => incrementStepIndex()}>
+            <Image style={styles.redoImage} source={iconRedo} />
+          </TouchableOpacity>
         </View>
-      </View>
+      </>
     );
   };
 
@@ -108,55 +103,54 @@ const DrillIllustration = props => {
 
   const displayAnimation = ({ illustrationSource, instruction, title }) => {
     return (
-      <ScrollView>
-        <View style={styles.pageAnimation}>
-          <Animation widthRatio={1} heightRatio={1 / 2} animation={illustrationSource} />
-        </View>
+      <>
+        <Animation widthRatio={1} heightRatio={props.minimal ? 2 / 5 : 1 / 2} animation={illustrationSource} />
         <View style={styles.description}>
           <View style={styles.containerAnimation}>{displayStepsAnimation(title)}</View>
         </View>
         <View style={styles.lines} />
         <Text style={styles.instruction}>{instruction}</Text>
-      </ScrollView>
+      </>
     );
   };
 
   const displayYoutube = ({ illustrationSource, title, instruction }) => {
     return (
-      <ScrollView>
-        <WebView
-          source={{
-            uri: illustrationSource,
-          }}
-          style={styles.drillAnimationPage}
-        />
+      <>
+        <View style={{ height: 250 }}>
+          <WebView
+            source={{
+              uri: illustrationSource,
+            }}
+          />
+        </View>
         <View style={styles.description}>
           <View style={styles.containerAnimation}>{displayStepsAnimation(title)}</View>
         </View>
         <View style={styles.lines} />
         <Text style={styles.instruction}>{instruction}</Text>
-      </ScrollView>
+      </>
     );
   };
 
   const displayVimeo = ({ illustrationSource, repetition, title }) => {
     return (
-      <View style={styles.drillAnimationPage}>
-        <VimeoVideo vimeoId={illustrationSource} screenWidth={screenDimension.width} />
-        <View>
-          <View style={styles.description}>
-            <View style={styles.subWrapper}>
-              <Text style={styles.fitness}>{repetition}</Text>
-            </View>
-            <View style={styles.subSubWrapper}>
-              <Text style={styles.fitness}>{title}</Text>
-            </View>
-            <TouchableOpacity style={styles.buttonNext} onPress={() => incrementStepIndex()} />
-          </View>
-          <View style={styles.lines} />
+      <>
+        <View style={{ height: 250 }}>
+          <VimeoVideo vimeoId={illustrationSource} screenWidth={screenDimension.width} />
         </View>
+        <View style={styles.description}>
+          <View style={styles.subWrapper}>
+            <Text style={styles.fitness}>{repetition}</Text>
+          </View>
+          <View style={styles.subSubWrapper}>
+            <Text style={styles.fitness}>{title}</Text>
+          </View>
+          <TouchableOpacity style={styles.buttonNext} onPress={() => incrementStepIndex()} />
+        </View>
+        <View style={styles.lines} />
         <View style={styles.container}>{displayNextStep()}</View>
-      </View>
+      </>
     );
   };
 
@@ -165,10 +159,6 @@ const DrillIllustration = props => {
 
 const screenDimension = Dimensions.get('window');
 const styles = StyleSheet.create({
-  drillAnimationPage: {
-    flex: 1,
-    height: screenDimension.height - 80,
-  },
   container: {
     flex: 1,
   },
@@ -176,7 +166,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-around',
     alignItems: 'center',
-    height: screenDimension.height - 80,
   },
   redoMessage: {
     fontSize: theme.FONT_SIZE_MEDIUM,
@@ -196,7 +185,6 @@ const styles = StyleSheet.create({
   },
   pageAnimation: {
     flex: 1,
-    height: screenDimension.height - 160,
   },
   fitness: {
     marginTop: 20,
@@ -230,7 +218,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   subWrapper: {
-    flex: 1,
+    flexGrow: 0,
+    flexShrink: 0,
     alignItems: 'center',
   },
   subSubWrapper: {
@@ -265,7 +254,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  favoriteImage: {
+  redoButton: {
+    width: 80,
+    height: 80,
+    borderRadius: 40,
+    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
+  },
+  redoImage: {
     width: 60,
     height: 60,
   },

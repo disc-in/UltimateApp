@@ -85,6 +85,7 @@ const VimeoVideo = ({ vimeoId, screenWidth }) => {
 const styles = StyleSheet.create({
   videoContainer: {
     flex: 1,
+    height: 250,
     alignItems: 'center',
     justifyContent: 'center',
   },

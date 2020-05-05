@@ -15,9 +15,12 @@ export const TrainingBravoPage = props => {
   const { training, program } = route.params;
 
   const finishTraining = () => {
-    props.completeTraining({ training, program });
     navigation.navigate('ProgramsPage');
   };
+
+  React.useEffect(() => {
+    props.completeTraining({ training, program });
+  }, []);
 
   const currentTrainingIndex = program.trainings.findIndex(item => item.id === training.id);
   return (

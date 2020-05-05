@@ -16,6 +16,7 @@ jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
 
 describe('<TrainingBravoPage />', () => {
   const navigation = { navigate: jest.fn(), setOptions: jest.fn() };
+  const completeTraining = jest.fn();
   const program = fixtures.programs[0];
   const training = program.trainings[0];
   const drill = training.drills[0];
@@ -28,13 +29,12 @@ describe('<TrainingBravoPage />', () => {
   };
 
   it('renders correctly', () => {
-    const tree = renderer.create(<TrainingBravoPage route={route} />).toJSON();
+    const tree = renderer.create(<TrainingBravoPage route={route} completeTraining={completeTraining} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('marks training as complete when finished', async () => {
+  it('marks training as complete and redirects when finished', async () => {
     const trainingLastDrill = training.drills[training.drills.length - 1];
-    const completeTraining = jest.fn();
 
     const Stack = createStackNavigator();
     const navigate = jest.fn();
@@ -60,9 +60,10 @@ describe('<TrainingBravoPage />', () => {
       </Provider>,
     );
 
+    await expect(completeTraining).toBeCalledWith({ training, program });
+
     await fireEvent.press(getByTestId('button'));
 
-    expect(completeTraining).toBeCalledWith({ training, program });
     expect(navigate).toBeCalledWith('ProgramsPage');
   });
 });

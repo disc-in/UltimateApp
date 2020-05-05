@@ -135,7 +135,7 @@ const fitnessDrill2 = {
 
 const frisbeeDrill1 = {
   id: 3,
-  type: DrillTypes.TECHNICAL,
+  type: DrillTypes.FRISBEE,
   author: 'Author',
   title: 'Frisbee Drill Title',
   image: 'https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1',
@@ -159,7 +159,7 @@ const frisbeeDrill1 = {
 
 const frisbeeDrill2 = {
   id: 4,
-  type: DrillTypes.TECHNICAL,
+  type: DrillTypes.FRISBEE,
   author: 'Author',
   title: 'Frisbee Drill Title',
   image:

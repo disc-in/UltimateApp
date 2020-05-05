@@ -14,7 +14,7 @@ describe('<DrillListPage />', () => {
   it('renders correctly when connected', () => {
     const route = {
       params: {
-        type: DrillTypes.TECHNICAL,
+        type: DrillTypes.FRISBEE,
       },
     };
     const tree = renderer
@@ -27,13 +27,13 @@ describe('<DrillListPage />', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders correctly with a technical drill', () => {
+  it('renders correctly with a frisbee drill', () => {
     const route = {
       params: {
-        type: DrillTypes.TECHNICAL,
+        type: DrillTypes.FRISBEE,
       },
     };
-    const drills = [createDrill({ type: DrillTypes.TECHNICAL })];
+    const drills = [createDrill({ type: DrillTypes.FRISBEE })];
     const tree = renderer.create(<DrillListPage route={route} storeDrills={drills} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -52,10 +52,10 @@ describe('<DrillListPage />', () => {
   it('links to video view', async () => {
     const route = {
       params: {
-        type: DrillTypes.TECHNICAL,
+        type: DrillTypes.FRISBEE,
       },
     };
-    const drill = createDrill({ type: DrillTypes.TECHNICAL, title: 'Hot Box' });
+    const drill = createDrill({ type: DrillTypes.FRISBEE, title: 'Hot Box' });
     const drills = [drill];
     const navigation = { navigate: jest.fn() };
     const { getByText } = render(<DrillListPage route={route} storeDrills={drills} navigation={navigation} />);
@@ -69,19 +69,19 @@ describe('<DrillListPage />', () => {
     const route = {
       name: 'DrillListPage',
       params: {
-        type: DrillTypes.TECHNICAL,
+        type: DrillTypes.FRISBEE,
       },
     };
-    const drills = [createDrill({ type: DrillTypes.TECHNICAL, title: 'Hot Box' })];
+    const drills = [createDrill({ type: DrillTypes.FRISBEE, title: 'Hot Box' })];
     const navigation = { navigate: jest.fn() };
     const { getByTestId } = render(<DrillListPage route={route} storeDrills={drills} navigation={navigation} />);
 
     await fireEvent.press(getByTestId('filterButton'));
 
-    expect(navigation.navigate).toBeCalledWith('TechnicalFilters', {
+    expect(navigation.navigate).toBeCalledWith('FrisbeeFilters', {
       initialData: drills,
       previousScreen: 'DrillListPage',
-      previousType: DrillTypes.TECHNICAL,
+      previousType: DrillTypes.FRISBEE,
     });
   });
 });

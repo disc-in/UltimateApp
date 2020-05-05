@@ -29,7 +29,7 @@ export const TrainingListPage = props => {
           <Text style={list.imageText}>{getTrainingDuration(item)} min</Text>
           <Text style={list.imageText}>{getTrainingMinimalPlayersNumber(item)}+ players</Text>
         </ImageBackground>
-        <View style={list.contentContainer}>
+        <View style={list.itemContentContainer}>
           <Text style={list.source}>{source}</Text>
           <Text style={list.title}>{title}</Text>
           <Text style={list.numberOfPlayers}>{getGoals(item).join(', ')}</Text>

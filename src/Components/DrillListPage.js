@@ -22,7 +22,7 @@ export const DrillListPage = props => {
       <TouchableOpacity
         style={styles.filterButton}
         onPress={() => {
-          const filtersPage = props.route.params.type === DrillTypes.TECHNICAL ? 'TechnicalFilters' : 'FitnessFilters';
+          const filtersPage = props.route.params.type === DrillTypes.FRISBEE ? 'FrisbeeFilters' : 'FitnessFilters';
           navigation.navigate(filtersPage, {
             initialData: storeDrillsForType,
             previousScreen: route.name,

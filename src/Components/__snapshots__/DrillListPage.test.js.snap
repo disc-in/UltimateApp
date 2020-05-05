@@ -314,7 +314,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
               },
             ],
             "title": "Frisbee Drill Title",
-            "type": "technical",
+            "type": "frisbee",
           },
           Object {
             "author": "Author",
@@ -604,7 +604,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
               },
             ],
             "title": "Frisbee Drill Title",
-            "type": "technical",
+            "type": "frisbee",
           },
         ]
       }
@@ -1206,7 +1206,7 @@ exports[`<DrillListPage /> renders correctly with a fitness drill 1`] = `
 </View>
 `;
 
-exports[`<DrillListPage /> renders correctly with a technical drill 1`] = `
+exports[`<DrillListPage /> renders correctly with a frisbee drill 1`] = `
 <View
   style={
     Object {
@@ -1256,7 +1256,7 @@ exports[`<DrillListPage /> renders correctly with a technical drill 1`] = `
               },
             ],
             "title": "Fitness Drill Title",
-            "type": "technical",
+            "type": "frisbee",
           },
         ]
       }

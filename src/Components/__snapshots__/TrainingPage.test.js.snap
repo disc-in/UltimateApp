@@ -440,7 +440,7 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
                     },
                   ],
                   "title": "Frisbee Drill Title",
-                  "type": "technical",
+                  "type": "frisbee",
                 },
               ]
             }
@@ -1296,7 +1296,7 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
                     },
                   ],
                   "title": "Frisbee Drill Title",
-                  "type": "technical",
+                  "type": "frisbee",
                 },
               ]
             }

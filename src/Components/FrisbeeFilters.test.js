@@ -6,13 +6,13 @@ import { createDrill } from '../Fixtures/TestFixtures';
 import { render, fireEvent, cleanup } from 'react-native-testing-library';
 import { Levels, GoalsFrisbee, DrillTypes } from '../Fixtures';
 
-import TechnicalFilters from './TechnicalFilters';
+import FrisbeeFilters from './FrisbeeFilters';
 
 jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
 
 afterEach(cleanup);
 
-describe('<TechnicalFilters />', () => {
+describe('<FrisbeeFilters />', () => {
   const beginnerDrill = createDrill({ id: 1, level: Levels.BEGINNER });
   const intermediateDrill = createDrill({ id: 2, level: Levels.INTERMEDIATE });
   const advancedDrill = createDrill({ id: 3, level: Levels.ADVANCED });
@@ -24,7 +24,7 @@ describe('<TechnicalFilters />', () => {
       },
     };
     const navigation = { setOptions: jest.fn(), navigate: jest.fn() };
-    const tree = renderer.create(<TechnicalFilters route={route} navigation={navigation} />).toJSON();
+    const tree = renderer.create(<FrisbeeFilters route={route} navigation={navigation} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
@@ -40,12 +40,12 @@ describe('<TechnicalFilters />', () => {
         <NavigationContainer>
           <Stack.Navigator>
             <Stack.Screen
-              name="TechnicalFilters"
-              component={TechnicalFilters}
+              name="FrisbeeFilters"
+              component={FrisbeeFilters}
               initialParams={{
                 initialData: drills,
                 previousScreen: 'DrillListPage',
-                previousType: DrillTypes.TECHNICAL,
+                previousType: DrillTypes.FRISBEE,
               }}
               listeners={({ navigation }) => ({
                 transitionStart: e => {
@@ -82,7 +82,7 @@ describe('<TechnicalFilters />', () => {
 
       expect(navigate).toBeCalledWith('DrillListPage', {
         filteredDrills: [advancedDrill],
-        type: DrillTypes.TECHNICAL,
+        type: DrillTypes.FRISBEE,
       });
     });
 
@@ -101,12 +101,12 @@ describe('<TechnicalFilters />', () => {
         <NavigationContainer>
           <Stack.Navigator>
             <Stack.Screen
-              name="TechnicalFilters"
-              component={TechnicalFilters}
+              name="FrisbeeFilters"
+              component={FrisbeeFilters}
               initialParams={{
                 initialData: drills,
                 previousScreen: 'DrillListPage',
-                previousType: DrillTypes.TECHNICAL,
+                previousType: DrillTypes.FRISBEE,
               }}
               listeners={({ navigation }) => ({
                 transitionStart: e => {
@@ -145,7 +145,7 @@ describe('<TechnicalFilters />', () => {
 
       expect(navigate).toBeCalledWith('DrillListPage', {
         filteredDrills: [handlingDrill, handlingDefenseDrill],
-        type: DrillTypes.TECHNICAL,
+        type: DrillTypes.FRISBEE,
       });
     });
 
@@ -163,12 +163,12 @@ describe('<TechnicalFilters />', () => {
         <NavigationContainer>
           <Stack.Navigator>
             <Stack.Screen
-              name="TechnicalFilters"
-              component={TechnicalFilters}
+              name="FrisbeeFilters"
+              component={FrisbeeFilters}
               initialParams={{
                 initialData: drills,
                 previousScreen: 'DrillListPage',
-                previousType: DrillTypes.TECHNICAL,
+                previousType: DrillTypes.FRISBEE,
               }}
               listeners={({ navigation }) => ({
                 transitionStart: e => {
@@ -193,7 +193,7 @@ describe('<TechnicalFilters />', () => {
 
       expect(navigate).toBeCalledWith('DrillListPage', {
         filteredDrills: [onePersonDrill, twoPeopleDrill],
-        type: DrillTypes.TECHNICAL,
+        type: DrillTypes.FRISBEE,
       });
     });
   });

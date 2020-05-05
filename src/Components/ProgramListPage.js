@@ -33,12 +33,12 @@ export default connect(mapStateToProps)(ProgramListPage);
 const styles = StyleSheet.create({
   programPage: {
     paddingVertical: 20,
-    paddingHorizontal: 10,
-    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
+    backgroundColor: theme.BACKGROUND_COLOR,
     height: '100%',
   },
   allTrainings: {
     paddingBottom: 20,
+    paddingHorizontal: 20,
   },
   allTrainingsText: {
     fontSize: theme.FONT_SIZE_LARGE,
@@ -48,5 +48,6 @@ const styles = StyleSheet.create({
   incentive: {
     fontSize: theme.FONT_SIZE_MEDIUM,
     paddingBottom: 10,
+    paddingHorizontal: 20,
   },
 });

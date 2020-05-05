@@ -23,13 +23,18 @@ export const Program = props => {
   const completeStyle = completeTrainingsCount === trainings.length ? styles.complete : null;
   return (
     <TouchableOpacity style={[styles.program, completeStyle]} onPress={onPress}>
-      <Text style={styles.programTitle}>{title}</Text>
-      <Text style={styles.completion}>
-        {completeTrainingsCount}/{trainings.length} trainings
-        {completeTrainingsCount === trainings.length && ' 👍🎉'}
-      </Text>
-      <View style={styles.progressBar}>
-        <View style={[StyleSheet.absoluteFill, styles.fillProgressBar, { width }]} />
+      <View style={styles.presentationContainer}>
+        <Text style={styles.programTitle}>{title}</Text>
+        <Text style={styles.completion}>
+          {completeTrainingsCount}/{trainings.length} trainings
+          {completeTrainingsCount === trainings.length && ' 👍🎉'}
+        </Text>
+        <View style={styles.progressBar}>
+          <View style={[StyleSheet.absoluteFill, styles.fillProgressBar, { width }]} />
+        </View>
+      </View>
+      <View style={styles.ctaContainer}>
+        <Text style={styles.cta}>></Text>
       </View>
     </TouchableOpacity>
   );
@@ -46,30 +51,49 @@ export default connect(mapStateToProps)(Program);
 const styles = StyleSheet.create({
   program: {
     marginBottom: 10,
-    padding: 20,
-    backgroundColor: theme.COLOR_SECONDARY_LIGHT,
+    padding: 10,
+    paddingLeft: 50,
+    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
+    flexDirection: 'row',
+    alignItems: 'center',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 3,
+    elevation: 3,
+  },
+  presentationContainer: {
+    flexBasis: '80%',
   },
   complete: {
     backgroundColor: theme.BACKGROUND_COLOR_BUTTON_ACTIVE,
   },
   programTitle: {
     fontSize: theme.FONT_SIZE_LARGE,
-    fontWeight: 'bold',
   },
   completion: {
     textAlign: 'right',
-    fontWeight: 'bold',
   },
   progressBar: {
     marginTop: 5,
-    height: 10,
+    height: 3,
     width: '100%',
-    backgroundColor: 'white',
-    borderRadius: 5,
+    backgroundColor: theme.BACKGROUND_COLOR,
+    borderRadius: 2,
   },
   fillProgressBar: {
     width: '50%',
     borderRadius: 5,
     backgroundColor: theme.COLOR_PRIMARY,
+  },
+  ctaContainer: {
+    flexBasis: '20%',
+    textAlign: 'center',
+  },
+  cta: {
+    fontSize: theme.FONT_SIZE_LARGE,
+    textAlign: 'center',
   },
 });

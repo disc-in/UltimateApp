@@ -1011,7 +1011,7 @@ exports[`<ProgramPage /> renders correctly 1`] = `
             <View
               style={
                 Object {
-                  "flexBasis": "50%",
+                  "flexBasis": "70%",
                 }
               }
             >
@@ -1023,17 +1023,6 @@ exports[`<ProgramPage /> renders correctly 1`] = `
                 }
               >
                 Dump & Swing
-              </Text>
-            </View>
-            <View
-              style={
-                Object {
-                  "flexBasis": "20%",
-                }
-              }
-            >
-              <Text>
-                Beginner
               </Text>
             </View>
             <View
@@ -1106,7 +1095,7 @@ exports[`<ProgramPage /> renders correctly 1`] = `
             <View
               style={
                 Object {
-                  "flexBasis": "50%",
+                  "flexBasis": "70%",
                 }
               }
             >
@@ -1118,17 +1107,6 @@ exports[`<ProgramPage /> renders correctly 1`] = `
                 }
               >
                 Training 2
-              </Text>
-            </View>
-            <View
-              style={
-                Object {
-                  "flexBasis": "20%",
-                }
-              }
-            >
-              <Text>
-                Beginner
               </Text>
             </View>
             <View

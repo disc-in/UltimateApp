@@ -10,8 +10,8 @@ export const ProgramPage = props => {
   const { program } = route.params;
 
   const renderTraining = ({ item }) => {
-    const { title } = item;
-    const onTrainingPress = training => navigation.navigate('TrainingPage', { training, program });
+    const training = item;
+    const onTrainingPress = () => navigation.navigate('TrainingPage', { training, program });
 
     const isDone =
       props.completeTrainings.find(
@@ -19,12 +19,9 @@ export const ProgramPage = props => {
       ) !== undefined;
     return (
       <ListItem>
-        <TouchableOpacity style={styles.training} onPress={() => onTrainingPress(item)}>
+        <TouchableOpacity style={styles.training} onPress={onTrainingPress}>
           <View style={styles.titleContainer}>
-            <Text style={styles.title}>{title}</Text>
-          </View>
-          <View style={styles.container}>
-            <Text>Beginner</Text>
+            <Text style={styles.title}>{training.title}</Text>
           </View>
           <View style={styles.container}>
             <Text>{isDone ? 'Done' : 'Todo'}</Text>
@@ -67,7 +64,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   titleContainer: {
-    flexBasis: '50%',
+    flexBasis: '70%',
   },
   container: {
     flexBasis: '20%',

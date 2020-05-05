@@ -70,7 +70,7 @@ describe('<DrillPageMinimal />', () => {
     expect(navigate).toBeCalledWith('DrillPageMinimal', { drill: secondDrill, training, program });
   });
 
-  it('marks training as complete when finished and is last drill', async () => {
+  it('links to bravo page when finished and is last drill', async () => {
     const trainingLastDrill = training.drills[training.drills.length - 1];
     const completeTraining = jest.fn();
 
@@ -100,7 +100,6 @@ describe('<DrillPageMinimal />', () => {
 
     await fireEvent.press(getByTestId('headerButton'));
 
-    expect(completeTraining).toBeCalledWith({ training, program });
-    expect(navigate).toBeCalledWith('TrainingPage', { training });
+    expect(navigate).toBeCalledWith('TrainingBravoPage', { training, program });
   });
 });

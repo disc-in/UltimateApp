@@ -15,7 +15,7 @@ export const TrainingBravoPage = props => {
   const { training, program } = route.params;
 
   const finishTraining = () => {
-    navigation.navigate('ProgramListPage');
+    navigation.navigate('ProgramPage', { program });
   };
 
   React.useEffect(() => {

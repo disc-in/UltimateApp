@@ -3,6 +3,7 @@ import { StyleSheet, TouchableOpacity, View, Text } from 'react-native';
 import { connect } from 'react-redux';
 
 import theme from '../../styles/theme.style';
+import ListItem from '../shared/ListItem';
 
 export const Program = props => {
   const { title, trainings } = props.program;
@@ -20,23 +21,24 @@ export const Program = props => {
   };
 
   const width = `${(completeTrainingsCount * 100) / trainings.length}%`;
-  const completeStyle = completeTrainingsCount === trainings.length ? styles.complete : null;
   return (
-    <TouchableOpacity style={[styles.program, completeStyle]} onPress={onPress}>
-      <View style={styles.presentationContainer}>
-        <Text style={styles.programTitle}>{title}</Text>
-        <Text style={styles.completion}>
-          {completeTrainingsCount}/{trainings.length} trainings
-          {completeTrainingsCount === trainings.length && ' 👍🎉'}
-        </Text>
-        <View style={styles.progressBar}>
-          <View style={[StyleSheet.absoluteFill, styles.fillProgressBar, { width }]} />
+    <ListItem>
+      <TouchableOpacity style={styles.program} onPress={onPress}>
+        <View style={styles.presentationContainer}>
+          <Text style={styles.programTitle}>{title}</Text>
+          <Text style={styles.completion}>
+            {completeTrainingsCount}/{trainings.length} trainings
+            {completeTrainingsCount === trainings.length && ' 👍🎉'}
+          </Text>
+          <View style={styles.progressBar}>
+            <View style={[StyleSheet.absoluteFill, styles.fillProgressBar, { width }]} />
+          </View>
         </View>
-      </View>
-      <View style={styles.ctaContainer}>
-        <Text style={styles.cta}>></Text>
-      </View>
-    </TouchableOpacity>
+        <View style={styles.ctaContainer}>
+          <Text style={styles.cta}>></Text>
+        </View>
+      </TouchableOpacity>
+    </ListItem>
   );
 };
 
@@ -50,25 +52,13 @@ export default connect(mapStateToProps)(Program);
 
 const styles = StyleSheet.create({
   program: {
-    marginBottom: 10,
-    padding: 10,
+    paddingTop: 10,
     paddingLeft: 50,
-    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     flexDirection: 'row',
     alignItems: 'center',
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.3,
-    shadowRadius: 3,
-    elevation: 3,
   },
   presentationContainer: {
     flexBasis: '80%',
-  },
-  complete: {
-    backgroundColor: theme.BACKGROUND_COLOR_BUTTON_ACTIVE,
   },
   programTitle: {
     fontSize: theme.FONT_SIZE_LARGE,

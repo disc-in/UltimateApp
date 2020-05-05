@@ -1006,26 +1006,12 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
         style={null}
       >
         <View
-          accessible={true}
-          focusable={true}
-          isTVSelectable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "alignItems": "center",
               "backgroundColor": "#fff",
               "elevation": 3,
-              "flexDirection": "row",
               "marginBottom": 10,
-              "opacity": 1,
               "padding": 10,
-              "paddingLeft": 50,
               "shadowOffset": Object {
                 "height": 1,
                 "width": 0,
@@ -1036,85 +1022,107 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
           }
         >
           <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "flexBasis": "80%",
+                "alignItems": "center",
+                "flexDirection": "row",
+                "opacity": 1,
+                "paddingLeft": 50,
+                "paddingTop": 10,
               }
             }
           >
-            <Text
-              style={
-                Object {
-                  "fontSize": 20,
-                }
-              }
-            >
-              Beginner
-            </Text>
-            <Text
-              style={
-                Object {
-                  "textAlign": "right",
-                }
-              }
-            >
-              0
-              /
-              2
-               trainings
-            </Text>
             <View
               style={
                 Object {
-                  "backgroundColor": "#f1f1f1",
-                  "borderRadius": 2,
-                  "height": 3,
-                  "marginTop": 5,
-                  "width": "100%",
+                  "flexBasis": "80%",
                 }
               }
             >
+              <Text
+                style={
+                  Object {
+                    "fontSize": 20,
+                  }
+                }
+              >
+                Beginner
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "textAlign": "right",
+                  }
+                }
+              >
+                0
+                /
+                2
+                 trainings
+              </Text>
               <View
                 style={
-                  Array [
-                    Object {
-                      "bottom": 0,
-                      "left": 0,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                    },
-                    Object {
-                      "backgroundColor": "#232b2b",
-                      "borderRadius": 5,
-                      "width": "50%",
-                    },
-                    Object {
-                      "width": "0%",
-                    },
-                  ]
+                  Object {
+                    "backgroundColor": "#f1f1f1",
+                    "borderRadius": 2,
+                    "height": 3,
+                    "marginTop": 5,
+                    "width": "100%",
+                  }
                 }
-              />
+              >
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                      Object {
+                        "backgroundColor": "#232b2b",
+                        "borderRadius": 5,
+                        "width": "50%",
+                      },
+                      Object {
+                        "width": "0%",
+                      },
+                    ]
+                  }
+                />
+              </View>
             </View>
-          </View>
-          <View
-            style={
-              Object {
-                "flexBasis": "20%",
-                "textAlign": "center",
-              }
-            }
-          >
-            <Text
+            <View
               style={
                 Object {
-                  "fontSize": 20,
+                  "flexBasis": "20%",
                   "textAlign": "center",
                 }
               }
             >
-              &gt;
-            </Text>
+              <Text
+                style={
+                  Object {
+                    "fontSize": 20,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                &gt;
+              </Text>
+            </View>
           </View>
         </View>
       </View>

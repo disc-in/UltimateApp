@@ -87,8 +87,7 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
                 }
               }
             >
-              40
-               mins
+              0 h 40
             </Text>
           </View>
         </View>
@@ -112,6 +111,11 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
       >
         <View>
           <RCTScrollView
+            contentContainerStyle={
+              Object {
+                "paddingBottom": 40,
+              }
+            }
             data={
               Array [
                 Object {
@@ -943,8 +947,7 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
                 }
               }
             >
-              40
-               mins
+              0 h 40
             </Text>
           </View>
         </View>
@@ -968,6 +971,11 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
       >
         <View>
           <RCTScrollView
+            contentContainerStyle={
+              Object {
+                "paddingBottom": 40,
+              }
+            }
             data={
               Array [
                 Object {

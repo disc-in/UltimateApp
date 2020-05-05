@@ -5,6 +5,7 @@ import { getTrainingDuration, getTrainingMinimalPlayersNumber } from './Training
 import { connect } from 'react-redux';
 import theme from '../styles/theme.style';
 import * as list from '../styles/list.style';
+import { convertMinsToTime } from '../utils/time';
 
 const mapStateToProps = state => {
   return {
@@ -26,7 +27,7 @@ export const TrainingListPage = props => {
     return (
       <TouchableOpacity style={list.item} onPress={() => navigation.navigate('TrainingPage', { training: item })}>
         <ImageBackground source={{ uri: image }} style={list.image} imageStyle={list.imageOpacity}>
-          <Text style={list.imageText}>{getTrainingDuration(item)} min</Text>
+          <Text style={list.imageText}>{convertMinsToTime(getTrainingDuration(item))}</Text>
           <Text style={list.imageText}>{getTrainingMinimalPlayersNumber(item)}+ players</Text>
         </ImageBackground>
         <View style={list.itemContentContainer}>

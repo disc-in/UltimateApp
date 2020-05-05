@@ -24,6 +24,11 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
   </Text>
   <View>
     <RCTScrollView
+      contentContainerStyle={
+        Object {
+          "paddingBottom": 40,
+        }
+      }
       data={
         Array [
           Object {
@@ -970,6 +975,11 @@ exports[`<DrillListPage /> renders correctly with a fitness drill 1`] = `
   </Text>
   <View>
     <RCTScrollView
+      contentContainerStyle={
+        Object {
+          "paddingBottom": 40,
+        }
+      }
       data={
         Array [
           Object {
@@ -1230,6 +1240,11 @@ exports[`<DrillListPage /> renders correctly with a frisbee drill 1`] = `
   </Text>
   <View>
     <RCTScrollView
+      contentContainerStyle={
+        Object {
+          "paddingBottom": 40,
+        }
+      }
       data={
         Array [
           Object {

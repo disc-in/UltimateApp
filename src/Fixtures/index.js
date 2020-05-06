@@ -1292,7 +1292,7 @@ const basicThrows = {
       title: 'Throwing exercice',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: animationSquare,
-      repetition: ' ',
+      repetition: '',
       rest: '',
       instruction: '',
     },

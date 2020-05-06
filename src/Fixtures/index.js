@@ -3,7 +3,7 @@ import animationSquare from './AnimationSquare';
 
 export const DrillTypes = {
   FITNESS: 'fitness',
-  TECHNICAL: 'technical',
+  FRISBEE: 'frisbee',
   GAME: 'game',
 };
 
@@ -600,7 +600,7 @@ const warmupDrill = {
 
 const chevronDrill = {
   id: 1001,
-  type: DrillTypes.TECHNICAL,
+  type: DrillTypes.FRISBEE,
   author: 'Author',
   title: 'Chevron passes',
   image: 'https://zupimages.net/up/20/19/1y4x.jpg',
@@ -628,7 +628,7 @@ const chevronDrill = {
 
 const markDrill = {
   id: 1002,
-  type: DrillTypes.TECHNICAL,
+  type: DrillTypes.FRISBEE,
   author: 'Martin',
   title: '3 people mark',
   image: 'https://zupimages.net/up/20/19/skjl.jpg',
@@ -656,7 +656,7 @@ const markDrill = {
 
 const breakDrill = {
   id: 1003,
-  type: DrillTypes.TECHNICAL,
+  type: DrillTypes.FRISBEE,
   author: 'Martin',
   title: 'Cuts to the break side',
   image: 'https://zupimages.net/up/20/19/83fx.jpg',
@@ -684,7 +684,7 @@ const breakDrill = {
 
 const lDrill = {
   id: 1004,
-  type: DrillTypes.TECHNICAL,
+  type: DrillTypes.FRISBEE,
   author: 'Martin',
   title: 'L drill',
   image: 'https://zupimages.net/up/20/19/tz63.jpg',
@@ -712,7 +712,7 @@ const lDrill = {
 
 const threeColumnsLongDrill = {
   id: 1005,
-  type: DrillTypes.TECHNICAL,
+  type: DrillTypes.FRISBEE,
   author: 'Martin',
   title: '3 columns long shot',
   image: 'https://zupimages.net/up/20/19/330p.jpg',
@@ -740,7 +740,7 @@ const threeColumnsLongDrill = {
 
 const twoColumnsLongDrill = {
   id: 1006,
-  type: DrillTypes.TECHNICAL,
+  type: DrillTypes.FRISBEE,
   author: 'Martin',
   title: '2 columns long shot with defense',
   image: 'https://zupimages.net/up/20/19/fvm4.jpg',
@@ -769,7 +769,7 @@ const twoColumnsLongDrill = {
 
 const treasureHuntDrill = {
   id: 1007,
-  type: DrillTypes.TECHNICAL,
+  type: DrillTypes.FRISBEE,
   author: 'PUC Ultimate',
   title: 'Treasure hunt',
   image: 'https://zupimages.net/up/20/19/z7lq.jpg',
@@ -807,7 +807,7 @@ const treasureHuntDrill = {
 
 const kyeDrill = {
   id: 1008,
-  type: DrillTypes.TECHNICAL,
+  type: DrillTypes.FRISBEE,
   author: 'KYE',
   title: '3 vs 2',
   image: 'https://zupimages.net/up/20/19/zgxt.jpg',
@@ -835,7 +835,7 @@ const kyeDrill = {
 
 const bigEightDrill = {
   id: 1009,
-  type: DrillTypes.TECHNICAL,
+  type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'The big 8',
   image: 'https://zupimages.net/up/20/19/5209.jpg',
@@ -863,7 +863,7 @@ const bigEightDrill = {
 
 const trainDrill = {
   id: 1010,
-  type: DrillTypes.TECHNICAL,
+  type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'The train',
   image: 'https://zupimages.net/up/20/19/ac8s.jpg',
@@ -891,7 +891,7 @@ const trainDrill = {
 
 const goaltimateDrill = {
   id: 1011,
-  type: DrillTypes.TECHNICAL,
+  type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Goaltimate',
   image: 'https://zupimages.net/up/20/19/gce7.jpg',
@@ -919,7 +919,7 @@ const goaltimateDrill = {
 
 const middleForceDrill = {
   id: 1012,
-  type: DrillTypes.TECHNICAL,
+  type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Middle Force',
   image: 'https://zupimages.net/up/20/19/q6jw.jpg',
@@ -947,7 +947,7 @@ const middleForceDrill = {
 
 const giveAndGoDrill = {
   id: 1013,
-  type: DrillTypes.TECHNICAL,
+  type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: "Give'n Go",
   image: 'https://zupimages.net/up/20/19/s9fe.jpg',
@@ -975,7 +975,7 @@ const giveAndGoDrill = {
 
 const AussieDrill = {
   id: 1014,
-  type: DrillTypes.TECHNICAL,
+  type: DrillTypes.FRISBEE,
   author: 'Matt Hill',
   title: 'Aussie games',
   image: 'https://zupimages.net/up/20/19/78g2.png',
@@ -1003,7 +1003,7 @@ const AussieDrill = {
 
 const bolognaMDrill = {
   id: 1015,
-  type: DrillTypes.TECHNICAL,
+  type: DrillTypes.FRISBEE,
   author: 'Bologna',
   title: 'The M',
   image: 'https://zupimages.net/up/20/19/akuy.jpg',
@@ -1031,7 +1031,7 @@ const bolognaMDrill = {
 
 const goToTenDrill = {
   id: 1016,
-  type: DrillTypes.TECHNICAL,
+  type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Go to 10',
   image: 'https://zupimages.net/up/20/19/rcyt.jpg',
@@ -1059,7 +1059,7 @@ const goToTenDrill = {
 
 const endzoneDameDrill = {
   id: 1017,
-  type: DrillTypes.TECHNICAL,
+  type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Endzone Game',
   image: 'https://zupimages.net/up/20/19/cd36.jpg',
@@ -1087,7 +1087,7 @@ const endzoneDameDrill = {
 
 const bulldogDrill = {
   id: 1018,
-  type: DrillTypes.TECHNICAL,
+  type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'British Bulldog',
   image: 'https://zupimages.net/up/20/19/tf79.jpg',
@@ -1115,7 +1115,7 @@ const bulldogDrill = {
 
 const menageATroisDrill = {
   id: 1019,
-  type: DrillTypes.TECHNICAL,
+  type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Menage a trois',
   image: 'https://zupimages.net/up/20/19/ai3z.jpg',
@@ -1143,7 +1143,7 @@ const menageATroisDrill = {
 
 const dwarfDuelDrill = {
   id: 1020,
-  type: DrillTypes.TECHNICAL,
+  type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Dwarf duel',
   image: 'https://zupimages.net/up/20/19/3m3k.jpg',
@@ -1171,7 +1171,7 @@ const dwarfDuelDrill = {
 
 const dishieChainDrill = {
   id: 1021,
-  type: DrillTypes.TECHNICAL,
+  type: DrillTypes.FRISBEE,
   author: 'Mooncatcher',
   title: 'Dishie Chain',
   image: 'https://zupimages.net/up/20/19/stdq.jpg',
@@ -1199,7 +1199,7 @@ const dishieChainDrill = {
 
 const breakDanceDrill = {
   id: 1022,
-  type: DrillTypes.TECHNICAL,
+  type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Break Dance',
   image: 'https://zupimages.net/up/20/19/agsd.jpg',
@@ -1227,7 +1227,7 @@ const breakDanceDrill = {
 
 const catapultdrill = {
   id: 1023,
-  type: DrillTypes.TECHNICAL,
+  type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'The Catapult',
   image: 'https://zupimages.net/up/20/19/kmlc.jpg',

@@ -1,5 +1,8 @@
 import theme from '../styles/theme.style';
 
+export const contentContainer = {
+  paddingBottom: 40,
+};
 export const counter = {
   color: theme.COLOR_SECONDARY,
   marginBottom: 20,
@@ -31,7 +34,7 @@ export const imageText = {
 export const imageTextMain = {
   fontSize: theme.FONT_SIZE_LARGE,
 };
-export const contentContainer = {
+export const itemContentContainer = {
   padding: 5,
   paddingBottom: 10,
 };

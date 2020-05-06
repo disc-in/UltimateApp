@@ -702,7 +702,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
             }
           }
         >
-          10
+          5
         </Text>
         <View
           animationType="timing"

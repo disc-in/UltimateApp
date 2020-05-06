@@ -547,7 +547,6 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
                       }
                     >
                       10
-                      +
                     </Text>
                     <Text
                       style={
@@ -558,7 +557,7 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
                         }
                       }
                     >
-                      min.
+                      min
                     </Text>
                   </View>
                   <View
@@ -679,7 +678,6 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
                       }
                     >
                       2
-                      +
                     </Text>
                     <Text
                       style={
@@ -1409,7 +1407,6 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
                       }
                     >
                       10
-                      +
                     </Text>
                     <Text
                       style={
@@ -1420,7 +1417,7 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
                         }
                       }
                     >
-                      min.
+                      min
                     </Text>
                   </View>
                   <View
@@ -1541,7 +1538,6 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
                       }
                     >
                       2
-                      +
                     </Text>
                     <Text
                       style={

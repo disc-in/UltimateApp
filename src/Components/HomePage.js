@@ -16,7 +16,7 @@ export default class HomePage extends React.Component {
         >
           <ImageBackground source={frisbeeGlove} style={styles.image}>
             <View style={styles.wrapper}>
-              <Text style={styles.text}>Frisbee drills</Text>
+              <Text style={styles.text}>Frisbee Drills</Text>
             </View>
           </ImageBackground>
         </TouchableHighlight>
@@ -26,14 +26,14 @@ export default class HomePage extends React.Component {
         >
           <ImageBackground source={fitness} style={styles.image}>
             <View style={styles.wrapper}>
-              <Text style={styles.text}>Fitness drills</Text>
+              <Text style={styles.text}>Fitness</Text>
             </View>
           </ImageBackground>
         </TouchableHighlight>
         <TouchableHighlight onPress={() => this.props.navigation.navigate('ProgramsPage')} style={styles.menuItem}>
           <ImageBackground source={huddle} style={styles.image}>
             <View style={styles.wrapper}>
-              <Text style={styles.text}>Training programs</Text>
+              <Text style={styles.text}>Training Programs</Text>
             </View>
           </ImageBackground>
         </TouchableHighlight>

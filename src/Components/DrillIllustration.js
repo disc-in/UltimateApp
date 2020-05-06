@@ -7,7 +7,7 @@ import VimeoVideo from './VimeoVideo';
 import { IllustrationType } from '../Fixtures';
 import theme from '../styles/theme.style';
 import iconRedo from '../../assets/redo_arrow.png';
-import buttonValidation from '../../assets/button_validation_light.png';
+import buttonValidation from '../../assets/button_validation_ultra_light.png';
 
 const DrillIllustration = props => {
   const [currentStepIndex, setStepIndex] = useState(0);

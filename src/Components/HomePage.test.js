@@ -13,13 +13,13 @@ describe('<HomePage />', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('links to technical drill list', async () => {
+  it('links to frisbee drill list', async () => {
     const navigation = { navigate: jest.fn() };
     const { getByText } = render(<HomePage navigation={navigation} />);
 
     await fireEvent.press(getByText('Frisbee drills'));
 
-    expect(navigation.navigate).toBeCalledWith('DrillListPage', { type: DrillTypes.TECHNICAL });
+    expect(navigation.navigate).toBeCalledWith('DrillListPage', { type: DrillTypes.FRISBEE });
 
     await fireEvent.press(getByText('Fitness drills'));
 

@@ -354,7 +354,7 @@ exports[`<TrainingListPage /> renders correctly when connected 1`] = `
                 },
               ],
               "title": "Frisbee Drill Title",
-              "type": "technical",
+              "type": "frisbee",
             },
           ],
           "id": 1,
@@ -653,7 +653,7 @@ exports[`<TrainingListPage /> renders correctly when connected 1`] = `
                 },
               ],
               "title": "Frisbee Drill Title",
-              "type": "technical",
+              "type": "frisbee",
             },
             Object {
               "author": "Author",
@@ -943,7 +943,7 @@ exports[`<TrainingListPage /> renders correctly when connected 1`] = `
                 },
               ],
               "title": "Frisbee Drill Title",
-              "type": "technical",
+              "type": "frisbee",
             },
           ],
           "id": 2,
@@ -1051,8 +1051,7 @@ exports[`<TrainingListPage /> renders correctly when connected 1`] = `
                 }
               }
             >
-              40
-               min
+              0 h 40
             </Text>
             <Text
               style={
@@ -1184,8 +1183,7 @@ exports[`<TrainingListPage /> renders correctly when connected 1`] = `
                 }
               }
             >
-              60
-               min
+              1 h
             </Text>
             <Text
               style={
@@ -1602,7 +1600,7 @@ exports[`<TrainingListPage /> renders correctly with a training 1`] = `
                 },
               ],
               "title": "Frisbee Drill Title",
-              "type": "technical",
+              "type": "frisbee",
             },
           ],
           "id": 1,
@@ -1901,7 +1899,7 @@ exports[`<TrainingListPage /> renders correctly with a training 1`] = `
                 },
               ],
               "title": "Frisbee Drill Title",
-              "type": "technical",
+              "type": "frisbee",
             },
             Object {
               "author": "Author",
@@ -2191,7 +2189,7 @@ exports[`<TrainingListPage /> renders correctly with a training 1`] = `
                 },
               ],
               "title": "Frisbee Drill Title",
-              "type": "technical",
+              "type": "frisbee",
             },
           ],
           "id": 2,
@@ -2299,8 +2297,7 @@ exports[`<TrainingListPage /> renders correctly with a training 1`] = `
                 }
               }
             >
-              40
-               min
+              0 h 40
             </Text>
             <Text
               style={
@@ -2432,8 +2429,7 @@ exports[`<TrainingListPage /> renders correctly with a training 1`] = `
                 }
               }
             >
-              60
-               min
+              1 h
             </Text>
             <Text
               style={

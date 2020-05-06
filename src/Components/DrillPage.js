@@ -19,8 +19,8 @@ import { toggleFavorite } from '../Store/Actions/favoriteAction';
 
 import theme from '../styles/theme.style';
 
-import iconFavoriteEmpty from '../../assets/ic_favorite_border.png';
-import iconFavoriteFull from '../../assets/ic_favorite.png';
+import iconFavoriteEmpty from '../../assets/ic_favorite_border_bookmark.png';
+import iconFavoriteFull from '../../assets/ic_favorite_bookmark.png';
 
 export const DrillPage = props => {
   const { route, navigation } = props;
@@ -93,8 +93,8 @@ export const DrillPage = props => {
       <View style={styles.separator} />
       <View style={styles.description}>
         <View style={styles.descriptionItem}>
-          <Text style={styles.descriptionGoalsTitle}>Goals</Text>
-          <Text style={styles.descriptionGoalsText}>{drill.goals ? drill.goals.join(' - ') : ''}</Text>
+          <Text style={styles.descriptionTitle}>Good for</Text>
+          <Text style={styles.descriptionText}>{drill.goals ? drill.goals.join(' - ') : ''}</Text>
         </View>
       </View>
       <View style={styles.lines} />
@@ -156,7 +156,7 @@ const styles = StyleSheet.create({
   },
   separator: {
     height: 15,
-    borderRightWidth: 1,
+    borderRightWidth: 0.5,
     borderRightColor: theme.COLOR_PRIMARY_LIGHT,
   },
   videoLink: {
@@ -214,28 +214,16 @@ const styles = StyleSheet.create({
     paddingHorizontal: 30,
     fontSize: theme.FONT_SIZE_SMALL,
   },
-  descriptionGoalsTitle: {
-    marginBottom: 10,
-    textAlign: 'center',
-    fontSize: theme.FONT_SIZE_MEDIUM,
-    color: theme.COLOR_SECONDARY,
-  },
-  descriptionGoalsText: {
-    color: theme.COLOR_PRIMARY,
-    textAlign: 'center',
-    fontSize: theme.FONT_SIZE_LARGE,
-    fontWeight: 'bold',
-  },
   lines: {
     borderBottomColor: theme.COLOR_SECONDARY_LIGHT,
     borderBottomWidth: 1,
   },
   favoriteContainer: {
-    marginRight: 15,
+    marginRight: 20,
   },
   favoriteImage: {
-    width: 25.5,
-    height: 30,
+    width: 17,
+    height: 20,
   },
 });
 

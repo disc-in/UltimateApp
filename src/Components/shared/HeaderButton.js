@@ -1,19 +1,20 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity } from 'react-native';
-import theme from '../../styles/theme.style';
+import { StyleSheet, Image, TouchableOpacity } from 'react-native';
+import buttonValidation from '../../../assets/check_dark.png';
 
 const HeaderButton = props => {
   return (
     <TouchableOpacity onPress={props.onPress} testID="headerButton">
-      <Text style={styles.headerButtonText}>✓</Text>
+      <Image style={styles.headerButtonText} source={buttonValidation} />
     </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
   headerButtonText: {
-    paddingRight: 20,
-    fontSize: theme.FONT_SIZE_LARGE,
+    marginRight: 20,
+    width: 20,
+    height: 20,
   },
 });
 

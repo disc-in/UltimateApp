@@ -113,14 +113,16 @@ exports[`<TrainingBravoPage /> renders correctly 1`] = `
       onStartShouldSetResponder={[Function]}
       style={
         Object {
+          "alignItems": "center",
           "backgroundColor": "#232b2b",
-          "borderRadius": 30,
+          "borderRadius": 5,
           "height": 40,
+          "justifyContent": "center",
           "left": "10%",
           "opacity": 1,
           "padding": 10,
           "right": "10%",
-          "width": "80%",
+          "width": "90%",
         }
       }
       testID="button"

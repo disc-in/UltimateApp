@@ -54,7 +54,7 @@ export const DrillPageMinimal = props => {
       </View>
       <MinimalDrill style={styles.illustration} drill={drill} />
       <View style={styles.btnMoreContainer}>
-        <Button onPress={goToFullDrill} text="DETAILS" />
+        <Button onPress={goToFullDrill} text="DETAILS" buttonLight="true" />
       </View>
     </View>
   );
@@ -118,6 +118,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical: 10,
+    paddingVertical: 50,
   },
 });

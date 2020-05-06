@@ -131,13 +131,12 @@ exports[`<DrillList /> renders correctly 1`] = `
               style={
                 Object {
                   "color": "#e5e5e5",
-                  "fontSize": 20,
+                  "fontSize": 16,
                   "textAlign": "center",
                 }
               }
             >
               10
-              +
             </Text>
             <Text
               style={
@@ -148,7 +147,7 @@ exports[`<DrillList /> renders correctly 1`] = `
                 }
               }
             >
-              min.
+              min
             </Text>
           </View>
           <View

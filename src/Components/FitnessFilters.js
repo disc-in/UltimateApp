@@ -157,7 +157,7 @@ class FitnessFilters extends React.Component {
           <Text style={filterStyle.filterTitle}>Duration</Text>
           <Text>How much time do you have?   {durationInMinutes || '-'} mins</Text>
           <Slider
-            minimumValue={10}
+            minimumValue={5}
             maximumValue={60}
             step={1}
             value={durationInMinutes}

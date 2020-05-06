@@ -11,9 +11,8 @@ export const ProgramsPage = props => {
   return (
     <View style={styles.programPage}>
       <TouchableHighlight onPress={() => props.navigation.navigate('TrainingListPage')} style={styles.allTrainings}>
-        <Text style={styles.allTrainingsText}>See all trainings ➔</Text>
+        <Text style={styles.allTrainingsText}>All trainings</Text>
       </TouchableHighlight>
-      <Text style={styles.incentive}>Or choose the perfect program for your team :</Text>
       <FlatList
         data={programs}
         keyExtractor={item => item.id.toString()}
@@ -43,6 +42,7 @@ const styles = StyleSheet.create({
   },
   allTrainingsText: {
     fontSize: theme.FONT_SIZE_LARGE,
+    marginLeft: 5,
     fontWeight: 'bold',
   },
   incentive: {

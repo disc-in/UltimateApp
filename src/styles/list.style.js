@@ -32,7 +32,7 @@ export const imageText = {
   fontSize: theme.FONT_SIZE_SMALL,
 };
 export const imageTextMain = {
-  fontSize: theme.FONT_SIZE_LARGE,
+  fontSize: theme.FONT_SIZE_MEDIUM,
 };
 export const itemContentContainer = {
   padding: 5,

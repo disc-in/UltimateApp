@@ -64,7 +64,7 @@ const stabilityDrill = {
   type: DrillTypes.FITNESS,
   author: 'Moby',
   title: 'Stability Off-season 1',
-  image: 'https://zupimages.net/up/20/19/6bxp.jpg',
+  image: 'https://zupimages.net/up/20/19/75s2.jpg',
   description:
     "It's the first session of our program, we start with stability drill to build solid base for the rest of the season",
   minimalPlayersNumber: 1,
@@ -488,7 +488,7 @@ const speedDrill = {
       id: 6,
       title: 'Sprint - 10 m',
       illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747769',
+      illustrationSource: '406765010',
       repetition: '4',
       rest: '90 s',
       instruction: '',
@@ -497,7 +497,7 @@ const speedDrill = {
       id: 7,
       title: 'Sprint - 30 m',
       illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406746924',
+      illustrationSource: '406765010',
       repetition: '4',
       rest: '90 s',
       instruction: '',
@@ -506,7 +506,7 @@ const speedDrill = {
       id: 8,
       title: 'Sprint - 50 m',
       illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747302',
+      illustrationSource: '406765010',
       repetition: '3',
       rest: '90 s',
       instruction: '',
@@ -588,9 +588,9 @@ const warmupDrill = {
   steps: [
     {
       id: 1,
-      title: 'Follow him',
-      illustrationType: IllustrationType.YOUTUBE,
-      illustrationSource: 'https://www.youtube.com/embed/cDLUFDZ5-zc',
+      title: 'Ultimate warm-up',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '415430252',
       repetition: '',
       rest: '',
       instruction: '',
@@ -742,7 +742,7 @@ const twoColumnsLongDrill = {
   id: 1006,
   type: DrillTypes.FRISBEE,
   author: 'Martin',
-  title: '2 columns long shot with defense',
+  title: '2 columns with defense',
   image: 'https://zupimages.net/up/20/19/fvm4.jpg',
   description:
     'Basic long passes drill. You want your players to alternate between throwing, running and passing, with offense and defense',
@@ -1253,6 +1253,52 @@ const catapultdrill = {
   ],
 };
 
+const basicThrows = {
+  id: 1007,
+  type: DrillTypes.FRISBEE,
+  author: 'Rowan McDonnell',
+  title: 'Basic Throws',
+  image: 'https://zupimages.net/up/20/19/zgxt.jpg',
+  description: 'Basic drills to learn how to throw',
+  minimalPlayersNumber: 2,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 Disc',
+  durationInMinutes: 20,
+  intensity: Intensities.LOW,
+  goals: [GoalsFrisbee.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'Backhand Throw',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '415565763',
+      repetition: '',
+      rest: '',
+      instruction: 'Follow him',
+    },
+    {
+      id: 2,
+      title: 'Forehand Throw',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '415569048',
+      repetition: '',
+      rest: '',
+      instruction: 'Follow him',
+    },
+    {
+      id: 3,
+      title: 'Throwing exercice',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: animationSquare,
+      repetition: '',
+      rest: '',
+      instruction: '',
+    },
+  ],
+};
+
 const normalGame = {
   id: 2001,
   type: DrillTypes.GAME,
@@ -1426,6 +1472,7 @@ export default {
     dishieChainDrill,
     breakDanceDrill,
     catapultdrill,
+    basicThrows,
     // Games
     normalGame,
     game3v3,

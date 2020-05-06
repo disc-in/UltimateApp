@@ -144,24 +144,24 @@ exports[`<DrillPageMinimal /> renders correctly with a training and a drill 1`] 
               </Text>
             </View>
             <View
+              accessible={true}
+              focusable={true}
+              isTVSelectable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
               style={
                 Object {
-                  "alignSelf": "flex-end",
-                  "flexDirection": "row",
+                  "opacity": 1,
                 }
               }
             >
-              <View
-                accessible={true}
-                focusable={true}
-                isTVSelectable={true}
-                onClick={[Function]}
-                onResponderGrant={[Function]}
-                onResponderMove={[Function]}
-                onResponderRelease={[Function]}
-                onResponderTerminate={[Function]}
-                onResponderTerminationRequest={[Function]}
-                onStartShouldSetResponder={[Function]}
+              <Image
+                source={1}
                 style={
                   Object {
                     "alignItems": "center",
@@ -172,7 +172,6 @@ exports[`<DrillPageMinimal /> renders correctly with a training and a drill 1`] 
                     "height": 25,
                     "justifyContent": "center",
                     "margin": 22.5,
-                    "opacity": 1,
                     "width": 25,
                   }
                 }
@@ -214,7 +213,7 @@ exports[`<DrillPageMinimal /> renders correctly with a training and a drill 1`] 
         "flexGrow": 0,
         "flexShrink": 1,
         "justifyContent": "center",
-        "paddingVertical": 10,
+        "paddingVertical": 50,
       }
     }
   >
@@ -231,14 +230,18 @@ exports[`<DrillPageMinimal /> renders correctly with a training and a drill 1`] 
       onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "backgroundColor": "#232b2b",
-          "borderRadius": 30,
+          "alignItems": "center",
+          "backgroundColor": "#fff",
+          "borderColor": "#A6A6A6",
+          "borderRadius": 5,
+          "borderWidth": 1,
           "height": 40,
+          "justifyContent": "center",
           "left": "10%",
           "opacity": 1,
           "padding": 10,
           "right": "10%",
-          "width": "80%",
+          "width": "90%",
         }
       }
       testID="button"
@@ -246,8 +249,9 @@ exports[`<DrillPageMinimal /> renders correctly with a training and a drill 1`] 
       <Text
         style={
           Object {
-            "color": "#fff",
+            "color": "#A6A6A6",
             "fontSize": 16,
+            "fontWeight": "bold",
             "textAlign": "center",
           }
         }

@@ -4,10 +4,11 @@ import HomePage from '../Components/HomePage';
 import DrillListPage from '../Components/DrillListPage';
 import DrillPage from '../Components/DrillPage';
 import DrillPageMinimal from '../Components/DrillPageMinimal';
-import TechnicalFilters from '../Components/TechnicalFilters';
+import FrisbeeFilters from '../Components/FrisbeeFilters';
 import FitnessFilters from '../Components/FitnessFilters';
 import TrainingListPage from '../Components/TrainingListPage';
 import TrainingPage from '../Components/TrainingPage';
+import TrainingBravoPage from '../Components/TrainingBravoPage';
 import ProgramsPage from '../Components/ProgramsPage';
 
 const Stack = createStackNavigator();
@@ -22,7 +23,7 @@ export const Navigation = () => (
         title: route.params.type.substr(0, 1).toUpperCase() + route.params.type.substr(1) + ' drills',
       })}
     />
-    <Stack.Screen name="TechnicalFilters" component={TechnicalFilters} options={{ title: 'Filters' }} />
+    <Stack.Screen name="FrisbeeFilters" component={FrisbeeFilters} options={{ title: 'Filters' }} />
     <Stack.Screen name="FitnessFilters" component={FitnessFilters} options={{ title: 'Filters' }} />
     <Stack.Screen
       name="DrillPage"
@@ -44,6 +45,11 @@ export const Navigation = () => (
       options={({ route }) => ({
         title: route.params.training.title + ' Drill',
       })}
+    />
+    <Stack.Screen
+      name="TrainingBravoPage"
+      component={TrainingBravoPage}
+      options={({ route }) => ({ title: route.params.training.title })}
     />
   </Stack.Navigator>
 );

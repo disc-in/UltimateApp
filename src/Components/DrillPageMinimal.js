@@ -1,8 +1,5 @@
 import React, { useLayoutEffect, useCallback } from 'react';
 import { Platform, StyleSheet, View, Text } from 'react-native';
-import { connect } from 'react-redux';
-
-import { completeTraining } from '../Store/Actions/programAction';
 
 import theme from '../styles/theme.style';
 import HeaderButton from './shared/HeaderButton';
@@ -23,8 +20,7 @@ export const DrillPageMinimal = props => {
 
   const goToNextDrill = useCallback(() => {
     if (currentDrillIndex === training.drills.length - 1) {
-      props.completeTraining({ training, program });
-      navigation.navigate('TrainingPage', { training });
+      navigation.navigate('TrainingBravoPage', { training, program });
     } else {
       const nextDrill = training.drills[currentDrillIndex + 1];
       navigation.navigate('DrillPageMinimal', { drill: nextDrill, training, program });
@@ -64,9 +60,7 @@ export const DrillPageMinimal = props => {
   );
 };
 
-const mapDispatchToProps = { completeTraining };
-
-export default connect(null, mapDispatchToProps)(DrillPageMinimal);
+export default DrillPageMinimal;
 
 const styles = StyleSheet.create({
   drillPage: {

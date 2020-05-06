@@ -7,7 +7,7 @@ import Checkbox from './filters/Checkbox';
 import Slider from './filters/Slider';
 import HeaderButton from './shared/HeaderButton';
 
-class TechnicalFilters extends React.Component {
+class FrisbeeFilters extends React.Component {
   constructor(props) {
     super(props);
 
@@ -110,4 +110,4 @@ class TechnicalFilters extends React.Component {
   }
 }
 
-export default TechnicalFilters;
+export default FrisbeeFilters;

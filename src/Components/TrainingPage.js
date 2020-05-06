@@ -7,6 +7,7 @@ import Button from './shared/Button';
 import theme from '../styles/theme.style';
 import iconPlayers from '../../assets/ic_players.png';
 import iconClock from '../../assets/ic_clock.png';
+import { convertMinsToTime } from '../utils/time';
 import { RECORDING_OPTION_IOS_BIT_RATE_STRATEGY_VARIABLE_CONSTRAINED } from 'expo-av/build/Audio';
 
 export function getTrainingDuration(training) {
@@ -70,7 +71,7 @@ export const TrainingPage = props => {
             </View>
             <View style={styles.info}>
               <Image style={styles.infoIcon} source={iconClock} />
-              <Text style={styles.infoValue}>{getTrainingDuration(training)} mins</Text>
+              <Text style={styles.infoValue}>{convertMinsToTime(getTrainingDuration(training))}</Text>
             </View>
           </View>
           <Text style={styles.descriptionText}>{training.description}</Text>

@@ -3,6 +3,11 @@
 exports[`<DrillList /> renders correctly 1`] = `
 <View>
   <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "paddingBottom": 40,
+      }
+    }
     data={
       Array [
         Object {

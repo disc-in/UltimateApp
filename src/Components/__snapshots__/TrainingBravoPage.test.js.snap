@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TrainingBravoPage /> renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "height": "100%",
+      "padding": 20,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "marginBottom": 40,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "fontSize": 20,
+          "fontWeight": "500",
+          "marginBottom": 20,
+        }
+      }
+    >
+      Beginner
+       - session 
+      1
+      /
+      2
+    </Text>
+    <Text>
+      Well done! You've just finished the training!
+    </Text>
+  </View>
+  <Text
+    style={
+      Object {
+        "fontSize": 20,
+        "fontWeight": "500",
+        "marginBottom": 20,
+      }
+    }
+  >
+    Recap
+  </Text>
+  <Text
+    style={
+      Object {
+        "fontSize": 16,
+      }
+    }
+  >
+    You worked on:
+  </Text>
+  <Text
+    style={
+      Object {
+        "fontSize": 14,
+      }
+    }
+  >
+    - 
+    Legs
+  </Text>
+  <Text
+    style={
+      Object {
+        "fontSize": 14,
+      }
+    }
+  >
+    - 
+    Defense
+  </Text>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "bottom": "3%",
+        "flex": 1,
+        "left": "3%",
+        "position": "absolute",
+        "right": "3%",
+        "width": "100%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "fontSize": 16,
+          "marginBottom": 20,
+        }
+      }
+    >
+      Get ready for the next training
+    </Text>
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#232b2b",
+          "borderRadius": 30,
+          "height": 40,
+          "left": "10%",
+          "opacity": 1,
+          "padding": 10,
+          "right": "10%",
+          "width": "80%",
+        }
+      }
+      testID="button"
+    >
+      <Text
+        style={
+          Object {
+            "color": "#fff",
+            "fontSize": 16,
+            "textAlign": "center",
+          }
+        }
+      >
+        Finish Training!
+      </Text>
+    </View>
+  </View>
+</View>
+`;

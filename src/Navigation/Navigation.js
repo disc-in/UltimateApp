@@ -8,6 +8,7 @@ import FrisbeeFilters from '../Components/FrisbeeFilters';
 import FitnessFilters from '../Components/FitnessFilters';
 import TrainingListPage from '../Components/TrainingListPage';
 import TrainingPage from '../Components/TrainingPage';
+import TrainingBravoPage from '../Components/TrainingBravoPage';
 import ProgramsPage from '../Components/ProgramsPage';
 
 const Stack = createStackNavigator();
@@ -44,6 +45,11 @@ export const Navigation = () => (
       options={({ route }) => ({
         title: route.params.training.title + ' Drill',
       })}
+    />
+    <Stack.Screen
+      name="TrainingBravoPage"
+      component={TrainingBravoPage}
+      options={({ route }) => ({ title: route.params.training.title })}
     />
   </Stack.Navigator>
 );

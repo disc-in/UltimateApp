@@ -36,7 +36,6 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           Object {
             "fontWeight": "bold",
             "marginBottom": 10,
-            "textAlign": "center",
             "textTransform": "uppercase",
           }
         }
@@ -167,7 +166,6 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           Object {
             "fontWeight": "bold",
             "marginBottom": 10,
-            "textAlign": "center",
             "textTransform": "uppercase",
           }
         }
@@ -298,7 +296,6 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           Object {
             "fontWeight": "bold",
             "marginBottom": 10,
-            "textAlign": "center",
             "textTransform": "uppercase",
           }
         }
@@ -429,7 +426,6 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           Object {
             "fontWeight": "bold",
             "marginBottom": 10,
-            "textAlign": "center",
             "textTransform": "uppercase",
           }
         }
@@ -560,7 +556,6 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           Object {
             "fontWeight": "bold",
             "marginBottom": 10,
-            "textAlign": "center",
             "textTransform": "uppercase",
           }
         }
@@ -679,7 +674,6 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           Object {
             "fontWeight": "bold",
             "marginBottom": 10,
-            "textAlign": "center",
             "textTransform": "uppercase",
           }
         }

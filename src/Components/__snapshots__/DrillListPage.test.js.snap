@@ -701,7 +701,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
                 style={
                   Object {
                     "color": "#e5e5e5",
-                    "fontSize": 20,
+                    "fontSize": 16,
                     "textAlign": "center",
                   }
                 }
@@ -833,7 +833,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
                 style={
                   Object {
                     "color": "#e5e5e5",
-                    "fontSize": 20,
+                    "fontSize": 16,
                     "textAlign": "center",
                   }
                 }
@@ -917,7 +917,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
         "borderRadius": 50,
         "bottom": "5%",
         "elevation": 10,
-        "height": 100,
+        "height": 60,
         "justifyContent": "center",
         "opacity": 1,
         "position": "absolute",
@@ -928,7 +928,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
         },
         "shadowOpacity": 0.3,
         "shadowRadius": 10,
-        "width": 100,
+        "width": 60,
       }
     }
     testID="filterButton"
@@ -1093,7 +1093,7 @@ exports[`<DrillListPage /> renders correctly with a fitness drill 1`] = `
                 style={
                   Object {
                     "color": "#e5e5e5",
-                    "fontSize": 20,
+                    "fontSize": 16,
                     "textAlign": "center",
                   }
                 }
@@ -1177,7 +1177,7 @@ exports[`<DrillListPage /> renders correctly with a fitness drill 1`] = `
         "borderRadius": 50,
         "bottom": "5%",
         "elevation": 10,
-        "height": 100,
+        "height": 60,
         "justifyContent": "center",
         "opacity": 1,
         "position": "absolute",
@@ -1188,7 +1188,7 @@ exports[`<DrillListPage /> renders correctly with a fitness drill 1`] = `
         },
         "shadowOpacity": 0.3,
         "shadowRadius": 10,
-        "width": 100,
+        "width": 60,
       }
     }
     testID="filterButton"
@@ -1353,7 +1353,7 @@ exports[`<DrillListPage /> renders correctly with a technical drill 1`] = `
                 style={
                   Object {
                     "color": "#e5e5e5",
-                    "fontSize": 20,
+                    "fontSize": 16,
                     "textAlign": "center",
                   }
                 }
@@ -1437,7 +1437,7 @@ exports[`<DrillListPage /> renders correctly with a technical drill 1`] = `
         "borderRadius": 50,
         "bottom": "5%",
         "elevation": 10,
-        "height": 100,
+        "height": 60,
         "justifyContent": "center",
         "opacity": 1,
         "position": "absolute",
@@ -1448,7 +1448,7 @@ exports[`<DrillListPage /> renders correctly with a technical drill 1`] = `
         },
         "shadowOpacity": 0.3,
         "shadowRadius": 10,
-        "width": 100,
+        "width": 60,
       }
     }
     testID="filterButton"

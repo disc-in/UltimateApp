@@ -537,7 +537,7 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
                       style={
                         Object {
                           "color": "#e5e5e5",
-                          "fontSize": 20,
+                          "fontSize": 16,
                           "textAlign": "center",
                         }
                       }
@@ -669,7 +669,7 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
                       style={
                         Object {
                           "color": "#e5e5e5",
-                          "fontSize": 20,
+                          "fontSize": 16,
                           "textAlign": "center",
                         }
                       }
@@ -763,14 +763,16 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
       onStartShouldSetResponder={[Function]}
       style={
         Object {
+          "alignItems": "center",
           "backgroundColor": "#232b2b",
-          "borderRadius": 30,
+          "borderRadius": 5,
           "height": 40,
+          "justifyContent": "center",
           "left": "10%",
           "opacity": 1,
           "padding": 10,
           "right": "10%",
-          "width": "80%",
+          "width": "90%",
         }
       }
       testID="button"
@@ -1393,7 +1395,7 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
                       style={
                         Object {
                           "color": "#e5e5e5",
-                          "fontSize": 20,
+                          "fontSize": 16,
                           "textAlign": "center",
                         }
                       }
@@ -1525,7 +1527,7 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
                       style={
                         Object {
                           "color": "#e5e5e5",
-                          "fontSize": 20,
+                          "fontSize": 16,
                           "textAlign": "center",
                         }
                       }
@@ -1619,14 +1621,16 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
       onStartShouldSetResponder={[Function]}
       style={
         Object {
+          "alignItems": "center",
           "backgroundColor": "#232b2b",
-          "borderRadius": 30,
+          "borderRadius": 5,
           "height": 40,
+          "justifyContent": "center",
           "left": "10%",
           "opacity": 1,
           "padding": 10,
           "right": "10%",
-          "width": "80%",
+          "width": "90%",
         }
       }
       testID="button"

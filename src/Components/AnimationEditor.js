@@ -30,6 +30,7 @@ class AnimationEditor extends React.Component {
     this.wRatio = 1;
 
     this.offenseCount = 1;
+    this.defenseCount = 1;
 
     this.keyCount = 0;
 
@@ -43,11 +44,13 @@ class AnimationEditor extends React.Component {
     });
   }
 
-  onLayout = e => {
+    onLayout = e => {
+
+        //TODO see why this is needed...
     this.setState({
       width: e.nativeEvent.layout.width,
       height: e.nativeEvent.layout.height,
-      dTop: e.nativeEvent.layout.y,
+      dTop: 40,
       dLeft: e.nativeEvent.layout.x,
     });
 
@@ -68,10 +71,14 @@ class AnimationEditor extends React.Component {
       case 'offense':
         x = 30;
         y = 450;
+        this.offenseCount++;
+        this.state.draggableElements[0].setNumber(this.offenseCount);
         break;
       case 'defense':
         x = 90;
         y = 450;
+        this.defenseCount++;
+        this.state.draggableElements[1].setNumber(this.defenseCount);
         break;
       case 'triangle':
         x = 270;
@@ -141,10 +148,9 @@ class AnimationEditor extends React.Component {
 
     var newDrill = this._copyDrill();
 
-    newDrill.positions = Array(3);
+    newDrill.positions = Array(2);
     newDrill.positions[0] = [];
     newDrill.positions[1] = [];
-    newDrill.positions[2] = [];
 
     /* Get the dimension of the screen and then initialize the drill */
     var { height, width } = Dimensions.get('window');
@@ -152,15 +158,15 @@ class AnimationEditor extends React.Component {
     console.log('screen h/w: ' + height + '/' + width);
 
     // Create the elements in the horizontal bar
-    var initialElements = [];
+    this.initialElements = [];
 
-    initialElements.push(this._createDE('offense'));
-    initialElements.push(this._createDE('defense'));
-    initialElements.push(this._createDE('disc'));
-    initialElements.push(this._createDE('triangle'));
+    this.initialElements.push(this._createDE('offense'));
+    this.initialElements.push(this._createDE('defense'));
+    this.initialElements.push(this._createDE('disc'));
+    this.initialElements.push(this._createDE('triangle'));
 
     this.setState(prevState => ({
-      draggableElements: prevState.draggableElements.concat(initialElements),
+      draggableElements: prevState.draggableElements.concat(this.initialElements),
       screenH: height,
       screenW: width,
       drill: newDrill,
@@ -277,21 +283,35 @@ class AnimationEditor extends React.Component {
   };
 
   _createDE(deType) {
-    //        console.log("create de with type: " + deType);
+            console.log("create de with type: " + deType);
     var text = '';
 
-    if (deType === 'offense') {
-      text = this.offenseCount;
-      this.offenseCount++;
-    }
+      var key = 600;
+      this.keyCount += 1;
 
-    this.keyCount += 1;
+      
+      if(deType === 'offense')
+          text = "1";
 
+      if(deType === 'defense'){
+          text = "1";
+          key = 601;
+      }
+
+      if(deType === 'triangle')
+          key = 602;
+
+      if(deType === 'disc')
+          key = 603;
+      
+
+      console.log("text: " + text);
     return new Test({
       onMoveEnd: this.addElementToDrill,
       key: this.keyCount,
       id: deType,
       eId: -1,
+      key: key,
       movable: true,
       animationWidth: this.state.screenW,
       animationHeight: this.state.screenH,
@@ -343,6 +363,7 @@ class AnimationEditor extends React.Component {
             />
 
         {this.state.draggableElements.map(function(item) {
+            console.log("render de");
           return item.render();
         })}
 
@@ -361,7 +382,8 @@ class AnimationEditor extends React.Component {
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    marginTop: 40,
+      marginTop: 0,
+      paddingTop: 0,
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'stretch',

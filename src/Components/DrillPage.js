@@ -27,7 +27,7 @@ class DrillPage extends React.Component {
         <View style={styles.content_container}>
           <AnimationEditor
             animation={currentStep.animation}
-            heightRatio={stepContainerFlex / (contentContainerFlex + stepContainerFlex)}
+            heightRatio={1}
             widthRatio={1}
             editable
           />

@@ -57,7 +57,12 @@ class MovingCircle extends React.Component{
         console.log("render Moving Circle: isCounterCut: " + this.props.isCounterCut);
         console.log("cx/cy: " + this.props.cx + "/"+ this.props.cy);
         console.log("currentposition.x/y: " + this.currentPosition.x._value + "/"+ this.currentPosition.y._value);
+
+
+        console.log("toString(): " + this.props.cx.toString());
         
+            /*         
+            fill="white"   stroke="green" */
         return(
             <Animated.View
             {...this.panResponder.panHandlers}
@@ -74,10 +79,9 @@ class MovingCircle extends React.Component{
             cx={this.props.radius}
             cy={this.props.radius}
             r={this.props.radius}
-            fill="white"
-            stroke="green"
             strokeWidth={this.props.radius / 6}
             strokeDasharray="3, 3"
+            fill="white"
                 />
                 </Svg>
                 </Animated.View>

@@ -15,7 +15,9 @@ class Test extends React.Component {
 
     */
   constructor(props) {
-    super(props);
+      super(props);
+
+      this.number = this.props.number.toString();
 
     // TODO: put the constant coefficient used in the following somewhere to avoir writing them twice (in this class and in DrillCuts)
     var dimensionMin = Math.min(this.props.animationWidth, this.props.animationHeight);
@@ -43,6 +45,7 @@ class Test extends React.Component {
     this._val = { x: 0, y: 0 };
     this.previousX = -1;
     this.previousY = -1;
+
 
     this.currentPosition.addListener(value => (this._val = value)); // Initialize PanResponder with move handling
 
@@ -74,12 +77,23 @@ class Test extends React.Component {
 
       onPanResponderRelease: (evt, gesturestate) => {
         if (this.props.movable && this.props.onMoveEnd !== undefined && this.props.onMoveEnd !== null) {
-          //		    console.log("Test: this.props.id: " + this.props.id);
+          		    console.log("Test: this.props.id: " + this.props.id);
           this.props.onMoveEnd(this, this.currentPosition.x._value, this.currentPosition.y._value);
           this.currentPosition.setValue({ x: 0, y: 0 });
         }
       },
     });
+  }
+
+    componentDidUpdate(){
+        console.log("!!!!!!!!update called");
+    }
+    componentDidMount(){
+        console.log("!!!!!!!!!!! mount");
+    }
+
+  setNumber(newNumber){
+      this.number = newNumber.toString();
   }
 
   setPosition(xArg, yArg) {
@@ -95,7 +109,9 @@ class Test extends React.Component {
     });
   }
 
-  render() {
+    render() {
+
+        console.log("render test: number: " + this.number);
     const panStyle = {
       transform: this.currentPosition.getTranslateTransform(),
     };
@@ -103,15 +119,15 @@ class Test extends React.Component {
     /* Returns a component according to the element type */
     switch (this.props.id) {
       case 'defense':
-        //            console.log("Render in defense");
+                    console.log("Render in defense");
         return (
           <Animated.Text
             // Use the panResponder in this view
             {...this.panResponder.panHandlers}
             style={[panStyle, styles.defense, { height: 40 }, { width: 40 }, { borderRadius: 40 }]}
-            key={this.props.key}
+            key={this.props.key+4}
           >
-            {this.props.number}
+            {this.number}
           </Animated.Text>
         );
 
@@ -122,9 +138,9 @@ class Test extends React.Component {
             // Use the panResponder in this view
             {...this.panResponder.panHandlers}
             style={[panStyle, styles.offense, { height: 40 }, { width: 40 }, { borderRadius: 40 }]}
-            key={this.props.key}
+            key={this.props.key+4}
           >
-            {this.props.number}
+            {this.number}
           </Animated.Text>
         );
 
@@ -135,7 +151,7 @@ class Test extends React.Component {
             // Use the panResponder in this view
             {...this.panResponder.panHandlers}
             style={[panStyle, styles.disc, { height: 20 }, { width: 20 }, { borderRadius: 20 }, { borderWidth: 2 }]}
-            key={this.props.key}
+            key={this.props.key+4}
           />
         );
 
@@ -152,7 +168,7 @@ class Test extends React.Component {
               { borderRightWidth: 12 },
               { borderBottomWidth: 25 },
             ]}
-            key={this.props.key}
+            key={this.props.key+4}
           />
         );
 

@@ -742,7 +742,7 @@ const twoColumnsLongDrill = {
   id: 1006,
   type: DrillTypes.TECHNICAL,
   author: 'Martin',
-  title: '2 columns long shot with defense',
+  title: '2 columns with defense',
   image: 'https://zupimages.net/up/20/19/fvm4.jpg',
   description:
     'Basic long passes drill. You want your players to alternate between throwing, running and passing, with offense and defense',

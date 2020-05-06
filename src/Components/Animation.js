@@ -401,7 +401,7 @@ class Animation extends React.Component {
 
     return (
       <View
-        style={[styles.mainContainer, { height: this.state.animationHeight }, { width: this.state.animationWidth }, {backgroundColor: "black"}]}
+        style={[styles.mainContainer, { height: this.state.animationHeight }, { width: this.state.animationWidth }]}
       >
         {this.props.editable ? this._display(this.cuts) : undefined}
         {this.state.de === undefined || this.state.de === null ? <View /> : this.state.de.map(this._display)}

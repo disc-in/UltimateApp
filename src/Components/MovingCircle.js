@@ -61,8 +61,7 @@ class MovingCircle extends React.Component{
 
         console.log("toString(): " + this.props.cx.toString());
         
-            /*         
-            fill="white"   stroke="green" */
+            /* stroke="green" */
         return(
             <Animated.View
             {...this.panResponder.panHandlers}

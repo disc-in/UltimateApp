@@ -7,6 +7,7 @@ import VimeoVideo from './VimeoVideo';
 import { IllustrationType } from '../Fixtures';
 import theme from '../styles/theme.style';
 import iconRedo from '../../assets/redo_arrow.png';
+import buttonValidation from '../../assets/button_validation_light.png';
 
 const DrillIllustration = props => {
   const [currentStepIndex, setStepIndex] = useState(0);
@@ -93,11 +94,39 @@ const DrillIllustration = props => {
           <View style={styles.subSubWrapper}>
             <Text style={styles.fitness}>{title}</Text>
           </View>
-          <View style={styles.containerAnimation}>
-            <TouchableOpacity style={styles.buttonNext} onPress={() => incrementStepIndex()} />
-          </View>
+          <TouchableOpacity onPress={() => incrementStepIndex()}>
+            <Image style={styles.buttonNext} source={buttonValidation} />
+          </TouchableOpacity>
         </View>
       );
+    }
+  };
+
+  const displayStepsVimeo = (title, repetition) => {
+    if (props.drill.steps.length <= 1) {
+      return <View />;
+    } else {
+      return (
+        <View style={styles.description}>
+          <View style={styles.subWrapper}>
+            <Text style={styles.fitness}>{repetition}</Text>
+          </View>
+          <View style={styles.subSubWrapper}>
+            <Text style={styles.fitness}>{title}</Text>
+          </View>
+          <TouchableOpacity onPress={() => incrementStepIndex()}>
+            <Image style={styles.buttonNext} source={buttonValidation} />
+          </TouchableOpacity>
+        </View>
+      );
+    }
+  };
+
+  const displayNextStepsVimeo = () => {
+    if (props.drill.steps.length <= 1) {
+      return <View />;
+    } else {
+      return <View style={styles.container}>{displayNextStep()}</View>;
     }
   };
 
@@ -140,16 +169,10 @@ const DrillIllustration = props => {
           <VimeoVideo vimeoId={illustrationSource} screenWidth={screenDimension.width} />
         </View>
         <View style={styles.description}>
-          <View style={styles.subWrapper}>
-            <Text style={styles.fitness}>{repetition}</Text>
-          </View>
-          <View style={styles.subSubWrapper}>
-            <Text style={styles.fitness}>{title}</Text>
-          </View>
-          <TouchableOpacity style={styles.buttonNext} onPress={() => incrementStepIndex()} />
+          <View style={styles.containerAnimation}>{displayStepsVimeo(title, repetition)}</View>
         </View>
         <View style={styles.lines} />
-        <View style={styles.container}>{displayNextStep()}</View>
+        <View style={styles.containerAnimation}>{displayNextStepsVimeo()}</View>
       </>
     );
   };

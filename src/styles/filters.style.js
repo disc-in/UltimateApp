@@ -19,12 +19,14 @@ export default {
     marginBottom: 10,
     textTransform: 'uppercase',
     fontWeight: 'bold',
-    textAlign: 'center',
   },
   filter: {
     marginBottom: 20,
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
+  },
+  button: {
+    backgroundColor: 'pink',
   },
 };

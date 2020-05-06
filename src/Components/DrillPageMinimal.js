@@ -4,7 +4,7 @@ import { Platform, StyleSheet, View, Text } from 'react-native';
 import theme from '../styles/theme.style';
 import HeaderButton from './shared/HeaderButton';
 import MinimalDrill from './shared/MinimalDrill';
-import ButtonLight from './shared/ButtonLight';
+import Button from './shared/Button';
 import Progress from './ProgressBar2';
 
 export const DrillPageMinimal = props => {
@@ -54,7 +54,7 @@ export const DrillPageMinimal = props => {
       </View>
       <MinimalDrill style={styles.illustration} drill={drill} />
       <View style={styles.btnMoreContainer}>
-        <ButtonLight onPress={goToFullDrill} text="DETAILS" />
+        <Button onPress={goToFullDrill} text="DETAILS" buttonLight="true" />
       </View>
     </View>
   );

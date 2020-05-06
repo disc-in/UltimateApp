@@ -12,11 +12,11 @@ const DrillList = props => {
     const { title, type, source, image, goals } = item;
 
     const imageMainData = type === DrillTypes.TECHNICAL ? 'minimalPlayersNumber' : 'durationInMinutes';
-    const imageMainDataLegend = type === DrillTypes.TECHNICAL ? 'players' : 'min.';
+    const imageMainDataLegend = type === DrillTypes.TECHNICAL ? 'players' : 'min';
     return (
       <TouchableOpacity style={list.item} onPress={() => onDrillPress(item)}>
         <ImageBackground source={{ uri: image }} style={list.image} imageStyle={list.imageOpacity}>
-          <Text style={{ ...list.imageText, ...list.imageTextMain }}>{item[imageMainData]}+</Text>
+          <Text style={{ ...list.imageText, ...list.imageTextMain }}>{item[imageMainData]}</Text>
           <Text style={list.imageText}>{imageMainDataLegend}</Text>
         </ImageBackground>
         <View style={list.contentContainer}>

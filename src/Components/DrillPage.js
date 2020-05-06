@@ -231,11 +231,11 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
   },
   favoriteContainer: {
-    marginRight: 15,
+    marginRight: 20,
   },
   favoriteImage: {
-    width: 25.5,
-    height: 30,
+    width: 21.25,
+    height: 25,
   },
 });
 

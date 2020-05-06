@@ -3,7 +3,7 @@ import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 
 import theme from '../../styles/theme.style';
 
-const Button = props => {
+const ButtonLight = props => {
   return (
     <TouchableOpacity style={styles.button} onPress={props.onPress} testID="button">
       <Text style={styles.text}>{props.text}</Text>
@@ -18,16 +18,19 @@ const styles = StyleSheet.create({
     width: '90%',
     height: 40,
     borderRadius: 5,
-    backgroundColor: theme.COLOR_PRIMARY,
+    backgroundColor: theme.COLOR_PRIMARY_LIGHT,
+    borderColor: theme.COLOR_SECONDARY,
+    borderWidth: 1,
     padding: 10,
     justifyContent: 'center',
     alignItems: 'center',
   },
   text: {
     textAlign: 'center',
-    color: theme.COLOR_PRIMARY_LIGHT,
+    color: theme.COLOR_SECONDARY,
     fontSize: theme.FONT_SIZE_MEDIUM,
+    fontWeight: 'bold',
   },
 });
 
-export default Button;
+export default ButtonLight;

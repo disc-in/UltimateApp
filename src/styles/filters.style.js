@@ -26,7 +26,4 @@ export default {
     flexWrap: 'wrap',
     justifyContent: 'space-between',
   },
-  button: {
-    backgroundColor: 'pink',
-  },
 };

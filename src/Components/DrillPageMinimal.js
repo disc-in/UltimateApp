@@ -7,7 +7,7 @@ import { completeTraining } from '../Store/Actions/programAction';
 import theme from '../styles/theme.style';
 import HeaderButton from './shared/HeaderButton';
 import MinimalDrill from './shared/MinimalDrill';
-import Button from './shared/Button';
+import ButtonLight from './shared/ButtonLight';
 import Progress from './ProgressBar2';
 
 export const DrillPageMinimal = props => {
@@ -58,7 +58,7 @@ export const DrillPageMinimal = props => {
       </View>
       <MinimalDrill style={styles.illustration} drill={drill} />
       <View style={styles.btnMoreContainer}>
-        <Button onPress={goToFullDrill} text="DETAILS" />
+        <ButtonLight onPress={goToFullDrill} text="DETAILS" />
       </View>
     </View>
   );
@@ -124,6 +124,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical: 20,
+    paddingVertical: 50,
   },
 });

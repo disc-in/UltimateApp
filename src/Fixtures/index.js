@@ -1253,6 +1253,52 @@ const catapultdrill = {
   ],
 };
 
+const basicThrows = {
+  id: 1007,
+  type: DrillTypes.FRISBEE,
+  author: 'Rowan McDonnell',
+  title: 'Basic Throws',
+  image: 'https://zupimages.net/up/20/19/zgxt.jpg',
+  description: 'Basic drills to learn how to throw',
+  minimalPlayersNumber: 2,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 Disc',
+  durationInMinutes: 20,
+  intensity: Intensities.LOW,
+  goals: [GoalsFrisbee.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'Backhand Throw',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '415565763',
+      repetition: '',
+      rest: '',
+      instruction: 'Follow him',
+    },
+    {
+      id: 2,
+      title: 'Forehand Throw',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '415569048',
+      repetition: '',
+      rest: '',
+      instruction: 'Follow him',
+    },
+    {
+      id: 3,
+      title: 'Throwing exercice',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: animationSquare,
+      repetition: ' ',
+      rest: '',
+      instruction: '',
+    },
+  ],
+};
+
 const normalGame = {
   id: 2001,
   type: DrillTypes.GAME,
@@ -1426,6 +1472,7 @@ export default {
     dishieChainDrill,
     breakDanceDrill,
     catapultdrill,
+    basicThrows,
     // Games
     normalGame,
     game3v3,

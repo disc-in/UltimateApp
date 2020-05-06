@@ -66,45 +66,6 @@ exports[`<MinimalDrill /> renders correctly 1`] = `
         />
       </View>
     </View>
-    <View
-      style={
-        Object {
-          "flexDirection": "row",
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignSelf": "flex-end",
-            "flexDirection": "row",
-          }
-        }
-      >
-        <View />
-      </View>
-    </View>
-    <View
-      style={
-        Object {
-          "borderBottomColor": "#DCDCDC",
-          "borderBottomWidth": 1,
-        }
-      }
-    />
-    <Text
-      style={
-        Object {
-          "alignItems": "center",
-          "color": "#232b2b",
-          "fontSize": 16,
-          "justifyContent": "center",
-          "marginBottom": 20,
-          "marginLeft": 20,
-          "marginTop": 20,
-        }
-      }
-    />
   </View>
 </View>
 `;

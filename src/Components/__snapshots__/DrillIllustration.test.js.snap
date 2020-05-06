@@ -89,111 +89,92 @@ exports[`<DrillIllustration /> renders correctly for a drill with a video from v
     <View
       style={
         Object {
-          "alignSelf": "flex-end",
-          "flexDirection": "row",
+          "alignItems": "center",
+          "flexGrow": 0,
+          "flexShrink": 0,
         }
       }
     >
-      <View
+      <Text
         style={
           Object {
-            "flexDirection": "row",
+            "color": "#232b2b",
+            "fontSize": 20,
+            "fontWeight": "bold",
+            "marginBottom": 20,
+            "marginLeft": 20,
+            "marginTop": 20,
           }
         }
       >
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "flexGrow": 0,
-              "flexShrink": 0,
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "color": "#232b2b",
-                "fontSize": 20,
-                "fontWeight": "bold",
-                "marginBottom": 20,
-                "marginLeft": 20,
-                "marginTop": 20,
-              }
-            }
-          >
-            20
-          </Text>
-        </View>
-        <View
-          style={
-            Object {
-              "flex": 6,
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "color": "#232b2b",
-                "fontSize": 20,
-                "fontWeight": "bold",
-                "marginBottom": 20,
-                "marginLeft": 20,
-                "marginTop": 20,
-              }
-            }
-          >
-            Rower Hamstring
-          </Text>
-        </View>
-        <View
-          accessible={true}
-          focusable={true}
-          isTVSelectable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "opacity": 1,
-            }
-          }
-        >
-          <Image
-            source={1}
-            style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#fff",
-                "borderColor": "#d5d5d5",
-                "borderRadius": 12.5,
-                "borderWidth": 2,
-                "height": 25,
-                "justifyContent": "center",
-                "margin": 22.5,
-                "width": 25,
-              }
-            }
-          />
-        </View>
-      </View>
+        20
+      </Text>
     </View>
-  </View>
-  <View>
     <View
       style={
         Object {
-          "borderBottomColor": "#DCDCDC",
-          "borderBottomWidth": 1,
+          "flex": 6,
         }
       }
-    />
+    >
+      <Text
+        style={
+          Object {
+            "color": "#232b2b",
+            "fontSize": 20,
+            "fontWeight": "bold",
+            "marginBottom": 20,
+            "marginLeft": 20,
+            "marginTop": 20,
+          }
+        }
+      >
+        Rower Hamstring
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderColor": "#d5d5d5",
+            "borderRadius": 12.5,
+            "borderWidth": 2,
+            "height": 25,
+            "justifyContent": "center",
+            "margin": 22.5,
+            "width": 25,
+          }
+        }
+      />
+    </View>
   </View>
+  <View
+    style={
+      Object {
+        "borderBottomColor": "#DCDCDC",
+        "borderBottomWidth": 1,
+      }
+    }
+  />
   <View
     style={
       Object {
@@ -972,27 +953,6 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
       }
     />
   </View>
-  <View
-    style={
-      Object {
-        "flexDirection": "row",
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignSelf": "flex-end",
-          "flexDirection": "row",
-        }
-      }
-    >
-      <View />
-    </View>
-  </View>
-  <View>
-    <View />
-  </View>
   <Text
     style={
       Object {
@@ -1131,44 +1091,5 @@ exports[`<DrillIllustration /> renders correctly for a drill with video 1`] = `
       />
     </View>
   </View>
-  <View
-    style={
-      Object {
-        "flexDirection": "row",
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignSelf": "flex-end",
-          "flexDirection": "row",
-        }
-      }
-    >
-      <View />
-    </View>
-  </View>
-  <View
-    style={
-      Object {
-        "borderBottomColor": "#DCDCDC",
-        "borderBottomWidth": 1,
-      }
-    }
-  />
-  <Text
-    style={
-      Object {
-        "alignItems": "center",
-        "color": "#232b2b",
-        "fontSize": 16,
-        "justifyContent": "center",
-        "marginBottom": 20,
-        "marginLeft": 20,
-        "marginTop": 20,
-      }
-    }
-  />
 </View>
 `;

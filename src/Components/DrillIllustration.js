@@ -85,39 +85,27 @@ const DrillIllustration = props => {
     );
   };
 
-  const displayLine = () => {
-    if (props.drill.steps.length <= 1) {
-      return <View />;
-    } else {
-      return <View style={styles.lines} />;
-    }
-  };
-
-  const displayStepsAnimation = title => {
-    if (props.drill.steps.length <= 1) {
-      return <View />;
-    } else {
-      return (
-        <View style={styles.descriptionAnimation}>
-          <View style={styles.subSubWrapper}>
-            <Text style={styles.fitness}>{title}</Text>
-          </View>
-          <TouchableOpacity onPress={() => incrementStepIndex()}>
-            <Image style={styles.buttonNext} source={buttonValidation} />
-          </TouchableOpacity>
-        </View>
-      );
-    }
-  };
-
   const displayAnimation = ({ illustrationSource, instruction, title }) => {
     return (
       <>
         <Animation widthRatio={1} heightRatio={props.minimal ? 2 / 5 : 1 / 2} animation={illustrationSource} />
-        <View style={styles.description}>
-          <View style={styles.containerAnimation}>{displayStepsAnimation(title)}</View>
-        </View>
-        <View>{displayLine()}</View>
+        {props.drill.steps.length > 1 && (
+          <>
+            <View style={styles.description}>
+              <View style={styles.containerAnimation}>
+                <View style={styles.descriptionAnimation}>
+                  <View style={styles.subSubWrapper}>
+                    <Text style={styles.fitness}>{title}</Text>
+                  </View>
+                  <TouchableOpacity onPress={() => incrementStepIndex()}>
+                    <Image style={styles.buttonNext} source={buttonValidation} />
+                  </TouchableOpacity>
+                </View>
+              </View>
+            </View>
+            <View style={styles.lines} />
+          </>
+        )}
         <Text style={styles.instruction}>{instruction}</Text>
       </>
     );
@@ -133,43 +121,26 @@ const DrillIllustration = props => {
             }}
           />
         </View>
-        <View style={styles.description}>
-          <View style={styles.containerAnimation}>{displayStepsAnimation(title)}</View>
-        </View>
-        <View style={styles.lines} />
-        <Text style={styles.instruction}>{instruction}</Text>
+        {props.drill.steps.length > 1 && (
+          <>
+            <View style={styles.description}>
+              <View style={styles.containerAnimation}>
+                <View style={styles.descriptionAnimation}>
+                  <View style={styles.subSubWrapper}>
+                    <Text style={styles.fitness}>{title}</Text>
+                  </View>
+                  <TouchableOpacity onPress={() => incrementStepIndex()}>
+                    <Image style={styles.buttonNext} source={buttonValidation} />
+                  </TouchableOpacity>
+                </View>
+              </View>
+            </View>
+            <View style={styles.lines} />
+            <Text style={styles.instruction}>{instruction}</Text>
+          </>
+        )}
       </>
     );
-  };
-
-  const displayStepsVimeo = (title, repetition) => {
-    if (props.drill.steps.length <= 1) {
-      return <View />;
-    } else {
-      return (
-        <>
-          <View style={styles.description}>
-            <View style={styles.subWrapper}>
-              <Text style={styles.fitness}>{repetition}</Text>
-            </View>
-            <View style={styles.subSubWrapper}>
-              <Text style={styles.fitness}>{title}</Text>
-            </View>
-            <TouchableOpacity onPress={() => incrementStepIndex()}>
-              <Image style={styles.buttonNext} source={buttonValidation} />
-            </TouchableOpacity>
-          </View>
-        </>
-      );
-    }
-  };
-
-  const displayNextStepsVimeo = () => {
-    if (props.drill.steps.length <= 1) {
-      return <View />;
-    } else {
-      return <View style={styles.container}>{displayNextStep()}</View>;
-    }
   };
 
   const displayVimeo = ({ illustrationSource, repetition, title }) => {
@@ -178,11 +149,25 @@ const DrillIllustration = props => {
         <View style={{ height: 250 }}>
           <VimeoVideo vimeoId={illustrationSource} screenWidth={screenDimension.width} />
         </View>
-        <View style={styles.description}>
-          <View style={styles.containerAnimation}>{displayStepsVimeo(title, repetition)}</View>
-        </View>
-        <View>{displayLine()}</View>
-        <View style={styles.containerAnimation}>{displayNextStepsVimeo()}</View>
+        {props.drill.steps.length > 1 && (
+          <>
+            <View style={styles.description}>
+              <View style={styles.subWrapper}>
+                <Text style={styles.fitness}>{repetition}</Text>
+              </View>
+              <View style={styles.subSubWrapper}>
+                <Text style={styles.fitness}>{title}</Text>
+              </View>
+              <TouchableOpacity onPress={() => incrementStepIndex()}>
+                <Image style={styles.buttonNext} source={buttonValidation} />
+              </TouchableOpacity>
+            </View>
+            <View style={styles.lines} />
+            <View style={styles.containerAnimation}>
+              <View style={styles.container}>{displayNextStep()}</View>
+            </View>
+          </>
+        )}
       </>
     );
   };

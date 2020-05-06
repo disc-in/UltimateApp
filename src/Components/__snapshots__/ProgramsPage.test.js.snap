@@ -33,22 +33,13 @@ exports[`<ProgramsPage /> renders correctly when connected 1`] = `
         Object {
           "fontSize": 20,
           "fontWeight": "bold",
+          "marginLeft": 5,
         }
       }
     >
-      See all trainings ➔
+      All trainings
     </Text>
   </View>
-  <Text
-    style={
-      Object {
-        "fontSize": 16,
-        "paddingBottom": 10,
-      }
-    }
-  >
-    Or choose the perfect program for your team :
-  </Text>
   <RCTScrollView
     data={
       Array [

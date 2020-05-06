@@ -184,14 +184,16 @@ exports[`<DrillIllustration /> renders correctly for a drill with a video from v
       </View>
     </View>
   </View>
-  <View
-    style={
-      Object {
-        "borderBottomColor": "#DCDCDC",
-        "borderBottomWidth": 1,
+  <View>
+    <View
+      style={
+        Object {
+          "borderBottomColor": "#DCDCDC",
+          "borderBottomWidth": 1,
+        }
       }
-    }
-  />
+    />
+  </View>
   <View
     style={
       Object {
@@ -988,14 +990,9 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
       <View />
     </View>
   </View>
-  <View
-    style={
-      Object {
-        "borderBottomColor": "#DCDCDC",
-        "borderBottomWidth": 1,
-      }
-    }
-  />
+  <View>
+    <View />
+  </View>
   <Text
     style={
       Object {

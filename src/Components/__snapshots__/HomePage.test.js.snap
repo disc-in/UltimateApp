@@ -151,7 +151,7 @@ exports[`<HomePage /> renders correctly 1`] = `
             }
           }
         >
-          Fitness
+          Fitness drills
         </Text>
       </View>
     </View>

@@ -4,7 +4,8 @@ import { View, ActivityIndicator, StyleSheet, Text } from 'react-native';
 import { Video } from 'expo-av';
 import theme from '../styles/theme.style';
 
-const VimeoVideo = ({ vimeoId, screenWidth }) => {
+const VimeoVideo = ({ vimeoId, screenWidth, sounds }) => {
+  console.log('Sounds is :', sounds);
   const videoElem = useRef(null);
   const [isBuffering, setBuffer] = useState(true);
   const [error, setError] = useState();
@@ -42,11 +43,13 @@ const VimeoVideo = ({ vimeoId, screenWidth }) => {
   const playVideoLoaded = () => {
     videoElem.current.setStatusAsync({
       rate: 1.0,
-      isMuted: true,
+      isMuted: !sounds,
       resizeMode: Video.RESIZE_MODE_CONTAIN,
       shouldPlay: true,
       isLooping: true,
+      useNativeControls: !sounds,
     });
+
     setBuffer(false);
   };
 
@@ -62,7 +65,7 @@ const VimeoVideo = ({ vimeoId, screenWidth }) => {
   const renderError = () => {
     return (
       <View style={styles.spinnerStyle}>
-        <Text>Oopsie! There was an error loading the video...</Text>
+        <Text> There was an error loading the video...</Text>
       </View>
     );
   };

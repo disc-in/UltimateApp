@@ -143,14 +143,14 @@ const DrillIllustration = props => {
     );
   };
 
-  const displayVimeo = ({ illustrationSource, repetition, title }) => {
+  const displayVimeo = ({ illustrationSource, repetition, title, sounds }) => {
     return (
       <>
-        <View style={{ height: 250 }}>
-          <VimeoVideo vimeoId={illustrationSource} screenWidth={screenDimension.width} />
-        </View>
         {props.drill.steps.length > 1 && (
           <>
+            <View style={{ height: 250 }}>
+              <VimeoVideo vimeoId={illustrationSource} screenWidth={screenDimension.width} sounds={sounds} />
+            </View>
             <View style={styles.description}>
               <View style={styles.subWrapper}>
                 <Text style={styles.fitness}>{repetition}</Text>
@@ -165,6 +165,15 @@ const DrillIllustration = props => {
             <View style={styles.lines} />
             <View style={styles.containerAnimation}>
               <View style={styles.container}>{displayNextStep()}</View>
+            </View>
+          </>
+        )}
+        {props.drill.steps.length <= 1 && (
+          <>
+            <View style={styles.videoAlone}>
+              <View style={{ height: 250 }}>
+                <VimeoVideo vimeoId={illustrationSource} screenWidth={screenDimension.width} sounds={sounds} />
+              </View>
             </View>
           </>
         )}
@@ -281,6 +290,11 @@ const styles = StyleSheet.create({
   redoImage: {
     width: 60,
     height: 60,
+  },
+  videoAlone: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex: 1,
   },
 });
 

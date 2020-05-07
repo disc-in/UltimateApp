@@ -180,6 +180,7 @@ exports[`<DrillIllustration /> renders correctly for a drill with a video from v
       Object {
         "alignSelf": "flex-end",
         "flexDirection": "row",
+        "marginTop": 5,
       }
     }
   >
@@ -278,10 +279,9 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
           "backgroundColor": "white",
           "flexDirection": "row",
           "justifyContent": "center",
-          "marginTop": 40,
         },
         Object {
-          "height": 687,
+          "height": 667,
         },
         Object {
           "width": 750,
@@ -538,326 +538,127 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
     <View
       style={
         Object {
-          "flex": 0.1,
-        }
-      }
-    />
-    <View
-      accessibilityRole="button"
-      accessibilityStates={Array []}
-      accessible={true}
-      focusable={true}
-      isTVSelectable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "opacity": 1,
+          "bottom": 0,
+          "flexDirection": "row",
+          "position": "absolute",
+          "right": 0,
         }
       }
     >
       <View
+        accessible={true}
+        focusable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
-          Array [
-            Object {},
-          ]
+          Object {
+            "alignItems": "center",
+            "height": 30,
+            "justifyContent": "center",
+            "opacity": 1,
+            "width": 30,
+          }
         }
       >
-        <Text
+        <Image
+          source={1}
           style={
-            Array [
-              Object {
-                "color": "#007AFF",
-                "fontSize": 18,
-                "padding": 8,
-                "textAlign": "center",
-              },
-            ]
+            Object {
+              "height": 20,
+              "width": 20,
+            }
           }
-        >
-           &lt; 
-        </Text>
+        />
       </View>
-    </View>
-    <View
-      style={
-        Object {
-          "flex": 0.1,
-        }
-      }
-    />
-    <View
-      accessibilityRole="button"
-      accessibilityStates={Array []}
-      accessible={true}
-      focusable={true}
-      isTVSelectable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
       <View
+        accessible={true}
+        focusable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
-          Array [
-            Object {},
-          ]
+          Object {
+            "alignItems": "center",
+            "height": 30,
+            "justifyContent": "center",
+            "opacity": 1,
+            "width": 30,
+          }
         }
       >
-        <Text
+        <Image
+          source={1}
           style={
-            Array [
-              Object {
-                "color": "#007AFF",
-                "fontSize": 18,
-                "padding": 8,
-                "textAlign": "center",
-              },
-            ]
+            Object {
+              "height": 20,
+              "width": 20,
+            }
           }
-        >
-          Lancer
-        </Text>
+        />
       </View>
-    </View>
-    <View
-      style={
-        Object {
-          "flex": 0.1,
-        }
-      }
-    />
-    <View
-      accessibilityRole="button"
-      accessibilityStates={Array []}
-      accessible={true}
-      focusable={true}
-      isTVSelectable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
       <View
+        accessible={true}
+        focusable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
-          Array [
-            Object {},
-          ]
+          Object {
+            "alignItems": "center",
+            "height": 30,
+            "justifyContent": "center",
+            "opacity": 1,
+            "width": 30,
+          }
         }
       >
-        <Text
+        <Image
+          source={1}
           style={
-            Array [
-              Object {
-                "color": "#007AFF",
-                "fontSize": 18,
-                "padding": 8,
-                "textAlign": "center",
-              },
-            ]
+            Object {
+              "height": 20,
+              "width": 20,
+            }
           }
-        >
-           &gt; 
-        </Text>
+        />
       </View>
     </View>
-    <View
-      style={
-        Array [
-          Object {
-            "backgroundColor": "gray",
-            "borderRadius": 10,
-            "borderWidth": 0,
-            "height": 15,
-            "position": "absolute",
-            "width": 15,
-          },
-          Object {
-            "left": 10,
-          },
-          Object {
-            "top": 667,
-          },
-        ]
-      }
-    />
-    <View
-      style={
-        Array [
-          Object {
-            "backgroundColor": "gray",
-            "borderRadius": 10,
-            "borderWidth": 0,
-            "height": 15,
-            "position": "absolute",
-            "width": 15,
-          },
-          Object {
-            "left": 365,
-          },
-          Object {
-            "top": 667,
-          },
-        ]
-      }
-    />
-    <View
-      style={
-        Array [
-          Object {
-            "backgroundColor": "gray",
-            "borderRadius": 10,
-            "borderWidth": 0,
-            "height": 15,
-            "position": "absolute",
-            "width": 15,
-          },
-          Object {
-            "left": 720,
-          },
-          Object {
-            "top": 667,
-          },
-        ]
-      }
-    />
     <View
       style={
         Object {
           "backgroundColor": "gray",
-          "height": 3,
+          "bottom": 10,
+          "height": 10,
           "left": 20,
           "position": "absolute",
-          "top": 673,
-          "width": 710,
+          "width": 630,
         }
       }
     />
     <View
       style={
         Object {
-          "backgroundColor": "blue",
-          "borderRadius": 10,
-          "borderWidth": 0,
-          "height": 15,
-          "left": 10,
-          "opacity": 1,
-          "position": "absolute",
-          "top": 667,
-          "width": 15,
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "backgroundColor": "blue",
-          "borderRadius": 10,
-          "borderWidth": 0,
-          "height": 15,
-          "left": 365,
-          "opacity": 0,
-          "position": "absolute",
-          "top": 667,
-          "width": 15,
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "backgroundColor": "blue",
-          "borderRadius": 10,
-          "borderWidth": 0,
-          "height": 15,
-          "left": 720,
-          "opacity": 0,
-          "position": "absolute",
-          "top": 667,
-          "width": 15,
-        }
-      }
-    />
-    <Text
-      style={
-        Array [
-          Object {
-            "position": "absolute",
-          },
-          Object {
-            "left": 14,
-          },
-          Object {
-            "top": 648,
-          },
-        ]
-      }
-    >
-      1
-    </Text>
-    <Text
-      style={
-        Array [
-          Object {
-            "position": "absolute",
-          },
-          Object {
-            "left": 369,
-          },
-          Object {
-            "top": 648,
-          },
-        ]
-      }
-    >
-      2
-    </Text>
-    <Text
-      style={
-        Array [
-          Object {
-            "position": "absolute",
-          },
-          Object {
-            "left": 724,
-          },
-          Object {
-            "top": 648,
-          },
-        ]
-      }
-    >
-      3
-    </Text>
-    <View
-      style={
-        Object {
-          "backgroundColor": "blue",
-          "height": 3,
+          "backgroundColor": "black",
+          "bottom": 10,
+          "height": 10,
           "left": 20,
           "position": "absolute",
-          "top": 673,
           "width": 0,
         }
       }
@@ -865,14 +666,6 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
     <View
       accessible={true}
       focusable={true}
-      hitSlop={
-        Object {
-          "bottom": 20,
-          "left": 20,
-          "right": 20,
-          "top": 20,
-        }
-      }
       isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
@@ -883,26 +676,19 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
       onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "height": 80,
-          "left": -5,
+          "backgroundColor": "transparent",
+          "bottom": 0,
+          "height": 35,
+          "left": 10,
           "opacity": 1,
           "position": "absolute",
-          "top": 652,
-          "width": 80,
+          "width": 157.5,
         }
       }
     />
     <View
       accessible={true}
       focusable={true}
-      hitSlop={
-        Object {
-          "bottom": 20,
-          "left": 20,
-          "right": 20,
-          "top": 20,
-        }
-      }
       isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
@@ -913,26 +699,19 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
       onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "height": 80,
-          "left": 350,
+          "backgroundColor": "transparent",
+          "bottom": 0,
+          "height": 35,
+          "left": 167.5,
           "opacity": 1,
           "position": "absolute",
-          "top": 652,
-          "width": 80,
+          "width": 315,
         }
       }
     />
     <View
       accessible={true}
       focusable={true}
-      hitSlop={
-        Object {
-          "bottom": 20,
-          "left": 20,
-          "right": 20,
-          "top": 20,
-        }
-      }
       isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
@@ -943,12 +722,13 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
       onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "height": 80,
-          "left": 705,
+          "backgroundColor": "transparent",
+          "bottom": 0,
+          "height": 35,
+          "left": 482.5,
           "opacity": 1,
           "position": "absolute",
-          "top": 652,
-          "width": 80,
+          "width": 172.5,
         }
       }
     />

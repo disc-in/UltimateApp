@@ -88,7 +88,7 @@ const DrillIllustration = props => {
   const displayAnimation = ({ illustrationSource, instruction, title }) => {
     return (
       <>
-        <Animation widthRatio={1} heightRatio={props.minimal ? 2 / 5 : 1 / 2} animation={illustrationSource} />
+        <Animation readonly widthRatio={1} heightRatio={1 / 2} animation={illustrationSource} />
         {props.drill.steps.length > 1 && (
           <>
             <View style={styles.description}>
@@ -198,6 +198,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   containerAnimation: {
+    marginTop: 5,
     flexDirection: 'row',
     alignSelf: 'flex-end',
   },

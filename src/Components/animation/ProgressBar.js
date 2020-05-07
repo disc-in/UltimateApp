@@ -33,7 +33,7 @@ class ProgressBar extends React.Component {
     this.progressBarDots = [];
 
     // Width of the progress bar
-    this.progressBarWidth = this.props.animationWidth - 40;
+    this.progressBarWidth = this.props.animationWidth - 120;
     var stepWidth = this.progressBarWidth / (this.props.stepCount - 1);
 
     //        if(this.props.animationWidth > 50)
@@ -55,58 +55,63 @@ class ProgressBar extends React.Component {
     this.progressBarComponents = [];
 
     /* Add the gray dots */
-    this.progressBarComponents = this.progressBarDots.map(item => (
-      <View style={[styles.dot, { left: item.left }, { top: this.props.animationHeight }]} key={item.key} />
-    ));
+    if (!this.props.readonly)
+      this.progressBarComponents = this.progressBarDots.map(item => (
+        <View style={[styles.gray, styles.dot, { left: item.left }]} key={item.key} />
+      ));
 
     /* Add the gray bar */
     this.progressBarComponents.push(
       <Animated.View
         style={[
+          styles.gray,
           styles.progressBar,
-          { top: this.props.animationHeight + 6 },
+          props.readonly && styles.largeProgressBar,
           { width: this.progressBarWidth },
-          { left: 20 },
         ]}
         key={3 * this.progressBarComponents.length + 1}
       />,
     );
 
     /* Add the blue dots */
-    this.progressBarComponents = this.progressBarComponents.concat(
-      this.progressBarDots.map(item => (
-        <Animated.View
-          style={[
-            styles.activatedDot,
-            { opacity: this.dotsOpacity[item.key] },
-            { left: this.progressBarDots[item.key].left },
-            { top: this.props.animationHeight },
-          ]}
-          key={this.progressBarDots[item.key].key + this.progressBarDots.length}
-        />
-      )),
-    );
+    if (!this.props.readonly)
+      this.progressBarComponents = this.progressBarComponents.concat(
+        this.progressBarDots.map(item => (
+          <Animated.View
+            style={[
+              styles.blue,
+              styles.dot,
+              {
+                opacity: this.dotsOpacity[item.key],
+                left: this.progressBarDots[item.key].left,
+              },
+            ]}
+            key={this.progressBarDots[item.key].key + this.progressBarDots.length}
+          />
+        )),
+      );
 
     /* Add the step numbers */
-    this.progressBarComponents = this.progressBarComponents.concat(
-      this.progressBarDots.map(item => (
-        <Text
-          style={[{ position: 'absolute' }, { left: item.left + 4 }, { top: this.props.animationHeight - 19 }]}
-          key={item.key + 2 * this.progressBarDots.length}
-        >
-          {item.key + 1}
-        </Text>
-      )),
-    );
+    if (!props.readonly)
+      this.progressBarComponents = this.progressBarComponents.concat(
+        this.progressBarDots.map(item => (
+          <Text
+            style={[styles.progressBarNumbers, { left: item.left + 4 }]}
+            key={item.key + 2 * this.progressBarDots.length}
+          >
+            {item.key + 1}
+          </Text>
+        )),
+      );
 
     /* Add the blue bar */
     this.progressBarComponents.push(
       <Animated.View
         style={[
-          styles.activatedProgressBar,
-          { top: this.props.animationHeight + 6 },
+          styles.blue,
+          styles.progressBar,
+          props.readonly && styles.largeProgressBar,
           { width: this.dynamiqueCurrentStep },
-          { left: 20 },
         ]}
         key={3 * this.progressBarComponents.length}
       />,
@@ -115,16 +120,19 @@ class ProgressBar extends React.Component {
     /* Add the objects used to detect the clicks on the dots */
     //        if(this.props.animationWidth > 50)
     this.progressBarComponents = this.progressBarComponents.concat(
-      this.progressBarDots.map(item => (
+      this.progressBarDots.map((item, idx, arr) => (
         <TouchableOpacity
-          hitSlop={{ top: 20, right: 20, bottom: 20, left: 20 }}
-          style={[
-            { position: 'absolute' },
-            { height: 80 },
-            { width: 80 },
-            { left: this.progressBarDots[item.key].left - 15 },
-            { top: this.props.animationHeight - 15 },
-          ]}
+          style={
+            props.readonly
+              ? [
+                  styles.largeHitBox,
+                  {
+                    width: idx === 0 ? stepWidth / 2 : idx === arr.length - 1 ? stepWidth / 2 + 15 : stepWidth,
+                    left: this.progressBarDots[item.key].left - (idx === 0 ? 0 : stepWidth / 2),
+                  },
+                ]
+              : [styles.dotHitBox, { left: this.progressBarDots[item.key].left - 15 }]
+          }
           onPress={() => this._stepButtonClicked(item.key)}
           key={1000 + item.key}
         />
@@ -187,31 +195,49 @@ class ProgressBar extends React.Component {
 
 export default ProgressBar;
 
+const DOT_SIZE = 15;
+const PROGRESS_BAR_MIDDLE = 15;
+const HITBOX_SLOP = 20;
+
 const styles = StyleSheet.create({
-  activatedDot: {
-    position: 'absolute',
-    height: 15,
-    width: 15,
-    borderRadius: 10,
-    borderWidth: 0,
-    backgroundColor: 'blue',
-  },
   dot: {
     position: 'absolute',
-    height: 15,
-    width: 15,
+    height: DOT_SIZE,
+    width: DOT_SIZE,
     borderRadius: 10,
     borderWidth: 0,
-    backgroundColor: 'gray',
+    bottom: PROGRESS_BAR_MIDDLE - DOT_SIZE / 2,
   },
-  activatedProgressBar: {
+  dotHitBox: {
     position: 'absolute',
-    backgroundColor: 'blue',
-    height: 3,
+    bottom: 0,
+    height: DOT_SIZE + HITBOX_SLOP,
+    width: DOT_SIZE + HITBOX_SLOP,
+  },
+  largeHitBox: {
+    position: 'absolute',
+    height: PROGRESS_BAR_MIDDLE + HITBOX_SLOP,
+    bottom: 0,
+    backgroundColor: 'transparent',
+  },
+  blue: {
+    backgroundColor: 'black',
+  },
+  gray: {
+    backgroundColor: 'gray',
   },
   progressBar: {
     position: 'absolute',
-    backgroundColor: 'gray',
-    height: 3,
+    bottom: PROGRESS_BAR_MIDDLE - 4 / 2,
+    height: 4,
+    left: 20,
+  },
+  largeProgressBar: {
+    height: 10,
+    bottom: PROGRESS_BAR_MIDDLE - 10 / 2,
+  },
+  progressBarNumbers: {
+    position: 'absolute',
+    bottom: PROGRESS_BAR_MIDDLE + 1 + DOT_SIZE / 2,
   },
 });

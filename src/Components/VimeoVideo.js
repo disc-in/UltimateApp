@@ -64,7 +64,7 @@ const VimeoVideo = ({ vimeoId, screenWidth, sounds }) => {
   const renderError = () => {
     return (
       <View style={styles.spinnerStyle}>
-        <Text> Oopsie! There was an error loading the video...</Text>
+        <Text>Oopsie! There was an error loading the video...</Text>
       </View>
     );
   };

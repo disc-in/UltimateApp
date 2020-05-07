@@ -171,9 +171,7 @@ const DrillIllustration = props => {
         {props.drill.steps.length <= 1 && (
           <>
             <View style={styles.videoAlone}>
-              <View style={{ height: 250 }}>
-                <VimeoVideo vimeoId={illustrationSource} screenWidth={screenDimension.width} sounds={sounds} />
-              </View>
+              <VimeoVideo vimeoId={illustrationSource} screenWidth={screenDimension.width} sounds={sounds} />
             </View>
           </>
         )}
@@ -295,6 +293,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flex: 1,
+    height: 250,
   },
 });
 

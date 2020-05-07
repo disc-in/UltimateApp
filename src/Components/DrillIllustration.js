@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { View, StyleSheet, Text, Dimensions, TouchableOpacity, Image } from 'react-native';
+import React, { useState, useEffect, useRef } from 'react';
+import { Animated, View, StyleSheet, Text, Dimensions, TouchableOpacity, Image } from 'react-native';
 import GestureRecognizer from 'react-native-swipe-gestures';
 import { WebView } from 'react-native-webview';
 
@@ -10,6 +10,23 @@ import theme from '../styles/theme.style';
 import { swipeConfig } from '../styles/config';
 import iconRedo from '../../assets/redo_arrow.png';
 import buttonValidation from '../../assets/button_validation_ultra_light.png';
+import buttonValidationGradient from '../../assets/button_validation_gradient.png';
+
+const fadeIn = () => {
+  // Will change fadeAnim value to 1 in 5 seconds
+  Animated.timing(fadeAnim, {
+    toValue: 1,
+    duration: 2000,
+  }).start();
+};
+
+const fadeOut = () => {
+  // Will change fadeAnim value to 0 in 5 seconds
+  Animated.timing(fadeAnim, {
+    toValue: 0,
+    duration: 2000,
+  }).start();
+};
 
 const DrillIllustration = props => {
   const [currentStepIndex, setStepIndex] = useState(0);
@@ -161,7 +178,24 @@ const DrillIllustration = props => {
                 <Text style={styles.fitness}>{title}</Text>
               </View>
               <TouchableOpacity onPress={() => incrementStepIndex()}>
+                {/* <Animated.View
+                  style={[
+                    {
+                      opacity: fadeOut, // Bind opacity to animated value
+                    },
+                  ]}
+                >*/}
                 <Image style={styles.buttonNext} source={buttonValidation} />
+                {/* </Animated.View>
+                <Animated.View
+                  style={[
+                    {
+                      opacity: fadeOut, // Bind opacity to animated value
+                    },
+                  ]}
+                >
+                  <Image style={styles.buttonNext} source={buttonValidationGradient} />
+                </Animated.View> */}
               </TouchableOpacity>
             </View>
             <View style={styles.lines} />
@@ -197,7 +231,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   containerAnimation: {
-    marginTop: 5,
     flexDirection: 'row',
     alignSelf: 'flex-end',
   },

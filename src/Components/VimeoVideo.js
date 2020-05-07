@@ -5,7 +5,6 @@ import { Video } from 'expo-av';
 import theme from '../styles/theme.style';
 
 const VimeoVideo = ({ vimeoId, screenWidth, sounds }) => {
-  console.log('Sounds is :', sounds);
   const videoElem = useRef(null);
   const [isBuffering, setBuffer] = useState(true);
   const [error, setError] = useState();
@@ -65,7 +64,7 @@ const VimeoVideo = ({ vimeoId, screenWidth, sounds }) => {
   const renderError = () => {
     return (
       <View style={styles.spinnerStyle}>
-        <Text> There was an error loading the video...</Text>
+        <Text> Oopsie! There was an error loading the video...</Text>
       </View>
     );
   };

@@ -28,7 +28,7 @@ export const TrainingBravoPage = props => {
     }
   }, []);
 
-  renderProgramTitle = () => {
+  const renderProgramTitle = () => {
     const currentTrainingIndex = program.trainings.findIndex(item => item.id === training.id);
     return (
       <Text style={styles.title}>

@@ -15,7 +15,6 @@ beforeEach(() => jest.useFakeTimers()); // for Animated
 jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
 
 describe('<TrainingBravoPage />', () => {
-  const navigation = { navigate: jest.fn(), setOptions: jest.fn() };
   const program = fixtures.programs[0];
   const training = program.trainings[0];
   const drill = training.drills[0];

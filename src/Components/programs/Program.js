@@ -4,22 +4,17 @@ import { connect } from 'react-redux';
 
 import theme from '../../styles/theme.style';
 import ListItem from '../shared/ListItem';
-import buttonValidation from '../../../assets/check_dark.png';
 import arrowDark from '../../../assets/arrow_dark.png';
 
 export const Program = props => {
   const { title, trainings } = props.program;
 
-  const programCompleteTrainings = props.completeTrainings
+  const completeTrainingsCount = props.completeTrainings
     .filter(({ training, program }) => program.id === props.program.id)
-    .map(({ training, program }) => training);
-  const completeTrainingsCount = programCompleteTrainings.length;
+    .map(({ training, program }) => training).length;
 
   const onPress = () => {
-    const firstTodoTraining = trainings.find(training => !programCompleteTrainings.includes(training));
-    if (firstTodoTraining !== undefined) {
-      props.navigation.navigate('ProgramPage', { program: props.program });
-    }
+    props.navigation.navigate('ProgramPage', { program: props.program });
   };
 
   const width = `${(completeTrainingsCount * 100) / trainings.length}%`;

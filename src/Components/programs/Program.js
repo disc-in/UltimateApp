@@ -1,9 +1,11 @@
 import React from 'react';
-import { StyleSheet, TouchableOpacity, View, Text } from 'react-native';
+import { StyleSheet, TouchableOpacity, View, Text, Image } from 'react-native';
 import { connect } from 'react-redux';
 
 import theme from '../../styles/theme.style';
 import ListItem from '../shared/ListItem';
+import buttonValidation from '../../../assets/check_dark.png';
+import arrowDark from '../../../assets/arrow_dark.png';
 
 export const Program = props => {
   const { title, trainings } = props.program;
@@ -35,7 +37,7 @@ export const Program = props => {
           </View>
         </View>
         <View style={styles.ctaContainer}>
-          <Text style={styles.cta}>></Text>
+          <Image style={styles.cta} source={arrowDark} />
         </View>
       </TouchableOpacity>
     </ListItem>
@@ -53,9 +55,10 @@ export default connect(mapStateToProps)(Program);
 const styles = StyleSheet.create({
   program: {
     paddingTop: 10,
-    paddingLeft: 50,
+    paddingLeft: 40,
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'space-evenly',
   },
   presentationContainer: {
     flexBasis: '80%',
@@ -79,11 +82,11 @@ const styles = StyleSheet.create({
     backgroundColor: theme.COLOR_PRIMARY,
   },
   ctaContainer: {
-    flexBasis: '20%',
-    textAlign: 'center',
+    flexBasis: '10%',
+    paddingLeft: 20,
   },
   cta: {
-    fontSize: theme.FONT_SIZE_LARGE,
-    textAlign: 'center',
+    height: 20,
+    aspectRatio: 109 / 239,
   },
 });

@@ -343,7 +343,7 @@ exports[`<ProgramPage /> renders correctly 1`] = `
                 },
               ],
               "title": "Frisbee Drill Title",
-              "type": "technical",
+              "type": "frisbee",
             },
           ],
           "id": 1,
@@ -642,7 +642,7 @@ exports[`<ProgramPage /> renders correctly 1`] = `
                 },
               ],
               "title": "Frisbee Drill Title",
-              "type": "technical",
+              "type": "frisbee",
             },
             Object {
               "author": "Author",
@@ -932,7 +932,7 @@ exports[`<ProgramPage /> renders correctly 1`] = `
                 },
               ],
               "title": "Frisbee Drill Title",
-              "type": "technical",
+              "type": "frisbee",
             },
           ],
           "id": 2,
@@ -1001,10 +1001,10 @@ exports[`<ProgramPage /> renders correctly 1`] = `
               Object {
                 "alignItems": "center",
                 "flexDirection": "row",
-                "marginBottom": 10,
+                "justifyContent": "space-between",
                 "opacity": 1,
                 "padding": 10,
-                "paddingLeft": 20,
+                "paddingLeft": 30,
               }
             }
           >
@@ -1032,9 +1032,15 @@ exports[`<ProgramPage /> renders correctly 1`] = `
                 }
               }
             >
-              <Text>
-                Todo
-              </Text>
+              <Image
+                source={1}
+                style={
+                  Object {
+                    "aspectRatio": 1,
+                    "height": 30,
+                  }
+                }
+              />
             </View>
             <View
               style={
@@ -1043,9 +1049,15 @@ exports[`<ProgramPage /> renders correctly 1`] = `
                 }
               }
             >
-              <Text>
-                &gt;
-              </Text>
+              <Image
+                source={1}
+                style={
+                  Object {
+                    "aspectRatio": 0.4560669456066946,
+                    "height": 20,
+                  }
+                }
+              />
             </View>
           </View>
         </View>
@@ -1085,10 +1097,10 @@ exports[`<ProgramPage /> renders correctly 1`] = `
               Object {
                 "alignItems": "center",
                 "flexDirection": "row",
-                "marginBottom": 10,
+                "justifyContent": "space-between",
                 "opacity": 1,
                 "padding": 10,
-                "paddingLeft": 20,
+                "paddingLeft": 30,
               }
             }
           >
@@ -1116,9 +1128,15 @@ exports[`<ProgramPage /> renders correctly 1`] = `
                 }
               }
             >
-              <Text>
-                Todo
-              </Text>
+              <Image
+                source={1}
+                style={
+                  Object {
+                    "aspectRatio": 1,
+                    "height": 30,
+                  }
+                }
+              />
             </View>
             <View
               style={
@@ -1127,9 +1145,15 @@ exports[`<ProgramPage /> renders correctly 1`] = `
                 }
               }
             >
-              <Text>
-                &gt;
-              </Text>
+              <Image
+                source={1}
+                style={
+                  Object {
+                    "aspectRatio": 0.4560669456066946,
+                    "height": 20,
+                  }
+                }
+              />
             </View>
           </View>
         </View>

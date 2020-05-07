@@ -32,8 +32,9 @@ exports[`<Program /> renders correctly 1`] = `
       Object {
         "alignItems": "center",
         "flexDirection": "row",
+        "justifyContent": "space-evenly",
         "opacity": 1,
-        "paddingLeft": 50,
+        "paddingLeft": 40,
         "paddingTop": 10,
       }
     }
@@ -103,21 +104,20 @@ exports[`<Program /> renders correctly 1`] = `
     <View
       style={
         Object {
-          "flexBasis": "20%",
-          "textAlign": "center",
+          "flexBasis": "10%",
+          "paddingLeft": 20,
         }
       }
     >
-      <Text
+      <Image
+        source={1}
         style={
           Object {
-            "fontSize": 20,
-            "textAlign": "center",
+            "aspectRatio": 0.4560669456066946,
+            "height": 20,
           }
         }
-      >
-        &gt;
-      </Text>
+      />
     </View>
   </View>
 </View>
@@ -155,8 +155,9 @@ exports[`<Program /> renders correctly when finished 1`] = `
       Object {
         "alignItems": "center",
         "flexDirection": "row",
+        "justifyContent": "space-evenly",
         "opacity": 1,
-        "paddingLeft": 50,
+        "paddingLeft": 40,
         "paddingTop": 10,
       }
     }
@@ -227,21 +228,20 @@ exports[`<Program /> renders correctly when finished 1`] = `
     <View
       style={
         Object {
-          "flexBasis": "20%",
-          "textAlign": "center",
+          "flexBasis": "10%",
+          "paddingLeft": 20,
         }
       }
     >
-      <Text
+      <Image
+        source={1}
         style={
           Object {
-            "fontSize": 20,
-            "textAlign": "center",
+            "aspectRatio": 0.4560669456066946,
+            "height": 20,
           }
         }
-      >
-        &gt;
-      </Text>
+      />
     </View>
   </View>
 </View>

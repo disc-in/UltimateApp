@@ -1,9 +1,12 @@
 import React from 'react';
-import { StyleSheet, FlatList, View, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, FlatList, View, Text, TouchableOpacity, Image } from 'react-native';
 import { connect } from 'react-redux';
 
 import theme from '../styles/theme.style';
 import ListItem from './shared/ListItem';
+import doneImage from '../../assets/button_validation_dark_theme.png';
+import toDoImage from '../../assets/button_validation_ultra_light.png';
+import arrowDark from '../../assets/arrow_dark.png';
 
 export const ProgramPage = props => {
   const { navigation, route } = props;
@@ -24,10 +27,10 @@ export const ProgramPage = props => {
             <Text style={styles.title}>{training.title}</Text>
           </View>
           <View style={styles.container}>
-            <Text>{isDone ? 'Done' : 'Todo'}</Text>
+            <Image style={styles.todoState} source={isDone ? doneImage : toDoImage} />
           </View>
           <View style={styles.container}>
-            <Text>></Text>
+            <Image style={styles.cta} source={arrowDark} />
           </View>
         </TouchableOpacity>
       </ListItem>
@@ -57,11 +60,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   training: {
-    marginBottom: 10,
     padding: 10,
-    paddingLeft: 20,
+    paddingLeft: 30,
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'space-between',
   },
   titleContainer: {
     flexBasis: '70%',
@@ -71,5 +74,13 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: theme.FONT_SIZE_LARGE,
+  },
+  todoState: {
+    height: 30,
+    aspectRatio: 1 / 1,
+  },
+  cta: {
+    height: 20,
+    aspectRatio: 109 / 239,
   },
 });

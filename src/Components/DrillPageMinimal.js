@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
     flexBasis: 60,
     flexShrink: 1,
     flexGrow: 0,
-    margin: 10,
+    marginTop: 10,
     justifyContent: 'center',
     alignItems: 'center',
   },

@@ -1,10 +1,15 @@
 import React from 'react';
-import { Button, StyleSheet, Easing, Animated, Dimensions, View } from 'react-native';
+import { StyleSheet, Easing, Animated, Dimensions, View, TouchableOpacity, Image } from 'react-native';
 
 import DisplayedElement from './animation/DisplayedElement';
 import DrillCuts from './animation/DrillCuts';
 import ProgressBar from './animation/ProgressBar';
 import Drill from './animation/Drill';
+
+import iconPlay from '../../assets/play.png';
+import iconPrev from '../../assets/prev.png';
+import iconNext from '../../assets/next.png';
+import iconReplay from '../../assets/replay.png';
 
 /** Display a drill and enables to animate it using buttons (play, next step, previous step)
  *
@@ -84,6 +89,7 @@ class Animation extends React.Component {
   /** Create the progress bar */
   _createProgressBar() {
     return new ProgressBar({
+      readonly: this.props.readonly,
       animationWidth: this.animationWidth,
       animationHeight: this.animationHeight,
       stepCount: this._stepCount(),
@@ -163,6 +169,15 @@ class Animation extends React.Component {
         );
       },
     );
+  }
+
+  _goToInit() {
+    this._initPositions();
+    Animated.timing(this.currentStepAV, {
+      toValue: 0,
+      duration: 0,
+      easing: Easing.linear,
+    }).start();
   }
 
   /** Play the whole drill */
@@ -316,19 +331,30 @@ class Animation extends React.Component {
     }
 
     return (
-      <View style={[styles.mainContainer, { height: this.animationHeight + 20 }, { width: this.animationWidth }]}>
+      <View style={[styles.mainContainer, { height: this.animationHeight }, { width: this.animationWidth }]}>
         {this._display(this.cuts)}
         {this.state.displayedElements === undefined || this.state.displayedElements === null ? (
           <View />
         ) : (
           this.state.displayedElements.map(this._display)
         )}
-        <View style={{ flex: 0.1 }} />
-        <Button style={{ flex: 1 }} title=" < " onPress={() => this._previousStep()} />
-        <View style={{ flex: 0.1 }} />
-        <Button style={{ flex: 1 }} title="Lancer" onPress={() => this._restart()} />
-        <View style={{ flex: 0.1 }} />
-        <Button title=" > " style={{ flex: 1 }} onPress={() => this._nextStep()} />
+        <View style={styles.controls}>
+          <TouchableOpacity style={styles.controlBtn} onPress={() => this._previousStep()}>
+            <Image style={styles.controlIcn} source={iconPrev} />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.controlBtn} onPress={() => this._restart()}>
+            <Image style={styles.controlIcn} source={iconPlay} />
+          </TouchableOpacity>
+          {this.state.currentStep === this._stepCount() - 1 ? (
+            <TouchableOpacity style={styles.controlBtn} onPress={() => this._goToInit()}>
+              <Image style={styles.controlIcn} source={iconReplay} />
+            </TouchableOpacity>
+          ) : (
+            <TouchableOpacity style={styles.controlBtn} onPress={() => this._nextStep()}>
+              <Image style={styles.controlIcn} source={iconNext} />
+            </TouchableOpacity>
+          )}
+        </View>
         {this._display(this.progressBar)}
       </View>
     );
@@ -428,11 +454,26 @@ class Animation extends React.Component {
 
 const styles = StyleSheet.create({
   mainContainer: {
-    marginTop: 40,
     alignItems: 'flex-start',
     flexDirection: 'row',
     justifyContent: 'center',
     backgroundColor: 'white',
+  },
+  controls: {
+    position: 'absolute',
+    bottom: 0,
+    right: 0,
+    flexDirection: 'row',
+  },
+  controlBtn: {
+    width: 30,
+    height: 30,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  controlIcn: {
+    width: 20,
+    height: 20,
   },
 });
 

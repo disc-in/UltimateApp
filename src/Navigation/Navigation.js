@@ -9,7 +9,8 @@ import FitnessFilters from '../Components/FitnessFilters';
 import TrainingListPage from '../Components/TrainingListPage';
 import TrainingPage from '../Components/TrainingPage';
 import TrainingBravoPage from '../Components/TrainingBravoPage';
-import ProgramsPage from '../Components/ProgramsPage';
+import ProgramListPage from '../Components/ProgramListPage';
+import ProgramPage from '../Components/ProgramPage';
 
 const Stack = createStackNavigator();
 
@@ -31,7 +32,12 @@ export const Navigation = () => (
       options={({ route }) => ({ title: route.params.drill.title })}
     />
     <Stack.Screen name="TrainingListPage" component={TrainingListPage} options={{ title: 'Training sessions' }} />
-    <Stack.Screen name="ProgramsPage" component={ProgramsPage} options={{ title: 'Choose a program' }} />
+    <Stack.Screen name="ProgramListPage" component={ProgramListPage} options={{ title: 'Choose a program' }} />
+    <Stack.Screen
+      name="ProgramPage"
+      component={ProgramPage}
+      options={({ route }) => ({ title: route.params.program.title })}
+    />
     <Stack.Screen
       name="TrainingPage"
       component={TrainingPage}

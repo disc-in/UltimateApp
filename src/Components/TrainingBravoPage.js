@@ -15,20 +15,31 @@ export const TrainingBravoPage = props => {
   const { training, program } = route.params;
 
   const finishTraining = () => {
-    navigation.navigate('ProgramsPage');
+    if (program) {
+      navigation.navigate('ProgramPage', { program });
+    } else {
+      navigation.navigate('TrainingListPage');
+    }
   };
 
   React.useEffect(() => {
-    props.completeTraining({ training, program });
+    if (program) {
+      props.completeTraining({ training, program });
+    }
   }, []);
 
-  const currentTrainingIndex = program.trainings.findIndex(item => item.id === training.id);
+  const renderProgramTitle = () => {
+    const currentTrainingIndex = program.trainings.findIndex(item => item.id === training.id);
+    return (
+      <Text style={styles.title}>
+        {program.title} - session {currentTrainingIndex + 1}/{program.trainings.length}
+      </Text>
+    );
+  };
   return (
     <View style={styles.trainingBravoPage}>
       <View style={styles.header}>
-        <Text style={styles.title}>
-          {program.title} - session {currentTrainingIndex + 1}/{program.trainings.length}
-        </Text>
+        {program && renderProgramTitle()}
         <Text>Well done! You've just finished the training!</Text>
       </View>
       <Text style={styles.title}>Recap</Text>

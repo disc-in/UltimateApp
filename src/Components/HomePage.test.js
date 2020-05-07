@@ -27,6 +27,6 @@ describe('<HomePage />', () => {
 
     await fireEvent.press(getByText('Training programs'));
 
-    expect(navigation.navigate).toBeCalledWith('ProgramsPage');
+    expect(navigation.navigate).toBeCalledWith('ProgramListPage');
   });
 });

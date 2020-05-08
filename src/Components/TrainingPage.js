@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity, Image } from 'react-native';
-import GestureRecognizer, { swipeDirections } from 'react-native-swipe-gestures';
+import GestureRecognizer from 'react-native-swipe-gestures';
 
 import DrillList from './shared/DrillList';
 import Button from './shared/Button';
@@ -85,9 +85,13 @@ export const TrainingPage = props => {
   );
 
   return (
-    <GestureRecognizer style={{ flex: 1 }} onSwipeLeft={onNextPress} onSwipeRight={onPrevPress} config={swipeConfig}>
+    <GestureRecognizer
+      style={styles.trainingPage}
+      onSwipeLeft={onNextPress}
+      onSwipeRight={onPrevPress}
+      config={swipeConfig}
+    >
       <DrillList
-        style={styles.trainingPage}
         ListHeaderComponent={header}
         ListFooterComponent={<View style={{ paddingBottom: 30 }} />}
         ItemComponentStyle={styles.list}

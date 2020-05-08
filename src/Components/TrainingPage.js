@@ -1,7 +1,6 @@
 import React from 'react';
-import { StyleSheet, ScrollView, View, Text, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity, Image } from 'react-native';
 
-import filterButtonImage from '../../assets/filter.png';
 import DrillList from './shared/DrillList';
 import Button from './shared/Button';
 import theme from '../styles/theme.style';
@@ -59,29 +58,36 @@ export const TrainingPage = props => {
     );
   };
 
+  const header = () => (
+    <View style={styles.overview}>
+      {program && programNavigation()}
+      <View style={styles.infos}>
+        <View style={styles.info}>
+          <Image style={styles.infoIcon} source={iconPlayers} />
+          <Text style={styles.infoValue}>{getTrainingMinimalPlayersNumber(training)}+</Text>
+        </View>
+        <View style={styles.info}>
+          <Image style={styles.infoIcon} source={iconClock} />
+          <Text style={styles.infoValue}>{convertMinsToTime(getTrainingDuration(training))}</Text>
+        </View>
+      </View>
+      <Text style={styles.descriptionText}>{training.description}</Text>
+    </View>
+  );
+
   return (
-    <View>
-      <ScrollView style={styles.trainingPage} contentContainerStyle={styles.trainingPageContent}>
-        <View style={styles.overview}>
-          {program && programNavigation()}
-          <View style={styles.infos}>
-            <View style={styles.info}>
-              <Image style={styles.infoIcon} source={iconPlayers} />
-              <Text style={styles.infoValue}>{getTrainingMinimalPlayersNumber(training)}+</Text>
-            </View>
-            <View style={styles.info}>
-              <Image style={styles.infoIcon} source={iconClock} />
-              <Text style={styles.infoValue}>{convertMinsToTime(getTrainingDuration(training))}</Text>
-            </View>
-          </View>
-          <Text style={styles.descriptionText}>{training.description}</Text>
-        </View>
-        <View style={styles.list}>
-          <DrillList navigation={navigation} drillsToDisplay={training.drills} onDrillPress={onDrillPress} />
-        </View>
-      </ScrollView>
+    <View style={{ flex: 1 }}>
+      <DrillList
+        style={styles.trainingPage}
+        ListHeaderComponent={header}
+        ListFooterComponent={<View style={{ paddingBottom: 30 }} />}
+        ItemComponentStyle={styles.list}
+        navigation={navigation}
+        drillsToDisplay={training.drills}
+        onDrillPress={onDrillPress}
+      />
       <View style={styles.footer}>
-        <Button style={styles.startButton} onPress={goToFirstDrill} text="Start training" />
+        <Button onPress={goToFirstDrill} text="Start training" />
       </View>
     </View>
   );
@@ -93,6 +99,7 @@ const styles = StyleSheet.create({
   trainingPage: {
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     height: '100%',
+    flex: 1,
   },
   trainingPageContent: {
     paddingBottom: 50,
@@ -117,11 +124,11 @@ const styles = StyleSheet.create({
     fontSize: theme.FONT_SIZE_LARGE,
   },
   btnPrevNext: {
-    color: theme.COLOR_PRIMARY,
-    textAlign: 'center',
     padding: 10,
   },
   btnPrevNextContent: {
+    textAlign: 'center',
+    color: theme.COLOR_PRIMARY,
     fontSize: theme.FONT_SIZE_LARGE,
   },
   descriptionText: {
@@ -147,11 +154,12 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
   },
   footer: {
-    flexDirection: 'row',
-    flex: 1,
-    width: '100%',
     position: 'absolute',
-    bottom: '3%',
-    justifyContent: 'center',
+    paddingBottom: 20,
+    paddingTop: 5,
+    bottom: 0,
+    backgroundColor: 'white',
+    width: '100%',
+    alignItems: 'center',
   },
 });

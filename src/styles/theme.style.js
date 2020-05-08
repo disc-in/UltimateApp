@@ -3,6 +3,7 @@ export default {
   FONT_SIZE_MEDIUM: 16,
   FONT_SIZE_LARGE: 20,
 
+  BACKGROUND_COLOR: '#f1f1f1',
   BACKGROUND_COLOR_LIGHT: '#fff',
   COLOR_PRIMARY: '#232b2b',
   COLOR_PRIMARY_LIGHT: '#fff',

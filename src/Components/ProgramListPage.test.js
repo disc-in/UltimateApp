@@ -3,14 +3,14 @@ import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import store from '../Store/testStore';
 
-import ConnectedProgramPage from './ProgramsPage';
+import ConnectedProgramListPage from './ProgramListPage';
 
-describe('<ProgramsPage />', () => {
+describe('<ProgramListPage />', () => {
   it('renders correctly when connected', () => {
     const tree = renderer
       .create(
         <Provider store={store}>
-          <ConnectedProgramPage />
+          <ConnectedProgramListPage />
         </Provider>,
       )
       .toJSON();

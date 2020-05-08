@@ -34,6 +34,9 @@
     "react-native-webview": "8.1.1",
     "react-redux": "^7.2.0",
     "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-persist": "^5.10.0",
+    "redux-logger": "^3.0.6",
     "watchman": "^1.0.0"
   },
   "devDependencies": {

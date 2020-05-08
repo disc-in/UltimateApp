@@ -1,11 +1,12 @@
 import 'react-native-gesture-handler';
 import React from 'react';
+import { PersistGate } from 'redux-persist/integration/react';
 import { Platform, AsyncStorage } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { enableScreens } from 'react-native-screens';
 import { Provider } from 'react-redux';
 import { Navigation } from './src/Navigation';
-import Store from './src/Store/configureStore';
+import { store, persistor } from './src/Store/configureStore';
 
 if (Platform.OS !== 'web') enableScreens();
 
@@ -37,13 +38,15 @@ const App = props => {
   }
 
   return (
-    <Provider store={Store}>
-      <NavigationContainer
-        initialState={initialState}
-        onStateChange={state => AsyncStorage.setItem(PERSISTENCE_KEY, JSON.stringify(state))}
-      >
-        <Navigation />
-      </NavigationContainer>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <NavigationContainer
+          initialState={initialState}
+          onStateChange={state => AsyncStorage.setItem(PERSISTENCE_KEY, JSON.stringify(state))}
+        >
+          <Navigation />
+        </NavigationContainer>
+      </PersistGate>
     </Provider>
   );
 };

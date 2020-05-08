@@ -1,4 +1,3 @@
-import AnimationMenageATrois from './AnimationMenageATrois';
 import animationSquare from './AnimationSquare';
 
 export const DrillTypes = {
@@ -973,7 +972,7 @@ const giveAndGoDrill = {
   ],
 };
 
-const AussieDrill = {
+const aussieDrill = {
   id: 1014,
   type: DrillTypes.FRISBEE,
   author: 'Matt Hill',
@@ -994,9 +993,10 @@ const AussieDrill = {
       title: '',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: animationSquare,
-      repetition: '1',
+      repetition: '',
       rest: '',
-      instruction: '',
+      instruction:
+        '2 teams plays against each others.There are 2 territories for each team and they play with 4 discs. To score a point, a player has to bring a disc in one of the endzone of the opponent team. A player can run with a disc. If a player, get touch in the territory of the other team or the disc is intercepted or touch the ground, he looses the possession. In his territory, he is invincible. First team to 5 wins! ',
     },
   ],
 };
@@ -1134,9 +1134,19 @@ const menageATroisDrill = {
       title: '',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: animationSquare,
-      repetition: '1',
+      repetition: '',
       rest: '',
       instruction: '',
+    },
+    {
+      id: 2,
+      title: 'Sudden death',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: animationSquare,
+      repetition: '',
+      rest: '',
+      instruction:
+        "The players form 2 columns. The rotation is: Receiving-Throwing-Marking. If player hasn't succeed to complete the throw, he has to make the defense to stay alive. Last 2 players in, win!",
     },
   ],
 };
@@ -1162,9 +1172,10 @@ const dwarfDuelDrill = {
       title: '',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: animationSquare,
-      repetition: '1',
+      repetition: '',
       rest: '',
-      instruction: '',
+      instruction:
+        "The coach (or an experience player) is throwing longs. When the offensive player start to run the defensive player can move. The player can't jump to catch the disc",
     },
   ],
 };
@@ -1289,12 +1300,23 @@ const basicThrows = {
     },
     {
       id: 3,
-      title: 'Throwing exercice',
+      title: 'Throwing machine',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: animationSquare,
       repetition: '',
       rest: '',
-      instruction: '',
+      instruction:
+        'With a partner, the players throw backhands and forehands for 5 minutes. After it, they try to throw in every way possible.',
+    },
+    {
+      id: 4,
+      title: 'The throwing olympics',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: animationSquare,
+      repetition: '',
+      rest: '',
+      instruction:
+        'By pair, the players throw as ask by the coach. If the disc falls, they have to go at the right of the 2 lines. The team at the left when the time is over wins!',
     },
   ],
 };
@@ -1384,7 +1406,7 @@ const longShotGame = {
       illustrationSource: animationSquare,
       repetition: '1',
       rest: '',
-      instruction: '',
+      instruction: '2 points if there was a successful long shot on the offense that lead to scoring!',
     },
   ],
 };
@@ -1437,6 +1459,33 @@ const coed2Long2Training = {
   drills: [warmupDrill, threeColumnsLongDrill, twoColumnsLongDrill, longShotGame],
 };
 
+const firstPracticeChild = {
+  id: 6,
+  illustrationType: '** Ultimate App **',
+  title: 'First time',
+  image: 'https://zupimages.net/up/20/19/a7io.png',
+  description: 'Training will allow the players to learn the basics of ultimate while having fun',
+  drills: [warmupDrill, basicThrows, dwarfDuelDrill, game3v3],
+};
+
+const secondPracticeChild = {
+  id: 7,
+  illustrationType: '** Ultimate App **',
+  title: 'Defense basics',
+  image: 'https://zupimages.net/up/20/19/dgwo.jpg',
+  description: 'Training will allow the players to learn the basics of ultimate while having fun',
+  drills: [warmupDrill, aussieDrill, menageATroisDrill, game3v3],
+};
+
+const thirdPracticeChild = {
+  id: 8,
+  illustrationType: '** Ultimate App **',
+  title: 'Treasure Hunt',
+  image: 'https://zupimages.net/up/20/19/c9i6.jpg',
+  description: 'Training will allow the players to learn the basics of ultimate while having fun',
+  drills: [warmupDrill, bulldogDrill, goToTenDrill, treasureHuntDrill, game3v3],
+};
+
 export default {
   favoriteDrills: [],
   completeTrainings: [],
@@ -1462,7 +1511,7 @@ export default {
     goaltimateDrill,
     middleForceDrill,
     giveAndGoDrill,
-    AussieDrill,
+    aussieDrill,
     bolognaMDrill,
     goToTenDrill,
     endzoneDameDrill,
@@ -1473,6 +1522,9 @@ export default {
     breakDanceDrill,
     catapultdrill,
     basicThrows,
+    firstPracticeChild,
+    secondPracticeChild,
+    thirdPracticeChild,
     // Games
     normalGame,
     game3v3,
@@ -1482,13 +1534,13 @@ export default {
   programs: [
     {
       id: 1,
-      title: 'Beginner',
-      trainings: [dumpSwingTraining],
+      title: 'Initiation U12',
+      trainings: [firstPracticeChild, secondPracticeChild, thirdPracticeChild],
     },
     {
       id: 2,
       title: 'Fitness Bloc',
-      trainings: [dumpSwingTraining, firstWeekFitnessTraining, coed2MarkTraining],
+      trainings: [firstWeekFitnessTraining],
     },
     {
       id: 3,

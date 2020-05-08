@@ -1,12 +1,12 @@
 import React from 'react';
 import { Button, StyleSheet, Easing, Animated, View } from 'react-native';
 
-import DisplayedElement from './DisplayedElement';
-// import DrillMenageATrois from './DrillMenageATrois';
-// import DrillSquare from './DrillSquare';
-import DrillCuts from './DrillCuts';
-import ProgressBar from './ProgressBar';
-import Drill from './Drill';
+import DisplayedElement from './animation/DisplayedElement';
+// import DrillMenageATrois from './animation/DrillMenageATrois';
+// import DrillSquare from './animation/DrillSquare';
+import DrillCuts from './animation/DrillCuts';
+import ProgressBar from './animation/ProgressBar';
+import Drill from './animation/Drill';
 
 /** Display a drill and enables to animate it using buttons (play, next step, previous step)
  *
@@ -101,7 +101,7 @@ class Animation extends React.Component {
       animationWidth: this.state.animationWidth,
       currentStep: this.state.currentStep,
       positionPercentToPixel: this._positionPercentToPixel,
-      onMoveEnd: this.props.onCutMove, 
+      onMoveEnd: this.props.onCutMove,
     });
     this.cuts.log();
   }
@@ -123,9 +123,9 @@ class Animation extends React.Component {
         currentStepAV: this.currentStepAV,
         getStepAnimation: this._getStepAnimation,
         stepLength: this.stepLength,
-          onStepChange: this.props.onStepChange,
-          onStepAdded: this.props.onStepAdded,
-          editable:this.props.editable,
+        onStepChange: this.props.onStepChange,
+        onStepAdded: this.props.onStepAdded,
+        editable: this.props.editable,
         key: 1,
       });
     else return undefined;
@@ -411,7 +411,7 @@ class Animation extends React.Component {
         <Button style={{ flex: 1 }} title="Lancer" onPress={() => this._restart()} />
         <View style={{ flex: 0.1 }} />
         <Button title=" > " style={{ flex: 1 }} onPress={() => this._nextStep()} />
-            {this._display(this.pb)}
+        {this._display(this.pb)}
       </View>
     );
   }

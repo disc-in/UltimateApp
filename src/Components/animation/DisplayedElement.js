@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Easing, Animated, View, PanResponder } from 'react-native';
 
 /** An element displayed in a drill animation */
-class Test extends React.Component {
+class DisplayedElement extends React.Component {
   /* Props must contain:
       - id: which indicates how to display the element
       ("offense", "defense", "triangle" or "disc")
@@ -15,15 +15,13 @@ class Test extends React.Component {
 
     */
   constructor(props) {
-      super(props);
-
-      this.number = this.props.number.toString();
+    super(props);
 
     // TODO: put the constant coefficient used in the following somewhere to avoir writing them twice (in this class and in DrillCuts)
     var dimensionMin = Math.min(this.props.animationWidth, this.props.animationHeight);
     this.props.playerRadius = dimensionMin / 12;
-    //	this.props.discRadius = this.props.playerRadius / 2;
-    this.props.discRadius = 200;
+    this.props.discRadius = this.props.playerRadius / 2;
+    //    this.props.discRadius = 200;
     this.props.coneSize = (this.props.playerRadius * 5) / 16;
 
     this.props.bottomconeSize = (this.props.playerRadius * 10) / 16;
@@ -33,19 +31,19 @@ class Test extends React.Component {
 
     this.currentPosition = new Animated.ValueXY({ x: 0, y: 0 });
 
-    this.xCut = 10;
-    this.yCut = 10;
-
     // Add a listener on each coordinate offset to get its value at the end of each move
-    this.currentPosition.x.addListener(({ value }) => (this._value = value));
-    this.currentPosition.y.addListener(({ value }) => (this._value = value));
+    this.currentPosition.x.addListener(({ value }) => {
+      this._value = value;
+    });
+    this.currentPosition.y.addListener(({ value }) => {
+      this._value = value;
+    });
 
     // True if the element has already been moved
     this.moved = false;
     this._val = { x: 0, y: 0 };
-    this.previousX = -1;
-    this.previousY = -1;
 
+    //	console.log("de movable: " + this.props.movable);
 
     this.currentPosition.addListener(value => (this._val = value)); // Initialize PanResponder with move handling
 
@@ -56,47 +54,33 @@ class Test extends React.Component {
 
       // Called when the gesture starts
       onPanResponderGrant: () => {
-        // We always want an element displayed at the original position of the first element.
-        // If the current element A is moved for the first time, we create a new element B at the original position of A
-        // If A is moved again, we do not do anything. B (or an element created by B) will be at the original position of A.
-        if (this.props.movable && this.props.onClick !== undefined && !this.moved) {
+        if (this.props.movable) {
           this.currentPosition.setOffset({
             x: this._val.x,
             y: this._val.y,
           });
-
-          this.props.onClick();
-          this.moved = true;
 
           this.currentPosition.setValue({ x: 0, y: 0 });
         }
       },
 
       // Called when a move is made
-      onPanResponderMove: Animated.event([null, { dx: this.currentPosition.x, dy: this.currentPosition.y }]),
+      onPanResponderMove: this.props.movable
+        ? Animated.event([null, { dx: this.currentPosition.x, dy: this.currentPosition.y }])
+        : undefined,
 
       onPanResponderRelease: (evt, gesturestate) => {
         if (this.props.movable && this.props.onMoveEnd !== undefined && this.props.onMoveEnd !== null) {
-          		    console.log("Test: this.props.id: " + this.props.id);
           this.props.onMoveEnd(this, this.currentPosition.x._value, this.currentPosition.y._value);
-          this.currentPosition.setValue({ x: 0, y: 0 });
         }
+        console.log('release: ' + this.currentPosition.x._value + '/' + this.currentPosition.y._value);
       },
     });
   }
 
-    componentDidUpdate(){
-        console.log("!!!!!!!!update called");
-    }
-    componentDidMount(){
-        console.log("!!!!!!!!!!! mount");
-    }
-
-  setNumber(newNumber){
-      this.number = newNumber.toString();
-  }
-
+  /** Set the position of the element (the argument are in pixels not in percentage of the screen) */
   setPosition(xArg, yArg) {
+    //	console.log("de: set position: " + xArg + "/" + yArg);
     this.currentPosition.setValue({ x: xArg, y: yArg });
   }
 
@@ -109,38 +93,53 @@ class Test extends React.Component {
     });
   }
 
-    render() {
-
-        console.log("render test: number: " + this.number);
-    const panStyle = {
+  render() {
+    var panStyle = {
       transform: this.currentPosition.getTranslateTransform(),
     };
 
     /* Returns a component according to the element type */
     switch (this.props.id) {
       case 'defense':
-                    console.log("Render in defense");
+        //            console.log("Render in defense");
         return (
           <Animated.Text
             // Use the panResponder in this view
             {...this.panResponder.panHandlers}
-            style={[panStyle, styles.defense, { height: 40 }, { width: 40 }, { borderRadius: 40 }]}
-            key={this.props.key+4}
+            style={[
+              panStyle,
+              styles.defense,
+              { height: 40 },
+              { width: 40 },
+              { borderRadius: 40 },
+              { left: 0 },
+              { top: 0 },
+            ]}
+            key={this.props.key}
           >
-            {this.number}
+            {this.props.number}
           </Animated.Text>
         );
 
       case 'offense':
-        //            console.log("Render in offense");
+        //            console.log("Render in offense l/t: " + this.props.left + "/" + this.props.top);
+
         return (
           <Animated.Text
             // Use the panResponder in this view
             {...this.panResponder.panHandlers}
-            style={[panStyle, styles.offense, { height: 40 }, { width: 40 }, { borderRadius: 40 }]}
-            key={this.props.key+4}
+            style={[
+              panStyle,
+              styles.offense,
+              { height: 40 },
+              { width: 40 },
+              { borderRadius: 40 },
+              { left: 0 },
+              { top: 0 },
+            ]}
+            key={this.props.key}
           >
-            {this.number}
+            {this.props.number}
           </Animated.Text>
         );
 
@@ -150,8 +149,17 @@ class Test extends React.Component {
           <Animated.View
             // Use the panResponder in this view
             {...this.panResponder.panHandlers}
-            style={[panStyle, styles.disc, { height: 20 }, { width: 20 }, { borderRadius: 20 }, { borderWidth: 2 }]}
-            key={this.props.key+4}
+            style={[
+              panStyle,
+              styles.disc,
+              { height: 20 },
+              { width: 20 },
+              { borderRadius: 20 },
+              { borderWidth: 2 },
+              { left: 0 },
+              { top: 0 },
+            ]}
+            key={this.props.key}
           />
         );
 
@@ -167,13 +175,15 @@ class Test extends React.Component {
               { borderLeftWidth: 12 },
               { borderRightWidth: 12 },
               { borderBottomWidth: 25 },
+              { top: 0 },
+              { left: 0 },
             ]}
-            key={this.props.key+4}
+            key={this.props.key}
           />
         );
 
       default:
-        return <View />;
+        return <View key={this.props.key} />;
     }
   }
 }
@@ -181,8 +191,6 @@ class Test extends React.Component {
 const styles = StyleSheet.create({
   defense: {
     position: 'absolute',
-    left: 90,
-    top: 450,
     backgroundColor: '#dcdcdc',
     textAlign: 'center',
     textAlignVertical: 'center',
@@ -191,8 +199,6 @@ const styles = StyleSheet.create({
 
   offense: {
     position: 'absolute',
-    left: 30,
-    top: 450,
     backgroundColor: '#cd5c5c',
     textAlign: 'center',
     textAlignVertical: 'center',
@@ -201,24 +207,18 @@ const styles = StyleSheet.create({
 
   disc: {
     position: 'absolute',
-    left: 190,
-    top: 450,
     borderColor: 'black',
     backgroundColor: 'white',
   },
 
   triangle: {
     position: 'absolute',
-    left: 270,
-    top: 450,
     backgroundColor: 'transparent',
     borderStyle: 'solid',
     borderLeftColor: 'transparent',
     borderRightColor: 'transparent',
     borderBottomColor: 'orange',
-    width: 0,
-    height: 0,
   },
 });
 
-export default Test;
+export default DisplayedElement;

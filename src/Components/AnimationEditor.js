@@ -4,9 +4,9 @@ import { TextInput, StyleSheet, Animated, Dimensions, View } from 'react-native'
 import Animation from './Animation';
 // import ElementAdderBar from './ElementAdderBar';
 
-import Test from './Test';
+import Test from './animation/Test';
 // import DisplayedElement from './DisplayedElement';
-import Drill from './Drill';
+import Drill from './animation/Drill';
 
 class AnimationEditor extends React.Component {
   constructor(props) {
@@ -44,9 +44,8 @@ class AnimationEditor extends React.Component {
     });
   }
 
-    onLayout = e => {
-
-        //TODO see why this is needed...
+  onLayout = e => {
+    //TODO see why this is needed...
     this.setState({
       width: e.nativeEvent.layout.width,
       height: e.nativeEvent.layout.height,
@@ -173,81 +172,78 @@ class AnimationEditor extends React.Component {
     }));
   }
 
-    cutMove = (elemId, xDelta, yDelta, isCounterCut) => {
-        
-        console.log('Animation editor: in cut move xD/yD: ' + xDelta + '/' + yDelta);
+  cutMove = (elemId, xDelta, yDelta, isCounterCut) => {
+    console.log('Animation editor: in cut move xD/yD: ' + xDelta + '/' + yDelta);
 
-        console.log('previousStep: ' + (this.currentStep-1) + ' ceil: ' + Math.ceil(this.currentStep-1));
+    console.log('previousStep: ' + (this.currentStep - 1) + ' ceil: ' + Math.ceil(this.currentStep - 1));
 
-        console.log('elemId: ' + elemId);
+    console.log('elemId: ' + elemId);
 
-        console.log('Drill before update: ');
-        this.state.drill.log();
+    console.log('Drill before update: ');
+    this.state.drill.log();
 
-        var previousStepId = Math.ceil(this.currentStep)-1;
-        
-        var previousPositions = this.state.drill.getPositionsAtStep(elemId, previousStepId);
-        
-        var xDeltaPercent = xDelta / (this.state.width * this.wRatio);
-        var yDeltaPercent = yDelta / (this.state.height * this.hRatio);
+    var previousStepId = Math.ceil(this.currentStep) - 1;
 
-        console.log(
-            'moved cut element to position: ' + (previousPositions[0][0] + xDeltaPercent) + '/' + (previousPositions[0][1] + yDeltaPercent),
-        );
-        
+    var previousPositions = this.state.drill.getPositionsAtStep(elemId, previousStepId);
 
-        var newDrill = this._copyDrill();
+    var xDeltaPercent = xDelta / (this.state.width * this.wRatio);
+    var yDeltaPercent = yDelta / (this.state.height * this.hRatio);
 
-        var xCutDelta = xDeltaPercent;
-        var yCutDelta = yDeltaPercent;
-        var xCCutDelta = xDeltaPercent;
-        var yCCutDelta = yDeltaPercent;
+    console.log(
+      'moved cut element to position: ' +
+        (previousPositions[0][0] + xDeltaPercent) +
+        '/' +
+        (previousPositions[0][1] + yDeltaPercent),
+    );
 
-        if(isCounterCut){
-            xCutDelta = 0;
-            yCutDelta = 0
-        }
-        else{
-            xCCutDelta = 0;
-            yCCutDelta = 0;
-        }
+    var newDrill = this._copyDrill();
 
-        /* Set the starting position */
-        newDrill.positions[previousStepId][elemId] = [];
-        newDrill.positions[previousStepId][elemId].push([]);
-        newDrill.positions[previousStepId][elemId][0].push(previousPositions[0][0] + xCutDelta);
-        newDrill.positions[previousStepId][elemId][0].push(previousPositions[0][1] + yCutDelta);
+    var xCutDelta = xDeltaPercent;
+    var yCutDelta = yDeltaPercent;
+    var xCCutDelta = xDeltaPercent;
+    var yCCutDelta = yDeltaPercent;
 
-        /* If there was a counter-cut or if the counter-cut is moving */
-        if(previousPositions.length > 1 || isCounterCut){
-
-            /* Set the counter-cut position */
-            newDrill.positions[previousStepId][elemId].push([]);
-
-            /* Get the new position of the counter-cut */
-
-            /* 1 - If there was no counter-cut, the move is from (previousPosition + currentPosition) / 2 */
-            var currentPositions = this.state.drill.getPositionsAtStep(elemId, previousStepId+1);
-            var newPositionX = (currentPositions[0][0] + previousPositions[0][0]) / 2 + xCCutDelta;
-            var newPositionY = (currentPositions[0][1] + previousPositions[0][1]) / 2 + yCCutDelta;
-
-            /* 2 - If there was a counter cut, the move is from this counter-cut position */
-            if(previousPositions.length > 1){
-                newPositionX = previousPositions[1][0] + xCCutDelta;
-                newPositionY = previousPositions[1][1] + yCCutDelta;
-            }
-            
-            newDrill.positions[previousStepId][elemId][1].push(newPositionX);
-            newDrill.positions[previousStepId][elemId][1].push(newPositionY);
-            
-        }
-
-        this.setState({ drill: newDrill }, () => {
-            console.log('Drill after update: ');
-            this.state.drill.log();
-        });
-        
+    if (isCounterCut) {
+      xCutDelta = 0;
+      yCutDelta = 0;
+    } else {
+      xCCutDelta = 0;
+      yCCutDelta = 0;
     }
+
+    /* Set the starting position */
+    newDrill.positions[previousStepId][elemId] = [];
+    newDrill.positions[previousStepId][elemId].push([]);
+    newDrill.positions[previousStepId][elemId][0].push(previousPositions[0][0] + xCutDelta);
+    newDrill.positions[previousStepId][elemId][0].push(previousPositions[0][1] + yCutDelta);
+
+    /* If there was a counter-cut or if the counter-cut is moving */
+    if (previousPositions.length > 1 || isCounterCut) {
+      /* Set the counter-cut position */
+      newDrill.positions[previousStepId][elemId].push([]);
+
+      /* Get the new position of the counter-cut */
+
+      /* 1 - If there was no counter-cut, the move is from (previousPosition + currentPosition) / 2 */
+      var currentPositions = this.state.drill.getPositionsAtStep(elemId, previousStepId + 1);
+      var newPositionX = (currentPositions[0][0] + previousPositions[0][0]) / 2 + xCCutDelta;
+      var newPositionY = (currentPositions[0][1] + previousPositions[0][1]) / 2 + yCCutDelta;
+
+      /* 2 - If there was a counter cut, the move is from this counter-cut position */
+      if (previousPositions.length > 1) {
+        newPositionX = previousPositions[1][0] + xCCutDelta;
+        newPositionY = previousPositions[1][1] + yCCutDelta;
+      }
+
+      newDrill.positions[previousStepId][elemId][1].push(newPositionX);
+      newDrill.positions[previousStepId][elemId][1].push(newPositionY);
+    }
+
+    this.setState({ drill: newDrill }, () => {
+      console.log('Drill after update: ');
+      this.state.drill.log();
+    });
+  };
 
   moveElement = (element, xDelta, yDelta) => {
     console.log('Animation editor: in move element xD/yD: ' + xDelta + '/' + yDelta);
@@ -283,35 +279,30 @@ class AnimationEditor extends React.Component {
   };
 
   _createDE(deType) {
-            console.log("create de with type: " + deType);
+    console.log('create de with type: ' + deType);
     var text = '';
 
-      var key = 600;
-      this.keyCount += 1;
+    var key = 600;
+    this.keyCount += 1;
 
-      
-      if(deType === 'offense')
-          text = "1";
+    if (deType === 'offense') text = '1';
 
-      if(deType === 'defense'){
-          text = "1";
-          key = 601;
-      }
+    if (deType === 'defense') {
+      text = '1';
+      key = 601;
+    }
 
-      if(deType === 'triangle')
-          key = 602;
+    if (deType === 'triangle') key = 602;
 
-      if(deType === 'disc')
-          key = 603;
-      
+    if (deType === 'disc') key = 603;
 
-      console.log("text: " + text);
+    console.log('text: ' + text);
     return new Test({
       onMoveEnd: this.addElementToDrill,
-      key: this.keyCount,
+      // key: this.keyCount,
       id: deType,
       eId: -1,
-      key: key,
+      key,
       movable: true,
       animationWidth: this.state.screenW,
       animationHeight: this.state.screenH,
@@ -325,20 +316,18 @@ class AnimationEditor extends React.Component {
     else return undefined;
   }
 
-    addStep = () => {
-        
-        // Add the element with its initial position
-        var newDrill = this._copyDrill();
+  addStep = () => {
+    // Add the element with its initial position
+    var newDrill = this._copyDrill();
 
-        newDrill.addStep();
+    newDrill.addStep();
 
-        this.setState({ drill: newDrill });
+    this.setState({ drill: newDrill });
+  };
 
-    }
-
-    displayStepDescription = () => {
-        // TODO
-    }
+  displayStepDescription = () => {
+    // TODO
+  };
 
   render() {
     console.log('render AE');
@@ -351,19 +340,19 @@ class AnimationEditor extends React.Component {
           style={[{ flex: 10 }]}
           editable
           drill={this.state.drill}
-        onElementMove={this.moveElement}
-        onCutMove={this.cutMove}
+          onElementMove={this.moveElement}
+          onCutMove={this.cutMove}
           height={this.state.height === undefined ? 300 : this.state.height * this.hRatio}
           width={this.state.width === undefined ? 300 : this.state.width * this.wRatio}
           dTop={this.state.dTop}
-        lTop={this.state.lTop}
-        onStepChange={this.displayStepDescription}
-        onStepAdded={this.addStep}
+          lTop={this.state.lTop}
+          onStepChange={this.displayStepDescription}
+          onStepAdded={this.addStep}
           currentStepAV={this.currentStepAV}
-            />
+        />
 
         {this.state.draggableElements.map(function(item) {
-            console.log("render de");
+          console.log('render de');
           return item.render();
         })}
 
@@ -373,7 +362,7 @@ class AnimationEditor extends React.Component {
           style={[{ flex: 3 }, {}]}
           placeholder="Step description"
           onChangeText={text => this._modifiedText()}
-            />
+        />
       </View>
     );
   }
@@ -382,8 +371,8 @@ class AnimationEditor extends React.Component {
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-      marginTop: 0,
-      paddingTop: 0,
+    marginTop: 0,
+    paddingTop: 0,
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'stretch',

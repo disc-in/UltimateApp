@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import Animation from './Animation';
 import AnimationEditor from './AnimationEditor';
 import { WebView } from 'react-native-webview';
-import DrillSquare from './DrillSquare';
+import DrillSquare from './animation/DrillSquare';
 
 const contentContainerFlex = 6;
 const stepContainerFlex = 4;
@@ -25,12 +25,7 @@ class DrillPage extends React.Component {
     return (
       <View style={styles.main_container}>
         <View style={styles.content_container}>
-          <AnimationEditor
-            animation={currentStep.animation}
-            heightRatio={1}
-            widthRatio={1}
-            editable
-          />
+          <AnimationEditor animation={currentStep.animation} heightRatio={1} widthRatio={1} editable />
 
           {/*	        <Animation animation={currentStep.animation} heightRatio={stepContainerFlex/(contentContainerFlex+stepContainerFlex)} widthRatio={1} editable={false} drill={drill}/>
           <WebView source={{ uri: 'https://www.youtube.com/embed/oN1bzPCKkGE' }} style={{ marginTop: 20 }} />

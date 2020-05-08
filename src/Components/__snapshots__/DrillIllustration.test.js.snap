@@ -102,6 +102,7 @@ exports[`<DrillIllustration /> renders correctly for a drill with a video from v
     style={
       Object {
         "flexDirection": "row",
+        "paddingBottom": 2,
       }
     }
   >
@@ -164,26 +165,65 @@ exports[`<DrillIllustration /> renders correctly for a drill with a video from v
       onStartShouldSetResponder={[Function]}
       style={
         Object {
+          "flex": 1,
           "opacity": 1,
         }
       }
     >
-      <Image
-        source={1}
+      <View
         style={
           Object {
-            "alignItems": "center",
-            "backgroundColor": "#fff",
-            "borderColor": "#d5d5d5",
-            "borderRadius": 12.5,
-            "borderWidth": 2,
-            "height": 25,
-            "justifyContent": "center",
-            "margin": 22.5,
-            "width": 25,
+            "opacity": 1,
           }
         }
-      />
+      >
+        <Image
+          source={1}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "borderColor": "#d5d5d5",
+              "borderRadius": 12.5,
+              "borderWidth": 1,
+              "height": 25,
+              "marginLeft": 20,
+              "marginRight": 20,
+              "marginTop": 20,
+              "position": "absolute",
+              "right": 0,
+              "width": 25,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "opacity": 0,
+          }
+        }
+      >
+        <Image
+          source={1}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "borderColor": "#d5d5d5",
+              "borderRadius": 12.5,
+              "borderWidth": 1,
+              "height": 25,
+              "marginLeft": 20,
+              "marginRight": 20,
+              "marginTop": 20,
+              "position": "absolute",
+              "right": 0,
+              "width": 25,
+            }
+          }
+        />
+      </View>
     </View>
   </View>
   <View
@@ -199,7 +239,6 @@ exports[`<DrillIllustration /> renders correctly for a drill with a video from v
       Object {
         "alignSelf": "flex-end",
         "flexDirection": "row",
-        "marginTop": 5,
       }
     }
   >
@@ -214,6 +253,7 @@ exports[`<DrillIllustration /> renders correctly for a drill with a video from v
         style={
           Object {
             "flexDirection": "row",
+            "paddingBottom": 2,
           }
         }
       >
@@ -672,10 +712,70 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
     </View>
     <View
       style={
+        Array [
+          Object {
+            "backgroundColor": "gray",
+          },
+          Object {
+            "borderRadius": 10,
+            "borderWidth": 0,
+            "bottom": 7.5,
+            "height": 15,
+            "position": "absolute",
+            "width": 15,
+          },
+          Object {
+            "left": 10,
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "gray",
+          },
+          Object {
+            "borderRadius": 10,
+            "borderWidth": 0,
+            "bottom": 7.5,
+            "height": 15,
+            "position": "absolute",
+            "width": 15,
+          },
+          Object {
+            "left": 325,
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "gray",
+          },
+          Object {
+            "borderRadius": 10,
+            "borderWidth": 0,
+            "bottom": 7.5,
+            "height": 15,
+            "position": "absolute",
+            "width": 15,
+          },
+          Object {
+            "left": 640,
+          },
+        ]
+      }
+    />
+    <View
+      style={
         Object {
           "backgroundColor": "gray",
-          "bottom": 10,
-          "height": 10,
+          "bottom": 13,
+          "height": 4,
           "left": 20,
           "position": "absolute",
           "width": 630,
@@ -686,8 +786,98 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
       style={
         Object {
           "backgroundColor": "black",
-          "bottom": 10,
-          "height": 10,
+          "borderRadius": 10,
+          "borderWidth": 0,
+          "bottom": 7.5,
+          "height": 15,
+          "left": 10,
+          "opacity": 1,
+          "position": "absolute",
+          "width": 15,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "black",
+          "borderRadius": 10,
+          "borderWidth": 0,
+          "bottom": 7.5,
+          "height": 15,
+          "left": 325,
+          "opacity": 0,
+          "position": "absolute",
+          "width": 15,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "black",
+          "borderRadius": 10,
+          "borderWidth": 0,
+          "bottom": 7.5,
+          "height": 15,
+          "left": 640,
+          "opacity": 0,
+          "position": "absolute",
+          "width": 15,
+        }
+      }
+    />
+    <Text
+      style={
+        Array [
+          Object {
+            "bottom": 23.5,
+            "position": "absolute",
+          },
+          Object {
+            "left": 14,
+          },
+        ]
+      }
+    >
+      1
+    </Text>
+    <Text
+      style={
+        Array [
+          Object {
+            "bottom": 23.5,
+            "position": "absolute",
+          },
+          Object {
+            "left": 329,
+          },
+        ]
+      }
+    >
+      2
+    </Text>
+    <Text
+      style={
+        Array [
+          Object {
+            "bottom": 23.5,
+            "position": "absolute",
+          },
+          Object {
+            "left": 644,
+          },
+        ]
+      }
+    >
+      3
+    </Text>
+    <View
+      style={
+        Object {
+          "backgroundColor": "black",
+          "bottom": 13,
+          "height": 4,
           "left": 20,
           "position": "absolute",
           "width": 0,
@@ -707,13 +897,12 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
       onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "backgroundColor": "transparent",
           "bottom": 0,
           "height": 35,
-          "left": 10,
+          "left": -5,
           "opacity": 1,
           "position": "absolute",
-          "width": 157.5,
+          "width": 35,
         }
       }
     />
@@ -730,13 +919,12 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
       onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "backgroundColor": "transparent",
           "bottom": 0,
           "height": 35,
-          "left": 167.5,
+          "left": 310,
           "opacity": 1,
           "position": "absolute",
-          "width": 315,
+          "width": 35,
         }
       }
     />
@@ -753,13 +941,12 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
       onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "backgroundColor": "transparent",
           "bottom": 0,
           "height": 35,
-          "left": 482.5,
+          "left": 625,
           "opacity": 1,
           "position": "absolute",
-          "width": 172.5,
+          "width": 35,
         }
       }
     />

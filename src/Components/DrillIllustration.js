@@ -11,25 +11,67 @@ import { swipeConfig } from '../styles/config';
 import iconRedo from '../../assets/redo_arrow.png';
 import buttonValidation from '../../assets/button_validation_ultra_light.png';
 import buttonValidationGradient from '../../assets/button_validation_gradient.png';
-
-const fadeIn = () => {
-  // Will change fadeAnim value to 1 in 5 seconds
-  Animated.timing(fadeAnim, {
-    toValue: 1,
-    duration: 2000,
-  }).start();
-};
-
-const fadeOut = () => {
-  // Will change fadeAnim value to 0 in 5 seconds
-  Animated.timing(fadeAnim, {
-    toValue: 0,
-    duration: 2000,
-  }).start();
-};
+import { Easing } from 'react-native-reanimated';
 
 const DrillIllustration = props => {
   const [currentStepIndex, setStepIndex] = useState(0);
+
+  const fadeAnim = useRef(new Animated.Value(1)).current;
+  const fadeCheckedAnim = useRef(new Animated.Value(0)).current;
+
+  const checkAnimation = () => {
+    Animated.sequence([
+      Animated.parallel([
+        Animated.timing(fadeAnim, {
+          toValue: 0,
+          duration: 800,
+          easing: Easing.easeOutQuint,
+        }),
+        Animated.timing(fadeCheckedAnim, {
+          toValue: 1,
+          duration: 800,
+          easing: Easing.easeOutQuint,
+        }),
+      ]),
+      Animated.parallel([
+        Animated.timing(fadeAnim, {
+          toValue: 1,
+          duration: 10,
+        }),
+        Animated.timing(fadeCheckedAnim, {
+          toValue: 0,
+          duration: 10,
+        }),
+      ]),
+    ]).start(() => incrementStepIndex());
+  };
+
+  const checkAnimationFast = () => {
+    Animated.sequence([
+      Animated.parallel([
+        Animated.timing(fadeAnim, {
+          toValue: 0,
+          duration: 200,
+          easing: Easing.easeOutQuint,
+        }),
+        Animated.timing(fadeCheckedAnim, {
+          toValue: 1,
+          duration: 200,
+          easing: Easing.easeOutQuint,
+        }),
+      ]),
+      Animated.parallel([
+        Animated.timing(fadeAnim, {
+          toValue: 1,
+          duration: 10,
+        }),
+        Animated.timing(fadeCheckedAnim, {
+          toValue: 0,
+          duration: 10,
+        }),
+      ]),
+    ]).start(() => incrementStepIndex());
+  };
 
   const currentStep = props.drill.steps[currentStepIndex];
 
@@ -116,8 +158,25 @@ const DrillIllustration = props => {
                   <View style={styles.subSubWrapper}>
                     <Text style={styles.fitness}>{title}</Text>
                   </View>
-                  <TouchableOpacity onPress={() => incrementStepIndex()}>
-                    <Image style={styles.buttonNext} source={buttonValidation} />
+                  <TouchableOpacity style={styles.container} onPress={() => checkAnimationFast()}>
+                    <Animated.View
+                      style={[
+                        {
+                          opacity: fadeAnim,
+                        },
+                      ]}
+                    >
+                      <Image style={styles.buttonNext} source={buttonValidation} />
+                    </Animated.View>
+                    <Animated.View
+                      style={[
+                        {
+                          opacity: fadeCheckedAnim,
+                        },
+                      ]}
+                    >
+                      <Image style={styles.buttonNext} source={buttonValidationGradient} />
+                    </Animated.View>
                   </TouchableOpacity>
                 </View>
               </View>
@@ -148,8 +207,25 @@ const DrillIllustration = props => {
                   <View style={styles.subSubWrapper}>
                     <Text style={styles.fitness}>{title}</Text>
                   </View>
-                  <TouchableOpacity onPress={() => incrementStepIndex()}>
-                    <Image style={styles.buttonNext} source={buttonValidation} />
+                  <TouchableOpacity style={styles.container} onPress={() => checkAnimation()}>
+                    <Animated.View
+                      style={[
+                        {
+                          opacity: fadeAnim,
+                        },
+                      ]}
+                    >
+                      <Image style={styles.buttonNext} source={buttonValidation} />
+                    </Animated.View>
+                    <Animated.View
+                      style={[
+                        {
+                          opacity: fadeCheckedAnim,
+                        },
+                      ]}
+                    >
+                      <Image style={styles.buttonNext} source={buttonValidationGradient} />
+                    </Animated.View>
                   </TouchableOpacity>
                 </View>
               </View>
@@ -177,27 +253,28 @@ const DrillIllustration = props => {
               <View style={styles.subSubWrapper}>
                 <Text style={styles.fitness}>{title}</Text>
               </View>
-              <TouchableOpacity onPress={() => incrementStepIndex()}>
-                {/* <Animated.View
-                  style={[
-                    {
-                      opacity: fadeOut, // Bind opacity to animated value
-                    },
-                  ]}
-                >*/}
-                <Image style={styles.buttonNext} source={buttonValidation} />
-                {/* </Animated.View>
+              <TouchableOpacity style={styles.container} onPress={() => checkAnimation()}>
                 <Animated.View
                   style={[
                     {
-                      opacity: fadeOut, // Bind opacity to animated value
+                      opacity: fadeAnim,
+                    },
+                  ]}
+                >
+                  <Image style={styles.buttonNext} source={buttonValidation} />
+                </Animated.View>
+                <Animated.View
+                  style={[
+                    {
+                      opacity: fadeCheckedAnim,
                     },
                   ]}
                 >
                   <Image style={styles.buttonNext} source={buttonValidationGradient} />
-                </Animated.View> */}
+                </Animated.View>
               </TouchableOpacity>
             </View>
+
             <View style={styles.lines} />
             <View style={styles.containerAnimation}>
               <View style={styles.container}>{displayNextStep()}</View>
@@ -236,6 +313,7 @@ const styles = StyleSheet.create({
   },
   description: {
     flexDirection: 'row',
+    paddingBottom: 2,
   },
   descriptionAnimation: {
     flexDirection: 'row',
@@ -265,14 +343,17 @@ const styles = StyleSheet.create({
     borderRightColor: theme.COLOR_PRIMARY_LIGHT,
   },
   buttonNext: {
-    margin: 22.5,
+    position: 'absolute',
+    right: 0,
+    marginRight: 20,
+    marginLeft: 20,
+    marginTop: 20,
     width: 25,
     height: 25,
     borderRadius: 12.5,
     backgroundColor: theme.BACKGROUND_COLOR_BUTTON,
-    borderWidth: 2,
+    borderWidth: 1,
     borderColor: theme.BORDER_COLOR_BUTTON_ACTIVE,
-    justifyContent: 'center',
     alignItems: 'center',
   },
   subWrapper: {
@@ -321,6 +402,15 @@ const styles = StyleSheet.create({
   redoImage: {
     width: 60,
     height: 60,
+  },
+  fadingText: {
+    fontSize: 28,
+    textAlign: 'center',
+    margin: 10,
+  },
+  buttonRow: {
+    flexDirection: 'row',
+    marginVertical: 16,
   },
 });
 

@@ -1,15 +1,15 @@
 import React from 'react';
 import { StyleSheet, Easing, Animated, View, TouchableOpacity, Image } from 'react-native';
 
-import DisplayedElement from './animation/DisplayedElement';
-import DrillCuts from './animation/DrillCuts';
-import ProgressBar from './animation/ProgressBar';
-import Drill from './animation/Drill';
+import DisplayedElement from './DisplayedElement';
+import DrillCuts from './DrillCuts';
+import ProgressBar from './ProgressBar';
+import Drill from './Drill';
 
-import iconPlay from '../../assets/play.png';
-import iconPrev from '../../assets/prev.png';
-import iconNext from '../../assets/next.png';
-import iconReplay from '../../assets/replay.png';
+import iconPlay from '../../../assets/play.png';
+import iconPrev from '../../../assets/prev.png';
+import iconNext from '../../../assets/next.png';
+import iconReplay from '../../../assets/replay.png';
 
 class Animation extends React.Component {
   constructor(props) {

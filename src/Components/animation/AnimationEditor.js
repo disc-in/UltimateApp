@@ -4,9 +4,9 @@ import { TextInput, StyleSheet, Animated, Dimensions, View } from 'react-native'
 import Animation from './Animation';
 // import ElementAdderBar from './ElementAdderBar';
 
-import Test from './animation/Test';
+import Test from './Test';
 // import DisplayedElement from './DisplayedElement';
-import Drill from './animation/Drill';
+import Drill from './Drill';
 
 class AnimationEditor extends React.Component {
   constructor(props) {

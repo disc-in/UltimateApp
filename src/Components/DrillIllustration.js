@@ -3,7 +3,7 @@ import { View, StyleSheet, Text, Dimensions, TouchableOpacity, Image } from 'rea
 import GestureRecognizer from 'react-native-swipe-gestures';
 import { WebView } from 'react-native-webview';
 
-import Animation from './Animation';
+import Animation from './animation/Animation';
 import VimeoVideo from './VimeoVideo';
 import { IllustrationType } from '../Fixtures';
 import theme from '../styles/theme.style';

@@ -229,5 +229,29 @@ exports[`<HomePage /> renders correctly 1`] = `
       </View>
     </View>
   </View>
+  <View
+    accessible={true}
+    focusable={true}
+    isTVSelectable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "height": "30%",
+        "marginBottom": 5,
+      }
+    }
+  >
+    <Text
+      style={null}
+    >
+      Animation Editor
+    </Text>
+  </View>
 </View>
 `;

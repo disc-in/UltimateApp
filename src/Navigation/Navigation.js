@@ -11,6 +11,7 @@ import TrainingPage from '../Components/TrainingPage';
 import TrainingBravoPage from '../Components/TrainingBravoPage';
 import ProgramListPage from '../Components/ProgramListPage';
 import ProgramPage from '../Components/ProgramPage';
+import AnimationEditorPage from '../Components/AnimationEditorPage';
 
 const Stack = createStackNavigator();
 
@@ -57,5 +58,6 @@ export const Navigation = () => (
       component={TrainingBravoPage}
       options={({ route }) => ({ title: route.params.training.title })}
     />
+    <Stack.Screen name="AnimationEditorPage" component={AnimationEditorPage} />
   </Stack.Navigator>
 );

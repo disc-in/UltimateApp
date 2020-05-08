@@ -17,9 +17,6 @@ import GradientButton from './shared/GradientButton';
 import DrillIllustration from './DrillIllustration';
 import { toggleFavorite } from '../Store/Actions/favoriteAction';
 
-import AnimationEditor from './AnimationEditor';
-import DrillSquare from './animation/DrillSquare';
-
 import theme from '../styles/theme.style';
 
 import iconFavoriteEmpty from '../../assets/ic_favorite_border_bookmark.png';
@@ -38,9 +35,7 @@ export const DrillPage = props => {
   const sizeBackground = screenDimension.height - headerHeight;
   const imageStyles = { ...styles.image, height: sizeBackground };
 
-  // const drill = route.params.drill;
-  const drill = new DrillSquare();
-  const currentStep = route.params.drill.steps[0];
+  const drill = route.params.drill;
 
   const onPressStartButton = () => {
     firstDrill.current.measureLayout(findNodeHandle(drillScrollView.current), (x, y) => {
@@ -120,7 +115,6 @@ export const DrillPage = props => {
       <View ref={firstDrill} style={styles.animation}>
         <DrillIllustration drill={drill} />
       </View>
-      <AnimationEditor animation={currentStep.animation} heightRatio={1} widthRatio={1} editable />
     </ScrollView>
   );
 };

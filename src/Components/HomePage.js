@@ -37,6 +37,12 @@ export default class HomePage extends React.Component {
             </View>
           </ImageBackground>
         </TouchableHighlight>
+        <TouchableHighlight
+          onPress={() => this.props.navigation.navigate('AnimationEditorPage')}
+          style={styles.menuItem}
+        >
+          <Text>Animation Editor</Text>
+        </TouchableHighlight>
       </View>
     );
   }

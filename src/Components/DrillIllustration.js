@@ -16,29 +16,29 @@ import { Easing } from 'react-native-reanimated';
 const DrillIllustration = props => {
   const [currentStepIndex, setStepIndex] = useState(0);
 
-  const fadeAnim = useRef(new Animated.Value(1)).current;
-  const fadeCheckedAnim = useRef(new Animated.Value(0)).current;
+  const opacityUnchecked = useRef(new Animated.Value(1)).current;
+  const opacityChecked = useRef(new Animated.Value(0)).current;
 
   const checkAnimation = () => {
     Animated.sequence([
       Animated.parallel([
-        Animated.timing(fadeAnim, {
+        Animated.timing(opacityUnchecked, {
           toValue: 0,
           duration: 800,
           easing: Easing.easeOutQuint,
         }),
-        Animated.timing(fadeCheckedAnim, {
+        Animated.timing(opacityChecked, {
           toValue: 1,
           duration: 800,
           easing: Easing.easeOutQuint,
         }),
       ]),
       Animated.parallel([
-        Animated.timing(fadeAnim, {
+        Animated.timing(opacityUnchecked, {
           toValue: 1,
           duration: 10,
         }),
-        Animated.timing(fadeCheckedAnim, {
+        Animated.timing(opacityChecked, {
           toValue: 0,
           duration: 10,
         }),
@@ -49,23 +49,23 @@ const DrillIllustration = props => {
   const checkAnimationFast = () => {
     Animated.sequence([
       Animated.parallel([
-        Animated.timing(fadeAnim, {
+        Animated.timing(opacityUnchecked, {
           toValue: 0,
           duration: 200,
           easing: Easing.easeOutQuint,
         }),
-        Animated.timing(fadeCheckedAnim, {
+        Animated.timing(opacityChecked, {
           toValue: 1,
           duration: 200,
           easing: Easing.easeOutQuint,
         }),
       ]),
       Animated.parallel([
-        Animated.timing(fadeAnim, {
+        Animated.timing(opacityUnchecked, {
           toValue: 1,
           duration: 10,
         }),
-        Animated.timing(fadeCheckedAnim, {
+        Animated.timing(opacityChecked, {
           toValue: 0,
           duration: 10,
         }),
@@ -162,7 +162,7 @@ const DrillIllustration = props => {
                     <Animated.View
                       style={[
                         {
-                          opacity: fadeAnim,
+                          opacity: opacityUnchecked,
                         },
                       ]}
                     >
@@ -171,7 +171,7 @@ const DrillIllustration = props => {
                     <Animated.View
                       style={[
                         {
-                          opacity: fadeCheckedAnim,
+                          opacity: opacityChecked,
                         },
                       ]}
                     >
@@ -211,7 +211,7 @@ const DrillIllustration = props => {
                     <Animated.View
                       style={[
                         {
-                          opacity: fadeAnim,
+                          opacity: opacityUnchecked,
                         },
                       ]}
                     >
@@ -220,7 +220,7 @@ const DrillIllustration = props => {
                     <Animated.View
                       style={[
                         {
-                          opacity: fadeCheckedAnim,
+                          opacity: opacityChecked,
                         },
                       ]}
                     >
@@ -257,7 +257,7 @@ const DrillIllustration = props => {
                 <Animated.View
                   style={[
                     {
-                      opacity: fadeAnim,
+                      opacity: opacityUnchecked,
                     },
                   ]}
                 >
@@ -266,7 +266,7 @@ const DrillIllustration = props => {
                 <Animated.View
                   style={[
                     {
-                      opacity: fadeCheckedAnim,
+                      opacity: opacityChecked,
                     },
                   ]}
                 >

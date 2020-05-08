@@ -1,13 +1,13 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import { AsyncStorage } from 'react-native';
+import { Platform, AsyncStorage } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { enableScreens } from 'react-native-screens';
 import { Provider } from 'react-redux';
 import { Navigation } from './src/Navigation';
 import Store from './src/Store/configureStore';
 
-enableScreens();
+if (Platform.OS !== 'web') enableScreens();
 
 const PERSISTENCE_KEY = 'NAVIGATION_STATE';
 

@@ -5,8 +5,8 @@ exports[`<TrainingBravoPage /> renders correctly 1`] = `
   style={
     Object {
       "backgroundColor": "#fff",
-      "height": "100%",
-      "padding": 20,
+      "flex": 1,
+      "width": "100%",
     }
   }
 >
@@ -14,7 +14,8 @@ exports[`<TrainingBravoPage /> renders correctly 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "marginBottom": 40,
+        "marginBottom": 20,
+        "padding": 20,
       }
     }
   >
@@ -24,6 +25,7 @@ exports[`<TrainingBravoPage /> renders correctly 1`] = `
           "fontSize": 20,
           "fontWeight": "500",
           "marginBottom": 20,
+          "paddingHorizontal": 20,
         }
       }
     >
@@ -43,6 +45,7 @@ exports[`<TrainingBravoPage /> renders correctly 1`] = `
         "fontSize": 20,
         "fontWeight": "500",
         "marginBottom": 20,
+        "paddingHorizontal": 20,
       }
     }
   >
@@ -52,6 +55,7 @@ exports[`<TrainingBravoPage /> renders correctly 1`] = `
     style={
       Object {
         "fontSize": 16,
+        "paddingHorizontal": 20,
       }
     }
   >
@@ -61,6 +65,7 @@ exports[`<TrainingBravoPage /> renders correctly 1`] = `
     style={
       Object {
         "fontSize": 14,
+        "paddingHorizontal": 20,
       }
     }
   >
@@ -71,6 +76,7 @@ exports[`<TrainingBravoPage /> renders correctly 1`] = `
     style={
       Object {
         "fontSize": 14,
+        "paddingHorizontal": 20,
       }
     }
   >
@@ -81,11 +87,9 @@ exports[`<TrainingBravoPage /> renders correctly 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "bottom": "3%",
+        "bottom": 20,
         "flex": 1,
-        "left": "3%",
         "position": "absolute",
-        "right": "3%",
         "width": "100%",
       }
     }
@@ -118,11 +122,9 @@ exports[`<TrainingBravoPage /> renders correctly 1`] = `
           "borderRadius": 5,
           "height": 40,
           "justifyContent": "center",
-          "left": "10%",
           "opacity": 1,
           "padding": 10,
-          "right": "10%",
-          "width": "90%",
+          "width": "80%",
         }
       }
       testID="button"

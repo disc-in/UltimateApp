@@ -16,9 +16,7 @@ const Button = props => {
 
 const styles = StyleSheet.create({
   button: {
-    left: '10%',
-    right: '10%',
-    width: '90%',
+    width: '80%',
     height: 40,
     borderRadius: 5,
     backgroundColor: theme.COLOR_PRIMARY,
@@ -32,9 +30,7 @@ const styles = StyleSheet.create({
     fontSize: theme.FONT_SIZE_MEDIUM,
   },
   buttonLight: {
-    left: '10%',
-    right: '10%',
-    width: '90%',
+    width: '80%',
     height: 40,
     borderRadius: 5,
     backgroundColor: theme.COLOR_PRIMARY_LIGHT,

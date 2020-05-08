@@ -1254,7 +1254,7 @@ const catapultdrill = {
 };
 
 const basicThrows = {
-  id: 1007,
+  id: 1024,
   type: DrillTypes.FRISBEE,
   author: 'Rowan McDonnell',
   title: 'Basic Throws',

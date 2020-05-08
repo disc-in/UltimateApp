@@ -17,10 +17,10 @@ class Animation extends React.Component {
 
     this.state = {
       drill: undefined,
-      de: [], // The graphical elments displayed in the drill
+      displayedElements: [], // The graphical elments displayed in the drill
       currentStep: 0, // Current step displayed on the phone
-      animationWidth: this.props.width,
-      animationHeight: this.props.height,
+      animationWidth: this.props.width || 100,
+      animationHeight: this.props.height || 100,
     };
 
     this.stepLength = 1000; // Duration of a step in milliseconds
@@ -59,23 +59,22 @@ class Animation extends React.Component {
   };
 
   /** Create the Componenets associated to the elements displayed in this drill */
-  _createDE() {
-    //	console.log("animation CreateDE: " + this._elemCount() + " elements");
-    var tempDe = [];
+  _createDisplayedElement() {
+    var result = [];
 
     /* For each element displayed in the current drill */
     for (var elemId = 0; elemId < this._elemCount(); ++elemId) {
       //	    console.log("animation createdE: element id: " + this.state.drill.ids[elemId]);
 
       /* Create the displayed element according to the drill */
-      tempDe.push(
+      result.push(
         new DisplayedElement({
           id: this.state.drill.ids[elemId],
           number: this.state.drill.texts[elemId],
           key: elemId,
           eId: elemId,
-          animationWidth: this.props.animationWidth,
-          animationHeight: this.props.animationHeight,
+          animationWidth: this.state.animationWidth,
+          animationHeight: this.state.animationHeight,
           movable: this.props.editable,
           onMoveEnd: this.props.onElementMove,
           //		    left: this.state.drill.positions[0][elemId][0][0]*this.state.animationWidth + this.dLeft,
@@ -84,7 +83,7 @@ class Animation extends React.Component {
       );
     }
 
-    return tempDe;
+    return result;
   }
 
   /** Create the cuts associated to each step of the drill */
@@ -102,7 +101,7 @@ class Animation extends React.Component {
   }
 
   /** Create the progress bar */
-  _createPB() {
+  _createProgressBar() {
     //	console.log("Create PB animation width " + this.state.animationWidth);
 
     if (
@@ -157,12 +156,12 @@ class Animation extends React.Component {
 
     console.log('intStep: ' + intStep);
 
-    if (this.state.de !== undefined && this.state.de !== null) {
+    if (this.state.displayedElements !== undefined && this.state.displayedElements !== null) {
       /* For each element */
-      for (var i = 0; i < this.state.de.length; i++) {
+      for (var i = 0; i < this.state.displayedElements.length; i++) {
         console.log('element: ' + i);
 
-        var element = this.state.de[i];
+        var element = this.state.displayedElements[i];
 
         var iPositions = this.state.drill.getPositionsAtStep(i, intStep);
         /* Get its position in pixel (it is represented in percentage in the drill) */
@@ -195,13 +194,13 @@ class Animation extends React.Component {
       () => {
         this.setState(
           {
-            de: this._createDE(),
+            displayedElements: this._createDisplayedElement(),
           },
           () => {
             /* Set all the elements to their initial positions */
             this._initPositions();
 
-            this.pb = this._createPB();
+            this.progressBar = this._createProgressBar();
             this._initializeCuts();
 
             if (this.props.onStepChange !== undefined && this.props.onStepChange !== null)
@@ -278,8 +277,8 @@ class Animation extends React.Component {
   }
 
   /** Returns the animation to a given step for all displayed elements
-	The substeps are played if the animation is forward and if the elements moves at step stepId
-    */
+    The substeps are played if the animation is forward and if the elements moves at step stepId
+  */
   _getStepAnimation = (stepId, isForward) => {
     console.log('Animation: get animation: ' + stepId);
 
@@ -299,8 +298,8 @@ class Animation extends React.Component {
     );
 
     /** Change the opacity of the step dots */
-    if (this.pb !== undefined && this.pb !== null)
-      stepAnimation = stepAnimation.concat(this.pb.getOpacityAnimation(stepId));
+    if (this.progressBar !== undefined && this.progressBar !== null)
+      stepAnimation = stepAnimation.concat(this.progressBar.getOpacityAnimation(stepId));
 
     /* For each displayed element */
     for (let elemId = 0; elemId < this.state.drill.ids.length; elemId += 1) {
@@ -317,7 +316,7 @@ class Animation extends React.Component {
       /* If this element must change its position */
       if (nextPosition !== undefined && nextPosition !== null) {
         /* Animation of the element at step stepId */
-        var deStepAnimation = [];
+        var displayedElementStepAnimation = [];
 
         var substepCount = nextPosition.length;
 
@@ -325,19 +324,23 @@ class Animation extends React.Component {
         if (playSubSteps) {
           /* For each substep of element de in step stepId */
           for (var substep = 0; substep < substepCount; substep++) {
-            var currentDE = this.state.de[elemId];
+            var currentDisplayedElement = this.state.displayedElements[elemId];
 
             /* Get the position of the element at this substep */
             var pixelPosition = this._positionPercentToPixel(nextPosition[substep][0], nextPosition[substep][1]);
 
             /* Get the corresponding animation */
-            var anim = currentDE.getAnimation(pixelPosition[0], pixelPosition[1], this.stepLength / substepCount);
+            var anim = currentDisplayedElement.getAnimation(
+              pixelPosition[0],
+              pixelPosition[1],
+              this.stepLength / substepCount,
+            );
 
-            deStepAnimation.push(anim);
+            displayedElementStepAnimation.push(anim);
           }
         } else {
           /* If the sub steps must not be played, just move the element to its last position */
-          currentDE = this.state.de[elemId];
+          currentDisplayedElement = this.state.displayedElements[elemId];
 
           /* Get the position of the element at this substep */
           pixelPosition = this._positionPercentToPixel(
@@ -397,7 +400,11 @@ class Animation extends React.Component {
         style={[styles.mainContainer, { height: this.state.animationHeight }, { width: this.state.animationWidth }]}
       >
         {!this.props.readonly && this._display(this.cuts)}
-        {this.state.de === undefined || this.state.de === null ? <View /> : this.state.de.map(this._display)}
+        {this.state.displayedElements === undefined || this.state.displayedElements === null ? (
+          <View />
+        ) : (
+          this.state.displayedElements.map(this._display)
+        )}
         <View style={styles.controls}>
           <TouchableOpacity style={styles.controlBtn} onPress={() => this._previousStep()}>
             <Image style={styles.controlIcn} source={iconPrev} />
@@ -415,7 +422,7 @@ class Animation extends React.Component {
             </TouchableOpacity>
           )}
         </View>
-        {this._display(this.pb)}
+        {this._display(this.progressBar)}
       </View>
     );
   }
@@ -423,7 +430,7 @@ class Animation extends React.Component {
   /** Used to update the animation when a modification is made through the editor */
   componentDidUpdate() {
     if (
-      (this.state.de === undefined || this.state.de === null) &&
+      (this.state.displayedElements === undefined || this.state.displayedElements === null) &&
       this.state.drill !== undefined &&
       this.state.drill !== null
     ) {
@@ -432,14 +439,14 @@ class Animation extends React.Component {
       });
       this.setState(
         {
-          de: this._createDE(),
+          de: this._createDisplayedElement(),
         },
         () => {
           /* Set all the elements to their initial positions */
           this._setCurrentPositions();
 
           this._initializeCuts();
-          this.pb = this._createPB();
+          this.progressBar = this._createProgressBar();
         },
       );
     }

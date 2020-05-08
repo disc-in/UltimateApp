@@ -1,89 +1,77 @@
 import React from 'react';
-import { StyleSheet, View, Text, Image, TouchableOpacity, FlatList } from 'react-native';
+import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
+import DrillList from './shared/DrillList';
+import filterButtonImage from '../../assets/filter.png';
+import { DrillTypes } from '../Fixtures';
 
-const mapStateToProps = state => {
-  return {
-    drills: state.drills,
-  };
-};
+import theme from '../styles/theme.style';
+import * as list from '../styles/list.style';
 
-const DrillListPage = props => {
-  const { navigation } = props;
-  const type = props.route.params.type;
-  const drills = props.drills.filter(d => d.type === type);
+export const DrillListPage = props => {
+  const { navigation, route, storeDrills } = props;
+  const { type, filteredDrills } = route.params;
+
+  const storeDrillsForType = storeDrills.filter(drill => drill.type === type);
+  const displayedDrills = filteredDrills ? filteredDrills : storeDrillsForType;
 
   return (
     <View style={styles.drillListPage}>
-      <Text style={styles.counter}>{drills.length} Drills</Text>
-      <FlatList
-        data={drills}
-        keyExtractor={item => item.id.toString()}
-        renderItem={({ item }) => (
-          <TouchableOpacity style={styles.drill} onPress={() => navigation.navigate('DrillPage', { drill: item })}>
-            <Image style={styles.image} source={{ uri: item.img }} />
-            <View style={styles.contentContainer}>
-              <View style={styles.drillSource}>
-                <Text style={styles.sourceText}>{item.source}</Text>
-              </View>
-              <Text style={styles.titleText}>{item.title}</Text>
-              <Text style={styles.playersText}>
-                Duration: {item.duration} - min players: {item.nbPlayers}
-              </Text>
-            </View>
-          </TouchableOpacity>
-        )}
-        onEndReachedThreshold={0.5}
-        onEndReached={() => {}}
-      />
+      <Text style={list.counter}>{displayedDrills.length} drills available</Text>
+      <DrillList navigation={navigation} drillsToDisplay={displayedDrills} />
+      <TouchableOpacity
+        style={styles.filterButton}
+        onPress={() => {
+          const filtersPage = props.route.params.type === DrillTypes.FRISBEE ? 'FrisbeeFilters' : 'FitnessFilters';
+          navigation.navigate(filtersPage, {
+            initialData: storeDrillsForType,
+            previousScreen: route.name,
+            previousType: type,
+          });
+        }}
+        testID="filterButton"
+      >
+        <Image source={filterButtonImage} style={styles.filterButtonImage} />
+      </TouchableOpacity>
     </View>
   );
+};
+
+const mapStateToProps = state => {
+  return {
+    storeDrills: state.drills,
+  };
 };
 
 export default connect(mapStateToProps)(DrillListPage);
 
 const styles = StyleSheet.create({
   drillListPage: {
-    padding: 16,
-    backgroundColor: '#fff',
+    paddingTop: 10,
+    paddingLeft: 20,
+    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     height: '100%',
   },
-  drill: {
-    height: 140,
-    flexDirection: 'row',
+  filterButton: {
+    position: 'absolute',
+    bottom: '5%',
+    right: '5%',
+    width: 60,
+    height: 60,
+    borderRadius: 50,
+    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
+    justifyContent: 'center',
+    alignItems: 'center',
+    shadowOffset: {
+      width: 0,
+      height: 10,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 10,
+    elevation: 10,
   },
-  counter: {
-    color: '#767676',
-    marginBottom: 16,
-  },
-  image: {
-    width: 120,
-    height: 120,
-    marginRight: 5,
-  },
-  contentContainer: {
-    padding: 16,
-  },
-  drillSource: {
-    flex: 2,
-  },
-  titleText: {
-    flex: 3,
-    fontWeight: 'bold',
-    fontSize: 20,
-    flexWrap: 'wrap',
-  },
-  sourceText: {
-    color: '#A6A6A6',
-  },
-  playersText: {
-    flex: 2,
-    color: '#AFAFAF',
-    fontSize: 14,
-  },
-  favoriteImage: {
-    width: 25,
-    height: 25,
-    marginRight: 5,
+  filterButtonImage: {
+    width: '100%',
+    height: '100%',
   },
 });

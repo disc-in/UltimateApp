@@ -1,19 +1,16 @@
 import React from 'react';
-import { Button, StyleSheet, Easing, Animated, View } from 'react-native';
+import { StyleSheet, Easing, Animated, View, TouchableOpacity, Image } from 'react-native';
 
 import DisplayedElement from './animation/DisplayedElement';
-// import DrillMenageATrois from './animation/DrillMenageATrois';
-// import DrillSquare from './animation/DrillSquare';
 import DrillCuts from './animation/DrillCuts';
 import ProgressBar from './animation/ProgressBar';
 import Drill from './animation/Drill';
 
-/** Display a drill and enables to animate it using buttons (play, next step, previous step)
- *
- * TODO:
- * - when restarting the complete animation, if the elements are not in their initial positions, add an empty animation to move the elements to their initial position before starting the animation
- * - fix the ratio of a drill (otherwise the display of a drill may be distorted)
- */
+import iconPlay from '../../assets/play.png';
+import iconPrev from '../../assets/prev.png';
+import iconNext from '../../assets/next.png';
+import iconReplay from '../../assets/replay.png';
+
 class Animation extends React.Component {
   constructor(props) {
     super(props);
@@ -87,8 +84,6 @@ class Animation extends React.Component {
       );
     }
 
-    //	console.log("animation end createde");
-
     return tempDe;
   }
 
@@ -117,6 +112,7 @@ class Animation extends React.Component {
       this.state.animationHeight !== null
     )
       return new ProgressBar({
+        readonly: this.props.readonly,
         animationWidth: this.state.animationWidth,
         animationHeight: this.state.animationHeight,
         stepCount: this._stepCount(),
@@ -157,10 +153,6 @@ class Animation extends React.Component {
   _setPositions(step) {
     console.log('animation _setPositions(' + step + ') called');
 
-    //	console.log("this.state.de: " + this.state.de);
-    //	console.log("this.state.de is null: ");
-    //	console.log(this.state.de === null);
-    //	console.log(this.state.de === undefined);
     var intStep = Math.ceil(step);
 
     console.log('intStep: ' + intStep);
@@ -182,8 +174,6 @@ class Animation extends React.Component {
       }
     }
 
-    //	console.log("set step");
-
     this.setState({ currentStep: intStep }, () => {
       if (this.props.onStepChange !== undefined && this.props.onStepChange !== null) this.props.onStepChange(intStep);
     });
@@ -193,10 +183,6 @@ class Animation extends React.Component {
   componentDidMount() {
     var inputDrill = new Drill();
     var initialStep = 0;
-
-    //	console.log("animation component did mount");
-
-    //	console.log("state.w/h: " + this.state.animationWidth + "/" + this.state.animationHeight);
 
     // If the current step is fixed by the parent (used in the editor)
     if (this.props.currentStep !== undefined && this.props.currentStep !== null) initialStep = this.props.currentStep;
@@ -224,6 +210,15 @@ class Animation extends React.Component {
         );
       },
     );
+  }
+
+  _goToInit() {
+    this._initPositions();
+    Animated.timing(this.currentStepAV, {
+      toValue: 0,
+      duration: 0,
+      easing: Easing.linear,
+    }).start();
   }
 
   /** Play the whole drill */
@@ -353,10 +348,10 @@ class Animation extends React.Component {
           /* Get the corresponding animation */
           anim = currentDE.getAnimation(pixelPosition[0], pixelPosition[1], this.stepLength);
 
-          deStepAnimation.push(anim);
+          displayedElementStepAnimation.push(anim);
         }
 
-        stepAnimation.push(Animated.sequence(deStepAnimation));
+        stepAnimation.push(Animated.sequence(displayedElementStepAnimation));
       }
     }
 
@@ -397,20 +392,29 @@ class Animation extends React.Component {
       this.cutsArray.push(this.cuts);
     }
 
-    //        console.log("animationH/W: " + this.state.animationWidth + "/" + this.state.animationHeight);
-
     return (
       <View
         style={[styles.mainContainer, { height: this.state.animationHeight }, { width: this.state.animationWidth }]}
       >
-        {this.props.editable ? this._display(this.cuts) : undefined}
+        {!this.props.readonly && this._display(this.cuts)}
         {this.state.de === undefined || this.state.de === null ? <View /> : this.state.de.map(this._display)}
-        <View style={{ flex: 0.1 }} />
-        <Button style={{ flex: 1 }} title=" < " onPress={() => this._previousStep()} />
-        <View style={{ flex: 0.1 }} />
-        <Button style={{ flex: 1 }} title="Lancer" onPress={() => this._restart()} />
-        <View style={{ flex: 0.1 }} />
-        <Button title=" > " style={{ flex: 1 }} onPress={() => this._nextStep()} />
+        <View style={styles.controls}>
+          <TouchableOpacity style={styles.controlBtn} onPress={() => this._previousStep()}>
+            <Image style={styles.controlIcn} source={iconPrev} />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.controlBtn} onPress={() => this._restart()}>
+            <Image style={styles.controlIcn} source={iconPlay} />
+          </TouchableOpacity>
+          {this.state.currentStep === this._stepCount() - 1 ? (
+            <TouchableOpacity style={styles.controlBtn} onPress={() => this._goToInit()}>
+              <Image style={styles.controlIcn} source={iconReplay} />
+            </TouchableOpacity>
+          ) : (
+            <TouchableOpacity style={styles.controlBtn} onPress={() => this._nextStep()}>
+              <Image style={styles.controlIcn} source={iconNext} />
+            </TouchableOpacity>
+          )}
+        </View>
         {this._display(this.pb)}
       </View>
     );
@@ -418,8 +422,6 @@ class Animation extends React.Component {
 
   /** Used to update the animation when a modification is made through the editor */
   componentDidUpdate() {
-    //	console.log("animation component did update");
-
     if (
       (this.state.de === undefined || this.state.de === null) &&
       this.state.drill !== undefined &&
@@ -433,8 +435,6 @@ class Animation extends React.Component {
           de: this._createDE(),
         },
         () => {
-          //		    console.log("finished updatding de");
-
           /* Set all the elements to their initial positions */
           this._setCurrentPositions();
 
@@ -447,12 +447,8 @@ class Animation extends React.Component {
 
   /** Used to update the animation when a modification is made through the editor */
   static getDerivedStateFromProps(props, state) {
-    //		console.log("animation derived state called");
-
     // Test if the drill has changed
     var isEqual = true;
-
-    //	console.log("state w/h: " + state.animationWidth + "/"+ state.animationHeight + " props w/h: " + props.animationWidth + "/" + props.height);
 
     if (props.width !== state.animationWidth || props.height !== state.animationHeight) isEqual = false;
 
@@ -512,7 +508,6 @@ class Animation extends React.Component {
           elemId = 0;
           cutId = 0;
         }
-        //		console.log(stepId + "/" + elemId + "/" + cutId);
       }
     }
 
@@ -530,11 +525,26 @@ class Animation extends React.Component {
 
 const styles = StyleSheet.create({
   mainContainer: {
-    marginTop: 40,
     alignItems: 'flex-start',
     flexDirection: 'row',
     justifyContent: 'center',
     backgroundColor: 'white',
+  },
+  controls: {
+    position: 'absolute',
+    bottom: 0,
+    right: 0,
+    flexDirection: 'row',
+  },
+  controlBtn: {
+    width: 30,
+    height: 30,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  controlIcn: {
+    width: 20,
+    height: 20,
   },
 });
 

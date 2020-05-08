@@ -183,12 +183,12 @@ class DrillCuts extends React.Component {
     /*
 // In svg
 
-stroke="green" 
+stroke="green"
 // Outside svg
 
               <Svg style={[StyleSheet.absoluteFill]} height="100%" width="100%">
                 <Line x1={cut.x0.toString()} y1={cut.y0.toString()} x2={cut.x2.toString()} y2={cut.y2.toString()}  strokeWidth="2" strokeDasharray="5, 5" />
-                <Line x1={cut.x1} y1={cut.y1} x2={cut.x2} y2={cut.y2} strokeWidth="2" strokeDasharray="5, 5" /> 
+                <Line x1={cut.x1} y1={cut.y1} x2={cut.x2} y2={cut.y2} strokeWidth="2" strokeDasharray="5, 5" />
               </Svg>
               {this._display(cut.countercutCircle)}
             {this._display(cut.cutCircle)}

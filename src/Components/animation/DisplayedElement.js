@@ -1,5 +1,8 @@
 import React from 'react';
-import { StyleSheet, Easing, Animated, View, PanResponder } from 'react-native';
+import { StyleSheet, Easing, Animated, View, Text, PanResponder } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+
+import theme from '../../styles/theme.style';
 
 /** An element displayed in a drill animation */
 class DisplayedElement extends React.Component {
@@ -21,11 +24,9 @@ class DisplayedElement extends React.Component {
     var dimensionMin = Math.min(this.props.animationWidth, this.props.animationHeight);
     this.props.playerRadius = dimensionMin / 12;
     this.props.discRadius = this.props.playerRadius / 2;
-    //    this.props.discRadius = 200;
     this.props.coneSize = (this.props.playerRadius * 5) / 16;
-
-    this.props.bottomconeSize = (this.props.playerRadius * 10) / 16;
-    this.props.borderWidth = this.props.discRadius / 10;
+    this.props.bottomconeSize = (this.props.playerRadius * 14) / 16;
+    this.props.borderWidth = (this.props.discRadius * 8) / 10;
 
     /* Current position of the element in pixels */
 
@@ -42,8 +43,6 @@ class DisplayedElement extends React.Component {
     // True if the element has already been moved
     this.moved = false;
     this._val = { x: 0, y: 0 };
-
-    //	console.log("de movable: " + this.props.movable);
 
     this.currentPosition.addListener(value => (this._val = value)); // Initialize PanResponder with move handling
 
@@ -80,7 +79,6 @@ class DisplayedElement extends React.Component {
 
   /** Set the position of the element (the argument are in pixels not in percentage of the screen) */
   setPosition(xArg, yArg) {
-    //	console.log("de: set position: " + xArg + "/" + yArg);
     this.currentPosition.setValue({ x: xArg, y: yArg });
   }
 
@@ -94,17 +92,14 @@ class DisplayedElement extends React.Component {
   }
 
   render() {
-    var panStyle = {
+    const panStyle = {
       transform: this.currentPosition.getTranslateTransform(),
     };
 
-    /* Returns a component according to the element type */
     switch (this.props.id) {
       case 'defense':
-        //            console.log("Render in defense");
         return (
-          <Animated.Text
-            // Use the panResponder in this view
+          <Animated.View
             {...this.panResponder.panHandlers}
             style={[
               panStyle,
@@ -117,16 +112,13 @@ class DisplayedElement extends React.Component {
             ]}
             key={this.props.key}
           >
-            {this.props.number}
-          </Animated.Text>
+            <Text style={styles.defenseText}>{this.props.number}</Text>
+          </Animated.View>
         );
 
       case 'offense':
-        //            console.log("Render in offense l/t: " + this.props.left + "/" + this.props.top);
-
         return (
-          <Animated.Text
-            // Use the panResponder in this view
+          <Animated.View
             {...this.panResponder.panHandlers}
             style={[
               panStyle,
@@ -139,15 +131,27 @@ class DisplayedElement extends React.Component {
             ]}
             key={this.props.key}
           >
-            {this.props.number}
-          </Animated.Text>
+            <LinearGradient
+              colors={[theme.GRADIENT_FIRST_COLOR, theme.GRADIENT_SECOND_COLOR]}
+              style={[
+                styles.gradient,
+                {
+                  height: this.props.playerRadius,
+                  width: this.props.playerRadius,
+                  borderRadius: this.props.playerRadius,
+                },
+              ]}
+              start={{ x: 1, y: 1 }}
+              end={{ x: 0, y: 0 }}
+            >
+              <Text style={styles.offenseText}>{this.props.number}</Text>
+            </LinearGradient>
+          </Animated.View>
         );
 
       case 'disc':
-        //            console.log("Render in disc");
         return (
           <Animated.View
-            // Use the panResponder in this view
             {...this.panResponder.panHandlers}
             style={[
               panStyle,
@@ -164,7 +168,6 @@ class DisplayedElement extends React.Component {
         );
 
       case 'triangle':
-        //            console.log("Render in triangle");
         return (
           <Animated.View
             // Use the panResponder in this view
@@ -172,11 +175,11 @@ class DisplayedElement extends React.Component {
             style={[
               panStyle,
               styles.triangle,
-              { borderLeftWidth: 12 },
-              { borderRightWidth: 12 },
-              { borderBottomWidth: 25 },
-              { top: 0 },
-              { left: 0 },
+              { borderLeftWidth: this.props.borderWidth },
+              { borderRightWidth: this.props.borderWidth },
+              { borderBottomWidth: this.props.bottomconeSize },
+              { top: this.top },
+              { left: this.left },
             ]}
             key={this.props.key}
           />
@@ -191,33 +194,41 @@ class DisplayedElement extends React.Component {
 const styles = StyleSheet.create({
   defense: {
     position: 'absolute',
-    backgroundColor: '#dcdcdc',
-    textAlign: 'center',
-    textAlignVertical: 'center',
-    color: 'black',
+    backgroundColor: theme.DEFENSE_COLOR,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-
+  defenseText: {
+    color: theme.OFFENSE_TEXT_COLOR,
+    fontWeight: 'bold',
+  },
   offense: {
     position: 'absolute',
-    backgroundColor: '#cd5c5c',
     textAlign: 'center',
     textAlignVertical: 'center',
-    color: 'white',
+  },
+  offenseText: {
+    fontWeight: 'bold',
+    color: theme.OFFENSE_TEXT_COLOR,
+  },
+  gradient: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 
   disc: {
     position: 'absolute',
-    borderColor: 'black',
-    backgroundColor: 'white',
+    borderColor: theme.DISC_BORDER,
+    backgroundColor: theme.DISC_COLOR,
   },
-
   triangle: {
     position: 'absolute',
     backgroundColor: 'transparent',
     borderStyle: 'solid',
     borderLeftColor: 'transparent',
     borderRightColor: 'transparent',
-    borderBottomColor: 'orange',
+    borderBottomColor: theme.CONE_COLOR,
   },
 });
 

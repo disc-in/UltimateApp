@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<VimeoVideo /> displays a message on error 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "height": 250,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "position": "absolute",
+      }
+    }
+  >
+    <Text>
+      Oopsie! There was an error loading the video...
+    </Text>
+  </View>
+  <View
+    pointerEvents="box-none"
+    style={
+      Object {
+        "height": 250,
+        "overflow": "hidden",
+        "width": 480,
+      }
+    }
+  >
+    <ViewManagerAdapter_ExpoVideoView
+      proxiedProperties={
+        Object {
+          "onError": [Function],
+          "onFullscreenUpdate": [Function],
+          "onLoad": [Function],
+          "onLoadStart": [Function],
+          "onReadyForDisplay": [Function],
+          "onStatusUpdate": [Function],
+          "resizeMode": "mock",
+          "source": undefined,
+          "status": Object {},
+        }
+      }
+      style={
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`<VimeoVideo /> loads the video 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "height": 250,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "position": "absolute",
+      }
+    }
+  >
+    <ActivityIndicator
+      animating={true}
+      color="#A6A6A6"
+      hidesWhenStopped={true}
+      size="large"
+    />
+    <Text>
+      Loading...
+    </Text>
+  </View>
+  <View
+    pointerEvents="box-none"
+    style={
+      Object {
+        "height": 250,
+        "overflow": "hidden",
+        "width": 480,
+      }
+    }
+  >
+    <ViewManagerAdapter_ExpoVideoView
+      proxiedProperties={
+        Object {
+          "onError": [Function],
+          "onFullscreenUpdate": [Function],
+          "onLoad": [Function],
+          "onLoadStart": [Function],
+          "onReadyForDisplay": [Function],
+          "onStatusUpdate": [Function],
+          "resizeMode": "mock",
+          "source": undefined,
+          "status": Object {},
+        }
+      }
+      style={
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    />
+  </View>
+</View>
+`;

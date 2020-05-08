@@ -1,0 +1,227 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DrillList /> renders correctly 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "paddingBottom": 40,
+    }
+  }
+  data={
+    Array [
+      Object {
+        "author": "Author",
+        "description": "Description of the drill",
+        "durationInMinutes": 10,
+        "equipment": "Equipment needs for the drill",
+        "equipmentLabel": "None",
+        "goals": Array [
+          "Full body",
+        ],
+        "id": 1,
+        "image": "https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg",
+        "intensity": "Low",
+        "level": "Beginner",
+        "minimalPlayersNumber": 1,
+        "seasonTiming": "Off-season",
+        "steps": Array [
+          Object {
+            "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
+            "illustrationType": "youtube",
+            "subtitle": "This is a subtitle",
+            "title": "Warmup",
+          },
+        ],
+        "title": "Fitness Drill Title",
+        "type": "fitness",
+      },
+    ]
+  }
+  disableVirtualization={false}
+  drillsToDisplay={
+    Array [
+      Object {
+        "author": "Author",
+        "description": "Description of the drill",
+        "durationInMinutes": 10,
+        "equipment": "Equipment needs for the drill",
+        "equipmentLabel": "None",
+        "goals": Array [
+          "Full body",
+        ],
+        "id": 1,
+        "image": "https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg",
+        "intensity": "Low",
+        "level": "Beginner",
+        "minimalPlayersNumber": 1,
+        "seasonTiming": "Off-season",
+        "steps": Array [
+          Object {
+            "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
+            "illustrationType": "youtube",
+            "subtitle": "This is a subtitle",
+            "title": "Warmup",
+          },
+        ],
+        "title": "Fitness Drill Title",
+        "type": "fitness",
+      },
+    ]
+  }
+  getItem={[Function]}
+  getItemCount={[Function]}
+  horizontal={false}
+  initialNumToRender={10}
+  keyExtractor={[Function]}
+  maxToRenderPerBatch={10}
+  numColumns={1}
+  onContentSizeChange={[Function]}
+  onEndReachedThreshold={2}
+  onLayout={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  stickyHeaderIndices={Array []}
+  updateCellsBatchingPeriod={50}
+  viewabilityConfigCallbackPairs={Array []}
+  windowSize={21}
+>
+  <View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flexDirection": "row",
+            "height": 80,
+            "marginBottom": 20,
+            "opacity": 1,
+          }
+        }
+      >
+        <View
+          accessibilityIgnoresInvertColors={true}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "rgb(0,0,0)",
+              "borderRadius": 5,
+              "height": 80,
+              "justifyContent": "center",
+              "marginRight": 10,
+              "padding": 10,
+              "width": 80,
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg",
+              }
+            }
+            style={
+              Array [
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                },
+                Object {
+                  "height": 80,
+                  "width": 80,
+                },
+                Object {
+                  "borderRadius": 5,
+                  "opacity": 0.5,
+                },
+              ]
+            }
+          />
+          <Text
+            style={
+              Object {
+                "color": "#e5e5e5",
+                "fontSize": 16,
+                "textAlign": "center",
+              }
+            }
+          >
+            10
+          </Text>
+          <Text
+            style={
+              Object {
+                "color": "#e5e5e5",
+                "fontSize": 14,
+                "textAlign": "center",
+              }
+            }
+          >
+            min
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "padding": 5,
+              "paddingBottom": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#A6A6A6",
+                "flex": 2,
+                "fontSize": 14,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "flex": 3,
+                "flexWrap": "wrap",
+                "fontSize": 20,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            Fitness Drill Title
+          </Text>
+          <Text
+            style={
+              Object {
+                "color": "#A6A6A6",
+                "flex": 2,
+                "fontSize": 14,
+              }
+            }
+          >
+            Full body
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;

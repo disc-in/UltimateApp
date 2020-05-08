@@ -1,119 +1,245 @@
-import React, { Component } from 'react';
-import { StyleSheet, View, Text, FlatList, Image, TouchableOpacity } from 'react-native';
+import React, { useRef, useLayoutEffect } from 'react';
+import {
+  ScrollView,
+  StyleSheet,
+  View,
+  Text,
+  ImageBackground,
+  TouchableOpacity,
+  Dimensions,
+  findNodeHandle,
+  Image,
+} from 'react-native';
 import { connect } from 'react-redux';
-import Animation from './Animation';
+import { useHeaderHeight } from '@react-navigation/stack';
+
+import GradientButton from './shared/GradientButton';
+import DrillIllustration from './DrillIllustration';
+import { toggleFavorite } from '../Store/Actions/favoriteAction';
+
 import AnimationEditor from './AnimationEditor';
-import { WebView } from 'react-native-webview';
 import DrillSquare from './animation/DrillSquare';
 
-const contentContainerFlex = 6;
-const stepContainerFlex = 4;
+import theme from '../styles/theme.style';
 
-class DrillPage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      currentStep: props.route.params.drill.steps[0],
-    };
-  }
+import iconFavoriteEmpty from '../../assets/ic_favorite_border_bookmark.png';
+import iconFavoriteFull from '../../assets/ic_favorite_bookmark.png';
 
-  render() {
-    //        const drill = this.props.route.params.drill;
-    const drill = new DrillSquare();
-    const currentStep = this.state.currentStep;
+export const DrillPage = props => {
+  const { route, navigation } = props;
+
+  // Create Component refs
+  const drillScrollView = useRef(null);
+  const firstDrill = useRef(null);
+
+  // Get Header Height
+  const headerHeight = useHeaderHeight();
+  const screenDimension = Dimensions.get('window');
+  const sizeBackground = screenDimension.height - headerHeight;
+  const imageStyles = { ...styles.image, height: sizeBackground };
+
+  // const drill = route.params.drill;
+  const drill = new DrillSquare();
+  const currentStep = route.params.drill.steps[0];
+
+  const onPressStartButton = () => {
+    firstDrill.current.measureLayout(findNodeHandle(drillScrollView.current), (x, y) => {
+      drillScrollView.current.scrollTo({ x: 0, y, animated: true });
+    });
+  };
+
+  const displayFavoriteButton = () => {
+    let sourceImage = iconFavoriteEmpty;
+    if (props.favoriteDrills.findIndex(item => item.id === props.route.params.drill.id) !== -1) {
+      sourceImage = iconFavoriteFull;
+    }
 
     return (
-      <View style={styles.main_container}>
-        <View style={styles.content_container}>
-          <AnimationEditor animation={currentStep.animation} heightRatio={1} widthRatio={1} editable />
-
-          {/*	        <Animation animation={currentStep.animation} heightRatio={stepContainerFlex/(contentContainerFlex+stepContainerFlex)} widthRatio={1} editable={false} drill={drill}/>
-          <WebView source={{ uri: 'https://www.youtube.com/embed/oN1bzPCKkGE' }} style={{ marginTop: 20 }} />
-                   currentStep.animation ? <Animation animation={currentStep.animation}/>
-                   : currentStep.video ? <Text>Soon a Video here</Text>
-                   : currentStep.webview ? <Text>Soon a Webpage here</Text>
-                   : <Text>No visual content for this step</Text> */}
-        </View>
-        {/*              <View style={styles.steps_list}>
-                <FlatList
-            data={drill.steps}
-            // keyExtractor={(item) => item.id.toString()}
-            renderItem={({ item }) => (
-              <TouchableOpacity
-                style={[styles.step, currentStep == item ? styles.current_step : styles.other_step]}
-                onPress={() => this.setState({ currentStep: item })}
-              >
-                <Text style={styles.title_text}>{item.title}</Text>
-                <Text style={styles.description_text}>{item.subtitle}</Text>
-              </TouchableOpacity>
-            )}
-            onEndReachedThreshold={0.5}
-            onEndReached={() => {}}
-          />
-          </View>*/}
-      </View>
+      <TouchableOpacity
+        style={styles.favoriteContainer}
+        onPress={() => props.toggleFavorite(drill)}
+        testID="favoriteButton"
+      >
+        <Image style={styles.favoriteImage} source={sourceImage} />
+      </TouchableOpacity>
     );
-  }
-}
+  };
 
+  useLayoutEffect(() =>
+    navigation.setOptions({
+      headerRight: () => displayFavoriteButton(),
+    }),
+  );
+
+  return (
+    <ScrollView ref={drillScrollView} style={styles.drillPage}>
+      <ImageBackground source={{ uri: drill.image }} style={imageStyles} imageStyle={styles.imageOpacity}>
+        <View style={styles.titleContainer}>
+          <Text style={styles.title}>{drill.title}</Text>
+          <Text style={styles.author}>{drill.author}</Text>
+        </View>
+        <View style={styles.infoWrapper}>
+          <View style={styles.infoSubWrapper}>
+            <Text style={styles.infoDrill}>{drill.durationInMinutes}</Text>
+            <Text style={styles.info}> minutes</Text>
+          </View>
+          <View style={styles.separator} />
+          <View style={styles.infoSubWrapper}>
+            <Text style={styles.infoDrill}>{drill.minimalPlayersNumber}+</Text>
+            <Text style={styles.info}> players</Text>
+          </View>
+          <View style={styles.separator} />
+          <View style={styles.infoSubWrapper}>
+            <Text style={styles.infoDrill}>{drill.level}</Text>
+            <Text style={styles.info}> level</Text>
+          </View>
+        </View>
+        <GradientButton onPress={onPressStartButton} text="Start" />
+      </ImageBackground>
+      <View style={styles.separator} />
+      <View style={styles.description}>
+        <View style={styles.descriptionItem}>
+          <Text style={styles.descriptionTitle}>Good for</Text>
+          <Text style={styles.descriptionText}>{drill.goals ? drill.goals.join(' - ') : ''}</Text>
+        </View>
+      </View>
+      <View style={styles.lines} />
+      <View style={styles.description}>
+        <View style={styles.descriptionItem}>
+          <Text style={styles.descriptionTitle}>Equipment</Text>
+          <Text style={styles.descriptionText}>{drill.equipmentLabel}</Text>
+        </View>
+      </View>
+      <View style={styles.lines} />
+      <View style={styles.description}>
+        <View style={styles.descriptionItem}>
+          <Text style={styles.descriptionTitle}>Description</Text>
+          <Text style={styles.descriptionText}>{drill.description}</Text>
+        </View>
+      </View>
+      <View ref={firstDrill} style={styles.animation}>
+        <DrillIllustration drill={drill} />
+      </View>
+      <AnimationEditor animation={currentStep.animation} heightRatio={1} widthRatio={1} editable />
+    </ScrollView>
+  );
+};
+
+const screenDimension = Dimensions.get('window');
 const styles = StyleSheet.create({
-  main_container: {
-    flex: 1,
-  },
-  item_container: {
-    flex: 1,
-  },
-  content_container: {
-    flex: contentContainerFlex,
-  },
-  steps_list: {
-    flex: stepContainerFlex,
-    backgroundColor: 'lightgrey',
-  },
-  step: {
-    backgroundColor: 'lightgrey',
-    borderTopColor: 'black',
-    borderTopWidth: 1,
-  },
-  current_step: {
-    backgroundColor: 'white',
-  },
-  loading_container: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 0,
-    bottom: 0,
-    alignItems: 'center',
-    justifyContent: 'center',
+  drillPage: {
+    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
   },
   image: {
-    height: 169,
-    margin: 5,
+    padding: 20,
+    alignItems: 'center',
+    backgroundColor: 'rgb(0,0,0)',
+    height: Dimensions.get('window').height, // will be overwritten
   },
-  title_text: {
-    fontWeight: 'bold',
-    fontSize: 20,
+  imageOpacity: {
+    opacity: 0.5,
+  },
+  title: {
+    color: theme.COLOR_PRIMARY_LIGHT,
+    fontSize: 35,
+    textAlign: 'center',
+  },
+  titleContainer: {
+    height: (Dimensions.get('window').height * 2) / 5,
     flex: 1,
-    flexWrap: 'wrap',
-    marginLeft: 5,
-    marginRight: 5,
-    marginTop: 10,
-    marginBottom: 10,
-    color: '#000000',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  description_text: {
-    fontStyle: 'italic',
-    color: '#666666',
-    margin: 5,
+  infoWrapper: {
+    height: (Dimensions.get('window').height * 1) / 5,
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+  },
+  info: {
+    color: theme.COLOR_PRIMARY_LIGHT,
+    paddingHorizontal: 30,
+    fontSize: theme.FONT_SIZE_MEDIUM,
+  },
+  separator: {
+    height: 15,
+    borderRightWidth: 0.5,
+    borderRightColor: theme.COLOR_PRIMARY_LIGHT,
+  },
+  videoLink: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  videoLinkText: {
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  description: {
+    padding: 20,
+  },
+  descriptionItem: {
     marginBottom: 15,
+  },
+  descriptionTitle: {
+    marginBottom: 10,
+    textAlign: 'center',
+    fontWeight: 'bold',
+    fontSize: theme.FONT_SIZE_LARGE,
+    color: theme.COLOR_PRIMARY,
+  },
+  descriptionText: {
+    color: theme.COLOR_SECONDARY,
+    textAlign: 'center',
+    fontSize: theme.FONT_SIZE_MEDIUM,
+  },
+  infoDrill: {
+    color: theme.COLOR_PRIMARY_LIGHT,
+    paddingHorizontal: 30,
+    fontSize: theme.FONT_SIZE_LARGE,
+  },
+  infoSubWrapper: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  gradient: {
+    flex: 1,
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  animation: {
+    flex: 1,
+    height: screenDimension.height - 80,
+  },
+  author: {
+    color: theme.COLOR_PRIMARY_LIGHT,
+    paddingHorizontal: 30,
+    fontSize: theme.FONT_SIZE_SMALL,
+  },
+  lines: {
+    borderBottomColor: theme.COLOR_SECONDARY_LIGHT,
+    borderBottomWidth: 1,
+  },
+  favoriteContainer: {
+    marginRight: 20,
+  },
+  favoriteImage: {
+    width: 17,
+    height: 20,
   },
 });
 
-const mapStateToProps = (state, props) => {
+const mapStateToProps = state => {
   return {
-    favoritesFilm: state.favoritesFilm,
+    favoriteDrills: state.favoriteDrills,
   };
 };
 
-export default connect(mapStateToProps)(DrillPage);
+const mapDispatchToProps = { toggleFavorite };
+
+export default connect(mapStateToProps, mapDispatchToProps)(DrillPage);

@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FilterButton /> renders correctly 1`] = `
+<View
+  accessible={true}
+  focusable={false}
+  isTVSelectable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "borderColor": "#e5e5e5",
+      "borderWidth": 1,
+      "flexBasis": "30%",
+      "flexGrow": 1,
+      "marginRight": 5,
+      "opacity": 1,
+      "paddingHorizontal": 20,
+      "paddingVertical": 10,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "textAlign": "center",
+        "textTransform": "capitalize",
+      }
+    }
+  >
+    OK
+  </Text>
+</View>
+`;
+
+exports[`<FilterButton /> renders correctly when active 1`] = `
+<View
+  accessible={true}
+  focusable={false}
+  isTVSelectable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#eee",
+      "borderColor": "#d5d5d5",
+      "borderWidth": 1,
+      "flexBasis": "30%",
+      "flexGrow": 1,
+      "marginRight": 5,
+      "opacity": 1,
+      "paddingHorizontal": 20,
+      "paddingVertical": 10,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "textAlign": "center",
+        "textTransform": "capitalize",
+      }
+    }
+  >
+    OK
+  </Text>
+</View>
+`;

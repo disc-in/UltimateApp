@@ -23,6 +23,7 @@ class Drill {
       nextPosition = this.positions[stepToCheck][elemId];
       stepToCheck -= 1;
     }
+
     return nextPosition;
   }
 

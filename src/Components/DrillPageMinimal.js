@@ -52,6 +52,7 @@ export const DrillPageMinimal = props => {
       <View style={styles.titleContainer}>
         <Text style={styles.title}>{drill.title}</Text>
       </View>
+
       <MinimalDrill style={styles.illustration} drill={drill} />
       <View style={styles.btnMoreContainer}>
         <Button onPress={goToFullDrill} text="DETAILS" buttonLight="true" />

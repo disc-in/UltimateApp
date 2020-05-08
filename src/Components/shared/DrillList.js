@@ -14,7 +14,7 @@ const DrillList = props => {
     const imageMainData = type === DrillTypes.FRISBEE ? 'minimalPlayersNumber' : 'durationInMinutes';
     const imageMainDataLegend = type === DrillTypes.FRISBEE ? 'players' : 'min';
     return (
-      <TouchableOpacity style={list.item} onPress={() => onDrillPress(item)}>
+      <TouchableOpacity style={[list.item, props.ItemComponentStyle]} onPress={() => onDrillPress(item)}>
         <ImageBackground source={{ uri: image }} style={list.image} imageStyle={list.imageOpacity}>
           <Text style={{ ...list.imageText, ...list.imageTextMain }}>{item[imageMainData]}</Text>
           <Text style={list.imageText}>{imageMainDataLegend}</Text>
@@ -29,14 +29,13 @@ const DrillList = props => {
   };
 
   return (
-    <View>
-      <FlatList
-        data={drillsToDisplay}
-        keyExtractor={item => item.id.toString()}
-        renderItem={renderDrill}
-        contentContainerStyle={list.contentContainer}
-      />
-    </View>
+    <FlatList
+      {...props}
+      data={drillsToDisplay}
+      keyExtractor={item => item.id.toString()}
+      renderItem={renderDrill}
+      contentContainerStyle={list.contentContainer}
+    />
   );
 };
 

@@ -238,11 +238,9 @@ exports[`<DrillPageMinimal /> renders correctly with a training and a drill 1`] 
           "borderWidth": 1,
           "height": 40,
           "justifyContent": "center",
-          "left": "10%",
           "opacity": 1,
           "padding": 10,
-          "right": "10%",
-          "width": "90%",
+          "width": "80%",
         }
       }
       testID="button"

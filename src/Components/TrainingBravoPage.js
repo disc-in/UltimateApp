@@ -64,31 +64,33 @@ export default connect(null, mapDispatchToProps)(TrainingBravoPage);
 const styles = StyleSheet.create({
   trainingBravoPage: {
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
-    height: '100%',
-    padding: 20,
+    flex: 1,
+    width: '100%',
   },
   header: {
     alignItems: 'center',
-    marginBottom: 40,
+    padding: 20,
+    marginBottom: 20,
   },
   title: {
     fontSize: theme.FONT_SIZE_LARGE,
     fontWeight: '500',
     marginBottom: 20,
+    paddingHorizontal: 20,
   },
   subtitle: {
     fontSize: theme.FONT_SIZE_MEDIUM,
+    paddingHorizontal: 20,
   },
   goal: {
     fontSize: theme.FONT_SIZE_SMALL,
+    paddingHorizontal: 20,
   },
   footer: {
     flex: 1,
-    width: '100%',
     position: 'absolute',
-    bottom: '3%',
-    left: '3%',
-    right: '3%',
+    width: '100%',
+    bottom: 20,
     alignItems: 'center',
   },
   incentive: {

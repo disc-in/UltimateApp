@@ -2,6 +2,19 @@
 
 exports[`<DrillIllustration /> renders correctly for a drill with a video from vimeo 1`] = `
 <View
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  onSwipeLeft={[Function]}
   style={
     Object {
       "flex": 1,
@@ -265,6 +278,19 @@ exports[`<DrillIllustration /> renders correctly for a drill with a video from v
 
 exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] = `
 <View
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  onSwipeLeft={[Function]}
   style={
     Object {
       "flex": 1,
@@ -744,6 +770,19 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
 
 exports[`<DrillIllustration /> renders correctly for a drill with no video nor animation 1`] = `
 <View
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  onSwipeLeft={[Function]}
   style={
     Object {
       "flex": 1,
@@ -807,6 +846,19 @@ exports[`<DrillIllustration /> renders correctly for a drill with no video nor a
 
 exports[`<DrillIllustration /> renders correctly for a drill with video 1`] = `
 <View
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  onSwipeLeft={[Function]}
   style={
     Object {
       "flex": 1,

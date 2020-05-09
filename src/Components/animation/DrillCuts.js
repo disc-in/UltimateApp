@@ -1,6 +1,8 @@
 import React from 'react';
-import { StyleSheet, View, Animated, PanResponder } from 'react-native';
+import { StyleSheet, View,  PanResponder } from 'react-native';
 import Svg, { Line, Circle } from 'react-native-svg';
+
+import Animated from 'react-native-reanimated';
 
 import MovingCircle from './MovingCircle';
 
@@ -84,12 +86,30 @@ class DrillCuts extends React.Component {
               var x2 = counterCutX;
               var y2 = counterCutY;
 
-              var d1 = Math.sqrt(Math.pow(x0 - x2, 2) + Math.pow(y0 - y2, 2));
+                var d1 = Math.sqrt(Math.pow(x0 - x2, 2) + Math.pow(y0 - y2, 2));                
               var d2 = Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
 
-              var angle1 = (-Math.asin(Math.abs(y0 - y2) / d1)).toString() + 'rad';
-              var angle2 = (-Math.asin(Math.abs(y1 - y2) / d2)).toString() + 'rad';
-
+                
+                var angle1 = new Animated.Value(Math.asin(Math.abs(y0 - y2) / d1));// + 'rad';
+                var angle2 = new Animated.Value(Math.asin(Math.abs(y2 - y1) / d2));//.toString() + 'rad';
+                
+                if(y2 > y0){
+                    if(x2 < x0)
+                        angle1 = new Animated.Value(3.14159 - angle1._value);
+                }
+                else
+                    if(x2 > x0)
+                        angle1 = new Animated.Value(3.14159 - angle1._value);
+                
+                if(y1 > y2){
+                    if(x1 < x2)
+                        angle2 = new Animated.Value(3.14159 - angle2._value);
+                }
+                else
+                    if(x1 > x2)
+                        angle2 = new Animated.Value(3.14159 - angle2._value);
+                
+                
               var left1 = (x0 + x2 - d1) / 2;
               var top1 = (y0 + y2) / 2;
               var left2 = (x1 + x2 - d2) / 2;
@@ -180,31 +200,10 @@ class DrillCuts extends React.Component {
   }
 
   _displayCut = cut => {
-    /*
-// In svg
 
-stroke="green"
-// Outside svg
-
-              <Svg style={[StyleSheet.absoluteFill]} height="100%" width="100%">
-                <Line x1={cut.x0.toString()} y1={cut.y0.toString()} x2={cut.x2.toString()} y2={cut.y2.toString()}  strokeWidth="2" strokeDasharray="5, 5" />
-                <Line x1={cut.x1} y1={cut.y1} x2={cut.x2} y2={cut.y2} strokeWidth="2" strokeDasharray="5, 5" />
-              </Svg>
-              {this._display(cut.countercutCircle)}
-            {this._display(cut.cutCircle)}
-*/
-
-    /* If there is no counter cut */
-    /*        console.log('pos 0: ' + cut.x0 + '/' + cut.y0);
-        console.log('pos 1: ' + cut.x1 + '/' + cut.y1);
-        console.log('pos 2: ' + cut.x2 + '/' + cut.y2);
-        console.log('disc radius: ' + this.discRadius);
-*/
-
-    console.log('angle1: ' + cut.angle1);
     return (
       <View key={cut.key + 4000} style={[StyleSheet.absoluteFill]} height="100%" width="100%">
-        <View
+        <Animated.View
           style={[
             { height: 1 },
             { width: cut.d1 },
@@ -215,11 +214,11 @@ stroke="green"
             { position: 'absolute' },
             { top: cut.top1 },
             { left: cut.left1 },
-            { transform: [{ rotate: cut.angle1 }] },
+            { transform: [{ rotate: cut.angle1.__getValue() }] },
           ]}
         />
 
-        <View
+        <Animated.View
           style={[
             { height: 1 },
             { width: cut.d2 },
@@ -230,7 +229,7 @@ stroke="green"
             { position: 'absolute' },
             { top: cut.top2 },
             { left: cut.left2 },
-            { transform: [{ rotate: cut.angle2 }] },
+            { transform: [{ rotate: cut.angle2.__getValue() }] },
           ]}
         />
       </View>
@@ -239,13 +238,13 @@ stroke="green"
 
   render() {
     return (
-      <View key="1" style={[{ position: 'absolute', left: 0, top: 0 }]} height="100%" width="100%">
+      <Animated.View key="1" style={[{ position: 'absolute', left: 0, top: 0 }]} height="100%" width="100%">
         {this.cuts.length >= this.props.currentStep &&
         this.cuts[this.props.currentStep] !== undefined &&
         this.cuts[this.props.currentStep] !== null
           ? this.cuts[this.props.currentStep].map(this._displayCut)
           : undefined}
-      </View>
+      </Animated.View>
     );
   }
 

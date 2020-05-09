@@ -3,8 +3,7 @@ import { TextInput, StyleSheet, Animated, Dimensions, View } from 'react-native'
 
 import Animation from './Animation';
 
-import Test from './Test';
-// import DisplayedElement from './DisplayedElement';
+import DraggableDisplayedElement from './DraggableDisplayedElement';
 import Drill from './Drill';
 
 import debug from './debug';
@@ -303,7 +302,7 @@ class AnimationEditor extends React.Component {
     if (deType === 'disc') key = 603;
 
     debug('text: ' + text);
-    return new Test({
+    return new DraggableDisplayedElement({
       onMoveEnd: this.addElementToAnimation,
       // key: this.keyCount,
       id: deType,

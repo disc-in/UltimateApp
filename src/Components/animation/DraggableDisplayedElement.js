@@ -8,7 +8,7 @@ import theme from '../../styles/theme.style';
 import debug from './debug';
 
 /** An element displayed in a drill animation */
-class Test extends React.Component {
+class DraggableDisplayedElement extends React.Component {
   /* Props must contain:
       - id: which indicates how to display the element
       ("offense", "defense", "triangle" or "disc")
@@ -83,7 +83,7 @@ class Test extends React.Component {
 
       onPanResponderRelease: (evt, gesturestate) => {
         if (this.props.movable && this.props.onMoveEnd !== undefined && this.props.onMoveEnd !== null) {
-          debug('Test: this.props.id: ' + this.props.id);
+          debug('TeDraggableDisplayedElementst: this.props.id: ' + this.props.id);
           this.props.onMoveEnd(this, this.currentPosition.x._value, this.currentPosition.y._value);
           this.currentPosition.setValue({ x: 0, y: 0 });
         }
@@ -116,7 +116,7 @@ class Test extends React.Component {
   }
 
   render() {
-    debug('render test: number: ' + this.number);
+    debug('render DraggableDisplayedElement: number: ' + this.number);
     const panStyle = {
       transform: this.currentPosition.getTranslateTransform(),
     };
@@ -260,4 +260,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Test;
+export default DraggableDisplayedElement;

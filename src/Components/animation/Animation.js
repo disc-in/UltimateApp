@@ -11,6 +11,8 @@ import iconPrev from '../../../assets/prev.png';
 import iconNext from '../../../assets/next.png';
 import iconReplay from '../../../assets/replay.png';
 
+import debug from './debug';
+
 class Animation extends React.Component {
   constructor(props) {
     super(props);
@@ -64,7 +66,7 @@ class Animation extends React.Component {
     var result = [];
     /* For each element displayed in the current animation */
     for (var elemId = 0; elemId < this._elemCount(); ++elemId) {
-      //	    console.log("animation createdE: element id: " + this.state.animation.ids[elemId]);
+      //	    debug("animation createdE: element id: " + this.state.animation.ids[elemId]);
 
       /* Create the displayed element according to the animation */
       result.push(
@@ -88,7 +90,7 @@ class Animation extends React.Component {
 
   /** Create the cuts associated to each step of the animation */
   _initializeCuts() {
-    console.log('initialize cut');
+    debug('initialize cut');
     this.cuts = new DrillCuts({
       animation: this.state.animation,
       animationHeight: this.animationHeight,
@@ -102,7 +104,7 @@ class Animation extends React.Component {
 
   /** Create the progress bar */
   _createProgressBar() {
-    //	console.log("Create PB animation width " + this.animationWidth);
+    //	debug("Create PB animation width " + this.animationWidth);
     if (
       this.animationWidth !== undefined &&
       this.animationWidth !== null &&
@@ -146,16 +148,16 @@ class Animation extends React.Component {
 
   /** Set each displayed element at its position at a given step */
   _setPositions(step) {
-    console.log('animation _setPositions(' + step + ') called');
+    debug('animation _setPositions(' + step + ') called');
 
     var intStep = Math.ceil(step);
 
-    console.log('intStep: ' + intStep);
+    debug('intStep: ' + intStep);
 
     if (this.state.displayedElements !== undefined && this.state.displayedElements !== null) {
       /* For each element */
       for (var i = 0; i < this.state.displayedElements.length; i++) {
-        console.log('element: ' + i);
+        debug('element: ' + i);
 
         var element = this.state.displayedElements[i];
 
@@ -163,7 +165,7 @@ class Animation extends React.Component {
         /* Get its position in pixel (it is represented in percentage in the animation) */
         var pixelPosition = this._positionPercentToPixel(iPositions[0][0], iPositions[0][1]);
 
-        //		console.log("pixelPosition:" + pixelPosition);
+        //		debug("pixelPosition:" + pixelPosition);
 
         element.setPosition(pixelPosition[0], pixelPosition[1]);
       }
@@ -203,7 +205,7 @@ class Animation extends React.Component {
             this._initPositions();
 
             this.progressBar = this._createProgressBar();
-            this._initializeCuts();
+            if (!this.props.editable) this._initializeCuts();
 
             if (this.props.onStepChange !== undefined && this.props.onStepChange !== null)
               this.props.onStepChange(initialStep);
@@ -282,7 +284,7 @@ class Animation extends React.Component {
     The substeps are played if the animation is forward and if the elements moves at step stepId
   */
   _getStepAnimation = (stepId, isForward) => {
-    console.log('Animation: get animation: ' + stepId);
+    debug('Animation: get animation: ' + stepId);
 
     stepId = Math.max(0, Math.round(stepId));
 
@@ -306,8 +308,8 @@ class Animation extends React.Component {
     /* For each displayed element */
     for (let elemId = 0; elemId < this.state.animation.ids.length; elemId += 1) {
       /* Get the position of the element at step stepId */
-      console.log('elemId is ', elemId);
-      console.log('stepId is ', stepId);
+      debug('elemId is ', elemId);
+      debug('stepId is ', stepId);
       const nextPosition = this.state.animation.getPositionsAtStep(elemId, stepId, this.state.currentStep); //this.state.animation.positions[elemId][stepId];
 
       /* The substeps are played only if the element moves at step stepId.
@@ -369,28 +371,28 @@ class Animation extends React.Component {
   }
 
   render() {
-    // console.log("render a");
+    // debug("render a");
 
     //	if(this.state.animation.positions.length > 0 && this.state.animation.positions[0] != undefined)
-    //	console.log("render a2, elem count: " + this.state.animation.positions[0].length);
+    //	debug("render a2, elem count: " + this.state.animation.positions[0].length);
 
     //	if(this.state.animation.positions.length > 0)
-    //	    console.log("\telem count: " + this.state.animation.positions[0].length);
-    //        console.log("render h/w: " + this.animationHeight + "/" + this.animationWidth);
+    //	    debug("\telem count: " + this.state.animation.positions[0].length);
+    //        debug("render h/w: " + this.animationHeight + "/" + this.animationWidth);
     this.cutsArray = [];
     //  if(this.state.animation !== undefined && this.state.animation !== null){
-    //    console.log("animation a1: ");
+    //    debug("animation a1: ");
     //   this.state.animation.log()
     //}
     //else
-    //    console.log("animation a2: " + this.state.animation);
+    //    debug("animation a2: " + this.state.animation);
 
     //  if(this.cuts !== undefined && this.cuts !== null){
-    //    console.log("cuts a1: ");
+    //    debug("cuts a1: ");
     //    this.cuts.log();
     //  }
     //  else
-    //    console.log("cuts a2: " + this.cuts);
+    //    debug("cuts a2: " + this.cuts);
 
     if (this.cuts !== undefined && this.cuts !== null) {
       this.cuts.props.currentStep = Math.floor(this.state.currentStep);
@@ -445,7 +447,7 @@ class Animation extends React.Component {
           /* Set all the elements to their initial positions */
           this._setCurrentPositions();
 
-          this._initializeCuts();
+          if (!this.props.editable) this._initializeCuts();
           this.progressBar = this._createProgressBar();
         },
       );

@@ -5,6 +5,8 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 import theme from '../../styles/theme.style';
 
+import debug from './debug';
+
 /** An element displayed in a drill animation */
 class Test extends React.Component {
   /* Props must contain:
@@ -36,7 +38,7 @@ class Test extends React.Component {
 
     this.currentPosition = new Animated.ValueXY({ x: 0, y: 0 });
 
-    console.log('playerRadius: ' + this.props.playerRadius);
+    debug('playerRadius: ' + this.props.playerRadius);
 
     this.xCut = 10;
     this.yCut = 10;
@@ -81,7 +83,7 @@ class Test extends React.Component {
 
       onPanResponderRelease: (evt, gesturestate) => {
         if (this.props.movable && this.props.onMoveEnd !== undefined && this.props.onMoveEnd !== null) {
-          console.log('Test: this.props.id: ' + this.props.id);
+          debug('Test: this.props.id: ' + this.props.id);
           this.props.onMoveEnd(this, this.currentPosition.x._value, this.currentPosition.y._value);
           this.currentPosition.setValue({ x: 0, y: 0 });
         }
@@ -90,10 +92,10 @@ class Test extends React.Component {
   }
 
   componentDidUpdate() {
-    console.log('!!!!!!!!update called');
+    debug('!!!!!!!!update called');
   }
   componentDidMount() {
-    console.log('!!!!!!!!!!! mount');
+    debug('!!!!!!!!!!! mount');
   }
 
   setNumber(newNumber) {
@@ -114,7 +116,7 @@ class Test extends React.Component {
   }
 
   render() {
-    console.log('render test: number: ' + this.number);
+    debug('render test: number: ' + this.number);
     const panStyle = {
       transform: this.currentPosition.getTranslateTransform(),
     };
@@ -122,7 +124,7 @@ class Test extends React.Component {
     /* Returns a component according to the element type */
     switch (this.props.id) {
       case 'defense':
-        console.log('Render in defense ');
+        debug('Render in defense ');
         return (
           <Animated.View
             {...this.panResponder.panHandlers}
@@ -140,7 +142,7 @@ class Test extends React.Component {
         );
 
       case 'offense':
-        //            console.log("Render in offense");
+        //            debug("Render in offense");
         return (
           <Animated.View
             {...this.panResponder.panHandlers}
@@ -172,7 +174,7 @@ class Test extends React.Component {
         );
 
       case 'disc':
-        //            console.log("Render in disc");
+        //            debug("Render in disc");
         return (
           <Animated.View
             // Use the panResponder in this view
@@ -183,7 +185,7 @@ class Test extends React.Component {
         );
 
       case 'triangle':
-        //            console.log("Render in triangle");
+        //            debug("Render in triangle");
         return (
           <Animated.View
             // Use the panResponder in this view

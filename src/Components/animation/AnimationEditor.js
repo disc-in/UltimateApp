@@ -7,6 +7,8 @@ import Test from './Test';
 // import DisplayedElement from './DisplayedElement';
 import Drill from './Drill';
 
+import debug from './debug';
+
 class AnimationEditor extends React.Component {
   constructor(props) {
     super(props);
@@ -57,8 +59,8 @@ class AnimationEditor extends React.Component {
       dLeft: e.nativeEvent.layout.x,
     });
 
-    console.log('animationE onlayout top left position x/y: ' + e.nativeEvent.layout.x + '/' + e.nativeEvent.layout.y);
-    console.log('animationE onlayout w/h: ' + e.nativeEvent.layout.width + '/' + e.nativeEvent.layout.height);
+    debug('animationE onlayout top left position x/y: ' + e.nativeEvent.layout.x + '/' + e.nativeEvent.layout.y);
+    debug('animationE onlayout w/h: ' + e.nativeEvent.layout.width + '/' + e.nativeEvent.layout.height);
   };
 
   addElementToAnimation = (element, xDelta, yDelta) => {
@@ -68,7 +70,7 @@ class AnimationEditor extends React.Component {
     var x = 0;
     var y = 0;
 
-    console.log('animationE: element id: ' + element.props.id);
+    debug('animationE: element id: ' + element.props.id);
 
     switch (element.props.id) {
       case 'offense':
@@ -96,10 +98,10 @@ class AnimationEditor extends React.Component {
     var newPosition = this._positionPixelToPercent(x + xDelta, y + yDelta);
 
     //        yDelta /= 2;
-    console.log('x+xDelta/y+yDelta: ' + x + '+' + xDelta + '/' + y + '+' + yDelta);
-    console.log('screen w/h + ' + this.state.screenW + '/' + this.state.screenH);
-    console.log('window w/h + ' + this.state.width + '/' + this.state.height);
-    console.log('added element to animation at position: ' + newPosition[0] + '/' + newPosition[1]);
+    debug('x+xDelta/y+yDelta: ' + x + '+' + xDelta + '/' + y + '+' + yDelta);
+    debug('screen w/h + ' + this.state.screenW + '/' + this.state.screenH);
+    debug('window w/h + ' + this.state.width + '/' + this.state.height);
+    debug('added element to animation at position: ' + newPosition[0] + '/' + newPosition[1]);
 
     // Add the element with its initial position
     var newAnimation = this._copyAnimation();
@@ -108,10 +110,9 @@ class AnimationEditor extends React.Component {
 
     this.saveAnimation(newAnimation);
 
-    //	console.log("ae, add element, step count: " + this.state.animation.positions.length);
+    //	debug("ae, add element, step count: " + this.state.animation.positions.length);
 
-    if (this.state.animation.positions.length > 0)
-      console.log('\telem count: ' + this.state.animation.positions[0].length);
+    if (this.state.animation.positions.length > 0) debug('\telem count: ' + this.state.animation.positions[0].length);
   };
 
   /** Convert a position (x, y) in pixels of the phone screen in a position (x2, y2) in percentages of the animation area
@@ -121,14 +122,14 @@ class AnimationEditor extends React.Component {
    * y2: corresponding vertical position in percentage (=0 if centered)
    */
   _positionPixelToPercent = (x, y) => {
-    console.log(
+    debug(
       'Animation : positionPercentToPixel, animation width/height: ' +
         this.state.width +
         '/' +
         this.state.height * this.hRatio,
     );
-    console.log('Animation : positionPercentToPixel, x/y: ' + x + '/' + y);
-    console.log('Animation : positionPercentToPixel, dLeft/dTop: ' + this.state.dLeft + '/' + this.state.dTop);
+    debug('Animation : positionPercentToPixel, x/y: ' + x + '/' + y);
+    debug('Animation : positionPercentToPixel, dLeft/dTop: ' + this.state.dLeft + '/' + this.state.dTop);
 
     // TODO replace coefficient by variable
     return [
@@ -148,7 +149,7 @@ class AnimationEditor extends React.Component {
   }
 
   componentDidMount() {
-    console.log('component mount');
+    debug('component mount');
 
     var newAnimation = this._copyAnimation();
 
@@ -159,7 +160,7 @@ class AnimationEditor extends React.Component {
     /* Get the dimension of the screen and then initialize the animation */
     var { height, width } = Dimensions.get('window');
 
-    console.log('screen h/w: ' + height + '/' + width);
+    debug('screen h/w: ' + height + '/' + width);
 
     // Create the elements in the horizontal bar
     this.initialElements = [];
@@ -178,13 +179,13 @@ class AnimationEditor extends React.Component {
   }
 
   cutMove = (elemId, xDelta, yDelta, isCounterCut) => {
-    console.log('Animation editor: in cut move xD/yD: ' + xDelta + '/' + yDelta);
+    debug('Animation editor: in cut move xD/yD: ' + xDelta + '/' + yDelta);
 
-    console.log('previousStep: ' + (this.currentStep - 1) + ' ceil: ' + Math.ceil(this.currentStep - 1));
+    debug('previousStep: ' + (this.currentStep - 1) + ' ceil: ' + Math.ceil(this.currentStep - 1));
 
-    console.log('elemId: ' + elemId);
+    debug('elemId: ' + elemId);
 
-    console.log('Animation before update: ');
+    debug('Animation before update: ');
     this.state.animation.log();
 
     var previousStepId = Math.ceil(this.currentStep) - 1;
@@ -194,7 +195,7 @@ class AnimationEditor extends React.Component {
     var xDeltaPercent = xDelta / (this.state.width * this.wRatio);
     var yDeltaPercent = yDelta / (this.state.height * this.hRatio);
 
-    console.log(
+    debug(
       'moved cut element to position: ' +
         (previousPositions[0][0] + xDeltaPercent) +
         '/' +
@@ -245,25 +246,25 @@ class AnimationEditor extends React.Component {
     }
 
     this.saveAnimation(newAnimation, () => {
-      console.log('Animation after update: ');
+      debug('Animation after update: ');
       this.state.animation.log();
     });
   };
 
   moveElement = (element, xDelta, yDelta) => {
-    console.log('Animation editor: in move element xD/yD: ' + xDelta + '/' + yDelta);
+    debug('Animation editor: in move element xD/yD: ' + xDelta + '/' + yDelta);
 
-    console.log('currentStep: ' + this.currentStep + ' ceil: ' + Math.ceil(this.currentStep));
+    debug('currentStep: ' + this.currentStep + ' ceil: ' + Math.ceil(this.currentStep));
 
     var currentPosition = this.state.animation.getPositionsAtStep(element.props.eId, Math.ceil(this.currentStep));
     currentPosition = currentPosition[0];
     var xDeltaPercent = xDelta / (this.state.width * this.wRatio);
     var yDeltaPercent = yDelta / (this.state.height * this.hRatio);
 
-    console.log(
+    debug(
       'moved element to position: ' + (currentPosition[0] + xDeltaPercent) + '/' + (currentPosition[1] + yDeltaPercent),
     );
-    console.log('Animation before update: ');
+    debug('Animation before update: ');
     this.state.animation.log();
 
     var newAnimation = this._copyAnimation();
@@ -274,7 +275,7 @@ class AnimationEditor extends React.Component {
     newAnimation.positions[Math.ceil(this.currentStep)][element.props.eId][0].push(currentPosition[1] + yDeltaPercent);
 
     this.saveAnimation(newAnimation, () => {
-      console.log('Animation after update: ');
+      debug('Animation after update: ');
       this.state.animation.log();
     });
   };
@@ -284,7 +285,7 @@ class AnimationEditor extends React.Component {
   };
 
   _createDE(deType, height, width) {
-    console.log('create de with type: ' + deType);
+    debug('create de with type: ' + deType);
     var text = '';
 
     var key = 600;
@@ -301,7 +302,7 @@ class AnimationEditor extends React.Component {
 
     if (deType === 'disc') key = 603;
 
-    console.log('text: ' + text);
+    debug('text: ' + text);
     return new Test({
       onMoveEnd: this.addElementToAnimation,
       // key: this.keyCount,
@@ -316,7 +317,7 @@ class AnimationEditor extends React.Component {
   }
 
   _display(item) {
-    console.log(item);
+    debug(item);
     if (item !== undefined && item !== null) return item.render();
     else return undefined;
   }
@@ -335,8 +336,8 @@ class AnimationEditor extends React.Component {
   };
 
   render() {
-    console.log('render AE');
-    console.log('this.currentStep: ' + this.currentStep);
+    debug('render AE');
+    debug('this.currentStep: ' + this.currentStep);
 
     return (
       <View style={styles.mainContainer} onLayout={this.onLayout}>
@@ -357,7 +358,7 @@ class AnimationEditor extends React.Component {
         />
 
         {this.state.draggableElements.map(function(item) {
-          console.log('render de');
+          debug('render de');
           return item.render();
         })}
 

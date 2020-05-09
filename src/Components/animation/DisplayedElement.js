@@ -4,6 +4,8 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 import theme from '../../styles/theme.style';
 
+import debug from './debug';
+
 /** An element displayed in a drill animation */
 class DisplayedElement extends React.Component {
   /* Props must contain:
@@ -28,7 +30,7 @@ class DisplayedElement extends React.Component {
     this.props.bottomconeSize = (this.props.playerRadius * 14) / 16;
     this.props.borderWidth = (this.props.discRadius * 8) / 10;
 
-    console.log('DE: player radius: ' + this.props.playerRadius);
+    debug('DE: player radius: ' + this.props.playerRadius);
     /* Current position of the element in pixels */
 
     this.currentPosition = new Animated.ValueXY({ x: 0, y: 0 });
@@ -73,7 +75,7 @@ class DisplayedElement extends React.Component {
         if (this.props.movable && this.props.onMoveEnd !== undefined && this.props.onMoveEnd !== null) {
           this.props.onMoveEnd(this, this.currentPosition.x._value, this.currentPosition.y._value);
         }
-        console.log('release: ' + this.currentPosition.x._value + '/' + this.currentPosition.y._value);
+        debug('release: ' + this.currentPosition.x._value + '/' + this.currentPosition.y._value);
       },
     });
   }

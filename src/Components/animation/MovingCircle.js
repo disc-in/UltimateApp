@@ -2,6 +2,8 @@ import React from 'react';
 import { StyleSheet, Easing, Animated, View, PanResponder } from 'react-native';
 import Svg, { Line, Circle } from 'react-native-svg';
 
+import debug from './debug';
+
 class MovingCircle extends React.Component {
   constructor(props) {
     super(props);
@@ -32,8 +34,8 @@ class MovingCircle extends React.Component {
           y: this._val.y,
         });
 
-        console.log('grant, elemId: ' + this.props.elemId);
-        console.log('\tis counter cut?: ' + this.props.isCounterCut);
+        debug('grant, elemId: ' + this.props.elemId);
+        debug('\tis counter cut?: ' + this.props.isCounterCut);
         this.currentPosition.setValue({ x: 0, y: 0 });
       },
 
@@ -56,11 +58,11 @@ class MovingCircle extends React.Component {
       transform: this.currentPosition.getTranslateTransform(),
     };
 
-    console.log('render Moving Circle: isCounterCut: ' + this.props.isCounterCut);
-    console.log('cx/cy: ' + this.props.cx + '/' + this.props.cy);
-    console.log('currentposition.x/y: ' + this.currentPosition.x._value + '/' + this.currentPosition.y._value);
+    debug('render Moving Circle: isCounterCut: ' + this.props.isCounterCut);
+    debug('cx/cy: ' + this.props.cx + '/' + this.props.cy);
+    debug('currentposition.x/y: ' + this.currentPosition.x._value + '/' + this.currentPosition.y._value);
 
-    console.log('toString(): ' + this.props.cx.toString());
+    debug('toString(): ' + this.props.cx.toString());
 
     /* stroke="green" */
     return (

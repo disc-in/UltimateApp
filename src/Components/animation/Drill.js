@@ -1,3 +1,5 @@
+import debug from './debug';
+
 // Each drill has an attribute "positions" which is a 4D array:
 // - positions[elemId][stepId][subStepId][coordinateId]
 //
@@ -39,10 +41,10 @@ class Drill {
 
   /** Add an element to the drill */
   addElement(element, initialX, initialY) {
-    console.log('drill add element at position: ' + initialX + '/' + initialY);
-    //	console.log("drill positions before update: " + this.positions);
+    debug('drill add element at position: ' + initialX + '/' + initialY);
+    //	debug("drill positions before update: " + this.positions);
 
-    //	console.log("drill element id: " + element.id);
+    //	debug("drill element id: " + element.id);
 
     // Set its initial position
     this.positions[0].push([[initialX, initialY]]);
@@ -60,7 +62,7 @@ class Drill {
     // Add its type
     this.ids.push(element.props.id);
 
-    //	console.log("positions after update: " + this.positions);
+    //	debug("positions after update: " + this.positions);
   }
 
   /** Add a step to the drill */
@@ -72,28 +74,28 @@ class Drill {
     if (this.positions !== undefined && this.positions !== null) {
       /* For each step */
       for (var stepId = 0; stepId < this.positions.length; stepId++) {
-        console.log('step ' + stepId);
+        debug('step ' + stepId);
 
         for (var elementId = 0; elementId < this.positions[stepId].length; elementId++) {
-          console.log('\telement ' + elementId);
+          debug('\telement ' + elementId);
 
           if (this.positions[stepId][elementId] !== null && this.positions[stepId][elementId] !== undefined) {
             for (var cutId = 0; cutId < this.positions[stepId][elementId].length; cutId++) {
-              console.log('\t\tcut ' + cutId);
+              debug('\t\tcut ' + cutId);
 
               if (
                 this.positions[stepId][elementId][cutId] !== undefined &&
                 this.positions[stepId][elementId][cutId] !== null
               ) {
-                console.log('\t\t\tx: ' + this.positions[stepId][elementId][cutId][0]);
-                console.log('\t\t\ty: ' + this.positions[stepId][elementId][cutId][1]);
-              } else console.log('\t\t\t' + this.positions[stepId][elementId][cutId]);
+                debug('\t\t\tx: ' + this.positions[stepId][elementId][cutId][0]);
+                debug('\t\t\ty: ' + this.positions[stepId][elementId][cutId][1]);
+              } else debug('\t\t\t' + this.positions[stepId][elementId][cutId]);
             }
-          } else console.log('\t\t' + this.positions[stepId][elementId]);
+          } else debug('\t\t' + this.positions[stepId][elementId]);
         }
       }
     } else {
-      console.log(this.positions);
+      debug(this.positions);
     }
   }
 }

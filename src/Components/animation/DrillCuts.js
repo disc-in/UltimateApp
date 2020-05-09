@@ -1,10 +1,12 @@
 import React from 'react';
-import { StyleSheet, View,  PanResponder } from 'react-native';
+import { StyleSheet, View, PanResponder } from 'react-native';
 import Svg, { Line, Circle } from 'react-native-svg';
 
 import Animated from 'react-native-reanimated';
 
 import MovingCircle from './MovingCircle';
+
+import debug from './debug';
 
 /** The cuts that must be displayed at each step of a animation (a cut correspond to the position of a player at the previous step) */
 class DrillCuts extends React.Component {
@@ -35,14 +37,14 @@ class DrillCuts extends React.Component {
 
       /* For each step */
       for (var stepId = 0; stepId < this.props.animation.stepCount(); stepId++) {
-        //        console.log('stepId: ' + stepId);
+        //        debug('stepId: ' + stepId);
         this.cuts.push([]);
 
         /* Nothing to do at step 0 as there is no previous position */
         if (stepId > 0) {
           /* For each element displayed */
           for (var elemId = 0; elemId < elemCount; elemId++) {
-            console.log('animation cut, elem id: ' + elemId);
+            debug('animation cut, elem id: ' + elemId);
             /* If the element moves at this step */
             if (
               this.props.animation.positions[stepId][elemId] !== null &&
@@ -60,7 +62,7 @@ class DrillCuts extends React.Component {
               elemCut.push(pos);
 
               var positions = this.props.animation.getPositionsAtStep(elemId, stepId - 1);
-              //            console.log('positions: ' + positions);
+              //            debug('positions: ' + positions);
 
               /* For each substep in this cut */
               for (var subStepId = 0; subStepId < positions.length; subStepId++) {
@@ -86,41 +88,31 @@ class DrillCuts extends React.Component {
               var x2 = counterCutX;
               var y2 = counterCutY;
 
-                var d1 = Math.sqrt(Math.pow(x0 - x2, 2) + Math.pow(y0 - y2, 2));                
+              var d1 = Math.sqrt(Math.pow(x0 - x2, 2) + Math.pow(y0 - y2, 2));
               var d2 = Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
 
-                
-                var angle1 = new Animated.Value(Math.asin(Math.abs(y0 - y2) / d1));// + 'rad';
-                var angle2 = new Animated.Value(Math.asin(Math.abs(y2 - y1) / d2));//.toString() + 'rad';
-                
-                if(y2 > y0){
-                    if(x2 < x0)
-                        angle1 = new Animated.Value(3.14159 - angle1._value);
-                }
-                else
-                    if(x2 > x0)
-                        angle1 = new Animated.Value(3.14159 - angle1._value);
-                
-                if(y1 > y2){
-                    if(x1 < x2)
-                        angle2 = new Animated.Value(3.14159 - angle2._value);
-                }
-                else
-                    if(x1 > x2)
-                        angle2 = new Animated.Value(3.14159 - angle2._value);
-                
-                
+              var angle1 = new Animated.Value(Math.asin(Math.abs(y0 - y2) / d1)); // + 'rad';
+              var angle2 = new Animated.Value(Math.asin(Math.abs(y2 - y1) / d2)); //.toString() + 'rad';
+
+              if (y2 > y0) {
+                if (x2 < x0) angle1 = new Animated.Value(3.14159 - angle1._value);
+              } else if (x2 > x0) angle1 = new Animated.Value(3.14159 - angle1._value);
+
+              if (y1 > y2) {
+                if (x1 < x2) angle2 = new Animated.Value(3.14159 - angle2._value);
+              } else if (x1 > x2) angle2 = new Animated.Value(3.14159 - angle2._value);
+
               var left1 = (x0 + x2 - d1) / 2;
               var top1 = (y0 + y2) / 2;
               var left2 = (x1 + x2 - d2) / 2;
               var top2 = (y1 + y2) / 2;
 
-              console.log('p0: ' + x0 + '/' + y0);
-              console.log('p1: ' + x1 + '/' + y1);
-              console.log('p2: ' + x2 + '/' + y2);
-              console.log('angle1: ' + angle1);
+              debug('p0: ' + x0 + '/' + y0);
+              debug('p1: ' + x1 + '/' + y1);
+              debug('p2: ' + x2 + '/' + y2);
+              debug('angle1: ' + angle1);
 
-              console.log('recompute cut');
+              debug('recompute cut');
 
               this.cuts[stepId].push({
                 key: elemId,
@@ -200,7 +192,6 @@ class DrillCuts extends React.Component {
   }
 
   _displayCut = cut => {
-
     return (
       <View key={cut.key + 4000} style={[StyleSheet.absoluteFill]} height="100%" width="100%">
         <Animated.View
@@ -250,10 +241,10 @@ class DrillCuts extends React.Component {
 
   log() {
     for (var stepId = 0; stepId < this.cuts.length; stepId++) {
-      console.log('step ' + stepId);
+      debug('step ' + stepId);
 
       for (var cutId = 0; cutId < this.cuts[stepId].length; cutId++)
-        console.log(
+        debug(
           '\tcut ' +
             cutId +
             '\n\t(' +

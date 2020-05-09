@@ -6,7 +6,7 @@ exports[`<HomePage /> renders correctly 1`] = `
     Object {
       "backgroundColor": "#fff",
       "height": "100%",
-      "paddingTop": 20,
+      "paddingTop": 7,
     }
   }
 >
@@ -23,7 +23,8 @@ exports[`<HomePage /> renders correctly 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "height": "30%",
+        "flexBasis": "25%",
+        "flexGrow": 1,
         "marginBottom": 5,
       }
     }
@@ -96,7 +97,8 @@ exports[`<HomePage /> renders correctly 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "height": "30%",
+        "flexBasis": "25%",
+        "flexGrow": 1,
         "marginBottom": 5,
       }
     }
@@ -169,7 +171,8 @@ exports[`<HomePage /> renders correctly 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "height": "30%",
+        "flexBasis": "25%",
+        "flexGrow": 1,
         "marginBottom": 5,
       }
     }
@@ -233,6 +236,7 @@ exports[`<HomePage /> renders correctly 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "paddingBottom": 5,
         "width": "100%",
       }
     }

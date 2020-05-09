@@ -20,7 +20,6 @@ class FitnessFilters extends React.Component {
       selectedGoals: [],
       durationInMinutes: undefined,
       displayedDrills: this.props.route.params.initialData,
-      favoriteDrills: this.props.favoriteDrills,
     };
 
     this.onDurationInMinutesChange = this.onSliderChange.bind(this, 'durationInMinutes');
@@ -50,6 +49,7 @@ class FitnessFilters extends React.Component {
   }
 
   applyFilters() {
+    const { favoriteDrills } = this.props;
     const {
       selectedFavorites,
       selectedLevels,
@@ -58,7 +58,6 @@ class FitnessFilters extends React.Component {
       selectedSeasonTimings,
       selectedGoals,
       durationInMinutes,
-      favoriteDrills,
     } = this.state;
     let newData = this.props.route.params.initialData;
 

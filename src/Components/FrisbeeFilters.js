@@ -18,7 +18,6 @@ class FrisbeeFilters extends React.Component {
       selectedGoals: [],
       numberOfPlayers: undefined,
       displayedDrills: this.props.route.params.initialData,
-      favoriteDrills: this.props.favoriteDrills,
     };
 
     this.onNumberOfPlayersChange = this.onSliderChange.bind(this, 'numberOfPlayers');
@@ -48,7 +47,8 @@ class FrisbeeFilters extends React.Component {
   }
 
   applyFilters() {
-    const { selectedFavorites, selectedLevels, selectedGoals, numberOfPlayers, favoriteDrills } = this.state;
+    const { favoriteDrills } = this.props;
+    const { selectedFavorites, selectedLevels, selectedGoals, numberOfPlayers } = this.state;
     let newData = this.props.route.params.initialData;
 
     if (selectedFavorites)

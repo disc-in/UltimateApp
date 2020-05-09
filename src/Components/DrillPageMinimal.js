@@ -51,12 +51,12 @@ export const DrillPageMinimal = props => {
     <ScrollView style={styles.drillPage}>
       <View style={styles.titleContainer}>
         <Text style={styles.title}>{drill.title}</Text>
+        <View style={styles.btnMoreContainer}>
+          <Button onPress={goToFullDrill} text="DETAILS" buttonLight="true" style={styles.smallerBtn} />
+        </View>
       </View>
 
       <MinimalDrill style={styles.illustration} drill={drill} />
-      <View style={styles.btnMoreContainer}>
-        <Button onPress={goToFullDrill} text="DETAILS" buttonLight="true" />
-      </View>
     </ScrollView>
   );
 };
@@ -72,6 +72,11 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     flexGrow: 1,
   },
+  smallerBtn: {
+    fontSize: theme.FONT_SIZE_SMALL,
+    width: 'auto',
+  },
+
   headerTitleText: {
     ...Platform.select({
       ios: {
@@ -101,7 +106,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 20,
     textAlign: 'center',
-    margin: 10,
+    margin: 5,
   },
   titleContainer: {
     flexBasis: 60,
@@ -119,6 +124,5 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical: 20,
   },
 });

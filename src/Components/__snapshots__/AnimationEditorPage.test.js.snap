@@ -59,6 +59,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
           Object {
             "bottom": 0,
             "flexDirection": "row",
+            "marginLeft": 30,
             "position": "absolute",
             "right": 0,
           }
@@ -296,11 +297,11 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
         style={
           Object {
             "bottom": 0,
-            "height": 35,
-            "left": -5,
+            "height": 25,
+            "left": 2.5,
             "opacity": 1,
             "position": "absolute",
-            "width": 35,
+            "width": 25,
           }
         }
       />
@@ -318,19 +319,25 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
         style={
           Object {
             "bottom": 0,
-            "height": 35,
-            "left": 310,
+            "height": 25,
+            "left": 317.5,
             "opacity": 1,
             "position": "absolute",
-            "width": 35,
+            "width": 25,
           }
         }
       />
       <View
         style={
           Object {
+            "backgroundColor": "black",
+            "borderRadius": 10,
+            "borderWidth": 0,
+            "bottom": 7.5,
+            "height": 15,
             "left": 640,
-            "top": 637,
+            "position": "absolute",
+            "width": 15,
           }
         }
       />
@@ -338,16 +345,12 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
         style={
           Array [
             Object {
+              "bottom": 7.5,
+              "color": "white",
               "position": "absolute",
             },
             Object {
-              "left": 644,
-            },
-            Object {
-              "top": 634,
-            },
-            Object {
-              "color": "white",
+              "left": 643,
             },
           ]
         }
@@ -375,12 +378,12 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
         onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "height": 80,
-            "left": 625,
+            "bottom": 0,
+            "height": 25,
+            "left": 620,
             "opacity": 1,
             "position": "absolute",
-            "top": 622,
-            "width": 80,
+            "width": 25,
           }
         }
       />

@@ -83,7 +83,7 @@ class ProgressBar extends React.Component {
         this.progressBarDots.map(item => (
           <Animated.View
             style={[
-              styles.blue,
+              styles.black,
               styles.dot,
               {
                 opacity: this.dotsOpacity[item.key],
@@ -108,11 +108,10 @@ class ProgressBar extends React.Component {
         )),
       );
 
-    /* Add the blue bar */
     this.progressBarComponents.push(
       <Animated.View
         style={[
-          styles.blue,
+          styles.black,
           styles.progressBar,
           props.readonly && styles.largeProgressBar,
           { width: this.dynamiqueCurrentStep },
@@ -135,7 +134,7 @@ class ProgressBar extends React.Component {
                     left: this.progressBarDots[item.key].left - (idx === 0 ? 0 : stepWidth / 2),
                   },
                 ]
-              : [styles.dotHitBox, { left: this.progressBarDots[item.key].left - 15 }]
+              : [styles.dotHitBox, { left: this.progressBarDots[item.key].left - DOT_SIZE / 2 }]
           }
           onPress={() => this._stepButtonClicked(item.key)}
           key={1000 + item.key}
@@ -148,23 +147,12 @@ class ProgressBar extends React.Component {
 
       /* Add the "add step" dot */
       this.progressBarComponents = this.progressBarComponents.concat(
-        <Animated.View
-          style={[styles.activatedDot, { left: addDotLeft }, { top: this.props.animationHeight - 30 }]}
-          key={2001}
-        />,
+        <Animated.View style={[styles.black, styles.dot, { left: addDotLeft }]} key={2001} />,
       );
 
       /* Add the text "+" */
       this.progressBarComponents = this.progressBarComponents.concat(
-        <Text
-          style={[
-            { position: 'absolute' },
-            { left: addDotLeft + 4 },
-            { top: this.props.animationHeight - 30 - 3 },
-            { color: 'white' },
-          ]}
-          key={2002}
-        >
+        <Text style={[styles.plusDotText, { left: addDotLeft + 3 }]} key={2002}>
           +
         </Text>,
       );
@@ -173,13 +161,7 @@ class ProgressBar extends React.Component {
       this.progressBarComponents = this.progressBarComponents.concat(
         <TouchableOpacity
           hitSlop={{ top: 20, right: 20, bottom: 20, left: 20 }}
-          style={[
-            { position: 'absolute' },
-            { height: 80 },
-            { width: 80 },
-            { left: addDotLeft - 15 },
-            { top: this.props.animationHeight - 15 - 30 },
-          ]}
+          style={[styles.dotHitBox, { left: addDotLeft - 20 }]}
           onPress={() => this._addStepButtonClicked()}
           key={2003}
         />,
@@ -248,7 +230,7 @@ export default ProgressBar;
 
 const DOT_SIZE = 15;
 const PROGRESS_BAR_MIDDLE = 15;
-const HITBOX_SLOP = 20;
+const HITBOX_SLOP = 10;
 
 const styles = StyleSheet.create({
   dot: {
@@ -271,7 +253,7 @@ const styles = StyleSheet.create({
     bottom: 0,
     backgroundColor: 'transparent',
   },
-  blue: {
+  black: {
     backgroundColor: 'black',
   },
   gray: {
@@ -290,5 +272,10 @@ const styles = StyleSheet.create({
   progressBarNumbers: {
     position: 'absolute',
     bottom: PROGRESS_BAR_MIDDLE + 1 + DOT_SIZE / 2,
+  },
+  plusDotText: {
+    position: 'absolute',
+    color: 'white',
+    bottom: PROGRESS_BAR_MIDDLE - DOT_SIZE / 2,
   },
 });

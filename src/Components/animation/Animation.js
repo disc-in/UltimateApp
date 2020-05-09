@@ -539,6 +539,7 @@ const styles = StyleSheet.create({
   },
   controls: {
     position: 'absolute',
+    marginLeft: 30,
     bottom: 0,
     right: 0,
     flexDirection: 'row',

@@ -54,11 +54,12 @@ export default class HomePage extends React.Component {
 const styles = StyleSheet.create({
   mainContainer: {
     height: '100%',
-    paddingTop: 20,
+    paddingTop: 7,
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
   },
   menuItem: {
-    height: '30%',
+    flexBasis: '25%',
+    flexGrow: 1,
     marginBottom: 5,
   },
   image: {
@@ -82,5 +83,6 @@ const styles = StyleSheet.create({
   editorLink: {
     alignItems: 'center',
     width: '100%',
+    paddingBottom: 5,
   },
 });

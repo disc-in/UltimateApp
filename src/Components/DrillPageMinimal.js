@@ -1,5 +1,5 @@
 import React, { useLayoutEffect, useCallback } from 'react';
-import { Platform, StyleSheet, View, Text } from 'react-native';
+import { Platform, StyleSheet, ScrollView, View, Text } from 'react-native';
 
 import theme from '../styles/theme.style';
 import HeaderButton from './shared/HeaderButton';
@@ -48,7 +48,7 @@ export const DrillPageMinimal = props => {
   }, [navigation, goToNextDrill, currentDrillIndex, training]);
 
   return (
-    <View style={styles.drillPage}>
+    <ScrollView style={styles.drillPage}>
       <View style={styles.titleContainer}>
         <Text style={styles.title}>{drill.title}</Text>
       </View>
@@ -57,7 +57,7 @@ export const DrillPageMinimal = props => {
       <View style={styles.btnMoreContainer}>
         <Button onPress={goToFullDrill} text="DETAILS" buttonLight="true" />
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
@@ -119,6 +119,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical: 50,
+    paddingVertical: 20,
   },
 });

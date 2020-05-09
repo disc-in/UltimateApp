@@ -160,10 +160,10 @@ class AnimationEditor extends React.Component {
     // Create the elements in the horizontal bar
     this.initialElements = [];
 
-    this.initialElements.push(this._createDE('offense'));
-    this.initialElements.push(this._createDE('defense'));
-    this.initialElements.push(this._createDE('disc'));
-    this.initialElements.push(this._createDE('triangle'));
+    this.initialElements.push(this._createDE('offense', height, width)); 
+    this.initialElements.push(this._createDE('defense',   height, width));
+    this.initialElements.push(this._createDE('disc',      height, width));
+    this.initialElements.push(this._createDE('triangle',  height, width));
 
     this.setState(prevState => ({
       draggableElements: prevState.draggableElements.concat(this.initialElements),
@@ -279,7 +279,7 @@ class AnimationEditor extends React.Component {
     //TODO
   };
 
-  _createDE(deType) {
+    _createDE(deType, height, width) {
     console.log('create de with type: ' + deType);
     var text = '';
 
@@ -305,8 +305,8 @@ class AnimationEditor extends React.Component {
       eId: -1,
       key,
       movable: true,
-      animationWidth: this.state.screenW,
-      animationHeight: this.state.screenH,
+      animationWidth: height,
+      animationHeight: width ,
       number: text,
     });
   }

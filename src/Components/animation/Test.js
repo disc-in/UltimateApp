@@ -1,6 +1,10 @@
 import React from 'react';
 import { StyleSheet, Easing, Animated, View, PanResponder } from 'react-native';
 
+import { LinearGradient } from 'expo-linear-gradient';
+
+import theme from '../../styles/theme.style';
+
 /** An element displayed in a drill animation */
 class Test extends React.Component {
   /* Props must contain:
@@ -22,8 +26,7 @@ class Test extends React.Component {
     // TODO: put the constant coefficient used in the following somewhere to avoir writing them twice (in this class and in DrillCuts)
     var dimensionMin = Math.min(this.props.animationWidth, this.props.animationHeight);
     this.props.playerRadius = dimensionMin / 12;
-    //	this.props.discRadius = this.props.playerRadius / 2;
-    this.props.discRadius = 200;
+    this.props.discRadius = this.props.playerRadius / 2;
     this.props.coneSize = (this.props.playerRadius * 5) / 16;
 
     this.props.bottomconeSize = (this.props.playerRadius * 10) / 16;
@@ -33,6 +36,8 @@ class Test extends React.Component {
 
     this.currentPosition = new Animated.ValueXY({ x: 0, y: 0 });
 
+      console.log("playerRadius: " + this.props.playerRadius);
+      
     this.xCut = 10;
     this.yCut = 10;
 
@@ -117,29 +122,53 @@ class Test extends React.Component {
     /* Returns a component according to the element type */
     switch (this.props.id) {
       case 'defense':
-        console.log('Render in defense');
+        console.log('Render in defense ');
         return (
-          <Animated.Text
-            // Use the panResponder in this view
+          <Animated.View
             {...this.panResponder.panHandlers}
-            style={[panStyle, styles.defense, { height: 40 }, { width: 40 }, { borderRadius: 40 }]}
+            style={[
+              panStyle,
+              styles.defense,
+              { height: this.props.playerRadius },
+              { width: this.props.playerRadius },
+              { borderRadius: this.props.playerRadius },
+            ]}
             key={this.props.key + 4}
           >
-            {this.number}
-          </Animated.Text>
+            <Animated.Text style={styles.defenseText}>{this.number}</Animated.Text>
+          </Animated.View>
         );
 
       case 'offense':
         //            console.log("Render in offense");
         return (
-          <Animated.Text
-            // Use the panResponder in this view
+          <Animated.View
             {...this.panResponder.panHandlers}
-            style={[panStyle, styles.offense, { height: 40 }, { width: 40 }, { borderRadius: 40 }]}
+            style={[
+              panStyle,
+              styles.offense,
+              { height: this.props.playerRadius },
+              { width: this.props.playerRadius },
+              { borderRadius: this.props.playerRadius },
+            ]}
             key={this.props.key + 4}
           >
-            {this.number}
-          </Animated.Text>
+            <LinearGradient
+              colors={[theme.GRADIENT_FIRST_COLOR, theme.GRADIENT_SECOND_COLOR]}
+              style={[
+                styles.gradient,
+                {
+                  height: this.props.playerRadius,
+                  width: this.props.playerRadius,
+                  borderRadius: this.props.playerRadius,
+                },
+              ]}
+              start={{ x: 1, y: 1 }}
+              end={{ x: 0, y: 0 }}
+            >
+              <Animated.Text style={styles.offenseText}>{this.number}</Animated.Text>
+            </LinearGradient>
+          </Animated.View>
         );
 
       case 'disc':
@@ -179,43 +208,53 @@ class Test extends React.Component {
 const styles = StyleSheet.create({
   defense: {
     position: 'absolute',
-    left: 90,
-    top: 450,
-    backgroundColor: '#dcdcdc',
+    backgroundColor: theme.DEFENSE_COLOR,
     textAlign: 'center',
     textAlignVertical: 'center',
-    color: 'black',
+    alignItems: 'center',
+    justifyContent: 'center',
+    left: 90,
+    top: 450,
+  },
+  defenseText: {
+    color: theme.OFFENSE_TEXT_COLOR,
+    fontWeight: 'bold',
   },
 
   offense: {
     position: 'absolute',
-    left: 30,
-    top: 450,
-    backgroundColor: '#cd5c5c',
     textAlign: 'center',
     textAlignVertical: 'center',
-    color: 'white',
+    left: 30,
+    top: 450,
+  },
+  offenseText: {
+    fontWeight: 'bold',
+    color: theme.OFFENSE_TEXT_COLOR,
+  },
+  gradient: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 
   disc: {
     position: 'absolute',
+    borderColor: theme.DISC_BORDER,
+    backgroundColor: theme.DISC_COLOR,
     left: 190,
     top: 450,
-    borderColor: 'black',
-    backgroundColor: 'white',
   },
 
   triangle: {
     position: 'absolute',
-    left: 270,
-    top: 450,
     backgroundColor: 'transparent',
     borderStyle: 'solid',
     borderLeftColor: 'transparent',
     borderRightColor: 'transparent',
-    borderBottomColor: 'orange',
-    width: 0,
-    height: 0,
+    borderBottomColor:  theme.CONE_COLOR,
+    left: 270,
+    top: 450,
   },
 });
 

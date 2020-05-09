@@ -28,6 +28,7 @@ class DisplayedElement extends React.Component {
     this.props.bottomconeSize = (this.props.playerRadius * 14) / 16;
     this.props.borderWidth = (this.props.discRadius * 8) / 10;
 
+      console.log("DE: player radius: " + this.props.playerRadius);
     /* Current position of the element in pixels */
 
     this.currentPosition = new Animated.ValueXY({ x: 0, y: 0 });
@@ -104,9 +105,9 @@ class DisplayedElement extends React.Component {
             style={[
               panStyle,
               styles.defense,
-              { height: 40 },
-              { width: 40 },
-              { borderRadius: 40 },
+              { height: this.props.playerRadius },
+              { width: this.props.playerRadius },
+              { borderRadius: this.props.playerRadius },
               { left: 0 },
               { top: 0 },
             ]}
@@ -123,9 +124,9 @@ class DisplayedElement extends React.Component {
             style={[
               panStyle,
               styles.offense,
-              { height: 40 },
-              { width: 40 },
-              { borderRadius: 40 },
+              { height: this.props.playerRadius },
+              { width: this.props.playerRadius },
+              { borderRadius: this.props.playerRadius },
               { left: 0 },
               { top: 0 },
             ]}

@@ -8,7 +8,7 @@ const Button = props => {
   const textLight = props.buttonLight ? styles.textLight : styles.text;
 
   return (
-    <TouchableOpacity style={buttonLight} onPress={props.onPress} testID="button">
+    <TouchableOpacity style={[buttonLight, props.style]} onPress={props.onPress} testID="button">
       <Text style={textLight}>{props.text}</Text>
     </TouchableOpacity>
   );

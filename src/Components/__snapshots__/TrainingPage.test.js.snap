@@ -752,6 +752,7 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
               "marginVertical": 20,
               "paddingBottom": 20,
               "paddingLeft": 20,
+              "paddingRight": 20,
             }
           }
         >
@@ -1914,6 +1915,7 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
               "marginVertical": 20,
               "paddingBottom": 20,
               "paddingLeft": 20,
+              "paddingRight": 20,
             }
           }
         >
@@ -1964,8 +1966,10 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
               onStartShouldSetResponder={[Function]}
               style={
                 Object {
+                  "left": "auto",
                   "opacity": 1,
-                  "padding": 10,
+                  "position": "absolute",
+                  "right": 10,
                 }
               }
             >

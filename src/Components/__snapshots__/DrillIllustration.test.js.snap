@@ -2,6 +2,12 @@
 
 exports[`<DrillIllustration /> renders correctly for a drill with a video from vimeo 1`] = `
 <View
+  config={
+    Object {
+      "directionalOffsetThreshold": 80,
+      "velocityThreshold": 0.2,
+    }
+  }
   onMoveShouldSetResponder={[Function]}
   onMoveShouldSetResponderCapture={[Function]}
   onResponderEnd={[Function]}
@@ -278,6 +284,12 @@ exports[`<DrillIllustration /> renders correctly for a drill with a video from v
 
 exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] = `
 <View
+  config={
+    Object {
+      "directionalOffsetThreshold": 80,
+      "velocityThreshold": 0.2,
+    }
+  }
   onMoveShouldSetResponder={[Function]}
   onMoveShouldSetResponderCapture={[Function]}
   onResponderEnd={[Function]}
@@ -770,6 +782,12 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
 
 exports[`<DrillIllustration /> renders correctly for a drill with no video nor animation 1`] = `
 <View
+  config={
+    Object {
+      "directionalOffsetThreshold": 80,
+      "velocityThreshold": 0.2,
+    }
+  }
   onMoveShouldSetResponder={[Function]}
   onMoveShouldSetResponderCapture={[Function]}
   onResponderEnd={[Function]}
@@ -846,6 +864,12 @@ exports[`<DrillIllustration /> renders correctly for a drill with no video nor a
 
 exports[`<DrillIllustration /> renders correctly for a drill with video 1`] = `
 <View
+  config={
+    Object {
+      "directionalOffsetThreshold": 80,
+      "velocityThreshold": 0.2,
+    }
+  }
   onMoveShouldSetResponder={[Function]}
   onMoveShouldSetResponderCapture={[Function]}
   onResponderEnd={[Function]}

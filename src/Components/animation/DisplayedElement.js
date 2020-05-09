@@ -205,8 +205,8 @@ const styles = StyleSheet.create({
   },
   offense: {
     position: 'absolute',
-    textAlign: 'center',
-    textAlignVertical: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   offenseText: {
     fontWeight: 'bold',

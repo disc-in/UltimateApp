@@ -36,8 +36,8 @@ class Test extends React.Component {
 
     this.currentPosition = new Animated.ValueXY({ x: 0, y: 0 });
 
-      console.log("playerRadius: " + this.props.playerRadius);
-      
+    console.log('playerRadius: ' + this.props.playerRadius);
+
     this.xCut = 10;
     this.yCut = 10;
 
@@ -252,7 +252,7 @@ const styles = StyleSheet.create({
     borderStyle: 'solid',
     borderLeftColor: 'transparent',
     borderRightColor: 'transparent',
-    borderBottomColor:  theme.CONE_COLOR,
+    borderBottomColor: theme.CONE_COLOR,
     left: 270,
     top: 450,
   },

@@ -2,7 +2,6 @@ import React from 'react';
 import { TextInput, StyleSheet, Animated, Dimensions, View } from 'react-native';
 
 import Animation from './Animation';
-// import ElementAdderBar from './ElementAdderBar';
 
 import Test from './Test';
 // import DisplayedElement from './DisplayedElement';
@@ -160,10 +159,10 @@ class AnimationEditor extends React.Component {
     // Create the elements in the horizontal bar
     this.initialElements = [];
 
-    this.initialElements.push(this._createDE('offense', height, width)); 
-    this.initialElements.push(this._createDE('defense',   height, width));
-    this.initialElements.push(this._createDE('disc',      height, width));
-    this.initialElements.push(this._createDE('triangle',  height, width));
+    this.initialElements.push(this._createDE('offense', height, width));
+    this.initialElements.push(this._createDE('defense', height, width));
+    this.initialElements.push(this._createDE('disc', height, width));
+    this.initialElements.push(this._createDE('triangle', height, width));
 
     this.setState(prevState => ({
       draggableElements: prevState.draggableElements.concat(this.initialElements),
@@ -279,7 +278,7 @@ class AnimationEditor extends React.Component {
     //TODO
   };
 
-    _createDE(deType, height, width) {
+  _createDE(deType, height, width) {
     console.log('create de with type: ' + deType);
     var text = '';
 
@@ -306,7 +305,7 @@ class AnimationEditor extends React.Component {
       key,
       movable: true,
       animationWidth: height,
-      animationHeight: width ,
+      animationHeight: width,
       number: text,
     });
   }

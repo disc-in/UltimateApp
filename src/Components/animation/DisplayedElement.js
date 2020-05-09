@@ -28,7 +28,7 @@ class DisplayedElement extends React.Component {
     this.props.bottomconeSize = (this.props.playerRadius * 14) / 16;
     this.props.borderWidth = (this.props.discRadius * 8) / 10;
 
-      console.log("DE: player radius: " + this.props.playerRadius);
+    console.log('DE: player radius: ' + this.props.playerRadius);
     /* Current position of the element in pixels */
 
     this.currentPosition = new Animated.ValueXY({ x: 0, y: 0 });

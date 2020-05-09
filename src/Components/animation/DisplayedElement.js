@@ -1,5 +1,8 @@
 import React from 'react';
-import { StyleSheet, Easing, Animated, View, PanResponder } from 'react-native';
+import { StyleSheet, Easing, Animated, View, Text, PanResponder } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+
+import theme from '../../styles/theme.style';
 
 /** An element displayed in a drill animation */
 class DisplayedElement extends React.Component {
@@ -108,7 +111,7 @@ class DisplayedElement extends React.Component {
     switch (this.props.id) {
       case 'defense':
         return (
-          <Animated.Text
+          <Animated.View
             {...this.panResponder.panHandlers}
             style={[
               panStyle,
@@ -121,13 +124,13 @@ class DisplayedElement extends React.Component {
             ]}
             key={this.props.key}
           >
-            {this.props.number}
-          </Animated.Text>
+            <Text style={styles.defenseText}>{this.props.number}</Text>
+          </Animated.View>
         );
 
       case 'offense':
         return (
-          <Animated.Text
+          <Animated.View
             {...this.panResponder.panHandlers}
             style={[
               panStyle,
@@ -140,8 +143,22 @@ class DisplayedElement extends React.Component {
             ]}
             key={this.props.key}
           >
-            {this.props.number}
-          </Animated.Text>
+            <LinearGradient
+              colors={[theme.GRADIENT_FIRST_COLOR, theme.GRADIENT_SECOND_COLOR]}
+              style={[
+                styles.gradient,
+                {
+                  height: this.props.playerRadius,
+                  width: this.props.playerRadius,
+                  borderRadius: this.props.playerRadius,
+                },
+              ]}
+              start={{ x: 1, y: 1 }}
+              end={{ x: 0, y: 0 }}
+            >
+              <Text style={styles.offenseText}>{this.props.number}</Text>
+            </LinearGradient>
+          </Animated.View>
         );
 
       case 'disc':
@@ -189,24 +206,35 @@ class DisplayedElement extends React.Component {
 const styles = StyleSheet.create({
   defense: {
     position: 'absolute',
-    backgroundColor: '#dcdcdc',
-    textAlign: 'center',
-    textAlignVertical: 'center',
-    color: 'black',
+    backgroundColor: theme.DEFENSE_COLOR,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  defenseText: {
+    color: theme.OFFENSE_TEXT_COLOR,
+    fontWeight: 'bold',
   },
 
   offense: {
     position: 'absolute',
-    backgroundColor: '#cd5c5c',
     textAlign: 'center',
     textAlignVertical: 'center',
-    color: 'white',
+  },
+  offenseText: {
+    fontWeight: 'bold',
+    color: theme.OFFENSE_TEXT_COLOR,
+  },
+
+  gradient: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 
   disc: {
     position: 'absolute',
-    borderColor: 'black',
-    backgroundColor: 'white',
+    borderColor: theme.DISC_BORDER,
+    backgroundColor: theme.DISC_COLOR,
   },
 
   triangle: {
@@ -215,7 +243,7 @@ const styles = StyleSheet.create({
     borderStyle: 'solid',
     borderLeftColor: 'transparent',
     borderRightColor: 'transparent',
-    borderBottomColor: 'orange',
+    borderBottomColor: theme.CONE_COLOR,
   },
 });
 

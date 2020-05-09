@@ -2,9 +2,25 @@
 
 exports[`<TrainingPage /> renders correctly with a training outside any program 1`] = `
 <View
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  onSwipeLeft={[Function]}
+  onSwipeRight={[Function]}
   style={
     Object {
+      "backgroundColor": "#fff",
       "flex": 1,
+      "height": "100%",
     }
   }
 >
@@ -713,13 +729,6 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
     renderItem={[Function]}
     scrollEventThrottle={50}
     stickyHeaderIndices={Array []}
-    style={
-      Object {
-        "backgroundColor": "#fff",
-        "flex": 1,
-        "height": "100%",
-      }
-    }
     updateCellsBatchingPeriod={50}
     viewabilityConfigCallbackPairs={Array []}
     windowSize={21}
@@ -1148,9 +1157,25 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
 
 exports[`<TrainingPage /> renders correctly with a training within a program 1`] = `
 <View
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  onSwipeLeft={[Function]}
+  onSwipeRight={[Function]}
   style={
     Object {
+      "backgroundColor": "#fff",
       "flex": 1,
+      "height": "100%",
     }
   }
 >
@@ -1859,13 +1884,6 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
     renderItem={[Function]}
     scrollEventThrottle={50}
     stickyHeaderIndices={Array []}
-    style={
-      Object {
-        "backgroundColor": "#fff",
-        "flex": 1,
-        "height": "100%",
-      }
-    }
     updateCellsBatchingPeriod={50}
     viewabilityConfigCallbackPairs={Array []}
     windowSize={21}

@@ -1,12 +1,14 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { Provider } from 'react-redux';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrill } from '../Fixtures/TestFixtures';
 import { render, fireEvent, cleanup } from 'react-native-testing-library';
+import store from '../Store/testStore';
 import { Levels, Intensities, EquipmentLabels, SeasonTimings, GoalsFitness, DrillTypes } from '../Fixtures';
 
-import FitnessFilters from './FitnessFilters';
+import ConnectedFitnessFilters, { FitnessFilters } from './FitnessFilters';
 
 jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
 
@@ -24,7 +26,7 @@ describe('<FitnessFilters />', () => {
       },
     };
     const navigation = { setOptions: jest.fn(), navigate: jest.fn() };
-    const tree = renderer.create(<FitnessFilters route={route} navigation={navigation} />).toJSON();
+    const tree = renderer.create(<FitnessFilters route={route} navigation={navigation} favoriteDrills={[]} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
@@ -37,25 +39,28 @@ describe('<FitnessFilters />', () => {
       const Stack = createStackNavigator();
 
       const { getByText, getByTestId } = render(
-        <NavigationContainer>
-          <Stack.Navigator>
-            <Stack.Screen
-              name="FitnessFilters"
-              component={FitnessFilters}
-              initialParams={{
-                initialData: drills,
-                previousScreen: 'DrillListPage',
-                previousType: DrillTypes.FITNESS,
-              }}
-              listeners={({ navigation }) => ({
-                transitionStart: e => {
-                  navigation.navigate = navigate;
-                },
-              })}
-            />
-            <Stack.Screen name="DrillListPage" component={DummyScreen} />
-          </Stack.Navigator>
-        </NavigationContainer>,
+        <Provider store={store}>
+          <NavigationContainer>
+            <Stack.Navigator>
+              <Stack.Screen
+                name="FitnessFilters"
+                component={ConnectedFitnessFilters}
+                initialParams={{
+                  initialData: drills,
+                  previousScreen: 'DrillListPage',
+                  previousType: DrillTypes.FITNESS,
+                }}
+                listeners={({ navigation }) => ({
+                  transitionStart: e => {
+                    navigation.navigate = navigate;
+                  },
+                })}
+              />
+              <Stack.Screen name="DrillListPage" component={DummyScreen} />
+            </Stack.Navigator>
+          </NavigationContainer>
+          ,
+        </Provider>,
       );
 
       expect(getByText('3 drills available')).toBeDefined();
@@ -97,25 +102,28 @@ describe('<FitnessFilters />', () => {
       const Stack = createStackNavigator();
 
       const { getByText, getByTestId } = render(
-        <NavigationContainer>
-          <Stack.Navigator>
-            <Stack.Screen
-              name="FitnessFilters"
-              component={FitnessFilters}
-              initialParams={{
-                initialData: drills,
-                previousScreen: 'DrillListPage',
-                previousType: DrillTypes.FITNESS,
-              }}
-              listeners={({ navigation }) => ({
-                transitionStart: e => {
-                  navigation.navigate = navigate;
-                },
-              })}
-            />
-            <Stack.Screen name="DrillListPage" component={DummyScreen} />
-          </Stack.Navigator>
-        </NavigationContainer>,
+        <Provider store={store}>
+          <NavigationContainer>
+            <Stack.Navigator>
+              <Stack.Screen
+                name="FitnessFilters"
+                component={ConnectedFitnessFilters}
+                initialParams={{
+                  initialData: drills,
+                  previousScreen: 'DrillListPage',
+                  previousType: DrillTypes.FITNESS,
+                }}
+                listeners={({ navigation }) => ({
+                  transitionStart: e => {
+                    navigation.navigate = navigate;
+                  },
+                })}
+              />
+              <Stack.Screen name="DrillListPage" component={DummyScreen} />
+            </Stack.Navigator>
+          </NavigationContainer>
+          ,
+        </Provider>,
       );
 
       expect(getByText('3 drills available')).toBeDefined();
@@ -157,25 +165,28 @@ describe('<FitnessFilters />', () => {
       const Stack = createStackNavigator();
 
       const { getByText, getByTestId } = render(
-        <NavigationContainer>
-          <Stack.Navigator>
-            <Stack.Screen
-              name="FitnessFilters"
-              component={FitnessFilters}
-              initialParams={{
-                initialData: drills,
-                previousScreen: 'DrillListPage',
-                previousType: DrillTypes.FITNESS,
-              }}
-              listeners={({ navigation }) => ({
-                transitionStart: e => {
-                  navigation.navigate = navigate;
-                },
-              })}
-            />
-            <Stack.Screen name="DrillListPage" component={DummyScreen} />
-          </Stack.Navigator>
-        </NavigationContainer>,
+        <Provider store={store}>
+          <NavigationContainer>
+            <Stack.Navigator>
+              <Stack.Screen
+                name="FitnessFilters"
+                component={ConnectedFitnessFilters}
+                initialParams={{
+                  initialData: drills,
+                  previousScreen: 'DrillListPage',
+                  previousType: DrillTypes.FITNESS,
+                }}
+                listeners={({ navigation }) => ({
+                  transitionStart: e => {
+                    navigation.navigate = navigate;
+                  },
+                })}
+              />
+              <Stack.Screen name="DrillListPage" component={DummyScreen} />
+            </Stack.Navigator>
+          </NavigationContainer>
+          ,
+        </Provider>,
       );
 
       expect(getByText('3 drills available')).toBeDefined();
@@ -217,25 +228,28 @@ describe('<FitnessFilters />', () => {
       const Stack = createStackNavigator();
 
       const { getByText, getByTestId } = render(
-        <NavigationContainer>
-          <Stack.Navigator>
-            <Stack.Screen
-              name="FitnessFilters"
-              component={FitnessFilters}
-              initialParams={{
-                initialData: drills,
-                previousScreen: 'DrillListPage',
-                previousType: DrillTypes.FITNESS,
-              }}
-              listeners={({ navigation }) => ({
-                transitionStart: e => {
-                  navigation.navigate = navigate;
-                },
-              })}
-            />
-            <Stack.Screen name="DrillListPage" component={DummyScreen} />
-          </Stack.Navigator>
-        </NavigationContainer>,
+        <Provider store={store}>
+          <NavigationContainer>
+            <Stack.Navigator>
+              <Stack.Screen
+                name="FitnessFilters"
+                component={ConnectedFitnessFilters}
+                initialParams={{
+                  initialData: drills,
+                  previousScreen: 'DrillListPage',
+                  previousType: DrillTypes.FITNESS,
+                }}
+                listeners={({ navigation }) => ({
+                  transitionStart: e => {
+                    navigation.navigate = navigate;
+                  },
+                })}
+              />
+              <Stack.Screen name="DrillListPage" component={DummyScreen} />
+            </Stack.Navigator>
+          </NavigationContainer>
+          ,
+        </Provider>,
       );
 
       expect(getByText('3 drills available')).toBeDefined();
@@ -280,25 +294,28 @@ describe('<FitnessFilters />', () => {
       const Stack = createStackNavigator();
 
       const { getByText, getByTestId } = render(
-        <NavigationContainer>
-          <Stack.Navigator>
-            <Stack.Screen
-              name="FitnessFilters"
-              component={FitnessFilters}
-              initialParams={{
-                initialData: drills,
-                previousScreen: 'DrillListPage',
-                previousType: DrillTypes.FITNESS,
-              }}
-              listeners={({ navigation }) => ({
-                transitionStart: e => {
-                  navigation.navigate = navigate;
-                },
-              })}
-            />
-            <Stack.Screen name="DrillListPage" component={DummyScreen} />
-          </Stack.Navigator>
-        </NavigationContainer>,
+        <Provider store={store}>
+          <NavigationContainer>
+            <Stack.Navigator>
+              <Stack.Screen
+                name="FitnessFilters"
+                component={ConnectedFitnessFilters}
+                initialParams={{
+                  initialData: drills,
+                  previousScreen: 'DrillListPage',
+                  previousType: DrillTypes.FITNESS,
+                }}
+                listeners={({ navigation }) => ({
+                  transitionStart: e => {
+                    navigation.navigate = navigate;
+                  },
+                })}
+              />
+              <Stack.Screen name="DrillListPage" component={DummyScreen} />
+            </Stack.Navigator>
+          </NavigationContainer>
+          ,
+        </Provider>,
       );
 
       expect(getByText('4 drills available')).toBeDefined();
@@ -342,25 +359,28 @@ describe('<FitnessFilters />', () => {
       const Stack = createStackNavigator();
 
       const { getByText, getByTestId, debug } = render(
-        <NavigationContainer>
-          <Stack.Navigator>
-            <Stack.Screen
-              name="FitnessFilters"
-              component={FitnessFilters}
-              initialParams={{
-                initialData: drills,
-                previousScreen: 'DrillListPage',
-                previousType: DrillTypes.FITNESS,
-              }}
-              listeners={({ navigation }) => ({
-                transitionStart: e => {
-                  navigation.navigate = navigate;
-                },
-              })}
-            />
-            <Stack.Screen name="DrillListPage" component={DummyScreen} />
-          </Stack.Navigator>
-        </NavigationContainer>,
+        <Provider store={store}>
+          <NavigationContainer>
+            <Stack.Navigator>
+              <Stack.Screen
+                name="FitnessFilters"
+                component={ConnectedFitnessFilters}
+                initialParams={{
+                  initialData: drills,
+                  previousScreen: 'DrillListPage',
+                  previousType: DrillTypes.FITNESS,
+                }}
+                listeners={({ navigation }) => ({
+                  transitionStart: e => {
+                    navigation.navigate = navigate;
+                  },
+                })}
+              />
+              <Stack.Screen name="DrillListPage" component={DummyScreen} />
+            </Stack.Navigator>
+          </NavigationContainer>
+          ,
+        </Provider>,
       );
 
       expect(getByText('How much time do you have?   - mins')).toBeDefined();

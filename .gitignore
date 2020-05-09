@@ -13,3 +13,4 @@ web-report/
 # macOS
 .DS_Store
 *.js~
+*.js#

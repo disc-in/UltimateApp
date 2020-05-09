@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Easing, Animated, View, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, Dimensions, Easing, Animated, View, TouchableOpacity, Image } from 'react-native';
 
 import DisplayedElement from './DisplayedElement';
 import DrillCuts from './DrillCuts';
@@ -16,14 +16,13 @@ class Animation extends React.Component {
     super(props);
 
     this.state = {
+      screenHeight: 1, // Height of the animation space
+      screenWidth: 1, // Width of the animation space
+      stepLength: 1000, // Duration of a step in milliseconds
       drill: undefined,
       displayedElements: [], // The graphical elments displayed in the drill
       currentStep: 0, // Current step displayed on the phone
-      animationWidth: this.props.width || 100,
-      animationHeight: this.props.height || 100,
     };
-
-    this.stepLength = 1000; // Duration of a step in milliseconds
 
     // Enables to update the current step inside an animation
     if (this.props.currentStepAV !== null && this.props.currentStepAV !== undefined)
@@ -33,6 +32,9 @@ class Animation extends React.Component {
     this.currentStepAV.addListener(progress => {
       this.setState({ currentStep: progress.value });
     });
+
+    this.animationWidth = 100;
+    this.animationHeight = 100;
 
     // Distance between the top of the window and the animation area
     this.dTop = 0;
@@ -73,12 +75,12 @@ class Animation extends React.Component {
           number: this.state.drill.texts[elemId],
           key: elemId,
           eId: elemId,
-          animationWidth: this.props.animationWidth,
-          animationHeight: this.props.animationHeight,
+          animationWidth: this.animationWidth,
+          animationHeight: this.animationHeight,
           movable: this.props.editable,
           onMoveEnd: this.props.onElementMove,
-          //		    left: this.state.drill.positions[0][elemId][0][0]*this.state.animationWidth + this.dLeft,
-          //		    top: this.state.drill.positions[0][elemId][0][1]*this.state.animationHeight + this.dTop
+          //		    left: this.state.drill.positions[0][elemId][0][0]*this.animationWidth + this.dLeft,
+          //		    top: this.state.drill.positions[0][elemId][0][1]*this.animationHeight + this.dTop
         }),
       );
     }
@@ -91,8 +93,8 @@ class Animation extends React.Component {
     console.log('initialize cut');
     this.cuts = new DrillCuts({
       drill: this.state.drill,
-      animationHeight: this.state.animationHeight,
-      animationWidth: this.state.animationWidth,
+      animationHeight: this.animationHeight,
+      animationWidth: this.animationWidth,
       currentStep: this.state.currentStep,
       positionPercentToPixel: this._positionPercentToPixel,
       onMoveEnd: this.props.onCutMove,
@@ -102,22 +104,22 @@ class Animation extends React.Component {
 
   /** Create the progress bar */
   _createProgressBar() {
-    //	console.log("Create PB animation width " + this.state.animationWidth);
+    //	console.log("Create PB animation width " + this.animationWidth);
 
     if (
-      this.state.animationWidth !== undefined &&
-      this.state.animationWidth !== null &&
-      this.state.animationHeight !== undefined &&
-      this.state.animationHeight !== null
+      this.animationWidth !== undefined &&
+      this.animationWidth !== null &&
+      this.animationHeight !== undefined &&
+      this.animationHeight !== null
     )
       return new ProgressBar({
         readonly: !this.props.editable,
-        animationWidth: this.state.animationWidth,
-        animationHeight: this.state.animationHeight,
+        animationWidth: this.animationWidth,
+        animationHeight: this.animationHeight,
         stepCount: this._stepCount(),
         currentStepAV: this.currentStepAV,
         getStepAnimation: this._getStepAnimation,
-        stepLength: this.stepLength,
+        stepLength: this.state.stepLength,
         onStepChange: this.props.onStepChange,
         onStepAdded: this.props.onStepAdded,
         editable: this.props.editable,
@@ -133,10 +135,7 @@ class Animation extends React.Component {
    * y2: corresponding vertical position in pixel (=0 if centered)
    */
   _positionPercentToPixel = (x, y) => {
-    //	console.log("Animation : positionPercentToPixel, width/height: " + this.state.animationWidth + "/" + this.state.animationHeight);
-    //	console.log("Animation : positionPercentToPixel, x/y: " + x + "/" + y);
-
-    return [this.state.animationWidth * x + this.dLeft, this.state.animationHeight * y + this.dTop];
+    return [this.animationWidth * x + this.dLeft, this.animationHeight * y + this.dTop];
   };
 
   /** Set each displayed element at its original position */
@@ -180,7 +179,11 @@ class Animation extends React.Component {
 
   /** Once we get the screen size, create the DisplayedElement used in the drill and set them to their initial position */
   componentDidMount() {
-    var inputDrill = new Drill();
+    var { height, width } = Dimensions.get('window');
+
+    this.animationWidth = width * this.props.widthRatio;
+    this.animationHeight = height * this.props.heightRatio;
+    var inputDrill = new Drill(this.props.animation);
     var initialStep = 0;
 
     // If the current step is fixed by the parent (used in the editor)
@@ -189,6 +192,8 @@ class Animation extends React.Component {
     this.setState(
       {
         drill: inputDrill,
+        screenHeight: height,
+        screenWidth: width,
         currentStep: initialStep,
       },
       () => {
@@ -291,7 +296,7 @@ class Animation extends React.Component {
     stepAnimation.push(
       Animated.timing(this.currentStepAV, {
         toValue: stepId,
-        duration: this.stepLength,
+        duration: this.state.stepLength,
         easing: Easing.linear,
         key: 0,
       }),
@@ -333,7 +338,7 @@ class Animation extends React.Component {
             var anim = currentDisplayedElement.getAnimation(
               pixelPosition[0],
               pixelPosition[1],
-              this.stepLength / substepCount,
+              this.state.stepLength / substepCount,
             );
 
             displayedElementStepAnimation.push(anim);
@@ -349,7 +354,7 @@ class Animation extends React.Component {
           );
 
           /* Get the corresponding animation */
-          anim = currentDisplayedElement.getAnimation(pixelPosition[0], pixelPosition[1], this.stepLength);
+          anim = currentDisplayedElement.getAnimation(pixelPosition[0], pixelPosition[1], this.state.stepLength);
 
           displayedElementStepAnimation.push(anim);
         }
@@ -396,9 +401,7 @@ class Animation extends React.Component {
     }
 
     return (
-      <View
-        style={[styles.mainContainer, { height: this.state.animationHeight }, { width: this.state.animationWidth }]}
-      >
+      <View style={[styles.mainContainer, { height: this.animationHeight }, { width: this.animationWidth }]}>
         {this.props.editable && this._display(this.cuts)}
         {this.state.displayedElements === undefined || this.state.displayedElements === null ? (
           <View />
@@ -439,7 +442,7 @@ class Animation extends React.Component {
       });
       this.setState(
         {
-          de: this._createDisplayedElement(),
+          displayedElements: this._createDisplayedElement(),
         },
         () => {
           /* Set all the elements to their initial positions */
@@ -457,7 +460,7 @@ class Animation extends React.Component {
     // Test if the drill has changed
     var isEqual = true;
 
-    if (props.width !== state.animationWidth || props.height !== state.animationHeight) isEqual = false;
+    if (props.width !== this.animationWidth || props.height !== this.animationHeight) isEqual = false;
 
     if (isEqual && props.drill !== undefined && state.drill !== undefined) {
       var stepId = 0;
@@ -522,9 +525,9 @@ class Animation extends React.Component {
     else {
       return {
         drill: props.drill,
-        de: undefined,
-        animationWidth: props.width,
-        animationHeight: props.height,
+        displayedElements: undefined,
+        animationWidth: this.animationWidth,
+        animationHeight: this.animationHeight,
       };
     }
   }

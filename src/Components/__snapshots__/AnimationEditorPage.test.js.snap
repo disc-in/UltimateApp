@@ -33,10 +33,10 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
             "justifyContent": "center",
           },
           Object {
-            "height": 0,
+            "height": 667,
           },
           Object {
-            "width": 0,
+            "width": 750,
           },
         ]
       }
@@ -193,7 +193,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
               "width": 15,
             },
             Object {
-              "left": -50,
+              "left": 325,
             },
           ]
         }
@@ -206,7 +206,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
             "height": 4,
             "left": 20,
             "position": "absolute",
-            "width": -60,
+            "width": 315,
           }
         }
       />
@@ -233,7 +233,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
             "borderWidth": 0,
             "bottom": 7.5,
             "height": 15,
-            "left": -50,
+            "left": 325,
             "opacity": 0,
             "position": "absolute",
             "width": 15,
@@ -263,7 +263,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
               "position": "absolute",
             },
             Object {
-              "left": -46,
+              "left": 329,
             },
           ]
         }
@@ -319,7 +319,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
           Object {
             "bottom": 0,
             "height": 35,
-            "left": -65,
+            "left": 310,
             "opacity": 1,
             "position": "absolute",
             "width": 35,
@@ -329,8 +329,8 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
       <View
         style={
           Object {
-            "left": -110,
-            "top": -30,
+            "left": 640,
+            "top": 637,
           }
         }
       />
@@ -341,10 +341,10 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
               "position": "absolute",
             },
             Object {
-              "left": -106,
+              "left": 644,
             },
             Object {
-              "top": -33,
+              "top": 634,
             },
             Object {
               "color": "white",
@@ -376,10 +376,10 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
         style={
           Object {
             "height": 80,
-            "left": -125,
+            "left": 625,
             "opacity": 1,
             "position": "absolute",
-            "top": -45,
+            "top": 622,
             "width": 80,
           }
         }

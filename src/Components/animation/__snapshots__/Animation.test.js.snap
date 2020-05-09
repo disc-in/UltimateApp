@@ -11,10 +11,10 @@ exports[`<Animation /> renders correctly 1`] = `
         "justifyContent": "center",
       },
       Object {
-        "height": undefined,
+        "height": NaN,
       },
       Object {
-        "width": undefined,
+        "width": NaN,
       },
     ]
   }
@@ -123,6 +123,29 @@ exports[`<Animation /> renders correctly 1`] = `
       />
     </View>
   </View>
-  <View />
+  <View
+    style={
+      Object {
+        "backgroundColor": "gray",
+        "bottom": 10,
+        "height": 10,
+        "left": 20,
+        "position": "absolute",
+        "width": NaN,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "black",
+        "bottom": 10,
+        "height": 10,
+        "left": 20,
+        "position": "absolute",
+        "width": NaN,
+      }
+    }
+  />
 </View>
 `;

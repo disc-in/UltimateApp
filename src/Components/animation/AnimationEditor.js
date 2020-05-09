@@ -342,8 +342,8 @@ class AnimationEditor extends React.Component {
           drill={this.state.drill}
           onElementMove={this.moveElement}
           onCutMove={this.cutMove}
-          height={this.state.height === undefined ? 300 : this.state.height * this.hRatio}
-          width={this.state.width === undefined ? 300 : this.state.width * this.wRatio}
+          widthRatio={1}
+          heightRatio={1 / 2}
           dTop={this.state.dTop}
           lTop={this.state.lTop}
           onStepChange={this.displayStepDescription}

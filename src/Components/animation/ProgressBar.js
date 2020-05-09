@@ -37,7 +37,7 @@ class ProgressBar extends React.Component {
     var stepWidth = this.progressBarWidth / (this.props.stepCount - 1);
 
     // If the bar is in the editor, there is an additional button to add a step
-    if (this.props.editable) {
+    if (!this.props.readonly) {
       stepWidth = this.progressBarWidth / this.props.stepCount;
       this.progressBarWidth -= stepWidth;
     }
@@ -143,7 +143,7 @@ class ProgressBar extends React.Component {
       )),
     );
 
-    if (this.props.editable) {
+    if (!this.props.readonly) {
       var addDotLeft = 10 + this.props.stepCount * stepWidth;
 
       /* Add the "add step" dot */

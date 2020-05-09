@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, ScrollView, View, Text, TouchableOpacity, TextInput } from 'react-native';
+import { ScrollView, View, Text } from 'react-native';
+import { connect } from 'react-redux';
 import filterStyle from '../styles/filters.style';
 import { Levels, Intensities, EquipmentLabels, SeasonTimings } from '../Fixtures';
 import Button from './filters/FilterButton';
@@ -10,8 +11,8 @@ import HeaderButton from './shared/HeaderButton';
 class FitnessFilters extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
+      selectedFavorites: false,
       selectedLevels: [],
       selectedIntensities: [],
       selectedEquipmentLabels: [],
@@ -19,6 +20,7 @@ class FitnessFilters extends React.Component {
       selectedGoals: [],
       durationInMinutes: undefined,
       displayedDrills: this.props.route.params.initialData,
+      favoriteDrills: props.favoriteDrills,
     };
 
     this.onDurationInMinutesChange = this.onSliderChange.bind(this, 'durationInMinutes');
@@ -35,21 +37,32 @@ class FitnessFilters extends React.Component {
     }, this.applyFilters);
   }
 
+  onFavoritesChange() {
+    this.setState(
+      prevState => ({
+        selectedFavorites: !prevState.selectedFavorites,
+      }),
+      this.applyFilters,
+    );
+  }
   onSliderChange(target, value) {
     this.setState({ [target]: value }, this.applyFilters);
   }
 
   applyFilters() {
     const {
+      selectedFavorites,
       selectedLevels,
       selectedIntensities,
       selectedEquipmentLabels,
       selectedSeasonTimings,
       selectedGoals,
       durationInMinutes,
+      favoriteDrills,
     } = this.state;
     let newData = this.props.route.params.initialData;
 
+    if (selectedFavorites) newData = newData.filter(drill => favoriteDrills.includes(drill));
     if (selectedLevels.length > 0) newData = newData.filter(drill => selectedLevels.includes(drill.level));
     if (selectedIntensities.length > 0)
       newData = newData.filter(drill => selectedIntensities.includes(drill.intensity));
@@ -81,6 +94,7 @@ class FitnessFilters extends React.Component {
 
   render() {
     const {
+      selectedFavorites,
       selectedLevels,
       selectedIntensities,
       selectedEquipmentLabels,
@@ -93,6 +107,9 @@ class FitnessFilters extends React.Component {
       <View style={filterStyle.wrapper}>
         <Text style={filterStyle.counter}>{this.state.displayedDrills.length} drills available</Text>
         <ScrollView contentContainerStyle={filterStyle.filters}>
+          <View style={filterStyle.filter}>
+            <Button title="Favorite Drills" onPress={() => this.onFavoritesChange()} active={selectedFavorites} />
+          </View>
           <Text style={filterStyle.filterTitle}>Level</Text>
           <View style={filterStyle.filter}>
             {Object.values(Levels).map(level => (
@@ -169,5 +186,9 @@ class FitnessFilters extends React.Component {
     );
   }
 }
-
-export default FitnessFilters;
+const mapStateToProps = state => {
+  return {
+    favoriteDrills: state.favoriteDrills,
+  };
+};
+export default connect(mapStateToProps)(FitnessFilters);

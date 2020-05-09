@@ -146,13 +146,14 @@ const DrillIllustration = props => {
   };
 
   const displayVimeo = ({ illustrationSource, repetition, title, sounds }) => {
+    const isUniqueStep = props.drill.steps.length === 1;
     return (
       <>
-        {props.drill.steps.length > 1 && (
+        <View style={[{ height: 250 }, isUniqueStep && styles.videoAlone]}>
+          <VimeoVideo vimeoId={illustrationSource} screenWidth={screenDimension.width} sounds={sounds} />
+        </View>
+        {!isUniqueStep && (
           <>
-            <View style={{ height: 250 }}>
-              <VimeoVideo vimeoId={illustrationSource} screenWidth={screenDimension.width} sounds={sounds} />
-            </View>
             <View style={styles.description}>
               <View style={styles.subWrapper}>
                 <Text style={styles.fitness}>{repetition}</Text>
@@ -167,13 +168,6 @@ const DrillIllustration = props => {
             <View style={styles.lines} />
             <View style={styles.containerAnimation}>
               <View style={styles.container}>{displayNextStep()}</View>
-            </View>
-          </>
-        )}
-        {props.drill.steps.length <= 1 && (
-          <>
-            <View style={styles.videoAlone}>
-              <VimeoVideo vimeoId={illustrationSource} screenWidth={screenDimension.width} sounds={sounds} />
             </View>
           </>
         )}
@@ -300,7 +294,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flex: 1,
-    height: 250,
   },
 });
 

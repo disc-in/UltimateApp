@@ -3,7 +3,7 @@ import { Animated, View, StyleSheet, Text, Dimensions, TouchableOpacity, Image }
 import GestureRecognizer from 'react-native-swipe-gestures';
 import { WebView } from 'react-native-webview';
 
-import Animation from './Animation';
+import Animation from './animation/Animation';
 import VimeoVideo from './VimeoVideo';
 import { IllustrationType } from '../Fixtures';
 import theme from '../styles/theme.style';
@@ -123,7 +123,7 @@ const DrillIllustration = props => {
   const displayAnimation = ({ illustrationSource, instruction, title }) => {
     return (
       <>
-        <Animation readonly widthRatio={1} heightRatio={1 / 2} animation={illustrationSource} />
+        <Animation widthRatio={1} heightRatio={1 / 2} animation={illustrationSource} />
         {props.drill.steps.length > 1 && (
           <>
             <View style={styles.description}>

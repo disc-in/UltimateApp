@@ -385,12 +385,12 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
       onStartShouldSetResponderCapture={[Function]}
       style={
         Object {
+          "alignItems": "center",
           "borderRadius": 55.583333333333336,
           "height": 55.583333333333336,
+          "justifyContent": "center",
           "left": 0,
           "position": "absolute",
-          "textAlign": "center",
-          "textAlignVertical": "center",
           "top": 0,
           "transform": Array [
             Object {
@@ -510,12 +510,12 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
       onStartShouldSetResponderCapture={[Function]}
       style={
         Object {
+          "alignItems": "center",
           "borderRadius": 55.583333333333336,
           "height": 55.583333333333336,
+          "justifyContent": "center",
           "left": 0,
           "position": "absolute",
-          "textAlign": "center",
-          "textAlignVertical": "center",
           "top": 0,
           "transform": Array [
             Object {
@@ -591,9 +591,9 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
         Object {
           "backgroundColor": "white",
           "borderColor": "black",
-          "borderRadius": 27.791666666666668,
-          "borderWidth": 2.779166666666667,
-          "height": 27.791666666666668,
+          "borderRadius": 20,
+          "borderWidth": 2,
+          "height": 20,
           "left": 0,
           "position": "absolute",
           "top": 0,
@@ -605,7 +605,7 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
               "translateY": 73.37,
             },
           ],
-          "width": 27.791666666666668,
+          "width": 20,
         }
       }
     />
@@ -614,6 +614,7 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
         Object {
           "bottom": 0,
           "flexDirection": "row",
+          "marginLeft": 30,
           "position": "absolute",
           "right": 0,
         }
@@ -752,7 +753,7 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
         Object {
           "backgroundColor": "transparent",
           "bottom": 0,
-          "height": 35,
+          "height": 25,
           "left": 10,
           "opacity": 1,
           "position": "absolute",
@@ -775,7 +776,7 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
         Object {
           "backgroundColor": "transparent",
           "bottom": 0,
-          "height": 35,
+          "height": 25,
           "left": 167.5,
           "opacity": 1,
           "position": "absolute",
@@ -798,7 +799,7 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
         Object {
           "backgroundColor": "transparent",
           "bottom": 0,
-          "height": 35,
+          "height": 25,
           "left": 482.5,
           "opacity": 1,
           "position": "absolute",

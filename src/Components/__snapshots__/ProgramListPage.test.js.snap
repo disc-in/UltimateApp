@@ -6,41 +6,16 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
     Object {
       "backgroundColor": "#f1f1f1",
       "height": "100%",
-      "paddingVertical": 20,
     }
   }
 >
-  <View
-    accessible={true}
-    focusable={true}
-    isTVSelectable={true}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
+  <RCTScrollView
+    contentContainerStyle={
       Object {
-        "paddingBottom": 20,
-        "paddingHorizontal": 20,
+        "paddingBottom": 50,
+        "paddingVertical": 10,
       }
     }
-  >
-    <Text
-      style={
-        Object {
-          "fontSize": 20,
-          "fontWeight": "bold",
-          "marginLeft": 5,
-        }
-      }
-    >
-      All trainings
-    </Text>
-  </View>
-  <RCTScrollView
     data={
       Array [
         Object {
@@ -1128,5 +1103,59 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
       </View>
     </View>
   </RCTScrollView>
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgba(241, 241, 241, 0.2)",
+        "bottom": 10,
+        "position": "absolute",
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "#fff",
+          "borderColor": "#A6A6A6",
+          "borderRadius": 5,
+          "borderWidth": 1,
+          "fontSize": 14,
+          "height": 40,
+          "justifyContent": "center",
+          "marginTop": 10,
+          "opacity": 1,
+          "padding": 10,
+          "width": "auto",
+        }
+      }
+      testID="button"
+    >
+      <Text
+        style={
+          Object {
+            "color": "#A6A6A6",
+            "fontSize": 16,
+            "fontWeight": "bold",
+            "textAlign": "center",
+          }
+        }
+      >
+        See all trainings
+      </Text>
+    </View>
+  </View>
 </View>
 `;

@@ -6,7 +6,7 @@ exports[`<HomePage /> renders correctly 1`] = `
     Object {
       "backgroundColor": "#fff",
       "height": "100%",
-      "paddingTop": 20,
+      "paddingTop": 7,
     }
   }
 >
@@ -23,7 +23,8 @@ exports[`<HomePage /> renders correctly 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "height": "30%",
+        "flexBasis": "25%",
+        "flexGrow": 1,
         "marginBottom": 5,
       }
     }
@@ -96,7 +97,8 @@ exports[`<HomePage /> renders correctly 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "height": "30%",
+        "flexBasis": "25%",
+        "flexGrow": 1,
         "marginBottom": 5,
       }
     }
@@ -169,7 +171,8 @@ exports[`<HomePage /> renders correctly 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "height": "30%",
+        "flexBasis": "25%",
+        "flexGrow": 1,
         "marginBottom": 5,
       }
     }
@@ -227,6 +230,56 @@ exports[`<HomePage /> renders correctly 1`] = `
           Training programs
         </Text>
       </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "paddingBottom": 5,
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#fff",
+          "borderColor": "#A6A6A6",
+          "borderRadius": 5,
+          "borderWidth": 1,
+          "height": 40,
+          "justifyContent": "center",
+          "opacity": 1,
+          "padding": 10,
+          "width": "80%",
+        }
+      }
+      testID="button"
+    >
+      <Text
+        style={
+          Object {
+            "color": "#A6A6A6",
+            "fontSize": 16,
+            "fontWeight": "bold",
+            "textAlign": "center",
+          }
+        }
+      >
+        Animation Editor
+      </Text>
     </View>
   </View>
 </View>

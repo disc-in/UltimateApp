@@ -20,103 +20,6 @@ exports[`<Animation /> renders correctly 1`] = `
   }
 >
   <View
-    height="100%"
-    style={
-      Array [
-        Object {
-          "position": "absolute",
-        },
-      ]
-    }
-    width="100%"
-  >
-    <RNSVGSvgView
-      bbHeight="100%"
-      bbWidth="100%"
-      focusable={false}
-      height="100%"
-      style={
-        Array [
-          Object {
-            "backgroundColor": "transparent",
-            "borderWidth": 0,
-          },
-          Array [
-            Object {
-              "bottom": 0,
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-            },
-          ],
-          Object {
-            "flex": 0,
-            "height": "100%",
-            "width": "100%",
-          },
-        ]
-      }
-      width="100%"
-    >
-      <RNSVGGroup>
-        <RNSVGLine
-          propList={
-            Array [
-              "stroke",
-              "strokeWidth",
-              "strokeDasharray",
-            ]
-          }
-          stroke={4278222848}
-          strokeDasharray={
-            Array [
-              "5",
-              "5",
-            ]
-          }
-          strokeWidth="2"
-          x1={NaN}
-          x2={NaN}
-          y1={NaN}
-          y2={NaN}
-        />
-        <RNSVGLine
-          propList={
-            Array [
-              "stroke",
-              "strokeWidth",
-              "strokeDasharray",
-            ]
-          }
-          stroke={4278222848}
-          strokeDasharray={
-            Array [
-              "5",
-              "5",
-            ]
-          }
-          strokeWidth="2"
-          x1={NaN}
-          x2={NaN}
-          y1={NaN}
-          y2={NaN}
-        />
-        <RNSVGCircle
-          cx={NaN}
-          cy={NaN}
-          fill={4278222848}
-          propList={
-            Array [
-              "fill",
-            ]
-          }
-          r={NaN}
-        />
-      </RNSVGGroup>
-    </RNSVGSvgView>
-  </View>
-  <View
     onMoveShouldSetResponder={[Function]}
     onMoveShouldSetResponderCapture={[Function]}
     onResponderEnd={[Function]}
@@ -131,12 +34,12 @@ exports[`<Animation /> renders correctly 1`] = `
     onStartShouldSetResponderCapture={[Function]}
     style={
       Object {
+        "alignItems": "center",
         "borderRadius": NaN,
         "height": NaN,
+        "justifyContent": "center",
         "left": 0,
         "position": "absolute",
-        "textAlign": "center",
-        "textAlignVertical": "center",
         "top": 0,
         "transform": Array [
           Object {
@@ -256,12 +159,12 @@ exports[`<Animation /> renders correctly 1`] = `
     onStartShouldSetResponderCapture={[Function]}
     style={
       Object {
+        "alignItems": "center",
         "borderRadius": NaN,
         "height": NaN,
+        "justifyContent": "center",
         "left": 0,
         "position": "absolute",
-        "textAlign": "center",
-        "textAlignVertical": "center",
         "top": 0,
         "transform": Array [
           Object {
@@ -337,9 +240,9 @@ exports[`<Animation /> renders correctly 1`] = `
       Object {
         "backgroundColor": "white",
         "borderColor": "black",
-        "borderRadius": NaN,
-        "borderWidth": NaN,
-        "height": NaN,
+        "borderRadius": 20,
+        "borderWidth": 2,
+        "height": 20,
         "left": 0,
         "position": "absolute",
         "top": 0,
@@ -351,7 +254,7 @@ exports[`<Animation /> renders correctly 1`] = `
             "translateY": NaN,
           },
         ],
-        "width": NaN,
+        "width": 20,
       }
     }
   />
@@ -360,6 +263,7 @@ exports[`<Animation /> renders correctly 1`] = `
       Object {
         "bottom": 0,
         "flexDirection": "row",
+        "marginLeft": 30,
         "position": "absolute",
         "right": 0,
       }
@@ -461,70 +365,10 @@ exports[`<Animation /> renders correctly 1`] = `
   </View>
   <View
     style={
-      Array [
-        Object {
-          "backgroundColor": "gray",
-        },
-        Object {
-          "borderRadius": 10,
-          "borderWidth": 0,
-          "bottom": 7.5,
-          "height": 15,
-          "position": "absolute",
-          "width": 15,
-        },
-        Object {
-          "left": NaN,
-        },
-      ]
-    }
-  />
-  <View
-    style={
-      Array [
-        Object {
-          "backgroundColor": "gray",
-        },
-        Object {
-          "borderRadius": 10,
-          "borderWidth": 0,
-          "bottom": 7.5,
-          "height": 15,
-          "position": "absolute",
-          "width": 15,
-        },
-        Object {
-          "left": NaN,
-        },
-      ]
-    }
-  />
-  <View
-    style={
-      Array [
-        Object {
-          "backgroundColor": "gray",
-        },
-        Object {
-          "borderRadius": 10,
-          "borderWidth": 0,
-          "bottom": 7.5,
-          "height": 15,
-          "position": "absolute",
-          "width": 15,
-        },
-        Object {
-          "left": NaN,
-        },
-      ]
-    }
-  />
-  <View
-    style={
       Object {
         "backgroundColor": "gray",
-        "bottom": 13,
-        "height": 4,
+        "bottom": 10,
+        "height": 10,
         "left": 20,
         "position": "absolute",
         "width": NaN,
@@ -535,98 +379,8 @@ exports[`<Animation /> renders correctly 1`] = `
     style={
       Object {
         "backgroundColor": "black",
-        "borderRadius": 10,
-        "borderWidth": 0,
-        "bottom": 7.5,
-        "height": 15,
-        "left": NaN,
-        "opacity": 1,
-        "position": "absolute",
-        "width": 15,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "backgroundColor": "black",
-        "borderRadius": 10,
-        "borderWidth": 0,
-        "bottom": 7.5,
-        "height": 15,
-        "left": NaN,
-        "opacity": 0,
-        "position": "absolute",
-        "width": 15,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "backgroundColor": "black",
-        "borderRadius": 10,
-        "borderWidth": 0,
-        "bottom": 7.5,
-        "height": 15,
-        "left": NaN,
-        "opacity": 0,
-        "position": "absolute",
-        "width": 15,
-      }
-    }
-  />
-  <Text
-    style={
-      Array [
-        Object {
-          "bottom": 23.5,
-          "position": "absolute",
-        },
-        Object {
-          "left": NaN,
-        },
-      ]
-    }
-  >
-    1
-  </Text>
-  <Text
-    style={
-      Array [
-        Object {
-          "bottom": 23.5,
-          "position": "absolute",
-        },
-        Object {
-          "left": NaN,
-        },
-      ]
-    }
-  >
-    2
-  </Text>
-  <Text
-    style={
-      Array [
-        Object {
-          "bottom": 23.5,
-          "position": "absolute",
-        },
-        Object {
-          "left": NaN,
-        },
-      ]
-    }
-  >
-    3
-  </Text>
-  <View
-    style={
-      Object {
-        "backgroundColor": "black",
-        "bottom": 13,
-        "height": 4,
+        "bottom": 10,
+        "height": 10,
         "left": 20,
         "position": "absolute",
         "width": NaN,
@@ -646,12 +400,13 @@ exports[`<Animation /> renders correctly 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
+        "backgroundColor": "transparent",
         "bottom": 0,
-        "height": 35,
+        "height": 25,
         "left": NaN,
         "opacity": 1,
         "position": "absolute",
-        "width": 35,
+        "width": NaN,
       }
     }
   />
@@ -668,12 +423,13 @@ exports[`<Animation /> renders correctly 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
+        "backgroundColor": "transparent",
         "bottom": 0,
-        "height": 35,
+        "height": 25,
         "left": NaN,
         "opacity": 1,
         "position": "absolute",
-        "width": 35,
+        "width": NaN,
       }
     }
   />
@@ -690,12 +446,13 @@ exports[`<Animation /> renders correctly 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
+        "backgroundColor": "transparent",
         "bottom": 0,
-        "height": 35,
+        "height": 25,
         "left": NaN,
         "opacity": 1,
         "position": "absolute",
-        "width": 35,
+        "width": NaN,
       }
     }
   />

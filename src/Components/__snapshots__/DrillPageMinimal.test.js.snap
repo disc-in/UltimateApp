@@ -44,7 +44,8 @@ exports[`<DrillPageMinimal /> renders correctly with a training and a drill 1`] 
       config={
         Object {
           "directionalOffsetThreshold": 80,
-          "velocityThreshold": 0.2,
+          "gestureIsClickThreshold": 10,
+          "velocityThreshold": 0.3,
         }
       }
       onMoveShouldSetResponder={[Function]}

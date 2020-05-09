@@ -20,7 +20,7 @@ class FitnessFilters extends React.Component {
       selectedGoals: [],
       durationInMinutes: undefined,
       displayedDrills: this.props.route.params.initialData,
-      favoriteDrills: props.favoriteDrills,
+      favoriteDrills: this.props.favoriteDrills,
     };
 
     this.onDurationInMinutesChange = this.onSliderChange.bind(this, 'durationInMinutes');
@@ -62,7 +62,8 @@ class FitnessFilters extends React.Component {
     } = this.state;
     let newData = this.props.route.params.initialData;
 
-    if (selectedFavorites) newData = newData.filter(drill => favoriteDrills.includes(drill));
+    if (selectedFavorites)
+      newData = newData.filter(drill => favoriteDrills.map(favorite => favorite.id).includes(drill.id));
     if (selectedLevels.length > 0) newData = newData.filter(drill => selectedLevels.includes(drill.level));
     if (selectedIntensities.length > 0)
       newData = newData.filter(drill => selectedIntensities.includes(drill.intensity));

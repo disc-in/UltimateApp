@@ -8,7 +8,7 @@ import Checkbox from './filters/Checkbox';
 import Slider from './filters/Slider';
 import HeaderButton from './shared/HeaderButton';
 
-class FitnessFilters extends React.Component {
+export class FitnessFilters extends React.Component {
   constructor(props) {
     super(props);
     this.state = {

@@ -8,7 +8,7 @@ import Checkbox from './filters/Checkbox';
 import Slider from './filters/Slider';
 import HeaderButton from './shared/HeaderButton';
 
-class FrisbeeFilters extends React.Component {
+export class FrisbeeFilters extends React.Component {
   constructor(props) {
     super(props);
 

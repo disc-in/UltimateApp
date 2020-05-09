@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import animationMenageATrois from '../Fixtures/AnimationMenageATrois';
+import animationMenageATrois from '../../Fixtures/AnimationMenageATrois';
 
 import Animation from './Animation';
 

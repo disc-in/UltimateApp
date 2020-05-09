@@ -48,6 +48,7 @@ export const DrillPage = props => {
     if (props.favoriteDrills.findIndex(item => item.id === props.route.params.drill.id) !== -1) {
       sourceImage = iconFavoriteFull;
     }
+
     return (
       <TouchableOpacity
         style={styles.favoriteContainer}

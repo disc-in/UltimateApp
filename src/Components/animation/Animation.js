@@ -205,7 +205,7 @@ class Animation extends React.Component {
             this._initPositions();
 
             this.progressBar = this._createProgressBar();
-            if (!this.props.editable) this._initializeCuts();
+            if (this.props.editable) this._initializeCuts();
 
             if (this.props.onStepChange !== undefined && this.props.onStepChange !== null)
               this.props.onStepChange(initialStep);
@@ -447,7 +447,7 @@ class Animation extends React.Component {
           /* Set all the elements to their initial positions */
           this._setCurrentPositions();
 
-          if (!this.props.editable) this._initializeCuts();
+          if (this.props.editable) this._initializeCuts();
           this.progressBar = this._createProgressBar();
         },
       );

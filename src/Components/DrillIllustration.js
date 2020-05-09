@@ -17,59 +17,33 @@ const DrillIllustration = props => {
   const [currentStepIndex, setStepIndex] = useState(0);
 
   const opacityUnchecked = useRef(new Animated.Value(1)).current;
-  const opacityChecked = useRef(new Animated.Value(0)).current;
+  const opacityChecked = opacityUnchecked.interpolate({ inputRange: [0, 1], outputRange: [1, 0] });
 
   const checkAnimation = () => {
     Animated.sequence([
-      Animated.parallel([
-        Animated.timing(opacityUnchecked, {
-          toValue: 0,
-          duration: 800,
-          easing: Easing.easeOutQuint,
-        }),
-        Animated.timing(opacityChecked, {
-          toValue: 1,
-          duration: 800,
-          easing: Easing.easeOutQuint,
-        }),
-      ]),
-      Animated.parallel([
-        Animated.timing(opacityUnchecked, {
-          toValue: 1,
-          duration: 10,
-        }),
-        Animated.timing(opacityChecked, {
-          toValue: 0,
-          duration: 10,
-        }),
-      ]),
+      Animated.timing(opacityUnchecked, {
+        toValue: 0,
+        duration: 800,
+        easing: Easing.easeOutQuint,
+      }),
+      Animated.timing(opacityUnchecked, {
+        toValue: 1,
+        duration: 10,
+      }),
     ]).start(() => incrementStepIndex());
   };
 
   const checkAnimationFast = () => {
     Animated.sequence([
-      Animated.parallel([
-        Animated.timing(opacityUnchecked, {
-          toValue: 0,
-          duration: 200,
-          easing: Easing.easeOutQuint,
-        }),
-        Animated.timing(opacityChecked, {
-          toValue: 1,
-          duration: 200,
-          easing: Easing.easeOutQuint,
-        }),
-      ]),
-      Animated.parallel([
-        Animated.timing(opacityUnchecked, {
-          toValue: 1,
-          duration: 10,
-        }),
-        Animated.timing(opacityChecked, {
-          toValue: 0,
-          duration: 10,
-        }),
-      ]),
+      Animated.timing(opacityUnchecked, {
+        toValue: 0,
+        duration: 200,
+        easing: Easing.easeOutQuint,
+      }),
+      Animated.timing(opacityUnchecked, {
+        toValue: 1,
+        duration: 10,
+      }),
     ]).start(() => incrementStepIndex());
   };
 

@@ -9,7 +9,7 @@ import theme from '../styles/theme.style';
 export const AnimationEditorPage = props => {
   return (
     <View style={styles.animationEditorPage}>
-      <AnimationEditor animation={drillSquare} heightRatio={1} widthRatio={1} editable />
+      <AnimationEditor animation={drillSquare} heightRatio={1} widthRatio={1} />
     </View>
   );
 };

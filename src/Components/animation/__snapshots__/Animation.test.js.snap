@@ -20,19 +20,6 @@ exports[`<Animation /> renders correctly 1`] = `
   }
 >
   <View
-    height="100%"
-    style={
-      Array [
-        Object {
-          "left": 0,
-          "position": "absolute",
-          "top": 0,
-        },
-      ]
-    }
-    width="100%"
-  />
-  <View
     style={
       Object {
         "bottom": 0,

@@ -90,7 +90,7 @@ const DrillIllustration = props => {
   const displayAnimation = ({ illustrationSource, instruction, title }) => {
     return (
       <>
-        <Animation readonly widthRatio={1} heightRatio={1 / 2} animation={illustrationSource} />
+        <Animation widthRatio={1} heightRatio={1 / 2} animation={illustrationSource} />
         {props.drill.steps.length > 1 && (
           <>
             <View style={styles.description}>

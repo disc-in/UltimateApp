@@ -73,8 +73,8 @@ class Animation extends React.Component {
           number: this.state.drill.texts[elemId],
           key: elemId,
           eId: elemId,
-          animationWidth: this.state.animationWidth,
-          animationHeight: this.state.animationHeight,
+          animationWidth: this.props.animationWidth,
+          animationHeight: this.props.animationHeight,
           movable: this.props.editable,
           onMoveEnd: this.props.onElementMove,
           //		    left: this.state.drill.positions[0][elemId][0][0]*this.state.animationWidth + this.dLeft,
@@ -111,7 +111,7 @@ class Animation extends React.Component {
       this.state.animationHeight !== null
     )
       return new ProgressBar({
-        readonly: this.props.readonly,
+        readonly: !this.props.editable,
         animationWidth: this.state.animationWidth,
         animationHeight: this.state.animationHeight,
         stepCount: this._stepCount(),
@@ -349,7 +349,7 @@ class Animation extends React.Component {
           );
 
           /* Get the corresponding animation */
-          anim = currentDE.getAnimation(pixelPosition[0], pixelPosition[1], this.stepLength);
+          anim = currentDisplayedElement.getAnimation(pixelPosition[0], pixelPosition[1], this.stepLength);
 
           displayedElementStepAnimation.push(anim);
         }
@@ -399,7 +399,7 @@ class Animation extends React.Component {
       <View
         style={[styles.mainContainer, { height: this.state.animationHeight }, { width: this.state.animationWidth }]}
       >
-        {!this.props.readonly && this._display(this.cuts)}
+        {this.props.editable && this._display(this.cuts)}
         {this.state.displayedElements === undefined || this.state.displayedElements === null ? (
           <View />
         ) : (

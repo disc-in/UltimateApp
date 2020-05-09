@@ -1,13 +1,14 @@
 import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity, Image } from 'react-native';
+import GestureRecognizer from 'react-native-swipe-gestures';
 
 import DrillList from './shared/DrillList';
 import Button from './shared/Button';
 import theme from '../styles/theme.style';
+import { swipeConfig } from '../styles/config';
 import iconPlayers from '../../assets/ic_players.png';
 import iconClock from '../../assets/ic_clock.png';
 import { convertMinsToTime } from '../utils/time';
-import { RECORDING_OPTION_IOS_BIT_RATE_STRATEGY_VARIABLE_CONSTRAINED } from 'expo-av/build/Audio';
 
 export function getTrainingDuration(training) {
   return training.drills.reduce((total, drill) => total + drill.durationInMinutes, 0);
@@ -26,18 +27,26 @@ export const TrainingPage = props => {
   const goToFirstDrill = () =>
     navigation.navigate('DrillPageMinimal', { drill: training.drills[0], training, program });
 
-  const programNavigation = () => {
-    const currentTrainingIndex = program.trainings.findIndex(programTraining => programTraining.id === training.id);
-    const isFirstTraining = currentTrainingIndex !== 0;
-    const isLastTraining = currentTrainingIndex !== program.trainings.length - 1;
+  const currentTrainingIndex = program
+    ? program.trainings.findIndex(programTraining => programTraining.id === training.id)
+    : null;
+  const isFirstTraining = program ? currentTrainingIndex === 0 : true;
+  const isLastTraining = program ? currentTrainingIndex === program.trainings.length - 1 : true;
 
-    const onNextPress = () =>
+  const onNextPress = () => {
+    if (!isLastTraining) {
       navigation.navigate('TrainingPage', { training: program.trainings[currentTrainingIndex + 1], program });
-    const onPrevPress = () =>
+    }
+  };
+  const onPrevPress = () => {
+    if (!isFirstTraining) {
       navigation.navigate('TrainingPage', { training: program.trainings[currentTrainingIndex - 1], program });
+    }
+  };
+  const programNavigation = () => {
     return (
       <View style={styles.programNavigation}>
-        {isFirstTraining && (
+        {!isFirstTraining && (
           <TouchableOpacity style={styles.btnPrevNext} onPress={onPrevPress}>
             <Text style={styles.btnPrevNextContent}>{'<'}</Text>
           </TouchableOpacity>
@@ -49,7 +58,7 @@ export const TrainingPage = props => {
             ({currentTrainingIndex + 1}/{program.trainings.length}){' '}
           </Text>
         )}
-        {isLastTraining && (
+        {!isLastTraining && (
           <TouchableOpacity style={styles.btnPrevNext} onPress={onNextPress}>
             <Text style={styles.btnPrevNextContent}>{'>'}</Text>
           </TouchableOpacity>
@@ -76,9 +85,13 @@ export const TrainingPage = props => {
   );
 
   return (
-    <View style={{ flex: 1 }}>
+    <GestureRecognizer
+      style={styles.trainingPage}
+      onSwipeLeft={onNextPress}
+      onSwipeRight={onPrevPress}
+      config={swipeConfig}
+    >
       <DrillList
-        style={styles.trainingPage}
         ListHeaderComponent={header}
         ListFooterComponent={<View style={{ paddingBottom: 30 }} />}
         ItemComponentStyle={styles.list}
@@ -89,7 +102,7 @@ export const TrainingPage = props => {
       <View style={styles.footer}>
         <Button onPress={goToFirstDrill} text="Start training" />
       </View>
-    </View>
+    </GestureRecognizer>
   );
 };
 

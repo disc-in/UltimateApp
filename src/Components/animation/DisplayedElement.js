@@ -179,8 +179,8 @@ class DisplayedElement extends React.Component {
               { borderLeftWidth: this.props.borderWidth },
               { borderRightWidth: this.props.borderWidth },
               { borderBottomWidth: this.props.bottomconeSize },
-              { top: this.top },
-              { left: this.left },
+              { top: 0 },
+              { left: 0 },
             ]}
             key={this.props.key}
           />

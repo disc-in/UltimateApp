@@ -16,6 +16,8 @@ class Animation extends React.Component {
     super(props);
 
     this.state = {
+      propsWidth: props.width,
+      propsHeight: props.height,
       screenHeight: 1, // Height of the animation space
       screenWidth: 1, // Width of the animation space
       stepLength: 1000, // Duration of a step in milliseconds
@@ -37,14 +39,10 @@ class Animation extends React.Component {
     this.animationHeight = 100;
 
     // Distance between the top of the window and the animation area
-    this.dTop = 0;
-
-    if (this.props.dTop !== undefined) this.dTop = this.props.dTop;
+    this.dTop = this.props.dTop || 0;
 
     // Distance between the left of the window and the animation area
-    this.dLeft = 0;
-
-    if (this.props.dLeft !== undefined) this.dLeft = this.props.dLeft;
+    this.dLeft = this.props.dLeft || 0;
   }
 
   /** Number of steps in the animation */
@@ -459,7 +457,7 @@ class Animation extends React.Component {
     // Test if the animation has changed
     var isEqual = true;
 
-    if (props.width !== this.animationWidth || props.height !== this.animationHeight) isEqual = false;
+    if (props.width !== state.propsWidth || props.height !== state.propsHeight) isEqual = false;
 
     if (isEqual && props.animation !== undefined && state.animation !== undefined) {
       var stepId = 0;

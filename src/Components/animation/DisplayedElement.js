@@ -23,15 +23,9 @@ class DisplayedElement extends React.Component {
     super(props);
 
     // TODO: put the constant coefficient used in the following somewhere to avoir writing them twice (in this class and in DrillCuts)
-    var dimensionMin = Math.min(this.props.animationWidth, this.props.animationHeight);
-    this.props.playerRadius = dimensionMin / 12;
+    this.props.playerRadius = Math.min(this.props.animationWidth, this.props.animationHeight) / 12;
     this.props.discRadius = this.props.playerRadius / 2;
-    this.props.coneSize = (this.props.playerRadius * 5) / 16;
-    this.props.bottomconeSize = (this.props.playerRadius * 14) / 16;
-    this.props.borderWidth = (this.props.discRadius * 8) / 10;
-
-    debug('DE: player radius: ' + this.props.playerRadius);
-    /* Current position of the element in pixels */
+    this.props.bottomconeSize = this.props.playerRadius / 2;
 
     this.currentPosition = new Animated.ValueXY({ x: 0, y: 0 });
 
@@ -178,8 +172,8 @@ class DisplayedElement extends React.Component {
             style={[
               panStyle,
               styles.triangle,
-              { borderLeftWidth: this.props.borderWidth },
-              { borderRightWidth: this.props.borderWidth },
+              { borderLeftWidth: this.props.bottomconeSize / 2 },
+              { borderRightWidth: this.props.bottomconeSize / 2 },
               { borderBottomWidth: this.props.bottomconeSize },
               { top: 0 },
               { left: 0 },

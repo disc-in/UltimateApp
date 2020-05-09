@@ -330,8 +330,8 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
       onStartShouldSetResponderCapture={[Function]}
       style={
         Object {
-          "borderRadius": 40,
-          "height": 40,
+          "borderRadius": 55.583333333333336,
+          "height": 55.583333333333336,
           "left": 0,
           "position": "absolute",
           "textAlign": "center",
@@ -345,7 +345,7 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
               "translateY": 40.019999999999996,
             },
           ],
-          "width": 40,
+          "width": 55.583333333333336,
         }
       }
     >
@@ -411,8 +411,8 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
         Object {
           "alignItems": "center",
           "backgroundColor": "#AFAFAF",
-          "borderRadius": 40,
-          "height": 40,
+          "borderRadius": 55.583333333333336,
+          "height": 55.583333333333336,
           "justifyContent": "center",
           "left": 0,
           "position": "absolute",
@@ -425,7 +425,7 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
               "translateY": 100.05,
             },
           ],
-          "width": 40,
+          "width": 55.583333333333336,
         }
       }
     >
@@ -455,8 +455,8 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
       onStartShouldSetResponderCapture={[Function]}
       style={
         Object {
-          "borderRadius": 40,
-          "height": 40,
+          "borderRadius": 55.583333333333336,
+          "height": 55.583333333333336,
           "left": 0,
           "position": "absolute",
           "textAlign": "center",
@@ -470,7 +470,7 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
               "translateY": 300.15000000000003,
             },
           ],
-          "width": 40,
+          "width": 55.583333333333336,
         }
       }
     >

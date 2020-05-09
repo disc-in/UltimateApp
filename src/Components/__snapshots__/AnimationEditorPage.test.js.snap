@@ -385,7 +385,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
         }
       />
     </View>
-    <Text
+    <View
       onMoveShouldSetResponder={[Function]}
       onMoveShouldSetResponderCapture={[Function]}
       onResponderEnd={[Function]}
@@ -400,10 +400,8 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
       onStartShouldSetResponderCapture={[Function]}
       style={
         Object {
-          "backgroundColor": "#cd5c5c",
-          "borderRadius": 40,
-          "color": "white",
-          "height": 40,
+          "borderRadius": 62.5,
+          "height": 62.5,
           "left": 30,
           "position": "absolute",
           "textAlign": "center",
@@ -417,13 +415,56 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
               "translateY": 0,
             },
           ],
-          "width": 40,
+          "width": 62.5,
         }
       }
     >
-      1
-    </Text>
-    <Text
+      <ViewManagerAdapter_ExpoLinearGradient
+        proxiedProperties={
+          Object {
+            "colors": Array [
+              4278759146,
+              4281005464,
+            ],
+            "endPoint": Array [
+              0,
+              0,
+            ],
+            "locations": undefined,
+            "startPoint": Array [
+              1,
+              1,
+            ],
+          }
+        }
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            },
+            Object {
+              "borderRadius": 62.5,
+              "height": 62.5,
+              "width": 62.5,
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#fff",
+              "fontWeight": "bold",
+            }
+          }
+        >
+          1
+        </Text>
+      </ViewManagerAdapter_ExpoLinearGradient>
+    </View>
+    <View
       onMoveShouldSetResponder={[Function]}
       onMoveShouldSetResponderCapture={[Function]}
       onResponderEnd={[Function]}
@@ -438,10 +479,11 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
       onStartShouldSetResponderCapture={[Function]}
       style={
         Object {
-          "backgroundColor": "#dcdcdc",
-          "borderRadius": 40,
-          "color": "black",
-          "height": 40,
+          "alignItems": "center",
+          "backgroundColor": "#AFAFAF",
+          "borderRadius": 62.5,
+          "height": 62.5,
+          "justifyContent": "center",
           "left": 90,
           "position": "absolute",
           "textAlign": "center",
@@ -455,12 +497,21 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
               "translateY": 0,
             },
           ],
-          "width": 40,
+          "width": 62.5,
         }
       }
     >
-      1
-    </Text>
+      <Text
+        style={
+          Object {
+            "color": "#fff",
+            "fontWeight": "bold",
+          }
+        }
+      >
+        1
+      </Text>
+    </View>
     <View
       onMoveShouldSetResponder={[Function]}
       onMoveShouldSetResponderCapture={[Function]}
@@ -512,14 +563,13 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
       style={
         Object {
           "backgroundColor": "transparent",
-          "borderBottomColor": "orange",
+          "borderBottomColor": "#FEA500",
           "borderBottomWidth": 25,
           "borderLeftColor": "transparent",
           "borderLeftWidth": 12,
           "borderRightColor": "transparent",
           "borderRightWidth": 12,
           "borderStyle": "solid",
-          "height": 0,
           "left": 270,
           "position": "absolute",
           "top": 450,
@@ -531,7 +581,6 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
               "translateY": 0,
             },
           ],
-          "width": 0,
         }
       }
     />

@@ -34,8 +34,8 @@ exports[`<Animation /> renders correctly 1`] = `
     onStartShouldSetResponderCapture={[Function]}
     style={
       Object {
-        "borderRadius": 40,
-        "height": 40,
+        "borderRadius": NaN,
+        "height": NaN,
         "left": 0,
         "position": "absolute",
         "textAlign": "center",
@@ -49,7 +49,7 @@ exports[`<Animation /> renders correctly 1`] = `
             "translateY": NaN,
           },
         ],
-        "width": 40,
+        "width": NaN,
       }
     }
   >
@@ -115,8 +115,8 @@ exports[`<Animation /> renders correctly 1`] = `
       Object {
         "alignItems": "center",
         "backgroundColor": "#AFAFAF",
-        "borderRadius": 40,
-        "height": 40,
+        "borderRadius": NaN,
+        "height": NaN,
         "justifyContent": "center",
         "left": 0,
         "position": "absolute",
@@ -129,7 +129,7 @@ exports[`<Animation /> renders correctly 1`] = `
             "translateY": NaN,
           },
         ],
-        "width": 40,
+        "width": NaN,
       }
     }
   >
@@ -159,8 +159,8 @@ exports[`<Animation /> renders correctly 1`] = `
     onStartShouldSetResponderCapture={[Function]}
     style={
       Object {
-        "borderRadius": 40,
-        "height": 40,
+        "borderRadius": NaN,
+        "height": NaN,
         "left": 0,
         "position": "absolute",
         "textAlign": "center",
@@ -174,7 +174,7 @@ exports[`<Animation /> renders correctly 1`] = `
             "translateY": NaN,
           },
         ],
-        "width": 40,
+        "width": NaN,
       }
     }
   >

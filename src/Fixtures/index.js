@@ -20,7 +20,7 @@ export const GoalsFrisbee = {
   THROWING: 'Throwing',
   BREAK: 'Breaking the mark',
   COMMUNICATION: 'Communication',
-  CATCH: 'Catch',
+  CATCH: 'Catching',
   PLAY: 'Playing time',
 };
 
@@ -578,7 +578,7 @@ const conditioningDrill = {
       title: 'Follow her',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '406556796',
-      sounds: false,
+      sounds: true,
       repetition: '',
       rest: '',
       instruction: '',
@@ -665,6 +665,7 @@ const conditioningDrillFullBody = {
       title: 'Follow her',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '416604913',
+      sounds: true,
       repetition: '',
       rest: '',
       instruction: '',
@@ -693,6 +694,7 @@ const basicThrows = {
       title: 'Backhand Throw',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '415565763',
+      sounds: true,
       repetition: '',
       rest: '',
       instruction: 'Follow him',
@@ -702,6 +704,7 @@ const basicThrows = {
       title: 'Forehand Throw',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '415569048',
+      sounds: true,
       repetition: '',
       rest: '',
       instruction: 'Follow him',
@@ -752,7 +755,7 @@ const markDrill = {
       illustrationSource: animationSquare,
       repetition: '1',
       rest: '90s',
-      instruction: 'Step 1: Introduce the notion of continuity',
+      instruction: 'Introduce the notion of continuity',
     },
   ],
 };
@@ -780,7 +783,7 @@ const breakDrill = {
       illustrationSource: animationSquare,
       repetition: '1',
       rest: '90s',
-      instruction: 'Step 1: Introduce the notion of continuity',
+      instruction: 'Introduce the notion of continuity',
     },
   ],
 };
@@ -808,7 +811,7 @@ const lDrill = {
       illustrationSource: animationSquare,
       repetition: '1',
       rest: '90s',
-      instruction: 'Step 1: Introduce the notion of continuity',
+      instruction: 'Introduce the notion of continuity',
     },
   ],
 };
@@ -836,7 +839,7 @@ const threeColumnsLongDrill = {
       illustrationSource: animationSquare,
       repetition: '1',
       rest: '90s',
-      instruction: 'Step 1: Introduce the notion of continuity',
+      instruction: 'Introduce the notion of continuity',
     },
   ],
 };
@@ -865,7 +868,7 @@ const twoColumnsLongDrill = {
       illustrationSource: animationSquare,
       repetition: '1',
       rest: '90s',
-      instruction: 'Step 1: Introduce the notion of continuity',
+      instruction: 'Introduce the notion of continuity',
     },
   ],
 };
@@ -1402,7 +1405,7 @@ const chevronDrill = {
       illustrationSource: animationSquare,
       repetition: '',
       rest: '',
-      instruction: 'Step 1: Introduce the notion of continuity',
+      instruction: 'Introduce the notion of continuity',
     },
   ],
 };
@@ -1911,7 +1914,7 @@ export default {
   programs: [
     {
       id: 1,
-      title: 'Initiation U12',
+      title: 'Initiation U13',
       trainings: [firstPracticeChild, secondPracticeChild, thirdPracticeChild],
     },
     {

@@ -49,7 +49,7 @@ const DrillIllustration = props => {
 
   const currentStep = props.drill.steps[currentStepIndex];
 
-  // back to 0 when drill change
+  // back to 0 when drill changes
   useEffect(() => {
     setStepIndex(0);
   }, [props.drill]);

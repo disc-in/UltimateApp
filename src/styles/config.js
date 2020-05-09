@@ -1,6 +1,4 @@
-export default {
-  swipeConfig: {
-    velocityThreshold: 0.2,
-    directionalOffsetThreshold: 80,
-  },
+export const swipeConfig = {
+  velocityThreshold: 0.2,
+  directionalOffsetThreshold: 80,
 };

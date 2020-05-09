@@ -882,9 +882,10 @@ const kyeDrill = {
       title: '',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: animationSquare,
-      repetition: '1',
+      repetition: '',
       rest: '',
-      instruction: '',
+      instruction:
+        'Forcing middle, the offensive cutter can only two cut to get the disc. Continuity and then under in the middle.',
     },
   ],
 };
@@ -1708,7 +1709,7 @@ const coed2MarkTraining = {
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description:
     "This training session aims at practicing your mark skills. Don't be broken to easily, generate dangerous passes",
-  drills: [warmupGameDrill, dwarfDuelDrill, markDrill, breakDrill, normalGame],
+  drills: [warmupGameDrill, dwarfDuelDrill, kyeDrill, breakDrill, normalGame],
 };
 
 const coed2LongTraining = {
@@ -1769,7 +1770,7 @@ const secondInintiationAdult = {
   id: 10,
   illustrationType: '** Ultimate App **',
   title: 'Defense & Longs',
-  image: 'https://zupimages.net/up/20/19/9fcj.jpg',
+  image: 'https://zupimages.net/up/20/19/cd36.jpg',
   description: 'In this training, the players will work on defense and long throws',
   drills: [warmupDrill, menageATroisDrill, threeColumnsLongDrill, normalGame],
 };
@@ -1777,8 +1778,8 @@ const secondInintiationAdult = {
 const thirdInintiationAdult = {
   id: 11,
   illustrationType: '** Ultimate App **',
-  title: 'Adapting to the pitch',
-  image: 'https://zupimages.net/up/20/19/9fcj.jpg',
+  title: 'Adapt to the field',
+  image: 'https://zupimages.net/up/20/19/hrqz.jpg',
   description: 'In this training, the players will learn to adapt on the size of the field',
   drills: [warmupDrill, goaltimateDrill, catapultdrill, normalGame],
 };
@@ -1803,9 +1804,9 @@ const secondVertical = {
 
 const defenseBase = {
   id: 14,
-  illustrationType: 'Martin',
+  illustrationType: '',
   title: 'Defense positioning',
-  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  image: 'https://zupimages.net/up/20/19/skjl.jpg',
   description: 'This training session aims at practicing your defense.',
   drills: [warmupGameDrill, defensePosition, youShallNotPass, breakDrill, normalGame],
 };
@@ -1869,9 +1870,6 @@ export default {
     secondPracticeChild,
     thirdPracticeChild,
     secondWeekFitnessTraining,
-    firstPracticeChild,
-    secondPracticeChild,
-    thirdPracticeChild,
     secondInintiationAdult,
     thirdInintiationAdult,
     initiationVertical,

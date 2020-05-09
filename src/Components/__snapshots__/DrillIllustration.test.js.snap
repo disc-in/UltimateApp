@@ -105,6 +105,7 @@ exports[`<DrillIllustration /> renders correctly for a drill with a video from v
     style={
       Object {
         "flexDirection": "row",
+        "paddingBottom": 2,
       }
     }
   >
@@ -167,26 +168,65 @@ exports[`<DrillIllustration /> renders correctly for a drill with a video from v
       onStartShouldSetResponder={[Function]}
       style={
         Object {
+          "flex": 1,
           "opacity": 1,
         }
       }
     >
-      <Image
-        source={1}
+      <View
         style={
           Object {
-            "alignItems": "center",
-            "backgroundColor": "#fff",
-            "borderColor": "#d5d5d5",
-            "borderRadius": 12.5,
-            "borderWidth": 2,
-            "height": 25,
-            "justifyContent": "center",
-            "margin": 22.5,
-            "width": 25,
+            "opacity": 1,
           }
         }
-      />
+      >
+        <Image
+          source={1}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "borderColor": "#d5d5d5",
+              "borderRadius": 12.5,
+              "borderWidth": 1,
+              "height": 25,
+              "marginLeft": 20,
+              "marginRight": 20,
+              "marginTop": 20,
+              "position": "absolute",
+              "right": 0,
+              "width": 25,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "opacity": 0,
+          }
+        }
+      >
+        <Image
+          source={1}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "borderColor": "#d5d5d5",
+              "borderRadius": 12.5,
+              "borderWidth": 1,
+              "height": 25,
+              "marginLeft": 20,
+              "marginRight": 20,
+              "marginTop": 20,
+              "position": "absolute",
+              "right": 0,
+              "width": 25,
+            }
+          }
+        />
+      </View>
     </View>
   </View>
   <View
@@ -202,7 +242,6 @@ exports[`<DrillIllustration /> renders correctly for a drill with a video from v
       Object {
         "alignSelf": "flex-end",
         "flexDirection": "row",
-        "marginTop": 5,
       }
     }
   >
@@ -217,6 +256,7 @@ exports[`<DrillIllustration /> renders correctly for a drill with a video from v
         style={
           Object {
             "flexDirection": "row",
+            "paddingBottom": 2,
           }
         }
       >

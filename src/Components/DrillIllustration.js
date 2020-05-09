@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { View, StyleSheet, Text, Dimensions, TouchableOpacity, Image } from 'react-native';
+import React, { useState, useEffect, useRef } from 'react';
+import { Animated, View, StyleSheet, Text, Dimensions, TouchableOpacity, Image } from 'react-native';
 import GestureRecognizer from 'react-native-swipe-gestures';
 import { WebView } from 'react-native-webview';
 
@@ -10,9 +10,42 @@ import theme from '../styles/theme.style';
 import { swipeConfig } from '../styles/config';
 import iconRedo from '../../assets/redo_arrow.png';
 import buttonValidation from '../../assets/button_validation_ultra_light.png';
+import buttonValidationGradient from '../../assets/button_validation_gradient.png';
+import { Easing } from 'react-native-reanimated';
 
 const DrillIllustration = props => {
   const [currentStepIndex, setStepIndex] = useState(0);
+
+  const opacityUnchecked = useRef(new Animated.Value(1)).current;
+  const opacityChecked = opacityUnchecked.interpolate({ inputRange: [0, 1], outputRange: [1, 0] });
+
+  const checkAnimation = () => {
+    Animated.sequence([
+      Animated.timing(opacityUnchecked, {
+        toValue: 0,
+        duration: 800,
+        easing: Easing.easeOutQuint,
+      }),
+      Animated.timing(opacityUnchecked, {
+        toValue: 1,
+        duration: 10,
+      }),
+    ]).start(() => incrementStepIndex());
+  };
+
+  const checkAnimationFast = () => {
+    Animated.sequence([
+      Animated.timing(opacityUnchecked, {
+        toValue: 0,
+        duration: 200,
+        easing: Easing.easeOutQuint,
+      }),
+      Animated.timing(opacityUnchecked, {
+        toValue: 1,
+        duration: 10,
+      }),
+    ]).start(() => incrementStepIndex());
+  };
 
   const currentStep = props.drill.steps[currentStepIndex];
 
@@ -99,8 +132,25 @@ const DrillIllustration = props => {
                   <View style={styles.subSubWrapper}>
                     <Text style={styles.fitness}>{title}</Text>
                   </View>
-                  <TouchableOpacity onPress={() => incrementStepIndex()}>
-                    <Image style={styles.buttonNext} source={buttonValidation} />
+                  <TouchableOpacity style={styles.container} onPress={() => checkAnimationFast()}>
+                    <Animated.View
+                      style={[
+                        {
+                          opacity: opacityUnchecked,
+                        },
+                      ]}
+                    >
+                      <Image style={styles.buttonNext} source={buttonValidation} />
+                    </Animated.View>
+                    <Animated.View
+                      style={[
+                        {
+                          opacity: opacityChecked,
+                        },
+                      ]}
+                    >
+                      <Image style={styles.buttonNext} source={buttonValidationGradient} />
+                    </Animated.View>
                   </TouchableOpacity>
                 </View>
               </View>
@@ -131,8 +181,25 @@ const DrillIllustration = props => {
                   <View style={styles.subSubWrapper}>
                     <Text style={styles.fitness}>{title}</Text>
                   </View>
-                  <TouchableOpacity onPress={() => incrementStepIndex()}>
-                    <Image style={styles.buttonNext} source={buttonValidation} />
+                  <TouchableOpacity style={styles.container} onPress={() => checkAnimation()}>
+                    <Animated.View
+                      style={[
+                        {
+                          opacity: opacityUnchecked,
+                        },
+                      ]}
+                    >
+                      <Image style={styles.buttonNext} source={buttonValidation} />
+                    </Animated.View>
+                    <Animated.View
+                      style={[
+                        {
+                          opacity: opacityChecked,
+                        },
+                      ]}
+                    >
+                      <Image style={styles.buttonNext} source={buttonValidationGradient} />
+                    </Animated.View>
                   </TouchableOpacity>
                 </View>
               </View>
@@ -161,10 +228,28 @@ const DrillIllustration = props => {
               <View style={styles.subSubWrapper}>
                 <Text style={styles.fitness}>{title}</Text>
               </View>
-              <TouchableOpacity onPress={() => incrementStepIndex()}>
-                <Image style={styles.buttonNext} source={buttonValidation} />
+              <TouchableOpacity style={styles.container} onPress={() => checkAnimation()}>
+                <Animated.View
+                  style={[
+                    {
+                      opacity: opacityUnchecked,
+                    },
+                  ]}
+                >
+                  <Image style={styles.buttonNext} source={buttonValidation} />
+                </Animated.View>
+                <Animated.View
+                  style={[
+                    {
+                      opacity: opacityChecked,
+                    },
+                  ]}
+                >
+                  <Image style={styles.buttonNext} source={buttonValidationGradient} />
+                </Animated.View>
               </TouchableOpacity>
             </View>
+
             <View style={styles.lines} />
             <View style={styles.containerAnimation}>
               <View style={styles.container}>{displayNextStep()}</View>
@@ -176,7 +261,7 @@ const DrillIllustration = props => {
   };
 
   return (
-    <GestureRecognizer style={styles.container} onSwipeLeft={incrementStepIndex} config={swipeConfig}>
+    <GestureRecognizer style={styles.container} onSwipeLeft={checkAnimationFast} config={swipeConfig}>
       {checkSwitch()}
     </GestureRecognizer>
   );
@@ -198,12 +283,12 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   containerAnimation: {
-    marginTop: 5,
     flexDirection: 'row',
     alignSelf: 'flex-end',
   },
   description: {
     flexDirection: 'row',
+    paddingBottom: 2,
   },
   descriptionAnimation: {
     flexDirection: 'row',
@@ -233,14 +318,17 @@ const styles = StyleSheet.create({
     borderRightColor: theme.COLOR_PRIMARY_LIGHT,
   },
   buttonNext: {
-    margin: 22.5,
+    position: 'absolute',
+    right: 0,
+    marginRight: 20,
+    marginLeft: 20,
+    marginTop: 20,
     width: 25,
     height: 25,
     borderRadius: 12.5,
     backgroundColor: theme.BACKGROUND_COLOR_BUTTON,
-    borderWidth: 2,
+    borderWidth: 1,
     borderColor: theme.BORDER_COLOR_BUTTON_ACTIVE,
-    justifyContent: 'center',
     alignItems: 'center',
   },
   subWrapper: {

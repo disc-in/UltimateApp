@@ -29,9 +29,12 @@ exports[`<DrillIllustration /> renders correctly for a drill with a video from v
 >
   <View
     style={
-      Object {
-        "height": 250,
-      }
+      Array [
+        Object {
+          "height": 250,
+        },
+        false,
+      ]
     }
   >
     <View

@@ -1,10 +1,12 @@
 import React from 'react';
 import { StyleSheet, View, Text, ImageBackground, TouchableHighlight } from 'react-native';
+
 import theme from '../styles/theme.style';
 import fitness from '../../assets/HomePage/fitness.png';
 import frisbeeGlove from '../../assets/HomePage/frisbeeglove.png';
 import huddle from '../../assets/HomePage/huddle.png';
 import { DrillTypes } from '../Fixtures';
+import Button from './shared/Button';
 
 export default class HomePage extends React.Component {
   render() {
@@ -37,12 +39,13 @@ export default class HomePage extends React.Component {
             </View>
           </ImageBackground>
         </TouchableHighlight>
-        <TouchableHighlight
-          onPress={() => this.props.navigation.navigate('AnimationEditorPage')}
-          style={styles.menuItem}
-        >
-          <Text>Animation Editor</Text>
-        </TouchableHighlight>
+        <View style={styles.editorLink}>
+          <Button
+            onPress={() => this.props.navigation.navigate('AnimationEditorPage')}
+            text="Animation Editor"
+            buttonLight="true"
+          />
+        </View>
       </View>
     );
   }
@@ -75,5 +78,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'flex-start',
     padding: 20,
+  },
+  editorLink: {
+    alignItems: 'center',
+    width: '100%',
   },
 });

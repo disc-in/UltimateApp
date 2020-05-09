@@ -1,10 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { createDrill } from '../Fixtures/TestFixtures';
-import { IllustrationType } from '../Fixtures';
-import animationSquare from '../Fixtures/AnimationSquare';
-
 import AnimationEditorPage from './AnimationEditorPage';
 
 describe('<AnimationEditorPage />', () => {

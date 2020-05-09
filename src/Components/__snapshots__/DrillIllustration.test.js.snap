@@ -316,6 +316,245 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
     }
   >
     <View
+      onMoveShouldSetResponder={[Function]}
+      onMoveShouldSetResponderCapture={[Function]}
+      onResponderEnd={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderReject={[Function]}
+      onResponderRelease={[Function]}
+      onResponderStart={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      onStartShouldSetResponderCapture={[Function]}
+      style={
+        Object {
+          "borderRadius": 40,
+          "height": 40,
+          "left": 0,
+          "position": "absolute",
+          "textAlign": "center",
+          "textAlignVertical": "center",
+          "top": 0,
+          "transform": Array [
+            Object {
+              "translateX": 337.5,
+            },
+            Object {
+              "translateY": 40.019999999999996,
+            },
+          ],
+          "width": 40,
+        }
+      }
+    >
+      <ViewManagerAdapter_ExpoLinearGradient
+        proxiedProperties={
+          Object {
+            "colors": Array [
+              4278759146,
+              4281005464,
+            ],
+            "endPoint": Array [
+              0,
+              0,
+            ],
+            "locations": undefined,
+            "startPoint": Array [
+              1,
+              1,
+            ],
+          }
+        }
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            },
+            Object {
+              "borderRadius": 55.583333333333336,
+              "height": 55.583333333333336,
+              "width": 55.583333333333336,
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#fff",
+              "fontWeight": "bold",
+            }
+          }
+        >
+          1
+        </Text>
+      </ViewManagerAdapter_ExpoLinearGradient>
+    </View>
+    <View
+      onMoveShouldSetResponder={[Function]}
+      onMoveShouldSetResponderCapture={[Function]}
+      onResponderEnd={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderReject={[Function]}
+      onResponderRelease={[Function]}
+      onResponderStart={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      onStartShouldSetResponderCapture={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#AFAFAF",
+          "borderRadius": 40,
+          "height": 40,
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "transform": Array [
+            Object {
+              "translateX": 337.5,
+            },
+            Object {
+              "translateY": 100.05,
+            },
+          ],
+          "width": 40,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#fff",
+            "fontWeight": "bold",
+          }
+        }
+      >
+        2
+      </Text>
+    </View>
+    <View
+      onMoveShouldSetResponder={[Function]}
+      onMoveShouldSetResponderCapture={[Function]}
+      onResponderEnd={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderReject={[Function]}
+      onResponderRelease={[Function]}
+      onResponderStart={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      onStartShouldSetResponderCapture={[Function]}
+      style={
+        Object {
+          "borderRadius": 40,
+          "height": 40,
+          "left": 0,
+          "position": "absolute",
+          "textAlign": "center",
+          "textAlignVertical": "center",
+          "top": 0,
+          "transform": Array [
+            Object {
+              "translateX": 337.5,
+            },
+            Object {
+              "translateY": 300.15000000000003,
+            },
+          ],
+          "width": 40,
+        }
+      }
+    >
+      <ViewManagerAdapter_ExpoLinearGradient
+        proxiedProperties={
+          Object {
+            "colors": Array [
+              4278759146,
+              4281005464,
+            ],
+            "endPoint": Array [
+              0,
+              0,
+            ],
+            "locations": undefined,
+            "startPoint": Array [
+              1,
+              1,
+            ],
+          }
+        }
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            },
+            Object {
+              "borderRadius": 55.583333333333336,
+              "height": 55.583333333333336,
+              "width": 55.583333333333336,
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#fff",
+              "fontWeight": "bold",
+            }
+          }
+        >
+          3
+        </Text>
+      </ViewManagerAdapter_ExpoLinearGradient>
+    </View>
+    <View
+      onMoveShouldSetResponder={[Function]}
+      onMoveShouldSetResponderCapture={[Function]}
+      onResponderEnd={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderReject={[Function]}
+      onResponderRelease={[Function]}
+      onResponderStart={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      onStartShouldSetResponderCapture={[Function]}
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderRadius": 20,
+          "borderWidth": 2,
+          "height": 20,
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "transform": Array [
+            Object {
+              "translateX": 315,
+            },
+            Object {
+              "translateY": 73.37,
+            },
+          ],
+          "width": 20,
+        }
+      }
+    />
+    <View
       style={
         Object {
           "bottom": 0,
@@ -440,6 +679,75 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
           "left": 20,
           "position": "absolute",
           "width": 0,
+        }
+      }
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "transparent",
+          "bottom": 0,
+          "height": 35,
+          "left": 10,
+          "opacity": 1,
+          "position": "absolute",
+          "width": 157.5,
+        }
+      }
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "transparent",
+          "bottom": 0,
+          "height": 35,
+          "left": 167.5,
+          "opacity": 1,
+          "position": "absolute",
+          "width": 315,
+        }
+      }
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "transparent",
+          "bottom": 0,
+          "height": 35,
+          "left": 482.5,
+          "opacity": 1,
+          "position": "absolute",
+          "width": 172.5,
         }
       }
     />

@@ -4,10 +4,10 @@ import Svg, { Line, Circle } from 'react-native-svg';
 
 import MovingCircle from './MovingCircle';
 
-/** The cuts that must be displayed at each step of a drill (a cut correspond to the position of a player at the previous step) */
+/** The cuts that must be displayed at each step of a animation (a cut correspond to the position of a player at the previous step) */
 class DrillCuts extends React.Component {
   /** Props must contain:
-	- drill: the drill Z
+	- animation: the animation Z
 	- animationHeight/Width: size of the animation area
 	- currentStep: the current step
 	- positionPercentToPixel: function which returns the absolute position (x, y) in pixel on the screen associated to a position in percentages (xp, yp) on the animation
@@ -28,11 +28,11 @@ class DrillCuts extends React.Component {
      */
     this.cuts = [];
 
-    if (this.props.drill.ids.length > 0) {
-      var elemCount = this.props.drill.ids.length;
+    if (this.props.animation.ids.length > 0) {
+      var elemCount = this.props.animation.ids.length;
 
       /* For each step */
-      for (var stepId = 0; stepId < this.props.drill.stepCount(); stepId++) {
+      for (var stepId = 0; stepId < this.props.animation.stepCount(); stepId++) {
         //        console.log('stepId: ' + stepId);
         this.cuts.push([]);
 
@@ -40,24 +40,24 @@ class DrillCuts extends React.Component {
         if (stepId > 0) {
           /* For each element displayed */
           for (var elemId = 0; elemId < elemCount; elemId++) {
-            console.log('drill cut, elem id: ' + elemId);
+            console.log('animation cut, elem id: ' + elemId);
             /* If the element moves at this step */
             if (
-              this.props.drill.positions[stepId][elemId] !== null &&
-              this.props.drill.positions[stepId][elemId] !== undefined
+              this.props.animation.positions[stepId][elemId] !== null &&
+              this.props.animation.positions[stepId][elemId] !== undefined
             ) {
               var elemCut = [];
 
               /* The cut starting position is its position at step stepId */
               var pos = this.props.positionPercentToPixel(
-                this.props.drill.positions[stepId][elemId][0][0],
-                this.props.drill.positions[stepId][elemId][0][1],
+                this.props.animation.positions[stepId][elemId][0][0],
+                this.props.animation.positions[stepId][elemId][0][1],
               );
 
               this._addOffset(pos, elemId);
               elemCut.push(pos);
 
-              var positions = this.props.drill.getPositionsAtStep(elemId, stepId - 1);
+              var positions = this.props.animation.getPositionsAtStep(elemId, stepId - 1);
               //            console.log('positions: ' + positions);
 
               /* For each substep in this cut */
@@ -152,7 +152,7 @@ class DrillCuts extends React.Component {
 
   /** Add an offset to the position so that the cut is placed at the center of the element (otherwise it would be at its top left) */
   _addOffset(pos, elemId) {
-    switch (this.props.drill.ids[elemId]) {
+    switch (this.props.animation.ids[elemId]) {
       case 'triangle':
         pos[0] += this.coneSize / 2;
         pos[1] += this.coneSize / 2;

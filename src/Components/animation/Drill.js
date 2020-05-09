@@ -4,10 +4,10 @@
 // Remark1: positions[elemId][0] is the initial position which must be defined for each element
 // Remark2: positions[elemId][stepId] is undefined if  element i position does not change between steps stepId-1 and stepId
 class Drill {
-  constructor() {
-    this.positions = [];
-    this.ids = [];
-    this.texts = [];
+  constructor(animation) {
+    this.positions = (animation && animation.positions) || [];
+    this.ids = (animation && animation.ids) || [];
+    this.texts = (animation && animation.texts) || [];
   }
 
   /** Get the position of an element at a given step or return undefined if its position at step stoppingStep is the last one at step stepId */

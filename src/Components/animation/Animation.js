@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Dimensions, Easing, Animated, View, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, Easing, Animated, Dimensions, View, TouchableOpacity, Image } from 'react-native';
 
 import DisplayedElement from './DisplayedElement';
 import DrillCuts from './DrillCuts';
@@ -19,8 +19,8 @@ class Animation extends React.Component {
       screenHeight: 1, // Height of the animation space
       screenWidth: 1, // Width of the animation space
       stepLength: 1000, // Duration of a step in milliseconds
-      drill: undefined,
-      displayedElements: [], // The graphical elments displayed in the drill
+      animation: undefined,
+      displayedElements: [], // The graphical elments displayed in the animation
       currentStep: 0, // Current step displayed on the phone
     };
 
@@ -47,40 +47,40 @@ class Animation extends React.Component {
     if (this.props.dLeft !== undefined) this.dLeft = this.props.dLeft;
   }
 
-  /** Number of steps in the drill */
+  /** Number of steps in the animation */
   _stepCount = () => {
-    if (this.state.drill !== undefined && this.state.drill !== null) return this.state.drill.positions.length;
+    if (this.state.animation !== undefined && this.state.animation !== null)
+      return this.state.animation.positions.length;
     else return 0;
   };
 
-  /** Number of elements displayed in the drill */
+  /** Number of elements displayed in the animation */
   _elemCount = () => {
-    if (this.state.drill !== undefined && this.state.drill !== null && this.state.drill.ids.length > 0)
-      return this.state.drill.ids.length;
+    if (this.state.animation !== undefined && this.state.animation !== null && this.state.animation.ids.length > 0)
+      return this.state.animation.ids.length;
     else return 0;
   };
 
-  /** Create the Componenets associated to the elements displayed in this drill */
-  _createDisplayedElement() {
+  /** Create the Componenets associated to the elements displayed in this animation */
+  _createDisplayedElements() {
     var result = [];
-
-    /* For each element displayed in the current drill */
+    /* For each element displayed in the current animation */
     for (var elemId = 0; elemId < this._elemCount(); ++elemId) {
-      //	    console.log("animation createdE: element id: " + this.state.drill.ids[elemId]);
+      //	    console.log("animation createdE: element id: " + this.state.animation.ids[elemId]);
 
-      /* Create the displayed element according to the drill */
+      /* Create the displayed element according to the animation */
       result.push(
         new DisplayedElement({
-          id: this.state.drill.ids[elemId],
-          number: this.state.drill.texts[elemId],
+          id: this.state.animation.ids[elemId],
+          number: this.state.animation.texts[elemId],
           key: elemId,
           eId: elemId,
           animationWidth: this.animationWidth,
           animationHeight: this.animationHeight,
           movable: this.props.editable,
           onMoveEnd: this.props.onElementMove,
-          //		    left: this.state.drill.positions[0][elemId][0][0]*this.animationWidth + this.dLeft,
-          //		    top: this.state.drill.positions[0][elemId][0][1]*this.animationHeight + this.dTop
+          //		    left: this.state.animation.positions[0][elemId][0][0]*this.animationWidth + this.dLeft,
+          //		    top: this.state.animation.positions[0][elemId][0][1]*this.animationHeight + this.dTop
         }),
       );
     }
@@ -88,11 +88,11 @@ class Animation extends React.Component {
     return result;
   }
 
-  /** Create the cuts associated to each step of the drill */
+  /** Create the cuts associated to each step of the animation */
   _initializeCuts() {
     console.log('initialize cut');
     this.cuts = new DrillCuts({
-      drill: this.state.drill,
+      animation: this.state.animation,
       animationHeight: this.animationHeight,
       animationWidth: this.animationWidth,
       currentStep: this.state.currentStep,
@@ -105,7 +105,6 @@ class Animation extends React.Component {
   /** Create the progress bar */
   _createProgressBar() {
     //	console.log("Create PB animation width " + this.animationWidth);
-
     if (
       this.animationWidth !== undefined &&
       this.animationWidth !== null &&
@@ -162,8 +161,8 @@ class Animation extends React.Component {
 
         var element = this.state.displayedElements[i];
 
-        var iPositions = this.state.drill.getPositionsAtStep(i, intStep);
-        /* Get its position in pixel (it is represented in percentage in the drill) */
+        var iPositions = this.state.animation.getPositionsAtStep(i, intStep);
+        /* Get its position in pixel (it is represented in percentage in the animation) */
         var pixelPosition = this._positionPercentToPixel(iPositions[0][0], iPositions[0][1]);
 
         //		console.log("pixelPosition:" + pixelPosition);
@@ -177,7 +176,7 @@ class Animation extends React.Component {
     });
   }
 
-  /** Once we get the screen size, create the DisplayedElement used in the drill and set them to their initial position */
+  /** Once we get the screen size, create the DisplayedElement used in the animation and set them to their initial position */
   componentDidMount() {
     var { height, width } = Dimensions.get('window');
 
@@ -191,7 +190,7 @@ class Animation extends React.Component {
 
     this.setState(
       {
-        drill: inputDrill,
+        animation: inputDrill,
         screenHeight: height,
         screenWidth: width,
         currentStep: initialStep,
@@ -199,7 +198,7 @@ class Animation extends React.Component {
       () => {
         this.setState(
           {
-            displayedElements: this._createDisplayedElement(),
+            displayedElements: this._createDisplayedElements(),
           },
           () => {
             /* Set all the elements to their initial positions */
@@ -225,11 +224,11 @@ class Animation extends React.Component {
     }).start();
   }
 
-  /** Play the whole drill */
+  /** Play the whole animation */
   _restart() {
     this._initPositions();
 
-    /* Animation of the whole drill */
+    /* Animation of the whole animation */
     var completeSequence = [];
 
     completeSequence.push(
@@ -307,11 +306,11 @@ class Animation extends React.Component {
       stepAnimation = stepAnimation.concat(this.progressBar.getOpacityAnimation(stepId));
 
     /* For each displayed element */
-    for (let elemId = 0; elemId < this.state.drill.ids.length; elemId += 1) {
+    for (let elemId = 0; elemId < this.state.animation.ids.length; elemId += 1) {
       /* Get the position of the element at step stepId */
       console.log('elemId is ', elemId);
       console.log('stepId is ', stepId);
-      const nextPosition = this.state.drill.getPositionsAtStep(elemId, stepId, this.state.currentStep); //this.state.drill.positions[elemId][stepId];
+      const nextPosition = this.state.animation.getPositionsAtStep(elemId, stepId, this.state.currentStep); //this.state.animation.positions[elemId][stepId];
 
       /* The substeps are played only if the element moves at step stepId.
 	       Otherwise, we just move the element to its previous position without playing the substeps of this position */
@@ -374,19 +373,19 @@ class Animation extends React.Component {
   render() {
     // console.log("render a");
 
-    //	if(this.state.drill.positions.length > 0 && this.state.drill.positions[0] != undefined)
-    //	console.log("render a2, elem count: " + this.state.drill.positions[0].length);
+    //	if(this.state.animation.positions.length > 0 && this.state.animation.positions[0] != undefined)
+    //	console.log("render a2, elem count: " + this.state.animation.positions[0].length);
 
-    //	if(this.state.drill.positions.length > 0)
-    //	    console.log("\telem count: " + this.state.drill.positions[0].length);
-    //        console.log("render h/w: " + this.state.animationHeight + "/" + this.state.animationWidth);
+    //	if(this.state.animation.positions.length > 0)
+    //	    console.log("\telem count: " + this.state.animation.positions[0].length);
+    //        console.log("render h/w: " + this.animationHeight + "/" + this.animationWidth);
     this.cutsArray = [];
-    //  if(this.state.drill !== undefined && this.state.drill !== null){
-    //    console.log("drill a1: ");
-    //   this.state.drill.log()
+    //  if(this.state.animation !== undefined && this.state.animation !== null){
+    //    console.log("animation a1: ");
+    //   this.state.animation.log()
     //}
     //else
-    //    console.log("drill a2: " + this.state.drill);
+    //    console.log("animation a2: " + this.state.animation);
 
     //  if(this.cuts !== undefined && this.cuts !== null){
     //    console.log("cuts a1: ");
@@ -434,15 +433,15 @@ class Animation extends React.Component {
   componentDidUpdate() {
     if (
       (this.state.displayedElements === undefined || this.state.displayedElements === null) &&
-      this.state.drill !== undefined &&
-      this.state.drill !== null
+      this.state.animation !== undefined &&
+      this.state.animation !== null
     ) {
       this.currentStepAV.addListener(progress => {
         this.setState({ currentStep: progress.value });
       });
       this.setState(
         {
-          displayedElements: this._createDisplayedElement(),
+          displayedElements: this._createDisplayedElements(),
         },
         () => {
           /* Set all the elements to their initial positions */
@@ -457,19 +456,19 @@ class Animation extends React.Component {
 
   /** Used to update the animation when a modification is made through the editor */
   static getDerivedStateFromProps(props, state) {
-    // Test if the drill has changed
+    // Test if the animation has changed
     var isEqual = true;
 
     if (props.width !== this.animationWidth || props.height !== this.animationHeight) isEqual = false;
 
-    if (isEqual && props.drill !== undefined && state.drill !== undefined) {
+    if (isEqual && props.animation !== undefined && state.animation !== undefined) {
       var stepId = 0;
       var elemId = 0;
       var cutId = 0;
 
       // Get all the positions in props and stats
-      var pPositions = props.drill.positions;
-      var sPositions = state.drill.positions;
+      var pPositions = props.animation.positions;
+      var sPositions = state.animation.positions;
 
       // If there is not the same number of steps
       if (pPositions.length !== sPositions.length) isEqual = false;
@@ -524,10 +523,8 @@ class Animation extends React.Component {
     if (isEqual) return null;
     else {
       return {
-        drill: props.drill,
+        animation: props.animation,
         displayedElements: undefined,
-        animationWidth: this.animationWidth,
-        animationHeight: this.animationHeight,
       };
     }
   }

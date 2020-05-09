@@ -16,7 +16,7 @@ class AnimationEditor extends React.Component {
       draggableElements: [],
       screenH: 1,
       screenW: 1,
-      drill: new Drill(),
+      animation: new Drill(props.animation),
       dTop: 0, // Distance between the top of the window and the editor
       dLeft: 0, // Distance between the left of the window and the editor
       width: 0,
@@ -57,7 +57,7 @@ class AnimationEditor extends React.Component {
     console.log('animationE onlayout w/h: ' + e.nativeEvent.layout.width + '/' + e.nativeEvent.layout.height);
   };
 
-  addElementToDrill = (element, xDelta, yDelta) => {
+  addElementToAnimation = (element, xDelta, yDelta) => {
     // TODO Replace the hard coded values
 
     // Get the original position of the element
@@ -95,18 +95,19 @@ class AnimationEditor extends React.Component {
     console.log('x+xDelta/y+yDelta: ' + x + '+' + xDelta + '/' + y + '+' + yDelta);
     console.log('screen w/h + ' + this.state.screenW + '/' + this.state.screenH);
     console.log('window w/h + ' + this.state.width + '/' + this.state.height);
-    console.log('added element to drill at position: ' + newPosition[0] + '/' + newPosition[1]);
+    console.log('added element to animation at position: ' + newPosition[0] + '/' + newPosition[1]);
 
     // Add the element with its initial position
-    var newDrill = this._copyDrill();
+    var newAnimation = this._copyAnimation();
 
-    newDrill.addElement(element, newPosition[0], newPosition[1]);
+    newAnimation.addElement(element, newPosition[0], newPosition[1]);
 
-    this.setState({ drill: newDrill });
+    this.setState({ animation: newAnimation });
 
-    //	console.log("ae, add element, step count: " + this.state.drill.positions.length);
+    //	console.log("ae, add element, step count: " + this.state.animation.positions.length);
 
-    if (this.state.drill.positions.length > 0) console.log('\telem count: ' + this.state.drill.positions[0].length);
+    if (this.state.animation.positions.length > 0)
+      console.log('\telem count: ' + this.state.animation.positions[0].length);
   };
 
   /** Convert a position (x, y) in pixels of the phone screen in a position (x2, y2) in percentages of the animation area
@@ -132,26 +133,26 @@ class AnimationEditor extends React.Component {
     ];
   };
 
-  _copyDrill() {
-    var newDrill = new Drill();
+  _copyAnimation() {
+    var newAnimation = new Drill();
 
-    newDrill.positions = JSON.parse(JSON.stringify(this.state.drill.positions));
-    newDrill.ids = JSON.parse(JSON.stringify(this.state.drill.ids));
-    newDrill.texts = JSON.parse(JSON.stringify(this.state.drill.texts));
+    newAnimation.positions = JSON.parse(JSON.stringify(this.state.animation.positions));
+    newAnimation.ids = JSON.parse(JSON.stringify(this.state.animation.ids));
+    newAnimation.texts = JSON.parse(JSON.stringify(this.state.animation.texts));
 
-    return newDrill;
+    return newAnimation;
   }
 
   componentDidMount() {
     console.log('component mount');
 
-    var newDrill = this._copyDrill();
+    var newAnimation = this._copyAnimation();
 
-    newDrill.positions = Array(2);
-    newDrill.positions[0] = [];
-    newDrill.positions[1] = [];
+    newAnimation.positions = Array(2);
+    newAnimation.positions[0] = [];
+    newAnimation.positions[1] = [];
 
-    /* Get the dimension of the screen and then initialize the drill */
+    /* Get the dimension of the screen and then initialize the animation */
     var { height, width } = Dimensions.get('window');
 
     console.log('screen h/w: ' + height + '/' + width);
@@ -168,7 +169,7 @@ class AnimationEditor extends React.Component {
       draggableElements: prevState.draggableElements.concat(this.initialElements),
       screenH: height,
       screenW: width,
-      drill: newDrill,
+      animation: newAnimation,
     }));
   }
 
@@ -179,12 +180,12 @@ class AnimationEditor extends React.Component {
 
     console.log('elemId: ' + elemId);
 
-    console.log('Drill before update: ');
-    this.state.drill.log();
+    console.log('Animation before update: ');
+    this.state.animation.log();
 
     var previousStepId = Math.ceil(this.currentStep) - 1;
 
-    var previousPositions = this.state.drill.getPositionsAtStep(elemId, previousStepId);
+    var previousPositions = this.state.animation.getPositionsAtStep(elemId, previousStepId);
 
     var xDeltaPercent = xDelta / (this.state.width * this.wRatio);
     var yDeltaPercent = yDelta / (this.state.height * this.hRatio);
@@ -196,7 +197,7 @@ class AnimationEditor extends React.Component {
         (previousPositions[0][1] + yDeltaPercent),
     );
 
-    var newDrill = this._copyDrill();
+    var newAnimation = this._copyAnimation();
 
     var xCutDelta = xDeltaPercent;
     var yCutDelta = yDeltaPercent;
@@ -212,20 +213,20 @@ class AnimationEditor extends React.Component {
     }
 
     /* Set the starting position */
-    newDrill.positions[previousStepId][elemId] = [];
-    newDrill.positions[previousStepId][elemId].push([]);
-    newDrill.positions[previousStepId][elemId][0].push(previousPositions[0][0] + xCutDelta);
-    newDrill.positions[previousStepId][elemId][0].push(previousPositions[0][1] + yCutDelta);
+    newAnimation.positions[previousStepId][elemId] = [];
+    newAnimation.positions[previousStepId][elemId].push([]);
+    newAnimation.positions[previousStepId][elemId][0].push(previousPositions[0][0] + xCutDelta);
+    newAnimation.positions[previousStepId][elemId][0].push(previousPositions[0][1] + yCutDelta);
 
     /* If there was a counter-cut or if the counter-cut is moving */
     if (previousPositions.length > 1 || isCounterCut) {
       /* Set the counter-cut position */
-      newDrill.positions[previousStepId][elemId].push([]);
+      newAnimation.positions[previousStepId][elemId].push([]);
 
       /* Get the new position of the counter-cut */
 
       /* 1 - If there was no counter-cut, the move is from (previousPosition + currentPosition) / 2 */
-      var currentPositions = this.state.drill.getPositionsAtStep(elemId, previousStepId + 1);
+      var currentPositions = this.state.animation.getPositionsAtStep(elemId, previousStepId + 1);
       var newPositionX = (currentPositions[0][0] + previousPositions[0][0]) / 2 + xCCutDelta;
       var newPositionY = (currentPositions[0][1] + previousPositions[0][1]) / 2 + yCCutDelta;
 
@@ -235,13 +236,13 @@ class AnimationEditor extends React.Component {
         newPositionY = previousPositions[1][1] + yCCutDelta;
       }
 
-      newDrill.positions[previousStepId][elemId][1].push(newPositionX);
-      newDrill.positions[previousStepId][elemId][1].push(newPositionY);
+      newAnimation.positions[previousStepId][elemId][1].push(newPositionX);
+      newAnimation.positions[previousStepId][elemId][1].push(newPositionY);
     }
 
-    this.setState({ drill: newDrill }, () => {
-      console.log('Drill after update: ');
-      this.state.drill.log();
+    this.setState({ animation: newAnimation }, () => {
+      console.log('Animation after update: ');
+      this.state.animation.log();
     });
   };
 
@@ -250,7 +251,7 @@ class AnimationEditor extends React.Component {
 
     console.log('currentStep: ' + this.currentStep + ' ceil: ' + Math.ceil(this.currentStep));
 
-    var currentPosition = this.state.drill.getPositionsAtStep(element.props.eId, Math.ceil(this.currentStep));
+    var currentPosition = this.state.animation.getPositionsAtStep(element.props.eId, Math.ceil(this.currentStep));
     currentPosition = currentPosition[0];
     var xDeltaPercent = xDelta / (this.state.width * this.wRatio);
     var yDeltaPercent = yDelta / (this.state.height * this.hRatio);
@@ -258,19 +259,19 @@ class AnimationEditor extends React.Component {
     console.log(
       'moved element to position: ' + (currentPosition[0] + xDeltaPercent) + '/' + (currentPosition[1] + yDeltaPercent),
     );
-    console.log('Drill before update: ');
-    this.state.drill.log();
+    console.log('Animation before update: ');
+    this.state.animation.log();
 
-    var newDrill = this._copyDrill();
+    var newAnimation = this._copyAnimation();
 
-    newDrill.positions[Math.ceil(this.currentStep)][element.props.eId] = [];
-    newDrill.positions[Math.ceil(this.currentStep)][element.props.eId].push([]);
-    newDrill.positions[Math.ceil(this.currentStep)][element.props.eId][0].push(currentPosition[0] + xDeltaPercent);
-    newDrill.positions[Math.ceil(this.currentStep)][element.props.eId][0].push(currentPosition[1] + yDeltaPercent);
+    newAnimation.positions[Math.ceil(this.currentStep)][element.props.eId] = [];
+    newAnimation.positions[Math.ceil(this.currentStep)][element.props.eId].push([]);
+    newAnimation.positions[Math.ceil(this.currentStep)][element.props.eId][0].push(currentPosition[0] + xDeltaPercent);
+    newAnimation.positions[Math.ceil(this.currentStep)][element.props.eId][0].push(currentPosition[1] + yDeltaPercent);
 
-    this.setState({ drill: newDrill }, () => {
-      console.log('Drill after update: ');
-      this.state.drill.log();
+    this.setState({ animation: newAnimation }, () => {
+      console.log('Animation after update: ');
+      this.state.animation.log();
     });
   };
 
@@ -298,7 +299,7 @@ class AnimationEditor extends React.Component {
 
     console.log('text: ' + text);
     return new Test({
-      onMoveEnd: this.addElementToDrill,
+      onMoveEnd: this.addElementToAnimation,
       // key: this.keyCount,
       id: deType,
       eId: -1,
@@ -318,11 +319,11 @@ class AnimationEditor extends React.Component {
 
   addStep = () => {
     // Add the element with its initial position
-    var newDrill = this._copyDrill();
+    var newAnimation = this._copyAnimation();
 
-    newDrill.addStep();
+    newAnimation.addStep();
 
-    this.setState({ drill: newDrill });
+    this.setState({ animation: newAnimation });
   };
 
   displayStepDescription = () => {
@@ -339,7 +340,7 @@ class AnimationEditor extends React.Component {
           onLayout={this.onLayout}
           style={[{ flex: 10 }]}
           editable
-          drill={this.state.drill}
+          animation={this.state.animation}
           onElementMove={this.moveElement}
           onCutMove={this.cutMove}
           widthRatio={1}

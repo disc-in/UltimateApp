@@ -4,7 +4,7 @@ import { View, ActivityIndicator, StyleSheet, Text } from 'react-native';
 import { Video } from 'expo-av';
 import theme from '../styles/theme.style';
 
-const VimeoVideo = ({ vimeoId, screenWidth }) => {
+const VimeoVideo = ({ vimeoId, screenWidth, sounds }) => {
   const videoElem = useRef(null);
   const [isBuffering, setBuffer] = useState(true);
   const [error, setError] = useState();
@@ -42,11 +42,12 @@ const VimeoVideo = ({ vimeoId, screenWidth }) => {
   const playVideoLoaded = () => {
     videoElem.current.setStatusAsync({
       rate: 1.0,
-      isMuted: true,
+      isMuted: !sounds,
       resizeMode: Video.RESIZE_MODE_CONTAIN,
       shouldPlay: true,
       isLooping: true,
     });
+
     setBuffer(false);
   };
 

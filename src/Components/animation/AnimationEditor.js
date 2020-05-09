@@ -279,10 +279,6 @@ class AnimationEditor extends React.Component {
     });
   };
 
-  _modifiedText = () => {
-    //TODO
-  };
-
   _createDE(deType, height, width) {
     debug('create de with type: ' + deType);
     var text = '';
@@ -362,12 +358,6 @@ class AnimationEditor extends React.Component {
         })}
 
         <View style={[{ flex: 3, height: 80 }]} />
-
-        <TextInput
-          style={[{ flex: 3 }, {}]}
-          placeholder="Step description"
-          onChangeText={text => this._modifiedText()}
-        />
       </View>
     );
   }

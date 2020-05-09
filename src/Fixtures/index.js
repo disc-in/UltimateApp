@@ -1332,7 +1332,6 @@ const catapultdrill = {
   ],
 };
 
-
 const chevronDrill = {
   id: 1024,
   type: DrillTypes.FRISBEE,
@@ -1687,7 +1686,6 @@ const longShotGame = {
 
 const dumpSwingTraining = {
   id: 1,
-  illustrationType: '** Ultimate App **',
   title: 'Dump & Swing',
   image: 'https://zupimages.net/up/20/19/frj2.jpg',
   description: 'This training session aims at make your team better at Dump & Swing. blabla bla bla bla',
@@ -1696,7 +1694,6 @@ const dumpSwingTraining = {
 
 const firstWeekFitnessTraining = {
   id: 2,
-  illustrationType: '** Ultimate App **',
   title: 'First Week Fitness',
   image: 'https://zupimages.net/up/20/19/9fcj.jpg',
   description: 'This is the first week of the Off-season program',
@@ -1705,7 +1702,6 @@ const firstWeekFitnessTraining = {
 
 const coed2MarkTraining = {
   id: 3,
-  illustrationType: 'Martin',
   title: 'Build your defense',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description:
@@ -1715,7 +1711,6 @@ const coed2MarkTraining = {
 
 const coed2LongTraining = {
   id: 4,
-  illustrationType: 'Martin',
   title: 'Long shot is coming',
   image: 'https://zupimages.net/up/20/19/aapn.jpg',
   description: 'This training session aims at practicing your long skills.',
@@ -1724,7 +1719,6 @@ const coed2LongTraining = {
 
 const coed2Long2Training = {
   id: 5,
-  illustrationType: 'Martin',
   title: 'Long is your weapon',
   image: 'https://zupimages.net/up/20/19/v8f4.jpg',
   description: 'This training session aims at practicing your long skills. ',
@@ -1733,7 +1727,6 @@ const coed2Long2Training = {
 
 const firstPracticeChild = {
   id: 6,
-  illustrationType: '** Ultimate App **',
   title: 'First time',
   image: 'https://zupimages.net/up/20/19/a7io.png',
   description: 'Training will allow the players to learn the basics of ultimate while having fun',
@@ -1742,7 +1735,6 @@ const firstPracticeChild = {
 
 const secondPracticeChild = {
   id: 7,
-  illustrationType: '** Ultimate App **',
   title: 'Defense basics',
   image: 'https://zupimages.net/up/20/19/dgwo.jpg',
   description: 'Training will allow the players to learn the basics of ultimate while having fun',
@@ -1751,7 +1743,6 @@ const secondPracticeChild = {
 
 const thirdPracticeChild = {
   id: 8,
-  illustrationType: '** Ultimate App **',
   title: 'Treasure Hunt',
   image: 'https://zupimages.net/up/20/19/c9i6.jpg',
   description: 'Training will allow the players to learn the basics of ultimate while having fun',
@@ -1760,7 +1751,6 @@ const thirdPracticeChild = {
 
 const secondWeekFitnessTraining = {
   id: 9,
-  illustrationType: '** Ultimate App **',
   title: 'Second Week Fitness',
   image: 'https://zupimages.net/up/20/19/9fcj.jpg',
   description: "This is the second week of the season. It's time to work on your conditioning",
@@ -1769,7 +1759,6 @@ const secondWeekFitnessTraining = {
 
 const secondInintiationAdult = {
   id: 10,
-  illustrationType: '** Ultimate App **',
   title: 'Defense & Longs',
   image: 'https://zupimages.net/up/20/19/cd36.jpg',
   description: 'In this training, the players will work on defense and long throws',
@@ -1778,7 +1767,6 @@ const secondInintiationAdult = {
 
 const thirdInintiationAdult = {
   id: 11,
-  illustrationType: '** Ultimate App **',
   title: 'Adapt to the field',
   image: 'https://zupimages.net/up/20/19/hrqz.jpg',
   description: 'In this training, the players will learn to adapt on the size of the field',
@@ -1787,7 +1775,6 @@ const thirdInintiationAdult = {
 
 const initiationVertical = {
   id: 12,
-  illustrationType: '** Ultimate App **',
   title: 'Vertical Stack',
   image: 'https://zupimages.net/up/20/19/frj2.jpg',
   description: 'This training session aims at make your team better at Vertical Stack',
@@ -1796,7 +1783,6 @@ const initiationVertical = {
 
 const secondVertical = {
   id: 13,
-  illustrationType: '** Ultimate App **',
   title: 'Vertical Stack',
   image: 'https://zupimages.net/up/20/19/frj2.jpg',
   description: 'This training session aims at make your team better at Vertical Stack',
@@ -1805,7 +1791,6 @@ const secondVertical = {
 
 const defenseBase = {
   id: 14,
-  illustrationType: '',
   title: 'Defense positioning',
   image: 'https://zupimages.net/up/20/19/skjl.jpg',
   description: 'This training session aims at practicing your defense.',

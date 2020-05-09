@@ -260,7 +260,7 @@ const DrillIllustration = props => {
   };
 
   return (
-    <GestureRecognizer style={styles.container} onSwipeLeft={incrementStepIndex} config={swipeConfig}>
+    <GestureRecognizer style={styles.container} onSwipeLeft={checkAnimationFast} config={swipeConfig}>
       {checkSwitch()}
     </GestureRecognizer>
   );

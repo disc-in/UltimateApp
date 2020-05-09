@@ -34,12 +34,12 @@ exports[`<Animation /> renders correctly 1`] = `
     onStartShouldSetResponderCapture={[Function]}
     style={
       Object {
+        "alignItems": "center",
         "borderRadius": NaN,
         "height": NaN,
+        "justifyContent": "center",
         "left": 0,
         "position": "absolute",
-        "textAlign": "center",
-        "textAlignVertical": "center",
         "top": 0,
         "transform": Array [
           Object {
@@ -159,12 +159,12 @@ exports[`<Animation /> renders correctly 1`] = `
     onStartShouldSetResponderCapture={[Function]}
     style={
       Object {
+        "alignItems": "center",
         "borderRadius": NaN,
         "height": NaN,
+        "justifyContent": "center",
         "left": 0,
         "position": "absolute",
-        "textAlign": "center",
-        "textAlignVertical": "center",
         "top": 0,
         "transform": Array [
           Object {

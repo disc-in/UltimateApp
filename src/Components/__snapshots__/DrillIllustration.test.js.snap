@@ -330,12 +330,12 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
       onStartShouldSetResponderCapture={[Function]}
       style={
         Object {
+          "alignItems": "center",
           "borderRadius": 55.583333333333336,
           "height": 55.583333333333336,
+          "justifyContent": "center",
           "left": 0,
           "position": "absolute",
-          "textAlign": "center",
-          "textAlignVertical": "center",
           "top": 0,
           "transform": Array [
             Object {
@@ -455,12 +455,12 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
       onStartShouldSetResponderCapture={[Function]}
       style={
         Object {
+          "alignItems": "center",
           "borderRadius": 55.583333333333336,
           "height": 55.583333333333336,
+          "justifyContent": "center",
           "left": 0,
           "position": "absolute",
-          "textAlign": "center",
-          "textAlignVertical": "center",
           "top": 0,
           "transform": Array [
             Object {

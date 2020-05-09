@@ -43,6 +43,11 @@ class AnimationEditor extends React.Component {
     });
   }
 
+  saveAnimation = (newAnimation, cb) => {
+    this.props.onAnimationChange && this.props.onAnimationChange(newAnimation);
+    this.setState({ animation: newAnimation }, cb);
+  };
+
   onLayout = e => {
     //TODO see why this is needed...
     this.setState({
@@ -101,7 +106,7 @@ class AnimationEditor extends React.Component {
 
     newAnimation.addElement(element, newPosition[0], newPosition[1]);
 
-    this.setState({ animation: newAnimation });
+    this.saveAnimation(newAnimation);
 
     //	console.log("ae, add element, step count: " + this.state.animation.positions.length);
 
@@ -164,11 +169,11 @@ class AnimationEditor extends React.Component {
     this.initialElements.push(this._createDE('disc', height, width));
     this.initialElements.push(this._createDE('triangle', height, width));
 
+    this.saveAnimation(newAnimation);
     this.setState(prevState => ({
       draggableElements: prevState.draggableElements.concat(this.initialElements),
       screenH: height,
       screenW: width,
-      animation: newAnimation,
     }));
   }
 
@@ -239,7 +244,7 @@ class AnimationEditor extends React.Component {
       newAnimation.positions[previousStepId][elemId][1].push(newPositionY);
     }
 
-    this.setState({ animation: newAnimation }, () => {
+    this.saveAnimation(newAnimation, () => {
       console.log('Animation after update: ');
       this.state.animation.log();
     });
@@ -268,7 +273,7 @@ class AnimationEditor extends React.Component {
     newAnimation.positions[Math.ceil(this.currentStep)][element.props.eId][0].push(currentPosition[0] + xDeltaPercent);
     newAnimation.positions[Math.ceil(this.currentStep)][element.props.eId][0].push(currentPosition[1] + yDeltaPercent);
 
-    this.setState({ animation: newAnimation }, () => {
+    this.saveAnimation(newAnimation, () => {
       console.log('Animation after update: ');
       this.state.animation.log();
     });
@@ -322,7 +327,7 @@ class AnimationEditor extends React.Component {
 
     newAnimation.addStep();
 
-    this.setState({ animation: newAnimation });
+    this.saveAnimation(newAnimation);
   };
 
   displayStepDescription = () => {

@@ -58,6 +58,12 @@ export const Navigation = () => (
       component={TrainingBravoPage}
       options={({ route }) => ({ title: route.params.training.title })}
     />
-    <Stack.Screen name="AnimationEditorPage" component={AnimationEditorPage} />
+    <Stack.Screen
+      name="AnimationEditorPage"
+      component={AnimationEditorPage}
+      options={() => ({
+        title: 'New Drill',
+      })}
+    />
   </Stack.Navigator>
 );

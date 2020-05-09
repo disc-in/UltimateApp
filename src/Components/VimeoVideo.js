@@ -78,7 +78,6 @@ const VimeoVideo = ({ vimeoId, screenWidth, sounds }) => {
         style={{ width: screenWidth, height: 250 }}
         onLoadStart={() => setBuffer(true)}
         onLoad={playVideoLoaded}
-        useNativeControls
       />
     </View>
   );

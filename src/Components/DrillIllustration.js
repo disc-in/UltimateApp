@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Text, Dimensions, TouchableOpacity, Image } from 'react-native';
+import GestureRecognizer from 'react-native-swipe-gestures';
 import { WebView } from 'react-native-webview';
 
 import Animation from './Animation';
 import VimeoVideo from './VimeoVideo';
 import { IllustrationType } from '../Fixtures';
 import theme from '../styles/theme.style';
+import { swipeConfig } from '../styles/config';
 import iconRedo from '../../assets/redo_arrow.png';
 import buttonValidation from '../../assets/button_validation_ultra_light.png';
 
@@ -179,7 +181,11 @@ const DrillIllustration = props => {
     );
   };
 
-  return <View style={styles.container}>{checkSwitch()}</View>;
+  return (
+    <GestureRecognizer style={styles.container} onSwipeLeft={incrementStepIndex} config={swipeConfig}>
+      {checkSwitch()}
+    </GestureRecognizer>
+  );
 };
 
 const screenDimension = Dimensions.get('window');

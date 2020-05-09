@@ -30,10 +30,14 @@
     "react-native-safe-area-context": "0.7.3",
     "react-native-screens": "~2.2.0",
     "react-native-svg": "^12.1.0",
+    "react-native-swipe-gestures": "^1.0.5",
     "react-native-web": "^0.11.7",
     "react-native-webview": "8.1.1",
     "react-redux": "^7.2.0",
     "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^5.10.0",
     "watchman": "^1.0.0"
   },
   "devDependencies": {

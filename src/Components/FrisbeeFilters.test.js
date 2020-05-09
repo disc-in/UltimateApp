@@ -2,11 +2,11 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 
 import { Provider } from 'react-redux';
+import configureMockStore from 'redux-mock-store';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrill } from '../Fixtures/TestFixtures';
 import { render, fireEvent, cleanup } from 'react-native-testing-library';
-import store from '../Store/testStore';
 import { Levels, GoalsFrisbee, DrillTypes } from '../Fixtures';
 
 import ConnectedFrisbeeFilters, { FrisbeeFilters } from './FrisbeeFilters';
@@ -39,8 +39,12 @@ describe('<FrisbeeFilters />', () => {
       const DummyScreen = props => null;
       const Stack = createStackNavigator();
 
+      const mockStore = configureMockStore()({
+        favoriteDrills: [],
+      });
+
       const { getByText, getByTestId } = render(
-        <Provider store={store}>
+        <Provider store={mockStore}>
           <NavigationContainer>
             <Stack.Navigator>
               <Stack.Screen
@@ -103,8 +107,12 @@ describe('<FrisbeeFilters />', () => {
       const DummyScreen = props => null;
       const Stack = createStackNavigator();
 
+      const mockStore = configureMockStore()({
+        favoriteDrills: [],
+      });
+
       const { getByText, getByTestId } = render(
-        <Provider store={store}>
+        <Provider store={mockStore}>
           <NavigationContainer>
             <Stack.Navigator>
               <Stack.Screen
@@ -168,8 +176,12 @@ describe('<FrisbeeFilters />', () => {
       const DummyScreen = props => null;
       const Stack = createStackNavigator();
 
-      const { getByText, getByTestId, debug } = render(
-        <Provider store={store}>
+      const mockStore = configureMockStore()({
+        favoriteDrills: [],
+      });
+
+      const { getByText, getByTestId } = render(
+        <Provider store={mockStore}>
           <NavigationContainer>
             <Stack.Navigator>
               <Stack.Screen
@@ -215,8 +227,12 @@ describe('<FrisbeeFilters />', () => {
       const DummyScreen = props => null;
       const Stack = createStackNavigator();
 
+      const mockstore = configureMockStore()({
+        favoriteDrills: [intermediateDrill],
+      });
+
       const { getByText, getByTestId } = render(
-        <Provider store={store}>
+        <Provider store={mockstore}>
           <NavigationContainer>
             <Stack.Navigator>
               <Stack.Screen
@@ -245,6 +261,8 @@ describe('<FrisbeeFilters />', () => {
       await fireEvent.press(getByText('Favorite Drills'));
 
       expect(getByText('1 drills available')).toBeDefined();
+
+      await fireEvent.press(getByTestId('headerButton'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
         filteredDrills: [intermediateDrill],

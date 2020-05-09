@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
+import configureMockStore from 'redux-mock-store';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrill } from '../Fixtures/TestFixtures';
@@ -38,8 +39,12 @@ describe('<FitnessFilters />', () => {
       const DummyScreen = props => null;
       const Stack = createStackNavigator();
 
+      const mockstore = configureMockStore()({
+        favoriteDrills: [],
+      });
+
       const { getByText, getByTestId } = render(
-        <Provider store={store}>
+        <Provider store={mockstore}>
           <NavigationContainer>
             <Stack.Navigator>
               <Stack.Screen
@@ -101,8 +106,12 @@ describe('<FitnessFilters />', () => {
       const DummyScreen = props => null;
       const Stack = createStackNavigator();
 
+      const mockstore = configureMockStore()({
+        favoriteDrills: [],
+      });
+
       const { getByText, getByTestId } = render(
-        <Provider store={store}>
+        <Provider store={mockstore}>
           <NavigationContainer>
             <Stack.Navigator>
               <Stack.Screen
@@ -164,8 +173,12 @@ describe('<FitnessFilters />', () => {
       const DummyScreen = props => null;
       const Stack = createStackNavigator();
 
+      const mockstore = configureMockStore()({
+        favoriteDrills: [],
+      });
+
       const { getByText, getByTestId } = render(
-        <Provider store={store}>
+        <Provider store={mockstore}>
           <NavigationContainer>
             <Stack.Navigator>
               <Stack.Screen
@@ -227,8 +240,12 @@ describe('<FitnessFilters />', () => {
       const DummyScreen = props => null;
       const Stack = createStackNavigator();
 
+      const mockstore = configureMockStore()({
+        favoriteDrills: [],
+      });
+
       const { getByText, getByTestId } = render(
-        <Provider store={store}>
+        <Provider store={mockstore}>
           <NavigationContainer>
             <Stack.Navigator>
               <Stack.Screen
@@ -293,8 +310,12 @@ describe('<FitnessFilters />', () => {
       const DummyScreen = props => null;
       const Stack = createStackNavigator();
 
+      const mockstore = configureMockStore()({
+        favoriteDrills: [],
+      });
+
       const { getByText, getByTestId } = render(
-        <Provider store={store}>
+        <Provider store={mockstore}>
           <NavigationContainer>
             <Stack.Navigator>
               <Stack.Screen
@@ -358,8 +379,12 @@ describe('<FitnessFilters />', () => {
       const DummyScreen = props => null;
       const Stack = createStackNavigator();
 
-      const { getByText, getByTestId, debug } = render(
-        <Provider store={store}>
+      const mockstore = configureMockStore()({
+        favoriteDrills: [],
+      });
+
+      const { getByText, getByTestId } = render(
+        <Provider store={mockstore}>
           <NavigationContainer>
             <Stack.Navigator>
               <Stack.Screen
@@ -395,6 +420,56 @@ describe('<FitnessFilters />', () => {
 
       expect(navigate).toBeCalledWith('DrillListPage', {
         filteredDrills: [oneMinuteDrill, twoMinutesDrill],
+        type: DrillTypes.FITNESS,
+      });
+    });
+    it('filters favorite drills', async () => {
+      const drills = [beginnerDrill, intermediateDrill, advancedDrill];
+      const navigate = jest.fn();
+
+      const DummyScreen = props => null;
+      const Stack = createStackNavigator();
+
+      const mockstore = configureMockStore()({
+        drills: [beginnerDrill, intermediateDrill, advancedDrill],
+        favoriteDrills: [intermediateDrill],
+      });
+
+      const { getByText, getByTestId } = render(
+        <Provider store={mockstore}>
+          <NavigationContainer>
+            <Stack.Navigator>
+              <Stack.Screen
+                name="FitnessFilters"
+                component={ConnectedFitnessFilters}
+                initialParams={{
+                  initialData: drills,
+                  previousScreen: 'DrillListPage',
+                  previousType: DrillTypes.FITNESS,
+                }}
+                listeners={({ navigation }) => ({
+                  transitionStart: e => {
+                    navigation.navigate = navigate;
+                  },
+                })}
+              />
+              <Stack.Screen name="DrillListPage" component={DummyScreen} />
+            </Stack.Navigator>
+          </NavigationContainer>
+          ,
+        </Provider>,
+      );
+
+      expect(getByText('3 drills available')).toBeDefined();
+
+      await fireEvent.press(getByText('Favorite Drills'));
+
+      expect(getByText('1 drills available')).toBeDefined();
+
+      await fireEvent.press(getByTestId('headerButton'));
+
+      expect(navigate).toBeCalledWith('DrillListPage', {
+        filteredDrills: [intermediateDrill],
         type: DrillTypes.FITNESS,
       });
     });

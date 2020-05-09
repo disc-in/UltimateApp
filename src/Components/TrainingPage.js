@@ -59,7 +59,7 @@ export const TrainingPage = props => {
           </Text>
         )}
         {!isLastTraining && (
-          <TouchableOpacity style={styles.btnPrevNext} onPress={onNextPress}>
+          <TouchableOpacity style={[styles.btnPrevNext, styles.btnNext]} onPress={onNextPress}>
             <Text style={styles.btnPrevNextContent}>{'>'}</Text>
           </TouchableOpacity>
         )}
@@ -119,6 +119,7 @@ const styles = StyleSheet.create({
   },
   overview: {
     paddingLeft: 20,
+    paddingRight: 20,
     paddingBottom: 20,
     marginVertical: 20,
     borderBottomWidth: 2,
@@ -137,7 +138,12 @@ const styles = StyleSheet.create({
     fontSize: theme.FONT_SIZE_LARGE,
   },
   btnPrevNext: {
-    padding: 10,
+    position: 'absolute',
+    left: 10,
+  },
+  btnNext: {
+    left: 'auto',
+    right: 10,
   },
   btnPrevNextContent: {
     textAlign: 'center',

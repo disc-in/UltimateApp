@@ -72,7 +72,6 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
               "flexGrow": 1,
               "marginRight": 5,
               "opacity": 1,
-              "paddingHorizontal": 20,
               "paddingVertical": 10,
             }
           }
@@ -108,7 +107,6 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
               "flexGrow": 1,
               "marginRight": 5,
               "opacity": 1,
-              "paddingHorizontal": 20,
               "paddingVertical": 10,
             }
           }
@@ -144,7 +142,6 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
               "flexGrow": 1,
               "marginRight": 5,
               "opacity": 1,
-              "paddingHorizontal": 20,
               "paddingVertical": 10,
             }
           }
@@ -202,7 +199,6 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
               "flexGrow": 1,
               "marginRight": 5,
               "opacity": 1,
-              "paddingHorizontal": 20,
               "paddingVertical": 10,
             }
           }
@@ -238,7 +234,6 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
               "flexGrow": 1,
               "marginRight": 5,
               "opacity": 1,
-              "paddingHorizontal": 20,
               "paddingVertical": 10,
             }
           }
@@ -274,7 +269,6 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
               "flexGrow": 1,
               "marginRight": 5,
               "opacity": 1,
-              "paddingHorizontal": 20,
               "paddingVertical": 10,
             }
           }
@@ -332,7 +326,6 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
               "flexGrow": 1,
               "marginRight": 5,
               "opacity": 1,
-              "paddingHorizontal": 20,
               "paddingVertical": 10,
             }
           }
@@ -368,7 +361,6 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
               "flexGrow": 1,
               "marginRight": 5,
               "opacity": 1,
-              "paddingHorizontal": 20,
               "paddingVertical": 10,
             }
           }
@@ -404,7 +396,6 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
               "flexGrow": 1,
               "marginRight": 5,
               "opacity": 1,
-              "paddingHorizontal": 20,
               "paddingVertical": 10,
             }
           }
@@ -462,7 +453,6 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
               "flexGrow": 1,
               "marginRight": 5,
               "opacity": 1,
-              "paddingHorizontal": 20,
               "paddingVertical": 10,
             }
           }
@@ -498,7 +488,6 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
               "flexGrow": 1,
               "marginRight": 5,
               "opacity": 1,
-              "paddingHorizontal": 20,
               "paddingVertical": 10,
             }
           }
@@ -534,7 +523,6 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
               "flexGrow": 1,
               "marginRight": 5,
               "opacity": 1,
-              "paddingHorizontal": 20,
               "paddingVertical": 10,
             }
           }

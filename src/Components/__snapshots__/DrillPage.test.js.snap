@@ -580,6 +580,12 @@ exports[`<DrillPage /> renders correctly 1`] = `
                           }
                         >
                           <View
+                            config={
+                              Object {
+                                "directionalOffsetThreshold": 80,
+                                "velocityThreshold": 0.2,
+                              }
+                            }
                             onMoveShouldSetResponder={[Function]}
                             onMoveShouldSetResponderCapture={[Function]}
                             onResponderEnd={[Function]}

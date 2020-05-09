@@ -111,7 +111,7 @@ const DrillIllustration = props => {
     return (
       <>
         <View style={styles.containerFinish}>
-          <Text style={styles.redoMessage}> You have seen all the steps of the drill </Text>
+          <Text style={styles.redoMessage}>You have completed the drill!</Text>
           <TouchableOpacity style={styles.redoButton} onPress={() => incrementStepIndex()}>
             <Image style={styles.redoImage} source={iconRedo} />
           </TouchableOpacity>
@@ -276,11 +276,13 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-around',
     alignItems: 'center',
+    padding: 20,
   },
   redoMessage: {
     fontSize: theme.FONT_SIZE_MEDIUM,
     color: theme.COLOR_PRIMARY,
     fontWeight: 'bold',
+    marginVertical: 50,
   },
   containerAnimation: {
     flexDirection: 'row',

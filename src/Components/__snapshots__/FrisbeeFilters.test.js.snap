@@ -31,6 +31,52 @@ exports[`<FrisbeeFilters /> renders correctly 1`] = `
     }
   >
     <View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "justifyContent": "space-between",
+            "marginBottom": 20,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#fff",
+              "borderColor": "#e5e5e5",
+              "borderWidth": 1,
+              "flexBasis": "30%",
+              "flexGrow": 1,
+              "marginRight": 5,
+              "opacity": 1,
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "textAlign": "center",
+                "textTransform": "capitalize",
+              }
+            }
+          >
+            Favorites only
+          </Text>
+        </View>
+      </View>
       <Text
         style={
           Object {

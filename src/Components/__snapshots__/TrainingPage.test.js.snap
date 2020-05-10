@@ -5,7 +5,8 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
   config={
     Object {
       "directionalOffsetThreshold": 80,
-      "velocityThreshold": 0.2,
+      "gestureIsClickThreshold": 10,
+      "velocityThreshold": 0.3,
     }
   }
   onMoveShouldSetResponder={[Function]}
@@ -1167,7 +1168,8 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
   config={
     Object {
       "directionalOffsetThreshold": 80,
-      "velocityThreshold": 0.2,
+      "gestureIsClickThreshold": 10,
+      "velocityThreshold": 0.3,
     }
   }
   onMoveShouldSetResponder={[Function]}

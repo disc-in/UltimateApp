@@ -40,7 +40,8 @@ And feel free to ask questions!
 
 To release a new version of the app :
 1. Send a pull request updating the version in `app.json`
-2. `expo publish --release-channel staging`
+2. Create a release on Github
+3. `expo publish --release-channel staging`
 
 
 ## License

@@ -74,7 +74,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
               }
             }
           >
-            Favorite Drills
+            Favorites only
           </Text>
         </View>
       </View>

@@ -41,7 +41,6 @@ export const DrillPageMinimal = props => {
     );
     navigation.setOptions({
       headerTitleAlign: 'center',
-      headerBackTitleVisible: false, // hide the "Back" text on iOS
       headerStyle: { height: 100 },
       headerTitle,
       headerRight,

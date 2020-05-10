@@ -1,5 +1,6 @@
 import React from 'react';
-import { ScrollView, View, Text, TouchableOpacity, TextInput } from 'react-native';
+import { ScrollView, View, Text } from 'react-native';
+import { connect } from 'react-redux';
 import filterStyle from '../styles/filters.style';
 import { Levels } from '../Fixtures';
 import Button from './filters/FilterButton';
@@ -7,11 +8,12 @@ import Checkbox from './filters/Checkbox';
 import Slider from './filters/Slider';
 import HeaderButton from './shared/HeaderButton';
 
-class FrisbeeFilters extends React.Component {
+export class FrisbeeFilters extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      selectedFavorites: false,
       selectedLevels: [],
       selectedGoals: [],
       numberOfPlayers: undefined,
@@ -21,6 +23,14 @@ class FrisbeeFilters extends React.Component {
     this.onNumberOfPlayersChange = this.onSliderChange.bind(this, 'numberOfPlayers');
   }
 
+  onFavoritesChange() {
+    this.setState(
+      prevState => ({
+        selectedFavorites: !prevState.selectedFavorites,
+      }),
+      this.applyFilters,
+    );
+  }
   onPressedChange(target, value) {
     this.setState(prevState => {
       const newValue = prevState[target].includes(value)
@@ -37,9 +47,14 @@ class FrisbeeFilters extends React.Component {
   }
 
   applyFilters() {
-    const { selectedLevels, selectedGoals, numberOfPlayers } = this.state;
+    const { favoriteDrills } = this.props;
+    const { selectedFavorites, selectedLevels, selectedGoals, numberOfPlayers } = this.state;
     let newData = this.props.route.params.initialData;
 
+    if (selectedFavorites) {
+      const favoriteIds = favoriteDrills.map(favorite => favorite.id);
+      newData = newData.filter(drill => favoriteIds.includes(drill.id));
+    }
     if (selectedLevels.length > 0) newData = newData.filter(drill => selectedLevels.includes(drill.level));
     if (selectedGoals.length > 0)
       newData = newData.filter(drill => drill.goals.filter(goal => selectedGoals.includes(goal)).length > 0);
@@ -64,11 +79,14 @@ class FrisbeeFilters extends React.Component {
   }
 
   render() {
-    const { selectedLevels, selectedGoals, numberOfPlayers } = this.state;
+    const { selectedFavorites, selectedLevels, selectedGoals, numberOfPlayers } = this.state;
     return (
       <View style={filterStyle.wrapper}>
         <Text style={filterStyle.counter}>{this.state.displayedDrills.length} drills available</Text>
         <ScrollView contentContainerStyle={filterStyle.filters}>
+          <View style={filterStyle.filter}>
+            <Button title="Favorites only" onPress={() => this.onFavoritesChange()} active={selectedFavorites} />
+          </View>
           <Text style={filterStyle.filterTitle}>Level</Text>
           <View style={filterStyle.filter}>
             {Object.values(Levels).map(level => (
@@ -110,4 +128,9 @@ class FrisbeeFilters extends React.Component {
   }
 }
 
-export default FrisbeeFilters;
+const mapStateToProps = state => {
+  return {
+    favoriteDrills: state.favoriteDrills,
+  };
+};
+export default connect(mapStateToProps)(FrisbeeFilters);

@@ -20,7 +20,7 @@ export const GoalsFrisbee = {
   THROWING: 'Throwing',
   BREAK: 'Breaking the mark',
   COMMUNICATION: 'Communication',
-  CATCH: 'Catch',
+  CATCH: 'Catching',
   PLAY: 'Playing time',
 };
 
@@ -578,7 +578,7 @@ const conditioningDrill = {
       title: 'Follow her',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '406556796',
-      sounds: false,
+      sounds: true,
       repetition: '',
       rest: '',
       instruction: '',
@@ -665,6 +665,7 @@ const conditioningDrillFullBody = {
       title: 'Follow her',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '416604913',
+      sounds: true,
       repetition: '',
       rest: '',
       instruction: '',
@@ -752,8 +753,8 @@ const breakDrill = {
       title: '',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: animationSquare,
-      repetition: '',
-      rest: '',
+      repetition: '1',
+      rest: '90s',
       instruction: 'Cut from the open side to the break side. \nChange direction on the fake',
     },
     {
@@ -761,8 +762,8 @@ const breakDrill = {
       title: '',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: animationSquare,
-      repetition: '',
-      rest: '',
+      repetition: '1',
+      rest: '90s',
       instruction: 'The Cuter will do one-step fake and go in the break side',
     },
   ],
@@ -789,8 +790,8 @@ const threeColumnsLongDrill = {
       title: '',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: animationSquare,
-      repetition: '',
-      rest: '',
+      repetition: '1',
+      rest: '90s',
       instruction:
         "1- The cutter run as fast as possible then he claps the second mate's hand. \n 2- Cut under and long ",
     },
@@ -819,8 +820,8 @@ const twoColumnsLongDrill = {
       title: '',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: animationSquare,
-      repetition: '',
-      rest: '',
+      repetition: '1',
+      rest: '90s',
       instruction: '',
     },
   ],
@@ -1885,7 +1886,7 @@ export default {
   programs: [
     {
       id: 1,
-      title: 'Initiation U12',
+      title: 'Initiation U13',
       trainings: [firstPracticeChild, secondPracticeChild, thirdPracticeChild],
     },
     {

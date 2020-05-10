@@ -17,7 +17,6 @@ const styles = StyleSheet.create({
     backgroundColor: theme.BACKGROUND_COLOR_BUTTON,
     borderWidth: 1,
     paddingVertical: 10,
-    paddingHorizontal: 20,
     marginRight: 5,
     flexGrow: 1,
     flexBasis: '30%',

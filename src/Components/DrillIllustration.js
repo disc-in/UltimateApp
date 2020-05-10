@@ -49,7 +49,7 @@ const DrillIllustration = props => {
 
   const currentStep = props.drill.steps[currentStepIndex];
 
-  // back to 0 when drill change
+  // back to 0 when drill changes
   useEffect(() => {
     setStepIndex(0);
   }, [props.drill]);
@@ -111,7 +111,7 @@ const DrillIllustration = props => {
     return (
       <>
         <View style={styles.containerFinish}>
-          <Text style={styles.redoMessage}> You have seen all the steps of the drill </Text>
+          <Text style={styles.redoMessage}>You have completed the drill!</Text>
           <TouchableOpacity style={styles.redoButton} onPress={() => incrementStepIndex()}>
             <Image style={styles.redoImage} source={iconRedo} />
           </TouchableOpacity>
@@ -123,7 +123,7 @@ const DrillIllustration = props => {
   const displayAnimation = ({ illustrationSource, instruction, title }) => {
     return (
       <>
-        <Animation widthRatio={1} heightRatio={1 / 2} animation={illustrationSource} />
+        <Animation widthRatio={1} heightRatio={props.minimal ? 2 / 5 : 1 / 2} animation={illustrationSource} />
         {props.drill.steps.length > 1 && (
           <>
             <View style={styles.description}>
@@ -276,11 +276,13 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-around',
     alignItems: 'center',
+    padding: 20,
   },
   redoMessage: {
     fontSize: theme.FONT_SIZE_MEDIUM,
     color: theme.COLOR_PRIMARY,
     fontWeight: 'bold',
+    marginVertical: 50,
   },
   containerAnimation: {
     flexDirection: 'row',

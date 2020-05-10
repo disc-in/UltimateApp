@@ -36,6 +36,12 @@ If you need to understand the basic specifications of the app, have a look at [t
 
 And feel free to ask questions!
 
+## Release
+
+To release a new version of the app :
+1. Send a pull request updating the version in `app.json`
+2. `expo publish --release-channel staging`
+
 
 ## License
 

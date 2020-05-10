@@ -18,6 +18,8 @@ npm run start
 
 If you want to contribute to the projet, just pick up a free issue from the [list](https://github.com/UltimateApp/UltimateApp/issues) and start developing. You can then open a pull-request so that your contribution can be merged into the master branch.
 
+Found a bug? Take 5 minutes to [report it](https://github.com/UltimateApp/UltimateApp/issues/new?assignees=&labels=bug&template=bug_report.md&title=)
+
 ### Tests
 
 We expect every code introduced via a pull-request to be tested.

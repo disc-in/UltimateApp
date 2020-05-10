@@ -5,7 +5,8 @@ exports[`<DrillIllustration /> renders correctly for a drill with a video from v
   config={
     Object {
       "directionalOffsetThreshold": 80,
-      "velocityThreshold": 0.2,
+      "gestureIsClickThreshold": 10,
+      "velocityThreshold": 0.3,
     }
   }
   onMoveShouldSetResponder={[Function]}
@@ -330,7 +331,8 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
   config={
     Object {
       "directionalOffsetThreshold": 80,
-      "velocityThreshold": 0.2,
+      "gestureIsClickThreshold": 10,
+      "velocityThreshold": 0.3,
     }
   }
   onMoveShouldSetResponder={[Function]}
@@ -829,7 +831,8 @@ exports[`<DrillIllustration /> renders correctly for a drill with no video nor a
   config={
     Object {
       "directionalOffsetThreshold": 80,
-      "velocityThreshold": 0.2,
+      "gestureIsClickThreshold": 10,
+      "velocityThreshold": 0.3,
     }
   }
   onMoveShouldSetResponder={[Function]}
@@ -913,7 +916,8 @@ exports[`<DrillIllustration /> renders correctly for a drill with video 1`] = `
   config={
     Object {
       "directionalOffsetThreshold": 80,
-      "velocityThreshold": 0.2,
+      "gestureIsClickThreshold": 10,
+      "velocityThreshold": 0.3,
     }
   }
   onMoveShouldSetResponder={[Function]}

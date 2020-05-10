@@ -61,8 +61,10 @@ export class FitnessFilters extends React.Component {
     } = this.state;
     let newData = this.props.route.params.initialData;
 
-    if (selectedFavorites)
-      newData = newData.filter(drill => favoriteDrills.map(favorite => favorite.id).includes(drill.id));
+    if (selectedFavorites) {
+      const favoriteIds = favoriteDrills.map(favorite => favorite.id);
+      newData = newData.filter(drill => favoriteIds.includes(drill.id));
+    }
     if (selectedLevels.length > 0) newData = newData.filter(drill => selectedLevels.includes(drill.level));
     if (selectedIntensities.length > 0)
       newData = newData.filter(drill => selectedIntensities.includes(drill.intensity));
@@ -108,7 +110,7 @@ export class FitnessFilters extends React.Component {
         <Text style={filterStyle.counter}>{this.state.displayedDrills.length} drills available</Text>
         <ScrollView contentContainerStyle={filterStyle.filters}>
           <View style={filterStyle.filter}>
-            <Button title="Favorite Drills" onPress={() => this.onFavoritesChange()} active={selectedFavorites} />
+            <Button title="Favorites only" onPress={() => this.onFavoritesChange()} active={selectedFavorites} />
           </View>
           <Text style={filterStyle.filterTitle}>Level</Text>
           <View style={filterStyle.filter}>

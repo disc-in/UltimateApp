@@ -258,7 +258,7 @@ describe('<FrisbeeFilters />', () => {
 
       expect(getByText('3 drills available')).toBeDefined();
 
-      await fireEvent.press(getByText('Favorite Drills'));
+      await fireEvent.press(getByText('Favorites only'));
 
       expect(getByText('1 drills available')).toBeDefined();
 

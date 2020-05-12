@@ -58,14 +58,26 @@ const DrillIllustration = props => {
     setStepIndex((currentStepIndex + 1) % (props.drill.steps.length + 1));
   };
 
+  const decrementStepIndex = () => {
+    if (currentStepIndex === 0) {
+      setStepIndex(0);
+    } else {
+      setStepIndex((currentStepIndex - 1) % (props.drill.steps.length + 1));
+    }
+  };
+
   const displayNextStep = () => {
     if (currentStepIndex + 1 === props.drill.steps.length) {
       return (
         <>
-          <View style={styles.description}>
-            <View style={styles.wrapperFinish}>
-              <Text style={styles.fitnessNext}>Finish</Text>
-            </View>
+          <View>
+            <TouchableOpacity onPress={() => checkAnimationFast()}>
+              <View style={styles.description}>
+                <View style={styles.wrapperFinish}>
+                  <Text style={styles.fitnessNext}>Finish</Text>
+                </View>
+              </View>
+            </TouchableOpacity>
           </View>
           <View style={styles.lines} />
         </>
@@ -73,14 +85,18 @@ const DrillIllustration = props => {
     } else {
       return (
         <>
-          <View style={styles.description}>
-            <View style={styles.subWrapper}>
-              <Text style={styles.fitnessNext}>{props.drill.steps[currentStepIndex + 1].repetition}</Text>
-            </View>
-            <View style={styles.subSubWrapper}>
-              <Text style={styles.fitnessNext}>{props.drill.steps[currentStepIndex + 1].title}</Text>
-            </View>
-            <View style={styles.fakeWrapper} />
+          <View>
+            <TouchableOpacity onPress={() => checkAnimationFast()}>
+              <View style={styles.description}>
+                <View style={styles.subWrapper}>
+                  <Text style={styles.fitnessNext}>{props.drill.steps[currentStepIndex + 1].repetition}</Text>
+                </View>
+                <View style={styles.subSubWrapper}>
+                  <Text style={styles.fitnessNext}>{props.drill.steps[currentStepIndex + 1].title}</Text>
+                </View>
+                <View style={styles.fakeWrapper} />
+              </View>
+            </TouchableOpacity>
           </View>
           <View style={styles.lines} />
         </>
@@ -261,7 +277,12 @@ const DrillIllustration = props => {
   };
 
   return (
-    <GestureRecognizer style={styles.container} onSwipeLeft={checkAnimationFast} config={swipeConfig}>
+    <GestureRecognizer
+      style={styles.container}
+      onSwipeLeft={checkAnimationFast}
+      config={swipeConfig}
+      onSwipeRight={decrementStepIndex}
+    >
       {checkSwitch()}
     </GestureRecognizer>
   );

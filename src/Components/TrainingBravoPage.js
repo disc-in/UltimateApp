@@ -16,9 +16,9 @@ export const TrainingBravoPage = props => {
 
   const finishTraining = () => {
     if (program) {
-      navigation.navigate('ProgramPage', { program });
+      navigation.navigate('ProgramListPage');
     } else {
-      navigation.navigate('TrainingListPage');
+      navigation.navigate('ProgramListPage');
     }
   };
 

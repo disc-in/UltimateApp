@@ -47,10 +47,10 @@ export const ProgramListPage = props => {
       <ListItem>
         <TouchableOpacity style={styles.training} onPress={onTrainingPress}>
           <View style={styles.titleContainer}>
-            <Text style={styles.title}>{item.title}</Text>
+            <Text style={styles.titleAccordion}>{item.title}</Text>
           </View>
           <View style={styles.containerAccordion}>
-            <Image style={styles.todoState} source={doneImage} />
+            <Image style={styles.todoState} source={toDoImage} />
           </View>
           <View style={styles.containerAccordion}>
             <Image style={styles.cta} source={arrowDark} />
@@ -67,7 +67,7 @@ export const ProgramListPage = props => {
         style={[styles.content, isActive ? styles.active : styles.inactive]}
         transition="backgroundColor"
       >
-        <View style={styles.programPage}>
+        <View style={styles.accordion}>
           <FlatList data={section.trainings} keyExtractor={item => item.id.toString()} renderItem={renderTraining} />
         </View>
       </Animatable.View>
@@ -118,14 +118,17 @@ const styles = StyleSheet.create({
     backgroundColor: theme.BACKGROUND_COLOR,
   },
   programPage: {
-    backgroundColor: theme.BACKGROUND_COLOR,
+    height: '100%',
+  },
+  accordion: {
+    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     height: '100%',
   },
   allTrainings: {
     fontSize: theme.FONT_SIZE_SMALL,
     alignSelf: 'center',
     width: 'auto',
-    marginTop: 10,
+    marginVertical: 10,
   },
   training: {
     padding: 10,
@@ -146,9 +149,13 @@ const styles = StyleSheet.create({
   },
   titleContainer: {
     flexBasis: '70%',
+    paddingLeft: 50,
   },
   title: {
     fontSize: theme.FONT_SIZE_LARGE,
+  },
+  titleAccordion: {
+    fontSize: theme.FONT_SIZE_MEDIUM,
   },
   todoState: {
     height: 30,

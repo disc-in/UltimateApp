@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 import DrillList from './shared/DrillList';
 import filterButtonImage from '../../assets/filter.png';
 import { DrillTypes } from '../Fixtures';
+import addButton from '../../assets/button_add.png';
 
 import theme from '../styles/theme.style';
 import * as list from '../styles/list.style';
@@ -14,6 +15,29 @@ export const DrillListPage = props => {
 
   const storeDrillsForType = storeDrills.filter(drill => drill.type === type);
   const displayedDrills = filteredDrills ? filteredDrills : storeDrillsForType;
+
+  const displayAddButton = () => {
+    const sourceImage = addButton;
+    if (type === DrillTypes.FRISBEE) {
+      return (
+        <TouchableOpacity
+          style={styles.addContainer}
+          onPress={() => navigation.navigate('AnimationEditorPage')}
+          testID="addButton"
+        >
+          <Image style={styles.addImage} source={sourceImage} />
+        </TouchableOpacity>
+      );
+    } else {
+      return <View />;
+    }
+  };
+
+  useLayoutEffect(() =>
+    navigation.setOptions({
+      headerRight: () => displayAddButton(),
+    }),
+  );
 
   return (
     <View style={styles.drillListPage}>
@@ -73,5 +97,12 @@ const styles = StyleSheet.create({
   filterButtonImage: {
     width: '100%',
     height: '100%',
+  },
+  addContainer: {
+    marginRight: 20,
+  },
+  addImage: {
+    width: 20,
+    height: 20,
   },
 });

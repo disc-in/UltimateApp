@@ -13,14 +13,10 @@ export const Program = props => {
     .filter(({ training, program }) => program.id === props.program.id)
     .map(({ training, program }) => training).length;
 
-  const onPress = () => {
-    props.navigation.navigate('ProgramPage', { program: props.program });
-  };
-
   const width = `${(completeTrainingsCount * 100) / trainings.length}%`;
   return (
-    <ListItem>
-      <TouchableOpacity style={styles.program} onPress={onPress}>
+    <ListItem style={styles.program}>
+      <View style={styles.program}>
         <View style={styles.presentationContainer}>
           <Text style={styles.programTitle}>{title}</Text>
           <Text style={styles.completion}>
@@ -31,10 +27,7 @@ export const Program = props => {
             <View style={[StyleSheet.absoluteFill, styles.fillProgressBar, { width }]} />
           </View>
         </View>
-        <View style={styles.ctaContainer}>
-          <Image style={styles.cta} source={arrowDark} />
-        </View>
-      </TouchableOpacity>
+      </View>
     </ListItem>
   );
 };
@@ -50,7 +43,7 @@ export default connect(mapStateToProps)(Program);
 const styles = StyleSheet.create({
   program: {
     paddingTop: 10,
-    paddingLeft: 40,
+    paddingLeft: 20,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-evenly',

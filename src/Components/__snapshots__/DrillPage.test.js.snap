@@ -600,6 +600,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                             onStartShouldSetResponder={[Function]}
                             onStartShouldSetResponderCapture={[Function]}
                             onSwipeLeft={[Function]}
+                            onSwipeRight={[Function]}
                             style={
                               Object {
                                 "flex": 1,

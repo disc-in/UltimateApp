@@ -22,6 +22,7 @@ exports[`<DrillIllustration /> renders correctly for a drill with a video from v
   onStartShouldSetResponder={[Function]}
   onStartShouldSetResponderCapture={[Function]}
   onSwipeLeft={[Function]}
+  onSwipeRight={[Function]}
   style={
     Object {
       "flex": 1,
@@ -253,65 +254,85 @@ exports[`<DrillIllustration /> renders correctly for a drill with a video from v
         }
       }
     >
-      <View
-        style={
-          Object {
-            "flexDirection": "row",
-            "paddingBottom": 2,
-          }
-        }
-      >
+      <View>
         <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "alignItems": "center",
-              "flexGrow": 0,
-              "flexShrink": 0,
+              "opacity": 1,
             }
           }
         >
-          <Text
+          <View
             style={
               Object {
-                "color": "#A6A6A6",
-                "fontSize": 20,
-                "marginBottom": 20,
-                "marginLeft": 20,
-                "marginTop": 20,
+                "flexDirection": "row",
+                "paddingBottom": 2,
               }
             }
           >
-            8
-          </Text>
-        </View>
-        <View
-          style={
-            Object {
-              "flex": 6,
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "color": "#A6A6A6",
-                "fontSize": 20,
-                "marginBottom": 20,
-                "marginLeft": 20,
-                "marginTop": 20,
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "flexGrow": 0,
+                  "flexShrink": 0,
+                }
               }
-            }
-          >
-            Full Clean
-          </Text>
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#A6A6A6",
+                    "fontSize": 20,
+                    "marginBottom": 20,
+                    "marginLeft": 20,
+                    "marginTop": 20,
+                  }
+                }
+              >
+                8
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "flex": 6,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#A6A6A6",
+                    "fontSize": 20,
+                    "marginBottom": 20,
+                    "marginLeft": 20,
+                    "marginTop": 20,
+                  }
+                }
+              >
+                Full Clean
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "width": 70,
+                }
+              }
+            />
+          </View>
         </View>
-        <View
-          style={
-            Object {
-              "width": 70,
-            }
-          }
-        />
       </View>
       <View
         style={
@@ -348,6 +369,7 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
   onStartShouldSetResponder={[Function]}
   onStartShouldSetResponderCapture={[Function]}
   onSwipeLeft={[Function]}
+  onSwipeRight={[Function]}
   style={
     Object {
       "flex": 1,
@@ -848,6 +870,7 @@ exports[`<DrillIllustration /> renders correctly for a drill with no video nor a
   onStartShouldSetResponder={[Function]}
   onStartShouldSetResponderCapture={[Function]}
   onSwipeLeft={[Function]}
+  onSwipeRight={[Function]}
   style={
     Object {
       "flex": 1,
@@ -933,6 +956,7 @@ exports[`<DrillIllustration /> renders correctly for a drill with video 1`] = `
   onStartShouldSetResponder={[Function]}
   onStartShouldSetResponderCapture={[Function]}
   onSwipeLeft={[Function]}
+  onSwipeRight={[Function]}
   style={
     Object {
       "flex": 1,

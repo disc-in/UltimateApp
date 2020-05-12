@@ -117,6 +117,7 @@ exports[`<DrillPageMinimal /> renders correctly with a training and a drill 1`] 
         onStartShouldSetResponder={[Function]}
         onStartShouldSetResponderCapture={[Function]}
         onSwipeLeft={[Function]}
+        onSwipeRight={[Function]}
         style={
           Object {
             "flex": 1,

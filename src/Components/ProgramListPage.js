@@ -13,8 +13,7 @@ import toDoImage from '../../assets/button_validation_ultra_light.png';
 import arrowDark from '../../assets/arrow_dark.png';
 
 export const ProgramListPage = props => {
-  const { programs } = props;
-  console.log('programs :', programs);
+  const { navigation, programs } = props;
 
   const [activeSections, setActiveSections] = useState([undefined]);
 
@@ -36,31 +35,30 @@ export const ProgramListPage = props => {
     );
   };
 
-  // const renderTraining = ({ item }) => {
-  //   const training = item;
-  //   const program = programs.activeSections;
-  //   const onTrainingPress = () => navigation.navigate('TrainingPage', { item, program });
+  const renderTraining = ({ item }) => {
+    const training = item;
+    const program = programs[activeSections];
+    const onTrainingPress = () => navigation.navigate('TrainingPage', { training, program });
 
-  //   const isDone =
-  //     props.completeTrainings.find(
-  //       complete => program.id === complete.program.id && training.id === complete.training.id,
-  //     ) !== undefined;
-  //   return (
-  //     <ListItem>
-  //       <TouchableOpacity style={styles.training} onPress={onTrainingPress}>
-  //         <View style={styles.titleContainer}>
-  //           <Text style={styles.title}>{item.title}</Text>
-  //         </View>
-  //         <View style={styles.containerAccordion}>
-  //           <Image style={styles.todoState} source={doneImage} />
-  //         </View>
-  //         <View style={styles.containerAccordion}>
-  //           <Image style={styles.cta} source={arrowDark} />
-  //         </View>
-  //       </TouchableOpacity>
-  //     </ListItem>
-  //   );
-  // };
+    // const isDone =
+    //   completeTrainings.find(complete => program.id === complete.program.id && training.id === complete.training.id) !==
+    //   undefined;
+    return (
+      <ListItem>
+        <TouchableOpacity style={styles.training} onPress={onTrainingPress}>
+          <View style={styles.titleContainer}>
+            <Text style={styles.title}>{item.title}</Text>
+          </View>
+          <View style={styles.containerAccordion}>
+            <Image style={styles.todoState} source={doneImage} />
+          </View>
+          <View style={styles.containerAccordion}>
+            <Image style={styles.cta} source={arrowDark} />
+          </View>
+        </TouchableOpacity>
+      </ListItem>
+    );
+  };
 
   const renderContent = (section, _, isActive) => {
     return (
@@ -69,9 +67,9 @@ export const ProgramListPage = props => {
         style={[styles.content, isActive ? styles.active : styles.inactive]}
         transition="backgroundColor"
       >
-        {/* <View style={styles.programPage}>
+        <View style={styles.programPage}>
           <FlatList data={section.trainings} keyExtractor={item => item.id.toString()} renderItem={renderTraining} />
-        </View> */}
+        </View>
       </Animatable.View>
     );
   };
@@ -135,7 +133,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    backgroundColor: 'pink',
   },
   listContainer: {
     paddingVertical: 10,

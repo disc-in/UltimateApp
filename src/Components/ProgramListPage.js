@@ -7,7 +7,6 @@ import Accordion from 'react-native-collapsible/Accordion';
 import theme from '../styles/theme.style';
 import Program from './programs/Program';
 import Button from './shared/Button';
-import ListItem from './shared/ListItem';
 import doneImage from '../../assets/button_validation_dark_theme.png';
 import toDoImage from '../../assets/button_validation_light.png';
 import arrowDark from '../../assets/arrow_dark.png';
@@ -40,7 +39,7 @@ export const ProgramListPage = props => {
     const program = programs[activeSections];
     const onTrainingPress = () => navigation.navigate('TrainingPage', { training, program });
 
-    // const isDone =
+    const isDone = false;
     //   completeTrainings.find(complete => program.id === complete.program.id && training.id === complete.training.id) !==
     //   undefined;
     return (
@@ -50,7 +49,7 @@ export const ProgramListPage = props => {
             <Text style={styles.titleAccordion}>{item.title}</Text>
           </View>
           <View style={styles.containerAccordion}>
-            <Image style={styles.todoState} source={toDoImage} />
+            <Image style={styles.todoState} source={isDone ? doneImage : toDoImage} />
           </View>
         </TouchableOpacity>
       </View>
@@ -66,7 +65,7 @@ export const ProgramListPage = props => {
       >
         <View style={styles.accordion}>
           <FlatList
-            style={styles.green}
+            style={styles.white}
             data={section.trainings}
             keyExtractor={item => item.id.toString()}
             renderItem={renderTraining}
@@ -92,6 +91,7 @@ export const ProgramListPage = props => {
               onChange={setSections}
             />
           </View>
+          <View style={styles.bottomPage}></View>
         </ScrollView>
       </View>
       <View style={styles.seeAllContainer}>
@@ -168,7 +168,10 @@ const styles = StyleSheet.create({
     bottom: 10,
     width: '100%',
   },
-  green: {
+  white: {
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
+  },
+  bottomPage: {
+    height: 80,
   },
 });

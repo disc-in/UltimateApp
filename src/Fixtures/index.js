@@ -1887,31 +1887,37 @@ export default {
     {
       id: 1,
       title: 'Initiation U13',
+      image: 'https://zupimages.net/up/20/19/stdq.jpg',
       trainings: [firstPracticeChild, secondPracticeChild, thirdPracticeChild],
     },
     {
       id: 2,
       title: 'Initiation Adult',
+      image: 'https://zupimages.net/up/20/19/stdq.jpg',
       trainings: [firstPracticeChild, secondInintiationAdult, thirdInintiationAdult],
     },
     {
       id: 3,
       title: 'Fitness Bloc',
+      image: 'https://zupimages.net/up/20/19/stdq.jpg',
       trainings: [firstWeekFitnessTraining, secondWeekFitnessTraining],
     },
     {
       id: 4,
       title: 'Vertical Stack',
+      image: 'https://zupimages.net/up/20/19/stdq.jpg',
       trainings: [initiationVertical, secondVertical, dumpSwingTraining],
     },
     {
       id: 5,
       title: 'Long throws',
+      image: 'https://zupimages.net/up/20/19/stdq.jpg',
       trainings: [coed2LongTraining, coed2Long2Training],
     },
     {
       id: 6,
       title: 'Strong defense',
+      image: 'https://zupimages.net/up/20/19/stdq.jpg',
       trainings: [defenseBase, coed2MarkTraining],
     },
   ],

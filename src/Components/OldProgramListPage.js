@@ -32,6 +32,7 @@ export const ProgramListPage = props => {
 const mapStateToProps = state => {
   return {
     programs: state.programs,
+    completeTrainings: state.completeTrainings,
   };
 };
 

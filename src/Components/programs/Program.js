@@ -1,12 +1,12 @@
 import React from 'react';
-import { StyleSheet, View, Text, Image } from 'react-native';
+import { StyleSheet, View, Text, ImageBackground } from 'react-native';
 import { connect } from 'react-redux';
 
 import theme from '../../styles/theme.style';
 import ListItem from '../shared/ListItem';
 
 export const Program = props => {
-  const { title, trainings } = props.program;
+  const { title, trainings, image } = props.program;
 
   const completeTrainingsCount = props.completeTrainings
     .filter(({ training, program }) => program.id === props.program.id)
@@ -14,20 +14,26 @@ export const Program = props => {
 
   const width = `${(completeTrainingsCount * 100) / trainings.length}%`;
   return (
-    <ListItem style={styles.program}>
-      <View style={styles.program}>
-        <View style={styles.presentationContainer}>
-          <Text style={styles.programTitle}>{title}</Text>
-          <Text style={styles.completion}>
-            {completeTrainingsCount}/{trainings.length}
-            {completeTrainingsCount === trainings.length && ' 👍🎉'}
-          </Text>
-          <View style={styles.progressBar}>
-            <View style={[StyleSheet.absoluteFill, styles.fillProgressBar, { width }]} />
+    <View style={styles.program}>
+      <ImageBackground
+        source={{ uri: 'https://zupimages.net/up/20/19/stdq.jpg' }}
+        style={styles.image}
+        imageStyle={styles.imageOpacity}
+      >
+        <View style={styles.program}>
+          <View style={styles.presentationContainer}>
+            <Text style={styles.programTitle}>{title}</Text>
+            <Text style={styles.completion}>
+              {completeTrainingsCount}/{trainings.length}
+              {completeTrainingsCount === trainings.length && ' 👍🎉'}
+            </Text>
+            <View style={styles.progressBar}>
+              <View style={[StyleSheet.absoluteFill, styles.fillProgressBar, { width }]} />
+            </View>
           </View>
         </View>
-      </View>
-    </ListItem>
+      </ImageBackground>
+    </View>
   );
 };
 
@@ -42,7 +48,6 @@ export default connect(mapStateToProps)(Program);
 const styles = StyleSheet.create({
   program: {
     paddingTop: 10,
-    paddingLeft: 20,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-evenly',
@@ -52,6 +57,7 @@ const styles = StyleSheet.create({
   },
   programTitle: {
     fontSize: theme.FONT_SIZE_LARGE,
+    color: theme.COLOR_PRIMARY_LIGHT,
   },
   completion: {
     textAlign: 'right',
@@ -75,5 +81,14 @@ const styles = StyleSheet.create({
   cta: {
     height: 20,
     aspectRatio: 109 / 239,
+  },
+  image: {
+    padding: 20,
+    alignItems: 'center',
+    backgroundColor: 'rgb(0,0,0)',
+    height: 200,
+  },
+  imageOpacity: {
+    opacity: 0.5,
   },
 });

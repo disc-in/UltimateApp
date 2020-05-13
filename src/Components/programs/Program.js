@@ -16,8 +16,10 @@ export const Program = props => {
   return (
     <View style={styles.program}>
       <ImageBackground source={{ uri: image }} style={styles.image} imageStyle={styles.imageOpacity}>
-        <View style={styles.presentationContainer}>
+        <View style={styles.wrapper}>
           <Text style={styles.programTitle}>{title}</Text>
+        </View>
+        <View style={styles.presentationContainer}>
           <Text style={styles.completion}>
             {completeTrainingsCount}/{trainings.length}
             {completeTrainingsCount === trainings.length && ' 👍🎉'}
@@ -47,7 +49,13 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
   },
   presentationContainer: {
-    flexBasis: '90%',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    paddingVertical: 100,
+    paddingHorizontal: 20,
   },
   programTitle: {
     fontSize: theme.FONT_SIZE_LARGE,
@@ -90,7 +98,14 @@ const styles = StyleSheet.create({
   imageOpacity: {
     opacity: 0.4,
   },
+  wrapper: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    justifyContent: 'center',
+    alignItems: 'flex-start',
+    padding: 20,
+  },
 });
-
-600;
-350;

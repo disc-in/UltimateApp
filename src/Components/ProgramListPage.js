@@ -22,7 +22,7 @@ export const ProgramListPage = props => {
   const renderHeader = (section, _, isActive) => {
     return (
       <Animatable.View
-        duration={400}
+        duration={500}
         style={[styles.header, isActive ? styles.active : styles.inactive]}
         transition="backgroundColor"
       >

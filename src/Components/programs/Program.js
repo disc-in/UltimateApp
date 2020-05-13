@@ -15,21 +15,15 @@ export const Program = props => {
   const width = `${(completeTrainingsCount * 100) / trainings.length}%`;
   return (
     <View style={styles.program}>
-      <ImageBackground
-        source={{ uri: 'https://zupimages.net/up/20/19/stdq.jpg' }}
-        style={styles.image}
-        imageStyle={styles.imageOpacity}
-      >
-        <View style={styles.program}>
-          <View style={styles.presentationContainer}>
-            <Text style={styles.programTitle}>{title}</Text>
-            <Text style={styles.completion}>
-              {completeTrainingsCount}/{trainings.length}
-              {completeTrainingsCount === trainings.length && ' 👍🎉'}
-            </Text>
-            <View style={styles.progressBar}>
-              <View style={[StyleSheet.absoluteFill, styles.fillProgressBar, { width }]} />
-            </View>
+      <ImageBackground source={{ uri: image }} style={styles.image} imageStyle={styles.imageOpacity}>
+        <View style={styles.presentationContainer}>
+          <Text style={styles.programTitle}>{title}</Text>
+          <Text style={styles.completion}>
+            {completeTrainingsCount}/{trainings.length}
+            {completeTrainingsCount === trainings.length && ' 👍🎉'}
+          </Text>
+          <View style={styles.progressBar}>
+            <View style={[StyleSheet.absoluteFill, styles.fillProgressBar, { width }]} />
           </View>
         </View>
       </ImageBackground>
@@ -47,13 +41,13 @@ export default connect(mapStateToProps)(Program);
 
 const styles = StyleSheet.create({
   program: {
-    paddingTop: 10,
+    paddingTop: 3,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-evenly',
   },
   presentationContainer: {
-    flexBasis: '80%',
+    flexBasis: '90%',
   },
   programTitle: {
     fontSize: theme.FONT_SIZE_LARGE,
@@ -61,6 +55,8 @@ const styles = StyleSheet.create({
   },
   completion: {
     textAlign: 'right',
+    color: theme.COLOR_PRIMARY_LIGHT,
+    fontSize: theme.FONT_SIZE_SMALL,
   },
   progressBar: {
     marginTop: 5,
@@ -83,12 +79,18 @@ const styles = StyleSheet.create({
     aspectRatio: 109 / 239,
   },
   image: {
-    padding: 20,
     alignItems: 'center',
     backgroundColor: 'rgb(0,0,0)',
-    height: 200,
+    height: 150,
+    width: '100%',
+
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
   },
   imageOpacity: {
-    opacity: 0.5,
+    opacity: 0.4,
   },
 });
+
+600;
+350;

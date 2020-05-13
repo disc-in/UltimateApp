@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import { ScrollView, StyleSheet, Text, View, TouchableOpacity, FlatList, Image } from 'react-native';
 import { connect } from 'react-redux';
 
@@ -9,7 +9,6 @@ import Program from './programs/Program';
 import Button from './shared/Button';
 import doneImage from '../../assets/button_validation_dark_theme.png';
 import toDoImage from '../../assets/button_validation_light.png';
-import arrowDark from '../../assets/arrow_dark.png';
 
 export const ProgramListPage = props => {
   const { navigation, programs } = props;
@@ -38,10 +37,13 @@ export const ProgramListPage = props => {
     const training = item;
     const program = programs[activeSections];
     const onTrainingPress = () => navigation.navigate('TrainingPage', { training, program });
+    console.log('program :', props.programs.id);
 
-    const isDone = false;
-    //   completeTrainings.find(complete => program.id === complete.program.id && training.id === complete.training.id) !==
-    //   undefined;
+    const isDone = true;
+    // props.completeTrainings.find(
+    //   complete => program.id === complete.program.id && training.id === complete.training.id,
+    // ) !== undefined;
+
     return (
       <View>
         <TouchableOpacity style={styles.training} onPress={onTrainingPress}>
@@ -65,7 +67,7 @@ export const ProgramListPage = props => {
       >
         <View style={styles.accordion}>
           <FlatList
-            style={styles.white}
+            style={styles.flatList}
             data={section.trainings}
             keyExtractor={item => item.id.toString()}
             renderItem={renderTraining}
@@ -91,7 +93,7 @@ export const ProgramListPage = props => {
               onChange={setSections}
             />
           </View>
-          <View style={styles.bottomPage}></View>
+          <View style={styles.bottomPage} />
         </ScrollView>
       </View>
       <View style={styles.seeAllContainer}>
@@ -109,6 +111,7 @@ export const ProgramListPage = props => {
 const mapStateToProps = state => {
   return {
     programs: state.programs,
+    completeTrainings: state.completeTrainings,
   };
 };
 
@@ -136,7 +139,6 @@ const styles = StyleSheet.create({
   },
   titleContainer: {
     flexBasis: '70%',
-    paddingLeft: 30,
   },
   title: {
     fontSize: theme.FONT_SIZE_LARGE,
@@ -145,11 +147,11 @@ const styles = StyleSheet.create({
     fontSize: theme.FONT_SIZE_MEDIUM,
   },
   todoState: {
-    height: 30,
+    height: 20,
     aspectRatio: 1 / 1,
   },
   cta: {
-    height: 20,
+    height: 25,
     aspectRatio: 109 / 239,
   },
   containerAccordion: {
@@ -168,7 +170,8 @@ const styles = StyleSheet.create({
     bottom: 10,
     width: '100%',
   },
-  white: {
+  flatList: {
+    paddingVertical: 20,
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
   },
   bottomPage: {

@@ -1,10 +1,9 @@
 import React from 'react';
-import { StyleSheet, TouchableOpacity, View, Text, Image } from 'react-native';
+import { StyleSheet, View, Text, Image } from 'react-native';
 import { connect } from 'react-redux';
 
 import theme from '../../styles/theme.style';
 import ListItem from '../shared/ListItem';
-import arrowDark from '../../../assets/arrow_dark.png';
 
 export const Program = props => {
   const { title, trainings } = props.program;
@@ -20,7 +19,7 @@ export const Program = props => {
         <View style={styles.presentationContainer}>
           <Text style={styles.programTitle}>{title}</Text>
           <Text style={styles.completion}>
-            {completeTrainingsCount}/{trainings.length} trainings
+            {completeTrainingsCount}/{trainings.length}
             {completeTrainingsCount === trainings.length && ' 👍🎉'}
           </Text>
           <View style={styles.progressBar}>

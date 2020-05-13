@@ -9,7 +9,7 @@ import Program from './programs/Program';
 import Button from './shared/Button';
 import ListItem from './shared/ListItem';
 import doneImage from '../../assets/button_validation_dark_theme.png';
-import toDoImage from '../../assets/button_validation_ultra_light.png';
+import toDoImage from '../../assets/button_validation_light.png';
 import arrowDark from '../../assets/arrow_dark.png';
 
 export const ProgramListPage = props => {
@@ -44,7 +44,7 @@ export const ProgramListPage = props => {
     //   completeTrainings.find(complete => program.id === complete.program.id && training.id === complete.training.id) !==
     //   undefined;
     return (
-      <ListItem>
+      <View>
         <TouchableOpacity style={styles.training} onPress={onTrainingPress}>
           <View style={styles.titleContainer}>
             <Text style={styles.titleAccordion}>{item.title}</Text>
@@ -52,11 +52,8 @@ export const ProgramListPage = props => {
           <View style={styles.containerAccordion}>
             <Image style={styles.todoState} source={toDoImage} />
           </View>
-          <View style={styles.containerAccordion}>
-            <Image style={styles.cta} source={arrowDark} />
-          </View>
         </TouchableOpacity>
-      </ListItem>
+      </View>
     );
   };
 
@@ -68,7 +65,12 @@ export const ProgramListPage = props => {
         transition="backgroundColor"
       >
         <View style={styles.accordion}>
-          <FlatList data={section.trainings} keyExtractor={item => item.id.toString()} renderItem={renderTraining} />
+          <FlatList
+            style={styles.green}
+            data={section.trainings}
+            keyExtractor={item => item.id.toString()}
+            renderItem={renderTraining}
+          />
         </View>
       </Animatable.View>
     );
@@ -78,7 +80,7 @@ export const ProgramListPage = props => {
     <View style={styles.programPage}>
       <View style={styles.container}>
         <ScrollView>
-          <View style={styles.listContainer}>
+          <View>
             <Accordion
               activeSections={activeSections}
               sections={programs}
@@ -115,20 +117,14 @@ export default connect(mapStateToProps)(ProgramListPage);
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: theme.BACKGROUND_COLOR,
+    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
   },
   programPage: {
     height: '100%',
   },
   accordion: {
-    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
+    backgroundColor: theme.BACKGROUND_COLOR,
     height: '100%',
-  },
-  allTrainings: {
-    fontSize: theme.FONT_SIZE_SMALL,
-    alignSelf: 'center',
-    width: 'auto',
-    marginVertical: 10,
   },
   training: {
     padding: 10,
@@ -136,20 +132,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-  },
-  listContainer: {
-    paddingVertical: 10,
-    paddingBottom: 50,
-  },
-  seeAllContainer: {
-    position: 'absolute',
-    backgroundColor: 'rgba(241, 241, 241, 0.2)',
-    bottom: 10,
-    width: '100%',
+    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
   },
   titleContainer: {
     flexBasis: '70%',
-    paddingLeft: 50,
+    paddingLeft: 30,
   },
   title: {
     fontSize: theme.FONT_SIZE_LARGE,
@@ -167,5 +154,21 @@ const styles = StyleSheet.create({
   },
   containerAccordion: {
     flexBasis: '20%',
+    alignItems: 'center',
+  },
+  allTrainings: {
+    fontSize: theme.FONT_SIZE_SMALL,
+    alignSelf: 'center',
+    width: 'auto',
+    marginVertical: 10,
+  },
+  seeAllContainer: {
+    position: 'absolute',
+    backgroundColor: 'rgba(241, 241, 241, 0.2)',
+    bottom: 10,
+    width: '100%',
+  },
+  green: {
+    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
   },
 });

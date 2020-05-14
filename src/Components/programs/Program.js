@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     bottom: 0,
-    paddingVertical: 100,
+    paddingVertical: 125,
     paddingHorizontal: 20,
   },
   programTitle: {
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
   image: {
     alignItems: 'center',
     backgroundColor: 'rgb(0,0,0)',
-    height: 150,
+    height: 175,
     width: '100%',
 
     flexDirection: 'row',

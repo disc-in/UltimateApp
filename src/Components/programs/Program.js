@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, View, Text, ImageBackground } from 'react-native';
 import { connect } from 'react-redux';
+import { LinearGradient } from 'expo-linear-gradient';
 
 import theme from '../../styles/theme.style';
-import ListItem from '../shared/ListItem';
 
 export const Program = props => {
   const { title, trainings, image } = props.program;
@@ -24,7 +24,12 @@ export const Program = props => {
             {completeTrainingsCount}/{trainings.length}
           </Text>
           <View style={styles.progressBar}>
-            <View style={[StyleSheet.absoluteFill, styles.fillProgressBar, { width }]} />
+            <LinearGradient
+              colors={[theme.GRADIENT_FIRST_COLOR, theme.GRADIENT_SECOND_COLOR]}
+              style={[StyleSheet.absoluteFill, styles.fillProgressBar, { width }]}
+              start={{ x: 1, y: 1 }}
+              end={{ x: 0, y: 0 }}
+            />
           </View>
         </View>
       </ImageBackground>

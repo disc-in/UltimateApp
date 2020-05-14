@@ -22,7 +22,7 @@ export const ProgramListPage = props => {
   const renderHeader = (section, _, isActive) => {
     return (
       <Animatable.View
-        duration={500}
+        duration={400}
         style={[styles.header, isActive ? styles.active : styles.inactive]}
         transition="backgroundColor"
       >
@@ -37,12 +37,12 @@ export const ProgramListPage = props => {
     const training = item;
     const program = programs[activeSections];
     const onTrainingPress = () => navigation.navigate('TrainingPage', { training, program });
-    console.log('program :', props.programs.id);
 
-    const isDone = true;
-    // props.completeTrainings.find(
-    //   complete => program.id === complete.program.id && training.id === complete.training.id,
-    // ) !== undefined;
+    const isDone = program
+      ? props.completeTrainings.find(
+          complete => program.id === complete.program.id && training.id === complete.training.id,
+        ) !== undefined
+      : false;
 
     return (
       <View>

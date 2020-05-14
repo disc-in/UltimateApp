@@ -22,7 +22,6 @@ export const Program = props => {
         <View style={styles.presentationContainer}>
           <Text style={styles.completion}>
             {completeTrainingsCount}/{trainings.length}
-            {completeTrainingsCount === trainings.length && ' 👍🎉'}
           </Text>
           <View style={styles.progressBar}>
             <View style={[StyleSheet.absoluteFill, styles.fillProgressBar, { width }]} />

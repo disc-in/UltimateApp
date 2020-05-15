@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Animated, View, StyleSheet, Text, Dimensions, TouchableOpacity, Image } from 'react-native';
+import { Animated, View, StyleSheet, Text, Dimensions, TouchableOpacity, Image, SafeAreaView } from 'react-native';
 import GestureRecognizer from 'react-native-swipe-gestures';
 import { WebView } from 'react-native-webview';
 
@@ -12,12 +12,15 @@ import iconRedo from '../../assets/redo_arrow.png';
 import buttonValidation from '../../assets/button_validation_ultra_light.png';
 import buttonValidationGradient from '../../assets/button_validation_gradient.png';
 import { Easing } from 'react-native-reanimated';
+import Carousel, { Pagination } from 'react-native-snap-carousel';
+
+const screenDimension = Dimensions.get('window');
 
 const DrillIllustration = props => {
-  const [currentStepIndex, setStepIndex] = useState(0);
-
+  const [activeIndex, setActiveIndex] = useState(0);
   const opacityUnchecked = useRef(new Animated.Value(1)).current;
   const opacityChecked = opacityUnchecked.interpolate({ inputRange: [0, 1], outputRange: [1, 0] });
+  const currentStep = props.drill.steps[activeIndex];
 
   const checkAnimation = () => {
     Animated.sequence([
@@ -47,19 +50,17 @@ const DrillIllustration = props => {
     ]).start(() => incrementStepIndex());
   };
 
-  const currentStep = props.drill.steps[currentStepIndex];
-
   // back to 0 when drill changes
   useEffect(() => {
-    setStepIndex(0);
+    setActiveIndex(0);
   }, [props.drill]);
 
   const incrementStepIndex = () => {
-    setStepIndex((currentStepIndex + 1) % (props.drill.steps.length + 1));
+    setActiveIndex((activeIndex + 1) % (props.drill.steps.length + 1));
   };
 
   const displayNextStep = () => {
-    if (currentStepIndex + 1 === props.drill.steps.length) {
+    if (activeIndex + 1 === props.drill.steps.length) {
       return (
         <>
           <View style={styles.description}>
@@ -75,35 +76,16 @@ const DrillIllustration = props => {
         <>
           <View style={styles.description}>
             <View style={styles.subWrapper}>
-              <Text style={styles.fitnessNext}>{props.drill.steps[currentStepIndex + 1].repetition}</Text>
+              <Text style={styles.fitnessNext}>{props.drill.steps[activeIndex + 1].repetition}</Text>
             </View>
             <View style={styles.subSubWrapper}>
-              <Text style={styles.fitnessNext}>{props.drill.steps[currentStepIndex + 1].title}</Text>
+              <Text style={styles.fitnessNext}>{props.drill.steps[activeIndex + 1].title}</Text>
             </View>
             <View style={styles.fakeWrapper} />
           </View>
           <View style={styles.lines} />
         </>
       );
-    }
-  };
-
-  const checkSwitch = () => {
-    if (currentStepIndex === props.drill.steps.length) {
-      return displayFinish();
-    } else if (!currentStep) {
-      return <View />; // bad state, but let's not crash
-    } else {
-      switch (props.drill.steps[currentStepIndex].illustrationType) {
-        case IllustrationType.ANIMATION:
-          return displayAnimation(props.drill.steps[currentStepIndex]);
-        case IllustrationType.YOUTUBE:
-          return displayYoutube(props.drill.steps[currentStepIndex]);
-        case IllustrationType.VIMEO:
-          return displayVimeo(props.drill.steps[currentStepIndex]);
-        default:
-          return <Text>No visual content for this drill</Text>;
-      }
     }
   };
 
@@ -132,26 +114,6 @@ const DrillIllustration = props => {
                   <View style={styles.subSubWrapper}>
                     <Text style={styles.fitness}>{title}</Text>
                   </View>
-                  <TouchableOpacity style={styles.container} onPress={() => checkAnimationFast()}>
-                    <Animated.View
-                      style={[
-                        {
-                          opacity: opacityUnchecked,
-                        },
-                      ]}
-                    >
-                      <Image style={styles.buttonNext} source={buttonValidation} />
-                    </Animated.View>
-                    <Animated.View
-                      style={[
-                        {
-                          opacity: opacityChecked,
-                        },
-                      ]}
-                    >
-                      <Image style={styles.buttonNext} source={buttonValidationGradient} />
-                    </Animated.View>
-                  </TouchableOpacity>
                 </View>
               </View>
             </View>
@@ -260,14 +222,95 @@ const DrillIllustration = props => {
     );
   };
 
-  return (
-    <GestureRecognizer style={styles.container} onSwipeLeft={checkAnimationFast} config={swipeConfig}>
-      {checkSwitch()}
-    </GestureRecognizer>
-  );
+  const checkSwitch = () => {
+    if (activeIndex === props.drill.steps.length) {
+      return displayFinish();
+    } else if (!currentStep) {
+      return <View />; // bad state, but let's not crash
+    } else {
+      switch (props.drill.steps[activeIndex].illustrationType) {
+        case IllustrationType.ANIMATION:
+          return displayAnimation(props.drill.steps[activeIndex]);
+        case IllustrationType.YOUTUBE:
+          return displayYoutube(props.drill.steps[activeIndex]);
+        case IllustrationType.VIMEO:
+          return displayVimeo(props.drill.steps[activeIndex]);
+        default:
+          return <Text>No visual content for this drill</Text>;
+      }
+    }
+  };
+
+  const renderStep = ({ item, index }) => {
+    if (!currentStep) {
+      return <View />; // bad state, but let's not crash
+    } else {
+      switch (item.illustrationType) {
+        case IllustrationType.ANIMATION:
+          return displayAnimation(item);
+        case IllustrationType.YOUTUBE:
+          return displayYoutube(item);
+        case IllustrationType.VIMEO:
+          return displayVimeo(item);
+        default:
+          return <Text>No visual content for this drill</Text>;
+      }
+    }
+  };
+
+  const pagination = () => {
+    return (
+      <Pagination
+        dotsLength={props.drill.steps.length}
+        activeDotIndex={activeIndex}
+        containerStyle={{
+          backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
+          paddingVertical: 0,
+        }}
+        dotStyle={{
+          width: 8,
+          height: 8,
+          borderRadius: 5,
+          marginHorizontal: 5,
+          backgroundColor: theme.GRADIENT_FIRST_COLOR,
+        }}
+        inactiveDotStyle={{
+          backgroundColor: theme.COLOR_SECONDARY,
+        }}
+        inactiveDotOpacity={0.4}
+        inactiveDotScale={0.6}
+      />
+    );
+  };
+
+  const drillTypes = () => {
+    if (props.drill.type === 'frisbee') {
+      return (
+        <SafeAreaView style={styles.container}>
+          <Carousel
+            layout="default"
+            // ref={ref => (carousel = ref)}
+            data={props.drill.steps}
+            sliderWidth={screenDimension.width}
+            itemWidth={screenDimension.width}
+            renderItem={renderStep}
+            onSnapToItem={index => setActiveIndex(index)}
+          />
+          <View style={styles.pagination}>{pagination()}</View>
+        </SafeAreaView>
+      );
+    } else {
+      return (
+        <GestureRecognizer style={styles.container} onSwipeLeft={checkAnimationFast} config={swipeConfig}>
+          {checkSwitch()}
+        </GestureRecognizer>
+      );
+    }
+  };
+
+  return <View style={styles.container}>{drillTypes()}</View>;
 };
 
-const screenDimension = Dimensions.get('window');
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -384,6 +427,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flex: 1,
+  },
+  pagination: {
+    paddingBottom: 15,
   },
 });
 

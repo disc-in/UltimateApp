@@ -9,26 +9,6 @@ exports[`<MinimalDrill /> renders correctly 1`] = `
   }
 >
   <View
-    config={
-      Object {
-        "directionalOffsetThreshold": 80,
-        "gestureIsClickThreshold": 10,
-        "velocityThreshold": 0.3,
-      }
-    }
-    onMoveShouldSetResponder={[Function]}
-    onMoveShouldSetResponderCapture={[Function]}
-    onResponderEnd={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderReject={[Function]}
-    onResponderRelease={[Function]}
-    onResponderStart={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    onStartShouldSetResponderCapture={[Function]}
-    onSwipeLeft={[Function]}
     style={
       Object {
         "flex": 1,
@@ -36,54 +16,82 @@ exports[`<MinimalDrill /> renders correctly 1`] = `
     }
   >
     <View
+      config={
+        Object {
+          "directionalOffsetThreshold": 80,
+          "gestureIsClickThreshold": 10,
+          "velocityThreshold": 0.3,
+        }
+      }
+      onMoveShouldSetResponder={[Function]}
+      onMoveShouldSetResponderCapture={[Function]}
+      onResponderEnd={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderReject={[Function]}
+      onResponderRelease={[Function]}
+      onResponderStart={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      onStartShouldSetResponderCapture={[Function]}
+      onSwipeLeft={[Function]}
       style={
         Object {
-          "height": 250,
+          "flex": 1,
         }
       }
     >
       <View
         style={
-          Array [
-            Object {
-              "flex": 1,
-              "overflow": "hidden",
-            },
-            undefined,
-          ]
+          Object {
+            "height": 250,
+          }
         }
       >
-        <RNCWebView
-          cacheEnabled={true}
-          javaScriptEnabled={true}
-          messagingEnabled={false}
-          onContentProcessDidTerminate={[Function]}
-          onHttpError={[Function]}
-          onLoadingError={[Function]}
-          onLoadingFinish={[Function]}
-          onLoadingProgress={[Function]}
-          onLoadingStart={[Function]}
-          onMessage={[Function]}
-          onShouldStartLoadWithRequest={[Function]}
-          source={
-            Object {
-              "uri": "https://www.youtube.com/embed/JkVHrA5o23o",
-            }
-          }
+        <View
           style={
             Array [
               Object {
                 "flex": 1,
                 "overflow": "hidden",
               },
-              Object {
-                "backgroundColor": "#ffffff",
-              },
               undefined,
             ]
           }
-          useSharedProcessPool={true}
-        />
+        >
+          <RNCWebView
+            cacheEnabled={true}
+            javaScriptEnabled={true}
+            messagingEnabled={false}
+            onContentProcessDidTerminate={[Function]}
+            onHttpError={[Function]}
+            onLoadingError={[Function]}
+            onLoadingFinish={[Function]}
+            onLoadingProgress={[Function]}
+            onLoadingStart={[Function]}
+            onMessage={[Function]}
+            onShouldStartLoadWithRequest={[Function]}
+            source={
+              Object {
+                "uri": "https://www.youtube.com/embed/JkVHrA5o23o",
+              }
+            }
+            style={
+              Array [
+                Object {
+                  "flex": 1,
+                  "overflow": "hidden",
+                },
+                Object {
+                  "backgroundColor": "#ffffff",
+                },
+                undefined,
+              ]
+            }
+            useSharedProcessPool={true}
+          />
+        </View>
       </View>
     </View>
   </View>

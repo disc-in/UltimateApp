@@ -1,4 +1,4 @@
-export const goToTen = {
+const goToTen = {
   positions: [
     [
       [[0.197, 0.677]],
@@ -106,3 +106,5 @@ export const goToTen = {
   ],
   texts: ['', '', '', '', '1', '1', '2', '2', '', '3', '3', '4', '4', '5', '5'],
 };
+
+export default goToTen;

@@ -17,7 +17,7 @@ const Stack = createStackNavigator();
 
 export const Navigation = () => (
   <Stack.Navigator screenOptions={{ headerBackTitleVisible: false }}>
-    <Stack.Screen name="HomePage" component={HomePage} options={{ title: 'Ultimate Coaching app' }} />
+    <Stack.Screen name="HomePage" component={HomePage} options={{ title: 'Disc In' }} />
     <Stack.Screen
       name="DrillListPage"
       component={DrillListPage}

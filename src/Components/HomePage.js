@@ -24,7 +24,7 @@ const HomeScreen = props => {
       <TouchableHighlight onPress={() => props.navigation.navigate('AnimationEditorPage')} style={styles.menuItem}>
         <ImageBackground source={simulator} style={styles.image}>
           <View style={styles.wrapper}>
-            <Text style={styles.text}>Simulator</Text>
+            <Text style={styles.text}>Create your play</Text>
           </View>
         </ImageBackground>
       </TouchableHighlight>
@@ -34,14 +34,14 @@ const HomeScreen = props => {
       >
         <ImageBackground source={frisbeeGlove} style={styles.image}>
           <View style={styles.wrapper}>
-            <Text style={styles.text}>Frisbee drills</Text>
+            <Text style={styles.text}>Drills</Text>
           </View>
         </ImageBackground>
       </TouchableHighlight>
       <TouchableHighlight onPress={() => props.navigation.navigate('ProgramListPage')} style={styles.menuItem}>
         <ImageBackground source={huddle} style={styles.image}>
           <View style={styles.wrapper}>
-            <Text style={styles.text}>Training programs</Text>
+            <Text style={styles.text}>Practices programs</Text>
           </View>
         </ImageBackground>
       </TouchableHighlight>

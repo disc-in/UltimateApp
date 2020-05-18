@@ -64,16 +64,6 @@ const Team = props => {
       </View>
       <ScrollView style={styles.imageContainer}>
         <TouchableHighlight
-          onPress={() => props.navigation.navigate('DrillListPage', { type: DrillTypes.FRISBEE })}
-          style={styles.menuTeam}
-        >
-          <ImageBackground source={ourPractices} style={styles.imageTeam}>
-            <View style={styles.wrapperCenter}>
-              <Text style={styles.titleCenter}>OUR PRACTICES</Text>
-            </View>
-          </ImageBackground>
-        </TouchableHighlight>
-        <TouchableHighlight
           onPress={() => props.navigation.navigate('DrillListPage', { type: DrillTypes.FITNESS })}
           style={styles.menuTeam}
         >
@@ -87,6 +77,16 @@ const Team = props => {
           <ImageBackground source={ourPlays} style={styles.imageTeam}>
             <View style={styles.wrapperCenter}>
               <Text style={styles.titleCenter}>OUR PLAYS</Text>
+            </View>
+          </ImageBackground>
+        </TouchableHighlight>
+        <TouchableHighlight
+          onPress={() => props.navigation.navigate('DrillListPage', { type: DrillTypes.FRISBEE })}
+          style={styles.menuTeam}
+        >
+          <ImageBackground source={ourPractices} style={styles.imageTeam}>
+            <View style={styles.wrapperCenter}>
+              <Text style={styles.titleCenter}>OUR PRACTICES</Text>
             </View>
           </ImageBackground>
         </TouchableHighlight>
@@ -161,8 +161,7 @@ export default function HomePage(props) {
       tabBarOptions={{
         activeTintColor: theme.COLOR_PRIMARY,
         inactiveTintColor: theme.COLOR_SECONDARY,
-        upperCaseLabel: true,
-        labelStyle: { fontSize: 14, fontWeight: 'bold' },
+        labelStyle: { fontSize: theme.FONT_SIZE_MEDIUM, fontWeight: 'bold', textTransform: 'none' },
         indicatorStyle: { backgroundColor: theme.COLOR_PRIMARY },
       }}
     >

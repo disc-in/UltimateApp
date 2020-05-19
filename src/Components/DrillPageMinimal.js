@@ -1,10 +1,12 @@
 import React, { useLayoutEffect, useCallback } from 'react';
 import { Platform, StyleSheet, ScrollView, View, Text } from 'react-native';
+import { connect } from 'react-redux';
 
 import theme from '../styles/theme.style';
 import MinimalDrill from './shared/MinimalDrill';
 import Button from './shared/Button';
 import Progress from './ProgressBar2';
+import { completeTraining } from '../Store/Actions/programAction';
 
 export const DrillPageMinimal = props => {
   const { route, navigation } = props;
@@ -12,19 +14,25 @@ export const DrillPageMinimal = props => {
 
   const currentDrillIndex = training.drills.findIndex(({ id }) => id === drill.id);
   if (currentDrillIndex === -1) navigation.navigate('TrainingPage', { training });
+  const isLastTraining = currentDrillIndex === training.drills.length - 1;
 
   const goToFullDrill = useCallback(() => {
     navigation.navigate('DrillPage', { drill });
   }, [navigation, drill]);
 
   const goToNextDrill = useCallback(() => {
-    if (currentDrillIndex === training.drills.length - 1) {
-      navigation.navigate('TrainingBravoPage', { training, program });
+    const nextDrill = training.drills[currentDrillIndex + 1];
+    navigation.navigate('DrillPageMinimal', { drill: nextDrill, training, program });
+  }, [training, currentDrillIndex, navigation, program]);
+
+  const finishTraining = useCallback(() => {
+    if (program) {
+      props.completeTraining({ training, program });
+      navigation.navigate('ProgramPage', { program });
     } else {
-      const nextDrill = training.drills[currentDrillIndex + 1];
-      navigation.navigate('DrillPageMinimal', { drill: nextDrill, training, program });
+      navigation.navigate('TrainingListPage');
     }
-  }, [training, currentDrillIndex, navigation, program, props]);
+  }, [training, navigation, program, props]);
 
   useLayoutEffect(() => {
     const onProgressDotPress = idx => {
@@ -55,13 +63,19 @@ export const DrillPageMinimal = props => {
 
       <MinimalDrill style={styles.illustration} drill={drill} />
       <View style={styles.footer}>
-        <Button onPress={goToNextDrill} text="Next drill" />
+        {isLastTraining ? (
+          <Button onPress={finishTraining} text="Finish Training!" />
+        ) : (
+          <Button onPress={goToNextDrill} text="Next drill" />
+        )}
       </View>
     </ScrollView>
   );
 };
 
-export default DrillPageMinimal;
+const mapDispatchToProps = { completeTraining };
+
+export default connect(null, mapDispatchToProps)(DrillPageMinimal);
 
 const styles = StyleSheet.create({
   drillPage: {

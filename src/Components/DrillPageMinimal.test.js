@@ -63,8 +63,9 @@ describe('<DrillPageMinimal />', () => {
       <DrillPageMinimal navigation={navigation} route={route} completeTraining={completeTraining} />,
     );
 
-    await fireEvent.press(getByText('Next drill'));
+    await fireEvent.press(getByText('Finish Training!'));
 
-    expect(navigation.navigate).toBeCalledWith('TrainingBravoPage', { training, program });
+    expect(completeTraining).toBeCalledWith({ training, program });
+    expect(navigation.navigate).toBeCalledWith('ProgramPage', { program });
   });
 });

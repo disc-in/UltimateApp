@@ -14,7 +14,6 @@ import buttonValidationGradient from '../../assets/button_validation_gradient.pn
 import { Easing } from 'react-native-reanimated';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import { TapGestureHandler } from 'react-native-gesture-handler';
 
 const screenDimension = Dimensions.get('window');
 
@@ -24,16 +23,8 @@ const DrillIllustration = props => {
   const opacityChecked = opacityUnchecked.interpolate({ inputRange: [0, 1], outputRange: [1, 0] });
   const currentStep = props.drill.steps[activeIndex];
   const isMultipleSteps = props.drill.steps.length > 1;
-  const isFirstStep = isMultipleSteps ? activeIndex === 0 : true;
-  const isLastStep = isMultipleSteps ? activeIndex === props.drill.steps.length - 1 : true;
 
-  const decrementStepIndex = () => {
-    if (activeIndex === 0) {
-      setActiveIndex(0);
-    } else {
-      setActiveIndex(activeIndex - 1);
-    }
-  };
+  const carouselRef = useRef(null);
 
   const checkAnimation = () => {
     Animated.sequence([
@@ -110,33 +101,6 @@ const DrillIllustration = props => {
           <TouchableOpacity style={styles.redoButton} onPress={() => incrementStepIndex()}>
             <Image style={styles.redoImage} source={iconRedo} />
           </TouchableOpacity>
-        </View>
-      </>
-    );
-  };
-
-  const displayAnimation = ({ illustrationSource, instruction, title }) => {
-    return (
-      <>
-        <View style={styles.line}>
-          <View>
-            {!isFirstStep && (
-              <TouchableOpacity onPress={decrementStepIndex}>
-                <MaterialCommunityIcons name="chevron-double-left" color={theme.COLOR_PRIMARY} size={26} />
-              </TouchableOpacity>
-            )}
-          </View>
-          <Text style={styles.title}>{currentStep.title}</Text>
-          <View>
-            {!isLastStep && (
-              <TouchableOpacity onPress={incrementStepIndex}>
-                <MaterialCommunityIcons name="chevron-double-right" color={theme.COLOR_PRIMARY} size={26} />
-              </TouchableOpacity>
-            )}
-          </View>
-        </View>
-        <View style={styles.animation}>
-          <Animation widthRatio={1} heightRatio={props.minimal ? 2 / 5 : 1 / 2} animation={illustrationSource} />
         </View>
       </>
     );
@@ -258,13 +222,51 @@ const DrillIllustration = props => {
     }
   };
 
+  const displayAnimation = ({ illustrationSource, title }, index) => {
+    const isFirstStep = isMultipleSteps ? index === 0 : true;
+    const isLastStep = isMultipleSteps ? index === props.drill.steps.length - 1 : true;
+    return (
+      <>
+        <View style={styles.line}>
+          <View>
+            {!isFirstStep && (
+              <TouchableOpacity
+                onPress={() => {
+                  carouselRef.current.snapToPrev();
+                }}
+              >
+                <MaterialCommunityIcons name="chevron-double-left" color={theme.COLOR_PRIMARY} size={26} />
+              </TouchableOpacity>
+            )}
+          </View>
+          <Text style={styles.title}>{title}</Text>
+          <View>
+            {!isLastStep && (
+              <TouchableOpacity
+                onPress={() => {
+                  carouselRef.current.snapToNext();
+                }}
+              >
+                <MaterialCommunityIcons name="chevron-double-right" color={theme.COLOR_PRIMARY} size={26} />
+              </TouchableOpacity>
+            )}
+          </View>
+        </View>
+        <View style={styles.animation}>
+          <Animation widthRatio={1} heightRatio={props.minimal ? 2 / 5 : 1 / 2} animation={illustrationSource} />
+        </View>
+      </>
+    );
+  };
+
   const renderStep = ({ item, index }) => {
+    // console.log('ITEMMMMMMMMMMMMMMMM', item);
     if (!currentStep) {
       return <View />; // bad state, but let's not crash
     } else {
       switch (item.illustrationType) {
         case IllustrationType.ANIMATION:
-          return displayAnimation(item);
+          return displayAnimation(item, index);
         case IllustrationType.YOUTUBE:
           return displayYoutube(item);
         case IllustrationType.VIMEO:
@@ -306,6 +308,7 @@ const DrillIllustration = props => {
         <SafeAreaView style={styles.container}>
           <Carousel
             layout="default"
+            ref={carouselRef}
             data={props.drill.steps}
             sliderWidth={screenDimension.width}
             itemWidth={screenDimension.width}
@@ -457,6 +460,7 @@ const styles = StyleSheet.create({
     fontSize: theme.FONT_SIZE_LARGE,
     color: theme.COLOR_PRIMARY,
     fontWeight: 'bold',
+    textAlign: 'center',
   },
   animation: { flex: 9 },
 });

@@ -2,7 +2,6 @@ import React, { useLayoutEffect, useCallback } from 'react';
 import { Platform, StyleSheet, ScrollView, View, Text } from 'react-native';
 
 import theme from '../styles/theme.style';
-import HeaderButton from './shared/HeaderButton';
 import MinimalDrill from './shared/MinimalDrill';
 import Button from './shared/Button';
 import Progress from './ProgressBar2';
@@ -31,7 +30,6 @@ export const DrillPageMinimal = props => {
     const onProgressDotPress = idx => {
       navigation.navigate('DrillPageMinimal', { training, drill: training.drills[idx] });
     };
-    const headerRight = () => <HeaderButton onPress={goToNextDrill} />;
 
     const headerTitle = () => (
       <View style={styles.headerTitle}>
@@ -43,12 +41,11 @@ export const DrillPageMinimal = props => {
       headerTitleAlign: 'center',
       headerStyle: { height: 100 },
       headerTitle,
-      headerRight,
     });
-  }, [navigation, goToNextDrill, currentDrillIndex, training]);
+  }, [navigation, currentDrillIndex, training]);
 
   return (
-    <ScrollView style={styles.drillPage}>
+    <ScrollView style={styles.drillPage} contentContainerStyle={{ flexGrow: 1 }}>
       <View style={styles.titleContainer}>
         <Text style={styles.title}>{drill.title}</Text>
         <View style={styles.btnMoreContainer}>
@@ -57,6 +54,9 @@ export const DrillPageMinimal = props => {
       </View>
 
       <MinimalDrill style={styles.illustration} drill={drill} />
+      <View style={styles.footer}>
+        <Button onPress={goToNextDrill} text="Next drill" />
+      </View>
     </ScrollView>
   );
 };
@@ -76,7 +76,6 @@ const styles = StyleSheet.create({
     fontSize: theme.FONT_SIZE_SMALL,
     width: 'auto',
   },
-
   headerTitleText: {
     ...Platform.select({
       ios: {
@@ -123,6 +122,15 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',
+    alignItems: 'center',
+  },
+  footer: {
+    position: 'absolute',
+    paddingBottom: 20,
+    paddingTop: 5,
+    bottom: 0,
+    backgroundColor: 'white',
+    width: '100%',
     alignItems: 'center',
   },
 });

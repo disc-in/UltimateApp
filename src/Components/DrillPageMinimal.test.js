@@ -19,7 +19,7 @@ describe('<DrillPageMinimal />', () => {
   const program = fixtures.programs[0];
   const training = program.trainings[0];
   const drill = training.drills[0];
-  const route = {
+  let route = {
     params: {
       program,
       training,
@@ -41,65 +41,30 @@ describe('<DrillPageMinimal />', () => {
   });
 
   it('links to next drill within training when finished', async () => {
-    const trainingFirstDrill = training.drills[0];
+    const { getByText } = render(<DrillPageMinimal navigation={navigation} route={route} />);
 
-    const Stack = createStackNavigator();
-    const navigate = jest.fn();
-    const { getByTestId } = render(
-      <Provider store={store}>
-        <NavigationContainer>
-          <Stack.Navigator>
-            <Stack.Screen
-              name="DrillPageMinimal"
-              component={ConnectedDrillPageMinimal}
-              initialParams={{ program, training, drill }}
-              listeners={({ navigation }) => ({
-                transitionStart: e => {
-                  navigation.navigate = navigate;
-                },
-              })}
-            />
-          </Stack.Navigator>
-        </NavigationContainer>
-      </Provider>,
-    );
-
-    await fireEvent.press(getByTestId('headerButton'));
+    await fireEvent.press(getByText('Next drill'));
 
     const secondDrill = training.drills[1];
-    expect(navigate).toBeCalledWith('DrillPageMinimal', { drill: secondDrill, training, program });
+    expect(navigation.navigate).toBeCalledWith('DrillPageMinimal', { drill: secondDrill, training, program });
   });
 
   it('links to bravo page when finished and is last drill', async () => {
-    const trainingLastDrill = training.drills[training.drills.length - 1];
     const completeTraining = jest.fn();
+    route = {
+      params: {
+        program,
+        training,
+        drill: training.drills[training.drills.length - 1],
+      },
+    };
 
-    const Stack = createStackNavigator();
-    const navigate = jest.fn();
-
-    const MockedConnectedDrillPageMinimal = connect(null, () => ({ completeTraining }))(DrillPageMinimal);
-
-    const { getByTestId } = render(
-      <Provider store={store}>
-        <NavigationContainer>
-          <Stack.Navigator>
-            <Stack.Screen
-              name="DrillPageMinimal"
-              component={MockedConnectedDrillPageMinimal}
-              initialParams={{ program, training, drill: trainingLastDrill }}
-              listeners={({ navigation }) => ({
-                transitionStart: e => {
-                  navigation.navigate = navigate;
-                },
-              })}
-            />
-          </Stack.Navigator>
-        </NavigationContainer>
-      </Provider>,
+    const { getByText } = render(
+      <DrillPageMinimal navigation={navigation} route={route} completeTraining={completeTraining} />,
     );
 
-    await fireEvent.press(getByTestId('headerButton'));
+    await fireEvent.press(getByText('Next drill'));
 
-    expect(navigate).toBeCalledWith('TrainingBravoPage', { training, program });
+    expect(navigation.navigate).toBeCalledWith('TrainingBravoPage', { training, program });
   });
 });

@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Text, ImageBackground, TouchableHighlight } from 'react-native';
 
+import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
 import fitness from '../../assets/HomePage/fitness.png';
 import frisbeeGlove from '../../assets/HomePage/frisbeeglove.png';
@@ -18,7 +19,7 @@ export default class HomePage extends React.Component {
         >
           <ImageBackground source={frisbeeGlove} style={styles.image}>
             <View style={styles.wrapper}>
-              <Text style={styles.text}>Frisbee drills</Text>
+              <Text style={styles.text}>{I18n.t('frisbeeDrills')}</Text>
             </View>
           </ImageBackground>
         </TouchableHighlight>
@@ -28,21 +29,21 @@ export default class HomePage extends React.Component {
         >
           <ImageBackground source={fitness} style={styles.image}>
             <View style={styles.wrapper}>
-              <Text style={styles.text}>Fitness drills</Text>
+              <Text style={styles.text}>{I18n.t('fitnessDrills')}</Text>
             </View>
           </ImageBackground>
         </TouchableHighlight>
         <TouchableHighlight onPress={() => this.props.navigation.navigate('ProgramListPage')} style={styles.menuItem}>
           <ImageBackground source={huddle} style={styles.image}>
             <View style={styles.wrapper}>
-              <Text style={styles.text}>Training programs</Text>
+              <Text style={styles.text}>{I18n.t('programs')}</Text>
             </View>
           </ImageBackground>
         </TouchableHighlight>
         <View style={styles.editorLink}>
           <Button
             onPress={() => this.props.navigation.navigate('AnimationEditorPage')}
-            text="Animation Editor"
+            text={I18n.t('editor')}
             buttonLight="true"
           />
         </View>

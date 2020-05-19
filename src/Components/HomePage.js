@@ -1,22 +1,20 @@
 import React from 'react';
-import { ScrollView, StyleSheet, View, Text, ImageBackground, TouchableHighlight } from 'react-native';
+import { StyleSheet, View, Text, ImageBackground, TouchableHighlight } from 'react-native';
 
 import theme from '../styles/theme.style';
 import frisbeeGlove from '../../assets/HomePage/frisbeeglove.jpg';
 import bodyweight from '../../assets/HomePage/bodyweight.jpg';
 import gymstrong from '../../assets/HomePage/gymstrong.jpg';
 import leanfit from '../../assets/HomePage/leanfit.jpg';
-import ourPractices from '../../assets/HomePage/ourpractices.jpg';
-import ourDrills from '../../assets/HomePage/ourdrills.jpg';
-import ourPlays from '../../assets/HomePage/ourplays.jpg';
-import ourWorkouts from '../../assets/HomePage/ourworkouts.jpg';
 import simulator from '../../assets/HomePage/simulator.jpg';
 import huddle from '../../assets/HomePage/huddle.png';
 import { DrillTypes } from '../Fixtures';
-import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import Button from './shared/Button';
 
-const Tab = createMaterialTopTabNavigator();
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { Ionicons } from '@expo/vector-icons';
+
+const Tab = createMaterialBottomTabNavigator();
 
 const HomeScreen = props => {
   return (
@@ -24,7 +22,7 @@ const HomeScreen = props => {
       <TouchableHighlight onPress={() => props.navigation.navigate('AnimationEditorPage')} style={styles.menuItem}>
         <ImageBackground source={simulator} style={styles.image}>
           <View style={styles.wrapper}>
-            <Text style={styles.text}>Create your play</Text>
+            <Text style={styles.text}>Theory</Text>
           </View>
         </ImageBackground>
       </TouchableHighlight>
@@ -45,60 +43,6 @@ const HomeScreen = props => {
           </View>
         </ImageBackground>
       </TouchableHighlight>
-    </View>
-  );
-};
-
-const Team = props => {
-  return (
-    <View>
-      <View style={styles.teamDescription}>
-        <Text style={styles.teamName}>Team Name</Text>
-        <View style={styles.editorLink}>
-          <Button
-            onPress={() => props.navigation.navigate('AnimationEditorPage')}
-            text="14 players"
-            buttonLight="true"
-          />
-        </View>
-      </View>
-      <ScrollView style={styles.imageContainer}>
-        <TouchableHighlight
-          onPress={() => props.navigation.navigate('DrillListPage', { type: DrillTypes.FITNESS })}
-          style={styles.menuTeam}
-        >
-          <ImageBackground source={ourDrills} style={styles.imageTeam}>
-            <View style={styles.wrapperCenter}>
-              <Text style={styles.titleCenter}>OUR DRILLS</Text>
-            </View>
-          </ImageBackground>
-        </TouchableHighlight>
-        <TouchableHighlight onPress={() => props.navigation.navigate('ProgramListPage')} style={styles.menuTeam}>
-          <ImageBackground source={ourPlays} style={styles.imageTeam}>
-            <View style={styles.wrapperCenter}>
-              <Text style={styles.titleCenter}>OUR PLAYS</Text>
-            </View>
-          </ImageBackground>
-        </TouchableHighlight>
-        <TouchableHighlight
-          onPress={() => props.navigation.navigate('DrillListPage', { type: DrillTypes.FRISBEE })}
-          style={styles.menuTeam}
-        >
-          <ImageBackground source={ourPractices} style={styles.imageTeam}>
-            <View style={styles.wrapperCenter}>
-              <Text style={styles.titleCenter}>OUR PRACTICES</Text>
-            </View>
-          </ImageBackground>
-        </TouchableHighlight>
-        <TouchableHighlight onPress={() => props.navigation.navigate('ProgramListPage')} style={styles.menuTeam}>
-          <ImageBackground source={ourWorkouts} style={styles.imageTeam}>
-            <View style={styles.wrapperCenter}>
-              <Text style={styles.titleCenter}>OUR WORKOUTS</Text>
-            </View>
-          </ImageBackground>
-        </TouchableHighlight>
-        <View style={styles.bottomPage} />
-      </ScrollView>
     </View>
   );
 };
@@ -158,16 +102,27 @@ const Fitness = props => {
 export default function HomePage(props) {
   return (
     <Tab.Navigator
-      tabBarOptions={{
-        activeTintColor: theme.COLOR_PRIMARY,
-        inactiveTintColor: theme.COLOR_SECONDARY,
-        labelStyle: { fontSize: theme.FONT_SIZE_MEDIUM, fontWeight: 'bold', textTransform: 'none' },
-        indicatorStyle: { backgroundColor: theme.COLOR_PRIMARY },
-      }}
+      initialRouteName="Frisbee"
+      activeColor={theme.COLOR_PRIMARY}
+      inactiveColor={theme.COLOR_SECONDARY}
+      barStyle={{ backgroundColor: theme.BACKGROUND_COLOR }}
     >
-      <Tab.Screen name="Home" component={HomeScreen} />
-      <Tab.Screen name="Team" component={Team} />
-      <Tab.Screen name="Fitness" component={Fitness} />
+      <Tab.Screen
+        name="Frisbee"
+        component={HomeScreen}
+        options={{
+          tabBarLabel: 'Home',
+          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="home" color={color} size={26} />,
+        }}
+      />
+      <Tab.Screen
+        name="Fitness"
+        component={Fitness}
+        options={{
+          tabBarLabel: 'Fitness',
+          tabBarIcon: ({ color }) => <Ionicons name="ios-fitness" color={color} size={26} />,
+        }}
+      />
     </Tab.Navigator>
   );
 }

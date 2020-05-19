@@ -15,6 +15,8 @@ export const DrillListPage = props => {
   const storeDrillsForType = storeDrills.filter(drill => drill.type === type);
   const displayedDrills = filteredDrills ? filteredDrills : storeDrillsForType;
 
+  const sortingProperty = type === DrillTypes.FRISBEE ? 'minimalPlayersNumber' : 'durationInMinutes';
+  const sortedDisplayedDrills = displayedDrills.sort((a, b) => a[sortingProperty] - b[sortingProperty]);
   return (
     <View style={styles.drillListPage}>
       <Text style={list.counter}>{displayedDrills.length} drills available</Text>

@@ -13,6 +13,8 @@ import buttonValidation from '../../assets/button_validation_ultra_light.png';
 import buttonValidationGradient from '../../assets/button_validation_gradient.png';
 import { Easing } from 'react-native-reanimated';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { TapGestureHandler } from 'react-native-gesture-handler';
 
 const screenDimension = Dimensions.get('window');
 
@@ -21,6 +23,17 @@ const DrillIllustration = props => {
   const opacityUnchecked = useRef(new Animated.Value(1)).current;
   const opacityChecked = opacityUnchecked.interpolate({ inputRange: [0, 1], outputRange: [1, 0] });
   const currentStep = props.drill.steps[activeIndex];
+  const isMultipleSteps = props.drill.steps.length > 1;
+  const isFirstStep = isMultipleSteps ? activeIndex === 0 : true;
+  const isLastStep = isMultipleSteps ? activeIndex === props.drill.steps.length - 1 : true;
+
+  const decrementStepIndex = () => {
+    if (activeIndex === 0) {
+      setActiveIndex(0);
+    } else {
+      setActiveIndex(activeIndex - 1);
+    }
+  };
 
   const checkAnimation = () => {
     Animated.sequence([
@@ -56,7 +69,7 @@ const DrillIllustration = props => {
   }, [props.drill]);
 
   const incrementStepIndex = () => {
-    setActiveIndex((activeIndex + 1) % (props.drill.steps.length + 1));
+    setActiveIndex(activeIndex + 1);
   };
 
   const displayNextStep = () => {
@@ -105,22 +118,26 @@ const DrillIllustration = props => {
   const displayAnimation = ({ illustrationSource, instruction, title }) => {
     return (
       <>
-        <Animation widthRatio={1} heightRatio={props.minimal ? 2 / 5 : 1 / 2} animation={illustrationSource} />
-        {props.drill.steps.length > 1 && (
-          <>
-            <View style={styles.description}>
-              <View style={styles.containerAnimation}>
-                <View style={styles.descriptionAnimation}>
-                  <View style={styles.subSubWrapper}>
-                    <Text style={styles.fitness}>{title}</Text>
-                  </View>
-                </View>
-              </View>
-            </View>
-            <View style={styles.lines} />
-          </>
-        )}
-        <Text style={styles.instruction}>{instruction}</Text>
+        <View style={styles.line}>
+          <View>
+            {!isFirstStep && (
+              <TouchableOpacity onPress={decrementStepIndex}>
+                <MaterialCommunityIcons name="chevron-double-left" color={theme.COLOR_PRIMARY} size={26} />
+              </TouchableOpacity>
+            )}
+          </View>
+          <Text style={styles.title}>{currentStep.title}</Text>
+          <View>
+            {!isLastStep && (
+              <TouchableOpacity onPress={incrementStepIndex}>
+                <MaterialCommunityIcons name="chevron-double-right" color={theme.COLOR_PRIMARY} size={26} />
+              </TouchableOpacity>
+            )}
+          </View>
+        </View>
+        <View style={styles.animation}>
+          <Animation widthRatio={1} heightRatio={props.minimal ? 2 / 5 : 1 / 2} animation={illustrationSource} />
+        </View>
       </>
     );
   };
@@ -289,7 +306,6 @@ const DrillIllustration = props => {
         <SafeAreaView style={styles.container}>
           <Carousel
             layout="default"
-            // ref={ref => (carousel = ref)}
             data={props.drill.steps}
             sliderWidth={screenDimension.width}
             itemWidth={screenDimension.width}
@@ -429,8 +445,20 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   pagination: {
-    paddingBottom: 15,
+    paddingVertical: 15,
   },
+  line: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginTop: 15,
+  },
+  title: {
+    fontSize: theme.FONT_SIZE_LARGE,
+    color: theme.COLOR_PRIMARY,
+    fontWeight: 'bold',
+  },
+  animation: { flex: 9 },
 });
 
 export default DrillIllustration;

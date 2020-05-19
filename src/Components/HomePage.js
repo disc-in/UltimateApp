@@ -19,7 +19,7 @@ export default class HomePage extends React.Component {
         >
           <ImageBackground source={frisbeeGlove} style={styles.image}>
             <View style={styles.wrapper}>
-              <Text style={styles.text}>{I18n.t('frisbeeDrills')}</Text>
+              <Text style={styles.text}>{I18n.t('homePage.frisbeeDrills')}</Text>
             </View>
           </ImageBackground>
         </TouchableHighlight>
@@ -29,21 +29,21 @@ export default class HomePage extends React.Component {
         >
           <ImageBackground source={fitness} style={styles.image}>
             <View style={styles.wrapper}>
-              <Text style={styles.text}>{I18n.t('fitnessDrills')}</Text>
+              <Text style={styles.text}>{I18n.t('homePage.fitnessDrills')}</Text>
             </View>
           </ImageBackground>
         </TouchableHighlight>
         <TouchableHighlight onPress={() => this.props.navigation.navigate('ProgramListPage')} style={styles.menuItem}>
           <ImageBackground source={huddle} style={styles.image}>
             <View style={styles.wrapper}>
-              <Text style={styles.text}>{I18n.t('programs')}</Text>
+              <Text style={styles.text}>{I18n.t('homePage.programs')}</Text>
             </View>
           </ImageBackground>
         </TouchableHighlight>
         <View style={styles.editorLink}>
           <Button
             onPress={() => this.props.navigation.navigate('AnimationEditorPage')}
-            text={I18n.t('editor')}
+            text={I18n.t('homePage.editor')}
             buttonLight="true"
           />
         </View>

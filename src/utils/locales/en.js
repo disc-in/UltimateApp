@@ -1,6 +1,8 @@
 export default {
-  frisbeeDrills: 'Frisbee Drills',
-  fitnessDrills: 'Fitness Drills',
-  programs: 'Training programs',
-  editor: 'Animation Editor',
+  homePage: {
+    frisbeeDrills: 'Frisbee Drills',
+    fitnessDrills: 'Fitness Drills',
+    programs: 'Training programs',
+    editor: 'Animation Editor',
+  },
 };

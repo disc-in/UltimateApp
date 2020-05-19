@@ -9,7 +9,7 @@ import Progress from './ProgressBar2';
 import { completeTraining } from '../Store/Actions/programAction';
 
 export const DrillPageMinimal = props => {
-  const { route, navigation } = props;
+  const { route, navigation, completeTraining } = props;
   const { drill, training, program } = route.params;
 
   const currentDrillIndex = training.drills.findIndex(({ id }) => id === drill.id);
@@ -27,12 +27,12 @@ export const DrillPageMinimal = props => {
 
   const finishTraining = useCallback(() => {
     if (program) {
-      props.completeTraining({ training, program });
+      completeTraining({ training, program });
       navigation.navigate('ProgramPage', { program });
     } else {
       navigation.navigate('TrainingListPage');
     }
-  }, [training, navigation, program, props]);
+  }, [training, navigation, program, completeTraining]);
 
   useLayoutEffect(() => {
     const onProgressDotPress = idx => {

@@ -120,7 +120,7 @@ export default connect(mapStateToProps)(ProgramListPage);
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
+    backgroundColor: theme.BACKGROUND_COLOR,
   },
   programPage: {
     height: '100%',
@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
+    backgroundColor: theme.BACKGROUND_COLOR,
   },
   titleContainer: {
     flexBasis: '70%',
@@ -172,7 +172,7 @@ const styles = StyleSheet.create({
   },
   flatList: {
     paddingVertical: 20,
-    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
+    backgroundColor: theme.BACKGROUND_COLOR,
   },
   bottomPage: {
     height: 80,

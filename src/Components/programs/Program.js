@@ -1,12 +1,12 @@
 import React from 'react';
-import { StyleSheet, View, Text, ImageBackground } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 import { connect } from 'react-redux';
-import { LinearGradient } from 'expo-linear-gradient';
+import ListItem from '../shared/ListItem';
 
 import theme from '../../styles/theme.style';
 
 export const Program = props => {
-  const { title, trainings, image } = props.program;
+  const { title, trainings } = props.program;
 
   const completeTrainingsCount = props.completeTrainings
     .filter(({ training, program }) => program.id === props.program.id)
@@ -14,26 +14,23 @@ export const Program = props => {
 
   const width = `${(completeTrainingsCount * 100) / trainings.length}%`;
   return (
-    <View style={styles.program}>
-      <ImageBackground source={{ uri: image }} style={styles.image} imageStyle={styles.imageOpacity}>
-        <View style={styles.wrapper}>
-          <Text style={styles.programTitle}>{title}</Text>
-        </View>
-        <View style={styles.presentationContainer}>
-          <Text style={styles.completion}>
-            {completeTrainingsCount}/{trainings.length}
-          </Text>
-          <View style={styles.progressBar}>
-            <LinearGradient
-              colors={[theme.GRADIENT_FIRST_COLOR, theme.GRADIENT_SECOND_COLOR]}
-              style={[StyleSheet.absoluteFill, styles.fillProgressBar, { width }]}
-              start={{ x: 1, y: 1 }}
-              end={{ x: 0, y: 0 }}
-            />
+    <ListItem>
+      <View style={styles.program}>
+        <View style={styles.image}>
+          <View style={styles.wrapper}>
+            <Text style={styles.programTitle}>{title}</Text>
+          </View>
+          <View style={styles.presentationContainer}>
+            <Text style={styles.completion}>
+              {completeTrainingsCount}/{trainings.length}
+            </Text>
+            <View style={styles.progressBar}>
+              <View style={[StyleSheet.absoluteFill, styles.fillProgressBar, { width }]} />
+            </View>
           </View>
         </View>
-      </ImageBackground>
-    </View>
+      </View>
+    </ListItem>
   );
 };
 
@@ -58,16 +55,17 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     bottom: 0,
-    paddingVertical: 125,
+    paddingVertical: 55,
     paddingHorizontal: 20,
   },
   programTitle: {
     fontSize: theme.FONT_SIZE_LARGE,
-    color: theme.COLOR_PRIMARY_LIGHT,
+    color: theme.COLOR_PRIMARY,
+    fontWeight: 'bold',
   },
   completion: {
     textAlign: 'right',
-    color: theme.COLOR_PRIMARY_LIGHT,
+    color: theme.COLOR_PRIMARY,
     fontSize: theme.FONT_SIZE_SMALL,
   },
   progressBar: {
@@ -80,7 +78,7 @@ const styles = StyleSheet.create({
   fillProgressBar: {
     width: '50%',
     borderRadius: 5,
-    backgroundColor: theme.COLOR_PRIMARY,
+    backgroundColor: theme.GRADIENT_FIRST_COLOR,
   },
   ctaContainer: {
     flexBasis: '10%',
@@ -92,10 +90,9 @@ const styles = StyleSheet.create({
   },
   image: {
     alignItems: 'center',
-    backgroundColor: 'rgb(0,0,0)',
-    height: 175,
+    backgroundColor: theme.COLOR_PRIMARY_LIGHT,
+    height: 105,
     width: '100%',
-
     flexDirection: 'row',
     justifyContent: 'space-evenly',
   },

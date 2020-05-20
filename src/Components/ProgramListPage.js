@@ -8,6 +8,7 @@ import theme from '../styles/theme.style';
 import Program from './programs/Program';
 import Button from './shared/Button';
 import doneImage from '../../assets/button_validation_dark_theme.png';
+import arrowDark from '../../assets/arrow_dark.png';
 
 export const ProgramListPage = props => {
   const { navigation, programs } = props;
@@ -52,6 +53,9 @@ export const ProgramListPage = props => {
           </View>
           <View style={styles.containerAccordion}>
             <Image style={styles.todoState} source={isDone ? doneImage : null} />
+          </View>
+          <View style={styles.container}>
+            <Image style={styles.cta} source={arrowDark} />
           </View>
         </TouchableOpacity>
       </View>
@@ -151,7 +155,7 @@ const styles = StyleSheet.create({
     aspectRatio: 1 / 1,
   },
   cta: {
-    height: 25,
+    height: 15,
     aspectRatio: 109 / 239,
   },
   containerAccordion: {

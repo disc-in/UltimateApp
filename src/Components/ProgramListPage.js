@@ -120,13 +120,13 @@ export default connect(mapStateToProps)(ProgramListPage);
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: theme.BACKGROUND_COLOR,
+    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
   },
   programPage: {
     height: '100%',
   },
   accordion: {
-    backgroundColor: theme.BACKGROUND_COLOR,
+    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     height: '100%',
   },
   training: {
@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    backgroundColor: theme.BACKGROUND_COLOR,
+    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
   },
   titleContainer: {
     flexBasis: '70%',
@@ -172,7 +172,7 @@ const styles = StyleSheet.create({
   },
   flatList: {
     paddingVertical: 20,
-    backgroundColor: theme.BACKGROUND_COLOR,
+    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
   },
   bottomPage: {
     height: 80,

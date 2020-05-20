@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
   },
   image: {
     alignItems: 'center',
-    backgroundColor: theme.COLOR_PRIMARY_LIGHT,
+    backgroundColor: theme.BACKGROUND_COLOR,
     height: 105,
     width: '100%',
     flexDirection: 'row',

@@ -45,6 +45,8 @@ export default connect(mapStateToProps)(Program);
 const styles = StyleSheet.create({
   program: {
     paddingTop: 3,
+    paddingLeft: 20,
+
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-evenly',
@@ -55,8 +57,15 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     bottom: 0,
-    paddingVertical: 55,
+    paddingVertical: 30,
     paddingHorizontal: 20,
+  },
+  image: {
+    alignItems: 'center',
+    backgroundColor: theme.COLOR_PRIMARY_LIGHT,
+    height: 60,
+    width: '100%',
+    justifyContent: 'space-evenly',
   },
   programTitle: {
     fontSize: theme.FONT_SIZE_LARGE,
@@ -88,20 +97,12 @@ const styles = StyleSheet.create({
     height: 20,
     aspectRatio: 109 / 239,
   },
-  image: {
-    alignItems: 'center',
-    backgroundColor: theme.BACKGROUND_COLOR,
-    height: 105,
-    width: '100%',
-    flexDirection: 'row',
-    justifyContent: 'space-evenly',
-  },
   imageOpacity: {
     opacity: 0.4,
   },
   wrapper: {
     position: 'absolute',
-    top: 0,
+    top: -10,
     left: 0,
     right: 0,
     bottom: 0,

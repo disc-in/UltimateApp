@@ -33,7 +33,7 @@ export const ProgramListPage = props => {
     );
   };
 
-  const renderTraining = ({ item }) => {
+  const renderTraining = ({ item, index }) => {
     const training = item;
     const program = programs[activeSections];
     const onTrainingPress = () => navigation.navigate('TrainingPage', { training, program });
@@ -48,7 +48,8 @@ export const ProgramListPage = props => {
       <View>
         <TouchableOpacity style={styles.training} onPress={onTrainingPress}>
           <View style={styles.titleContainer}>
-            <Text style={styles.titleAccordion}>{item.title}</Text>
+            <Text>{index + 1}- </Text>
+            <Text>{item.title}</Text>
           </View>
           <View style={styles.containerAccordion}>
             <Image style={styles.todoState} source={isDone ? doneImage : toDoImage} />
@@ -120,14 +121,15 @@ export default connect(mapStateToProps)(ProgramListPage);
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
+    backgroundColor: theme.BACKGROUND_COLOR,
   },
   programPage: {
     height: '100%',
   },
   accordion: {
-    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
+    backgroundColor: theme.BACKGROUND_COLOR,
     height: '100%',
+    paddingLeft: 40,
   },
   training: {
     padding: 10,
@@ -135,16 +137,15 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
+    backgroundColor: theme.BACKGROUND_COLOR,
   },
   titleContainer: {
     flexBasis: '70%',
+    flexDirection: 'row',
+    fontSize: theme.FONT_SIZE_MEDIUM,
   },
   title: {
     fontSize: theme.FONT_SIZE_LARGE,
-  },
-  titleAccordion: {
-    fontSize: theme.FONT_SIZE_MEDIUM,
   },
   todoState: {
     height: 20,
@@ -171,8 +172,8 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   flatList: {
-    paddingVertical: 20,
-    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
+    paddingVertical: 10,
+    backgroundColor: theme.BACKGROUND_COLOR,
   },
   bottomPage: {
     height: 80,

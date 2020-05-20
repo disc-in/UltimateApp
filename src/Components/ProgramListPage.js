@@ -8,7 +8,6 @@ import theme from '../styles/theme.style';
 import Program from './programs/Program';
 import Button from './shared/Button';
 import doneImage from '../../assets/button_validation_dark_theme.png';
-import toDoImage from '../../assets/button_validation_light.png';
 
 export const ProgramListPage = props => {
   const { navigation, programs } = props;
@@ -52,7 +51,7 @@ export const ProgramListPage = props => {
             <Text>{item.title}</Text>
           </View>
           <View style={styles.containerAccordion}>
-            <Image style={styles.todoState} source={isDone ? doneImage : toDoImage} />
+            <Image style={styles.todoState} source={isDone ? doneImage : null} />
           </View>
         </TouchableOpacity>
       </View>
@@ -129,7 +128,7 @@ const styles = StyleSheet.create({
   accordion: {
     backgroundColor: theme.BACKGROUND_COLOR,
     height: '100%',
-    paddingLeft: 40,
+    paddingLeft: 30,
   },
   training: {
     padding: 10,

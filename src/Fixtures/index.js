@@ -691,26 +691,6 @@ const basicThrows = {
   steps: [
     {
       id: 1,
-      title: 'Backhand Throw',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '415565763',
-      sounds: true,
-      repetition: '',
-      rest: '',
-      instruction: 'Follow him',
-    },
-    {
-      id: 2,
-      title: 'Forehand Throw',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '415569048',
-      sounds: true,
-      repetition: '',
-      rest: '',
-      instruction: 'Follow him',
-    },
-    {
-      id: 3,
       title: 'Throwing machine',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: animationSquare,
@@ -720,7 +700,7 @@ const basicThrows = {
         'With a partner, the players throw backhands and forehands for 5 minutes. After it, they try to throw in every way possible.',
     },
     {
-      id: 4,
+      id: 2,
       title: 'The throwing olympics',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: animationSquare,

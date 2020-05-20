@@ -260,7 +260,6 @@ const DrillIllustration = props => {
   };
 
   const renderStep = ({ item, index }) => {
-    // console.log('ITEMMMMMMMMMMMMMMMM', item);
     if (!currentStep) {
       return <View />; // bad state, but let's not crash
     } else {

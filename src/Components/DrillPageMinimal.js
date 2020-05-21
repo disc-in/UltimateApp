@@ -1,37 +1,43 @@
 import React, { useLayoutEffect, useCallback } from 'react';
 import { Platform, StyleSheet, ScrollView, View, Text } from 'react-native';
+import { connect } from 'react-redux';
 
 import theme from '../styles/theme.style';
-import HeaderButton from './shared/HeaderButton';
 import MinimalDrill from './shared/MinimalDrill';
 import Button from './shared/Button';
 import Progress from './ProgressBar2';
+import { completeTraining } from '../Store/Actions/programAction';
 
 export const DrillPageMinimal = props => {
-  const { route, navigation } = props;
+  const { route, navigation, completeTraining } = props;
   const { drill, training, program } = route.params;
 
   const currentDrillIndex = training.drills.findIndex(({ id }) => id === drill.id);
   if (currentDrillIndex === -1) navigation.navigate('TrainingPage', { training });
+  const isLastTraining = currentDrillIndex === training.drills.length - 1;
 
   const goToFullDrill = useCallback(() => {
     navigation.navigate('DrillPage', { drill });
   }, [navigation, drill]);
 
   const goToNextDrill = useCallback(() => {
-    if (currentDrillIndex === training.drills.length - 1) {
-      navigation.navigate('TrainingBravoPage', { training, program });
+    const nextDrill = training.drills[currentDrillIndex + 1];
+    navigation.navigate('DrillPageMinimal', { drill: nextDrill, training, program });
+  }, [training, currentDrillIndex, navigation, program]);
+
+  const finishTraining = useCallback(() => {
+    if (program) {
+      completeTraining({ training, program });
+      navigation.navigate('ProgramPage', { program });
     } else {
-      const nextDrill = training.drills[currentDrillIndex + 1];
-      navigation.navigate('DrillPageMinimal', { drill: nextDrill, training, program });
+      navigation.navigate('TrainingListPage');
     }
-  }, [training, currentDrillIndex, navigation, program, props]);
+  }, [training, navigation, program, completeTraining]);
 
   useLayoutEffect(() => {
     const onProgressDotPress = idx => {
       navigation.navigate('DrillPageMinimal', { training, drill: training.drills[idx] });
     };
-    const headerRight = () => <HeaderButton onPress={goToNextDrill} />;
 
     const headerTitle = () => (
       <View style={styles.headerTitle}>
@@ -43,12 +49,11 @@ export const DrillPageMinimal = props => {
       headerTitleAlign: 'center',
       headerStyle: { height: 100 },
       headerTitle,
-      headerRight,
     });
-  }, [navigation, goToNextDrill, currentDrillIndex, training]);
+  }, [navigation, currentDrillIndex, training]);
 
   return (
-    <ScrollView style={styles.drillPage}>
+    <ScrollView style={styles.drillPage} contentContainerStyle={{ flexGrow: 1 }}>
       <View style={styles.titleContainer}>
         <Text style={styles.title}>{drill.title}</Text>
         <View style={styles.btnMoreContainer}>
@@ -57,11 +62,20 @@ export const DrillPageMinimal = props => {
       </View>
 
       <MinimalDrill style={styles.illustration} drill={drill} />
+      <View style={styles.footer}>
+        {isLastTraining ? (
+          <Button onPress={finishTraining} text="Finish Training!" />
+        ) : (
+          <Button onPress={goToNextDrill} text="Next drill" />
+        )}
+      </View>
     </ScrollView>
   );
 };
 
-export default DrillPageMinimal;
+const mapDispatchToProps = { completeTraining };
+
+export default connect(null, mapDispatchToProps)(DrillPageMinimal);
 
 const styles = StyleSheet.create({
   drillPage: {
@@ -76,7 +90,6 @@ const styles = StyleSheet.create({
     fontSize: theme.FONT_SIZE_SMALL,
     width: 'auto',
   },
-
   headerTitleText: {
     ...Platform.select({
       ios: {
@@ -123,6 +136,15 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',
+    alignItems: 'center',
+  },
+  footer: {
+    position: 'absolute',
+    paddingBottom: 20,
+    paddingTop: 5,
+    bottom: 0,
+    backgroundColor: 'white',
+    width: '100%',
     alignItems: 'center',
   },
 });

@@ -1,6 +1,7 @@
 import React, { useState, useLayoutEffect } from 'react';
 import { Share, StyleSheet, View, Alert } from 'react-native';
 
+import I18n from '../utils/i18n';
 import AnimationEditor from './animation/AnimationEditor';
 import HeaderButton from './shared/HeaderButton';
 import drillSquare from './animation/DrillSquare';
@@ -19,12 +20,11 @@ export const AnimationEditorPage = props => {
 
   const askShare = () => {
     Alert.alert(
-      'Coming soon',
-      'Soon you will be able to create drills, training sessions and programs. \n' +
-        'For now you can only send your new drill to an ultimate app dev.',
+      I18n.t('animationEditor.comingSoon.title'),
+      I18n.t('animationEditor.comingSoon.content'),
       [
-        { text: 'Cancel', style: 'cancel' },
-        { text: 'Send the drill to a dev', onPress: doShare },
+        { text: I18n.t('animationEditor.comingSoon.cancel'), style: 'cancel' },
+        { text: I18n.t('animationEditor.comingSoon.cta'), onPress: doShare },
       ],
       { cancelable: true },
     );
@@ -32,7 +32,7 @@ export const AnimationEditorPage = props => {
 
   const doShare = () => {
     Share.share({
-      title: 'Please add this drill to UltimateApp',
+      title: I18n.t('animationEditor.comingSoon.sharePlaceholder'),
       message:
         '----- ENCODED DRILL -------\n' + JSON.stringify(currentAnimationState) + '\n---------------------------',
     }).catch(err => console.log(err));

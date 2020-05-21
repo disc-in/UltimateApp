@@ -1,6 +1,8 @@
 import React from 'react';
 import { ScrollView, View, Text } from 'react-native';
 import { connect } from 'react-redux';
+
+import I18n from '../utils/i18n';
 import filterStyle from '../styles/filters.style';
 import { Levels, Intensities, EquipmentLabels, SeasonTimings } from '../Fixtures';
 import Button from './filters/FilterButton';
@@ -107,12 +109,18 @@ export class FitnessFilters extends React.Component {
 
     return (
       <View style={filterStyle.wrapper}>
-        <Text style={filterStyle.counter}>{this.state.displayedDrills.length} drills available</Text>
+        <Text style={filterStyle.counter}>
+          {I18n.t('drillListPage.availableDrills', { count: this.state.displayedDrills.length })}
+        </Text>
         <ScrollView contentContainerStyle={filterStyle.filters}>
           <View style={filterStyle.filter}>
-            <Button title="Favorites only" onPress={() => this.onFavoritesChange()} active={selectedFavorites} />
+            <Button
+              title={I18n.t('fitnessFilters.favorites')}
+              onPress={() => this.onFavoritesChange()}
+              active={selectedFavorites}
+            />
           </View>
-          <Text style={filterStyle.filterTitle}>Level</Text>
+          <Text style={filterStyle.filterTitle}>{I18n.t('fitnessFilters.level')}</Text>
           <View style={filterStyle.filter}>
             {Object.values(Levels).map(level => (
               <Button
@@ -123,7 +131,7 @@ export class FitnessFilters extends React.Component {
               />
             ))}
           </View>
-          <Text style={filterStyle.filterTitle}>Intensity</Text>
+          <Text style={filterStyle.filterTitle}>{I18n.t('fitnessFilters.intensity')}</Text>
           <View style={filterStyle.filter}>
             {Object.values(Intensities).map(intensity => (
               <Button
@@ -134,7 +142,7 @@ export class FitnessFilters extends React.Component {
               />
             ))}
           </View>
-          <Text style={filterStyle.filterTitle}>Equipment</Text>
+          <Text style={filterStyle.filterTitle}>{I18n.t('fitnessFilters.equipment')}</Text>
           <View style={filterStyle.filter}>
             {Object.values(EquipmentLabels).map(equipmentLabel => (
               <Button
@@ -145,7 +153,7 @@ export class FitnessFilters extends React.Component {
               />
             ))}
           </View>
-          <Text style={filterStyle.filterTitle}>Season Timing</Text>
+          <Text style={filterStyle.filterTitle}>{I18n.t('fitnessFilters.seasonTiming')}</Text>
           <View style={filterStyle.filter}>
             {Object.values(SeasonTimings)
               .filter(value => value !== SeasonTimings.ANYTIME)
@@ -158,7 +166,7 @@ export class FitnessFilters extends React.Component {
                 />
               ))}
           </View>
-          <Text style={filterStyle.filterTitle}>Goals</Text>
+          <Text style={filterStyle.filterTitle}>{I18n.t('fitnessFilters.goals')}</Text>
           <View style={filterStyle.filter}>
             {this.props.route.params.initialData
               .map(drill => drill.goals)
@@ -173,8 +181,8 @@ export class FitnessFilters extends React.Component {
                 />
               ))}
           </View>
-          <Text style={filterStyle.filterTitle}>Duration</Text>
-          <Text>How much time do you have?   {durationInMinutes || '-'} mins</Text>
+          <Text style={filterStyle.filterTitle}>{I18n.t('fitnessFilters.duration')}</Text>
+          <Text>{I18n.t('fitnessFilters.durationLabel', { duration: durationInMinutes || '-' })}</Text>
           <Slider
             minimumValue={5}
             maximumValue={60}

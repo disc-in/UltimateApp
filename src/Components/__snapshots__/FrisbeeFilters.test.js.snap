@@ -19,8 +19,7 @@ exports[`<FrisbeeFilters /> renders correctly 1`] = `
       }
     }
   >
-    2
-     drills available
+    2 drills available
   </Text>
   <RCTScrollView
     contentContainerStyle={
@@ -331,8 +330,7 @@ exports[`<FrisbeeFilters /> renders correctly 1`] = `
           }
         }
       >
-        Number of players: 
-        -
+        Number of players: -
       </Text>
       <View
         style={

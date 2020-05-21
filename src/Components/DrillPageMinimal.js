@@ -2,6 +2,7 @@ import React, { useLayoutEffect, useCallback } from 'react';
 import { Platform, StyleSheet, ScrollView, View, Text } from 'react-native';
 import { connect } from 'react-redux';
 
+import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
 import MinimalDrill from './shared/MinimalDrill';
 import Button from './shared/Button';
@@ -41,7 +42,9 @@ export const DrillPageMinimal = props => {
 
     const headerTitle = () => (
       <View style={styles.headerTitle}>
-        <Text style={styles.headerTitleText}>{training.title + ' Drills'}</Text>
+        <Text style={styles.headerTitleText}>
+          {I18n.t('drillPageMinimal.headerTitle', { trainingTitle: training.title })}
+        </Text>
         <Progress total={training.drills.length} current={currentDrillIndex + 1} onDotPress={onProgressDotPress} />
       </View>
     );
@@ -57,16 +60,21 @@ export const DrillPageMinimal = props => {
       <View style={styles.titleContainer}>
         <Text style={styles.title}>{drill.title}</Text>
         <View style={styles.btnMoreContainer}>
-          <Button onPress={goToFullDrill} text="DETAILS" buttonLight="true" style={styles.smallerBtn} />
+          <Button
+            onPress={goToFullDrill}
+            text={I18n.t('drillPageMinimal.details')}
+            buttonLight="true"
+            style={styles.smallerBtn}
+          />
         </View>
       </View>
 
       <MinimalDrill style={styles.illustration} drill={drill} />
       <View style={styles.footer}>
         {isLastTraining ? (
-          <Button onPress={finishTraining} text="Finish Training!" />
+          <Button onPress={finishTraining} text={I18n.t('drillPageMinimal.finish')} />
         ) : (
-          <Button onPress={goToNextDrill} text="Next drill" />
+          <Button onPress={goToNextDrill} text={I18n.t('drillPageMinimal.next')} />
         )}
       </View>
     </ScrollView>

@@ -80,8 +80,8 @@
       "./setupJest.js"
     ]
   },
-  "engines" : {
-    "node" : ">=0.12"
+  "engines": {
+    "node": ">=0.12"
   },
   "private": true,
   "license": "MIT"

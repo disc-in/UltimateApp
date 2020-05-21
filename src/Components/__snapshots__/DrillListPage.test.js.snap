@@ -19,8 +19,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
       }
     }
   >
-    2
-     drills available
+    2 drills available
   </Text>
   <RCTScrollView
     contentContainerStyle={
@@ -1550,8 +1549,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
       }
     }
   >
-    3
-     drills available
+    3 drills available
   </Text>
   <RCTScrollView
     contentContainerStyle={
@@ -2208,8 +2206,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
       }
     }
   >
-    3
-     drills available
+    3 drills available
   </Text>
   <RCTScrollView
     contentContainerStyle={

@@ -13,6 +13,7 @@ import {
 import { connect } from 'react-redux';
 import { useHeaderHeight } from '@react-navigation/stack';
 
+import I18n from '../utils/i18n';
 import GradientButton from './shared/GradientButton';
 import DrillIllustration from './DrillIllustration';
 import { toggleFavorite } from '../Store/Actions/favoriteAction';
@@ -76,39 +77,39 @@ export const DrillPage = props => {
         <View style={styles.infoWrapper}>
           <View style={styles.infoSubWrapper}>
             <Text style={styles.infoDrill}>{drill.durationInMinutes}</Text>
-            <Text style={styles.info}> minutes</Text>
+            <Text style={styles.info}>{I18n.t('drillPage.minutes')}</Text>
           </View>
           <View style={styles.separator} />
           <View style={styles.infoSubWrapper}>
             <Text style={styles.infoDrill}>{drill.minimalPlayersNumber}+</Text>
-            <Text style={styles.info}> players</Text>
+            <Text style={styles.info}>{I18n.t('drillPage.players')}</Text>
           </View>
           <View style={styles.separator} />
           <View style={styles.infoSubWrapper}>
             <Text style={styles.infoDrill}>{drill.level}</Text>
-            <Text style={styles.info}> level</Text>
+            <Text style={styles.info}>{I18n.t('drillPage.level')}</Text>
           </View>
         </View>
-        <GradientButton onPress={onPressStartButton} text="Start" />
+        <GradientButton onPress={onPressStartButton} text={I18n.t('drillPage.start')} />
       </ImageBackground>
       <View style={styles.separator} />
       <View style={styles.description}>
         <View style={styles.descriptionItem}>
-          <Text style={styles.descriptionTitle}>Good for</Text>
+          <Text style={styles.descriptionTitle}>{I18n.t('drillPage.goal')}</Text>
           <Text style={styles.descriptionText}>{drill.goals ? drill.goals.join(' - ') : ''}</Text>
         </View>
       </View>
       <View style={styles.lines} />
       <View style={styles.description}>
         <View style={styles.descriptionItem}>
-          <Text style={styles.descriptionTitle}>Equipment</Text>
+          <Text style={styles.descriptionTitle}>{I18n.t('drillPage.equipment')}</Text>
           <Text style={styles.descriptionText}>{drill.equipmentLabel}</Text>
         </View>
       </View>
       <View style={styles.lines} />
       <View style={styles.description}>
         <View style={styles.descriptionItem}>
-          <Text style={styles.descriptionTitle}>Description</Text>
+          <Text style={styles.descriptionTitle}>{I18n.t('drillPage.description')}</Text>
           <Text style={styles.descriptionText}>{drill.description}</Text>
         </View>
       </View>

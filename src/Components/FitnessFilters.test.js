@@ -72,7 +72,7 @@ describe('<FitnessFilters />', () => {
 
       await fireEvent.press(getByText(Levels.BEGINNER));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
       await fireEvent.press(getByText(Levels.INTERMEDIATE));
 
@@ -80,7 +80,7 @@ describe('<FitnessFilters />', () => {
 
       await fireEvent.press(getByText(Levels.BEGINNER));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
       await fireEvent.press(getByText(Levels.INTERMEDIATE));
 
@@ -139,7 +139,7 @@ describe('<FitnessFilters />', () => {
 
       await fireEvent.press(getByText(Intensities.LOW));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
       await fireEvent.press(getByText(Intensities.MODERATE));
 
@@ -147,7 +147,7 @@ describe('<FitnessFilters />', () => {
 
       await fireEvent.press(getByText(Intensities.LOW));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
       await fireEvent.press(getByText(Intensities.MODERATE));
 
@@ -206,7 +206,7 @@ describe('<FitnessFilters />', () => {
 
       await fireEvent.press(getByText(EquipmentLabels.NONE));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
       await fireEvent.press(getByText(EquipmentLabels.BASIC));
 
@@ -214,7 +214,7 @@ describe('<FitnessFilters />', () => {
 
       await fireEvent.press(getByText(EquipmentLabels.NONE));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
       await fireEvent.press(getByText(EquipmentLabels.BASIC));
 
@@ -273,7 +273,7 @@ describe('<FitnessFilters />', () => {
 
       await fireEvent.press(getByText(SeasonTimings.OFF_SEASON));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
       await fireEvent.press(getByText(SeasonTimings.PRE_SEASON));
 
@@ -281,7 +281,7 @@ describe('<FitnessFilters />', () => {
 
       await fireEvent.press(getByText(SeasonTimings.OFF_SEASON));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
       await fireEvent.press(getByText(SeasonTimings.PRE_SEASON));
 
@@ -289,7 +289,7 @@ describe('<FitnessFilters />', () => {
 
       await fireEvent.press(getByText(SeasonTimings.IN_SEASON));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
       await fireEvent.press(getByTestId('headerButton'));
 
@@ -351,7 +351,7 @@ describe('<FitnessFilters />', () => {
 
       await fireEvent.press(getByText(GoalsFitness.LEGS));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
       await fireEvent.press(getByText(GoalsFitness.FULL_BODY));
 
@@ -359,7 +359,7 @@ describe('<FitnessFilters />', () => {
 
       await fireEvent.press(getByText(GoalsFitness.UPPER));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
       await fireEvent.press(getByTestId('headerButton'));
 
@@ -464,7 +464,7 @@ describe('<FitnessFilters />', () => {
 
       await fireEvent.press(getByText('Favorites only'));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
       await fireEvent.press(getByTestId('headerButton'));
 

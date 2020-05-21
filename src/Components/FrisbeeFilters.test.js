@@ -72,7 +72,7 @@ describe('<FrisbeeFilters />', () => {
 
       await fireEvent.press(getByText(Levels.BEGINNER));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
       await fireEvent.press(getByText(Levels.INTERMEDIATE));
 
@@ -80,7 +80,7 @@ describe('<FrisbeeFilters />', () => {
 
       await fireEvent.press(getByText(Levels.BEGINNER));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
       await fireEvent.press(getByText(Levels.INTERMEDIATE));
 
@@ -148,7 +148,7 @@ describe('<FrisbeeFilters />', () => {
 
       await fireEvent.press(getByText(GoalsFrisbee.DEFENSE));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
       await fireEvent.press(getByText(GoalsFrisbee.THROWING));
 
@@ -260,7 +260,7 @@ describe('<FrisbeeFilters />', () => {
 
       await fireEvent.press(getByText('Favorites only'));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
       await fireEvent.press(getByTestId('headerButton'));
 

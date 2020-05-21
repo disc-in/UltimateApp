@@ -62,10 +62,7 @@ exports[`<Program /> renders correctly 1`] = `
           }
         }
       >
-        0
-        /
-        1
-         trainings
+        0/1 trainings
       </Text>
       <View
         style={
@@ -185,10 +182,7 @@ exports[`<Program /> renders correctly when finished 1`] = `
           }
         }
       >
-        2
-        /
-        2
-         trainings
+        2/2 trainings
          👍🎉
       </Text>
       <View

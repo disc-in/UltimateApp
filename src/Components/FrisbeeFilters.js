@@ -12,12 +12,13 @@ export class FrisbeeFilters extends React.Component {
   constructor(props) {
     super(props);
 
+    const { filters, initialData } = props.route.params;
     this.state = {
-      selectedFavorites: false,
-      selectedLevels: [],
-      selectedGoals: [],
-      numberOfPlayers: undefined,
-      displayedDrills: this.props.route.params.initialData,
+      selectedFavorites: filters?.selectedFavorites || false,
+      selectedLevels: filters?.selectedLevels || [],
+      selectedGoals: filters?.selectedGoals || [],
+      numberOfPlayers: filters?.numberOfPlayers || undefined,
+      displayedDrills: filters?.displayedDrills || initialData,
     };
 
     this.onNumberOfPlayersChange = this.onSliderChange.bind(this, 'numberOfPlayers');
@@ -71,6 +72,7 @@ export class FrisbeeFilters extends React.Component {
             this.props.navigation.navigate(this.props.route.params.previousScreen, {
               filteredDrills: this.state.displayedDrills,
               type: this.props.route.params.previousType,
+              filters: this.state,
             });
           }}
         />

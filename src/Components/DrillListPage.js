@@ -29,6 +29,7 @@ export const DrillListPage = props => {
             initialData: storeDrillsForType,
             previousScreen: route.name,
             previousType: type,
+            filters: route.params.filters,
           });
         }}
         testID="filterButton"

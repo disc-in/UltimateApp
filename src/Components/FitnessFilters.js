@@ -11,15 +11,17 @@ import HeaderButton from './shared/HeaderButton';
 export class FitnessFilters extends React.Component {
   constructor(props) {
     super(props);
+
+    const { filters, initialData } = props.route.params;
     this.state = {
-      selectedFavorites: false,
-      selectedLevels: [],
-      selectedIntensities: [],
-      selectedEquipmentLabels: [],
-      selectedSeasonTimings: [],
-      selectedGoals: [],
-      durationInMinutes: undefined,
-      displayedDrills: this.props.route.params.initialData,
+      selectedFavorites: filters?.selectedFavorites || false,
+      selectedLevels: filters?.selectedLevels || [],
+      selectedIntensities: filters?.selectedIntensities || [],
+      selectedEquipmentLabels: filters?.selectedEquipmentLabels || [],
+      selectedSeasonTimings: filters?.selectedSeasonTimings || [],
+      selectedGoals: filters?.selectedGoals || [],
+      durationInMinutes: filters?.durationInMinutes || undefined,
+      displayedDrills: filters?.displayedDrills || initialData,
     };
 
     this.onDurationInMinutesChange = this.onSliderChange.bind(this, 'durationInMinutes');
@@ -87,6 +89,7 @@ export class FitnessFilters extends React.Component {
             this.props.navigation.navigate(this.props.route.params.previousScreen, {
               filteredDrills: this.state.displayedDrills,
               type: this.props.route.params.previousType,
+              filters: this.state,
             });
           }}
         />

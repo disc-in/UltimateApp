@@ -93,6 +93,16 @@ describe('<FitnessFilters />', () => {
       expect(navigate).toBeCalledWith('DrillListPage', {
         filteredDrills: [advancedDrill],
         type: DrillTypes.FITNESS,
+        currentFilters: {
+          selectedFavorites: false,
+          selectedLevels: [Levels.ADVANCED],
+          selectedIntensities: [],
+          selectedEquipmentLabels: [],
+          selectedSeasonTimings: [],
+          selectedGoals: [],
+          durationInMinutes: undefined,
+          displayedDrills: [advancedDrill],
+        },
       });
     });
 
@@ -160,6 +170,16 @@ describe('<FitnessFilters />', () => {
       expect(navigate).toBeCalledWith('DrillListPage', {
         filteredDrills: [highDrill],
         type: DrillTypes.FITNESS,
+        currentFilters: {
+          selectedFavorites: false,
+          selectedLevels: [],
+          selectedIntensities: [Intensities.HIGH],
+          selectedEquipmentLabels: [],
+          selectedSeasonTimings: [],
+          selectedGoals: [],
+          durationInMinutes: undefined,
+          displayedDrills: [highDrill],
+        },
       });
     });
 
@@ -227,6 +247,16 @@ describe('<FitnessFilters />', () => {
       expect(navigate).toBeCalledWith('DrillListPage', {
         filteredDrills: [fullEquipmentDrill],
         type: DrillTypes.FITNESS,
+        currentFilters: {
+          selectedFavorites: false,
+          selectedLevels: [],
+          selectedIntensities: [],
+          selectedEquipmentLabels: [EquipmentLabels.FULL],
+          selectedSeasonTimings: [],
+          selectedGoals: [],
+          durationInMinutes: undefined,
+          displayedDrills: [fullEquipmentDrill],
+        },
       });
     });
 
@@ -296,6 +326,16 @@ describe('<FitnessFilters />', () => {
       expect(navigate).toBeCalledWith('DrillListPage', {
         filteredDrills: [inDrill],
         type: DrillTypes.FITNESS,
+        currentFilters: {
+          selectedFavorites: false,
+          selectedLevels: [],
+          selectedIntensities: [],
+          selectedEquipmentLabels: [],
+          selectedSeasonTimings: [SeasonTimings.IN_SEASON],
+          selectedGoals: [],
+          durationInMinutes: undefined,
+          displayedDrills: [inDrill],
+        },
       });
     });
 
@@ -366,6 +406,16 @@ describe('<FitnessFilters />', () => {
       expect(navigate).toBeCalledWith('DrillListPage', {
         filteredDrills: [upperDrill],
         type: DrillTypes.FITNESS,
+        currentFilters: {
+          selectedFavorites: false,
+          selectedLevels: [],
+          selectedIntensities: [],
+          selectedEquipmentLabels: [],
+          selectedSeasonTimings: [],
+          selectedGoals: [GoalsFitness.UPPER],
+          durationInMinutes: undefined,
+          displayedDrills: [upperDrill],
+        },
       });
     });
 
@@ -421,8 +471,19 @@ describe('<FitnessFilters />', () => {
       expect(navigate).toBeCalledWith('DrillListPage', {
         filteredDrills: [oneMinuteDrill, twoMinutesDrill],
         type: DrillTypes.FITNESS,
+        currentFilters: {
+          selectedFavorites: false,
+          selectedLevels: [],
+          selectedIntensities: [],
+          selectedEquipmentLabels: [],
+          selectedSeasonTimings: [],
+          selectedGoals: [],
+          durationInMinutes: 5,
+          displayedDrills: [oneMinuteDrill, twoMinutesDrill],
+        },
       });
     });
+
     it('filters favorite drills', async () => {
       const drills = [beginnerDrill, intermediateDrill, advancedDrill];
       const navigate = jest.fn();
@@ -471,6 +532,16 @@ describe('<FitnessFilters />', () => {
       expect(navigate).toBeCalledWith('DrillListPage', {
         filteredDrills: [intermediateDrill],
         type: DrillTypes.FITNESS,
+        currentFilters: {
+          selectedFavorites: true,
+          selectedLevels: [],
+          selectedIntensities: [],
+          selectedEquipmentLabels: [],
+          selectedSeasonTimings: [],
+          selectedGoals: [],
+          durationInMinutes: undefined,
+          displayedDrills: [intermediateDrill],
+        },
       });
     });
   });

@@ -93,6 +93,13 @@ describe('<FrisbeeFilters />', () => {
       expect(navigate).toBeCalledWith('DrillListPage', {
         filteredDrills: [advancedDrill],
         type: DrillTypes.FRISBEE,
+        currentFilters: {
+          selectedFavorites: false,
+          selectedLevels: [Levels.ADVANCED],
+          selectedGoals: [],
+          numberOfPlayers: undefined,
+          displayedDrills: [advancedDrill],
+        },
       });
     });
 
@@ -163,6 +170,13 @@ describe('<FrisbeeFilters />', () => {
       expect(navigate).toBeCalledWith('DrillListPage', {
         filteredDrills: [handlingDrill, handlingDefenseDrill],
         type: DrillTypes.FRISBEE,
+        currentFilters: {
+          selectedFavorites: false,
+          selectedLevels: [],
+          selectedGoals: [GoalsFrisbee.HANDLING],
+          numberOfPlayers: undefined,
+          displayedDrills: [handlingDrill, handlingDefenseDrill],
+        },
       });
     });
 
@@ -218,6 +232,13 @@ describe('<FrisbeeFilters />', () => {
       expect(navigate).toBeCalledWith('DrillListPage', {
         filteredDrills: [onePersonDrill, twoPeopleDrill],
         type: DrillTypes.FRISBEE,
+        currentFilters: {
+          selectedFavorites: false,
+          selectedLevels: [],
+          selectedGoals: [],
+          numberOfPlayers: 5,
+          displayedDrills: [onePersonDrill, twoPeopleDrill],
+        },
       });
     });
     it('filters favorite drills', async () => {
@@ -267,6 +288,13 @@ describe('<FrisbeeFilters />', () => {
       expect(navigate).toBeCalledWith('DrillListPage', {
         filteredDrills: [intermediateDrill],
         type: DrillTypes.FRISBEE,
+        currentFilters: {
+          selectedFavorites: true,
+          selectedLevels: [],
+          selectedGoals: [],
+          numberOfPlayers: undefined,
+          displayedDrills: [intermediateDrill],
+        },
       });
     });
   });

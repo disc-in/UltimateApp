@@ -89,7 +89,7 @@ export class FitnessFilters extends React.Component {
             this.props.navigation.navigate(this.props.route.params.previousScreen, {
               filteredDrills: this.state.displayedDrills,
               type: this.props.route.params.previousType,
-              filters: this.state,
+              currentFilters: this.state,
             });
           }}
         />

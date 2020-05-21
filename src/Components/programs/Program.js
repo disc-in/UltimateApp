@@ -46,7 +46,6 @@ const styles = StyleSheet.create({
   program: {
     paddingTop: 3,
     paddingLeft: 20,
-
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-evenly',

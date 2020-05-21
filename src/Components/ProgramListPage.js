@@ -46,18 +46,26 @@ export const ProgramListPage = props => {
 
     return (
       <View>
-        <TouchableOpacity style={styles.training} onPress={onTrainingPress}>
-          <View style={styles.titleContainer}>
-            <Text>{index + 1}- </Text>
-            <Text>{item.title}</Text>
+        <TouchableOpacity style={isDone ? styles.trainingDone : styles.training} onPress={onTrainingPress}>
+          <View style={styles.descriptionContainer}>
+            <View style={styles.titleContainer}>
+              <Text style={styles.drillText}>{index + 1}- </Text>
+              <Text style={styles.drillText}>{item.title}</Text>
+            </View>
+            <Text style={styles.description}>{item.description}</Text>
           </View>
-          <View style={styles.containerAccordion}>
-            <Image style={styles.todoState} source={isDone ? doneImage : null} />
-          </View>
-          <View style={styles.container}>
-            <Image style={styles.cta} source={arrowDark} />
+          <View style={styles.arrowDoneContainer}>
+            <View style={styles.flexRow}>
+              <View style={styles.containerAccordion}>
+                <Image style={styles.todoState} source={isDone ? doneImage : null} />
+              </View>
+              <View style={styles.container}>
+                <Image style={styles.cta} source={arrowDark} />
+              </View>
+            </View>
           </View>
         </TouchableOpacity>
+        <View style={styles.lines} />
       </View>
     );
   };
@@ -124,15 +132,13 @@ export default connect(mapStateToProps)(ProgramListPage);
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: theme.BACKGROUND_COLOR,
   },
   programPage: {
     height: '100%',
   },
   accordion: {
-    backgroundColor: theme.BACKGROUND_COLOR,
+    backgroundColor: theme.COLOR_PRIMARY_LIGHT,
     height: '100%',
-    paddingLeft: 30,
   },
   training: {
     padding: 10,
@@ -140,12 +146,19 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    backgroundColor: theme.BACKGROUND_COLOR,
+    backgroundColor: theme.COLOR_PRIMARY_LIGHT,
+  },
+  trainingDone: {
+    padding: 10,
+    paddingLeft: 30,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    backgroundColor: '#f5fbfc',
   },
   titleContainer: {
     flexBasis: '70%',
     flexDirection: 'row',
-    fontSize: theme.FONT_SIZE_MEDIUM,
   },
   title: {
     fontSize: theme.FONT_SIZE_LARGE,
@@ -153,9 +166,10 @@ const styles = StyleSheet.create({
   todoState: {
     height: 20,
     aspectRatio: 1 / 1,
+    marginHorizontal: 10,
   },
   cta: {
-    height: 15,
+    height: 20,
     aspectRatio: 109 / 239,
   },
   containerAccordion: {
@@ -176,9 +190,39 @@ const styles = StyleSheet.create({
   },
   flatList: {
     paddingVertical: 10,
-    backgroundColor: theme.BACKGROUND_COLOR,
+    backgroundColor: theme.COLOR_PRIMARY_LIGHT,
   },
   bottomPage: {
     height: 80,
+  },
+  drillText: {
+    fontSize: theme.FONT_SIZE_MEDIUM,
+    fontWeight: 'bold',
+    color: theme.COLOR_PRIMARY,
+  },
+  drillTextDone: {
+    fontSize: theme.FONT_SIZE_MEDIUM,
+    fontWeight: 'bold',
+    color: theme.COLOR_PRIMARY,
+  },
+  description: {
+    fontSize: theme.FONT_SIZE_SMALL,
+    color: theme.COLOR_PRIMARY,
+  },
+  descriptionContainer: {
+    flexBasis: '75%',
+  },
+  lines: {
+    borderBottomColor: theme.COLOR_SECONDARY_LIGHT,
+    borderBottomWidth: 1,
+  },
+  arrowDoneContainer: {
+    position: 'absolute',
+    right: 20,
+  },
+  flexRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
 });

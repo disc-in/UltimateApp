@@ -142,13 +142,6 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     marginBottom: 5,
   },
-  menuTeam: {
-    flex: 1,
-    marginBottom: 5,
-  },
-  imageTeam: {
-    height: 180,
-  },
   image: {
     height: '100%',
   },
@@ -190,20 +183,6 @@ const styles = StyleSheet.create({
   description: {
     alignItems: 'center',
     width: '70%',
-  },
-  teamDescription: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
-    paddingTop: 30,
-    paddingBottom: 15,
-  },
-  teamName: {
-    color: theme.COLOR_PRIMARY,
-    fontSize: theme.FONT_SIZE_LARGE,
-    fontWeight: 'bold',
-    paddingLeft: 10,
-    flex: 2,
   },
   bottomPage: {
     height: 105,

@@ -137,7 +137,6 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   accordion: {
-    backgroundColor: theme.COLOR_PRIMARY_LIGHT,
     height: '100%',
   },
   training: {

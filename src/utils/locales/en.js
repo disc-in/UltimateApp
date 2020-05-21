@@ -1,4 +1,48 @@
+import { Intensities, Levels, FrisbeeGoals, FitnessGoals, SeasonTimings, EquipmentLabels } from '../../Fixtures';
+
 export default {
+  data: {
+    levels: {
+      [Levels.BEGINNER]: 'Beginner',
+      [Levels.INTERMEDIATE]: 'Intermediate',
+      [Levels.ADVANCED]: 'Advanced',
+    },
+    frisbeeGoals: {
+      [FrisbeeGoals.DEFENSE]: 'Defense',
+      [FrisbeeGoals.MARK]: 'Mark',
+      [FrisbeeGoals.HANDLING]: 'Handling',
+      [FrisbeeGoals.CUTTING]: 'Cutting',
+      [FrisbeeGoals.THROWING]: 'Throwing',
+      [FrisbeeGoals.BREAK]: 'Breaking the mark',
+      [FrisbeeGoals.COMMUNICATION]: 'Communication',
+      [FrisbeeGoals.CATCH]: 'Catching',
+      [FrisbeeGoals.PLAY]: 'Playing time',
+    },
+    fitnessGoals: {
+      [FitnessGoals.LEGS]: 'Legs',
+      [FitnessGoals.UPPER]: 'Upper',
+      [FitnessGoals.FULL_BODY]: 'Full body',
+      [FitnessGoals.CORE]: 'Core',
+      [FitnessGoals.CONDITIONING]: 'Conditioning',
+      [FitnessGoals.WARM_UP]: 'Warm-up',
+    },
+    seasonTimings: {
+      [SeasonTimings.OFF_SEASON]: 'Off-season',
+      [SeasonTimings.PRE_SEASON]: 'Pre-season',
+      [SeasonTimings.IN_SEASON]: 'In-season',
+      [SeasonTimings.ANYTIME]: 'Anytime',
+    },
+    equipmentLabels: {
+      [EquipmentLabels.NONE]: 'None',
+      [EquipmentLabels.BASIC]: 'Basic',
+      [EquipmentLabels.FULL]: 'Full',
+    },
+    intensities: {
+      [Intensities.LOW]: 'Low',
+      [Intensities.MODERATE]: 'Moderate',
+      [Intensities.HIGH]: 'High',
+    },
+  },
   homePage: {
     frisbeeDrills: 'Frisbee Drills',
     fitnessDrills: 'Fitness Drills',

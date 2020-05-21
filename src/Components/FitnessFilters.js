@@ -124,7 +124,7 @@ export class FitnessFilters extends React.Component {
           <View style={filterStyle.filter}>
             {Object.values(Levels).map(level => (
               <Button
-                title={level}
+                title={I18n.t(`data.levels.${level}`)}
                 onPress={() => this.onPressedChange('selectedLevels', level)}
                 key={level}
                 active={selectedLevels.includes(level)}
@@ -135,7 +135,7 @@ export class FitnessFilters extends React.Component {
           <View style={filterStyle.filter}>
             {Object.values(Intensities).map(intensity => (
               <Button
-                title={intensity}
+                title={I18n.t(`data.intensities.${intensity}`)}
                 onPress={() => this.onPressedChange('selectedIntensities', intensity)}
                 key={intensity}
                 active={selectedIntensities.includes(intensity)}
@@ -146,7 +146,7 @@ export class FitnessFilters extends React.Component {
           <View style={filterStyle.filter}>
             {Object.values(EquipmentLabels).map(equipmentLabel => (
               <Button
-                title={equipmentLabel}
+                title={I18n.t(`data.equipmentLabels.${equipmentLabel}`)}
                 onPress={() => this.onPressedChange('selectedEquipmentLabels', equipmentLabel)}
                 key={equipmentLabel}
                 active={selectedEquipmentLabels.includes(equipmentLabel)}
@@ -159,7 +159,7 @@ export class FitnessFilters extends React.Component {
               .filter(value => value !== SeasonTimings.ANYTIME)
               .map(seasonTiming => (
                 <Button
-                  title={seasonTiming}
+                  title={I18n.t(`data.seasonTimings.${seasonTiming}`)}
                   onPress={() => this.onPressedChange('selectedSeasonTimings', seasonTiming)}
                   key={seasonTiming}
                   active={selectedSeasonTimings.includes(seasonTiming)}
@@ -174,7 +174,7 @@ export class FitnessFilters extends React.Component {
               .filter((goal, index, array) => array.indexOf(goal) === index)
               .map(goal => (
                 <Checkbox
-                  title={goal}
+                  title={I18n.t(`data.fitnessGoals.${goal}`)}
                   onPress={() => this.onPressedChange('selectedGoals', goal)}
                   key={goal}
                   active={selectedGoals.includes(goal)}

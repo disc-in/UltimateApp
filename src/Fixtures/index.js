@@ -13,7 +13,7 @@ export const Intensities = {
   HIGH: 'High',
 };
 
-export const GoalsFrisbee = {
+export const FrisbeeGoals = {
   DEFENSE: 'Defense',
   MARK: 'Mark',
   HANDLING: 'Handling',
@@ -25,7 +25,7 @@ export const GoalsFrisbee = {
   PLAY: 'Playing time',
 };
 
-export const GoalsFitness = {
+export const FitnessGoals = {
   LEGS: 'Legs',
   UPPER: 'Upper',
   FULL_BODY: 'Full body',
@@ -72,7 +72,7 @@ const stabilityDrill = {
   equipment: 'Kettlebell - Dumbbell',
   durationInMinutes: 20,
   intensity: Intensities.LOW,
-  goals: [GoalsFitness.LEGS, GoalsFitness.UPPER],
+  goals: [FitnessGoals.LEGS, FitnessGoals.UPPER],
   seasonTiming: SeasonTimings.OFF_SEASON,
   level: Levels.BEGINNER,
   steps: [
@@ -331,7 +331,7 @@ const strengthDrill = {
   equipment: 'Kettlebell - Dumbbell - Tow bar',
   durationInMinutes: 15,
   intensity: Intensities.HIGH,
-  goals: [GoalsFitness.FULL_BODY],
+  goals: [FitnessGoals.FULL_BODY],
   seasonTiming: SeasonTimings.OFF_SEASON,
   level: Levels.BEGINNER,
   steps: [
@@ -471,7 +471,7 @@ const speedDrill = {
   equipment: 'None',
   durationInMinutes: 30,
   intensity: Intensities.HIGH,
-  goals: [GoalsFitness.FULL_BODY],
+  goals: [FitnessGoals.FULL_BODY],
   seasonTiming: SeasonTimings.OFF_SEASON,
   level: Levels.BEGINNER,
   steps: [
@@ -570,7 +570,7 @@ const conditioningDrill = {
   equipment: 'None',
   durationInMinutes: 10,
   intensity: Intensities.HIGH,
-  goals: [GoalsFitness.FULL_BODY],
+  goals: [FitnessGoals.FULL_BODY],
   seasonTiming: SeasonTimings.OFF_SEASON,
   level: Levels.BEGINNER,
   steps: [
@@ -599,7 +599,7 @@ const warmupGameDrill = {
   equipment: 'None',
   durationInMinutes: 10,
   intensity: Intensities.LOW,
-  goals: [GoalsFitness.WARM_UP],
+  goals: [FitnessGoals.WARM_UP],
   seasonTiming: SeasonTimings.OFF_SEASON,
   level: Levels.BEGINNER,
   steps: [
@@ -628,7 +628,7 @@ const warmupDrill = {
   equipment: 'None',
   durationInMinutes: 10,
   intensity: Intensities.MODERATE,
-  goals: [GoalsFitness.WARM_UP],
+  goals: [FitnessGoals.WARM_UP],
   seasonTiming: SeasonTimings.OFF_SEASON,
   level: Levels.BEGINNER,
   steps: [
@@ -657,7 +657,7 @@ const conditioningDrillFullBody = {
   equipment: 'None',
   durationInMinutes: 20,
   intensity: Intensities.MODERATE,
-  goals: [GoalsFitness.FULL_BODY],
+  goals: [FitnessGoals.FULL_BODY],
   seasonTiming: SeasonTimings.OFF_SEASON,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -686,7 +686,7 @@ const basicThrows = {
   equipment: '1 Disc',
   durationInMinutes: 20,
   intensity: Intensities.LOW,
-  goals: [GoalsFrisbee.THROWING],
+  goals: [FrisbeeGoals.THROWING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -745,7 +745,7 @@ const breakDrill = {
   equipment: 'Cones if you have some (not mandatory)',
   durationInMinutes: 20,
   intensity: Intensities.MODERATE,
-  goals: [GoalsFrisbee.BREAK, GoalsFrisbee.MARK],
+  goals: [FrisbeeGoals.BREAK, FrisbeeGoals.MARK],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -782,7 +782,7 @@ const threeColumnsLongDrill = {
   equipment: 'around 1 disc for 3 players, 3 cones',
   durationInMinutes: 20,
   intensity: Intensities.MODERATE,
-  goals: [GoalsFrisbee.THROWING],
+  goals: [FrisbeeGoals.THROWING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -812,7 +812,7 @@ const twoColumnsLongDrill = {
   equipment: 'around 1 disc for 3 players, 3 cones',
   durationInMinutes: 30,
   intensity: Intensities.HIGH,
-  goals: [GoalsFrisbee.THROWING],
+  goals: [FrisbeeGoals.THROWING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -841,7 +841,7 @@ const treasureHuntDrill = {
   equipment: '10 discs - 10 cones',
   durationInMinutes: 20,
   intensity: Intensities.LOW,
-  goals: [GoalsFrisbee.PLAY],
+  goals: [FrisbeeGoals.PLAY],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -870,7 +870,7 @@ const kyeDrill = {
   equipment: '1 disc - 2 cones',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
-  goals: [GoalsFrisbee.DEFENSE, GoalsFrisbee.PLAY, GoalsFrisbee.COMMUNICATION],
+  goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.PLAY, FrisbeeGoals.COMMUNICATION],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -899,7 +899,7 @@ const bigEightDrill = {
   equipment: '8 Discs - 8 Cones',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
-  goals: [GoalsFrisbee.THROWING],
+  goals: [FrisbeeGoals.THROWING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -928,7 +928,7 @@ const trainDrill = {
   equipment: '1 Disc',
   durationInMinutes: 10,
   intensity: Intensities.LOW,
-  goals: [GoalsFrisbee.THROWING, GoalsFrisbee.CUTTING, GoalsFrisbee.COMMUNICATION],
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -967,7 +967,7 @@ const goaltimateDrill = {
   equipment: '1 Disc - 10 Cones or 1 Goal',
   durationInMinutes: 20,
   intensity: Intensities.HIGH,
-  goals: [GoalsFrisbee.THROWING, GoalsFrisbee.DEFENSE, GoalsFrisbee.PLAY, GoalsFrisbee.PLAY],
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.DEFENSE, FrisbeeGoals.PLAY, FrisbeeGoals.PLAY],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -1006,7 +1006,7 @@ const giveAndGoDrill = {
   equipment: '1 Disc - 12 Cones',
   durationInMinutes: 10,
   intensity: Intensities.HIGH,
-  goals: [GoalsFrisbee.THROWING, GoalsFrisbee.HANDLING],
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.HANDLING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -1043,7 +1043,7 @@ const aussieDrill = {
   equipment: '4 Discs - 20 Cones',
   durationInMinutes: 20,
   intensity: Intensities.LOW,
-  goals: [GoalsFrisbee.THROWING, GoalsFrisbee.COMMUNICATION, GoalsFrisbee.PLAY],
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.COMMUNICATION, FrisbeeGoals.PLAY],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -1072,7 +1072,7 @@ const bolognaMDrill = {
   equipment: '5 Disc - 6 Cones',
   durationInMinutes: 20,
   intensity: Intensities.MODERATE,
-  goals: [GoalsFrisbee.THROWING, GoalsFrisbee.HANDLING],
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.HANDLING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.ADVANCED,
   steps: [
@@ -1100,7 +1100,7 @@ const goToTenDrill = {
   equipment: '1 Disc - 4 Cones',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
-  goals: [GoalsFrisbee.THROWING, GoalsFrisbee.PLAY, GoalsFrisbee.DEFENSE],
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.PLAY, FrisbeeGoals.DEFENSE],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -1128,7 +1128,7 @@ const endzoneDameDrill = {
   equipment: '1 Disc - 4 Cones',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
-  goals: [GoalsFrisbee.THROWING, GoalsFrisbee.PLAY, GoalsFrisbee.DEFENSE],
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.PLAY, FrisbeeGoals.DEFENSE],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -1167,7 +1167,7 @@ const bulldogDrill = {
   equipment: '4 Cones',
   durationInMinutes: 10,
   intensity: Intensities.LOW,
-  goals: [GoalsFrisbee.DEFENSE, GoalsFrisbee.PLAY, GoalsFrisbee.COMMUNICATION],
+  goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.PLAY, FrisbeeGoals.COMMUNICATION],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -1196,7 +1196,7 @@ const menageATroisDrill = {
   equipment: '1 Disc',
   durationInMinutes: 10,
   intensity: Intensities.LOW,
-  goals: [GoalsFrisbee.THROWING, GoalsFrisbee.DEFENSE, GoalsFrisbee.BREAK],
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.DEFENSE, FrisbeeGoals.BREAK],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -1235,7 +1235,7 @@ const dwarfDuelDrill = {
   equipment: '1 Disc - 2 Cones',
   durationInMinutes: 10,
   intensity: Intensities.MODERATE,
-  goals: [GoalsFrisbee.CUTTING],
+  goals: [FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -1264,7 +1264,7 @@ const dishieChainDrill = {
   equipment: '1 Disc - 2 Cones',
   durationInMinutes: 10,
   intensity: Intensities.MODERATE,
-  goals: [GoalsFrisbee.THROWING, GoalsFrisbee.CUTTING],
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -1302,7 +1302,7 @@ const breakDanceDrill = {
   equipment: '5 Discs - 10 Cones',
   durationInMinutes: 20,
   intensity: Intensities.MODERATE,
-  goals: [GoalsFrisbee.THROWING, GoalsFrisbee.CUTTING],
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.ADVANCED,
   steps: [
@@ -1341,7 +1341,7 @@ const catapultdrill = {
   equipment: '5 Disc - 3 Cones',
   durationInMinutes: 20,
   intensity: Intensities.HIGH,
-  goals: [GoalsFrisbee.THROWING],
+  goals: [FrisbeeGoals.THROWING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -1370,7 +1370,7 @@ const chevronDrill = {
   equipment: 'None',
   durationInMinutes: 10,
   intensity: Intensities.HIGH,
-  goals: [GoalsFrisbee.CUTTING, GoalsFrisbee.CATCH, GoalsFrisbee.THROWING],
+  goals: [FrisbeeGoals.CUTTING, FrisbeeGoals.CATCH, FrisbeeGoals.THROWING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -1398,7 +1398,7 @@ const trainDrillHarder = {
   equipment: '1 Disc',
   durationInMinutes: 10,
   intensity: Intensities.LOW,
-  goals: [GoalsFrisbee.THROWING, GoalsFrisbee.CUTTING],
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -1447,7 +1447,7 @@ const resetOpen = {
   equipment: '1 Disc',
   durationInMinutes: 10,
   intensity: Intensities.MODERATE,
-  goals: [GoalsFrisbee.CUTTING, GoalsFrisbee.HANDLING],
+  goals: [FrisbeeGoals.CUTTING, FrisbeeGoals.HANDLING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -1496,7 +1496,7 @@ const resetBreak = {
   equipment: '1 Disc',
   durationInMinutes: 10,
   intensity: Intensities.MODERATE,
-  goals: [GoalsFrisbee.CUTTING, GoalsFrisbee.HANDLING],
+  goals: [FrisbeeGoals.CUTTING, FrisbeeGoals.HANDLING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -1545,7 +1545,7 @@ const youShallNotPass = {
   equipment: '1 Disc and 4 Cones',
   durationInMinutes: 12,
   intensity: Intensities.MODERATE,
-  goals: [GoalsFrisbee.DEFENSE],
+  goals: [FrisbeeGoals.DEFENSE],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -1593,7 +1593,7 @@ const defensePosition = {
   equipment: '1 Disc and 5 Cones',
   durationInMinutes: 10,
   intensity: Intensities.MODERATE,
-  goals: [GoalsFrisbee.DEFENSE],
+  goals: [FrisbeeGoals.DEFENSE],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -1634,7 +1634,7 @@ const normalGame = {
   equipment: '8 cones and 1 disc per field',
   durationInMinutes: 20,
   intensity: Intensities.LOW,
-  goals: [GoalsFitness.CORE],
+  goals: [FitnessGoals.CORE],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -1664,7 +1664,7 @@ const game3v3 = {
   equipment: '8 cones and 1 disc per field',
   durationInMinutes: 20,
   intensity: Intensities.HIGH,
-  goals: [GoalsFrisbee.PLAY],
+  goals: [FrisbeeGoals.PLAY],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -1694,7 +1694,7 @@ const longShotGame = {
   equipment: '8 cones and 1 disc per field',
   durationInMinutes: 20,
   intensity: Intensities.HIGH,
-  goals: [GoalsFrisbee.PLAY, GoalsFrisbee.THROWING],
+  goals: [FrisbeeGoals.PLAY, FrisbeeGoals.THROWING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [

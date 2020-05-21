@@ -2,8 +2,8 @@ import animationSquare from './AnimationSquare';
 import {
   DrillTypes,
   Intensities,
-  GoalsFrisbee,
-  GoalsFitness,
+  FrisbeeGoals,
+  FitnessGoals,
   Levels,
   SeasonTimings,
   EquipmentLabels,
@@ -23,7 +23,7 @@ export const createDrill = (override = {}) => {
     equipment: 'Equipment needs for the drill',
     durationInMinutes: 10,
     intensity: Intensities.LOW,
-    goals: [GoalsFitness.FULL_BODY],
+    goals: [FitnessGoals.FULL_BODY],
     seasonTiming: SeasonTimings.OFF_SEASON,
     level: Levels.BEGINNER,
     steps: [
@@ -71,7 +71,7 @@ const fitnessDrill1 = {
   equipment: 'Equipment needs for the drill',
   durationInMinutes: 10,
   intensity: Intensities.LOW,
-  goals: [GoalsFitness.FULL_BODY],
+  goals: [FitnessGoals.FULL_BODY],
   seasonTiming: SeasonTimings.OFF_SEASON,
   level: Levels.BEGINNER,
   steps: [
@@ -108,7 +108,7 @@ const fitnessDrill2 = {
   equipment: 'Equipment needs for the drill',
   durationInMinutes: 10,
   intensity: Intensities.HIGH,
-  goals: [GoalsFitness.LEGS],
+  goals: [FitnessGoals.LEGS],
   seasonTiming: SeasonTimings.IN_SEASON,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -146,7 +146,7 @@ const frisbeeDrill1 = {
   equipment: 'Equipment needs for the drill',
   durationInMinutes: 30,
   intensity: Intensities.LOW,
-  goals: [GoalsFrisbee.DEFENSE],
+  goals: [FrisbeeGoals.DEFENSE],
   seasonTiming: '',
   level: Levels.BEGINNER,
   steps: [
@@ -171,7 +171,7 @@ const frisbeeDrill2 = {
   equipment: 'Equipment needs for the drill',
   durationInMinutes: 30,
   intensity: Intensities.LOW,
-  goals: [GoalsFrisbee.DEFENSE],
+  goals: [FrisbeeGoals.DEFENSE],
   seasonTiming: '',
   level: Levels.BEGINNER,
   steps: [

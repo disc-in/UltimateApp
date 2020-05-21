@@ -7,7 +7,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrill } from '../Fixtures/TestFixtures';
 import { render, fireEvent, cleanup } from 'react-native-testing-library';
-import { Levels, GoalsFrisbee, DrillTypes } from '../Fixtures';
+import { Levels, FrisbeeGoals, DrillTypes } from '../Fixtures';
 
 import ConnectedFrisbeeFilters, { FrisbeeFilters } from './FrisbeeFilters';
 
@@ -16,9 +16,24 @@ jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
 afterEach(cleanup);
 
 describe('<FrisbeeFilters />', () => {
-  const beginnerDrill = createDrill({ id: 1, level: Levels.BEGINNER });
-  const intermediateDrill = createDrill({ id: 2, level: Levels.INTERMEDIATE });
-  const advancedDrill = createDrill({ id: 3, level: Levels.ADVANCED });
+  const beginnerDrill = createDrill({
+    id: 1,
+    type: DrillTypes.FRISBEE,
+    goals: [FrisbeeGoals.HANDLING],
+    level: Levels.BEGINNER,
+  });
+  const intermediateDrill = createDrill({
+    id: 2,
+    type: DrillTypes.FRISBEE,
+    goals: [FrisbeeGoals.HANDLING],
+    level: Levels.INTERMEDIATE,
+  });
+  const advancedDrill = createDrill({
+    id: 3,
+    type: DrillTypes.FRISBEE,
+    goals: [FrisbeeGoals.HANDLING],
+    level: Levels.ADVANCED,
+  });
 
   it('renders correctly', () => {
     const route = {
@@ -97,10 +112,10 @@ describe('<FrisbeeFilters />', () => {
     });
 
     it('filters drills by goal', async () => {
-      const defenseDrill = createDrill({ id: 1, goals: [GoalsFrisbee.DEFENSE] });
-      const handlingDrill = createDrill({ id: 2, goals: [GoalsFrisbee.HANDLING] });
-      const throwingDrill = createDrill({ id: 3, goals: [GoalsFrisbee.THROWING] });
-      const handlingDefenseDrill = createDrill({ id: 4, goals: [GoalsFrisbee.DEFENSE, GoalsFrisbee.HANDLING] });
+      const defenseDrill = createDrill({ id: 1, goals: [FrisbeeGoals.DEFENSE] });
+      const handlingDrill = createDrill({ id: 2, goals: [FrisbeeGoals.HANDLING] });
+      const throwingDrill = createDrill({ id: 3, goals: [FrisbeeGoals.THROWING] });
+      const handlingDefenseDrill = createDrill({ id: 4, goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.HANDLING] });
       const drills = [defenseDrill, handlingDrill, throwingDrill, handlingDefenseDrill];
       const navigate = jest.fn();
 
@@ -138,23 +153,23 @@ describe('<FrisbeeFilters />', () => {
 
       expect(getByText('4 drills available')).toBeDefined();
 
-      await fireEvent.press(getByText(GoalsFrisbee.DEFENSE));
+      await fireEvent.press(getByText(FrisbeeGoals.DEFENSE));
 
       expect(getByText('2 drills available')).toBeDefined();
 
-      await fireEvent.press(getByText(GoalsFrisbee.THROWING));
+      await fireEvent.press(getByText(FrisbeeGoals.THROWING));
 
       expect(getByText('3 drills available')).toBeDefined();
 
-      await fireEvent.press(getByText(GoalsFrisbee.DEFENSE));
+      await fireEvent.press(getByText(FrisbeeGoals.DEFENSE));
 
       expect(getByText('1 drill available')).toBeDefined();
 
-      await fireEvent.press(getByText(GoalsFrisbee.THROWING));
+      await fireEvent.press(getByText(FrisbeeGoals.THROWING));
 
       expect(getByText('4 drills available')).toBeDefined();
 
-      await fireEvent.press(getByText(GoalsFrisbee.HANDLING));
+      await fireEvent.press(getByText(FrisbeeGoals.HANDLING));
 
       expect(getByText('2 drills available')).toBeDefined();
 

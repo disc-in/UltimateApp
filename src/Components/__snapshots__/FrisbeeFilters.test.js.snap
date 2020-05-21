@@ -315,7 +315,7 @@ exports[`<FrisbeeFilters /> renders correctly 1`] = `
                   }
                 }
               >
-                Full body
+                Handling
               </Text>
             </View>
           </View>

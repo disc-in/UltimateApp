@@ -99,7 +99,7 @@ export class FrisbeeFilters extends React.Component {
           <View style={filterStyle.filter}>
             {Object.values(Levels).map(level => (
               <Button
-                title={level}
+                title={I18n.t(`data.levels.${level}`)}
                 onPress={() => this.onPressedChange('selectedLevels', level)}
                 key={level}
                 active={selectedLevels.includes(level)}
@@ -114,7 +114,7 @@ export class FrisbeeFilters extends React.Component {
               .filter((goal, index, array) => array.indexOf(goal) === index)
               .map(goal => (
                 <Checkbox
-                  title={goal}
+                  title={I18n.t(`data.frisbeeGoals.${goal}`)}
                   onPress={() => this.onPressedChange('selectedGoals', goal)}
                   key={goal}
                   active={selectedGoals.includes(goal)}

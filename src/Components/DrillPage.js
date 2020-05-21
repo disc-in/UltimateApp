@@ -86,7 +86,7 @@ export const DrillPage = props => {
           </View>
           <View style={styles.separator} />
           <View style={styles.infoSubWrapper}>
-            <Text style={styles.infoDrill}>{drill.level}</Text>
+            <Text style={styles.infoDrill}>{I18n.t(`data.levels.${drill.level}`)}</Text>
             <Text style={styles.info}>{I18n.t('drillPage.level')}</Text>
           </View>
         </View>

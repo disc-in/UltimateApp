@@ -79,7 +79,7 @@ exports[`<HomePage /> renders correctly 1`] = `
             }
           }
         >
-          Frisbee drills
+          Frisbee Drills
         </Text>
       </View>
     </View>
@@ -153,7 +153,7 @@ exports[`<HomePage /> renders correctly 1`] = `
             }
           }
         >
-          Fitness drills
+          Fitness Drills
         </Text>
       </View>
     </View>

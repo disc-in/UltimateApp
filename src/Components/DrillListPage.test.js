@@ -27,24 +27,30 @@ describe('<DrillListPage />', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders correctly with a frisbee drill', () => {
+  it('renders frisbee drills sorted by number of players', () => {
     const route = {
       params: {
         type: DrillTypes.FRISBEE,
       },
     };
-    const drills = [createDrill({ type: DrillTypes.FRISBEE })];
+    const morePlayersDrill = createDrill({ type: DrillTypes.FRISBEE, minimalPlayersNumber: 14 });
+    const lessPlayersDrill = createDrill({ type: DrillTypes.FRISBEE, minimalPlayersNumber: 6 });
+    const evenMorePlayersDrill = createDrill({ type: DrillTypes.FRISBEE, minimalPlayersNumber: 20 });
+    const drills = [morePlayersDrill, evenMorePlayersDrill, lessPlayersDrill];
     const tree = renderer.create(<DrillListPage route={route} storeDrills={drills} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders correctly with a fitness drill', () => {
+  it('renders fitness drills sorted by duration', () => {
     const route = {
       params: {
         type: DrillTypes.FITNESS,
       },
     };
-    const drills = [createDrill({ type: DrillTypes.FITNESS })];
+    const shortDrill = createDrill({ type: DrillTypes.FITNESS, durationInMinutes: 10 });
+    const longDrill = createDrill({ type: DrillTypes.FITNESS, durationInMinutes: 20 });
+    const evenLongerDrill = createDrill({ type: DrillTypes.FITNESS, durationInMinutes: 30 });
+    const drills = [longDrill, evenLongerDrill, shortDrill];
     const tree = renderer.create(<DrillListPage route={route} storeDrills={drills} />).toJSON();
     expect(tree).toMatchSnapshot();
   });

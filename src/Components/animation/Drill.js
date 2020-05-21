@@ -34,11 +34,6 @@ class Drill {
     return this.positions.length;
   }
 
-  /** Number of elements displayed in the drill */
-  elemCount() {
-    return this.ids.length;
-  }
-
   /** Add an element to the drill */
   addElement(element, initialX, initialY) {
     debug('drill add element at position: ' + initialX + '/' + initialY);
@@ -67,7 +62,7 @@ class Drill {
 
   /** Add a step to the drill */
   addStep() {
-    this.positions.push(new Array(this.elemCount()));
+    this.positions.push(new Array(this.ids.length));
   }
 
   log() {

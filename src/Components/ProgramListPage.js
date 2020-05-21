@@ -189,18 +189,12 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   flatList: {
-    paddingVertical: 10,
     backgroundColor: theme.COLOR_PRIMARY_LIGHT,
   },
   bottomPage: {
     height: 80,
   },
   drillText: {
-    fontSize: theme.FONT_SIZE_MEDIUM,
-    fontWeight: 'bold',
-    color: theme.COLOR_PRIMARY,
-  },
-  drillTextDone: {
     fontSize: theme.FONT_SIZE_MEDIUM,
     fontWeight: 'bold',
     color: theme.COLOR_PRIMARY,

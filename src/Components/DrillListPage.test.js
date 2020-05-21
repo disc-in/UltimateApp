@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { render, fireEvent, cleanup } from 'react-native-testing-library';
 import store from '../Store/testStore';
 import { createDrill } from '../Fixtures/TestFixtures';
-import { DrillTypes } from '../Fixtures';
+import { DrillTypes } from '../Fixtures/config';
 
 import ConnectedDrillListPage, { DrillListPage } from './DrillListPage';
 

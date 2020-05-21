@@ -8,7 +8,7 @@ import {
   SeasonTimings,
   EquipmentLabels,
   IllustrationType,
-} from './index';
+} from './config';
 
 export const createDrill = (override = {}) => {
   return {

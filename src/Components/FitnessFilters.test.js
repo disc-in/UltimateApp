@@ -7,7 +7,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { createDrill } from '../Fixtures/TestFixtures';
 import { render, fireEvent, cleanup } from 'react-native-testing-library';
 import store from '../Store/testStore';
-import { Levels, Intensities, EquipmentLabels, SeasonTimings, FitnessGoals, DrillTypes } from '../Fixtures';
+import { Levels, Intensities, EquipmentLabels, SeasonTimings, FitnessGoals, DrillTypes } from '../Fixtures/config';
 
 import ConnectedFitnessFilters, { FitnessFilters } from './FitnessFilters';
 

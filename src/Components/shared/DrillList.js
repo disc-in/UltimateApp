@@ -3,7 +3,7 @@ import { View, Text, ImageBackground, TouchableOpacity, FlatList } from 'react-n
 
 import I18n from '../../utils/i18n';
 import * as list from '../../styles/list.style';
-import { DrillTypes } from '../../Fixtures';
+import { DrillTypes } from '../../Fixtures/config';
 
 const DrillList = props => {
   const { navigation, drillsToDisplay } = props;

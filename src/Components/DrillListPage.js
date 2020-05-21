@@ -3,7 +3,7 @@ import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 import DrillList from './shared/DrillList';
 import filterButtonImage from '../../assets/filter.png';
-import { DrillTypes } from '../Fixtures';
+import { DrillTypes } from '../Fixtures/config';
 
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';

@@ -7,7 +7,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrill } from '../Fixtures/TestFixtures';
 import { render, fireEvent, cleanup } from 'react-native-testing-library';
-import { Levels, FrisbeeGoals, DrillTypes } from '../Fixtures';
+import { Levels, FrisbeeGoals, DrillTypes } from '../Fixtures/config';
 
 import ConnectedFrisbeeFilters, { FrisbeeFilters } from './FrisbeeFilters';
 

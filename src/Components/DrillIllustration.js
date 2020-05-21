@@ -6,7 +6,7 @@ import { WebView } from 'react-native-webview';
 import I18n from '../utils/i18n';
 import Animation from './animation/Animation';
 import VimeoVideo from './VimeoVideo';
-import { IllustrationType } from '../Fixtures';
+import { IllustrationType } from '../Fixtures/config';
 import theme from '../styles/theme.style';
 import { swipeConfig } from '../styles/config';
 import iconRedo from '../../assets/redo_arrow.png';

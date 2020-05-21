@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 import I18n from '../utils/i18n';
 import filterStyle from '../styles/filters.style';
-import { Levels } from '../Fixtures';
+import { Levels } from '../Fixtures/config';
 import Button from './filters/FilterButton';
 import Checkbox from './filters/Checkbox';
 import Slider from './filters/Slider';

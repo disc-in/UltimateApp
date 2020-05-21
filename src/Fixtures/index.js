@@ -1,4 +1,5 @@
 import animationSquare from './AnimationSquare';
+import animationGoToTen from './AnimationGoToTen';
 
 export const DrillTypes = {
   FITNESS: 'fitness',
@@ -1087,7 +1088,7 @@ const goToTenDrill = {
       id: 1,
       title: '',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: animationGoToTen,
       repetition: '',
       rest: '',
       instruction: 'First team with 10 completes passes win. Stall to 6.',

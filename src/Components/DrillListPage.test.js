@@ -33,9 +33,9 @@ describe('<DrillListPage />', () => {
         type: DrillTypes.FRISBEE,
       },
     };
-    const morePlayersDrill = createDrill({ type: DrillTypes.FRISBEE, minimalPlayersNumber: 14 });
-    const lessPlayersDrill = createDrill({ type: DrillTypes.FRISBEE, minimalPlayersNumber: 6 });
-    const evenMorePlayersDrill = createDrill({ type: DrillTypes.FRISBEE, minimalPlayersNumber: 20 });
+    const morePlayersDrill = createDrill({ id: 1, type: DrillTypes.FRISBEE, minimalPlayersNumber: 14 });
+    const lessPlayersDrill = createDrill({ id: 2, type: DrillTypes.FRISBEE, minimalPlayersNumber: 6 });
+    const evenMorePlayersDrill = createDrill({ id: 3, type: DrillTypes.FRISBEE, minimalPlayersNumber: 20 });
     const drills = [morePlayersDrill, evenMorePlayersDrill, lessPlayersDrill];
     const tree = renderer.create(<DrillListPage route={route} storeDrills={drills} />).toJSON();
     expect(tree).toMatchSnapshot();
@@ -47,9 +47,9 @@ describe('<DrillListPage />', () => {
         type: DrillTypes.FITNESS,
       },
     };
-    const shortDrill = createDrill({ type: DrillTypes.FITNESS, durationInMinutes: 10 });
-    const longDrill = createDrill({ type: DrillTypes.FITNESS, durationInMinutes: 20 });
-    const evenLongerDrill = createDrill({ type: DrillTypes.FITNESS, durationInMinutes: 30 });
+    const shortDrill = createDrill({ id: 1, type: DrillTypes.FITNESS, durationInMinutes: 10 });
+    const longDrill = createDrill({ id: 2, type: DrillTypes.FITNESS, durationInMinutes: 20 });
+    const evenLongerDrill = createDrill({ id: 3, type: DrillTypes.FITNESS, durationInMinutes: 30 });
     const drills = [longDrill, evenLongerDrill, shortDrill];
     const tree = renderer.create(<DrillListPage route={route} storeDrills={drills} />).toJSON();
     expect(tree).toMatchSnapshot();

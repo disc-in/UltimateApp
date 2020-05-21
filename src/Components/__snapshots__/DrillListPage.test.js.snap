@@ -1594,7 +1594,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           "goals": Array [
             "Full body",
           ],
-          "id": 1,
+          "id": 2,
           "image": "https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg",
           "intensity": "Low",
           "level": "Beginner",
@@ -1620,7 +1620,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           "goals": Array [
             "Full body",
           ],
-          "id": 1,
+          "id": 3,
           "image": "https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg",
           "intensity": "Low",
           "level": "Beginner",
@@ -1677,7 +1677,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           "goals": Array [
             "Full body",
           ],
-          "id": 1,
+          "id": 2,
           "image": "https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg",
           "intensity": "Low",
           "level": "Beginner",
@@ -1703,7 +1703,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           "goals": Array [
             "Full body",
           ],
-          "id": 1,
+          "id": 3,
           "image": "https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg",
           "intensity": "Low",
           "level": "Beginner",
@@ -2225,7 +2225,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           "goals": Array [
             "Full body",
           ],
-          "id": 1,
+          "id": 2,
           "image": "https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg",
           "intensity": "Low",
           "level": "Beginner",
@@ -2277,7 +2277,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           "goals": Array [
             "Full body",
           ],
-          "id": 1,
+          "id": 3,
           "image": "https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg",
           "intensity": "Low",
           "level": "Beginner",
@@ -2308,7 +2308,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           "goals": Array [
             "Full body",
           ],
-          "id": 1,
+          "id": 2,
           "image": "https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg",
           "intensity": "Low",
           "level": "Beginner",
@@ -2360,7 +2360,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           "goals": Array [
             "Full body",
           ],
-          "id": 1,
+          "id": 3,
           "image": "https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg",
           "intensity": "Low",
           "level": "Beginner",

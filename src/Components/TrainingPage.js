@@ -162,6 +162,7 @@ const styles = StyleSheet.create({
   infos: {
     flexDirection: 'row',
     justifyContent: 'space-evenly',
+    padding: 5,
   },
   info: {
     alignItems: 'center',

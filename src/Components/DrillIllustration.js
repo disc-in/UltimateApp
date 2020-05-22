@@ -5,7 +5,7 @@ import { WebView } from 'react-native-webview';
 
 import Animation from './animation/Animation';
 import VimeoVideo from './VimeoVideo';
-import { IllustrationType } from '../Fixtures';
+import { IllustrationType, DrillTypes } from '../Fixtures';
 import theme from '../styles/theme.style';
 import { swipeConfig } from '../styles/config';
 import iconRedo from '../../assets/redo_arrow.png';
@@ -22,7 +22,6 @@ const DrillIllustration = props => {
   const opacityUnchecked = useRef(new Animated.Value(1)).current;
   const opacityChecked = opacityUnchecked.interpolate({ inputRange: [0, 1], outputRange: [1, 0] });
   const currentStep = props.drill.steps[activeIndex];
-  const isMultipleSteps = props.drill.steps.length > 1;
 
   const carouselRef = useRef(null);
 
@@ -222,9 +221,9 @@ const DrillIllustration = props => {
     }
   };
 
-  const displayAnimation = ({ illustrationSource, title }, index) => {
-    const isFirstStep = isMultipleSteps ? index === 0 : true;
-    const isLastStep = isMultipleSteps ? index === props.drill.steps.length - 1 : true;
+  const displayAnimation = ({ illustrationSource, title, instruction }, index) => {
+    const isFirstStep = index === 0;
+    const isLastStep = index === props.drill.steps.length - 1;
     return (
       <>
         <View style={styles.line}>
@@ -255,6 +254,7 @@ const DrillIllustration = props => {
         <View style={styles.animation}>
           <Animation widthRatio={1} heightRatio={props.minimal ? 2 / 5 : 1 / 2} animation={illustrationSource} />
         </View>
+        <Text style={styles.instruction}>{instruction}</Text>
       </>
     );
   };
@@ -302,7 +302,7 @@ const DrillIllustration = props => {
   };
 
   const drillTypes = () => {
-    if (props.drill.type === 'frisbee') {
+    if (props.drill.type === DrillTypes.FRISBEE) {
       return (
         <SafeAreaView style={styles.container}>
           <Carousel

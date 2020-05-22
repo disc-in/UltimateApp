@@ -33,7 +33,7 @@ export const AnimationEditorPage = props => {
 
   const doShare = () => {
     Share.share({
-      title: I18n.t('animationEditor.comingSoon.sharePlaceholder'),
+      title: I18n.t('animationEditor.sharePlaceholder'),
       message:
         '----- ENCODED DRILL -------\n' + JSON.stringify(currentAnimationState) + '\n---------------------------',
     }).catch(err => console.log(err));

@@ -7,6 +7,8 @@ import Button from './filters/FilterButton';
 import Checkbox from './filters/Checkbox';
 import Slider from './filters/Slider';
 import HeaderButton from './shared/HeaderButton';
+import iconRedo from '../../assets/redo_arrow.png';
+import buttonValidation from '../../assets/check_dark.png';
 
 export class FrisbeeFilters extends React.Component {
   constructor(props) {
@@ -22,6 +24,20 @@ export class FrisbeeFilters extends React.Component {
     };
 
     this.onNumberOfPlayersChange = this.onSliderChange.bind(this, 'numberOfPlayers');
+  }
+
+  resetFilters() {
+    this.setState(
+      {
+        selectedFavorites: false,
+        selectedLevels: [],
+        selectedGoals: [],
+        numberOfPlayers: undefined,
+      },
+      () => {
+        this.applyFilters(this.validateFilters);
+      },
+    );
   }
 
   onFavoritesChange() {
@@ -47,7 +63,7 @@ export class FrisbeeFilters extends React.Component {
     this.setState({ [target]: value }, this.applyFilters);
   }
 
-  applyFilters() {
+  applyFilters(callback = () => {}) {
     const { favoriteDrills } = this.props;
     const { selectedFavorites, selectedLevels, selectedGoals, numberOfPlayers } = this.state;
     let newData = this.props.route.params.initialData;
@@ -61,21 +77,24 @@ export class FrisbeeFilters extends React.Component {
       newData = newData.filter(drill => drill.goals.filter(goal => selectedGoals.includes(goal)).length > 0);
     if (numberOfPlayers) newData = newData.filter(drill => drill.minimalPlayersNumber <= numberOfPlayers);
 
-    this.setState({ displayedDrills: newData });
+    this.setState({ displayedDrills: newData }, callback);
+  }
+
+  validateFilters() {
+    this.props.navigation.navigate(this.props.route.params.previousScreen, {
+      filteredDrills: this.state.displayedDrills,
+      type: this.props.route.params.previousType,
+      currentFilters: this.state,
+    });
   }
 
   componentDidMount() {
     this.props.navigation.setOptions({
       headerRight: () => (
-        <HeaderButton
-          onPress={() => {
-            this.props.navigation.navigate(this.props.route.params.previousScreen, {
-              filteredDrills: this.state.displayedDrills,
-              type: this.props.route.params.previousType,
-              currentFilters: this.state,
-            });
-          }}
-        />
+        <View style={{ flexDirection: 'row' }}>
+          <HeaderButton image={iconRedo} onPress={() => this.resetFilters()} testID="resetButton" />
+          <HeaderButton image={buttonValidation} onPress={() => this.validateFilters()} testID="validateButton" />
+        </View>
       ),
     });
   }

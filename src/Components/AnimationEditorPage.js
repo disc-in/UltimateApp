@@ -4,6 +4,7 @@ import { Share, StyleSheet, View, Alert } from 'react-native';
 import AnimationEditor from './animation/AnimationEditor';
 import HeaderButton from './shared/HeaderButton';
 import drillSquare from './animation/DrillSquare';
+import buttonValidation from '../../assets/check_dark.png';
 
 import theme from '../styles/theme.style';
 
@@ -13,7 +14,7 @@ export const AnimationEditorPage = props => {
 
   useLayoutEffect(() => {
     navigation.setOptions({
-      headerRight: () => <HeaderButton onPress={askShare} />,
+      headerRight: () => <HeaderButton image={buttonValidation} onPress={askShare} />,
     });
   });
 

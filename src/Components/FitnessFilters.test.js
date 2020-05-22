@@ -412,7 +412,7 @@ describe('<FitnessFilters />', () => {
           selectedIntensities: [],
           selectedEquipmentLabels: [],
           selectedSeasonTimings: [],
-          selectedGoals: [GoalsFitness.UPPER],
+          selectedGoals: [FitnessGoals.UPPER],
           durationInMinutes: undefined,
           displayedDrills: [upperDrill],
         },

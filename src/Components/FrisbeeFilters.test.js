@@ -188,7 +188,7 @@ describe('<FrisbeeFilters />', () => {
         currentFilters: {
           selectedFavorites: false,
           selectedLevels: [],
-          selectedGoals: [GoalsFrisbee.HANDLING],
+          selectedGoals: [FrisbeeGoals.HANDLING],
           numberOfPlayers: undefined,
           displayedDrills: [handlingDrill, handlingDefenseDrill],
         },

@@ -22,10 +22,7 @@ export default class HomePage extends React.Component {
             </View>
           </ImageBackground>
         </TouchableHighlight>
-        <TouchableHighlight
-          onPress={() => this.props.navigation.navigate('DrillListPage', { type: DrillTypes.FITNESS })}
-          style={styles.menuItem}
-        >
+        <TouchableHighlight onPress={() => this.props.navigation.navigate('TheoryPage')} style={styles.menuItem}>
           <ImageBackground source={fitness} style={styles.image}>
             <View style={styles.wrapper}>
               <Text style={styles.text}>Fitness drills</Text>

@@ -12,6 +12,7 @@ import TrainingBravoPage from '../Components/TrainingBravoPage';
 import ProgramListPage from '../Components/ProgramListPage';
 import ProgramPage from '../Components/ProgramPage';
 import AnimationEditorPage from '../Components/AnimationEditorPage';
+import TheoryPage from '../Components/TheoryPage';
 
 const Stack = createStackNavigator();
 
@@ -63,6 +64,13 @@ export const Navigation = () => (
       component={AnimationEditorPage}
       options={() => ({
         title: 'New Drill',
+      })}
+    />
+    <Stack.Screen
+      name="TheoryPage"
+      component={TheoryPage}
+      options={() => ({
+        title: 'Theory',
       })}
     />
   </Stack.Navigator>

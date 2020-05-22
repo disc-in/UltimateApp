@@ -19,8 +19,7 @@ exports[`<TrainingListPage /> renders correctly when connected 1`] = `
       }
     }
   >
-    2
-     training sessions available
+    2 training sessions available
   </Text>
   <RCTScrollView
     data={
@@ -1062,8 +1061,7 @@ exports[`<TrainingListPage /> renders correctly when connected 1`] = `
                 }
               }
             >
-              2
-              + players
+              2+ players
             </Text>
           </View>
           <View
@@ -1194,8 +1192,7 @@ exports[`<TrainingListPage /> renders correctly when connected 1`] = `
                 }
               }
             >
-              2
-              + players
+              2+ players
             </Text>
           </View>
           <View
@@ -1265,8 +1262,7 @@ exports[`<TrainingListPage /> renders correctly with a training 1`] = `
       }
     }
   >
-    2
-     training sessions available
+    2 training sessions available
   </Text>
   <RCTScrollView
     data={
@@ -2308,8 +2304,7 @@ exports[`<TrainingListPage /> renders correctly with a training 1`] = `
                 }
               }
             >
-              2
-              + players
+              2+ players
             </Text>
           </View>
           <View
@@ -2440,8 +2435,7 @@ exports[`<TrainingListPage /> renders correctly with a training 1`] = `
                 }
               }
             >
-              2
-              + players
+              2+ players
             </Text>
           </View>
           <View

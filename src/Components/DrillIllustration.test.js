@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import animationMenageATrois from '../Fixtures/AnimationMenageATrois';
 
 import DrillIllustration from './DrillIllustration';
-import { IllustrationType } from '../Fixtures';
+import { IllustrationType } from '../Fixtures/config';
 import { createDrill } from '../Fixtures/TestFixtures';
 
 describe('<DrillIllustration />', () => {

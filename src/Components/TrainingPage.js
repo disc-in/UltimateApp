@@ -9,6 +9,8 @@ import theme from '../styles/theme.style';
 import { swipeConfig } from '../styles/config';
 import iconPlayers from '../../assets/ic_players.png';
 import iconClock from '../../assets/ic_clock.png';
+import iconNextTraining from '../../assets/next_training.png';
+import iconPrevTraining from '../../assets/prev_training.png';
 import { convertMinsToTime } from '../utils/time';
 
 export function getTrainingDuration(training) {
@@ -49,19 +51,33 @@ export const TrainingPage = props => {
       <View style={styles.programNavigation}>
         {!isFirstTraining && (
           <TouchableOpacity style={styles.btnPrevNext} onPress={onPrevPress}>
-            <Text style={styles.btnPrevNextContent}>{'<'}</Text>
+            <Image style={styles.navTraining} source={iconPrevTraining} />
           </TouchableOpacity>
         )}
-        <Text style={styles.title}>{training.title}</Text>
-        {program.trainings.length > 1 && (
-          <Text style={styles.subtitle}>
-            {' '}
-            ({currentTrainingIndex + 1}/{program.trainings.length}){' '}
-          </Text>
-        )}
+        <View style={styles.programInfo}>
+          <View style={styles.infos}>
+            <Text style={styles.title}>{training.title}</Text>
+            {program.trainings.length > 1 && (
+              <Text style={styles.subtitle}>
+                {' '}
+                ({currentTrainingIndex + 1}/{program.trainings.length}){' '}
+              </Text>
+            )}
+          </View>
+          <View style={styles.infos}>
+            <View style={styles.info}>
+              <Image style={styles.infoIcon} source={iconPlayers} />
+              <Text style={styles.infoValue}>{getTrainingMinimalPlayersNumber(training)}+</Text>
+            </View>
+            <View style={styles.info}>
+              <Image style={styles.infoIcon} source={iconClock} />
+              <Text style={styles.infoValue}>{convertMinsToTime(getTrainingDuration(training))}</Text>
+            </View>
+          </View>
+        </View>
         {!isLastTraining && (
           <TouchableOpacity style={[styles.btnPrevNext, styles.btnNext]} onPress={onNextPress}>
-            <Text style={styles.btnPrevNextContent}>{'>'}</Text>
+            <Image style={styles.navTraining} source={iconNextTraining} />
           </TouchableOpacity>
         )}
       </View>
@@ -71,16 +87,6 @@ export const TrainingPage = props => {
   const header = () => (
     <View style={styles.overview}>
       {program && programNavigation()}
-      <View style={styles.infos}>
-        <View style={styles.info}>
-          <Image style={styles.infoIcon} source={iconPlayers} />
-          <Text style={styles.infoValue}>{getTrainingMinimalPlayersNumber(training)}+</Text>
-        </View>
-        <View style={styles.info}>
-          <Image style={styles.infoIcon} source={iconClock} />
-          <Text style={styles.infoValue}>{convertMinsToTime(getTrainingDuration(training))}</Text>
-        </View>
-      </View>
       <Text style={styles.descriptionText}>{training.description}</Text>
     </View>
   );
@@ -131,6 +137,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  programInfo: {
+    flexDirection: 'column',
+  },
   title: {
     fontSize: theme.FONT_SIZE_LARGE,
     fontWeight: 'bold',
@@ -146,11 +155,6 @@ const styles = StyleSheet.create({
     left: 'auto',
     right: 10,
   },
-  btnPrevNextContent: {
-    textAlign: 'center',
-    color: theme.COLOR_PRIMARY,
-    fontSize: theme.FONT_SIZE_LARGE,
-  },
   descriptionText: {
     color: theme.COLOR_SECONDARY,
     fontSize: theme.FONT_SIZE_MEDIUM,
@@ -161,6 +165,11 @@ const styles = StyleSheet.create({
   },
   info: {
     alignItems: 'center',
+  },
+  navTraining: {
+    width: 20,
+    height: 60,
+    resizeMode: 'contain',
   },
   infoIcon: {
     width: 20,

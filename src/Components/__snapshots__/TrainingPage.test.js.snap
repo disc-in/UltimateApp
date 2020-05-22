@@ -756,70 +756,6 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
             }
           }
         >
-          <View
-            style={
-              Object {
-                "flexDirection": "row",
-                "justifyContent": "space-evenly",
-              }
-            }
-          >
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                }
-              }
-            >
-              <Image
-                source={1}
-                style={
-                  Object {
-                    "height": 20,
-                    "width": 20,
-                  }
-                }
-              />
-              <Text
-                style={
-                  Object {
-                    "color": "#A6A6A6",
-                    "fontSize": 16,
-                  }
-                }
-              >
-                2
-                +
-              </Text>
-            </View>
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                }
-              }
-            >
-              <Image
-                source={1}
-                style={
-                  Object {
-                    "height": 20,
-                    "width": 20,
-                  }
-                }
-              />
-              <Text
-                style={
-                  Object {
-                    "color": "#A6A6A6",
-                    "fontSize": 16,
-                  }
-                }
-              >
-                0 h 40
-              </Text>
-            </View>
-          </View>
           <Text
             style={
               Object {
@@ -1928,31 +1864,112 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
               }
             }
           >
-            <Text
+            <View
               style={
                 Object {
-                  "fontSize": 20,
-                  "fontWeight": "bold",
+                  "flexDirection": "column",
                 }
               }
             >
-              Dump & Swing
-            </Text>
-            <Text
-              style={
-                Object {
-                  "fontSize": 20,
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "justifyContent": "space-evenly",
+                  }
                 }
-              }
-            >
-               
-              (
-              1
-              /
-              2
-              )
-               
-            </Text>
+              >
+                <Text
+                  style={
+                    Object {
+                      "fontSize": 20,
+                      "fontWeight": "bold",
+                    }
+                  }
+                >
+                  Dump & Swing
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "fontSize": 20,
+                    }
+                  }
+                >
+                   
+                  (
+                  1
+                  /
+                  2
+                  )
+                   
+                </Text>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "justifyContent": "space-evenly",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                    }
+                  }
+                >
+                  <Image
+                    source={1}
+                    style={
+                      Object {
+                        "height": 20,
+                        "width": 20,
+                      }
+                    }
+                  />
+                  <Text
+                    style={
+                      Object {
+                        "color": "#A6A6A6",
+                        "fontSize": 16,
+                      }
+                    }
+                  >
+                    2
+                    +
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                    }
+                  }
+                >
+                  <Image
+                    source={1}
+                    style={
+                      Object {
+                        "height": 20,
+                        "width": 20,
+                      }
+                    }
+                  />
+                  <Text
+                    style={
+                      Object {
+                        "color": "#A6A6A6",
+                        "fontSize": 16,
+                      }
+                    }
+                  >
+                    0 h 40
+                  </Text>
+                </View>
+              </View>
+            </View>
             <View
               accessible={true}
               focusable={true}
@@ -1972,82 +1989,18 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
                   "right": 10,
                 }
               }
-            >
-              <Text
-                style={
-                  Object {
-                    "color": "#232b2b",
-                    "fontSize": 20,
-                    "textAlign": "center",
-                  }
-                }
-              >
-                &gt;
-              </Text>
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "flexDirection": "row",
-                "justifyContent": "space-evenly",
-              }
-            }
-          >
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                }
-              }
+              testID="goToNext"
             >
               <Image
                 source={1}
                 style={
                   Object {
-                    "height": 20,
+                    "height": 60,
+                    "resizeMode": "contain",
                     "width": 20,
                   }
                 }
               />
-              <Text
-                style={
-                  Object {
-                    "color": "#A6A6A6",
-                    "fontSize": 16,
-                  }
-                }
-              >
-                2
-                +
-              </Text>
-            </View>
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                }
-              }
-            >
-              <Image
-                source={1}
-                style={
-                  Object {
-                    "height": 20,
-                    "width": 20,
-                  }
-                }
-              />
-              <Text
-                style={
-                  Object {
-                    "color": "#A6A6A6",
-                    "fontSize": 16,
-                  }
-                }
-              >
-                0 h 40
-              </Text>
             </View>
           </View>
           <Text

@@ -50,7 +50,7 @@ export const TrainingPage = props => {
     return (
       <View style={styles.programNavigation}>
         {!isFirstTraining && (
-          <TouchableOpacity style={styles.btnPrevNext} onPress={onPrevPress}>
+          <TouchableOpacity style={styles.btnPrevNext} onPress={onPrevPress} testID="goToPrev">
             <Image style={styles.navTraining} source={iconPrevTraining} />
           </TouchableOpacity>
         )}
@@ -76,7 +76,7 @@ export const TrainingPage = props => {
           </View>
         </View>
         {!isLastTraining && (
-          <TouchableOpacity style={[styles.btnPrevNext, styles.btnNext]} onPress={onNextPress}>
+          <TouchableOpacity style={[styles.btnPrevNext, styles.btnNext]} onPress={onNextPress} testID="goToNext">
             <Image style={styles.navTraining} source={iconNextTraining} />
           </TouchableOpacity>
         )}

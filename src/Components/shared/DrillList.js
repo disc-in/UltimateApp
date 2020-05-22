@@ -1,8 +1,9 @@
 import React from 'react';
 import { View, Text, ImageBackground, TouchableOpacity, FlatList } from 'react-native';
 
+import I18n from '../../utils/i18n';
 import * as list from '../../styles/list.style';
-import { DrillTypes } from '../../Fixtures';
+import { DrillTypes } from '../../Fixtures/config';
 
 const DrillList = props => {
   const { navigation, drillsToDisplay } = props;
@@ -22,7 +23,11 @@ const DrillList = props => {
         <View style={list.itemContentContainer}>
           <Text style={list.source}>{source}</Text>
           <Text style={list.title}>{title}</Text>
-          <Text style={list.numberOfPlayers}>{goals.join(', ')}</Text>
+          <Text style={list.numberOfPlayers}>
+            {goals
+              .map(goal => I18n.t(`data.fitnessGoals.${goal}`, { defaults: [{ scope: `data.frisbeeGoals.${goal}` }] }))
+              .join(', ')}
+          </Text>
         </View>
       </TouchableOpacity>
     );

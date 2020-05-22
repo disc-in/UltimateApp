@@ -7,7 +7,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { createDrill } from '../Fixtures/TestFixtures';
 import { render, fireEvent, cleanup } from 'react-native-testing-library';
 import store from '../Store/testStore';
-import { Levels, Intensities, EquipmentLabels, SeasonTimings, GoalsFitness, DrillTypes } from '../Fixtures';
+import { Levels, Intensities, EquipmentLabels, SeasonTimings, FitnessGoals, DrillTypes } from '../Fixtures/config';
 
 import ConnectedFitnessFilters, { FitnessFilters } from './FitnessFilters';
 
@@ -72,7 +72,7 @@ describe('<FitnessFilters />', () => {
 
       await fireEvent.press(getByText(Levels.BEGINNER));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
       await fireEvent.press(getByText(Levels.INTERMEDIATE));
 
@@ -80,7 +80,7 @@ describe('<FitnessFilters />', () => {
 
       await fireEvent.press(getByText(Levels.BEGINNER));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
       await fireEvent.press(getByText(Levels.INTERMEDIATE));
 
@@ -149,7 +149,7 @@ describe('<FitnessFilters />', () => {
 
       await fireEvent.press(getByText(Intensities.LOW));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
       await fireEvent.press(getByText(Intensities.MODERATE));
 
@@ -157,7 +157,7 @@ describe('<FitnessFilters />', () => {
 
       await fireEvent.press(getByText(Intensities.LOW));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
       await fireEvent.press(getByText(Intensities.MODERATE));
 
@@ -226,7 +226,7 @@ describe('<FitnessFilters />', () => {
 
       await fireEvent.press(getByText(EquipmentLabels.NONE));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
       await fireEvent.press(getByText(EquipmentLabels.BASIC));
 
@@ -234,7 +234,7 @@ describe('<FitnessFilters />', () => {
 
       await fireEvent.press(getByText(EquipmentLabels.NONE));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
       await fireEvent.press(getByText(EquipmentLabels.BASIC));
 
@@ -303,7 +303,7 @@ describe('<FitnessFilters />', () => {
 
       await fireEvent.press(getByText(SeasonTimings.OFF_SEASON));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
       await fireEvent.press(getByText(SeasonTimings.PRE_SEASON));
 
@@ -311,7 +311,7 @@ describe('<FitnessFilters />', () => {
 
       await fireEvent.press(getByText(SeasonTimings.OFF_SEASON));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
       await fireEvent.press(getByText(SeasonTimings.PRE_SEASON));
 
@@ -319,7 +319,7 @@ describe('<FitnessFilters />', () => {
 
       await fireEvent.press(getByText(SeasonTimings.IN_SEASON));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
       await fireEvent.press(getByTestId('validateButton'));
 
@@ -340,10 +340,10 @@ describe('<FitnessFilters />', () => {
     });
 
     it('filters drills by goal', async () => {
-      const legsDrill = createDrill({ id: 1, goals: [GoalsFitness.LEGS] });
-      const upperDrill = createDrill({ id: 2, goals: [GoalsFitness.UPPER] });
-      const fullDrill = createDrill({ id: 3, goals: [GoalsFitness.FULL_BODY] });
-      const legsCoreDrill = createDrill({ id: 4, goals: [GoalsFitness.LEGS, GoalsFitness.CORE] });
+      const legsDrill = createDrill({ id: 1, goals: [FitnessGoals.LEGS] });
+      const upperDrill = createDrill({ id: 2, goals: [FitnessGoals.UPPER] });
+      const fullDrill = createDrill({ id: 3, goals: [FitnessGoals.FULL_BODY] });
+      const legsCoreDrill = createDrill({ id: 4, goals: [FitnessGoals.LEGS, FitnessGoals.CORE] });
       const drills = [legsDrill, upperDrill, fullDrill, legsCoreDrill];
       const navigate = jest.fn();
 
@@ -381,25 +381,25 @@ describe('<FitnessFilters />', () => {
 
       expect(getByText('4 drills available')).toBeDefined();
 
-      await fireEvent.press(getByText(GoalsFitness.LEGS));
+      await fireEvent.press(getByText(FitnessGoals.LEGS));
 
       expect(getByText('2 drills available')).toBeDefined();
 
-      await fireEvent.press(getByText(GoalsFitness.FULL_BODY));
+      await fireEvent.press(getByText(FitnessGoals.FULL_BODY));
 
       expect(getByText('3 drills available')).toBeDefined();
 
-      await fireEvent.press(getByText(GoalsFitness.LEGS));
+      await fireEvent.press(getByText(FitnessGoals.LEGS));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
-      await fireEvent.press(getByText(GoalsFitness.FULL_BODY));
+      await fireEvent.press(getByText(FitnessGoals.FULL_BODY));
 
       expect(getByText('4 drills available')).toBeDefined();
 
-      await fireEvent.press(getByText(GoalsFitness.UPPER));
+      await fireEvent.press(getByText(FitnessGoals.UPPER));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
       await fireEvent.press(getByTestId('validateButton'));
 
@@ -525,7 +525,7 @@ describe('<FitnessFilters />', () => {
 
       await fireEvent.press(getByText('Favorites only'));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
       await fireEvent.press(getByTestId('validateButton'));
 

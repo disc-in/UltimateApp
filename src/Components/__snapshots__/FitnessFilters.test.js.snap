@@ -19,8 +19,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
       }
     }
   >
-    2
-     drills available
+    2 drills available
   </Text>
   <RCTScrollView
     contentContainerStyle={
@@ -715,9 +714,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
         Duration
       </Text>
       <Text>
-        How much time do you have?   
-        -
-         mins
+        How much time do you have?   - mins
       </Text>
       <View
         style={

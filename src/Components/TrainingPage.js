@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity, Image } from 'react-native';
 import GestureRecognizer from 'react-native-swipe-gestures';
 
+import I18n from '../utils/i18n';
 import DrillList from './shared/DrillList';
 import Button from './shared/Button';
 import theme from '../styles/theme.style';
@@ -100,7 +101,7 @@ export const TrainingPage = props => {
         onDrillPress={onDrillPress}
       />
       <View style={styles.footer}>
-        <Button onPress={goToFirstDrill} text="Start training" />
+        <Button onPress={goToFirstDrill} text={I18n.t('trainingPage.start')} />
       </View>
     </GestureRecognizer>
   );

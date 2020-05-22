@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { render, fireEvent, cleanup } from 'react-native-testing-library';
-import { DrillTypes } from '../Fixtures';
+import { DrillTypes } from '../Fixtures/config';
 
 import HomePage from './HomePage';
 

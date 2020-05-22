@@ -3,8 +3,9 @@ import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 import DrillList from './shared/DrillList';
 import filterButtonImage from '../../assets/filter.png';
-import { DrillTypes } from '../Fixtures';
+import { DrillTypes } from '../Fixtures/config';
 
+import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
 import * as list from '../styles/list.style';
 
@@ -19,7 +20,7 @@ export const DrillListPage = props => {
   const sortedDisplayedDrills = displayedDrills.sort((a, b) => a[sortingProperty] - b[sortingProperty]);
   return (
     <View style={styles.drillListPage}>
-      <Text style={list.counter}>{displayedDrills.length} drills available</Text>
+      <Text style={list.counter}>{I18n.t('drillListPage.availableDrills', { count: displayedDrills.length })}</Text>
       <DrillList navigation={navigation} drillsToDisplay={displayedDrills} />
       <TouchableOpacity
         style={styles.filterButton}

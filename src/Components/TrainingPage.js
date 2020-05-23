@@ -9,6 +9,8 @@ import theme from '../styles/theme.style';
 import { swipeConfig } from '../styles/config';
 import iconPlayers from '../../assets/ic_players.png';
 import iconClock from '../../assets/ic_clock.png';
+import iconNextTraining from '../../assets/next_training.png';
+import iconPrevTraining from '../../assets/prev_training.png';
 import { convertMinsToTime } from '../utils/time';
 
 export function getTrainingDuration(training) {
@@ -48,20 +50,22 @@ export const TrainingPage = props => {
     return (
       <View style={styles.programNavigation}>
         {!isFirstTraining && (
-          <TouchableOpacity style={styles.btnPrevNext} onPress={onPrevPress}>
-            <Text style={styles.btnPrevNextContent}>{'<'}</Text>
+          <TouchableOpacity style={styles.btnPrevNext} onPress={onPrevPress} testID="goToPrev">
+            <Image style={styles.navTraining} source={iconPrevTraining} />
           </TouchableOpacity>
         )}
-        <Text style={styles.title}>{training.title}</Text>
-        {program.trainings.length > 1 && (
-          <Text style={styles.subtitle}>
-            {' '}
-            ({currentTrainingIndex + 1}/{program.trainings.length}){' '}
-          </Text>
-        )}
+        <View style={styles.programInfo}>
+          <Text style={styles.title}>{training.title}</Text>
+          {program.trainings.length > 1 && (
+            <Text style={styles.subtitle}>
+              {' '}
+              ({currentTrainingIndex + 1}/{program.trainings.length}){' '}
+            </Text>
+          )}
+        </View>
         {!isLastTraining && (
-          <TouchableOpacity style={[styles.btnPrevNext, styles.btnNext]} onPress={onNextPress}>
-            <Text style={styles.btnPrevNextContent}>{'>'}</Text>
+          <TouchableOpacity style={[styles.btnPrevNext, styles.btnNext]} onPress={onNextPress} testID="goToNext">
+            <Image style={styles.navTraining} source={iconNextTraining} />
           </TouchableOpacity>
         )}
       </View>
@@ -138,6 +142,10 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: theme.FONT_SIZE_LARGE,
   },
+  programInfo: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   btnPrevNext: {
     position: 'absolute',
     left: 10,
@@ -146,11 +154,6 @@ const styles = StyleSheet.create({
     left: 'auto',
     right: 10,
   },
-  btnPrevNextContent: {
-    textAlign: 'center',
-    color: theme.COLOR_PRIMARY,
-    fontSize: theme.FONT_SIZE_LARGE,
-  },
   descriptionText: {
     color: theme.COLOR_SECONDARY,
     fontSize: theme.FONT_SIZE_MEDIUM,
@@ -158,9 +161,15 @@ const styles = StyleSheet.create({
   infos: {
     flexDirection: 'row',
     justifyContent: 'space-evenly',
+    padding: 5,
   },
   info: {
     alignItems: 'center',
+  },
+  navTraining: {
+    width: 20,
+    height: 60,
+    resizeMode: 'contain',
   },
   infoIcon: {
     width: 20,

@@ -55,25 +55,13 @@ export const TrainingPage = props => {
           </TouchableOpacity>
         )}
         <View style={styles.programInfo}>
-          <View style={styles.infos}>
-            <Text style={styles.title}>{training.title}</Text>
-            {program.trainings.length > 1 && (
-              <Text style={styles.subtitle}>
-                {' '}
-                ({currentTrainingIndex + 1}/{program.trainings.length}){' '}
-              </Text>
-            )}
-          </View>
-          <View style={styles.infos}>
-            <View style={styles.info}>
-              <Image style={styles.infoIcon} source={iconPlayers} />
-              <Text style={styles.infoValue}>{getTrainingMinimalPlayersNumber(training)}+</Text>
-            </View>
-            <View style={styles.info}>
-              <Image style={styles.infoIcon} source={iconClock} />
-              <Text style={styles.infoValue}>{convertMinsToTime(getTrainingDuration(training))}</Text>
-            </View>
-          </View>
+          <Text style={styles.title}>{training.title}</Text>
+          {program.trainings.length > 1 && (
+            <Text style={styles.subtitle}>
+              {' '}
+              ({currentTrainingIndex + 1}/{program.trainings.length}){' '}
+            </Text>
+          )}
         </View>
         {!isLastTraining && (
           <TouchableOpacity style={[styles.btnPrevNext, styles.btnNext]} onPress={onNextPress} testID="goToNext">
@@ -87,6 +75,16 @@ export const TrainingPage = props => {
   const header = () => (
     <View style={styles.overview}>
       {program && programNavigation()}
+      <View style={styles.infos}>
+        <View style={styles.info}>
+          <Image style={styles.infoIcon} source={iconPlayers} />
+          <Text style={styles.infoValue}>{getTrainingMinimalPlayersNumber(training)}+</Text>
+        </View>
+        <View style={styles.info}>
+          <Image style={styles.infoIcon} source={iconClock} />
+          <Text style={styles.infoValue}>{convertMinsToTime(getTrainingDuration(training))}</Text>
+        </View>
+      </View>
       <Text style={styles.descriptionText}>{training.description}</Text>
     </View>
   );
@@ -137,15 +135,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  programInfo: {
-    flexDirection: 'column',
-  },
   title: {
     fontSize: theme.FONT_SIZE_LARGE,
     fontWeight: 'bold',
   },
   subtitle: {
     fontSize: theme.FONT_SIZE_LARGE,
+  },
+  programInfo: {
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   btnPrevNext: {
     position: 'absolute',

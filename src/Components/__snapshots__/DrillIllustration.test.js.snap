@@ -87,6 +87,7 @@ exports[`<DrillIllustration /> renders correctly for a drill with a video from v
               "resizeMode": "mock",
               "source": undefined,
               "status": Object {},
+              "useNativeControls": true,
             }
           }
           style={

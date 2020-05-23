@@ -91,7 +91,6 @@ describe('<FitnessFilters />', () => {
       await fireEvent.press(getByTestId('validateButton'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
-        filteredDrills: [advancedDrill],
         type: DrillTypes.FITNESS,
         currentFilters: {
           selectedFavorites: false,
@@ -168,7 +167,6 @@ describe('<FitnessFilters />', () => {
       await fireEvent.press(getByTestId('validateButton'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
-        filteredDrills: [highDrill],
         type: DrillTypes.FITNESS,
         currentFilters: {
           selectedFavorites: false,
@@ -245,7 +243,6 @@ describe('<FitnessFilters />', () => {
       await fireEvent.press(getByTestId('validateButton'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
-        filteredDrills: [fullEquipmentDrill],
         type: DrillTypes.FITNESS,
         currentFilters: {
           selectedFavorites: false,
@@ -324,7 +321,6 @@ describe('<FitnessFilters />', () => {
       await fireEvent.press(getByTestId('validateButton'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
-        filteredDrills: [inDrill],
         type: DrillTypes.FITNESS,
         currentFilters: {
           selectedFavorites: false,
@@ -404,7 +400,6 @@ describe('<FitnessFilters />', () => {
       await fireEvent.press(getByTestId('validateButton'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
-        filteredDrills: [upperDrill],
         type: DrillTypes.FITNESS,
         currentFilters: {
           selectedFavorites: false,
@@ -469,7 +464,6 @@ describe('<FitnessFilters />', () => {
       await fireEvent.press(getByTestId('validateButton'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
-        filteredDrills: [oneMinuteDrill, twoMinutesDrill],
         type: DrillTypes.FITNESS,
         currentFilters: {
           selectedFavorites: false,
@@ -530,7 +524,6 @@ describe('<FitnessFilters />', () => {
       await fireEvent.press(getByTestId('validateButton'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
-        filteredDrills: [intermediateDrill],
         type: DrillTypes.FITNESS,
         currentFilters: {
           selectedFavorites: true,
@@ -602,7 +595,6 @@ describe('<FitnessFilters />', () => {
       await fireEvent.press(getByTestId('validateButton'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
-        filteredDrills: drills,
         type: DrillTypes.FITNESS,
         currentFilters: {
           selectedFavorites: false,

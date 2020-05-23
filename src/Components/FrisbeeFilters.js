@@ -84,7 +84,6 @@ export class FrisbeeFilters extends React.Component {
 
   validateFilters() {
     this.props.navigation.navigate(this.props.route.params.previousScreen, {
-      filteredDrills: this.state.displayedDrills,
       type: this.props.route.params.previousType,
       currentFilters: this.state,
     });

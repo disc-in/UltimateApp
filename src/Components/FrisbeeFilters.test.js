@@ -106,7 +106,6 @@ describe('<FrisbeeFilters />', () => {
       await fireEvent.press(getByTestId('validateButton'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
-        filteredDrills: [advancedDrill],
         type: DrillTypes.FRISBEE,
         currentFilters: {
           selectedFavorites: false,
@@ -183,7 +182,6 @@ describe('<FrisbeeFilters />', () => {
       await fireEvent.press(getByTestId('validateButton'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
-        filteredDrills: [handlingDrill, handlingDefenseDrill],
         type: DrillTypes.FRISBEE,
         currentFilters: {
           selectedFavorites: false,
@@ -245,7 +243,6 @@ describe('<FrisbeeFilters />', () => {
       await fireEvent.press(getByTestId('validateButton'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
-        filteredDrills: [onePersonDrill, twoPeopleDrill],
         type: DrillTypes.FRISBEE,
         currentFilters: {
           selectedFavorites: false,
@@ -302,7 +299,6 @@ describe('<FrisbeeFilters />', () => {
       await fireEvent.press(getByTestId('validateButton'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
-        filteredDrills: [intermediateDrill],
         type: DrillTypes.FRISBEE,
         currentFilters: {
           selectedFavorites: true,
@@ -369,7 +365,6 @@ describe('<FrisbeeFilters />', () => {
       expect(getByText('3 drills available')).toBeDefined();
 
       expect(navigate).toBeCalledWith('DrillListPage', {
-        filteredDrills: drills,
         type: DrillTypes.FRISBEE,
         currentFilters: {
           selectedFavorites: false,

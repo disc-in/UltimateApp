@@ -23,14 +23,15 @@ class DraggableDisplayedElement extends React.Component {
   constructor(props) {
     super(props);
 
+    console.log('DDE: playerRadius: ' + this.props.playerRadius);
+    console.log('DDE: left: ' + this.props.left);
+    console.log('DDE: top: ' + this.props.top);
     this.number = this.props.number.toString();
 
     // TODO: put the constant coefficient used in the following somewhere to avoir writing them twice (in this class and in DrillCuts)
-    var dimensionMin = Math.min(this.props.animationWidth, this.props.animationHeight);
-    this.props.playerRadius = dimensionMin / 12;
+
     this.props.discRadius = this.props.playerRadius / 2;
     this.props.coneSize = (this.props.playerRadius * 5) / 16;
-
     this.props.bottomconeSize = (this.props.playerRadius * 10) / 16;
     this.props.borderWidth = this.props.discRadius / 10;
 
@@ -124,7 +125,6 @@ class DraggableDisplayedElement extends React.Component {
     /* Returns a component according to the element type */
     switch (this.props.id) {
       case 'defense':
-        debug('Render in defense ');
         return (
           <Animated.View
             {...this.panResponder.panHandlers}
@@ -134,6 +134,8 @@ class DraggableDisplayedElement extends React.Component {
               { height: this.props.playerRadius },
               { width: this.props.playerRadius },
               { borderRadius: this.props.playerRadius },
+              { top: this.props.top },
+              { left: this.props.left },
             ]}
             key={this.props.key + 4}
           >
@@ -142,7 +144,6 @@ class DraggableDisplayedElement extends React.Component {
         );
 
       case 'offense':
-        //            debug("Render in offense");
         return (
           <Animated.View
             {...this.panResponder.panHandlers}
@@ -152,6 +153,8 @@ class DraggableDisplayedElement extends React.Component {
               { height: this.props.playerRadius },
               { width: this.props.playerRadius },
               { borderRadius: this.props.playerRadius },
+              { top: this.props.top },
+              { left: this.props.left },
             ]}
             key={this.props.key + 4}
           >
@@ -179,7 +182,16 @@ class DraggableDisplayedElement extends React.Component {
           <Animated.View
             // Use the panResponder in this view
             {...this.panResponder.panHandlers}
-            style={[panStyle, styles.disc, { height: 20 }, { width: 20 }, { borderRadius: 20 }, { borderWidth: 2 }]}
+            style={[
+              panStyle,
+              styles.disc,
+              { height: 20 },
+              { width: 20 },
+              { borderRadius: 20 },
+              { borderWidth: 2 },
+              { top: this.props.top },
+              { left: this.props.left },
+            ]}
             key={this.props.key + 4}
           />
         );
@@ -196,6 +208,8 @@ class DraggableDisplayedElement extends React.Component {
               { borderLeftWidth: 12 },
               { borderRightWidth: 12 },
               { borderBottomWidth: 25 },
+              { top: this.props.top },
+              { left: this.props.left },
             ]}
             key={this.props.key + 4}
           />
@@ -215,8 +229,6 @@ const styles = StyleSheet.create({
     textAlignVertical: 'center',
     alignItems: 'center',
     justifyContent: 'center',
-    left: 90,
-    top: 450,
   },
   defenseText: {
     color: theme.OFFENSE_TEXT_COLOR,
@@ -227,8 +239,8 @@ const styles = StyleSheet.create({
     position: 'absolute',
     textAlign: 'center',
     textAlignVertical: 'center',
-    left: 30,
-    top: 450,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   offenseText: {
     fontWeight: 'bold',
@@ -244,8 +256,6 @@ const styles = StyleSheet.create({
     position: 'absolute',
     borderColor: theme.DISC_BORDER,
     backgroundColor: theme.DISC_COLOR,
-    left: 190,
-    top: 450,
   },
 
   triangle: {
@@ -255,8 +265,6 @@ const styles = StyleSheet.create({
     borderLeftColor: 'transparent',
     borderRightColor: 'transparent',
     borderBottomColor: theme.CONE_COLOR,
-    left: 270,
-    top: 450,
   },
 });
 

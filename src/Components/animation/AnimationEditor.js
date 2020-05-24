@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextInput, StyleSheet, Animated, Dimensions, View } from 'react-native';
+import { StyleSheet, Animated, Dimensions, View } from 'react-native';
 
 import Animation from './Animation';
 
@@ -14,8 +14,6 @@ class AnimationEditor extends React.Component {
 
     this.state = {
       draggableElements: [],
-      screenH: 1,
-      screenW: 1,
       animation: new Drill(props.animation),
       dTop: 0, // Distance between the top of the window and the editor
       dLeft: 0, // Distance between the left of the window and the editor
@@ -24,7 +22,7 @@ class AnimationEditor extends React.Component {
     };
 
     /** Vertical ratio of the space of the editor in which the animation is displayed */
-    this.hRatio = 6 / 7;
+    this.hRatio = 5 / 7;
 
     /** Horizontal ratio of the space of the editor in which the animation is displayed */
     this.wRatio = 1;
@@ -50,16 +48,45 @@ class AnimationEditor extends React.Component {
   };
 
   onLayout = e => {
+    var cHeight = e.nativeEvent.layout.height;
+    var cWidth = e.nativeEvent.layout.width;
+
     //TODO see why this is needed...
     this.setState({
-      width: e.nativeEvent.layout.width,
-      height: e.nativeEvent.layout.height,
-      dTop: 40,
+      width: cWidth,
+      height: cHeight,
+      dTop: e.nativeEvent.layout.y,
       dLeft: e.nativeEvent.layout.x,
     });
 
-    debug('animationE onlayout top left position x/y: ' + e.nativeEvent.layout.x + '/' + e.nativeEvent.layout.y);
-    debug('animationE onlayout w/h: ' + e.nativeEvent.layout.width + '/' + e.nativeEvent.layout.height);
+    // Create the elements in the horizontal bar
+    this.initialElements = [];
+
+    var aWidth = cWidth * this.wRatio;
+    var aHeight = cHeight * this.hRatio;
+
+    console.log('onLayout: aWidth/aHeight: ' + aWidth + '/' + aHeight);
+
+    var playerRadius = Math.min(aWidth, aHeight) / 12;
+    this.ddeTop = aHeight + 2.5 * playerRadius;
+    this.ddeLeft = Array(4);
+
+    this.ddeLeft[0] = (1 * aWidth) / 5 - playerRadius / 2;
+    this.ddeLeft[1] = (2 * aWidth) / 5 - playerRadius / 2;
+    this.ddeLeft[2] = (3 * aWidth) / 5 - playerRadius / 2;
+    this.ddeLeft[3] = (4 * aWidth) / 5 - playerRadius / 2;
+
+    this.initialElements.push(this._createDE('offense', playerRadius, this.ddeTop, this.ddeLeft[0]));
+    this.initialElements.push(this._createDE('defense', playerRadius, this.ddeTop, this.ddeLeft[1]));
+    this.initialElements.push(this._createDE('disc', playerRadius, this.ddeTop, this.ddeLeft[2]));
+    this.initialElements.push(this._createDE('triangle', playerRadius, this.ddeTop, this.ddeLeft[3]));
+
+    this.setState(prevState => ({
+      draggableElements: prevState.draggableElements.concat(this.initialElements),
+    }));
+
+    console.log('animationE onlayout top left position x/y: ' + e.nativeEvent.layout.x + '/' + e.nativeEvent.layout.y);
+    console.log('animationE onlayout w/h: ' + e.nativeEvent.layout.width + '/' + e.nativeEvent.layout.height);
   };
 
   addElementToAnimation = (element, xDelta, yDelta) => {
@@ -70,27 +97,30 @@ class AnimationEditor extends React.Component {
     var y = 0;
 
     debug('animationE: element id: ' + element.props.id);
+    var elementNumber = '';
 
     switch (element.props.id) {
       case 'offense':
-        x = 30;
-        y = 450;
+        x = this.ddeLeft[0];
+        y = this.ddeTop;
+        elementNumber = this.offenseCount;
         this.offenseCount++;
         this.state.draggableElements[0].setNumber(this.offenseCount);
         break;
       case 'defense':
-        x = 90;
-        y = 450;
+        x = this.ddeLeft[1];
+        y = this.ddeTop;
+        elementNumber = this.defenseCount;
         this.defenseCount++;
         this.state.draggableElements[1].setNumber(this.defenseCount);
         break;
       case 'triangle':
-        x = 270;
-        y = 450;
+        x = this.ddeLeft[2];
+        y = this.ddeTop;
         break;
       case 'disc':
-        x = 190;
-        y = 450;
+        x = this.ddeLeft[3];
+        y = this.ddeTop;
         break;
     }
 
@@ -98,14 +128,13 @@ class AnimationEditor extends React.Component {
 
     //        yDelta /= 2;
     debug('x+xDelta/y+yDelta: ' + x + '+' + xDelta + '/' + y + '+' + yDelta);
-    debug('screen w/h + ' + this.state.screenW + '/' + this.state.screenH);
     debug('window w/h + ' + this.state.width + '/' + this.state.height);
     debug('added element to animation at position: ' + newPosition[0] + '/' + newPosition[1]);
 
     // Add the element with its initial position
     var newAnimation = this._copyAnimation();
 
-    newAnimation.addElement(element, newPosition[0], newPosition[1]);
+    newAnimation.addElement(element, newPosition[0], newPosition[1], elementNumber);
 
     this.saveAnimation(newAnimation);
 
@@ -159,22 +188,9 @@ class AnimationEditor extends React.Component {
     /* Get the dimension of the screen and then initialize the animation */
     var { height, width } = Dimensions.get('window');
 
-    debug('screen h/w: ' + height + '/' + width);
-
-    // Create the elements in the horizontal bar
-    this.initialElements = [];
-
-    this.initialElements.push(this._createDE('offense', height, width));
-    this.initialElements.push(this._createDE('defense', height, width));
-    this.initialElements.push(this._createDE('disc', height, width));
-    this.initialElements.push(this._createDE('triangle', height, width));
+    console.log('screen h/w: ' + height + '/' + width);
 
     this.saveAnimation(newAnimation);
-    this.setState(prevState => ({
-      draggableElements: prevState.draggableElements.concat(this.initialElements),
-      screenH: height,
-      screenW: width,
-    }));
   }
 
   cutMove = (elemId, xDelta, yDelta, isCounterCut) => {
@@ -279,8 +295,7 @@ class AnimationEditor extends React.Component {
     });
   };
 
-  _createDE(deType, height, width) {
-    debug('create de with type: ' + deType);
+  _createDE(deType, playerRadius, top, left) {
     var text = '';
 
     var key = 600;
@@ -305,8 +320,9 @@ class AnimationEditor extends React.Component {
       eId: -1,
       key,
       movable: true,
-      animationWidth: height,
-      animationHeight: width,
+      playerRadius,
+      top,
+      left,
       number: text,
     });
   }
@@ -344,7 +360,7 @@ class AnimationEditor extends React.Component {
           onElementMove={this.moveElement}
           onCutMove={this.cutMove}
           widthRatio={1}
-          heightRatio={1 / 2}
+          heightRatio={this.hRatio}
           dTop={this.state.dTop}
           lTop={this.state.lTop}
           onStepChange={this.displayStepDescription}

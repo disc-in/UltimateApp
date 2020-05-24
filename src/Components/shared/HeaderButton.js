@@ -1,17 +1,16 @@
 import React from 'react';
 import { StyleSheet, Image, TouchableOpacity } from 'react-native';
-import buttonValidation from '../../../assets/check_dark.png';
 
 const HeaderButton = props => {
   return (
-    <TouchableOpacity onPress={props.onPress} testID="headerButton">
-      <Image style={styles.headerButtonText} source={buttonValidation} />
+    <TouchableOpacity onPress={props.onPress} testID={props.testID || 'headerButton'}>
+      <Image style={styles.image} source={props.image} />
     </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
-  headerButtonText: {
+  image: {
     marginRight: 20,
     width: 20,
     height: 20,

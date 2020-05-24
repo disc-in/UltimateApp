@@ -5,6 +5,7 @@ import I18n from '../utils/i18n';
 import AnimationEditor from './animation/AnimationEditor';
 import HeaderButton from './shared/HeaderButton';
 import drillSquare from './animation/DrillSquare';
+import buttonValidation from '../../assets/check_dark.png';
 
 import theme from '../styles/theme.style';
 
@@ -14,7 +15,7 @@ export const AnimationEditorPage = props => {
 
   useLayoutEffect(() => {
     navigation.setOptions({
-      headerRight: () => <HeaderButton onPress={askShare} />,
+      headerRight: () => <HeaderButton image={buttonValidation} onPress={askShare} />,
     });
   });
 
@@ -32,7 +33,7 @@ export const AnimationEditorPage = props => {
 
   const doShare = () => {
     Share.share({
-      title: I18n.t('animationEditor.comingSoon.sharePlaceholder'),
+      title: I18n.t('animationEditor.sharePlaceholder'),
       message:
         '----- ENCODED DRILL -------\n' + JSON.stringify(currentAnimationState) + '\n---------------------------',
     }).catch(err => console.log(err));

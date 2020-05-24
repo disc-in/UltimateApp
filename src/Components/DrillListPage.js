@@ -11,10 +11,10 @@ import * as list from '../styles/list.style';
 
 export const DrillListPage = props => {
   const { navigation, route, storeDrills } = props;
-  const { type, filteredDrills } = route.params;
+  const { type, currentFilters } = route.params;
 
   const storeDrillsForType = storeDrills.filter(drill => drill.type === type);
-  const displayedDrills = filteredDrills ? filteredDrills : storeDrillsForType;
+  const displayedDrills = currentFilters?.displayedDrills || storeDrillsForType;
 
   const sortingProperty = type === DrillTypes.FRISBEE ? 'minimalPlayersNumber' : 'durationInMinutes';
   const sortedDisplayedDrills = displayedDrills.sort((a, b) => a[sortingProperty] - b[sortingProperty]);
@@ -30,6 +30,7 @@ export const DrillListPage = props => {
             initialData: storeDrillsForType,
             previousScreen: route.name,
             previousType: type,
+            filters: currentFilters,
           });
         }}
         testID="filterButton"

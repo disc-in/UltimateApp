@@ -111,8 +111,8 @@ export default function HomePage(props) {
         name="Frisbee"
         component={HomeScreen}
         options={{
-          tabBarLabel: 'Home',
-          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="home" color={color} size={26} />,
+          tabBarLabel: 'Frisbee',
+          tabBarIcon: ({ color }) => <Ionicons name="ios-radio-button-off" color={color} size={26} />,
         }}
       />
       <Tab.Screen

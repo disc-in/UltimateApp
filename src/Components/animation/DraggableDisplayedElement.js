@@ -23,9 +23,6 @@ class DraggableDisplayedElement extends React.Component {
   constructor(props) {
     super(props);
 
-    console.log('DDE: playerRadius: ' + this.props.playerRadius);
-    console.log('DDE: left: ' + this.props.left);
-    console.log('DDE: top: ' + this.props.top);
     this.number = this.props.number.toString();
 
     // TODO: put the constant coefficient used in the following somewhere to avoir writing them twice (in this class and in DrillCuts)

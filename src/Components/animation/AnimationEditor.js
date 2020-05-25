@@ -65,7 +65,7 @@ class AnimationEditor extends React.Component {
     var aWidth = cWidth * this.wRatio;
     var aHeight = cHeight * this.hRatio;
 
-    console.log('onLayout: aWidth/aHeight: ' + aWidth + '/' + aHeight);
+    debug('onLayout: aWidth/aHeight: ' + aWidth + '/' + aHeight);
 
     var playerRadius = Math.min(aWidth, aHeight) / 12;
     this.ddeTop = aHeight + 2.5 * playerRadius;
@@ -85,8 +85,8 @@ class AnimationEditor extends React.Component {
       draggableElements: prevState.draggableElements.concat(this.initialElements),
     }));
 
-    console.log('animationE onlayout top left position x/y: ' + e.nativeEvent.layout.x + '/' + e.nativeEvent.layout.y);
-    console.log('animationE onlayout w/h: ' + e.nativeEvent.layout.width + '/' + e.nativeEvent.layout.height);
+    debug('animationE onlayout top left position x/y: ' + e.nativeEvent.layout.x + '/' + e.nativeEvent.layout.y);
+    debug('animationE onlayout w/h: ' + e.nativeEvent.layout.width + '/' + e.nativeEvent.layout.height);
   };
 
   addElementToAnimation = (element, xDelta, yDelta) => {
@@ -188,7 +188,7 @@ class AnimationEditor extends React.Component {
     /* Get the dimension of the screen and then initialize the animation */
     var { height, width } = Dimensions.get('window');
 
-    console.log('screen h/w: ' + height + '/' + width);
+    debug('screen h/w: ' + height + '/' + width);
 
     this.saveAnimation(newAnimation);
   }

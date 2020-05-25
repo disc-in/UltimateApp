@@ -96,7 +96,6 @@ class Animation extends React.Component {
       this.state.animation,
       this.animationHeight,
       this.animationWidth,
-      this.state.currentStep,
       this._positionPercentToPixel,
       this.props.onCutMove,
     );

@@ -1041,10 +1041,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
                   }
                 }
               >
-                0
-                /
-                2
-                 trainings
+                0/2 trainings
               </Text>
               <View
                 style={

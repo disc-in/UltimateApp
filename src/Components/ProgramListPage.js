@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, View, FlatList } from 'react-native';
 import { connect } from 'react-redux';
 
+import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
 import Program from './programs/Program';
 import Button from './shared/Button';
@@ -20,7 +21,7 @@ export const ProgramListPage = props => {
       <View style={styles.seeAllContainer}>
         <Button
           onPress={() => props.navigation.navigate('TrainingListPage')}
-          text="See all trainings"
+          text={I18n.t('programListPage.allTrainings')}
           buttonLight="true"
           style={styles.allTrainings}
         />

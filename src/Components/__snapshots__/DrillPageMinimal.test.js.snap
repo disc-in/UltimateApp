@@ -2,6 +2,11 @@
 
 exports[`<DrillPageMinimal /> renders correctly with a training and a drill 1`] = `
 <RCTScrollView
+  contentContainerStyle={
+    Object {
+      "flexGrow": 1,
+    }
+  }
   style={
     Object {
       "backgroundColor": "#fff",
@@ -325,6 +330,57 @@ exports[`<DrillPageMinimal /> renders correctly with a training and a drill 1`] 
             }
           />
         </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "white",
+          "bottom": 0,
+          "paddingBottom": 20,
+          "paddingTop": 5,
+          "position": "absolute",
+          "width": "100%",
+        }
+      }
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#232b2b",
+            "borderRadius": 5,
+            "height": 40,
+            "justifyContent": "center",
+            "opacity": 1,
+            "padding": 10,
+            "width": "80%",
+          }
+        }
+        testID="button"
+      >
+        <Text
+          style={
+            Object {
+              "color": "#fff",
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
+        >
+          Next drill
+        </Text>
       </View>
     </View>
   </View>

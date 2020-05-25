@@ -3,9 +3,10 @@ import { Animated, View, StyleSheet, Text, Dimensions, TouchableOpacity, Image, 
 import GestureRecognizer from 'react-native-swipe-gestures';
 import { WebView } from 'react-native-webview';
 
+import I18n from '../utils/i18n';
 import Animation from './animation/Animation';
 import VimeoVideo from './VimeoVideo';
-import { IllustrationType, DrillTypes } from '../Fixtures';
+import { IllustrationType, DrillTypes } from '../Fixtures/config';
 import theme from '../styles/theme.style';
 import { swipeConfig } from '../styles/config';
 import iconRedo from '../../assets/redo_arrow.png';
@@ -68,7 +69,7 @@ const DrillIllustration = props => {
         <>
           <View style={styles.description}>
             <View style={styles.wrapperFinish}>
-              <Text style={styles.fitnessNext}>Finish</Text>
+              <Text style={styles.fitnessNext}>{I18n.t('drillIllustration.finish')}</Text>
             </View>
           </View>
           <View style={styles.lines} />
@@ -96,7 +97,7 @@ const DrillIllustration = props => {
     return (
       <>
         <View style={styles.containerFinish}>
-          <Text style={styles.redoMessage}>You have completed the drill!</Text>
+          <Text style={styles.redoMessage}>{I18n.t('drillIllustration.redoMessage')}</Text>
           <TouchableOpacity style={styles.redoButton} onPress={() => incrementStepIndex()}>
             <Image style={styles.redoImage} source={iconRedo} />
           </TouchableOpacity>

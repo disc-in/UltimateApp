@@ -4,18 +4,20 @@ import { render, fireEvent, cleanup } from 'react-native-testing-library';
 
 import HeaderButton from './HeaderButton';
 
+import buttonValidation from '../../../assets/check_dark.png';
+
 afterEach(cleanup);
 
 describe('<HeaderButton />', () => {
   it('renders correctly', () => {
-    const tree = renderer.create(<HeaderButton title="OK" />).toJSON();
+    const tree = renderer.create(<HeaderButton image={buttonValidation} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('calls delegates onPress prop', async () => {
     const onPress = jest.fn();
 
-    const { getByTestId } = render(<HeaderButton title="Easy" onPress={onPress} />);
+    const { getByTestId } = render(<HeaderButton onPress={onPress} />);
 
     await fireEvent.press(getByTestId('headerButton'));
 

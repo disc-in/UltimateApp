@@ -3,6 +3,7 @@ import { StyleSheet, Easing, Animated, Dimensions, View, TouchableOpacity, Image
 
 import DisplayedElement from './DisplayedElement';
 import DrillCuts from './DrillCuts';
+import DisplayedCuts from './DisplayedCuts';
 import ProgressBar from './ProgressBar';
 import Drill from './Drill';
 
@@ -91,14 +92,13 @@ class Animation extends React.Component {
   /** Create the cuts associated to each step of the animation */
   _initializeCuts() {
     debug('initialize cut');
-    this.cuts = new DrillCuts({
-      animation: this.state.animation,
-      animationHeight: this.animationHeight,
-      animationWidth: this.animationWidth,
-      currentStep: this.state.currentStep,
-      positionPercentToPixel: this._positionPercentToPixel,
-      onMoveEnd: this.props.onCutMove,
-    });
+    this.cuts = new DrillCuts(
+      this.state.animation,
+      this.animationHeight,
+      this.animationWidth,
+      this._positionPercentToPixel,
+      this.props.onCutMove,
+    );
     this.cuts.log();
   }
 
@@ -371,37 +371,15 @@ class Animation extends React.Component {
   }
 
   render() {
-    // debug("render a");
-
-    //	if(this.state.animation.positions.length > 0 && this.state.animation.positions[0] != undefined)
-    //	debug("render a2, elem count: " + this.state.animation.positions[0].length);
-
-    //	if(this.state.animation.positions.length > 0)
-    //	    debug("\telem count: " + this.state.animation.positions[0].length);
-    //        debug("render h/w: " + this.animationHeight + "/" + this.animationWidth);
     this.cutsArray = [];
-    //  if(this.state.animation !== undefined && this.state.animation !== null){
-    //    debug("animation a1: ");
-    //   this.state.animation.log()
-    //}
-    //else
-    //    debug("animation a2: " + this.state.animation);
-
-    //  if(this.cuts !== undefined && this.cuts !== null){
-    //    debug("cuts a1: ");
-    //    this.cuts.log();
-    //  }
-    //  else
-    //    debug("cuts a2: " + this.cuts);
-
-    if (this.cuts !== undefined && this.cuts !== null) {
-      this.cuts.props.currentStep = Math.floor(this.state.currentStep);
-      this.cutsArray.push(this.cuts);
-    }
 
     return (
       <View style={[styles.mainContainer, { height: this.animationHeight }, { width: this.animationWidth }]}>
-        {this.props.editable && this._display(this.cuts)}
+        {this.props.editable && this.cuts !== undefined && this.cuts !== null ? (
+          <DisplayedCuts step={this.state.currentStep} drillCuts={this.cuts} />
+        ) : (
+          undefined
+        )}
         {this.state.displayedElements === undefined || this.state.displayedElements === null ? (
           <View />
         ) : (

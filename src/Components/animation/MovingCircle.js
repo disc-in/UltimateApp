@@ -64,7 +64,6 @@ class MovingCircle extends React.Component {
 
     debug('toString(): ' + this.props.cx.toString());
 
-    /* stroke="green" */
     return (
       <Animated.View
         {...this.panResponder.panHandlers}
@@ -73,21 +72,16 @@ class MovingCircle extends React.Component {
           { position: 'absolute' },
           { left: this.props.cx - this.props.radius },
           { top: this.props.cy - this.props.radius },
+          { height: 20 },
+          { width: 20 },
+          { borderRadius: 15 },
+          { borderWidth: 1 },
+          { borderColor: 'green' },
+          { backgroundColor: 'white' },
         ]}
         height={2 * this.props.radius}
         width={2 * this.props.radius}
-      >
-        <Svg style={[StyleSheet.absoluteFill]}>
-          <Circle
-            cx={this.props.radius}
-            cy={this.props.radius}
-            r={this.props.radius}
-            strokeWidth={this.props.radius / 6}
-            strokeDasharray="3, 3"
-            fill="white"
-          />
-        </Svg>
-      </Animated.View>
+      />
     );
   }
 }

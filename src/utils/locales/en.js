@@ -44,10 +44,17 @@ export default {
     },
   },
   homePage: {
-    frisbeeDrills: 'Frisbee Drills',
-    fitnessDrills: 'Fitness Drills',
-    programs: 'Training programs',
-    editor: 'Animation Editor',
+    frisbeeTab: 'Frisbee',
+    fitnessTab: 'Fitness',
+    theory: 'Theory',
+    drills: 'Drills',
+    programs: 'Practice Programs',
+    leanTitle: 'Lean Fit',
+    leanSubtitle: 'Get lean and fit over 6 weeks with a balanced plan that builds endurance',
+    bodyweightTitle: 'Bodywaight only',
+    bodyweightSubtitle: 'Push your strenght and improve muscle tone over the season - all without weights',
+    gymTitle: 'Gym Strong',
+    gymSubtitle: 'Build full-body strenght with a focus on weight training over the season',
   },
   animationEditor: {
     comingSoon: {

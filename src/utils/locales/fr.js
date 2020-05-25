@@ -44,10 +44,17 @@ export default {
     },
   },
   homePage: {
-    frisbeeDrills: 'Exercices de Frisbee',
-    fitnessDrills: 'Exercices de Fitness',
+    frisbeeTab: 'Frisbee',
+    fitnessTab: 'Fitness',
+    theory: 'Théorie',
+    drills: 'Exercices',
     programs: "Programmes d'entraînement",
-    editor: 'Editeur de drills',
+    leanTitle: 'Affuté',
+    leanSubtitle: 'Préparez-vous en 6 semaines avec un programme équilibré pour votre endurance',
+    bodyweightTitle: 'Poids du corps',
+    bodyweightSubtitle: 'Gagnez en force et en tonus musculaire - juste avec le poids du corps',
+    gymTitle: 'En salle',
+    gymSubtitle: 'Un programme conçu pour développer la force pendant la saison',
   },
   animationEditor: {
     comingSoon: {

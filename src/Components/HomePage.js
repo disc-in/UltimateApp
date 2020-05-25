@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Text, ImageBackground, TouchableHighlight } from 'react-native';
 
+import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
 import frisbeeGlove from '../../assets/HomePage/frisbeeglove.jpg';
 import bodyweight from '../../assets/HomePage/bodyweight.jpg';
@@ -8,7 +9,7 @@ import gymstrong from '../../assets/HomePage/gymstrong.jpg';
 import leanfit from '../../assets/HomePage/leanfit.jpg';
 import simulator from '../../assets/HomePage/simulator.jpg';
 import huddle from '../../assets/HomePage/huddle.png';
-import { DrillTypes } from '../Fixtures';
+import { DrillTypes } from '../Fixtures/config';
 
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
@@ -21,7 +22,7 @@ const HomeScreen = props => {
       <TouchableHighlight onPress={() => props.navigation.navigate('AnimationEditorPage')} style={styles.menuItem}>
         <ImageBackground source={simulator} style={styles.image}>
           <View style={styles.wrapper}>
-            <Text style={styles.text}>Theory</Text>
+            <Text style={styles.text}>{I18n.t('homePage.theory')}</Text>
           </View>
         </ImageBackground>
       </TouchableHighlight>
@@ -31,14 +32,14 @@ const HomeScreen = props => {
       >
         <ImageBackground source={frisbeeGlove} style={styles.image}>
           <View style={styles.wrapper}>
-            <Text style={styles.text}>Drills</Text>
+            <Text style={styles.text}>{I18n.t('homePage.drills')}</Text>
           </View>
         </ImageBackground>
       </TouchableHighlight>
       <TouchableHighlight onPress={() => props.navigation.navigate('ProgramListPage')} style={styles.menuItem}>
         <ImageBackground source={huddle} style={styles.image}>
           <View style={styles.wrapper}>
-            <Text style={styles.text}>Practices programs</Text>
+            <Text style={styles.text}>{I18n.t('homePage.programs')}</Text>
           </View>
         </ImageBackground>
       </TouchableHighlight>
@@ -55,11 +56,9 @@ const Fitness = props => {
       >
         <ImageBackground source={leanfit} style={styles.image}>
           <View style={styles.wrapperCenter}>
-            <Text style={styles.titleCenter}>LEAN FIT</Text>
+            <Text style={styles.titleCenter}>{I18n.t('homePage.leanTitle')}</Text>
             <View style={styles.description}>
-              <Text style={styles.textFitness}>
-                Get lean and fit over 6 weeks with a balanced plan that builds endurance
-              </Text>
+              <Text style={styles.textFitness}>{I18n.t('homePage.leanSubtitle')}</Text>
             </View>
           </View>
         </ImageBackground>
@@ -70,11 +69,9 @@ const Fitness = props => {
       >
         <ImageBackground source={bodyweight} style={styles.image}>
           <View style={styles.wrapperCenter}>
-            <Text style={styles.titleCenter}>BODYWEIGHT ONLY</Text>
+            <Text style={styles.titleCenter}>{I18n.t('homePage.bodyweightTitle')}</Text>
             <View style={styles.description}>
-              <Text style={styles.textFitness}>
-                Push your strenght and improve muscle tone over the season - all without weights
-              </Text>
+              <Text style={styles.textFitness}>{I18n.t('homePage.bodyweightSubtitle')}</Text>
             </View>
           </View>
         </ImageBackground>
@@ -85,11 +82,9 @@ const Fitness = props => {
       >
         <ImageBackground source={gymstrong} style={styles.image}>
           <View style={styles.wrapperCenter}>
-            <Text style={styles.titleCenter}>GYM STRONG</Text>
+            <Text style={styles.titleCenter}>{I18n.t('homePage.gymTitle')}</Text>
             <View style={styles.description}>
-              <Text style={styles.textFitness}>
-                Build full-body strenght with a focus on weight training over the season
-              </Text>
+              <Text style={styles.textFitness}>{I18n.t('homePage.gymSubtitle')}</Text>
             </View>
           </View>
         </ImageBackground>
@@ -110,7 +105,7 @@ export default function HomePage(props) {
         name="Frisbee"
         component={HomeScreen}
         options={{
-          tabBarLabel: 'Frisbee',
+          tabBarLabel: I18n.t('homePage.frisbeeTab'),
           tabBarIcon: ({ color }) => <Ionicons name="ios-radio-button-off" color={color} size={26} />,
         }}
       />
@@ -118,7 +113,7 @@ export default function HomePage(props) {
         name="Fitness"
         component={Fitness}
         options={{
-          tabBarLabel: 'Fitness',
+          tabBarLabel: I18n.t('homePage.fitnessTab'),
           tabBarIcon: ({ color }) => <Ionicons name="ios-fitness" color={color} size={26} />,
         }}
       />

@@ -379,7 +379,27 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
         }
       }
     >
-      <View />
+      <View>
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <Text />
+        </View>
+      </View>
       <Text
         style={
           Object {
@@ -390,7 +410,27 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
           }
         }
       />
-      <View />
+      <View>
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <Text />
+        </View>
+      </View>
     </View>
     <View
       style={
@@ -856,6 +896,19 @@ exports[`<DrillIllustration /> renders correctly for a drill with animation 1`] 
         />
       </View>
     </View>
+    <Text
+      style={
+        Object {
+          "alignItems": "center",
+          "color": "#232b2b",
+          "fontSize": 16,
+          "justifyContent": "center",
+          "marginBottom": 20,
+          "marginLeft": 20,
+          "marginTop": 20,
+        }
+      }
+    />
   </View>
 </View>
 `;

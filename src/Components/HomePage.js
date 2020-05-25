@@ -11,7 +11,6 @@ import huddle from '../../assets/HomePage/huddle.png';
 import { DrillTypes } from '../Fixtures';
 
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { Ionicons } from '@expo/vector-icons';
 
 const Tab = createMaterialBottomTabNavigator();

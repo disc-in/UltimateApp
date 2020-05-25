@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Text, ImageBackground, TouchableOpacity, FlatList } from 'react-native';
 
+import I18n from '../utils/i18n';
 import { getTrainingDuration, getTrainingMinimalPlayersNumber } from './TrainingPage';
 import { connect } from 'react-redux';
 import theme from '../styles/theme.style';
@@ -28,7 +29,9 @@ export const TrainingListPage = props => {
       <TouchableOpacity style={list.item} onPress={() => navigation.navigate('TrainingPage', { training: item })}>
         <ImageBackground source={{ uri: image }} style={list.image} imageStyle={list.imageOpacity}>
           <Text style={list.imageText}>{convertMinsToTime(getTrainingDuration(item))}</Text>
-          <Text style={list.imageText}>{getTrainingMinimalPlayersNumber(item)}+ players</Text>
+          <Text style={list.imageText}>
+            {I18n.t('trainingListPage.players', { count: getTrainingMinimalPlayersNumber(item) })}
+          </Text>
         </ImageBackground>
         <View style={list.itemContentContainer}>
           <Text style={list.source}>{source}</Text>
@@ -41,7 +44,7 @@ export const TrainingListPage = props => {
 
   return (
     <View style={styles.trainingListPage}>
-      <Text style={list.counter}>{data.length} training sessions available</Text>
+      <Text style={list.counter}>{I18n.t('trainingListPage.availableTrainings', { count: data.length })}</Text>
       <FlatList data={data} keyExtractor={item => item.id.toString()} renderItem={renderTraining} />
     </View>
   );

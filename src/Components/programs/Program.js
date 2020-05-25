@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, TouchableOpacity, View, Text, Image } from 'react-native';
 import { connect } from 'react-redux';
 
+import I18n from '../../utils/i18n';
 import theme from '../../styles/theme.style';
 import ListItem from '../shared/ListItem';
 import arrowDark from '../../../assets/arrow_dark.png';
@@ -24,7 +25,7 @@ export const Program = props => {
         <View style={styles.presentationContainer}>
           <Text style={styles.programTitle}>{title}</Text>
           <Text style={styles.completion}>
-            {completeTrainingsCount}/{trainings.length} trainings
+            {I18n.t('programs.program.completion', { done: completeTrainingsCount, total: trainings.length })}
             {completeTrainingsCount === trainings.length && ' 👍🎉'}
           </Text>
           <View style={styles.progressBar}>

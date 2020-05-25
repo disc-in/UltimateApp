@@ -43,6 +43,15 @@ export default {
       [Intensities.HIGH]: 'High',
     },
   },
+  navigation: {
+    homePage: 'Disc In',
+    drillListPage: '{{type}} drills',
+    filters: 'Filters',
+    trainingListPage: 'Training sessions',
+    programListPage: 'Choose a program',
+    drillPageMinimal: '{{training}} drills',
+    animationEditorPage: 'New Drill',
+  },
   homePage: {
     frisbeeTab: 'Frisbee',
     fitnessTab: 'Fitness',

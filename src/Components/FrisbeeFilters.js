@@ -1,26 +1,45 @@
 import React from 'react';
 import { ScrollView, View, Text } from 'react-native';
 import { connect } from 'react-redux';
+
+import I18n from '../utils/i18n';
 import filterStyle from '../styles/filters.style';
-import { Levels } from '../Fixtures';
+import { Levels } from '../Fixtures/config';
 import Button from './filters/FilterButton';
 import Checkbox from './filters/Checkbox';
 import Slider from './filters/Slider';
 import HeaderButton from './shared/HeaderButton';
+import iconRedo from '../../assets/redo_arrow.png';
+import buttonValidation from '../../assets/check_dark.png';
 
 export class FrisbeeFilters extends React.Component {
   constructor(props) {
     super(props);
 
+    const { filters, initialData } = props.route.params;
     this.state = {
-      selectedFavorites: false,
-      selectedLevels: [],
-      selectedGoals: [],
-      numberOfPlayers: undefined,
-      displayedDrills: this.props.route.params.initialData,
+      selectedFavorites: filters?.selectedFavorites || false,
+      selectedLevels: filters?.selectedLevels || [],
+      selectedGoals: filters?.selectedGoals || [],
+      numberOfPlayers: filters?.numberOfPlayers || undefined,
+      displayedDrills: filters?.displayedDrills || initialData,
     };
 
     this.onNumberOfPlayersChange = this.onSliderChange.bind(this, 'numberOfPlayers');
+  }
+
+  resetFilters() {
+    this.setState(
+      {
+        selectedFavorites: false,
+        selectedLevels: [],
+        selectedGoals: [],
+        numberOfPlayers: undefined,
+      },
+      () => {
+        this.applyFilters(this.validateFilters);
+      },
+    );
   }
 
   onFavoritesChange() {
@@ -46,7 +65,7 @@ export class FrisbeeFilters extends React.Component {
     this.setState({ [target]: value }, this.applyFilters);
   }
 
-  applyFilters() {
+  applyFilters(callback = () => {}) {
     const { favoriteDrills } = this.props;
     const { selectedFavorites, selectedLevels, selectedGoals, numberOfPlayers } = this.state;
     let newData = this.props.route.params.initialData;
@@ -60,20 +79,23 @@ export class FrisbeeFilters extends React.Component {
       newData = newData.filter(drill => drill.goals.filter(goal => selectedGoals.includes(goal)).length > 0);
     if (numberOfPlayers) newData = newData.filter(drill => drill.minimalPlayersNumber <= numberOfPlayers);
 
-    this.setState({ displayedDrills: newData });
+    this.setState({ displayedDrills: newData }, callback);
+  }
+
+  validateFilters() {
+    this.props.navigation.navigate(this.props.route.params.previousScreen, {
+      type: this.props.route.params.previousType,
+      currentFilters: this.state,
+    });
   }
 
   componentDidMount() {
     this.props.navigation.setOptions({
       headerRight: () => (
-        <HeaderButton
-          onPress={() => {
-            this.props.navigation.navigate(this.props.route.params.previousScreen, {
-              filteredDrills: this.state.displayedDrills,
-              type: this.props.route.params.previousType,
-            });
-          }}
-        />
+        <View style={{ flexDirection: 'row' }}>
+          <HeaderButton image={iconRedo} onPress={() => this.resetFilters()} testID="resetButton" />
+          <HeaderButton image={buttonValidation} onPress={() => this.validateFilters()} testID="validateButton" />
+        </View>
       ),
     });
   }
@@ -82,23 +104,29 @@ export class FrisbeeFilters extends React.Component {
     const { selectedFavorites, selectedLevels, selectedGoals, numberOfPlayers } = this.state;
     return (
       <View style={filterStyle.wrapper}>
-        <Text style={filterStyle.counter}>{this.state.displayedDrills.length} drills available</Text>
+        <Text style={filterStyle.counter}>
+          {I18n.t('drillListPage.availableDrills', { count: this.state.displayedDrills.length })}
+        </Text>
         <ScrollView contentContainerStyle={filterStyle.filters}>
           <View style={filterStyle.filter}>
-            <Button title="Favorites only" onPress={() => this.onFavoritesChange()} active={selectedFavorites} />
+            <Button
+              title={I18n.t('fitnessFilters.favorites')}
+              onPress={() => this.onFavoritesChange()}
+              active={selectedFavorites}
+            />
           </View>
-          <Text style={filterStyle.filterTitle}>Level</Text>
+          <Text style={filterStyle.filterTitle}>{I18n.t('fitnessFilters.level')}</Text>
           <View style={filterStyle.filter}>
             {Object.values(Levels).map(level => (
               <Button
-                title={level}
+                title={I18n.t(`data.levels.${level}`)}
                 onPress={() => this.onPressedChange('selectedLevels', level)}
                 key={level}
                 active={selectedLevels.includes(level)}
               />
             ))}
           </View>
-          <Text style={filterStyle.filterTitle}>Goals</Text>
+          <Text style={filterStyle.filterTitle}>{I18n.t('fitnessFilters.goals')}</Text>
           <View style={filterStyle.filter}>
             {this.props.route.params.initialData
               .map(drill => drill.goals)
@@ -106,14 +134,16 @@ export class FrisbeeFilters extends React.Component {
               .filter((goal, index, array) => array.indexOf(goal) === index)
               .map(goal => (
                 <Checkbox
-                  title={goal}
+                  title={I18n.t(`data.frisbeeGoals.${goal}`)}
                   onPress={() => this.onPressedChange('selectedGoals', goal)}
                   key={goal}
                   active={selectedGoals.includes(goal)}
                 />
               ))}
           </View>
-          <Text style={filterStyle.filterTitle}>Number of players: {numberOfPlayers || '-'}</Text>
+          <Text style={filterStyle.filterTitle}>
+            {I18n.t('frisbeeFilters.numberOfPlayersLabel', { number: numberOfPlayers || '-' })}
+          </Text>
           <Slider
             minimumValue={1}
             maximumValue={30}

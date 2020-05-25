@@ -48,13 +48,13 @@ class AnimationEditor extends React.Component {
   };
 
   onLayout = e => {
-    var cHeight = e.nativeEvent.layout.height;
-    var cWidth = e.nativeEvent.layout.width;
+    var editorHeight = e.nativeEvent.layout.height;
+    var editorWidth = e.nativeEvent.layout.width;
 
     //TODO see why this is needed...
     this.setState({
-      width: cWidth,
-      height: cHeight,
+      width: editorWidth,
+      height: editorHeight,
       dTop: e.nativeEvent.layout.y,
       dLeft: e.nativeEvent.layout.x,
     });
@@ -62,24 +62,24 @@ class AnimationEditor extends React.Component {
     // Create the elements in the horizontal bar
     this.initialElements = [];
 
-    var aWidth = cWidth * this.wRatio;
-    var aHeight = cHeight * this.hRatio;
+    var animationWidth = editorWidth * this.wRatio;
+    var animationHeight = editorHeight * this.hRatio;
 
-    debug('onLayout: aWidth/aHeight: ' + aWidth + '/' + aHeight);
+    debug('onLayout: animationWidth/animationHeight: ' + animationWidth + '/' + animationHeight);
 
-    var playerRadius = Math.min(aWidth, aHeight) / 12;
-    this.ddeTop = aHeight + 2.5 * playerRadius;
-    this.ddeLeft = Array(4);
+    var playerRadius = Math.min(animationWidth, animationHeight) / 12;
+    this.draggableElementsTop = animationHeight + 2.5 * playerRadius;
+    this.draggableElementsLeft = Array(4);
 
-    this.ddeLeft[0] = (1 * aWidth) / 5 - playerRadius / 2;
-    this.ddeLeft[1] = (2 * aWidth) / 5 - playerRadius / 2;
-    this.ddeLeft[2] = (3 * aWidth) / 5 - playerRadius / 2;
-    this.ddeLeft[3] = (4 * aWidth) / 5 - playerRadius / 2;
+    this.draggableElementsLeft[0] = (1 * animationWidth) / 5 - playerRadius / 2;
+    this.draggableElementsLeft[1] = (2 * animationWidth) / 5 - playerRadius / 2;
+    this.draggableElementsLeft[2] = (3 * animationWidth) / 5 - playerRadius / 2;
+    this.draggableElementsLeft[3] = (4 * animationWidth) / 5 - playerRadius / 2;
 
-    this.initialElements.push(this._createDE('offense', playerRadius, this.ddeTop, this.ddeLeft[0]));
-    this.initialElements.push(this._createDE('defense', playerRadius, this.ddeTop, this.ddeLeft[1]));
-    this.initialElements.push(this._createDE('disc', playerRadius, this.ddeTop, this.ddeLeft[2]));
-    this.initialElements.push(this._createDE('triangle', playerRadius, this.ddeTop, this.ddeLeft[3]));
+    this.initialElements.push(this._createDraggableElements('offense', playerRadius, this.draggableElementsTop, this.draggableElementsLeft[0]));
+    this.initialElements.push(this._createDraggableElements('defense', playerRadius, this.draggableElementsTop, this.draggableElementsLeft[1]));
+    this.initialElements.push(this._createDraggableElements('disc', playerRadius, this.draggableElementsTop, this.draggableElementsLeft[2]));
+    this.initialElements.push(this._createDraggableElements('triangle', playerRadius, this.draggableElementsTop, this.draggableElementsLeft[3]));
 
     this.setState(prevState => ({
       draggableElements: prevState.draggableElements.concat(this.initialElements),
@@ -101,26 +101,26 @@ class AnimationEditor extends React.Component {
 
     switch (element.props.id) {
       case 'offense':
-        x = this.ddeLeft[0];
-        y = this.ddeTop;
+        x = this.draggableElementsLeft[0];
+        y = this.draggableElementsTop;
         elementNumber = this.offenseCount;
         this.offenseCount++;
         this.state.draggableElements[0].setNumber(this.offenseCount);
         break;
       case 'defense':
-        x = this.ddeLeft[1];
-        y = this.ddeTop;
+        x = this.draggableElementsLeft[1];
+        y = this.draggableElementsTop;
         elementNumber = this.defenseCount;
         this.defenseCount++;
         this.state.draggableElements[1].setNumber(this.defenseCount);
         break;
       case 'triangle':
-        x = this.ddeLeft[2];
-        y = this.ddeTop;
+        x = this.draggableElementsLeft[2];
+        y = this.draggableElementsTop;
         break;
       case 'disc':
-        x = this.ddeLeft[3];
-        y = this.ddeTop;
+        x = this.draggableElementsLeft[3];
+        y = this.draggableElementsTop;
         break;
     }
 
@@ -295,7 +295,7 @@ class AnimationEditor extends React.Component {
     });
   };
 
-  _createDE(deType, playerRadius, top, left) {
+  _createDraggableElements(deType, playerRadius, top, left) {
     var text = '';
 
     var key = 600;

@@ -64,11 +64,7 @@ class DisplayedCuts extends React.Component {
   render() {
     return (
       <Animated.View key="1" style={[{ position: 'absolute', left: 0, top: 0 }]} height="100%" width="100%">
-        {this.props.drillCuts.cuts.length >= this.props.step &&
-        this.props.drillCuts.cuts[this.props.step] !== undefined &&
-        this.props.drillCuts.cuts[this.props.step] !== null
-          ? this.props.drillCuts.cuts[this.props.step].map(this._displayCut)
-          : undefined}
+        {this.props.drillCuts.cuts[this.props.step]?.map(this._displayCut)}
       </Animated.View>
     );
   }

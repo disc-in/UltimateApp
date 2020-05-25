@@ -15,13 +15,15 @@ import { useHeaderHeight } from '@react-navigation/stack';
 
 import I18n from '../utils/i18n';
 import GradientButton from './shared/GradientButton';
-import DrillIllustration from './DrillIllustration';
 import { toggleFavorite } from '../Store/Actions/favoriteAction';
 
 import theme from '../styles/theme.style';
 
 import iconFavoriteEmpty from '../../assets/ic_favorite_border_bookmark.png';
 import iconFavoriteFull from '../../assets/ic_favorite_bookmark.png';
+import FitnessDrillIllustration from './FitnessDrillIllustration';
+import FrisbeeDrillIllustration from './FrisbeeDrillAnimation';
+import { DrillTypes } from '../Fixtures/config';
 
 export const DrillPage = props => {
   const { route, navigation } = props;
@@ -66,6 +68,14 @@ export const DrillPage = props => {
       headerRight: () => displayFavoriteButton(),
     }),
   );
+
+  const typeSwitch = () => {
+    if (drill.type === DrillTypes.FRISBEE) {
+      return <FrisbeeDrillIllustration drill={drill} />;
+    } else {
+      return <FitnessDrillIllustration drill={drill} />;
+    }
+  };
 
   return (
     <ScrollView ref={drillScrollView} style={styles.drillPage}>
@@ -114,7 +124,7 @@ export const DrillPage = props => {
         </View>
       </View>
       <View ref={firstDrill} style={styles.animation}>
-        <DrillIllustration drill={drill} />
+        {typeSwitch()}
       </View>
     </ScrollView>
   );

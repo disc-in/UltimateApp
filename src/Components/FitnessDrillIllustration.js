@@ -1,24 +1,23 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Animated, View, StyleSheet, Text, Dimensions, TouchableOpacity, Image, SafeAreaView } from 'react-native';
+import { Animated, View, StyleSheet, Text, Dimensions, TouchableOpacity, Image } from 'react-native';
 import GestureRecognizer from 'react-native-swipe-gestures';
 import { WebView } from 'react-native-webview';
 
 import I18n from '../utils/i18n';
 import Animation from './animation/Animation';
 import VimeoVideo from './VimeoVideo';
-import { IllustrationType, DrillTypes } from '../Fixtures/config';
+import { IllustrationType } from '../Fixtures/config';
 import theme from '../styles/theme.style';
 import { swipeConfig } from '../styles/config';
 import iconRedo from '../../assets/redo_arrow.png';
 import buttonValidation from '../../assets/button_validation_ultra_light.png';
 import buttonValidationGradient from '../../assets/button_validation_gradient.png';
 import { Easing } from 'react-native-reanimated';
-import Carousel, { Pagination } from 'react-native-snap-carousel';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const screenDimension = Dimensions.get('window');
 
-const DrillIllustration = props => {
+const FitnessDrillIllustration = props => {
   const [activeIndex, setActiveIndex] = useState(0);
   const opacityUnchecked = useRef(new Animated.Value(1)).current;
   const opacityChecked = opacityUnchecked.interpolate({ inputRange: [0, 1], outputRange: [1, 0] });
@@ -69,7 +68,7 @@ const DrillIllustration = props => {
         <>
           <View style={styles.description}>
             <View style={styles.wrapperFinish}>
-              <Text style={styles.fitnessNext}>{I18n.t('drillIllustration.finish')}</Text>
+              <Text style={styles.fitnessNext}>{I18n.t('FitnessDrillIllustration.finish')}</Text>
             </View>
           </View>
           <View style={styles.lines} />
@@ -97,7 +96,7 @@ const DrillIllustration = props => {
     return (
       <>
         <View style={styles.containerFinish}>
-          <Text style={styles.redoMessage}>{I18n.t('drillIllustration.redoMessage')}</Text>
+          <Text style={styles.redoMessage}>{I18n.t('FitnessDrillIllustration.redoMessage')}</Text>
           <TouchableOpacity style={styles.redoButton} onPress={() => incrementStepIndex()}>
             <Image style={styles.redoImage} source={iconRedo} />
           </TouchableOpacity>
@@ -260,74 +259,11 @@ const DrillIllustration = props => {
     );
   };
 
-  const renderStep = ({ item, index }) => {
-    if (!currentStep) {
-      return <View />; // bad state, but let's not crash
-    } else {
-      switch (item.illustrationType) {
-        case IllustrationType.ANIMATION:
-          return displayAnimation(item, index);
-        case IllustrationType.YOUTUBE:
-          return displayYoutube(item);
-        case IllustrationType.VIMEO:
-          return displayVimeo(item);
-        default:
-          return <Text>No visual content for this drill</Text>;
-      }
-    }
-  };
-
-  const pagination = () => {
-    return (
-      <Pagination
-        dotsLength={props.drill.steps.length}
-        activeDotIndex={activeIndex}
-        containerStyle={{
-          backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
-          paddingVertical: 0,
-        }}
-        dotStyle={{
-          width: 8,
-          height: 8,
-          borderRadius: 5,
-          marginHorizontal: 5,
-          backgroundColor: theme.GRADIENT_FIRST_COLOR,
-        }}
-        inactiveDotStyle={{
-          backgroundColor: theme.COLOR_SECONDARY,
-        }}
-        inactiveDotOpacity={0.4}
-        inactiveDotScale={0.6}
-      />
-    );
-  };
-
-  const drillTypes = () => {
-    if (props.drill.type === DrillTypes.FRISBEE) {
-      return (
-        <SafeAreaView style={styles.container}>
-          <Carousel
-            layout="default"
-            ref={carouselRef}
-            data={props.drill.steps}
-            sliderWidth={screenDimension.width}
-            itemWidth={screenDimension.width}
-            renderItem={renderStep}
-            onSnapToItem={index => setActiveIndex(index)}
-          />
-          <View style={styles.pagination}>{pagination()}</View>
-        </SafeAreaView>
-      );
-    } else {
-      return (
-        <GestureRecognizer style={styles.container} onSwipeLeft={checkAnimationFast} config={swipeConfig}>
-          {checkSwitch()}
-        </GestureRecognizer>
-      );
-    }
-  };
-
-  return <View style={styles.container}>{drillTypes()}</View>;
+  return (
+    <GestureRecognizer style={styles.container} onSwipeLeft={checkAnimationFast} config={swipeConfig}>
+      {checkSwitch()}
+    </GestureRecognizer>
+  );
 };
 
 const styles = StyleSheet.create({
@@ -465,4 +401,4 @@ const styles = StyleSheet.create({
   animation: { flex: 9 },
 });
 
-export default DrillIllustration;
+export default FitnessDrillIllustration;

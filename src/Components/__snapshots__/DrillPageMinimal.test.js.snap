@@ -102,6 +102,26 @@ exports[`<DrillPageMinimal /> renders correctly with a training and a drill 1`] 
       }
     >
       <View
+        config={
+          Object {
+            "directionalOffsetThreshold": 80,
+            "gestureIsClickThreshold": 10,
+            "velocityThreshold": 0.3,
+          }
+        }
+        onMoveShouldSetResponder={[Function]}
+        onMoveShouldSetResponderCapture={[Function]}
+        onResponderEnd={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderReject={[Function]}
+        onResponderRelease={[Function]}
+        onResponderStart={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        onStartShouldSetResponderCapture={[Function]}
+        onSwipeLeft={[Function]}
         style={
           Object {
             "flex": 1,
@@ -109,227 +129,199 @@ exports[`<DrillPageMinimal /> renders correctly with a training and a drill 1`] 
         }
       >
         <View
-          config={
-            Object {
-              "directionalOffsetThreshold": 80,
-              "gestureIsClickThreshold": 10,
-              "velocityThreshold": 0.3,
-            }
-          }
-          onMoveShouldSetResponder={[Function]}
-          onMoveShouldSetResponderCapture={[Function]}
-          onResponderEnd={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderReject={[Function]}
-          onResponderRelease={[Function]}
-          onResponderStart={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          onStartShouldSetResponderCapture={[Function]}
-          onSwipeLeft={[Function]}
           style={
             Object {
-              "flex": 1,
+              "height": 250,
             }
           }
         >
           <View
             style={
-              Object {
-                "height": 250,
-              }
+              Array [
+                Object {
+                  "flex": 1,
+                  "overflow": "hidden",
+                },
+                undefined,
+              ]
             }
           >
-            <View
+            <RNCWebView
+              cacheEnabled={true}
+              javaScriptEnabled={true}
+              messagingEnabled={false}
+              onContentProcessDidTerminate={[Function]}
+              onHttpError={[Function]}
+              onLoadingError={[Function]}
+              onLoadingFinish={[Function]}
+              onLoadingProgress={[Function]}
+              onLoadingStart={[Function]}
+              onMessage={[Function]}
+              onShouldStartLoadWithRequest={[Function]}
+              source={
+                Object {
+                  "uri": "https://www.youtube.com/embed/JkVHrA5o23o",
+                }
+              }
               style={
                 Array [
                   Object {
                     "flex": 1,
                     "overflow": "hidden",
                   },
+                  Object {
+                    "backgroundColor": "#ffffff",
+                  },
                   undefined,
                 ]
               }
-            >
-              <RNCWebView
-                cacheEnabled={true}
-                javaScriptEnabled={true}
-                messagingEnabled={false}
-                onContentProcessDidTerminate={[Function]}
-                onHttpError={[Function]}
-                onLoadingError={[Function]}
-                onLoadingFinish={[Function]}
-                onLoadingProgress={[Function]}
-                onLoadingStart={[Function]}
-                onMessage={[Function]}
-                onShouldStartLoadWithRequest={[Function]}
-                source={
-                  Object {
-                    "uri": "https://www.youtube.com/embed/JkVHrA5o23o",
-                  }
-                }
-                style={
-                  Array [
-                    Object {
-                      "flex": 1,
-                      "overflow": "hidden",
-                    },
-                    Object {
-                      "backgroundColor": "#ffffff",
-                    },
-                    undefined,
-                  ]
-                }
-                useSharedProcessPool={true}
-              />
-            </View>
+              useSharedProcessPool={true}
+            />
           </View>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "paddingBottom": 2,
+            }
+          }
+        >
           <View
             style={
               Object {
+                "alignSelf": "flex-end",
                 "flexDirection": "row",
-                "paddingBottom": 2,
               }
             }
           >
             <View
               style={
                 Object {
-                  "alignSelf": "flex-end",
                   "flexDirection": "row",
+                  "justifyContent": "space-between",
                 }
               }
             >
               <View
                 style={
                   Object {
-                    "flexDirection": "row",
-                    "justifyContent": "space-between",
+                    "flex": 6,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#232b2b",
+                      "fontSize": 20,
+                      "fontWeight": "bold",
+                      "marginBottom": 20,
+                      "marginLeft": 20,
+                      "marginTop": 20,
+                    }
+                  }
+                >
+                  Warmup
+                </Text>
+              </View>
+              <View
+                accessible={true}
+                focusable={true}
+                isTVSelectable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "flex": 1,
+                    "opacity": 1,
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "flex": 6,
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#232b2b",
-                        "fontSize": 20,
-                        "fontWeight": "bold",
-                        "marginBottom": 20,
-                        "marginLeft": 20,
-                        "marginTop": 20,
-                      }
-                    }
-                  >
-                    Warmup
-                  </Text>
-                </View>
-                <View
-                  accessible={true}
-                  focusable={true}
-                  isTVSelectable={true}
-                  onClick={[Function]}
-                  onResponderGrant={[Function]}
-                  onResponderMove={[Function]}
-                  onResponderRelease={[Function]}
-                  onResponderTerminate={[Function]}
-                  onResponderTerminationRequest={[Function]}
-                  onStartShouldSetResponder={[Function]}
-                  style={
-                    Object {
-                      "flex": 1,
                       "opacity": 1,
                     }
                   }
                 >
-                  <View
+                  <Image
+                    source={1}
                     style={
                       Object {
-                        "opacity": 1,
+                        "alignItems": "center",
+                        "backgroundColor": "#fff",
+                        "borderColor": "#d5d5d5",
+                        "borderRadius": 12.5,
+                        "borderWidth": 1,
+                        "height": 25,
+                        "marginLeft": 20,
+                        "marginRight": 20,
+                        "marginTop": 20,
+                        "position": "absolute",
+                        "right": 0,
+                        "width": 25,
                       }
                     }
-                  >
-                    <Image
-                      source={1}
-                      style={
-                        Object {
-                          "alignItems": "center",
-                          "backgroundColor": "#fff",
-                          "borderColor": "#d5d5d5",
-                          "borderRadius": 12.5,
-                          "borderWidth": 1,
-                          "height": 25,
-                          "marginLeft": 20,
-                          "marginRight": 20,
-                          "marginTop": 20,
-                          "position": "absolute",
-                          "right": 0,
-                          "width": 25,
-                        }
-                      }
-                    />
-                  </View>
-                  <View
+                  />
+                </View>
+                <View
+                  style={
+                    Object {
+                      "opacity": 0,
+                    }
+                  }
+                >
+                  <Image
+                    source={1}
                     style={
                       Object {
-                        "opacity": 0,
+                        "alignItems": "center",
+                        "backgroundColor": "#fff",
+                        "borderColor": "#d5d5d5",
+                        "borderRadius": 12.5,
+                        "borderWidth": 1,
+                        "height": 25,
+                        "marginLeft": 20,
+                        "marginRight": 20,
+                        "marginTop": 20,
+                        "position": "absolute",
+                        "right": 0,
+                        "width": 25,
                       }
                     }
-                  >
-                    <Image
-                      source={1}
-                      style={
-                        Object {
-                          "alignItems": "center",
-                          "backgroundColor": "#fff",
-                          "borderColor": "#d5d5d5",
-                          "borderRadius": 12.5,
-                          "borderWidth": 1,
-                          "height": 25,
-                          "marginLeft": 20,
-                          "marginRight": 20,
-                          "marginTop": 20,
-                          "position": "absolute",
-                          "right": 0,
-                          "width": 25,
-                        }
-                      }
-                    />
-                  </View>
+                  />
                 </View>
               </View>
             </View>
           </View>
-          <View
-            style={
-              Object {
-                "borderBottomColor": "#DCDCDC",
-                "borderBottomWidth": 1,
-              }
-            }
-          />
-          <Text
-            style={
-              Object {
-                "alignItems": "center",
-                "color": "#232b2b",
-                "fontSize": 16,
-                "justifyContent": "center",
-                "marginBottom": 20,
-                "marginLeft": 20,
-                "marginTop": 20,
-              }
-            }
-          />
         </View>
+        <View
+          style={
+            Object {
+              "borderBottomColor": "#DCDCDC",
+              "borderBottomWidth": 1,
+            }
+          }
+        />
+        <Text
+          style={
+            Object {
+              "alignItems": "center",
+              "color": "#232b2b",
+              "fontSize": 16,
+              "justifyContent": "center",
+              "marginBottom": 20,
+              "marginLeft": 20,
+              "marginTop": 20,
+            }
+          }
+        />
       </View>
     </View>
     <View

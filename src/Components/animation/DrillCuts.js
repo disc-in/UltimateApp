@@ -1,6 +1,4 @@
 import React from 'react';
-import { StyleSheet, View, PanResponder } from 'react-native';
-import Svg, { Line, Circle } from 'react-native-svg';
 
 import Animated from 'react-native-reanimated';
 
@@ -9,18 +7,16 @@ import MovingCircle from './MovingCircle';
 import debug from './debug';
 
 /** The cuts that must be displayed at each step of a animation (a cut correspond to the position of a player at the previous step) */
-class DrillCuts extends React.Component {
-  /** Props must contain:
-	- animation: the animation Z
+class DrillCuts {
+  /** Arguments:
+	- animation: the animation
 	- animationHeight/Width: size of the animation area
-	- currentStep: the current step
-	- positionPercentToPixel: function which returns the absolute position (x, y) in pixel on the screen associated to a position in percentages (xp, yp) on the animation
+  - positionPercentToPixel: function which returns the absolute position (x, y) in pixel on the screen associated to a position in percentages (xp, yp) on the animation
+  - onMoveEnd: what to do when the move is over
     */
-  constructor(props) {
-    super(props);
-
+  constructor(animation, animationHeight, animationWidth, positionPercentToPixel, onMoveEnd) {
     // TODO: put the constant coefficient used in the following somewhere to avoir writing them twice (in this class and in DisplayedElement)
-    var dimensionMin = Math.min(this.props.animationWidth, this.props.animationHeight);
+    var dimensionMin = Math.min(animationWidth, animationHeight);
     this.playerRadius = dimensionMin / 12;
     this.discRadius = this.playerRadius / 2;
     this.coneSize = (this.playerRadius * 5) / 16;
@@ -32,11 +28,11 @@ class DrillCuts extends React.Component {
      */
     this.cuts = [];
 
-    if (this.props.animation.ids.length > 0) {
-      var elemCount = this.props.animation.ids.length;
+    if (animation.ids.length > 0) {
+      var elemCount = animation.ids.length;
 
       /* For each step */
-      for (var stepId = 0; stepId < this.props.animation.stepCount(); stepId++) {
+      for (var stepId = 0; stepId < animation.stepCount(); stepId++) {
         //        debug('stepId: ' + stepId);
         this.cuts.push([]);
 
@@ -46,29 +42,26 @@ class DrillCuts extends React.Component {
           for (var elemId = 0; elemId < elemCount; elemId++) {
             debug('animation cut, elem id: ' + elemId);
             /* If the element moves at this step */
-            if (
-              this.props.animation.positions[stepId][elemId] !== null &&
-              this.props.animation.positions[stepId][elemId] !== undefined
-            ) {
+            if (animation.positions[stepId][elemId] !== null && animation.positions[stepId][elemId] !== undefined) {
               var elemCut = [];
 
               /* The cut starting position is its position at step stepId */
-              var pos = this.props.positionPercentToPixel(
-                this.props.animation.positions[stepId][elemId][0][0],
-                this.props.animation.positions[stepId][elemId][0][1],
+              var pos = positionPercentToPixel(
+                animation.positions[stepId][elemId][0][0],
+                animation.positions[stepId][elemId][0][1],
               );
 
-              this._addOffset(pos, elemId);
+              this._addOffset(animation, pos, elemId);
               elemCut.push(pos);
 
-              var positions = this.props.animation.getPositionsAtStep(elemId, stepId - 1);
+              var positions = animation.getPositionsAtStep(elemId, stepId - 1);
               //            debug('positions: ' + positions);
 
               /* For each substep in this cut */
               for (var subStepId = 0; subStepId < positions.length; subStepId++) {
                 /* Add the position(s) of the cut */
-                pos = this.props.positionPercentToPixel(positions[subStepId][0], positions[subStepId][1]);
-                this._addOffset(pos, elemId);
+                pos = positionPercentToPixel(positions[subStepId][0], positions[subStepId][1]);
+                this._addOffset(animation, pos, elemId);
 
                 elemCut.push(pos);
               }
@@ -135,20 +128,20 @@ class DrillCuts extends React.Component {
                 top2,
 
                 cutCircle: new MovingCircle({
-                  onMoveEnd: this.props.onMoveEnd,
+                  onMoveEnd: onMoveEnd,
                   elemId,
-                  animationHeight: this.props.animationHeight,
-                  animationWidth: this.props.animationWidth,
+                  animationHeight: animationHeight,
+                  animationWidth: animationWidth,
                   cx: elemCut[1][0],
                   cy: elemCut[1][1],
                   radius: this.discRadius / 2,
                   isCounterCut: false,
                 }),
                 countercutCircle: new MovingCircle({
-                  onMoveEnd: this.props.onMoveEnd,
+                  onMoveEnd: onMoveEnd,
                   elemId,
-                  animationHeight: this.props.animationHeight,
-                  animationWidth: this.props.animationWidth,
+                  animationHeight: animationHeight,
+                  animationWidth: animationWidth,
                   cx: counterCutX,
                   cy: counterCutY,
                   radius: this.discRadius / 2,
@@ -163,8 +156,8 @@ class DrillCuts extends React.Component {
   }
 
   /** Add an offset to the position so that the cut is placed at the center of the element (otherwise it would be at its top left) */
-  _addOffset(pos, elemId) {
-    switch (this.props.animation.ids[elemId]) {
+  _addOffset(animation, pos, elemId) {
+    switch (animation.ids[elemId]) {
       case 'triangle':
         pos[0] += this.coneSize / 2;
         pos[1] += this.coneSize / 2;
@@ -185,58 +178,6 @@ class DrillCuts extends React.Component {
         pos[1] += this.discRadius / 2;
         break;
     }
-  }
-
-  _display(element) {
-    return element.render();
-  }
-
-  _displayCut = cut => {
-    return (
-      <View key={cut.key + 4000} style={[StyleSheet.absoluteFill]} height="100%" width="100%">
-        <Animated.View
-          style={[
-            { height: 1 },
-            { width: cut.d1 },
-            { borderRadius: 1 },
-            { borderWidth: 1 },
-            { borderColor: 'green' },
-            { borderStyle: 'dotted' },
-            { position: 'absolute' },
-            { top: cut.top1 },
-            { left: cut.left1 },
-            { transform: [{ rotate: cut.angle1.__getValue() }] },
-          ]}
-        />
-
-        <Animated.View
-          style={[
-            { height: 1 },
-            { width: cut.d2 },
-            { borderRadius: 1 },
-            { borderWidth: 1 },
-            { borderColor: 'green' },
-            { borderStyle: 'dotted' },
-            { position: 'absolute' },
-            { top: cut.top2 },
-            { left: cut.left2 },
-            { transform: [{ rotate: cut.angle2.__getValue() }] },
-          ]}
-        />
-      </View>
-    );
-  };
-
-  render() {
-    return (
-      <Animated.View key="1" style={[{ position: 'absolute', left: 0, top: 0 }]} height="100%" width="100%">
-        {this.cuts.length >= this.props.currentStep &&
-        this.cuts[this.props.currentStep] !== undefined &&
-        this.cuts[this.props.currentStep] !== null
-          ? this.cuts[this.props.currentStep].map(this._displayCut)
-          : undefined}
-      </Animated.View>
-    );
   }
 
   log() {

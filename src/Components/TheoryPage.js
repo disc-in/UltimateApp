@@ -530,7 +530,7 @@ export const TheoryPage = props => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.dropdown}>
+      <View style={styles.containerDropdown}>
         <Dropdown
           data={data}
           fontSize={theme.FONT_SIZE_MEDIUM}
@@ -539,8 +539,9 @@ export const TheoryPage = props => {
           selectedItemColor={theme.COLOR_PRIMARY}
           itemColor={theme.COLOR_SECONDARY}
           itemCount={6}
-          itemPadding={8}
           dropdownOffset={{ top: 15, left: 0 }}
+          containerStyle={styles.dropdown}
+          value={'Throwing'}
         />
       </View>
       <ScrollView>
@@ -594,6 +595,10 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
   },
   dropdown: {
-    marginHorizontal: 80,
+    width: '80%',
+  },
+  containerDropdown: {
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });

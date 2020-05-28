@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { render, fireEvent, cleanup } from 'react-native-testing-library';
-import { DrillTypes } from '../Fixtures';
+import { DrillTypes } from '../Fixtures/config';
 
 import HomePage from './HomePage';
 
@@ -17,11 +17,11 @@ describe('<HomePage />', () => {
     const navigation = { navigate: jest.fn() };
     const { getByText } = render(<HomePage navigation={navigation} />);
 
-    await fireEvent.press(getByText('Frisbee drills'));
+    await fireEvent.press(getByText('Frisbee Drills'));
 
     expect(navigation.navigate).toBeCalledWith('DrillListPage', { type: DrillTypes.FRISBEE });
 
-    await fireEvent.press(getByText('Fitness drills'));
+    await fireEvent.press(getByText('Fitness Drills'));
 
     expect(navigation.navigate).toBeCalledWith('DrillListPage', { type: DrillTypes.FITNESS });
 

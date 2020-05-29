@@ -10,7 +10,15 @@ export const TheoryPage = (props, { label, value, onChangeText, placeholder, ind
   const screenDimension = Dimensions.get('window');
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [modalVisible, setModalVisible] = useState(false);
-  const [selectedItem, setSelectedItem] = useState([]);
+  const [selectedItem, setSelectedItem] = useState([
+    {
+      item: {
+        id: 0,
+        text: '',
+        definition: '',
+      },
+    },
+  ]);
   const [theorySubject, setTheorySubject] = useState('Ultimate Vocabulary');
   const dataDropdown = [
     {
@@ -424,11 +432,10 @@ export const TheoryPage = (props, { label, value, onChangeText, placeholder, ind
   const extractKey = ({ id }) => id;
 
   const showModal = selectedItem => {
-    setModalVisible(true), selectedItem;
+    setModalVisible(true);
   };
 
   const _onPressItem = item => {
-    console.log('ITEEEEMMMMM ========================= ************************', selectedItem);
     setSelectedItem(item);
     showModal(selectedItem);
   };
@@ -436,22 +443,6 @@ export const TheoryPage = (props, { label, value, onChangeText, placeholder, ind
   const _renderItem = ({ item }) => {
     return (
       <View>
-        <Modal animationType="slide" visible={modalVisible} transparent>
-          <View style={styles.centeredView}>
-            <View style={styles.modalView}>
-              <Text style={styles.modalTitle}>{item.text}</Text>
-              <Text style={styles.modalText}>{item.definition}</Text>
-              <TouchableHighlight
-                style={{ ...styles.openButton, backgroundColor: theme.COLOR_PRIMARY }}
-                onPress={() => {
-                  setModalVisible(!modalVisible);
-                }}
-              >
-                <Text style={styles.textStyle}>Return</Text>
-              </TouchableHighlight>
-            </View>
-          </View>
-        </Modal>
         <TouchableHighlight
           onPress={() => {
             _onPressItem({ item });
@@ -473,6 +464,24 @@ export const TheoryPage = (props, { label, value, onChangeText, placeholder, ind
           renderSectionHeader={renderSectionHeader}
           keyExtractor={extractKey}
         />
+        <View>
+          <Modal animationType="slide" visible={modalVisible} transparent>
+            <View style={styles.centeredView}>
+              <View style={styles.modalView}>
+                <Text style={styles.modalTitle}>{selectedItem.item.text}</Text>
+                <Text style={styles.modalText}>{selectedItem.item.definition}</Text>
+                <TouchableHighlight
+                  style={{ ...styles.openButton, backgroundColor: theme.COLOR_PRIMARY }}
+                  onPress={() => {
+                    setModalVisible(!modalVisible);
+                  }}
+                >
+                  <Text style={styles.textStyle}>Return</Text>
+                </TouchableHighlight>
+              </View>
+            </View>
+          </Modal>
+        </View>
       </View>
     );
   };

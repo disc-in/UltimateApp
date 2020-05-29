@@ -20,6 +20,7 @@ export const TheoryPage = (props, { label, value, onChangeText, placeholder, ind
   const screenDimension = Dimensions.get('window');
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [modalVisible, setModalVisible] = useState(false);
+  const [selectedItemTest, setSelectedItemTest] = useState([]);
   const [theorySubject, setTheorySubject] = useState('Ultimate Vocabulary');
   const dataDropdown = [
     {
@@ -432,14 +433,22 @@ export const TheoryPage = (props, { label, value, onChangeText, placeholder, ind
 
   const extractKey = ({ id }) => id;
 
-  const renderDefinition = ({ item }) => {
-    console.log('item definition =================================>', item);
+  const _showModal = item => {
+    setModalVisible(true), setSelectedItemTest(item);
+  };
+
+  const _onPressItem = item => {
+    _showModal(item);
+  };
+
+  const _renderNewItem = ({ item, section }) => {
+    console.log('ITEM =============>', selectedItemTest, '   ');
     return (
       <View>
-        <Modal animationType="slide" visible={modalVisible} transparent={true}>
+        <Modal animationType="slide" visible={modalVisible} transparent>
           <View style={styles.centeredView}>
             <View style={styles.modalView}>
-              <Text style={styles.modalText}>{item.text}</Text>
+              <Text style={styles.modalTitle}>{item.text}</Text>
               <Text style={styles.modalText}>{item.definition}</Text>
               <TouchableHighlight
                 style={{ ...styles.openButton, backgroundColor: theme.COLOR_PRIMARY }}
@@ -455,7 +464,7 @@ export const TheoryPage = (props, { label, value, onChangeText, placeholder, ind
 
         <TouchableHighlight
           onPress={() => {
-            setModalVisible(!modalVisible);
+            _onPressItem();
           }}
         >
           <Text style={styles.row}>{item.text}</Text>
@@ -474,7 +483,7 @@ export const TheoryPage = (props, { label, value, onChangeText, placeholder, ind
         <SectionList
           style={styles.container}
           sections={sections}
-          renderItem={renderDefinition}
+          renderItem={(item, section) => _renderNewItem(item, section)}
           renderSectionHeader={renderSectionHeader}
           keyExtractor={extractKey}
         />
@@ -494,7 +503,6 @@ export const TheoryPage = (props, { label, value, onChangeText, placeholder, ind
         <View style={styles.titleContainer}>
           <Text style={styles.instruction}>{item.text}</Text>
         </View>
-        <View style={styles.lines} />
       </>
     );
   };
@@ -577,6 +585,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: theme.FONT_SIZE_MEDIUM,
     fontWeight: 'bold',
+    paddingLeft: 10,
   },
   btnNext: {
     left: 'auto',
@@ -597,7 +606,7 @@ const styles = StyleSheet.create({
   titleContainer: {
     paddingVertical: 15,
   },
-  instruction: { fontSize: theme.FONT_SIZE_SMALL },
+  instruction: { fontSize: theme.FONT_SIZE_SMALL, paddingLeft: 10 },
   maxHeight: {
     height: '100%',
   },
@@ -658,9 +667,10 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   openButton: {
-    backgroundColor: '#F194FF',
-    borderRadius: 20,
+    backgroundColor: theme.COLOR_PRIMARY,
+    borderRadius: 10,
     padding: 10,
+    paddingHorizontal: 20,
     elevation: 2,
   },
   textStyle: {
@@ -670,5 +680,15 @@ const styles = StyleSheet.create({
   },
   modalText: {
     marginBottom: 15,
+    fontSize: theme.FONT_SIZE_MEDIUM,
+  },
+  modalTitle: {
+    marginBottom: 15,
+    fontWeight: 'bold',
+    fontSize: theme.FONT_SIZE_LARGE,
+  },
+  pink: {
+    borderWidth: 2,
+    borderColor: 'red',
   },
 });

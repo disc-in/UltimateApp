@@ -1,15 +1,5 @@
 import React, { useState } from 'react';
-import {
-  Alert,
-  View,
-  StyleSheet,
-  Text,
-  Dimensions,
-  FlatList,
-  SectionList,
-  Modal,
-  TouchableHighlight,
-} from 'react-native';
+import { View, StyleSheet, Text, Dimensions, FlatList, SectionList, Modal, TouchableHighlight } from 'react-native';
 import { Dropdown } from 'react-native-material-dropdown';
 
 import VimeoVideo from './VimeoVideo';
@@ -20,7 +10,7 @@ export const TheoryPage = (props, { label, value, onChangeText, placeholder, ind
   const screenDimension = Dimensions.get('window');
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [modalVisible, setModalVisible] = useState(false);
-  const [selectedItemTest, setSelectedItemTest] = useState([]);
+  const [selectedItem, setSelectedItem] = useState([]);
   const [theorySubject, setTheorySubject] = useState('Ultimate Vocabulary');
   const dataDropdown = [
     {
@@ -433,16 +423,17 @@ export const TheoryPage = (props, { label, value, onChangeText, placeholder, ind
 
   const extractKey = ({ id }) => id;
 
-  const _showModal = item => {
-    setModalVisible(true), setSelectedItemTest(item);
+  const showModal = selectedItem => {
+    setModalVisible(true), selectedItem;
   };
 
   const _onPressItem = item => {
-    _showModal(item);
+    console.log('ITEEEEMMMMM ========================= ************************', selectedItem);
+    setSelectedItem(item);
+    showModal(selectedItem);
   };
 
-  const _renderNewItem = ({ item, section }) => {
-    console.log('ITEM =============>', selectedItemTest, '   ');
+  const _renderItem = ({ item }) => {
     return (
       <View>
         <Modal animationType="slide" visible={modalVisible} transparent>
@@ -461,10 +452,9 @@ export const TheoryPage = (props, { label, value, onChangeText, placeholder, ind
             </View>
           </View>
         </Modal>
-
         <TouchableHighlight
           onPress={() => {
-            _onPressItem();
+            _onPressItem({ item });
           }}
         >
           <Text style={styles.row}>{item.text}</Text>
@@ -473,22 +463,22 @@ export const TheoryPage = (props, { label, value, onChangeText, placeholder, ind
     );
   };
 
-  const renderSectionHeader = ({ section }) => {
-    return <Text style={styles.header}>{section.title}</Text>;
-  };
-
   const displayDictionary = () => {
     return (
       <View style={styles.container}>
         <SectionList
           style={styles.container}
           sections={sections}
-          renderItem={(item, section) => _renderNewItem(item, section)}
+          renderItem={item => _renderItem(item)}
           renderSectionHeader={renderSectionHeader}
           keyExtractor={extractKey}
         />
       </View>
     );
+  };
+
+  const renderSectionHeader = ({ section }) => {
+    return <Text style={styles.header}>{section.title}</Text>;
   };
 
   const renderTheory = ({ item }) => {

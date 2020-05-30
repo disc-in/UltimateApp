@@ -1,156 +1,25 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, Text, Dimensions, FlatList, SectionList, Modal, TouchableHighlight } from 'react-native';
 import { Dropdown } from 'react-native-material-dropdown';
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import { Ionicons } from '@expo/vector-icons';
 
 import VimeoVideo from './VimeoVideo';
 
 import theme from '../styles/theme.style';
 
-export const TheoryPage = (props, { label, value, onChangeText, placeholder, index }) => {
-  const screenDimension = Dimensions.get('window');
-  const [selectedIndex, setSelectedIndex] = useState(0);
+const Tab = createMaterialBottomTabNavigator();
+const screenDimension = Dimensions.get('window');
+
+const Dictionary = () => {
   const [modalVisible, setModalVisible] = useState(false);
-  const [selectedItem, setSelectedItem] = useState([
-    {
-      item: {
-        id: 0,
-        text: '',
-        definition: '',
-      },
+  const [selectedItem, setSelectedItem] = useState({
+    item: {
+      id: 0,
+      text: '',
+      definition: '',
     },
-  ]);
-  const [theorySubject, setTheorySubject] = useState('Ultimate Vocabulary');
-  const dataDropdown = [
-    {
-      value: 'Ultimate Vocabulary',
-      pages: [
-        {
-          id: 1,
-          title: 'Vocabulary',
-          text: 'example de texte',
-          video: '413628757',
-          animation: '',
-        },
-      ],
-    },
-    {
-      value: 'Throwing',
-      pages: [
-        {
-          id: 1,
-          title: 'Backhand',
-          text: 'example de texte',
-          video: '415565763',
-          animation: '',
-        },
-        {
-          id: 2,
-          title: 'Forehand',
-          text: ' ',
-          video: '415569048',
-          animation: '',
-        },
-        {
-          id: 3,
-          title: 'Hammer',
-          text: '',
-          video: '423999439',
-          animation: '',
-        },
-        {
-          id: 4,
-          title: 'Scoober',
-          text: ' ',
-          video: '423999364',
-          animation: '',
-        },
-      ],
-    },
-    {
-      value: 'Cutting',
-      pages: [
-        {
-          id: 1,
-          title: 'How does horizontal stacks work?',
-          text: 'example de texte',
-          video: '424000350',
-          animation: '',
-        },
-      ],
-    },
-    {
-      value: 'Defense',
-      pages: [
-        {
-          id: 1,
-          title: 'How does horizontal stacks work?',
-          text: 'example de texte',
-          video: '413628757',
-          animation: '',
-        },
-      ],
-    },
-    {
-      value: 'Vertical Stack',
-      pages: [
-        {
-          id: 1,
-          title: 'How does horizontal stacks work?',
-          text: 'example de texte',
-          video: '424002454',
-          animation: '',
-        },
-      ],
-    },
-    {
-      value: 'Endzone Offense',
-      pages: [
-        {
-          id: 1,
-          title: 'How does horizontal stacks work?',
-          text: 'example de texte',
-          video: '413628757',
-          animation: '',
-        },
-      ],
-    },
-    {
-      value: 'Horizontal Stack',
-      pages: [
-        {
-          id: 1,
-          title: 'How does horizontal stacks work?',
-          text: 'example de texte',
-          video: '424002425',
-          animation: '',
-        },
-      ],
-    },
-    {
-      value: 'Handling',
-      pages: [
-        {
-          id: 1,
-          title: 'How does horizontal stacks work?',
-          text: 'example de texte',
-          video: '413628757',
-          animation: '',
-        },
-      ],
-    },
-    {
-      value: 'Others Stacks',
-      pages: [
-        {
-          id: 1,
-          title: 'How does horizontal stacks work?',
-          text: 'example de texte',
-          video: '413628757',
-          animation: '',
-        },
-      ],
-    },
-  ];
+  });
 
   const sections = [
     {
@@ -490,6 +359,85 @@ export const TheoryPage = (props, { label, value, onChangeText, placeholder, ind
     return <Text style={styles.header}>{section.title}</Text>;
   };
 
+  return (
+    <View style={styles.container}>
+      <View>
+        <View style={styles.containerDropdown}>
+          <View>
+            <View style={styles.container} width={screenDimension.width}>
+              {displayDictionary()}
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  );
+};
+
+const Essential = () => {
+  const screenDimension = Dimensions.get('window');
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [theorySubject, setTheorySubject] = useState('Ultimate Vocabulary');
+  const dataDropdown = [
+    {
+      value: 'Throwing',
+      pages: [
+        {
+          id: 1,
+          title: 'Backhand',
+          text: 'example de texte',
+          video: '415565763',
+          animation: '',
+        },
+        {
+          id: 2,
+          title: 'Forehand',
+          text: ' ',
+          video: '415569048',
+          animation: '',
+        },
+        {
+          id: 3,
+          title: 'Hammer',
+          text: '',
+          video: '423999439',
+          animation: '',
+        },
+        {
+          id: 4,
+          title: 'Scoober',
+          text: ' ',
+          video: '423999364',
+          animation: '',
+        },
+      ],
+    },
+    {
+      value: 'Cutting',
+      pages: [
+        {
+          id: 1,
+          title: 'How does horizontal stacks work?',
+          text: 'example de texte',
+          video: '424000350',
+          animation: '',
+        },
+      ],
+    },
+    {
+      value: 'Defense',
+      pages: [
+        {
+          id: 1,
+          title: 'How does horizontal stacks work?',
+          text: 'example de texte',
+          video: '413628757',
+          animation: '',
+        },
+      ],
+    },
+  ];
+
   const renderTheory = ({ item }) => {
     return (
       <>
@@ -507,24 +455,16 @@ export const TheoryPage = (props, { label, value, onChangeText, placeholder, ind
   };
 
   const displayTheory = () => {
-    if (selectedIndex === 0) {
-      return (
-        <View style={styles.container} width={screenDimension.width}>
-          {displayDictionary()}
-        </View>
-      );
-    } else {
-      return (
-        <View style={styles.container}>
-          <FlatList
-            data={dataDropdown[selectedIndex].pages}
-            contentContainerStyle={styles.listContainer}
-            keyExtractor={item => item.id.toString()}
-            renderItem={renderTheory}
-          />
-        </View>
-      );
-    }
+    return (
+      <View style={styles.container}>
+        <FlatList
+          data={dataDropdown[selectedIndex].pages}
+          contentContainerStyle={styles.listContainer}
+          keyExtractor={item => item.id.toString()}
+          renderItem={renderTheory}
+        />
+      </View>
+    );
   };
 
   return (
@@ -541,7 +481,7 @@ export const TheoryPage = (props, { label, value, onChangeText, placeholder, ind
             itemCount={6}
             dropdownOffset={{ top: 40, left: 0 }}
             containerStyle={styles.dropdown}
-            value={'Ultimate Vocabulary'}
+            value={'Trowing'}
             onChangeText={(value, index) => {
               setTheorySubject(value);
               setSelectedIndex(index);
@@ -554,7 +494,164 @@ export const TheoryPage = (props, { label, value, onChangeText, placeholder, ind
   );
 };
 
-export default TheoryPage;
+const Tactics = () => {
+  const screenDimension = Dimensions.get('window');
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [theorySubject, setTheorySubject] = useState('Ultimate Vocabulary');
+  const dataDropdown = [
+    {
+      value: 'Vertical Stack',
+      pages: [
+        {
+          id: 1,
+          title: 'How does horizontal stacks work?',
+          text: 'example de texte',
+          video: '424002454',
+          animation: '',
+        },
+      ],
+    },
+    {
+      value: 'Endzone Offense',
+      pages: [
+        {
+          id: 1,
+          title: 'How does horizontal stacks work?',
+          text: 'example de texte',
+          video: '413628757',
+          animation: '',
+        },
+      ],
+    },
+    {
+      value: 'Horizontal Stack',
+      pages: [
+        {
+          id: 1,
+          title: 'How does horizontal stacks work?',
+          text: 'example de texte',
+          video: '424002425',
+          animation: '',
+        },
+      ],
+    },
+    {
+      value: 'Handling',
+      pages: [
+        {
+          id: 1,
+          title: 'How does horizontal stacks work?',
+          text: 'example de texte',
+          video: '413628757',
+          animation: '',
+        },
+      ],
+    },
+    {
+      value: 'Others Stacks',
+      pages: [
+        {
+          id: 1,
+          title: 'How does horizontal stacks work?',
+          text: 'example de texte',
+          video: '413628757',
+          animation: '',
+        },
+      ],
+    },
+  ];
+
+  const renderTheory = ({ item }) => {
+    return (
+      <>
+        <View style={styles.titleContainer}>
+          <Text style={styles.title}>{item.title}</Text>
+        </View>
+        <View style={styles.container}>
+          <VimeoVideo vimeoId={item.video} screenWidth={screenDimension.width} sounds={false} />
+        </View>
+        <View style={styles.titleContainer}>
+          <Text style={styles.instruction}>{item.text}</Text>
+        </View>
+      </>
+    );
+  };
+
+  const displayTheory = () => {
+    return (
+      <View style={styles.container}>
+        <FlatList
+          data={dataDropdown[selectedIndex].pages}
+          contentContainerStyle={styles.listContainer}
+          keyExtractor={item => item.id.toString()}
+          renderItem={renderTheory}
+        />
+      </View>
+    );
+  };
+
+  return (
+    <View style={styles.container}>
+      <View>
+        <View style={styles.containerDropdown}>
+          <Dropdown
+            data={dataDropdown}
+            fontSize={theme.FONT_SIZE_MEDIUM}
+            baseColor={theme.COLOR_SECONDARY}
+            textColor={theme.COLOR_PRIMARY}
+            selectedItemColor={theme.COLOR_PRIMARY}
+            itemColor={theme.COLOR_SECONDARY}
+            itemCount={6}
+            dropdownOffset={{ top: 40, left: 0 }}
+            containerStyle={styles.dropdown}
+            value={'Vertical Stack'}
+            onChangeText={(value, index) => {
+              setTheorySubject(value);
+              setSelectedIndex(index);
+            }}
+          />
+          <View>{displayTheory()}</View>
+        </View>
+      </View>
+    </View>
+  );
+};
+
+export default function TheoryPage() {
+  return (
+    <Tab.Navigator
+      initialRouteName="Dictionary"
+      activeColor={theme.COLOR_PRIMARY}
+      inactiveColor={theme.COLOR_SECONDARY}
+      barStyle={{ backgroundColor: theme.BACKGROUND_COLOR }}
+    >
+      <Tab.Screen
+        name="Dictionary"
+        component={Dictionary}
+        options={{
+          tabBarLabel: 'Dictionary',
+          tabBarIcon: ({ color }) => <Ionicons name="ios-text" color={color} size={26} />,
+        }}
+      />
+      <Tab.Screen
+        name="Essential"
+        component={Essential}
+        options={{
+          tabBarLabel: 'Essential',
+          tabBarIcon: ({ color }) => <Ionicons name="ios-bookmarks" color={color} size={26} />,
+        }}
+      />
+      <Tab.Screen
+        name="Tactics"
+        component={Tactics}
+        options={{
+          tabBarLabel: 'Tactics',
+          tabBarIcon: ({ color }) => <Ionicons name="md-clipboard" color={color} size={26} />,
+        }}
+      />
+    </Tab.Navigator>
+  );
+}
 
 const styles = StyleSheet.create({
   container: {

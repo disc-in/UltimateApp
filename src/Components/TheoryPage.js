@@ -987,10 +987,13 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.2,
     shadowRadius: 1.41,
+    borderWidth: 1,
+    borderColor: theme.COLOR_PRIMARY,
   },
   subjectText: {
     color: theme.COLOR_PRIMARY,
     fontWeight: 'bold',
     textAlign: 'center',
+    fontSize: theme.FONT_SIZE_LARGE,
   },
 });

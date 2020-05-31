@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, Text, Dimensions, FlatList, SectionList, Modal, TouchableHighlight } from 'react-native';
-import { Dropdown } from 'react-native-material-dropdown';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 
 import VimeoVideo from './VimeoVideo';
 
@@ -334,7 +333,14 @@ const Dictionary = () => {
           keyExtractor={extractKey}
         />
         <View>
-          <Modal animationType="slide" visible={modalVisible} transparent>
+          <Modal
+            animationType="slide"
+            visible={modalVisible}
+            transparent
+            onRequestClose={() => {
+              setModalVisible(!modalVisible);
+            }}
+          >
             <View style={styles.centeredView}>
               <View style={styles.modalView}>
                 <Text style={styles.modalTitle}>{selectedItem.item.text}</Text>
@@ -377,37 +383,50 @@ const Dictionary = () => {
 const Essential = () => {
   const screenDimension = Dimensions.get('window');
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [theorySubject, setTheorySubject] = useState('Ultimate Vocabulary');
-  const dataDropdown = [
+  const [theorySubject, setTheorySubject] = useState('Throwing');
+  const [modalVisible, setModalVisible] = useState(false);
+  const dataEssential = [
     {
       value: 'Throwing',
       pages: [
         {
           id: 1,
           title: 'Backhand',
-          text: 'example de texte',
+          text: 'Rowan McDonnell',
           video: '415565763',
           animation: '',
         },
         {
           id: 2,
           title: 'Forehand',
-          text: ' ',
+          text: 'Rowan McDonnell',
           video: '415569048',
           animation: '',
         },
         {
           id: 3,
           title: 'Hammer',
-          text: '',
+          text: 'Rowan McDonnell',
           video: '423999439',
           animation: '',
         },
         {
           id: 4,
           title: 'Scoober',
-          text: ' ',
+          text: 'Rowan McDonnell',
           video: '423999364',
+          animation: '',
+        },
+      ],
+    },
+    {
+      value: 'Catching',
+      pages: [
+        {
+          id: 1,
+          title: '',
+          text: 'Rise Up',
+          video: '424266555',
           animation: '',
         },
       ],
@@ -417,8 +436,8 @@ const Essential = () => {
       pages: [
         {
           id: 1,
-          title: 'How does horizontal stacks work?',
-          text: 'example de texte',
+          title: '',
+          text: 'Rise Up Ultimate',
           video: '424000350',
           animation: '',
         },
@@ -429,9 +448,9 @@ const Essential = () => {
       pages: [
         {
           id: 1,
-          title: 'How does horizontal stacks work?',
-          text: 'example de texte',
-          video: '413628757',
+          title: 'Force',
+          text: 'Colonel Saul',
+          video: '424266154',
           animation: '',
         },
       ],
@@ -458,7 +477,7 @@ const Essential = () => {
     return (
       <View style={styles.container}>
         <FlatList
-          data={dataDropdown[selectedIndex].pages}
+          data={dataEssential[selectedIndex].pages}
           contentContainerStyle={styles.listContainer}
           keyExtractor={item => item.id.toString()}
           renderItem={renderTheory}
@@ -470,23 +489,87 @@ const Essential = () => {
   return (
     <View style={styles.container}>
       <View>
-        <View style={styles.containerDropdown}>
-          <Dropdown
-            data={dataDropdown}
-            fontSize={theme.FONT_SIZE_MEDIUM}
-            baseColor={theme.COLOR_SECONDARY}
-            textColor={theme.COLOR_PRIMARY}
-            selectedItemColor={theme.COLOR_PRIMARY}
-            itemColor={theme.COLOR_SECONDARY}
-            itemCount={6}
-            dropdownOffset={{ top: 40, left: 0 }}
-            containerStyle={styles.dropdown}
-            value={'Trowing'}
-            onChangeText={(value, index) => {
-              setTheorySubject(value);
-              setSelectedIndex(index);
+        <View>
+          <Modal
+            animationType="fade"
+            visible={modalVisible}
+            onRequestClose={() => {
+              setModalVisible(!modalVisible);
             }}
-          />
+          >
+            <View style={styles.centeredView}>
+              <View style={styles.modalViewTheory}>
+                <TouchableHighlight
+                  style={styles.subjectButton}
+                  onPress={() => {
+                    setSelectedIndex(0);
+                    setTheorySubject('Throwing');
+                    setModalVisible(!modalVisible);
+                  }}
+                >
+                  <Text style={styles.subjectText}>Throwing</Text>
+                </TouchableHighlight>
+                <TouchableHighlight
+                  style={styles.subjectButton}
+                  onPress={() => {
+                    setSelectedIndex(1);
+                    setTheorySubject('Catching');
+                    setModalVisible(!modalVisible);
+                  }}
+                >
+                  <Text style={styles.subjectText}>Catching</Text>
+                </TouchableHighlight>
+                <TouchableHighlight
+                  style={styles.subjectButton}
+                  onPress={() => {
+                    setSelectedIndex(2);
+                    setTheorySubject('Cutting');
+                    setModalVisible(!modalVisible);
+                  }}
+                >
+                  <Text style={styles.subjectText}>Cutting</Text>
+                </TouchableHighlight>
+
+                <TouchableHighlight
+                  style={styles.subjectButton}
+                  onPress={() => {
+                    setSelectedIndex(3);
+                    setTheorySubject('Defense');
+                    setModalVisible(!modalVisible);
+                  }}
+                >
+                  <Text style={styles.subjectText}>Defense</Text>
+                </TouchableHighlight>
+
+                <TouchableHighlight
+                  style={styles.returnButton}
+                  onPress={() => {
+                    setModalVisible(!modalVisible);
+                  }}
+                >
+                  <Text style={styles.textStyle}>Return</Text>
+                </TouchableHighlight>
+              </View>
+            </View>
+          </Modal>
+        </View>
+        <View style={styles.displayTheory}>
+          <TouchableHighlight
+            style={styles.subjectModal}
+            onPress={() => {
+              setModalVisible(true);
+            }}
+          >
+            <View>
+              <View style={styles.flexDirection}>
+                <Text style={{ ...styles.textStyle, color: theme.COLOR_PRIMARY }}>{theorySubject}</Text>
+                <MaterialCommunityIcons name="chevron-down" color={theme.COLOR_PRIMARY} size={26} />
+              </View>
+              <View style={styles.lines} />
+            </View>
+          </TouchableHighlight>
+        </View>
+        <View style={styles.displayTheory}>
           <View>{displayTheory()}</View>
         </View>
       </View>
@@ -497,28 +580,17 @@ const Essential = () => {
 const Tactics = () => {
   const screenDimension = Dimensions.get('window');
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [theorySubject, setTheorySubject] = useState('Ultimate Vocabulary');
-  const dataDropdown = [
+  const [theorySubject, setTheorySubject] = useState('Vertical Stack');
+  const [modalVisible, setModalVisible] = useState(false);
+  const dataTactics = [
     {
       value: 'Vertical Stack',
       pages: [
         {
           id: 1,
-          title: 'How does horizontal stacks work?',
-          text: 'example de texte',
+          title: 'How does vertical stacks work?',
+          text: 'That Drone Guy Ty',
           video: '424002454',
-          animation: '',
-        },
-      ],
-    },
-    {
-      value: 'Endzone Offense',
-      pages: [
-        {
-          id: 1,
-          title: 'How does horizontal stacks work?',
-          text: 'example de texte',
-          video: '413628757',
           animation: '',
         },
       ],
@@ -529,18 +601,31 @@ const Tactics = () => {
         {
           id: 1,
           title: 'How does horizontal stacks work?',
-          text: 'example de texte',
+          text: 'That Drone Guy Ty',
           video: '424002425',
           animation: '',
         },
       ],
     },
     {
+      value: 'Endzone Offense',
+      pages: [
+        {
+          id: 1,
+          title: 'How to score a point?',
+          text: 'example de texte',
+          video: '413628757',
+          animation: '',
+        },
+      ],
+    },
+
+    {
       value: 'Handling',
       pages: [
         {
           id: 1,
-          title: 'How does horizontal stacks work?',
+          title: 'Handler secret',
           text: 'example de texte',
           video: '413628757',
           animation: '',
@@ -552,8 +637,8 @@ const Tactics = () => {
       pages: [
         {
           id: 1,
-          title: 'How does horizontal stacks work?',
-          text: 'example de texte',
+          title: "It's time to learn something new?",
+          text: 'Moby',
           video: '413628757',
           animation: '',
         },
@@ -581,7 +666,7 @@ const Tactics = () => {
     return (
       <View style={styles.container}>
         <FlatList
-          data={dataDropdown[selectedIndex].pages}
+          data={dataTactics[selectedIndex].pages}
           contentContainerStyle={styles.listContainer}
           keyExtractor={item => item.id.toString()}
           renderItem={renderTheory}
@@ -593,23 +678,97 @@ const Tactics = () => {
   return (
     <View style={styles.container}>
       <View>
-        <View style={styles.containerDropdown}>
-          <Dropdown
-            data={dataDropdown}
-            fontSize={theme.FONT_SIZE_MEDIUM}
-            baseColor={theme.COLOR_SECONDARY}
-            textColor={theme.COLOR_PRIMARY}
-            selectedItemColor={theme.COLOR_PRIMARY}
-            itemColor={theme.COLOR_SECONDARY}
-            itemCount={6}
-            dropdownOffset={{ top: 40, left: 0 }}
-            containerStyle={styles.dropdown}
-            value={'Vertical Stack'}
-            onChangeText={(value, index) => {
-              setTheorySubject(value);
-              setSelectedIndex(index);
+        <View>
+          <Modal
+            animationType="fade"
+            visible={modalVisible}
+            onRequestClose={() => {
+              setModalVisible(!modalVisible);
             }}
-          />
+          >
+            <View style={styles.centeredView}>
+              <View style={styles.modalViewTheory}>
+                <TouchableHighlight
+                  style={styles.subjectButton}
+                  onPress={() => {
+                    setSelectedIndex(0);
+                    setTheorySubject('Vertical Stack');
+                    setModalVisible(!modalVisible);
+                  }}
+                >
+                  <Text style={styles.subjectText}>Vertical Stack</Text>
+                </TouchableHighlight>
+                <TouchableHighlight
+                  style={styles.subjectButton}
+                  onPress={() => {
+                    setSelectedIndex(1);
+                    setTheorySubject('Horizontal Stack');
+                    setModalVisible(!modalVisible);
+                  }}
+                >
+                  <Text style={styles.subjectText}>Horizontal Stack</Text>
+                </TouchableHighlight>
+                <TouchableHighlight
+                  style={styles.subjectButton}
+                  onPress={() => {
+                    setSelectedIndex(2);
+                    setTheorySubject('Endzone Offense');
+                    setModalVisible(!modalVisible);
+                  }}
+                >
+                  <Text style={styles.subjectText}>Endzone Offense</Text>
+                </TouchableHighlight>
+
+                <TouchableHighlight
+                  style={styles.subjectButton}
+                  onPress={() => {
+                    setSelectedIndex(3);
+                    setTheorySubject('Handling');
+                    setModalVisible(!modalVisible);
+                  }}
+                >
+                  <Text style={styles.subjectText}>Handling</Text>
+                </TouchableHighlight>
+                <TouchableHighlight
+                  style={styles.subjectButton}
+                  onPress={() => {
+                    setSelectedIndex(4);
+                    setTheorySubject('Others Stacks');
+                    setModalVisible(!modalVisible);
+                  }}
+                >
+                  <Text style={styles.subjectText}>Others Stacks</Text>
+                </TouchableHighlight>
+
+                <TouchableHighlight
+                  style={styles.returnButton}
+                  onPress={() => {
+                    setModalVisible(!modalVisible);
+                  }}
+                >
+                  <Text style={styles.textStyle}>Return</Text>
+                </TouchableHighlight>
+              </View>
+            </View>
+          </Modal>
+        </View>
+        <View style={styles.displayTheory}>
+          <TouchableHighlight
+            style={styles.subjectModal}
+            onPress={() => {
+              setModalVisible(true);
+            }}
+          >
+            <View>
+              <View style={styles.flexDirection}>
+                <Text style={{ ...styles.textStyle, color: theme.COLOR_PRIMARY }}>{theorySubject}</Text>
+                <MaterialCommunityIcons name="chevron-down" color={theme.COLOR_PRIMARY} size={26} />
+              </View>
+              <View style={styles.lines} />
+            </View>
+          </TouchableHighlight>
+        </View>
+        <View style={styles.displayTheory}>
           <View>{displayTheory()}</View>
         </View>
       </View>
@@ -668,15 +827,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingVertical: 15,
-  },
-  btnPrevNext: {
-    position: 'absolute',
-    left: 10,
-  },
-  btnPrevNextContent: {
-    textAlign: 'center',
-    color: theme.COLOR_PRIMARY,
-    fontSize: theme.FONT_SIZE_LARGE,
   },
   title: {
     fontSize: theme.FONT_SIZE_MEDIUM,
@@ -762,6 +912,26 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 5,
   },
+
+  modalViewTheory: {
+    width: '80%',
+    height: '70%',
+    justifyContent: 'space-around',
+    margin: 20,
+    backgroundColor: 'white',
+    borderRadius: 20,
+    padding: 15,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+  },
+
   openButton: {
     backgroundColor: theme.COLOR_PRIMARY,
     borderRadius: 10,
@@ -783,8 +953,57 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: theme.FONT_SIZE_LARGE,
   },
-  pink: {
-    borderWidth: 2,
-    borderColor: 'red',
+  returnButton: {
+    backgroundColor: theme.COLOR_PRIMARY,
+    borderRadius: 10,
+    padding: 10,
+    paddingHorizontal: 20,
+    elevation: 2,
+    width: 120,
+  },
+  displayTheory: {
+    alignItems: 'center',
+    paddingTop: 20,
+  },
+  subjectModal: {
+    backgroundColor: theme.COLOR_PRIMARY_LIGHT,
+    borderRadius: 5,
+    padding: 10,
+    width: '50%',
+    paddingVertical: 10,
+    elevation: 2,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 1.41,
+  },
+  flexDirection: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  subjectButton: {
+    backgroundColor: theme.COLOR_SECONDARY_LIGHT,
+    width: '100%',
+    borderRadius: 2,
+    padding: 10,
+    paddingHorizontal: 5,
+    marginHorizontal: 5,
+    elevation: 2,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 1.41,
+  },
+  subjectText: {
+    color: theme.COLOR_PRIMARY,
+    fontWeight: 'bold',
+    textAlign: 'center',
   },
 });

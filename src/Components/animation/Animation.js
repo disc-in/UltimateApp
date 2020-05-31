@@ -100,7 +100,6 @@ class Animation extends React.Component {
       this._positionPercentToPixel,
       this.props.onCutMove,
     );
-    this.cuts.log();
   }
 
   /** Create the progress bar */
@@ -295,8 +294,6 @@ class Animation extends React.Component {
 
     /* Animation of all the elements at step stepId */
     var stepAnimation = [];
-
-    this.state.animation.log();
 
     var barMoveDuration = this.state.stepLength;
     var barValue = stepId;

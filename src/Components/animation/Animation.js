@@ -13,7 +13,6 @@ import iconNext from '../../../assets/next.png';
 import iconReplay from '../../../assets/replay.png';
 
 import debug from './debug';
-import { EndOfLineState } from 'typescript';
 
 class Animation extends React.Component {
   constructor(props) {
@@ -28,6 +27,7 @@ class Animation extends React.Component {
       animation: undefined,
       displayedElements: [], // The graphical elments displayed in the animation
       currentStep: 0, // Current step displayed on the phone
+      animationPlaying: false,
     };
 
     // Enables to update the current step inside an animation
@@ -232,6 +232,8 @@ class Animation extends React.Component {
     /* Animation of the whole animation */
     var completeSequence = [];
 
+    this.setState({ animationPlaying: true });
+
     completeSequence.push(
       Animated.timing(this.currentStepAV, {
         toValue: 0,
@@ -244,7 +246,7 @@ class Animation extends React.Component {
     for (var stepId = 0; stepId < this._stepCount(); stepId++)
       completeSequence.push(Animated.parallel(this._getStepAnimation(stepId, true)));
 
-    Animated.sequence(completeSequence).start();
+    Animated.sequence(completeSequence).start(() => this.setState({ animationPlaying: false }));
 
     if (this.props.onStepChange !== undefined && this.props.onStepChange !== null)
       this.props.onStepChange(this._stepCount());
@@ -289,8 +291,6 @@ class Animation extends React.Component {
    * (true if the elements are already in the initial position, in that case no need to wait for an animation which does not move anything)
    */
   _getStepAnimation = (stepId, playSubsteps, moveInstantlyToInitialPosition = false) => {
-    debug('Animation: get animation: ' + stepId);
-
     stepId = Math.max(0, Math.round(stepId));
 
     /* Animation of all the elements at step stepId */
@@ -345,7 +345,8 @@ class Animation extends React.Component {
 
             var currentSubStepLength = substepLength;
 
-            if (moveInstantlyToInitialPosition && substep == 0) currentSubStepLength = 0;
+            if ((moveInstantlyToInitialPosition || this.state.currentStep === 0) && substep === 0)
+              currentSubStepLength = 0;
 
             /* Get the position of the element at this substep */
             var pixelPosition = this._positionPercentToPixel(nextPosition[substep][0], nextPosition[substep][1]);
@@ -385,7 +386,7 @@ class Animation extends React.Component {
 
     return (
       <View style={[styles.mainContainer, { height: this.animationHeight }, { width: this.animationWidth }]}>
-        {this.props.editable && this.cuts !== undefined && this.cuts !== null ? (
+        {this.props.editable && this.cuts !== undefined && this.cuts !== null && !this.state.animationPlaying ? (
           <DisplayedCuts step={this.state.currentStep} drillCuts={this.cuts} />
         ) : (
           undefined

@@ -1,4 +1,4 @@
-consoimport React from 'react';
+import React from 'react';
 import { Text, StyleSheet, Easing, Animated, View, TouchableOpacity } from 'react-native';
 
 /** Progress bar displayed with an animation which:

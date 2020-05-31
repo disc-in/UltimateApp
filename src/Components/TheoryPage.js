@@ -417,6 +417,13 @@ const Essential = () => {
           video: '423999364',
           animation: '',
         },
+        {
+          id: 5,
+          title: 'How to Backhand Pull Like a Boss',
+          text: 'Ryan Lowe',
+          video: '424514096',
+          animation: '',
+        },
       ],
     },
     {
@@ -427,6 +434,13 @@ const Essential = () => {
           title: 'The art of catching',
           text: 'Rise Up',
           video: '424266555',
+          animation: '',
+        },
+        {
+          id: 2,
+          title: 'How to Layout',
+          text: 'Brodie Smith',
+          video: '424514902',
           animation: '',
         },
       ],
@@ -625,9 +639,9 @@ const Tactics = () => {
       pages: [
         {
           id: 1,
-          title: 'Handler secret',
-          text: 'example de texte',
-          video: '413628757',
+          title: 'Handler Cutting',
+          text: 'Rise Up',
+          video: '424511928',
           animation: '',
         },
       ],

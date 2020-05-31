@@ -2,8 +2,8 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { DrillTypes } from '../../Fixtures/config';
 
-import FitnessDrillIllustration from '../FitnessDrillIllustration';
-import FrisbeeDrillIllustration from '../FrisbeeDrillAnimation';
+import FitnessDrillIllustration from '../drills/FitnessDrillIllustration';
+import FrisbeeDrillIllustration from '../drills/FrisbeeDrillAnimation';
 
 const MinimalDrill = props => {
   const { drill } = props;

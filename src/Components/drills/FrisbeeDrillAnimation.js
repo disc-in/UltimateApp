@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { View, StyleSheet, Text, Dimensions, TouchableOpacity, SafeAreaView } from 'react-native';
 import { WebView } from 'react-native-webview';
-
-import Animation from './animation/Animation';
-import VimeoVideo from './VimeoVideo';
-import { IllustrationType } from '../Fixtures/config';
-import theme from '../styles/theme.style';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
+import Animation from '../animation/Animation';
+import VimeoVideo from '../VimeoVideo';
+import { IllustrationType } from '../../Fixtures/config';
+import theme from '../../styles/theme.style';
 
 const screenDimension = Dimensions.get('window');
 

@@ -21,8 +21,8 @@ import theme from '../styles/theme.style';
 
 import iconFavoriteEmpty from '../../assets/ic_favorite_border_bookmark.png';
 import iconFavoriteFull from '../../assets/ic_favorite_bookmark.png';
-import FitnessDrillIllustration from './FitnessDrillIllustration';
-import FrisbeeDrillIllustration from './FrisbeeDrillAnimation';
+import FitnessDrillIllustration from './drills/FitnessDrillIllustration';
+import FrisbeeDrillIllustration from './drills/FrisbeeDrillAnimation';
 import { DrillTypes } from '../Fixtures/config';
 
 export const DrillPage = props => {

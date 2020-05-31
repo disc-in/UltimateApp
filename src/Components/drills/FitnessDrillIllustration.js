@@ -2,18 +2,18 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Animated, View, StyleSheet, Text, Dimensions, TouchableOpacity, Image } from 'react-native';
 import GestureRecognizer from 'react-native-swipe-gestures';
 import { WebView } from 'react-native-webview';
-
-import I18n from '../utils/i18n';
-import Animation from './animation/Animation';
-import VimeoVideo from './VimeoVideo';
-import { IllustrationType } from '../Fixtures/config';
-import theme from '../styles/theme.style';
-import { swipeConfig } from '../styles/config';
-import iconRedo from '../../assets/redo_arrow.png';
-import buttonValidation from '../../assets/button_validation_ultra_light.png';
-import buttonValidationGradient from '../../assets/button_validation_gradient.png';
 import { Easing } from 'react-native-reanimated';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
+import I18n from '../../utils/i18n';
+import Animation from '../animation/Animation';
+import VimeoVideo from '../VimeoVideo';
+import { IllustrationType } from '../../Fixtures/config';
+import theme from '../../styles/theme.style';
+import { swipeConfig } from '../../styles/config';
+import iconRedo from '../../../assets/redo_arrow.png';
+import buttonValidation from '../../../assets/button_validation_ultra_light.png';
+import buttonValidationGradient from '../../../assets/button_validation_gradient.png';
 
 const screenDimension = Dimensions.get('window');
 

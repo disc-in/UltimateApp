@@ -159,12 +159,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 20,
   },
-  redoMessage: {
-    fontSize: theme.FONT_SIZE_MEDIUM,
-    color: theme.COLOR_PRIMARY,
-    fontWeight: 'bold',
-    marginVertical: 50,
-  },
   containerAnimation: {
     flexDirection: 'row',
     alignSelf: 'flex-end',
@@ -250,16 +244,6 @@ const styles = StyleSheet.create({
     color: theme.COLOR_PRIMARY,
     justifyContent: 'center',
     alignItems: 'center',
-  },
-  redoButton: {
-    width: 80,
-    height: 80,
-    borderRadius: 40,
-    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
-  },
-  redoImage: {
-    width: 60,
-    height: 60,
   },
   videoAlone: {
     flex: 1,

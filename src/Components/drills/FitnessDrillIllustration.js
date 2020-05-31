@@ -62,41 +62,11 @@ const FitnessDrillIllustration = props => {
     setActiveIndex(activeIndex + 1);
   };
 
-  const displayNextStep = () => {
-    if (activeIndex + 1 === props.drill.steps.length) {
-      return (
-        <>
-          <View style={styles.description}>
-            <View style={styles.wrapperFinish}>
-              <Text style={styles.fitnessNext}>{I18n.t('FitnessDrillIllustration.finish')}</Text>
-            </View>
-          </View>
-          <View style={styles.lines} />
-        </>
-      );
-    } else {
-      return (
-        <>
-          <View style={styles.description}>
-            <View style={styles.subWrapper}>
-              <Text style={styles.fitnessNext}>{props.drill.steps[activeIndex + 1].repetition}</Text>
-            </View>
-            <View style={styles.subSubWrapper}>
-              <Text style={styles.fitnessNext}>{props.drill.steps[activeIndex + 1].title}</Text>
-            </View>
-            <View style={styles.fakeWrapper} />
-          </View>
-          <View style={styles.lines} />
-        </>
-      );
-    }
-  };
-
-  const displayFinish = () => {
+  const renderFinish = () => {
     return (
       <>
         <View style={styles.containerFinish}>
-          <Text style={styles.redoMessage}>{I18n.t('FitnessDrillIllustration.redoMessage')}</Text>
+          <Text style={styles.redoMessage}>{I18n.t('fitnessDrillIllustration.redoMessage')}</Text>
           <TouchableOpacity style={styles.redoButton} onPress={() => incrementStepIndex()}>
             <Image style={styles.redoImage} source={iconRedo} />
           </TouchableOpacity>
@@ -105,7 +75,7 @@ const FitnessDrillIllustration = props => {
     );
   };
 
-  const displayYoutube = ({ illustrationSource, title, instruction }) => {
+  const renderYoutube = ({ illustrationSource, title, instruction }) => {
     return (
       <>
         <View style={{ height: 250 }}>
@@ -195,7 +165,7 @@ const FitnessDrillIllustration = props => {
     );
   };
 
-  const displayVimeo = ({ illustrationSource, repetition, title, sounds }) => {
+  const renderVimeo = ({ illustrationSource, repetition, title, sounds }) => {
     const isUniqueStep = props.drill.steps.length === 1;
     return (
       <>
@@ -209,26 +179,7 @@ const FitnessDrillIllustration = props => {
     );
   };
 
-  const checkSwitch = () => {
-    if (activeIndex === props.drill.steps.length) {
-      return displayFinish();
-    } else if (!currentStep) {
-      return <View />; // bad state, but let's not crash
-    } else {
-      switch (props.drill.steps[activeIndex].illustrationType) {
-        case IllustrationType.ANIMATION:
-          return displayAnimation(props.drill.steps[activeIndex]);
-        case IllustrationType.YOUTUBE:
-          return displayYoutube(props.drill.steps[activeIndex]);
-        case IllustrationType.VIMEO:
-          return displayVimeo(props.drill.steps[activeIndex]);
-        default:
-          return <Text>No visual content for this drill</Text>;
-      }
-    }
-  };
-
-  const displayAnimation = ({ illustrationSource, title, instruction }, index) => {
+  const renderAnimation = ({ illustrationSource, title, instruction }, index) => {
     const isFirstStep = index === 0;
     const isLastStep = index === props.drill.steps.length - 1;
     return (
@@ -268,7 +219,10 @@ const FitnessDrillIllustration = props => {
 
   return (
     <GestureRecognizer style={styles.container} onSwipeLeft={checkAnimationFast} config={swipeConfig}>
-      {checkSwitch()}
+      {activeIndex === props.drill.steps.length && renderFinish()}
+      {currentStep?.illustrationType === IllustrationType.ANIMATION && renderAnimation(currentStep)}
+      {currentStep?.illustrationType === IllustrationType.YOUTUBE && renderYoutube(currentStep)}
+      {currentStep?.illustrationType === IllustrationType.VIMEO && renderVimeo(currentStep)}
     </GestureRecognizer>
   );
 };
@@ -317,13 +271,6 @@ const styles = StyleSheet.create({
   fitnessDone: {
     color: theme.COLOR_SECONDARY,
   },
-  fitnessNext: {
-    marginTop: 20,
-    marginBottom: 20,
-    marginLeft: 20,
-    fontSize: theme.FONT_SIZE_LARGE,
-    color: theme.COLOR_SECONDARY,
-  },
   separator: {
     height: 15,
     borderRightWidth: 1,
@@ -350,9 +297,6 @@ const styles = StyleSheet.create({
   },
   subSubWrapper: {
     flex: 6,
-  },
-  fakeWrapper: {
-    width: 70,
   },
   lines: {
     borderBottomColor: '#DCDCDC',

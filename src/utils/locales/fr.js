@@ -59,9 +59,7 @@ export default {
     },
     sharePlaceholder: "Pouvez-vous ajouter cet exercices à l'application ?",
   },
-  drillIllustration: {
-    finish: 'Terminer',
-    noContent: 'Pas de contenu pour cet exercice',
+  fitnessDrillIllustration: {
     redoMessage: "Vous avez terminé l'exercice !",
   },
   drillListPage: {

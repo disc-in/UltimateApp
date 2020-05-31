@@ -466,7 +466,7 @@ const Essential = () => {
         <View style={styles.container}>
           <VimeoVideo vimeoId={item.video} screenWidth={screenDimension.width} sounds={false} />
         </View>
-        <View style={styles.titleContainer}>
+        <View style={styles.instructionContainer}>
           <Text style={styles.instruction}>{item.text}</Text>
         </View>
       </>
@@ -655,7 +655,7 @@ const Tactics = () => {
         <View style={styles.container}>
           <VimeoVideo vimeoId={item.video} screenWidth={screenDimension.width} sounds={false} />
         </View>
-        <View style={styles.titleContainer}>
+        <View style={styles.instructionContainer}>
           <Text style={styles.instruction}>{item.text}</Text>
         </View>
       </>
@@ -844,6 +844,11 @@ const styles = StyleSheet.create({
   },
   titleContainer: {
     paddingVertical: 15,
+  },
+  instructionContainer: {
+    paddingVertical: 15,
+    textAlign: 'center',
+    alignItems: 'center',
   },
   instruction: { fontSize: theme.FONT_SIZE_SMALL, paddingLeft: 10 },
   listContainer: {

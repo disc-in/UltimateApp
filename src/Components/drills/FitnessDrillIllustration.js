@@ -12,8 +12,6 @@ import { IllustrationType } from '../../Fixtures/config';
 import theme from '../../styles/theme.style';
 import { swipeConfig } from '../../styles/config';
 import iconRedo from '../../../assets/redo_arrow.png';
-import buttonValidation from '../../../assets/button_validation_ultra_light.png';
-import buttonValidationGradient from '../../../assets/button_validation_gradient.png';
 
 const screenDimension = Dimensions.get('window');
 
@@ -31,20 +29,6 @@ const FitnessDrillIllustration = props => {
       Animated.timing(opacityUnchecked, {
         toValue: 0,
         duration: 800,
-        easing: Easing.easeOutQuint,
-      }),
-      Animated.timing(opacityUnchecked, {
-        toValue: 1,
-        duration: 10,
-      }),
-    ]).start(() => incrementStepIndex());
-  };
-
-  const checkAnimationFast = () => {
-    Animated.sequence([
-      Animated.timing(opacityUnchecked, {
-        toValue: 0,
-        duration: 200,
         easing: Easing.easeOutQuint,
       }),
       Animated.timing(opacityUnchecked, {
@@ -88,7 +72,7 @@ const FitnessDrillIllustration = props => {
         </View>
         {stepsCount > 1 && (
           <>
-            <View style={styles.description}>
+            <View style={styles.step}>
               <View style={styles.containerAnimation}>
                 <View style={styles.descriptionAnimation}>
                   <View style={styles.subSubWrapper}>
@@ -102,7 +86,12 @@ const FitnessDrillIllustration = props => {
                         },
                       ]}
                     >
-                      <Image style={styles.buttonNext} source={buttonValidation} />
+                      <MaterialCommunityIcons
+                        style={styles.buttonNext}
+                        name="check-circle-outline"
+                        color={theme.COLOR_PRIMARY}
+                        size={26}
+                      />
                     </Animated.View>
                     <Animated.View
                       style={[
@@ -111,7 +100,12 @@ const FitnessDrillIllustration = props => {
                         },
                       ]}
                     >
-                      <Image style={styles.buttonNext} source={buttonValidationGradient} />
+                      <MaterialCommunityIcons
+                        style={styles.buttonNext}
+                        name="check-circle"
+                        color={theme.COLOR_PRIMARY}
+                        size={26}
+                      />
                     </Animated.View>
                   </TouchableOpacity>
                 </View>
@@ -128,14 +122,14 @@ const FitnessDrillIllustration = props => {
   const renderStep = ({ index, item }) => {
     const isCurrent = index == activeIndex;
 
-    const doneStyle = index < activeIndex ? styles.fitnessDone : {};
-    const currentStyle = isCurrent ? styles.fitnessCurrent : {};
+    const doneStyle = index < activeIndex ? styles.stepTitleDone : {};
+    const currentStyle = isCurrent ? styles.stepTitleCurrent : {};
 
     return (
       <>
-        <View style={styles.description}>
+        <View style={styles.step}>
           <View style={styles.subWrapper}>
-            <Text style={[styles.fitness, doneStyle, currentStyle]}>
+            <Text style={[styles.stepTitle, doneStyle, currentStyle]}>
               {item.repetition} {item.title}
             </Text>
           </View>
@@ -148,7 +142,12 @@ const FitnessDrillIllustration = props => {
                   },
                 ]}
               >
-                <Image style={styles.buttonNext} source={buttonValidation} />
+                <MaterialCommunityIcons
+                  style={styles.buttonNext}
+                  name="check-circle-outline"
+                  color={theme.COLOR_PRIMARY}
+                  size={26}
+                />
               </Animated.View>
               <Animated.View
                 style={[
@@ -157,7 +156,12 @@ const FitnessDrillIllustration = props => {
                   },
                 ]}
               >
-                <Image style={styles.buttonNext} source={buttonValidationGradient} />
+                <MaterialCommunityIcons
+                  style={styles.buttonNext}
+                  name="check-circle"
+                  color={theme.COLOR_PRIMARY}
+                  size={26}
+                />
               </Animated.View>
             </TouchableOpacity>
           )}
@@ -248,9 +252,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignSelf: 'flex-end',
   },
-  description: {
+  step: {
     flexDirection: 'row',
-    paddingBottom: 2,
+    padding: 20,
   },
   descriptionAnimation: {
     flexDirection: 'row',
@@ -259,17 +263,14 @@ const styles = StyleSheet.create({
   pageAnimation: {
     flex: 1,
   },
-  fitness: {
-    marginTop: 20,
-    marginBottom: 20,
-    marginLeft: 20,
+  stepTitle: {
     fontSize: theme.FONT_SIZE_LARGE,
     color: theme.COLOR_PRIMARY,
   },
-  fitnessCurrent: {
+  stepTitleCurrent: {
     fontWeight: 'bold',
   },
-  fitnessDone: {
+  stepTitleDone: {
     color: theme.COLOR_SECONDARY,
   },
   separator: {
@@ -280,16 +281,7 @@ const styles = StyleSheet.create({
   buttonNext: {
     position: 'absolute',
     right: 0,
-    marginRight: 20,
     marginLeft: 20,
-    marginTop: 20,
-    width: 25,
-    height: 25,
-    borderRadius: 12.5,
-    backgroundColor: theme.BACKGROUND_COLOR_BUTTON,
-    borderWidth: 1,
-    borderColor: theme.BORDER_COLOR_BUTTON_ACTIVE,
-    alignItems: 'center',
   },
   subWrapper: {
     flexGrow: 0,
@@ -302,19 +294,6 @@ const styles = StyleSheet.create({
   lines: {
     borderBottomColor: '#DCDCDC',
     borderBottomWidth: 1,
-  },
-  wrapperFinish: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  finishMessage: {
-    marginTop: 150,
-    marginBottom: 20,
-    marginLeft: 20,
-    fontSize: theme.FONT_SIZE_LARGE,
-    color: theme.COLOR_PRIMARY,
-    fontWeight: 'bold',
   },
   instruction: {
     marginTop: 20,
@@ -339,9 +318,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flex: 1,
-  },
-  pagination: {
-    paddingVertical: 15,
   },
   line: {
     flex: 1,

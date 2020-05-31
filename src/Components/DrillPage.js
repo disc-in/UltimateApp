@@ -16,10 +16,13 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import I18n from '../utils/i18n';
 import GradientButton from './shared/GradientButton';
-import DrillIllustration from './DrillIllustration';
 import { toggleFavorite } from '../Store/Actions/favoriteAction';
 
 import theme from '../styles/theme.style';
+
+import FitnessDrillIllustration from './drills/FitnessDrillIllustration';
+import FrisbeeDrillIllustration from './drills/FrisbeeDrillIllustration';
+import { DrillTypes } from '../Fixtures/config';
 
 export const DrillPage = props => {
   const { route, navigation } = props;
@@ -112,7 +115,8 @@ export const DrillPage = props => {
         </View>
       </View>
       <View ref={firstDrill} style={styles.animation}>
-        <DrillIllustration drill={drill} />
+        {drill.type === DrillTypes.FRISBEE && <FrisbeeDrillIllustration drill={drill} />}
+        {drill.type === DrillTypes.FITNESS && <FitnessDrillIllustration drill={drill} />}
       </View>
     </ScrollView>
   );

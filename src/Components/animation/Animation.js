@@ -13,6 +13,7 @@ import iconNext from '../../../assets/next.png';
 import iconReplay from '../../../assets/replay.png';
 
 import debug from './debug';
+import { EndOfLineState } from 'typescript';
 
 class Animation extends React.Component {
   constructor(props) {
@@ -239,8 +240,8 @@ class Animation extends React.Component {
       }),
     );
 
-    /* For each step (start at step 1 as step 0 corresponds to the initial positions)*/
-    for (var stepId = 1; stepId < this._stepCount(); stepId++)
+    /* For each step */
+    for (var stepId = 0; stepId < this._stepCount(); stepId++)
       completeSequence.push(Animated.parallel(this._getStepAnimation(stepId, true)));
 
     Animated.sequence(completeSequence).start();
@@ -281,9 +282,13 @@ class Animation extends React.Component {
   }
 
   /** Returns the animation to a given step for all displayed elements
-    The substeps are played if the animation is forward and if the elements moves at step stepId
-  */
-  _getStepAnimation = (stepId, isForward) => {
+   * - playSubsteps: boolean which indicates if we play the substeps
+   * (true if push the "play animation" button or if we move from a step to the next one)
+   * (false if we move to a step which is not the next)
+   * - moveInstantlyToInitialPosition: boolean which indicates if the elements must be move instantly to their initial position in this step
+   * (true if the elements are already in the initial position, in that case no need to wait for an animation which does not move anything)
+   */
+  _getStepAnimation = (stepId, playSubsteps, moveInstantlyToInitialPosition = false) => {
     debug('Animation: get animation: ' + stepId);
 
     stepId = Math.max(0, Math.round(stepId));
@@ -291,11 +296,21 @@ class Animation extends React.Component {
     /* Animation of all the elements at step stepId */
     var stepAnimation = [];
 
+    this.state.animation.log();
+
+    var barMoveDuration = this.state.stepLength;
+    var barValue = stepId;
+
+    if (moveInstantlyToInitialPosition) {
+      barMoveDuration = this.state.stepLength;
+      barValue = stepId + 0.5;
+    }
+
     /* The first animation in the sequence enables to update the current step */
     stepAnimation.push(
       Animated.timing(this.currentStepAV, {
-        toValue: stepId,
-        duration: this.state.stepLength,
+        toValue: barValue,
+        duration: barMoveDuration,
         easing: Easing.linear,
         key: 0,
       }),
@@ -312,33 +327,31 @@ class Animation extends React.Component {
       debug('stepId is ', stepId);
       const nextPosition = this.state.animation.getPositionsAtStep(elemId, stepId, this.state.currentStep); //this.state.animation.positions[elemId][stepId];
 
-      /* The substeps are played only if the element moves at step stepId.
-	       Otherwise, we just move the element to its previous position without playing the substeps of this position */
-      let playSubSteps = true;
-      if (nextPosition === undefined || nextPosition === null || !isForward) playSubSteps = false;
-
       /* If this element must change its position */
       if (nextPosition !== undefined && nextPosition !== null) {
         /* Animation of the element at step stepId */
         var displayedElementStepAnimation = [];
 
         var substepCount = nextPosition.length;
+        var substepLength = this.state.stepLength / substepCount;
+
+        if (moveInstantlyToInitialPosition && substepCount === 1) substepLength = 0;
 
         /* If the sub steps must be played */
-        if (playSubSteps) {
+        if (playSubsteps) {
           /* For each substep of element de in step stepId */
           for (var substep = 0; substep < substepCount; substep++) {
             var currentDisplayedElement = this.state.displayedElements[elemId];
+
+            var currentSubStepLength = substepLength;
+
+            if (moveInstantlyToInitialPosition && substep == 0) currentSubStepLength = 0;
 
             /* Get the position of the element at this substep */
             var pixelPosition = this._positionPercentToPixel(nextPosition[substep][0], nextPosition[substep][1]);
 
             /* Get the corresponding animation */
-            var anim = currentDisplayedElement.getAnimation(
-              pixelPosition[0],
-              pixelPosition[1],
-              this.state.stepLength / substepCount,
-            );
+            var anim = currentDisplayedElement.getAnimation(pixelPosition[0], pixelPosition[1], currentSubStepLength);
 
             displayedElementStepAnimation.push(anim);
           }
@@ -347,10 +360,7 @@ class Animation extends React.Component {
           currentDisplayedElement = this.state.displayedElements[elemId];
 
           /* Get the position of the element at this substep */
-          pixelPosition = this._positionPercentToPixel(
-            nextPosition[substepCount - 1][0],
-            nextPosition[substepCount - 1][1],
-          );
+          pixelPosition = this._positionPercentToPixel(nextPosition[0][0], nextPosition[0][1]);
 
           /* Get the corresponding animation */
           anim = currentDisplayedElement.getAnimation(pixelPosition[0], pixelPosition[1], this.state.stepLength);

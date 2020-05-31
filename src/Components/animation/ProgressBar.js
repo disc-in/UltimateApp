@@ -1,4 +1,4 @@
-import React from 'react';
+consoimport React from 'react';
 import { Text, StyleSheet, Easing, Animated, View, TouchableOpacity } from 'react-native';
 
 /** Progress bar displayed with an animation which:
@@ -174,9 +174,17 @@ class ProgressBar extends React.Component {
   }
 
   _stepButtonClicked = key => {
-    Animated.parallel(
-      this.props.getStepAnimation(this.progressBarDots[key].key, this.props.currentStepAV <= key),
-    ).start();
+    var isNextStep = key - this.props.currentStepAV._value <= 1 && key - this.props.currentStepAV._value > 0;
+
+    var moveAnimation = [];
+    /* If the step button clicked is the next step compared to what is currently displayed */
+    if (isNextStep)
+      /* Then first play the previous step with counter-cut */
+      moveAnimation.push(Animated.parallel(this.props.getStepAnimation(this.progressBarDots[key].key - 1, true, true)));
+
+    /* Always move to the initial position of the step which corresponds to the button */
+    moveAnimation.push(Animated.parallel(this.props.getStepAnimation(this.progressBarDots[key].key, false)));
+    Animated.sequence(moveAnimation).start();
 
     if (this.props.onStepChange !== undefined && this.props.onStepChange !== null) this.props.onStepChange(key);
   };

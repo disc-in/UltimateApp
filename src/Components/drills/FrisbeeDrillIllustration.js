@@ -22,7 +22,7 @@ const FrisbeeDrillIllustration = props => {
     setActiveIndex(0);
   }, [props.drill]);
 
-  const titleNavigation = (title, index) => {
+  const renderTitle = (title, index) => {
     const isFirstStep = index === 0;
     const isLastStep = index === props.drill.steps.length - 1;
     return (
@@ -54,10 +54,9 @@ const FrisbeeDrillIllustration = props => {
     );
   };
 
-  const displayYoutube = ({ illustrationSource, title, index }) => {
+  const displayYoutube = ({ illustrationSource }) => {
     return (
       <>
-        {titleNavigation(title, index)}
         <View style={styles.contentWrapper}>
           <View style={{ height: 250 }}>
             <WebView
@@ -71,10 +70,9 @@ const FrisbeeDrillIllustration = props => {
     );
   };
 
-  const displayVimeo = ({ illustrationSource, title, sounds }, index) => {
+  const displayVimeo = ({ illustrationSource, sounds }) => {
     return (
       <>
-        {titleNavigation(title, index)}
         <View style={styles.contentWrapper}>
           <View style={[{ height: 250 }, styles.videoAlone]}>
             <VimeoVideo vimeoId={illustrationSource} screenWidth={screenDimension.width} sounds={sounds} />
@@ -84,10 +82,9 @@ const FrisbeeDrillIllustration = props => {
     );
   };
 
-  const displayAnimation = ({ illustrationSource, title, instruction }, index) => {
+  const displayAnimation = ({ illustrationSource, instruction }) => {
     return (
       <>
-        {titleNavigation(title, index)}
         <View style={styles.contentWrapper}>
           <Animation widthRatio={1} heightRatio={props.minimal ? 2 / 5 : 1 / 2} animation={illustrationSource} />
         </View>
@@ -97,23 +94,18 @@ const FrisbeeDrillIllustration = props => {
   };
 
   const renderStep = ({ item, index }) => {
-    if (!currentStep) {
-      return <View />; // bad state, but let's not crash
-    } else {
-      switch (item.illustrationType) {
-        case IllustrationType.ANIMATION:
-          return displayAnimation(item, index);
-        case IllustrationType.YOUTUBE:
-          return displayYoutube(item, index);
-        case IllustrationType.VIMEO:
-          return displayVimeo(item, index);
-        default:
-          return <Text>No visual content for this drill</Text>;
-      }
-    }
+    return (
+      <>
+        {renderTitle(item.title, index)}
+        <View style={styles.pagination}>{renderPagination()}</View>
+        {item.illustrationType === IllustrationType.ANIMATION && displayAnimation(item)}
+        {item.illustrationType === IllustrationType.YOUTUBE && displayYoutube(item)}
+        {item.illustrationType === IllustrationType.VIMEO && displayVimeo(item)}
+      </>
+    );
   };
 
-  const pagination = () => {
+  const renderPagination = () => {
     return (
       <Pagination
         dotsLength={props.drill.steps.length}
@@ -150,7 +142,6 @@ const FrisbeeDrillIllustration = props => {
           renderItem={renderStep}
           onSnapToItem={index => setActiveIndex(index)}
         />
-        <View style={styles.pagination}>{pagination()}</View>
       </SafeAreaView>
     </View>
   );

@@ -76,6 +76,7 @@ const VimeoVideo = ({ vimeoId, screenWidth, sounds }) => {
       <Video
         ref={videoElem}
         resizeMode={Video.RESIZE_MODE_CONTAIN}
+        useNativeControls
         style={{ width: screenWidth, height: 250 }}
         onLoadStart={() => setBuffer(true)}
         onLoad={playVideoLoaded}

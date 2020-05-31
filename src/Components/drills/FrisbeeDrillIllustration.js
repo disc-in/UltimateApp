@@ -126,6 +126,8 @@ const FrisbeeDrillIllustration = props => {
         }}
         inactiveDotOpacity={0.4}
         inactiveDotScale={0.6}
+        tappableDots
+        carouselRef={carouselRef}
       />
     );
   };

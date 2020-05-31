@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Animated, View, StyleSheet, Text, Dimensions, TouchableOpacity, Image } from 'react-native';
+import { Animated, View, StyleSheet, Text, Dimensions, TouchableOpacity, Image, FlatList } from 'react-native';
 import GestureRecognizer from 'react-native-swipe-gestures';
 import { WebView } from 'react-native-webview';
 import { Easing } from 'react-native-reanimated';
@@ -154,6 +154,47 @@ const FitnessDrillIllustration = props => {
     );
   };
 
+  const renderStep = ({ index, item }) => {
+    const isCurrent = index == activeIndex;
+
+    const doneStyle = index < activeIndex ? styles.fitnessDone : {};
+    const currentStyle = isCurrent ? styles.fitnessCurrent : {};
+
+    return (
+      <>
+        <View style={styles.description}>
+          <View style={styles.subWrapper}>
+            <Text style={[styles.fitness, doneStyle, currentStyle]}>
+              {item.repetition} {item.title}
+            </Text>
+          </View>
+          {isCurrent && (
+            <TouchableOpacity style={styles.container} onPress={() => checkAnimation()}>
+              <Animated.View
+                style={[
+                  {
+                    opacity: opacityUnchecked,
+                  },
+                ]}
+              >
+                <Image style={styles.buttonNext} source={buttonValidation} />
+              </Animated.View>
+              <Animated.View
+                style={[
+                  {
+                    opacity: opacityChecked,
+                  },
+                ]}
+              >
+                <Image style={styles.buttonNext} source={buttonValidationGradient} />
+              </Animated.View>
+            </TouchableOpacity>
+          )}
+        </View>
+      </>
+    );
+  };
+
   const displayVimeo = ({ illustrationSource, repetition, title, sounds }) => {
     const isUniqueStep = props.drill.steps.length === 1;
     return (
@@ -162,41 +203,7 @@ const FitnessDrillIllustration = props => {
           <VimeoVideo vimeoId={illustrationSource} screenWidth={screenDimension.width} sounds={sounds} />
         </View>
         {!isUniqueStep && (
-          <>
-            <View style={styles.description}>
-              <View style={styles.subWrapper}>
-                <Text style={styles.fitness}>{repetition}</Text>
-              </View>
-              <View style={styles.subSubWrapper}>
-                <Text style={styles.fitness}>{title}</Text>
-              </View>
-              <TouchableOpacity style={styles.container} onPress={() => checkAnimation()}>
-                <Animated.View
-                  style={[
-                    {
-                      opacity: opacityUnchecked,
-                    },
-                  ]}
-                >
-                  <Image style={styles.buttonNext} source={buttonValidation} />
-                </Animated.View>
-                <Animated.View
-                  style={[
-                    {
-                      opacity: opacityChecked,
-                    },
-                  ]}
-                >
-                  <Image style={styles.buttonNext} source={buttonValidationGradient} />
-                </Animated.View>
-              </TouchableOpacity>
-            </View>
-
-            <View style={styles.lines} />
-            <View style={styles.containerAnimation}>
-              <View style={styles.container}>{displayNextStep()}</View>
-            </View>
-          </>
+          <FlatList data={props.drill.steps} keyExtractor={item => item.id.toString()} renderItem={renderStep} />
         )}
       </>
     );
@@ -303,7 +310,12 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     fontSize: theme.FONT_SIZE_LARGE,
     color: theme.COLOR_PRIMARY,
+  },
+  fitnessCurrent: {
     fontWeight: 'bold',
+  },
+  fitnessDone: {
+    color: theme.COLOR_SECONDARY,
   },
   fitnessNext: {
     marginTop: 20,

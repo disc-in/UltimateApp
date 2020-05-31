@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
-import MinimalDrill from './shared/MinimalDrill';
+import MinimalDrill from './drills/MinimalDrill';
 import Button from './shared/Button';
 import Progress from './ProgressBar2';
 import { completeTraining } from '../Store/Actions/programAction';

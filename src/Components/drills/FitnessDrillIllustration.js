@@ -3,7 +3,7 @@ import { Animated, View, StyleSheet, Text, Dimensions, TouchableOpacity, Image }
 import GestureRecognizer from 'react-native-swipe-gestures';
 import { WebView } from 'react-native-webview';
 import { Easing } from 'react-native-reanimated';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import I18n from '../../utils/i18n';
 import Animation from '../animation/Animation';

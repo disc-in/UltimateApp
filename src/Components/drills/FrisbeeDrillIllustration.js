@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { View, StyleSheet, Text, Dimensions, TouchableOpacity, SafeAreaView } from 'react-native';
 import { WebView } from 'react-native-webview';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import Animation from '../animation/Animation';
 import VimeoVideo from '../VimeoVideo';

@@ -22,6 +22,7 @@ const FitnessDrillIllustration = props => {
   const opacityUnchecked = useRef(new Animated.Value(1)).current;
   const opacityChecked = opacityUnchecked.interpolate({ inputRange: [0, 1], outputRange: [1, 0] });
   const currentStep = props.drill.steps[activeIndex];
+  const stepsCount = props.drill.steps.length;
 
   const carouselRef = useRef(null);
 
@@ -59,7 +60,7 @@ const FitnessDrillIllustration = props => {
   }, [props.drill]);
 
   const incrementStepIndex = () => {
-    setActiveIndex(activeIndex + 1);
+    setActiveIndex((activeIndex + 1) % (stepsCount + 1));
   };
 
   const renderFinish = () => {
@@ -85,7 +86,7 @@ const FitnessDrillIllustration = props => {
             }}
           />
         </View>
-        {props.drill.steps.length > 1 && (
+        {stepsCount > 1 && (
           <>
             <View style={styles.description}>
               <View style={styles.containerAnimation}>
@@ -166,7 +167,7 @@ const FitnessDrillIllustration = props => {
   };
 
   const renderVimeo = ({ illustrationSource, repetition, title, sounds }) => {
-    const isUniqueStep = props.drill.steps.length === 1;
+    const isUniqueStep = stepsCount === 1;
     return (
       <>
         <View style={[{ height: 250 }, isUniqueStep && styles.videoAlone]}>
@@ -181,7 +182,7 @@ const FitnessDrillIllustration = props => {
 
   const renderAnimation = ({ illustrationSource, title, instruction }, index) => {
     const isFirstStep = index === 0;
-    const isLastStep = index === props.drill.steps.length - 1;
+    const isLastStep = index === stepsCount - 1;
     return (
       <>
         <View style={styles.line}>
@@ -218,7 +219,7 @@ const FitnessDrillIllustration = props => {
   };
 
   return (
-    <GestureRecognizer style={styles.container} onSwipeLeft={checkAnimationFast} config={swipeConfig}>
+    <GestureRecognizer style={styles.container} onSwipeLeft={checkAnimation} config={swipeConfig}>
       {activeIndex === props.drill.steps.length && renderFinish()}
       {currentStep?.illustrationType === IllustrationType.ANIMATION && renderAnimation(currentStep)}
       {currentStep?.illustrationType === IllustrationType.YOUTUBE && renderYoutube(currentStep)}

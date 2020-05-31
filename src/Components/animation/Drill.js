@@ -35,7 +35,7 @@ class Drill {
   }
 
   /** Add an element to the drill */
-  addElement(element, initialX, initialY) {
+  addElement(element, initialX, initialY, elementNumber) {
     debug('drill add element at position: ' + initialX + '/' + initialY);
     //	debug("drill positions before update: " + this.positions);
 
@@ -48,11 +48,7 @@ class Drill {
     for (var i = 1; i < this.stepCount(); ++i) this.positions[i].push(undefined);
 
     // Add its text
-    if (element.props.number === undefined) {
-      this.texts.push('');
-    } else {
-      this.texts.push(element.props.number);
-    }
+    this.texts.push(elementNumber);
 
     // Add its type
     this.ids.push(element.props.id);

@@ -9,22 +9,43 @@ import Button from './filters/FilterButton';
 import Checkbox from './filters/Checkbox';
 import Slider from './filters/Slider';
 import HeaderButton from './shared/HeaderButton';
+import iconRedo from '../../assets/redo_arrow.png';
+import buttonValidation from '../../assets/check_dark.png';
 
 export class FitnessFilters extends React.Component {
   constructor(props) {
     super(props);
+
+    const { filters, initialData } = props.route.params;
     this.state = {
-      selectedFavorites: false,
-      selectedLevels: [],
-      selectedIntensities: [],
-      selectedEquipmentLabels: [],
-      selectedSeasonTimings: [],
-      selectedGoals: [],
-      durationInMinutes: undefined,
-      displayedDrills: this.props.route.params.initialData,
+      selectedFavorites: filters?.selectedFavorites || false,
+      selectedLevels: filters?.selectedLevels || [],
+      selectedIntensities: filters?.selectedIntensities || [],
+      selectedEquipmentLabels: filters?.selectedEquipmentLabels || [],
+      selectedSeasonTimings: filters?.selectedSeasonTimings || [],
+      selectedGoals: filters?.selectedGoals || [],
+      durationInMinutes: filters?.durationInMinutes || undefined,
+      displayedDrills: filters?.displayedDrills || initialData,
     };
 
     this.onDurationInMinutesChange = this.onSliderChange.bind(this, 'durationInMinutes');
+  }
+
+  resetFilters() {
+    this.setState(
+      {
+        selectedFavorites: false,
+        selectedLevels: [],
+        selectedIntensities: [],
+        selectedEquipmentLabels: [],
+        selectedSeasonTimings: [],
+        selectedGoals: [],
+        durationInMinutes: undefined,
+      },
+      () => {
+        this.applyFilters(this.validateFilters);
+      },
+    );
   }
 
   onPressedChange(target, value) {
@@ -50,7 +71,7 @@ export class FitnessFilters extends React.Component {
     this.setState({ [target]: value }, this.applyFilters);
   }
 
-  applyFilters() {
+  applyFilters(callback = () => {}) {
     const { favoriteDrills } = this.props;
     const {
       selectedFavorites,
@@ -78,20 +99,23 @@ export class FitnessFilters extends React.Component {
       newData = newData.filter(drill => drill.goals.filter(goal => selectedGoals.includes(goal)).length > 0);
     if (durationInMinutes) newData = newData.filter(drill => drill.durationInMinutes <= durationInMinutes);
 
-    this.setState({ displayedDrills: newData });
+    this.setState({ displayedDrills: newData }, callback);
+  }
+
+  validateFilters() {
+    this.props.navigation.navigate(this.props.route.params.previousScreen, {
+      type: this.props.route.params.previousType,
+      currentFilters: this.state,
+    });
   }
 
   componentDidMount() {
     this.props.navigation.setOptions({
       headerRight: () => (
-        <HeaderButton
-          onPress={() => {
-            this.props.navigation.navigate(this.props.route.params.previousScreen, {
-              filteredDrills: this.state.displayedDrills,
-              type: this.props.route.params.previousType,
-            });
-          }}
-        />
+        <View style={{ flexDirection: 'row' }}>
+          <HeaderButton image={iconRedo} onPress={() => this.resetFilters()} testID="resetButton" />
+          <HeaderButton image={buttonValidation} onPress={() => this.validateFilters()} testID="validateButton" />
+        </View>
       ),
     });
   }

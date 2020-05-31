@@ -346,7 +346,7 @@ const Dictionary = () => {
                 <Text style={styles.modalTitle}>{selectedItem.item.text}</Text>
                 <Text style={styles.modalText}>{selectedItem.item.definition}</Text>
                 <TouchableHighlight
-                  style={{ ...styles.openButton, backgroundColor: theme.COLOR_PRIMARY }}
+                  style={styles.returnButtonDictionnary}
                   onPress={() => {
                     setModalVisible(!modalVisible);
                   }}
@@ -368,7 +368,7 @@ const Dictionary = () => {
   return (
     <View style={styles.container}>
       <View>
-        <View style={styles.containerDropdown}>
+        <View style={styles.containerDictionary}>
           <View>
             <View style={styles.container} width={screenDimension.width}>
               {displayDictionary()}
@@ -424,7 +424,7 @@ const Essential = () => {
       pages: [
         {
           id: 1,
-          title: '',
+          title: 'The art of catching',
           text: 'Rise Up',
           video: '424266555',
           animation: '',
@@ -436,7 +436,7 @@ const Essential = () => {
       pages: [
         {
           id: 1,
-          title: '',
+          title: 'How to make a perfect cut?',
           text: 'Rise Up Ultimate',
           video: '424000350',
           animation: '',
@@ -561,7 +561,7 @@ const Essential = () => {
             }}
           >
             <View>
-              <View style={styles.flexDirection}>
+              <View style={styles.dropdown}>
                 <Text style={{ ...styles.textStyle, color: theme.COLOR_PRIMARY }}>{theorySubject}</Text>
                 <MaterialCommunityIcons name="chevron-down" color={theme.COLOR_PRIMARY} size={26} />
               </View>
@@ -760,7 +760,7 @@ const Tactics = () => {
             }}
           >
             <View>
-              <View style={styles.flexDirection}>
+              <View style={styles.dropdown}>
                 <Text style={{ ...styles.textStyle, color: theme.COLOR_PRIMARY }}>{theorySubject}</Text>
                 <MaterialCommunityIcons name="chevron-down" color={theme.COLOR_PRIMARY} size={26} />
               </View>
@@ -833,18 +833,11 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     paddingLeft: 10,
   },
-  btnNext: {
-    left: 'auto',
-    right: 10,
-  },
   lines: {
     borderBottomColor: theme.COLOR_SECONDARY_LIGHT,
     borderBottomWidth: 1,
   },
-  dropdown: {
-    width: '80%',
-  },
-  containerDropdown: {
+  containerDictionary: {
     justifyContent: 'center',
     alignItems: 'center',
     paddingTop: 20,
@@ -853,9 +846,6 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
   },
   instruction: { fontSize: theme.FONT_SIZE_SMALL, paddingLeft: 10 },
-  maxHeight: {
-    height: '100%',
-  },
   listContainer: {
     paddingVertical: 10,
     paddingBottom: 50,
@@ -869,11 +859,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     backgroundColor: 'rgba(247,247,247,1.0)',
   },
-  item: {
-    padding: 10,
-    fontSize: 18,
-    height: 44,
-  },
   row: {
     padding: 15,
     marginBottom: 5,
@@ -886,11 +871,6 @@ const styles = StyleSheet.create({
     color: 'white',
     fontWeight: 'bold',
   },
-  containerPink: {
-    flex: 1,
-    backgroundColor: 'pink',
-  },
-
   centeredView: {
     flex: 1,
     justifyContent: 'center',
@@ -932,7 +912,7 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
 
-  openButton: {
+  returnButtonDictionnary: {
     backgroundColor: theme.COLOR_PRIMARY,
     borderRadius: 10,
     padding: 10,
@@ -947,6 +927,7 @@ const styles = StyleSheet.create({
   modalText: {
     marginBottom: 15,
     fontSize: theme.FONT_SIZE_MEDIUM,
+    textAlign: 'left',
   },
   modalTitle: {
     marginBottom: 15,
@@ -980,7 +961,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.2,
     shadowRadius: 1.41,
   },
-  flexDirection: {
+  dropdown: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',

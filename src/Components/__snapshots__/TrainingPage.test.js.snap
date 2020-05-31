@@ -761,6 +761,7 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
               Object {
                 "flexDirection": "row",
                 "justifyContent": "space-evenly",
+                "padding": 5,
               }
             }
           >
@@ -1928,31 +1929,40 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
               }
             }
           >
-            <Text
+            <View
               style={
                 Object {
-                  "fontSize": 20,
-                  "fontWeight": "bold",
+                  "alignItems": "center",
+                  "justifyContent": "center",
                 }
               }
             >
-              Dump & Swing
-            </Text>
-            <Text
-              style={
-                Object {
-                  "fontSize": 20,
+              <Text
+                style={
+                  Object {
+                    "fontSize": 20,
+                    "fontWeight": "bold",
+                  }
                 }
-              }
-            >
-               
-              (
-              1
-              /
-              2
-              )
-               
-            </Text>
+              >
+                Dump & Swing
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "fontSize": 20,
+                  }
+                }
+              >
+                 
+                (
+                1
+                /
+                2
+                )
+                 
+              </Text>
+            </View>
             <View
               accessible={true}
               focusable={true}
@@ -1972,18 +1982,18 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
                   "right": 10,
                 }
               }
+              testID="goToNext"
             >
-              <Text
+              <Image
+                source={1}
                 style={
                   Object {
-                    "color": "#232b2b",
-                    "fontSize": 20,
-                    "textAlign": "center",
+                    "height": 60,
+                    "resizeMode": "contain",
+                    "width": 20,
                   }
                 }
-              >
-                &gt;
-              </Text>
+              />
             </View>
           </View>
           <View
@@ -1991,6 +2001,7 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
               Object {
                 "flexDirection": "row",
                 "justifyContent": "space-evenly",
+                "padding": 5,
               }
             }
           >

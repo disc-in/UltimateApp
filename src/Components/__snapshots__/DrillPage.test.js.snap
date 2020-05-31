@@ -276,7 +276,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                   }
                                 }
                               >
-                                 minutes
+                                minutes
                               </Text>
                             </View>
                             <View
@@ -317,7 +317,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                   }
                                 }
                               >
-                                 players
+                                players
                               </Text>
                             </View>
                             <View
@@ -357,7 +357,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                   }
                                 }
                               >
-                                 level
+                                level
                               </Text>
                             </View>
                           </View>
@@ -805,15 +805,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                 }
                 testID="favoriteButton"
               >
-                <Image
-                  source={1}
-                  style={
-                    Object {
-                      "height": 20,
-                      "width": 17,
-                    }
-                  }
-                />
+                <Text />
               </View>
             </View>
           </View>

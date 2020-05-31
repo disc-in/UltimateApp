@@ -12,15 +12,17 @@ import {
 } from 'react-native';
 import { connect } from 'react-redux';
 import { useHeaderHeight } from '@react-navigation/stack';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
+import I18n from '../utils/i18n';
 import GradientButton from './shared/GradientButton';
-import DrillIllustration from './DrillIllustration';
 import { toggleFavorite } from '../Store/Actions/favoriteAction';
 
 import theme from '../styles/theme.style';
 
-import iconFavoriteEmpty from '../../assets/ic_favorite_border_bookmark.png';
-import iconFavoriteFull from '../../assets/ic_favorite_bookmark.png';
+import FitnessDrillIllustration from './drills/FitnessDrillIllustration';
+import FrisbeeDrillIllustration from './drills/FrisbeeDrillIllustration';
+import { DrillTypes } from '../Fixtures/config';
 
 export const DrillPage = props => {
   const { route, navigation } = props;
@@ -44,9 +46,9 @@ export const DrillPage = props => {
   };
 
   const displayFavoriteButton = () => {
-    let sourceImage = iconFavoriteEmpty;
+    let icon = 'heart-outline';
     if (props.favoriteDrills.findIndex(item => item.id === props.route.params.drill.id) !== -1) {
-      sourceImage = iconFavoriteFull;
+      icon = 'heart';
     }
 
     return (
@@ -55,7 +57,7 @@ export const DrillPage = props => {
         onPress={() => props.toggleFavorite(drill)}
         testID="favoriteButton"
       >
-        <Image style={styles.favoriteImage} source={sourceImage} />
+        <MaterialCommunityIcons name={icon} color={theme.COLOR_PRIMARY} size={26} />
       </TouchableOpacity>
     );
   };
@@ -76,44 +78,45 @@ export const DrillPage = props => {
         <View style={styles.infoWrapper}>
           <View style={styles.infoSubWrapper}>
             <Text style={styles.infoDrill}>{drill.durationInMinutes}</Text>
-            <Text style={styles.info}> minutes</Text>
+            <Text style={styles.info}>{I18n.t('drillPage.minutes')}</Text>
           </View>
           <View style={styles.separator} />
           <View style={styles.infoSubWrapper}>
             <Text style={styles.infoDrill}>{drill.minimalPlayersNumber}+</Text>
-            <Text style={styles.info}> players</Text>
+            <Text style={styles.info}>{I18n.t('drillPage.players')}</Text>
           </View>
           <View style={styles.separator} />
           <View style={styles.infoSubWrapper}>
-            <Text style={styles.infoDrill}>{drill.level}</Text>
-            <Text style={styles.info}> level</Text>
+            <Text style={styles.infoDrill}>{I18n.t(`data.levels.${drill.level}`)}</Text>
+            <Text style={styles.info}>{I18n.t('drillPage.level')}</Text>
           </View>
         </View>
-        <GradientButton onPress={onPressStartButton} text="Start" />
+        <GradientButton onPress={onPressStartButton} text={I18n.t('drillPage.start')} />
       </ImageBackground>
       <View style={styles.separator} />
       <View style={styles.description}>
         <View style={styles.descriptionItem}>
-          <Text style={styles.descriptionTitle}>Good for</Text>
+          <Text style={styles.descriptionTitle}>{I18n.t('drillPage.goal')}</Text>
           <Text style={styles.descriptionText}>{drill.goals ? drill.goals.join(' - ') : ''}</Text>
         </View>
       </View>
       <View style={styles.lines} />
       <View style={styles.description}>
         <View style={styles.descriptionItem}>
-          <Text style={styles.descriptionTitle}>Equipment</Text>
+          <Text style={styles.descriptionTitle}>{I18n.t('drillPage.equipment')}</Text>
           <Text style={styles.descriptionText}>{drill.equipmentLabel}</Text>
         </View>
       </View>
       <View style={styles.lines} />
       <View style={styles.description}>
         <View style={styles.descriptionItem}>
-          <Text style={styles.descriptionTitle}>Description</Text>
+          <Text style={styles.descriptionTitle}>{I18n.t('drillPage.description')}</Text>
           <Text style={styles.descriptionText}>{drill.description}</Text>
         </View>
       </View>
       <View ref={firstDrill} style={styles.animation}>
-        <DrillIllustration drill={drill} />
+        {drill.type === DrillTypes.FRISBEE && <FrisbeeDrillIllustration drill={drill} />}
+        {drill.type === DrillTypes.FITNESS && <FitnessDrillIllustration drill={drill} />}
       </View>
     </ScrollView>
   );
@@ -221,10 +224,6 @@ const styles = StyleSheet.create({
   },
   favoriteContainer: {
     marginRight: 20,
-  },
-  favoriteImage: {
-    width: 17,
-    height: 20,
   },
 });
 

@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { render, fireEvent, cleanup } from 'react-native-testing-library';
 import store from '../Store/testStore';
 import { createDrill } from '../Fixtures/TestFixtures';
-import { DrillTypes } from '../Fixtures';
+import { DrillTypes } from '../Fixtures/config';
 
 import ConnectedDrillListPage, { DrillListPage } from './DrillListPage';
 
@@ -27,24 +27,30 @@ describe('<DrillListPage />', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders correctly with a frisbee drill', () => {
+  it('renders frisbee drills sorted by number of players', () => {
     const route = {
       params: {
         type: DrillTypes.FRISBEE,
       },
     };
-    const drills = [createDrill({ type: DrillTypes.FRISBEE })];
+    const morePlayersDrill = createDrill({ id: 1, type: DrillTypes.FRISBEE, minimalPlayersNumber: 14 });
+    const lessPlayersDrill = createDrill({ id: 2, type: DrillTypes.FRISBEE, minimalPlayersNumber: 6 });
+    const evenMorePlayersDrill = createDrill({ id: 3, type: DrillTypes.FRISBEE, minimalPlayersNumber: 20 });
+    const drills = [morePlayersDrill, evenMorePlayersDrill, lessPlayersDrill];
     const tree = renderer.create(<DrillListPage route={route} storeDrills={drills} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders correctly with a fitness drill', () => {
+  it('renders fitness drills sorted by duration', () => {
     const route = {
       params: {
         type: DrillTypes.FITNESS,
       },
     };
-    const drills = [createDrill({ type: DrillTypes.FITNESS })];
+    const shortDrill = createDrill({ id: 1, type: DrillTypes.FITNESS, durationInMinutes: 10 });
+    const longDrill = createDrill({ id: 2, type: DrillTypes.FITNESS, durationInMinutes: 20 });
+    const evenLongerDrill = createDrill({ id: 3, type: DrillTypes.FITNESS, durationInMinutes: 30 });
+    const drills = [longDrill, evenLongerDrill, shortDrill];
     const tree = renderer.create(<DrillListPage route={route} storeDrills={drills} />).toJSON();
     expect(tree).toMatchSnapshot();
   });

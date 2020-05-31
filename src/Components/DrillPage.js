@@ -22,7 +22,7 @@ import theme from '../styles/theme.style';
 import iconFavoriteEmpty from '../../assets/ic_favorite_border_bookmark.png';
 import iconFavoriteFull from '../../assets/ic_favorite_bookmark.png';
 import FitnessDrillIllustration from './drills/FitnessDrillIllustration';
-import FrisbeeDrillIllustration from './drills/FrisbeeDrillAnimation';
+import FrisbeeDrillIllustration from './drills/FrisbeeDrillIllustration';
 import { DrillTypes } from '../Fixtures/config';
 
 export const DrillPage = props => {
@@ -68,14 +68,6 @@ export const DrillPage = props => {
       headerRight: () => displayFavoriteButton(),
     }),
   );
-
-  const typeSwitch = () => {
-    if (drill.type === DrillTypes.FRISBEE) {
-      return <FrisbeeDrillIllustration drill={drill} />;
-    } else {
-      return <FitnessDrillIllustration drill={drill} />;
-    }
-  };
 
   return (
     <ScrollView ref={drillScrollView} style={styles.drillPage}>
@@ -124,7 +116,8 @@ export const DrillPage = props => {
         </View>
       </View>
       <View ref={firstDrill} style={styles.animation}>
-        {typeSwitch()}
+        {drill.type === DrillTypes.FRISBEE && <FrisbeeDrillIllustration drill={drill} />}
+        {drill.type === DrillTypes.FITNESS && <FitnessDrillIllustration drill={drill} />}
       </View>
     </ScrollView>
   );

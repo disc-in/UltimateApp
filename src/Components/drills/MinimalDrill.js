@@ -3,22 +3,17 @@ import { StyleSheet, View } from 'react-native';
 import { DrillTypes } from '../../Fixtures/config';
 
 import FitnessDrillIllustration from '../drills/FitnessDrillIllustration';
-import FrisbeeDrillIllustration from '../drills/FrisbeeDrillAnimation';
+import FrisbeeDrillIllustration from '../drills/FrisbeeDrillIllustration';
 
 const MinimalDrill = props => {
   const { drill } = props;
 
-  const typeSwitch = () => {
-    if (drill.type === DrillTypes.FRISBEE) {
-      return <FrisbeeDrillIllustration drill={drill} minimal />;
-    } else {
-      return <FitnessDrillIllustration drill={drill} minimal />;
-    }
-  };
-
   return (
     <>
-      <View style={styles.animation}>{typeSwitch()}</View>
+      <View style={styles.animation}>
+        {drill.type === DrillTypes.FRISBEE && <FrisbeeDrillIllustration drill={drill} minimal />}
+        {drill.type === DrillTypes.FITNESS && <FitnessDrillIllustration drill={drill} minimal />}
+      </View>
     </>
   );
 };

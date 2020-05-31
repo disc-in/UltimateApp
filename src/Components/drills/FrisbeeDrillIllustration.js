@@ -138,8 +138,8 @@ const FrisbeeDrillIllustration = props => {
     );
   };
 
-  const frisbeeDrill = () => {
-    return (
+  return (
+    <View style={styles.container}>
       <SafeAreaView style={styles.container}>
         <Carousel
           layout="default"
@@ -152,10 +152,8 @@ const FrisbeeDrillIllustration = props => {
         />
         <View style={styles.pagination}>{pagination()}</View>
       </SafeAreaView>
-    );
-  };
-
-  return <View style={styles.container}>{frisbeeDrill()}</View>;
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({

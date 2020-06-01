@@ -422,9 +422,6 @@ class Animation extends React.Component {
       this.state.animation !== undefined &&
       this.state.animation !== null
     ) {
-      this.currentStepAV.addListener(progress => {
-        this.setState({ currentStep: progress.value });
-      });
       this.setState(
         {
           displayedElements: this._createDisplayedElements(),
@@ -432,7 +429,6 @@ class Animation extends React.Component {
         () => {
           /* Set all the elements to their initial positions */
           this._setCurrentPositions();
-
           if (this.props.editable) this._initializeCuts();
           this.progressBar = this._createProgressBar();
         },

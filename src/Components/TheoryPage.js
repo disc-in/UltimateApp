@@ -381,7 +381,6 @@ const Dictionary = () => {
 };
 
 const Essential = () => {
-  const screenDimension = Dimensions.get('window');
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [theorySubject, setTheorySubject] = useState('Throwing');
   const [modalVisible, setModalVisible] = useState(false);
@@ -592,7 +591,6 @@ const Essential = () => {
 };
 
 const Tactics = () => {
-  const screenDimension = Dimensions.get('window');
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [theorySubject, setTheorySubject] = useState('Vertical Stack');
   const [modalVisible, setModalVisible] = useState(false);
@@ -642,18 +640,6 @@ const Tactics = () => {
           title: 'Handler Cutting',
           text: 'Rise Up',
           video: '424511928',
-          animation: '',
-        },
-      ],
-    },
-    {
-      value: 'Others Stacks',
-      pages: [
-        {
-          id: 1,
-          title: "It's time to learn something new?",
-          text: 'Moby',
-          video: '413628757',
           animation: '',
         },
       ],
@@ -742,16 +728,6 @@ const Tactics = () => {
                   }}
                 >
                   <Text style={styles.subjectText}>Handling</Text>
-                </TouchableHighlight>
-                <TouchableHighlight
-                  style={styles.subjectButton}
-                  onPress={() => {
-                    setSelectedIndex(4);
-                    setTheorySubject('Others Stacks');
-                    setModalVisible(!modalVisible);
-                  }}
-                >
-                  <Text style={styles.subjectText}>Others Stacks</Text>
                 </TouchableHighlight>
 
                 <TouchableHighlight

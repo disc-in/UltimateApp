@@ -147,21 +147,22 @@ class AnimationEditor extends React.Component {
           break;
       }
 
-    //        yDelta /= 2;
-    debug('x+xDelta/y+yDelta: ' + x + '+' + xDelta + '/' + y + '+' + yDelta);
-    debug('window w/h + ' + this.state.width + '/' + this.state.height);
-    debug('added element to animation at position: ' + newPosition[0] + '/' + newPosition[1]);
+      //        yDelta /= 2;
+      debug('x+xDelta/y+yDelta: ' + x + '+' + xDelta + '/' + y + '+' + yDelta);
+      debug('window w/h + ' + this.state.width + '/' + this.state.height);
+      debug('added element to animation at position: ' + newPosition[0] + '/' + newPosition[1]);
 
-    // Add the element with its initial position
-    var newAnimation = this._copyAnimation();
+      // Add the element with its initial position
+      var newAnimation = this._copyAnimation();
 
-    newAnimation.addElement(element, newPosition[0], newPosition[1], elementNumber);
+      newAnimation.addElement(element, newPosition[0], newPosition[1], elementNumber);
 
-    this.saveAnimation(newAnimation);
+      this.saveAnimation(newAnimation);
 
-    //	debug("ae, add element, step count: " + this.state.animation.positions.length);
+      //	debug("ae, add element, step count: " + this.state.animation.positions.length);
 
-    if (this.state.animation.positions.length > 0) debug('\telem count: ' + this.state.animation.positions[0].length);
+      if (this.state.animation.positions.length > 0) debug('\telem count: ' + this.state.animation.positions[0].length);
+    }
   };
 
   /** Convert a position (x, y) in pixels of the phone screen in a position (x2, y2) in percentages of the animation area
@@ -253,11 +254,20 @@ class AnimationEditor extends React.Component {
       yCCutDelta = 0;
     }
 
+    var newCutPosition = [previousPositions[0][0] + xCutDelta, previousPositions[0][1] + yCutDelta];
+
+    /* If the cut goes outside of the animation area, put it at the border of the animation */
+    if (newCutPosition[0] < 0) newCutPosition[0] = 0;
+    else if (newCutPosition[0] > 1) newCutPosition[0] = 1;
+
+    if (newCutPosition[1] < 0) newCutPosition[1] = 0;
+    else if (newCutPosition[1] > 0.85) newCutPosition[1] = 0.85;
+
     /* Set the starting position */
     newAnimation.positions[previousStepId][elemId] = [];
     newAnimation.positions[previousStepId][elemId].push([]);
-    newAnimation.positions[previousStepId][elemId][0].push(previousPositions[0][0] + xCutDelta);
-    newAnimation.positions[previousStepId][elemId][0].push(previousPositions[0][1] + yCutDelta);
+    newAnimation.positions[previousStepId][elemId][0].push(newCutPosition[0]);
+    newAnimation.positions[previousStepId][elemId][0].push(newCutPosition[1]);
 
     /* If there was a counter-cut or if the counter-cut is moving */
     if (previousPositions.length > 1 || isCounterCut) {
@@ -276,6 +286,13 @@ class AnimationEditor extends React.Component {
         newPositionX = previousPositions[1][0] + xCCutDelta;
         newPositionY = previousPositions[1][1] + yCCutDelta;
       }
+
+      /* If the counter-cut goes outside of the animation area, put it at the border of the animation */
+      if (newPositionX < 0) newPositionX = 0;
+      else if (newPositionX > 1) newPositionX = 1;
+
+      if (newPositionY < 0) newPositionY = 0;
+      else if (newPositionY > 0.85) newPositionY = 0.85;
 
       newAnimation.positions[previousStepId][elemId][1].push(newPositionX);
       newAnimation.positions[previousStepId][elemId][1].push(newPositionY);
@@ -323,8 +340,8 @@ class AnimationEditor extends React.Component {
       }
     } else {
       /* If the element is not moved outside of the animation area, updated its coordinates */
-    newAnimation.positions[Math.ceil(this.currentStep)][element.props.eId] = [];
-    newAnimation.positions[Math.ceil(this.currentStep)][element.props.eId].push([]);
+      newAnimation.positions[Math.ceil(this.currentStep)][element.props.eId] = [];
+      newAnimation.positions[Math.ceil(this.currentStep)][element.props.eId].push([]);
       newAnimation.positions[Math.ceil(this.currentStep)][element.props.eId][0].push(
         currentPosition[0] + xDeltaPercent,
       );

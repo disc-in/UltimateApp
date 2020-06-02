@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Animated, View, StyleSheet, Text, Dimensions, TouchableOpacity, Image, FlatList } from 'react-native';
-import GestureRecognizer from 'react-native-swipe-gestures';
 import { WebView } from 'react-native-webview';
 import { Easing } from 'react-native-reanimated';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -10,7 +9,6 @@ import Animation from '../animation/Animation';
 import VimeoVideo from '../VimeoVideo';
 import { IllustrationType } from '../../Fixtures/config';
 import theme from '../../styles/theme.style';
-import { swipeConfig } from '../../styles/config';
 import iconRedo from '../../../assets/redo_arrow.png';
 
 const screenDimension = Dimensions.get('window');
@@ -220,12 +218,12 @@ const FitnessDrillIllustration = props => {
   };
 
   return (
-    <GestureRecognizer style={styles.container} onSwipeLeft={checkAnimation} config={swipeConfig}>
+    <View style={styles.container}>
       {activeIndex === props.drill.steps.length && renderFinish()}
       {currentStep?.illustrationType === IllustrationType.ANIMATION && renderAnimation(currentStep)}
       {currentStep?.illustrationType === IllustrationType.YOUTUBE && renderYoutube(currentStep)}
       {currentStep?.illustrationType === IllustrationType.VIMEO && renderVimeo(currentStep)}
-    </GestureRecognizer>
+    </View>
   );
 };
 

@@ -170,7 +170,12 @@ const FitnessDrillIllustration = props => {
           <VimeoVideo vimeoId={illustrationSource} screenWidth={screenDimension.width} sounds={sounds} />
         </View>
         {!isUniqueStep && (
-          <FlatList data={props.drill.steps} keyExtractor={item => item.id.toString()} renderItem={renderStep} />
+          <FlatList
+            nestedScrollEnabled
+            data={props.drill.steps}
+            keyExtractor={item => item.id.toString()}
+            renderItem={renderStep}
+          />
         )}
       </>
     );

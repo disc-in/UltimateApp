@@ -35,7 +35,7 @@ const FitnessDrillIllustration = props => {
         toValue: 1,
         duration: 10,
       }),
-    ]).start(() => incrementStepIndex());
+    ]).start(() => setActiveIndex((activeIndex + 1) % (stepsCount + 1)));
   };
 
   // back to 0 when drill changes
@@ -43,16 +43,12 @@ const FitnessDrillIllustration = props => {
     setActiveIndex(0);
   }, [props.drill]);
 
-  const incrementStepIndex = () => {
-    setActiveIndex((activeIndex + 1) % (stepsCount + 1));
-  };
-
   const renderFinish = () => {
     return (
       <>
         <View style={styles.containerFinish}>
           <Text style={styles.redoMessage}>{I18n.t('fitnessDrillIllustration.redoMessage')}</Text>
-          <TouchableOpacity style={styles.redoButton} onPress={() => incrementStepIndex()}>
+          <TouchableOpacity style={styles.redoButton} onPress={() => setActiveIndex(0)}>
             <Image style={styles.redoImage} source={iconRedo} />
           </TouchableOpacity>
         </View>
@@ -126,7 +122,7 @@ const FitnessDrillIllustration = props => {
     const currentStyle = isCurrent ? styles.stepTitleCurrent : {};
 
     return (
-      <>
+      <TouchableOpacity onPress={() => setActiveIndex(index)}>
         <View style={styles.step}>
           <View style={styles.subWrapper}>
             <Text style={[styles.stepTitle, doneStyle, currentStyle]}>
@@ -166,7 +162,7 @@ const FitnessDrillIllustration = props => {
             </TouchableOpacity>
           )}
         </View>
-      </>
+      </TouchableOpacity>
     );
   };
 

@@ -12,7 +12,7 @@ import huddle from '../../assets/HomePage/huddle.png';
 import { DrillTypes } from '../Fixtures/config';
 
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-import { Ionicons } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -106,7 +106,7 @@ export default HomePage = props => {
         component={HomeScreen}
         options={{
           tabBarLabel: I18n.t('homePage.frisbeeTab'),
-          tabBarIcon: ({ color }) => <Ionicons name="ios-disc" color={color} size={26} />,
+          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="disc" color={color} size={26} />,
         }}
       />
       <Tab.Screen
@@ -114,7 +114,7 @@ export default HomePage = props => {
         component={Fitness}
         options={{
           tabBarLabel: I18n.t('homePage.fitnessTab'),
-          tabBarIcon: ({ color }) => <Ionicons name="ios-fitness" color={color} size={26} />,
+          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="dumbbell" color={color} size={26} />,
         }}
       />
     </Tab.Navigator>

@@ -19,8 +19,6 @@ class Animation extends React.Component {
     super(props);
 
     this.state = {
-      propsWidth: props.width,
-      propsHeight: props.height,
       screenHeight: 1, // Height of the animation space
       screenWidth: 1, // Width of the animation space
       stepLength: 1000, // Duration of a step in milliseconds

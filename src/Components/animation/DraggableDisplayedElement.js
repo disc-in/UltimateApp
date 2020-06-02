@@ -191,7 +191,7 @@ class DraggableDisplayedElement extends React.Component {
             ]}
             key={this.props.key + 4}
           >
-            <Animated.Text style={styles.discText}>{this.props.number}</Animated.Text>
+            <Animated.Text style={styles.discText}>{this.number}</Animated.Text>
           </Animated.View>
         );
 

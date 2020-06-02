@@ -127,7 +127,7 @@ const FitnessDrillIllustration = props => {
           </Text>
         </View>
         {isCurrent && (
-          <TouchableOpacity style={styles.doneAnimation} onPress={() => checkAnimation()}>
+          <TouchableOpacity style={styles.doneAnimation} onPress={() => checkAnimation()} testID="doneIcon">
             <Animated.View
               style={[
                 {

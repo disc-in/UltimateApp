@@ -93,14 +93,13 @@ const Fitness = props => {
   );
 };
 
-export default function HomePage(props) {
+export default HomePage = props => {
   return (
     <Tab.Navigator
       initialRouteName="Frisbee"
       activeColor={theme.COLOR_PRIMARY}
       inactiveColor={theme.COLOR_SECONDARY}
       barStyle={{ backgroundColor: theme.BACKGROUND_COLOR }}
-      shifting
     >
       <Tab.Screen
         name="Frisbee"
@@ -120,7 +119,7 @@ export default function HomePage(props) {
       />
     </Tab.Navigator>
   );
-}
+};
 
 const styles = StyleSheet.create({
   mainContainer: {

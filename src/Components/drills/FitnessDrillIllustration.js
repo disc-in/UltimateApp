@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Animated, View, StyleSheet, Text, Dimensions, TouchableOpacity, Image, FlatList } from 'react-native';
+import { Animated, View, StyleSheet, Text, Dimensions, TouchableOpacity, FlatList } from 'react-native';
 import { WebView } from 'react-native-webview';
 import { Easing } from 'react-native-reanimated';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -9,7 +9,6 @@ import Animation from '../animation/Animation';
 import VimeoVideo from '../VimeoVideo';
 import { IllustrationType } from '../../Fixtures/config';
 import theme from '../../styles/theme.style';
-import iconRedo from '../../../assets/redo_arrow.png';
 
 const screenDimension = Dimensions.get('window');
 
@@ -21,6 +20,7 @@ const FitnessDrillIllustration = props => {
   const stepsCount = props.drill.steps.length;
 
   const carouselRef = useRef(null);
+  const flatListRef = useRef(null);
 
   const checkAnimation = () => {
     Animated.sequence([
@@ -33,7 +33,11 @@ const FitnessDrillIllustration = props => {
         toValue: 1,
         duration: 10,
       }),
-    ]).start(() => setActiveIndex((activeIndex + 1) % (stepsCount + 1)));
+    ]).start(() => {
+      const newIndex = (activeIndex + 1) % (stepsCount + 1);
+      setActiveIndex(newIndex);
+      flatListRef.current?.scrollToIndex({ animated: true, index: newIndex, viewPosition: 0.5 });
+    });
   };
 
   // back to 0 when drill changes
@@ -46,7 +50,7 @@ const FitnessDrillIllustration = props => {
       <View style={styles.containerFinish}>
         <Text style={styles.redoMessage}>{I18n.t('fitnessDrillIllustration.redoMessage')}</Text>
         <TouchableOpacity style={styles.redoButton} onPress={() => setActiveIndex(0)}>
-          <Image style={styles.redoImage} source={iconRedo} />
+          <MaterialCommunityIcons name="redo-variant" color={theme.COLOR_PRIMARY} size={50} />
         </TouchableOpacity>
       </View>
     );
@@ -170,6 +174,7 @@ const FitnessDrillIllustration = props => {
         {!isUniqueStep && (
           <FlatList
             nestedScrollEnabled
+            ref={flatListRef}
             data={props.drill.steps}
             keyExtractor={item => item.id.toString()}
             renderItem={renderStep}
@@ -233,7 +238,7 @@ const styles = StyleSheet.create({
   },
   containerFinish: {
     flex: 1,
-    justifyContent: 'space-around',
+    justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
   },
@@ -242,6 +247,10 @@ const styles = StyleSheet.create({
     color: theme.COLOR_PRIMARY,
     fontWeight: 'bold',
     marginVertical: 50,
+  },
+  redoButton: {
+    width: 80,
+    height: 80,
   },
   containerAnimation: {
     flexDirection: 'row',
@@ -298,16 +307,6 @@ const styles = StyleSheet.create({
     color: theme.COLOR_PRIMARY,
     justifyContent: 'center',
     alignItems: 'center',
-  },
-  redoButton: {
-    width: 80,
-    height: 80,
-    borderRadius: 40,
-    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
-  },
-  redoImage: {
-    width: 60,
-    height: 60,
   },
   videoAlone: {
     justifyContent: 'center',

@@ -349,7 +349,7 @@ exports[`<FitnessDrillIllustration /> links to any step and finishes at the end 
       Object {
         "alignItems": "center",
         "flex": 1,
-        "justifyContent": "space-around",
+        "justifyContent": "center",
         "padding": 20,
       }
     }
@@ -379,23 +379,32 @@ exports[`<FitnessDrillIllustration /> links to any step and finishes at the end 
       onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "backgroundColor": "#fff",
-          "borderRadius": 40,
           "height": 80,
           "opacity": 1,
           "width": 80,
         }
       }
     >
-      <Image
-        source={1}
+      <Text
+        allowFontScaling={false}
         style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
+          Array [
+            Object {
+              "color": "#232b2b",
+              "fontSize": 50,
+            },
+            undefined,
+            Object {
+              "fontFamily": "material-community",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
         }
-      />
+      >
+        
+      </Text>
     </View>
   </View>
 </View>

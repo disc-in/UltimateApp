@@ -129,19 +129,17 @@ const FrisbeeDrillIllustration = props => {
   };
 
   return (
-    <View style={styles.container}>
-      <SafeAreaView style={styles.container}>
-        <Carousel
-          layout="default"
-          ref={carouselRef}
-          data={props.drill.steps}
-          sliderWidth={screenDimension.width}
-          itemWidth={screenDimension.width}
-          renderItem={renderStep}
-          onSnapToItem={index => setActiveIndex(index)}
-        />
-      </SafeAreaView>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Carousel
+        layout="default"
+        ref={carouselRef}
+        data={props.drill.steps}
+        sliderWidth={screenDimension.width}
+        itemWidth={screenDimension.width}
+        renderItem={renderStep}
+        onSnapToItem={index => setActiveIndex(index)}
+      />
+    </SafeAreaView>
   );
 };
 

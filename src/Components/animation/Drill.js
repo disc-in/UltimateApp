@@ -56,6 +56,32 @@ class Drill {
     //	debug("positions after update: " + this.positions);
   }
 
+  removeElement(elementIndex) {
+    var elementId = this.ids[elementIndex];
+    var elementText = this.texts[elementIndex];
+
+    /* Remove its values from the drill */
+    for (var i = 0; i < this.positions.length; i++) this.positions[i].splice(elementIndex, 1);
+    this.ids.splice(elementIndex, 1);
+    this.texts.splice(elementIndex, 1);
+
+    /* If the element had a number */
+    if (elementText !== '') {
+      var vElement = parseInt(elementText, 10);
+
+      /* For each element which has a number and which is of the same type than the element removed */
+      for (var i = 0; i < this.texts.length; i++)
+        if (this.texts[i] !== '' && this.ids[i] === elementId) {
+          var vi = parseInt(this.texts[i], 10);
+
+          /* If element i has a greater number than the element removed, decrement its number */
+          if (vi > vElement) {
+            this.texts[i] = (vi - 1).toString();
+         }
+        }
+    }
+  }
+
   /** Add a step to the drill */
   addStep() {
     this.positions.push(new Array(this.ids.length));

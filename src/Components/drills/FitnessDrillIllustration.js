@@ -45,14 +45,12 @@ const FitnessDrillIllustration = props => {
 
   const renderFinish = () => {
     return (
-      <>
-        <View style={styles.containerFinish}>
-          <Text style={styles.redoMessage}>{I18n.t('fitnessDrillIllustration.redoMessage')}</Text>
-          <TouchableOpacity style={styles.redoButton} onPress={() => setActiveIndex(0)}>
-            <Image style={styles.redoImage} source={iconRedo} />
-          </TouchableOpacity>
-        </View>
-      </>
+      <View style={styles.containerFinish}>
+        <Text style={styles.redoMessage}>{I18n.t('fitnessDrillIllustration.redoMessage')}</Text>
+        <TouchableOpacity style={styles.redoButton} onPress={() => setActiveIndex(0)}>
+          <Image style={styles.redoImage} source={iconRedo} />
+        </TouchableOpacity>
+      </View>
     );
   };
 
@@ -122,46 +120,44 @@ const FitnessDrillIllustration = props => {
     const currentStyle = isCurrent ? styles.stepTitleCurrent : {};
 
     return (
-      <TouchableOpacity onPress={() => setActiveIndex(index)}>
-        <View style={styles.step}>
-          <View style={styles.subWrapper}>
-            <Text style={[styles.stepTitle, doneStyle, currentStyle]}>
-              {item.repetition} {item.title}
-            </Text>
-          </View>
-          {isCurrent && (
-            <TouchableOpacity style={styles.container} onPress={() => checkAnimation()}>
-              <Animated.View
-                style={[
-                  {
-                    opacity: opacityUnchecked,
-                  },
-                ]}
-              >
-                <MaterialCommunityIcons
-                  style={styles.buttonNext}
-                  name="check-circle-outline"
-                  color={theme.COLOR_PRIMARY}
-                  size={26}
-                />
-              </Animated.View>
-              <Animated.View
-                style={[
-                  {
-                    opacity: opacityChecked,
-                  },
-                ]}
-              >
-                <MaterialCommunityIcons
-                  style={styles.buttonNext}
-                  name="check-circle"
-                  color={theme.COLOR_PRIMARY}
-                  size={26}
-                />
-              </Animated.View>
-            </TouchableOpacity>
-          )}
+      <TouchableOpacity style={styles.step} onPress={() => setActiveIndex(index)}>
+        <View style={styles.subWrapper}>
+          <Text style={[styles.stepTitle, doneStyle, currentStyle]}>
+            {item.repetition} {item.title}
+          </Text>
         </View>
+        {isCurrent && (
+          <TouchableOpacity style={styles.doneAnimation} onPress={() => checkAnimation()}>
+            <Animated.View
+              style={[
+                {
+                  opacity: opacityUnchecked,
+                },
+              ]}
+            >
+              <MaterialCommunityIcons
+                style={styles.buttonNext}
+                name="check-circle-outline"
+                color={theme.COLOR_PRIMARY}
+                size={26}
+              />
+            </Animated.View>
+            <Animated.View
+              style={[
+                {
+                  opacity: opacityChecked,
+                },
+              ]}
+            >
+              <MaterialCommunityIcons
+                style={styles.buttonNext}
+                name="check-circle"
+                color={theme.COLOR_PRIMARY}
+                size={26}
+              />
+            </Animated.View>
+          </TouchableOpacity>
+        )}
       </TouchableOpacity>
     );
   };
@@ -256,7 +252,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
-  pageAnimation: {
+  doneAnimation: {
     flex: 1,
   },
   stepTitle: {

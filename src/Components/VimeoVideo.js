@@ -5,7 +5,7 @@ import { Video } from 'expo-av';
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
 
-const VimeoVideo = ({ vimeoId, screenWidth, sounds }) => {
+const VimeoVideo = ({ vimeoId, screenWidth, sounds, shouldPlay }) => {
   const videoElem = useRef(null);
   const [isBuffering, setBuffer] = useState(true);
   const [error, setError] = useState();
@@ -45,7 +45,7 @@ const VimeoVideo = ({ vimeoId, screenWidth, sounds }) => {
       rate: 1.0,
       isMuted: !sounds,
       resizeMode: Video.RESIZE_MODE_CONTAIN,
-      shouldPlay: true,
+      shouldPlay: shouldPlay || false,
       isLooping: true,
     });
 

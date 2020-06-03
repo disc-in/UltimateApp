@@ -1147,7 +1147,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
                             }
                           >
                             1
-                            - 
+                             - 
                             Dump & Swing
                           </Text>
                           <Text
@@ -1239,7 +1239,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
                             }
                           >
                             2
-                            - 
+                             - 
                             Training 2
                           </Text>
                           <Text

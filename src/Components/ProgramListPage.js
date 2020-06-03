@@ -43,7 +43,7 @@ export const ProgramListPage = props => {
       <TouchableOpacity style={[styles.training, isDone ? styles.trainingDone : null]} onPress={onTrainingPress}>
         <View style={styles.descriptionContainer}>
           <Text style={styles.trainingTitle}>
-            {index + 1}- {training.title}
+            {index + 1} - {training.title}
           </Text>
           <Text style={styles.trainingDescription}>{training.description}</Text>
         </View>

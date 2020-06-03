@@ -104,7 +104,7 @@ export const DrillPage = props => {
       <View style={styles.description}>
         <View style={styles.descriptionItem}>
           <Text style={styles.descriptionTitle}>{I18n.t('drillPage.equipment')}</Text>
-          <Text style={styles.descriptionText}>{drill.equipmentLabel}</Text>
+          <Text style={styles.descriptionText}>{drill.equipment}</Text>
         </View>
       </View>
       <View style={styles.lines} />

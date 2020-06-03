@@ -519,7 +519,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                 }
                               }
                             >
-                              None
+                              Equipment needs for the drill
                             </Text>
                           </View>
                         </View>

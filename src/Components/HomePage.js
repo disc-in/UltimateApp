@@ -19,7 +19,7 @@ const Tab = createMaterialBottomTabNavigator();
 const HomeScreen = props => {
   return (
     <View style={styles.mainContainer}>
-      <TouchableHighlight onPress={() => props.navigation.navigate('AnimationEditorPage')} style={styles.menuItem}>
+      <TouchableHighlight onPress={() => props.navigation.navigate('TheoryPage')} style={styles.menuItem}>
         <ImageBackground source={simulator} style={styles.image}>
           <View style={styles.wrapper}>
             <Text style={styles.text}>{I18n.t('homePage.theory')}</Text>
@@ -43,6 +43,13 @@ const HomeScreen = props => {
           </View>
         </ImageBackground>
       </TouchableHighlight>
+      {/* <View style={styles.editorLink}> */}
+      {/* <Button
+          onPress={() => props.navigation.navigate('AnimationEditorPage')}
+          text={I18n.t('homePage.editor')}
+          buttonLight="true"
+        /> */}
+      {/* </View> */}
     </View>
   );
 };
@@ -51,7 +58,7 @@ const Fitness = props => {
   return (
     <View style={styles.mainContainer}>
       <TouchableHighlight
-        onPress={() => this.props.navigation.navigate('TheoryPage')} text="Theory" buttonLight="true"}
+        onPress={() => props.navigation.navigate('DrillListPage', { type: DrillTypes.FITNESS })}
         style={styles.menuItem}
       >
         <ImageBackground source={leanfit} style={styles.image}>
@@ -120,7 +127,6 @@ export default HomePage = props => {
     </Tab.Navigator>
   );
 };
-
 
 const styles = StyleSheet.create({
   mainContainer: {

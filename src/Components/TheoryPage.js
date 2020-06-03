@@ -773,7 +773,6 @@ export default function TheoryPage() {
       activeColor={theme.COLOR_PRIMARY}
       inactiveColor={theme.COLOR_SECONDARY}
       barStyle={{ backgroundColor: theme.BACKGROUND_COLOR }}
-      shifting
     >
       <Tab.Screen
         name="Dictionary"

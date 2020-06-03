@@ -6,6 +6,8 @@ import DrillCuts from './DrillCuts';
 import DisplayedCuts from './DisplayedCuts';
 import ProgressBar from './ProgressBar';
 import Drill from './Drill';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import theme from '../../styles/theme.style';
 
 import iconPlay from '../../../assets/play.png';
 import iconPrev from '../../../assets/prev.png';
@@ -19,14 +21,13 @@ class Animation extends React.Component {
     super(props);
 
     this.state = {
-      propsWidth: props.width,
-      propsHeight: props.height,
       screenHeight: 1, // Height of the animation space
       screenWidth: 1, // Width of the animation space
       stepLength: 1000, // Duration of a step in milliseconds
       animation: undefined,
       displayedElements: [], // The graphical elments displayed in the animation
       currentStep: 0, // Current step displayed on the phone
+      animationPlaying: false,
     };
 
     // Enables to update the current step inside an animation
@@ -99,7 +100,6 @@ class Animation extends React.Component {
       this._positionPercentToPixel,
       this.props.onCutMove,
     );
-    this.cuts.log();
   }
 
   /** Create the progress bar */
@@ -118,7 +118,6 @@ class Animation extends React.Component {
         stepCount: this._stepCount(),
         currentStepAV: this.currentStepAV,
         getStepAnimation: this._getStepAnimation,
-        stepLength: this.state.stepLength,
         onStepChange: this.props.onStepChange,
         onStepAdded: this.props.onStepAdded,
         editable: this.props.editable,
@@ -231,6 +230,8 @@ class Animation extends React.Component {
     /* Animation of the whole animation */
     var completeSequence = [];
 
+    this.setState({ animationPlaying: true });
+
     completeSequence.push(
       Animated.timing(this.currentStepAV, {
         toValue: 0,
@@ -239,11 +240,12 @@ class Animation extends React.Component {
       }),
     );
 
-    /* For each step (start at step 1 as step 0 corresponds to the initial positions)*/
+    /* For each step */
+    completeSequence.push(Animated.parallel(this._getStepAnimation(0, true, true)));
     for (var stepId = 1; stepId < this._stepCount(); stepId++)
-      completeSequence.push(Animated.parallel(this._getStepAnimation(stepId, true)));
+      completeSequence.push(Animated.parallel(this._getStepAnimation(stepId, true, false)));
 
-    Animated.sequence(completeSequence).start();
+    Animated.sequence(completeSequence).start(() => this.setState({ animationPlaying: false }));
 
     if (this.props.onStepChange !== undefined && this.props.onStepChange !== null)
       this.props.onStepChange(this._stepCount());
@@ -255,7 +257,7 @@ class Animation extends React.Component {
       this.setState(
         prevState => ({ currentStep: prevState.currentStep - 1 }),
         () => {
-          var stepArray = this._getStepAnimation(this.state.currentStep, false);
+          var stepArray = this._getStepAnimation(this.state.currentStep, false, false);
           Animated.parallel(stepArray).start();
 
           if (this.props.onStepChange !== undefined && this.props.onStepChange !== null)
@@ -271,7 +273,7 @@ class Animation extends React.Component {
       this.setState(
         prevState => ({ currentStep: prevState.currentStep + 1 }),
         () => {
-          Animated.parallel(this._getStepAnimation(this.state.currentStep, true)).start();
+          Animated.parallel(this._getStepAnimation(this.state.currentStep, true, false)).start();
 
           if (this.props.onStepChange !== undefined && this.props.onStepChange !== null)
             this.props.onStepChange(this.state.currentStep);
@@ -281,29 +283,19 @@ class Animation extends React.Component {
   }
 
   /** Returns the animation to a given step for all displayed elements
-    The substeps are played if the animation is forward and if the elements moves at step stepId
-  */
-  _getStepAnimation = (stepId, isForward) => {
-    debug('Animation: get animation: ' + stepId);
-
+   * - playSubsteps: boolean which indicates if we play the substeps
+   * (true if push the "play animation" button or if we move from a step to the next one)
+   * (false if we move to a step which is not the next)
+   * - instantFirstSubStep : boolean which indicates if the elements must be moved instantly to their initial position in this step
+   * (set to true if the elements are already in this step initial position, in that case no need to wait for an animation which does not move anything)
+   */
+  _getStepAnimation = (stepId, playSubsteps, instantFirstSubStep = false) => {
     stepId = Math.max(0, Math.round(stepId));
 
     /* Animation of all the elements at step stepId */
     var stepAnimation = [];
 
-    /* The first animation in the sequence enables to update the current step */
-    stepAnimation.push(
-      Animated.timing(this.currentStepAV, {
-        toValue: stepId,
-        duration: this.state.stepLength,
-        easing: Easing.linear,
-        key: 0,
-      }),
-    );
-
-    /** Change the opacity of the step dots */
-    if (this.progressBar !== undefined && this.progressBar !== null)
-      stepAnimation = stepAnimation.concat(this.progressBar.getOpacityAnimation(stepId));
+    var hasCounterCut = false;
 
     /* For each displayed element */
     for (let elemId = 0; elemId < this.state.animation.ids.length; elemId += 1) {
@@ -312,33 +304,33 @@ class Animation extends React.Component {
       debug('stepId is ', stepId);
       const nextPosition = this.state.animation.getPositionsAtStep(elemId, stepId, this.state.currentStep); //this.state.animation.positions[elemId][stepId];
 
-      /* The substeps are played only if the element moves at step stepId.
-	       Otherwise, we just move the element to its previous position without playing the substeps of this position */
-      let playSubSteps = true;
-      if (nextPosition === undefined || nextPosition === null || !isForward) playSubSteps = false;
-
       /* If this element must change its position */
       if (nextPosition !== undefined && nextPosition !== null) {
         /* Animation of the element at step stepId */
         var displayedElementStepAnimation = [];
 
         var substepCount = nextPosition.length;
+        var substepLength = this.state.stepLength / substepCount;
+
+        if (substepCount > 1) hasCounterCut = true;
+
+        if (instantFirstSubStep && substepCount === 1) substepLength = 0;
 
         /* If the sub steps must be played */
-        if (playSubSteps) {
+        if (playSubsteps) {
           /* For each substep of element de in step stepId */
           for (var substep = 0; substep < substepCount; substep++) {
             var currentDisplayedElement = this.state.displayedElements[elemId];
+
+            var currentSubStepLength = substepLength;
+
+            if ((instantFirstSubStep || stepId === 0) && substep === 0) currentSubStepLength = 0;
 
             /* Get the position of the element at this substep */
             var pixelPosition = this._positionPercentToPixel(nextPosition[substep][0], nextPosition[substep][1]);
 
             /* Get the corresponding animation */
-            var anim = currentDisplayedElement.getAnimation(
-              pixelPosition[0],
-              pixelPosition[1],
-              this.state.stepLength / substepCount,
-            );
+            var anim = currentDisplayedElement.getAnimation(pixelPosition[0], pixelPosition[1], currentSubStepLength);
 
             displayedElementStepAnimation.push(anim);
           }
@@ -347,10 +339,7 @@ class Animation extends React.Component {
           currentDisplayedElement = this.state.displayedElements[elemId];
 
           /* Get the position of the element at this substep */
-          pixelPosition = this._positionPercentToPixel(
-            nextPosition[substepCount - 1][0],
-            nextPosition[substepCount - 1][1],
-          );
+          pixelPosition = this._positionPercentToPixel(nextPosition[0][0], nextPosition[0][1]);
 
           /* Get the corresponding animation */
           anim = currentDisplayedElement.getAnimation(pixelPosition[0], pixelPosition[1], this.state.stepLength);
@@ -360,6 +349,33 @@ class Animation extends React.Component {
 
         stepAnimation.push(Animated.sequence(displayedElementStepAnimation));
       }
+    }
+
+    /** Change the opacity of the step dots */
+    if (this.progressBar !== undefined && this.progressBar !== null) {
+      var barMoveDuration = this.state.stepLength;
+      var barValue = stepId;
+
+      /* If we play the substeps and if there are counter-cuts in this step, the animation will end by all the counter-cuts of step stepId.
+        Consequently, the progress bar must be moved between stepId dot and stepId + 1 dot.
+     */
+      if (playSubsteps && hasCounterCut) barValue = stepId + 0.5;
+
+      if (instantFirstSubStep)
+        if (playSubsteps && hasCounterCut) barMoveDuration = this.state.stepLength / 2;
+        else barMoveDuration = 0;
+
+      stepAnimation = stepAnimation.concat(this.progressBar.getOpacityAnimation(stepId, barMoveDuration));
+
+      /* The first animation in the sequence enables to update the current step */
+      stepAnimation.push(
+        Animated.timing(this.currentStepAV, {
+          toValue: barValue,
+          duration: barMoveDuration,
+          easing: Easing.linear,
+          key: 0,
+        }),
+      );
     }
 
     return stepAnimation;
@@ -375,7 +391,7 @@ class Animation extends React.Component {
 
     return (
       <View style={[styles.mainContainer, { height: this.animationHeight }, { width: this.animationWidth }]}>
-        {this.props.editable && this.cuts !== undefined && this.cuts !== null ? (
+        {this.props.editable && this.cuts !== undefined && this.cuts !== null && !this.state.animationPlaying ? (
           <DisplayedCuts step={this.state.currentStep} drillCuts={this.cuts} />
         ) : (
           undefined
@@ -385,7 +401,7 @@ class Animation extends React.Component {
         ) : (
           this.state.displayedElements.map(this._display)
         )}
-        <View style={styles.controls}>
+            <MaterialCommunityIcons name="chevron-double-left" color={theme.COLOR_PRIMARY} size={26} />
           <TouchableOpacity style={styles.controlBtn} onPress={() => this._previousStep()}>
             <Image style={styles.controlIcn} source={iconPrev} />
           </TouchableOpacity>
@@ -424,7 +440,6 @@ class Animation extends React.Component {
         () => {
           /* Set all the elements to their initial positions */
           this._setCurrentPositions();
-
           if (this.props.editable) this._initializeCuts();
           this.progressBar = this._createProgressBar();
         },

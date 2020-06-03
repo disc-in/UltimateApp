@@ -1,5 +1,5 @@
-import React from 'react';
-import { StyleSheet, View, Text, ImageBackground, TouchableHighlight } from 'react-native';
+import React, { useLayoutEffect } from 'react';
+import { StyleSheet, View, Text, ImageBackground, TouchableHighlight, TouchableOpacity } from 'react-native';
 
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
@@ -101,12 +101,31 @@ const Fitness = props => {
 };
 
 export default HomePage = props => {
+  const { navigation } = props;
+
+  const displayEditor = () => {
+    return (
+      <TouchableOpacity
+        style={styles.headerContainer}
+        onPress={() => props.navigation.navigate('AnimationEditorPage')}
+        testID="editorButton"
+      >
+        <MaterialCommunityIcons name="clipboard-outline" color={theme.COLOR_PRIMARY} size={26} />
+      </TouchableOpacity>
+    );
+  };
+
+  useLayoutEffect(() =>
+    navigation.setOptions({
+      headerRight: () => displayEditor(),
+    }),
+  );
   return (
     <Tab.Navigator
       initialRouteName="Frisbee"
-      activeColor={theme.COLOR_PRIMARY}
+      activeColor={theme.COLOR_PRIMARY_LIGHT}
       inactiveColor={theme.COLOR_SECONDARY}
-      barStyle={{ backgroundColor: theme.BACKGROUND_COLOR }}
+      barStyle={{ backgroundColor: theme.COLOR_PRIMARY }}
     >
       <Tab.Screen
         name="Frisbee"
@@ -187,5 +206,8 @@ const styles = StyleSheet.create({
   },
   bottomPage: {
     height: 105,
+  },
+  headerContainer: {
+    marginRight: 20,
   },
 });

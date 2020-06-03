@@ -7,7 +7,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { createDrill } from '../Fixtures/TestFixtures';
 import { render, fireEvent, cleanup } from 'react-native-testing-library';
 import store from '../Store/testStore';
-import { Levels, Intensities, EquipmentLabels, SeasonTimings, GoalsFitness, DrillTypes } from '../Fixtures';
+import { Levels, Intensities, EquipmentLabels, SeasonTimings, FitnessGoals, DrillTypes } from '../Fixtures/config';
 
 import ConnectedFitnessFilters, { FitnessFilters } from './FitnessFilters';
 
@@ -72,7 +72,7 @@ describe('<FitnessFilters />', () => {
 
       await fireEvent.press(getByText(Levels.BEGINNER));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
       await fireEvent.press(getByText(Levels.INTERMEDIATE));
 
@@ -80,7 +80,7 @@ describe('<FitnessFilters />', () => {
 
       await fireEvent.press(getByText(Levels.BEGINNER));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
       await fireEvent.press(getByText(Levels.INTERMEDIATE));
 
@@ -88,11 +88,20 @@ describe('<FitnessFilters />', () => {
 
       await fireEvent.press(getByText(Levels.ADVANCED));
 
-      await fireEvent.press(getByTestId('headerButton'));
+      await fireEvent.press(getByTestId('validateButton'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
-        filteredDrills: [advancedDrill],
         type: DrillTypes.FITNESS,
+        currentFilters: {
+          selectedFavorites: false,
+          selectedLevels: [Levels.ADVANCED],
+          selectedIntensities: [],
+          selectedEquipmentLabels: [],
+          selectedSeasonTimings: [],
+          selectedGoals: [],
+          durationInMinutes: undefined,
+          displayedDrills: [advancedDrill],
+        },
       });
     });
 
@@ -139,7 +148,7 @@ describe('<FitnessFilters />', () => {
 
       await fireEvent.press(getByText(Intensities.LOW));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
       await fireEvent.press(getByText(Intensities.MODERATE));
 
@@ -147,7 +156,7 @@ describe('<FitnessFilters />', () => {
 
       await fireEvent.press(getByText(Intensities.LOW));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
       await fireEvent.press(getByText(Intensities.MODERATE));
 
@@ -155,11 +164,20 @@ describe('<FitnessFilters />', () => {
 
       await fireEvent.press(getByText(Intensities.HIGH));
 
-      await fireEvent.press(getByTestId('headerButton'));
+      await fireEvent.press(getByTestId('validateButton'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
-        filteredDrills: [highDrill],
         type: DrillTypes.FITNESS,
+        currentFilters: {
+          selectedFavorites: false,
+          selectedLevels: [],
+          selectedIntensities: [Intensities.HIGH],
+          selectedEquipmentLabels: [],
+          selectedSeasonTimings: [],
+          selectedGoals: [],
+          durationInMinutes: undefined,
+          displayedDrills: [highDrill],
+        },
       });
     });
 
@@ -206,7 +224,7 @@ describe('<FitnessFilters />', () => {
 
       await fireEvent.press(getByText(EquipmentLabels.NONE));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
       await fireEvent.press(getByText(EquipmentLabels.BASIC));
 
@@ -214,7 +232,7 @@ describe('<FitnessFilters />', () => {
 
       await fireEvent.press(getByText(EquipmentLabels.NONE));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
       await fireEvent.press(getByText(EquipmentLabels.BASIC));
 
@@ -222,11 +240,20 @@ describe('<FitnessFilters />', () => {
 
       await fireEvent.press(getByText(EquipmentLabels.FULL));
 
-      await fireEvent.press(getByTestId('headerButton'));
+      await fireEvent.press(getByTestId('validateButton'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
-        filteredDrills: [fullEquipmentDrill],
         type: DrillTypes.FITNESS,
+        currentFilters: {
+          selectedFavorites: false,
+          selectedLevels: [],
+          selectedIntensities: [],
+          selectedEquipmentLabels: [EquipmentLabels.FULL],
+          selectedSeasonTimings: [],
+          selectedGoals: [],
+          durationInMinutes: undefined,
+          displayedDrills: [fullEquipmentDrill],
+        },
       });
     });
 
@@ -273,7 +300,7 @@ describe('<FitnessFilters />', () => {
 
       await fireEvent.press(getByText(SeasonTimings.OFF_SEASON));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
       await fireEvent.press(getByText(SeasonTimings.PRE_SEASON));
 
@@ -281,7 +308,7 @@ describe('<FitnessFilters />', () => {
 
       await fireEvent.press(getByText(SeasonTimings.OFF_SEASON));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
       await fireEvent.press(getByText(SeasonTimings.PRE_SEASON));
 
@@ -289,21 +316,30 @@ describe('<FitnessFilters />', () => {
 
       await fireEvent.press(getByText(SeasonTimings.IN_SEASON));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
-      await fireEvent.press(getByTestId('headerButton'));
+      await fireEvent.press(getByTestId('validateButton'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
-        filteredDrills: [inDrill],
         type: DrillTypes.FITNESS,
+        currentFilters: {
+          selectedFavorites: false,
+          selectedLevels: [],
+          selectedIntensities: [],
+          selectedEquipmentLabels: [],
+          selectedSeasonTimings: [SeasonTimings.IN_SEASON],
+          selectedGoals: [],
+          durationInMinutes: undefined,
+          displayedDrills: [inDrill],
+        },
       });
     });
 
     it('filters drills by goal', async () => {
-      const legsDrill = createDrill({ id: 1, goals: [GoalsFitness.LEGS] });
-      const upperDrill = createDrill({ id: 2, goals: [GoalsFitness.UPPER] });
-      const fullDrill = createDrill({ id: 3, goals: [GoalsFitness.FULL_BODY] });
-      const legsCoreDrill = createDrill({ id: 4, goals: [GoalsFitness.LEGS, GoalsFitness.CORE] });
+      const legsDrill = createDrill({ id: 1, goals: [FitnessGoals.LEGS] });
+      const upperDrill = createDrill({ id: 2, goals: [FitnessGoals.UPPER] });
+      const fullDrill = createDrill({ id: 3, goals: [FitnessGoals.FULL_BODY] });
+      const legsCoreDrill = createDrill({ id: 4, goals: [FitnessGoals.LEGS, FitnessGoals.CORE] });
       const drills = [legsDrill, upperDrill, fullDrill, legsCoreDrill];
       const navigate = jest.fn();
 
@@ -341,31 +377,40 @@ describe('<FitnessFilters />', () => {
 
       expect(getByText('4 drills available')).toBeDefined();
 
-      await fireEvent.press(getByText(GoalsFitness.LEGS));
+      await fireEvent.press(getByText(FitnessGoals.LEGS));
 
       expect(getByText('2 drills available')).toBeDefined();
 
-      await fireEvent.press(getByText(GoalsFitness.FULL_BODY));
+      await fireEvent.press(getByText(FitnessGoals.FULL_BODY));
 
       expect(getByText('3 drills available')).toBeDefined();
 
-      await fireEvent.press(getByText(GoalsFitness.LEGS));
+      await fireEvent.press(getByText(FitnessGoals.LEGS));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
-      await fireEvent.press(getByText(GoalsFitness.FULL_BODY));
+      await fireEvent.press(getByText(FitnessGoals.FULL_BODY));
 
       expect(getByText('4 drills available')).toBeDefined();
 
-      await fireEvent.press(getByText(GoalsFitness.UPPER));
+      await fireEvent.press(getByText(FitnessGoals.UPPER));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
-      await fireEvent.press(getByTestId('headerButton'));
+      await fireEvent.press(getByTestId('validateButton'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
-        filteredDrills: [upperDrill],
         type: DrillTypes.FITNESS,
+        currentFilters: {
+          selectedFavorites: false,
+          selectedLevels: [],
+          selectedIntensities: [],
+          selectedEquipmentLabels: [],
+          selectedSeasonTimings: [],
+          selectedGoals: [FitnessGoals.UPPER],
+          durationInMinutes: undefined,
+          displayedDrills: [upperDrill],
+        },
       });
     });
 
@@ -416,13 +461,23 @@ describe('<FitnessFilters />', () => {
       expect(getByText('How much time do you have?   5 mins')).toBeDefined();
       expect(getByText('2 drills available')).toBeDefined();
 
-      await fireEvent.press(getByTestId('headerButton'));
+      await fireEvent.press(getByTestId('validateButton'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
-        filteredDrills: [oneMinuteDrill, twoMinutesDrill],
         type: DrillTypes.FITNESS,
+        currentFilters: {
+          selectedFavorites: false,
+          selectedLevels: [],
+          selectedIntensities: [],
+          selectedEquipmentLabels: [],
+          selectedSeasonTimings: [],
+          selectedGoals: [],
+          durationInMinutes: 5,
+          displayedDrills: [oneMinuteDrill, twoMinutesDrill],
+        },
       });
     });
+
     it('filters favorite drills', async () => {
       const drills = [beginnerDrill, intermediateDrill, advancedDrill];
       const navigate = jest.fn();
@@ -464,13 +519,93 @@ describe('<FitnessFilters />', () => {
 
       await fireEvent.press(getByText('Favorites only'));
 
-      expect(getByText('1 drills available')).toBeDefined();
+      expect(getByText('1 drill available')).toBeDefined();
 
-      await fireEvent.press(getByTestId('headerButton'));
+      await fireEvent.press(getByTestId('validateButton'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
-        filteredDrills: [intermediateDrill],
         type: DrillTypes.FITNESS,
+        currentFilters: {
+          selectedFavorites: true,
+          selectedLevels: [],
+          selectedIntensities: [],
+          selectedEquipmentLabels: [],
+          selectedSeasonTimings: [],
+          selectedGoals: [],
+          durationInMinutes: undefined,
+          displayedDrills: [intermediateDrill],
+        },
+      });
+    });
+  });
+
+  describe('resets filters', () => {
+    it('resets a fitler', async () => {
+      const oneMinuteDrill = createDrill({ id: 1, durationInMinutes: 1 });
+      const twoMinutesDrill = createDrill({ id: 2, durationInMinutes: 2 });
+      const tenMinutesDrill = createDrill({ id: 3, durationInMinutes: 10 });
+      const drills = [oneMinuteDrill, twoMinutesDrill, tenMinutesDrill];
+      const navigate = jest.fn();
+
+      const DummyScreen = props => null;
+      const Stack = createStackNavigator();
+
+      const mockstore = configureMockStore()({
+        favoriteDrills: [],
+      });
+
+      const { getByText, getByTestId } = render(
+        <Provider store={mockstore}>
+          <NavigationContainer>
+            <Stack.Navigator>
+              <Stack.Screen
+                name="FitnessFilters"
+                component={ConnectedFitnessFilters}
+                initialParams={{
+                  initialData: drills,
+                  previousScreen: 'DrillListPage',
+                  previousType: DrillTypes.FITNESS,
+                }}
+                listeners={({ navigation }) => ({
+                  transitionStart: e => {
+                    navigation.navigate = navigate;
+                  },
+                })}
+              />
+              <Stack.Screen name="DrillListPage" component={DummyScreen} />
+            </Stack.Navigator>
+          </NavigationContainer>
+          ,
+        </Provider>,
+      );
+
+      expect(getByText('How much time do you have?   - mins')).toBeDefined();
+      expect(getByText('3 drills available')).toBeDefined();
+
+      await fireEvent(getByTestId('durationSlider'), 'valueChange', 5);
+
+      expect(getByText('How much time do you have?   5 mins')).toBeDefined();
+      expect(getByText('2 drills available')).toBeDefined();
+
+      await fireEvent.press(getByTestId('resetButton'));
+
+      expect(getByText('How much time do you have?   - mins')).toBeDefined();
+      expect(getByText('3 drills available')).toBeDefined();
+
+      await fireEvent.press(getByTestId('validateButton'));
+
+      expect(navigate).toBeCalledWith('DrillListPage', {
+        type: DrillTypes.FITNESS,
+        currentFilters: {
+          selectedFavorites: false,
+          selectedLevels: [],
+          selectedIntensities: [],
+          selectedEquipmentLabels: [],
+          selectedSeasonTimings: [],
+          selectedGoals: [],
+          durationInMinutes: undefined,
+          displayedDrills: drills,
+        },
       });
     });
   });

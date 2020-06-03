@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 import * as Animatable from 'react-native-animatable';
 import Accordion from 'react-native-collapsible/Accordion';
+import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
 import Program from './programs/Program';
 import Button from './shared/Button';
@@ -111,7 +112,7 @@ export const ProgramListPage = props => {
       <View style={styles.seeAllContainer}>
         <Button
           onPress={() => props.navigation.navigate('TrainingListPage')}
-          text="See all trainings"
+          text={I18n.t('programListPage.allTrainings')}
           buttonLight="true"
           style={styles.allTrainings}
         />

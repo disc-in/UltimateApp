@@ -2,22 +2,28 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Animated, View, StyleSheet, Text, Dimensions, TouchableOpacity, Image } from 'react-native';
 import GestureRecognizer from 'react-native-swipe-gestures';
 import { WebView } from 'react-native-webview';
-
-import Animation from './animation/Animation';
-import VimeoVideo from './VimeoVideo';
-import { IllustrationType } from '../Fixtures';
-import theme from '../styles/theme.style';
-import { swipeConfig } from '../styles/config';
-import iconRedo from '../../assets/redo_arrow.png';
-import buttonValidation from '../../assets/button_validation_ultra_light.png';
-import buttonValidationGradient from '../../assets/button_validation_gradient.png';
 import { Easing } from 'react-native-reanimated';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-const DrillIllustration = props => {
-  const [currentStepIndex, setStepIndex] = useState(0);
+import I18n from '../../utils/i18n';
+import Animation from '../animation/Animation';
+import VimeoVideo from '../VimeoVideo';
+import { IllustrationType } from '../../Fixtures/config';
+import theme from '../../styles/theme.style';
+import { swipeConfig } from '../../styles/config';
+import iconRedo from '../../../assets/redo_arrow.png';
+import buttonValidation from '../../../assets/button_validation_ultra_light.png';
+import buttonValidationGradient from '../../../assets/button_validation_gradient.png';
 
+const screenDimension = Dimensions.get('window');
+
+const FitnessDrillIllustration = props => {
+  const [activeIndex, setActiveIndex] = useState(0);
   const opacityUnchecked = useRef(new Animated.Value(1)).current;
   const opacityChecked = opacityUnchecked.interpolate({ inputRange: [0, 1], outputRange: [1, 0] });
+  const currentStep = props.drill.steps[activeIndex];
+
+  const carouselRef = useRef(null);
 
   const checkAnimation = () => {
     Animated.sequence([
@@ -47,24 +53,22 @@ const DrillIllustration = props => {
     ]).start(() => incrementStepIndex());
   };
 
-  const currentStep = props.drill.steps[currentStepIndex];
-
   // back to 0 when drill changes
   useEffect(() => {
-    setStepIndex(0);
+    setActiveIndex(0);
   }, [props.drill]);
 
   const incrementStepIndex = () => {
-    setStepIndex((currentStepIndex + 1) % (props.drill.steps.length + 1));
+    setActiveIndex(activeIndex + 1);
   };
 
   const displayNextStep = () => {
-    if (currentStepIndex + 1 === props.drill.steps.length) {
+    if (activeIndex + 1 === props.drill.steps.length) {
       return (
         <>
           <View style={styles.description}>
             <View style={styles.wrapperFinish}>
-              <Text style={styles.fitnessNext}>Finish</Text>
+              <Text style={styles.fitnessNext}>{I18n.t('FitnessDrillIllustration.finish')}</Text>
             </View>
           </View>
           <View style={styles.lines} />
@@ -75,10 +79,10 @@ const DrillIllustration = props => {
         <>
           <View style={styles.description}>
             <View style={styles.subWrapper}>
-              <Text style={styles.fitnessNext}>{props.drill.steps[currentStepIndex + 1].repetition}</Text>
+              <Text style={styles.fitnessNext}>{props.drill.steps[activeIndex + 1].repetition}</Text>
             </View>
             <View style={styles.subSubWrapper}>
-              <Text style={styles.fitnessNext}>{props.drill.steps[currentStepIndex + 1].title}</Text>
+              <Text style={styles.fitnessNext}>{props.drill.steps[activeIndex + 1].title}</Text>
             </View>
             <View style={styles.fakeWrapper} />
           </View>
@@ -88,77 +92,15 @@ const DrillIllustration = props => {
     }
   };
 
-  const checkSwitch = () => {
-    if (currentStepIndex === props.drill.steps.length) {
-      return displayFinish();
-    } else if (!currentStep) {
-      return <View />; // bad state, but let's not crash
-    } else {
-      switch (props.drill.steps[currentStepIndex].illustrationType) {
-        case IllustrationType.ANIMATION:
-          return displayAnimation(props.drill.steps[currentStepIndex]);
-        case IllustrationType.YOUTUBE:
-          return displayYoutube(props.drill.steps[currentStepIndex]);
-        case IllustrationType.VIMEO:
-          return displayVimeo(props.drill.steps[currentStepIndex]);
-        default:
-          return <Text>No visual content for this drill</Text>;
-      }
-    }
-  };
-
   const displayFinish = () => {
     return (
       <>
         <View style={styles.containerFinish}>
-          <Text style={styles.redoMessage}>You have completed the drill!</Text>
+          <Text style={styles.redoMessage}>{I18n.t('FitnessDrillIllustration.redoMessage')}</Text>
           <TouchableOpacity style={styles.redoButton} onPress={() => incrementStepIndex()}>
             <Image style={styles.redoImage} source={iconRedo} />
           </TouchableOpacity>
         </View>
-      </>
-    );
-  };
-
-  const displayAnimation = ({ illustrationSource, instruction, title }) => {
-    return (
-      <>
-        <Animation widthRatio={1} heightRatio={props.minimal ? 2 / 5 : 1 / 2} animation={illustrationSource} />
-        {props.drill.steps.length > 1 && (
-          <>
-            <View style={styles.description}>
-              <View style={styles.containerAnimation}>
-                <View style={styles.descriptionAnimation}>
-                  <View style={styles.subSubWrapper}>
-                    <Text style={styles.fitness}>{title}</Text>
-                  </View>
-                  <TouchableOpacity style={styles.container} onPress={() => checkAnimationFast()}>
-                    <Animated.View
-                      style={[
-                        {
-                          opacity: opacityUnchecked,
-                        },
-                      ]}
-                    >
-                      <Image style={styles.buttonNext} source={buttonValidation} />
-                    </Animated.View>
-                    <Animated.View
-                      style={[
-                        {
-                          opacity: opacityChecked,
-                        },
-                      ]}
-                    >
-                      <Image style={styles.buttonNext} source={buttonValidationGradient} />
-                    </Animated.View>
-                  </TouchableOpacity>
-                </View>
-              </View>
-            </View>
-            <View style={styles.lines} />
-          </>
-        )}
-        <Text style={styles.instruction}>{instruction}</Text>
       </>
     );
   };
@@ -260,6 +202,63 @@ const DrillIllustration = props => {
     );
   };
 
+  const checkSwitch = () => {
+    if (activeIndex === props.drill.steps.length) {
+      return displayFinish();
+    } else if (!currentStep) {
+      return <View />; // bad state, but let's not crash
+    } else {
+      switch (props.drill.steps[activeIndex].illustrationType) {
+        case IllustrationType.ANIMATION:
+          return displayAnimation(props.drill.steps[activeIndex]);
+        case IllustrationType.YOUTUBE:
+          return displayYoutube(props.drill.steps[activeIndex]);
+        case IllustrationType.VIMEO:
+          return displayVimeo(props.drill.steps[activeIndex]);
+        default:
+          return <Text>No visual content for this drill</Text>;
+      }
+    }
+  };
+
+  const displayAnimation = ({ illustrationSource, title, instruction }, index) => {
+    const isFirstStep = index === 0;
+    const isLastStep = index === props.drill.steps.length - 1;
+    return (
+      <>
+        <View style={styles.line}>
+          <View>
+            {!isFirstStep && (
+              <TouchableOpacity
+                onPress={() => {
+                  carouselRef.current.snapToPrev();
+                }}
+              >
+                <MaterialCommunityIcons name="chevron-double-left" color={theme.COLOR_PRIMARY} size={26} />
+              </TouchableOpacity>
+            )}
+          </View>
+          <Text style={styles.title}>{title}</Text>
+          <View>
+            {!isLastStep && (
+              <TouchableOpacity
+                onPress={() => {
+                  carouselRef.current.snapToNext();
+                }}
+              >
+                <MaterialCommunityIcons name="chevron-double-right" color={theme.COLOR_PRIMARY} size={26} />
+              </TouchableOpacity>
+            )}
+          </View>
+        </View>
+        <View style={styles.animation}>
+          <Animation widthRatio={1} heightRatio={props.minimal ? 2 / 5 : 1 / 2} animation={illustrationSource} />
+        </View>
+        <Text style={styles.instruction}>{instruction}</Text>
+      </>
+    );
+  };
+
   return (
     <GestureRecognizer style={styles.container} onSwipeLeft={checkAnimationFast} config={swipeConfig}>
       {checkSwitch()}
@@ -267,7 +266,6 @@ const DrillIllustration = props => {
   );
 };
 
-const screenDimension = Dimensions.get('window');
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -385,6 +383,22 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flex: 1,
   },
+  pagination: {
+    paddingVertical: 15,
+  },
+  line: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginTop: 15,
+  },
+  title: {
+    fontSize: theme.FONT_SIZE_LARGE,
+    color: theme.COLOR_PRIMARY,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  animation: { flex: 9 },
 });
 
-export default DrillIllustration;
+export default FitnessDrillIllustration;

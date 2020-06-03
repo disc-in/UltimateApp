@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { View, ActivityIndicator, StyleSheet, Text } from 'react-native';
-
 import { Video } from 'expo-av';
+
+import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
 
 const VimeoVideo = ({ vimeoId, screenWidth, sounds }) => {
@@ -55,7 +56,7 @@ const VimeoVideo = ({ vimeoId, screenWidth, sounds }) => {
     return (
       <View style={styles.spinnerStyle}>
         <ActivityIndicator animating color={theme.COLOR_SECONDARY} size="large" />
-        <Text>Loading...</Text>
+        <Text>{I18n.t('vimeoVideo.loading')}</Text>
       </View>
     );
   };
@@ -63,7 +64,7 @@ const VimeoVideo = ({ vimeoId, screenWidth, sounds }) => {
   const renderError = () => {
     return (
       <View style={styles.spinnerStyle}>
-        <Text>Oopsie! There was an error loading the video...</Text>
+        <Text>{I18n.t('vimeoVideo.error')}</Text>
       </View>
     );
   };
@@ -75,6 +76,7 @@ const VimeoVideo = ({ vimeoId, screenWidth, sounds }) => {
       <Video
         ref={videoElem}
         resizeMode={Video.RESIZE_MODE_CONTAIN}
+        useNativeControls
         style={{ width: screenWidth, height: 250 }}
         onLoadStart={() => setBuffer(true)}
         onLoad={playVideoLoaded}

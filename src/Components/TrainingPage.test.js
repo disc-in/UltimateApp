@@ -41,12 +41,12 @@ describe('<TrainingPage />', () => {
       },
     };
 
-    const { queryByText } = render(<TrainingPage navigation={navigation} route={route} />);
+    const { queryByTestId } = render(<TrainingPage navigation={navigation} route={route} />);
 
-    expect(queryByText('<')).toBeDefined();
-    expect(queryByText('>')).toBeNull(); // Not displayed on last training
+    expect(queryByTestId('goToPrev')).toBeDefined();
+    expect(queryByTestId('goToNext')).toBeNull(); // Not displayed on last training
 
-    await fireEvent.press(queryByText('<'));
+    await fireEvent.press(queryByTestId('goToPrev'));
 
     expect(navigation.navigate).toBeCalledWith('TrainingPage', { training: program.trainings[0], program });
   });
@@ -59,12 +59,12 @@ describe('<TrainingPage />', () => {
       },
     };
 
-    const { queryByText } = render(<TrainingPage navigation={navigation} route={route} />);
+    const { queryByTestId } = render(<TrainingPage navigation={navigation} route={route} />);
 
-    expect(queryByText('<')).toBeNull();
-    expect(queryByText('>')).toBeDefined();
+    expect(queryByTestId('goToPrev')).toBeNull();
+    expect(queryByTestId('goToNext')).toBeDefined();
 
-    await fireEvent.press(queryByText('>'));
+    await fireEvent.press(queryByTestId('goToNext'));
 
     expect(navigation.navigate).toBeCalledWith('TrainingPage', { training: program.trainings[1], program });
   });

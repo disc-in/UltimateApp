@@ -3,6 +3,7 @@ import { StyleSheet, View, Text } from 'react-native';
 import { connect } from 'react-redux';
 import ListItem from '../shared/ListItem';
 
+import I18n from '../../utils/i18n';
 import theme from '../../styles/theme.style';
 
 export const Program = props => {
@@ -22,7 +23,7 @@ export const Program = props => {
           </View>
           <View style={styles.presentationContainer}>
             <Text style={styles.completion}>
-              {completeTrainingsCount}/{trainings.length}
+              {I18n.t('programs.program.completion', { done: completeTrainingsCount, total: trainings.length })}
             </Text>
             <View style={styles.progressBar}>
               <View style={[StyleSheet.absoluteFill, styles.fillProgressBar, { width }]} />

@@ -12,7 +12,6 @@ class ProgressBar extends React.Component {
   // - stepCount: the number of steps
   // - currentStepAV: an animated value which represents the current step
   // - getStepAnimation(): set the animation to a given step
-  // - stepLength: length of an animation step in ms
   constructor(props) {
     super(props);
 
@@ -199,7 +198,7 @@ class ProgressBar extends React.Component {
    * The opacity of the other dots is set to 0
    */
 
-  getOpacityAnimation(stepId) {
+  getOpacityAnimation(stepId, duration) {
     var stepAnimation = [];
 
     /* Color the dots of id <= stepId */
@@ -207,7 +206,7 @@ class ProgressBar extends React.Component {
       stepAnimation.push(
         Animated.timing(this.dotsOpacity[i], {
           toValue: 1,
-          duration: this.props.stepLength,
+          duration,
           easing: Easing.cubic,
           key: i,
         }),
@@ -219,7 +218,7 @@ class ProgressBar extends React.Component {
       stepAnimation.push(
         Animated.timing(this.dotsOpacity[i], {
           toValue: 0,
-          duration: this.props.stepLength,
+          duration,
           easing: Easing.cubic,
           key: i,
         }),

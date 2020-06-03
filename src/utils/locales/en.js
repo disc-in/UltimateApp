@@ -75,9 +75,7 @@ export default {
     },
     sharePlaceholder: 'Please add this drill to UltimateApp',
   },
-  drillIllustration: {
-    finish: 'Finish',
-    noContent: 'No visual content for this drill',
+  fitnessDrillIllustration: {
     redoMessage: 'You have completed the drill!',
   },
   drillListPage: {

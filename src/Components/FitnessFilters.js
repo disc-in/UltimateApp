@@ -1,28 +1,51 @@
 import React from 'react';
 import { ScrollView, View, Text } from 'react-native';
 import { connect } from 'react-redux';
+
+import I18n from '../utils/i18n';
 import filterStyle from '../styles/filters.style';
-import { Levels, Intensities, EquipmentLabels, SeasonTimings } from '../Fixtures';
+import { Levels, Intensities, EquipmentLabels, SeasonTimings } from '../Fixtures/config';
 import Button from './filters/FilterButton';
 import Checkbox from './filters/Checkbox';
 import Slider from './filters/Slider';
 import HeaderButton from './shared/HeaderButton';
+import iconRedo from '../../assets/redo_arrow.png';
+import buttonValidation from '../../assets/check_dark.png';
 
 export class FitnessFilters extends React.Component {
   constructor(props) {
     super(props);
+
+    const { filters, initialData } = props.route.params;
     this.state = {
-      selectedFavorites: false,
-      selectedLevels: [],
-      selectedIntensities: [],
-      selectedEquipmentLabels: [],
-      selectedSeasonTimings: [],
-      selectedGoals: [],
-      durationInMinutes: undefined,
-      displayedDrills: this.props.route.params.initialData,
+      selectedFavorites: filters?.selectedFavorites || false,
+      selectedLevels: filters?.selectedLevels || [],
+      selectedIntensities: filters?.selectedIntensities || [],
+      selectedEquipmentLabels: filters?.selectedEquipmentLabels || [],
+      selectedSeasonTimings: filters?.selectedSeasonTimings || [],
+      selectedGoals: filters?.selectedGoals || [],
+      durationInMinutes: filters?.durationInMinutes || undefined,
+      displayedDrills: filters?.displayedDrills || initialData,
     };
 
     this.onDurationInMinutesChange = this.onSliderChange.bind(this, 'durationInMinutes');
+  }
+
+  resetFilters() {
+    this.setState(
+      {
+        selectedFavorites: false,
+        selectedLevels: [],
+        selectedIntensities: [],
+        selectedEquipmentLabels: [],
+        selectedSeasonTimings: [],
+        selectedGoals: [],
+        durationInMinutes: undefined,
+      },
+      () => {
+        this.applyFilters(this.validateFilters);
+      },
+    );
   }
 
   onPressedChange(target, value) {
@@ -48,7 +71,7 @@ export class FitnessFilters extends React.Component {
     this.setState({ [target]: value }, this.applyFilters);
   }
 
-  applyFilters() {
+  applyFilters(callback = () => {}) {
     const { favoriteDrills } = this.props;
     const {
       selectedFavorites,
@@ -76,20 +99,23 @@ export class FitnessFilters extends React.Component {
       newData = newData.filter(drill => drill.goals.filter(goal => selectedGoals.includes(goal)).length > 0);
     if (durationInMinutes) newData = newData.filter(drill => drill.durationInMinutes <= durationInMinutes);
 
-    this.setState({ displayedDrills: newData });
+    this.setState({ displayedDrills: newData }, callback);
+  }
+
+  validateFilters() {
+    this.props.navigation.navigate(this.props.route.params.previousScreen, {
+      type: this.props.route.params.previousType,
+      currentFilters: this.state,
+    });
   }
 
   componentDidMount() {
     this.props.navigation.setOptions({
       headerRight: () => (
-        <HeaderButton
-          onPress={() => {
-            this.props.navigation.navigate(this.props.route.params.previousScreen, {
-              filteredDrills: this.state.displayedDrills,
-              type: this.props.route.params.previousType,
-            });
-          }}
-        />
+        <View style={{ flexDirection: 'row' }}>
+          <HeaderButton image={iconRedo} onPress={() => this.resetFilters()} testID="resetButton" />
+          <HeaderButton image={buttonValidation} onPress={() => this.validateFilters()} testID="validateButton" />
+        </View>
       ),
     });
   }
@@ -107,58 +133,64 @@ export class FitnessFilters extends React.Component {
 
     return (
       <View style={filterStyle.wrapper}>
-        <Text style={filterStyle.counter}>{this.state.displayedDrills.length} drills available</Text>
+        <Text style={filterStyle.counter}>
+          {I18n.t('drillListPage.availableDrills', { count: this.state.displayedDrills.length })}
+        </Text>
         <ScrollView contentContainerStyle={filterStyle.filters}>
           <View style={filterStyle.filter}>
-            <Button title="Favorites only" onPress={() => this.onFavoritesChange()} active={selectedFavorites} />
+            <Button
+              title={I18n.t('fitnessFilters.favorites')}
+              onPress={() => this.onFavoritesChange()}
+              active={selectedFavorites}
+            />
           </View>
-          <Text style={filterStyle.filterTitle}>Level</Text>
+          <Text style={filterStyle.filterTitle}>{I18n.t('fitnessFilters.level')}</Text>
           <View style={filterStyle.filter}>
             {Object.values(Levels).map(level => (
               <Button
-                title={level}
+                title={I18n.t(`data.levels.${level}`)}
                 onPress={() => this.onPressedChange('selectedLevels', level)}
                 key={level}
                 active={selectedLevels.includes(level)}
               />
             ))}
           </View>
-          <Text style={filterStyle.filterTitle}>Intensity</Text>
+          <Text style={filterStyle.filterTitle}>{I18n.t('fitnessFilters.intensity')}</Text>
           <View style={filterStyle.filter}>
             {Object.values(Intensities).map(intensity => (
               <Button
-                title={intensity}
+                title={I18n.t(`data.intensities.${intensity}`)}
                 onPress={() => this.onPressedChange('selectedIntensities', intensity)}
                 key={intensity}
                 active={selectedIntensities.includes(intensity)}
               />
             ))}
           </View>
-          <Text style={filterStyle.filterTitle}>Equipment</Text>
+          <Text style={filterStyle.filterTitle}>{I18n.t('fitnessFilters.equipment')}</Text>
           <View style={filterStyle.filter}>
             {Object.values(EquipmentLabels).map(equipmentLabel => (
               <Button
-                title={equipmentLabel}
+                title={I18n.t(`data.equipmentLabels.${equipmentLabel}`)}
                 onPress={() => this.onPressedChange('selectedEquipmentLabels', equipmentLabel)}
                 key={equipmentLabel}
                 active={selectedEquipmentLabels.includes(equipmentLabel)}
               />
             ))}
           </View>
-          <Text style={filterStyle.filterTitle}>Season Timing</Text>
+          <Text style={filterStyle.filterTitle}>{I18n.t('fitnessFilters.seasonTiming')}</Text>
           <View style={filterStyle.filter}>
             {Object.values(SeasonTimings)
               .filter(value => value !== SeasonTimings.ANYTIME)
               .map(seasonTiming => (
                 <Button
-                  title={seasonTiming}
+                  title={I18n.t(`data.seasonTimings.${seasonTiming}`)}
                   onPress={() => this.onPressedChange('selectedSeasonTimings', seasonTiming)}
                   key={seasonTiming}
                   active={selectedSeasonTimings.includes(seasonTiming)}
                 />
               ))}
           </View>
-          <Text style={filterStyle.filterTitle}>Goals</Text>
+          <Text style={filterStyle.filterTitle}>{I18n.t('fitnessFilters.goals')}</Text>
           <View style={filterStyle.filter}>
             {this.props.route.params.initialData
               .map(drill => drill.goals)
@@ -166,15 +198,15 @@ export class FitnessFilters extends React.Component {
               .filter((goal, index, array) => array.indexOf(goal) === index)
               .map(goal => (
                 <Checkbox
-                  title={goal}
+                  title={I18n.t(`data.fitnessGoals.${goal}`)}
                   onPress={() => this.onPressedChange('selectedGoals', goal)}
                   key={goal}
                   active={selectedGoals.includes(goal)}
                 />
               ))}
           </View>
-          <Text style={filterStyle.filterTitle}>Duration</Text>
-          <Text>How much time do you have?   {durationInMinutes || '-'} mins</Text>
+          <Text style={filterStyle.filterTitle}>{I18n.t('fitnessFilters.duration')}</Text>
+          <Text>{I18n.t('fitnessFilters.durationLabel', { duration: durationInMinutes || '-' })}</Text>
           <Slider
             minimumValue={5}
             maximumValue={60}

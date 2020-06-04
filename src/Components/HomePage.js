@@ -8,21 +8,24 @@ import bodyweight from '../../assets/HomePage/bodyweight.jpg';
 import gymstrong from '../../assets/HomePage/gymstrong.jpg';
 import leanfit from '../../assets/HomePage/leanfit.jpg';
 import simulator from '../../assets/HomePage/simulator.jpg';
+import dictionary from '../../assets/HomePage/dictionary.jpg';
+import ourPlays from '../../assets/HomePage/ourplays.jpg';
+import essential from '../../assets/HomePage/essential.jpg';
 import huddle from '../../assets/HomePage/huddle.png';
 import { DrillTypes } from '../Fixtures/config';
 
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
 
 const Tab = createMaterialBottomTabNavigator();
 
 const HomeScreen = props => {
   return (
     <View style={styles.mainContainer}>
-      <TouchableHighlight onPress={() => props.navigation.navigate('TheoryPage')} style={styles.menuItem}>
-        <ImageBackground source={simulator} style={styles.image}>
+      <TouchableHighlight onPress={() => props.navigation.navigate('AnimationEditorPage')} style={styles.menuItem}>
+        <ImageBackground source={ourPlays} style={styles.image}>
           <View style={styles.wrapper}>
-            <Text style={styles.text}>{I18n.t('homePage.theory')}</Text>
+            <Text style={styles.text}>{I18n.t('homePage.editor')}</Text>
           </View>
         </ImageBackground>
       </TouchableHighlight>
@@ -43,13 +46,6 @@ const HomeScreen = props => {
           </View>
         </ImageBackground>
       </TouchableHighlight>
-      {/* <View style={styles.editorLink}> */}
-      {/* <Button
-          onPress={() => props.navigation.navigate('AnimationEditorPage')}
-          text={I18n.t('homePage.editor')}
-          buttonLight="true"
-        /> */}
-      {/* </View> */}
     </View>
   );
 };
@@ -100,6 +96,37 @@ const Fitness = props => {
   );
 };
 
+const Theory = props => {
+  return (
+    <View style={styles.mainContainer}>
+      <TouchableHighlight onPress={() => props.navigation.navigate('Dictionary')} style={styles.menuItem}>
+        <ImageBackground source={dictionary} style={styles.image}>
+          <View style={styles.wrapper}>
+            <Text style={styles.text}>{I18n.t('homePage.dictionary')}</Text>
+          </View>
+        </ImageBackground>
+      </TouchableHighlight>
+      <TouchableHighlight
+        onPress={() => props.navigation.navigate('EssentialPage', { type: DrillTypes.FRISBEE })}
+        style={styles.menuItem}
+      >
+        <ImageBackground source={essential} style={styles.image}>
+          <View style={styles.wrapper}>
+            <Text style={styles.text}>{I18n.t('homePage.essential')}</Text>
+          </View>
+        </ImageBackground>
+      </TouchableHighlight>
+      <TouchableHighlight onPress={() => props.navigation.navigate('TacticsPage')} style={styles.menuItem}>
+        <ImageBackground source={simulator} style={styles.image}>
+          <View style={styles.wrapper}>
+            <Text style={styles.text}>{I18n.t('homePage.tactics')}</Text>
+          </View>
+        </ImageBackground>
+      </TouchableHighlight>
+    </View>
+  );
+};
+
 export default HomePage = props => {
   const { navigation } = props;
 
@@ -110,7 +137,7 @@ export default HomePage = props => {
         onPress={() => props.navigation.navigate('AnimationEditorPage')}
         testID="editorButton"
       >
-        <MaterialCommunityIcons name="clipboard-outline" color={theme.COLOR_PRIMARY} size={26} />
+        <MaterialCommunityIcons name="email-outline" color={theme.COLOR_PRIMARY} size={26} />
       </TouchableOpacity>
     );
   };
@@ -131,8 +158,8 @@ export default HomePage = props => {
         name="Frisbee"
         component={HomeScreen}
         options={{
-          tabBarLabel: I18n.t('homePage.frisbeeTab'),
-          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="disc" color={color} size={26} />,
+          tabBarLabel: I18n.t('homePage.trainingTab'),
+          tabBarIcon: ({ color }) => <Ionicons name="ios-disc" color={color} size={26} />,
         }}
       />
       <Tab.Screen
@@ -140,7 +167,15 @@ export default HomePage = props => {
         component={Fitness}
         options={{
           tabBarLabel: I18n.t('homePage.fitnessTab'),
-          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="dumbbell" color={color} size={26} />,
+          tabBarIcon: ({ color }) => <Ionicons name="ios-fitness" color={color} size={26} />,
+        }}
+      />
+      <Tab.Screen
+        name="Theory"
+        component={Theory}
+        options={{
+          tabBarLabel: I18n.t('homePage.theoryTab'),
+          tabBarIcon: ({ color }) => <Ionicons name="md-clipboard" color={color} size={26} />,
         }}
       />
     </Tab.Navigator>

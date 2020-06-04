@@ -8,7 +8,6 @@ import {
   TouchableOpacity,
   Dimensions,
   findNodeHandle,
-  Image,
 } from 'react-native';
 import { connect } from 'react-redux';
 import { useHeaderHeight } from '@react-navigation/stack';

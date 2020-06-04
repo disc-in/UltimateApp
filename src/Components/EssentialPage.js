@@ -110,6 +110,7 @@ const Essential = () => {
         <View style={styles.instructionContainer}>
           <Text style={styles.instruction}>{item.text}</Text>
         </View>
+        <View style={styles.lines} />
       </>
     );
   };

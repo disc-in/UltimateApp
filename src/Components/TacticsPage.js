@@ -75,6 +75,7 @@ const TacticsPage = () => {
         </View>
         <View style={styles.instructionContainer}>
           <Text style={styles.instruction}>{item.text}</Text>
+          <View style={styles.lines} />
         </View>
       </>
     );

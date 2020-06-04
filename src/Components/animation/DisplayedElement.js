@@ -23,17 +23,65 @@ class DisplayedElement extends React.Component {
     super(props);
 
     // TODO: put the constant coefficient used in the following somewhere to avoir writing them twice (in this class and in DrillCuts)
-    this.props.playerRadius = Math.min(this.props.animationWidth, this.props.animationHeight) / 12;
-    this.props.discRadius = this.props.playerRadius / 2;
-    this.props.bottomconeSize = this.props.playerRadius / 2;
+    this.playerRadius = Math.min(this.props.animationWidth, this.props.animationHeight) / 12;
+    this.bottomconeSize = this.playerRadius / 2;
 
-    this.currentPosition = new Animated.ValueXY({ x: 0, y: 0 });
+    console.log('de movable?: ' + this.props.movable);
+    /* Positions of the element at each step of the drill */
+    this.xPositions = [];
+    this.yPositions = [];
+
+    /* Value of the progress at which the element must be at these given positions */
+    this.time = [];
+
+    console.log(
+      'de constructor player radius/animationH/animationW: ' +
+        this.playerRadius +
+        '/' +
+        this.props.animationHeight +
+        '/' +
+        this.props.animationWidth +
+        '/' +
+        Math.min(this.props.animationWidth, this.props.animationHeight) / 12,
+    );
+
+    for (var stepId = 0; stepId < this.props.animation.stepCount(); stepId++) {
+      var currentPositions = this.props.animation.getPositionsAtStep(this.props.eId, stepId);
+
+      var p0 = this.props.positionPercentToPixel(currentPositions[0][0], currentPositions[0][1]);
+
+      this.xPositions.push(p0[0]);
+      this.yPositions.push(p0[1]);
+      this.time.push(stepId);
+
+      /* If there is a count-cut */
+      if (currentPositions.length > 1) {
+        var p1 = this.props.positionPercentToPixel(currentPositions[1][0], currentPositions[1][1]);
+        this.xPositions.push(p1[0]);
+        this.yPositions.push(p1[1]);
+        this.time.push(stepId + 0.5);
+      }
+    }
+
+    this.interpolateX = this.props.currentStepAV.interpolate({
+      inputRange: this.time,
+      outputRange: this.xPositions,
+    });
+
+    this.interpolateY = this.props.currentStepAV.interpolate({
+      inputRange: this.time,
+      outputRange: this.yPositions,
+    });
+
+    this.offset = new Animated.ValueXY({ x: 0, y: 0 });
 
     // Add a listener on each coordinate offset to get its value at the end of each move
-    this.currentPosition.x.addListener(({ value }) => {
+    this.offset.x.addListener(({ value }) => {
       this._value = value;
+      console.log('dans le listener: ' + typeof this);
+      console.log('dans le listener 2: ' + this.props.animationHeight);
     });
-    this.currentPosition.y.addListener(({ value }) => {
+    this.offset.y.addListener(({ value }) => {
       this._value = value;
     });
 
@@ -41,7 +89,7 @@ class DisplayedElement extends React.Component {
     this.moved = false;
     this._val = { x: 0, y: 0 };
 
-    this.currentPosition.addListener(value => (this._val = value)); // Initialize PanResponder with move handling
+    this.offset.addListener(value => (this._val = value)); // Initialize PanResponder with move handling
 
     // Initiate the panResponder
     this.panResponder = PanResponder.create({
@@ -51,47 +99,45 @@ class DisplayedElement extends React.Component {
       // Called when the gesture starts
       onPanResponderGrant: () => {
         if (this.props.movable) {
-          this.currentPosition.setOffset({
+          this.offset.setOffset({
             x: this._val.x,
             y: this._val.y,
           });
 
-          this.currentPosition.setValue({ x: 0, y: 0 });
+          this.offset.setValue({ x: 0, y: 0 });
         }
       },
 
       // Called when a move is made
       onPanResponderMove: this.props.movable
-        ? Animated.event([null, { dx: this.currentPosition.x, dy: this.currentPosition.y }])
+        ? Animated.event([null, { dx: this.offset.x, dy: this.offset.y }])
         : undefined,
 
       onPanResponderRelease: (evt, gesturestate) => {
         if (this.props.movable && this.props.onMoveEnd !== undefined && this.props.onMoveEnd !== null) {
-          this.props.onMoveEnd(this, this.currentPosition.x._value, this.currentPosition.y._value);
+          this.props.onMoveEnd(this, this.offset.x._value, this.offset.y._value);
         }
-        debug('release: ' + this.currentPosition.x._value + '/' + this.currentPosition.y._value);
+        console.log('release: ' + this.offset.x._value + '/' + this.offset.y._value);
       },
     });
   }
 
-  /** Set the position of the element (the argument are in pixels not in percentage of the screen) */
-  setPosition(xArg, yArg) {
-    this.currentPosition.setValue({ x: xArg, y: yArg });
-  }
-
-  /** Get an animation to move the element at a given position */
-  getAnimation(xValue, yValue, durationValue) {
-    return Animated.timing(this.currentPosition, {
-      toValue: { x: xValue, y: yValue },
-      duration: durationValue,
-      easing: Easing.linear,
-    });
-  }
-
+  // {...this.panResponder.panHandlers}
+  // panStyle,
   render() {
     const panStyle = {
-      transform: this.currentPosition.getTranslateTransform(),
+      transform: this.offset.getTranslateTransform(),
     };
+    // const panStyle = {
+    //   transform: [
+    //     {
+    //       translateX: this.offset.x,
+    //     },
+    //     {
+    //       translateY: this.offset.y,
+    //     },
+    //   ],
+    // };
 
     switch (this.props.id) {
       case 'defense':
@@ -100,16 +146,39 @@ class DisplayedElement extends React.Component {
             {...this.panResponder.panHandlers}
             style={[
               panStyle,
-              styles.defense,
-              { height: this.props.playerRadius },
-              { width: this.props.playerRadius },
-              { borderRadius: this.props.playerRadius },
+              { height: this.animationHeight },
+              { width: this.animationWidth },
+              { position: 'absolute' },
+              { alignItems: 'center' },
+              { justifyContent: 'center' },
               { left: 0 },
               { top: 0 },
+              { backgroundColor: 'black' },
             ]}
-            key={this.props.key}
           >
-            <Text style={styles.defenseText}>{this.props.number}</Text>
+            <Animated.View
+              style={[
+                {
+                  transform: [
+                    {
+                      translateX: this.interpolateX,
+                    },
+                    {
+                      translateY: this.interpolateY,
+                    },
+                  ],
+                },
+                styles.defense,
+                { height: this.playerRadius },
+                { width: this.playerRadius },
+                { borderRadius: this.playerRadius },
+                { left: 0 },
+                { top: 0 },
+              ]}
+              key={this.props.eId}
+            >
+              <Text style={styles.defenseText}>{this.props.number}</Text>
+            </Animated.View>
           </Animated.View>
         );
 
@@ -120,22 +189,22 @@ class DisplayedElement extends React.Component {
             style={[
               panStyle,
               styles.offense,
-              { height: this.props.playerRadius },
-              { width: this.props.playerRadius },
-              { borderRadius: this.props.playerRadius },
+              { height: this.playerRadius },
+              { width: this.playerRadius },
+              { borderRadius: this.playerRadius },
               { left: 0 },
               { top: 0 },
             ]}
-            key={this.props.key}
+            key={this.props.eId}
           >
             <LinearGradient
               colors={[theme.GRADIENT_FIRST_COLOR, theme.GRADIENT_SECOND_COLOR]}
               style={[
                 styles.gradient,
                 {
-                  height: this.props.playerRadius,
-                  width: this.props.playerRadius,
-                  borderRadius: this.props.playerRadius,
+                  height: this.playerRadius,
+                  width: this.playerRadius,
+                  borderRadius: this.playerRadius,
                 },
               ]}
               start={{ x: 1, y: 1 }}
@@ -160,7 +229,7 @@ class DisplayedElement extends React.Component {
               { left: 0 },
               { top: 0 },
             ]}
-            key={this.props.key}
+            key={this.props.eId}
           />
         );
 
@@ -172,18 +241,18 @@ class DisplayedElement extends React.Component {
             style={[
               panStyle,
               styles.triangle,
-              { borderLeftWidth: this.props.bottomconeSize / 2 },
-              { borderRightWidth: this.props.bottomconeSize / 2 },
-              { borderBottomWidth: this.props.bottomconeSize },
+              { borderLeftWidth: this.bottomconeSize / 2 },
+              { borderRightWidth: this.bottomconeSize / 2 },
+              { borderBottomWidth: this.bottomconeSize },
               { top: 0 },
               { left: 0 },
             ]}
-            key={this.props.key}
+            key={this.props.eId}
           />
         );
 
       default:
-        return <View key={this.props.key} />;
+        return <View key={this.props.eId} />;
     }
   }
 }

@@ -20,13 +20,20 @@ class Animation extends React.Component {
   constructor(props) {
     super(props);
 
+    var initialStep = 0;
+
+    // If the current step is fixed by the parent (used in the editor)
+    if (this.props.currentStep !== undefined && this.props.currentStep !== null) initialStep = this.props.currentStep;
+
+    if (this.props.onStepChange !== undefined && this.props.onStepChange !== null) this.props.onStepChange(initialStep);
+
     this.state = {
-      screenHeight: 1, // Height of the animation space
-      screenWidth: 1, // Width of the animation space
       stepLength: 1000, // Duration of a step in milliseconds
-      animation: undefined,
-      displayedElements: [], // The graphical elments displayed in the animation
-      currentStep: 0, // Current step displayed on the phone
+      animation: new Drill(this.props.animation),
+      widthRatio: props.widthRatio,
+      heigthRatio: props.heigthRatio,
+      displayedElements: _createDisplayedElements(props),
+      currentStep: initialStep, // Current step displayed on the phone
       animationPlaying: false,
     };
 
@@ -62,33 +69,6 @@ class Animation extends React.Component {
       return this.state.animation.ids.length;
     else return 0;
   };
-
-  /** Create the Componenets associated to the elements displayed in this animation */
-  _createDisplayedElements() {
-    var result = [];
-    /* For each element displayed in the current animation */
-    for (var elemId = 0; elemId < this._elemCount(); ++elemId) {
-      //	    debug("animation createdE: element id: " + this.state.animation.ids[elemId]);
-
-      /* Create the displayed element according to the animation */
-      result.push(
-        new DisplayedElement({
-          id: this.state.animation.ids[elemId],
-          number: this.state.animation.texts[elemId],
-          key: elemId,
-          eId: elemId,
-          animationWidth: this.animationWidth,
-          animationHeight: this.animationHeight,
-          movable: this.props.editable,
-          onMoveEnd: this.props.onElementMove,
-          //		    left: this.state.animation.positions[0][elemId][0][0]*this.animationWidth + this.dLeft,
-          //		    top: this.state.animation.positions[0][elemId][0][1]*this.animationHeight + this.dTop
-        }),
-      );
-    }
-
-    return result;
-  }
 
   /** Create the cuts associated to each step of the animation */
   _initializeCuts() {
@@ -153,23 +133,6 @@ class Animation extends React.Component {
 
     debug('intStep: ' + intStep);
 
-    if (this.state.displayedElements !== undefined && this.state.displayedElements !== null) {
-      /* For each element */
-      for (var i = 0; i < this.state.displayedElements.length; i++) {
-        debug('element: ' + i);
-
-        var element = this.state.displayedElements[i];
-
-        var iPositions = this.state.animation.getPositionsAtStep(i, intStep);
-        /* Get its position in pixel (it is represented in percentage in the animation) */
-        var pixelPosition = this._positionPercentToPixel(iPositions[0][0], iPositions[0][1]);
-
-        //		debug("pixelPosition:" + pixelPosition);
-
-        element.setPosition(pixelPosition[0], pixelPosition[1]);
-      }
-    }
-
     this.setState({ currentStep: intStep }, () => {
       if (this.props.onStepChange !== undefined && this.props.onStepChange !== null) this.props.onStepChange(intStep);
     });
@@ -181,37 +144,9 @@ class Animation extends React.Component {
 
     this.animationWidth = width * this.props.widthRatio;
     this.animationHeight = height * this.props.heightRatio;
-    var inputDrill = new Drill(this.props.animation);
-    var initialStep = 0;
 
-    // If the current step is fixed by the parent (used in the editor)
-    if (this.props.currentStep !== undefined && this.props.currentStep !== null) initialStep = this.props.currentStep;
-
-    this.setState(
-      {
-        animation: inputDrill,
-        screenHeight: height,
-        screenWidth: width,
-        currentStep: initialStep,
-      },
-      () => {
-        this.setState(
-          {
-            displayedElements: this._createDisplayedElements(),
-          },
-          () => {
-            /* Set all the elements to their initial positions */
-            this._initPositions();
-
-            this.progressBar = this._createProgressBar();
-            if (this.props.editable) this._initializeCuts();
-
-            if (this.props.onStepChange !== undefined && this.props.onStepChange !== null)
-              this.props.onStepChange(initialStep);
-          },
-        );
-      },
-    );
+    this.progressBar = this._createProgressBar();
+    if (this.props.editable) this._initializeCuts();
   }
 
   _goToInit() {
@@ -282,6 +217,19 @@ class Animation extends React.Component {
     }
   }
 
+  /** Get an animation to move an element to a position
+   * - elemId: the id of the object representing the element in this.props.displayedElements
+   * - xValue, yValue: destination of the animation
+   * - durationValue: duration of the animation
+   */
+  _getAnimation(elemId, xValue, yValue, durationValue) {
+    return Animated.timing(this.state.displayedElements[elemId].position, {
+      toValue: { x: xValue, y: yValue },
+      duration: durationValue,
+      easing: Easing.linear,
+    });
+  }
+
   /** Returns the animation to a given step for all displayed elements
    * - playSubsteps: boolean which indicates if we play the substeps
    * (true if push the "play animation" button or if we move from a step to the next one)
@@ -320,8 +268,6 @@ class Animation extends React.Component {
         if (playSubsteps) {
           /* For each substep of element de in step stepId */
           for (var substep = 0; substep < substepCount; substep++) {
-            var currentDisplayedElement = this.state.displayedElements[elemId];
-
             var currentSubStepLength = substepLength;
 
             if ((instantFirstSubStep || stepId === 0) && substep === 0) currentSubStepLength = 0;
@@ -330,19 +276,18 @@ class Animation extends React.Component {
             var pixelPosition = this._positionPercentToPixel(nextPosition[substep][0], nextPosition[substep][1]);
 
             /* Get the corresponding animation */
-            var anim = currentDisplayedElement.getAnimation(pixelPosition[0], pixelPosition[1], currentSubStepLength);
+            var anim = this._getAnimation(elemId, pixelPosition[0], pixelPosition[1], currentSubStepLength);
 
             displayedElementStepAnimation.push(anim);
           }
         } else {
           /* If the sub steps must not be played, just move the element to its last position */
-          currentDisplayedElement = this.state.displayedElements[elemId];
 
           /* Get the position of the element at this substep */
           pixelPosition = this._positionPercentToPixel(nextPosition[0][0], nextPosition[0][1]);
 
           /* Get the corresponding animation */
-          anim = currentDisplayedElement.getAnimation(pixelPosition[0], pixelPosition[1], this.state.stepLength);
+          anim = this._getAnimation(elemId, pixelPosition[0], pixelPosition[1], this.state.stepLength);
 
           displayedElementStepAnimation.push(anim);
         }
@@ -388,7 +333,7 @@ class Animation extends React.Component {
 
   render() {
     this.cutsArray = [];
-
+    //<MaterialCommunityIcons name="chevron-double-left" color={theme.COLOR_PRIMARY} size={26} />
     return (
       <View style={[styles.mainContainer, { height: this.animationHeight }, { width: this.animationWidth }]}>
         {this.props.editable && this.cuts !== undefined && this.cuts !== null && !this.state.animationPlaying ? (
@@ -396,12 +341,25 @@ class Animation extends React.Component {
         ) : (
           undefined
         )}
-        {this.state.displayedElements === undefined || this.state.displayedElements === null ? (
-          <View />
-        ) : (
-          this.state.displayedElements.map(this._display)
-        )}
-            <MaterialCommunityIcons name="chevron-double-left" color={theme.COLOR_PRIMARY} size={26} />
+
+        {this.state.displayedElements?.map(item => {
+          return (
+            <DisplayedElement
+              id={item.id}
+              number={item.number}
+              key={item.key}
+              eId={item.eId}
+              movable={item.movable}
+              onMoveEnd={item.onMoveEnd}
+              animationWidth={this.animationWidth}
+              animationHeight={this.animationHeight}
+              animation={this.props.animation}
+              currentStepAV={this.currentStepAV}
+              positionPercentToPixel={this._positionPercentToPixel}
+            />
+          );
+        })}
+        <View style={styles.controls}>
           <TouchableOpacity style={styles.controlBtn} onPress={() => this._previousStep()}>
             <Image style={styles.controlIcn} source={iconPrev} />
           </TouchableOpacity>
@@ -418,33 +376,34 @@ class Animation extends React.Component {
             </TouchableOpacity>
           )}
         </View>
-        {this._display(this.progressBar)}
+        {/* {this._display(this.progressBar)} */}
       </View>
     );
   }
 
-  /** Used to update the animation when a modification is made through the editor */
+  // /** Used to update the animation when a modification is made through the editor */
   componentDidUpdate() {
-    if (
-      (this.state.displayedElements === undefined || this.state.displayedElements === null) &&
-      this.state.animation !== undefined &&
-      this.state.animation !== null
-    ) {
-      this.currentStepAV.addListener(progress => {
-        this.setState({ currentStep: progress.value });
-      });
-      this.setState(
-        {
-          displayedElements: this._createDisplayedElements(),
-        },
-        () => {
-          /* Set all the elements to their initial positions */
-          this._setCurrentPositions();
-          if (this.props.editable) this._initializeCuts();
-          this.progressBar = this._createProgressBar();
-        },
-      );
-    }
+    console.log('animation update');
+    //   if (
+    //     (this.state.displayedElements === undefined || this.state.displayedElements === null) &&
+    //     this.state.animation !== undefined &&
+    //     this.state.animation !== null
+    //   ) {
+    // this.currentStepAV.addListener(progress => {
+    //   this.setState({ currentStep: progress.value });
+    // });
+    // this.setState(
+    //   {
+    //     displayedElements: this._createDisplayedElements(),
+    //   },
+    //   () => {
+    //     /* Set all the elements to their initial positions */
+    //     this._setCurrentPositions();
+    //     if (this.props.editable) this._initializeCuts();
+    //     this.progressBar = this._createProgressBar();
+    //   },
+    // );
+    //   }
   }
 
   /** Used to update the animation when a modification is made through the editor */
@@ -452,14 +411,18 @@ class Animation extends React.Component {
     // Test if the animation has changed
     var isEqual = true;
 
-    if (props.width !== state.propsWidth || props.height !== state.propsHeight) isEqual = false;
+    console.log('animation derivedStateFromProps');
+    console.log('props.animation: ' + props.animation);
+
+    /* If a dimension has changed */
+    if (props.widthRatio !== state.widthRatio || props.heightRatio !== state.heightRatio) isEqual = false;
 
     if (isEqual && props.animation !== undefined && state.animation !== undefined) {
       var stepId = 0;
       var elemId = 0;
       var cutId = 0;
 
-      // Get all the positions in props and stats
+      // Get all the positions in props and state
       var pPositions = props.animation.positions;
       var sPositions = state.animation.positions;
 
@@ -517,11 +480,36 @@ class Animation extends React.Component {
     else {
       return {
         animation: props.animation,
-        displayedElements: undefined,
+        displayedElements: _createDisplayedElements(props),
       };
     }
   }
 }
+
+/** Create the Componenets associated to the elements displayed in this animation */
+const _createDisplayedElements = props => {
+  var result = [];
+
+  /* For each element displayed in the current animation */
+  for (var elemId = 0; elemId < props.animation.elemCount(); ++elemId) {
+    var currentStep = 0;
+
+    if (props.currentStepAV !== null && props.currentStepAV !== undefined)
+      currentStep = parseInt(props.currentStepAV._value, 10);
+
+    /* Create the displayed element according to the animation */
+    result.push({
+      id: props.animation.ids[elemId],
+      number: props.animation.texts[elemId],
+      key: elemId,
+      eId: elemId,
+      movable: props.editable,
+      onMoveEnd: props.onElementMove,
+    });
+  }
+
+  return result;
+};
 
 const styles = StyleSheet.create({
   mainContainer: {

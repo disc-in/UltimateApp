@@ -412,7 +412,7 @@ class AnimationEditor extends React.Component {
 
   render() {
     debug('render AE');
-    debug('this.currentStep: ' + this.currentStep);
+    console.log('this.state.animation: ' + this.state.animation);
 
     return (
       <View style={styles.mainContainer} onLayout={this.onLayout}>

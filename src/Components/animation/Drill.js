@@ -34,6 +34,11 @@ class Drill {
     return this.positions.length;
   }
 
+  elemCount() {
+    if (this.positions === undefined || this.positions === null || this.positions.length === 0) return 0;
+    else return this.positions[0].length;
+  }
+
   /** Add an element to the drill */
   addElement(element, initialX, initialY, elementNumber) {
     debug('drill add element at position: ' + initialX + '/' + initialY);
@@ -77,7 +82,7 @@ class Drill {
           /* If element i has a greater number than the element removed, decrement its number */
           if (vi > vElement) {
             this.texts[i] = (vi - 1).toString();
-         }
+          }
         }
     }
   }

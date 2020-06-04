@@ -75,16 +75,6 @@ class DisplayedElement extends React.Component {
 
     this.offset = new Animated.ValueXY({ x: 0, y: 0 });
 
-    // Add a listener on each coordinate offset to get its value at the end of each move
-    this.offset.x.addListener(({ value }) => {
-      this._value = value;
-      console.log('dans le listener: ' + typeof this);
-      console.log('dans le listener 2: ' + this.props.animationHeight);
-    });
-    this.offset.y.addListener(({ value }) => {
-      this._value = value;
-    });
-
     // True if the element has already been moved
     this.moved = false;
     this._val = { x: 0, y: 0 };

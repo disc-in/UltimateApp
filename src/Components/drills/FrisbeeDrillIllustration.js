@@ -56,29 +56,25 @@ const FrisbeeDrillIllustration = props => {
 
   const displayYoutube = ({ illustrationSource }) => {
     return (
-      <>
-        <View style={styles.contentWrapper}>
-          <View style={{ height: 250 }}>
-            <WebView
-              source={{
-                uri: illustrationSource,
-              }}
-            />
-          </View>
+      <View style={styles.contentWrapper}>
+        <View style={{ height: 250 }}>
+          <WebView
+            source={{
+              uri: illustrationSource,
+            }}
+          />
         </View>
-      </>
+      </View>
     );
   };
 
   const displayVimeo = ({ illustrationSource, sounds }) => {
     return (
-      <>
-        <View style={styles.contentWrapper}>
-          <View style={[{ height: 250 }, styles.videoAlone]}>
-            <VimeoVideo vimeoId={illustrationSource} screenWidth={screenDimension.width} sounds={sounds} />
-          </View>
+      <View style={styles.contentWrapper}>
+        <View style={[{ height: 250 }, styles.videoAlone]}>
+          <VimeoVideo vimeoId={illustrationSource} screenWidth={screenDimension.width} sounds={sounds} />
         </View>
-      </>
+      </View>
     );
   };
 
@@ -133,114 +129,23 @@ const FrisbeeDrillIllustration = props => {
   };
 
   return (
-    <View style={styles.container}>
-      <SafeAreaView style={styles.container}>
-        <Carousel
-          layout="default"
-          ref={carouselRef}
-          data={props.drill.steps}
-          sliderWidth={screenDimension.width}
-          itemWidth={screenDimension.width}
-          renderItem={renderStep}
-          onSnapToItem={index => setActiveIndex(index)}
-        />
-      </SafeAreaView>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Carousel
+        layout="default"
+        ref={carouselRef}
+        data={props.drill.steps}
+        sliderWidth={screenDimension.width}
+        itemWidth={screenDimension.width}
+        renderItem={renderStep}
+        onSnapToItem={index => setActiveIndex(index)}
+      />
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-  },
-  containerFinish: {
-    flex: 1,
-    justifyContent: 'space-around',
-    alignItems: 'center',
-    padding: 20,
-  },
-  redoMessage: {
-    fontSize: theme.FONT_SIZE_MEDIUM,
-    color: theme.COLOR_PRIMARY,
-    fontWeight: 'bold',
-    marginVertical: 50,
-  },
-  containerAnimation: {
-    flexDirection: 'row',
-    alignSelf: 'flex-end',
-  },
-  description: {
-    flexDirection: 'row',
-    paddingBottom: 2,
-  },
-  descriptionAnimation: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  pageAnimation: {
-    flex: 1,
-  },
-  fitness: {
-    marginTop: 20,
-    marginBottom: 20,
-    marginLeft: 20,
-    fontSize: theme.FONT_SIZE_LARGE,
-    color: theme.COLOR_PRIMARY,
-    fontWeight: 'bold',
-  },
-  fitnessNext: {
-    marginTop: 20,
-    marginBottom: 20,
-    marginLeft: 20,
-    fontSize: theme.FONT_SIZE_LARGE,
-    color: theme.COLOR_SECONDARY,
-  },
-  separator: {
-    height: 15,
-    borderRightWidth: 1,
-    borderRightColor: theme.COLOR_PRIMARY_LIGHT,
-  },
-  buttonNext: {
-    position: 'absolute',
-    right: 0,
-    marginRight: 20,
-    marginLeft: 20,
-    marginTop: 20,
-    width: 25,
-    height: 25,
-    borderRadius: 12.5,
-    backgroundColor: theme.BACKGROUND_COLOR_BUTTON,
-    borderWidth: 1,
-    borderColor: theme.BORDER_COLOR_BUTTON_ACTIVE,
-    alignItems: 'center',
-  },
-  subWrapper: {
-    flexGrow: 0,
-    flexShrink: 0,
-    alignItems: 'center',
-  },
-  subSubWrapper: {
-    flex: 6,
-  },
-  fakeWrapper: {
-    width: 70,
-  },
-  lines: {
-    borderBottomColor: '#DCDCDC',
-    borderBottomWidth: 1,
-  },
-  wrapperFinish: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  finishMessage: {
-    marginTop: 150,
-    marginBottom: 20,
-    marginLeft: 20,
-    fontSize: theme.FONT_SIZE_LARGE,
-    color: theme.COLOR_PRIMARY,
-    fontWeight: 'bold',
   },
   instruction: {
     marginTop: 20,
@@ -250,16 +155,6 @@ const styles = StyleSheet.create({
     color: theme.COLOR_PRIMARY,
     justifyContent: 'center',
     alignItems: 'center',
-  },
-  redoButton: {
-    width: 80,
-    height: 80,
-    borderRadius: 40,
-    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
-  },
-  redoImage: {
-    width: 60,
-    height: 60,
   },
   videoAlone: {
     flex: 1,

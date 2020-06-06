@@ -143,4 +143,7 @@ export default {
   dictionaryPage: {
     back: 'Retour',
   },
+  EssentialPage: {
+    back: 'Retour',
+  },
 };

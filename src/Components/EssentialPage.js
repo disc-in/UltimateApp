@@ -2,19 +2,16 @@ import React, { useState } from 'react';
 import { View, StyleSheet, Text, Dimensions, Modal, TouchableHighlight, FlatList } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-import VimeoVideo from './VimeoVideo';
-
+import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
+import VimeoVideo from './VimeoVideo';
 
 const screenDimension = Dimensions.get('window');
 
-const Essential = () => {
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const [theorySubject, setTheorySubject] = useState('Throwing');
-  const [modalVisible, setModalVisible] = useState(false);
+const EssentialPage = () => {
   const dataEssential = [
     {
-      value: 'Throwing',
+      title: 'Throwing',
       pages: [
         {
           id: 1,
@@ -54,7 +51,7 @@ const Essential = () => {
       ],
     },
     {
-      value: 'Catching',
+      title: 'Catching',
       pages: [
         {
           id: 1,
@@ -73,7 +70,7 @@ const Essential = () => {
       ],
     },
     {
-      value: 'Cutting',
+      title: 'Cutting',
       pages: [
         {
           id: 1,
@@ -85,7 +82,7 @@ const Essential = () => {
       ],
     },
     {
-      value: 'Defense',
+      title: 'Defense',
       pages: [
         {
           id: 1,
@@ -98,14 +95,18 @@ const Essential = () => {
     },
   ];
 
-  const renderTheory = ({ item }) => {
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [theorySubject, setTheorySubject] = useState(dataEssential[0].title);
+  const [modalVisible, setModalVisible] = useState(false);
+
+  const renderContent = ({ item }) => {
     return (
       <>
         <View style={styles.titleContainer}>
           <Text style={styles.title}>{item.title}</Text>
         </View>
         <View style={styles.container}>
-          <VimeoVideo vimeoId={item.video} screenWidth={screenDimension.width} sounds={false} />
+          <VimeoVideo vimeoId={item.video} screenWidth={screenDimension.width} sounds />
         </View>
         <View style={styles.instructionContainer}>
           <Text style={styles.instruction}>{item.text}</Text>
@@ -122,7 +123,7 @@ const Essential = () => {
           data={dataEssential[selectedIndex].pages}
           contentContainerStyle={styles.listContainer}
           keyExtractor={item => item.id.toString()}
-          renderItem={renderTheory}
+          renderItem={renderContent}
         />
       </View>
     );
@@ -130,96 +131,62 @@ const Essential = () => {
 
   return (
     <View style={styles.container}>
-      <View>
-        <View>
-          <Modal
-            animationType="fade"
-            visible={modalVisible}
-            onRequestClose={() => {
-              setModalVisible(!modalVisible);
-            }}
-          >
-            <View style={styles.centeredView}>
-              <View style={styles.modalViewTheory}>
-                <TouchableHighlight
-                  style={styles.subjectButton}
-                  onPress={() => {
-                    setSelectedIndex(0);
-                    setTheorySubject('Throwing');
-                    setModalVisible(!modalVisible);
-                  }}
-                >
-                  <Text style={styles.subjectText}>Throwing</Text>
-                </TouchableHighlight>
-                <TouchableHighlight
-                  style={styles.subjectButton}
-                  onPress={() => {
-                    setSelectedIndex(1);
-                    setTheorySubject('Catching');
-                    setModalVisible(!modalVisible);
-                  }}
-                >
-                  <Text style={styles.subjectText}>Catching</Text>
-                </TouchableHighlight>
-                <TouchableHighlight
-                  style={styles.subjectButton}
-                  onPress={() => {
-                    setSelectedIndex(2);
-                    setTheorySubject('Cutting');
-                    setModalVisible(!modalVisible);
-                  }}
-                >
-                  <Text style={styles.subjectText}>Cutting</Text>
-                </TouchableHighlight>
-
-                <TouchableHighlight
-                  style={styles.subjectButton}
-                  onPress={() => {
-                    setSelectedIndex(3);
-                    setTheorySubject('Defense');
-                    setModalVisible(!modalVisible);
-                  }}
-                >
-                  <Text style={styles.subjectText}>Defense</Text>
-                </TouchableHighlight>
-
-                <TouchableHighlight
-                  style={styles.returnButton}
-                  onPress={() => {
-                    setModalVisible(!modalVisible);
-                  }}
-                >
-                  <Text style={styles.textStyle}>Return</Text>
-                </TouchableHighlight>
-              </View>
+      <Modal
+        animationType="fade"
+        visible={modalVisible}
+        onRequestClose={() => {
+          setModalVisible(!modalVisible);
+        }}
+      >
+        <View style={styles.centeredView}>
+          <View style={styles.modalViewTheory}>
+            {dataEssential.map((topic, index) => (
+              <TouchableHighlight
+                style={styles.subjectButton}
+                onPress={() => {
+                  setSelectedIndex(index);
+                  setTheorySubject(topic.title);
+                  setModalVisible(!modalVisible);
+                }}
+              >
+                <Text style={styles.subjectText}>{topic.title}</Text>
+              </TouchableHighlight>
+            ))}
+            <TouchableHighlight
+              style={styles.returnButton}
+              onPress={() => {
+                setModalVisible(!modalVisible);
+              }}
+            >
+              <Text style={styles.textStyle}>{I18n.t('essentialPage.back')}</Text>
+            </TouchableHighlight>
+          </View>
+        </View>
+      </Modal>
+      <View style={styles.displayTheory}>
+        <TouchableHighlight
+          style={styles.subjectModal}
+          onPress={() => {
+            setModalVisible(true);
+          }}
+        >
+          <View>
+            <View style={styles.dropdown}>
+              <Text style={{ ...styles.textStyle, color: theme.COLOR_PRIMARY }}>{theorySubject}</Text>
+              <MaterialCommunityIcons name="chevron-down" color={theme.COLOR_PRIMARY} size={26} />
             </View>
-          </Modal>
-        </View>
-        <View style={styles.displayTheory}>
-          <TouchableHighlight
-            style={styles.subjectModal}
-            onPress={() => {
-              setModalVisible(true);
-            }}
-          >
-            <View>
-              <View style={styles.dropdown}>
-                <Text style={{ ...styles.textStyle, color: theme.COLOR_PRIMARY }}>{theorySubject}</Text>
-                <MaterialCommunityIcons name="chevron-down" color={theme.COLOR_PRIMARY} size={26} />
-              </View>
-              <View style={styles.lines} />
-            </View>
-          </TouchableHighlight>
-        </View>
-        <View style={styles.displayTheory}>
-          <View>{displayTheory()}</View>
-        </View>
+            <View style={styles.lines} />
+          </View>
+        </TouchableHighlight>
+      </View>
+      <View style={styles.displayTheory}>
+        <View>{displayTheory()}</View>
       </View>
     </View>
   );
 };
 
-export default Essential;
+export default EssentialPage;
 
 const styles = StyleSheet.create({
   container: {

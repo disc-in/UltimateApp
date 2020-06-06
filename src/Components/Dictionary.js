@@ -5,14 +5,12 @@ import theme from '../styles/theme.style';
 
 const screenDimension = Dimensions.get('window');
 
-const Dictionary = () => {
+const DictionaryPage = () => {
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedItem, setSelectedItem] = useState({
-    item: {
-      id: 0,
-      text: '',
-      definition: '',
-    },
+    id: 0,
+    text: '',
+    definition: '',
   });
 
   const sections = [
@@ -294,65 +292,20 @@ const Dictionary = () => {
 
   const extractKey = ({ id }) => id;
 
-  const showModal = selectedItem => {
-    setModalVisible(true);
-  };
-
   const _onPressItem = item => {
     setSelectedItem(item);
-    showModal(selectedItem);
+    setModalVisible(true);
   };
 
   const _renderItem = ({ item }) => {
     return (
-      <View>
-        <TouchableHighlight
-          onPress={() => {
-            _onPressItem({ item });
-          }}
-        >
-          <Text style={styles.row}>{item.text}</Text>
-        </TouchableHighlight>
-      </View>
-    );
-  };
-
-  const displayDictionary = () => {
-    return (
-      <View style={styles.container}>
-        <SectionList
-          style={styles.container}
-          sections={sections}
-          renderItem={item => _renderItem(item)}
-          renderSectionHeader={renderSectionHeader}
-          keyExtractor={extractKey}
-        />
-        <View>
-          <Modal
-            animationType="slide"
-            visible={modalVisible}
-            transparent
-            onRequestClose={() => {
-              setModalVisible(!modalVisible);
-            }}
-          >
-            <View style={styles.centeredView}>
-              <View style={styles.modalView}>
-                <Text style={styles.modalTitle}>{selectedItem.item.text}</Text>
-                <Text style={styles.modalText}>{selectedItem.item.definition}</Text>
-                <TouchableHighlight
-                  style={styles.returnButtonDictionnary}
-                  onPress={() => {
-                    setModalVisible(!modalVisible);
-                  }}
-                >
-                  <Text style={styles.textStyle}>Return</Text>
-                </TouchableHighlight>
-              </View>
-            </View>
-          </Modal>
-        </View>
-      </View>
+      <TouchableHighlight
+        onPress={() => {
+          _onPressItem(item);
+        }}
+      >
+        <Text style={styles.row}>{item.text}</Text>
+      </TouchableHighlight>
     );
   };
 
@@ -361,36 +314,46 @@ const Dictionary = () => {
   };
 
   return (
-    <View style={styles.container}>
-      <View>
-        <View style={styles.containerDictionary}>
-          <View>
-            <View style={styles.container} width={screenDimension.width}>
-              {displayDictionary()}
-            </View>
+    <View style={styles.dictionaryPage} width={screenDimension.width}>
+      <SectionList
+        sections={sections}
+        renderItem={item => _renderItem(item)}
+        renderSectionHeader={renderSectionHeader}
+        keyExtractor={extractKey}
+      />
+      <Modal
+        animationType="slide"
+        visible={modalVisible}
+        transparent
+        onRequestClose={() => {
+          setModalVisible(!modalVisible);
+        }}
+      >
+        <View style={styles.centeredView}>
+          <View style={styles.modalView}>
+            <Text style={styles.modalTitle}>{selectedItem.text}</Text>
+            <Text style={styles.modalText}>{selectedItem.definition}</Text>
+            <TouchableHighlight
+              style={styles.returnButton}
+              onPress={() => {
+                setModalVisible(!modalVisible);
+              }}
+            >
+              <Text style={styles.returnButtonText}>Return</Text>
+            </TouchableHighlight>
           </View>
         </View>
-      </View>
+      </Modal>
     </View>
   );
 };
 
-export default Dictionary;
+export default DictionaryPage;
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  dictionaryPage: {
     backgroundColor: theme.COLOR_PRIMARY_LIGHT,
-  },
-  containerDictionary: {
-    justifyContent: 'center',
-    alignItems: 'center',
     paddingTop: 20,
-  },
-  row: {
-    padding: 15,
-    marginBottom: 5,
-    backgroundColor: theme.COLOR_SECONDARY_LIGHT,
   },
   header: {
     padding: 15,
@@ -399,11 +362,15 @@ const styles = StyleSheet.create({
     color: 'white',
     fontWeight: 'bold',
   },
+  row: {
+    padding: 15,
+    marginBottom: 5,
+    backgroundColor: theme.COLOR_SECONDARY_LIGHT,
+  },
   centeredView: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 22,
   },
   modalView: {
     margin: 20,
@@ -420,26 +387,12 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 5,
   },
-
-  returnButtonDictionnary: {
-    backgroundColor: theme.COLOR_PRIMARY,
-    borderRadius: 10,
-    padding: 10,
-    paddingHorizontal: 20,
-    elevation: 2,
-  },
-  textStyle: {
-    color: 'white',
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
   modalText: {
-    marginBottom: 15,
+    marginBottom: 20,
     fontSize: theme.FONT_SIZE_MEDIUM,
-    textAlign: 'left',
   },
   modalTitle: {
-    marginBottom: 15,
+    marginBottom: 20,
     fontWeight: 'bold',
     fontSize: theme.FONT_SIZE_LARGE,
   },
@@ -450,5 +403,10 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     elevation: 2,
     width: 120,
+  },
+  returnButtonText: {
+    color: 'white',
+    fontWeight: 'bold',
+    textAlign: 'center',
   },
 });

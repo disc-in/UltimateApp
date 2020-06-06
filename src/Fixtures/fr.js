@@ -719,6 +719,94 @@ const breakDrill = {
   ],
 };
 
+const threeColumnsLongDrill = {
+  id: 1025,
+  type: DrillTypes.FRISBEE,
+  author: 'Martin',
+  title: '3 columns long shot',
+  image: 'https://zupimages.net/up/20/19/330p.jpg',
+  description: 'Basic long passes drill. You want your players to alternate between throwing, running and passing',
+  minimalPlayersNumber: 12,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disc for 3 players - 3 cones',
+  durationInMinutes: 20,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: '',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: animationSquare,
+      repetition: '1',
+      rest: '90s',
+      instruction:
+        "1- The cutter run as fast as possible then he claps the second mate's hand. \n 2- Cut under and long ",
+    },
+  ],
+};
+
+const twoColumnsLongDrill = {
+  id: 1026,
+  type: DrillTypes.FRISBEE,
+  author: 'Martin',
+  title: '2 columns with defense',
+  image: 'https://zupimages.net/up/20/19/fvm4.jpg',
+  description:
+    'Basic long passes drill. You want your players to alternate between throwing, running and passing, with offense and defense',
+  minimalPlayersNumber: 18,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disc for 3 players - 3 cones',
+  durationInMinutes: 30,
+  intensity: Intensities.HIGH,
+  goals: [FrisbeeGoals.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: '',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: animationSquare,
+      repetition: '1',
+      rest: '90s',
+      instruction: '',
+    },
+  ],
+};
+
+const treasureHuntDrill = {
+  id: 1009,
+  type: DrillTypes.FRISBEE,
+  author: 'PUC Ultimate',
+  title: 'Treasure Hunt',
+  image: 'https://zupimages.net/up/20/19/z7lq.jpg',
+  description:
+    '2 teams are fighting. The objective is to bring the 5 Frisbees back into a square delimited by the cones.\nPlayers are not allowed to walk with the Frisbee. When a Frisbee falls or is intercepted, it must be brought back to the starting point by the attacking team. The first team that "saves" all its frisbees wins.',
+  minimalPlayersNumber: 10,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '10 discs - 10 cones',
+  durationInMinutes: 20,
+  intensity: Intensities.LOW,
+  goals: [FrisbeeGoals.PLAY],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'Basic Version',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: animationSquare,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Goals: Bringing all the disc in the square. \nA player can play in offense on his side or go on the other side to play defense.\nIf there is a turnover, the frisbee goes back to the starting line.\nFirst team that saves all the discs win!',
+    },
+  ],
+};
+
 const kyeDrill = {
   id: 1010,
   type: DrillTypes.FRISBEE,
@@ -744,6 +832,35 @@ const kyeDrill = {
       rest: '',
       instruction:
         "La défense applique une force middle. Les attaquants ont seulement le droit de faire 2 cuts pour avoir le disque. Ils peuvent recevoir une passe de continuité en profondeur ou revenir vers le lanceur. L'objectif de l'exercice est d'apprendre à placer très vite sa marque et d'utiliser son corps et sa position pour contrôler les cuts des attaquants.",
+    },
+  ],
+};
+
+const bigEightDrill = {
+  id: 1011,
+  type: DrillTypes.FRISBEE,
+  author: 'Moby',
+  title: 'The big 8',
+  image: 'https://zupimages.net/up/20/19/5209.jpg',
+  description: 'Making a pass circuit where each player will try to work on their throws',
+  minimalPlayersNumber: 16,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '8 discs - 8 cones',
+  durationInMinutes: 15,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: '',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: animationSquare,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Here is the rotation: \nHandler in the middle \nReset going for the backdoor \nFirst of the stack following in the break \nLast of the stack going long \nSame but in opposite position ',
     },
   ],
 };
@@ -787,6 +904,46 @@ const trainDrill = {
   ],
 };
 
+const goaltimateDrill = {
+  id: 1004,
+  type: DrillTypes.FRISBEE,
+  author: 'Moby',
+  title: 'Goaltimate',
+  image: 'https://zupimages.net/up/20/19/gce7.jpg',
+  description:
+    'The object is to score points by throwing a disc to a teammate in a small scoring area, through a large semicircular hoop called the goal.',
+  minimalPlayersNumber: 8,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disc - 10 cones or 1 goal',
+  durationInMinutes: 20,
+  intensity: Intensities.HIGH,
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.DEFENSE, FrisbeeGoals.PLAY, FrisbeeGoals.PLAY],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'Goaltimate rules',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: animationSquare,
+      repetition: '',
+      rest: '',
+      instruction:
+        '4 on 4 \nStall count of 5 \nWhenever a turnover happens, the new offensive team must ‘clear’ the disc by taking it into the clear box, and can then attack the goal.\nOne point for a completed pass that travels through the hoop and is caught in the end zone by your teammate',
+    },
+    {
+      id: 2,
+      title: '',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '416849035',
+      sounds: true,
+      repetition: '',
+      rest: '',
+      instruction: '',
+    },
+  ],
+};
+
 const giveAndGoDrill = {
   id: 1013,
   type: DrillTypes.FRISBEE,
@@ -820,6 +977,159 @@ const giveAndGoDrill = {
       repetition: '',
       rest: '',
       instruction: 'Une course entre 2 équipes. La première à 25 passes gagne !',
+    },
+  ],
+};
+
+const aussieDrill = {
+  id: 1008,
+  type: DrillTypes.FRISBEE,
+  author: 'Matt Hill',
+  title: 'Aussie games',
+  image: 'https://zupimages.net/up/20/19/78g2.png',
+  description: 'You can run with the disc',
+  minimalPlayersNumber: 12,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '4 discs - 20 cones',
+  durationInMinutes: 20,
+  intensity: Intensities.LOW,
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.COMMUNICATION, FrisbeeGoals.PLAY],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: '',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: animationSquare,
+      repetition: '',
+      rest: '',
+      instruction:
+        '2 teams plays against each others.There are 2 territories for each team and they play with 4 discs.\nTo score a point, a player has to bring a disc in one of the endzone of the opponent team. A player can run with a disc. If a player, get touch in the territory of the other team or the disc is intercepted or touch the ground, he looses the possession. In his territory, he is invincible. First team to 5 wins! ',
+    },
+  ],
+};
+
+const bolognaMDrill = {
+  id: 1024,
+  type: DrillTypes.FRISBEE,
+  author: 'Bologna',
+  title: 'The M',
+  image: 'https://zupimages.net/up/20/19/akuy.jpg',
+  description: 'Follow the M',
+  minimalPlayersNumber: 10,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '5 disc - 6 cones',
+  durationInMinutes: 20,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.HANDLING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.ADVANCED,
+  steps: [
+    {
+      id: 1,
+      title: '',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: animationSquare,
+      repetition: '',
+      rest: '',
+      instruction: 'Working on the reset from the front of the stack',
+    },
+  ],
+};
+
+const goToTenDrill = {
+  id: 1014,
+  type: DrillTypes.FRISBEE,
+  author: 'Moby',
+  title: 'Go to 10',
+  image: 'https://zupimages.net/up/20/19/rcyt.jpg',
+  description: 'First team with 10 completes passes win',
+  minimalPlayersNumber: 12,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disc - 4 cones',
+  durationInMinutes: 15,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.PLAY, FrisbeeGoals.DEFENSE],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: '',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: animationGoToTen,
+      repetition: '',
+      rest: '',
+      instruction: 'First team with 10 completes passes win. Stall to 6.',
+    },
+  ],
+};
+
+const endzoneDameDrill = {
+  id: 1015,
+  type: DrillTypes.FRISBEE,
+  author: 'Moby',
+  title: 'Endzone Game',
+  image: 'https://zupimages.net/up/20/19/cd36.jpg',
+  description: 'Game to 5. If you score, your team stay in offense',
+  minimalPlayersNumber: 12,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disc - 4 cones',
+  durationInMinutes: 15,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.PLAY, FrisbeeGoals.DEFENSE],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'Endzone Game',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: animationSquare,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Game to 5. If you score, your team stay in offense.\nThe player who caught the disc in the endzone has to keep the disc to start the next offense ',
+    },
+    {
+      id: 2,
+      title: 'Endzone finition',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: animationSquare,
+      repetition: '',
+      rest: '',
+      instruction: 'Everybody start behing the disc.\nGame to 5',
+    },
+  ],
+};
+
+const bulldogDrill = {
+  id: 1016,
+  type: DrillTypes.FRISBEE,
+  author: 'Moby',
+  title: 'British Bulldog',
+  image: 'https://zupimages.net/up/20/19/tf79.jpg',
+  description:
+    'The bulldogs stand in the middle of the play area. All remaining players stand at one end of the area (home). The aim of the game is to run from one end of the field of play to the other, without being caught by the bulldogs. When a player is caught, they become a bulldog themselves.',
+  minimalPlayersNumber: 12,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '4 cones',
+  durationInMinutes: 10,
+  intensity: Intensities.LOW,
+  goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.PLAY, FrisbeeGoals.COMMUNICATION],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: '',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: animationSquare,
+      repetition: '',
+      rest: '',
+      instruction:
+        'The bulldogs try to catch the remaining players. The aim of the game is to run from one end of the field of play to the other, without being caught.\nWhen a player is caught, he must hold hands with one another and form a line of 3 bulldogs.\n If there is more than 3 bulldogs, they split in more than one line',
     },
   ],
 };
@@ -888,6 +1198,83 @@ const dwarfDuelDrill = {
       rest: '',
       instruction:
         "Le coach ou un joueur expérimenté lance des longues.\nQuand l'attaquant commence à courir, le défenseur peur se déplacer. Aucun des deux joueurs n'a le droit de sauter pour attraper le frisbee.",
+    },
+  ],
+};
+
+const dishieChainDrill = {
+  id: 1017,
+  type: DrillTypes.FRISBEE,
+  author: 'Mooncatcher',
+  title: 'Dishie Chain',
+  image: 'https://zupimages.net/up/20/19/stdq.jpg',
+  description: 'Basic long passes drill. You want your players to alternate between throwing, running and passing',
+  minimalPlayersNumber: 12,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disc - 2 cones',
+  durationInMinutes: 10,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: '',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: animationSquare,
+      repetition: '',
+      rest: '',
+      instruction:
+        '2 columns: \n2 players from the same column go in direction of the thrower. When of them receive the disc.\n The thrower is looking ot make a dishie when the other cutter is going long.\n The cutter catching the long throw becomes the new first thrower for the other column',
+    },
+    {
+      id: 2,
+      title: '',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: animationSquare,
+      repetition: '',
+      rest: '',
+      instruction: 'Add a defensive player to work on the poach with a side stack',
+    },
+  ],
+};
+
+const breakDanceDrill = {
+  id: 1018,
+  type: DrillTypes.FRISBEE,
+  author: 'Moby',
+  title: 'Break Dance',
+  image: 'https://zupimages.net/up/20/19/agsd.jpg',
+  description: 'Making a christmas tree in the break',
+  minimalPlayersNumber: 12,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '5 discs - 10 cones',
+  durationInMinutes: 20,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.ADVANCED,
+  steps: [
+    {
+      id: 1,
+      title: 'Break continuity',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: animationSquare,
+      repetition: '',
+      rest: '',
+      instruction:
+        'The cutter try to work on their timing to start their almort horizontal cut. The player goes to the next cones after his throws ',
+    },
+    {
+      id: 2,
+      title: 'The race',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: animationSquare,
+      repetition: '',
+      rest: '',
+      instruction:
+        'The 2 teams are racing. \nWhen the disc reach the last player, he has to run as fast as possible to start a new serie. \nFirst team that make the complete rotation win!',
     },
   ],
 };
@@ -1178,6 +1565,304 @@ const defensePositionDrill = {
       repetition: '',
       rest: '',
       instruction: 'Même exercice. Cette fois, le défenseur doit toujours se positionner à 45° derrière le receveur.',
+    },
+  ],
+};
+
+const normalGame = {
+  id: 2001,
+  type: DrillTypes.GAME,
+  author: 'Martin',
+  title: '7v7 game',
+  image:
+    'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
+  description:
+    "It's always interesting to have a time to play in game conditions towards the end of a training. That's the perfect moment to use what players have learnt during the training. Keep in mind that players always FORGET everything when they start playing, so remind them what we're to concentrate on",
+  minimalPlayersNumber: 14,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '8 cones - 1 disc',
+  durationInMinutes: 20,
+  intensity: Intensities.LOW,
+  goals: [FitnessGoals.CORE],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: '',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: animationSquare,
+      repetition: '1',
+      rest: '',
+      instruction: '',
+    },
+  ],
+};
+
+const game3v3 = {
+  id: 2002,
+  type: DrillTypes.GAME,
+  author: 'Martin',
+  title: '3v3 games',
+  image:
+    'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
+  description:
+    "The perfect setup if you have a LOT of players or want your players to touch a lot of frisbees in a short time. This can be quite exhausting so don't forget to set breaks every 5 o 10 minutes.",
+  minimalPlayersNumber: 6,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '8 cones - 1 disc',
+  durationInMinutes: 20,
+  intensity: Intensities.HIGH,
+  goals: [FrisbeeGoals.PLAY],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: '',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: animationSquare,
+      repetition: '1',
+      rest: '',
+      instruction: '',
+    },
+  ],
+};
+
+const longShotGame = {
+  id: 2003,
+  type: DrillTypes.GAME,
+  author: 'Martin',
+  title: 'Long shots oriented game',
+  image:
+    'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
+  description:
+    'Just a classical game on the whole field. Only exception: a team scores 2 points if there was a successful long shot on the offense that lead to scoring!',
+  minimalPlayersNumber: 6,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '8 cones - 1 disc',
+  durationInMinutes: 20,
+  intensity: Intensities.HIGH,
+  goals: [FrisbeeGoals.PLAY, FrisbeeGoals.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: '',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: animationSquare,
+      repetition: '1',
+      rest: '',
+      instruction: '2 points if there was a successful long shot on the offense that lead to scoring!',
+    },
+  ],
+};
+
+const dumpSwingTraining = {
+  id: 1,
+  title: 'Dump & Swing',
+  image: 'https://zupimages.net/up/20/19/frj2.jpg',
+  description: 'This training session aims at make your team better at Dump & Swing. blabla bla bla bla',
+  drills: [warmupDrill],
+};
+
+const firstWeekFitnessTraining = {
+  id: 2,
+  title: 'First Week Fitness',
+  image: 'https://zupimages.net/up/20/19/9fcj.jpg',
+  description: 'This is the first week of the Off-season program',
+  drills: [stabilityDrill, strengthDrill, speedDrill, conditioningDrill],
+};
+
+const coed2MarkTraining = {
+  id: 3,
+  title: 'Build your Defense',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description:
+    "This training session aims at practicing your mark skills. Don't be broken to easily, generate dangerous passes",
+  drills: [warmupGameDrill, dwarfDuelDrill, kyeDrill, breakDrill, normalGame],
+};
+
+const coed2LongTraining = {
+  id: 4,
+  title: 'Long Shot is Coming',
+  image: 'https://zupimages.net/up/20/19/aapn.jpg',
+  description: 'This training session aims at practicing your long skills.',
+  drills: [warmupGameDrill, threeColumnsLongDrill, longShotGame],
+};
+
+const coed2Long2Training = {
+  id: 5,
+  title: 'Long is your weapon',
+  image: 'https://zupimages.net/up/20/19/v8f4.jpg',
+  description: 'This training session aims at practicing your long skills. ',
+  drills: [warmupDrill, threeColumnsLongDrill, twoColumnsLongDrill, longShotGame],
+};
+
+const firstChildTraining = {
+  id: 6,
+  title: 'First Time',
+  image: 'https://zupimages.net/up/20/19/a7io.png',
+  description: 'Training will allow the players to learn the basics of ultimate while having fun',
+  drills: [warmupDrill, basicThrowsDrill, dwarfDuelDrill, game3v3],
+};
+
+const secondChildTraining = {
+  id: 7,
+  title: 'Defense Basics',
+  image: 'https://zupimages.net/up/20/19/dgwo.jpg',
+  description: 'Training will allow the players to learn the basics of ultimate while having fun',
+  drills: [warmupDrill, aussieDrill, menageATroisDrill, game3v3],
+};
+
+const thirdChildTraining = {
+  id: 8,
+  title: 'Treasure Hunt',
+  image: 'https://zupimages.net/up/20/19/c9i6.jpg',
+  description: 'Training will allow the players to learn the basics of ultimate while having fun',
+  drills: [warmupDrill, bulldogDrill, goToTenDrill, treasureHuntDrill, game3v3],
+};
+
+const secondWeekFitnessTraining = {
+  id: 9,
+  title: 'Second Week Fitness',
+  image: 'https://zupimages.net/up/20/19/9fcj.jpg',
+  description: "This is the second week of the season. It's time to work on your conditioning",
+  drills: [conditioningFullbodyDrill, conditioningDrill],
+};
+
+const secondInintiationAdultTraining = {
+  id: 10,
+  title: 'Defense & Longs',
+  image: 'https://zupimages.net/up/20/19/cd36.jpg',
+  description: 'In this training, the players will work on defense and long throws',
+  drills: [warmupDrill, menageATroisDrill, threeColumnsLongDrill, normalGame],
+};
+
+const thirdInintiationAdultTraining = {
+  id: 11,
+  title: 'Adapt to the Field',
+  image: 'https://zupimages.net/up/20/19/hrqz.jpg',
+  description: 'In this training, the players will learn to adapt on the size of the field',
+  drills: [warmupDrill, goaltimateDrill, triangleOfDeathdrill, normalGame],
+};
+
+const initiationVerticalTraining = {
+  id: 12,
+  title: 'Vertical Stack',
+  image: 'https://zupimages.net/up/20/19/frj2.jpg',
+  description: 'This training session aims at make your team better at Vertical Stack',
+  drills: [warmupDrill, trainDrill, bigEightDrill, normalGame],
+};
+
+const secondVerticalTraining = {
+  id: 13,
+  title: 'The Break Power',
+  image: 'https://zupimages.net/up/20/19/frj2.jpg',
+  description: 'This training session aims at make your team better at Vertical Stack',
+  drills: [warmupDrill, resetBreakDrill, trainOfFakeDrill, game3v3, normalGame],
+};
+
+const defenseBaseTraining = {
+  id: 14,
+  title: 'Defense Positioning',
+  image: 'https://zupimages.net/up/20/19/skjl.jpg',
+  description: 'This training session aims at practicing your defense.',
+  drills: [warmupGameDrill, defensePositionDrill, youShallNotPassDrill, breakDrill, normalGame],
+};
+
+export default {
+  favoriteDrills: [],
+  completeTrainings: [],
+  drills: [
+    // Fitness
+    stabilityDrill,
+    strengthDrill,
+    speedDrill,
+    conditioningDrill,
+    warmupGameDrill,
+    warmupDrill,
+    conditioningFullbodyDrill,
+    // Frisbee
+    basicThrowsDrill,
+    trainDrill,
+    menageATroisDrill,
+    goaltimateDrill,
+    resetOpenDrill,
+    resetBreakDrill,
+    youShallNotPassDrill,
+    aussieDrill,
+    treasureHuntDrill,
+    kyeDrill,
+    bigEightDrill,
+    dwarfDuelDrill,
+    giveAndGoDrill,
+    goToTenDrill,
+    endzoneDameDrill,
+    bulldogDrill,
+    dishieChainDrill,
+    breakDanceDrill,
+    triangleOfDeathdrill,
+    trainOfFakeDrill,
+    defensePositionDrill,
+    chevronDrill,
+    breakDrill,
+    bolognaMDrill,
+    threeColumnsLongDrill,
+    twoColumnsLongDrill,
+
+    // Games
+    normalGame,
+    game3v3,
+    longShotGame,
+  ],
+  trainings: [
+    dumpSwingTraining,
+    firstWeekFitnessTraining,
+    coed2MarkTraining,
+    coed2LongTraining,
+    coed2Long2Training,
+    firstChildTraining,
+    secondChildTraining,
+    thirdChildTraining,
+    secondWeekFitnessTraining,
+    secondInintiationAdultTraining,
+    thirdInintiationAdultTraining,
+    initiationVerticalTraining,
+    secondVerticalTraining,
+    defenseBaseTraining,
+  ],
+  programs: [
+    {
+      id: 1,
+      title: 'Initiation U13',
+      trainings: [firstChildTraining, secondChildTraining, thirdChildTraining],
+    },
+    {
+      id: 2,
+      title: 'Initiation Adult',
+      trainings: [firstChildTraining, secondInintiationAdultTraining, thirdInintiationAdultTraining],
+    },
+    {
+      id: 3,
+      title: 'Fitness Bloc',
+      trainings: [firstWeekFitnessTraining, secondWeekFitnessTraining],
+    },
+    {
+      id: 4,
+      title: 'Vertical Stack',
+      trainings: [initiationVerticalTraining, secondVerticalTraining, dumpSwingTraining],
+    },
+    {
+      id: 5,
+      title: 'Long Throws',
+      trainings: [coed2LongTraining, coed2Long2Training],
+    },
+    {
+      id: 6,
+      title: 'Strong Defense',
+      trainings: [defenseBaseTraining, coed2MarkTraining],
     },
   ],
 };

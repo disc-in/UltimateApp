@@ -27,7 +27,7 @@ class DraggableDisplayedElement extends React.Component {
 
     // TODO: put the constant coefficient used in the following somewhere to avoir writing them twice (in this class and in DrillCuts)
 
-    this.props.discRadius = this.props.playerRadius / 2;
+    this.props.discRadius = this.props.playerRadius / 1.1;
     this.props.coneSize = (this.props.playerRadius * 5) / 16;
     this.props.bottomconeSize = (this.props.playerRadius * 10) / 16;
     this.props.borderWidth = this.props.discRadius / 10;
@@ -182,15 +182,17 @@ class DraggableDisplayedElement extends React.Component {
             style={[
               panStyle,
               styles.disc,
-              { height: 20 },
-              { width: 20 },
-              { borderRadius: 20 },
-              { borderWidth: 2 },
+              { height: this.props.discRadius },
+              { width: this.props.discRadius },
+              { borderRadius: this.props.discRadius },
+              { borderWidth: this.props.discRadius / 10 },
               { top: this.props.top },
               { left: this.props.left },
             ]}
             key={this.props.key + 4}
-          />
+          >
+            <Animated.Text style={styles.discText}>{this.number}</Animated.Text>
+          </Animated.View>
         );
 
       case 'triangle':
@@ -253,6 +255,12 @@ const styles = StyleSheet.create({
     position: 'absolute',
     borderColor: theme.DISC_BORDER,
     backgroundColor: theme.DISC_COLOR,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  discText: {
+    fontWeight: 'bold',
+    color: theme.DISC_TEXT_COLOR,
   },
 
   triangle: {

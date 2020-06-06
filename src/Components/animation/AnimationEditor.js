@@ -29,12 +29,13 @@ class AnimationEditor extends React.Component {
 
     this.offenseCount = 1;
     this.defenseCount = 1;
+    this.discCount = 1;
 
     this.keyCount = 0;
 
     this.currentStep = 0;
 
-    // Enables to update the current step inside an animation
+    // Enables to update  the current step inside an animation
     this.currentStepAV = new Animated.Value(0);
 
     this.currentStepAV.addListener(progress => {
@@ -76,10 +77,18 @@ class AnimationEditor extends React.Component {
     this.draggableElementsLeft[2] = (3 * animationWidth) / 5 - playerRadius / 2;
     this.draggableElementsLeft[3] = (4 * animationWidth) / 5 - playerRadius / 2;
 
-    this.initialElements.push(this._createDraggableElements('offense', playerRadius, this.draggableElementsTop, this.draggableElementsLeft[0]));
-    this.initialElements.push(this._createDraggableElements('defense', playerRadius, this.draggableElementsTop, this.draggableElementsLeft[1]));
-    this.initialElements.push(this._createDraggableElements('disc', playerRadius, this.draggableElementsTop, this.draggableElementsLeft[2]));
-    this.initialElements.push(this._createDraggableElements('triangle', playerRadius, this.draggableElementsTop, this.draggableElementsLeft[3]));
+    this.initialElements.push(
+      this._createDraggableElements('offense', playerRadius, this.draggableElementsTop, this.draggableElementsLeft[0]),
+    );
+    this.initialElements.push(
+      this._createDraggableElements('defense', playerRadius, this.draggableElementsTop, this.draggableElementsLeft[1]),
+    );
+    this.initialElements.push(
+      this._createDraggableElements('disc', playerRadius, this.draggableElementsTop, this.draggableElementsLeft[2]),
+    );
+    this.initialElements.push(
+      this._createDraggableElements('triangle', playerRadius, this.draggableElementsTop, this.draggableElementsLeft[3]),
+    );
 
     this.setState(prevState => ({
       draggableElements: prevState.draggableElements.concat(this.initialElements),
@@ -103,16 +112,10 @@ class AnimationEditor extends React.Component {
       case 'offense':
         x = this.draggableElementsLeft[0];
         y = this.draggableElementsTop;
-        elementNumber = this.offenseCount;
-        this.offenseCount++;
-        this.state.draggableElements[0].setNumber(this.offenseCount);
         break;
       case 'defense':
         x = this.draggableElementsLeft[1];
         y = this.draggableElementsTop;
-        elementNumber = this.defenseCount;
-        this.defenseCount++;
-        this.state.draggableElements[1].setNumber(this.defenseCount);
         break;
       case 'triangle':
         x = this.draggableElementsLeft[2];
@@ -126,21 +129,41 @@ class AnimationEditor extends React.Component {
 
     var newPosition = this._positionPixelToPercent(x + xDelta, y + yDelta);
 
-    //        yDelta /= 2;
-    debug('x+xDelta/y+yDelta: ' + x + '+' + xDelta + '/' + y + '+' + yDelta);
-    debug('window w/h + ' + this.state.width + '/' + this.state.height);
-    debug('added element to animation at position: ' + newPosition[0] + '/' + newPosition[1]);
+    if (newPosition[0] <= 1 && newPosition[1] <= 1 && newPosition[0] >= 0 && newPosition[1] >= 0) {
+      switch (element.props.id) {
+        case 'offense':
+          elementNumber = this.offenseCount;
+          this.offenseCount++;
+          this.state.draggableElements[0].setNumber(this.offenseCount);
+          break;
+        case 'defense':
+          elementNumber = this.defenseCount;
+          this.defenseCount++;
+          this.state.draggableElements[1].setNumber(this.defenseCount);
+          break;
+        case 'disc':
+          elementNumber = this.discCount;
+          this.discCount++;
+          this.state.draggableElements[3].setNumber(this.discCount);
+          break;
+      }
 
-    // Add the element with its initial position
-    var newAnimation = this._copyAnimation();
+      //        yDelta /= 2;
+      debug('x+xDelta/y+yDelta: ' + x + '+' + xDelta + '/' + y + '+' + yDelta);
+      debug('window w/h + ' + this.state.width + '/' + this.state.height);
+      debug('added element to animation at position: ' + newPosition[0] + '/' + newPosition[1]);
 
-    newAnimation.addElement(element, newPosition[0], newPosition[1], elementNumber);
+      // Add the element with its initial position
+      var newAnimation = this._copyAnimation();
 
-    this.saveAnimation(newAnimation);
+      newAnimation.addElement(element, newPosition[0], newPosition[1], elementNumber);
 
-    //	debug("ae, add element, step count: " + this.state.animation.positions.length);
+      this.saveAnimation(newAnimation);
 
-    if (this.state.animation.positions.length > 0) debug('\telem count: ' + this.state.animation.positions[0].length);
+      //	debug("ae, add element, step count: " + this.state.animation.positions.length);
+
+      if (this.state.animation.positions.length > 0) debug('\telem count: ' + this.state.animation.positions[0].length);
+    }
   };
 
   /** Convert a position (x, y) in pixels of the phone screen in a position (x2, y2) in percentages of the animation area
@@ -310,7 +333,10 @@ class AnimationEditor extends React.Component {
 
     if (deType === 'triangle') key = 602;
 
-    if (deType === 'disc') key = 603;
+    if (deType === 'disc') {
+      text = '1';
+      key = 603;
+    }
 
     debug('text: ' + text);
     return new DraggableDisplayedElement({

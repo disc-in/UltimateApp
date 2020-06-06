@@ -1573,11 +1573,11 @@ const normalGame = {
   id: 2001,
   type: DrillTypes.GAME,
   author: 'Martin',
-  title: '7v7 game',
+  title: 'Match 7 contre 7',
   image:
     'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
   description:
-    "It's always interesting to have a time to play in game conditions towards the end of a training. That's the perfect moment to use what players have learnt during the training. Keep in mind that players always FORGET everything when they start playing, so remind them what we're to concentrate on",
+    "Un match reste un des meilleurs moyens de pratiquer et de s'amuser. Idéal pour terminer un entraînement car c'est l'occasion pour les joueurs de mettre en application ce qu'ils ont pu apprendre précédemment. Il est important de rappeler aux joueurs les situations qu'on cherche à retrouver dans le match (par exemple jouer dans le break si on fait une séane sur le break) car ils oublient toujours tout ça dans la folie du jeu.",
   minimalPlayersNumber: 14,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '8 cones - 1 disc',
@@ -1603,11 +1603,11 @@ const game3v3 = {
   id: 2002,
   type: DrillTypes.GAME,
   author: 'Martin',
-  title: '3v3 games',
+  title: 'Match 3 contre 3',
   image:
     'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
   description:
-    "The perfect setup if you have a LOT of players or want your players to touch a lot of frisbees in a short time. This can be quite exhausting so don't forget to set breaks every 5 o 10 minutes.",
+    "Une bonne alternative pour donner du temps de jeu aux joueurs s'ils sont très nombreux ou si l'on veut qu'ils touchent beaucoup le frisbee. Cela peut être très physique donc il ne faut pas hésiter à faire des pauses toutes les 5 à 10 minutes.",
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '8 cones - 1 disc',
@@ -1633,11 +1633,11 @@ const longShotGame = {
   id: 2003,
   type: DrillTypes.GAME,
   author: 'Martin',
-  title: 'Long shots oriented game',
+  title: 'Match spécial longues',
   image:
     'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
   description:
-    'Just a classical game on the whole field. Only exception: a team scores 2 points if there was a successful long shot on the offense that lead to scoring!',
+    "Un match classique à 7 contre 7 sur grand terrain. Seule exception : une équipe marque 2 points s'il y a eu une longue réussie sur l'attaque qui a mené au point !",
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '8 cones - 1 disc',

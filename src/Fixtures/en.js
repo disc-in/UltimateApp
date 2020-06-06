@@ -1609,7 +1609,7 @@ const game3v3 = {
   image:
     'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
   description:
-    "The perfect setup if you have a LOT of players or want your players to touch a lot of frisbees in a short time. This can be quite exhausting so don't forget to set breaks every 5 o 10 minutes.",
+    "The perfect setup if you have a LOT of players or want your players to touch a lot of frisbees in a short time. This can be quite exhausting so don't forget to set breaks every 5 to 10 minutes.",
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '8 cones - 1 disc',
@@ -1635,7 +1635,7 @@ const longShotGame = {
   id: 2003,
   type: DrillTypes.GAME,
   author: 'Martin',
-  title: 'Long shots oriented game',
+  title: 'Hucks oriented game',
   image:
     'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
   description:

@@ -14,7 +14,7 @@ import ProgramPage from '../Components/ProgramPage';
 import AnimationEditorPage from '../Components/AnimationEditorPage';
 
 import EssentialPage from '../Components/EssentialPage';
-import Dictionary from '../Components/Dictionary';
+import DictionaryPage from '../Components/DictionaryPage';
 import TacticsPage from '../Components/TacticsPage';
 
 import I18n from '../utils/i18n';
@@ -74,8 +74,16 @@ export const Navigation = () => (
       component={AnimationEditorPage}
       options={() => ({ title: I18n.t('navigation.animationEditorPage') })}
     />
-    <Stack.Screen name="Dictionary" component={Dictionary} options={{ title: I18n.t('navigation.dictionary') }} />
-    <Stack.Screen name="EssentialPage" component={EssentialPage} options={{ title: I18n.t('navigation.essential') }} />
-    <Stack.Screen name="TacticsPage" component={TacticsPage} options={{ title: I18n.t('navigation.tactics') }} />
+    <Stack.Screen
+      name="DictionaryPage"
+      component={DictionaryPage}
+      options={{ title: I18n.t('navigation.dictionaryPage') }}
+    />
+    <Stack.Screen
+      name="EssentialPage"
+      component={EssentialPage}
+      options={{ title: I18n.t('navigation.essentialPage') }}
+    />
+    <Stack.Screen name="TacticsPage" component={TacticsPage} options={{ title: I18n.t('navigation.tacticsPage') }} />
   </Stack.Navigator>
 );

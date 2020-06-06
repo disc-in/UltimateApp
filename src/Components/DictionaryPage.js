@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, Text, Dimensions, SectionList, Modal, TouchableHighlight } from 'react-native';
 
+import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
 
 const screenDimension = Dimensions.get('window');
@@ -339,7 +340,7 @@ const DictionaryPage = () => {
                 setModalVisible(!modalVisible);
               }}
             >
-              <Text style={styles.returnButtonText}>Return</Text>
+              <Text style={styles.returnButtonText}>{I18n.t('dictionaryPage.back')}</Text>
             </TouchableHighlight>
           </View>
         </View>

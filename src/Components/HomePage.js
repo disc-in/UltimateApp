@@ -99,7 +99,7 @@ const Fitness = props => {
 const Theory = props => {
   return (
     <View style={styles.mainContainer}>
-      <TouchableHighlight onPress={() => props.navigation.navigate('Dictionary')} style={styles.menuItem}>
+      <TouchableHighlight onPress={() => props.navigation.navigate('DictionaryPage')} style={styles.menuItem}>
         <ImageBackground source={dictionary} style={styles.image}>
           <View style={styles.wrapper}>
             <Text style={styles.text}>{I18n.t('homePage.dictionary')}</Text>

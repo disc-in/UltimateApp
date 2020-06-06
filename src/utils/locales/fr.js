@@ -51,9 +51,9 @@ export default {
     programListPage: "Programmes d'entraînement",
     drillPageMinimal: '{{training}} - exercices',
     animationEditorPage: 'Nouvel exo',
-    dictionary: 'Dictionnaire',
-    essential: 'Essentiel',
-    tactics: 'Tactiques',
+    dictionaryPage: 'Dictionnaire',
+    essentialPage: 'Essentiel',
+    tacticsPage: 'Tactiques',
   },
   homePage: {
     frisbeeTab: 'Frisbee',
@@ -139,5 +139,8 @@ export default {
     program: {
       completion: '{{done}}/{{total}} entraînements',
     },
+  },
+  dictionaryPage: {
+    back: 'Retour',
   },
 };

@@ -51,9 +51,9 @@ export default {
     programListPage: 'Choose a program',
     drillPageMinimal: '{{training}} drills',
     animationEditorPage: 'New Drill',
-    dictionary: 'Dictionary',
-    essential: 'Essential',
-    tactics: 'Tactics',
+    dictionaryPage: 'Dictionary',
+    essentialPage: 'Essential',
+    tacticsPage: 'Tactics',
   },
   homePage: {
     trainingTab: 'Training',
@@ -142,5 +142,8 @@ export default {
     program: {
       completion: '{{done}}/{{total}} trainings',
     },
+  },
+  dictionaryPage: {
+    back: 'Back',
   },
 };

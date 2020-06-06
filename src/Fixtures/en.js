@@ -1683,7 +1683,7 @@ const coed2MarkTraining = {
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description:
     "This training session aims at practicing your mark skills. Don't be broken to easily, generate dangerous passes",
-  drills: [warmupGameDrill, dwarfDuelDrill, kyeDrill, breakDrill, normalGame],
+  drills: [warmupGameDrill, kyeDrill, breakDrill, normalGame],
 };
 
 const coed2LongTraining = {

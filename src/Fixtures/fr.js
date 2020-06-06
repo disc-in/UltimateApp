@@ -1663,112 +1663,111 @@ const dumpSwingTraining = {
   id: 1,
   title: 'Dump & Swing',
   image: 'https://zupimages.net/up/20/19/frj2.jpg',
-  description: 'This training session aims at make your team better at Dump & Swing. blabla bla bla bla',
+  description: 'Faire vivre le disque pour créer des espaces',
   drills: [warmupDrill],
 };
 
 const firstWeekFitnessTraining = {
   id: 2,
-  title: 'First Week Fitness',
+  title: 'Fitness 1e semaine',
   image: 'https://zupimages.net/up/20/19/9fcj.jpg',
-  description: 'This is the first week of the Off-season program',
+  description: "L'heure de la reprise a sonné",
   drills: [stabilityDrill, strengthDrill, speedDrill, conditioningDrill],
 };
 
 const coed2MarkTraining = {
   id: 3,
-  title: 'Build your Defense',
+  title: "J'aime la D",
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description:
-    "This training session aims at practicing your mark skills. Don't be broken to easily, generate dangerous passes",
-  drills: [warmupGameDrill, dwarfDuelDrill, kyeDrill, breakDrill, normalGame],
+  description: 'Progresser à la marque, générer des passes dangereuses',
+  drills: [warmupGameDrill, kyeDrill, breakDrill, normalGame],
 };
 
 const coed2LongTraining = {
   id: 4,
-  title: 'Long Shot is Coming',
+  title: 'Longues are Coming',
   image: 'https://zupimages.net/up/20/19/aapn.jpg',
-  description: 'This training session aims at practicing your long skills.',
+  description: "S'entraîner à tirer des longues",
   drills: [warmupGameDrill, threeColumnsLongDrill, longShotGame],
 };
 
 const coed2Long2Training = {
   id: 5,
-  title: 'Long is your weapon',
+  title: 'La longue est mon arme',
   image: 'https://zupimages.net/up/20/19/v8f4.jpg',
-  description: 'This training session aims at practicing your long skills. ',
-  drills: [warmupDrill, threeColumnsLongDrill, twoColumnsLongDrill, longShotGame],
+  description: "S'entraîner à tirer des longues",
+  drills: [warmupDrill, triangleOfDeathdrill, twoColumnsLongDrill, longShotGame],
 };
 
 const firstChildTraining = {
   id: 6,
-  title: 'First Time',
+  title: 'Première fois',
   image: 'https://zupimages.net/up/20/19/a7io.png',
-  description: 'Training will allow the players to learn the basics of ultimate while having fun',
+  description: "Découvrir l'ultimate en s'amusant",
   drills: [warmupDrill, basicThrowsDrill, dwarfDuelDrill, game3v3],
 };
 
 const secondChildTraining = {
   id: 7,
-  title: 'Defense Basics',
+  title: 'Les bases de la défense',
   image: 'https://zupimages.net/up/20/19/dgwo.jpg',
-  description: 'Training will allow the players to learn the basics of ultimate while having fun',
+  description: 'Mettre en place les bons réflexes défensifs tout en touchant beaucoup de disque',
   drills: [warmupDrill, aussieDrill, menageATroisDrill, game3v3],
 };
 
 const thirdChildTraining = {
   id: 8,
-  title: 'Treasure Hunt',
+  title: 'Chasse aux trésors',
   image: 'https://zupimages.net/up/20/19/c9i6.jpg',
-  description: 'Training will allow the players to learn the basics of ultimate while having fun',
+  description: "Idéal pour découvrir les bases de l'ultimate en s'amusant",
   drills: [warmupDrill, bulldogDrill, goToTenDrill, treasureHuntDrill, game3v3],
 };
 
 const secondWeekFitnessTraining = {
   id: 9,
-  title: 'Second Week Fitness',
+  title: 'Fitness 2e semaine',
   image: 'https://zupimages.net/up/20/19/9fcj.jpg',
-  description: "This is the second week of the season. It's time to work on your conditioning",
+  description: "C'est la deuxième semaine de la saison, c'est l'heure de travailler son endurance",
   drills: [conditioningFullbodyDrill, conditioningDrill],
 };
 
 const secondInintiationAdultTraining = {
   id: 10,
-  title: 'Defense & Longs',
+  title: 'Défense & Longues',
   image: 'https://zupimages.net/up/20/19/cd36.jpg',
-  description: 'In this training, the players will work on defense and long throws',
+  description: '',
   drills: [warmupDrill, menageATroisDrill, threeColumnsLongDrill, normalGame],
 };
 
 const thirdInintiationAdultTraining = {
   id: 11,
-  title: 'Adapt to the Field',
+  title: "S'adapter au terrain",
   image: 'https://zupimages.net/up/20/19/hrqz.jpg',
-  description: 'In this training, the players will learn to adapt on the size of the field',
+  description: "S'adapter à l'espace disponible sur le terrain tout en s'amusant",
   drills: [warmupDrill, goaltimateDrill, triangleOfDeathdrill, normalGame],
 };
 
 const initiationVerticalTraining = {
   id: 12,
-  title: 'Vertical Stack',
+  title: 'Stack vertical',
   image: 'https://zupimages.net/up/20/19/frj2.jpg',
-  description: 'This training session aims at make your team better at Vertical Stack',
+  description: "Faire progresser l'équipe sur le stack vertical",
   drills: [warmupDrill, trainDrill, bigEightDrill, normalGame],
 };
 
 const secondVerticalTraining = {
   id: 13,
-  title: 'The Break Power',
+  title: 'Le pouvoir du break',
   image: 'https://zupimages.net/up/20/19/frj2.jpg',
-  description: 'This training session aims at make your team better at Vertical Stack',
+  description: "Continuer de faire progresser l'équipe sur le stack vertical",
   drills: [warmupDrill, resetBreakDrill, trainOfFakeDrill, game3v3, normalGame],
 };
 
 const defenseBaseTraining = {
   id: 14,
-  title: 'Defense Positioning',
+  title: 'Positionnement défensif',
   image: 'https://zupimages.net/up/20/19/skjl.jpg',
-  description: 'This training session aims at practicing your defense.',
+  description: "Utiliser son corps et son cerveau pour gêner l'attaque",
   drills: [warmupGameDrill, defensePositionDrill, youShallNotPassDrill, breakDrill, normalGame],
 };
 
@@ -1836,32 +1835,32 @@ export default {
   programs: [
     {
       id: 1,
-      title: 'Initiation U13',
+      title: 'Initiation u13',
       trainings: [firstChildTraining, secondChildTraining, thirdChildTraining],
     },
     {
       id: 2,
-      title: 'Initiation Adult',
+      title: 'Initiation adultes',
       trainings: [firstChildTraining, secondInintiationAdultTraining, thirdInintiationAdultTraining],
     },
     {
       id: 3,
-      title: 'Fitness Bloc',
+      title: 'Reprise fitness',
       trainings: [firstWeekFitnessTraining, secondWeekFitnessTraining],
     },
     {
       id: 4,
-      title: 'Vertical Stack',
+      title: 'Stack vertical',
       trainings: [initiationVerticalTraining, secondVerticalTraining, dumpSwingTraining],
     },
     {
       id: 5,
-      title: 'Long Throws',
+      title: 'Longues',
       trainings: [coed2LongTraining, coed2Long2Training],
     },
     {
       id: 6,
-      title: 'Strong Defense',
+      title: 'Défense de fer',
       trainings: [defenseBaseTraining, coed2MarkTraining],
     },
   ],

@@ -238,11 +238,13 @@ exports[`<Animation /> renders correctly 1`] = `
     onStartShouldSetResponderCapture={[Function]}
     style={
       Object {
+        "alignItems": "center",
         "backgroundColor": "white",
         "borderColor": "black",
-        "borderRadius": 20,
-        "borderWidth": 2,
-        "height": 20,
+        "borderRadius": NaN,
+        "borderWidth": NaN,
+        "height": NaN,
+        "justifyContent": "center",
         "left": 0,
         "position": "absolute",
         "top": 0,
@@ -254,10 +256,21 @@ exports[`<Animation /> renders correctly 1`] = `
             "translateY": NaN,
           },
         ],
-        "width": 20,
+        "width": NaN,
       }
     }
-  />
+  >
+    <Text
+      style={
+        Object {
+          "color": "black",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      
+    </Text>
+  </View>
   <View
     style={
       Object {

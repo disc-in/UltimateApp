@@ -12,7 +12,6 @@ class ProgressBar extends React.Component {
   // - stepCount: the number of steps
   // - currentStepAV: an animated value which represents the current step
   // - getStepAnimation(): set the animation to a given step
-  // - stepLength: length of an animation step in ms
   constructor(props) {
     super(props);
 
@@ -174,9 +173,17 @@ class ProgressBar extends React.Component {
   }
 
   _stepButtonClicked = key => {
-    Animated.parallel(
-      this.props.getStepAnimation(this.progressBarDots[key].key, this.props.currentStepAV <= key),
-    ).start();
+    var isNextStep = key - this.props.currentStepAV._value <= 1 && key - this.props.currentStepAV._value > 0;
+
+    var moveAnimation = [];
+    /* If the step button clicked is the next step compared to what is currently displayed */
+    if (isNextStep)
+      /* Then first play the previous step with counter-cut */
+      moveAnimation.push(Animated.parallel(this.props.getStepAnimation(this.progressBarDots[key].key - 1, true, true)));
+
+    /* Always move to the initial position of the step which corresponds to the button */
+    moveAnimation.push(Animated.parallel(this.props.getStepAnimation(this.progressBarDots[key].key, false)));
+    Animated.sequence(moveAnimation).start();
 
     if (this.props.onStepChange !== undefined && this.props.onStepChange !== null) this.props.onStepChange(key);
   };
@@ -191,7 +198,7 @@ class ProgressBar extends React.Component {
    * The opacity of the other dots is set to 0
    */
 
-  getOpacityAnimation(stepId) {
+  getOpacityAnimation(stepId, duration) {
     var stepAnimation = [];
 
     /* Color the dots of id <= stepId */
@@ -199,7 +206,7 @@ class ProgressBar extends React.Component {
       stepAnimation.push(
         Animated.timing(this.dotsOpacity[i], {
           toValue: 1,
-          duration: this.props.stepLength,
+          duration,
           easing: Easing.cubic,
           key: i,
         }),
@@ -211,7 +218,7 @@ class ProgressBar extends React.Component {
       stepAnimation.push(
         Animated.timing(this.dotsOpacity[i], {
           toValue: 0,
-          duration: this.props.stepLength,
+          duration,
           easing: Easing.cubic,
           key: i,
         }),

@@ -26,6 +26,14 @@ import ladder from './Animation/Ladder';
 import giveAndGoRace from './Animation/GiveAndGoRace';
 import blockTheUnder from './Animation/BlockTheUnder';
 import blockEverything from './Animation/BlockEverything';
+import defensiveUnder from './Animation/DefensiveUnder';
+import defenseDeep from './Animation/DefenseDeep';
+import threeVersusTwo from './Animation/ThreeVersusTwo';
+import train from './Animation/Train';
+import trainRace from './Animation/TrainRace';
+import triangleDeath from './Animation/TriangleDeath';
+import oneFakeTrain from './Animation/OneFakeTrain';
+import twoFakeTrain from './Animation/TwoFakeTrain';
 
 const stabilityDrill = {
   id: 1,
@@ -822,7 +830,7 @@ const kyeDrill = {
       id: 1,
       title: '',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: threeVersusTwo,
       repetition: '',
       rest: '',
       instruction:
@@ -880,7 +888,7 @@ const trainDrill = {
       id: 1,
       title: 'Le train classique',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: train,
       repetition: '',
       rest: '',
       instruction:
@@ -890,7 +898,7 @@ const trainDrill = {
       id: 2,
       title: 'Les aventuriers du rail',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: trainRace,
       repetition: '',
       rest: '',
       instruction:
@@ -1294,7 +1302,7 @@ const triangleOfDeathdrill = {
       id: 1,
       title: '',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: triangleDeath,
       repetition: '',
       rest: '',
       instruction:
@@ -1351,7 +1359,7 @@ const trainOfFakeDrill = {
       id: 1,
       title: 'Le train classique',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: train,
       repetition: '',
       rest: '',
       instruction:
@@ -1361,7 +1369,7 @@ const trainOfFakeDrill = {
       id: 2,
       title: 'Avec 1 feinte',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: oneFakeTrain,
       repetition: '',
       rest: '',
       instruction:
@@ -1371,7 +1379,7 @@ const trainOfFakeDrill = {
       id: 3,
       title: 'Avec 2 feintes',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: twoFakeTrain,
       repetition: '',
       rest: '',
       instruction:
@@ -1546,7 +1554,7 @@ const defensePositionDrill = {
       id: 1,
       title: 'Bloquer les passes courtes',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: defensiveUnder,
       repetition: '',
       rest: '',
       instruction:
@@ -1556,7 +1564,7 @@ const defensePositionDrill = {
       id: 2,
       title: 'Bloquer les passes longues',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: defenseDeep,
       repetition: '',
       rest: '',
       instruction: 'Même exercice. Cette fois, le défenseur doit toujours se positionner à 45° derrière le receveur.',

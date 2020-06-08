@@ -26,6 +26,14 @@ import ladder from './Animation/Ladder';
 import giveAndGoRace from './Animation/GiveAndGoRace';
 import blockTheUnder from './Animation/BlockTheUnder';
 import blockEverything from './Animation/BlockEverything';
+import defensiveUnder from './Animation/DefensiveUnder';
+import defenseDeep from './Animation/DefenseDeep';
+import threeVersusTwo from './Animation/ThreeVersusTwo';
+import train from './Animation/Train';
+import trainRace from './Animation/TrainRace';
+import triangleDeath from './Animation/TriangleDeath';
+import oneFakeTrain from './Animation/OneFakeTrain';
+import twoFakeTrain from './Animation/TwoFakeTrain';
 
 const stabilityDrill = {
   id: 1,
@@ -823,7 +831,7 @@ const kyeDrill = {
       id: 1,
       title: '',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: threeVersusTwo,
       repetition: '',
       rest: '',
       instruction:
@@ -881,7 +889,7 @@ const trainDrill = {
       id: 1,
       title: 'Normal train',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: train,
       repetition: '',
       rest: '',
       instruction:
@@ -891,7 +899,7 @@ const trainDrill = {
       id: 2,
       title: 'Racing train',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: trainRace,
       repetition: '',
       rest: '',
       instruction:
@@ -1294,7 +1302,7 @@ const triangleOfDeathdrill = {
       id: 1,
       title: '',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: triangleDeath,
       repetition: '',
       rest: '',
       instruction:
@@ -1351,7 +1359,7 @@ const trainOfFakeDrill = {
       id: 1,
       title: 'Normal train',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: train,
       repetition: '',
       rest: '',
       instruction:
@@ -1361,7 +1369,7 @@ const trainOfFakeDrill = {
       id: 2,
       title: 'With One fake',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: oneFakeTrain,
       repetition: '',
       rest: '',
       instruction:
@@ -1371,7 +1379,7 @@ const trainOfFakeDrill = {
       id: 3,
       title: 'With two fakes',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: twoFakeTrain,
       repetition: '',
       rest: '',
       instruction:
@@ -1547,7 +1555,7 @@ const defensePositionDrill = {
       id: 1,
       title: 'Positioning Under',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: defensiveUnder,
       repetition: '',
       rest: '',
       instruction:
@@ -1557,7 +1565,7 @@ const defensePositionDrill = {
       id: 2,
       title: 'Positioning Deep',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: defenseDeep,
       repetition: '',
       rest: '',
       instruction:

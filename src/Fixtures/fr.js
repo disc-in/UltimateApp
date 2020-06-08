@@ -9,8 +9,11 @@ import {
   IllustrationType,
 } from './config';
 
-import animationSquare from './AnimationSquare';
-import animationGoToTen from './AnimationGoToTen';
+import animationSquare from './Animation/AnimationSquare';
+import animationGoToTen from './Animation/AnimationGoToTen';
+import throwingMachine from './Animation/ThrowingMachine';
+import giveAndGo from './Animation/GiveAndGo';
+import threePerson from './Animation/ThreePerson';
 
 const stabilityDrill = {
   id: 1,
@@ -644,38 +647,18 @@ const basicThrowsDrill = {
   steps: [
     {
       id: 1,
-      title: 'Revers',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '415565763',
-      sounds: true,
-      repetition: '',
-      rest: '',
-      instruction: 'Follow him',
-    },
-    {
-      id: 2,
-      title: 'Coup droit',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '415569048',
-      sounds: true,
-      repetition: '',
-      rest: '',
-      instruction: 'Follow him',
-    },
-    {
-      id: 3,
       title: 'La Machine à lancer',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: throwingMachine,
       repetition: '',
       rest: '',
       instruction: 'En binôme, les joueurs lancent des revers et coup droits pendant 5 minutes.',
     },
     {
-      id: 4,
+      id: 2,
       title: 'Montante - descendante',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: throwingMachine,
       repetition: '',
       rest: '',
       instruction:
@@ -962,9 +945,9 @@ const giveAndGoDrill = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: 'Le Une-deux',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: giveAndGo,
       repetition: '',
       rest: '',
       instruction: "Les joueurs doivent réaliser l'exercice aussi vite que possible. Attention à éviter les travels",
@@ -1154,7 +1137,7 @@ const menageATroisDrill = {
       id: 1,
       title: 'Marque à plat',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: threePerson,
       repetition: '',
       rest: '',
       instruction:

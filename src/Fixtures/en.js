@@ -9,8 +9,12 @@ import {
   IllustrationType,
 } from './config';
 
-import animationSquare from './AnimationSquare';
-import animationGoToTen from './AnimationGoToTen';
+import animationSquare from './Animation/AnimationSquare';
+import animationGoToTen from './Animation/AnimationGoToTen';
+import throwingMachine from './Animation/ThrowingMachine';
+import giveAndGo from './Animation/GiveAndGo';
+import threePerson from './Animation/ThreePerson';
+import redemption from './Animation/Redemption';
 
 const stabilityDrill = {
   id: 1,
@@ -645,38 +649,18 @@ const basicThrowsDrill = {
   steps: [
     {
       id: 1,
-      title: 'Backhand Throw',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '415565763',
-      sounds: true,
-      repetition: '',
-      rest: '',
-      instruction: 'Follow him',
-    },
-    {
-      id: 2,
-      title: 'Forehand Throw',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '415569048',
-      sounds: true,
-      repetition: '',
-      rest: '',
-      instruction: 'Follow him',
-    },
-    {
-      id: 3,
       title: 'Throwing Machine',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: throwingMachine,
       repetition: '',
       rest: '',
       instruction: 'With a partner, the players throw backhands and forehands for 5 minutes.',
     },
     {
-      id: 4,
+      id: 2,
       title: 'The Throwing Olympics Ladder',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: throwingMachine,
       repetition: '',
       rest: '',
       instruction:
@@ -963,9 +947,9 @@ const giveAndGoDrill = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: 'Give-N-Go',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: giveAndGo,
       repetition: '',
       rest: '',
       instruction: 'Try to do this give and go drill as fast as possible. Make sure not to travel.',
@@ -1155,7 +1139,7 @@ const menageATroisDrill = {
       id: 1,
       title: 'Flat mark',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: threePerson,
       repetition: '',
       rest: '',
       instruction: 'The defensive player does a flat mark, five times before switching roles.',
@@ -1164,7 +1148,7 @@ const menageATroisDrill = {
       id: 2,
       title: 'Redemption',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: redemption,
       repetition: '',
       rest: '',
       instruction:

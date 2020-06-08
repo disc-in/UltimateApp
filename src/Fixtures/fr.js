@@ -14,6 +14,18 @@ import animationGoToTen from './Animation/AnimationGoToTen';
 import throwingMachine from './Animation/ThrowingMachine';
 import giveAndGo from './Animation/GiveAndGo';
 import threePerson from './Animation/ThreePerson';
+import redemption from './Animation/Redemption';
+import dwarDuel from './Animation/DwarfDuel';
+import backdoor from './Animation/Backdoor';
+import powerReset from './Animation/PowerReset';
+import resetOpen from './Animation/ResetOpen';
+import upline from './Animation/Upline';
+import around from './Animation/Around';
+import resetBreak from './Animation/ResetBreak';
+import ladder from './Animation/Ladder';
+import giveAndGoRace from './Animation/GiveAndGoRace';
+import blockTheUnder from './Animation/BlockTheUnder';
+import blockEverything from './Animation/BlockEverything';
 
 const stabilityDrill = {
   id: 1,
@@ -658,7 +670,7 @@ const basicThrowsDrill = {
       id: 2,
       title: 'Montante - descendante',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: throwingMachine,
+      illustrationSource: ladder,
       repetition: '',
       rest: '',
       instruction:
@@ -956,7 +968,7 @@ const giveAndGoDrill = {
       id: 2,
       title: 'Ça compte !',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: giveAndGoRace,
       repetition: '',
       rest: '',
       instruction: 'Une course entre 2 équipes. La première à 25 passes gagne !',
@@ -1147,7 +1159,7 @@ const menageATroisDrill = {
       id: 2,
       title: 'Rédemption',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: redemption,
       repetition: '',
       rest: '',
       instruction:
@@ -1176,7 +1188,7 @@ const dwarfDuelDrill = {
       id: 1,
       title: '',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: dwarDuel,
       repetition: '',
       rest: '',
       instruction:
@@ -1388,7 +1400,7 @@ const resetOpenDrill = {
       id: 1,
       title: 'Par derrière',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: backdoor,
       repetition: '',
       rest: '',
       instruction:
@@ -1398,7 +1410,7 @@ const resetOpenDrill = {
       id: 2,
       title: 'Power position',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: powerReset,
       repetition: '',
       rest: '',
       instruction:
@@ -1408,7 +1420,7 @@ const resetOpenDrill = {
       id: 3,
       title: 'Situation de match',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: resetOpen,
       repetition: '',
       rest: '',
       instruction:
@@ -1437,7 +1449,7 @@ const resetBreakDrill = {
       id: 1,
       title: 'The 45° Upline',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: upline,
       repetition: '',
       rest: '',
       instruction:
@@ -1447,7 +1459,7 @@ const resetBreakDrill = {
       id: 2,
       title: 'The Easy Reset',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: around,
       repetition: '',
       rest: '',
       instruction:
@@ -1457,7 +1469,7 @@ const resetBreakDrill = {
       id: 3,
       title: 'Situation de match',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: resetBreak,
       repetition: '',
       rest: '',
       instruction:
@@ -1486,7 +1498,7 @@ const youShallNotPassDrill = {
       id: 1,
       title: 'Bloquer les passes courtes',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: blockTheUnder,
       repetition: '',
       rest: '',
       instruction:
@@ -1496,7 +1508,7 @@ const youShallNotPassDrill = {
       id: 2,
       title: 'Bloquez tout !',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: blockEverything,
       repetition: '',
       rest: '',
       instruction: "Même exercice, mais le lanceur a le droit de lancer la longue si c'est pertinent",
@@ -1505,7 +1517,7 @@ const youShallNotPassDrill = {
       id: 3,
       title: 'Comptez les points',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: blockEverything,
       repetition: '',
       rest: '',
       instruction:

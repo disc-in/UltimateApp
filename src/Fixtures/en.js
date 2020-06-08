@@ -15,6 +15,17 @@ import throwingMachine from './Animation/ThrowingMachine';
 import giveAndGo from './Animation/GiveAndGo';
 import threePerson from './Animation/ThreePerson';
 import redemption from './Animation/Redemption';
+import dwarDuel from './Animation/DwarfDuel';
+import backdoor from './Animation/Backdoor';
+import powerReset from './Animation/PowerReset';
+import resetOpen from './Animation/ResetOpen';
+import upline from './Animation/Upline';
+import around from './Animation/Around';
+import resetBreak from './Animation/ResetBreak';
+import ladder from './Animation/Ladder';
+import giveAndGoRace from './Animation/GiveAndGoRace';
+import blockTheUnder from './Animation/BlockTheUnder';
+import blockEverything from './Animation/BlockEverything';
 
 const stabilityDrill = {
   id: 1,
@@ -660,7 +671,7 @@ const basicThrowsDrill = {
       id: 2,
       title: 'The Throwing Olympics Ladder',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: throwingMachine,
+      illustrationSource: ladder,
       repetition: '',
       rest: '',
       instruction:
@@ -958,7 +969,7 @@ const giveAndGoDrill = {
       id: 2,
       title: 'Make It Count',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: giveAndGoRace,
       repetition: '',
       rest: '',
       instruction: 'A race between 2 teams. First to 25 wins!',
@@ -1177,7 +1188,7 @@ const dwarfDuelDrill = {
       id: 1,
       title: '',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: dwarDuel,
       repetition: '',
       rest: '',
       instruction:
@@ -1389,7 +1400,7 @@ const resetOpenDrill = {
       id: 1,
       title: 'The Backdoor',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: backdoor,
       repetition: '',
       rest: '',
       instruction:
@@ -1399,7 +1410,7 @@ const resetOpenDrill = {
       id: 2,
       title: 'Power Reset',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: powerReset,
       repetition: '',
       rest: '',
       instruction:
@@ -1409,7 +1420,7 @@ const resetOpenDrill = {
       id: 3,
       title: 'Game Situation',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: resetOpen,
       repetition: '',
       rest: '',
       instruction:
@@ -1438,7 +1449,7 @@ const resetBreakDrill = {
       id: 1,
       title: 'The 45° Upline',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: upline,
       repetition: '',
       rest: '',
       instruction:
@@ -1448,7 +1459,7 @@ const resetBreakDrill = {
       id: 2,
       title: 'The Easy Reset',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: around,
       repetition: '',
       rest: '',
       instruction:
@@ -1458,7 +1469,7 @@ const resetBreakDrill = {
       id: 3,
       title: 'Game Situation',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: resetBreak,
       repetition: '',
       rest: '',
       instruction:
@@ -1487,7 +1498,7 @@ const youShallNotPassDrill = {
       id: 1,
       title: 'Blocking the Under',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: blockTheUnder,
       repetition: '',
       rest: '',
       instruction:
@@ -1497,7 +1508,7 @@ const youShallNotPassDrill = {
       id: 2,
       title: 'Blocking Everything',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: blockEverything,
       repetition: '',
       rest: '',
       instruction:
@@ -1507,7 +1518,7 @@ const youShallNotPassDrill = {
       id: 3,
       title: 'Make It Count',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: blockEverything,
       repetition: '',
       rest: '',
       instruction:

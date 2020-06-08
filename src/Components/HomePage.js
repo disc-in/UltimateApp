@@ -22,13 +22,6 @@ const Tab = createMaterialBottomTabNavigator();
 const HomeScreen = props => {
   return (
     <View style={styles.mainContainer}>
-      <TouchableHighlight onPress={() => props.navigation.navigate('AnimationEditorPage')} style={styles.menuItem}>
-        <ImageBackground source={ourPlays} style={styles.image}>
-          <View style={styles.wrapper}>
-            <Text style={styles.text}>{I18n.t('homePage.editor')}</Text>
-          </View>
-        </ImageBackground>
-      </TouchableHighlight>
       <TouchableHighlight
         onPress={() => props.navigation.navigate('DrillListPage', { type: DrillTypes.FRISBEE })}
         style={styles.menuItem}
@@ -43,6 +36,13 @@ const HomeScreen = props => {
         <ImageBackground source={huddle} style={styles.image}>
           <View style={styles.wrapper}>
             <Text style={styles.text}>{I18n.t('homePage.programs')}</Text>
+          </View>
+        </ImageBackground>
+      </TouchableHighlight>
+      <TouchableHighlight onPress={() => props.navigation.navigate('AnimationEditorPage')} style={styles.menuItem}>
+        <ImageBackground source={ourPlays} style={styles.image}>
+          <View style={styles.wrapper}>
+            <Text style={styles.text}>{I18n.t('homePage.editor')}</Text>
           </View>
         </ImageBackground>
       </TouchableHighlight>

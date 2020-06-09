@@ -34,6 +34,11 @@ import trainRace from './Animation/TrainRace';
 import triangleDeath from './Animation/TriangleDeath';
 import oneFakeTrain from './Animation/OneFakeTrain';
 import twoFakeTrain from './Animation/TwoFakeTrain';
+import breakSide from './Animation/BreakSide';
+import goaltimate from './Animation/Goaltimate';
+import bigEight from './Animation/BigEight';
+import theM from './Animation/TheM';
+import dishiesChain from './Animation/DishiesChain';
 
 const stabilityDrill = {
   id: 1,
@@ -697,7 +702,7 @@ const breakDrill = {
   description: 'Cutting from the open side to the break side. The drill is both for the thrower and the mark.',
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.NONE,
-  equipment: '6 discs - 6 cones',
+  equipment: '6 discs - 2 cones',
   durationInMinutes: 20,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.BREAK, FrisbeeGoals.MARK],
@@ -706,9 +711,9 @@ const breakDrill = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: 'Open to Break',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: breakSide,
       instruction:
         'Two lines of players face each other, about 30 meters apart. A force is decided for the exercise. At the front of one line is a player with a disc, and a mark maintaining the force. The front of the other line cuts towards the thrower on the open side, and when the thrower fakes, cuts horizontally from the open side towards the break side. The thrower then must break the mark to throw to the cutter. The thrower then makes the next cut, towards the other side. The mark becomes a thrower, and the next in line becomes the mark. Players in line should have discs.',
     },
@@ -716,7 +721,7 @@ const breakDrill = {
       id: 2,
       title: 'Great Wall of China',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: breakSide,
       instruction:
         "If you want to work on improving the mark, you may insist so that the defender may not be broken twice in a row with the same pass. You want them to identify the thrower's favorite throw and block it",
     },
@@ -860,7 +865,7 @@ const bigEightDrill = {
       id: 1,
       title: '',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: bigEight,
       repetition: '',
       rest: '',
       instruction:
@@ -929,7 +934,7 @@ const goaltimateDrill = {
       id: 1,
       title: 'Goaltimate rules',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: goaltimate,
       repetition: '',
       rest: '',
       instruction:
@@ -937,7 +942,7 @@ const goaltimateDrill = {
     },
     {
       id: 2,
-      title: '',
+      title: 'Illustration',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '416849035',
       sounds: true,
@@ -1034,7 +1039,7 @@ const bolognaMDrill = {
       id: 1,
       title: '',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: theM,
       repetition: '',
       rest: '',
       instruction: 'Working on the reset from the front of the stack',
@@ -1223,9 +1228,9 @@ const dishieChainDrill = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: 'Focus on Offense',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: dishiesChain,
       repetition: '',
       rest: '',
       instruction:
@@ -1233,7 +1238,7 @@ const dishieChainDrill = {
     },
     {
       id: 2,
-      title: '',
+      title: 'Adding a poach',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: animationSquare,
       repetition: '',

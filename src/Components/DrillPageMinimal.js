@@ -57,19 +57,20 @@ export const DrillPageMinimal = props => {
   }, [navigation, currentDrillIndex, training]);
 
   return (
-    <ScrollView style={styles.drillPage} contentContainerStyle={{ flexGrow: 1 }}>
-      <View style={styles.titleContainer}>
-        <View style={styles.lineTop}>
-          <Text style={styles.title}>{drill.title}</Text>
-          <View style={styles.btnMoreContainer}>
-            <TouchableHighlight onPress={goToFullDrill}>
-              <MaterialCommunityIcons name="information" color={theme.COLOR_PRIMARY} size={26} />
-            </TouchableHighlight>
+    <>
+      <ScrollView style={styles.drillPage}>
+        <View style={styles.titleContainer}>
+          <View style={styles.lineTop}>
+            <Text style={styles.title}>{drill.title}</Text>
+            <View style={styles.btnMoreContainer}>
+              <TouchableHighlight onPress={goToFullDrill}>
+                <MaterialCommunityIcons name="information" color={theme.COLOR_PRIMARY} size={26} />
+              </TouchableHighlight>
+            </View>
           </View>
         </View>
-      </View>
-
-      <MinimalDrill style={styles.illustration} drill={drill} />
+        <MinimalDrill style={styles.illustration} drill={drill} />
+      </ScrollView>
       <View style={styles.footer}>
         {isLastTraining ? (
           <ButtonNext onPress={finishTraining} text={I18n.t('drillPageMinimal.finish')} />
@@ -77,7 +78,7 @@ export const DrillPageMinimal = props => {
           <ButtonNext onPress={goToNextDrill} text={I18n.t('drillPageMinimal.next')} />
         )}
       </View>
-    </ScrollView>
+    </>
   );
 };
 

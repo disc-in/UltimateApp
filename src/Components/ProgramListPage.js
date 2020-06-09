@@ -8,7 +8,6 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
 import Program from './programs/Program';
-import Button from './shared/Button';
 import arrowDark from '../../assets/arrow_dark.png';
 
 export const ProgramListPage = props => {
@@ -89,14 +88,6 @@ export const ProgramListPage = props => {
         />
         <View style={styles.bottomPage} />
       </ScrollView>
-      <View style={styles.seeAllContainer}>
-        <Button
-          onPress={() => props.navigation.navigate('TrainingListPage')}
-          text={I18n.t('programListPage.allTrainings')}
-          buttonLight="true"
-          style={styles.allTrainings}
-        />
-      </View>
     </View>
   );
 };

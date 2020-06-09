@@ -11,7 +11,7 @@ const MinimalDrill = props => {
   return (
     <>
       <View style={styles.animation}>
-        {drill.type === DrillTypes.FRISBEE && <FrisbeeDrillIllustration drill={drill} minimal />}
+        {drill.type === DrillTypes.FRISBEE && <FrisbeeDrillIllustration drill={drill} />}
         {drill.type === DrillTypes.FITNESS && <FitnessDrillIllustration drill={drill} minimal />}
       </View>
     </>

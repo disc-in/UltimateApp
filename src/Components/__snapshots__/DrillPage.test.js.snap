@@ -575,7 +575,6 @@ exports[`<DrillPage /> renders correctly 1`] = `
                           style={
                             Object {
                               "flex": 1,
-                              "height": 1254,
                             }
                           }
                         >

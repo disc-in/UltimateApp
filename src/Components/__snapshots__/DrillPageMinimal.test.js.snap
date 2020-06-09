@@ -7,6 +7,7 @@ Array [
       Object {
         "backgroundColor": "#fff",
         "flex": 1,
+        "marginBottom": 60,
       }
     }
   >
@@ -35,9 +36,8 @@ Array [
               Object {
                 "fontSize": 20,
                 "fontWeight": "bold",
-                "marginBottom": 5,
+                "marginLeft": 10,
                 "marginTop": 10,
-                "textAlign": "center",
               }
             }
           >

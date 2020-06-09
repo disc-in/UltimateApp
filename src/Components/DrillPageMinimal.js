@@ -90,6 +90,7 @@ const styles = StyleSheet.create({
   drillPage: {
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     flex: 1,
+    marginBottom: 60,
   },
   headerTitle: {
     flexDirection: 'column',
@@ -128,9 +129,8 @@ const styles = StyleSheet.create({
   title: {
     fontSize: theme.FONT_SIZE_LARGE,
     fontWeight: 'bold',
-    textAlign: 'center',
     marginTop: 10,
-    marginBottom: 5,
+    marginLeft: 10,
   },
   titleContainer: {
     flexBasis: 60,

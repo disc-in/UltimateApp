@@ -8,6 +8,7 @@ import Animation from '../animation/Animation';
 import VimeoVideo from '../VimeoVideo';
 import { IllustrationType } from '../../Fixtures/config';
 import theme from '../../styles/theme.style';
+import { ScrollView } from 'react-native-gesture-handler';
 
 const screenDimension = Dimensions.get('window');
 
@@ -81,10 +82,14 @@ const FrisbeeDrillIllustration = props => {
   const displayAnimation = ({ illustrationSource, instruction }) => {
     return (
       <>
-        <View style={styles.contentWrapper}>
-          <Animation widthRatio={1} heightRatio={props.minimal ? 2 / 5 : 1 / 2} animation={illustrationSource} />
-        </View>
-        <Text style={styles.instruction}>{instruction}</Text>
+        <ScrollView style={styles.scrollView}>
+          <View style={styles.contentWrapper}>
+            <Animation widthRatio={1} heightRatio={1 / 2} animation={illustrationSource} />
+          </View>
+          <View style={styles.instructionContainer}>
+            <Text style={styles.instruction}>{instruction}</Text>
+          </View>
+        </ScrollView>
       </>
     );
   };
@@ -148,9 +153,8 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   instruction: {
-    marginTop: 20,
-    marginBottom: 20,
-    marginLeft: 20,
+    marginBottom: 10,
+    marginHorizontal: 10,
     fontSize: theme.FONT_SIZE_MEDIUM,
     color: theme.COLOR_PRIMARY,
     justifyContent: 'center',
@@ -160,10 +164,10 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   pagination: {
-    paddingVertical: 15,
+    paddingVertical: 10,
   },
   line: {
-    flex: 1,
+    height: 40,
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginHorizontal: 30,
@@ -172,10 +176,11 @@ const styles = StyleSheet.create({
   title: {
     fontSize: theme.FONT_SIZE_MEDIUM,
     color: theme.COLOR_PRIMARY,
-
     textAlign: 'center',
   },
-  contentWrapper: { flex: 9 },
+  contentWrapper: { height: 375 },
+  instructionContainer: {},
+  scrollView: { flex: 1 },
 });
 
 export default FrisbeeDrillIllustration;

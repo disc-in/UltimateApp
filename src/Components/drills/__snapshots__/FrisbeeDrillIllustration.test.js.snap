@@ -135,8 +135,8 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
             style={
               Object {
                 "alignItems": "center",
-                "flex": 1,
                 "flexDirection": "row",
+                "height": 40,
                 "justifyContent": "space-between",
                 "marginHorizontal": 30,
               }
@@ -159,14 +159,14 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
           <View
             style={
               Object {
-                "paddingVertical": 15,
+                "paddingVertical": 10,
               }
             }
           />
           <View
             style={
               Object {
-                "flex": 9,
+                "height": 375,
               }
             }
           >

@@ -122,7 +122,6 @@ export const DrillPage = props => {
   );
 };
 
-const screenDimension = Dimensions.get('window');
 const styles = StyleSheet.create({
   drillPage: {
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
@@ -211,7 +210,6 @@ const styles = StyleSheet.create({
   },
   animation: {
     flex: 1,
-    height: screenDimension.height - 80,
   },
   author: {
     color: theme.COLOR_PRIMARY_LIGHT,

@@ -56,10 +56,10 @@ export default {
     tacticsPage: 'Tactiques',
   },
   homePage: {
-    trainingTab: 'Entraînement',
+    frisbeeTab: 'Frisbee',
     fitnessTab: 'Fitness',
     theoryTab: 'Theorie',
-    editor: "Editeur d'exos",
+    editor: 'Editeur',
     drills: 'Exercices',
     programs: "Programmes d'entraînement",
     leanTitle: 'Affuté',

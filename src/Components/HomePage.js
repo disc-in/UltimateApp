@@ -158,7 +158,7 @@ export default HomePage = props => {
         name="Frisbee"
         component={HomeScreen}
         options={{
-          tabBarLabel: I18n.t('homePage.trainingTab'),
+          tabBarLabel: I18n.t('homePage.frisbeeTab'),
           tabBarIcon: ({ color }) => <Ionicons name="ios-disc" color={color} size={26} />,
         }}
       />

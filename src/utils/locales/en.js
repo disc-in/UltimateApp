@@ -56,10 +56,10 @@ export default {
     tacticsPage: 'Tactics',
   },
   homePage: {
-    trainingTab: 'Training',
+    frisbeeTab: 'Frisbee',
     fitnessTab: 'Fitness',
     theoryTab: 'Theory',
-    editor: 'Drill Editor',
+    editor: 'Editor',
     drills: 'Drills',
     programs: 'Practice Programs',
     leanTitle: 'Lean Fit',

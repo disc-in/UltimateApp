@@ -39,6 +39,7 @@ import goaltimate from './Animation/Goaltimate';
 import bigEight from './Animation/BigEight';
 import theM from './Animation/TheM';
 import dishiesChain from './Animation/DishiesChain';
+import dishiesPoach from './Animation/DishiesPoach';
 
 const stabilityDrill = {
   id: 1,
@@ -1240,7 +1241,7 @@ const dishieChainDrill = {
       id: 2,
       title: 'Adding a poach',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: dishiesPoach,
       repetition: '',
       rest: '',
       instruction: 'Add a defensive player to work on the poach with a side stack',

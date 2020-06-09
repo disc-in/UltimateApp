@@ -94,6 +94,7 @@ const styles = StyleSheet.create({
   },
   headerTitle: {
     flexDirection: 'column',
+
     flexGrow: 1,
   },
   smallerBtn: {
@@ -129,6 +130,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: theme.FONT_SIZE_LARGE,
     fontWeight: 'bold',
+    textAlign: 'center',
     marginTop: 10,
     marginLeft: 10,
   },

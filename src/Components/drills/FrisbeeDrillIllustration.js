@@ -165,13 +165,14 @@ const styles = StyleSheet.create({
   line: {
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'space-around',
-    marginTop: 15,
+    justifyContent: 'space-between',
+    marginHorizontal: 30,
+    alignItems: 'center',
   },
   title: {
-    fontSize: theme.FONT_SIZE_LARGE,
+    fontSize: theme.FONT_SIZE_MEDIUM,
     color: theme.COLOR_PRIMARY,
-    fontWeight: 'bold',
+
     textAlign: 'center',
   },
   contentWrapper: { flex: 9 },

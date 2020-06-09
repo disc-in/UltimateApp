@@ -1,13 +1,14 @@
 import React, { useLayoutEffect, useCallback } from 'react';
-import { Platform, StyleSheet, ScrollView, View, Text } from 'react-native';
+import { Platform, StyleSheet, ScrollView, View, Text, Button, TouchableHighlight } from 'react-native';
 import { connect } from 'react-redux';
 
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
 import MinimalDrill from './drills/MinimalDrill';
-import Button from './shared/Button';
+import ButtonNext from './shared/Button';
 import Progress from './ProgressBar2';
 import { completeTraining } from '../Store/Actions/programAction';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export const DrillPageMinimal = props => {
   const { route, navigation, completeTraining } = props;
@@ -58,23 +59,22 @@ export const DrillPageMinimal = props => {
   return (
     <ScrollView style={styles.drillPage} contentContainerStyle={{ flexGrow: 1 }}>
       <View style={styles.titleContainer}>
-        <Text style={styles.title}>{drill.title}</Text>
-        <View style={styles.btnMoreContainer}>
-          <Button
-            onPress={goToFullDrill}
-            text={I18n.t('drillPageMinimal.details')}
-            buttonLight="true"
-            style={styles.smallerBtn}
-          />
+        <View style={styles.lineTop}>
+          <Text style={styles.title}>{drill.title}</Text>
+          <View style={styles.btnMoreContainer}>
+            <TouchableHighlight onPress={goToFullDrill}>
+              <MaterialCommunityIcons name="information" color={theme.COLOR_PRIMARY} size={26} />
+            </TouchableHighlight>
+          </View>
         </View>
       </View>
 
       <MinimalDrill style={styles.illustration} drill={drill} />
       <View style={styles.footer}>
         {isLastTraining ? (
-          <Button onPress={finishTraining} text={I18n.t('drillPageMinimal.finish')} />
+          <ButtonNext onPress={finishTraining} text={I18n.t('drillPageMinimal.finish')} />
         ) : (
-          <Button onPress={goToNextDrill} text={I18n.t('drillPageMinimal.next')} />
+          <ButtonNext onPress={goToNextDrill} text={I18n.t('drillPageMinimal.next')} />
         )}
       </View>
     </ScrollView>
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
   },
   smallerBtn: {
     fontSize: theme.FONT_SIZE_SMALL,
-    width: 'auto',
+    width: 100,
   },
   headerTitleText: {
     ...Platform.select({
@@ -125,9 +125,11 @@ const styles = StyleSheet.create({
     flexShrink: 0,
   },
   title: {
-    fontSize: 20,
+    fontSize: theme.FONT_SIZE_LARGE,
+    fontWeight: 'bold',
     textAlign: 'center',
-    margin: 5,
+    marginTop: 10,
+    marginBottom: 5,
   },
   titleContainer: {
     flexBasis: 60,
@@ -138,13 +140,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   btnMoreContainer: {
-    flexBasis: 50,
-    flexShrink: 1,
-    flexGrow: 0,
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
+    position: 'absolute',
+    right: 30,
+    top: 10,
   },
   footer: {
     position: 'absolute',
@@ -154,5 +152,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     width: '100%',
     alignItems: 'center',
+  },
+  lineTop: {
+    width: '100%',
   },
 });

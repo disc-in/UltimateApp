@@ -134,10 +134,11 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
           <View
             style={
               Object {
+                "alignItems": "center",
                 "flex": 1,
                 "flexDirection": "row",
-                "justifyContent": "space-around",
-                "marginTop": 15,
+                "justifyContent": "space-between",
+                "marginHorizontal": 30,
               }
             }
           >
@@ -146,8 +147,7 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
               style={
                 Object {
                   "color": "#232b2b",
-                  "fontSize": 20,
-                  "fontWeight": "bold",
+                  "fontSize": 16,
                   "textAlign": "center",
                 }
               }

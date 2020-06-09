@@ -32,14 +32,6 @@ describe('<DrillPageMinimal />', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('links to drill page', async () => {
-    const { getByText } = render(<DrillPageMinimal navigation={navigation} route={route} />);
-
-    await fireEvent.press(getByText('DETAILS'));
-
-    expect(navigation.navigate).toBeCalledWith('DrillPage', { drill });
-  });
-
   it('links to next drill within training when finished', async () => {
     const { getByText } = render(<DrillPageMinimal navigation={navigation} route={route} />);
 

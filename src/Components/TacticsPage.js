@@ -71,12 +71,12 @@ const TacticsPage = () => {
           <Text style={styles.title}>{item.title}</Text>
         </View>
         <View style={styles.container}>
-          <VimeoVideo vimeoId={item.video} screenWidth={screenDimension.width} sounds={false} />
+          <VimeoVideo vimeoId={item.video} screenWidth={screenDimension.width} />
         </View>
         <View style={styles.instructionContainer}>
           <Text style={styles.instruction}>{item.text}</Text>
-          <View style={styles.lines} />
         </View>
+        <View style={styles.lines} />
       </>
     );
   };

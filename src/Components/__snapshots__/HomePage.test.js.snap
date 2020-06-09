@@ -127,80 +127,6 @@ exports[`<HomePage /> renders correctly 1`] = `
                     }
                   }
                 >
-                  Theory
-                </Text>
-              </View>
-            </View>
-          </View>
-          <View
-            accessible={true}
-            focusable={true}
-            isTVSelectable={true}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
-              Object {
-                "flexBasis": "25%",
-                "flexGrow": 1,
-                "marginBottom": 5,
-              }
-            }
-          >
-            <View
-              accessibilityIgnoresInvertColors={true}
-              style={
-                Object {
-                  "height": "100%",
-                }
-              }
-            >
-              <Image
-                source={1}
-                style={
-                  Array [
-                    Object {
-                      "bottom": 0,
-                      "left": 0,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                    },
-                    Object {
-                      "height": "100%",
-                      "width": undefined,
-                    },
-                    undefined,
-                  ]
-                }
-              />
-              <View
-                style={
-                  Object {
-                    "alignItems": "flex-start",
-                    "bottom": 0,
-                    "justifyContent": "center",
-                    "left": 0,
-                    "padding": 20,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "color": "#fff",
-                      "fontSize": 28,
-                      "fontWeight": "bold",
-                    }
-                  }
-                >
                   Drills
                 </Text>
               </View>
@@ -280,6 +206,80 @@ exports[`<HomePage /> renders correctly 1`] = `
               </View>
             </View>
           </View>
+          <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "flexBasis": "25%",
+                "flexGrow": 1,
+                "marginBottom": 5,
+              }
+            }
+          >
+            <View
+              accessibilityIgnoresInvertColors={true}
+              style={
+                Object {
+                  "height": "100%",
+                }
+              }
+            >
+              <Image
+                source={1}
+                style={
+                  Array [
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                    Object {
+                      "height": "100%",
+                      "width": undefined,
+                    },
+                    undefined,
+                  ]
+                }
+              />
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "bottom": 0,
+                    "justifyContent": "center",
+                    "left": 0,
+                    "padding": 20,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#fff",
+                      "fontSize": 28,
+                      "fontWeight": "bold",
+                    }
+                  }
+                >
+                  Editor
+                </Text>
+              </View>
+            </View>
+          </View>
         </View>
       </View>
     </View>
@@ -289,7 +289,7 @@ exports[`<HomePage /> renders correctly 1`] = `
     pointerEvents="none"
     style={
       Object {
-        "backgroundColor": "#f1f1f1",
+        "backgroundColor": "#232b2b",
         "bottom": 0,
         "elevation": 4,
         "left": 0,
@@ -314,7 +314,7 @@ exports[`<HomePage /> renders correctly 1`] = `
       style={
         Object {
           "alignItems": "center",
-          "backgroundColor": "#f1f1f1",
+          "backgroundColor": "#232b2b",
           "overflow": "hidden",
         }
       }
@@ -325,7 +325,7 @@ exports[`<HomePage /> renders correctly 1`] = `
         style={
           Object {
             "flexDirection": "row",
-            "maxWidth": 336,
+            "maxWidth": 504,
             "paddingBottom": 0,
             "paddingLeft": 0,
             "paddingRight": 0,
@@ -485,7 +485,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                           "textAlign": "center",
                         },
                         Object {
-                          "color": "#232b2b",
+                          "color": "#fff",
                         },
                       ],
                     ]
@@ -685,7 +685,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                           "textAlign": "center",
                         },
                         Object {
-                          "color": "#232b2b",
+                          "color": "#fff",
                         },
                       ],
                     ]
@@ -734,9 +734,208 @@ exports[`<HomePage /> renders correctly 1`] = `
             </View>
           </View>
         </View>
+        <View
+          accessibilityRole="button"
+          accessibilityStates={
+            Array [
+              "selected",
+            ]
+          }
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "flex": 1,
+              "paddingVertical": 6,
+            }
+          }
+        >
+          <View
+            pointerEvents="none"
+          >
+            <View
+              style={
+                Object {
+                  "alignSelf": "center",
+                  "height": 24,
+                  "marginHorizontal": 12,
+                  "marginTop": 2,
+                  "transform": Array [
+                    Object {
+                      "translateY": 0,
+                    },
+                  ],
+                  "width": 24,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "bottom": 0,
+                    "left": 0,
+                    "opacity": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  }
+                }
+              >
+                <Text />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "bottom": 0,
+                    "left": 0,
+                    "opacity": 1,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  }
+                }
+              >
+                <Text />
+              </View>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "left": 0,
+                      "position": "absolute",
+                      "top": -2,
+                    },
+                    Object {
+                      "right": -2,
+                    },
+                  ]
+                }
+              >
+                <Text
+                  numberOfLines={1}
+                  style={
+                    Object {
+                      "alignSelf": "flex-end",
+                      "backgroundColor": "#f50057",
+                      "borderRadius": 8,
+                      "color": "#ffffff",
+                      "fontFamily": "System",
+                      "fontSize": 8,
+                      "fontWeight": "400",
+                      "height": 16,
+                      "lineHeight": 16,
+                      "minWidth": 16,
+                      "opacity": 0,
+                      "overflow": "hidden",
+                      "paddingHorizontal": 4,
+                      "textAlign": "center",
+                      "textAlignVertical": "center",
+                    }
+                  }
+                />
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "height": 16,
+                  "paddingBottom": 2,
+                  "transform": Array [
+                    Object {
+                      "scale": 1,
+                    },
+                  ],
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "opacity": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#000000",
+                        "fontFamily": "System",
+                        "fontWeight": "400",
+                        "textAlign": "left",
+                      },
+                      Array [
+                        Object {
+                          "backgroundColor": "transparent",
+                          "fontSize": 12,
+                          "textAlign": "center",
+                        },
+                        Object {
+                          "color": "#fff",
+                        },
+                      ],
+                    ]
+                  }
+                >
+                  Theory
+                </Text>
+              </View>
+              <View
+                style={
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "opacity": 1,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#000000",
+                        "fontFamily": "System",
+                        "fontWeight": "400",
+                        "textAlign": "left",
+                      },
+                      Array [
+                        Object {
+                          "backgroundColor": "transparent",
+                          "fontSize": 12,
+                          "textAlign": "center",
+                        },
+                        Object {
+                          "color": "#A6A6A6",
+                        },
+                      ],
+                    ]
+                  }
+                >
+                  Theory
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
       </View>
     </View>
   </View>
-
 </View>
 `;

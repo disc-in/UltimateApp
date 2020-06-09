@@ -128,25 +128,6 @@ const Theory = props => {
 };
 
 export default HomePage = props => {
-  const { navigation } = props;
-
-  const displayEditor = () => {
-    return (
-      <TouchableOpacity
-        style={styles.headerContainer}
-        onPress={() => props.navigation.navigate('AnimationEditorPage')}
-        testID="editorButton"
-      >
-        <MaterialCommunityIcons name="email-outline" color={theme.COLOR_PRIMARY} size={26} />
-      </TouchableOpacity>
-    );
-  };
-
-  useLayoutEffect(() =>
-    navigation.setOptions({
-      headerRight: () => displayEditor(),
-    }),
-  );
   return (
     <Tab.Navigator
       initialRouteName="Frisbee"

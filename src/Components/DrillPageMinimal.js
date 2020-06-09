@@ -1,5 +1,5 @@
 import React, { useLayoutEffect, useCallback } from 'react';
-import { Platform, StyleSheet, ScrollView, View, Text, Button, TouchableHighlight } from 'react-native';
+import { Platform, StyleSheet, ScrollView, View, Text, TouchableHighlight } from 'react-native';
 import { connect } from 'react-redux';
 
 import I18n from '../utils/i18n';
@@ -64,7 +64,7 @@ export const DrillPageMinimal = props => {
             <Text style={styles.title}>{drill.title}</Text>
             <View style={styles.btnMoreContainer}>
               <TouchableHighlight onPress={goToFullDrill}>
-                <MaterialCommunityIcons name="information" color={theme.COLOR_PRIMARY} size={26} />
+                <MaterialCommunityIcons name="information-outline" color={theme.COLOR_PRIMARY} size={26} />
               </TouchableHighlight>
             </View>
           </View>

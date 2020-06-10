@@ -38,6 +38,7 @@ Array [
                 "fontWeight": "bold",
                 "marginLeft": 10,
                 "marginTop": 10,
+                "textAlign": "center",
               }
             }
           >

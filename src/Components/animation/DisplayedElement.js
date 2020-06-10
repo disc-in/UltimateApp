@@ -24,7 +24,7 @@ class DisplayedElement extends React.Component {
 
     // TODO: put the constant coefficient used in the following somewhere to avoir writing them twice (in this class and in DrillCuts)
     this.props.playerRadius = Math.min(this.props.animationWidth, this.props.animationHeight) / 12;
-    this.props.discRadius = this.props.playerRadius / 2;
+    this.props.discRadius = this.props.playerRadius / 1.1;
     this.props.bottomconeSize = this.props.playerRadius / 2;
 
     this.currentPosition = new Animated.ValueXY({ x: 0, y: 0 });
@@ -153,15 +153,17 @@ class DisplayedElement extends React.Component {
             style={[
               panStyle,
               styles.disc,
-              { height: 20 },
-              { width: 20 },
-              { borderRadius: 20 },
-              { borderWidth: 2 },
+              { height: this.props.discRadius },
+              { width: this.props.discRadius },
+              { borderRadius: this.props.discRadius },
+              { borderWidth: this.props.discRadius / 10 },
               { left: 0 },
               { top: 0 },
             ]}
             key={this.props.key}
-          />
+          >
+            <Text style={styles.discText}>{this.props.number}</Text>
+          </Animated.View>
         );
 
       case 'triangle':
@@ -196,8 +198,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   defenseText: {
-    color: theme.OFFENSE_TEXT_COLOR,
     fontWeight: 'bold',
+    color: theme.OFFENSE_TEXT_COLOR,
   },
   offense: {
     position: 'absolute',
@@ -218,6 +220,12 @@ const styles = StyleSheet.create({
     position: 'absolute',
     borderColor: theme.DISC_BORDER,
     backgroundColor: theme.DISC_COLOR,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  discText: {
+    fontWeight: 'bold',
+    color: theme.DISC_TEXT_COLOR,
   },
   triangle: {
     position: 'absolute',

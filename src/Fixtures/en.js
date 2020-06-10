@@ -9,8 +9,37 @@ import {
   IllustrationType,
 } from './config';
 
-import animationSquare from './AnimationSquare';
-import animationGoToTen from './AnimationGoToTen';
+import animationSquare from './Animation/AnimationSquare';
+import animationGoToTen from './Animation/AnimationGoToTen';
+import throwingMachine from './Animation/ThrowingMachine';
+import giveAndGo from './Animation/GiveAndGo';
+import threePerson from './Animation/ThreePerson';
+import redemption from './Animation/Redemption';
+import dwarDuel from './Animation/DwarfDuel';
+import backdoor from './Animation/Backdoor';
+import powerReset from './Animation/PowerReset';
+import resetOpen from './Animation/ResetOpen';
+import upline from './Animation/Upline';
+import around from './Animation/Around';
+import resetBreak from './Animation/ResetBreak';
+import ladder from './Animation/Ladder';
+import giveAndGoRace from './Animation/GiveAndGoRace';
+import blockTheUnder from './Animation/BlockTheUnder';
+import blockEverything from './Animation/BlockEverything';
+import defensiveUnder from './Animation/DefensiveUnder';
+import defenseDeep from './Animation/DefenseDeep';
+import threeVersusTwo from './Animation/ThreeVersusTwo';
+import train from './Animation/Train';
+import trainRace from './Animation/TrainRace';
+import triangleDeath from './Animation/TriangleDeath';
+import oneFakeTrain from './Animation/OneFakeTrain';
+import twoFakeTrain from './Animation/TwoFakeTrain';
+import breakSide from './Animation/BreakSide';
+import goaltimate from './Animation/Goaltimate';
+import bigEight from './Animation/BigEight';
+import theM from './Animation/TheM';
+import dishiesChain from './Animation/DishiesChain';
+import dishiesPoach from './Animation/DishiesPoach';
 
 const stabilityDrill = {
   id: 1,
@@ -598,7 +627,7 @@ const warmupDrill = {
   ],
 };
 
-const conditioningDrillFullBody = {
+const conditioningFullbodyDrill = {
   id: 7,
   type: DrillTypes.FITNESS,
   author: 'Pamela Reif',
@@ -627,7 +656,7 @@ const conditioningDrillFullBody = {
   ],
 };
 
-const basicThrows = {
+const basicThrowsDrill = {
   id: 1001,
   type: DrillTypes.FRISBEE,
   author: 'Rowan McDonnell',
@@ -636,7 +665,7 @@ const basicThrows = {
   description: 'Basic drills to learn how to throw',
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 Disc for 2 players',
+  equipment: '1 disc for 2 players',
   durationInMinutes: 20,
   intensity: Intensities.LOW,
   goals: [FrisbeeGoals.THROWING],
@@ -645,38 +674,18 @@ const basicThrows = {
   steps: [
     {
       id: 1,
-      title: 'Backhand Throw',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '415565763',
-      sounds: true,
-      repetition: '',
-      rest: '',
-      instruction: 'Follow him',
-    },
-    {
-      id: 2,
-      title: 'Forehand Throw',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '415569048',
-      sounds: true,
-      repetition: '',
-      rest: '',
-      instruction: 'Follow him',
-    },
-    {
-      id: 3,
       title: 'Throwing Machine',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: throwingMachine,
       repetition: '',
       rest: '',
       instruction: 'With a partner, the players throw backhands and forehands for 5 minutes.',
     },
     {
-      id: 4,
+      id: 2,
       title: 'The Throwing Olympics Ladder',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: ladder,
       repetition: '',
       rest: '',
       instruction:
@@ -694,7 +703,7 @@ const breakDrill = {
   description: 'Cutting from the open side to the break side. The drill is both for the thrower and the mark.',
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.NONE,
-  equipment: '6 discs - 6 cones',
+  equipment: '6 discs - 2 cones',
   durationInMinutes: 20,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.BREAK, FrisbeeGoals.MARK],
@@ -703,18 +712,19 @@ const breakDrill = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: 'Open to Break',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: breakSide,
       instruction:
         'Two lines of players face each other, about 30 meters apart. A force is decided for the exercise. At the front of one line is a player with a disc, and a mark maintaining the force. The front of the other line cuts towards the thrower on the open side, and when the thrower fakes, cuts horizontally from the open side towards the break side. The thrower then must break the mark to throw to the cutter. The thrower then makes the next cut, towards the other side. The mark becomes a thrower, and the next in line becomes the mark. Players in line should have discs.',
     },
     {
       id: 2,
-      title: '',
+      title: 'Great Wall of China',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
-      instruction: 'The Cuter will do one-step fake and go in the break side',
+      illustrationSource: breakSide,
+      instruction:
+        "If you want to work on improving the mark, you may insist so that the defender may not be broken twice in a row with the same pass. You want them to identify the thrower's favorite throw and block it",
     },
   ],
 };
@@ -810,7 +820,7 @@ const treasureHuntDrill = {
 const kyeDrill = {
   id: 1010,
   type: DrillTypes.FRISBEE,
-  author: 'KYE',
+  author: 'Kye',
   title: '3 vs 2',
   image: 'https://zupimages.net/up/20/19/zgxt.jpg',
   description: 'The team with two players stays on defense if they successfully force a turnover',
@@ -827,7 +837,7 @@ const kyeDrill = {
       id: 1,
       title: '',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: threeVersusTwo,
       repetition: '',
       rest: '',
       instruction:
@@ -845,7 +855,7 @@ const bigEightDrill = {
   description: 'Making a pass circuit where each player will try to work on their throws',
   minimalPlayersNumber: 16,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '8 Discs - 8 Cones',
+  equipment: '8 discs - 8 cones',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.THROWING],
@@ -856,7 +866,7 @@ const bigEightDrill = {
       id: 1,
       title: '',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: bigEight,
       repetition: '',
       rest: '',
       instruction:
@@ -874,7 +884,7 @@ const trainDrill = {
   description: 'This is a drill which works on the flow of a vertical stack',
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 Disc',
+  equipment: '1 disc',
   durationInMinutes: 10,
   intensity: Intensities.LOW,
   goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
@@ -885,7 +895,7 @@ const trainDrill = {
       id: 1,
       title: 'Normal train',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: train,
       repetition: '',
       rest: '',
       instruction:
@@ -895,7 +905,7 @@ const trainDrill = {
       id: 2,
       title: 'Racing train',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: trainRace,
       repetition: '',
       rest: '',
       instruction:
@@ -914,7 +924,7 @@ const goaltimateDrill = {
     'The object is to score points by throwing a disc to a teammate in a small scoring area, through a large semicircular hoop called the goal.',
   minimalPlayersNumber: 8,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 Disc - 10 Cones or 1 Goal',
+  equipment: '1 disc - 10 cones or 1 goal',
   durationInMinutes: 20,
   intensity: Intensities.HIGH,
   goals: [FrisbeeGoals.THROWING, FrisbeeGoals.DEFENSE, FrisbeeGoals.PLAY, FrisbeeGoals.PLAY],
@@ -925,7 +935,7 @@ const goaltimateDrill = {
       id: 1,
       title: 'Goaltimate rules',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: goaltimate,
       repetition: '',
       rest: '',
       instruction:
@@ -933,7 +943,7 @@ const goaltimateDrill = {
     },
     {
       id: 2,
-      title: '',
+      title: 'Illustration',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '416849035',
       sounds: true,
@@ -953,7 +963,7 @@ const giveAndGoDrill = {
   description: 'Follow your disc as fast as possible',
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 Disc - 12 Cones',
+  equipment: '1 disc - 12 cones',
   durationInMinutes: 10,
   intensity: Intensities.HIGH,
   goals: [FrisbeeGoals.THROWING, FrisbeeGoals.HANDLING],
@@ -962,9 +972,9 @@ const giveAndGoDrill = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: 'Give-N-Go',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: giveAndGo,
       repetition: '',
       rest: '',
       instruction: 'Try to do this give and go drill as fast as possible. Make sure not to travel.',
@@ -973,7 +983,7 @@ const giveAndGoDrill = {
       id: 2,
       title: 'Make It Count',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: giveAndGoRace,
       repetition: '',
       rest: '',
       instruction: 'A race between 2 teams. First to 25 wins!',
@@ -990,7 +1000,7 @@ const aussieDrill = {
   description: 'You can run with the disc',
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '4 Discs - 20 Cones',
+  equipment: '4 discs - 20 cones',
   durationInMinutes: 20,
   intensity: Intensities.LOW,
   goals: [FrisbeeGoals.THROWING, FrisbeeGoals.COMMUNICATION, FrisbeeGoals.PLAY],
@@ -1019,7 +1029,7 @@ const bolognaMDrill = {
   description: 'Follow the M',
   minimalPlayersNumber: 10,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '5 Disc - 6 Cones',
+  equipment: '5 disc - 6 cones',
   durationInMinutes: 20,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.THROWING, FrisbeeGoals.HANDLING],
@@ -1030,7 +1040,7 @@ const bolognaMDrill = {
       id: 1,
       title: '',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: theM,
       repetition: '',
       rest: '',
       instruction: 'Working on the reset from the front of the stack',
@@ -1047,7 +1057,7 @@ const goToTenDrill = {
   description: 'First team with 10 completes passes win',
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 Disc - 4 Cones',
+  equipment: '1 disc - 4 cones',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.THROWING, FrisbeeGoals.PLAY, FrisbeeGoals.DEFENSE],
@@ -1075,7 +1085,7 @@ const endzoneDameDrill = {
   description: 'Game to 5. If you score, your team stay in offense',
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 Disc - 4 Cones',
+  equipment: '1 disc - 4 cones',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.THROWING, FrisbeeGoals.PLAY, FrisbeeGoals.DEFENSE],
@@ -1114,7 +1124,7 @@ const bulldogDrill = {
     'The bulldogs stand in the middle of the play area. All remaining players stand at one end of the area (home). The aim of the game is to run from one end of the field of play to the other, without being caught by the bulldogs. When a player is caught, they become a bulldog themselves.',
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '4 Cones',
+  equipment: '4 cones',
   durationInMinutes: 10,
   intensity: Intensities.LOW,
   goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.PLAY, FrisbeeGoals.COMMUNICATION],
@@ -1143,7 +1153,7 @@ const menageATroisDrill = {
   description: 'The thrower tries to reach the target by using any fake possible',
   minimalPlayersNumber: 3,
   equipmentLabel: EquipmentLabels.NONE,
-  equipment: '1 Disc',
+  equipment: '1 disc',
   durationInMinutes: 10,
   intensity: Intensities.LOW,
   goals: [FrisbeeGoals.THROWING, FrisbeeGoals.DEFENSE, FrisbeeGoals.BREAK],
@@ -1154,7 +1164,7 @@ const menageATroisDrill = {
       id: 1,
       title: 'Flat mark',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: threePerson,
       repetition: '',
       rest: '',
       instruction: 'The defensive player does a flat mark, five times before switching roles.',
@@ -1163,7 +1173,7 @@ const menageATroisDrill = {
       id: 2,
       title: 'Redemption',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: redemption,
       repetition: '',
       rest: '',
       instruction:
@@ -1178,10 +1188,10 @@ const dwarfDuelDrill = {
   author: 'Moby',
   title: 'Dwarf Duel',
   image: 'https://zupimages.net/up/20/19/3m3k.jpg',
-  description: 'Duel without jumping',
+  description: 'Duel without jumping, all about positioning',
   minimalPlayersNumber: 3,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 Disc - 2 Cones',
+  equipment: '1 disc - 2 cones',
   durationInMinutes: 10,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.CUTTING],
@@ -1192,7 +1202,7 @@ const dwarfDuelDrill = {
       id: 1,
       title: '',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: dwarDuel,
       repetition: '',
       rest: '',
       instruction:
@@ -1210,7 +1220,7 @@ const dishieChainDrill = {
   description: 'Basic long passes drill. You want your players to alternate between throwing, running and passing',
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 Disc - 2 Cones',
+  equipment: '1 disc - 2 cones',
   durationInMinutes: 10,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING],
@@ -1219,9 +1229,9 @@ const dishieChainDrill = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: 'Focus on Offense',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: dishiesChain,
       repetition: '',
       rest: '',
       instruction:
@@ -1229,9 +1239,9 @@ const dishieChainDrill = {
     },
     {
       id: 2,
-      title: '',
+      title: 'Adding a poach',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: dishiesPoach,
       repetition: '',
       rest: '',
       instruction: 'Add a defensive player to work on the poach with a side stack',
@@ -1248,7 +1258,7 @@ const breakDanceDrill = {
   description: 'Making a christmas tree in the break',
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '5 Discs - 10 Cones',
+  equipment: '5 discs - 10 cones',
   durationInMinutes: 20,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING],
@@ -1278,7 +1288,7 @@ const breakDanceDrill = {
   ],
 };
 
-const catapultdrill = {
+const triangleOfDeathdrill = {
   id: 1019,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
@@ -1287,7 +1297,7 @@ const catapultdrill = {
   description: 'Throwing 10 hucks in a row as far and as fast as possible',
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '10 Disc - 3 Cones',
+  equipment: '10 disc - 3 cones',
   durationInMinutes: 20,
   intensity: Intensities.HIGH,
   goals: [FrisbeeGoals.THROWING],
@@ -1298,7 +1308,7 @@ const catapultdrill = {
       id: 1,
       title: '',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: triangleDeath,
       repetition: '',
       rest: '',
       instruction:
@@ -1335,7 +1345,7 @@ const chevronDrill = {
   ],
 };
 
-const trainDrillHarder = {
+const trainOfFakeDrill = {
   id: 1020,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
@@ -1344,7 +1354,7 @@ const trainDrillHarder = {
   description: 'This is a drill which works on the flow of a vertical stack',
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 Disc',
+  equipment: '1 disc',
   durationInMinutes: 10,
   intensity: Intensities.LOW,
   goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING],
@@ -1355,7 +1365,7 @@ const trainDrillHarder = {
       id: 1,
       title: 'Normal train',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: train,
       repetition: '',
       rest: '',
       instruction:
@@ -1365,7 +1375,7 @@ const trainDrillHarder = {
       id: 2,
       title: 'With One fake',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: oneFakeTrain,
       repetition: '',
       rest: '',
       instruction:
@@ -1375,7 +1385,7 @@ const trainDrillHarder = {
       id: 3,
       title: 'With two fakes',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: twoFakeTrain,
       repetition: '',
       rest: '',
       instruction:
@@ -1384,7 +1394,7 @@ const trainDrillHarder = {
   ],
 };
 
-const resetOpen = {
+const resetOpenDrill = {
   id: 1005,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
@@ -1393,7 +1403,7 @@ const resetOpen = {
   description: 'Cutting with good timing; throwing immediately after catching',
   minimalPlayersNumber: 4,
   equipmentLabel: EquipmentLabels.NONE,
-  equipment: '1 Disc',
+  equipment: '1 disc',
   durationInMinutes: 10,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.CUTTING, FrisbeeGoals.HANDLING],
@@ -1404,7 +1414,7 @@ const resetOpen = {
       id: 1,
       title: 'The Backdoor',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: backdoor,
       repetition: '',
       rest: '',
       instruction:
@@ -1414,7 +1424,7 @@ const resetOpen = {
       id: 2,
       title: 'Power Reset',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: powerReset,
       repetition: '',
       rest: '',
       instruction:
@@ -1424,7 +1434,7 @@ const resetOpen = {
       id: 3,
       title: 'Game Situation',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: resetOpen,
       repetition: '',
       rest: '',
       instruction:
@@ -1433,7 +1443,7 @@ const resetOpen = {
   ],
 };
 
-const resetBreak = {
+const resetBreakDrill = {
   id: 1006,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
@@ -1442,7 +1452,7 @@ const resetBreak = {
   description: 'Cutting with good timing; throwing immediately after catching',
   minimalPlayersNumber: 4,
   equipmentLabel: EquipmentLabels.NONE,
-  equipment: '1 Disc',
+  equipment: '1 disc',
   durationInMinutes: 10,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.CUTTING, FrisbeeGoals.HANDLING],
@@ -1453,7 +1463,7 @@ const resetBreak = {
       id: 1,
       title: 'The 45° Upline',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: upline,
       repetition: '',
       rest: '',
       instruction:
@@ -1463,7 +1473,7 @@ const resetBreak = {
       id: 2,
       title: 'The Easy Reset',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: around,
       repetition: '',
       rest: '',
       instruction:
@@ -1473,7 +1483,7 @@ const resetBreak = {
       id: 3,
       title: 'Game Situation',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: resetBreak,
       repetition: '',
       rest: '',
       instruction:
@@ -1482,7 +1492,7 @@ const resetBreak = {
   ],
 };
 
-const youShallNotPass = {
+const youShallNotPassDrill = {
   id: 1007,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
@@ -1491,7 +1501,7 @@ const youShallNotPass = {
   description: 'Using your body to prevent your opponent from getting to the disc',
   minimalPlayersNumber: 4,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 Disc - 4 Cones',
+  equipment: '1 disc - 4 cones',
   durationInMinutes: 12,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.DEFENSE],
@@ -1502,7 +1512,7 @@ const youShallNotPass = {
       id: 1,
       title: 'Blocking the Under',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: blockTheUnder,
       repetition: '',
       rest: '',
       instruction:
@@ -1512,7 +1522,7 @@ const youShallNotPass = {
       id: 2,
       title: 'Blocking Everything',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: blockEverything,
       repetition: '',
       rest: '',
       instruction:
@@ -1522,7 +1532,7 @@ const youShallNotPass = {
       id: 3,
       title: 'Make It Count',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: blockEverything,
       repetition: '',
       rest: '',
       instruction:
@@ -1531,7 +1541,7 @@ const youShallNotPass = {
   ],
 };
 
-const defensePosition = {
+const defensePositionDrill = {
   id: 1021,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
@@ -1540,7 +1550,7 @@ const defensePosition = {
   description: "Maintaining good positioning and adapting to the team's defense",
   minimalPlayersNumber: 4,
   equipmentLabel: EquipmentLabels.NONE,
-  equipment: '1 Disc - 5 Cones',
+  equipment: '1 disc - 5 cones',
   durationInMinutes: 10,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.DEFENSE],
@@ -1551,7 +1561,7 @@ const defensePosition = {
       id: 1,
       title: 'Positioning Under',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: defensiveUnder,
       repetition: '',
       rest: '',
       instruction:
@@ -1561,7 +1571,7 @@ const defensePosition = {
       id: 2,
       title: 'Positioning Deep',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: defenseDeep,
       repetition: '',
       rest: '',
       instruction:
@@ -1608,7 +1618,7 @@ const game3v3 = {
   image:
     'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
   description:
-    "The perfect setup if you have a LOT of players or want your players to touch a lot of frisbees in a short time. This can be quite exhausting so don't forget to set breaks every 5 o 10 minutes.",
+    "The perfect setup if you have a LOT of players or want your players to touch a lot of frisbees in a short time. This can be quite exhausting so don't forget to set breaks every 5 to 10 minutes.",
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '8 cones - 1 disc',
@@ -1634,7 +1644,7 @@ const longShotGame = {
   id: 2003,
   type: DrillTypes.GAME,
   author: 'Martin',
-  title: 'Long shots oriented game',
+  title: 'Hucks oriented game',
   image:
     'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
   description:
@@ -1682,7 +1692,7 @@ const coed2MarkTraining = {
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description:
     "This training session aims at practicing your mark skills. Don't be broken to easily, generate dangerous passes",
-  drills: [warmupGameDrill, dwarfDuelDrill, kyeDrill, breakDrill, normalGame],
+  drills: [warmupGameDrill, kyeDrill, breakDrill, normalGame],
 };
 
 const coed2LongTraining = {
@@ -1701,15 +1711,15 @@ const coed2Long2Training = {
   drills: [warmupDrill, threeColumnsLongDrill, twoColumnsLongDrill, longShotGame],
 };
 
-const firstPracticeChild = {
+const firstChildTraining = {
   id: 6,
   title: 'First Time',
   image: 'https://zupimages.net/up/20/19/a7io.png',
   description: 'Training will allow the players to learn the basics of ultimate while having fun',
-  drills: [warmupDrill, basicThrows, dwarfDuelDrill, game3v3],
+  drills: [warmupDrill, basicThrowsDrill, dwarfDuelDrill, game3v3],
 };
 
-const secondPracticeChild = {
+const secondChildTraining = {
   id: 7,
   title: 'Defense Basics',
   image: 'https://zupimages.net/up/20/19/dgwo.jpg',
@@ -1717,7 +1727,7 @@ const secondPracticeChild = {
   drills: [warmupDrill, aussieDrill, menageATroisDrill, game3v3],
 };
 
-const thirdPracticeChild = {
+const thirdChildTraining = {
   id: 8,
   title: 'Treasure Hunt',
   image: 'https://zupimages.net/up/20/19/c9i6.jpg',
@@ -1730,10 +1740,10 @@ const secondWeekFitnessTraining = {
   title: 'Second Week Fitness',
   image: 'https://zupimages.net/up/20/19/9fcj.jpg',
   description: "This is the second week of the season. It's time to work on your conditioning",
-  drills: [conditioningDrillFullBody, conditioningDrill],
+  drills: [conditioningFullbodyDrill, conditioningDrill],
 };
 
-const secondInintiationAdult = {
+const secondInintiationAdultTraining = {
   id: 10,
   title: 'Defense & Longs',
   image: 'https://zupimages.net/up/20/19/cd36.jpg',
@@ -1741,15 +1751,15 @@ const secondInintiationAdult = {
   drills: [warmupDrill, menageATroisDrill, threeColumnsLongDrill, normalGame],
 };
 
-const thirdInintiationAdult = {
+const thirdInintiationAdultTraining = {
   id: 11,
   title: 'Adapt to the Field',
   image: 'https://zupimages.net/up/20/19/hrqz.jpg',
   description: 'In this training, the players will learn to adapt on the size of the field',
-  drills: [warmupDrill, goaltimateDrill, catapultdrill, normalGame],
+  drills: [warmupDrill, goaltimateDrill, triangleOfDeathdrill, normalGame],
 };
 
-const initiationVertical = {
+const initiationVerticalTraining = {
   id: 12,
   title: 'Vertical Stack',
   image: 'https://zupimages.net/up/20/19/frj2.jpg',
@@ -1757,20 +1767,20 @@ const initiationVertical = {
   drills: [warmupDrill, trainDrill, bigEightDrill, normalGame],
 };
 
-const secondVertical = {
+const secondVerticalTraining = {
   id: 13,
   title: 'The Break Power',
   image: 'https://zupimages.net/up/20/19/frj2.jpg',
   description: 'This training session aims at make your team better at Vertical Stack',
-  drills: [warmupDrill, resetBreak, trainDrillHarder, game3v3, normalGame],
+  drills: [warmupDrill, resetBreakDrill, trainOfFakeDrill, game3v3, normalGame],
 };
 
-const defenseBase = {
+const defenseBaseTraining = {
   id: 14,
   title: 'Defense Positioning',
   image: 'https://zupimages.net/up/20/19/skjl.jpg',
   description: 'This training session aims at practicing your defense.',
-  drills: [warmupGameDrill, defensePosition, youShallNotPass, breakDrill, normalGame],
+  drills: [warmupGameDrill, defensePositionDrill, youShallNotPassDrill, breakDrill, normalGame],
 };
 
 export default {
@@ -1784,15 +1794,15 @@ export default {
     conditioningDrill,
     warmupGameDrill,
     warmupDrill,
-    conditioningDrillFullBody,
+    conditioningFullbodyDrill,
     // Frisbee
-    basicThrows,
+    basicThrowsDrill,
     trainDrill,
     menageATroisDrill,
     goaltimateDrill,
-    resetOpen,
-    resetBreak,
-    youShallNotPass,
+    resetOpenDrill,
+    resetBreakDrill,
+    youShallNotPassDrill,
     aussieDrill,
     treasureHuntDrill,
     kyeDrill,
@@ -1804,9 +1814,9 @@ export default {
     bulldogDrill,
     dishieChainDrill,
     breakDanceDrill,
-    catapultdrill,
-    trainDrillHarder,
-    defensePosition,
+    triangleOfDeathdrill,
+    trainOfFakeDrill,
+    defensePositionDrill,
     chevronDrill,
     breakDrill,
     bolognaMDrill,
@@ -1824,26 +1834,26 @@ export default {
     coed2MarkTraining,
     coed2LongTraining,
     coed2Long2Training,
-    firstPracticeChild,
-    secondPracticeChild,
-    thirdPracticeChild,
+    firstChildTraining,
+    secondChildTraining,
+    thirdChildTraining,
     secondWeekFitnessTraining,
-    secondInintiationAdult,
-    thirdInintiationAdult,
-    initiationVertical,
-    secondVertical,
-    defenseBase,
+    secondInintiationAdultTraining,
+    thirdInintiationAdultTraining,
+    initiationVerticalTraining,
+    secondVerticalTraining,
+    defenseBaseTraining,
   ],
   programs: [
     {
       id: 1,
       title: 'Initiation U13',
-      trainings: [firstPracticeChild, secondPracticeChild, thirdPracticeChild],
+      trainings: [firstChildTraining, secondChildTraining, thirdChildTraining],
     },
     {
       id: 2,
       title: 'Initiation Adult',
-      trainings: [firstPracticeChild, secondInintiationAdult, thirdInintiationAdult],
+      trainings: [firstChildTraining, secondInintiationAdultTraining, thirdInintiationAdultTraining],
     },
     {
       id: 3,
@@ -1853,7 +1863,7 @@ export default {
     {
       id: 4,
       title: 'Vertical Stack',
-      trainings: [initiationVertical, secondVertical, dumpSwingTraining],
+      trainings: [initiationVerticalTraining, secondVerticalTraining, dumpSwingTraining],
     },
     {
       id: 5,
@@ -1863,7 +1873,7 @@ export default {
     {
       id: 6,
       title: 'Strong Defense',
-      trainings: [defenseBase, coed2MarkTraining],
+      trainings: [defenseBaseTraining, coed2MarkTraining],
     },
   ],
 };

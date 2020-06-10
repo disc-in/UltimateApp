@@ -7,7 +7,6 @@ import DrillPage from '../Components/DrillPage';
 import DrillPageMinimal from '../Components/DrillPageMinimal';
 import FrisbeeFilters from '../Components/FrisbeeFilters';
 import FitnessFilters from '../Components/FitnessFilters';
-import TrainingListPage from '../Components/TrainingListPage';
 import TrainingPage from '../Components/TrainingPage';
 import ProgramListPage from '../Components/ProgramListPage';
 
@@ -35,11 +34,6 @@ export const Navigation = () => (
       name="DrillPage"
       component={DrillPage}
       options={({ route }) => ({ title: route.params.drill.title })}
-    />
-    <Stack.Screen
-      name="TrainingListPage"
-      component={TrainingListPage}
-      options={{ title: I18n.t('navigation.trainingListPage') }}
     />
     <Stack.Screen
       name="ProgramListPage"

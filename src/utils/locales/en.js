@@ -47,7 +47,6 @@ export default {
     homePage: 'Disc In',
     drillListPage: '{{type}} drills',
     filters: 'Filters',
-    trainingListPage: 'Training sessions',
     programListPage: 'Choose a program',
     drillPageMinimal: '{{training}} drills',
     animationEditorPage: 'New Drill',
@@ -112,14 +111,6 @@ export default {
   },
   frisbeeFilters: {
     numberOfPlayersLabel: 'Number of players: {{number}}',
-  },
-  trainingListPage: {
-    availableTrainings: {
-      zero: '{{count}} training session available',
-      one: '{{count}} training session available',
-      other: '{{count}} training sessions available',
-    },
-    players: '{{count}}+ players',
   },
   trainingPage: {
     start: 'Start training',

@@ -9,8 +9,37 @@ import {
   IllustrationType,
 } from './config';
 
-import animationSquare from './AnimationSquare';
-import animationGoToTen from './AnimationGoToTen';
+import animationSquare from './Animation/AnimationSquare';
+import animationGoToTen from './Animation/AnimationGoToTen';
+import throwingMachine from './Animation/ThrowingMachine';
+import giveAndGo from './Animation/GiveAndGo';
+import threePerson from './Animation/ThreePerson';
+import redemption from './Animation/Redemption';
+import dwarDuel from './Animation/DwarfDuel';
+import backdoor from './Animation/Backdoor';
+import powerReset from './Animation/PowerReset';
+import resetOpen from './Animation/ResetOpen';
+import upline from './Animation/Upline';
+import around from './Animation/Around';
+import resetBreak from './Animation/ResetBreak';
+import ladder from './Animation/Ladder';
+import giveAndGoRace from './Animation/GiveAndGoRace';
+import blockTheUnder from './Animation/BlockTheUnder';
+import blockEverything from './Animation/BlockEverything';
+import defensiveUnder from './Animation/DefensiveUnder';
+import defenseDeep from './Animation/DefenseDeep';
+import threeVersusTwo from './Animation/ThreeVersusTwo';
+import train from './Animation/Train';
+import trainRace from './Animation/TrainRace';
+import triangleDeath from './Animation/TriangleDeath';
+import oneFakeTrain from './Animation/OneFakeTrain';
+import twoFakeTrain from './Animation/TwoFakeTrain';
+import breakSide from './Animation/BreakSide';
+import goaltimate from './Animation/Goaltimate';
+import bigEight from './Animation/BigEight';
+import theM from './Animation/TheM';
+import dishiesChain from './Animation/DishiesChain';
+import dishiesPoach from './Animation/DishiesPoach';
 
 const stabilityDrill = {
   id: 1,
@@ -586,7 +615,7 @@ const warmupDrill = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: 'Echauffement basique',
       illustrationType: IllustrationType.VIMEO,
       sounds: true,
       illustrationSource: '415430252',
@@ -615,7 +644,7 @@ const conditioningFullbodyDrill = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: 'Suivez là',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '416604913',
       sounds: true,
@@ -644,38 +673,18 @@ const basicThrowsDrill = {
   steps: [
     {
       id: 1,
-      title: 'Revers',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '415565763',
-      sounds: true,
-      repetition: '',
-      rest: '',
-      instruction: 'Follow him',
-    },
-    {
-      id: 2,
-      title: 'Coup droit',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '415569048',
-      sounds: true,
-      repetition: '',
-      rest: '',
-      instruction: 'Follow him',
-    },
-    {
-      id: 3,
       title: 'La Machine à lancer',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: throwingMachine,
       repetition: '',
       rest: '',
       instruction: 'En binôme, les joueurs lancent des revers et coup droits pendant 5 minutes.',
     },
     {
-      id: 4,
+      id: 2,
       title: 'Montante - descendante',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: ladder,
       repetition: '',
       rest: '',
       instruction:
@@ -704,7 +713,7 @@ const breakDrill = {
       id: 1,
       title: '',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: breakSide,
       instruction:
         "Deux lignes de joueurs se font face, à environ 20 mètres de distance. Une force est décidée pour l'exercice. Le premier joueur d'une ligne est le lanceur, il est défendu par une marque qui applique la force. Le premier joueur de l'autre ligne faire un cut vers le lanceur dans le côté ouvert, puis quand le lanceur faire une feinte, il faire un contre-cut horizontal vers le côté fermé. Le lanceur doit alors casser sa marque pour réussir sa passe dans le côté fermé. Le lanceur fait ensuite le cut suivant vers l'autre ligne. La marque devient le prochain lanceur et le joueur suivant devient la marque. Les joueurs en attente doivent avoir quelques disques.",
     },
@@ -712,7 +721,7 @@ const breakDrill = {
       id: 2,
       title: 'La Grande Muraille de Chine',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: breakSide,
       instruction:
         "Si l'on veut faire travailler la marque, on peut insister sur le fait de ne jamais se prendre 2 fois de suite le même break. Il s'agit d'observer quelle est la passe préférentielle de l'attaquant et de tout faire pour la bloquer. On peut compter les points en valorisant les marques qui ont provoqué une passe ratée ou hors-timing",
     },
@@ -825,9 +834,9 @@ const kyeDrill = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: '3 versus 2',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: threeVersusTwo,
       repetition: '',
       rest: '',
       instruction:
@@ -854,9 +863,9 @@ const bigEightDrill = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: 'Le grand 8',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: bigEight,
       repetition: '',
       rest: '',
       instruction:
@@ -885,7 +894,7 @@ const trainDrill = {
       id: 1,
       title: 'Le train classique',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: train,
       repetition: '',
       rest: '',
       instruction:
@@ -895,7 +904,7 @@ const trainDrill = {
       id: 2,
       title: 'Les aventuriers du rail',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: trainRace,
       repetition: '',
       rest: '',
       instruction:
@@ -925,7 +934,7 @@ const goaltimateDrill = {
       id: 1,
       title: 'Goaltimate rules',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: goaltimate,
       repetition: '',
       rest: '',
       instruction:
@@ -933,7 +942,7 @@ const goaltimateDrill = {
     },
     {
       id: 2,
-      title: '',
+      title: 'Présentation du goaltimate',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '416849035',
       sounds: true,
@@ -962,9 +971,9 @@ const giveAndGoDrill = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: 'Le Une-deux',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: giveAndGo,
       repetition: '',
       rest: '',
       instruction: "Les joueurs doivent réaliser l'exercice aussi vite que possible. Attention à éviter les travels",
@@ -973,7 +982,7 @@ const giveAndGoDrill = {
       id: 2,
       title: 'Ça compte !',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: giveAndGoRace,
       repetition: '',
       rest: '',
       instruction: 'Une course entre 2 équipes. La première à 25 passes gagne !',
@@ -999,7 +1008,7 @@ const aussieDrill = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: "initiation ludique à l'ultimate",
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: animationSquare,
       repetition: '',
@@ -1028,9 +1037,9 @@ const bolognaMDrill = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: 'Le grand M',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: theM,
       repetition: '',
       rest: '',
       instruction: 'Working on the reset from the front of the stack',
@@ -1056,7 +1065,7 @@ const goToTenDrill = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: 'Passe à 10',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: animationGoToTen,
       repetition: '',
@@ -1123,7 +1132,7 @@ const bulldogDrill = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: "L'épervier",
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: animationSquare,
       repetition: '',
@@ -1154,7 +1163,7 @@ const menageATroisDrill = {
       id: 1,
       title: 'Marque à plat',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: threePerson,
       repetition: '',
       rest: '',
       instruction:
@@ -1164,7 +1173,7 @@ const menageATroisDrill = {
       id: 2,
       title: 'Rédemption',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: redemption,
       repetition: '',
       rest: '',
       instruction:
@@ -1191,9 +1200,9 @@ const dwarfDuelDrill = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: 'Le duel',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: dwarDuel,
       repetition: '',
       rest: '',
       instruction:
@@ -1220,9 +1229,9 @@ const dishieChainDrill = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: 'La chaine des catapultes',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: dishiesChain,
       repetition: '',
       rest: '',
       instruction:
@@ -1230,9 +1239,9 @@ const dishieChainDrill = {
     },
     {
       id: 2,
-      title: '',
+      title: 'Eclater un poach',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: dishiesPoach,
       repetition: '',
       rest: '',
       instruction: 'Add a defensive player to work on the poach with a side stack',
@@ -1297,9 +1306,9 @@ const triangleOfDeathdrill = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: 'La catapulte',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: triangleDeath,
       repetition: '',
       rest: '',
       instruction:
@@ -1356,7 +1365,7 @@ const trainOfFakeDrill = {
       id: 1,
       title: 'Le train classique',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: train,
       repetition: '',
       rest: '',
       instruction:
@@ -1366,7 +1375,7 @@ const trainOfFakeDrill = {
       id: 2,
       title: 'Avec 1 feinte',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: oneFakeTrain,
       repetition: '',
       rest: '',
       instruction:
@@ -1376,7 +1385,7 @@ const trainOfFakeDrill = {
       id: 3,
       title: 'Avec 2 feintes',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: twoFakeTrain,
       repetition: '',
       rest: '',
       instruction:
@@ -1405,7 +1414,7 @@ const resetOpenDrill = {
       id: 1,
       title: 'Par derrière',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: backdoor,
       repetition: '',
       rest: '',
       instruction:
@@ -1415,7 +1424,7 @@ const resetOpenDrill = {
       id: 2,
       title: 'Power position',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: powerReset,
       repetition: '',
       rest: '',
       instruction:
@@ -1425,7 +1434,7 @@ const resetOpenDrill = {
       id: 3,
       title: 'Situation de match',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: resetOpen,
       repetition: '',
       rest: '',
       instruction:
@@ -1454,7 +1463,7 @@ const resetBreakDrill = {
       id: 1,
       title: 'The 45° Upline',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: upline,
       repetition: '',
       rest: '',
       instruction:
@@ -1464,7 +1473,7 @@ const resetBreakDrill = {
       id: 2,
       title: 'The Easy Reset',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: around,
       repetition: '',
       rest: '',
       instruction:
@@ -1474,7 +1483,7 @@ const resetBreakDrill = {
       id: 3,
       title: 'Situation de match',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: resetBreak,
       repetition: '',
       rest: '',
       instruction:
@@ -1503,7 +1512,7 @@ const youShallNotPassDrill = {
       id: 1,
       title: 'Bloquer les passes courtes',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: blockTheUnder,
       repetition: '',
       rest: '',
       instruction:
@@ -1513,7 +1522,7 @@ const youShallNotPassDrill = {
       id: 2,
       title: 'Bloquez tout !',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: blockEverything,
       repetition: '',
       rest: '',
       instruction: "Même exercice, mais le lanceur a le droit de lancer la longue si c'est pertinent",
@@ -1522,7 +1531,7 @@ const youShallNotPassDrill = {
       id: 3,
       title: 'Comptez les points',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: blockEverything,
       repetition: '',
       rest: '',
       instruction:
@@ -1551,7 +1560,7 @@ const defensePositionDrill = {
       id: 1,
       title: 'Bloquer les passes courtes',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: defensiveUnder,
       repetition: '',
       rest: '',
       instruction:
@@ -1561,7 +1570,7 @@ const defensePositionDrill = {
       id: 2,
       title: 'Bloquer les passes longues',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: defenseDeep,
       repetition: '',
       rest: '',
       instruction: 'Même exercice. Cette fois, le défenseur doit toujours se positionner à 45° derrière le receveur.',
@@ -1589,7 +1598,7 @@ const normalGame = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: 'Match classique',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: animationSquare,
       repetition: '1',
@@ -1619,7 +1628,7 @@ const game3v3 = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: 'Match 3 vs 3',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: animationSquare,
       repetition: '1',
@@ -1649,7 +1658,7 @@ const longShotGame = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: 'Match spécial Longues',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: animationSquare,
       repetition: '1',

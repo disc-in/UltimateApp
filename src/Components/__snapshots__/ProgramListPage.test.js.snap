@@ -5,6 +5,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
   style={
     Object {
       "height": "100%",
+      "paddingVertical": 10,
     }
   }
 >
@@ -1292,13 +1293,6 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
           </View>
         </View>
       </View>
-      <View
-        style={
-          Object {
-            "height": 80,
-          }
-        }
-      />
     </View>
   </RCTScrollView>
 </View>

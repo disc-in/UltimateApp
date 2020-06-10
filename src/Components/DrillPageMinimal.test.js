@@ -66,6 +66,6 @@ describe('<DrillPageMinimal />', () => {
     await fireEvent.press(getByText('Finish Training!'));
 
     expect(completeTraining).toBeCalledWith({ training, program });
-    expect(navigation.navigate).toBeCalledWith('ProgramPage', { program });
+    expect(navigation.navigate).toBeCalledWith('ProgramListPage');
   });
 });

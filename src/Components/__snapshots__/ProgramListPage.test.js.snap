@@ -1301,59 +1301,5 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
       />
     </View>
   </RCTScrollView>
-  <View
-    style={
-      Object {
-        "backgroundColor": "rgba(241, 241, 241, 0.2)",
-        "bottom": 10,
-        "position": "absolute",
-        "width": "100%",
-      }
-    }
-  >
-    <View
-      accessible={true}
-      focusable={true}
-      isTVSelectable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "alignItems": "center",
-          "alignSelf": "center",
-          "backgroundColor": "#fff",
-          "borderColor": "#A6A6A6",
-          "borderRadius": 5,
-          "borderWidth": 1,
-          "fontSize": 14,
-          "height": 40,
-          "justifyContent": "center",
-          "marginVertical": 10,
-          "opacity": 1,
-          "padding": 10,
-          "width": "auto",
-        }
-      }
-      testID="button"
-    >
-      <Text
-        style={
-          Object {
-            "color": "#A6A6A6",
-            "fontSize": 16,
-            "fontWeight": "bold",
-            "textAlign": "center",
-          }
-        }
-      >
-        See all trainings
-      </Text>
-    </View>
-  </View>
 </View>
 `;

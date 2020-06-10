@@ -11,7 +11,6 @@ import TrainingListPage from '../Components/TrainingListPage';
 import TrainingPage from '../Components/TrainingPage';
 import ProgramListPage from '../Components/ProgramListPage';
 
-import ProgramPage from '../Components/ProgramPage';
 import AnimationEditorPage from '../Components/AnimationEditorPage';
 
 import I18n from '../utils/i18n';
@@ -47,11 +46,7 @@ export const Navigation = () => (
       component={ProgramListPage}
       options={{ title: I18n.t('navigation.programListPage') }}
     />
-    <Stack.Screen
-      name="ProgramPage"
-      component={ProgramPage}
-      options={({ route }) => ({ title: route.params.program.title })}
-    />
+
     <Stack.Screen
       name="TrainingPage"
       component={TrainingPage}

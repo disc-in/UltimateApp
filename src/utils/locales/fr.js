@@ -112,9 +112,6 @@ export default {
   frisbeeFilters: {
     numberOfPlayersLabel: 'Nombre de joueurs : {{number}}',
   },
-  programListPage: {
-    allTrainings: 'Tous les entraînements',
-  },
   trainingListPage: {
     availableTrainings: {
       one: '{{count}} entraînement disponible',

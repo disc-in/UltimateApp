@@ -86,7 +86,6 @@ export const ProgramListPage = props => {
           duration={400}
           onChange={setSections}
         />
-        <View style={styles.bottomPage} />
       </ScrollView>
     </View>
   );
@@ -107,6 +106,7 @@ const styles = StyleSheet.create({
   },
   programListPage: {
     height: '100%',
+    paddingVertical: 10,
   },
   accordion: {
     height: '100%',
@@ -154,20 +154,5 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-  },
-  bottomPage: {
-    height: 80,
-  },
-  allTrainings: {
-    fontSize: theme.FONT_SIZE_SMALL,
-    alignSelf: 'center',
-    width: 'auto',
-    marginVertical: 10,
-  },
-  seeAllContainer: {
-    position: 'absolute',
-    backgroundColor: 'rgba(241, 241, 241, 0.2)',
-    bottom: 10,
-    width: '100%',
   },
 });

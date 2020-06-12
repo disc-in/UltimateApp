@@ -1,6 +1,5 @@
 import React from 'react';
-import { StyleSheet, Easing, Animated, View, PanResponder } from 'react-native';
-import Svg, { Line, Circle } from 'react-native-svg';
+import { Animated, PanResponder } from 'react-native';
 
 import debug from './debug';
 

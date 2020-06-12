@@ -7,7 +7,7 @@ import debug from './debug';
 // Remark2: positions[elemId][stepId] is undefined if  element i position does not change between steps stepId-1 and stepId
 class Drill {
   constructor(animation) {
-    this.positions = (animation && animation.positions) || [];
+    this.positions = (animation && animation.positions) || [[], []];
     this.ids = (animation && animation.ids) || [];
     this.texts = (animation && animation.texts) || [];
   }
@@ -88,36 +88,116 @@ class Drill {
   }
 
   /** Add a step to the drill */
+  removeStep() {
+    if (this.stepCount() > 2) {
+      var lastStepId = this.stepCount() - 1;
+
+      for (var elemId = 0; elemId < this.elemCount(); elemId++) this.positions[lastStepId][elemId] = undefined;
+      this.positions.pop();
+    }
+  }
+
+  /** Add a step to the drill */
   addStep() {
     this.positions.push(new Array(this.ids.length));
+  }
+
+  /** Test if all the positions in the current drill are the same than in otherDrill */
+  isEqualTo(otherDrill) {
+    var isEqual = otherDrill !== undefined && otherDrill !== null;
+
+    if (isEqual && this.elemCount() !== otherDrill.elemCount) isEqual = false;
+
+    var elemId = 0;
+
+    while (isEqual && elemId < this.elemCount()) {
+      isEqual = this.isElementEqualIn(elemId, otherDrill);
+      elemId++;
+    }
+
+    return isEqual;
+  }
+
+  /* Test if all the positions of the element of id elemId are the same in the current drill and otherDrill */
+  isElementEqualIn(elemId, otherDrill) {
+    var isEqual = otherDrill !== undefined && otherDrill !== null;
+
+    /* Check the positions */
+    var stepId = 0;
+    var cutId = 0;
+
+    // Get all the positions in props and state
+    var pPositions = this.positions;
+    var sPositions = otherDrill.positions;
+
+    // If there is not the same number of steps
+    if (pPositions.length !== sPositions.length) isEqual = false;
+
+    // While no difference has been found and all the positions have not been tested
+    while (stepId < pPositions.length && isEqual) {
+      if (pPositions.length !== sPositions.length) isEqual = false;
+
+      if (isEqual && pPositions[stepId].length !== sPositions[stepId].length) isEqual = false;
+
+      var pUndefined = pPositions[stepId][elemId] === undefined || pPositions[stepId][elemId] === null;
+      var sUndefined = sPositions[stepId][elemId] === undefined || sPositions[stepId][elemId] === null;
+
+      var pSize = -1;
+      var sSize = -1;
+
+      if (!pUndefined) pSize = pPositions[stepId][elemId].length;
+
+      if (!sUndefined) sSize = sPositions[stepId][elemId].length;
+
+      if (
+        pSize !== sSize ||
+        (pSize > 0 &&
+          (pPositions[stepId][elemId][cutId][0] !== sPositions[stepId][elemId][cutId][0] ||
+            pPositions[stepId][elemId][cutId][1] !== sPositions[stepId][elemId][cutId][1]))
+      )
+        // If the position is different
+        isEqual = false;
+
+      // Go to the next position
+      if (pPositions[stepId][elemId] === undefined || pPositions[stepId][elemId] === null) {
+        stepId++;
+        cutId = 0;
+      } else if (pPositions[stepId][elemId].length > cutId + 1) cutId++;
+      else {
+        stepId++;
+        cutId = 0;
+      }
+    }
+
+    return isEqual;
   }
 
   log() {
     if (this.positions !== undefined && this.positions !== null) {
       /* For each step */
       for (var stepId = 0; stepId < this.positions.length; stepId++) {
-        debug('step ' + stepId);
+        console.log('step ' + stepId);
 
         for (var elementId = 0; elementId < this.positions[stepId].length; elementId++) {
-          debug('\telement ' + elementId);
+          console.log('\telement ' + elementId);
 
           if (this.positions[stepId][elementId] !== null && this.positions[stepId][elementId] !== undefined) {
             for (var cutId = 0; cutId < this.positions[stepId][elementId].length; cutId++) {
-              debug('\t\tcut ' + cutId);
+              console.log('\t\tcut ' + cutId);
 
               if (
                 this.positions[stepId][elementId][cutId] !== undefined &&
                 this.positions[stepId][elementId][cutId] !== null
               ) {
-                debug('\t\t\tx: ' + this.positions[stepId][elementId][cutId][0]);
-                debug('\t\t\ty: ' + this.positions[stepId][elementId][cutId][1]);
-              } else debug('\t\t\t' + this.positions[stepId][elementId][cutId]);
+                console.log('\t\t\tx: ' + this.positions[stepId][elementId][cutId][0]);
+                console.log('\t\t\ty: ' + this.positions[stepId][elementId][cutId][1]);
+              } else console.log('\t\t\t' + this.positions[stepId][elementId][cutId]);
             }
-          } else debug('\t\t' + this.positions[stepId][elementId]);
+          } else console.log('\t\t' + this.positions[stepId][elementId]);
         }
       }
     } else {
-      debug(this.positions);
+      console.log(this.positions);
     }
   }
 }

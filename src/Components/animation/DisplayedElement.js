@@ -22,64 +22,12 @@ class DisplayedElement extends React.Component {
   constructor(props) {
     super(props);
 
-    // TODO: put the constant coefficient used in the following somewhere to avoir writing them twice (in this class and in DrillCuts)
-    this.playerRadius = Math.min(this.props.animationWidth, this.props.animationHeight) / 12;
-    this.bottomconeSize = this.playerRadius / 2;
-
-    console.log('de movable?: ' + this.props.movable);
-    /* Positions of the element at each step of the drill */
-    this.xPositions = [];
-    this.yPositions = [];
-
-    /* Value of the progress at which the element must be at these given positions */
-    this.time = [];
-
-    console.log(
-      'de constructor player radius/animationH/animationW: ' +
-        this.playerRadius +
-        '/' +
-        this.props.animationHeight +
-        '/' +
-        this.props.animationWidth +
-        '/' +
-        Math.min(this.props.animationWidth, this.props.animationHeight) / 12,
-    );
-
-    for (var stepId = 0; stepId < this.props.animation.stepCount(); stepId++) {
-      var currentPositions = this.props.animation.getPositionsAtStep(this.props.eId, stepId);
-
-      var p0 = this.props.positionPercentToPixel(currentPositions[0][0], currentPositions[0][1]);
-
-      this.xPositions.push(p0[0]);
-      this.yPositions.push(p0[1]);
-      this.time.push(stepId);
-
-      /* If there is a count-cut */
-      if (currentPositions.length > 1) {
-        var p1 = this.props.positionPercentToPixel(currentPositions[1][0], currentPositions[1][1]);
-        this.xPositions.push(p1[0]);
-        this.yPositions.push(p1[1]);
-        this.time.push(stepId + 0.5);
-      }
-    }
-
-    this.interpolateX = this.props.currentStepAV.interpolate({
-      inputRange: this.time,
-      outputRange: this.xPositions,
-    });
-
-    this.interpolateY = this.props.currentStepAV.interpolate({
-      inputRange: this.time,
-      outputRange: this.yPositions,
-    });
+    this.state = {
+      isMoving: false,
+      stateFromProps: _initializeStateFromProps(props),
+    };
 
     this.offset = new Animated.ValueXY({ x: 0, y: 0 });
-
-    // True if the element has already been moved
-    this.moved = false;
-    this._val = { x: 0, y: 0 };
-
-    this.offset.addListener(value => (this._val = value)); // Initialize PanResponder with move handling
 
     // Initiate the panResponder
     this.panResponder = PanResponder.create({
@@ -89,9 +37,13 @@ class DisplayedElement extends React.Component {
       // Called when the gesture starts
       onPanResponderGrant: () => {
         if (this.props.movable) {
+          this.setState({
+            isMoving: true,
+          });
+
           this.offset.setOffset({
-            x: this._val.x,
-            y: this._val.y,
+            x: this.state.stateFromProps.interpolateX.__getValue(),
+            y: this.state.stateFromProps.interpolateY.__getValue(),
           });
 
           this.offset.setValue({ x: 0, y: 0 });
@@ -107,145 +59,335 @@ class DisplayedElement extends React.Component {
         if (this.props.movable && this.props.onMoveEnd !== undefined && this.props.onMoveEnd !== null) {
           this.props.onMoveEnd(this, this.offset.x._value, this.offset.y._value);
         }
-        console.log('release: ' + this.offset.x._value + '/' + this.offset.y._value);
+        this.setState({
+          isMoving: false,
+        });
       },
     });
   }
 
-  // {...this.panResponder.panHandlers}
-  // panStyle,
+  static getDerivedStateFromProps(props, state) {
+    var isEqual = true;
+
+    /* If most of the attributes are equal */
+    if (
+      props.id !== state.stateFromProps.id ||
+      props.number !== state.stateFromProps.number ||
+      props.eId !== state.stateFromProps.eId ||
+      props.animationWidth !== state.stateFromProps.animationWidth ||
+      props.animationHeight !== state.stateFromProps.animationHeight
+    )
+      isEqual = false;
+
+    if (isEqual) {
+      /* If the animation is defined in the state */
+      if (state.stateFromProps.animation !== undefined && state.stateFromProps.animation !== null)
+        /* Test if the element has the same position at each step in both animations */
+        isEqual = props.animation.isElementEqualIn(props.eId, state.stateFromProps.animation);
+      else if (props.animation !== undefined || props.animation !== null)
+        /* If the animation is not defined in the state but is defined in props */
+        isEqual = false;
+    }
+
+    if (isEqual) return null;
+    else {
+      return {
+        stateFromProps: _initializeStateFromProps(props),
+      };
+    }
+  }
+
   render() {
     const panStyle = {
       transform: this.offset.getTranslateTransform(),
     };
-    // const panStyle = {
-    //   transform: [
-    //     {
-    //       translateX: this.offset.x,
-    //     },
-    //     {
-    //       translateY: this.offset.y,
-    //     },
-    //   ],
-    // };
 
-    switch (this.props.id) {
+    switch (this.state.stateFromProps.id) {
       case 'defense':
-        return (
-          <Animated.View
-            {...this.panResponder.panHandlers}
-            style={[
-              panStyle,
-              { height: this.animationHeight },
-              { width: this.animationWidth },
-              { position: 'absolute' },
-              { alignItems: 'center' },
-              { justifyContent: 'center' },
-              { left: 0 },
-              { top: 0 },
-              { backgroundColor: 'black' },
-            ]}
-          >
+        if (this.state.isMoving)
+          return (
             <Animated.View
+              {...this.panResponder.panHandlers}
+              style={[
+                panStyle,
+                styles.defense,
+                { height: this.state.stateFromProps.playerRadius },
+                { width: this.state.stateFromProps.playerRadius },
+                { borderRadius: this.state.stateFromProps.playerRadius },
+                { left: 0 },
+                { top: 0 },
+              ]}
+              key={this.state.stateFromProps.id}
+            >
+              <Text style={styles.defenseText}>{this.state.stateFromProps.number}</Text>
+            </Animated.View>
+          );
+        else
+          return (
+            <Animated.View
+              {...this.panResponder.panHandlers}
               style={[
                 {
                   transform: [
                     {
-                      translateX: this.interpolateX,
+                      translateX: this.state.stateFromProps.interpolateX,
                     },
                     {
-                      translateY: this.interpolateY,
+                      translateY: this.state.stateFromProps.interpolateY,
                     },
                   ],
                 },
                 styles.defense,
-                { height: this.playerRadius },
-                { width: this.playerRadius },
-                { borderRadius: this.playerRadius },
+                { height: this.state.stateFromProps.playerRadius },
+                { width: this.state.stateFromProps.playerRadius },
+                { borderRadius: this.state.stateFromProps.playerRadius },
                 { left: 0 },
                 { top: 0 },
               ]}
-              key={this.props.eId}
+              key={this.state.stateFromProps.id}
             >
-              <Text style={styles.defenseText}>{this.props.number}</Text>
+              <Text style={styles.defenseText}>{this.state.stateFromProps.number}</Text>
             </Animated.View>
-          </Animated.View>
-        );
+          );
 
       case 'offense':
-        return (
-          <Animated.View
-            {...this.panResponder.panHandlers}
-            style={[
-              panStyle,
-              styles.offense,
-              { height: this.playerRadius },
-              { width: this.playerRadius },
-              { borderRadius: this.playerRadius },
-              { left: 0 },
-              { top: 0 },
-            ]}
-            key={this.props.eId}
-          >
-            <LinearGradient
-              colors={[theme.GRADIENT_FIRST_COLOR, theme.GRADIENT_SECOND_COLOR]}
+        if (this.state.isMoving)
+          return (
+            <Animated.View
+              {...this.panResponder.panHandlers}
               style={[
-                styles.gradient,
-                {
-                  height: this.playerRadius,
-                  width: this.playerRadius,
-                  borderRadius: this.playerRadius,
-                },
+                panStyle,
+                styles.offense,
+                { height: this.state.stateFromProps.playerRadius },
+                { width: this.state.stateFromProps.playerRadius },
+                { borderRadius: this.state.stateFromProps.playerRadius },
+                { left: 0 },
+                { top: 0 },
               ]}
-              start={{ x: 1, y: 1 }}
-              end={{ x: 0, y: 0 }}
+              key={this.state.stateFromProps.id}
             >
-              <Text style={styles.offenseText}>{this.props.number}</Text>
-            </LinearGradient>
-          </Animated.View>
-        );
+              <LinearGradient
+                colors={[theme.GRADIENT_FIRST_COLOR, theme.GRADIENT_SECOND_COLOR]}
+                style={[
+                  styles.gradient,
+                  {
+                    height: this.state.stateFromProps.playerRadius,
+                    width: this.state.stateFromProps.playerRadius,
+                    borderRadius: this.state.stateFromProps.playerRadius,
+                  },
+                ]}
+                start={{ x: 1, y: 1 }}
+                end={{ x: 0, y: 0 }}
+              >
+                <Text style={styles.offenseText}>{this.state.stateFromProps.number}</Text>
+              </LinearGradient>
+            </Animated.View>
+          );
+        else
+          return (
+            <Animated.View
+              {...this.panResponder.panHandlers}
+              style={[
+                {
+                  transform: [
+                    {
+                      translateX: this.state.stateFromProps.interpolateX,
+                    },
+                    {
+                      translateY: this.state.stateFromProps.interpolateY,
+                    },
+                  ],
+                },
+                styles.offense,
+                { height: this.state.stateFromProps.playerRadius },
+                { width: this.state.stateFromProps.playerRadius },
+                { borderRadius: this.state.stateFromProps.playerRadius },
+                { left: 0 },
+                { top: 0 },
+              ]}
+              key={this.state.stateFromProps.id}
+            >
+              <LinearGradient
+                colors={[theme.GRADIENT_FIRST_COLOR, theme.GRADIENT_SECOND_COLOR]}
+                style={[
+                  styles.gradient,
+                  {
+                    height: this.state.stateFromProps.playerRadius,
+                    width: this.state.stateFromProps.playerRadius,
+                    borderRadius: this.state.stateFromProps.playerRadius,
+                  },
+                ]}
+                start={{ x: 1, y: 1 }}
+                end={{ x: 0, y: 0 }}
+              >
+                <Text style={styles.offenseText}>{this.state.stateFromProps.number}</Text>
+              </LinearGradient>
+            </Animated.View>
+          );
 
       case 'disc':
-        return (
-          <Animated.View
-            {...this.panResponder.panHandlers}
-            style={[
-              panStyle,
-              styles.disc,
-              { height: 20 },
-              { width: 20 },
-              { borderRadius: 20 },
-              { borderWidth: 2 },
-              { left: 0 },
-              { top: 0 },
-            ]}
-            key={this.props.eId}
-          />
-        );
+        if (this.state.isMoving)
+          return (
+            <Animated.View
+              {...this.panResponder.panHandlers}
+              style={[
+                panStyle,
+                styles.disc,
+                { height: 20 },
+                { width: 20 },
+                { borderRadius: 20 },
+                { borderWidth: 2 },
+                { left: 0 },
+                { top: 0 },
+              ]}
+              key={this.state.stateFromProps.id}
+            />
+          );
+        else
+          return (
+            <Animated.View
+              {...this.panResponder.panHandlers}
+              style={[
+                {
+                  transform: [
+                    {
+                      translateX: this.state.stateFromProps.interpolateX,
+                    },
+                    {
+                      translateY: this.state.stateFromProps.interpolateY,
+                    },
+                  ],
+                },
+                styles.disc,
+                { height: 20 },
+                { width: 20 },
+                { borderRadius: 20 },
+                { borderWidth: 2 },
+                { left: 0 },
+                { top: 0 },
+              ]}
+              key={this.state.stateFromProps.id}
+            />
+          );
 
       case 'triangle':
-        return (
-          <Animated.View
-            // Use the panResponder in this view
-            {...this.panResponder.panHandlers}
-            style={[
-              panStyle,
-              styles.triangle,
-              { borderLeftWidth: this.bottomconeSize / 2 },
-              { borderRightWidth: this.bottomconeSize / 2 },
-              { borderBottomWidth: this.bottomconeSize },
-              { top: 0 },
-              { left: 0 },
-            ]}
-            key={this.props.eId}
-          />
-        );
+        if (this.state.isMoving)
+          return (
+            <Animated.View
+              // Use the panResponder in this view
+              {...this.panResponder.panHandlers}
+              style={[
+                panStyle,
+                styles.triangle,
+                { borderLeftWidth: this.state.stateFromProps.bottomConeSize / 2 },
+                { borderRightWidth: this.state.stateFromProps.bottomConeSize / 2 },
+                { borderBottomWidth: this.state.stateFromProps.bottomConeSize },
+                { top: 0 },
+                { left: 0 },
+              ]}
+              key={this.state.stateFromProps.id}
+            />
+          );
+        else
+          return (
+            <Animated.View
+              // Use the panResponder in this view
+              {...this.panResponder.panHandlers}
+              style={[
+                {
+                  transform: [
+                    {
+                      translateX: this.state.stateFromProps.interpolateX,
+                    },
+                    {
+                      translateY: this.state.stateFromProps.interpolateY,
+                    },
+                  ],
+                },
+                styles.triangle,
+                { borderLeftWidth: this.state.stateFromProps.bottomConeSize / 2 },
+                { borderRightWidth: this.state.stateFromProps.bottomConeSize / 2 },
+                { borderBottomWidth: this.state.stateFromProps.bottomConeSize },
+                { top: 0 },
+                { left: 0 },
+              ]}
+              key={this.state.stateFromProps.id}
+            />
+          );
 
       default:
-        return <View key={this.props.eId} />;
+        return <View key={this.state.stateFromProps.id} />;
     }
   }
 }
+
+const _initializeStateFromProps = props => {
+  /* Positions of the element at each step of the drill */
+  var xPositions = [];
+  var yPositions = [];
+
+  /* Value of the progress at which the element must be at these given positions */
+  var time = [];
+
+  /* For each step */
+  for (var stepId = 0; stepId < props.animation.stepCount(); stepId++) {
+    var currentPositions = props.animation.getPositionsAtStep(props.eId, stepId);
+
+    /* Get the element initial position */
+    var p0 = props.positionPercentToPixel(currentPositions[0][0], currentPositions[0][1]);
+
+    xPositions.push(p0[0]);
+    yPositions.push(p0[1]);
+    time.push(stepId);
+
+    /* If there is a count-cut */
+    if (currentPositions.length > 1) {
+      /* If the counter-cut is not at last step (in theory there should not be any counter-cut at last step) */
+      if (stepId !== props.animation.stepCount() - 1) {
+        /* Get the element counter-cut position */
+        var p1 = props.positionPercentToPixel(currentPositions[1][0], currentPositions[1][1]);
+
+        var nextPositions = props.animation.getPositionsAtStep(props.eId, stepId + 1);
+        var p2 = props.positionPercentToPixel(nextPositions[0][0], nextPositions[0][0]);
+
+        var d1 = Math.sqrt(Math.pow(p0[0] - p1[0], 2) + Math.pow(p0[1] - p1[1], 2));
+        var d2 = Math.sqrt(Math.pow(p1[0] - p2[0], 2) + Math.pow(p1[1] - p2[1], 2));
+
+        if (d1 + d2 > 0) {
+          xPositions.push(p1[0]);
+          yPositions.push(p1[1]);
+          time.push(stepId + d1 / (d1 + d2));
+        }
+      }
+    }
+  }
+
+  var interpolateX = props.currentStepAV.interpolate({
+    inputRange: time,
+    outputRange: xPositions,
+  });
+
+  var interpolateY = props.currentStepAV.interpolate({
+    inputRange: time,
+    outputRange: yPositions,
+  });
+
+  // TODO: put the constant coefficient used in the following somewhere to avoir writing them twice (in this class and in DrillCuts)
+  var playerRadius = Math.min(props.animationWidth, props.animationHeight) / 12;
+
+  return {
+    playerRadius,
+    bottomConeSize: playerRadius / 2,
+    id: props.id,
+    eId: props.eId,
+    number: props.number,
+    animationWidth: props.animationWidth,
+    animationHeight: props.animationHeight,
+    animation: props.animation,
+    interpolateX,
+    interpolateY,
+  };
+};
 
 const styles = StyleSheet.create({
   defense: {

@@ -8,6 +8,7 @@ import Animation from '../animation/Animation';
 import VimeoVideo from '../VimeoVideo';
 import { IllustrationType } from '../../Fixtures/config';
 import theme from '../../styles/theme.style';
+import Drill from '../animation/Drill';
 
 const screenDimension = Dimensions.get('window');
 
@@ -86,7 +87,11 @@ const FrisbeeDrillIllustration = props => {
     return (
       <>
         <View style={styles.contentWrapper}>
-          <Animation widthRatio={1} heightRatio={props.minimal ? 2 / 5 : 1 / 2} animation={illustrationSource} />
+          <Animation
+            widthRatio={1}
+            heightRatio={props.minimal ? 2 / 5 : 1 / 2}
+            animation={new Drill(illustrationSource)}
+          />
         </View>
         <Text style={styles.instruction}>{instruction}</Text>
       </>

@@ -1,4 +1,4 @@
-import animationSquare from './AnimationSquare';
+import animationSquare from './Animation/AnimationSquare';
 import {
   DrillTypes,
   Intensities,

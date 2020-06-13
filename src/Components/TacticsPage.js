@@ -3,7 +3,6 @@ import { View, StyleSheet, Text, Dimensions, Modal, TouchableHighlight, FlatList
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import VimeoVideo from './VimeoVideo';
-
 import theme from '../styles/theme.style';
 
 const screenDimension = Dimensions.get('window');
@@ -12,6 +11,7 @@ const TacticsPage = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [theorySubject, setTheorySubject] = useState('Vertical Stack');
   const [modalVisible, setModalVisible] = useState(false);
+
   const dataTactics = [
     {
       value: 'Vertical Stack',
@@ -64,33 +64,20 @@ const TacticsPage = () => {
     },
   ];
 
-  const renderTheory = ({ item }) => {
+  const renderContent = ({ item }) => {
     return (
       <>
         <View style={styles.titleContainer}>
           <Text style={styles.title}>{item.title}</Text>
         </View>
         <View style={styles.container}>
-          <VimeoVideo vimeoId={item.video} screenWidth={screenDimension.width} />
+          <VimeoVideo vimeoId={item.video} screenWidth={screenDimension.width} sounds />
         </View>
         <View style={styles.instructionContainer}>
           <Text style={styles.instruction}>{item.text}</Text>
         </View>
         <View style={styles.lines} />
       </>
-    );
-  };
-
-  const displayTheory = () => {
-    return (
-      <View style={styles.container}>
-        <FlatList
-          data={dataTactics[selectedIndex].pages}
-          contentContainerStyle={styles.listContainer}
-          keyExtractor={item => item.id.toString()}
-          renderItem={renderTheory}
-        />
-      </View>
     );
   };
 
@@ -178,7 +165,12 @@ const TacticsPage = () => {
           </TouchableHighlight>
         </View>
         <View style={styles.displayTheory}>
-          <View>{displayTheory()}</View>
+          <FlatList
+            data={dataTactics[selectedIndex].pages}
+            contentContainerStyle={styles.listContainer}
+            keyExtractor={item => item.id.toString()}
+            renderItem={renderContent}
+          />
         </View>
       </View>
     </View>
@@ -201,7 +193,6 @@ const styles = StyleSheet.create({
     borderBottomColor: theme.COLOR_SECONDARY_LIGHT,
     borderBottomWidth: 1,
   },
-
   titleContainer: {
     paddingVertical: 15,
   },
@@ -210,7 +201,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     alignItems: 'center',
   },
-  instruction: { fontSize: theme.FONT_SIZE_SMALL, paddingLeft: 10 },
+  instruction: {
+    fontSize: theme.FONT_SIZE_SMALL,
+    paddingLeft: 10,
+  },
   listContainer: {
     paddingVertical: 10,
     paddingBottom: 50,
@@ -221,7 +215,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 22,
   },
-
   modalViewTheory: {
     width: '80%',
     height: '70%',
@@ -240,7 +233,6 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 5,
   },
-
   textStyle: {
     color: 'white',
     fontWeight: 'bold',

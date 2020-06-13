@@ -9,6 +9,7 @@ const rootReducer = combineReducers({
   drills: (state = [], action) => state,
   trainings: (state = [], action) => state,
   programs: (state = [], action) => state,
+  theory: (state = [], action) => state,
 });
 
 export default rootReducer;

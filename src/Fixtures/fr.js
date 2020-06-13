@@ -9,6 +9,8 @@ import {
   IllustrationType,
 } from './config';
 
+import { dictionary, essentials, tactics } from './theory.fr';
+
 import animationSquare from './Animation/AnimationSquare';
 import animationGoToTen from './Animation/AnimationGoToTen';
 import throwingMachine from './Animation/ThrowingMachine';
@@ -1781,6 +1783,11 @@ const defenseBaseTraining = {
 };
 
 export default {
+  theory: {
+    dictionary,
+    essentials,
+    tactics,
+  },
   favoriteDrills: [],
   completeTrainings: [],
   drills: [

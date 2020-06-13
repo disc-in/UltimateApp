@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, Text, Dimensions, Modal, TouchableHighlight, FlatList } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { connect } from 'react-redux';
 
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
@@ -8,95 +9,9 @@ import VimeoVideo from './VimeoVideo';
 
 const screenDimension = Dimensions.get('window');
 
-const EssentialPage = () => {
-  const dataEssential = [
-    {
-      title: 'Throwing',
-      pages: [
-        {
-          id: 1,
-          title: 'Backhand',
-          text: 'Rowan McDonnell',
-          video: '415565763',
-          animation: '',
-        },
-        {
-          id: 2,
-          title: 'Forehand',
-          text: 'Rowan McDonnell',
-          video: '415569048',
-          animation: '',
-        },
-        {
-          id: 3,
-          title: 'Hammer',
-          text: 'Rowan McDonnell',
-          video: '423999439',
-          animation: '',
-        },
-        {
-          id: 4,
-          title: 'Scoober',
-          text: 'Rowan McDonnell',
-          video: '423999364',
-          animation: '',
-        },
-        {
-          id: 5,
-          title: 'How to Backhand Pull Like a Boss',
-          text: 'Ryan Lowe',
-          video: '424514096',
-          animation: '',
-        },
-      ],
-    },
-    {
-      title: 'Catching',
-      pages: [
-        {
-          id: 1,
-          title: 'The art of catching',
-          text: 'Rise Up',
-          video: '424266555',
-          animation: '',
-        },
-        {
-          id: 2,
-          title: 'How to Layout',
-          text: 'Brodie Smith',
-          video: '424514902',
-          animation: '',
-        },
-      ],
-    },
-    {
-      title: 'Cutting',
-      pages: [
-        {
-          id: 1,
-          title: 'How to make a perfect cut?',
-          text: 'Rise Up Ultimate',
-          video: '424000350',
-          animation: '',
-        },
-      ],
-    },
-    {
-      title: 'Defense',
-      pages: [
-        {
-          id: 1,
-          title: 'Force',
-          text: 'Colonel Saul',
-          video: '424266154',
-          animation: '',
-        },
-      ],
-    },
-  ];
-
+const EssentialPage = ({ essentials }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [theorySubject, setTheorySubject] = useState(dataEssential[0].title);
+  const [theorySubject, setTheorySubject] = useState(essentials[0].title);
   const [modalVisible, setModalVisible] = useState(false);
 
   const renderContent = ({ item }) => {
@@ -120,7 +35,7 @@ const EssentialPage = () => {
     return (
       <View style={styles.container}>
         <FlatList
-          data={dataEssential[selectedIndex].pages}
+          data={essentials[selectedIndex].pages}
           contentContainerStyle={styles.listContainer}
           keyExtractor={item => item.id.toString()}
           renderItem={renderContent}
@@ -140,9 +55,10 @@ const EssentialPage = () => {
       >
         <View style={styles.centeredView}>
           <View style={styles.modalViewTheory}>
-            {dataEssential.map((topic, index) => (
+            {essentials.map((topic, index) => (
               <TouchableHighlight
                 style={styles.subjectButton}
+                key={index}
                 onPress={() => {
                   setSelectedIndex(index);
                   setTheorySubject(topic.title);
@@ -186,7 +102,13 @@ const EssentialPage = () => {
   );
 };
 
-export default EssentialPage;
+const mapStateToProps = state => {
+  return {
+    essentials: state.theory.essentials,
+  };
+};
+
+export default connect(mapStateToProps)(EssentialPage);
 
 const styles = StyleSheet.create({
   container: {

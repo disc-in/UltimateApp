@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, Text, Dimensions, Modal, TouchableHighlight, FlatList } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { connect } from 'react-redux';
 
 import I18n from '../utils/i18n';
 import VimeoVideo from './VimeoVideo';
@@ -8,62 +9,10 @@ import theme from '../styles/theme.style';
 
 const screenDimension = Dimensions.get('window');
 
-const TacticsPage = () => {
+const TacticsPage = ({ tactics }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [theorySubject, setTheorySubject] = useState('Vertical Stack');
   const [modalVisible, setModalVisible] = useState(false);
-
-  const dataTactics = [
-    {
-      title: 'Vertical Stack',
-      pages: [
-        {
-          id: 1,
-          title: 'How does vertical stacks work?',
-          text: 'That Drone Guy Ty',
-          video: '424002454',
-          animation: '',
-        },
-      ],
-    },
-    {
-      title: 'Horizontal Stack',
-      pages: [
-        {
-          id: 2,
-          title: 'How does horizontal stacks work?',
-          text: 'That Drone Guy Ty',
-          video: '424002425',
-          animation: '',
-        },
-      ],
-    },
-    {
-      title: 'Endzone Offense',
-      pages: [
-        {
-          id: 3,
-          title: 'How to score a point?',
-          text: 'example de texte',
-          video: '413628757',
-          animation: '',
-        },
-      ],
-    },
-
-    {
-      title: 'Handling',
-      pages: [
-        {
-          id: 4,
-          title: 'Handler Cutting',
-          text: 'Rise Up',
-          video: '424511928',
-          animation: '',
-        },
-      ],
-    },
-  ];
 
   const renderContent = ({ item }) => {
     return (
@@ -93,9 +42,10 @@ const TacticsPage = () => {
       >
         <View style={styles.centeredView}>
           <View style={styles.modalViewTheory}>
-            {dataTactics.map((topic, index) => (
+            {tactics.map((topic, index) => (
               <TouchableHighlight
                 style={styles.subjectButton}
+                key={index}
                 onPress={() => {
                   setSelectedIndex(index);
                   setTheorySubject(topic.title);
@@ -134,7 +84,7 @@ const TacticsPage = () => {
       </View>
       <View style={styles.displayTheory}>
         <FlatList
-          data={dataTactics[selectedIndex].pages}
+          data={tactics[selectedIndex].pages}
           contentContainerStyle={styles.listContainer}
           keyExtractor={item => item.id.toString()}
           renderItem={renderContent}
@@ -144,7 +94,13 @@ const TacticsPage = () => {
   );
 };
 
-export default TacticsPage;
+const mapStateToProps = state => {
+  return {
+    tactics: state.theory.tactics,
+  };
+};
+
+export default connect(mapStateToProps)(TacticsPage);
 
 const styles = StyleSheet.create({
   container: {

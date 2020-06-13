@@ -1497,7 +1497,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#fff",
+        "backgroundColor": "#08AEEA",
         "borderRadius": 50,
         "bottom": "5%",
         "elevation": 10,
@@ -1517,15 +1517,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
     }
     testID="filterButton"
   >
-    <Image
-      source={1}
-      style={
-        Object {
-          "height": "100%",
-          "width": "100%",
-        }
-      }
-    />
+    <Text />
   </View>
 </View>
 `;
@@ -2154,7 +2146,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#fff",
+        "backgroundColor": "#08AEEA",
         "borderRadius": 50,
         "bottom": "5%",
         "elevation": 10,
@@ -2174,15 +2166,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
     }
     testID="filterButton"
   >
-    <Image
-      source={1}
-      style={
-        Object {
-          "height": "100%",
-          "width": "100%",
-        }
-      }
-    />
+    <Text />
   </View>
 </View>
 `;
@@ -2811,7 +2795,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#fff",
+        "backgroundColor": "#08AEEA",
         "borderRadius": 50,
         "bottom": "5%",
         "elevation": 10,
@@ -2831,15 +2815,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
     }
     testID="filterButton"
   >
-    <Image
-      source={1}
-      style={
-        Object {
-          "height": "100%",
-          "width": "100%",
-        }
-      }
-    />
+    <Text />
   </View>
 </View>
 `;

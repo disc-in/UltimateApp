@@ -340,7 +340,7 @@ const DictionaryPage = () => {
                 setModalVisible(!modalVisible);
               }}
             >
-              <Text style={styles.returnButtonText}>{I18n.t('dictionaryPage.back')}</Text>
+              <Text style={styles.returnButtonText}>{I18n.t('shared.back')}</Text>
             </TouchableHighlight>
           </View>
         </View>

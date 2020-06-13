@@ -55,6 +55,9 @@ export default {
     essentialPage: 'Essential',
     tacticsPage: 'Tactics',
   },
+  shared: {
+    back: 'Back',
+  },
   homePage: {
     frisbeeTab: 'Frisbee',
     fitnessTab: 'Fitness',
@@ -142,11 +145,5 @@ export default {
     program: {
       completion: '{{done}}/{{total}} trainings',
     },
-  },
-  dictionaryPage: {
-    back: 'Back',
-  },
-  essentialPage: {
-    back: 'Back',
   },
 };

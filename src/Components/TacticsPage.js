@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, StyleSheet, Text, Dimensions, Modal, TouchableHighlight, FlatList } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
+import I18n from '../utils/i18n';
 import VimeoVideo from './VimeoVideo';
 import theme from '../styles/theme.style';
 
@@ -14,7 +15,7 @@ const TacticsPage = () => {
 
   const dataTactics = [
     {
-      value: 'Vertical Stack',
+      title: 'Vertical Stack',
       pages: [
         {
           id: 1,
@@ -26,10 +27,10 @@ const TacticsPage = () => {
       ],
     },
     {
-      value: 'Horizontal Stack',
+      title: 'Horizontal Stack',
       pages: [
         {
-          id: 1,
+          id: 2,
           title: 'How does horizontal stacks work?',
           text: 'That Drone Guy Ty',
           video: '424002425',
@@ -38,10 +39,10 @@ const TacticsPage = () => {
       ],
     },
     {
-      value: 'Endzone Offense',
+      title: 'Endzone Offense',
       pages: [
         {
-          id: 1,
+          id: 3,
           title: 'How to score a point?',
           text: 'example de texte',
           video: '413628757',
@@ -51,10 +52,10 @@ const TacticsPage = () => {
     },
 
     {
-      value: 'Handling',
+      title: 'Handling',
       pages: [
         {
-          id: 1,
+          id: 4,
           title: 'Handler Cutting',
           text: 'Rise Up',
           video: '424511928',
@@ -83,95 +84,61 @@ const TacticsPage = () => {
 
   return (
     <View style={styles.container}>
-      <View>
-        <View>
-          <Modal
-            animationType="fade"
-            visible={modalVisible}
-            onRequestClose={() => {
-              setModalVisible(!modalVisible);
-            }}
-          >
-            <View style={styles.centeredView}>
-              <View style={styles.modalViewTheory}>
-                <TouchableHighlight
-                  style={styles.subjectButton}
-                  onPress={() => {
-                    setSelectedIndex(0);
-                    setTheorySubject('Vertical Stack');
-                    setModalVisible(!modalVisible);
-                  }}
-                >
-                  <Text style={styles.subjectText}>Vertical Stack</Text>
-                </TouchableHighlight>
-                <TouchableHighlight
-                  style={styles.subjectButton}
-                  onPress={() => {
-                    setSelectedIndex(1);
-                    setTheorySubject('Horizontal Stack');
-                    setModalVisible(!modalVisible);
-                  }}
-                >
-                  <Text style={styles.subjectText}>Horizontal Stack</Text>
-                </TouchableHighlight>
-                <TouchableHighlight
-                  style={styles.subjectButton}
-                  onPress={() => {
-                    setSelectedIndex(2);
-                    setTheorySubject('Endzone Offense');
-                    setModalVisible(!modalVisible);
-                  }}
-                >
-                  <Text style={styles.subjectText}>Endzone Offense</Text>
-                </TouchableHighlight>
-
-                <TouchableHighlight
-                  style={styles.subjectButton}
-                  onPress={() => {
-                    setSelectedIndex(3);
-                    setTheorySubject('Handling');
-                    setModalVisible(!modalVisible);
-                  }}
-                >
-                  <Text style={styles.subjectText}>Handling</Text>
-                </TouchableHighlight>
-
-                <TouchableHighlight
-                  style={styles.returnButton}
-                  onPress={() => {
-                    setModalVisible(!modalVisible);
-                  }}
-                >
-                  <Text style={styles.textStyle}>Return</Text>
-                </TouchableHighlight>
-              </View>
+      <Modal
+        animationType="fade"
+        visible={modalVisible}
+        onRequestClose={() => {
+          setModalVisible(!modalVisible);
+        }}
+      >
+        <View style={styles.centeredView}>
+          <View style={styles.modalViewTheory}>
+            {dataTactics.map((topic, index) => (
+              <TouchableHighlight
+                style={styles.subjectButton}
+                onPress={() => {
+                  setSelectedIndex(index);
+                  setTheorySubject(topic.title);
+                  setModalVisible(!modalVisible);
+                }}
+              >
+                <Text style={styles.subjectText}>{topic.title}</Text>
+              </TouchableHighlight>
+            ))}
+            <TouchableHighlight
+              style={styles.returnButton}
+              onPress={() => {
+                setModalVisible(!modalVisible);
+              }}
+            >
+              <Text style={styles.textStyle}>{I18n.t('shared.back')}</Text>
+            </TouchableHighlight>
+          </View>
+        </View>
+      </Modal>
+      <View style={styles.displayTheory}>
+        <TouchableHighlight
+          style={styles.subjectModal}
+          onPress={() => {
+            setModalVisible(true);
+          }}
+        >
+          <View>
+            <View style={styles.dropdown}>
+              <Text style={{ ...styles.textStyle, color: theme.COLOR_PRIMARY }}>{theorySubject}</Text>
+              <MaterialCommunityIcons name="chevron-down" color={theme.COLOR_PRIMARY} size={26} />
             </View>
-          </Modal>
-        </View>
-        <View style={styles.displayTheory}>
-          <TouchableHighlight
-            style={styles.subjectModal}
-            onPress={() => {
-              setModalVisible(true);
-            }}
-          >
-            <View>
-              <View style={styles.dropdown}>
-                <Text style={{ ...styles.textStyle, color: theme.COLOR_PRIMARY }}>{theorySubject}</Text>
-                <MaterialCommunityIcons name="chevron-down" color={theme.COLOR_PRIMARY} size={26} />
-              </View>
-              <View style={styles.lines} />
-            </View>
-          </TouchableHighlight>
-        </View>
-        <View style={styles.displayTheory}>
-          <FlatList
-            data={dataTactics[selectedIndex].pages}
-            contentContainerStyle={styles.listContainer}
-            keyExtractor={item => item.id.toString()}
-            renderItem={renderContent}
-          />
-        </View>
+            <View style={styles.lines} />
+          </View>
+        </TouchableHighlight>
+      </View>
+      <View style={styles.displayTheory}>
+        <FlatList
+          data={dataTactics[selectedIndex].pages}
+          contentContainerStyle={styles.listContainer}
+          keyExtractor={item => item.id.toString()}
+          renderItem={renderContent}
+        />
       </View>
     </View>
   );

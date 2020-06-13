@@ -55,6 +55,9 @@ export default {
     essentialPage: 'Les bases du jeu',
     tacticsPage: 'Tactiques',
   },
+  shared: {
+    back: 'Retour',
+  },
   homePage: {
     frisbeeTab: 'Frisbee',
     fitnessTab: 'Fitness',
@@ -140,11 +143,5 @@ export default {
     program: {
       completion: '{{done}}/{{total}} entraînements',
     },
-  },
-  dictionaryPage: {
-    back: 'Retour',
-  },
-  EssentialPage: {
-    back: 'Retour',
   },
 };

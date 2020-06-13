@@ -158,7 +158,7 @@ const EssentialPage = () => {
                 setModalVisible(!modalVisible);
               }}
             >
-              <Text style={styles.textStyle}>{I18n.t('essentialPage.back')}</Text>
+              <Text style={styles.textStyle}>{I18n.t('shared.back')}</Text>
             </TouchableHighlight>
           </View>
         </View>

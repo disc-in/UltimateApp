@@ -6,6 +6,8 @@ import store from '../Store/testStore';
 
 import ConnectedDictionaryPage, { DictionaryPage } from './DictionaryPage';
 
+beforeEach(() => jest.useFakeTimers()); // for Modal behaviour
+
 describe('<DictionaryPage />', () => {
   it('renders correctly', () => {
     const tree = renderer

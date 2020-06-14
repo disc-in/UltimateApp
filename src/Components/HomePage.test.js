@@ -8,6 +8,7 @@ import { DrillTypes } from '../Fixtures/config';
 import HomePage from './HomePage';
 
 afterEach(cleanup);
+jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
 
 describe('<HomePage />', () => {
   it('renders correctly', () => {

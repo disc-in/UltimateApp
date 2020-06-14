@@ -13,6 +13,10 @@ import ProgramListPage from '../Components/ProgramListPage';
 import ProgramPage from '../Components/ProgramPage';
 import AnimationEditorPage from '../Components/AnimationEditorPage';
 
+import EssentialPage from '../Components/EssentialPage';
+import DictionaryPage from '../Components/DictionaryPage';
+import TacticsPage from '../Components/TacticsPage';
+
 import I18n from '../utils/i18n';
 
 const Stack = createStackNavigator();
@@ -70,5 +74,16 @@ export const Navigation = () => (
       component={AnimationEditorPage}
       options={() => ({ title: I18n.t('navigation.animationEditorPage') })}
     />
+    <Stack.Screen
+      name="DictionaryPage"
+      component={DictionaryPage}
+      options={{ title: I18n.t('navigation.dictionaryPage') }}
+    />
+    <Stack.Screen
+      name="EssentialPage"
+      component={EssentialPage}
+      options={{ title: I18n.t('navigation.essentialPage') }}
+    />
+    <Stack.Screen name="TacticsPage" component={TacticsPage} options={{ title: I18n.t('navigation.tacticsPage') }} />
   </Stack.Navigator>
 );

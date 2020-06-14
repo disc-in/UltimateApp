@@ -97,10 +97,6 @@ class Animation extends React.Component {
     }
   }
 
-  goToStep = stepId => {
-    this.playStep(stepId);
-  };
-
   /** Play the whole animation */
   playAnimation = () => {
     this.setState(
@@ -193,19 +189,15 @@ class Animation extends React.Component {
   };
 
   render() {
-    //<MaterialCommunityIcons name="chevron-double-left" color={theme.COLOR_PRIMARY} size={26} />
-
     return (
       <View style={[styles.mainContainer, { height: this.animationHeight }, { width: this.animationWidth }]}>
-        {this.props.editable && !this.state.animationPlaying ? (
+        {this.props.editable && !this.state.animationPlaying && (
           <DisplayedCuts
             step={this.state.currentStep}
             positionPercentToPixel={this._positionPercentToPixel}
             animation={this.props.animation}
             onMoveEnd={this.props.onCutMove}
           />
-        ) : (
-          undefined
         )}
 
         {this.state.displayedElements?.map(item => {
@@ -226,28 +218,6 @@ class Animation extends React.Component {
           );
         })}
 
-        {/* {this.props.editable ? (
-          <View style={styles.controls}>
-            <TouchableOpacity style={styles.controlBtn} onPress={() => this._previousStep()}>
-            <Image style={styles.controlIcn} source={iconPrev} />
-          </TouchableOpacity>
-            <TouchableOpacity style={styles.controlBtn} onPress={() => this.props.onStepRemoved()}>
-              <Image style={styles.controlIcn} source={iconMinus} />
-            </TouchableOpacity>
-            {this.state.currentStep === this._stepCount() - 1 ? (
-            <TouchableOpacity style={styles.controlBtn} onPress={() => this.moveToStep(0)}>
-              <Image style={styles.controlIcn} source={iconReplay} />
-            </TouchableOpacity>
-          ) : (
-            <TouchableOpacity style={styles.controlBtn} onPress={() => this._nextStep()}>
-              <Image style={styles.controlIcn} source={iconNext} />
-            </TouchableOpacity>
-          )}
-          </View>
-        ) : (
-          undefined
-        )} */}
-
         <ProgressBar
           readonly={!this.props.editable}
           animationWidth={this.animationWidth}
@@ -255,7 +225,7 @@ class Animation extends React.Component {
           stepCount={this._stepCount()}
           currentStepAV={this.currentStepAV}
           editable={this.props.editable}
-          goToStep={this.goToStep}
+          goToStep={this.playStep}
           playAnimation={this.playAnimation}
           onStepAdded={this.props.onStepAdded}
           onStepRemoved={this.props.onStepRemoved}
@@ -263,19 +233,6 @@ class Animation extends React.Component {
         />
       </View>
     );
-  }
-
-  // /** Used to update the animation when a modification is made through the editor */
-  componentDidUpdate() {
-    //   if (
-    //     (this.state.displayedElements === undefined || this.state.displayedElements === null) &&
-    //     this.state.animation !== undefined &&
-    //     this.state.animation !== null
-    //   ) {
-    // this.currentStepAV.addListener(progress => {
-    //   this.setState({ currentStep: progress.value });
-    // });
-    //   }
   }
 
   /** Used to update the animation when a modification is made through the editor */

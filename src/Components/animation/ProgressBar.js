@@ -33,23 +33,21 @@ class ProgressBar extends React.Component {
     return (
       <View style={[{ position: 'absolute', left: 0, top: 0 }]} height="100%" width="100%">
         {/* Gray dots */}
-        {this.props.readonly
-          ? undefined
-          : this.state.stateFromProps.progressBarDots?.map(item => (
-              <View style={[styles.gray, styles.dot, { left: item.left }]} key={item.key} />
-            ))}
+        {!this.props.readonly &&
+          this.state.stateFromProps.progressBarDots?.map(item => (
+            <View style={[styles.gray, styles.dot, { left: item.left }]} key={item.key} />
+          ))}
 
         {/* Step number */}
-        {this.props.readonly
-          ? undefined
-          : this.state.stateFromProps.progressBarDots?.map(item => (
-              <Text
-                style={[styles.progressBarNumbers, { left: item.left + 4 }]}
-                key={item.key + 2 * this.state.stateFromProps.progressBarDots.length}
-              >
-                {item.key + 1}
-              </Text>
-            ))}
+        {!this.props.readonly &&
+          this.state.stateFromProps.progressBarDots?.map(item => (
+            <Text
+              style={[styles.progressBarNumbers, { left: item.left + 4 }]}
+              key={item.key + 2 * this.state.stateFromProps.progressBarDots.length}
+            >
+              {item.key + 1}
+            </Text>
+          ))}
 
         {/* Gray bar */}
         <View
@@ -62,21 +60,20 @@ class ProgressBar extends React.Component {
         />
 
         {/* Black dots */}
-        {this.props.readonly
-          ? undefined
-          : this.state.stateFromProps.progressBarDots?.map(item => (
-              <Animated.View
-                style={[
-                  styles.black,
-                  styles.dot,
-                  {
-                    opacity: this.state.stateFromProps.interpolatedOpacities[item.key],
-                    left: item.left,
-                  },
-                ]}
-                key={item.key + this.state.stateFromProps.progressBarDots.length}
-              />
-            ))}
+        {!this.props.readonly &&
+          this.state.stateFromProps.progressBarDots?.map(item => (
+            <Animated.View
+              style={[
+                styles.black,
+                styles.dot,
+                {
+                  opacity: this.state.stateFromProps.interpolatedOpacities[item.key],
+                  left: item.left,
+                },
+              ]}
+              key={item.key + this.state.stateFromProps.progressBarDots.length}
+            />
+          ))}
 
         {/* Play button */}
         <TouchableOpacity
@@ -116,18 +113,17 @@ class ProgressBar extends React.Component {
         ))}
 
         {/* White squares */}
-        {!this.props.readonly
-          ? undefined
-          : this.state.stateFromProps.progressBarDots?.map(item => (
-              <Animated.View
-                style={[styles.white, styles.square]}
-                key={item.key + this.state.stateFromProps.progressBarDots.length}
-                left={item.left + 3}
-              />
-            ))}
+        {this.props.readonly &&
+          this.state.stateFromProps.progressBarDots?.map(item => (
+            <Animated.View
+              style={[styles.white, styles.square]}
+              key={item.key + this.state.stateFromProps.progressBarDots.length}
+              left={item.left + 3}
+            />
+          ))}
 
         {/* Buttons: add step, remove step, trash */}
-        {!this.props.readonly ? (
+        {!this.props.readonly && (
           <View style={[StyleSheet.absoluteFill]} height="100%" width="100%">
             <TouchableOpacity style={[styles.dot, { right: 60 }]} onPress={() => this.props.onStepAdded()}>
               <Image style={styles.controlIcn} source={iconAdd} />
@@ -139,8 +135,6 @@ class ProgressBar extends React.Component {
               <Image style={styles.controlIcn} source={iconTrash} />
             </TouchableOpacity>
           </View>
-        ) : (
-          undefined
         )}
       </View>
     );

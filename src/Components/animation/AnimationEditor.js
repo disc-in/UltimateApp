@@ -359,22 +359,22 @@ class AnimationEditor extends React.Component {
     this.saveAnimation(newAnimation);
   };
 
-  _createDraggableElements(deType, playerRadius, top, left) {
+  _createDraggableElements(displayedElementType, playerRadius, top, left) {
     var text = '';
 
     var key = 600;
     this.keyCount += 1;
 
-    if (deType === 'offense') text = '1';
+    if (displayedElementType === 'offense') text = '1';
 
-    if (deType === 'defense') {
+    if (displayedElementType === 'defense') {
       text = '1';
       key = 601;
     }
 
-    if (deType === 'triangle') key = 602;
+    if (displayedElementType === 'triangle') key = 602;
 
-    if (deType === 'disc') {
+    if (displayedElementType === 'disc') {
       text = '1';
       key = 603;
     }
@@ -383,7 +383,7 @@ class AnimationEditor extends React.Component {
     return new DraggableDisplayedElement({
       onMoveEnd: this.addElementToAnimation,
       // key: this.keyCount,
-      id: deType,
+      id: displayedElementType,
       eId: -1,
       key,
       movable: true,
@@ -425,14 +425,6 @@ class AnimationEditor extends React.Component {
     newAnimation.removeStep();
 
     this.saveAnimation(newAnimation);
-  };
-
-  displayStepDescription = () => {
-    // TODO
-  };
-
-  displayStepDescription = () => {
-    // TODO
   };
 
   render() {

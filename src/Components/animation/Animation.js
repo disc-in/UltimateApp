@@ -52,13 +52,6 @@ class Animation extends React.Component {
     else return 0;
   };
 
-  /** Number of elements displayed in the animation */
-  _elemCount = () => {
-    if (this.state.animation !== undefined && this.state.animation !== null && this.state.animation.ids.length > 0)
-      return this.state.animation.ids.length;
-    else return 0;
-  };
-
   /** Convert a position (x, y) in percentages of the animation area in a position (x2, y2) in pixels of the phone screen
    * x: horizontal position in percentages (=0 left edge, =1 right edge)
    * y: vertical position in percentages (=0 top, =1 bottom)
@@ -75,26 +68,6 @@ class Animation extends React.Component {
 
     this.animationWidth = width * this.props.widthRatio;
     this.animationHeight = height * this.props.heightRatio;
-  }
-
-  /** Get back to the previous step */
-  _previousStep() {
-    if (this.state.currentStep !== 0) {
-      this.moveToStep(this.state.currentStep - 1);
-
-      if (this.props.onStepChange !== undefined && this.props.onStepChange !== null)
-        this.props.onStepChange(this.state.currentStep);
-    }
-  }
-
-  /** Go to the next step */
-  _nextStep() {
-    if (this.state.currentStep !== this._stepCount() - 1) {
-      this.playStep(this.state.currentStep + 1);
-
-      if (this.props.onStepChange !== undefined && this.props.onStepChange !== null)
-        this.props.onStepChange(this.state.currentStep);
-    }
   }
 
   /** Play the whole animation */
@@ -128,24 +101,6 @@ class Animation extends React.Component {
         Animated.sequence(sequence).start(() =>
           this.setState({ animationPlaying: false, currentStep: this._stepCount() - 1 }),
         );
-      },
-    );
-  };
-
-  /** Instantly move to a step */
-  moveToStep = stepId => {
-    this.setState(
-      {
-        animationPlaying: true,
-      },
-      () => {
-        var stepId2 = Math.max(0, Math.round(stepId));
-        Animated.timing(this.currentStepAV, {
-          toValue: stepId2,
-          duration: 0,
-          easing: Easing.linear,
-          key: 0,
-        }).start(() => this.setState({ animationPlaying: false, currentStep: stepId2 }));
       },
     );
   };
@@ -291,23 +246,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     backgroundColor: 'white',
-  },
-  controls: {
-    position: 'absolute',
-    marginLeft: 30,
-    bottom: 0,
-    right: 0,
-    flexDirection: 'row',
-  },
-  controlBtn: {
-    width: 30,
-    height: 30,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  controlIcn: {
-    width: 20,
-    height: 20,
   },
 });
 

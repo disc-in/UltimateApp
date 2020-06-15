@@ -728,9 +728,9 @@ exports[`<Animation /> renders correctly 1`] = `
         "alignItems": "center",
         "backgroundColor": "white",
         "borderColor": "black",
-        "borderRadius": NaN,
-        "borderWidth": NaN,
-        "height": NaN,
+        "borderRadius": 20,
+        "borderWidth": 2,
+        "height": 20,
         "justifyContent": "center",
         "left": 0,
         "position": "absolute",
@@ -743,21 +743,10 @@ exports[`<Animation /> renders correctly 1`] = `
             "translateY": 36,
           },
         ],
-        "width": NaN,
+        "width": 20,
       }
     }
-  >
-    <Text
-      style={
-        Object {
-          "color": "black",
-          "fontWeight": "bold",
-        }
-      }
-    >
-      
-    </Text>
-  </View>
+  />
   <View
     height="100%"
     style={

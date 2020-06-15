@@ -17,15 +17,11 @@ export const ProgramListPage = props => {
   const [activeSections, setActiveSections] = useState([activeProgramId]);
 
   const setSections = sections => {
-    setActiveSections(sections.includes(undefined) ? [] : sections);
+    setActiveSections(sections);
   };
 
   const renderHeader = (section, _, isActive) => {
-    return (
-      <Animatable.View duration={400} transition="backgroundColor">
-        <Program program={section} />
-      </Animatable.View>
-    );
+    return <Program program={section} />;
   };
 
   const renderTraining = ({ item, index }) => {
@@ -57,7 +53,7 @@ export const ProgramListPage = props => {
                 size={26}
               />
             )}
-            <View style={styles.containere}>
+            <View>
               <Image style={styles.cta} source={arrowDark} />
             </View>
           </View>
@@ -68,9 +64,12 @@ export const ProgramListPage = props => {
 
   const renderContent = (section, _, isActive) => {
     return (
-      <Animatable.View duration={400} style={styles.content} transition="backgroundColor">
-        <FlatList data={section.trainings} keyExtractor={item => item.id.toString()} renderItem={renderTraining} />
-      </Animatable.View>
+      <FlatList
+        contentContainerStyle={styles.trainingsList}
+        data={section.trainings}
+        keyExtractor={item => item.id.toString()}
+        renderItem={renderTraining}
+      />
     );
   };
 
@@ -102,9 +101,6 @@ const mapStateToProps = state => {
 export default connect(mapStateToProps)(ProgramListPage);
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
   programListPage: {
     height: '100%',
     paddingVertical: 10,
@@ -112,7 +108,7 @@ const styles = StyleSheet.create({
   accordion: {
     height: '100%',
   },
-  content: {
+  trainingsList: {
     marginBottom: 10,
   },
   training: {

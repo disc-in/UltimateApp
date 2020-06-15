@@ -11,10 +11,10 @@ exports[`<Animation /> renders correctly 1`] = `
         "justifyContent": "center",
       },
       Object {
-        "height": NaN,
+        "height": 100,
       },
       Object {
-        "width": NaN,
+        "width": 100,
       },
     ]
   }
@@ -34,22 +34,318 @@ exports[`<Animation /> renders correctly 1`] = `
     onStartShouldSetResponderCapture={[Function]}
     style={
       Object {
+        "backgroundColor": "transparent",
+        "borderBottomColor": "#FEA500",
+        "borderBottomWidth": 4.166666666666667,
+        "borderLeftColor": "transparent",
+        "borderLeftWidth": 2.0833333333333335,
+        "borderRightColor": "transparent",
+        "borderRightWidth": 2.0833333333333335,
+        "borderStyle": "solid",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "transform": Array [
+          Object {
+            "translateX": 30,
+          },
+          Object {
+            "translateY": 30,
+          },
+        ],
+      }
+    }
+  />
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderBottomColor": "#FEA500",
+        "borderBottomWidth": 4.166666666666667,
+        "borderLeftColor": "transparent",
+        "borderLeftWidth": 2.0833333333333335,
+        "borderRightColor": "transparent",
+        "borderRightWidth": 2.0833333333333335,
+        "borderStyle": "solid",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "transform": Array [
+          Object {
+            "translateX": 30,
+          },
+          Object {
+            "translateY": 60,
+          },
+        ],
+      }
+    }
+  />
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderBottomColor": "#FEA500",
+        "borderBottomWidth": 4.166666666666667,
+        "borderLeftColor": "transparent",
+        "borderLeftWidth": 2.0833333333333335,
+        "borderRightColor": "transparent",
+        "borderRightWidth": 2.0833333333333335,
+        "borderStyle": "solid",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "transform": Array [
+          Object {
+            "translateX": 60,
+          },
+          Object {
+            "translateY": 30,
+          },
+        ],
+      }
+    }
+  />
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderBottomColor": "#FEA500",
+        "borderBottomWidth": 4.166666666666667,
+        "borderLeftColor": "transparent",
+        "borderLeftWidth": 2.0833333333333335,
+        "borderRightColor": "transparent",
+        "borderRightWidth": 2.0833333333333335,
+        "borderStyle": "solid",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "transform": Array [
+          Object {
+            "translateX": 60,
+          },
+          Object {
+            "translateY": 60,
+          },
+        ],
+      }
+    }
+  />
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderBottomColor": "#FEA500",
+        "borderBottomWidth": 4.166666666666667,
+        "borderLeftColor": "transparent",
+        "borderLeftWidth": 2.0833333333333335,
+        "borderRightColor": "transparent",
+        "borderRightWidth": 2.0833333333333335,
+        "borderStyle": "solid",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "transform": Array [
+          Object {
+            "translateX": 45,
+          },
+          Object {
+            "translateY": 20,
+          },
+        ],
+      }
+    }
+  />
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderBottomColor": "#FEA500",
+        "borderBottomWidth": 4.166666666666667,
+        "borderLeftColor": "transparent",
+        "borderLeftWidth": 2.0833333333333335,
+        "borderRightColor": "transparent",
+        "borderRightWidth": 2.0833333333333335,
+        "borderStyle": "solid",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "transform": Array [
+          Object {
+            "translateX": 20,
+          },
+          Object {
+            "translateY": 45,
+          },
+        ],
+      }
+    }
+  />
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderBottomColor": "#FEA500",
+        "borderBottomWidth": 4.166666666666667,
+        "borderLeftColor": "transparent",
+        "borderLeftWidth": 2.0833333333333335,
+        "borderRightColor": "transparent",
+        "borderRightWidth": 2.0833333333333335,
+        "borderStyle": "solid",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "transform": Array [
+          Object {
+            "translateX": 45,
+          },
+          Object {
+            "translateY": 70,
+          },
+        ],
+      }
+    }
+  />
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderBottomColor": "#FEA500",
+        "borderBottomWidth": 4.166666666666667,
+        "borderLeftColor": "transparent",
+        "borderLeftWidth": 2.0833333333333335,
+        "borderRightColor": "transparent",
+        "borderRightWidth": 2.0833333333333335,
+        "borderStyle": "solid",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "transform": Array [
+          Object {
+            "translateX": 70,
+          },
+          Object {
+            "translateY": 45,
+          },
+        ],
+      }
+    }
+  />
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Object {
         "alignItems": "center",
-        "borderRadius": NaN,
-        "height": NaN,
+        "borderRadius": 8.333333333333334,
+        "height": 8.333333333333334,
         "justifyContent": "center",
         "left": 0,
         "position": "absolute",
         "top": 0,
         "transform": Array [
           Object {
-            "translateX": NaN,
+            "translateX": 30,
           },
           Object {
-            "translateY": NaN,
+            "translateY": 30,
           },
         ],
-        "width": NaN,
+        "width": 8.333333333333334,
       }
     }
   >
@@ -79,9 +375,9 @@ exports[`<Animation /> renders correctly 1`] = `
             "justifyContent": "center",
           },
           Object {
-            "borderRadius": NaN,
-            "height": NaN,
-            "width": NaN,
+            "borderRadius": 8.333333333333334,
+            "height": 8.333333333333334,
+            "width": 8.333333333333334,
           },
         ]
       }
@@ -114,67 +410,21 @@ exports[`<Animation /> renders correctly 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#AFAFAF",
-        "borderRadius": NaN,
-        "height": NaN,
+        "borderRadius": 8.333333333333334,
+        "height": 8.333333333333334,
         "justifyContent": "center",
         "left": 0,
         "position": "absolute",
         "top": 0,
         "transform": Array [
           Object {
-            "translateX": NaN,
+            "translateX": 16,
           },
           Object {
-            "translateY": NaN,
+            "translateY": 30,
           },
         ],
-        "width": NaN,
-      }
-    }
-  >
-    <Text
-      style={
-        Object {
-          "color": "#fff",
-          "fontWeight": "bold",
-        }
-      }
-    >
-      2
-    </Text>
-  </View>
-  <View
-    onMoveShouldSetResponder={[Function]}
-    onMoveShouldSetResponderCapture={[Function]}
-    onResponderEnd={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderReject={[Function]}
-    onResponderRelease={[Function]}
-    onResponderStart={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    onStartShouldSetResponderCapture={[Function]}
-    style={
-      Object {
-        "alignItems": "center",
-        "borderRadius": NaN,
-        "height": NaN,
-        "justifyContent": "center",
-        "left": 0,
-        "position": "absolute",
-        "top": 0,
-        "transform": Array [
-          Object {
-            "translateX": NaN,
-          },
-          Object {
-            "translateY": NaN,
-          },
-        ],
-        "width": NaN,
+        "width": 8.333333333333334,
       }
     }
   >
@@ -204,9 +454,88 @@ exports[`<Animation /> renders correctly 1`] = `
             "justifyContent": "center",
           },
           Object {
-            "borderRadius": NaN,
-            "height": NaN,
-            "width": NaN,
+            "borderRadius": 8.333333333333334,
+            "height": 8.333333333333334,
+            "width": 8.333333333333334,
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#fff",
+            "fontWeight": "bold",
+          }
+        }
+      >
+        2
+      </Text>
+    </ViewManagerAdapter_ExpoLinearGradient>
+  </View>
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "borderRadius": 8.333333333333334,
+        "height": 8.333333333333334,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "transform": Array [
+          Object {
+            "translateX": 60,
+          },
+          Object {
+            "translateY": 30,
+          },
+        ],
+        "width": 8.333333333333334,
+      }
+    }
+  >
+    <ViewManagerAdapter_ExpoLinearGradient
+      proxiedProperties={
+        Object {
+          "colors": Array [
+            4278759146,
+            4281005464,
+          ],
+          "endPoint": Array [
+            0,
+            0,
+          ],
+          "locations": undefined,
+          "startPoint": Array [
+            1,
+            1,
+          ],
+        }
+      }
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          },
+          Object {
+            "borderRadius": 8.333333333333334,
+            "height": 8.333333333333334,
+            "width": 8.333333333333334,
           },
         ]
       }
@@ -238,6 +567,164 @@ exports[`<Animation /> renders correctly 1`] = `
     onStartShouldSetResponderCapture={[Function]}
     style={
       Object {
+        "alignItems": "center",
+        "borderRadius": 8.333333333333334,
+        "height": 8.333333333333334,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "transform": Array [
+          Object {
+            "translateX": 60,
+          },
+          Object {
+            "translateY": 60,
+          },
+        ],
+        "width": 8.333333333333334,
+      }
+    }
+  >
+    <ViewManagerAdapter_ExpoLinearGradient
+      proxiedProperties={
+        Object {
+          "colors": Array [
+            4278759146,
+            4281005464,
+          ],
+          "endPoint": Array [
+            0,
+            0,
+          ],
+          "locations": undefined,
+          "startPoint": Array [
+            1,
+            1,
+          ],
+        }
+      }
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          },
+          Object {
+            "borderRadius": 8.333333333333334,
+            "height": 8.333333333333334,
+            "width": 8.333333333333334,
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#fff",
+            "fontWeight": "bold",
+          }
+        }
+      >
+        4
+      </Text>
+    </ViewManagerAdapter_ExpoLinearGradient>
+  </View>
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "borderRadius": 8.333333333333334,
+        "height": 8.333333333333334,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "transform": Array [
+          Object {
+            "translateX": 30,
+          },
+          Object {
+            "translateY": 60,
+          },
+        ],
+        "width": 8.333333333333334,
+      }
+    }
+  >
+    <ViewManagerAdapter_ExpoLinearGradient
+      proxiedProperties={
+        Object {
+          "colors": Array [
+            4278759146,
+            4281005464,
+          ],
+          "endPoint": Array [
+            0,
+            0,
+          ],
+          "locations": undefined,
+          "startPoint": Array [
+            1,
+            1,
+          ],
+        }
+      }
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          },
+          Object {
+            "borderRadius": 8.333333333333334,
+            "height": 8.333333333333334,
+            "width": 8.333333333333334,
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#fff",
+            "fontWeight": "bold",
+          }
+        }
+      >
+        5
+      </Text>
+    </ViewManagerAdapter_ExpoLinearGradient>
+  </View>
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Object {
         "backgroundColor": "white",
         "borderColor": "black",
         "borderRadius": 20,
@@ -248,10 +735,10 @@ exports[`<Animation /> renders correctly 1`] = `
         "top": 0,
         "transform": Array [
           Object {
-            "translateX": NaN,
+            "translateX": 36,
           },
           Object {
-            "translateY": NaN,
+            "translateY": 36,
           },
         ],
         "width": 20,
@@ -259,47 +746,40 @@ exports[`<Animation /> renders correctly 1`] = `
     }
   />
   <View
+    height="100%"
     style={
-      Object {
-        "bottom": 0,
-        "flexDirection": "row",
-        "marginLeft": 30,
-        "position": "absolute",
-        "right": 0,
-      }
+      Array [
+        Object {
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+        },
+      ]
     }
+    width="100%"
   >
     <View
-      accessible={true}
-      focusable={true}
-      isTVSelectable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
       style={
-        Object {
-          "alignItems": "center",
-          "height": 30,
-          "justifyContent": "center",
-          "opacity": 1,
-          "width": 30,
-        }
-      }
-    >
-      <Image
-        source={1}
-        style={
+        Array [
           Object {
-            "height": 20,
-            "width": 20,
-          }
-        }
-      />
-    </View>
+            "backgroundColor": "gray",
+          },
+          Object {
+            "bottom": 13,
+            "height": 4,
+            "left": 20,
+            "position": "absolute",
+          },
+          Object {
+            "bottom": 10,
+            "height": 10,
+          },
+          Object {
+            "width": 54.166666666666664,
+          },
+        ]
+      }
+    />
     <View
       accessible={true}
       focusable={true}
@@ -314,23 +794,32 @@ exports[`<Animation /> renders correctly 1`] = `
       style={
         Object {
           "alignItems": "center",
+          "borderRadius": 10,
+          "borderWidth": 0,
+          "bottom": 0,
           "height": 30,
           "justifyContent": "center",
+          "left": 67.91666666666667,
           "opacity": 1,
+          "position": "absolute",
           "width": 30,
         }
       }
     >
-      <Image
-        source={1}
-        style={
-          Object {
-            "height": 20,
-            "width": 20,
-          }
-        }
-      />
+      <Text />
     </View>
+    <View
+      style={
+        Object {
+          "backgroundColor": "black",
+          "bottom": 10,
+          "height": 10,
+          "left": 20,
+          "position": "absolute",
+          "width": 0,
+        }
+      }
+    />
     <View
       accessible={true}
       focusable={true}
@@ -344,117 +833,215 @@ exports[`<Animation /> renders correctly 1`] = `
       onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "alignItems": "center",
-          "height": 30,
-          "justifyContent": "center",
+          "backgroundColor": "transparent",
+          "bottom": 0,
+          "height": 25,
+          "left": 10,
           "opacity": 1,
-          "width": 30,
+          "position": "absolute",
+          "width": 0,
         }
       }
-    >
-      <Image
-        source={1}
-        style={
-          Object {
-            "height": 20,
-            "width": 20,
-          }
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "transparent",
+          "bottom": 0,
+          "height": 25,
+          "left": 10.000000000000002,
+          "opacity": 1,
+          "position": "absolute",
+          "width": 10.833333333333334,
         }
-      />
-    </View>
+      }
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "transparent",
+          "bottom": 0,
+          "height": 25,
+          "left": 20.833333333333336,
+          "opacity": 1,
+          "position": "absolute",
+          "width": 10.833333333333334,
+        }
+      }
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "transparent",
+          "bottom": 0,
+          "height": 25,
+          "left": 31.666666666666664,
+          "opacity": 1,
+          "position": "absolute",
+          "width": 10.833333333333334,
+        }
+      }
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "transparent",
+          "bottom": 0,
+          "height": 25,
+          "left": 42.5,
+          "opacity": 1,
+          "position": "absolute",
+          "width": 10.833333333333334,
+        }
+      }
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "transparent",
+          "bottom": 0,
+          "height": 25,
+          "left": 53.333333333333336,
+          "opacity": 1,
+          "position": "absolute",
+          "width": 10.833333333333334,
+        }
+      }
+    />
+    <View
+      left={13}
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderWidth": 0,
+          "bottom": 7.5,
+          "color": "white",
+          "height": 15,
+          "position": "absolute",
+          "width": 7.5,
+        }
+      }
+    />
+    <View
+      left={23.833333333333336}
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderWidth": 0,
+          "bottom": 7.5,
+          "color": "white",
+          "height": 15,
+          "position": "absolute",
+          "width": 7.5,
+        }
+      }
+    />
+    <View
+      left={34.66666666666667}
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderWidth": 0,
+          "bottom": 7.5,
+          "color": "white",
+          "height": 15,
+          "position": "absolute",
+          "width": 7.5,
+        }
+      }
+    />
+    <View
+      left={45.5}
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderWidth": 0,
+          "bottom": 7.5,
+          "color": "white",
+          "height": 15,
+          "position": "absolute",
+          "width": 7.5,
+        }
+      }
+    />
+    <View
+      left={56.333333333333336}
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderWidth": 0,
+          "bottom": 7.5,
+          "color": "white",
+          "height": 15,
+          "position": "absolute",
+          "width": 7.5,
+        }
+      }
+    />
+    <View
+      left={67.16666666666667}
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderWidth": 0,
+          "bottom": 7.5,
+          "color": "white",
+          "height": 15,
+          "position": "absolute",
+          "width": 7.5,
+        }
+      }
+    />
   </View>
-  <View
-    style={
-      Object {
-        "backgroundColor": "gray",
-        "bottom": 10,
-        "height": 10,
-        "left": 20,
-        "position": "absolute",
-        "width": NaN,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "backgroundColor": "black",
-        "bottom": 10,
-        "height": 10,
-        "left": 20,
-        "position": "absolute",
-        "width": NaN,
-      }
-    }
-  />
-  <View
-    accessible={true}
-    focusable={true}
-    isTVSelectable={true}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "backgroundColor": "transparent",
-        "bottom": 0,
-        "height": 25,
-        "left": NaN,
-        "opacity": 1,
-        "position": "absolute",
-        "width": NaN,
-      }
-    }
-  />
-  <View
-    accessible={true}
-    focusable={true}
-    isTVSelectable={true}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "backgroundColor": "transparent",
-        "bottom": 0,
-        "height": 25,
-        "left": NaN,
-        "opacity": 1,
-        "position": "absolute",
-        "width": NaN,
-      }
-    }
-  />
-  <View
-    accessible={true}
-    focusable={true}
-    isTVSelectable={true}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "backgroundColor": "transparent",
-        "bottom": 0,
-        "height": 25,
-        "left": NaN,
-        "opacity": 1,
-        "position": "absolute",
-        "width": NaN,
-      }
-    }
-  />
 </View>
 `;

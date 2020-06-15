@@ -331,6 +331,7 @@ exports[`<Animation /> renders correctly 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "backgroundColor": "#08AEEA",
         "borderRadius": 8.333333333333334,
         "height": 8.333333333333334,
         "justifyContent": "center",
@@ -349,50 +350,16 @@ exports[`<Animation /> renders correctly 1`] = `
       }
     }
   >
-    <ViewManagerAdapter_ExpoLinearGradient
-      proxiedProperties={
-        Object {
-          "colors": Array [
-            4278759146,
-            4281005464,
-          ],
-          "endPoint": Array [
-            0,
-            0,
-          ],
-          "locations": undefined,
-          "startPoint": Array [
-            1,
-            1,
-          ],
-        }
-      }
+    <Text
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flex": 1,
-            "justifyContent": "center",
-          },
-          Object {
-            "borderRadius": 8.333333333333334,
-            "height": 8.333333333333334,
-            "width": 8.333333333333334,
-          },
-        ]
+        Object {
+          "color": "#fff",
+          "fontWeight": "bold",
+        }
       }
     >
-      <Text
-        style={
-          Object {
-            "color": "#fff",
-            "fontWeight": "bold",
-          }
-        }
-      >
-        1
-      </Text>
-    </ViewManagerAdapter_ExpoLinearGradient>
+      1
+    </Text>
   </View>
   <View
     onMoveShouldSetResponder={[Function]}
@@ -410,6 +377,7 @@ exports[`<Animation /> renders correctly 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "backgroundColor": "#08AEEA",
         "borderRadius": 8.333333333333334,
         "height": 8.333333333333334,
         "justifyContent": "center",
@@ -428,50 +396,16 @@ exports[`<Animation /> renders correctly 1`] = `
       }
     }
   >
-    <ViewManagerAdapter_ExpoLinearGradient
-      proxiedProperties={
-        Object {
-          "colors": Array [
-            4278759146,
-            4281005464,
-          ],
-          "endPoint": Array [
-            0,
-            0,
-          ],
-          "locations": undefined,
-          "startPoint": Array [
-            1,
-            1,
-          ],
-        }
-      }
+    <Text
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flex": 1,
-            "justifyContent": "center",
-          },
-          Object {
-            "borderRadius": 8.333333333333334,
-            "height": 8.333333333333334,
-            "width": 8.333333333333334,
-          },
-        ]
+        Object {
+          "color": "#fff",
+          "fontWeight": "bold",
+        }
       }
     >
-      <Text
-        style={
-          Object {
-            "color": "#fff",
-            "fontWeight": "bold",
-          }
-        }
-      >
-        2
-      </Text>
-    </ViewManagerAdapter_ExpoLinearGradient>
+      2
+    </Text>
   </View>
   <View
     onMoveShouldSetResponder={[Function]}
@@ -489,6 +423,7 @@ exports[`<Animation /> renders correctly 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "backgroundColor": "#08AEEA",
         "borderRadius": 8.333333333333334,
         "height": 8.333333333333334,
         "justifyContent": "center",
@@ -507,50 +442,16 @@ exports[`<Animation /> renders correctly 1`] = `
       }
     }
   >
-    <ViewManagerAdapter_ExpoLinearGradient
-      proxiedProperties={
-        Object {
-          "colors": Array [
-            4278759146,
-            4281005464,
-          ],
-          "endPoint": Array [
-            0,
-            0,
-          ],
-          "locations": undefined,
-          "startPoint": Array [
-            1,
-            1,
-          ],
-        }
-      }
+    <Text
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flex": 1,
-            "justifyContent": "center",
-          },
-          Object {
-            "borderRadius": 8.333333333333334,
-            "height": 8.333333333333334,
-            "width": 8.333333333333334,
-          },
-        ]
+        Object {
+          "color": "#fff",
+          "fontWeight": "bold",
+        }
       }
     >
-      <Text
-        style={
-          Object {
-            "color": "#fff",
-            "fontWeight": "bold",
-          }
-        }
-      >
-        3
-      </Text>
-    </ViewManagerAdapter_ExpoLinearGradient>
+      3
+    </Text>
   </View>
   <View
     onMoveShouldSetResponder={[Function]}
@@ -568,6 +469,7 @@ exports[`<Animation /> renders correctly 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "backgroundColor": "#08AEEA",
         "borderRadius": 8.333333333333334,
         "height": 8.333333333333334,
         "justifyContent": "center",
@@ -586,50 +488,16 @@ exports[`<Animation /> renders correctly 1`] = `
       }
     }
   >
-    <ViewManagerAdapter_ExpoLinearGradient
-      proxiedProperties={
-        Object {
-          "colors": Array [
-            4278759146,
-            4281005464,
-          ],
-          "endPoint": Array [
-            0,
-            0,
-          ],
-          "locations": undefined,
-          "startPoint": Array [
-            1,
-            1,
-          ],
-        }
-      }
+    <Text
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flex": 1,
-            "justifyContent": "center",
-          },
-          Object {
-            "borderRadius": 8.333333333333334,
-            "height": 8.333333333333334,
-            "width": 8.333333333333334,
-          },
-        ]
+        Object {
+          "color": "#fff",
+          "fontWeight": "bold",
+        }
       }
     >
-      <Text
-        style={
-          Object {
-            "color": "#fff",
-            "fontWeight": "bold",
-          }
-        }
-      >
-        4
-      </Text>
-    </ViewManagerAdapter_ExpoLinearGradient>
+      4
+    </Text>
   </View>
   <View
     onMoveShouldSetResponder={[Function]}
@@ -647,6 +515,7 @@ exports[`<Animation /> renders correctly 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "backgroundColor": "#08AEEA",
         "borderRadius": 8.333333333333334,
         "height": 8.333333333333334,
         "justifyContent": "center",
@@ -665,50 +534,16 @@ exports[`<Animation /> renders correctly 1`] = `
       }
     }
   >
-    <ViewManagerAdapter_ExpoLinearGradient
-      proxiedProperties={
-        Object {
-          "colors": Array [
-            4278759146,
-            4281005464,
-          ],
-          "endPoint": Array [
-            0,
-            0,
-          ],
-          "locations": undefined,
-          "startPoint": Array [
-            1,
-            1,
-          ],
-        }
-      }
+    <Text
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flex": 1,
-            "justifyContent": "center",
-          },
-          Object {
-            "borderRadius": 8.333333333333334,
-            "height": 8.333333333333334,
-            "width": 8.333333333333334,
-          },
-        ]
+        Object {
+          "color": "#fff",
+          "fontWeight": "bold",
+        }
       }
     >
-      <Text
-        style={
-          Object {
-            "color": "#fff",
-            "fontWeight": "bold",
-          }
-        }
-      >
-        5
-      </Text>
-    </ViewManagerAdapter_ExpoLinearGradient>
+      5
+    </Text>
   </View>
   <View
     onMoveShouldSetResponder={[Function]}

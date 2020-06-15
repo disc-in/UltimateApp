@@ -3,7 +3,6 @@ import { Text, StyleSheet, Easing, Animated, View, TouchableOpacity, Image } fro
 
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import theme from '../../styles/theme.style';
-import iconPlay from '../../../assets/play.png';
 
 /** Progress bar displayed with an animation which:
     - shows the number of step;
@@ -79,7 +78,7 @@ class ProgressBar extends React.Component {
           style={[styles.playBtn, { left: this.state.stateFromProps.playLeft }]}
           onPress={() => this.props.playAnimation()}
         >
-          <Image style={styles.playIcn} source={iconPlay} />
+          <MaterialCommunityIcons name="play" color={theme.COLOR_PRIMARY} size={36} />
         </TouchableOpacity>
 
         {/* Black bar */}
@@ -126,15 +125,12 @@ class ProgressBar extends React.Component {
           <View style={[StyleSheet.absoluteFill]} height="100%" width="100%">
             <TouchableOpacity style={[styles.icon, { right: 70 }]} onPress={() => this.props.onStepAdded()}>
               <MaterialCommunityIcons name="plus-box" color={theme.COLOR_PRIMARY} size={22} />
-              {/* <Image style={styles.controlIcn} source={iconAdd} /> */}
             </TouchableOpacity>
             <TouchableOpacity style={[styles.icon, { right: 40 }]} onPress={() => this.props.onStepRemoved()}>
               <MaterialCommunityIcons name="minus-box" color={theme.COLOR_PRIMARY} size={22} />
-              {/* <Image style={styles.controlIcn} source={iconMinus} /> */}
             </TouchableOpacity>
             <TouchableOpacity style={[styles.icon, { right: 10 }]}>
               <MaterialCommunityIcons name="trash-can" color={theme.COLOR_PRIMARY} size={22} />
-              {/* <Image style={styles.controlIcn} source={iconTrash} /> */}
             </TouchableOpacity>
           </View>
         )}
@@ -268,11 +264,6 @@ const styles = StyleSheet.create({
     borderWidth: 0,
     bottom: PROGRESS_BAR_MIDDLE - DOT_SIZE / 2,
     color: 'white',
-  },
-  controlIcn: {
-    height: 20,
-    width: 20,
-    bottom: 3,
   },
   dotHitBox: {
     position: 'absolute',

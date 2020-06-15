@@ -1,8 +1,6 @@
 import React from 'react';
 import { StyleSheet, Easing, Animated, View, PanResponder } from 'react-native';
 
-import { LinearGradient } from 'expo-linear-gradient';
-
 import theme from '../../styles/theme.style';
 
 /** An element displayed in a drill animation */
@@ -142,21 +140,7 @@ class DraggableDisplayedElement extends React.Component {
             ]}
             key={this.props.key + 4}
           >
-            <LinearGradient
-              colors={[theme.GRADIENT_FIRST_COLOR, theme.GRADIENT_SECOND_COLOR]}
-              style={[
-                styles.gradient,
-                {
-                  height: this.props.playerRadius,
-                  width: this.props.playerRadius,
-                  borderRadius: this.props.playerRadius,
-                },
-              ]}
-              start={{ x: 1, y: 1 }}
-              end={{ x: 0, y: 0 }}
-            >
-              <Animated.Text style={styles.offenseText}>{this.number}</Animated.Text>
-            </LinearGradient>
+            <Animated.Text style={styles.offenseText}>{this.number}</Animated.Text>
           </Animated.View>
         );
 
@@ -205,6 +189,8 @@ class DraggableDisplayedElement extends React.Component {
   }
 }
 
+export default DraggableDisplayedElement;
+
 const styles = StyleSheet.create({
   defense: {
     position: 'absolute',
@@ -218,9 +204,9 @@ const styles = StyleSheet.create({
     color: theme.OFFENSE_TEXT_COLOR,
     fontWeight: 'bold',
   },
-
   offense: {
     position: 'absolute',
+    backgroundColor: theme.GRADIENT_FIRST_COLOR,
     textAlign: 'center',
     textAlignVertical: 'center',
     alignItems: 'center',
@@ -230,12 +216,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: theme.OFFENSE_TEXT_COLOR,
   },
-  gradient: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
   disc: {
     position: 'absolute',
     borderColor: theme.DISC_BORDER,
@@ -247,7 +227,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: theme.DISC_TEXT_COLOR,
   },
-
   triangle: {
     position: 'absolute',
     backgroundColor: 'transparent',
@@ -257,5 +236,3 @@ const styles = StyleSheet.create({
     borderBottomColor: theme.CONE_COLOR,
   },
 });
-
-export default DraggableDisplayedElement;

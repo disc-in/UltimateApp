@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import animationSquare from '../../Fixtures/AnimationSquare';
+import animationSquare from '../../Fixtures/Animation/AnimationSquare';
 import Drill from './Drill';
 
 import Animation from './Animation';

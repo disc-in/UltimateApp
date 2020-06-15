@@ -1,0 +1,259 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DictionaryPage /> renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "paddingTop": 20,
+    }
+  }
+  width={750}
+>
+  <RCTScrollView
+    data={
+      Array [
+        Object {
+          "data": Array [
+            Object {
+              "definition": "When Forcing you are making the player holding the disc throw a certain direction. A break is when your attempt fails and they throw the direction you are guarding against. A teammate may yell “no break!” if there is an opposing player wide open on the guarded side, this means try extra hard to guard that side.",
+              "id": 0,
+              "text": "Break",
+            },
+            Object {
+              "definition": "Happens when a freshly pulled disc goes out-of-bounds. The receiving team take the disc to the brick-mark which is centrally located and 20 yards in-field from the first end zone line. A brick is signified by clapping hands once over head or by calling “Brick.”",
+              "id": 1,
+              "text": "Brick",
+            },
+          ],
+          "id": 1,
+          "title": "B",
+        },
+      ]
+    }
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    onContentSizeChange={[Function]}
+    onEndReachedThreshold={2}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    renderItem={[Function]}
+    renderSectionHeader={[Function]}
+    scrollEventThrottle={50}
+    sections={
+      Array [
+        Object {
+          "data": Array [
+            Object {
+              "definition": "When Forcing you are making the player holding the disc throw a certain direction. A break is when your attempt fails and they throw the direction you are guarding against. A teammate may yell “no break!” if there is an opposing player wide open on the guarded side, this means try extra hard to guard that side.",
+              "id": 0,
+              "text": "Break",
+            },
+            Object {
+              "definition": "Happens when a freshly pulled disc goes out-of-bounds. The receiving team take the disc to the brick-mark which is centrally located and 20 yards in-field from the first end zone line. A brick is signified by clapping hands once over head or by calling “Brick.”",
+              "id": 1,
+              "text": "Brick",
+            },
+          ],
+          "id": 1,
+          "title": "B",
+        },
+      ]
+    }
+    stickyHeaderIndices={
+      Array [
+        0,
+      ]
+    }
+    stickySectionHeadersEnabled={true}
+    updateCellsBatchingPeriod={50}
+    windowSize={21}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <Text
+          style={
+            Object {
+              "backgroundColor": "#232b2b",
+              "color": "white",
+              "fontWeight": "bold",
+              "marginBottom": 5,
+              "padding": 15,
+            }
+          }
+        >
+          B
+        </Text>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={null}
+        >
+          <Text
+            style={
+              Object {
+                "backgroundColor": "#e5e5e5",
+                "marginBottom": 5,
+                "padding": 15,
+              }
+            }
+          >
+            Break
+          </Text>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={null}
+        >
+          <Text
+            style={
+              Object {
+                "backgroundColor": "#e5e5e5",
+                "marginBottom": 5,
+                "padding": 15,
+              }
+            }
+          >
+            Brick
+          </Text>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      />
+    </View>
+  </RCTScrollView>
+  <Modal
+    animationType="slide"
+    hardwareAccelerated={false}
+    onRequestClose={[Function]}
+    transparent={true}
+    visible={false}
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "white",
+            "borderRadius": 20,
+            "elevation": 5,
+            "margin": 20,
+            "padding": 35,
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.25,
+            "shadowRadius": 3.84,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "fontSize": 20,
+              "fontWeight": "bold",
+              "marginBottom": 20,
+            }
+          }
+        >
+          
+        </Text>
+        <Text
+          style={
+            Object {
+              "fontSize": 16,
+              "marginBottom": 20,
+            }
+          }
+        >
+          
+        </Text>
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#232b2b",
+              "borderRadius": 10,
+              "elevation": 2,
+              "padding": 10,
+              "paddingHorizontal": 20,
+              "width": 120,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "white",
+                "fontWeight": "bold",
+                "textAlign": "center",
+              }
+            }
+          >
+            Back
+          </Text>
+        </View>
+      </View>
+    </View>
+  </Modal>
+</View>
+`;

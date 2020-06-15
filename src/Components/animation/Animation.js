@@ -154,7 +154,6 @@ class Animation extends React.Component {
             onMoveEnd={this.props.onCutMove}
           />
         )}
-
         {this.state.displayedElements?.map(item => {
           return (
             <DisplayedElement
@@ -172,7 +171,6 @@ class Animation extends React.Component {
             />
           );
         })}
-
         <ProgressBar
           readonly={!this.props.editable}
           animationWidth={this.animationWidth}

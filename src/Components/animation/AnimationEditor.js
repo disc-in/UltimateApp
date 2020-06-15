@@ -34,7 +34,7 @@ class AnimationEditor extends React.Component {
 
     this.currentStep = 0;
 
-    // Enables to update the current step inside an animation
+    // Enables to update  the current step inside an animation
     this.currentStepAV = new Animated.Value(0);
 
     this.currentStepAV.addListener(progress => {

@@ -375,6 +375,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                             style={
                               Object {
                                 "alignItems": "center",
+                                "backgroundColor": "#08AEEA",
                                 "borderRadius": 50,
                                 "height": 100,
                                 "justifyContent": "center",
@@ -383,47 +384,18 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                 "width": 100,
                               }
                             }
-                            testID="gradientButton"
+                            testID="startButton"
                           >
-                            <ViewManagerAdapter_ExpoLinearGradient
-                              proxiedProperties={
-                                Object {
-                                  "colors": Array [
-                                    4278759146,
-                                    4281005464,
-                                  ],
-                                  "endPoint": Array [
-                                    0,
-                                    0,
-                                  ],
-                                  "locations": undefined,
-                                  "startPoint": Array [
-                                    1,
-                                    1,
-                                  ],
-                                }
-                              }
+                            <Text
                               style={
                                 Object {
-                                  "alignItems": "center",
-                                  "borderRadius": 50,
-                                  "height": 100,
-                                  "justifyContent": "center",
-                                  "width": 100,
+                                  "fontSize": 16,
+                                  "fontWeight": "bold",
                                 }
                               }
                             >
-                              <Text
-                                style={
-                                  Object {
-                                    "fontSize": 16,
-                                    "fontWeight": "bold",
-                                  }
-                                }
-                              >
-                                Start
-                              </Text>
-                            </ViewManagerAdapter_ExpoLinearGradient>
+                              Start
+                            </Text>
                           </View>
                         </View>
                         <View
@@ -519,7 +491,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                 }
                               }
                             >
-                              None
+                              Equipment needs for the drill
                             </Text>
                           </View>
                         </View>
@@ -580,26 +552,6 @@ exports[`<DrillPage /> renders correctly 1`] = `
                           }
                         >
                           <View
-                            config={
-                              Object {
-                                "directionalOffsetThreshold": 80,
-                                "gestureIsClickThreshold": 10,
-                                "velocityThreshold": 0.3,
-                              }
-                            }
-                            onMoveShouldSetResponder={[Function]}
-                            onMoveShouldSetResponderCapture={[Function]}
-                            onResponderEnd={[Function]}
-                            onResponderGrant={[Function]}
-                            onResponderMove={[Function]}
-                            onResponderReject={[Function]}
-                            onResponderRelease={[Function]}
-                            onResponderStart={[Function]}
-                            onResponderTerminate={[Function]}
-                            onResponderTerminationRequest={[Function]}
-                            onStartShouldSetResponder={[Function]}
-                            onStartShouldSetResponderCapture={[Function]}
-                            onSwipeLeft={[Function]}
                             style={
                               Object {
                                 "flex": 1,

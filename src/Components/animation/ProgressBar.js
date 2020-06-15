@@ -14,7 +14,7 @@ class ProgressBar extends React.Component {
   // - animationWidth/animationHeight: size in pixel of the animation
   // - stepCount: the number of steps
   // - currentStepAV: an animated value which represents the current step
-  // - stepLength: length of an animation step in ms
+  // - getStepAnimation(): set the animation to a given step
   constructor(props) {
     super(props);
 

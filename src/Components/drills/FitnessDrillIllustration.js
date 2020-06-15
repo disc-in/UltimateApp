@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Animated, View, StyleSheet, Text, Dimensions, TouchableOpacity, Image } from 'react-native';
-import GestureRecognizer from 'react-native-swipe-gestures';
+import { Animated, View, StyleSheet, Text, Dimensions, TouchableOpacity, FlatList } from 'react-native';
 import { WebView } from 'react-native-webview';
 import { Easing } from 'react-native-reanimated';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -10,10 +9,6 @@ import Animation from '../animation/Animation';
 import VimeoVideo from '../VimeoVideo';
 import { IllustrationType } from '../../Fixtures/config';
 import theme from '../../styles/theme.style';
-import { swipeConfig } from '../../styles/config';
-import iconRedo from '../../../assets/redo_arrow.png';
-import buttonValidation from '../../../assets/button_validation_ultra_light.png';
-import buttonValidationGradient from '../../../assets/button_validation_gradient.png';
 
 const screenDimension = Dimensions.get('window');
 
@@ -22,8 +17,10 @@ const FitnessDrillIllustration = props => {
   const opacityUnchecked = useRef(new Animated.Value(1)).current;
   const opacityChecked = opacityUnchecked.interpolate({ inputRange: [0, 1], outputRange: [1, 0] });
   const currentStep = props.drill.steps[activeIndex];
+  const stepsCount = props.drill.steps.length;
 
   const carouselRef = useRef(null);
+  const flatListRef = useRef(null);
 
   const checkAnimation = () => {
     Animated.sequence([
@@ -36,21 +33,11 @@ const FitnessDrillIllustration = props => {
         toValue: 1,
         duration: 10,
       }),
-    ]).start(() => incrementStepIndex());
-  };
-
-  const checkAnimationFast = () => {
-    Animated.sequence([
-      Animated.timing(opacityUnchecked, {
-        toValue: 0,
-        duration: 200,
-        easing: Easing.easeOutQuint,
-      }),
-      Animated.timing(opacityUnchecked, {
-        toValue: 1,
-        duration: 10,
-      }),
-    ]).start(() => incrementStepIndex());
+    ]).start(() => {
+      const newIndex = (activeIndex + 1) % (stepsCount + 1);
+      setActiveIndex(newIndex);
+      flatListRef.current?.scrollToIndex({ animated: true, index: newIndex, viewPosition: 0.5 });
+    });
   };
 
   // back to 0 when drill changes
@@ -58,54 +45,18 @@ const FitnessDrillIllustration = props => {
     setActiveIndex(0);
   }, [props.drill]);
 
-  const incrementStepIndex = () => {
-    setActiveIndex(activeIndex + 1);
-  };
-
-  const displayNextStep = () => {
-    if (activeIndex + 1 === props.drill.steps.length) {
-      return (
-        <>
-          <View style={styles.description}>
-            <View style={styles.wrapperFinish}>
-              <Text style={styles.fitnessNext}>{I18n.t('FitnessDrillIllustration.finish')}</Text>
-            </View>
-          </View>
-          <View style={styles.lines} />
-        </>
-      );
-    } else {
-      return (
-        <>
-          <View style={styles.description}>
-            <View style={styles.subWrapper}>
-              <Text style={styles.fitnessNext}>{props.drill.steps[activeIndex + 1].repetition}</Text>
-            </View>
-            <View style={styles.subSubWrapper}>
-              <Text style={styles.fitnessNext}>{props.drill.steps[activeIndex + 1].title}</Text>
-            </View>
-            <View style={styles.fakeWrapper} />
-          </View>
-          <View style={styles.lines} />
-        </>
-      );
-    }
-  };
-
-  const displayFinish = () => {
+  const renderFinish = () => {
     return (
-      <>
-        <View style={styles.containerFinish}>
-          <Text style={styles.redoMessage}>{I18n.t('FitnessDrillIllustration.redoMessage')}</Text>
-          <TouchableOpacity style={styles.redoButton} onPress={() => incrementStepIndex()}>
-            <Image style={styles.redoImage} source={iconRedo} />
-          </TouchableOpacity>
-        </View>
-      </>
+      <View style={styles.containerFinish}>
+        <Text style={styles.redoMessage}>{I18n.t('fitnessDrillIllustration.redoMessage')}</Text>
+        <TouchableOpacity style={styles.redoButton} onPress={() => setActiveIndex(0)}>
+          <MaterialCommunityIcons name="redo-variant" color={theme.COLOR_PRIMARY} size={50} />
+        </TouchableOpacity>
+      </View>
     );
   };
 
-  const displayYoutube = ({ illustrationSource, title, instruction }) => {
+  const renderYoutube = ({ illustrationSource, title, instruction }) => {
     return (
       <>
         <View style={{ height: 250 }}>
@@ -115,9 +66,9 @@ const FitnessDrillIllustration = props => {
             }}
           />
         </View>
-        {props.drill.steps.length > 1 && (
+        {stepsCount > 1 && (
           <>
-            <View style={styles.description}>
+            <View style={styles.step}>
               <View style={styles.containerAnimation}>
                 <View style={styles.descriptionAnimation}>
                   <View style={styles.subSubWrapper}>
@@ -131,7 +82,12 @@ const FitnessDrillIllustration = props => {
                         },
                       ]}
                     >
-                      <Image style={styles.buttonNext} source={buttonValidation} />
+                      <MaterialCommunityIcons
+                        style={styles.buttonNext}
+                        name="check-circle-outline"
+                        color={theme.COLOR_PRIMARY}
+                        size={26}
+                      />
                     </Animated.View>
                     <Animated.View
                       style={[
@@ -140,7 +96,12 @@ const FitnessDrillIllustration = props => {
                         },
                       ]}
                     >
-                      <Image style={styles.buttonNext} source={buttonValidationGradient} />
+                      <MaterialCommunityIcons
+                        style={styles.buttonNext}
+                        name="check-circle"
+                        color={theme.COLOR_PRIMARY}
+                        size={26}
+                      />
                     </Animated.View>
                   </TouchableOpacity>
                 </View>
@@ -154,76 +115,78 @@ const FitnessDrillIllustration = props => {
     );
   };
 
-  const displayVimeo = ({ illustrationSource, repetition, title, sounds }) => {
-    const isUniqueStep = props.drill.steps.length === 1;
+  const renderStep = ({ index, item }) => {
+    const isCurrent = index == activeIndex;
+
+    const doneStyle = index < activeIndex ? styles.stepTitleDone : {};
+    const currentStyle = isCurrent ? styles.stepTitleCurrent : {};
+
+    return (
+      <TouchableOpacity style={styles.step} onPress={() => setActiveIndex(index)}>
+        <View style={styles.subWrapper}>
+          <Text style={[styles.stepTitle, doneStyle, currentStyle]}>
+            {item.repetition} {item.title}
+          </Text>
+        </View>
+        {isCurrent && (
+          <TouchableOpacity style={styles.doneAnimation} onPress={() => checkAnimation()} testID="doneIcon">
+            <Animated.View
+              style={[
+                {
+                  opacity: opacityUnchecked,
+                },
+              ]}
+            >
+              <MaterialCommunityIcons
+                style={styles.buttonNext}
+                name="check-circle-outline"
+                color={theme.COLOR_PRIMARY}
+                size={26}
+              />
+            </Animated.View>
+            <Animated.View
+              style={[
+                {
+                  opacity: opacityChecked,
+                },
+              ]}
+            >
+              <MaterialCommunityIcons
+                style={styles.buttonNext}
+                name="check-circle"
+                color={theme.COLOR_PRIMARY}
+                size={26}
+              />
+            </Animated.View>
+          </TouchableOpacity>
+        )}
+      </TouchableOpacity>
+    );
+  };
+
+  const renderVimeo = ({ illustrationSource, repetition, title, sounds }) => {
+    const isUniqueStep = stepsCount === 1;
     return (
       <>
         <View style={[{ height: 250 }, isUniqueStep && styles.videoAlone]}>
-          <VimeoVideo vimeoId={illustrationSource} screenWidth={screenDimension.width} sounds={sounds} />
+          <VimeoVideo vimeoId={illustrationSource} screenWidth={screenDimension.width} sounds={sounds} shouldPlay />
         </View>
         {!isUniqueStep && (
-          <>
-            <View style={styles.description}>
-              <View style={styles.subWrapper}>
-                <Text style={styles.fitness}>{repetition}</Text>
-              </View>
-              <View style={styles.subSubWrapper}>
-                <Text style={styles.fitness}>{title}</Text>
-              </View>
-              <TouchableOpacity style={styles.container} onPress={() => checkAnimation()}>
-                <Animated.View
-                  style={[
-                    {
-                      opacity: opacityUnchecked,
-                    },
-                  ]}
-                >
-                  <Image style={styles.buttonNext} source={buttonValidation} />
-                </Animated.View>
-                <Animated.View
-                  style={[
-                    {
-                      opacity: opacityChecked,
-                    },
-                  ]}
-                >
-                  <Image style={styles.buttonNext} source={buttonValidationGradient} />
-                </Animated.View>
-              </TouchableOpacity>
-            </View>
-
-            <View style={styles.lines} />
-            <View style={styles.containerAnimation}>
-              <View style={styles.container}>{displayNextStep()}</View>
-            </View>
-          </>
+          <FlatList
+            nestedScrollEnabled
+            ref={flatListRef}
+            data={props.drill.steps}
+            keyExtractor={item => item.id.toString()}
+            renderItem={renderStep}
+          />
         )}
       </>
     );
   };
 
-  const checkSwitch = () => {
-    if (activeIndex === props.drill.steps.length) {
-      return displayFinish();
-    } else if (!currentStep) {
-      return <View />; // bad state, but let's not crash
-    } else {
-      switch (props.drill.steps[activeIndex].illustrationType) {
-        case IllustrationType.ANIMATION:
-          return displayAnimation(props.drill.steps[activeIndex]);
-        case IllustrationType.YOUTUBE:
-          return displayYoutube(props.drill.steps[activeIndex]);
-        case IllustrationType.VIMEO:
-          return displayVimeo(props.drill.steps[activeIndex]);
-        default:
-          return <Text>No visual content for this drill</Text>;
-      }
-    }
-  };
-
-  const displayAnimation = ({ illustrationSource, title, instruction }, index) => {
+  const renderAnimation = ({ illustrationSource, title, instruction }, index) => {
     const isFirstStep = index === 0;
-    const isLastStep = index === props.drill.steps.length - 1;
+    const isLastStep = index === stepsCount - 1;
     return (
       <>
         <View style={styles.line}>
@@ -260,9 +223,12 @@ const FitnessDrillIllustration = props => {
   };
 
   return (
-    <GestureRecognizer style={styles.container} onSwipeLeft={checkAnimationFast} config={swipeConfig}>
-      {checkSwitch()}
-    </GestureRecognizer>
+    <View style={styles.container}>
+      {activeIndex === props.drill.steps.length && renderFinish()}
+      {currentStep?.illustrationType === IllustrationType.ANIMATION && renderAnimation(currentStep)}
+      {currentStep?.illustrationType === IllustrationType.YOUTUBE && renderYoutube(currentStep)}
+      {currentStep?.illustrationType === IllustrationType.VIMEO && renderVimeo(currentStep)}
+    </View>
   );
 };
 
@@ -272,7 +238,7 @@ const styles = StyleSheet.create({
   },
   containerFinish: {
     flex: 1,
-    justifyContent: 'space-around',
+    justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
   },
@@ -282,34 +248,33 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginVertical: 50,
   },
+  redoButton: {
+    width: 80,
+    height: 80,
+  },
   containerAnimation: {
     flexDirection: 'row',
     alignSelf: 'flex-end',
   },
-  description: {
+  step: {
     flexDirection: 'row',
-    paddingBottom: 2,
+    padding: 20,
   },
   descriptionAnimation: {
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
-  pageAnimation: {
+  doneAnimation: {
     flex: 1,
   },
-  fitness: {
-    marginTop: 20,
-    marginBottom: 20,
-    marginLeft: 20,
+  stepTitle: {
     fontSize: theme.FONT_SIZE_LARGE,
     color: theme.COLOR_PRIMARY,
+  },
+  stepTitleCurrent: {
     fontWeight: 'bold',
   },
-  fitnessNext: {
-    marginTop: 20,
-    marginBottom: 20,
-    marginLeft: 20,
-    fontSize: theme.FONT_SIZE_LARGE,
+  stepTitleDone: {
     color: theme.COLOR_SECONDARY,
   },
   separator: {
@@ -320,16 +285,7 @@ const styles = StyleSheet.create({
   buttonNext: {
     position: 'absolute',
     right: 0,
-    marginRight: 20,
     marginLeft: 20,
-    marginTop: 20,
-    width: 25,
-    height: 25,
-    borderRadius: 12.5,
-    backgroundColor: theme.BACKGROUND_COLOR_BUTTON,
-    borderWidth: 1,
-    borderColor: theme.BORDER_COLOR_BUTTON_ACTIVE,
-    alignItems: 'center',
   },
   subWrapper: {
     flexGrow: 0,
@@ -339,25 +295,9 @@ const styles = StyleSheet.create({
   subSubWrapper: {
     flex: 6,
   },
-  fakeWrapper: {
-    width: 70,
-  },
   lines: {
     borderBottomColor: '#DCDCDC',
     borderBottomWidth: 1,
-  },
-  wrapperFinish: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  finishMessage: {
-    marginTop: 150,
-    marginBottom: 20,
-    marginLeft: 20,
-    fontSize: theme.FONT_SIZE_LARGE,
-    color: theme.COLOR_PRIMARY,
-    fontWeight: 'bold',
   },
   instruction: {
     marginTop: 20,
@@ -368,23 +308,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  redoButton: {
-    width: 80,
-    height: 80,
-    borderRadius: 40,
-    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
-  },
-  redoImage: {
-    width: 60,
-    height: 60,
-  },
   videoAlone: {
     justifyContent: 'center',
     alignItems: 'center',
     flex: 1,
-  },
-  pagination: {
-    paddingVertical: 15,
   },
   line: {
     flex: 1,

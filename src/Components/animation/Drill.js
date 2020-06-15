@@ -1,10 +1,10 @@
 import debug from './debug';
 
 // Each drill has an attribute "positions" which is a 4D array:
-// - positions[elemId][stepId][subStepId][coordinateId]
+// - positions[stepId][elemId][subStepId][coordinateId]
 //
-// Remark1: positions[elemId][0] is the initial position which must be defined for each element
-// Remark2: positions[elemId][stepId] is undefined if  element i position does not change between steps stepId-1 and stepId
+// Remark1: positions[0][elemId] is the initial position which must be defined for each element
+// Remark2: positions[stepId][elemId] is undefined if  element i position does not change between steps stepId-1 and stepId
 class Drill {
   constructor(animation) {
     this.positions = (animation && animation.positions) || [[], []];
@@ -12,7 +12,12 @@ class Drill {
     this.texts = (animation && animation.texts) || [];
   }
 
-  /** Get the position of an element at a given step or return undefined if its position at step stoppingStep is the last one at step stepId */
+  /** Get the position of an element at a given step.
+   * If the element does not move at step stepId, the previous step will be check to find the element previous position.
+   * stoppingStep is the last step to check to find the previous position of the element
+   * If the element does not move at steps stoppingStep to stepId, return undefined
+   * When stoppingStep is equal to -1, a position will always be returned as the element must have a position at step 0.
+   */
   getPositionsAtStep(elemId, stepId, stoppingStep = -1) {
     /* Get the position of the element at step stepId */
     var nextPosition = this.positions[stepId][elemId];
@@ -171,6 +176,8 @@ class Drill {
   }
 
   log() {
+    debug('== Positions');
+
     if (this.positions !== undefined && this.positions !== null) {
       /* For each step */
       for (var stepId = 0; stepId < this.positions.length; stepId++) {

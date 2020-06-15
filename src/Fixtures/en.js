@@ -9,8 +9,39 @@ import {
   IllustrationType,
 } from './config';
 
-import animationSquare from './AnimationSquare';
-import animationGoToTen from './AnimationGoToTen';
+import { dictionary, essentials, tactics } from './theory.en';
+
+import animationSquare from './Animation/AnimationSquare';
+import animationGoToTen from './Animation/AnimationGoToTen';
+import throwingMachine from './Animation/ThrowingMachine';
+import giveAndGo from './Animation/GiveAndGo';
+import threePerson from './Animation/ThreePerson';
+import redemption from './Animation/Redemption';
+import dwarDuel from './Animation/DwarfDuel';
+import backdoor from './Animation/Backdoor';
+import powerReset from './Animation/PowerReset';
+import resetOpen from './Animation/ResetOpen';
+import upline from './Animation/Upline';
+import around from './Animation/Around';
+import resetBreak from './Animation/ResetBreak';
+import ladder from './Animation/Ladder';
+import giveAndGoRace from './Animation/GiveAndGoRace';
+import blockTheUnder from './Animation/BlockTheUnder';
+import blockEverything from './Animation/BlockEverything';
+import defensiveUnder from './Animation/DefensiveUnder';
+import defenseDeep from './Animation/DefenseDeep';
+import threeVersusTwo from './Animation/ThreeVersusTwo';
+import train from './Animation/Train';
+import trainRace from './Animation/TrainRace';
+import triangleDeath from './Animation/TriangleDeath';
+import oneFakeTrain from './Animation/OneFakeTrain';
+import twoFakeTrain from './Animation/TwoFakeTrain';
+import breakSide from './Animation/BreakSide';
+import goaltimate from './Animation/Goaltimate';
+import bigEight from './Animation/BigEight';
+import theM from './Animation/TheM';
+import dishiesChain from './Animation/DishiesChain';
+import dishiesPoach from './Animation/DishiesPoach';
 
 const stabilityDrill = {
   id: 1,
@@ -598,7 +629,7 @@ const warmupDrill = {
   ],
 };
 
-const conditioningDrillFullBody = {
+const conditioningFullbodyDrill = {
   id: 7,
   type: DrillTypes.FITNESS,
   author: 'Pamela Reif',
@@ -627,7 +658,7 @@ const conditioningDrillFullBody = {
   ],
 };
 
-const basicThrows = {
+const basicThrowsDrill = {
   id: 1001,
   type: DrillTypes.FRISBEE,
   author: 'Rowan McDonnell',
@@ -636,7 +667,7 @@ const basicThrows = {
   description: 'Basic drills to learn how to throw',
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 Disc',
+  equipment: '1 disc for 2 players',
   durationInMinutes: 20,
   intensity: Intensities.LOW,
   goals: [FrisbeeGoals.THROWING],
@@ -645,43 +676,22 @@ const basicThrows = {
   steps: [
     {
       id: 1,
-      title: 'Backhand Throw',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '415565763',
-      sounds: true,
+      title: 'Throwing Machine',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: throwingMachine,
       repetition: '',
       rest: '',
-      instruction: 'Follow him',
+      instruction: 'With a partner, the players throw backhands and forehands for 5 minutes.',
     },
     {
       id: 2,
-      title: 'Forehand Throw',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '415569048',
-      sounds: true,
-      repetition: '',
-      rest: '',
-      instruction: 'Follow him',
-    },
-    {
-      id: 3,
-      title: 'Throwing machine',
+      title: 'The Throwing Olympics Ladder',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: ladder,
       repetition: '',
       rest: '',
       instruction:
-        'With a partner, the players throw backhands and forehands for 5 minutes. After it, they try to throw in every way possible.',
-    },
-    {
-      id: 4,
-      title: 'The throwing olympics',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
-      repetition: '',
-      rest: '',
-      instruction:
-        'By pair, the players throw as ask by the coach. If the disc falls, they have to go at the right of the 2 lines. The team at the left when the time is over wins!',
+        'Players stand in two lines facing a partner and pass back and forth. The coach decides what throw they do. If the disc falls, the pair moves to the right most spot in the line. The pair at the left when the time is over wins!',
     },
   ],
 };
@@ -690,12 +700,12 @@ const breakDrill = {
   id: 1023,
   type: DrillTypes.FRISBEE,
   author: 'Martin',
-  title: 'Cuts to the break side',
+  title: 'Cuts to the Break Side',
   image: 'https://zupimages.net/up/20/19/83fx.jpg',
-  description: 'Cut from the open side to the break side. The thrower and the mark are working',
+  description: 'Cutting from the open side to the break side. The drill is both for the thrower and the mark.',
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.NONE,
-  equipment: 'Cones if you have some (not mandatory)',
+  equipment: '6 discs - 2 cones',
   durationInMinutes: 20,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.BREAK, FrisbeeGoals.MARK],
@@ -704,21 +714,19 @@ const breakDrill = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: 'Open to Break',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
-      repetition: '1',
-      rest: '90s',
-      instruction: 'Cut from the open side to the break side. \nChange direction on the fake',
+      illustrationSource: breakSide,
+      instruction:
+        'Two lines of players face each other, about 30 meters apart. A force is decided for the exercise. At the front of one line is a player with a disc, and a mark maintaining the force. The front of the other line cuts towards the thrower on the open side, and when the thrower fakes, cuts horizontally from the open side towards the break side. The thrower then must break the mark to throw to the cutter. The thrower then makes the next cut, towards the other side. The mark becomes a thrower, and the next in line becomes the mark. Players in line should have discs.',
     },
     {
       id: 2,
-      title: '',
+      title: 'Great Wall of China',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
-      repetition: '1',
-      rest: '90s',
-      instruction: 'The Cuter will do one-step fake and go in the break side',
+      illustrationSource: breakSide,
+      instruction:
+        "If you want to work on improving the mark, you may insist so that the defender may not be broken twice in a row with the same pass. You want them to identify the thrower's favorite throw and block it",
     },
   ],
 };
@@ -732,7 +740,7 @@ const threeColumnsLongDrill = {
   description: 'Basic long passes drill. You want your players to alternate between throwing, running and passing',
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: 'around 1 disc for 3 players, 3 cones',
+  equipment: '1 disc for 3 players - 3 cones',
   durationInMinutes: 20,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.THROWING],
@@ -762,7 +770,7 @@ const twoColumnsLongDrill = {
     'Basic long passes drill. You want your players to alternate between throwing, running and passing, with offense and defense',
   minimalPlayersNumber: 18,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: 'around 1 disc for 3 players, 3 cones',
+  equipment: '1 disc for 3 players - 3 cones',
   durationInMinutes: 30,
   intensity: Intensities.HIGH,
   goals: [FrisbeeGoals.THROWING],
@@ -785,7 +793,7 @@ const treasureHuntDrill = {
   id: 1009,
   type: DrillTypes.FRISBEE,
   author: 'PUC Ultimate',
-  title: 'Treasure hunt',
+  title: 'Treasure Hunt',
   image: 'https://zupimages.net/up/20/19/z7lq.jpg',
   description:
     '2 teams are fighting. The objective is to bring the 5 Frisbees back into a square delimited by the cones.\nPlayers are not allowed to walk with the Frisbee. When a Frisbee falls or is intercepted, it must be brought back to the starting point by the attacking team. The first team that "saves" all its frisbees wins.',
@@ -814,10 +822,10 @@ const treasureHuntDrill = {
 const kyeDrill = {
   id: 1010,
   type: DrillTypes.FRISBEE,
-  author: 'KYE',
+  author: 'Kye',
   title: '3 vs 2',
   image: 'https://zupimages.net/up/20/19/zgxt.jpg',
-  description: 'The team with 2 players stay in defense if they succeed to make the defense',
+  description: 'The team with two players stays on defense if they successfully force a turnover',
   minimalPlayersNumber: 5,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disc - 2 cones',
@@ -831,11 +839,11 @@ const kyeDrill = {
       id: 1,
       title: '',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: threeVersusTwo,
       repetition: '',
       rest: '',
       instruction:
-        'Forcing middle\n the offensive cutter can only make two cuts to get the disc.\n1- He try to catch the continuity \n2- He goes under in the middle \nThe goal of this defensive drill is to learn how to quickly set up the mark and how to use your body to control the cut of your opponent. ',
+        "The defense forces middle. The offensive cutters are only allowed to make two cuts to get the disc. They may either catch a continuation pass, or cutting under. The goal of the drill is for the defense to learn how to quickly set up a mark and to use their bodies and positioning downfield to control the offense's cuts.",
     },
   ],
 };
@@ -849,7 +857,7 @@ const bigEightDrill = {
   description: 'Making a pass circuit where each player will try to work on their throws',
   minimalPlayersNumber: 16,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '8 Discs - 8 Cones',
+  equipment: '8 discs - 8 cones',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.THROWING],
@@ -860,7 +868,7 @@ const bigEightDrill = {
       id: 1,
       title: '',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: bigEight,
       repetition: '',
       rest: '',
       instruction:
@@ -873,12 +881,12 @@ const trainDrill = {
   id: 1002,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
-  title: 'The train',
+  title: 'The Train',
   image: 'https://zupimages.net/up/20/19/ac8s.jpg',
-  description: 'Drill where you teach the flow with a vertical stack',
+  description: 'This is a drill which works on the flow of a vertical stack',
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 Disc',
+  equipment: '1 disc',
   durationInMinutes: 10,
   intensity: Intensities.LOW,
   goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
@@ -889,20 +897,21 @@ const trainDrill = {
       id: 1,
       title: 'Normal train',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: train,
       repetition: '',
       rest: '',
       instruction:
-        'Always try to keep the 5 middles and 2 handlers formations. The last of the stack run deep.\nOn the fake, the player come back with an agressive cut in the open side. When he receive the disc all the others players switch their position.\nThe thrower become the reset. The reset become the first of the stack ... and the last of the stack go deep. He has to be running full sprint when the precedent player receive the disc.',
+        'Set up a vertical stack of 5 cutters with a thrower and a dump and decide on a force. The last cutter in the stack cuts deep while looking at the thrower. When the thrower fakes, the receiver cuts back in on the open side and receives the disc. The next player in the stack must begin their deep cut so as to be hitting full speed when the previous cutter catches the disc. The rest of the stack re-positions farther downfield, the thrower becomes the dump, the previous dump becomes the front of the stack. Repeat for the length of the field.',
     },
     {
       id: 2,
       title: 'Racing train',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: trainRace,
       repetition: '',
       rest: '',
-      instruction: 'Keep it simple, and make a race between 2 teams. They have to throw the same amount of passes.',
+      instruction:
+        'Racing train: Divide into two teams. Begin in the same place and complete the train as a race. Decide on a set number of passes, the team that completes this many passes first wins!',
     },
   ],
 };
@@ -917,7 +926,7 @@ const goaltimateDrill = {
     'The object is to score points by throwing a disc to a teammate in a small scoring area, through a large semicircular hoop called the goal.',
   minimalPlayersNumber: 8,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 Disc - 10 Cones or 1 Goal',
+  equipment: '1 disc - 10 cones or 1 goal',
   durationInMinutes: 20,
   intensity: Intensities.HIGH,
   goals: [FrisbeeGoals.THROWING, FrisbeeGoals.DEFENSE, FrisbeeGoals.PLAY, FrisbeeGoals.PLAY],
@@ -928,7 +937,7 @@ const goaltimateDrill = {
       id: 1,
       title: 'Goaltimate rules',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: goaltimate,
       repetition: '',
       rest: '',
       instruction:
@@ -936,7 +945,7 @@ const goaltimateDrill = {
     },
     {
       id: 2,
-      title: '',
+      title: 'Illustration',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '416849035',
       sounds: true,
@@ -951,12 +960,12 @@ const giveAndGoDrill = {
   id: 1013,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
-  title: "Give'n Go",
+  title: 'Give-N-Go',
   image: 'https://zupimages.net/up/20/19/s9fe.jpg',
   description: 'Follow your disc as fast as possible',
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 Disc - 12 Cones',
+  equipment: '1 disc - 12 cones',
   durationInMinutes: 10,
   intensity: Intensities.HIGH,
   goals: [FrisbeeGoals.THROWING, FrisbeeGoals.HANDLING],
@@ -965,21 +974,21 @@ const giveAndGoDrill = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: 'Give-N-Go',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: giveAndGo,
       repetition: '',
       rest: '',
-      instruction: 'Try to do this give and go drill as fast as possible. Be vigilant to the travel.',
+      instruction: 'Try to do this give and go drill as fast as possible. Make sure not to travel.',
     },
     {
       id: 2,
-      title: 'Make it count',
+      title: 'Make It Count',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: giveAndGoRace,
       repetition: '',
       rest: '',
-      instruction: 'Racing between 2 teams. First to 25 wins!',
+      instruction: 'A race between 2 teams. First to 25 wins!',
     },
   ],
 };
@@ -993,7 +1002,7 @@ const aussieDrill = {
   description: 'You can run with the disc',
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '4 Discs - 20 Cones',
+  equipment: '4 discs - 20 cones',
   durationInMinutes: 20,
   intensity: Intensities.LOW,
   goals: [FrisbeeGoals.THROWING, FrisbeeGoals.COMMUNICATION, FrisbeeGoals.PLAY],
@@ -1022,7 +1031,7 @@ const bolognaMDrill = {
   description: 'Follow the M',
   minimalPlayersNumber: 10,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '5 Disc - 6 Cones',
+  equipment: '5 disc - 6 cones',
   durationInMinutes: 20,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.THROWING, FrisbeeGoals.HANDLING],
@@ -1033,10 +1042,10 @@ const bolognaMDrill = {
       id: 1,
       title: '',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: theM,
       repetition: '',
       rest: '',
-      instruction: 'Working on the reset from the first of the stack',
+      instruction: 'Working on the reset from the front of the stack',
     },
   ],
 };
@@ -1050,7 +1059,7 @@ const goToTenDrill = {
   description: 'First team with 10 completes passes win',
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 Disc - 4 Cones',
+  equipment: '1 disc - 4 cones',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.THROWING, FrisbeeGoals.PLAY, FrisbeeGoals.DEFENSE],
@@ -1078,7 +1087,7 @@ const endzoneDameDrill = {
   description: 'Game to 5. If you score, your team stay in offense',
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 Disc - 4 Cones',
+  equipment: '1 disc - 4 cones',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.THROWING, FrisbeeGoals.PLAY, FrisbeeGoals.DEFENSE],
@@ -1117,7 +1126,7 @@ const bulldogDrill = {
     'The bulldogs stand in the middle of the play area. All remaining players stand at one end of the area (home). The aim of the game is to run from one end of the field of play to the other, without being caught by the bulldogs. When a player is caught, they become a bulldog themselves.',
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '4 Cones',
+  equipment: '4 cones',
   durationInMinutes: 10,
   intensity: Intensities.LOW,
   goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.PLAY, FrisbeeGoals.COMMUNICATION],
@@ -1141,12 +1150,12 @@ const menageATroisDrill = {
   id: 1003,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
-  title: 'Menage a trois',
+  title: 'Three-person drill',
   image: 'https://zupimages.net/up/20/19/ai3z.jpg',
-  description: 'Pass - defense - Receive',
+  description: 'The thrower tries to reach the target by using any fake possible',
   minimalPlayersNumber: 3,
-  equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 Disc',
+  equipmentLabel: EquipmentLabels.NONE,
+  equipment: '1 disc',
   durationInMinutes: 10,
   intensity: Intensities.LOW,
   goals: [FrisbeeGoals.THROWING, FrisbeeGoals.DEFENSE, FrisbeeGoals.BREAK],
@@ -1155,23 +1164,22 @@ const menageATroisDrill = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: 'Flat mark',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: threePerson,
       repetition: '',
       rest: '',
-      instruction:
-        "The thrower try to reach the target by using any fake possible (without pivot it's interesting) \nThe defensive player is doing a flat mark",
+      instruction: 'The defensive player does a flat mark, five times before switching roles.',
     },
     {
       id: 2,
-      title: 'Sudden death',
+      title: 'Redemption',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: redemption,
       repetition: '',
       rest: '',
       instruction:
-        "The players form 2 columns.\nThe rotation is: Receiving-Throwing-Marking.\nIf player hasn't succeed to complete the throw, he has to make the defense to stay alive. Last 2 players in, win!",
+        'The set-up is the same as three-person drill, but with lines behind the thrower and receiver. The order is receiving the disc, throwing, and then following the disc to mark. After marking, the player goes to the back of the line. The thrower must throw a pass that the receiver can catch within one pivot. If they do not, they must then force the next thrower to throw a bad pass, or else they are out of the game! The game continues until one player wins.',
     },
   ],
 };
@@ -1180,12 +1188,12 @@ const dwarfDuelDrill = {
   id: 1012,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
-  title: 'Dwarf duel',
+  title: 'Dwarf Duel',
   image: 'https://zupimages.net/up/20/19/3m3k.jpg',
-  description: 'Duel without jumping',
+  description: 'Duel without jumping, all about positioning',
   minimalPlayersNumber: 3,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 Disc - 2 Cones',
+  equipment: '1 disc - 2 cones',
   durationInMinutes: 10,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.CUTTING],
@@ -1196,11 +1204,11 @@ const dwarfDuelDrill = {
       id: 1,
       title: '',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: dwarDuel,
       repetition: '',
       rest: '',
       instruction:
-        "The coach (or an experience player) is throwing longs.\nWhen the offensive player start to run the defensive player can move. The player can't jump to catch the disc",
+        'The coach (or an experienced player) throws hucks.\nWhen the offensive player starts to run, the defensive player can move. Neither player can jump to catch the disc',
     },
   ],
 };
@@ -1214,7 +1222,7 @@ const dishieChainDrill = {
   description: 'Basic long passes drill. You want your players to alternate between throwing, running and passing',
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 Disc - 2 Cones',
+  equipment: '1 disc - 2 cones',
   durationInMinutes: 10,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING],
@@ -1223,9 +1231,9 @@ const dishieChainDrill = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: 'Focus on Offense',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: dishiesChain,
       repetition: '',
       rest: '',
       instruction:
@@ -1233,9 +1241,9 @@ const dishieChainDrill = {
     },
     {
       id: 2,
-      title: '',
+      title: 'Adding a poach',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: dishiesPoach,
       repetition: '',
       rest: '',
       instruction: 'Add a defensive player to work on the poach with a side stack',
@@ -1252,7 +1260,7 @@ const breakDanceDrill = {
   description: 'Making a christmas tree in the break',
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '5 Discs - 10 Cones',
+  equipment: '5 discs - 10 cones',
   durationInMinutes: 20,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING],
@@ -1282,16 +1290,16 @@ const breakDanceDrill = {
   ],
 };
 
-const catapultdrill = {
+const triangleOfDeathdrill = {
   id: 1019,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
-  title: 'The Catapult',
+  title: 'The Triangle of Death',
   image: 'https://zupimages.net/up/20/19/kmlc.jpg',
-  description: 'Throwing 10 long shot a row as far and fast as you can',
+  description: 'Throwing 10 hucks in a row as far and as fast as possible',
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '5 Disc - 3 Cones',
+  equipment: '10 disc - 3 cones',
   durationInMinutes: 20,
   intensity: Intensities.HIGH,
   goals: [FrisbeeGoals.THROWING],
@@ -1302,11 +1310,11 @@ const catapultdrill = {
       id: 1,
       title: '',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: triangleDeath,
       repetition: '',
       rest: '',
       instruction:
-        'One main thrower who is cutting as fast as possible and throwing 10 long throws. \nThe cutter has to find the perfect timing by adapting the start of their cut to the thrower',
+        'Set up a small triangle of cones about 3 meters apart, pointing downfield. One thrower begins on one side. One player stands about 3 meters behind the triangle with a large pile of discs. The rest of the team sets up in a vertical stack (this can be more than 5 players).\n\nThe thrower cuts to the peak of the triangle and then to the other side, receives a dishy pass from player behind the triangle, and throws a huck to a cutter from the back of the stack. The thrower immediately remakes their cut in the opposite direction, receiving a dishy and throwing a huck. Repeat either 10 times, or until all cutters have received a pass.',
     },
   ],
 };
@@ -1315,12 +1323,12 @@ const chevronDrill = {
   id: 1022,
   type: DrillTypes.FRISBEE,
   author: 'Author',
-  title: 'Chevron passes',
+  title: 'Chevron Passes',
   image: 'https://zupimages.net/up/20/19/1y4x.jpg',
-  description: 'Cutting in the right timing, catching and passing straight away',
+  description: 'Cutting with good timing; throwing immediately after catching',
   minimalPlayersNumber: 8,
-  equipmentLabel: EquipmentLabels.NONE,
-  equipment: 'None',
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disc - 2 cones',
   durationInMinutes: 10,
   intensity: Intensities.HIGH,
   goals: [FrisbeeGoals.CUTTING, FrisbeeGoals.CATCH, FrisbeeGoals.THROWING],
@@ -1339,16 +1347,16 @@ const chevronDrill = {
   ],
 };
 
-const trainDrillHarder = {
+const trainOfFakeDrill = {
   id: 1020,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
-  title: 'The train 2',
+  title: 'The Fake Train',
   image: 'https://zupimages.net/up/20/19/ac8s.jpg',
-  description: 'Drill where you teach the flow with a vertical stack',
+  description: 'This is a drill which works on the flow of a vertical stack',
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 Disc',
+  equipment: '1 disc',
   durationInMinutes: 10,
   intensity: Intensities.LOW,
   goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING],
@@ -1359,45 +1367,45 @@ const trainDrillHarder = {
       id: 1,
       title: 'Normal train',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: train,
       repetition: '',
       rest: '',
       instruction:
-        'Always try to keep the 5 middles and 2 handlers formations. The last of the stack run deep.\nOn the fake, the player come back with an agressive cut in the open side. When he receive the disc all the others players switch their position.\nThe thrower become the reset. The reset become the first of the stack ... and the last of the stack go deep.\nHe has to be running full sprint when the precedent player receive the disc.',
+        'Set up a vertical stack of 5 cutters with a thrower and a dump and decide on a force. The last cutter in the stack cuts deep while looking at the thrower. When the thrower fakes, the receiver cuts back in on the open side and receives the disc. The next player in the stack must begin their deep cut so as to be hitting full speed when the previous cutter catches the disc. The rest of the stack re-positions farther downfield, the thrower becomes the dump, the previous dump becomes the front of the stack. Repeat for the length of the field.',
     },
     {
       id: 2,
-      title: 'With one fake',
+      title: 'With One fake',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: oneFakeTrain,
       repetition: '',
       rest: '',
       instruction:
-        'Always keep the formation, the thrower can choose to add another fake. If it happens, the cutter clear in the second position of the stack and the reset go up line.',
+        'Set up the normal train drill. This time, however, the thrower can choose to make a second fake while the cutters is cutting in. If they do, the cutters clears to the second position in the stack (from the front), the thrower looks at the dump, the dump cuts upline and receives a pass. The drill continues.',
     },
     {
       id: 3,
       title: 'With two fakes',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: twoFakeTrain,
       repetition: '',
       rest: '',
       instruction:
-        'The thrower can choose to make 2 fakes. The reset after going upline clear and the first of the stack go to the reset position',
+        'Set up the One Fake Train Drill. This time, when the reset cuts upline, the thrower can again fake. If they do, the front of the stack cuts back and receives a dump in the reset position. The drill continues.',
     },
   ],
 };
 
-const resetOpen = {
+const resetOpenDrill = {
   id: 1005,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Reset Open',
   image: 'https://zupimages.net/up/20/19/tzk3.jpg',
-  description: 'Cutting in the right timing, catching and passing straight away',
+  description: 'Cutting with good timing; throwing immediately after catching',
   minimalPlayersNumber: 4,
   equipmentLabel: EquipmentLabels.NONE,
-  equipment: '1 Disc',
+  equipment: '1 disc',
   durationInMinutes: 10,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.CUTTING, FrisbeeGoals.HANDLING],
@@ -1406,47 +1414,47 @@ const resetOpen = {
   steps: [
     {
       id: 1,
-      title: 'The backdoor',
+      title: 'The Backdoor',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: backdoor,
       repetition: '',
       rest: '',
       instruction:
-        'The reset handler moves to 45°, in the open side, behind the thrower.\nWhen the thrower makes an eye contact, the reset have to be prepare to receive the backdoor pass.\nThe disc is send back to the thrower, the mark is change and the cut is make again on the other side. ',
+        "The thrower stands with a defender setting a force, and the reset handler sets up at a 45° angle behind the thrower, on the open side.\nThe thrower begins by looking up field, before turning and making eye contact with the reset. When eye contact is established, the reset makes a backdoor cut and receives a pass.\nThe disc is then sent back to the thrower, the thrower's defender switches the force, and the cut is made again in the opposite direction.",
     },
     {
       id: 2,
-      title: 'Power reset',
+      title: 'Power Reset',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: powerReset,
       repetition: '',
       rest: '',
       instruction:
-        'Same position has before. When the eyecontact is made, the disc has to be send in front of the reset handler. Same rotation.',
+        'The set-up is the same as in "The Backdoor." This time, when eye contact is made, the reset cuts up-field and receives a pass in front of them.',
     },
     {
       id: 3,
-      title: 'Game situation',
+      title: 'Game Situation',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: resetOpen,
       repetition: '',
       rest: '',
       instruction:
-        'Keep the 45°. Now the defense on the reset option is real. The offensive player can choose between the 2 options. No more than one step fake. The team who scores the most wins!',
+        'The set-up is the same as in "the Backdoor." The defense on the reset is real, and the reset must choose one of the two directions to cut to receive a pass. The reset is not allowed more than one juke. Each team does the same number of attempts, whichever team completes the most passes wins!',
     },
   ],
 };
 
-const resetBreak = {
+const resetBreakDrill = {
   id: 1006,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Reset Break',
   image: 'https://zupimages.net/up/20/19/w90f.jpg',
-  description: 'Cutting in the right timing, catching and passing straight away',
+  description: 'Cutting with good timing; throwing immediately after catching',
   minimalPlayersNumber: 4,
   equipmentLabel: EquipmentLabels.NONE,
-  equipment: '1 Disc',
+  equipment: '1 disc',
   durationInMinutes: 10,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.CUTTING, FrisbeeGoals.HANDLING],
@@ -1455,47 +1463,47 @@ const resetBreak = {
   steps: [
     {
       id: 1,
-      title: 'The 45° Up-line',
+      title: 'The 45° Upline',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: upline,
       repetition: '',
       rest: '',
       instruction:
-        'The reset handler is on the same line than the thrower.\nThe reset move slowly to a 45° position in the break side. When the thrower makes an eye contact, the reset have to make a incisive up-line cut.\nThe disc is send back to the thrower, the cut is make again on the other side.',
+        'A thrower holds a disc with a defender who marks with a force. The reset handler begins in line horizontally with the thrower, on the break side.\nThe reset moves slowly upfield until they are at a 45° from the thrower. When the thrower makes eye contact, the reset makes a decisive upline cut.\nThe disc is then sent back to the thrower, and exercise is repeated with the opposite force.',
     },
     {
       id: 2,
-      title: 'The easy Reset',
+      title: 'The Easy Reset',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: around,
       repetition: '',
       rest: '',
       instruction:
-        'Same start has before. When the eyecontact is made, the disc has to be send close to the starting position of the reset handler. Same rotation.',
+        'Same set-up as "The 45° Upline." When eye contact is made, the thrower throws around the mark with the goal that the reset catches about where they had started before moving up field. The reset only moves once the pass is thrown. Switch sides.',
     },
     {
       id: 3,
-      title: 'Game situation',
+      title: 'Game Situation',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: resetBreak,
       repetition: '',
       rest: '',
       instruction:
-        'Now the defense on the reset option is real. The offensive player can choose between the 2 options. No more than one step fake. The team who scores the most wins!',
+        'Same set-up as "The 45° Upline." The defense on the reset is real, and the reset must choose one of the two directions to cut to receive a pass. The reset is not allowed more than one juke. Each team does the same number of attempts, whichever team completes the most passes wins!',
     },
   ],
 };
 
-const youShallNotPass = {
+const youShallNotPassDrill = {
   id: 1007,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
-  title: 'You shall not pass',
+  title: 'You Shall Not Pass',
   image: 'https://zupimages.net/up/20/19/90z6.jpg',
-  description: 'Using your body to avoid your opponent to get the disc',
+  description: 'Using your body to prevent your opponent from getting to the disc',
   minimalPlayersNumber: 4,
-  equipmentLabel: EquipmentLabels.NONE,
-  equipment: '1 Disc and 4 Cones',
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disc - 4 cones',
   durationInMinutes: 12,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.DEFENSE],
@@ -1504,46 +1512,47 @@ const youShallNotPass = {
   steps: [
     {
       id: 1,
-      title: 'Blocking the under',
+      title: 'Blocking the Under',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: blockTheUnder,
       repetition: '',
       rest: '',
       instruction:
-        "The 2 players will reach the box and then go deep. When he want, the offensive player can come back and try to catch the disc in the box.\nHe can't switch again his direction",
+        'Set up both an offense line and a defense line. One attacker and one defender each run to the box then cut deep at the same time. The offensive player must cut back towards the thrower to try to catch the disc in the box, they are only allowed to change their direction this one time. The defender must position themself so that the offense cannot pass them to return to the box. The thrower may only throw to under cuts.',
     },
     {
       id: 2,
-      title: 'Blocking everything',
+      title: 'Blocking Everything',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
-      repetition: '',
-      rest: '',
-      instruction: 'Same as before but now the offensive player can receive the frisbee deep',
-    },
-    {
-      id: 3,
-      title: 'Make it count',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: blockEverything,
       repetition: '',
       rest: '',
       instruction:
-        'One team against another. They score when they catch the disc. Alternate the offense. First team to 10 wins!',
+        'The same exercise as "Blocking the Under," but the thrower is allowed to throw both deep and under.',
+    },
+    {
+      id: 3,
+      title: 'Make It Count',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: blockEverything,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Divide into two teams and do the "Block Everything" drill. This time, if the pass is not completed, the defense gets a point. The first team to 10 wins!',
     },
   ],
 };
 
-const defensePosition = {
+const defensePositionDrill = {
   id: 1021,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
-  title: 'Defense positonning',
+  title: 'Defense Positioning',
   image: 'https://zupimages.net/up/20/19/zigu.jpg',
-  description: 'Alway keep the good position and adapt to the team defense',
+  description: "Maintaining good positioning and adapting to the team's defense",
   minimalPlayersNumber: 4,
   equipmentLabel: EquipmentLabels.NONE,
-  equipment: '1 Disc and 5 Cones',
+  equipment: '1 disc - 5 cones',
   durationInMinutes: 10,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.DEFENSE],
@@ -1552,23 +1561,23 @@ const defensePosition = {
   steps: [
     {
       id: 1,
-      title: 'Blocking the under',
+      title: 'Positioning Under',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: defensiveUnder,
       repetition: '',
       rest: '',
       instruction:
-        'A thrower with a mark. The offensive cutter can go to any cones.\nThe defensive player have to always keep a distance of 1 meter with the cutter. In this situation, he stays at 45° under.',
+        'A thrower stands with a mark and a force. An offensive receiver begins at any cone, with a defensive player positioning at a 45° angle on the open side between the receiver and the thrower. The receiver runs between the cones in any order, and the defensive player must maintain their positioning relative to the receiver at all times.',
     },
     {
       id: 2,
-      title: 'Blocking the deep',
+      title: 'Positioning Deep',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: defenseDeep,
       repetition: '',
       rest: '',
       instruction:
-        'Same as before but the defensive player has to stay at the same level of the cutter. He keeps the 1 meters between him and the cutter',
+        'The drill is the same as "Positioning Under", except that the defensive player positions downfield of the receiver.',
     },
   ],
 };
@@ -1584,7 +1593,7 @@ const normalGame = {
     "It's always interesting to have a time to play in game conditions towards the end of a training. That's the perfect moment to use what players have learnt during the training. Keep in mind that players always FORGET everything when they start playing, so remind them what we're to concentrate on",
   minimalPlayersNumber: 14,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '8 cones and 1 disc per field',
+  equipment: '8 cones - 1 disc',
   durationInMinutes: 20,
   intensity: Intensities.LOW,
   goals: [FitnessGoals.CORE],
@@ -1611,10 +1620,10 @@ const game3v3 = {
   image:
     'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
   description:
-    "The perfect setup if you have a LOT of players or want your players to touch a lot of frisbees in a short time. This can be quite exhausting so don't forget to set breaks every 5 o 10 minutes.",
+    "The perfect setup if you have a LOT of players or want your players to touch a lot of frisbees in a short time. This can be quite exhausting so don't forget to set breaks every 5 to 10 minutes.",
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '8 cones and 1 disc per field',
+  equipment: '8 cones - 1 disc',
   durationInMinutes: 20,
   intensity: Intensities.HIGH,
   goals: [FrisbeeGoals.PLAY],
@@ -1637,14 +1646,14 @@ const longShotGame = {
   id: 2003,
   type: DrillTypes.GAME,
   author: 'Martin',
-  title: 'Long shots oriented game',
+  title: 'Hucks oriented game',
   image:
     'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
   description:
     'Just a classical game on the whole field. Only exception: a team scores 2 points if there was a successful long shot on the offense that lead to scoring!',
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '8 cones and 1 disc per field',
+  equipment: '8 cones - 1 disc',
   durationInMinutes: 20,
   intensity: Intensities.HIGH,
   goals: [FrisbeeGoals.PLAY, FrisbeeGoals.THROWING],
@@ -1681,18 +1690,18 @@ const firstWeekFitnessTraining = {
 
 const coed2MarkTraining = {
   id: 3,
-  title: 'Build your defense',
+  title: 'Build your Defense',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description:
     "This training session aims at practicing your mark skills. Don't be broken to easily, generate dangerous passes",
-  drills: [warmupGameDrill, dwarfDuelDrill, kyeDrill, breakDrill, normalGame],
+  drills: [warmupGameDrill, kyeDrill, breakDrill, normalGame],
 };
 
 const coed2LongTraining = {
   id: 4,
-  title: 'Long shot is coming',
+  title: 'Long Shot is Coming',
   image: 'https://zupimages.net/up/20/19/aapn.jpg',
-  description: 'This training session aims at practicing your long skills.',
+  description: 'Practice your long skills.',
   drills: [warmupGameDrill, threeColumnsLongDrill, longShotGame],
 };
 
@@ -1700,31 +1709,31 @@ const coed2Long2Training = {
   id: 5,
   title: 'Long is your weapon',
   image: 'https://zupimages.net/up/20/19/v8f4.jpg',
-  description: 'This training session aims at practicing your long skills. ',
+  description: 'Practicie your long skills.',
   drills: [warmupDrill, threeColumnsLongDrill, twoColumnsLongDrill, longShotGame],
 };
 
-const firstPracticeChild = {
+const firstChildTraining = {
   id: 6,
-  title: 'First time',
+  title: 'First Time',
   image: 'https://zupimages.net/up/20/19/a7io.png',
   description: 'Training will allow the players to learn the basics of ultimate while having fun',
-  drills: [warmupDrill, basicThrows, dwarfDuelDrill, game3v3],
+  drills: [warmupDrill, basicThrowsDrill, dwarfDuelDrill, game3v3],
 };
 
-const secondPracticeChild = {
+const secondChildTraining = {
   id: 7,
-  title: 'Defense basics',
+  title: 'Defense Basics',
   image: 'https://zupimages.net/up/20/19/dgwo.jpg',
   description: 'Training will allow the players to learn the basics of ultimate while having fun',
   drills: [warmupDrill, aussieDrill, menageATroisDrill, game3v3],
 };
 
-const thirdPracticeChild = {
+const thirdChildTraining = {
   id: 8,
   title: 'Treasure Hunt',
   image: 'https://zupimages.net/up/20/19/c9i6.jpg',
-  description: 'Training will allow the players to learn the basics of ultimate while having fun',
+  description: 'Help players learn the basics of ultimate while having fun',
   drills: [warmupDrill, bulldogDrill, goToTenDrill, treasureHuntDrill, game3v3],
 };
 
@@ -1733,50 +1742,56 @@ const secondWeekFitnessTraining = {
   title: 'Second Week Fitness',
   image: 'https://zupimages.net/up/20/19/9fcj.jpg',
   description: "This is the second week of the season. It's time to work on your conditioning",
-  drills: [conditioningDrillFullBody, conditioningDrill],
+  drills: [conditioningFullbodyDrill, conditioningDrill],
 };
 
-const secondInintiationAdult = {
+const secondInintiationAdultTraining = {
   id: 10,
   title: 'Defense & Longs',
   image: 'https://zupimages.net/up/20/19/cd36.jpg',
-  description: 'In this training, the players will work on defense and long throws',
+  description: 'Players will work on defense and long throws',
   drills: [warmupDrill, menageATroisDrill, threeColumnsLongDrill, normalGame],
 };
 
-const thirdInintiationAdult = {
+const thirdInintiationAdultTraining = {
   id: 11,
-  title: 'Adapt to the field',
+  title: 'Adapt to the Field',
   image: 'https://zupimages.net/up/20/19/hrqz.jpg',
-  description: 'In this training, the players will learn to adapt on the size of the field',
-  drills: [warmupDrill, goaltimateDrill, catapultdrill, normalGame],
+  description: 'Players will learn to adapt to the size of the field',
+  drills: [warmupDrill, goaltimateDrill, triangleOfDeathdrill, normalGame],
 };
 
-const initiationVertical = {
+const initiationVerticalTraining = {
   id: 12,
   title: 'Vertical Stack',
   image: 'https://zupimages.net/up/20/19/frj2.jpg',
-  description: 'This training session aims at make your team better at Vertical Stack',
+  description: 'Make your team better at Vertical Stack',
   drills: [warmupDrill, trainDrill, bigEightDrill, normalGame],
 };
 
-const secondVertical = {
+const secondVerticalTraining = {
   id: 13,
-  title: 'The Break power',
+  title: 'The Break Power',
   image: 'https://zupimages.net/up/20/19/frj2.jpg',
-  description: 'This training session aims at make your team better at Vertical Stack',
-  drills: [warmupDrill, resetBreak, trainDrillHarder, game3v3, normalGame],
+  description: 'Make your team better at Vertical Stack',
+  drills: [warmupDrill, resetBreakDrill, trainOfFakeDrill, game3v3, normalGame],
 };
 
-const defenseBase = {
+const defenseBaseTraining = {
   id: 14,
-  title: 'Defense positioning',
+  title: 'Defense Positioning',
   image: 'https://zupimages.net/up/20/19/skjl.jpg',
-  description: 'This training session aims at practicing your defense.',
-  drills: [warmupGameDrill, defensePosition, youShallNotPass, breakDrill, normalGame],
+  description: 'Practice your defense.',
+  drills: [warmupGameDrill, defensePositionDrill, youShallNotPassDrill, breakDrill, normalGame],
 };
 
+console.log('en', tactics);
 export default {
+  theory: {
+    dictionary,
+    essentials,
+    tactics,
+  },
   favoriteDrills: [],
   completeTrainings: [],
   drills: [
@@ -1787,15 +1802,15 @@ export default {
     conditioningDrill,
     warmupGameDrill,
     warmupDrill,
-    conditioningDrillFullBody,
+    conditioningFullbodyDrill,
     // Frisbee
-    basicThrows,
+    basicThrowsDrill,
     trainDrill,
     menageATroisDrill,
     goaltimateDrill,
-    resetOpen,
-    resetBreak,
-    youShallNotPass,
+    resetOpenDrill,
+    resetBreakDrill,
+    youShallNotPassDrill,
     aussieDrill,
     treasureHuntDrill,
     kyeDrill,
@@ -1807,9 +1822,9 @@ export default {
     bulldogDrill,
     dishieChainDrill,
     breakDanceDrill,
-    catapultdrill,
-    trainDrillHarder,
-    defensePosition,
+    triangleOfDeathdrill,
+    trainOfFakeDrill,
+    defensePositionDrill,
     chevronDrill,
     breakDrill,
     bolognaMDrill,
@@ -1827,26 +1842,26 @@ export default {
     coed2MarkTraining,
     coed2LongTraining,
     coed2Long2Training,
-    firstPracticeChild,
-    secondPracticeChild,
-    thirdPracticeChild,
+    firstChildTraining,
+    secondChildTraining,
+    thirdChildTraining,
     secondWeekFitnessTraining,
-    secondInintiationAdult,
-    thirdInintiationAdult,
-    initiationVertical,
-    secondVertical,
-    defenseBase,
+    secondInintiationAdultTraining,
+    thirdInintiationAdultTraining,
+    initiationVerticalTraining,
+    secondVerticalTraining,
+    defenseBaseTraining,
   ],
   programs: [
     {
       id: 1,
       title: 'Initiation U13',
-      trainings: [firstPracticeChild, secondPracticeChild, thirdPracticeChild],
+      trainings: [firstChildTraining, secondChildTraining, thirdChildTraining],
     },
     {
       id: 2,
       title: 'Initiation Adult',
-      trainings: [firstPracticeChild, secondInintiationAdult, thirdInintiationAdult],
+      trainings: [firstChildTraining, secondInintiationAdultTraining, thirdInintiationAdultTraining],
     },
     {
       id: 3,
@@ -1856,17 +1871,17 @@ export default {
     {
       id: 4,
       title: 'Vertical Stack',
-      trainings: [initiationVertical, secondVertical, dumpSwingTraining],
+      trainings: [initiationVerticalTraining, secondVerticalTraining, dumpSwingTraining],
     },
     {
       id: 5,
-      title: 'Long throws',
+      title: 'Long Throws',
       trainings: [coed2LongTraining, coed2Long2Training],
     },
     {
       id: 6,
-      title: 'Strong defense',
-      trainings: [defenseBase, coed2MarkTraining],
+      title: 'Strong Defense',
+      trainings: [defenseBaseTraining, coed2MarkTraining],
     },
   ],
 };

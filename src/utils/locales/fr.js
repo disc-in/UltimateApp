@@ -43,11 +43,36 @@ export default {
       [Intensities.HIGH]: 'Haute',
     },
   },
+  navigation: {
+    homePage: 'Disc In',
+    drillListPage: 'Exercices de {{type}}',
+    filters: 'Filtres',
+    programListPage: "Programmes d'entraînement",
+    drillPageMinimal: '{{training}} - exercices',
+    animationEditorPage: 'Nouvel exo',
+    dictionaryPage: 'Lexique',
+    essentialPage: 'Les bases du jeu',
+    tacticsPage: 'Tactiques',
+  },
+  shared: {
+    back: 'Retour',
+  },
   homePage: {
-    frisbeeDrills: 'Exercices de Frisbee',
-    fitnessDrills: 'Exercices de Fitness',
+    frisbeeTab: 'Frisbee',
+    fitnessTab: 'Fitness',
+    theoryTab: 'Theorie',
+    editor: 'Editeur',
+    drills: 'Exercices',
     programs: "Programmes d'entraînement",
-    editor: 'Editeur de drills',
+    leanTitle: 'Affuté',
+    leanSubtitle: 'Préparez-vous en 6 semaines avec un programme équilibré pour votre endurance',
+    bodyweightTitle: 'Poids du corps',
+    bodyweightSubtitle: 'Gagnez en force et en tonus musculaire - juste avec le poids du corps',
+    gymTitle: 'En salle',
+    gymSubtitle: 'Un programme conçu pour développer la force pendant la saison',
+    dictionary: 'Lexique',
+    essential: 'Les bases du jeu',
+    tactics: 'Tactiques',
   },
   animationEditor: {
     comingSoon: {
@@ -59,9 +84,7 @@ export default {
     },
     sharePlaceholder: "Pouvez-vous ajouter cet exercices à l'application ?",
   },
-  drillIllustration: {
-    finish: 'Terminer',
-    noContent: 'Pas de contenu pour cet exercice',
+  fitnessDrillIllustration: {
     redoMessage: "Vous avez terminé l'exercice !",
   },
   drillListPage: {
@@ -97,16 +120,6 @@ export default {
   },
   frisbeeFilters: {
     numberOfPlayersLabel: 'Nombre de joueurs : {{number}}',
-  },
-  programListPage: {
-    allTrainings: 'Tous les entraînements',
-  },
-  trainingListPage: {
-    availableTrainings: {
-      one: '{{count}} entraînement disponible',
-      other: '{{count}} entraînements disponibles',
-    },
-    players: '{{count}}+ joueurs',
   },
   trainingPage: {
     start: "Commencer l'entraînement",

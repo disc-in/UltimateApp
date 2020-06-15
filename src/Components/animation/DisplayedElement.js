@@ -9,15 +9,10 @@ import debug from './debug';
 /** An element displayed in a drill animation */
 class DisplayedElement extends React.Component {
   /* Props must contain:
-      - id: which indicates how to display the element
-      ("offense", "defense", "triangle" or "disc")
-
+      - id: which indicates how to display the element: "offense", "defense", "triangle" or "disc"
       - movable: true if element can be moved by the user
-
       - number: string defined if there is something written on the element
-
       - eId: element index in the list of elements of the drill (-1 if it is not currently in a drill)
-
     */
   constructor(props) {
     super(props);
@@ -397,8 +392,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   defenseText: {
-    color: theme.OFFENSE_TEXT_COLOR,
     fontWeight: 'bold',
+    color: theme.OFFENSE_TEXT_COLOR,
   },
   offense: {
     position: 'absolute',
@@ -419,6 +414,12 @@ const styles = StyleSheet.create({
     position: 'absolute',
     borderColor: theme.DISC_BORDER,
     backgroundColor: theme.DISC_COLOR,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  discText: {
+    fontWeight: 'bold',
+    color: theme.DISC_TEXT_COLOR,
   },
   triangle: {
     position: 'absolute',

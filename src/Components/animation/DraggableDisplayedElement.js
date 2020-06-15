@@ -5,8 +5,6 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 import theme from '../../styles/theme.style';
 
-import debug from './debug';
-
 /** An element displayed in a drill animation */
 class DraggableDisplayedElement extends React.Component {
   /* Props must contain:
@@ -35,8 +33,6 @@ class DraggableDisplayedElement extends React.Component {
     /* Current position of the element in pixels */
 
     this.currentPosition = new Animated.ValueXY({ x: 0, y: 0 });
-
-    debug('playerRadius: ' + this.props.playerRadius);
 
     this.xCut = 10;
     this.yCut = 10;
@@ -81,19 +77,11 @@ class DraggableDisplayedElement extends React.Component {
 
       onPanResponderRelease: (evt, gesturestate) => {
         if (this.props.movable && this.props.onMoveEnd !== undefined && this.props.onMoveEnd !== null) {
-          debug('TeDraggableDisplayedElementst: this.props.id: ' + this.props.id);
           this.props.onMoveEnd(this, this.currentPosition.x._value, this.currentPosition.y._value);
           this.currentPosition.setValue({ x: 0, y: 0 });
         }
       },
     });
-  }
-
-  componentDidUpdate() {
-    debug('!!!!!!!!update called');
-  }
-  componentDidMount() {
-    debug('!!!!!!!!!!! mount');
   }
 
   setNumber(newNumber) {
@@ -114,7 +102,6 @@ class DraggableDisplayedElement extends React.Component {
   }
 
   render() {
-    debug('render DraggableDisplayedElement: number: ' + this.number);
     const panStyle = {
       transform: this.currentPosition.getTranslateTransform(),
     };
@@ -174,7 +161,6 @@ class DraggableDisplayedElement extends React.Component {
         );
 
       case 'disc':
-        //            debug("Render in disc");
         return (
           <Animated.View
             // Use the panResponder in this view
@@ -196,7 +182,6 @@ class DraggableDisplayedElement extends React.Component {
         );
 
       case 'triangle':
-        //            debug("Render in triangle");
         return (
           <Animated.View
             // Use the panResponder in this view

@@ -1,8 +1,5 @@
 import React from 'react';
-import { StyleSheet, Easing, Animated, View, PanResponder } from 'react-native';
-import Svg, { Line, Circle } from 'react-native-svg';
-
-import debug from './debug';
+import { Animated, PanResponder } from 'react-native';
 
 class MovingCircle extends React.Component {
   constructor(props) {
@@ -34,8 +31,6 @@ class MovingCircle extends React.Component {
           y: this._val.y,
         });
 
-        debug('grant, elemId: ' + this.props.elemId);
-        debug('\tis counter cut?: ' + this.props.isCounterCut);
         this.currentPosition.setValue({ x: 0, y: 0 });
       },
 
@@ -57,12 +52,6 @@ class MovingCircle extends React.Component {
     var panStyle = {
       transform: this.currentPosition.getTranslateTransform(),
     };
-
-    debug('render Moving Circle: isCounterCut: ' + this.props.isCounterCut);
-    debug('cx/cy: ' + this.props.cx + '/' + this.props.cy);
-    debug('currentposition.x/y: ' + this.currentPosition.x._value + '/' + this.currentPosition.y._value);
-
-    debug('toString(): ' + this.props.cx.toString());
 
     return (
       <Animated.View

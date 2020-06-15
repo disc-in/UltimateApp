@@ -65,8 +65,6 @@ class AnimationEditor extends React.Component {
     var animationWidth = editorWidth * this.wRatio;
     var animationHeight = editorHeight * this.hRatio;
 
-    debug('onLayout: animationWidth/animationHeight: ' + animationWidth + '/' + animationHeight);
-
     var playerRadius = Math.min(animationWidth, animationHeight) / 12;
     this.draggableElementsTop = animationHeight + 2.5 * playerRadius;
     this.draggableElementsLeft = Array(4);
@@ -92,9 +90,6 @@ class AnimationEditor extends React.Component {
     this.setState(prevState => ({
       draggableElements: prevState.draggableElements.concat(this.initialElements),
     }));
-
-    debug('animationE onlayout top left position x/y: ' + e.nativeEvent.layout.x + '/' + e.nativeEvent.layout.y);
-    debug('animationE onlayout w/h: ' + e.nativeEvent.layout.width + '/' + e.nativeEvent.layout.height);
   };
 
   addElementToAnimation = (element, xDelta, yDelta) => {
@@ -104,7 +99,6 @@ class AnimationEditor extends React.Component {
     var x = 0;
     var y = 0;
 
-    debug('animationE: element id: ' + element.props.id);
     var elementNumber = '';
 
     switch (element.props.id) {
@@ -146,21 +140,12 @@ class AnimationEditor extends React.Component {
           break;
       }
 
-      //        yDelta /= 2;
-      debug('x+xDelta/y+yDelta: ' + x + '+' + xDelta + '/' + y + '+' + yDelta);
-      debug('window w/h + ' + this.state.width + '/' + this.state.height);
-      debug('added element to animation at position: ' + newPosition[0] + '/' + newPosition[1]);
-
       // Add the element with its initial position
       var newAnimation = this._copyAnimation();
 
       newAnimation.addElement(element, newPosition[0], newPosition[1], elementNumber);
 
       this.saveAnimation(newAnimation);
-
-      //	debug("ae, add element, step count: " + this.state.animation.positions.length);
-
-      if (this.state.animation.positions.length > 0) debug('\telem count: ' + this.state.animation.positions[0].length);
     }
   };
 
@@ -201,8 +186,6 @@ class AnimationEditor extends React.Component {
   }
 
   componentDidMount() {
-    debug('component mount');
-
     var newAnimation = this._copyAnimation();
 
     newAnimation.positions = Array(2);
@@ -212,33 +195,16 @@ class AnimationEditor extends React.Component {
     /* Get the dimension of the screen and then initialize the animation */
     var { height, width } = Dimensions.get('window');
 
-    debug('screen h/w: ' + height + '/' + width);
-
     this.saveAnimation(newAnimation);
   }
 
   cutMove = (elemId, xDelta, yDelta, isCounterCut) => {
-    debug('Animation editor: in cut move xD/yD: ' + xDelta + '/' + yDelta);
-
-    debug('previousStep: ' + (this.currentStep - 1) + ' ceil: ' + Math.ceil(this.currentStep - 1));
-
-    debug('elemId: ' + elemId);
-
-    debug('Animation before update: ');
-
     var previousStepId = Math.ceil(this.currentStep) - 1;
 
     var previousPositions = this.state.animation.getPositionsAtStep(elemId, previousStepId);
 
     var xDeltaPercent = xDelta / (this.state.width * this.wRatio);
     var yDeltaPercent = yDelta / (this.state.height * this.hRatio);
-
-    debug(
-      'moved cut element to position: ' +
-        (previousPositions[0][0] + xDeltaPercent) +
-        '/' +
-        (previousPositions[0][1] + yDeltaPercent),
-    );
 
     var newAnimation = this._copyAnimation();
 
@@ -321,7 +287,7 @@ class AnimationEditor extends React.Component {
     if (
       newPixelPosition[0] >= animationWidth - 50 &&
       newPixelPosition[1] >= animationHeight - 50 &&
-      newPixelPosition[1] <= animationHeight - 5
+      newPixelPosition[1] <= animationHeight + 3
     ) {
       /* Remove it from the drill */
       newAnimation.removeElement(element.props.eId);
@@ -379,7 +345,6 @@ class AnimationEditor extends React.Component {
       key = 603;
     }
 
-    debug('text: ' + text);
     return new DraggableDisplayedElement({
       onMoveEnd: this.addElementToAnimation,
       // key: this.keyCount,
@@ -395,7 +360,6 @@ class AnimationEditor extends React.Component {
   }
 
   _display(item) {
-    debug(item);
     if (item !== undefined && item !== null) return item.render();
     else return undefined;
   }
@@ -448,7 +412,6 @@ class AnimationEditor extends React.Component {
         />
 
         {this.state.draggableElements.map(function(item) {
-          debug('render de');
           return item.render();
         })}
 

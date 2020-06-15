@@ -1,10 +1,9 @@
 import React from 'react';
 import { Text, StyleSheet, Easing, Animated, View, TouchableOpacity, Image } from 'react-native';
 
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import theme from '../../styles/theme.style';
 import iconPlay from '../../../assets/play.png';
-import iconAdd from '../../../assets/plus-box.png';
-import iconMinus from '../../../assets/minus-box.png';
-import iconTrash from '../../../assets/delete.png';
 
 /** Progress bar displayed with an animation which:
     - shows the number of step;
@@ -125,14 +124,17 @@ class ProgressBar extends React.Component {
         {/* Buttons: add step, remove step, trash */}
         {!this.props.readonly && (
           <View style={[StyleSheet.absoluteFill]} height="100%" width="100%">
-            <TouchableOpacity style={[styles.dot, { right: 60 }]} onPress={() => this.props.onStepAdded()}>
-              <Image style={styles.controlIcn} source={iconAdd} />
+            <TouchableOpacity style={[styles.icon, { right: 70 }]} onPress={() => this.props.onStepAdded()}>
+              <MaterialCommunityIcons name="plus-box" color={theme.COLOR_PRIMARY} size={22} />
+              {/* <Image style={styles.controlIcn} source={iconAdd} /> */}
             </TouchableOpacity>
-            <TouchableOpacity style={[styles.dot, { right: 35 }]} onPress={() => this.props.onStepRemoved()}>
-              <Image style={styles.controlIcn} source={iconMinus} />
+            <TouchableOpacity style={[styles.icon, { right: 40 }]} onPress={() => this.props.onStepRemoved()}>
+              <MaterialCommunityIcons name="minus-box" color={theme.COLOR_PRIMARY} size={22} />
+              {/* <Image style={styles.controlIcn} source={iconMinus} /> */}
             </TouchableOpacity>
-            <TouchableOpacity style={[styles.dot, { right: 10 }]}>
-              <Image style={styles.controlIcn} source={iconTrash} />
+            <TouchableOpacity style={[styles.icon, { right: 10 }]}>
+              <MaterialCommunityIcons name="trash-can" color={theme.COLOR_PRIMARY} size={22} />
+              {/* <Image style={styles.controlIcn} source={iconTrash} /> */}
             </TouchableOpacity>
           </View>
         )}
@@ -162,9 +164,9 @@ const _initializeStateFromProps = props => {
   var progressBarDots = [];
 
   // Width of the progress bar
-  var progressBarWidth = props.animationWidth - 120;
+  var progressBarWidth = props.animationWidth - 135;
 
-  if (props.readonly) progressBarWidth = props.animationWidth - 50;
+  if (props.readonly) progressBarWidth = props.animationWidth - 35;
 
   var stepWidth = progressBarWidth / props.stepCount;
 
@@ -252,6 +254,12 @@ const styles = StyleSheet.create({
     textAlignVertical: 'center',
     includeFontPadding: false,
     color: 'white',
+  },
+  icon: {
+    position: 'absolute',
+    borderRadius: 10,
+    borderWidth: 0,
+    bottom: PROGRESS_BAR_MIDDLE - DOT_SIZE / 2 - 2,
   },
   square: {
     position: 'absolute',

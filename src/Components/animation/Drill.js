@@ -57,8 +57,6 @@ class Drill {
 
     // Add its type
     this.ids.push(element.props.id);
-
-    //	debug("positions after update: " + this.positions);
   }
 
   removeElement(elementIndex) {

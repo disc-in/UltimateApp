@@ -42,13 +42,4 @@ describe('<Program />', () => {
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
-
-  it('links to program', async () => {
-    const navigation = { navigate: jest.fn() };
-    const { getByText } = render(<Program program={program} navigation={navigation} completeTrainings={[]} />);
-
-    await fireEvent.press(getByText(program.title));
-
-    expect(navigation.navigate).toBeCalledWith('ProgramPage', { program });
-  });
 });

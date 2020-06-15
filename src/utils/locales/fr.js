@@ -47,7 +47,6 @@ export default {
     homePage: 'Disc In',
     drillListPage: 'Exercices de {{type}}',
     filters: 'Filtres',
-    trainingListPage: "Séances d'entraînement",
     programListPage: "Programmes d'entraînement",
     drillPageMinimal: '{{training}} - exercices',
     animationEditorPage: 'Nouvel exo',
@@ -121,16 +120,6 @@ export default {
   },
   frisbeeFilters: {
     numberOfPlayersLabel: 'Nombre de joueurs : {{number}}',
-  },
-  programListPage: {
-    allTrainings: 'Tous les entraînements',
-  },
-  trainingListPage: {
-    availableTrainings: {
-      one: '{{count}} entraînement disponible',
-      other: '{{count}} entraînements disponibles',
-    },
-    players: '{{count}}+ joueurs',
   },
   trainingPage: {
     start: "Commencer l'entraînement",

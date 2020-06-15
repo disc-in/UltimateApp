@@ -7,10 +7,9 @@ import DrillPage from '../Components/DrillPage';
 import DrillPageMinimal from '../Components/DrillPageMinimal';
 import FrisbeeFilters from '../Components/FrisbeeFilters';
 import FitnessFilters from '../Components/FitnessFilters';
-import TrainingListPage from '../Components/TrainingListPage';
 import TrainingPage from '../Components/TrainingPage';
 import ProgramListPage from '../Components/ProgramListPage';
-import ProgramPage from '../Components/ProgramPage';
+
 import AnimationEditorPage from '../Components/AnimationEditorPage';
 
 import EssentialPage from '../Components/EssentialPage';
@@ -41,20 +40,11 @@ export const Navigation = () => (
       options={({ route }) => ({ title: route.params.drill.title })}
     />
     <Stack.Screen
-      name="TrainingListPage"
-      component={TrainingListPage}
-      options={{ title: I18n.t('navigation.trainingListPage') }}
-    />
-    <Stack.Screen
       name="ProgramListPage"
       component={ProgramListPage}
       options={{ title: I18n.t('navigation.programListPage') }}
     />
-    <Stack.Screen
-      name="ProgramPage"
-      component={ProgramPage}
-      options={({ route }) => ({ title: route.params.program.title })}
-    />
+
     <Stack.Screen
       name="TrainingPage"
       component={TrainingPage}

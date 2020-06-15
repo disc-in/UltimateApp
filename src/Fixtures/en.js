@@ -1701,7 +1701,7 @@ const coed2LongTraining = {
   id: 4,
   title: 'Long Shot is Coming',
   image: 'https://zupimages.net/up/20/19/aapn.jpg',
-  description: 'This training session aims at practicing your long skills.',
+  description: 'Practice your long skills.',
   drills: [warmupGameDrill, threeColumnsLongDrill, longShotGame],
 };
 
@@ -1709,7 +1709,7 @@ const coed2Long2Training = {
   id: 5,
   title: 'Long is your weapon',
   image: 'https://zupimages.net/up/20/19/v8f4.jpg',
-  description: 'This training session aims at practicing your long skills. ',
+  description: 'Practicie your long skills.',
   drills: [warmupDrill, threeColumnsLongDrill, twoColumnsLongDrill, longShotGame],
 };
 
@@ -1733,7 +1733,7 @@ const thirdChildTraining = {
   id: 8,
   title: 'Treasure Hunt',
   image: 'https://zupimages.net/up/20/19/c9i6.jpg',
-  description: 'Training will allow the players to learn the basics of ultimate while having fun',
+  description: 'Help players learn the basics of ultimate while having fun',
   drills: [warmupDrill, bulldogDrill, goToTenDrill, treasureHuntDrill, game3v3],
 };
 
@@ -1749,7 +1749,7 @@ const secondInintiationAdultTraining = {
   id: 10,
   title: 'Defense & Longs',
   image: 'https://zupimages.net/up/20/19/cd36.jpg',
-  description: 'In this training, the players will work on defense and long throws',
+  description: 'Players will work on defense and long throws',
   drills: [warmupDrill, menageATroisDrill, threeColumnsLongDrill, normalGame],
 };
 
@@ -1757,7 +1757,7 @@ const thirdInintiationAdultTraining = {
   id: 11,
   title: 'Adapt to the Field',
   image: 'https://zupimages.net/up/20/19/hrqz.jpg',
-  description: 'In this training, the players will learn to adapt on the size of the field',
+  description: 'Players will learn to adapt to the size of the field',
   drills: [warmupDrill, goaltimateDrill, triangleOfDeathdrill, normalGame],
 };
 
@@ -1765,7 +1765,7 @@ const initiationVerticalTraining = {
   id: 12,
   title: 'Vertical Stack',
   image: 'https://zupimages.net/up/20/19/frj2.jpg',
-  description: 'This training session aims at make your team better at Vertical Stack',
+  description: 'Make your team better at Vertical Stack',
   drills: [warmupDrill, trainDrill, bigEightDrill, normalGame],
 };
 
@@ -1773,7 +1773,7 @@ const secondVerticalTraining = {
   id: 13,
   title: 'The Break Power',
   image: 'https://zupimages.net/up/20/19/frj2.jpg',
-  description: 'This training session aims at make your team better at Vertical Stack',
+  description: 'Make your team better at Vertical Stack',
   drills: [warmupDrill, resetBreakDrill, trainOfFakeDrill, game3v3, normalGame],
 };
 
@@ -1781,7 +1781,7 @@ const defenseBaseTraining = {
   id: 14,
   title: 'Defense Positioning',
   image: 'https://zupimages.net/up/20/19/skjl.jpg',
-  description: 'This training session aims at practicing your defense.',
+  description: 'Practice your defense.',
   drills: [warmupGameDrill, defensePositionDrill, youShallNotPassDrill, breakDrill, normalGame],
 };
 

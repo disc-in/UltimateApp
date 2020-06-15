@@ -50,11 +50,18 @@ export default {
     programListPage: "Programmes d'entraînement",
     drillPageMinimal: '{{training}} - exercices',
     animationEditorPage: 'Nouvel exo',
+    dictionaryPage: 'Lexique',
+    essentialPage: 'Les bases du jeu',
+    tacticsPage: 'Tactiques',
+  },
+  shared: {
+    back: 'Retour',
   },
   homePage: {
     frisbeeTab: 'Frisbee',
     fitnessTab: 'Fitness',
-    theory: 'Théorie',
+    theoryTab: 'Theorie',
+    editor: 'Editeur',
     drills: 'Exercices',
     programs: "Programmes d'entraînement",
     leanTitle: 'Affuté',
@@ -63,6 +70,9 @@ export default {
     bodyweightSubtitle: 'Gagnez en force et en tonus musculaire - juste avec le poids du corps',
     gymTitle: 'En salle',
     gymSubtitle: 'Un programme conçu pour développer la force pendant la saison',
+    dictionary: 'Lexique',
+    essential: 'Les bases du jeu',
+    tactics: 'Tactiques',
   },
   animationEditor: {
     comingSoon: {

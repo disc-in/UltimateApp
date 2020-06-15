@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, Easing, Animated, View, Text, PanResponder } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
 
 import theme from '../../styles/theme.style';
 

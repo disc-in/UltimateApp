@@ -28,7 +28,7 @@ export const DrillPageMinimal = props => {
 
   const finishTraining = useCallback(() => {
     completeTraining({ training, program });
-    navigation.navigate('ProgramListPage');
+    navigation.navigate('ProgramListPage', { activeProgram: program.id });
   }, [training, navigation, program, completeTraining]);
 
   useLayoutEffect(() => {

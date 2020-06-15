@@ -13,7 +13,8 @@ import arrowDark from '../../assets/arrow_dark.png';
 export const ProgramListPage = props => {
   const { navigation, programs } = props;
 
-  const [activeSections, setActiveSections] = useState([undefined]);
+  const activeProgramId = programs.findIndex(program => program.id === props.activeProgram);
+  const [activeSections, setActiveSections] = useState([activeProgramId]);
 
   const setSections = sections => {
     setActiveSections(sections.includes(undefined) ? [] : sections);

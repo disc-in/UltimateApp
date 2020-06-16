@@ -298,7 +298,7 @@ const styles = StyleSheet.create({
   },
   offense: {
     position: 'absolute',
-    backgroundColor: theme.GRADIENT_FIRST_COLOR,
+    backgroundColor: theme.MAIN_COLOR,
     alignItems: 'center',
     justifyContent: 'center',
   },

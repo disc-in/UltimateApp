@@ -65,6 +65,6 @@ const styles = StyleSheet.create({
   fillProgressBar: {
     width: '50%',
     borderRadius: 5,
-    backgroundColor: theme.GRADIENT_FIRST_COLOR,
+    backgroundColor: theme.MAIN_COLOR,
   },
 });

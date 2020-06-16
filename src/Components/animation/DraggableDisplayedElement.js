@@ -206,7 +206,7 @@ const styles = StyleSheet.create({
   },
   offense: {
     position: 'absolute',
-    backgroundColor: theme.GRADIENT_FIRST_COLOR,
+    backgroundColor: theme.MAIN_COLOR,
     textAlign: 'center',
     textAlignVertical: 'center',
     alignItems: 'center',

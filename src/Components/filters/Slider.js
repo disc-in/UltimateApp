@@ -15,8 +15,8 @@ const Slider = ({ minimumValue, maximumValue, step, value, onValueChange, testID
         onValueChange={onValueChange}
         style={styles.slider}
         trackStyle={styles.trackStyle}
-        minimumTrackTintColor={theme.GRADIENT_FIRST_COLOR}
-        thumbTintColor={theme.GRADIENT_FIRST_COLOR}
+        minimumTrackTintColor={theme.MAIN_COLOR}
+        thumbTintColor={theme.MAIN_COLOR}
         testID={testID}
       />
       <Text style={styles.boundaries}>{maximumValue}</Text>

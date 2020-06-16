@@ -120,7 +120,7 @@ const FrisbeeDrillIllustration = props => {
           height: 8,
           borderRadius: 5,
           marginHorizontal: 5,
-          backgroundColor: theme.GRADIENT_FIRST_COLOR,
+          backgroundColor: theme.MAIN_COLOR,
         }}
         inactiveDotStyle={{
           backgroundColor: theme.COLOR_SECONDARY,

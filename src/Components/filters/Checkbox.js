@@ -13,7 +13,7 @@ const Checkbox = props => {
         title={props.title}
         containerStyle={styles.containerStyle}
         textStyle={styles.textStyle}
-        checkedColor={theme.FORM_ELEMENT_COLOR}
+        checkedColor={theme.MAIN_COLOR}
       />
     </View>
   );

@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, Easing, Animated, View, Text, PanResponder } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
 
 import theme from '../../styles/theme.style';
 
@@ -99,217 +98,119 @@ class DisplayedElement extends React.Component {
 
     switch (this.state.stateFromProps.id) {
       case 'defense':
-        if (this.state.isMoving)
-          return (
-            <Animated.View
-              {...this.panResponder.panHandlers}
-              style={[
-                panStyle,
-                styles.defense,
-                { height: this.state.stateFromProps.playerRadius },
-                { width: this.state.stateFromProps.playerRadius },
-                { borderRadius: this.state.stateFromProps.playerRadius },
-                { left: 0 },
-                { top: 0 },
-              ]}
-              key={this.state.stateFromProps.id}
-            >
-              <Text style={styles.defenseText}>{this.state.stateFromProps.number}</Text>
-            </Animated.View>
-          );
-        else
-          return (
-            <Animated.View
-              {...this.panResponder.panHandlers}
-              style={[
-                {
-                  transform: [
-                    {
-                      translateX: this.state.stateFromProps.interpolateX,
-                    },
-                    {
-                      translateY: this.state.stateFromProps.interpolateY,
-                    },
-                  ],
-                },
-                styles.defense,
-                { height: this.state.stateFromProps.playerRadius },
-                { width: this.state.stateFromProps.playerRadius },
-                { borderRadius: this.state.stateFromProps.playerRadius },
-                { left: 0 },
-                { top: 0 },
-              ]}
-              key={this.state.stateFromProps.id}
-            >
-              <Text style={styles.defenseText}>{this.state.stateFromProps.number}</Text>
-            </Animated.View>
-          );
-
+        return (
+          <Animated.View
+            {...this.panResponder.panHandlers}
+            style={[
+              this.state.moving
+                ? panStyle
+                : {
+                    transform: [
+                      {
+                        translateX: this.state.stateFromProps.interpolateX,
+                      },
+                      {
+                        translateY: this.state.stateFromProps.interpolateY,
+                      },
+                    ],
+                  },
+              styles.defense,
+              { height: this.state.stateFromProps.playerRadius },
+              { width: this.state.stateFromProps.playerRadius },
+              { borderRadius: this.state.stateFromProps.playerRadius },
+              { left: 0 },
+              { top: 0 },
+            ]}
+            key={this.state.stateFromProps.id}
+          >
+            <Text style={styles.defenseText}>{this.state.stateFromProps.number}</Text>
+          </Animated.View>
+        );
       case 'offense':
-        if (this.state.isMoving)
-          return (
-            <Animated.View
-              {...this.panResponder.panHandlers}
-              style={[
-                panStyle,
-                styles.offense,
-                { height: this.state.stateFromProps.playerRadius },
-                { width: this.state.stateFromProps.playerRadius },
-                { borderRadius: this.state.stateFromProps.playerRadius },
-                { left: 0 },
-                { top: 0 },
-              ]}
-              key={this.state.stateFromProps.id}
-            >
-              <LinearGradient
-                colors={[theme.GRADIENT_FIRST_COLOR, theme.GRADIENT_SECOND_COLOR]}
-                style={[
-                  styles.gradient,
-                  {
-                    height: this.state.stateFromProps.playerRadius,
-                    width: this.state.stateFromProps.playerRadius,
-                    borderRadius: this.state.stateFromProps.playerRadius,
+        return (
+          <Animated.View
+            {...this.panResponder.panHandlers}
+            style={[
+              this.state.isMoving
+                ? panStyle
+                : {
+                    transform: [
+                      {
+                        translateX: this.state.stateFromProps.interpolateX,
+                      },
+                      {
+                        translateY: this.state.stateFromProps.interpolateY,
+                      },
+                    ],
                   },
-                ]}
-                start={{ x: 1, y: 1 }}
-                end={{ x: 0, y: 0 }}
-              >
-                <Text style={styles.offenseText}>{this.state.stateFromProps.number}</Text>
-              </LinearGradient>
-            </Animated.View>
-          );
-        else
-          return (
-            <Animated.View
-              {...this.panResponder.panHandlers}
-              style={[
-                {
-                  transform: [
-                    {
-                      translateX: this.state.stateFromProps.interpolateX,
-                    },
-                    {
-                      translateY: this.state.stateFromProps.interpolateY,
-                    },
-                  ],
-                },
-                styles.offense,
-                { height: this.state.stateFromProps.playerRadius },
-                { width: this.state.stateFromProps.playerRadius },
-                { borderRadius: this.state.stateFromProps.playerRadius },
-                { left: 0 },
-                { top: 0 },
-              ]}
-              key={this.state.stateFromProps.id}
-            >
-              <LinearGradient
-                colors={[theme.GRADIENT_FIRST_COLOR, theme.GRADIENT_SECOND_COLOR]}
-                style={[
-                  styles.gradient,
-                  {
-                    height: this.state.stateFromProps.playerRadius,
-                    width: this.state.stateFromProps.playerRadius,
-                    borderRadius: this.state.stateFromProps.playerRadius,
-                  },
-                ]}
-                start={{ x: 1, y: 1 }}
-                end={{ x: 0, y: 0 }}
-              >
-                <Text style={styles.offenseText}>{this.state.stateFromProps.number}</Text>
-              </LinearGradient>
-            </Animated.View>
-          );
-
+              styles.offense,
+              { height: this.state.stateFromProps.playerRadius },
+              { width: this.state.stateFromProps.playerRadius },
+              { borderRadius: this.state.stateFromProps.playerRadius },
+              { left: 0 },
+              { top: 0 },
+            ]}
+            key={this.state.stateFromProps.id}
+          >
+            <Text style={styles.offenseText}>{this.state.stateFromProps.number}</Text>
+          </Animated.View>
+        );
       case 'disc':
-        if (this.state.isMoving)
-          return (
-            <Animated.View
-              {...this.panResponder.panHandlers}
-              style={[
-                panStyle,
-                styles.disc,
-                { height: 20 },
-                { width: 20 },
-                { borderRadius: 20 },
-                { borderWidth: 2 },
-                { left: 0 },
-                { top: 0 },
-              ]}
-              key={this.state.stateFromProps.id}
-            />
-          );
-        else
-          return (
-            <Animated.View
-              {...this.panResponder.panHandlers}
-              style={[
-                {
-                  transform: [
-                    {
-                      translateX: this.state.stateFromProps.interpolateX,
-                    },
-                    {
-                      translateY: this.state.stateFromProps.interpolateY,
-                    },
-                  ],
-                },
-                styles.disc,
-                { height: 20 },
-                { width: 20 },
-                { borderRadius: 20 },
-                { borderWidth: 2 },
-                { left: 0 },
-                { top: 0 },
-              ]}
-              key={this.state.stateFromProps.id}
-            />
-          );
-
+        return (
+          <Animated.View
+            {...this.panResponder.panHandlers}
+            style={[
+              this.state.isMoving
+                ? panStyle
+                : {
+                    transform: [
+                      {
+                        translateX: this.state.stateFromProps.interpolateX,
+                      },
+                      {
+                        translateY: this.state.stateFromProps.interpolateY,
+                      },
+                    ],
+                  },
+              styles.disc,
+              { height: 20 },
+              { width: 20 },
+              { borderRadius: 20 },
+              { borderWidth: 2 },
+              { left: 0 },
+              { top: 0 },
+            ]}
+            key={this.state.stateFromProps.id}
+          />
+        );
       case 'triangle':
-        if (this.state.isMoving)
-          return (
-            <Animated.View
-              // Use the panResponder in this view
-              {...this.panResponder.panHandlers}
-              style={[
-                panStyle,
-                styles.triangle,
-                { borderLeftWidth: this.state.stateFromProps.bottomConeSize / 2 },
-                { borderRightWidth: this.state.stateFromProps.bottomConeSize / 2 },
-                { borderBottomWidth: this.state.stateFromProps.bottomConeSize },
-                { top: 0 },
-                { left: 0 },
-              ]}
-              key={this.state.stateFromProps.id}
-            />
-          );
-        else
-          return (
-            <Animated.View
-              // Use the panResponder in this view
-              {...this.panResponder.panHandlers}
-              style={[
-                {
-                  transform: [
-                    {
-                      translateX: this.state.stateFromProps.interpolateX,
-                    },
-                    {
-                      translateY: this.state.stateFromProps.interpolateY,
-                    },
-                  ],
-                },
-                styles.triangle,
-                { borderLeftWidth: this.state.stateFromProps.bottomConeSize / 2 },
-                { borderRightWidth: this.state.stateFromProps.bottomConeSize / 2 },
-                { borderBottomWidth: this.state.stateFromProps.bottomConeSize },
-                { top: 0 },
-                { left: 0 },
-              ]}
-              key={this.state.stateFromProps.id}
-            />
-          );
-
+        return (
+          <Animated.View
+            // Use the panResponder in this view
+            {...this.panResponder.panHandlers}
+            style={[
+              this.state.isMoving
+                ? panStyle
+                : {
+                    transform: [
+                      {
+                        translateX: this.state.stateFromProps.interpolateX,
+                      },
+                      {
+                        translateY: this.state.stateFromProps.interpolateY,
+                      },
+                    ],
+                  },
+              styles.triangle,
+              { borderLeftWidth: this.state.stateFromProps.bottomConeSize / 2 },
+              { borderRightWidth: this.state.stateFromProps.bottomConeSize / 2 },
+              { borderBottomWidth: this.state.stateFromProps.bottomConeSize },
+              { top: 0 },
+              { left: 0 },
+            ]}
+            key={this.state.stateFromProps.id}
+          />
+        );
       default:
         return <View key={this.state.stateFromProps.id} />;
     }
@@ -397,6 +298,7 @@ const styles = StyleSheet.create({
   },
   offense: {
     position: 'absolute',
+    backgroundColor: theme.MAIN_COLOR,
     alignItems: 'center',
     justifyContent: 'center',
   },

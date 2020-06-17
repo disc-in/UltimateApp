@@ -347,7 +347,6 @@ class AnimationEditor extends React.Component {
 
     return new DraggableDisplayedElement({
       onMoveEnd: this.addElementToAnimation,
-      // key: this.keyCount,
       id: displayedElementType,
       eId: -1,
       key,

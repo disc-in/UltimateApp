@@ -807,7 +807,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           <View
             style={
               Object {
-                "backgroundColor": "#008577",
+                "backgroundColor": "#08AEEA",
                 "borderRadius": 2,
                 "height": 0,
                 "marginTop": -0,
@@ -820,7 +820,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
             onLayout={[Function]}
             style={
               Object {
-                "backgroundColor": "#008577",
+                "backgroundColor": "#08AEEA",
                 "borderRadius": 10,
                 "height": 0,
                 "position": "absolute",

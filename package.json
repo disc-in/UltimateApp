@@ -45,7 +45,8 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-logger": "^3.0.6",
     "redux-persist": "^5.10.0",
-    "watchman": "^1.0.0"
+    "watchman": "^1.0.0",
+    "expo-screen-orientation": "~1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

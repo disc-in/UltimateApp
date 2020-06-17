@@ -5,10 +5,12 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
-import MinimalDrill from './drills/MinimalDrill';
+import FitnessDrillIllustration from './drills/FitnessDrillIllustration';
+import FrisbeeDrillIllustration from './drills/FrisbeeDrillIllustration';
 import ButtonNext from './shared/Button';
 import Progress from './ProgressBar2';
 import { completeTraining } from '../Store/Actions/programAction';
+import { DrillTypes } from '../Fixtures/config';
 
 export const DrillPageMinimal = props => {
   const { route, navigation, completeTraining } = props;
@@ -61,7 +63,10 @@ export const DrillPageMinimal = props => {
             <MaterialCommunityIcons name="information-outline" color={theme.COLOR_PRIMARY} size={26} />
           </TouchableOpacity>
         </View>
-        <MinimalDrill style={styles.illustration} drill={drill} />
+        <View style={styles.illustration}>
+          {drill.type === DrillTypes.FRISBEE && <FrisbeeDrillIllustration drill={drill} />}
+          {drill.type === DrillTypes.FITNESS && <FitnessDrillIllustration drill={drill} />}
+        </View>
       </ScrollView>
       <View style={styles.footer}>
         {isLastTraining ? (

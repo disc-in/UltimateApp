@@ -8,7 +8,6 @@ import Animation from '../animation/Animation';
 import VimeoVideo from '../VimeoVideo';
 import { IllustrationType } from '../../Fixtures/config';
 import theme from '../../styles/theme.style';
-
 import Drill from '../animation/Drill';
 
 const screenDimension = Dimensions.get('window');

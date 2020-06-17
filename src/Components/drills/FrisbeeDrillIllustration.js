@@ -83,11 +83,7 @@ const FrisbeeDrillIllustration = props => {
     return (
       <>
         <View style={styles.contentWrapper}>
-          <Animation
-            widthRatio={1}
-            heightRatio={props.minimal ? 2 / 5 : 1 / 2}
-            animation={new Drill(illustrationSource)}
-          />
+          <Animation widthRatio={1} heightRatio={1 / 2} animation={new Drill(illustrationSource)} />
         </View>
         <Text style={styles.instruction}>{instruction}</Text>
       </>
@@ -153,33 +149,30 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   instruction: {
-    marginTop: 20,
-    marginBottom: 20,
-    marginLeft: 20,
+    marginBottom: 10,
+    marginHorizontal: 10,
     fontSize: theme.FONT_SIZE_MEDIUM,
     color: theme.COLOR_PRIMARY,
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   videoAlone: {
     flex: 1,
   },
   pagination: {
-    paddingVertical: 15,
+    paddingVertical: 10,
   },
   line: {
-    flex: 1,
+    height: 40,
     flexDirection: 'row',
-    justifyContent: 'space-around',
-    marginTop: 15,
+    justifyContent: 'space-between',
+    marginHorizontal: 30,
+    alignItems: 'center',
   },
   title: {
-    fontSize: theme.FONT_SIZE_LARGE,
+    fontSize: theme.FONT_SIZE_MEDIUM,
     color: theme.COLOR_PRIMARY,
-    fontWeight: 'bold',
     textAlign: 'center',
   },
-  contentWrapper: { flex: 9 },
+  contentWrapper: { minHeight: 375 },
 });
 
 export default FrisbeeDrillIllustration;

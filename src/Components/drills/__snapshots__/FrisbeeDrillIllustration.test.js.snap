@@ -134,10 +134,11 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
           <View
             style={
               Object {
-                "flex": 1,
+                "alignItems": "center",
                 "flexDirection": "row",
-                "justifyContent": "space-around",
-                "marginTop": 15,
+                "height": 40,
+                "justifyContent": "space-between",
+                "marginHorizontal": 30,
               }
             }
           >
@@ -146,8 +147,7 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
               style={
                 Object {
                   "color": "#232b2b",
-                  "fontSize": 20,
-                  "fontWeight": "bold",
+                  "fontSize": 16,
                   "textAlign": "center",
                 }
               }
@@ -159,14 +159,14 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
           <View
             style={
               Object {
-                "paddingVertical": 15,
+                "paddingVertical": 10,
               }
             }
           />
           <View
             style={
               Object {
-                "flex": 9,
+                "minHeight": 375,
               }
             }
           >

@@ -33,9 +33,9 @@ describe('<DrillPageMinimal />', () => {
   });
 
   it('links to drill page', async () => {
-    const { getByText } = render(<DrillPageMinimal navigation={navigation} route={route} />);
+    const { getByTestId } = render(<DrillPageMinimal navigation={navigation} route={route} />);
 
-    await fireEvent.press(getByText('DETAILS'));
+    await fireEvent.press(getByTestId('detailsButton'));
 
     expect(navigation.navigate).toBeCalledWith('DrillPage', { drill });
   });

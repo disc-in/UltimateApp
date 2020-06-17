@@ -1,13 +1,16 @@
 import React, { useLayoutEffect, useCallback } from 'react';
-import { Platform, StyleSheet, ScrollView, View, Text } from 'react-native';
+import { Platform, StyleSheet, ScrollView, View, Text, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
-import MinimalDrill from './drills/MinimalDrill';
-import Button from './shared/Button';
+import FitnessDrillIllustration from './drills/FitnessDrillIllustration';
+import FrisbeeDrillIllustration from './drills/FrisbeeDrillIllustration';
+import ButtonNext from './shared/Button';
 import Progress from './ProgressBar2';
 import { completeTraining } from '../Store/Actions/programAction';
+import { DrillTypes } from '../Fixtures/config';
 
 export const DrillPageMinimal = props => {
   const { route, navigation, completeTraining } = props;
@@ -52,28 +55,27 @@ export const DrillPageMinimal = props => {
   }, [navigation, currentDrillIndex, training]);
 
   return (
-    <ScrollView style={styles.drillPage} contentContainerStyle={{ flexGrow: 1 }}>
-      <View style={styles.titleContainer}>
-        <Text style={styles.title}>{drill.title}</Text>
-        <View style={styles.btnMoreContainer}>
-          <Button
-            onPress={goToFullDrill}
-            text={I18n.t('drillPageMinimal.details')}
-            buttonLight="true"
-            style={styles.smallerBtn}
-          />
+    <>
+      <ScrollView style={styles.drillPage}>
+        <View style={styles.titleContainer}>
+          <Text style={styles.title}>{drill.title}</Text>
+          <TouchableOpacity style={styles.detailsButton} onPress={goToFullDrill} testID="detailsButton">
+            <MaterialCommunityIcons name="information-outline" color={theme.COLOR_PRIMARY} size={26} />
+          </TouchableOpacity>
         </View>
-      </View>
-
-      <MinimalDrill style={styles.illustration} drill={drill} />
+        <View style={styles.illustration}>
+          {drill.type === DrillTypes.FRISBEE && <FrisbeeDrillIllustration drill={drill} />}
+          {drill.type === DrillTypes.FITNESS && <FitnessDrillIllustration drill={drill} />}
+        </View>
+      </ScrollView>
       <View style={styles.footer}>
         {isLastTraining ? (
-          <Button onPress={finishTraining} text={I18n.t('drillPageMinimal.finish')} />
+          <ButtonNext onPress={finishTraining} text={I18n.t('drillPageMinimal.finish')} />
         ) : (
-          <Button onPress={goToNextDrill} text={I18n.t('drillPageMinimal.next')} />
+          <ButtonNext onPress={goToNextDrill} text={I18n.t('drillPageMinimal.next')} />
         )}
       </View>
-    </ScrollView>
+    </>
   );
 };
 
@@ -85,14 +87,11 @@ const styles = StyleSheet.create({
   drillPage: {
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     flex: 1,
+    marginBottom: 50,
   },
   headerTitle: {
     flexDirection: 'column',
     flexGrow: 1,
-  },
-  smallerBtn: {
-    fontSize: theme.FONT_SIZE_SMALL,
-    width: 'auto',
   },
   headerTitleText: {
     ...Platform.select({
@@ -115,16 +114,6 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     width: '100%',
   },
-  illustration: {
-    flexBasis: '50%',
-    flexGrow: 1,
-    flexShrink: 0,
-  },
-  title: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 5,
-  },
   titleContainer: {
     flexBasis: 60,
     flexShrink: 1,
@@ -133,18 +122,26 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  btnMoreContainer: {
-    flexBasis: 50,
-    flexShrink: 1,
-    flexGrow: 0,
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
+  title: {
+    fontSize: theme.FONT_SIZE_LARGE,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginTop: 10,
+    marginLeft: 10,
+  },
+  detailsButton: {
+    position: 'absolute',
+    right: 30,
+    top: 10,
+  },
+  illustration: {
+    flexBasis: '50%',
+    flexGrow: 1,
+    flexShrink: 0,
   },
   footer: {
     position: 'absolute',
-    paddingBottom: 20,
+    paddingBottom: 10,
     paddingTop: 5,
     bottom: 0,
     backgroundColor: 'white',

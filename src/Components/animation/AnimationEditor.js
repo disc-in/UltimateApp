@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Animated, Dimensions, View } from 'react-native';
+import { StyleSheet, Animated, Dimensions, Easing, View } from 'react-native';
 
 import Animation from './Animation';
 
@@ -11,7 +11,6 @@ import debug from './debug';
 class AnimationEditor extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       draggableElements: [],
       animation: new Drill(props.animation),
@@ -66,8 +65,6 @@ class AnimationEditor extends React.Component {
     var animationWidth = editorWidth * this.wRatio;
     var animationHeight = editorHeight * this.hRatio;
 
-    debug('onLayout: animationWidth/animationHeight: ' + animationWidth + '/' + animationHeight);
-
     var playerRadius = Math.min(animationWidth, animationHeight) / 12;
     this.draggableElementsTop = animationHeight + 2.5 * playerRadius;
     this.draggableElementsLeft = Array(4);
@@ -93,9 +90,6 @@ class AnimationEditor extends React.Component {
     this.setState(prevState => ({
       draggableElements: prevState.draggableElements.concat(this.initialElements),
     }));
-
-    debug('animationE onlayout top left position x/y: ' + e.nativeEvent.layout.x + '/' + e.nativeEvent.layout.y);
-    debug('animationE onlayout w/h: ' + e.nativeEvent.layout.width + '/' + e.nativeEvent.layout.height);
   };
 
   addElementToAnimation = (element, xDelta, yDelta) => {
@@ -105,7 +99,6 @@ class AnimationEditor extends React.Component {
     var x = 0;
     var y = 0;
 
-    debug('animationE: element id: ' + element.props.id);
     var elementNumber = '';
 
     switch (element.props.id) {
@@ -118,18 +111,17 @@ class AnimationEditor extends React.Component {
         y = this.draggableElementsTop;
         break;
       case 'triangle':
-        x = this.draggableElementsLeft[2];
+        x = this.draggableElementsLeft[3];
         y = this.draggableElementsTop;
         break;
       case 'disc':
-        x = this.draggableElementsLeft[3];
+        x = this.draggableElementsLeft[2];
         y = this.draggableElementsTop;
         break;
     }
 
     var newPosition = this._positionPixelToPercent(x + xDelta, y + yDelta);
-
-    if (newPosition[0] <= 1 && newPosition[1] <= 1 && newPosition[0] >= 0 && newPosition[1] >= 0) {
+    if (newPosition[0] <= 1 && newPosition[1] <= 0.88 && newPosition[0] >= 0 && newPosition[1] >= 0) {
       switch (element.props.id) {
         case 'offense':
           elementNumber = this.offenseCount;
@@ -144,14 +136,9 @@ class AnimationEditor extends React.Component {
         case 'disc':
           elementNumber = this.discCount;
           this.discCount++;
-          this.state.draggableElements[3].setNumber(this.discCount);
+          this.state.draggableElements[2].setNumber(this.discCount);
           break;
       }
-
-      //        yDelta /= 2;
-      debug('x+xDelta/y+yDelta: ' + x + '+' + xDelta + '/' + y + '+' + yDelta);
-      debug('window w/h + ' + this.state.width + '/' + this.state.height);
-      debug('added element to animation at position: ' + newPosition[0] + '/' + newPosition[1]);
 
       // Add the element with its initial position
       var newAnimation = this._copyAnimation();
@@ -159,10 +146,6 @@ class AnimationEditor extends React.Component {
       newAnimation.addElement(element, newPosition[0], newPosition[1], elementNumber);
 
       this.saveAnimation(newAnimation);
-
-      //	debug("ae, add element, step count: " + this.state.animation.positions.length);
-
-      if (this.state.animation.positions.length > 0) debug('\telem count: ' + this.state.animation.positions[0].length);
     }
   };
 
@@ -173,19 +156,22 @@ class AnimationEditor extends React.Component {
    * y2: corresponding vertical position in percentage (=0 if centered)
    */
   _positionPixelToPercent = (x, y) => {
-    debug(
-      'Animation : positionPercentToPixel, animation width/height: ' +
-        this.state.width +
-        '/' +
-        this.state.height * this.hRatio,
-    );
-    debug('Animation : positionPercentToPixel, x/y: ' + x + '/' + y);
-    debug('Animation : positionPercentToPixel, dLeft/dTop: ' + this.state.dLeft + '/' + this.state.dTop);
-
-    // TODO replace coefficient by variable
     return [
       (x - this.state.dLeft) / (this.state.width * this.wRatio),
       (y - this.state.dTop) / (this.state.height * this.hRatio),
+    ];
+  };
+
+  /** Convert a position (x, y) in percentage of the animation area (x2, y2) in pixels of the phone screen
+   * x: horizontal position in percentage (=0 if centered)
+   * y: vertical position in percentage (=0 if centered)
+   * x: corresponding horizontal position in pixels (=0 left edge, =1 right edge)
+   * y: corresponding vertical position in pixels (=0 top, =1 bottom)
+   */
+  _positionPercentToPixel = (x, y) => {
+    return [
+      x * (this.state.width * this.wRatio) + this.state.dLeft,
+      y * (this.state.height * this.hRatio) + this.state.dTop,
     ];
   };
 
@@ -200,8 +186,6 @@ class AnimationEditor extends React.Component {
   }
 
   componentDidMount() {
-    debug('component mount');
-
     var newAnimation = this._copyAnimation();
 
     newAnimation.positions = Array(2);
@@ -211,34 +195,16 @@ class AnimationEditor extends React.Component {
     /* Get the dimension of the screen and then initialize the animation */
     var { height, width } = Dimensions.get('window');
 
-    debug('screen h/w: ' + height + '/' + width);
-
     this.saveAnimation(newAnimation);
   }
 
   cutMove = (elemId, xDelta, yDelta, isCounterCut) => {
-    debug('Animation editor: in cut move xD/yD: ' + xDelta + '/' + yDelta);
-
-    debug('previousStep: ' + (this.currentStep - 1) + ' ceil: ' + Math.ceil(this.currentStep - 1));
-
-    debug('elemId: ' + elemId);
-
-    debug('Animation before update: ');
-    this.state.animation.log();
-
     var previousStepId = Math.ceil(this.currentStep) - 1;
 
     var previousPositions = this.state.animation.getPositionsAtStep(elemId, previousStepId);
 
     var xDeltaPercent = xDelta / (this.state.width * this.wRatio);
     var yDeltaPercent = yDelta / (this.state.height * this.hRatio);
-
-    debug(
-      'moved cut element to position: ' +
-        (previousPositions[0][0] + xDeltaPercent) +
-        '/' +
-        (previousPositions[0][1] + yDeltaPercent),
-    );
 
     var newAnimation = this._copyAnimation();
 
@@ -255,11 +221,20 @@ class AnimationEditor extends React.Component {
       yCCutDelta = 0;
     }
 
+    var newCutPosition = [previousPositions[0][0] + xCutDelta, previousPositions[0][1] + yCutDelta];
+
+    /* If the cut goes outside of the animation area, put it at the border of the animation */
+    if (newCutPosition[0] < 0) newCutPosition[0] = 0;
+    else if (newCutPosition[0] > 1) newCutPosition[0] = 1;
+
+    if (newCutPosition[1] < 0) newCutPosition[1] = 0;
+    else if (newCutPosition[1] > 0.85) newCutPosition[1] = 0.85;
+
     /* Set the starting position */
     newAnimation.positions[previousStepId][elemId] = [];
     newAnimation.positions[previousStepId][elemId].push([]);
-    newAnimation.positions[previousStepId][elemId][0].push(previousPositions[0][0] + xCutDelta);
-    newAnimation.positions[previousStepId][elemId][0].push(previousPositions[0][1] + yCutDelta);
+    newAnimation.positions[previousStepId][elemId][0].push(newCutPosition[0]);
+    newAnimation.positions[previousStepId][elemId][0].push(newCutPosition[1]);
 
     /* If there was a counter-cut or if the counter-cut is moving */
     if (previousPositions.length > 1 || isCounterCut) {
@@ -279,70 +254,100 @@ class AnimationEditor extends React.Component {
         newPositionY = previousPositions[1][1] + yCCutDelta;
       }
 
+      /* If the counter-cut goes outside of the animation area, put it at the border of the animation */
+      if (newPositionX < 0) newPositionX = 0;
+      else if (newPositionX > 1) newPositionX = 1;
+
+      if (newPositionY < 0) newPositionY = 0;
+      else if (newPositionY > 0.85) newPositionY = 0.85;
+
       newAnimation.positions[previousStepId][elemId][1].push(newPositionX);
       newAnimation.positions[previousStepId][elemId][1].push(newPositionY);
     }
 
     this.saveAnimation(newAnimation, () => {
-      debug('Animation after update: ');
       this.state.animation.log();
     });
   };
 
   moveElement = (element, xDelta, yDelta) => {
-    debug('Animation editor: in move element xD/yD: ' + xDelta + '/' + yDelta);
-
-    debug('currentStep: ' + this.currentStep + ' ceil: ' + Math.ceil(this.currentStep));
-
     var currentPosition = this.state.animation.getPositionsAtStep(element.props.eId, Math.ceil(this.currentStep));
     currentPosition = currentPosition[0];
     var xDeltaPercent = xDelta / (this.state.width * this.wRatio);
     var yDeltaPercent = yDelta / (this.state.height * this.hRatio);
 
-    debug(
-      'moved element to position: ' + (currentPosition[0] + xDeltaPercent) + '/' + (currentPosition[1] + yDeltaPercent),
-    );
-    debug('Animation before update: ');
-    this.state.animation.log();
+    var newPosition = [currentPosition[0] + xDeltaPercent, currentPosition[1] + yDeltaPercent];
+    var newPixelPosition = this._positionPercentToPixel(newPosition[0], newPosition[1]);
 
     var newAnimation = this._copyAnimation();
+    var animationWidth = this.state.width * this.wRatio;
+    var animationHeight = this.state.height * this.hRatio;
 
-    newAnimation.positions[Math.ceil(this.currentStep)][element.props.eId] = [];
-    newAnimation.positions[Math.ceil(this.currentStep)][element.props.eId].push([]);
-    newAnimation.positions[Math.ceil(this.currentStep)][element.props.eId][0].push(currentPosition[0] + xDeltaPercent);
-    newAnimation.positions[Math.ceil(this.currentStep)][element.props.eId][0].push(currentPosition[1] + yDeltaPercent);
+    /* If the element is dropped on the trash icon */
+    if (
+      newPixelPosition[0] >= animationWidth - 50 &&
+      newPixelPosition[1] >= animationHeight - 50 &&
+      newPixelPosition[1] <= animationHeight + 3
+    ) {
+      /* Remove it from the drill */
+      newAnimation.removeElement(element.props.eId);
 
-    this.saveAnimation(newAnimation, () => {
-      debug('Animation after update: ');
-      this.state.animation.log();
-    });
+      /* If it had a number, we need to decrement the number of the corresponding draggable element */
+      switch (element.props.id) {
+        case 'offense':
+          this.offenseCount--;
+          this.state.draggableElements[0].setNumber(this.offenseCount);
+          break;
+        case 'defense':
+          this.defenseCount--;
+          this.state.draggableElements[1].setNumber(this.defenseCount);
+          break;
+        case 'disc':
+          this.discCount--;
+          this.state.draggableElements[2].setNumber(this.discCount);
+          break;
+      }
+    } else {
+      /* If the element is moved outside of the animation area, move it to the closest position inside the animation area */
+      if (newPosition[0] < 0) newPosition[0] = 0;
+      else if (newPosition[0] > 1) newPosition[0] = 1;
+
+      if (newPosition[1] < 0) newPosition[1] = 0;
+      else if (newPosition[1] > 0.85) newPosition[1] = 0.85;
+
+      /* If the element is not moved outside of the animation area, updated its coordinates */
+      newAnimation.positions[Math.ceil(this.currentStep)][element.props.eId] = [];
+      newAnimation.positions[Math.ceil(this.currentStep)][element.props.eId].push([]);
+      newAnimation.positions[Math.ceil(this.currentStep)][element.props.eId][0].push(newPosition[0]);
+      newAnimation.positions[Math.ceil(this.currentStep)][element.props.eId][0].push(newPosition[1]);
+    }
+
+    this.saveAnimation(newAnimation);
   };
 
-  _createDraggableElements(deType, playerRadius, top, left) {
+  _createDraggableElements(displayedElementType, playerRadius, top, left) {
     var text = '';
 
     var key = 600;
     this.keyCount += 1;
 
-    if (deType === 'offense') text = '1';
+    if (displayedElementType === 'offense') text = '1';
 
-    if (deType === 'defense') {
+    if (displayedElementType === 'defense') {
       text = '1';
       key = 601;
     }
 
-    if (deType === 'triangle') key = 602;
+    if (displayedElementType === 'triangle') key = 602;
 
-    if (deType === 'disc') {
+    if (displayedElementType === 'disc') {
       text = '1';
       key = 603;
     }
 
-    debug('text: ' + text);
     return new DraggableDisplayedElement({
       onMoveEnd: this.addElementToAnimation,
-      // key: this.keyCount,
-      id: deType,
+      id: displayedElementType,
       eId: -1,
       key,
       movable: true,
@@ -354,7 +359,6 @@ class AnimationEditor extends React.Component {
   }
 
   _display(item) {
-    debug(item);
     if (item !== undefined && item !== null) return item.render();
     else return undefined;
   }
@@ -368,14 +372,25 @@ class AnimationEditor extends React.Component {
     this.saveAnimation(newAnimation);
   };
 
-  displayStepDescription = () => {
-    // TODO
+  removeStep = () => {
+    // Add the element with its initial position
+    var newAnimation = this._copyAnimation();
+
+    /* If the last step is currently displayed */
+    if (this.currentStep === this.state.animation.stepCount() - 1)
+      Animated.timing(this.currentStepAV, {
+        toValue: this.state.animation.stepCount() - 2,
+        duration: 0,
+        easing: Easing.linear,
+        key: 0,
+      }).start();
+
+    newAnimation.removeStep();
+
+    this.saveAnimation(newAnimation);
   };
 
   render() {
-    debug('render AE');
-    debug('this.currentStep: ' + this.currentStep);
-
     return (
       <View style={styles.mainContainer} onLayout={this.onLayout}>
         <Animation
@@ -391,11 +406,11 @@ class AnimationEditor extends React.Component {
           lTop={this.state.lTop}
           onStepChange={this.displayStepDescription}
           onStepAdded={this.addStep}
+          onStepRemoved={this.removeStep}
           currentStepAV={this.currentStepAV}
         />
 
         {this.state.draggableElements.map(function(item) {
-          debug('render de');
           return item.render();
         })}
 

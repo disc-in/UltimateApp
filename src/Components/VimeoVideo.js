@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { View, ActivityIndicator, StyleSheet, Text } from 'react-native';
 import { Video } from 'expo-av';
+import * as ScreenOrientation from 'expo-screen-orientation';
 
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
@@ -80,6 +81,14 @@ const VimeoVideo = ({ vimeoId, screenWidth, sounds, shouldPlay }) => {
         style={{ width: screenWidth, height: 250 }}
         onLoadStart={() => setBuffer(true)}
         onLoad={playVideoLoaded}
+        onFullscreenUpdate={async ({ fullscreenUpdate }) => {
+          if (fullscreenUpdate === Video.FULLSCREEN_UPDATE_PLAYER_WILL_PRESENT) {
+            await ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
+          }
+          if (fullscreenUpdate === Video.FULLSCREEN_UPDATE_PLAYER_WILL_DISMISS) {
+            await ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT);
+          }
+        }}
       />
     </View>
   );

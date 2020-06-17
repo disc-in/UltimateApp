@@ -47,23 +47,32 @@ export default {
     homePage: 'Disc In',
     drillListPage: '{{type}} drills',
     filters: 'Filters',
-    trainingListPage: 'Training sessions',
     programListPage: 'Choose a program',
     drillPageMinimal: '{{training}} drills',
     animationEditorPage: 'New Drill',
+    dictionaryPage: 'Dictionary',
+    essentialPage: 'Essential',
+    tacticsPage: 'Tactics',
+  },
+  shared: {
+    back: 'Back',
   },
   homePage: {
     frisbeeTab: 'Frisbee',
     fitnessTab: 'Fitness',
-    theory: 'Theory',
+    theoryTab: 'Theory',
+    editor: 'Editor',
     drills: 'Drills',
     programs: 'Practice Programs',
     leanTitle: 'Lean Fit',
     leanSubtitle: 'Get lean and fit over 6 weeks with a balanced plan that builds endurance',
-    bodyweightTitle: 'Bodywaight only',
+    bodyweightTitle: 'Bodyweight only',
     bodyweightSubtitle: 'Push your strenght and improve muscle tone over the season - all without weights',
     gymTitle: 'Gym Strong',
     gymSubtitle: 'Build full-body strenght with a focus on weight training over the season',
+    dictionary: 'Dictionary',
+    essential: 'Essential',
+    tactics: 'Tactics',
   },
   animationEditor: {
     comingSoon: {
@@ -112,17 +121,6 @@ export default {
   },
   frisbeeFilters: {
     numberOfPlayersLabel: 'Number of players: {{number}}',
-  },
-  programListPage: {
-    allTrainings: 'See all trainings',
-  },
-  trainingListPage: {
-    availableTrainings: {
-      zero: '{{count}} training session available',
-      one: '{{count}} training session available',
-      other: '{{count}} training sessions available',
-    },
-    players: '{{count}}+ players',
   },
   trainingPage: {
     start: 'Start training',

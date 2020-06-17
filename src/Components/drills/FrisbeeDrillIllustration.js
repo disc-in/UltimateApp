@@ -8,7 +8,9 @@ import Animation from '../animation/Animation';
 import VimeoVideo from '../VimeoVideo';
 import { IllustrationType } from '../../Fixtures/config';
 import theme from '../../styles/theme.style';
+
 import { ScrollView } from 'react-native-gesture-handler';
+import Drill from '../animation/Drill';
 
 const screenDimension = Dimensions.get('window');
 
@@ -82,6 +84,7 @@ const FrisbeeDrillIllustration = props => {
   const displayAnimation = ({ illustrationSource, instruction }) => {
     return (
       <>
+
         <ScrollView style={styles.scrollView}>
           <View style={styles.contentWrapper}>
             <Animation widthRatio={1} heightRatio={1 / 2} animation={illustrationSource} />
@@ -90,6 +93,7 @@ const FrisbeeDrillIllustration = props => {
             <Text style={styles.instruction}>{instruction}</Text>
           </View>
         </ScrollView>
+
       </>
     );
   };
@@ -120,7 +124,7 @@ const FrisbeeDrillIllustration = props => {
           height: 8,
           borderRadius: 5,
           marginHorizontal: 5,
-          backgroundColor: theme.GRADIENT_FIRST_COLOR,
+          backgroundColor: theme.MAIN_COLOR,
         }}
         inactiveDotStyle={{
           backgroundColor: theme.COLOR_SECONDARY,

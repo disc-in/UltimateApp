@@ -1,4 +1,4 @@
-import animationSquare from './AnimationSquare';
+import animationSquare from './Animation/AnimationSquare';
 import {
   DrillTypes,
   Intensities,
@@ -203,6 +203,56 @@ const training2 = {
 };
 
 export default {
+  theory: {
+    dictionary: [
+      {
+        id: 1,
+        title: 'B',
+        data: [
+          {
+            id: 0,
+            text: 'Break',
+            definition:
+              'When Forcing you are making the player holding the disc throw a certain direction. A break is when your attempt fails and they throw the direction you are guarding against. A teammate may yell “no break!” if there is an opposing player wide open on the guarded side, this means try extra hard to guard that side.',
+          },
+          {
+            id: 1,
+            text: 'Brick',
+            definition:
+              'Happens when a freshly pulled disc goes out-of-bounds. The receiving team take the disc to the brick-mark which is centrally located and 20 yards in-field from the first end zone line. A brick is signified by clapping hands once over head or by calling “Brick.”',
+          },
+        ],
+      },
+    ],
+    essentials: [
+      {
+        title: 'Cutting',
+        pages: [
+          {
+            id: 1,
+            title: 'How to make a perfect cut?',
+            text: 'Rise Up Ultimate',
+            video: '424000350',
+            animation: '',
+          },
+        ],
+      },
+    ],
+    tactics: [
+      {
+        title: 'Vertical Stack',
+        pages: [
+          {
+            id: 1,
+            title: 'How does vertical stacks work?',
+            text: 'That Drone Guy Ty',
+            video: '424002454',
+            animation: '',
+          },
+        ],
+      },
+    ],
+  },
   favoriteDrills: [],
   completeTrainings: [],
   drills: [fitnessDrill1, fitnessDrill2, frisbeeDrill1, frisbeeDrill2],

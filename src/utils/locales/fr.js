@@ -47,15 +47,21 @@ export default {
     homePage: 'Disc In',
     drillListPage: 'Exercices de {{type}}',
     filters: 'Filtres',
-    trainingListPage: "Séances d'entraînement",
     programListPage: "Programmes d'entraînement",
     drillPageMinimal: '{{training}} - exercices',
     animationEditorPage: 'Nouvel exo',
+    dictionaryPage: 'Lexique',
+    essentialPage: 'Les bases du jeu',
+    tacticsPage: 'Tactiques',
+  },
+  shared: {
+    back: 'Retour',
   },
   homePage: {
     frisbeeTab: 'Frisbee',
     fitnessTab: 'Fitness',
-    theory: 'Théorie',
+    theoryTab: 'Theorie',
+    editor: 'Editeur',
     drills: 'Exercices',
     programs: "Programmes d'entraînement",
     leanTitle: 'Affuté',
@@ -64,6 +70,9 @@ export default {
     bodyweightSubtitle: 'Gagnez en force et en tonus musculaire - juste avec le poids du corps',
     gymTitle: 'En salle',
     gymSubtitle: 'Un programme conçu pour développer la force pendant la saison',
+    dictionary: 'Lexique',
+    essential: 'Les bases du jeu',
+    tactics: 'Tactiques',
   },
   animationEditor: {
     comingSoon: {
@@ -111,16 +120,6 @@ export default {
   },
   frisbeeFilters: {
     numberOfPlayersLabel: 'Nombre de joueurs : {{number}}',
-  },
-  programListPage: {
-    allTrainings: 'Tous les entraînements',
-  },
-  trainingListPage: {
-    availableTrainings: {
-      one: '{{count}} entraînement disponible',
-      other: '{{count}} entraînements disponibles',
-    },
-    players: '{{count}}+ joueurs',
   },
   trainingPage: {
     start: "Commencer l'entraînement",

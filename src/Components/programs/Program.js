@@ -1,11 +1,10 @@
 import React from 'react';
-import { StyleSheet, TouchableOpacity, View, Text, Image } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 import { connect } from 'react-redux';
 
 import I18n from '../../utils/i18n';
 import theme from '../../styles/theme.style';
 import ListItem from '../shared/ListItem';
-import arrowDark from '../../../assets/arrow_dark.png';
 
 export const Program = props => {
   const { title, trainings } = props.program;
@@ -14,56 +13,47 @@ export const Program = props => {
     .filter(({ training, program }) => program.id === props.program.id)
     .map(({ training, program }) => training).length;
 
-  const onPress = () => {
-    props.navigation.navigate('ProgramPage', { program: props.program });
-  };
-
   const width = `${(completeTrainingsCount * 100) / trainings.length}%`;
   return (
     <ListItem>
-      <TouchableOpacity style={styles.program} onPress={onPress}>
-        <View style={styles.presentationContainer}>
-          <Text style={styles.programTitle}>{title}</Text>
-          <Text style={styles.completion}>
-            {I18n.t('programs.program.completion', { done: completeTrainingsCount, total: trainings.length })}
-            {completeTrainingsCount === trainings.length && ' 👍🎉'}
-          </Text>
-          <View style={styles.progressBar}>
-            <View style={[StyleSheet.absoluteFill, styles.fillProgressBar, { width }]} />
-          </View>
+      <View style={styles.program}>
+        <Text style={styles.programTitle}>{title}</Text>
+        <Text style={styles.completion}>
+          {I18n.t('programs.program.completion', { done: completeTrainingsCount, total: trainings.length })}
+          {completeTrainingsCount === trainings.length && ' 👍🎉'}
+        </Text>
+        <View style={styles.progressBar}>
+          <View style={[StyleSheet.absoluteFill, styles.fillProgressBar, { width }]} />
         </View>
-        <View style={styles.ctaContainer}>
-          <Image style={styles.cta} source={arrowDark} />
-        </View>
-      </TouchableOpacity>
+      </View>
     </ListItem>
   );
 };
 
-const mapStateToProps = state => {
-  return {
-    completeTrainings: state.completeTrainings,
-  };
-};
+const mapStateToProps = state => ({
+  completeTrainings: state.completeTrainings,
+});
 
 export default connect(mapStateToProps)(Program);
 
 const styles = StyleSheet.create({
   program: {
-    paddingTop: 10,
-    paddingLeft: 40,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-evenly',
-  },
-  presentationContainer: {
-    flexBasis: '80%',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    alignItems: 'flex-start',
+    backgroundColor: theme.COLOR_PRIMARY_LIGHT,
+    width: '100%',
   },
   programTitle: {
     fontSize: theme.FONT_SIZE_LARGE,
+    color: theme.COLOR_PRIMARY,
+    fontWeight: 'bold',
   },
   completion: {
     textAlign: 'right',
+    width: '100%',
+    color: theme.COLOR_PRIMARY,
+    fontSize: theme.FONT_SIZE_SMALL,
   },
   progressBar: {
     marginTop: 5,
@@ -75,14 +65,6 @@ const styles = StyleSheet.create({
   fillProgressBar: {
     width: '50%',
     borderRadius: 5,
-    backgroundColor: theme.COLOR_PRIMARY,
-  },
-  ctaContainer: {
-    flexBasis: '10%',
-    paddingLeft: 20,
-  },
-  cta: {
-    height: 20,
-    aspectRatio: 109 / 239,
+    backgroundColor: theme.MAIN_COLOR,
   },
 });

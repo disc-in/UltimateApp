@@ -8,14 +8,13 @@ import {
   TouchableOpacity,
   Dimensions,
   findNodeHandle,
-  Image,
 } from 'react-native';
 import { connect } from 'react-redux';
 import { useHeaderHeight } from '@react-navigation/stack';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import I18n from '../utils/i18n';
-import GradientButton from './shared/GradientButton';
+import StartButton from './shared/StartButton';
 import { toggleFavorite } from '../Store/Actions/favoriteAction';
 
 import theme from '../styles/theme.style';
@@ -91,7 +90,7 @@ export const DrillPage = props => {
             <Text style={styles.info}>{I18n.t('drillPage.level')}</Text>
           </View>
         </View>
-        <GradientButton onPress={onPressStartButton} text={I18n.t('drillPage.start')} />
+        <StartButton onPress={onPressStartButton} text={I18n.t('drillPage.start')} />
       </ImageBackground>
       <View style={styles.separator} />
       <View style={styles.description}>

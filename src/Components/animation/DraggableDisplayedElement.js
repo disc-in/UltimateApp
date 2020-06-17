@@ -1,11 +1,7 @@
 import React from 'react';
 import { StyleSheet, Easing, Animated, View, PanResponder } from 'react-native';
 
-import { LinearGradient } from 'expo-linear-gradient';
-
 import theme from '../../styles/theme.style';
-
-import debug from './debug';
 
 /** An element displayed in a drill animation */
 class DraggableDisplayedElement extends React.Component {
@@ -35,8 +31,6 @@ class DraggableDisplayedElement extends React.Component {
     /* Current position of the element in pixels */
 
     this.currentPosition = new Animated.ValueXY({ x: 0, y: 0 });
-
-    debug('playerRadius: ' + this.props.playerRadius);
 
     this.xCut = 10;
     this.yCut = 10;
@@ -81,19 +75,11 @@ class DraggableDisplayedElement extends React.Component {
 
       onPanResponderRelease: (evt, gesturestate) => {
         if (this.props.movable && this.props.onMoveEnd !== undefined && this.props.onMoveEnd !== null) {
-          debug('TeDraggableDisplayedElementst: this.props.id: ' + this.props.id);
           this.props.onMoveEnd(this, this.currentPosition.x._value, this.currentPosition.y._value);
           this.currentPosition.setValue({ x: 0, y: 0 });
         }
       },
     });
-  }
-
-  componentDidUpdate() {
-    debug('!!!!!!!!update called');
-  }
-  componentDidMount() {
-    debug('!!!!!!!!!!! mount');
   }
 
   setNumber(newNumber) {
@@ -114,7 +100,6 @@ class DraggableDisplayedElement extends React.Component {
   }
 
   render() {
-    debug('render DraggableDisplayedElement: number: ' + this.number);
     const panStyle = {
       transform: this.currentPosition.getTranslateTransform(),
     };
@@ -155,26 +140,11 @@ class DraggableDisplayedElement extends React.Component {
             ]}
             key={this.props.key + 4}
           >
-            <LinearGradient
-              colors={[theme.GRADIENT_FIRST_COLOR, theme.GRADIENT_SECOND_COLOR]}
-              style={[
-                styles.gradient,
-                {
-                  height: this.props.playerRadius,
-                  width: this.props.playerRadius,
-                  borderRadius: this.props.playerRadius,
-                },
-              ]}
-              start={{ x: 1, y: 1 }}
-              end={{ x: 0, y: 0 }}
-            >
-              <Animated.Text style={styles.offenseText}>{this.number}</Animated.Text>
-            </LinearGradient>
+            <Animated.Text style={styles.offenseText}>{this.number}</Animated.Text>
           </Animated.View>
         );
 
       case 'disc':
-        //            debug("Render in disc");
         return (
           <Animated.View
             // Use the panResponder in this view
@@ -196,7 +166,6 @@ class DraggableDisplayedElement extends React.Component {
         );
 
       case 'triangle':
-        //            debug("Render in triangle");
         return (
           <Animated.View
             // Use the panResponder in this view
@@ -220,6 +189,8 @@ class DraggableDisplayedElement extends React.Component {
   }
 }
 
+export default DraggableDisplayedElement;
+
 const styles = StyleSheet.create({
   defense: {
     position: 'absolute',
@@ -233,9 +204,9 @@ const styles = StyleSheet.create({
     color: theme.OFFENSE_TEXT_COLOR,
     fontWeight: 'bold',
   },
-
   offense: {
     position: 'absolute',
+    backgroundColor: theme.MAIN_COLOR,
     textAlign: 'center',
     textAlignVertical: 'center',
     alignItems: 'center',
@@ -245,12 +216,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: theme.OFFENSE_TEXT_COLOR,
   },
-  gradient: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
   disc: {
     position: 'absolute',
     borderColor: theme.DISC_BORDER,
@@ -262,7 +227,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: theme.DISC_TEXT_COLOR,
   },
-
   triangle: {
     position: 'absolute',
     backgroundColor: 'transparent',
@@ -272,5 +236,3 @@ const styles = StyleSheet.create({
     borderBottomColor: theme.CONE_COLOR,
   },
 });
-
-export default DraggableDisplayedElement;

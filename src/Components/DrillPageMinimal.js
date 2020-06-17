@@ -28,12 +28,8 @@ export const DrillPageMinimal = props => {
   }, [training, currentDrillIndex, navigation, program]);
 
   const finishTraining = useCallback(() => {
-    if (program) {
-      completeTraining({ training, program });
-      navigation.navigate('ProgramPage', { program });
-    } else {
-      navigation.navigate('TrainingListPage');
-    }
+    completeTraining({ training, program });
+    navigation.navigate('ProgramListPage', { activeProgram: program.id });
   }, [training, navigation, program, completeTraining]);
 
   useLayoutEffect(() => {

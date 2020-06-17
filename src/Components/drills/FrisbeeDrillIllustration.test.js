@@ -6,6 +6,7 @@ import { createDrill } from '../../Fixtures/TestFixtures';
 import FrisbeeDrillIllustration from './FrisbeeDrillIllustration';
 
 afterEach(cleanup);
+jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
 
 describe('<FrisbeeDrillIllustration />', () => {
   it('renders correctly', () => {

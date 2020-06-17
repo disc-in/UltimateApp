@@ -891,20 +891,11 @@ const goaltimateDrill = {
       title: 'Goaltimate rules',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: goaltimate,
+      videoIllustration: '416849035',
       repetition: '',
       rest: '',
       instruction:
         '4 on 4 \nStall count of 5 \nWhenever a turnover happens, the new offensive team must ‘clear’ the disc by taking it into the clear box, and can then attack the goal.\nOne point for a completed pass that travels through the hoop and is caught in the end zone by your teammate',
-    },
-    {
-      id: 2,
-      title: 'Illustration',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '416849035',
-      sounds: true,
-      repetition: '',
-      rest: '',
-      instruction: '',
     },
   ],
 };
@@ -1588,7 +1579,6 @@ const horizontalTiming = {
       title: 'Break is succeed',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: horizontalTimingAnimation,
-      videoIllustration: '',
       repetition: '',
       rest: '',
       instruction:
@@ -1627,7 +1617,6 @@ const game3v3Horizontal = {
       title: 'Deeply aggressive',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: threeHorizontal,
-      videoIllustration: '',
       repetition: '',
       rest: '',
       instruction:
@@ -1666,7 +1655,6 @@ const theDuel = {
       title: 'One direction',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: theDual,
-      videoIllustration: '',
       repetition: '',
       rest: '',
       instruction:
@@ -1677,7 +1665,6 @@ const theDuel = {
       title: 'With a fake',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: theDualFake,
-      videoIllustration: '',
       repetition: '',
       rest: '',
       instruction:
@@ -2006,7 +1993,7 @@ export default {
     {
       id: 5,
       title: 'Horizontal Stack',
-      trainings: [initiationHorizontal, secondVerticalTraining, dumpSwingTraining],
+      trainings: [initiationHorizontal, horizontalFlow],
     },
     {
       id: 6,

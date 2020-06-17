@@ -53,6 +53,7 @@ export default {
     dictionaryPage: 'Dictionary',
     essentialPage: 'Essential',
     tacticsPage: 'Tactics',
+    videoPage: 'Video',
   },
   shared: {
     back: 'Back',

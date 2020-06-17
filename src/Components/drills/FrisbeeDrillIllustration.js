@@ -15,6 +15,7 @@ const screenDimension = Dimensions.get('window');
 const FrisbeeDrillIllustration = props => {
   const [activeIndex, setActiveIndex] = useState(0);
   const currentStep = props.drill.steps[activeIndex];
+  const { navigation } = props;
 
   const carouselRef = useRef(null);
 
@@ -79,12 +80,26 @@ const FrisbeeDrillIllustration = props => {
     );
   };
 
-  const displayAnimation = ({ illustrationSource, instruction }) => {
+  const displayVideo = videoIllustration => {
+    console.log('NAVIGATION ***********************', navigation);
+    if (typeof videoIllustration !== 'undefined') {
+      return (
+        <View style={styles.centerContainer}>
+          <TouchableOpacity onPress={() => navigation.navigate('VideoPage')}>
+            <MaterialCommunityIcons name="video" color={theme.COLOR_PRIMARY} size={35} />
+          </TouchableOpacity>
+        </View>
+      );
+    }
+  };
+
+  const displayAnimation = ({ illustrationSource, instruction, videoIllustration }) => {
     return (
       <>
         <View style={styles.contentWrapper}>
           <Animation widthRatio={1} heightRatio={1 / 2} animation={new Drill(illustrationSource)} />
         </View>
+        <View>{displayVideo(videoIllustration)}</View>
         <Text style={styles.instruction}>{instruction}</Text>
       </>
     );
@@ -173,6 +188,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   contentWrapper: { minHeight: 375 },
+  centerContainer: {
+    flex: 1,
+    alignItems: 'center',
+  },
 });
 
 export default FrisbeeDrillIllustration;

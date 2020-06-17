@@ -9,7 +9,6 @@ import VimeoVideo from '../VimeoVideo';
 import { IllustrationType } from '../../Fixtures/config';
 import theme from '../../styles/theme.style';
 
-import { ScrollView } from 'react-native-gesture-handler';
 import Drill from '../animation/Drill';
 
 const screenDimension = Dimensions.get('window');
@@ -84,14 +83,10 @@ const FrisbeeDrillIllustration = props => {
   const displayAnimation = ({ illustrationSource, instruction }) => {
     return (
       <>
-        <ScrollView style={styles.scrollView}>
-          <View style={styles.contentWrapper}>
-            <Animation widthRatio={1} heightRatio={1 / 2} animation={illustrationSource} />
-          </View>
-          <View style={styles.instructionContainer}>
-            <Text style={styles.instruction}>{instruction}</Text>
-          </View>
-        </ScrollView>
+        <View style={styles.contentWrapper}>
+          <Animation widthRatio={1} heightRatio={1 / 2} animation={new Drill(illustrationSource)} />
+        </View>
+        <Text style={styles.instruction}>{instruction}</Text>
       </>
     );
   };
@@ -159,8 +154,6 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
     fontSize: theme.FONT_SIZE_MEDIUM,
     color: theme.COLOR_PRIMARY,
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   videoAlone: {
     flex: 1,
@@ -180,9 +173,7 @@ const styles = StyleSheet.create({
     color: theme.COLOR_PRIMARY,
     textAlign: 'center',
   },
-  contentWrapper: { height: 375 },
-  instructionContainer: {},
-  scrollView: { flex: 1 },
+  contentWrapper: { minHeight: 375 },
 });
 
 export default FrisbeeDrillIllustration;

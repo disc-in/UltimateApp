@@ -1,6 +1,7 @@
 import React, { useLayoutEffect, useCallback } from 'react';
 import { Platform, StyleSheet, ScrollView, View, Text, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
@@ -8,7 +9,6 @@ import MinimalDrill from './drills/MinimalDrill';
 import ButtonNext from './shared/Button';
 import Progress from './ProgressBar2';
 import { completeTraining } from '../Store/Actions/programAction';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export const DrillPageMinimal = props => {
   const { route, navigation, completeTraining } = props;

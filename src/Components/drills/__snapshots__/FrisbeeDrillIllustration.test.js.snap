@@ -166,7 +166,7 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
           <View
             style={
               Object {
-                "height": 375,
+                "minHeight": 375,
               }
             }
           >

@@ -42,6 +42,14 @@ import bigEight from './Animation/BigEight';
 import theM from './Animation/TheM';
 import dishiesChain from './Animation/DishiesChain';
 import dishiesPoach from './Animation/DishiesPoach';
+import discGolfAnimation from './Animation/DiscGolf';
+import dDCAnimation from './Animation/DDC';
+import horizontalTimingAnimation from './Animation/HorizontalTiming';
+import horizontalTimingOpenAnimation from './Animation/HorizontalTimingOpen';
+import threeHorizontal from './Animation/ThreeHorizontal';
+import threeHorizontalGame from './Animation/ThreeHorizontalGame';
+import theDual from './Animation/TheDual';
+import theDualFake from './Animation/theDualFake';
 
 const stabilityDrill = {
   id: 1,
@@ -731,64 +739,6 @@ const breakDrill = {
   ],
 };
 
-const threeColumnsLongDrill = {
-  id: 1025,
-  type: DrillTypes.FRISBEE,
-  author: 'Martin',
-  title: '3 columns long shot',
-  image: 'https://zupimages.net/up/20/19/330p.jpg',
-  description: 'Basic long passes drill. You want your players to alternate between throwing, running and passing',
-  minimalPlayersNumber: 12,
-  equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 disc for 3 players - 3 cones',
-  durationInMinutes: 20,
-  intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.THROWING],
-  seasonTiming: SeasonTimings.ANYTIME,
-  level: Levels.INTERMEDIATE,
-  steps: [
-    {
-      id: 1,
-      title: '',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
-      repetition: '1',
-      rest: '90s',
-      instruction:
-        "1- The cutter run as fast as possible then he claps the second mate's hand. \n 2- Cut under and long ",
-    },
-  ],
-};
-
-const twoColumnsLongDrill = {
-  id: 1026,
-  type: DrillTypes.FRISBEE,
-  author: 'Martin',
-  title: '2 columns with defense',
-  image: 'https://zupimages.net/up/20/19/fvm4.jpg',
-  description:
-    'Basic long passes drill. You want your players to alternate between throwing, running and passing, with offense and defense',
-  minimalPlayersNumber: 18,
-  equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 disc for 3 players - 3 cones',
-  durationInMinutes: 30,
-  intensity: Intensities.HIGH,
-  goals: [FrisbeeGoals.THROWING],
-  seasonTiming: SeasonTimings.ANYTIME,
-  level: Levels.INTERMEDIATE,
-  steps: [
-    {
-      id: 1,
-      title: '',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
-      repetition: '1',
-      rest: '90s',
-      instruction: '',
-    },
-  ],
-};
-
 const treasureHuntDrill = {
   id: 1009,
   type: DrillTypes.FRISBEE,
@@ -1319,34 +1269,6 @@ const triangleOfDeathdrill = {
   ],
 };
 
-const chevronDrill = {
-  id: 1022,
-  type: DrillTypes.FRISBEE,
-  author: 'Author',
-  title: 'Chevron Passes',
-  image: 'https://zupimages.net/up/20/19/1y4x.jpg',
-  description: 'Cutting with good timing; throwing immediately after catching',
-  minimalPlayersNumber: 8,
-  equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 disc - 2 cones',
-  durationInMinutes: 10,
-  intensity: Intensities.HIGH,
-  goals: [FrisbeeGoals.CUTTING, FrisbeeGoals.CATCH, FrisbeeGoals.THROWING],
-  seasonTiming: SeasonTimings.ANYTIME,
-  level: Levels.BEGINNER,
-  steps: [
-    {
-      id: 1,
-      title: '',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
-      repetition: '',
-      rest: '',
-      instruction: '',
-    },
-  ],
-};
-
 const trainOfFakeDrill = {
   id: 1020,
   type: DrillTypes.FRISBEE,
@@ -1582,6 +1504,185 @@ const defensePositionDrill = {
   ],
 };
 
+const discGolf = {
+  id: 1027,
+  type: DrillTypes.FRISBEE,
+  author: 'Moby',
+  title: 'Disc Golf',
+  image: 'https://zupimages.net/up/20/25/f4bu.jpg',
+  description:
+    'The rules. Disc Golf is played like traditional golf, but with disc golf discs instead of balls and clubs',
+  minimalPlayersNumber: 1,
+  equipmentLabel: EquipmentLabels.NONE,
+  equipment: '1 disc per Player',
+  durationInMinutes: 10,
+  intensity: Intensities.LOW,
+  goals: [FrisbeeGoals.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: '',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: discGolfAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'The rules. Disc Golf is played like traditional golf, but with disc golf discs instead of balls and clubs. One throw (stroke) is counted each time the disc is thrown and when a penalty is incurred. The goal is to play each hole in the fewest strokes possible.',
+    },
+  ],
+};
+
+const dDC = {
+  id: 1028,
+  type: DrillTypes.FRISBEE,
+  author: '',
+  title: 'DDC',
+  image: 'https://zupimages.net/up/20/25/vhea.jpg',
+  description: 'Double disc court is a frisbee sport which combines quickness, strategy, and throwing ability.',
+  minimalPlayersNumber: 4,
+  equipmentLabel: EquipmentLabels.NONE,
+  equipment: '2 discs - 8 cones',
+  durationInMinutes: 15,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.COMMUNICATION, FrisbeeGoals.CATCH],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: '',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: dDCAnimation,
+      videoIllustration: '429982987',
+      repetition: '',
+      rest: '',
+      instruction:
+        "DDC is played by two teams of two players each. The courts are 13 meters square and 17 meters apart. You get one point for a throw that lands and stays in the opponents' court, or if an opponent drops your throw. Your opponents get one point if your throw touches outside their court. If you can arrange it so that the other team is touching both discs at the same time, you get two points. That is called 'doubling' your opponents.",
+    },
+  ],
+};
+
+const horizontalTiming = {
+  id: 1029,
+  type: DrillTypes.FRISBEE,
+  author: 'Moby',
+  title: 'Horizontal Timing',
+  image: 'https://zupimages.net/up/20/25/zn5l.jpg',
+  description: 'Complete drill to work on the timing of the cutter and handler in a horizontal stack',
+  minimalPlayersNumber: 5,
+  equipmentLabel: EquipmentLabels.NONE,
+  equipment: '1 disc',
+  durationInMinutes: 10,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'Break is succeed',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: horizontalTimingAnimation,
+      videoIllustration: '',
+      repetition: '',
+      rest: '',
+      instruction:
+        'The cutter stands 10m downfield of the handler. The rotation  after 2 tries is Mark > Central handler > Reset > Cutter in the open side > Cutter in the break side',
+    },
+    {
+      id: 2,
+      title: 'Play in the open side',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: horizontalTimingOpenAnimation,
+      repetition: '',
+      rest: '',
+      instruction: '',
+    },
+  ],
+};
+
+const game3v3Horizontal = {
+  id: 1030,
+  type: DrillTypes.FRISBEE,
+  author: 'Moby',
+  title: 'Diamond Cut',
+  image: 'https://zupimages.net/up/20/25/zn5l.jpg',
+  description: 'work of freeing up spaces in a horizontal stack',
+  minimalPlayersNumber: 6,
+  equipmentLabel: EquipmentLabels.NONE,
+  equipment: '1 disc - 8 cones',
+  durationInMinutes: 15,
+  intensity: Intensities.HIGH,
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'Deeply aggressive',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: threeHorizontal,
+      videoIllustration: '',
+      repetition: '',
+      rest: '',
+      instruction:
+        'Two teams compete against each other. They alternate positions every 2 throws. The goal is to score a point with a maximum of 2 passes. The cutter in the open side starts to move and the cutter has to adapt by making a opposite cut. ',
+    },
+    {
+      id: 2,
+      title: 'Game situation',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: threeHorizontalGame,
+      repetition: '',
+      rest: '',
+      instruction: 'Same drill. When a team manages to score, they stay in offense. First team to 10 wins.',
+    },
+  ],
+};
+
+const theDuel = {
+  id: 1031,
+  type: DrillTypes.FRISBEE,
+  author: 'Moby',
+  title: 'Nothing like a duel',
+  image: 'https://zupimages.net/up/20/19/cd36.jpg',
+  description: 'Nothing better than a duel to work on the different aspects of the game',
+  minimalPlayersNumber: 4,
+  equipmentLabel: EquipmentLabels.NONE,
+  equipment: '1 disc ',
+  durationInMinutes: 10,
+  intensity: Intensities.HIGH,
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.CATCH],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'One direction',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: theDual,
+      videoIllustration: '',
+      repetition: '',
+      rest: '',
+      instruction:
+        "The cutter after initating can't make any fake. The thrower has to react quickly. Rotate every Three throws ",
+    },
+    {
+      id: 1,
+      title: 'With a fake',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: theDualFake,
+      videoIllustration: '',
+      repetition: '',
+      rest: '',
+      instruction:
+        'Same situation as the precedent drill but if the thrower make a fake the cutter has to change his direction ',
+    },
+  ],
+};
+
 const normalGame = {
   id: 2001,
   type: DrillTypes.GAME,
@@ -1702,7 +1803,7 @@ const coed2LongTraining = {
   title: 'Long Shot is Coming',
   image: 'https://zupimages.net/up/20/19/aapn.jpg',
   description: 'Practice your long skills.',
-  drills: [warmupGameDrill, threeColumnsLongDrill, longShotGame],
+  drills: [warmupGameDrill, longShotGame],
 };
 
 const coed2Long2Training = {
@@ -1710,7 +1811,7 @@ const coed2Long2Training = {
   title: 'Long is your weapon',
   image: 'https://zupimages.net/up/20/19/v8f4.jpg',
   description: 'Practicie your long skills.',
-  drills: [warmupDrill, threeColumnsLongDrill, twoColumnsLongDrill, longShotGame],
+  drills: [warmupDrill, longShotGame],
 };
 
 const firstChildTraining = {
@@ -1750,7 +1851,7 @@ const secondInintiationAdultTraining = {
   title: 'Defense & Longs',
   image: 'https://zupimages.net/up/20/19/cd36.jpg',
   description: 'Players will work on defense and long throws',
-  drills: [warmupDrill, menageATroisDrill, threeColumnsLongDrill, normalGame],
+  drills: [warmupDrill, menageATroisDrill, normalGame],
 };
 
 const thirdInintiationAdultTraining = {
@@ -1783,6 +1884,27 @@ const defenseBaseTraining = {
   image: 'https://zupimages.net/up/20/19/skjl.jpg',
   description: 'Practice your defense.',
   drills: [warmupGameDrill, defensePositionDrill, youShallNotPassDrill, breakDrill, normalGame],
+};
+const LearningByPlaying = {
+  id: 14,
+  title: 'Learning to throw',
+  image: 'https://zupimages.net/up/20/19/skjl.jpg',
+  description: 'Practice your throw by playing game.',
+  drills: [warmupGameDrill, discGolf, dDC],
+};
+const initiationHorizontal = {
+  id: 15,
+  title: 'Horizontal Stack',
+  image: 'https://zupimages.net/up/20/19/skjl.jpg',
+  description: 'Practice how to cut in a horizontal stack',
+  drills: [warmupGameDrill, theDuel, game3v3Horizontal, normalGame],
+};
+const horizontalFlow = {
+  id: 16,
+  title: 'Horizontal Stack',
+  image: 'https://zupimages.net/up/20/19/skjl.jpg',
+  description: 'Practice how to cut in a horizontal stack',
+  drills: [warmupGameDrill, horizontalTiming, normalGame],
 };
 
 console.log('en', tactics);
@@ -1825,11 +1947,14 @@ export default {
     triangleOfDeathdrill,
     trainOfFakeDrill,
     defensePositionDrill,
-    chevronDrill,
     breakDrill,
     bolognaMDrill,
-    threeColumnsLongDrill,
-    twoColumnsLongDrill,
+    discGolf,
+    dDC,
+    horizontalTiming,
+    horizontalFlow,
+    game3v3Horizontal,
+    theDuel,
 
     // Games
     normalGame,
@@ -1851,6 +1976,8 @@ export default {
     initiationVerticalTraining,
     secondVerticalTraining,
     defenseBaseTraining,
+    LearningByPlaying,
+    initiationHorizontal,
   ],
   programs: [
     {
@@ -1865,8 +1992,8 @@ export default {
     },
     {
       id: 3,
-      title: 'Fitness Bloc',
-      trainings: [firstWeekFitnessTraining, secondWeekFitnessTraining],
+      title: 'Learning by Playing',
+      trainings: [LearningByPlaying],
     },
     {
       id: 4,
@@ -1875,13 +2002,38 @@ export default {
     },
     {
       id: 5,
-      title: 'Long Throws',
-      trainings: [coed2LongTraining, coed2Long2Training],
+      title: 'Horizontal Stack',
+      trainings: [initiationHorizontal, secondVerticalTraining, dumpSwingTraining],
     },
     {
       id: 6,
-      title: 'Strong Defense',
-      trainings: [defenseBaseTraining, coed2MarkTraining],
+      title: 'Individual Defense',
+      trainings: [defenseBaseTraining],
+    },
+    {
+      id: 7,
+      title: 'Zone Defense: 3-3-1',
+      trainings: [defenseBaseTraining],
+    },
+    {
+      id: 8,
+      title: 'Zone Defense: Freespeed',
+      trainings: [defenseBaseTraining],
+    },
+    {
+      id: 9,
+      title: 'Side Stack',
+      trainings: [defenseBaseTraining],
+    },
+    {
+      id: 10,
+      title: 'Split Stack',
+      trainings: [defenseBaseTraining],
+    },
+    {
+      id: 11,
+      title: 'Diagonal Stack',
+      trainings: [defenseBaseTraining],
     },
   ],
 };

@@ -1,5 +1,5 @@
 import React, { useLayoutEffect, useCallback } from 'react';
-import { Platform, StyleSheet, ScrollView, View, Text, TouchableHighlight } from 'react-native';
+import { Platform, StyleSheet, ScrollView, View, Text, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 
 import I18n from '../utils/i18n';
@@ -56,14 +56,10 @@ export const DrillPageMinimal = props => {
     <>
       <ScrollView style={styles.drillPage}>
         <View style={styles.titleContainer}>
-          <View style={styles.lineTop}>
-            <Text style={styles.title}>{drill.title}</Text>
-            <View style={styles.btnMoreContainer}>
-              <TouchableHighlight onPress={goToFullDrill}>
-                <MaterialCommunityIcons name="information-outline" color={theme.COLOR_PRIMARY} size={26} />
-              </TouchableHighlight>
-            </View>
-          </View>
+          <Text style={styles.title}>{drill.title}</Text>
+          <TouchableOpacity style={styles.detailsButton} onPress={goToFullDrill} testID="detailsButton">
+            <MaterialCommunityIcons name="information-outline" color={theme.COLOR_PRIMARY} size={26} />
+          </TouchableOpacity>
         </View>
         <MinimalDrill style={styles.illustration} drill={drill} />
       </ScrollView>
@@ -86,16 +82,11 @@ const styles = StyleSheet.create({
   drillPage: {
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     flex: 1,
-    marginBottom: 60,
+    marginBottom: 50,
   },
   headerTitle: {
     flexDirection: 'column',
-
     flexGrow: 1,
-  },
-  smallerBtn: {
-    fontSize: theme.FONT_SIZE_SMALL,
-    width: 100,
   },
   headerTitleText: {
     ...Platform.select({
@@ -118,18 +109,6 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     width: '100%',
   },
-  illustration: {
-    flexBasis: '50%',
-    flexGrow: 1,
-    flexShrink: 0,
-  },
-  title: {
-    fontSize: theme.FONT_SIZE_LARGE,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    marginTop: 10,
-    marginLeft: 10,
-  },
   titleContainer: {
     flexBasis: 60,
     flexShrink: 1,
@@ -138,21 +117,30 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  btnMoreContainer: {
+  title: {
+    fontSize: theme.FONT_SIZE_LARGE,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginTop: 10,
+    marginLeft: 10,
+  },
+  detailsButton: {
     position: 'absolute',
     right: 30,
     top: 10,
   },
+  illustration: {
+    flexBasis: '50%',
+    flexGrow: 1,
+    flexShrink: 0,
+  },
   footer: {
     position: 'absolute',
-    paddingBottom: 20,
+    paddingBottom: 10,
     paddingTop: 5,
     bottom: 0,
     backgroundColor: 'white',
     width: '100%',
     alignItems: 'center',
-  },
-  lineTop: {
-    width: '100%',
   },
 });

@@ -7,7 +7,7 @@ Array [
       Object {
         "backgroundColor": "#fff",
         "flex": 1,
-        "marginBottom": 60,
+        "marginBottom": 50,
       }
     }
   >
@@ -24,51 +24,41 @@ Array [
           }
         }
       >
-        <View
+        <Text
           style={
             Object {
-              "width": "100%",
+              "fontSize": 20,
+              "fontWeight": "bold",
+              "marginLeft": 10,
+              "marginTop": 10,
+              "textAlign": "center",
             }
           }
         >
-          <Text
-            style={
-              Object {
-                "fontSize": 20,
-                "fontWeight": "bold",
-                "marginLeft": 10,
-                "marginTop": 10,
-                "textAlign": "center",
-              }
+          Fitness Drill Title
+        </Text>
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+              "position": "absolute",
+              "right": 30,
+              "top": 10,
             }
-          >
-            Fitness Drill Title
-          </Text>
-          <View
-            style={
-              Object {
-                "position": "absolute",
-                "right": 30,
-                "top": 10,
-              }
-            }
-          >
-            <View
-              accessible={true}
-              focusable={true}
-              isTVSelectable={true}
-              onClick={[Function]}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
-              style={null}
-            >
-              <Text />
-            </View>
-          </View>
+          }
+          testID="detailsButton"
+        >
+          <Text />
         </View>
       </View>
       <View
@@ -242,7 +232,7 @@ Array [
         "alignItems": "center",
         "backgroundColor": "white",
         "bottom": 0,
-        "paddingBottom": 20,
+        "paddingBottom": 10,
         "paddingTop": 5,
         "position": "absolute",
         "width": "100%",

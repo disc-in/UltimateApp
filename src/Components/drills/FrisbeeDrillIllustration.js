@@ -84,7 +84,6 @@ const FrisbeeDrillIllustration = props => {
   const displayAnimation = ({ illustrationSource, instruction }) => {
     return (
       <>
-
         <ScrollView style={styles.scrollView}>
           <View style={styles.contentWrapper}>
             <Animation widthRatio={1} heightRatio={1 / 2} animation={illustrationSource} />
@@ -93,7 +92,6 @@ const FrisbeeDrillIllustration = props => {
             <Text style={styles.instruction}>{instruction}</Text>
           </View>
         </ScrollView>
-
       </>
     );
   };

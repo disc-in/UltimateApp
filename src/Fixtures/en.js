@@ -49,7 +49,10 @@ import horizontalTimingOpenAnimation from './Animation/HorizontalTimingOpen';
 import threeHorizontal from './Animation/ThreeHorizontal';
 import threeHorizontalGame from './Animation/ThreeHorizontalGame';
 import theDual from './Animation/TheDual';
-import theDualFake from './Animation/theDualFake';
+import theDualFake from './Animation/TheDualFake';
+import treasureHunt from './Animation/TreasureHunt';
+import bulldogAnimation from './Animation/Bulldogs';
+import aussieRules from './Animation/AussieRules';
 
 const stabilityDrill = {
   id: 1,
@@ -760,7 +763,7 @@ const treasureHuntDrill = {
       id: 1,
       title: 'Basic Version',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: treasureHunt,
       repetition: '',
       rest: '',
       instruction:
@@ -963,7 +966,7 @@ const aussieDrill = {
       id: 1,
       title: '',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: aussieRules,
       repetition: '',
       rest: '',
       instruction:
@@ -1087,7 +1090,7 @@ const bulldogDrill = {
       id: 1,
       title: '',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: bulldogAnimation,
       repetition: '',
       rest: '',
       instruction:

@@ -53,6 +53,19 @@ import theDualFake from './Animation/TheDualFake';
 import treasureHunt from './Animation/TreasureHunt';
 import bulldogAnimation from './Animation/Bulldogs';
 import aussieRules from './Animation/AussieRules';
+import cardinalAnimation from './Animation/Cardinal';
+import horizontalToVerticalAnimation from './Animation/HorizontalToVertical';
+import horizontalDiamond from './Animation/HorizontalDiamond';
+import iso from './Animation/Iso';
+import horizontalTrapOpen from './Animation/HorizontalTrapOpen';
+import horizontalTrapBreak from './Animation/HorizontalTrapBreak';
+import horizontalTrapGame from './Animation/HorizontalTrapGame';
+import hoTrapFar from './Animation/HoTrapFar';
+import hoTrapDirect from './Animation/HoTrapDirect';
+import hoTrapGame from './Animation/HoTrapGame';
+import hoHandler from './Animation/HoHandler';
+import hoHandlerBreak from './Animation/HoHandlerBreak';
+import hoHandlerGame from './Animation/HoHandlerGame';
 
 const stabilityDrill = {
   id: 1,
@@ -1533,7 +1546,7 @@ const dDC = {
   type: DrillTypes.FRISBEE,
   author: '',
   title: 'DDC',
-  image: 'https://zupimages.net/up/20/25/vhea.jpg',
+  image: 'https://zupimages.net/up/20/25/t73e.jpg',
   description: 'Double disc court is a frisbee sport which combines quickness, strategy, and throwing ability.',
   minimalPlayersNumber: 4,
   equipmentLabel: EquipmentLabels.NONE,
@@ -1661,7 +1674,7 @@ const theDuel = {
         "The cutter after initating can't make any fake. The thrower has to react quickly. Rotate every Three throws ",
     },
     {
-      id: 1,
+      id: 2,
       title: 'With a fake',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: theDualFake,
@@ -1669,6 +1682,230 @@ const theDuel = {
       rest: '',
       instruction:
         'Same situation as the precedent drill but if the thrower make a fake the cutter has to change his direction ',
+    },
+  ],
+};
+
+const cardinal = {
+  id: 1032,
+  type: DrillTypes.FRISBEE,
+  author: 'Edwin',
+  title: 'Cardinal Point',
+  image: 'https://zupimages.net/up/20/19/cd36.jpg',
+  description: 'Learning to throw in any position',
+  minimalPlayersNumber: 2,
+  equipmentLabel: EquipmentLabels.NONE,
+  equipment: '1 disc ',
+  durationInMinutes: 10,
+  intensity: Intensities.LOW,
+  goals: [FrisbeeGoals.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: '',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: cardinalAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Kung-fu throwing : imagine a compass with your pivot foot at the center. Pivot N and throw. Pivot NE and throw. Pivot E and throw and so on around the compass. Go four times around, twice throwing forehands and twice throwing backhands.',
+    },
+  ],
+};
+
+const horizontalToVertical = {
+  id: 1033,
+  type: DrillTypes.FRISBEE,
+  author: 'Moby',
+  title: 'Horizontal Flow',
+  image: 'https://zupimages.net/up/20/19/cd36.jpg',
+  description: 'Learning to create a powerful flow from a static position.',
+  minimalPlayersNumber: 7,
+  equipmentLabel: EquipmentLabels.NONE,
+  equipment: '1 disc ',
+  durationInMinutes: 20,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'Windmill',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: horizontalToVerticalAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        "Starting at the brick mark, the goal is to make a quick transition from a 4 middles and 3 handlers position to a 'Classic ' 5 middles and 2 handler position. The first plays can be called a Windmill.  When the flow is create start again by switching the position.",
+    },
+    {
+      id: 2,
+      title: 'Diamond',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: horizontalDiamond,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Same Goal but this time, the play starts with a diamond in the middle. The player in the open side initiates.',
+    },
+    {
+      id: 3,
+      title: 'Iso',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: iso,
+      repetition: '',
+      rest: '',
+      instruction:
+        "Same Goal but this time, the play starts with 'Iso' on a designed player (Number 3 in the animation). The goal of the Iso is to use the fear of a deep throw to gain a lot of field on the first pass.",
+    },
+  ],
+};
+
+const horizontalTrap = {
+  id: 1034,
+  type: DrillTypes.FRISBEE,
+  author: 'Moby',
+  title: 'Trap with the Open',
+  image: 'https://zupimages.net/up/20/19/cd36.jpg',
+  description: 'Learning to use the horizontal stack to get out of the line with the cutter in the open side',
+  minimalPlayersNumber: 6,
+  equipmentLabel: EquipmentLabels.NONE,
+  equipment: '1 disc ',
+  durationInMinutes: 15,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'Diamond in the Open side',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: horizontalTrapOpen,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Situation to play with a horizontal stack when the player are trap on the line. The 2 players can only cut between the 4 cones. The closest playr from the line initiates and the other player do the opposite. The goal of the offensive player is to gain as many meters as possible in 2 throws.',
+    },
+    {
+      id: 2,
+      title: 'Break is working',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: horizontalTrapBreak,
+      repetition: '',
+      rest: '',
+      instruction: "Same situation but now we allow the break on the mark. It's still the same player that initiate",
+    },
+    {
+      id: 3,
+      title: 'Game situation',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: horizontalTrapGame,
+      repetition: '',
+      rest: '',
+      instruction:
+        '3 players play against each others. The goal of the offense is to score a goal in maximum 2 passes. If the team succeed, they stay in offense.',
+    },
+  ],
+};
+
+const horizontalTrapOutside = {
+  id: 1035,
+  type: DrillTypes.FRISBEE,
+  author: 'Moby',
+  title: 'Trap with the Break',
+  image: 'https://zupimages.net/up/20/19/cd36.jpg',
+  description: 'Learning to use the horizontal stack to get out of the line with the cutter in the break side',
+  minimalPlayersNumber: 6,
+  equipmentLabel: EquipmentLabels.NONE,
+  equipment: '1 disc ',
+  durationInMinutes: 15,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'Going long',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: hoTrapFar,
+      repetition: '',
+      rest: '',
+      instruction:
+        'In this situation, the 2 offensive players are the 2 players in the break side of a horizontal stack. They can only touch the frisbee inside the 4 cones and they are trying to gain as many meters as they can in 2 passes. In this drill, the first player go deep and come back at the fake of the thrower. The second player do the continuity',
+    },
+    {
+      id: 2,
+      title: 'Horizontal cut',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: hoTrapDirect,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Same situation but now the first player fake going deep for few steps and go directly in the open side. The second player do the continuity deep.',
+    },
+    {
+      id: 3,
+      title: 'Game situation',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: hoTrapGame,
+      repetition: '',
+      rest: '',
+      instruction:
+        '3 players play against each others. The goal of the offense is to score a goal in maximum 2 passes. If the team succeed, they stay in offense.',
+    },
+  ],
+};
+
+const horizontalHandler = {
+  id: 1036,
+  type: DrillTypes.FRISBEE,
+  author: 'Moby',
+  title: 'Trap with the handlers',
+  image: 'https://zupimages.net/up/20/19/cd36.jpg',
+  description: 'Learning to use the horizontal stack to get out of the line with the handler',
+  minimalPlayersNumber: 8,
+  equipmentLabel: EquipmentLabels.NONE,
+  equipment: '1 disc ',
+  durationInMinutes: 15,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'Upline cut',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: hoHandler,
+      repetition: '',
+      rest: '',
+      instruction:
+        'The stall is raising. The reset handler advances to form an angle then initiate upline to get the disc. The player number 4 always do the continuity. The second option is to play with the second handler with an around break then to play immediately in the break side. Rotate every 3 throws',
+    },
+    {
+      id: 2,
+      title: 'Adaptation',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: hoHandlerBreak,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Same situation but now the reset handler is making a cut in the break side. The other handler do the opposite move. The player number 4 always do the continuity.',
+    },
+    {
+      id: 3,
+      title: 'Game situation',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: hoHandlerGame,
+      repetition: '',
+      rest: '',
+      instruction:
+        '4 players play against each others. The goal of the offense is to succeed  2 complete passes. If the team succeed, they stay in offense.',
     },
   ],
 };
@@ -1817,7 +2054,7 @@ const secondChildTraining = {
   title: 'Defense Basics',
   image: 'https://zupimages.net/up/20/19/dgwo.jpg',
   description: 'Training will allow the players to learn the basics of ultimate while having fun',
-  drills: [warmupDrill, aussieDrill, menageATroisDrill, game3v3],
+  drills: [warmupDrill, aussieDrill, cardinal, menageATroisDrill, game3v3],
 };
 
 const thirdChildTraining = {
@@ -1884,16 +2121,16 @@ const LearningByPlaying = {
 };
 const initiationHorizontal = {
   id: 15,
-  title: 'Horizontal Stack',
+  title: 'Horizontal Cut',
   image: 'https://zupimages.net/up/20/19/skjl.jpg',
   description: 'Practice how to cut in a horizontal stack',
   drills: [warmupGameDrill, theDuel, game3v3Horizontal, normalGame],
 };
 const horizontalFlow = {
   id: 16,
-  title: 'Horizontal Stack',
+  title: 'Horizontal Flow',
   image: 'https://zupimages.net/up/20/19/skjl.jpg',
-  description: 'Practice how to cut in a horizontal stack',
+  description: 'Practice how to generate a flow with all the team',
   drills: [warmupGameDrill, horizontalTiming, normalGame],
 };
 
@@ -1945,6 +2182,11 @@ export default {
     horizontalFlow,
     game3v3Horizontal,
     theDuel,
+    cardinal,
+    horizontalToVertical,
+    horizontalHandler,
+    horizontalTrapOutside,
+    horizontalTrap,
 
     // Games
     normalGame,

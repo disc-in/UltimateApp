@@ -344,6 +344,7 @@ const aussieRules = {
     3,
     4,
   ],
+  background: 'empty',
 };
 
 export default aussieRules;

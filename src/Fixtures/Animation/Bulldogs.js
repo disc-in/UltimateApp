@@ -208,6 +208,7 @@ const bulldogs = {
     'defense',
   ],
   texts: ['', '', '', '', 1, 1, 2, 3, 4, 5, 6, 7],
+  background: 'empty',
 };
 
 export default bulldogs;

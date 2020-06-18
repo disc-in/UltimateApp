@@ -61,6 +61,7 @@ const discGolf = {
   ],
   ids: ['offense', 'defense', 'disc', 'triangle', 'disc'],
   texts: [1, 1, 1, '', 2],
+  background: 'empty',
 };
 
 export default discGolf;

@@ -142,6 +142,7 @@ const dDC = {
     'disc',
   ],
   texts: ['', '', '', '', '', '', '', '', 1, 2, 1, 2, 1, 2],
+  background: 'empty',
 };
 
 export default dDC;

@@ -533,6 +533,7 @@ const treasureHunt = {
     9,
     10,
   ],
+  background: 'empty',
 };
 
 export default treasureHunt;

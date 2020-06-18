@@ -10,6 +10,7 @@ class Drill {
     this.positions = (animation && animation.positions) || [[], []];
     this.ids = (animation && animation.ids) || [];
     this.texts = (animation && animation.texts) || [];
+    this.background = (animation && animation.background) || 'zone';
   }
 
   /** Get the position of an element at a given step.
@@ -111,6 +112,7 @@ class Drill {
 
     if (isEqual && this.elemCount() !== otherDrill.elemCount) isEqual = false;
 
+    if (isEqual && this.background !== otherDrill.background) isEqual = false;
     var elemId = 0;
 
     while (isEqual && elemId < this.elemCount()) {

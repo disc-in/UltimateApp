@@ -6,24 +6,21 @@ import { View } from 'react-native';
  * The possible backgrounds are:
  * - "zone": used for end-zone plays. Display a zone and part of the central area (1/3 zone, 2/3 field)
  * - "3/4 field": used for non end-zone plays. Display a zone and part of the central area (1/4 zone, 3/4 field)
+ * - "rectangle": rectangle around the animation zone
  *
  * The background type is specified as a String in the props type.
  *
- * If this.props.type does not match any of the above types, the background will be empty.
+ * If this.props.background does not match any of the above types, the background will be empty.
  *
  */
 class AnimationBackground extends React.Component {
   /**
    * @param {} props The props must contain:
    * - animationWidth, animationHeight: the dimension of the animation area
-   * - type: the background type
+   * - background: the background type
    */
   constructor(props) {
     super(props);
-
-    this.state = {
-      type: this.props.background,
-    };
 
     var topMargin = props.animationHeight * 0.05;
     var bottomMargin = props.animationHeight * 0.1;
@@ -36,7 +33,7 @@ class AnimationBackground extends React.Component {
     var threeQuarterLineTop = topMargin + fieldHeight * 0.24;
 
     this.state = {
-      type: this.props.type,
+      background: this.props.background,
       animationWidth: this.props.animationWidth,
       animationHeight: this.props.animationHeight,
       leftRightMargin,
@@ -59,7 +56,7 @@ class AnimationBackground extends React.Component {
     if (
       props.animationWidth !== state.animationWidth ||
       props.animationHeight !== state.animationHeight ||
-      props.background !== state.type
+      props.background !== state.background
     ) {
       var topMargin = props.animationHeight * 0.05;
       var bottomMargin = props.animationHeight * 0.1;
@@ -72,7 +69,7 @@ class AnimationBackground extends React.Component {
       var threeQuarterLineTop = topMargin + fieldHeight * 0.24;
 
       return {
-        type: props.background,
+        background: props.background,
         animationWidth: props.animationWidth,
         animationHeight: props.animationHeight,
         leftRightMargin,
@@ -89,18 +86,16 @@ class AnimationBackground extends React.Component {
         brickZoneTop: zoneLineTop + fieldHeight * 0.33 - 2 * brickRadius,
         brick34Top: threeQuarterLineTop + fieldHeight * 0.24 - 2 * brickRadius,
       };
-    } else if (props.type !== state.type) {
+    } else if (props.background !== state.background) {
       return {
-        type: props.type,
+        background: props.background,
       };
     }
     return null;
   }
 
   render() {
-    console.log('ab: zoneLineTop: ' + this.state.zoneLineTop);
-    console.log('ab: brickZoneTop: ' + this.state.brickZoneTop);
-    switch (this.state.type) {
+    switch (this.state.background) {
       case 'zone':
         return (
           <View
@@ -264,6 +259,74 @@ class AnimationBackground extends React.Component {
               ]}
               height={2 * this.state.brickRadius}
               width={2 * this.state.brickRadius}
+            />
+          </View>
+        );
+      case 'rectangle':
+        return (
+          <View
+            style={[
+              { position: 'absolute' },
+              { top: 0 },
+              { bottom: 0 },
+              { height: this.state.animationHeight },
+              { width: this.state.animationWidth },
+            ]}
+          >
+            {/* Right vertical bar */}
+            <View
+              style={[
+                { height: this.state.fieldHeight },
+                { width: this.state.linesWidth },
+                { borderRadius: 1 },
+                { borderWidth: 1 },
+                { backgroundColor: 'black' },
+                { position: 'absolute' },
+                { top: this.state.topMargin },
+                { left: this.state.leftRightMargin + this.state.fieldWidth },
+              ]}
+            />
+
+            {/* Left vertical bar */}
+            <View
+              style={[
+                { height: this.state.fieldHeight },
+                { width: this.state.linesWidth },
+                { borderRadius: 1 },
+                { borderWidth: 1 },
+                { backgroundColor: 'gray' },
+                { position: 'absolute' },
+                { top: this.state.topMargin },
+                { left: this.state.leftRightMargin },
+              ]}
+            />
+
+            {/* Top horizontal bar */}
+            <View
+              style={[
+                { height: this.state.linesWidth },
+                { width: this.state.fieldWidth },
+                { borderRadius: 1 },
+                { borderWidth: 1 },
+                { backgroundColor: 'gray' },
+                { position: 'absolute' },
+                { top: this.state.topMargin },
+                { left: this.state.leftRightMargin },
+              ]}
+            />
+
+            {/* Top horizontal bar */}
+            <View
+              style={[
+                { height: this.state.linesWidth },
+                { width: this.state.fieldWidth },
+                { borderRadius: 1 },
+                { borderWidth: 1 },
+                { backgroundColor: 'gray' },
+                { position: 'absolute' },
+                { top: this.state.fieldHeight + this.state.topMargin },
+                { left: this.state.leftRightMargin },
+              ]}
             />
           </View>
         );

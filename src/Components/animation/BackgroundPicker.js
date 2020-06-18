@@ -1,4 +1,4 @@
-import React, { useState, Component } from 'react';
+import React from 'react';
 import { View, Picker, StyleSheet } from 'react-native';
 
 export default class BackgroundPicker extends React.Component {
@@ -10,8 +10,6 @@ export default class BackgroundPicker extends React.Component {
     };
 
     this.props.onBackgroundChange(props.type);
-
-    console.log('selectevalue: ' + this.state.selectedValue);
   }
 
   render() {
@@ -26,6 +24,7 @@ export default class BackgroundPicker extends React.Component {
         >
           <Picker.Item label="Endzone" value="zone" />
           <Picker.Item label="3/4 field" value="3/4 field" />
+          <Picker.Item label="Rectangle" value="rectangle" />
           <Picker.Item label="Empty" value="empty" />
         </Picker>
       </View>

@@ -49,7 +49,7 @@ import horizontalTimingOpenAnimation from './Animation/HorizontalTimingOpen';
 import threeHorizontal from './Animation/ThreeHorizontal';
 import threeHorizontalGame from './Animation/ThreeHorizontalGame';
 import theDual from './Animation/TheDual';
-import theDualFake from './Animation/TheDualFake';
+import theDualFake from './Animation/theDualFake';
 import treasureHunt from './Animation/TreasureHunt';
 import bulldogAnimation from './Animation/Bulldogs';
 import aussieRules from './Animation/AussieRules';
@@ -66,6 +66,8 @@ import hoTrapGame from './Animation/HoTrapGame';
 import hoHandler from './Animation/HoHandler';
 import hoHandlerBreak from './Animation/HoHandlerBreak';
 import hoHandlerGame from './Animation/HoHandlerGame';
+import breakDanceAnimation from './Animation/BreakDance';
+import breakRace from './Animation/BreakRace';
 
 const stabilityDrill = {
   id: 1,
@@ -1228,7 +1230,7 @@ const breakDanceDrill = {
       id: 1,
       title: 'Break continuity',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: breakDanceAnimation,
       repetition: '',
       rest: '',
       instruction:
@@ -1238,7 +1240,7 @@ const breakDanceDrill = {
       id: 2,
       title: 'The race',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: breakRace,
       repetition: '',
       rest: '',
       instruction:

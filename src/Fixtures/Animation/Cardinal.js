@@ -21,6 +21,7 @@ const cardinal = {
   ],
   ids: ['offense', 'defense', 'disc'],
   texts: [1, 1, 1],
+  background: 'empty',
 };
 
 export default cardinal;

@@ -1,9 +1,10 @@
 import React from 'react';
-import { StyleSheet, Animated, Dimensions, Easing, View } from 'react-native';
+import { StyleSheet, Animated, Dimensions, Easing, View, Picker } from 'react-native';
 
 import Animation from './Animation';
 
 import DraggableDisplayedElement from './DraggableDisplayedElement';
+import BackgroundPicker from './BackgroundPicker';
 import Drill from './Drill';
 
 import debug from './debug';
@@ -69,10 +70,10 @@ class AnimationEditor extends React.Component {
     this.draggableElementsTop = animationHeight + 2.5 * playerRadius;
     this.draggableElementsLeft = Array(4);
 
-    this.draggableElementsLeft[0] = (1 * animationWidth) / 5 - playerRadius / 2;
-    this.draggableElementsLeft[1] = (2 * animationWidth) / 5 - playerRadius / 2;
-    this.draggableElementsLeft[2] = (3 * animationWidth) / 5 - playerRadius / 2;
-    this.draggableElementsLeft[3] = (4 * animationWidth) / 5 - playerRadius / 2;
+    this.draggableElementsLeft[0] = (1 * animationWidth) / 7 - playerRadius / 2;
+    this.draggableElementsLeft[1] = (2 * animationWidth) / 7 - playerRadius / 2;
+    this.draggableElementsLeft[2] = (3 * animationWidth) / 7 - playerRadius / 2;
+    this.draggableElementsLeft[3] = (4 * animationWidth) / 7 - playerRadius / 2;
 
     this.initialElements.push(
       this._createDraggableElements('offense', playerRadius, this.draggableElementsTop, this.draggableElementsLeft[0]),
@@ -147,6 +148,12 @@ class AnimationEditor extends React.Component {
 
       this.saveAnimation(newAnimation);
     }
+  };
+
+  onBackgroundChange = value => {
+    var newAnimation = this._copyAnimation();
+    newAnimation.background = value;
+    this.saveAnimation(newAnimation);
   };
 
   /** Convert a position (x, y) in pixels of the phone screen in a position (x2, y2) in percentages of the animation area
@@ -408,6 +415,12 @@ class AnimationEditor extends React.Component {
           onStepAdded={this.addStep}
           onStepRemoved={this.removeStep}
           currentStepAV={this.currentStepAV}
+        />
+
+        <BackgroundPicker
+          onBackgroundChange={this.onBackgroundChange}
+          type={this.state.animation.background}
+          style={[{ position: 'absolute', left: 10 }]}
         />
 
         {this.state.draggableElements.map(function(item) {

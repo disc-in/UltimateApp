@@ -69,6 +69,7 @@ class AnimationBackground extends React.Component {
       var linesWidth = Math.min(fieldHeight, fieldWidth) * 0.005;
       var brickRadius = linesWidth * 5;
       var zoneLineTop = topMargin + fieldHeight * 0.33;
+      var threeQuarterLineTop = topMargin + fieldHeight * 0.24;
 
       return {
         type: props.background,
@@ -82,8 +83,11 @@ class AnimationBackground extends React.Component {
         linesWidth,
         zoneLineTop,
         brickRadius,
+        threeQuarterLineTop,
         brickLeft: leftRightMargin + fieldWidth / 2 - brickRadius,
         brickTop: zoneLineTop * 2 - brickRadius,
+        brickZoneTop: zoneLineTop + fieldHeight * 0.33 - 2 * brickRadius,
+        brick34Top: threeQuarterLineTop + fieldHeight * 0.24 - 2 * brickRadius,
       };
     } else if (props.type !== state.type) {
       return {
@@ -94,6 +98,8 @@ class AnimationBackground extends React.Component {
   }
 
   render() {
+    console.log('ab: zoneLineTop: ' + this.state.zoneLineTop);
+    console.log('ab: brickZoneTop: ' + this.state.brickZoneTop);
     switch (this.state.type) {
       case 'zone':
         return (

@@ -8,9 +8,11 @@ export default class BackgroundPicker extends React.Component {
     this.state = {
       selectedValue: props.type,
     };
-  }
 
-  //   const [selectedValue, setSelectedValue] = useState('java');
+    this.props.onBackgroundChange(props.type);
+
+    console.log('selectevalue: ' + this.state.selectedValue);
+  }
 
   render() {
     return (
@@ -19,9 +21,6 @@ export default class BackgroundPicker extends React.Component {
           selectedValue={this.state.selectedValue}
           style={{ position: 'absolute', right: 10, height: 50, width: 100 }}
           onValueChange={(itemValue, itemIndex) => {
-            this.setState = {
-              selectedValue: itemValue,
-            };
             this.props.onBackgroundChange(itemValue);
           }}
         >

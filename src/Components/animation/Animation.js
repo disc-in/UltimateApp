@@ -5,6 +5,7 @@ import DisplayedElement from './DisplayedElement';
 import DisplayedCuts from './DisplayedCuts';
 import ProgressBar from './ProgressBar';
 import Drill from './Drill';
+import AnimationBackground from './AnimationBackground';
 
 class Animation extends React.Component {
   constructor(props) {
@@ -146,6 +147,15 @@ class Animation extends React.Component {
   render() {
     return (
       <View style={[styles.mainContainer, { height: this.animationHeight }, { width: this.animationWidth }]}>
+        {this.animationWidth && (
+          <AnimationBackground
+            animationWidth={this.animationWidth}
+            animationHeight={this.animationHeight}
+            background={this.props.animation.background}
+            type={this.props.animation.background}
+          />
+        )}
+
         {this.props.editable && !this.state.animationPlaying && (
           <DisplayedCuts
             step={this.state.currentStep}

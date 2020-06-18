@@ -42,6 +42,177 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
       }
     >
       <View
+        style={
+          Array [
+            Object {
+              "position": "absolute",
+            },
+            Object {
+              "top": 0,
+            },
+            Object {
+              "bottom": 0,
+            },
+            Object {
+              "height": 952.8571428571429,
+            },
+            Object {
+              "width": 750,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "height": 809.9285714285714,
+              },
+              Object {
+                "width": 3.375,
+              },
+              Object {
+                "borderRadius": 1,
+              },
+              Object {
+                "borderWidth": 1,
+              },
+              Object {
+                "backgroundColor": "black",
+              },
+              Object {
+                "position": "absolute",
+              },
+              Object {
+                "top": 47.642857142857146,
+              },
+              Object {
+                "left": 712.5,
+              },
+            ]
+          }
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "height": 809.9285714285714,
+              },
+              Object {
+                "width": 3.375,
+              },
+              Object {
+                "borderRadius": 1,
+              },
+              Object {
+                "borderWidth": 1,
+              },
+              Object {
+                "backgroundColor": "gray",
+              },
+              Object {
+                "position": "absolute",
+              },
+              Object {
+                "top": 47.642857142857146,
+              },
+              Object {
+                "left": 37.5,
+              },
+            ]
+          }
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "height": 3.375,
+              },
+              Object {
+                "width": 675,
+              },
+              Object {
+                "borderRadius": 1,
+              },
+              Object {
+                "borderWidth": 1,
+              },
+              Object {
+                "backgroundColor": "gray",
+              },
+              Object {
+                "position": "absolute",
+              },
+              Object {
+                "top": 47.642857142857146,
+              },
+              Object {
+                "left": 37.5,
+              },
+            ]
+          }
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "height": 3.375,
+              },
+              Object {
+                "width": 675,
+              },
+              Object {
+                "borderRadius": 1,
+              },
+              Object {
+                "borderWidth": 1,
+              },
+              Object {
+                "backgroundColor": "gray",
+              },
+              Object {
+                "position": "absolute",
+              },
+              Object {
+                "top": 314.91928571428576,
+              },
+              Object {
+                "left": 37.5,
+              },
+            ]
+          }
+        />
+        <View
+          height={33.75}
+          style={
+            Array [
+              Object {
+                "position": "absolute",
+              },
+              Object {
+                "left": 358.125,
+              },
+              Object {
+                "top": 548.4457142857143,
+              },
+              Object {
+                "borderRadius": 16.875,
+              },
+              Object {
+                "borderWidth": 1,
+              },
+              Object {
+                "borderColor": "gray",
+              },
+              Object {
+                "backgroundColor": "white",
+              },
+            ]
+          }
+          width={33.75}
+        />
+      </View>
+      <View
         height="100%"
         style={
           Array [
@@ -374,6 +545,59 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
             <Text />
           </View>
         </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "paddingTop": 40,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "height": 50,
+            "position": "absolute",
+            "right": 10,
+            "width": 100,
+          }
+        }
+      >
+        <RCTPicker
+          items={
+            Array [
+              Object {
+                "label": "Endzone",
+                "textColor": undefined,
+                "value": "zone",
+              },
+              Object {
+                "label": "3/4 field",
+                "textColor": undefined,
+                "value": "3/4 field",
+              },
+              Object {
+                "label": "Empty",
+                "textColor": undefined,
+                "value": "empty",
+              },
+            ]
+          }
+          onChange={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          selectedIndex={0}
+          style={
+            Array [
+              Object {
+                "height": 216,
+              },
+              undefined,
+            ]
+          }
+        />
       </View>
     </View>
     <View

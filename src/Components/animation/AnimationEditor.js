@@ -188,7 +188,7 @@ class AnimationEditor extends React.Component {
     newAnimation.positions = JSON.parse(JSON.stringify(this.state.animation.positions));
     newAnimation.ids = JSON.parse(JSON.stringify(this.state.animation.ids));
     newAnimation.texts = JSON.parse(JSON.stringify(this.state.animation.texts));
-    newAnimation.backgrounds = JSON.parse(JSON.stringify(this.state.animation.background));
+    newAnimation.background = JSON.parse(JSON.stringify(this.state.animation.background));
 
     return newAnimation;
   }

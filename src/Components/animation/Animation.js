@@ -152,7 +152,6 @@ class Animation extends React.Component {
             animationWidth={this.animationWidth}
             animationHeight={this.animationHeight}
             background={this.props.animation.background}
-            type={this.props.animation.background}
           />
         )}
 

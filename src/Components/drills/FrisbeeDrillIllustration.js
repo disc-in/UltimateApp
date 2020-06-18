@@ -81,11 +81,10 @@ const FrisbeeDrillIllustration = props => {
   };
 
   const displayVideo = videoIllustration => {
-    console.log('NAVIGATION ***********************', navigation);
     if (typeof videoIllustration !== 'undefined') {
       return (
         <View style={styles.centerContainer}>
-          <TouchableOpacity onPress={() => navigation.navigate('VideoPage')}>
+          <TouchableOpacity onPress={() => navigation.navigate('VideoPage', { videoIllustration })}>
             <MaterialCommunityIcons name="video" color={theme.COLOR_PRIMARY} size={35} />
           </TouchableOpacity>
         </View>

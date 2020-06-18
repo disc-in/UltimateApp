@@ -7,12 +7,16 @@ import theme from '../styles/theme.style';
 
 const screenDimension = Dimensions.get('window');
 
-const VideoPage = () => {
+const VideoPage = videoIllustration => {
   return (
     <View style={styles.container}>
       <View style={styles.contentWrapper}>
         <View style={[{ height: 250 }, styles.videoAlone]}>
-          <VimeoVideo vimeoId={429982987} screenWidth={screenDimension.width} sounds />
+          <VimeoVideo
+            vimeoId={videoIllustration.route.params.videoIllustration}
+            screenWidth={screenDimension.width}
+            sounds
+          />
         </View>
       </View>
     </View>

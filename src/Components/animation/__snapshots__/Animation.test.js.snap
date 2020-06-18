@@ -20,6 +20,177 @@ exports[`<Animation /> renders correctly 1`] = `
   }
 >
   <View
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        Object {
+          "top": 0,
+        },
+        Object {
+          "bottom": 0,
+        },
+        Object {
+          "height": 100,
+        },
+        Object {
+          "width": 100,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "height": 85,
+          },
+          Object {
+            "width": 0.425,
+          },
+          Object {
+            "borderRadius": 1,
+          },
+          Object {
+            "borderWidth": 1,
+          },
+          Object {
+            "backgroundColor": "black",
+          },
+          Object {
+            "position": "absolute",
+          },
+          Object {
+            "top": 5,
+          },
+          Object {
+            "left": 95,
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "height": 85,
+          },
+          Object {
+            "width": 0.425,
+          },
+          Object {
+            "borderRadius": 1,
+          },
+          Object {
+            "borderWidth": 1,
+          },
+          Object {
+            "backgroundColor": "gray",
+          },
+          Object {
+            "position": "absolute",
+          },
+          Object {
+            "top": 5,
+          },
+          Object {
+            "left": 5,
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "height": 0.425,
+          },
+          Object {
+            "width": 90,
+          },
+          Object {
+            "borderRadius": 1,
+          },
+          Object {
+            "borderWidth": 1,
+          },
+          Object {
+            "backgroundColor": "gray",
+          },
+          Object {
+            "position": "absolute",
+          },
+          Object {
+            "top": 5,
+          },
+          Object {
+            "left": 5,
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "height": 0.425,
+          },
+          Object {
+            "width": 90,
+          },
+          Object {
+            "borderRadius": 1,
+          },
+          Object {
+            "borderWidth": 1,
+          },
+          Object {
+            "backgroundColor": "gray",
+          },
+          Object {
+            "position": "absolute",
+          },
+          Object {
+            "top": 33.05,
+          },
+          Object {
+            "left": 5,
+          },
+        ]
+      }
+    />
+    <View
+      height={4.25}
+      style={
+        Array [
+          Object {
+            "position": "absolute",
+          },
+          Object {
+            "left": 47.875,
+          },
+          Object {
+            "top": 56.849999999999994,
+          },
+          Object {
+            "borderRadius": 2.125,
+          },
+          Object {
+            "borderWidth": 1,
+          },
+          Object {
+            "borderColor": "gray",
+          },
+          Object {
+            "backgroundColor": "white",
+          },
+        ]
+      }
+      width={4.25}
+    />
+  </View>
+  <View
     onMoveShouldSetResponder={[Function]}
     onMoveShouldSetResponderCapture={[Function]}
     onResponderEnd={[Function]}

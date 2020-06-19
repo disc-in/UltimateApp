@@ -1497,7 +1497,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#08AEEA",
+        "backgroundColor": "#2a9e91",
         "borderRadius": 50,
         "bottom": "5%",
         "elevation": 10,
@@ -2146,7 +2146,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#08AEEA",
+        "backgroundColor": "#2a9e91",
         "borderRadius": 50,
         "bottom": "5%",
         "elevation": 10,
@@ -2795,7 +2795,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#08AEEA",
+        "backgroundColor": "#2a9e91",
         "borderRadius": 50,
         "bottom": "5%",
         "elevation": 10,

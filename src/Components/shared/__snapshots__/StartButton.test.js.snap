@@ -15,7 +15,7 @@ exports[`<StartButton /> renders correctly 1`] = `
   style={
     Object {
       "alignItems": "center",
-      "backgroundColor": "#08AEEA",
+      "backgroundColor": "#2a9e91",
       "borderRadius": 50,
       "height": 100,
       "justifyContent": "center",
@@ -29,6 +29,7 @@ exports[`<StartButton /> renders correctly 1`] = `
   <Text
     style={
       Object {
+        "color": "#fff",
         "fontSize": 16,
         "fontWeight": "bold",
       }

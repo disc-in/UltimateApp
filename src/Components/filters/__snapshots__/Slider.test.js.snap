@@ -88,7 +88,7 @@ exports[`<Slider /> renders correctly 1`] = `
     <View
       style={
         Object {
-          "backgroundColor": "#08AEEA",
+          "backgroundColor": "#2a9e91",
           "borderRadius": 2,
           "height": 0,
           "marginTop": -0,
@@ -101,7 +101,7 @@ exports[`<Slider /> renders correctly 1`] = `
       onLayout={[Function]}
       style={
         Object {
-          "backgroundColor": "#08AEEA",
+          "backgroundColor": "#2a9e91",
           "borderRadius": 10,
           "height": 0,
           "position": "absolute",

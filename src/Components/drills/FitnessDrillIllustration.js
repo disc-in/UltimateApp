@@ -141,7 +141,7 @@ const FitnessDrillIllustration = props => {
               <MaterialCommunityIcons
                 style={styles.buttonNext}
                 name="check-circle-outline"
-                color={theme.COLOR_PRIMARY}
+                color={theme.COLOR_SECONDARY}
                 size={26}
               />
             </Animated.View>
@@ -155,7 +155,7 @@ const FitnessDrillIllustration = props => {
               <MaterialCommunityIcons
                 style={styles.buttonNext}
                 name="check-circle"
-                color={theme.COLOR_PRIMARY}
+                color={theme.MAIN_COLOR}
                 size={26}
               />
             </Animated.View>

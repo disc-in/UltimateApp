@@ -19,6 +19,7 @@ class AnimationEditor extends React.Component {
       dLeft: 0, // Distance between the left of the window and the editor
       width: 0,
       height: 0,
+      isElementMoving: false, // True if an element already in the animation is moving (enables when an element moves to enable removing it)
     };
 
     /** Vertical ratio of the space of the editor in which the animation is displayed */
@@ -41,6 +42,10 @@ class AnimationEditor extends React.Component {
     this.currentStepAV.addListener(progress => {
       this.currentStep = progress.value;
     });
+
+    this.editorHeight = 100;
+    this.editorWidth = 100;
+    this.draggableElementsTop = 100;
   }
 
   saveAnimation = (newAnimation, cb) => {
@@ -49,13 +54,13 @@ class AnimationEditor extends React.Component {
   };
 
   onLayout = e => {
-    var editorHeight = e.nativeEvent.layout.height;
-    var editorWidth = e.nativeEvent.layout.width;
+    this.editorHeight = e.nativeEvent.layout.height;
+    this.editorWidth = e.nativeEvent.layout.width;
 
     //TODO see why this is needed...
     this.setState({
-      width: editorWidth,
-      height: editorHeight,
+      width: this.editorWidth,
+      height: this.editorHeight,
       dTop: e.nativeEvent.layout.y,
       dLeft: e.nativeEvent.layout.x,
     });
@@ -63,8 +68,8 @@ class AnimationEditor extends React.Component {
     // Create the elements in the horizontal bar
     this.initialElements = [];
 
-    var animationWidth = editorWidth * this.wRatio;
-    var animationHeight = editorHeight * this.hRatio;
+    var animationWidth = this.editorWidth * this.wRatio;
+    var animationHeight = this.editorHeight * this.hRatio;
 
     var playerRadius = Math.min(animationWidth, animationHeight) / 12;
     this.draggableElementsTop = animationHeight + 2.5 * playerRadius;
@@ -94,8 +99,6 @@ class AnimationEditor extends React.Component {
   };
 
   addElementToAnimation = (element, xDelta, yDelta) => {
-    // TODO Replace the hard coded values
-
     // Get the original position of the element
     var x = 0;
     var y = 0;
@@ -331,6 +334,13 @@ class AnimationEditor extends React.Component {
     }
 
     this.saveAnimation(newAnimation);
+    this.setState({ isElementMoving: false }); // Line to comment
+  };
+
+  anElementMoves = () => {
+    this.setState({
+      isElementMoving: true,
+    });
   };
 
   _createDraggableElements(displayedElementType, playerRadius, top, left) {
@@ -406,6 +416,7 @@ class AnimationEditor extends React.Component {
           style={[{ flex: 10 }]}
           editable
           animation={this.state.animation}
+          onMoveStart={this.anElementMoves}
           onElementMove={this.moveElement}
           onCutMove={this.cutMove}
           widthRatio={1}
@@ -418,15 +429,25 @@ class AnimationEditor extends React.Component {
           currentStepAV={this.currentStepAV}
         />
 
-        <BackgroundPicker
-          onBackgroundChange={this.onBackgroundChange}
-          type={this.state.animation.background}
-          style={[{ position: 'absolute', left: 10 }]}
-        />
+        {this.state.isElementMoving ? (
+          <View
+            style={[{ position: 'absolute', left: 0, top: this.draggableElementsTop, backgroundColor: 'gray' }]}
+            height="10%"
+            width="100%"
+          />
+        ) : (
+          <View style={[{ position: 'absolute', left: 0, top: 0 }]} height="100%" width="100%">
+            {this.state.draggableElements.map(function(item) {
+              return item.render();
+            })}
 
-        {this.state.draggableElements.map(function(item) {
-          return item.render();
-        })}
+            <BackgroundPicker
+              onBackgroundChange={this.onBackgroundChange}
+              type={this.state.animation.background}
+              top={this.draggableElementsTop}
+            />
+          </View>
+        )}
 
         <View style={[{ flex: 3, height: 80 }]} />
       </View>

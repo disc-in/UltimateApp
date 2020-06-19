@@ -14,10 +14,10 @@ export default class BackgroundPicker extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <View style={[{ position: 'absolute', left: 0, top: 0 }]} height="100%" width="100%">
         <Picker
           selectedValue={this.state.selectedValue}
-          style={{ position: 'absolute', right: 10, height: 50, width: 100 }}
+          style={{ position: 'absolute', top: this.props.top - 10, right: 10, height: 50, width: 120 }}
           onValueChange={(itemValue, itemIndex) => {
             this.props.onBackgroundChange(itemValue);
           }}
@@ -42,7 +42,7 @@ export default class BackgroundPicker extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 40,
     alignItems: 'center',
+    position: 'absolute',
   },
 });

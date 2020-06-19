@@ -171,6 +171,7 @@ class Animation extends React.Component {
               key={item.key}
               eId={item.eId}
               movable={item.movable}
+              onMoveStart={this.props.onMoveStart}
               onMoveEnd={item.onMoveEnd}
               animationWidth={this.animationWidth}
               animationHeight={this.animationHeight}

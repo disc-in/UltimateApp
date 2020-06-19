@@ -30,6 +30,8 @@ class DisplayedElement extends React.Component {
 
       // Called when the gesture starts
       onPanResponderGrant: () => {
+        if (this.props.onMoveStart !== undefined && this.props.onMoveStart !== null) this.props.onMoveStart();
+
         if (this.props.movable) {
           this.setState({
             isMoving: true,
@@ -102,7 +104,7 @@ class DisplayedElement extends React.Component {
           <Animated.View
             {...this.panResponder.panHandlers}
             style={[
-              this.state.moving
+              this.state.isMoving
                 ? panStyle
                 : {
                     transform: [

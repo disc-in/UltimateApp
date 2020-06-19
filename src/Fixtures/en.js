@@ -11,7 +11,6 @@ import {
 
 import { dictionary, essentials, tactics } from './theory.en';
 
-import animationSquare from './Animation/AnimationSquare';
 import animationGoToTen from './Animation/AnimationGoToTen';
 import throwingMachine from './Animation/ThrowingMachine';
 import giveAndGo from './Animation/GiveAndGo';
@@ -74,6 +73,10 @@ import threeGame from './Animation/ThreeGame';
 import normalGameAnimation from './Animation/NormalGame';
 import endzoneAnimation from './Animation/Endzone';
 import endzoneFinition from './Animation/EndzoneFinition';
+import stopFlowAnimation from './Animation/StopFlow';
+import theTunnelAnimation from './Animation/TheTunnel';
+import leopard from './Animation/Leopard';
+import cupSwingingAnimation from './Animation/CupSwinging';
 
 const stabilityDrill = {
   id: 1,
@@ -1076,7 +1079,7 @@ const endzoneGameDrill = {
       illustrationSource: endzoneFinition,
       repetition: '',
       rest: '',
-      instruction: 'Everybody start behing the disc.\nGame to 5',
+      instruction: 'Same Rules as before. The difference is that everybody start behind the disc.\nGame to 5',
     },
   ],
 };
@@ -1922,7 +1925,7 @@ const checkLong = {
   id: 1037,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
-  title: 'How far can we go?',
+  title: 'Long is your new weapon',
   image: 'https://zupimages.net/up/20/19/cd36.jpg',
   description: 'Learning to throw deep as a cutter and to get information as a cutter',
   minimalPlayersNumber: 3,
@@ -1972,6 +1975,122 @@ const throwCatchThrow = {
       rest: '',
       instruction:
         'The receiver already has a disc in its hands.  The goal is to never have two discs simultaneously in your hands. When the receiver is about to receive the other disc he throws in the air (to himself) his disc, he catches the other disc, throws it, catch his disc. If this is succeeded, then he throws his disc to the other player that already has his one disc in its hands.',
+    },
+  ],
+};
+
+const stopFlow = {
+  id: 1039,
+  type: DrillTypes.FRISBEE,
+  author: 'Colony',
+  title: 'Stoping the Flow',
+  image: 'https://zupimages.net/up/20/19/cd36.jpg',
+  description: 'Learn to quickly identify dangerous option and deny it.',
+  minimalPlayersNumber: 5,
+  equipmentLabel: EquipmentLabels.NONE,
+  equipment: '1 discs ',
+  durationInMinutes: 12,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.DEFENSE],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: '',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: stopFlowAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        "The defenders of the furst throw are not looking at the disc and they can't make a defense a the first throw. When the throw is made, the second cutter has to make a straight cut. The first defender try to block the continuity ",
+    },
+  ],
+};
+
+const theTunnel = {
+  id: 1040,
+  type: DrillTypes.FRISBEE,
+  author: 'CUSB',
+  title: 'The tunnel',
+  image: 'https://zupimages.net/up/20/19/cd36.jpg',
+  description: 'Warm up drill to focus on the reactivity in defense.',
+  minimalPlayersNumber: 2,
+  equipmentLabel: EquipmentLabels.NONE,
+  equipment: '4 cones ',
+  durationInMinutes: 12,
+  intensity: Intensities.HIGH,
+  goals: [FrisbeeGoals.DEFENSE],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: '',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: theTunnelAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'One offensive player against a defender. The goal of the offensive player is to cross the bottom line first or to touch the farthest cones before the defender reach the cone innermost ',
+    },
+  ],
+};
+
+const sprintDefense = {
+  id: 1041,
+  type: DrillTypes.FRISBEE,
+  author: 'Lucky Grass',
+  title: "The leopard's defense",
+  image: 'https://zupimages.net/up/20/19/cd36.jpg',
+  description: 'Warm up drill to focus on the reactivity in defense.',
+  minimalPlayersNumber: 2,
+  equipmentLabel: EquipmentLabels.NONE,
+  equipment: '2 cones ',
+  durationInMinutes: 8,
+  intensity: Intensities.HIGH,
+  goals: [FrisbeeGoals.DEFENSE],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: '',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: leopard,
+      repetition: '',
+      rest: '',
+      instruction:
+        'One offensive player against a defender. The goal of the offensive player is touch the outside cone before that the defender touch the inside one. They both have to touch the inside cone before switching their direction. The defensive player can start running when the both feet of the attacker left the ground.',
+    },
+  ],
+};
+
+const cupSwinging = {
+  id: 1042,
+  type: DrillTypes.FRISBEE,
+  author: 'Moby',
+  title: 'Swinging with the cup',
+  image: 'https://zupimages.net/up/20/19/cd36.jpg',
+  description: 'Practicing the defense against the swing as a 3 players cup',
+  minimalPlayersNumber: 7,
+  equipmentLabel: EquipmentLabels.NONE,
+  equipment: '1 disc ',
+  durationInMinutes: 10,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.COMMUNICATION],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: '',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: cupSwingingAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'The 3 players cup as to move together to deny the throw to the cutter. The handlers can only make a flat throw to the cutter. Their goal is to swing quickly to get around the cup. ',
     },
   ],
 };
@@ -2100,7 +2219,7 @@ const longestGame = {
   id: 2005,
   type: DrillTypes.GAME,
   author: 'Moby',
-  title: 'Being conservative with the disc',
+  title: 'The disc is gold',
   image:
     'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
   description:
@@ -2179,7 +2298,7 @@ const secondChildTraining = {
   title: 'Defense Basics',
   image: 'https://zupimages.net/up/20/19/dgwo.jpg',
   description: 'Training will allow the players to learn the basics of ultimate while having fun',
-  drills: [warmupDrill, aussieDrill, cardinal, menageATroisDrill, game3v3],
+  drills: [warmupDrill, aussieDrill, cardinal, checkLong, game3v3],
 };
 
 const thirdChildTraining = {
@@ -2187,7 +2306,7 @@ const thirdChildTraining = {
   title: 'Treasure Hunt',
   image: 'https://zupimages.net/up/20/19/c9i6.jpg',
   description: 'Help players learn the basics of ultimate while having fun',
-  drills: [warmupDrill, bulldogDrill, goToTenDrill, treasureHuntDrill, game3v3],
+  drills: [warmupDrill, menageATroisDrill, bulldogDrill, goToTenDrill, treasureHuntDrill, game3v3],
 };
 
 const secondWeekFitnessTraining = {
@@ -2226,7 +2345,7 @@ const LearningByPlaying = {
   title: 'Learning to throw',
   image: 'https://zupimages.net/up/20/19/skjl.jpg',
   description: 'Practice your throw by playing game.',
-  drills: [warmupGameDrill, discGolf, dDC],
+  drills: [warmupGameDrill, discGolf, dDC, theTunnel],
 };
 const initiationHorizontal = {
   id: 14,
@@ -2266,6 +2385,38 @@ const coed2MarkTraining = {
   description:
     "This training session aims at practicing your mark skills. Don't be broken to easily, generate dangerous passes",
   drills: [warmupGameDrill, kyeDrill, breakDrill, normalGame],
+};
+
+const defenseSecond = {
+  id: 19,
+  title: 'Stop the Flow',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'This training will help to stop the flow',
+  drills: [warmupGameDrill, theTunnel, resetBreakDrill, youShallNotPassDrill, normalGame],
+};
+
+const defenseThird = {
+  id: 20,
+  title: 'No more Reset',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Learn to use your body to stop the flow',
+  drills: [warmupGameDrill, kyeDrill, stopFlow, dwarfDuelDrill, normalGame],
+};
+
+const playingToLearn = {
+  id: 21,
+  title: 'Ultimate Games',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Playing games to learn the basics',
+  drills: [warmupGameDrill],
+};
+
+const zoneCup = {
+  id: 22,
+  title: 'Initiation Cup',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'First practice to learn the cup of the zone defense',
+  drills: [bulldogDrill, warmupGameDrill],
 };
 
 console.log('en', tactics);
@@ -2323,6 +2474,10 @@ export default {
     horizontalTrap,
     checkLong,
     throwCatchThrow,
+    stopFlow,
+    theTunnel,
+    sprintDefense,
+    cupSwinging,
 
     // Games
     normalGame,
@@ -2352,6 +2507,10 @@ export default {
     LearningByPlaying,
     initiationHorizontal,
     horizontalLine,
+    defenseSecond,
+    defenseThird,
+    playingToLearn,
+    zoneCup,
   ],
   programs: [
     {
@@ -2367,7 +2526,7 @@ export default {
     {
       id: 3,
       title: 'Learning by Playing',
-      trainings: [LearningByPlaying],
+      trainings: [LearningByPlaying, playingToLearn],
     },
     {
       id: 4,
@@ -2382,12 +2541,12 @@ export default {
     {
       id: 6,
       title: 'Individual Defense',
-      trainings: [defenseBaseTraining],
+      trainings: [defenseBaseTraining, defenseSecond, defenseThird],
     },
     {
       id: 7,
       title: 'Zone Defense: 3-3-1',
-      trainings: [defenseBaseTraining],
+      trainings: [zoneCup],
     },
     {
       id: 8,

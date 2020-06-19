@@ -104,7 +104,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
                           "top": 0,
                         },
                         Object {
-                          "backgroundColor": "#08AEEA",
+                          "backgroundColor": "#2a9e91",
                           "borderRadius": 5,
                           "width": "50%",
                         },

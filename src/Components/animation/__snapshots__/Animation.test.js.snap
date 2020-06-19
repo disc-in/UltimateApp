@@ -502,7 +502,7 @@ exports[`<Animation /> renders correctly 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#08AEEA",
+        "backgroundColor": "#2a9e91",
         "borderRadius": 8.333333333333334,
         "height": 8.333333333333334,
         "justifyContent": "center",
@@ -548,7 +548,7 @@ exports[`<Animation /> renders correctly 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#08AEEA",
+        "backgroundColor": "#2a9e91",
         "borderRadius": 8.333333333333334,
         "height": 8.333333333333334,
         "justifyContent": "center",
@@ -594,7 +594,7 @@ exports[`<Animation /> renders correctly 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#08AEEA",
+        "backgroundColor": "#2a9e91",
         "borderRadius": 8.333333333333334,
         "height": 8.333333333333334,
         "justifyContent": "center",
@@ -640,7 +640,7 @@ exports[`<Animation /> renders correctly 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#08AEEA",
+        "backgroundColor": "#2a9e91",
         "borderRadius": 8.333333333333334,
         "height": 8.333333333333334,
         "justifyContent": "center",
@@ -686,7 +686,7 @@ exports[`<Animation /> renders correctly 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#08AEEA",
+        "backgroundColor": "#2a9e91",
         "borderRadius": 8.333333333333334,
         "height": 8.333333333333334,
         "justifyContent": "center",

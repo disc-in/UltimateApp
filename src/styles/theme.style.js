@@ -13,7 +13,7 @@ export default {
   BORDER_COLOR_BUTTON_ACTIVE: '#d5d5d5',
   BACKGROUND_COLOR_BUTTON: '#fff',
   BACKGROUND_COLOR_BUTTON_ACTIVE: '#eee',
-  MAIN_COLOR: '#08AEEA',
+  MAIN_COLOR: '#2a9e91',
 
   // animations
   CONE_COLOR: '#FEA500',

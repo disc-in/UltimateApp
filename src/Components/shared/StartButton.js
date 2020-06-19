@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: theme.FONT_SIZE_MEDIUM,
     fontWeight: 'bold',
+    color: theme.COLOR_PRIMARY_LIGHT,
   },
 });
 

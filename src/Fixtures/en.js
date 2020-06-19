@@ -68,6 +68,12 @@ import hoHandlerBreak from './Animation/HoHandlerBreak';
 import hoHandlerGame from './Animation/HoHandlerGame';
 import breakDanceAnimation from './Animation/BreakDance';
 import breakRace from './Animation/BreakRace';
+import longCheck from './Animation/LongCheck';
+import throwCatch from './Animation/ThrowCatch';
+import threeGame from './Animation/ThreeGame';
+import normalGameAnimation from './Animation/NormalGame';
+import endzoneAnimation from './Animation/Endzone';
+import endzoneFinition from './Animation/EndzoneFinition';
 
 const stabilityDrill = {
   id: 1,
@@ -1037,7 +1043,7 @@ const goToTenDrill = {
   ],
 };
 
-const endzoneDameDrill = {
+const endzoneGameDrill = {
   id: 1015,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
@@ -1057,7 +1063,7 @@ const endzoneDameDrill = {
       id: 1,
       title: 'Endzone Game',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: endzoneAnimation,
       repetition: '',
       rest: '',
       instruction:
@@ -1067,7 +1073,7 @@ const endzoneDameDrill = {
       id: 2,
       title: 'Endzone finition',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: endzoneFinition,
       repetition: '',
       rest: '',
       instruction: 'Everybody start behing the disc.\nGame to 5',
@@ -1912,6 +1918,64 @@ const horizontalHandler = {
   ],
 };
 
+const checkLong = {
+  id: 1037,
+  type: DrillTypes.FRISBEE,
+  author: 'Moby',
+  title: 'How far can we go?',
+  image: 'https://zupimages.net/up/20/19/cd36.jpg',
+  description: 'Learning to throw deep as a cutter and to get information as a cutter',
+  minimalPlayersNumber: 3,
+  equipmentLabel: EquipmentLabels.NONE,
+  equipment: '1 disc ',
+  durationInMinutes: 15,
+  intensity: Intensities.HIGH,
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'Time to go long',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: longCheck,
+      repetition: '',
+      rest: '',
+      instruction:
+        'When the long thrower is changing direction the cutter go long as fast as possible. The goal is to make the longest complete pass',
+    },
+  ],
+};
+
+const throwCatchThrow = {
+  id: 1038,
+  type: DrillTypes.FRISBEE,
+  author: 'Edwin',
+  title: 'Double Disc',
+  image: 'https://zupimages.net/up/20/19/cd36.jpg',
+  description: 'Work by pair. The goal is to improve your trhowing and catching speed',
+  minimalPlayersNumber: 2,
+  equipmentLabel: EquipmentLabels.NONE,
+  equipment: '2 discs ',
+  durationInMinutes: 12,
+  intensity: Intensities.LOW,
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CATCH],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: '',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: throwCatch,
+      repetition: '',
+      rest: '',
+      instruction:
+        'The receiver already has a disc in its hands.  The goal is to never have two discs simultaneously in your hands. When the receiver is about to receive the other disc he throws in the air (to himself) his disc, he catches the other disc, throws it, catch his disc. If this is succeeded, then he throws his disc to the other player that already has his one disc in its hands.',
+    },
+  ],
+};
+
 const normalGame = {
   id: 2001,
   type: DrillTypes.GAME,
@@ -1934,7 +1998,7 @@ const normalGame = {
       id: 1,
       title: '',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: normalGameAnimation,
       repetition: '1',
       rest: '',
       instruction: '',
@@ -1964,7 +2028,7 @@ const game3v3 = {
       id: 1,
       title: '',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: threeGame,
       repetition: '1',
       rest: '',
       instruction: '',
@@ -1994,7 +2058,7 @@ const longShotGame = {
       id: 1,
       title: '',
       illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationSource: normalGameAnimation,
       repetition: '1',
       rest: '',
       instruction: '2 points if there was a successful long shot on the offense that lead to scoring!',
@@ -2002,31 +2066,90 @@ const longShotGame = {
   ],
 };
 
-const dumpSwingTraining = {
+const lineGame = {
+  id: 2004,
+  type: DrillTypes.GAME,
+  author: 'Moby',
+  title: 'Breaking the mark oriented game',
+  image:
+    'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
+  description:
+    'Just a classical game on the whole field. Only exception: After a turn-over, the offensive player has to start from the closest sideline.',
+  minimalPlayersNumber: 8,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '8 cones - 1 disc',
+  durationInMinutes: 20,
+  intensity: Intensities.HIGH,
+  goals: [FrisbeeGoals.PLAY, FrisbeeGoals.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: '',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: normalGameAnimation,
+      repetition: '1',
+      rest: '',
+      instruction: 'After a turn-over, the disc has to start from the sideline.',
+    },
+  ],
+};
+
+const longestGame = {
+  id: 2005,
+  type: DrillTypes.GAME,
+  author: 'Moby',
+  title: 'Being conservative with the disc',
+  image:
+    'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
+  description:
+    'Just a classical game on the whole field. Uses a stopwatch to calculate the time spent for a team to score a point. The team that took the longest time to score a point without a turnover gains 3 more points at the end of the game.',
+  minimalPlayersNumber: 8,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '8 cones - 1 disc - 1 stopwatch',
+  durationInMinutes: 15,
+  intensity: Intensities.HIGH,
+  goals: [FrisbeeGoals.PLAY, FrisbeeGoals.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'The longest point',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: normalGameAnimation,
+      repetition: '1',
+      rest: '',
+      instruction:
+        'Classical game. The team that took the longest time to score a point without a turnover gains 3 more points at the end of the game.',
+    },
+  ],
+};
+
+const initiationVerticalTraining = {
   id: 1,
+  title: 'Vertical Stack',
+  image: 'https://zupimages.net/up/20/19/frj2.jpg',
+  description: 'Learning the basic of a Vertical Stack',
+  drills: [warmupDrill, trainDrill, resetOpenDrill, resetBreakDrill, game3v3],
+};
+
+const secondVerticalTraining = {
+  id: 2,
+  title: 'The Break Power',
+  image: 'https://zupimages.net/up/20/19/frj2.jpg',
+  description: 'How to use the break side in a Vertical Stack',
+  drills: [warmupDrill, trainOfFakeDrill, bigEightDrill, game3v3, normalGame],
+};
+
+const dumpSwingTraining = {
+  id: 3,
   title: 'Dump & Swing',
   image: 'https://zupimages.net/up/20/19/frj2.jpg',
-  description: 'This training session aims at make your team better at Dump & Swing. blabla bla bla bla',
-  drills: [warmupDrill],
+  description: "Working on keeping the disc 'alive' with a vertical stack",
+  drills: [warmupDrill, trainOfFakeDrill, dishieChainDrill, endzoneGameDrill, longestGame],
 };
-
-const firstWeekFitnessTraining = {
-  id: 2,
-  title: 'First Week Fitness',
-  image: 'https://zupimages.net/up/20/19/9fcj.jpg',
-  description: 'This is the first week of the Off-season program',
-  drills: [stabilityDrill, strengthDrill, speedDrill, conditioningDrill],
-};
-
-const coed2MarkTraining = {
-  id: 3,
-  title: 'Build your Defense',
-  image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description:
-    "This training session aims at practicing your mark skills. Don't be broken to easily, generate dangerous passes",
-  drills: [warmupGameDrill, kyeDrill, breakDrill, normalGame],
-};
-
 const coed2LongTraining = {
   id: 4,
   title: 'Long Shot is Coming',
@@ -2080,7 +2203,7 @@ const secondInintiationAdultTraining = {
   title: 'Defense & Longs',
   image: 'https://zupimages.net/up/20/19/cd36.jpg',
   description: 'Players will work on defense and long throws',
-  drills: [warmupDrill, menageATroisDrill, normalGame],
+  drills: [warmupDrill, menageATroisDrill, checkLong, trainDrill, normalGame],
 };
 
 const thirdInintiationAdultTraining = {
@@ -2088,52 +2211,61 @@ const thirdInintiationAdultTraining = {
   title: 'Adapt to the Field',
   image: 'https://zupimages.net/up/20/19/hrqz.jpg',
   description: 'Players will learn to adapt to the size of the field',
-  drills: [warmupDrill, goaltimateDrill, triangleOfDeathdrill, normalGame],
-};
-
-const initiationVerticalTraining = {
-  id: 12,
-  title: 'Vertical Stack',
-  image: 'https://zupimages.net/up/20/19/frj2.jpg',
-  description: 'Make your team better at Vertical Stack',
-  drills: [warmupDrill, trainDrill, bigEightDrill, normalGame],
-};
-
-const secondVerticalTraining = {
-  id: 13,
-  title: 'The Break Power',
-  image: 'https://zupimages.net/up/20/19/frj2.jpg',
-  description: 'Make your team better at Vertical Stack',
-  drills: [warmupDrill, resetBreakDrill, trainOfFakeDrill, game3v3, normalGame],
+  drills: [warmupDrill, throwCatchThrow, goaltimateDrill, triangleOfDeathdrill, normalGame],
 };
 
 const defenseBaseTraining = {
-  id: 14,
+  id: 12,
   title: 'Defense Positioning',
   image: 'https://zupimages.net/up/20/19/skjl.jpg',
   description: 'Practice your defense.',
   drills: [warmupGameDrill, defensePositionDrill, youShallNotPassDrill, breakDrill, normalGame],
 };
 const LearningByPlaying = {
-  id: 14,
+  id: 13,
   title: 'Learning to throw',
   image: 'https://zupimages.net/up/20/19/skjl.jpg',
   description: 'Practice your throw by playing game.',
   drills: [warmupGameDrill, discGolf, dDC],
 };
 const initiationHorizontal = {
-  id: 15,
+  id: 14,
   title: 'Horizontal Cut',
   image: 'https://zupimages.net/up/20/19/skjl.jpg',
   description: 'Practice how to cut in a horizontal stack',
   drills: [warmupGameDrill, theDuel, game3v3Horizontal, normalGame],
 };
 const horizontalFlow = {
-  id: 16,
+  id: 15,
   title: 'Horizontal Flow',
   image: 'https://zupimages.net/up/20/19/skjl.jpg',
   description: 'Practice how to generate a flow with all the team',
-  drills: [warmupGameDrill, horizontalTiming, normalGame],
+  drills: [warmupGameDrill, horizontalTiming, horizontalToVertical, longShotGame],
+};
+
+const horizontalLine = {
+  id: 16,
+  title: 'Horizontal Trap',
+  image: 'https://zupimages.net/up/20/19/skjl.jpg',
+  description: 'Practice how to generate a flow with all the teamget out of the line with a Ho stack',
+  drills: [warmupGameDrill, horizontalTrap, horizontalTrapOutside, horizontalHandler, lineGame],
+};
+
+const firstWeekFitnessTraining = {
+  id: 17,
+  title: 'First Week Fitness',
+  image: 'https://zupimages.net/up/20/19/9fcj.jpg',
+  description: 'This is the first week of the Off-season program',
+  drills: [stabilityDrill, strengthDrill, speedDrill, conditioningDrill],
+};
+
+const coed2MarkTraining = {
+  id: 18,
+  title: 'Build your Defense',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description:
+    "This training session aims at practicing your mark skills. Don't be broken to easily, generate dangerous passes",
+  drills: [warmupGameDrill, kyeDrill, breakDrill, normalGame],
 };
 
 console.log('en', tactics);
@@ -2169,7 +2301,7 @@ export default {
     dwarfDuelDrill,
     giveAndGoDrill,
     goToTenDrill,
-    endzoneDameDrill,
+    endzoneGameDrill,
     bulldogDrill,
     dishieChainDrill,
     breakDanceDrill,
@@ -2189,22 +2321,29 @@ export default {
     horizontalHandler,
     horizontalTrapOutside,
     horizontalTrap,
+    checkLong,
+    throwCatchThrow,
 
     // Games
     normalGame,
     game3v3,
     longShotGame,
+    lineGame,
+    longestGame,
   ],
   trainings: [
-    dumpSwingTraining,
+    // Fitness
     firstWeekFitnessTraining,
+    secondWeekFitnessTraining,
+
+    // Frisbee
+    dumpSwingTraining,
     coed2MarkTraining,
     coed2LongTraining,
     coed2Long2Training,
     firstChildTraining,
     secondChildTraining,
     thirdChildTraining,
-    secondWeekFitnessTraining,
     secondInintiationAdultTraining,
     thirdInintiationAdultTraining,
     initiationVerticalTraining,
@@ -2212,6 +2351,7 @@ export default {
     defenseBaseTraining,
     LearningByPlaying,
     initiationHorizontal,
+    horizontalLine,
   ],
   programs: [
     {
@@ -2237,7 +2377,7 @@ export default {
     {
       id: 5,
       title: 'Horizontal Stack',
-      trainings: [initiationHorizontal, horizontalFlow],
+      trainings: [initiationHorizontal, horizontalFlow, horizontalLine],
     },
     {
       id: 6,

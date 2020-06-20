@@ -52,7 +52,7 @@ class DisplayedElement extends React.Component {
 
       onPanResponderRelease: (event, gestureState) => {
         if (this.props.movable && this.props.onMoveEnd !== undefined && this.props.onMoveEnd !== null) {
-          this.props.onMoveEnd(this.props.eId, gestureState.dx, gestureState.dy);
+          this.props.onMoveEnd(this.props.eId, this.props.id, gestureState.dx, gestureState.dy);
         }
         this.setState({
           isMoving: false,

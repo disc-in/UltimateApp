@@ -219,7 +219,7 @@ class AnimationEditor extends React.Component {
     });
   };
 
-  onElementMoveEnd = (elementIndex, xDelta, yDelta) => {
+  onElementMoveEnd = (elementIndex, type, xDelta, yDelta) => {
     var currentPosition = this.state.animation.getPositionsAtStep(elementIndex, Math.ceil(this.currentStep));
     currentPosition = currentPosition[0];
     var xDeltaPercent = xDelta / (this.state.width * this.wRatio);
@@ -232,16 +232,10 @@ class AnimationEditor extends React.Component {
     var animationWidth = this.state.width * this.wRatio;
     var animationHeight = this.state.height * this.hRatio;
 
-    /* If the element is dropped on the trash icon */
-    if (
-      newPixelPosition[0] >= animationWidth - 50 &&
-      newPixelPosition[1] >= animationHeight - 50 &&
-      newPixelPosition[1] <= animationHeight + 3
-    ) {
-      /* Remove it from the drill */
+    /* If the element is dropped on the trash area */
+    if (newPosition[1] > 0.85) {
       newAnimation.removeElement(elementIndex);
 
-      /* If it had a number, we need to decrement the number of the corresponding draggable element */
       const labels = { ...this.state.labels };
       labels[type] = labels[type] - 1;
       this.setState({ labels });
@@ -249,9 +243,7 @@ class AnimationEditor extends React.Component {
       /* If the element is moved outside of the animation area, move it to the closest position inside the animation area */
       if (newPosition[0] < 0) newPosition[0] = 0;
       else if (newPosition[0] > 1) newPosition[0] = 1;
-
       if (newPosition[1] < 0) newPosition[1] = 0;
-      else if (newPosition[1] > 0.85) newPosition[1] = 0.85;
 
       /* If the element is not moved outside of the animation area, updated its coordinates */
       newAnimation.positions[Math.ceil(this.currentStep)][elementIndex] = [];
@@ -299,7 +291,6 @@ class AnimationEditor extends React.Component {
       <View style={styles.mainContainer} onLayout={this.onLayout}>
         <Animation
           onLayout={this.onLayout}
-          style={[{ flex: 10 }]}
           editable
           animation={this.state.animation}
           onMoveStart={this.onMoveStart}

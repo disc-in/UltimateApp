@@ -2,7 +2,6 @@ import React from 'react';
 import { StyleSheet, Animated, Dimensions, Easing, View, Picker } from 'react-native';
 
 import Animation from './Animation';
-
 import DraggableDisplayedElement from './DraggableDisplayedElement';
 import BackgroundPicker from './BackgroundPicker';
 import Drill from './Drill';
@@ -13,12 +12,18 @@ class AnimationEditor extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      draggableElements: [],
       animation: new Drill(props.animation),
       dTop: 0, // Distance between the top of the window and the editor
       dLeft: 0, // Distance between the left of the window and the editor
       width: 0,
       height: 0,
+      playerRadius: 0,
+      labels: {
+        offense: 1,
+        defense: 1,
+        disc: 1,
+        triangle: 1,
+      },
       isElementMoving: false, // True if an element already in the animation is moving (enables when an element moves to enable removing it)
     };
 
@@ -27,12 +32,6 @@ class AnimationEditor extends React.Component {
 
     /** Horizontal ratio of the space of the editor in which the animation is displayed */
     this.wRatio = 1;
-
-    this.offenseCount = 1;
-    this.defenseCount = 1;
-    this.discCount = 1;
-
-    this.keyCount = 0;
 
     this.currentStep = 0;
 
@@ -45,7 +44,6 @@ class AnimationEditor extends React.Component {
 
     this.editorHeight = 100;
     this.editorWidth = 100;
-    this.draggableElementsTop = 100;
   }
 
   saveAnimation = (newAnimation, cb) => {
@@ -71,84 +69,24 @@ class AnimationEditor extends React.Component {
     var animationWidth = this.editorWidth * this.wRatio;
     var animationHeight = this.editorHeight * this.hRatio;
 
-    var playerRadius = Math.min(animationWidth, animationHeight) / 12;
-    this.draggableElementsTop = animationHeight + 2.5 * playerRadius;
-    this.draggableElementsLeft = Array(4);
-
-    this.draggableElementsLeft[0] = (1 * animationWidth) / 7 - playerRadius / 2;
-    this.draggableElementsLeft[1] = (2 * animationWidth) / 7 - playerRadius / 2;
-    this.draggableElementsLeft[2] = (3 * animationWidth) / 7 - playerRadius / 2;
-    this.draggableElementsLeft[3] = (4 * animationWidth) / 7 - playerRadius / 2;
-
-    this.initialElements.push(
-      this._createDraggableElements('offense', playerRadius, this.draggableElementsTop, this.draggableElementsLeft[0]),
-    );
-    this.initialElements.push(
-      this._createDraggableElements('defense', playerRadius, this.draggableElementsTop, this.draggableElementsLeft[1]),
-    );
-    this.initialElements.push(
-      this._createDraggableElements('disc', playerRadius, this.draggableElementsTop, this.draggableElementsLeft[2]),
-    );
-    this.initialElements.push(
-      this._createDraggableElements('triangle', playerRadius, this.draggableElementsTop, this.draggableElementsLeft[3]),
-    );
-
     this.setState(prevState => ({
-      draggableElements: prevState.draggableElements.concat(this.initialElements),
+      playerRadius: Math.min(animationWidth, animationHeight) / 12,
     }));
   };
 
-  addElementToAnimation = (element, xDelta, yDelta) => {
-    // Get the original position of the element
-    var x = 0;
-    var y = 0;
+  addElementToAnimation = (type, x, y) => {
+    console.log({ type, x, y });
+    // TODO: Fix y offset
+    const position = this._positionPixelToPercent(x, y - 50);
+    if (position[0] <= 1 && position[1] <= 0.88 && position[0] >= 0 && position[1] >= 0) {
+      const text = this.state.labels[type];
+      console.log(text);
+      const labels = { ...this.state.labels };
+      labels[type] = labels[type] + 1;
+      this.setState({ labels });
 
-    var elementNumber = '';
-
-    switch (element.props.id) {
-      case 'offense':
-        x = this.draggableElementsLeft[0];
-        y = this.draggableElementsTop;
-        break;
-      case 'defense':
-        x = this.draggableElementsLeft[1];
-        y = this.draggableElementsTop;
-        break;
-      case 'triangle':
-        x = this.draggableElementsLeft[3];
-        y = this.draggableElementsTop;
-        break;
-      case 'disc':
-        x = this.draggableElementsLeft[2];
-        y = this.draggableElementsTop;
-        break;
-    }
-
-    var newPosition = this._positionPixelToPercent(x + xDelta, y + yDelta);
-    if (newPosition[0] <= 1 && newPosition[1] <= 0.88 && newPosition[0] >= 0 && newPosition[1] >= 0) {
-      switch (element.props.id) {
-        case 'offense':
-          elementNumber = this.offenseCount;
-          this.offenseCount++;
-          this.state.draggableElements[0].setNumber(this.offenseCount);
-          break;
-        case 'defense':
-          elementNumber = this.defenseCount;
-          this.defenseCount++;
-          this.state.draggableElements[1].setNumber(this.defenseCount);
-          break;
-        case 'disc':
-          elementNumber = this.discCount;
-          this.discCount++;
-          this.state.draggableElements[2].setNumber(this.discCount);
-          break;
-      }
-
-      // Add the element with its initial position
       var newAnimation = this._copyAnimation();
-
-      newAnimation.addElement(element, newPosition[0], newPosition[1], elementNumber);
-
+      newAnimation.addElement(type, position[0], position[1], text);
       this.saveAnimation(newAnimation);
     }
   };
@@ -281,7 +219,7 @@ class AnimationEditor extends React.Component {
     });
   };
 
-  moveElement = (element, xDelta, yDelta) => {
+  onElementMove = (element, xDelta, yDelta) => {
     var currentPosition = this.state.animation.getPositionsAtStep(element.props.eId, Math.ceil(this.currentStep));
     currentPosition = currentPosition[0];
     var xDeltaPercent = xDelta / (this.state.width * this.wRatio);
@@ -304,20 +242,9 @@ class AnimationEditor extends React.Component {
       newAnimation.removeElement(element.props.eId);
 
       /* If it had a number, we need to decrement the number of the corresponding draggable element */
-      switch (element.props.id) {
-        case 'offense':
-          this.offenseCount--;
-          this.state.draggableElements[0].setNumber(this.offenseCount);
-          break;
-        case 'defense':
-          this.defenseCount--;
-          this.state.draggableElements[1].setNumber(this.defenseCount);
-          break;
-        case 'disc':
-          this.discCount--;
-          this.state.draggableElements[2].setNumber(this.discCount);
-          break;
-      }
+      const labels = { ...this.state.labels };
+      labels[type] = labels[type] - 1;
+      this.setState({ labels });
     } else {
       /* If the element is moved outside of the animation area, move it to the closest position inside the animation area */
       if (newPosition[0] < 0) newPosition[0] = 0;
@@ -337,49 +264,11 @@ class AnimationEditor extends React.Component {
     this.setState({ isElementMoving: false }); // Line to comment
   };
 
-  anElementMoves = () => {
+  onMoveStart = () => {
     this.setState({
       isElementMoving: true,
     });
   };
-
-  _createDraggableElements(displayedElementType, playerRadius, top, left) {
-    var text = '';
-
-    var key = 600;
-    this.keyCount += 1;
-
-    if (displayedElementType === 'offense') text = '1';
-
-    if (displayedElementType === 'defense') {
-      text = '1';
-      key = 601;
-    }
-
-    if (displayedElementType === 'triangle') key = 602;
-
-    if (displayedElementType === 'disc') {
-      text = '1';
-      key = 603;
-    }
-
-    return new DraggableDisplayedElement({
-      onMoveEnd: this.addElementToAnimation,
-      id: displayedElementType,
-      eId: -1,
-      key,
-      movable: true,
-      playerRadius,
-      top,
-      left,
-      number: text,
-    });
-  }
-
-  _display(item) {
-    if (item !== undefined && item !== null) return item.render();
-    else return undefined;
-  }
 
   addStep = () => {
     // Add the element with its initial position
@@ -416,8 +305,8 @@ class AnimationEditor extends React.Component {
           style={[{ flex: 10 }]}
           editable
           animation={this.state.animation}
-          onMoveStart={this.anElementMoves}
-          onElementMove={this.moveElement}
+          onMoveStart={this.onMoveStart}
+          onElementMove={this.onElementMove}
           onCutMove={this.cutMove}
           widthRatio={1}
           heightRatio={this.hRatio}
@@ -431,20 +320,24 @@ class AnimationEditor extends React.Component {
 
         {this.state.isElementMoving ? (
           <View
-            style={[{ position: 'absolute', left: 0, top: this.draggableElementsTop, backgroundColor: 'gray' }]}
+            style={[{ position: 'absolute', left: 0, top: 100, backgroundColor: 'gray' }]}
             height="10%"
             width="100%"
           />
         ) : (
-          <View style={[{ position: 'absolute', left: 0, top: 0 }]} height="100%" width="100%">
-            {this.state.draggableElements.map(function(item) {
-              return item.render();
-            })}
-
+          <View style={styles.draggableArea}>
+            {['offense', 'defense', 'disc', 'triangle'].map(type => (
+              <DraggableDisplayedElement
+                type={type}
+                playerRadius={this.state.playerRadius}
+                onMoveEnd={this.addElementToAnimation}
+                number={this.state.labels[type]}
+                key={type}
+              />
+            ))}
             <BackgroundPicker
               onBackgroundChange={this.onBackgroundChange}
-              type={this.state.animation.background}
-              top={this.draggableElementsTop}
+              selectedBackground={this.state.animation.background}
             />
           </View>
         )}
@@ -463,6 +356,12 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'stretch',
+  },
+  draggableArea: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    padding: 10,
   },
 });
 

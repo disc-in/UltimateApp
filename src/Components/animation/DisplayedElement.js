@@ -30,6 +30,7 @@ class DisplayedElement extends React.Component {
 
       // Called when the gesture starts
       onPanResponderGrant: () => {
+        console.log('onPanResponderGrant');
         if (this.props.onMoveStart !== undefined && this.props.onMoveStart !== null) this.props.onMoveStart();
 
         if (this.props.movable) {
@@ -47,11 +48,13 @@ class DisplayedElement extends React.Component {
       },
 
       // Called when a move is made
-      onPanResponderMove: this.props.movable
-        ? Animated.event([null, { dx: this.offset.x, dy: this.offset.y }])
-        : undefined,
+      onPanResponderMove: () => {
+        console.log('onPanResponderMove');
+        return this.props.movable ? Animated.event([null, { dx: this.offset.x, dy: this.offset.y }]) : undefined;
+      },
 
       onPanResponderRelease: (evt, gesturestate) => {
+        console.log('onPanResponderRelease');
         if (this.props.movable && this.props.onMoveEnd !== undefined && this.props.onMoveEnd !== null) {
           this.props.onMoveEnd(this, this.offset.x._value, this.offset.y._value);
         }
@@ -296,7 +299,7 @@ const styles = StyleSheet.create({
   },
   defenseText: {
     fontWeight: 'bold',
-    color: theme.OFFENSE_TEXT_COLOR,
+    color: theme.PLAYER_TEXT_COLOR,
   },
   offense: {
     position: 'absolute',
@@ -306,7 +309,7 @@ const styles = StyleSheet.create({
   },
   offenseText: {
     fontWeight: 'bold',
-    color: theme.OFFENSE_TEXT_COLOR,
+    color: theme.PLAYER_TEXT_COLOR,
   },
   gradient: {
     flex: 1,

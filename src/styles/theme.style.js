@@ -18,9 +18,7 @@ export default {
   // animations
   CONE_COLOR: '#FEA500',
   DEFENSE_COLOR: '#AFAFAF',
-  DEFENSE_TEXT_COLOR: '#000',
-  // OFFENSE BACKGROUND USE GRADIENT
-  OFFENSE_TEXT_COLOR: '#fff',
+  PLAYER_TEXT_COLOR: '#fff',
   DISC_TEXT_COLOR: 'black',
   CUT_COLOR: 'green',
   DISC_COLOR: 'white',

@@ -187,7 +187,6 @@ class Animation extends React.Component {
           animationHeight={this.animationHeight}
           stepCount={this._stepCount()}
           currentStepAV={this.currentStepAV}
-          editable={this.props.editable}
           goToStep={this.playStep}
           playAnimation={this.playAnimation}
           onStepAdded={this.props.onStepAdded}

@@ -30,14 +30,12 @@ class DisplayedElement extends React.Component {
 
       // Called when the gesture starts
       onPanResponderGrant: () => {
-        console.log('onPanResponderGrant');
         if (this.props.onMoveStart !== undefined && this.props.onMoveStart !== null) this.props.onMoveStart();
 
         if (this.props.movable) {
           this.setState({
             isMoving: true,
           });
-
           this.offset.setOffset({
             x: this.state.stateFromProps.interpolateX.__getValue(),
             y: this.state.stateFromProps.interpolateY.__getValue(),
@@ -49,14 +47,12 @@ class DisplayedElement extends React.Component {
 
       // Called when a move is made
       onPanResponderMove: () => {
-        console.log('onPanResponderMove');
         return this.props.movable ? Animated.event([null, { dx: this.offset.x, dy: this.offset.y }]) : undefined;
       },
 
-      onPanResponderRelease: (evt, gesturestate) => {
-        console.log('onPanResponderRelease');
+      onPanResponderRelease: (event, gestureState) => {
         if (this.props.movable && this.props.onMoveEnd !== undefined && this.props.onMoveEnd !== null) {
-          this.props.onMoveEnd(this, this.offset.x._value, this.offset.y._value);
+          this.props.onMoveEnd(this.props.eId, gestureState.dx, gestureState.dy);
         }
         this.setState({
           isMoving: false,

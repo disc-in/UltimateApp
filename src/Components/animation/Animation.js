@@ -166,7 +166,7 @@ class Animation extends React.Component {
             eId={index}
             movable={this.props.editable}
             onMoveStart={this.props.onMoveStart}
-            onMoveEnd={this.props.onElementMove}
+            onMoveEnd={this.props.onElementMoveEnd}
             animationWidth={this.animationWidth}
             animationHeight={this.animationHeight}
             animation={this.props.animation}
@@ -184,7 +184,6 @@ class Animation extends React.Component {
           playAnimation={this.playAnimation}
           onStepAdded={this.props.onStepAdded}
           onStepRemoved={this.props.onStepRemoved}
-          key={1}
         />
       </View>
     );

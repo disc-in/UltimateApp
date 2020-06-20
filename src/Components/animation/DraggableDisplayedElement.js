@@ -14,7 +14,6 @@ class DraggableDisplayedElement extends React.Component {
 
     /* Current position of the element in pixels */
     this.currentPosition = new Animated.ValueXY({ x: 0, y: 0 });
-    this.currentPosition.addListener(value => (this._val = value)); // Initialize PanResponder with move handling
 
     // Initiate the panResponder
     this.panResponder = PanResponder.create({
@@ -24,8 +23,8 @@ class DraggableDisplayedElement extends React.Component {
       // Called when a move is made
       onPanResponderMove: Animated.event([null, { dx: this.currentPosition.x, dy: this.currentPosition.y }]),
 
-      onPanResponderRelease: (evt, gesturestate) => {
-        this.props.onMoveEnd(this.props.type, gesturestate.moveX, gesturestate.moveY);
+      onPanResponderRelease: (event, gestureState) => {
+        this.props.onMoveEnd(this.props.type, gestureState.moveX, gestureState.moveY);
         this.currentPosition.setValue({ x: 0, y: 0 });
       },
     });

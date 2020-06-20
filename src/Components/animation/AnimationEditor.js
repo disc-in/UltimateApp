@@ -26,7 +26,7 @@ class AnimationEditor extends React.Component {
         disc: 1,
         triangle: 1,
       },
-      isElementMoving: false, // True if an element already in the animation is moving (enables when an element moves to enable removing it)
+      isElementMoving: false,
     };
 
     /** Vertical ratio of the space of the editor in which the animation is displayed */
@@ -219,8 +219,8 @@ class AnimationEditor extends React.Component {
     });
   };
 
-  onElementMove = (element, xDelta, yDelta) => {
-    var currentPosition = this.state.animation.getPositionsAtStep(element.props.eId, Math.ceil(this.currentStep));
+  onElementMoveEnd = (elementIndex, xDelta, yDelta) => {
+    var currentPosition = this.state.animation.getPositionsAtStep(elementIndex, Math.ceil(this.currentStep));
     currentPosition = currentPosition[0];
     var xDeltaPercent = xDelta / (this.state.width * this.wRatio);
     var yDeltaPercent = yDelta / (this.state.height * this.hRatio);
@@ -239,7 +239,7 @@ class AnimationEditor extends React.Component {
       newPixelPosition[1] <= animationHeight + 3
     ) {
       /* Remove it from the drill */
-      newAnimation.removeElement(element.props.eId);
+      newAnimation.removeElement(elementIndex);
 
       /* If it had a number, we need to decrement the number of the corresponding draggable element */
       const labels = { ...this.state.labels };
@@ -254,14 +254,14 @@ class AnimationEditor extends React.Component {
       else if (newPosition[1] > 0.85) newPosition[1] = 0.85;
 
       /* If the element is not moved outside of the animation area, updated its coordinates */
-      newAnimation.positions[Math.ceil(this.currentStep)][element.props.eId] = [];
-      newAnimation.positions[Math.ceil(this.currentStep)][element.props.eId].push([]);
-      newAnimation.positions[Math.ceil(this.currentStep)][element.props.eId][0].push(newPosition[0]);
-      newAnimation.positions[Math.ceil(this.currentStep)][element.props.eId][0].push(newPosition[1]);
+      newAnimation.positions[Math.ceil(this.currentStep)][elementIndex] = [];
+      newAnimation.positions[Math.ceil(this.currentStep)][elementIndex].push([]);
+      newAnimation.positions[Math.ceil(this.currentStep)][elementIndex][0].push(newPosition[0]);
+      newAnimation.positions[Math.ceil(this.currentStep)][elementIndex][0].push(newPosition[1]);
     }
 
     this.saveAnimation(newAnimation);
-    this.setState({ isElementMoving: false }); // Line to comment
+    this.setState({ isElementMoving: false });
   };
 
   onMoveStart = () => {
@@ -306,7 +306,7 @@ class AnimationEditor extends React.Component {
           editable
           animation={this.state.animation}
           onMoveStart={this.onMoveStart}
-          onElementMove={this.onElementMove}
+          onElementMoveEnd={this.onElementMoveEnd}
           onCutMove={this.cutMove}
           widthRatio={1}
           heightRatio={this.hRatio}

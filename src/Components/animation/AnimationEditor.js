@@ -14,7 +14,7 @@ class AnimationEditor extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      animation: new Drill(props.animation),
+      animation: new Drill(),
       dTop: 0, // Distance between the top of the window and the editor
       dLeft: 0, // Distance between the left of the window and the editor
       width: 0,

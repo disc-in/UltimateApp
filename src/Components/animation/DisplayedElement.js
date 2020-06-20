@@ -97,128 +97,72 @@ class DisplayedElement extends React.Component {
   }
 
   render() {
-    const panStyle = {
-      transform: this.offset.getTranslateTransform(),
-    };
+    const panStyle = this.state.isMoving
+      ? {
+          transform: this.offset.getTranslateTransform(),
+        }
+      : {
+          transform: [
+            {
+              translateX: this.state.stateFromProps.interpolateX,
+            },
+            {
+              translateY: this.state.stateFromProps.interpolateY,
+            },
+          ],
+        };
+    const playerRadius = this.state.stateFromProps.playerRadius;
+    const discRadius = playerRadius / 1.5;
+    const coneSize = playerRadius / 2;
 
+    let itemStyle, textStyle;
     switch (this.state.stateFromProps.id) {
       case 'defense':
-        return (
-          <Animated.View
-            {...this.panResponder.panHandlers}
-            style={[
-              this.state.isMoving
-                ? panStyle
-                : {
-                    transform: [
-                      {
-                        translateX: this.state.stateFromProps.interpolateX,
-                      },
-                      {
-                        translateY: this.state.stateFromProps.interpolateY,
-                      },
-                    ],
-                  },
-              styles.defense,
-              { height: this.state.stateFromProps.playerRadius },
-              { width: this.state.stateFromProps.playerRadius },
-              { borderRadius: this.state.stateFromProps.playerRadius },
-              { left: 0 },
-              { top: 0 },
-            ]}
-            key={this.state.stateFromProps.id}
-          >
-            <Text style={styles.defenseText}>{this.state.stateFromProps.number}</Text>
-          </Animated.View>
-        );
       case 'offense':
-        return (
-          <Animated.View
-            {...this.panResponder.panHandlers}
-            style={[
-              this.state.isMoving
-                ? panStyle
-                : {
-                    transform: [
-                      {
-                        translateX: this.state.stateFromProps.interpolateX,
-                      },
-                      {
-                        translateY: this.state.stateFromProps.interpolateY,
-                      },
-                    ],
-                  },
-              styles.offense,
-              { height: this.state.stateFromProps.playerRadius },
-              { width: this.state.stateFromProps.playerRadius },
-              { borderRadius: this.state.stateFromProps.playerRadius },
-              { left: 0 },
-              { top: 0 },
-            ]}
-            key={this.state.stateFromProps.id}
-          >
-            <Text style={styles.offenseText}>{this.state.stateFromProps.number}</Text>
-          </Animated.View>
-        );
+        itemStyle = [
+          panStyle,
+          styles.displayedElement,
+          this.state.stateFromProps.id == 'defense' ? styles.defense : styles.offense,
+          {
+            height: playerRadius,
+            width: playerRadius,
+            borderRadius: playerRadius,
+          },
+        ];
+        textStyle = styles.playerText;
+        break;
       case 'disc':
-        return (
-          <Animated.View
-            {...this.panResponder.panHandlers}
-            style={[
-              this.state.isMoving
-                ? panStyle
-                : {
-                    transform: [
-                      {
-                        translateX: this.state.stateFromProps.interpolateX,
-                      },
-                      {
-                        translateY: this.state.stateFromProps.interpolateY,
-                      },
-                    ],
-                  },
-              styles.disc,
-              { height: 20 },
-              { width: 20 },
-              { borderRadius: 20 },
-              { borderWidth: 2 },
-              { left: 0 },
-              { top: 0 },
-            ]}
-            key={this.state.stateFromProps.id}
-          />
-        );
+        itemStyle = [
+          panStyle,
+          styles.displayedElement,
+          styles.disc,
+          {
+            height: discRadius,
+            width: discRadius,
+            borderRadius: discRadius,
+            borderWidth: discRadius / 10,
+          },
+        ];
+        textStyle = styles.discText;
+        break;
       case 'triangle':
-        return (
-          <Animated.View
-            // Use the panResponder in this view
-            {...this.panResponder.panHandlers}
-            style={[
-              this.state.isMoving
-                ? panStyle
-                : {
-                    transform: [
-                      {
-                        translateX: this.state.stateFromProps.interpolateX,
-                      },
-                      {
-                        translateY: this.state.stateFromProps.interpolateY,
-                      },
-                    ],
-                  },
-              styles.triangle,
-              { borderLeftWidth: this.state.stateFromProps.bottomConeSize / 2 },
-              { borderRightWidth: this.state.stateFromProps.bottomConeSize / 2 },
-              { borderBottomWidth: this.state.stateFromProps.bottomConeSize },
-              { top: 0 },
-              { left: 0 },
-            ]}
-            key={this.state.stateFromProps.id}
-          />
-        );
-      default:
-        return <View key={this.state.stateFromProps.id} />;
+        itemStyle = [
+          panStyle,
+          styles.displayedElement,
+          styles.triangle,
+          {
+            borderLeftWidth: coneSize / 2,
+            borderRightWidth: coneSize / 2,
+            borderBottomWidth: coneSize,
+          },
+        ];
+        textStyle = styles.triangleText;
     }
+    return (
+      <Animated.View {...this.panResponder.panHandlers} style={itemStyle} key={this.state.stateFromProps.id}>
+        <Animated.Text style={textStyle}>{this.state.stateFromProps.number}</Animated.Text>
+      </Animated.View>
+    );
   }
 }
 
@@ -278,7 +222,6 @@ const _initializeStateFromProps = props => {
 
   return {
     playerRadius,
-    bottomConeSize: playerRadius / 2,
     id: props.id,
     eId: props.eId,
     number: props.number,
@@ -291,50 +234,42 @@ const _initializeStateFromProps = props => {
 };
 
 const styles = StyleSheet.create({
-  defense: {
+  displayedElement: {
     position: 'absolute',
-    backgroundColor: theme.DEFENSE_COLOR,
+    textAlign: 'center',
+    textAlignVertical: 'center',
     alignItems: 'center',
     justifyContent: 'center',
+    top: 0,
+    left: 0,
   },
-  defenseText: {
-    fontWeight: 'bold',
-    color: theme.PLAYER_TEXT_COLOR,
+  defense: {
+    backgroundColor: theme.DEFENSE_COLOR,
   },
   offense: {
-    position: 'absolute',
     backgroundColor: theme.MAIN_COLOR,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
-  offenseText: {
-    fontWeight: 'bold',
+  playerText: {
     color: theme.PLAYER_TEXT_COLOR,
+    fontWeight: 'bold',
   },
-  gradient: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
   disc: {
-    position: 'absolute',
     borderColor: theme.DISC_BORDER,
     backgroundColor: theme.DISC_COLOR,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   discText: {
-    fontWeight: 'bold',
-    color: theme.DISC_TEXT_COLOR,
+    width: 0,
+    height: 0,
   },
   triangle: {
-    position: 'absolute',
     backgroundColor: 'transparent',
     borderStyle: 'solid',
-    borderLeftColor: 'transparent',
-    borderRightColor: 'transparent',
+    borderColor: 'transparent',
     borderBottomColor: theme.CONE_COLOR,
+  },
+  triangleText: {
+    width: 0,
+    height: 0,
   },
 });
 

@@ -39,7 +39,6 @@ class AnimationEditor extends React.Component {
 
     // Enables to update  the current step inside an animation
     this.currentStepAV = new Animated.Value(0);
-
     this.currentStepAV.addListener(progress => {
       this.currentStep = progress.value;
     });
@@ -77,12 +76,11 @@ class AnimationEditor extends React.Component {
   };
 
   addElementToAnimation = (type, x, y) => {
-    console.log({ type, x, y });
     // TODO: Fix y offset
     const position = this._positionPixelToPercent(x, y - 50);
     if (position[0] <= 1 && position[1] <= 0.88 && position[0] >= 0 && position[1] >= 0) {
       const text = this.state.labels[type];
-      console.log(text);
+
       const labels = { ...this.state.labels };
       labels[type] = labels[type] + 1;
       this.setState({ labels });

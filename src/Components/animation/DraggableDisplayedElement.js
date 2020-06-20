@@ -32,7 +32,7 @@ class DraggableDisplayedElement extends React.Component {
   }
 
   render() {
-    const discRadius = this.props.playerRadius / 1.1;
+    const discRadius = this.props.playerRadius / 1.5;
     const coneSize = this.props.playerRadius / 2;
 
     const panStyle = {

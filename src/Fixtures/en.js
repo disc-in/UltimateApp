@@ -1785,7 +1785,6 @@ const defenseBaseTraining = {
   drills: [warmupGameDrill, defensePositionDrill, youShallNotPassDrill, breakDrill, normalGame],
 };
 
-console.log('en', tactics);
 export default {
   theory: {
     dictionary,

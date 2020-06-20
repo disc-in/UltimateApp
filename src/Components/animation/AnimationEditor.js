@@ -1,10 +1,12 @@
 import React from 'react';
 import { StyleSheet, Animated, Dimensions, Easing, View, Picker } from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import Animation from './Animation';
 import DraggableDisplayedElement from './DraggableDisplayedElement';
 import BackgroundPicker from './BackgroundPicker';
 import Drill from './Drill';
+import theme from '../../styles/theme.style';
 
 import debug from './debug';
 
@@ -319,11 +321,9 @@ class AnimationEditor extends React.Component {
         />
 
         {this.state.isElementMoving ? (
-          <View
-            style={[{ position: 'absolute', left: 0, top: 100, backgroundColor: 'gray' }]}
-            height="10%"
-            width="100%"
-          />
+          <View style={styles.deletionArea}>
+            <MaterialCommunityIcons name="trash-can" color={theme.COLOR_PRIMARY} size={22} />
+          </View>
         ) : (
           <View style={styles.draggableArea}>
             {['offense', 'defense', 'disc', 'triangle'].map(type => (
@@ -341,8 +341,6 @@ class AnimationEditor extends React.Component {
             />
           </View>
         )}
-
-        <View style={[{ flex: 3, height: 80 }]} />
       </View>
     );
   }
@@ -362,6 +360,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
     padding: 10,
+  },
+  deletionArea: {
+    marginHorizontal: 30,
+    marginTop: 10,
+    borderColor: 'grey',
+    borderWidth: 2,
+    height: 50,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
 

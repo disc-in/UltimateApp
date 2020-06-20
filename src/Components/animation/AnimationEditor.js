@@ -271,11 +271,8 @@ class AnimationEditor extends React.Component {
   };
 
   addStep = () => {
-    // Add the element with its initial position
     var newAnimation = this._copyAnimation();
-
     newAnimation.addStep();
-
     this.saveAnimation(newAnimation);
   };
 

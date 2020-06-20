@@ -4,7 +4,6 @@ import { StyleSheet, Easing, Animated, Dimensions, View, Image } from 'react-nat
 import DisplayedElement from './DisplayedElement';
 import DisplayedCuts from './DisplayedCuts';
 import ProgressBar from './ProgressBar';
-import Drill from './Drill';
 import AnimationBackground from './AnimationBackground';
 
 class Animation extends React.Component {
@@ -20,7 +19,6 @@ class Animation extends React.Component {
 
     this.state = {
       stepLength: 1000, // Duration of a step in milliseconds
-      animation: new Drill(this.props.animation),
       currentStep: initialStep, // Current step displayed on the phone
       animationPlaying: false,
     };
@@ -43,12 +41,6 @@ class Animation extends React.Component {
     // Distance between the left of the window and the animation area
     this.dLeft = this.props.dLeft || 0;
   }
-
-  /** Number of steps in the animation */
-  _stepCount = () => {
-    if (this.state.animation !== undefined && this.state.animation !== null) return this.state.animation.stepCount();
-    else return 0;
-  };
 
   /** Convert a position (x, y) in percentages of the animation area in a position (x2, y2) in pixels of the phone screen
    * x: horizontal position in percentages (=0 left edge, =1 right edge)
@@ -88,15 +80,15 @@ class Animation extends React.Component {
 
         sequence.push(
           Animated.timing(this.currentStepAV, {
-            toValue: this._stepCount() - 1,
-            duration: this.state.stepLength * (this._stepCount() - 1),
+            toValue: this.props.animation.stepCount() - 1,
+            duration: this.state.stepLength * (this.props.animation.stepCount() - 1),
             easing: Easing.linear,
             key: 1,
           }),
         );
 
         Animated.sequence(sequence).start(() =>
-          this.setState({ animationPlaying: false, currentStep: this._stepCount() - 1 }),
+          this.setState({ animationPlaying: false, currentStep: this.props.animation.stepCount() - 1 }),
         );
       },
     );
@@ -178,7 +170,7 @@ class Animation extends React.Component {
           readonly={!this.props.editable}
           animationWidth={this.animationWidth}
           animationHeight={this.animationHeight}
-          stepCount={this._stepCount()}
+          stepCount={this.props.animation.stepCount()}
           currentStepAV={this.currentStepAV}
           goToStep={this.playStep}
           playAnimation={this.playAnimation}

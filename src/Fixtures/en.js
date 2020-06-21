@@ -732,7 +732,7 @@ const basicThrowsDrill = {
 };
 
 const breakDrill = {
-  id: 1023,
+  id: 1002,
   type: DrillTypes.FRISBEE,
   author: 'Martin',
   title: 'Cuts to the Break Side',
@@ -767,7 +767,7 @@ const breakDrill = {
 };
 
 const treasureHuntDrill = {
-  id: 1009,
+  id: 1003,
   type: DrillTypes.FRISBEE,
   author: 'PUC Ultimate',
   title: 'Treasure Hunt',
@@ -797,7 +797,7 @@ const treasureHuntDrill = {
 };
 
 const kyeDrill = {
-  id: 1010,
+  id: 1004,
   type: DrillTypes.FRISBEE,
   author: 'Kye',
   title: '3 vs 2',
@@ -826,7 +826,7 @@ const kyeDrill = {
 };
 
 const bigEightDrill = {
-  id: 1011,
+  id: 1005,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'The big 8',
@@ -855,7 +855,7 @@ const bigEightDrill = {
 };
 
 const trainDrill = {
-  id: 1002,
+  id: 1006,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'The Train',
@@ -894,7 +894,7 @@ const trainDrill = {
 };
 
 const goaltimateDrill = {
-  id: 1004,
+  id: 1006,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Goaltimate',
@@ -925,7 +925,7 @@ const goaltimateDrill = {
 };
 
 const giveAndGoDrill = {
-  id: 1013,
+  id: 1007,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Give-N-Go',
@@ -991,7 +991,7 @@ const aussieDrill = {
 };
 
 const bolognaMDrill = {
-  id: 1024,
+  id: 1009,
   type: DrillTypes.FRISBEE,
   author: 'Bologna',
   title: 'The M',
@@ -1019,7 +1019,7 @@ const bolognaMDrill = {
 };
 
 const goToTenDrill = {
-  id: 1014,
+  id: 1010,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Go to 10',
@@ -1047,7 +1047,7 @@ const goToTenDrill = {
 };
 
 const endzoneGameDrill = {
-  id: 1015,
+  id: 1011,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Endzone Game',
@@ -1085,7 +1085,7 @@ const endzoneGameDrill = {
 };
 
 const bulldogDrill = {
-  id: 1016,
+  id: 1012,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'British Bulldog',
@@ -1115,7 +1115,7 @@ const bulldogDrill = {
 };
 
 const menageATroisDrill = {
-  id: 1003,
+  id: 1013,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Three-person drill',
@@ -1153,7 +1153,7 @@ const menageATroisDrill = {
 };
 
 const dwarfDuelDrill = {
-  id: 1012,
+  id: 1014,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Dwarf Duel',
@@ -1182,7 +1182,7 @@ const dwarfDuelDrill = {
 };
 
 const dishieChainDrill = {
-  id: 1017,
+  id: 1015,
   type: DrillTypes.FRISBEE,
   author: 'Mooncatcher',
   title: 'Dishie Chain',
@@ -1220,7 +1220,7 @@ const dishieChainDrill = {
 };
 
 const breakDanceDrill = {
-  id: 1018,
+  id: 1016,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Break Dance',
@@ -1259,7 +1259,7 @@ const breakDanceDrill = {
 };
 
 const triangleOfDeathdrill = {
-  id: 1019,
+  id: 1017,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'The Triangle of Death',
@@ -1288,7 +1288,7 @@ const triangleOfDeathdrill = {
 };
 
 const trainOfFakeDrill = {
-  id: 1020,
+  id: 1018,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'The Fake Train',
@@ -1337,7 +1337,7 @@ const trainOfFakeDrill = {
 };
 
 const resetOpenDrill = {
-  id: 1005,
+  id: 1019,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Reset Open',
@@ -1386,7 +1386,7 @@ const resetOpenDrill = {
 };
 
 const resetBreakDrill = {
-  id: 1006,
+  id: 1020,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Reset Break',
@@ -1435,7 +1435,7 @@ const resetBreakDrill = {
 };
 
 const youShallNotPassDrill = {
-  id: 1007,
+  id: 1021,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'You Shall Not Pass',
@@ -1484,7 +1484,7 @@ const youShallNotPassDrill = {
 };
 
 const defensePositionDrill = {
-  id: 1021,
+  id: 1022,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Defense Positioning',
@@ -1523,7 +1523,7 @@ const defensePositionDrill = {
 };
 
 const discGolf = {
-  id: 1027,
+  id: 1023,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Disc Golf',
@@ -1553,7 +1553,7 @@ const discGolf = {
 };
 
 const dDC = {
-  id: 1028,
+  id: 1024,
   type: DrillTypes.FRISBEE,
   author: '',
   title: 'DDC',
@@ -1583,7 +1583,7 @@ const dDC = {
 };
 
 const horizontalTiming = {
-  id: 1029,
+  id: 1025,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Horizontal Timing',
@@ -1621,7 +1621,7 @@ const horizontalTiming = {
 };
 
 const game3v3Horizontal = {
-  id: 1030,
+  id: 1026,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Diamond Cut',
@@ -1659,7 +1659,7 @@ const game3v3Horizontal = {
 };
 
 const theDuel = {
-  id: 1031,
+  id: 1027,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Nothing like a duel',
@@ -1698,7 +1698,7 @@ const theDuel = {
 };
 
 const cardinal = {
-  id: 1032,
+  id: 1028,
   type: DrillTypes.FRISBEE,
   author: 'Edwin',
   title: 'Cardinal Point',
@@ -1727,7 +1727,7 @@ const cardinal = {
 };
 
 const horizontalToVertical = {
-  id: 1033,
+  id: 1029,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Horizontal Flow',
@@ -1776,7 +1776,7 @@ const horizontalToVertical = {
 };
 
 const horizontalTrap = {
-  id: 1034,
+  id: 1030,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Trap with the Open',
@@ -1824,7 +1824,7 @@ const horizontalTrap = {
 };
 
 const horizontalTrapOutside = {
-  id: 1035,
+  id: 1031,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Trap with the Break',
@@ -1873,7 +1873,7 @@ const horizontalTrapOutside = {
 };
 
 const horizontalHandler = {
-  id: 1036,
+  id: 1032,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Trap with the handlers',
@@ -1922,7 +1922,7 @@ const horizontalHandler = {
 };
 
 const checkLong = {
-  id: 1037,
+  id: 1033,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Long is your new weapon',
@@ -1951,7 +1951,7 @@ const checkLong = {
 };
 
 const throwCatchThrow = {
-  id: 1038,
+  id: 1034,
   type: DrillTypes.FRISBEE,
   author: 'Edwin',
   title: 'Double Disc',
@@ -1980,7 +1980,7 @@ const throwCatchThrow = {
 };
 
 const stopFlow = {
-  id: 1039,
+  id: 1035,
   type: DrillTypes.FRISBEE,
   author: 'Colony',
   title: 'Stoping the Flow',
@@ -2009,7 +2009,7 @@ const stopFlow = {
 };
 
 const theTunnel = {
-  id: 1040,
+  id: 1036,
   type: DrillTypes.FRISBEE,
   author: 'CUSB',
   title: 'The tunnel',
@@ -2038,7 +2038,7 @@ const theTunnel = {
 };
 
 const sprintDefense = {
-  id: 1041,
+  id: 1037,
   type: DrillTypes.FRISBEE,
   author: 'Lucky Grass',
   title: "The leopard's defense",
@@ -2067,7 +2067,7 @@ const sprintDefense = {
 };
 
 const cupSwinging = {
-  id: 1042,
+  id: 1038,
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Swinging with the cup',
@@ -2269,24 +2269,9 @@ const dumpSwingTraining = {
   description: "Working on keeping the disc 'alive' with a vertical stack",
   drills: [warmupDrill, trainOfFakeDrill, dishieChainDrill, endzoneGameDrill, longestGame],
 };
-const coed2LongTraining = {
-  id: 4,
-  title: 'Long Shot is Coming',
-  image: 'https://zupimages.net/up/20/19/aapn.jpg',
-  description: 'Practice your long skills.',
-  drills: [warmupGameDrill, longShotGame],
-};
-
-const coed2Long2Training = {
-  id: 5,
-  title: 'Long is your weapon',
-  image: 'https://zupimages.net/up/20/19/v8f4.jpg',
-  description: 'Practicie your long skills.',
-  drills: [warmupDrill, longShotGame],
-};
 
 const firstChildTraining = {
-  id: 6,
+  id: 4,
   title: 'First Time',
   image: 'https://zupimages.net/up/20/19/a7io.png',
   description: 'Training will allow the players to learn the basics of ultimate while having fun',
@@ -2294,7 +2279,7 @@ const firstChildTraining = {
 };
 
 const secondChildTraining = {
-  id: 7,
+  id: 5,
   title: 'Defense Basics',
   image: 'https://zupimages.net/up/20/19/dgwo.jpg',
   description: 'Training will allow the players to learn the basics of ultimate while having fun',
@@ -2302,23 +2287,15 @@ const secondChildTraining = {
 };
 
 const thirdChildTraining = {
-  id: 8,
+  id: 6,
   title: 'Treasure Hunt',
   image: 'https://zupimages.net/up/20/19/c9i6.jpg',
   description: 'Help players learn the basics of ultimate while having fun',
   drills: [warmupDrill, menageATroisDrill, bulldogDrill, goToTenDrill, treasureHuntDrill, game3v3],
 };
 
-const secondWeekFitnessTraining = {
-  id: 9,
-  title: 'Second Week Fitness',
-  image: 'https://zupimages.net/up/20/19/9fcj.jpg',
-  description: "This is the second week of the season. It's time to work on your conditioning",
-  drills: [conditioningFullbodyDrill, conditioningDrill],
-};
-
 const secondInintiationAdultTraining = {
-  id: 10,
+  id: 7,
   title: 'Defense & Longs',
   image: 'https://zupimages.net/up/20/19/cd36.jpg',
   description: 'Players will work on defense and long throws',
@@ -2326,7 +2303,7 @@ const secondInintiationAdultTraining = {
 };
 
 const thirdInintiationAdultTraining = {
-  id: 11,
+  id: 8,
   title: 'Adapt to the Field',
   image: 'https://zupimages.net/up/20/19/hrqz.jpg',
   description: 'Players will learn to adapt to the size of the field',
@@ -2334,28 +2311,28 @@ const thirdInintiationAdultTraining = {
 };
 
 const defenseBaseTraining = {
-  id: 12,
+  id: 9,
   title: 'Defense Positioning',
   image: 'https://zupimages.net/up/20/19/skjl.jpg',
   description: 'Practice your defense.',
   drills: [warmupGameDrill, defensePositionDrill, youShallNotPassDrill, breakDrill, normalGame],
 };
 const LearningByPlaying = {
-  id: 13,
+  id: 10,
   title: 'Learning to throw',
   image: 'https://zupimages.net/up/20/19/skjl.jpg',
   description: 'Practice your throw by playing game.',
   drills: [warmupGameDrill, discGolf, dDC, theTunnel],
 };
 const initiationHorizontal = {
-  id: 14,
+  id: 11,
   title: 'Horizontal Cut',
   image: 'https://zupimages.net/up/20/19/skjl.jpg',
   description: 'Practice how to cut in a horizontal stack',
   drills: [warmupGameDrill, theDuel, game3v3Horizontal, normalGame],
 };
 const horizontalFlow = {
-  id: 15,
+  id: 12,
   title: 'Horizontal Flow',
   image: 'https://zupimages.net/up/20/19/skjl.jpg',
   description: 'Practice how to generate a flow with all the team',
@@ -2363,23 +2340,15 @@ const horizontalFlow = {
 };
 
 const horizontalLine = {
-  id: 16,
+  id: 13,
   title: 'Horizontal Trap',
   image: 'https://zupimages.net/up/20/19/skjl.jpg',
   description: 'Practice how to generate a flow with all the teamget out of the line with a Ho stack',
   drills: [warmupGameDrill, horizontalTrap, horizontalTrapOutside, horizontalHandler, lineGame],
 };
 
-const firstWeekFitnessTraining = {
-  id: 17,
-  title: 'First Week Fitness',
-  image: 'https://zupimages.net/up/20/19/9fcj.jpg',
-  description: 'This is the first week of the Off-season program',
-  drills: [stabilityDrill, strengthDrill, speedDrill, conditioningDrill],
-};
-
 const coed2MarkTraining = {
-  id: 18,
+  id: 14,
   title: 'Build your Defense',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description:
@@ -2388,7 +2357,7 @@ const coed2MarkTraining = {
 };
 
 const defenseSecond = {
-  id: 19,
+  id: 15,
   title: 'Stop the Flow',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'This training will help to stop the flow',
@@ -2396,7 +2365,7 @@ const defenseSecond = {
 };
 
 const defenseThird = {
-  id: 20,
+  id: 16,
   title: 'No more Reset',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Learn to use your body to stop the flow',
@@ -2404,7 +2373,7 @@ const defenseThird = {
 };
 
 const playingToLearn = {
-  id: 21,
+  id: 17,
   title: 'Ultimate Games',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Playing games to learn the basics',
@@ -2412,7 +2381,7 @@ const playingToLearn = {
 };
 
 const zoneCup = {
-  id: 22,
+  id: 18,
   title: 'Initiation Cup',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'First practice to learn the cup of the zone defense',
@@ -2464,7 +2433,6 @@ export default {
     discGolf,
     dDC,
     horizontalTiming,
-    horizontalFlow,
     game3v3Horizontal,
     theDuel,
     cardinal,
@@ -2488,14 +2456,10 @@ export default {
   ],
   trainings: [
     // Fitness
-    firstWeekFitnessTraining,
-    secondWeekFitnessTraining,
 
     // Frisbee
     dumpSwingTraining,
     coed2MarkTraining,
-    coed2LongTraining,
-    coed2Long2Training,
     firstChildTraining,
     secondChildTraining,
     thirdChildTraining,
@@ -2504,6 +2468,7 @@ export default {
     initiationVerticalTraining,
     secondVerticalTraining,
     defenseBaseTraining,
+    horizontalFlow,
     LearningByPlaying,
     initiationHorizontal,
     horizontalLine,

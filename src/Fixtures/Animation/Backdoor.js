@@ -43,6 +43,7 @@ const backdoor = {
   ],
   ids: ['disc', 'defense', 'offense', 'offense'],
   texts: [1, 1, 1, 2],
+  background: 'empty',
 };
 
 export default backdoor;

@@ -78,6 +78,14 @@ import stopFlowAnimation from './Animation/StopFlow';
 import theTunnelAnimation from './Animation/TheTunnel';
 import leopard from './Animation/Leopard';
 import cupSwingingAnimation from './Animation/CupSwinging';
+import zoneGameAnimation from './Animation/ZoneGame';
+import diagonalOpenAnimation from './Animation/DiagonalOpen';
+import diagonalPowerAnimation from './Animation/DiagonalPower';
+import diagonalOverAnimation from './Animation/DiagonalOver';
+import diagonalGameAnimation from './Animation/DiagonalGame';
+import diagonaldualOpen from './Animation/DiagonalOpenTwo';
+import diagonaldualBreak from './Animation/DiagonalDuelBreak';
+import diagonalDualGame from './Animation/DiagonalDualGame';
 
 const stabilityDrill = {
   id: 1,
@@ -893,37 +901,6 @@ const trainDrill = {
   ],
 };
 
-const goaltimateDrill = {
-  id: 1006,
-  type: DrillTypes.FRISBEE,
-  author: 'Moby',
-  title: 'Goaltimate',
-  image: 'https://zupimages.net/up/20/19/gce7.jpg',
-  description:
-    'The object is to score points by throwing a disc to a teammate in a small scoring area, through a large semicircular hoop called the goal.',
-  minimalPlayersNumber: 8,
-  equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 disc - 10 cones or 1 goal',
-  durationInMinutes: 20,
-  intensity: Intensities.HIGH,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.DEFENSE, FrisbeeGoals.PLAY, FrisbeeGoals.PLAY],
-  seasonTiming: SeasonTimings.ANYTIME,
-  level: Levels.INTERMEDIATE,
-  steps: [
-    {
-      id: 1,
-      title: 'Goaltimate rules',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: goaltimate,
-      videoIllustration: '416849035',
-      repetition: '',
-      rest: '',
-      instruction:
-        '4 on 4 \nStall count of 5 \nWhenever a turnover happens, the new offensive team must ‘clear’ the disc by taking it into the clear box, and can then attack the goal.\nOne point for a completed pass that travels through the hoop and is caught in the end zone by your teammate',
-    },
-  ],
-};
-
 const giveAndGoDrill = {
   id: 1007,
   type: DrillTypes.FRISBEE,
@@ -1051,7 +1028,7 @@ const endzoneGameDrill = {
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Endzone Game',
-  image: 'https://zupimages.net/up/20/19/cd36.jpg',
+  image: 'https://zupimages.net/up/20/25/71b2.jpg',
   description: 'Game to 5. If you score, your team stay in offense',
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
@@ -1624,7 +1601,7 @@ const game3v3Horizontal = {
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Diamond Cut',
-  image: 'https://zupimages.net/up/20/25/zn5l.jpg',
+  image: 'hhttps://zupimages.net/up/20/25/2vga.jpg',
   description: 'work of freeing up spaces in a horizontal stack',
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.NONE,
@@ -1701,7 +1678,7 @@ const cardinal = {
   type: DrillTypes.FRISBEE,
   author: 'Edwin',
   title: 'Cardinal Point',
-  image: 'https://zupimages.net/up/20/19/cd36.jpg',
+  image: 'https://zupimages.net/up/20/25/xtik.png',
   description: 'Learning to throw in any position',
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.NONE,
@@ -1730,7 +1707,7 @@ const horizontalToVertical = {
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Horizontal Flow',
-  image: 'https://zupimages.net/up/20/19/cd36.jpg',
+  image: 'https://zupimages.net/up/20/25/kecr.jpg',
   description: 'Learning to create a powerful flow from a static position.',
   minimalPlayersNumber: 7,
   equipmentLabel: EquipmentLabels.NONE,
@@ -1779,7 +1756,7 @@ const horizontalTrap = {
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Trap with the Open',
-  image: 'https://zupimages.net/up/20/19/cd36.jpg',
+  image: 'https://zupimages.net/up/20/25/zkfl.jpg',
   description: 'Learning to use the horizontal stack to get out of the line with the cutter in the open side',
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.NONE,
@@ -1798,7 +1775,7 @@ const horizontalTrap = {
       repetition: '',
       rest: '',
       instruction:
-        'Situation to play with a horizontal stack when the player are trap on the line. The 2 players can only cut between the 4 cones. The closest playr from the line initiates and the other player do the opposite. The goal of the offensive player is to gain as many meters as possible in 2 throws.',
+        'Situation to play with a horizontal stack when the player are trap on the line. The 2 players can only cut between the 4 cones. The closest player from the line initiates and the other player do the opposite. The goal of the offensive player is to gain as many meters as possible in 2 throws.',
     },
     {
       id: 2,
@@ -1827,7 +1804,7 @@ const horizontalTrapOutside = {
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Trap with the Break',
-  image: 'https://zupimages.net/up/20/19/cd36.jpg',
+  image: 'https://zupimages.net/up/20/25/zkfl.jpg',
   description: 'Learning to use the horizontal stack to get out of the line with the cutter in the break side',
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.NONE,
@@ -1876,7 +1853,7 @@ const horizontalHandler = {
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Trap with the handlers',
-  image: 'https://zupimages.net/up/20/19/cd36.jpg',
+  image: 'https://zupimages.net/up/20/25/zkfl.jpg',
   description: 'Learning to use the horizontal stack to get out of the line with the handler',
   minimalPlayersNumber: 8,
   equipmentLabel: EquipmentLabels.NONE,
@@ -1925,7 +1902,7 @@ const checkLong = {
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Long is your new weapon',
-  image: 'https://zupimages.net/up/20/19/cd36.jpg',
+  image: 'https://zupimages.net/up/20/25/pzn1.jpg',
   description: 'Learning to throw deep as a cutter and to get information as a cutter',
   minimalPlayersNumber: 3,
   equipmentLabel: EquipmentLabels.NONE,
@@ -1954,7 +1931,7 @@ const throwCatchThrow = {
   type: DrillTypes.FRISBEE,
   author: 'Edwin',
   title: 'Double Disc',
-  image: 'https://zupimages.net/up/20/19/cd36.jpg',
+  image: 'https://zupimages.net/up/20/25/gf41.jpg',
   description: 'Work by pair. The goal is to improve your trhowing and catching speed',
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.NONE,
@@ -2012,7 +1989,7 @@ const theTunnel = {
   type: DrillTypes.FRISBEE,
   author: 'CUSB',
   title: 'The tunnel',
-  image: 'https://zupimages.net/up/20/19/cd36.jpg',
+  image: 'https://zupimages.net/up/20/25/742g.jpeg',
   description: 'Warm up drill to focus on the reactivity in defense.',
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.NONE,
@@ -2041,7 +2018,7 @@ const sprintDefense = {
   type: DrillTypes.FRISBEE,
   author: 'Lucky Grass',
   title: "The leopard's defense",
-  image: 'https://zupimages.net/up/20/19/cd36.jpg',
+  image: 'https://zupimages.net/up/20/25/5pqg.jpg',
   description: 'Warm up drill to focus on the reactivity in defense.',
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.NONE,
@@ -2070,7 +2047,7 @@ const cupSwinging = {
   type: DrillTypes.FRISBEE,
   author: 'Moby',
   title: 'Swinging with the cup',
-  image: 'https://zupimages.net/up/20/19/cd36.jpg',
+  image: 'https://zupimages.net/up/20/25/019o.jpg',
   description: 'Practicing the defense against the swing as a 3 players cup',
   minimalPlayersNumber: 7,
   equipmentLabel: EquipmentLabels.NONE,
@@ -2090,6 +2067,174 @@ const cupSwinging = {
       rest: '',
       instruction:
         'The 3 players cup as to move together to deny the throw to the cutter. The handlers can only make a flat throw to the cutter. Their goal is to swing quickly to get around the cup. ',
+    },
+  ],
+};
+
+const zoneGame = {
+  id: 1039,
+  type: DrillTypes.FRISBEE,
+  author: 'Moby',
+  title: 'Try to beat our zone',
+  image: 'https://zupimages.net/up/20/25/fnkl.jpg',
+  description: 'Trying to score a point against the zone defense with as few attempts as possible',
+  minimalPlayersNumber: 14,
+  equipmentLabel: EquipmentLabels.NONE,
+  equipment: '1 disc - 8 cones',
+  durationInMinutes: 25,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.COMMUNICATION, FrisbeeGoals.PLAY],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: '',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: zoneGameAnimation,
+      videoIllustration: '431159653',
+      repetition: '',
+      rest: '',
+      instruction:
+        'The offense team tries to score a point against a zone defense. If there is a turn-over, the disc go back to the offense at the last complete catch and the offense team try again. They have to score with as few attempts as possible ',
+    },
+  ],
+};
+
+const goaltimateDrill = {
+  id: 1040,
+  type: DrillTypes.FRISBEE,
+  author: 'Moby',
+  title: 'Goaltimate',
+  image: 'https://zupimages.net/up/20/19/gce7.jpg',
+  description:
+    'The object is to score points by throwing a disc to a teammate in a small scoring area, through a large semicircular hoop called the goal.',
+  minimalPlayersNumber: 8,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disc - 10 cones or 1 goal',
+  durationInMinutes: 20,
+  intensity: Intensities.HIGH,
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.DEFENSE, FrisbeeGoals.PLAY],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'Goaltimate rules',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: goaltimate,
+      videoIllustration: '416849035',
+      repetition: '',
+      rest: '',
+      instruction:
+        '4 on 4 \nStall count of 5 \nWhenever a turnover happens, the new offensive team must ‘clear’ the disc by taking it into the clear box, and can then attack the goal.\nOne point for a completed pass that travels through the hoop and is caught in the end zone by your teammate',
+    },
+  ],
+};
+
+const diagonalToVertical = {
+  id: 1041,
+  type: DrillTypes.FRISBEE,
+  author: 'Moby',
+  title: 'Diagonal to Vertical',
+  image: 'https://zupimages.net/up/20/25/iqn0.jpg',
+  description: 'Train the team to make the perfect transition from a diagonal stack to a vertical flow',
+  minimalPlayersNumber: 8,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disc ',
+  durationInMinutes: 15,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'Forcing close side',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: diagonalOpenAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Working on making a quick transition from diagonal to Vertcial Flow. The 2 players in the open side has to clear, in the break side, to free the space for the others. The player cutter goes deep and come back if there is a fake. The handler in the break side become a cutter.',
+    },
+    {
+      id: 2,
+      title: 'Forcing far side',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: diagonalPowerAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Same start but the force is different. The two deepest player go in the break side. The first cutter has to cut to gain a power position. The following cutter go deep and then it become a classic train situation. ',
+    },
+    {
+      id: 3,
+      title: 'The Overhead solution',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: diagonalOverAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'The defensive player is forcing the far side. The goal is to practice the overhead throw and its continuity',
+    },
+    {
+      id: 4,
+      title: 'Adapting',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: diagonalGameAnimation,
+      repetition: '',
+      rest: '',
+      instruction: 'The defensive player will choose any force and the cutter has to adpat as quickly as possible',
+    },
+  ],
+};
+
+const diagonalIso = {
+  id: 1042,
+  type: DrillTypes.FRISBEE,
+  author: 'Mooncatchers',
+  title: 'Diagonal Iso',
+  image: 'https://zupimages.net/up/20/25/vozh.jpg',
+  description: 'Train the team to make the perfect transition from a diagonal stack to a vertical flow',
+  minimalPlayersNumber: 8,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disc ',
+  durationInMinutes: 15,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'Diagonal Iso',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: diagonaldualOpen,
+      repetition: '',
+      rest: '',
+      instruction:
+        'The two cutters can only run between the cones and the line. The player more in the middle has initiate and the other one adapts. Try to find the perfect angle to have a good timing',
+    },
+    {
+      id: 2,
+      title: 'The Overhead Solution',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: diagonaldualBreak,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Same start but now the thrower is making an overhead in the break side. The throw has to be futher than the first cone. THe second cutter try to make the perfect continuity',
+    },
+    {
+      id: 3,
+      title: 'Game situation',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: diagonalDualGame,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Game situation. The cutter can only run in the open side and in the far break side. To succeed, the offensive team has to score a point in maximum 2 passes.If they score, they stay in offense',
     },
   ],
 };
@@ -2245,6 +2390,36 @@ const longestGame = {
   ],
 };
 
+const trainingGame = {
+  id: 2006,
+  type: DrillTypes.GAME,
+  author: 'Moby',
+  title: 'The disc is gold',
+  image:
+    'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
+  description: 'Just a classical game on the whole field. ',
+  minimalPlayersNumber: 8,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '8 cones - 1 disc - 1 stopwatch',
+  durationInMinutes: 15,
+  intensity: Intensities.HIGH,
+  goals: [FrisbeeGoals.PLAY, FrisbeeGoals.CUTTING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'Practice your new stack',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: normalGameAnimation,
+      repetition: '1',
+      rest: '',
+      instruction:
+        'Classical game. After a turn-over, the offensive team has to start from a stack practice in the training',
+    },
+  ],
+};
+
 const initiationVerticalTraining = {
   id: 1,
   title: 'Stack vertical',
@@ -2383,7 +2558,31 @@ const zoneCup = {
   title: 'Initiation Cup',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'First practice to learn the cup of the zone defense',
-  drills: [bulldogDrill, warmupGameDrill],
+  drills: [bulldogDrill, warmupGameDrill, cupSwinging, zoneGame],
+};
+
+const sideStackTraining = {
+  id: 19,
+  title: 'Initation to Side Stack',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'First practice to learn the basics of Side Stack',
+  drills: [warmupGameDrill, horizontalTrapOutside, trainingGame],
+};
+
+const splitStackTraining = {
+  id: 20,
+  title: 'Initiation to Split Stack',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'First practice to learn the basics of Split Stack',
+  drills: [warmupGameDrill, horizontalTrapOutside, trainingGame],
+};
+
+const diagonalStackTraining = {
+  id: 21,
+  title: 'Initiation to Diagonal Stack',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'First practice to learn the diagonal Stack',
+  drills: [warmupGameDrill, horizontalTrapOutside, diagonalToVertical, trainingGame],
 };
 
 export default {
@@ -2443,11 +2642,17 @@ export default {
     theTunnel,
     sprintDefense,
     cupSwinging,
+    zoneGame,
+    diagonalToVertical,
+    diagonalIso,
 
     // Games
     normalGame,
     game3v3,
     longShotGame,
+    lineGame,
+    longestGame,
+    trainingGame,
   ],
   trainings: [
     dumpSwingTraining,
@@ -2468,6 +2673,9 @@ export default {
     defenseThird,
     playingToLearn,
     zoneCup,
+    sideStackTraining,
+    splitStackTraining,
+    diagonalStackTraining,
   ],
   programs: [
     {
@@ -2502,28 +2710,23 @@ export default {
     },
     {
       id: 7,
-      title: 'Zone Defense: 3-3-1',
+      title: 'Defense de Zone',
       trainings: [zoneCup],
     },
     {
       id: 8,
-      title: 'Zone Defense: Freespeed',
-      trainings: [defenseBaseTraining],
+      title: 'Stack sur le côté',
+      trainings: [sideStackTraining],
     },
     {
       id: 9,
-      title: 'Stack sur le côté',
-      trainings: [defenseBaseTraining],
+      title: 'Stack en U',
+      trainings: [splitStackTraining],
     },
     {
       id: 10,
-      title: 'Stack en U',
-      trainings: [defenseBaseTraining],
-    },
-    {
-      id: 11,
       title: 'Stack diagonal',
-      trainings: [defenseBaseTraining],
+      trainings: [diagonalStackTraining],
     },
   ],
 };

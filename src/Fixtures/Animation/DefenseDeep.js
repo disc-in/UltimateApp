@@ -78,6 +78,7 @@ const defenseDeep = {
   ],
   ids: ['triangle', 'triangle', 'triangle', 'triangle', 'triangle', 'defense', 'offense', 'disc', 'offense', 'defense'],
   texts: ['', '', '', '', '', 1, 1, 1, 2, 2],
+  background: 'empty',
 };
 
 export default defenseDeep;

@@ -176,6 +176,7 @@ const breakSide = {
     'triangle',
   ],
   texts: [1, 2, 3, 1, 2, 3, 4, 4, '', '', '', '', '', '', '5', '', ''],
+  background: 'empty',
 };
 
 export default breakSide;

@@ -45,10 +45,9 @@ class DisplayedElement extends React.Component {
         }
       },
 
-      // Called when a move is made
-      onPanResponderMove: () => {
-        return this.props.movable ? Animated.event([null, { dx: this.offset.x, dy: this.offset.y }]) : undefined;
-      },
+      onPanResponderMove: this.props.movable
+        ? Animated.event([null, { dx: this.offset.x, dy: this.offset.y }])
+        : undefined,
 
       onPanResponderRelease: (event, gestureState) => {
         if (this.props.movable && this.props.onMoveEnd !== undefined && this.props.onMoveEnd !== null) {

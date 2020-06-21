@@ -1555,11 +1555,19 @@ const dDC = {
       title: '',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: dDCAnimation,
-      videoIllustration: '429982987',
       repetition: '',
       rest: '',
       instruction:
         "DDC is played by two teams of two players each. The courts are 13 meters square and 17 meters apart. You get one point for a throw that lands and stays in the opponents' court, or if an opponent drops your throw. Your opponents get one point if your throw touches outside their court. If you can arrange it so that the other team is touching both discs at the same time, you get two points. That is called 'doubling' your opponents.",
+    },
+    {
+      id: 2,
+      title: 'DDC Video',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: '429982987',
+      repetition: '',
+      rest: '',
+      instruction: '',
     },
   ],
 };
@@ -2098,11 +2106,19 @@ const zoneGame = {
       title: '',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: zoneGameAnimation,
-      videoIllustration: '431159653',
       repetition: '',
       rest: '',
       instruction:
         'The offense team tries to score a point against a zone defense. If there is a turn-over, the disc go back to the offense at the last complete catch and the offense team try again. They have to score with as few attempts as possible ',
+    },
+    {
+      id: 2,
+      title: 'Zone Video',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: '431159653',
+      repetition: '',
+      rest: '',
+      instruction: '',
     },
   ],
 };
@@ -2129,11 +2145,19 @@ const goaltimateDrill = {
       title: 'Goaltimate rules',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: goaltimate,
-      videoIllustration: '416849035',
       repetition: '',
       rest: '',
       instruction:
         '4 on 4 \nStall count of 5 \nWhenever a turnover happens, the new offensive team must ‘clear’ the disc by taking it into the clear box, and can then attack the goal.\nOne point for a completed pass that travels through the hoop and is caught in the end zone by your teammate',
+    },
+    {
+      id: 2,
+      title: 'Goaltimate video',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '416849035',
+      repetition: '',
+      rest: '',
+      instruction: '',
     },
   ],
 };

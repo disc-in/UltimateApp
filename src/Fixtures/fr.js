@@ -86,6 +86,12 @@ import diagonalGameAnimation from './Animation/DiagonalGame';
 import diagonaldualOpen from './Animation/DiagonalOpenTwo';
 import diagonaldualBreak from './Animation/DiagonalDuelBreak';
 import diagonalDualGame from './Animation/DiagonalDualGame';
+import splitIsoAnimation from './Animation/SplitIso';
+import splitGameDual from './Animation/SplitGameDual';
+import splitToVerticalAnimation from './Animation/SplitToVertical';
+import splitWindmill from './Animation/SplitWindmill';
+import sideFlow from './Animation/SideFlow';
+import sideWindmill from './Animation/SideWindmill';
 
 const stabilityDrill = {
   id: 1,
@@ -2239,6 +2245,122 @@ const diagonalIso = {
   ],
 };
 
+const splitIso = {
+  id: 1043,
+  type: DrillTypes.FRISBEE,
+  author: 'Mooncatchers',
+  title: 'Split Iso',
+  image: 'https://zupimages.net/up/20/25/k6hi.jpg',
+  description: 'Train the team to make the perfect transition from a diagonal stack to a vertical flow',
+  minimalPlayersNumber: 8,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disc ',
+  durationInMinutes: 15,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'Open Split Iso',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: splitIsoAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'The two cutters can only run between the cones and the line. The closest cutter from the handler initiates. Try to find the perfect angle to have a good timing',
+    },
+    {
+      id: 2,
+      title: 'Game situation',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: splitGameDual,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Game situation. The offensive players can only run between the cones. To succeed, the offensive team has to score a point in maximum 2 passes.If they score, they stay in offense',
+    },
+  ],
+};
+
+const splitToVertical = {
+  id: 1044,
+  type: DrillTypes.FRISBEE,
+  author: 'Moby',
+  title: 'Split to Vertical',
+  image: 'https://zupimages.net/up/20/25/uqd5.jpg',
+  description: 'Train the team to make the perfect transition from a split stack to a vertical flow',
+  minimalPlayersNumber: 8,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disc ',
+  durationInMinutes: 15,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'With the open side cutters',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: splitToVerticalAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Working on a quick transition from a split stack to a vertical flow. Here the plays made with the cutter in the open side',
+    },
+    {
+      id: 2,
+      title: 'With the break side cutters',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: splitWindmill,
+      repetition: '',
+      rest: '',
+      instruction: 'Same situation, but now the cutters in the open side clear and the other cutter get involve',
+    },
+  ],
+};
+
+const sideToVertical = {
+  id: 1045,
+  type: DrillTypes.FRISBEE,
+  author: 'Moby',
+  title: 'Side to Vertical',
+  image: 'https://zupimages.net/up/20/25/zpuq.jpg',
+  description: 'Train the team to make the perfect transition from a side stack to a vertical flow',
+  minimalPlayersNumber: 8,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disc ',
+  durationInMinutes: 15,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'Iso on the free Side',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: sideFlow,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Working on a quick transition from a side stack to a vertical flow. Here the plays made with the cutter creating a double iso on the free side.',
+    },
+    {
+      id: 2,
+      title: 'Windmill',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: sideWindmill,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Everybody from the side stack float to the other side, a designated  player stay and get the disc. this position should open a deep throw continuity',
+    },
+  ],
+};
+
 const normalGame = {
   id: 2001,
   type: DrillTypes.GAME,
@@ -2566,7 +2688,7 @@ const sideStackTraining = {
   title: 'Initation to Side Stack',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'First practice to learn the basics of Side Stack',
-  drills: [warmupGameDrill, horizontalTrapOutside, trainingGame],
+  drills: [warmupGameDrill, horizontalTrapOutside, sideToVertical, trainingGame],
 };
 
 const splitStackTraining = {
@@ -2574,7 +2696,7 @@ const splitStackTraining = {
   title: 'Initiation to Split Stack',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'First practice to learn the basics of Split Stack',
-  drills: [warmupGameDrill, horizontalTrapOutside, trainingGame],
+  drills: [warmupGameDrill, horizontalTrapOutside, splitIso, splitToVertical, trainingGame],
 };
 
 const diagonalStackTraining = {
@@ -2582,7 +2704,7 @@ const diagonalStackTraining = {
   title: 'Initiation to Diagonal Stack',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'First practice to learn the diagonal Stack',
-  drills: [warmupGameDrill, horizontalTrapOutside, diagonalToVertical, trainingGame],
+  drills: [warmupGameDrill, horizontalTrapOutside, diagonalIso, diagonalToVertical, trainingGame],
 };
 
 export default {
@@ -2645,6 +2767,9 @@ export default {
     zoneGame,
     diagonalToVertical,
     diagonalIso,
+    splitIso,
+    splitToVertical,
+    sideToVertical,
 
     // Games
     normalGame,

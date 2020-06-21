@@ -36,7 +36,7 @@ export const DrillListPage = props => {
         }}
         testID="filterButton"
       >
-        <MaterialCommunityIcons name="filter" color={theme.MAIN_COLOR} size={40} />
+        <MaterialCommunityIcons name="filter" color={theme.BACKGROUND_COLOR} size={40} />
       </TouchableOpacity>
     </View>
   );
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     width: 60,
     height: 60,
     borderRadius: 50,
-    backgroundColor: theme.COLOR_PRIMARY,
+    backgroundColor: theme.MAIN_COLOR,
     justifyContent: 'center',
     alignItems: 'center',
     shadowOffset: {

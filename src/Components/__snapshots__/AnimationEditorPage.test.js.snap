@@ -16,10 +16,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
       Object {
         "alignItems": "stretch",
         "flex": 1,
-        "flexDirection": "column",
         "justifyContent": "center",
-        "marginTop": 0,
-        "paddingTop": 0,
       }
     }
   >
@@ -520,248 +517,257 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
     <View
       style={
         Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "justifyContent": "flex-start",
-          "padding": 10,
+          "height": 50,
+          "marginHorizontal": 30,
+          "marginTop": 10,
         }
       }
     >
       <View
-        onMoveShouldSetResponder={[Function]}
-        onMoveShouldSetResponderCapture={[Function]}
-        onResponderEnd={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderReject={[Function]}
-        onResponderRelease={[Function]}
-        onResponderStart={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        onStartShouldSetResponderCapture={[Function]}
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#08AEEA",
-            "borderRadius": 0,
-            "height": 0,
-            "justifyContent": "center",
-            "marginRight": 10,
-            "textAlign": "center",
-            "textAlignVertical": "center",
-            "transform": Array [
-              Object {
-                "translateX": 0,
-              },
-              Object {
-                "translateY": 0,
-              },
-            ],
-            "width": 0,
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
           }
         }
       >
-        <Text
+        <View
+          onMoveShouldSetResponder={[Function]}
+          onMoveShouldSetResponderCapture={[Function]}
+          onResponderEnd={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderReject={[Function]}
+          onResponderRelease={[Function]}
+          onResponderStart={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          onStartShouldSetResponderCapture={[Function]}
           style={
             Object {
-              "color": "#fff",
-              "fontWeight": "bold",
-            }
-          }
-        >
-          1
-        </Text>
-      </View>
-      <View
-        onMoveShouldSetResponder={[Function]}
-        onMoveShouldSetResponderCapture={[Function]}
-        onResponderEnd={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderReject={[Function]}
-        onResponderRelease={[Function]}
-        onResponderStart={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        onStartShouldSetResponderCapture={[Function]}
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#AFAFAF",
-            "borderRadius": 0,
-            "height": 0,
-            "justifyContent": "center",
-            "marginRight": 10,
-            "textAlign": "center",
-            "textAlignVertical": "center",
-            "transform": Array [
-              Object {
-                "translateX": 0,
-              },
-              Object {
-                "translateY": 0,
-              },
-            ],
-            "width": 0,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#fff",
-              "fontWeight": "bold",
-            }
-          }
-        >
-          1
-        </Text>
-      </View>
-      <View
-        onMoveShouldSetResponder={[Function]}
-        onMoveShouldSetResponderCapture={[Function]}
-        onResponderEnd={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderReject={[Function]}
-        onResponderRelease={[Function]}
-        onResponderStart={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        onStartShouldSetResponderCapture={[Function]}
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "white",
-            "borderColor": "black",
-            "borderRadius": 0,
-            "borderWidth": 0,
-            "height": 0,
-            "justifyContent": "center",
-            "marginRight": 10,
-            "textAlign": "center",
-            "textAlignVertical": "center",
-            "transform": Array [
-              Object {
-                "translateX": 0,
-              },
-              Object {
-                "translateY": 0,
-              },
-            ],
-            "width": 0,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "black",
-              "fontWeight": "bold",
-            }
-          }
-        >
-          1
-        </Text>
-      </View>
-      <View
-        onMoveShouldSetResponder={[Function]}
-        onMoveShouldSetResponderCapture={[Function]}
-        onResponderEnd={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderReject={[Function]}
-        onResponderRelease={[Function]}
-        onResponderStart={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        onStartShouldSetResponderCapture={[Function]}
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "transparent",
-            "borderBottomColor": "#FEA500",
-            "borderBottomWidth": 0,
-            "borderColor": "transparent",
-            "borderLeftWidth": 0,
-            "borderRightWidth": 0,
-            "borderStyle": "solid",
-            "justifyContent": "center",
-            "marginRight": 10,
-            "textAlign": "center",
-            "textAlignVertical": "center",
-            "transform": Array [
-              Object {
-                "translateX": 0,
-              },
-              Object {
-                "translateY": 0,
-              },
-            ],
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
+              "alignItems": "center",
+              "backgroundColor": "#08AEEA",
+              "borderRadius": 0,
               "height": 0,
+              "justifyContent": "center",
+              "marginRight": 10,
+              "textAlign": "center",
+              "textAlignVertical": "center",
+              "transform": Array [
+                Object {
+                  "translateX": 0,
+                },
+                Object {
+                  "translateY": 0,
+                },
+              ],
               "width": 0,
             }
           }
         >
-          1
-        </Text>
-      </View>
-      <View
-        style={
-          Object {
-            "height": 50,
-            "width": 150,
-          }
-        }
-      >
-        <RCTPicker
-          items={
-            Array [
+          <Text
+            style={
               Object {
-                "label": "Endzone",
-                "textColor": undefined,
-                "value": "zone",
-              },
-              Object {
-                "label": "3/4 field",
-                "textColor": undefined,
-                "value": "3/4 field",
-              },
-              Object {
-                "label": "Rectangle",
-                "textColor": undefined,
-                "value": "rectangle",
-              },
-              Object {
-                "label": "Empty",
-                "textColor": undefined,
-                "value": "empty",
-              },
-            ]
-          }
-          onChange={[Function]}
+                "color": "#fff",
+                "fontWeight": "bold",
+              }
+            }
+          >
+            1
+          </Text>
+        </View>
+        <View
+          onMoveShouldSetResponder={[Function]}
+          onMoveShouldSetResponderCapture={[Function]}
+          onResponderEnd={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderReject={[Function]}
+          onResponderRelease={[Function]}
+          onResponderStart={[Function]}
+          onResponderTerminate={[Function]}
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
-          selectedIndex={0}
+          onStartShouldSetResponderCapture={[Function]}
           style={
-            Array [
-              Object {
-                "height": 216,
-              },
-              undefined,
-            ]
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#AFAFAF",
+              "borderRadius": 0,
+              "height": 0,
+              "justifyContent": "center",
+              "marginRight": 10,
+              "textAlign": "center",
+              "textAlignVertical": "center",
+              "transform": Array [
+                Object {
+                  "translateX": 0,
+                },
+                Object {
+                  "translateY": 0,
+                },
+              ],
+              "width": 0,
+            }
           }
-        />
+        >
+          <Text
+            style={
+              Object {
+                "color": "#fff",
+                "fontWeight": "bold",
+              }
+            }
+          >
+            1
+          </Text>
+        </View>
+        <View
+          onMoveShouldSetResponder={[Function]}
+          onMoveShouldSetResponderCapture={[Function]}
+          onResponderEnd={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderReject={[Function]}
+          onResponderRelease={[Function]}
+          onResponderStart={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          onStartShouldSetResponderCapture={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "white",
+              "borderColor": "black",
+              "borderRadius": 0,
+              "borderWidth": 0,
+              "height": 0,
+              "justifyContent": "center",
+              "marginRight": 10,
+              "textAlign": "center",
+              "textAlignVertical": "center",
+              "transform": Array [
+                Object {
+                  "translateX": 0,
+                },
+                Object {
+                  "translateY": 0,
+                },
+              ],
+              "width": 0,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "black",
+                "fontWeight": "bold",
+              }
+            }
+          >
+            1
+          </Text>
+        </View>
+        <View
+          onMoveShouldSetResponder={[Function]}
+          onMoveShouldSetResponderCapture={[Function]}
+          onResponderEnd={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderReject={[Function]}
+          onResponderRelease={[Function]}
+          onResponderStart={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          onStartShouldSetResponderCapture={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "borderBottomColor": "#FEA500",
+              "borderBottomWidth": 0,
+              "borderColor": "transparent",
+              "borderLeftWidth": 0,
+              "borderRightWidth": 0,
+              "borderStyle": "solid",
+              "justifyContent": "center",
+              "marginRight": 10,
+              "textAlign": "center",
+              "textAlignVertical": "center",
+              "transform": Array [
+                Object {
+                  "translateX": 0,
+                },
+                Object {
+                  "translateY": 0,
+                },
+              ],
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "height": 0,
+                "width": 0,
+              }
+            }
+          >
+            1
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "height": 50,
+              "width": 150,
+            }
+          }
+        >
+          <RCTPicker
+            items={
+              Array [
+                Object {
+                  "label": "Endzone",
+                  "textColor": undefined,
+                  "value": "zone",
+                },
+                Object {
+                  "label": "3/4 field",
+                  "textColor": undefined,
+                  "value": "3/4 field",
+                },
+                Object {
+                  "label": "Rectangle",
+                  "textColor": undefined,
+                  "value": "rectangle",
+                },
+                Object {
+                  "label": "Empty",
+                  "textColor": undefined,
+                  "value": "empty",
+                },
+              ]
+            }
+            onChange={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            selectedIndex={0}
+            style={
+              Array [
+                Object {
+                  "height": 216,
+                },
+                undefined,
+              ]
+            }
+          />
+        </View>
       </View>
     </View>
   </View>

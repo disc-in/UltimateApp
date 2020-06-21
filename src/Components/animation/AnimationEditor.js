@@ -48,7 +48,7 @@ class AnimationEditor extends React.Component {
   }
 
   saveAnimation = (newAnimation, cb) => {
-    this.props.onAnimationChange && this.props.onAnimationChange(newAnimation);
+    this.props.onAnimationChange(newAnimation);
     this.setState({ animation: newAnimation }, cb);
   };
 
@@ -107,19 +107,6 @@ class AnimationEditor extends React.Component {
     return [
       (x - this.state.dLeft) / (this.state.width * this.wRatio),
       (y - this.state.dTop) / (this.state.height * this.hRatio),
-    ];
-  };
-
-  /** Convert a position (x, y) in percentage of the animation area (x2, y2) in pixels of the phone screen
-   * x: horizontal position in percentage (=0 if centered)
-   * y: vertical position in percentage (=0 if centered)
-   * x: corresponding horizontal position in pixels (=0 left edge, =1 right edge)
-   * y: corresponding vertical position in pixels (=0 top, =1 bottom)
-   */
-  _positionPercentToPixel = (x, y) => {
-    return [
-      x * (this.state.width * this.wRatio) + this.state.dLeft,
-      y * (this.state.height * this.hRatio) + this.state.dTop,
     ];
   };
 
@@ -226,7 +213,6 @@ class AnimationEditor extends React.Component {
     var yDeltaPercent = yDelta / (this.state.height * this.hRatio);
 
     var newPosition = [currentPosition[0] + xDeltaPercent, currentPosition[1] + yDeltaPercent];
-    var newPixelPosition = this._positionPercentToPixel(newPosition[0], newPosition[1]);
 
     var newAnimation = this._copyAnimation();
     var animationWidth = this.state.width * this.wRatio;
@@ -246,10 +232,7 @@ class AnimationEditor extends React.Component {
       if (newPosition[1] < 0) newPosition[1] = 0;
 
       /* If the element is not moved outside of the animation area, updated its coordinates */
-      newAnimation.positions[Math.ceil(this.currentStep)][elementIndex] = [];
-      newAnimation.positions[Math.ceil(this.currentStep)][elementIndex].push([]);
-      newAnimation.positions[Math.ceil(this.currentStep)][elementIndex][0].push(newPosition[0]);
-      newAnimation.positions[Math.ceil(this.currentStep)][elementIndex][0].push(newPosition[1]);
+      newAnimation.positions[Math.ceil(this.currentStep)][elementIndex] = [newPosition];
     }
 
     this.saveAnimation(newAnimation);
@@ -306,27 +289,29 @@ class AnimationEditor extends React.Component {
           currentStepAV={this.currentStepAV}
         />
 
-        {this.state.isElementMoving ? (
-          <View style={styles.deletionArea}>
-            <MaterialCommunityIcons name="trash-can" color={theme.COLOR_PRIMARY} size={22} />
-          </View>
-        ) : (
-          <View style={styles.draggableArea}>
-            {['offense', 'defense', 'disc', 'triangle'].map(type => (
-              <DraggableDisplayedElement
-                type={type}
-                playerRadius={this.state.playerRadius}
-                onMoveEnd={this.addElementToAnimation}
-                number={this.state.labels[type]}
-                key={type}
+        <View style={styles.actionsArea}>
+          {this.state.isElementMoving ? (
+            <View style={styles.deletionArea}>
+              <MaterialCommunityIcons name="trash-can" color={theme.COLOR_PRIMARY} size={22} />
+            </View>
+          ) : (
+            <View style={styles.draggableArea}>
+              {['offense', 'defense', 'disc', 'triangle'].map(type => (
+                <DraggableDisplayedElement
+                  type={type}
+                  playerRadius={this.state.playerRadius}
+                  onMoveEnd={this.addElementToAnimation}
+                  number={this.state.labels[type]}
+                  key={type}
+                />
+              ))}
+              <BackgroundPicker
+                onBackgroundChange={this.onBackgroundChange}
+                selectedBackground={this.state.animation.background}
               />
-            ))}
-            <BackgroundPicker
-              onBackgroundChange={this.onBackgroundChange}
-              selectedBackground={this.state.animation.background}
-            />
-          </View>
-        )}
+            </View>
+          )}
+        </View>
       </View>
     );
   }
@@ -335,24 +320,23 @@ class AnimationEditor extends React.Component {
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    marginTop: 0,
-    paddingTop: 0,
-    flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'stretch',
+  },
+  actionsArea: {
+    marginHorizontal: 30,
+    marginTop: 10,
+    height: 50,
   },
   draggableArea: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'flex-start',
-    padding: 10,
   },
   deletionArea: {
-    marginHorizontal: 30,
-    marginTop: 10,
+    flex: 1,
     borderColor: 'grey',
     borderWidth: 2,
-    height: 50,
     alignItems: 'center',
     justifyContent: 'center',
   },

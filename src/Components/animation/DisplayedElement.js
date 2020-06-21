@@ -8,7 +8,7 @@ import debug from './debug';
 /** An element displayed in a drill animation */
 class DisplayedElement extends React.Component {
   /* Props must contain:
-      - id: which indicates how to display the element: "offense", "defense", "triangle" or "disc"
+      - type: which indicates how to display the element: "offense", "defense", "triangle" or "disc"
       - movable: true if element can be moved by the user
       - number: string defined if there is something written on the element
       - eId: element index in the list of elements of the drill (-1 if it is not currently in a drill)
@@ -51,7 +51,7 @@ class DisplayedElement extends React.Component {
 
       onPanResponderRelease: (event, gestureState) => {
         if (this.props.movable && this.props.onMoveEnd !== undefined && this.props.onMoveEnd !== null) {
-          this.props.onMoveEnd(this.props.eId, this.props.id, gestureState.dx, gestureState.dy);
+          this.props.onMoveEnd(this.props.eId, this.props.type, gestureState.dx, gestureState.dy);
         }
         this.setState({
           isMoving: false,
@@ -65,9 +65,6 @@ class DisplayedElement extends React.Component {
 
     /* If most of the attributes are equal */
     if (
-      props.id !== state.stateFromProps.id ||
-      props.number !== state.stateFromProps.number ||
-      props.eId !== state.stateFromProps.eId ||
       props.animationWidth !== state.stateFromProps.animationWidth ||
       props.animationHeight !== state.stateFromProps.animationHeight
     )
@@ -106,18 +103,20 @@ class DisplayedElement extends React.Component {
             },
           ],
         };
-    const playerRadius = this.state.stateFromProps.playerRadius;
+
+    // TODO: put the constant coefficient used in the following somewhere to avoir writing them twice (in this class and in DrillCuts)
+    const playerRadius = Math.min(this.props.animationWidth, this.props.animationHeight) / 12;
     const discRadius = playerRadius / 1.5;
     const coneSize = playerRadius / 2;
 
     let itemStyle, textStyle;
-    switch (this.state.stateFromProps.id) {
+    switch (this.props.type) {
       case 'defense':
       case 'offense':
         itemStyle = [
           panStyle,
           styles.displayedElement,
-          this.state.stateFromProps.id == 'defense' ? styles.defense : styles.offense,
+          this.props.type == 'defense' ? styles.defense : styles.offense,
           {
             height: playerRadius,
             width: playerRadius,
@@ -154,8 +153,8 @@ class DisplayedElement extends React.Component {
         textStyle = styles.triangleText;
     }
     return (
-      <Animated.View {...this.panResponder.panHandlers} style={itemStyle} key={this.state.stateFromProps.id}>
-        <Animated.Text style={textStyle}>{this.state.stateFromProps.number}</Animated.Text>
+      <Animated.View {...this.panResponder.panHandlers} style={itemStyle}>
+        <Animated.Text style={textStyle}>{this.props.number}</Animated.Text>
       </Animated.View>
     );
   }
@@ -163,21 +162,21 @@ class DisplayedElement extends React.Component {
 
 const _initializeStateFromProps = props => {
   /* Positions of the element at each step of the drill */
-  var xPositions = [];
-  var yPositions = [];
+  const xPositions = [];
+  const yPositions = [];
 
   /* Value of the progress at which the element must be at these given positions */
-  var time = [];
+  const time = [];
 
   /* For each step */
-  for (var stepId = 0; stepId < props.animation.stepCount(); stepId++) {
-    var currentPositions = props.animation.getPositionsAtStep(props.eId, stepId);
+  for (let stepId = 0; stepId < props.animation.stepCount(); stepId++) {
+    const currentPositions = props.animation.getPositionsAtStep(props.eId, stepId);
 
     /* Get the element initial position */
-    var p0 = props.positionPercentToPixel(currentPositions[0][0], currentPositions[0][1]);
+    const initialPosition = props.positionPercentToPixel(currentPositions[0][0], currentPositions[0][1]);
 
-    xPositions.push(p0[0]);
-    yPositions.push(p0[1]);
+    xPositions.push(initialPosition[0]);
+    yPositions.push(initialPosition[1]);
     time.push(stepId);
 
     /* If there is a count-cut */
@@ -185,44 +184,37 @@ const _initializeStateFromProps = props => {
       /* If the counter-cut is not at last step (in theory there should not be any counter-cut at last step) */
       if (stepId !== props.animation.stepCount() - 1) {
         /* Get the element counter-cut position */
-        var p1 = props.positionPercentToPixel(currentPositions[1][0], currentPositions[1][1]);
+        const counterCutPosition = props.positionPercentToPixel(currentPositions[1][0], currentPositions[1][1]);
 
-        var nextPositions = props.animation.getPositionsAtStep(props.eId, stepId + 1);
-        var p2 = props.positionPercentToPixel(nextPositions[0][0], nextPositions[0][0]);
+        const nextPositions = props.animation.getPositionsAtStep(props.eId, stepId + 1);
+        const finalPosition = props.positionPercentToPixel(nextPositions[0][0], nextPositions[0][0]);
 
-        var d1 = Math.sqrt(Math.pow(p0[0] - p1[0], 2) + Math.pow(p0[1] - p1[1], 2));
-        var d2 = Math.sqrt(Math.pow(p1[0] - p2[0], 2) + Math.pow(p1[1] - p2[1], 2));
+        const firstCutLength = Math.sqrt(
+          Math.pow(initialPosition[0] - counterCutPosition[0], 2) +
+            Math.pow(initialPosition[1] - counterCutPosition[1], 2),
+        );
+        const secondCutLength = Math.sqrt(
+          Math.pow(counterCutPosition[0] - finalPosition[0], 2) + Math.pow(counterCutPosition[1] - finalPosition[1], 2),
+        );
 
-        if (d1 + d2 > 0) {
-          xPositions.push(p1[0]);
-          yPositions.push(p1[1]);
-          time.push(stepId + d1 / (d1 + d2));
-        }
+        xPositions.push(counterCutPosition[0]);
+        yPositions.push(counterCutPosition[1]);
+        time.push(stepId + firstCutLength / (firstCutLength + secondCutLength));
       }
     }
   }
 
-  var interpolateX = props.currentStepAV.interpolate({
+  const interpolateX = props.currentStepAV.interpolate({
     inputRange: time,
     outputRange: xPositions,
   });
 
-  var interpolateY = props.currentStepAV.interpolate({
+  const interpolateY = props.currentStepAV.interpolate({
     inputRange: time,
     outputRange: yPositions,
   });
 
-  // TODO: put the constant coefficient used in the following somewhere to avoir writing them twice (in this class and in DrillCuts)
-  var playerRadius = Math.min(props.animationWidth, props.animationHeight) / 12;
-
   return {
-    playerRadius,
-    id: props.id,
-    eId: props.eId,
-    number: props.number,
-    animationWidth: props.animationWidth,
-    animationHeight: props.animationHeight,
-    animation: props.animation,
     interpolateX,
     interpolateY,
   };

@@ -152,7 +152,7 @@ class Animation extends React.Component {
         )}
         {this.props.animation.ids.map((id, index) => (
           <DisplayedElement
-            id={id}
+            type={id}
             number={this.props.animation.texts[index]}
             key={index}
             eId={index}

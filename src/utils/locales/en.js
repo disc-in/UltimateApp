@@ -83,6 +83,16 @@ export default {
       cancel: 'Cancel',
       cta: 'Send the drill to a dev',
     },
+
+    sharePlaceholder: 'Please add this drill to UltimateApp',
+  },
+  feedback: {
+    comingSoon: {
+      title: 'Send your feedback',
+      content: 'Feedback blabla',
+      cancel: 'Cancel',
+      cta: 'Send',
+    },
     sharePlaceholder: 'Please add this drill to UltimateApp',
   },
   fitnessDrillIllustration: {

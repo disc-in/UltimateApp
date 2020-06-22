@@ -4,7 +4,6 @@ import { StyleSheet, Easing, Animated, Dimensions, View, Image } from 'react-nat
 import DisplayedElement from './DisplayedElement';
 import DisplayedCuts from './DisplayedCuts';
 import ProgressBar from './ProgressBar';
-import Drill from './Drill';
 import AnimationBackground from './AnimationBackground';
 
 class Animation extends React.Component {
@@ -20,10 +19,6 @@ class Animation extends React.Component {
 
     this.state = {
       stepLength: 1000, // Duration of a step in milliseconds
-      animation: new Drill(this.props.animation),
-      widthRatio: props.widthRatio,
-      heigthRatio: props.heigthRatio,
-      displayedElements: _createDisplayedElements(props),
       currentStep: initialStep, // Current step displayed on the phone
       animationPlaying: false,
     };
@@ -47,12 +42,6 @@ class Animation extends React.Component {
     this.dLeft = this.props.dLeft || 0;
   }
 
-  /** Number of steps in the animation */
-  _stepCount = () => {
-    if (this.state.animation !== undefined && this.state.animation !== null) return this.state.animation.stepCount();
-    else return 0;
-  };
-
   /** Convert a position (x, y) in percentages of the animation area in a position (x2, y2) in pixels of the phone screen
    * x: horizontal position in percentages (=0 left edge, =1 right edge)
    * y: vertical position in percentages (=0 top, =1 bottom)
@@ -71,7 +60,6 @@ class Animation extends React.Component {
     this.animationHeight = height * this.props.heightRatio;
   }
 
-  /** Play the whole animation */
   playAnimation = () => {
     this.setState(
       {
@@ -92,21 +80,20 @@ class Animation extends React.Component {
 
         sequence.push(
           Animated.timing(this.currentStepAV, {
-            toValue: this._stepCount() - 1,
-            duration: this.state.stepLength * (this._stepCount() - 1),
+            toValue: this.props.animation.stepCount() - 1,
+            duration: this.state.stepLength * (this.props.animation.stepCount() - 1),
             easing: Easing.linear,
             key: 1,
           }),
         );
 
         Animated.sequence(sequence).start(() =>
-          this.setState({ animationPlaying: false, currentStep: this._stepCount() - 1 }),
+          this.setState({ animationPlaying: false, currentStep: this.props.animation.stepCount() - 1 }),
         );
       },
     );
   };
 
-  /** Animate a step (or just move instantly to it is the first step) */
   playStep = stepId => {
     this.setState(
       {
@@ -163,89 +150,37 @@ class Animation extends React.Component {
             onMoveEnd={this.props.onCutMove}
           />
         )}
-        {this.state.displayedElements?.map(item => {
-          return (
-            <DisplayedElement
-              id={item.id}
-              number={item.number}
-              key={item.key}
-              eId={item.eId}
-              movable={item.movable}
-              onMoveEnd={item.onMoveEnd}
-              animationWidth={this.animationWidth}
-              animationHeight={this.animationHeight}
-              animation={this.props.animation}
-              currentStepAV={this.currentStepAV}
-              positionPercentToPixel={this._positionPercentToPixel}
-            />
-          );
-        })}
+        {this.props.animation.ids.map((id, index) => (
+          <DisplayedElement
+            type={id}
+            number={this.props.animation.texts[index]}
+            key={index}
+            eId={index}
+            movable={this.props.editable}
+            onMoveStart={this.props.onMoveStart}
+            onMoveEnd={this.props.onElementMoveEnd}
+            animationWidth={this.animationWidth}
+            animationHeight={this.animationHeight}
+            animation={this.props.animation}
+            currentStepAV={this.currentStepAV}
+            positionPercentToPixel={this._positionPercentToPixel}
+          />
+        ))}
         <ProgressBar
           readonly={!this.props.editable}
           animationWidth={this.animationWidth}
           animationHeight={this.animationHeight}
-          stepCount={this._stepCount()}
+          stepCount={this.props.animation.stepCount()}
           currentStepAV={this.currentStepAV}
-          editable={this.props.editable}
           goToStep={this.playStep}
           playAnimation={this.playAnimation}
           onStepAdded={this.props.onStepAdded}
           onStepRemoved={this.props.onStepRemoved}
-          key={1}
         />
       </View>
     );
   }
-
-  /** Used to update the animation when a modification is made through the editor */
-  static getDerivedStateFromProps(props, state) {
-    // Test if the animation has changed
-    var isEqual = true;
-
-    /* If a dimension has changed */
-    if (props.widthRatio !== state.widthRatio || props.heightRatio !== state.heightRatio) isEqual = false;
-
-    if (isEqual) {
-      /* If the animation is defined in the state */
-      if (state.animation !== undefined && state.animation !== null)
-        /* Test if all the elements have the same position at each step in both animations */
-        isEqual = props.animation.isEqualTo(state.animation);
-      else if (props.animation !== undefined || props.animation !== null)
-        /* If the animation is not defined in the state but is defined in props */
-        isEqual = false;
-    }
-
-    if (isEqual) return null;
-    else {
-      return {
-        animation: props.animation,
-        displayedElements: _createDisplayedElements(props),
-        heightRatio: props.heightRatio,
-        widthRatio: props.widthRatio,
-      };
-    }
-  }
 }
-
-/** Create the Componenets associated to the elements displayed in this animation */
-const _createDisplayedElements = props => {
-  var result = [];
-
-  /* For each element displayed in the current animation */
-  for (var elemId = 0; elemId < props.animation.elemCount(); ++elemId) {
-    /* Create the displayed element according to the animation */
-    result.push({
-      id: props.animation.ids[elemId],
-      number: props.animation.texts[elemId],
-      key: elemId,
-      eId: elemId,
-      movable: props.editable,
-      onMoveEnd: props.onElementMove,
-    });
-  }
-
-  return result;
-};
 
 const styles = StyleSheet.create({
   mainContainer: {

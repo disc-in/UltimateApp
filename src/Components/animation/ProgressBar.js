@@ -123,14 +123,11 @@ class ProgressBar extends React.Component {
         {/* Buttons: add step, remove step, trash */}
         {!this.props.readonly && (
           <View style={[StyleSheet.absoluteFill]} height="100%" width="100%">
-            <TouchableOpacity style={[styles.icon, { right: 70 }]} onPress={() => this.props.onStepAdded()}>
+            <TouchableOpacity style={[styles.icon, { right: 40 }]} onPress={() => this.props.onStepAdded()}>
               <MaterialCommunityIcons name="plus-box" color={theme.COLOR_PRIMARY} size={22} />
             </TouchableOpacity>
-            <TouchableOpacity style={[styles.icon, { right: 40 }]} onPress={() => this.props.onStepRemoved()}>
+            <TouchableOpacity style={[styles.icon, { right: 10 }]} onPress={() => this.props.onStepRemoved()}>
               <MaterialCommunityIcons name="minus-box" color={theme.COLOR_PRIMARY} size={22} />
-            </TouchableOpacity>
-            <TouchableOpacity style={[styles.icon, { right: 10 }]}>
-              <MaterialCommunityIcons name="trash-can" color={theme.COLOR_PRIMARY} size={22} />
             </TouchableOpacity>
           </View>
         )}

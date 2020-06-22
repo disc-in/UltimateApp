@@ -16,10 +16,8 @@ class Drill {
   /** Get the position of an element at a given step.
    * If the element does not move at step stepId, the previous step will be check to find the element previous position.
    * stoppingStep is the last step to check to find the previous position of the element
-   * If the element does not move at steps stoppingStep to stepId, return undefined
-   * When stoppingStep is equal to -1, a position will always be returned as the element must have a position at step 0.
    */
-  getPositionsAtStep(elemId, stepId, stoppingStep = -1) {
+  getPositionsAtStep(elemId, stepId) {
     /* Get the position of the element at step stepId */
     var nextPosition = this.positions[stepId][elemId];
 
@@ -27,7 +25,7 @@ class Drill {
     var stepToCheck = stepId - 1;
 
     /* While the position of the element at step stepId has not been found  and all the steps after the current one have been checked */
-    while ((nextPosition === undefined || nextPosition === null) && stepToCheck !== stoppingStep) {
+    while ((nextPosition === undefined || nextPosition === null) && stepToCheck !== -1) {
       nextPosition = this.positions[stepToCheck][elemId];
       stepToCheck -= 1;
     }
@@ -46,23 +44,14 @@ class Drill {
   }
 
   /** Add an element to the drill */
-  addElement(element, initialX, initialY, elementNumber) {
-    debug('drill add element at position: ' + initialX + '/' + initialY);
-    //	debug("drill positions before update: " + this.positions);
-
-    //	debug("drill element id: " + element.id);
-
-    // Set its initial position
+  addElement(type, initialX, initialY, text) {
     this.positions[0].push([[initialX, initialY]]);
 
     // Add an undefined representing the fact that it does not currently move at the other steps
     for (var i = 1; i < this.stepCount(); ++i) this.positions[i].push(undefined);
 
-    // Add its text
-    this.texts.push(elementNumber);
-
-    // Add its type
-    this.ids.push(element.props.id);
+    this.texts.push(text);
+    this.ids.push(type);
   }
 
   removeElement(elementIndex) {

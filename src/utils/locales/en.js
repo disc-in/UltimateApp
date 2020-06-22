@@ -49,7 +49,7 @@ export default {
     filters: 'Filters',
     programListPage: 'Choose a program',
     drillPageMinimal: '{{training}} drills',
-    animationEditorPage: 'New Drill',
+    animationEditorPage: 'New Drill (experimental)',
     dictionaryPage: 'Dictionary',
     essentialPage: 'Essential',
     tacticsPage: 'Tactics',

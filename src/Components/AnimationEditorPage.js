@@ -4,7 +4,6 @@ import { Share, StyleSheet, View, Alert } from 'react-native';
 import I18n from '../utils/i18n';
 import AnimationEditor from './animation/AnimationEditor';
 import HeaderButton from './shared/HeaderButton';
-import drillSquare from './animation/DrillSquare';
 import buttonValidation from '../../assets/check_dark.png';
 
 import theme from '../styles/theme.style';
@@ -41,7 +40,7 @@ export const AnimationEditorPage = props => {
 
   return (
     <View style={styles.animationEditorPage}>
-      <AnimationEditor animation={drillSquare} onAnimationChange={saveAnimationState} />
+      <AnimationEditor onAnimationChange={saveAnimationState} />
     </View>
   );
 };

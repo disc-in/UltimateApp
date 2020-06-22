@@ -79,7 +79,6 @@ const resetBreak = {
   ids: ['defense', 'defense', 'offense', 'offense', 'disc'],
   texts: [1, 2, 1, 2, 1],
   background: 'zone',
-  backgrounds: 'zone',
 };
 
 export default resetBreak;

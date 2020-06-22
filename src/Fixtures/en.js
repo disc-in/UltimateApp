@@ -2733,7 +2733,6 @@ const diagonalStackTraining = {
   drills: [warmupGameDrill, horizontalTrapOutside, diagonalIso, diagonalToVertical, trainingGame],
 };
 
-console.log('en', tactics);
 export default {
   theory: {
     dictionary,

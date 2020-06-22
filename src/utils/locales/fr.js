@@ -49,7 +49,7 @@ export default {
     filters: 'Filtres',
     programListPage: "Programmes d'entraînement",
     drillPageMinimal: '{{training}} - exercices',
-    animationEditorPage: 'Nouvel exo',
+    animationEditorPage: 'Nouvel exo (expérimental)',
     dictionaryPage: 'Lexique',
     essentialPage: 'Les bases du jeu',
     tacticsPage: 'Tactiques',

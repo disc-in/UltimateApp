@@ -19,10 +19,6 @@ class DisplayedCuts extends React.Component {
     };
   }
 
-  _display(element) {
-    return element.render();
-  }
-
   _displayCut = cut => {
     return (
       <View key={cut.key + 4000} style={[StyleSheet.absoluteFill]} height="100%" width="100%">

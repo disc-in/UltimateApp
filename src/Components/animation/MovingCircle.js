@@ -1,5 +1,5 @@
 import React from 'react';
-import { Animated, PanResponder } from 'react-native';
+import { Animated, PanResponder, StyleSheet } from 'react-native';
 
 class MovingCircle extends React.Component {
   constructor(props) {
@@ -58,15 +58,9 @@ class MovingCircle extends React.Component {
         {...this.panResponder.panHandlers}
         style={[
           panStyle,
-          { position: 'absolute' },
+          styles.circle,
           { left: this.props.cx - this.props.radius },
           { top: this.props.cy - this.props.radius },
-          { height: 20 },
-          { width: 20 },
-          { borderRadius: 15 },
-          { borderWidth: 1 },
-          { borderColor: 'green' },
-          { backgroundColor: 'white' },
         ]}
         height={2 * this.props.radius}
         width={2 * this.props.radius}
@@ -76,3 +70,15 @@ class MovingCircle extends React.Component {
 }
 
 export default MovingCircle;
+
+const styles = StyleSheet.create({
+  circle: {
+    position: 'absolute',
+    height: 20,
+    width: 20,
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: 'green',
+    backgroundColor: 'white',
+  },
+});

@@ -85,13 +85,13 @@ export default {
     sharePlaceholder: "Pouvez-vous ajouter cet exercices à l'application ?",
   },
   feedback: {
-    comingSoon: {
-      title: 'Send your feedback',
-      content: 'Feedback blabla',
-      cancel: 'Cancel',
-      cta: 'Send to the team',
+    contact: {
+      title: 'Contactez-nous',
+      content:
+        'Nous aimerions connaitre vos opinions pour améliorer notre application.\nNotre contact: ultimate.discin@gmail.com',
+      cancel: 'Annulé',
+      cta: 'Envoyer',
     },
-    sharePlaceholder: 'Please add this drill to UltimateApp',
   },
   fitnessDrillIllustration: {
     redoMessage: "Vous avez terminé l'exercice !",

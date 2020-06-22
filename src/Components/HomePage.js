@@ -1,14 +1,5 @@
 import React, { useLayoutEffect } from 'react';
-import {
-  Share,
-  StyleSheet,
-  View,
-  Text,
-  ImageBackground,
-  TouchableHighlight,
-  TouchableOpacity,
-  Alert,
-} from 'react-native';
+import { StyleSheet, View, Text, ImageBackground, TouchableHighlight, TouchableOpacity, Alert } from 'react-native';
 
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
@@ -22,6 +13,7 @@ import ourPlays from '../../assets/HomePage/ourplays.jpg';
 import essential from '../../assets/HomePage/essential.jpg';
 import huddle from '../../assets/HomePage/huddle.png';
 import { DrillTypes } from '../Fixtures/config';
+import * as MailComposer from 'expo-mail-composer';
 
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
@@ -141,21 +133,24 @@ export default HomePage = props => {
 
   const feedback = () => {
     Alert.alert(
-      I18n.t('feedback.comingSoon.title'),
-      I18n.t('feedback.comingSoon.content'),
+      I18n.t('feedback.contact.title'),
+      I18n.t('feedback.contact.content'),
       [
-        { text: I18n.t('feedback.comingSoon.cancel'), style: 'cancel' },
-        { text: I18n.t('feedback.comingSoon.cta'), onPress: doShare },
+        { text: I18n.t('feedback.contact.cancel'), style: 'cancel' },
+        { text: I18n.t('feedback.contact.cta'), onPress: sendEmailAsync },
       ],
       { cancelable: true },
     );
   };
 
-  const doShare = () => {
-    Share.share({
-      title: I18n.t('feedback.sharePlaceholder'),
-      message: '',
-    }).catch(err => console.log(err));
+  const sendEmailAsync = () => {
+    let result = MailComposer.composeAsync({
+      recipients: ['ultimate.discin@gmail.com'],
+      subject: 'Feedback Disc In',
+      body: '',
+    });
+
+    alert(result.status);
   };
 
   const displayFeedbackButton = () => {
@@ -171,6 +166,7 @@ export default HomePage = props => {
       headerRight: () => displayFeedbackButton(),
     }),
   );
+
   return (
     <Tab.Navigator
       initialRouteName="Frisbee"

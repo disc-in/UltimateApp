@@ -86,13 +86,12 @@ export default {
     sharePlaceholder: 'Please add this drill to UltimateApp',
   },
   feedback: {
-    comingSoon: {
-      title: 'Send your feedback',
-      content: 'Feedback blabla',
+    contact: {
+      title: 'Contact us',
+      content: 'We would like your feedback to improve our app.\nOur contact: ultimate.discin@gmail.com',
       cancel: 'Cancel',
       cta: 'Send',
     },
-    sharePlaceholder: 'Please add this drill to UltimateApp',
   },
   fitnessDrillIllustration: {
     redoMessage: 'You have completed the drill!',

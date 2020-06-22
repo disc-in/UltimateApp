@@ -64,7 +64,7 @@ export const DrillPageMinimal = props => {
           </TouchableOpacity>
         </View>
         <View style={styles.illustration}>
-          {drill.type === DrillTypes.FRISBEE && <FrisbeeDrillIllustration drill={drill} />}
+          {drill.type === DrillTypes.FRISBEE && <FrisbeeDrillIllustration drill={drill} navigation={navigation} />}
           {drill.type === DrillTypes.FITNESS && <FitnessDrillIllustration drill={drill} />}
         </View>
       </ScrollView>

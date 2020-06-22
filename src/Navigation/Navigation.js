@@ -15,6 +15,7 @@ import AnimationEditorPage from '../Components/AnimationEditorPage';
 import EssentialPage from '../Components/EssentialPage';
 import DictionaryPage from '../Components/DictionaryPage';
 import TacticsPage from '../Components/TacticsPage';
+import VideoPage from '../Components/VideoPage';
 
 import I18n from '../utils/i18n';
 

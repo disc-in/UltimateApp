@@ -53,6 +53,7 @@ export default {
     dictionaryPage: 'Lexique',
     essentialPage: 'Les bases du jeu',
     tacticsPage: 'Tactiques',
+    videoPage: 'Vidéo',
   },
   shared: {
     back: 'Retour',
@@ -85,21 +86,11 @@ export default {
     sharePlaceholder: "Pouvez-vous ajouter cet exercices à l'application ?",
   },
   feedback: {
-    contact: {
       title: 'Contactez-nous',
       content:
         'Nous aimerions connaitre vos opinions pour améliorer notre application.\nNotre contact: ultimate.discin@gmail.com',
       cancel: 'Annulé',
       cta: 'Envoyer',
-    },
-  },
-  fitnessDrillIllustration: {
-    redoMessage: "Vous avez terminé l'exercice !",
-  },
-  drillListPage: {
-    availableDrills: {
-      one: '1 exercice disponible',
-      other: '{{count}} exercices disponibles',
     },
   },
   drillPage: {

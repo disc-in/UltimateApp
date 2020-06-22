@@ -166,7 +166,6 @@ export default HomePage = props => {
       headerRight: () => displayFeedbackButton(),
     }),
   );
-
   return (
     <Tab.Navigator
       initialRouteName="Frisbee"

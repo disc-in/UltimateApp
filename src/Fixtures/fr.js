@@ -2839,41 +2839,36 @@ export default {
     },
     {
       id: 3,
-      title: 'Apprendre en jouant',
-      trainings: [LearningByPlaying, playingToLearn],
-    },
-    {
-      id: 4,
       title: 'Stack Vertical',
       trainings: [initiationVerticalTraining, secondVerticalTraining, dumpSwingTraining],
     },
     {
-      id: 5,
+      id: 4,
       title: 'Stack Horizontal',
       trainings: [initiationHorizontal, horizontalFlow, horizontalLine],
     },
     {
-      id: 6,
+      id: 5,
       title: 'Defense individuel',
       trainings: [defenseBaseTraining, defenseSecond, defenseThird],
     },
     {
-      id: 7,
+      id: 6,
       title: 'Defense de Zone',
       trainings: [zoneCup],
     },
     {
-      id: 8,
+      id: 7,
       title: 'Stack sur le côté',
       trainings: [sideStackTraining],
     },
     {
-      id: 9,
+      id: 8,
       title: 'Stack en U',
       trainings: [splitStackTraining],
     },
     {
-      id: 10,
+      id: 9,
       title: 'Stack diagonal',
       trainings: [diagonalStackTraining],
     },

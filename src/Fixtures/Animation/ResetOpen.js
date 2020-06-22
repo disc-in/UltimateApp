@@ -89,6 +89,7 @@ const resetOpen = {
   ],
   ids: ['disc', 'defense', 'offense', 'defense', 'offense'],
   texts: [1, 1, 1, 2, 2],
+  background: 'empty',
 };
 
 export default resetOpen;

@@ -123,6 +123,7 @@ const dishiesChain = {
   ],
   ids: ['triangle', 'triangle', 'offense', 'offense', 'defense', 'defense', 'offense', 'disc', 'defense', 'defense'],
   texts: ['', '', 1, 2, 1, 2, 3, '', 3, 4],
+  background: 'empty',
 };
 
 export default dishiesChain;

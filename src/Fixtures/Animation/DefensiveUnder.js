@@ -75,6 +75,7 @@ const defensiveUnder = {
   ],
   ids: ['triangle', 'triangle', 'triangle', 'triangle', 'triangle', 'defense', 'offense', 'defense', 'offense', 'disc'],
   texts: ['', '', '', '', '', 1, 1, 2, 2, 1],
+  background: 'empty',
 };
 
 export default defensiveUnder;

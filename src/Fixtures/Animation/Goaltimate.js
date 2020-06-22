@@ -236,6 +236,7 @@ const goaltimate = {
     'disc',
   ],
   texts: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 1, 2, 3, 4, 1, 2, 3, 4, ''],
+  background: 'empty',
 };
 
 export default goaltimate;

@@ -172,6 +172,7 @@ const redemption = {
   ],
   ids: ['offense', 'offense', 'offense', 'defense', 'defense', 'defense', 'defense', 'disc'],
   texts: [1, 2, 3, 1, 2, 3, 4, 1],
+  background: 'empty',
 };
 
 export default redemption;

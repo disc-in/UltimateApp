@@ -76,6 +76,7 @@ const dwarfDuel = {
   ],
   ids: ['offense', 'defense', 'defense', 'offense', 'triangle', 'triangle', 'offense', 'disc', 'disc'],
   texts: [1, 1, 2, 2, '', '', 3, 1, 2],
+  background: 'empty',
 };
 
 export default dwarfDuel;

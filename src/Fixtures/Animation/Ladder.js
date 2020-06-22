@@ -153,6 +153,7 @@ const ladder = {
     'offense',
   ],
   texts: ['', '', '', '', 1, 2, 3, 4, 1, 2, 1, 2, 3, 4, 3, 4],
+  background: 'empty',
 };
 
 export default ladder;

@@ -195,6 +195,7 @@ const blockTheUnder = {
     'disc',
   ],
   texts: ['', '', '', '', '', '', 1, 2, 1, 2, 3, 3, 4, 4, 1, 2],
+  background: 'empty',
 };
 
 export default blockTheUnder;

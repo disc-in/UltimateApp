@@ -1,5 +1,5 @@
-import React, { useLayoutEffect } from 'react';
-import { StyleSheet, View, Text, ImageBackground, TouchableHighlight, TouchableOpacity } from 'react-native';
+import React from 'react';
+import { StyleSheet, View, Text, ImageBackground, TouchableHighlight } from 'react-native';
 
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
@@ -15,7 +15,7 @@ import huddle from '../../assets/HomePage/huddle.png';
 import { DrillTypes } from '../Fixtures/config';
 
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
 
 const Tab = createMaterialBottomTabNavigator();
 

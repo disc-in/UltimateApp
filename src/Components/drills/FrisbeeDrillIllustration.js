@@ -173,6 +173,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   contentWrapper: { minHeight: 375 },
+  centerContainer: {
+    flex: 1,
+    alignItems: 'center',
+  },
 });
 
 export default FrisbeeDrillIllustration;

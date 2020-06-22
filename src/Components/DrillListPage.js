@@ -18,6 +18,7 @@ export const DrillListPage = props => {
 
   const sortingProperty = type === DrillTypes.FRISBEE ? 'minimalPlayersNumber' : 'durationInMinutes';
   const sortedDisplayedDrills = displayedDrills.sort((a, b) => a[sortingProperty] - b[sortingProperty]);
+
   return (
     <View style={styles.drillListPage}>
       <Text style={list.counter}>{I18n.t('drillListPage.availableDrills', { count: displayedDrills.length })}</Text>

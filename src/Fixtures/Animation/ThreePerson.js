@@ -78,6 +78,7 @@ const threePerson = {
   ],
   ids: ['offense', 'defense', 'offense', 'disc'],
   texts: [1, 1, 2, 1],
+  background: 'empty',
 };
 
 export default threePerson;

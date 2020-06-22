@@ -323,6 +323,7 @@ const giveAndGoRace = {
     3,
     4,
   ],
+  background: 'empty',
 };
 
 export default giveAndGoRace;

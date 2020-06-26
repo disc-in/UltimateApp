@@ -53,7 +53,6 @@ export default {
     dictionaryPage: 'Lexique',
     essentialPage: 'Les bases du jeu',
     tacticsPage: 'Tactiques',
-    videoPage: 'Vidéo',
   },
   shared: {
     back: 'Retour',
@@ -86,16 +85,24 @@ export default {
     sharePlaceholder: "Pouvez-vous ajouter cet exercices à l'application ?",
   },
   feedback: {
-    contact: {
-      title: 'Contactez-nous',
+    alert: {
+      title: 'Contactez-nous !',
       content:
-        'Nous aimerions connaitre vos opinions pour améliorer notre application.\nNotre contact: ultimate.discin@gmail.com',
-      cancel: 'Annulé',
+        'Nous serions ravis de connaitre vos opinions pour améliorer notre application.\n\nVoulez-vous nous envoyer un message ?',
+      cancel: 'Annuler',
       cta: 'Envoyer',
     },
+    subject: "Retours sur l'app Disc In",
   },
   fitnessDrillIllustration: {
     redoMessage: "Tu as fini l'exercice!",
+  },
+  drillListPage: {
+    availableDrills: {
+      zero: '{{count}} drill available',
+      one: '{{count}} drill available',
+      other: '{{count}} drills available',
+    },
   },
   drillPage: {
     minutes: 'minutes',

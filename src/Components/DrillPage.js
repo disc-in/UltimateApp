@@ -114,7 +114,7 @@ export const DrillPage = props => {
         </View>
       </View>
       <View ref={firstDrill} style={styles.animation}>
-        {drill.type === DrillTypes.FRISBEE && <FrisbeeDrillIllustration drill={drill} navigation={navigation} />}
+        {drill.type === DrillTypes.FRISBEE && <FrisbeeDrillIllustration drill={drill} />}
         {drill.type === DrillTypes.FITNESS && <FitnessDrillIllustration drill={drill} />}
       </View>
     </ScrollView>

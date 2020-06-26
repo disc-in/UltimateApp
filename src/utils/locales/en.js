@@ -53,7 +53,6 @@ export default {
     dictionaryPage: 'Dictionary',
     essentialPage: 'Essential',
     tacticsPage: 'Tactics',
-    videoPage: 'Video',
   },
   shared: {
     back: 'Back',
@@ -87,12 +86,14 @@ export default {
     sharePlaceholder: 'Please add this drill to UltimateApp',
   },
   feedback: {
-    contact: {
-      title: 'Contact us',
-      content: 'We would like your feedback to improve our app.\nOur contact: ultimate.discin@gmail.com',
+    alert: {
+      title: 'Get in touch!',
+      content:
+        'We are always looking for ideas and feedback to improve the app.\n\nWould you like to send us a message?',
       cancel: 'Cancel',
       cta: 'Send',
     },
+    subject: 'Feedback concerning Disc In',
   },
   fitnessDrillIllustration: {
     redoMessage: 'You have completed the drill!',

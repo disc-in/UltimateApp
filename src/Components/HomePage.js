@@ -1,5 +1,7 @@
 import React, { useLayoutEffect } from 'react';
-import { StyleSheet, View, Text, ImageBackground, TouchableHighlight, TouchableOpacity, Alert } from 'react-native';
+import { StyleSheet, View, Text, ImageBackground, TouchableHighlight, TouchableOpacity } from 'react-native';
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
@@ -13,10 +15,7 @@ import ourPlays from '../../assets/HomePage/ourplays.jpg';
 import essential from '../../assets/HomePage/essential.jpg';
 import huddle from '../../assets/HomePage/huddle.png';
 import { DrillTypes } from '../Fixtures/config';
-import * as MailComposer from 'expo-mail-composer';
-
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
+import FeedbackButton from './home/FeedbackButton';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -131,41 +130,12 @@ const Theory = props => {
 export default HomePage = props => {
   const { navigation } = props;
 
-  const feedback = () => {
-    Alert.alert(
-      I18n.t('feedback.contact.title'),
-      I18n.t('feedback.contact.content'),
-      [
-        { text: I18n.t('feedback.contact.cancel'), style: 'cancel' },
-        { text: I18n.t('feedback.contact.cta'), onPress: sendEmailAsync },
-      ],
-      { cancelable: true },
-    );
-  };
-
-  const sendEmailAsync = () => {
-    let result = MailComposer.composeAsync({
-      recipients: ['ultimate.discin@gmail.com'],
-      subject: 'Feedback Disc In',
-      body: '',
-    });
-
-    alert(result.status);
-  };
-
-  const displayFeedbackButton = () => {
-    return (
-      <TouchableOpacity style={styles.feedbackContainer} onPress={() => feedback()} testID="feedbackButton">
-        <MaterialCommunityIcons name="email-outline" color={theme.COLOR_PRIMARY} size={26} />
-      </TouchableOpacity>
-    );
-  };
-
   useLayoutEffect(() =>
     navigation.setOptions({
-      headerRight: () => displayFeedbackButton(),
+      headerRight: () => <FeedbackButton />,
     }),
   );
+
   return (
     <Tab.Navigator
       initialRouteName="Frisbee"
@@ -262,9 +232,6 @@ const styles = StyleSheet.create({
     height: 105,
   },
   headerContainer: {
-    marginRight: 20,
-  },
-  feedbackContainer: {
     marginRight: 20,
   },
 });

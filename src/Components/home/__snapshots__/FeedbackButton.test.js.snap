@@ -18,7 +18,6 @@ exports[`<FeedbackButton /> renders correctly 1`] = `
       "opacity": 1,
     }
   }
-  testID="feedbackButton"
 >
   <Text />
 </View>

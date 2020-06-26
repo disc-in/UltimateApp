@@ -7,90 +7,88 @@ import {
   SeasonTimings,
   EquipmentLabels,
   IllustrationType,
-} from './config';
+} from '../config';
 
-import { dictionary, essentials, tactics } from './theory.en';
-
-import animationGoToTen from './Animation/AnimationGoToTen';
-import throwingMachine from './Animation/ThrowingMachine';
-import giveAndGo from './Animation/GiveAndGo';
-import threePerson from './Animation/ThreePerson';
-import redemption from './Animation/Redemption';
-import dwarDuel from './Animation/DwarfDuel';
-import backdoor from './Animation/Backdoor';
-import powerReset from './Animation/PowerReset';
-import resetOpen from './Animation/ResetOpen';
-import upline from './Animation/Upline';
-import around from './Animation/Around';
-import resetBreak from './Animation/ResetBreak';
-import ladder from './Animation/Ladder';
-import giveAndGoRace from './Animation/GiveAndGoRace';
-import blockTheUnder from './Animation/BlockTheUnder';
-import blockEverything from './Animation/BlockEverything';
-import defensiveUnder from './Animation/DefensiveUnder';
-import defenseDeep from './Animation/DefenseDeep';
-import threeVersusTwo from './Animation/ThreeVersusTwo';
-import train from './Animation/Train';
-import trainRace from './Animation/TrainRace';
-import triangleDeath from './Animation/TriangleDeath';
-import oneFakeTrain from './Animation/OneFakeTrain';
-import twoFakeTrain from './Animation/TwoFakeTrain';
-import breakSide from './Animation/BreakSide';
-import goaltimate from './Animation/Goaltimate';
-import bigEight from './Animation/BigEight';
-import theM from './Animation/TheM';
-import dishiesChain from './Animation/DishiesChain';
-import dishiesPoach from './Animation/DishiesPoach';
-import discGolfAnimation from './Animation/DiscGolf';
-import dDCAnimation from './Animation/DDC';
-import horizontalTimingAnimation from './Animation/HorizontalTiming';
-import horizontalTimingOpenAnimation from './Animation/HorizontalTimingOpen';
-import threeHorizontal from './Animation/ThreeHorizontal';
-import threeHorizontalGame from './Animation/ThreeHorizontalGame';
-import theDual from './Animation/TheDual';
-import theDualFake from './Animation/theDualFake';
-import treasureHunt from './Animation/TreasureHunt';
-import bulldogAnimation from './Animation/Bulldogs';
-import aussieRules from './Animation/AussieRules';
-import cardinalAnimation from './Animation/Cardinal';
-import horizontalToVerticalAnimation from './Animation/HorizontalToVertical';
-import horizontalDiamond from './Animation/HorizontalDiamond';
-import iso from './Animation/Iso';
-import horizontalTrapOpen from './Animation/HorizontalTrapOpen';
-import horizontalTrapBreak from './Animation/HorizontalTrapBreak';
-import horizontalTrapGame from './Animation/HorizontalTrapGame';
-import hoTrapFar from './Animation/HoTrapFar';
-import hoTrapDirect from './Animation/HoTrapDirect';
-import hoTrapGame from './Animation/HoTrapGame';
-import hoHandler from './Animation/HoHandler';
-import hoHandlerBreak from './Animation/HoHandlerBreak';
-import hoHandlerGame from './Animation/HoHandlerGame';
-import breakDanceAnimation from './Animation/BreakDance';
-import breakRace from './Animation/BreakRace';
-import longCheck from './Animation/LongCheck';
-import throwCatch from './Animation/ThrowCatch';
-import threeGame from './Animation/ThreeGame';
-import normalGameAnimation from './Animation/NormalGame';
-import endzoneAnimation from './Animation/Endzone';
-import endzoneFinition from './Animation/EndzoneFinition';
-import stopFlowAnimation from './Animation/StopFlow';
-import theTunnelAnimation from './Animation/TheTunnel';
-import leopard from './Animation/Leopard';
-import cupSwingingAnimation from './Animation/CupSwinging';
-import zoneGameAnimation from './Animation/ZoneGame';
-import diagonalOpenAnimation from './Animation/DiagonalOpen';
-import diagonalPowerAnimation from './Animation/DiagonalPower';
-import diagonalOverAnimation from './Animation/DiagonalOver';
-import diagonalGameAnimation from './Animation/DiagonalGame';
-import diagonaldualOpen from './Animation/DiagonalOpenTwo';
-import diagonaldualBreak from './Animation/DiagonalDuelBreak';
-import diagonalDualGame from './Animation/DiagonalDualGame';
-import splitIsoAnimation from './Animation/SplitIso';
-import splitGameDual from './Animation/SplitGameDual';
-import splitToVerticalAnimation from './Animation/SplitToVertical';
-import splitWindmill from './Animation/SplitWindmill';
-import sideFlow from './Animation/SideFlow';
-import sideWindmill from './Animation/SideWindmill';
+import animationGoToTen from '../Animation/AnimationGoToTen';
+import throwingMachine from '../Animation/ThrowingMachine';
+import giveAndGo from '../Animation/GiveAndGo';
+import threePerson from '../Animation/ThreePerson';
+import redemption from '../Animation/Redemption';
+import dwarDuel from '../Animation/DwarfDuel';
+import backdoor from '../Animation/Backdoor';
+import powerReset from '../Animation/PowerReset';
+import resetOpen from '../Animation/ResetOpen';
+import upline from '../Animation/Upline';
+import around from '../Animation/Around';
+import resetBreak from '../Animation/ResetBreak';
+import ladder from '../Animation/Ladder';
+import giveAndGoRace from '../Animation/GiveAndGoRace';
+import blockTheUnder from '../Animation/BlockTheUnder';
+import blockEverything from '../Animation/BlockEverything';
+import defensiveUnder from '../Animation/DefensiveUnder';
+import defenseDeep from '../Animation/DefenseDeep';
+import threeVersusTwo from '../Animation/ThreeVersusTwo';
+import train from '../Animation/Train';
+import trainRace from '../Animation/TrainRace';
+import triangleDeath from '../Animation/TriangleDeath';
+import oneFakeTrain from '../Animation/OneFakeTrain';
+import twoFakeTrain from '../Animation/TwoFakeTrain';
+import breakSide from '../Animation/BreakSide';
+import goaltimate from '../Animation/Goaltimate';
+import bigEight from '../Animation/BigEight';
+import theM from '../Animation/TheM';
+import dishiesChain from '../Animation/DishiesChain';
+import dishiesPoach from '../Animation/DishiesPoach';
+import discGolfAnimation from '../Animation/DiscGolf';
+import dDCAnimation from '../Animation/DDC';
+import horizontalTimingAnimation from '../Animation/HorizontalTiming';
+import horizontalTimingOpenAnimation from '../Animation/HorizontalTimingOpen';
+import threeHorizontal from '../Animation/ThreeHorizontal';
+import threeHorizontalGame from '../Animation/ThreeHorizontalGame';
+import theDual from '../Animation/TheDual';
+import theDualFake from '../Animation/theDualFake';
+import treasureHunt from '../Animation/TreasureHunt';
+import bulldogAnimation from '../Animation/Bulldogs';
+import aussieRules from '../Animation/AussieRules';
+import cardinalAnimation from '../Animation/Cardinal';
+import horizontalToVerticalAnimation from '../Animation/HorizontalToVertical';
+import horizontalDiamond from '../Animation/HorizontalDiamond';
+import iso from '../Animation/Iso';
+import horizontalTrapOpen from '../Animation/HorizontalTrapOpen';
+import horizontalTrapBreak from '../Animation/HorizontalTrapBreak';
+import horizontalTrapGame from '../Animation/HorizontalTrapGame';
+import hoTrapFar from '../Animation/HoTrapFar';
+import hoTrapDirect from '../Animation/HoTrapDirect';
+import hoTrapGame from '../Animation/HoTrapGame';
+import hoHandler from '../Animation/HoHandler';
+import hoHandlerBreak from '../Animation/HoHandlerBreak';
+import hoHandlerGame from '../Animation/HoHandlerGame';
+import breakDanceAnimation from '../Animation/BreakDance';
+import breakRace from '../Animation/BreakRace';
+import longCheck from '../Animation/LongCheck';
+import throwCatch from '../Animation/ThrowCatch';
+import threeGame from '../Animation/ThreeGame';
+import normalGameAnimation from '../Animation/NormalGame';
+import endzoneAnimation from '../Animation/Endzone';
+import endzoneFinition from '../Animation/EndzoneFinition';
+import stopFlowAnimation from '../Animation/StopFlow';
+import theTunnelAnimation from '../Animation/TheTunnel';
+import leopard from '../Animation/Leopard';
+import cupSwingingAnimation from '../Animation/CupSwinging';
+import zoneGameAnimation from '../Animation/ZoneGame';
+import diagonalOpenAnimation from '../Animation/DiagonalOpen';
+import diagonalPowerAnimation from '../Animation/DiagonalPower';
+import diagonalOverAnimation from '../Animation/DiagonalOver';
+import diagonalGameAnimation from '../Animation/DiagonalGame';
+import diagonaldualOpen from '../Animation/DiagonalOpenTwo';
+import diagonaldualBreak from '../Animation/DiagonalDuelBreak';
+import diagonalDualGame from '../Animation/DiagonalDualGame';
+import splitIsoAnimation from '../Animation/SplitIso';
+import splitGameDual from '../Animation/SplitGameDual';
+import splitToVerticalAnimation from '../Animation/SplitToVertical';
+import splitWindmill from '../Animation/SplitWindmill';
+import sideFlow from '../Animation/SideFlow';
+import sideWindmill from '../Animation/SideWindmill';
 
 const stabilityDrill = {
   id: 1,
@@ -4660,232 +4658,225 @@ const fitnessWeek21 = {
   drills: [tDrill, tDrill],
 };
 
-export default {
-  theory: {
-    dictionary,
-    essentials,
-    tactics,
+export const drills = [
+  // Fitness
+  stabilityDrill,
+  strengthDrill,
+  speedDrill,
+  conditioningDrill,
+  warmupGameDrill,
+  warmupDrill,
+  conditioningFullbodyDrill,
+  fartlek,
+  mas30,
+  suicide,
+  tDrill,
+  lacticSprint,
+  mas30Light,
+  circuit,
+  rest,
+  serpentine,
+  mas15,
+  circuitLong,
+  mas15Long,
+  sprintPractice,
+  ladderPractice,
+
+  // Frisbee
+  basicThrowsDrill,
+  trainDrill,
+  menageATroisDrill,
+  goaltimateDrill,
+  resetOpenDrill,
+  resetBreakDrill,
+  youShallNotPassDrill,
+  aussieDrill,
+  treasureHuntDrill,
+  kyeDrill,
+  bigEightDrill,
+  dwarfDuelDrill,
+  giveAndGoDrill,
+  goToTenDrill,
+  endzoneGameDrill,
+  bulldogDrill,
+  dishieChainDrill,
+  breakDanceDrill,
+  triangleOfDeathdrill,
+  trainOfFakeDrill,
+  defensePositionDrill,
+  breakDrill,
+  bolognaMDrill,
+  discGolf,
+  dDC,
+  horizontalTiming,
+  game3v3Horizontal,
+  theDuel,
+  cardinal,
+  horizontalToVertical,
+  horizontalHandler,
+  horizontalTrapOutside,
+  horizontalTrap,
+  checkLong,
+  throwCatchThrow,
+  stopFlow,
+  theTunnel,
+  sprintDefense,
+  cupSwinging,
+  zoneGame,
+  diagonalToVertical,
+  diagonalIso,
+  splitIso,
+  splitToVertical,
+  sideToVertical,
+
+  // Games
+  normalGame,
+  game3v3,
+  longShotGame,
+  lineGame,
+  longestGame,
+  trainingGame,
+];
+
+export const trainings = [
+  // Fitness
+  fitnessWeek1,
+  fitnessWeek2,
+  fitnessWeek3,
+  fitnessWeek4,
+  fitnessWeek5,
+  fitnessWeek6,
+  fitnessWeek7,
+  fitnessWeek8,
+  fitnessWeek9,
+  fitnessWeek10,
+  fitnessWeek11,
+  fitnessWeek12,
+  fitnessWeek13,
+  fitnessWeek14,
+  fitnessWeek15,
+  fitnessWeek16,
+  fitnessWeek17,
+  fitnessWeek18,
+  fitnessWeek19,
+  fitnessWeek20,
+  fitnessWeek21,
+
+  // Frisbee
+  dumpSwingTraining,
+  coed2MarkTraining,
+  firstChildTraining,
+  secondChildTraining,
+  thirdChildTraining,
+  secondInintiationAdultTraining,
+  thirdInintiationAdultTraining,
+  initiationVerticalTraining,
+  secondVerticalTraining,
+  defenseBaseTraining,
+  horizontalFlow,
+  LearningByPlaying,
+  initiationHorizontal,
+  horizontalLine,
+  defenseSecond,
+  defenseThird,
+  playingToLearn,
+  zoneCup,
+  sideStackTraining,
+  splitStackTraining,
+  diagonalStackTraining,
+];
+
+export const programs = [
+  {
+    id: 1,
+    title: 'Initiation U13',
+    trainings: [firstChildTraining, secondChildTraining, thirdChildTraining],
   },
-  favoriteDrills: [],
-  completeTrainings: [],
-  drills: [
-    // Fitness
-    stabilityDrill,
-    strengthDrill,
-    speedDrill,
-    conditioningDrill,
-    warmupGameDrill,
-    warmupDrill,
-    conditioningFullbodyDrill,
-    fartlek,
-    mas30,
-    suicide,
-    tDrill,
-    lacticSprint,
-    mas30Light,
-    circuit,
-    rest,
-    serpentine,
-    mas15,
-    circuitLong,
-    mas15Long,
-    sprintPractice,
-    ladderPractice,
-
-    // Frisbee
-    basicThrowsDrill,
-    trainDrill,
-    menageATroisDrill,
-    goaltimateDrill,
-    resetOpenDrill,
-    resetBreakDrill,
-    youShallNotPassDrill,
-    aussieDrill,
-    treasureHuntDrill,
-    kyeDrill,
-    bigEightDrill,
-    dwarfDuelDrill,
-    giveAndGoDrill,
-    goToTenDrill,
-    endzoneGameDrill,
-    bulldogDrill,
-    dishieChainDrill,
-    breakDanceDrill,
-    triangleOfDeathdrill,
-    trainOfFakeDrill,
-    defensePositionDrill,
-    breakDrill,
-    bolognaMDrill,
-    discGolf,
-    dDC,
-    horizontalTiming,
-    game3v3Horizontal,
-    theDuel,
-    cardinal,
-    horizontalToVertical,
-    horizontalHandler,
-    horizontalTrapOutside,
-    horizontalTrap,
-    checkLong,
-    throwCatchThrow,
-    stopFlow,
-    theTunnel,
-    sprintDefense,
-    cupSwinging,
-    zoneGame,
-    diagonalToVertical,
-    diagonalIso,
-    splitIso,
-    splitToVertical,
-    sideToVertical,
-
-    // Games
-    normalGame,
-    game3v3,
-    longShotGame,
-    lineGame,
-    longestGame,
-    trainingGame,
-  ],
-  trainings: [
-    // Fitness
-    fitnessWeek1,
-    fitnessWeek2,
-    fitnessWeek3,
-    fitnessWeek4,
-    fitnessWeek5,
-    fitnessWeek6,
-    fitnessWeek7,
-    fitnessWeek8,
-    fitnessWeek9,
-    fitnessWeek10,
-    fitnessWeek11,
-    fitnessWeek12,
-    fitnessWeek13,
-    fitnessWeek14,
-    fitnessWeek15,
-    fitnessWeek16,
-    fitnessWeek17,
-    fitnessWeek18,
-    fitnessWeek19,
-    fitnessWeek20,
-    fitnessWeek21,
-
-    // Frisbee
-    dumpSwingTraining,
-    coed2MarkTraining,
-    firstChildTraining,
-    secondChildTraining,
-    thirdChildTraining,
-    secondInintiationAdultTraining,
-    thirdInintiationAdultTraining,
-    initiationVerticalTraining,
-    secondVerticalTraining,
-    defenseBaseTraining,
-    horizontalFlow,
-    LearningByPlaying,
-    initiationHorizontal,
-    horizontalLine,
-    defenseSecond,
-    defenseThird,
-    playingToLearn,
-    zoneCup,
-    sideStackTraining,
-    splitStackTraining,
-    diagonalStackTraining,
-  ],
-  programs: [
-    {
-      id: 1,
-      title: 'Initiation U13',
-      trainings: [firstChildTraining, secondChildTraining, thirdChildTraining],
-    },
-    {
-      id: 2,
-      title: 'Initiation Adult',
-      trainings: [firstChildTraining, secondInintiationAdultTraining, thirdInintiationAdultTraining],
-    },
-    {
-      id: 3,
-      title: 'Vertical Stack',
-      trainings: [initiationVerticalTraining, secondVerticalTraining, dumpSwingTraining],
-    },
-    {
-      id: 4,
-      title: 'Horizontal Stack',
-      trainings: [initiationHorizontal, horizontalFlow, horizontalLine],
-    },
-    {
-      id: 5,
-      title: 'Individual Defense',
-      trainings: [defenseBaseTraining, defenseSecond, defenseThird],
-    },
-    {
-      id: 6,
-      title: 'Zone Defense',
-      trainings: [zoneCup],
-    },
-    {
-      id: 7,
-      title: 'Side Stack',
-      trainings: [sideStackTraining],
-    },
-    {
-      id: 8,
-      title: 'Split Stack',
-      trainings: [splitStackTraining],
-    },
-    {
-      id: 9,
-      title: 'Diagonal Stack',
-      trainings: [diagonalStackTraining],
-    },
-    //FITNESS PROGRAMS:
-    {
-      id: 10,
-      title: 'Off-season - Part 1',
-      trainings: [
-        fitnessWeek1,
-        fitnessWeek2,
-        fitnessWeek3,
-        fitnessWeek4,
-        fitnessWeek5,
-        fitnessWeek6,
-        fitnessWeek7,
-        fitnessWeek8,
-        fitnessWeek9,
-      ],
-    },
-    {
-      id: 11,
-      title: 'Off-season - Part 2',
-      trainings: [
-        fitnessWeek10,
-        fitnessWeek11,
-        fitnessWeek12,
-        fitnessWeek13,
-        fitnessWeek14,
-        fitnessWeek15,
-        fitnessWeek16,
-        fitnessWeek17,
-        fitnessWeek18,
-        fitnessWeek19,
-      ],
-    },
-    {
-      id: 12,
-      title: 'Pre-season',
-      trainings: [fitnessWeek20, fitnessWeek21],
-    },
-    {
-      id: 13,
-      title: 'In-season',
-      trainings: [diagonalStackTraining],
-    },
-    {
-      id: 14,
-      title: 'Peak',
-      trainings: [diagonalStackTraining],
-    },
-  ],
-};
+  {
+    id: 2,
+    title: 'Initiation Adult',
+    trainings: [firstChildTraining, secondInintiationAdultTraining, thirdInintiationAdultTraining],
+  },
+  {
+    id: 3,
+    title: 'Vertical Stack',
+    trainings: [initiationVerticalTraining, secondVerticalTraining, dumpSwingTraining],
+  },
+  {
+    id: 4,
+    title: 'Horizontal Stack',
+    trainings: [initiationHorizontal, horizontalFlow, horizontalLine],
+  },
+  {
+    id: 5,
+    title: 'Individual Defense',
+    trainings: [defenseBaseTraining, defenseSecond, defenseThird],
+  },
+  {
+    id: 6,
+    title: 'Zone Defense',
+    trainings: [zoneCup],
+  },
+  {
+    id: 7,
+    title: 'Side Stack',
+    trainings: [sideStackTraining],
+  },
+  {
+    id: 8,
+    title: 'Split Stack',
+    trainings: [splitStackTraining],
+  },
+  {
+    id: 9,
+    title: 'Diagonal Stack',
+    trainings: [diagonalStackTraining],
+  },
+  //FITNESS PROGRAMS:
+  {
+    id: 10,
+    title: 'Off-season - Part 1',
+    trainings: [
+      fitnessWeek1,
+      fitnessWeek2,
+      fitnessWeek3,
+      fitnessWeek4,
+      fitnessWeek5,
+      fitnessWeek6,
+      fitnessWeek7,
+      fitnessWeek8,
+      fitnessWeek9,
+    ],
+  },
+  {
+    id: 11,
+    title: 'Off-season - Part 2',
+    trainings: [
+      fitnessWeek10,
+      fitnessWeek11,
+      fitnessWeek12,
+      fitnessWeek13,
+      fitnessWeek14,
+      fitnessWeek15,
+      fitnessWeek16,
+      fitnessWeek17,
+      fitnessWeek18,
+      fitnessWeek19,
+    ],
+  },
+  {
+    id: 12,
+    title: 'Pre-season',
+    trainings: [fitnessWeek20, fitnessWeek21],
+  },
+  {
+    id: 13,
+    title: 'In-season',
+    trainings: [diagonalStackTraining],
+  },
+  {
+    id: 14,
+    title: 'Peak',
+    trainings: [diagonalStackTraining],
+  },
+];

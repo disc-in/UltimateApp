@@ -84,8 +84,18 @@ export default {
     },
     sharePlaceholder: "Pouvez-vous ajouter cet exercices à l'application ?",
   },
+  feedback: {
+    alert: {
+      title: 'Contactez-nous !',
+      content:
+        'Nous serions ravis de connaitre vos opinions pour améliorer notre application.\n\nVoulez-vous nous envoyer un message ?',
+      cancel: 'Annuler',
+      cta: 'Envoyer',
+    },
+    subject: "Retours sur l'app Disc In",
+  },
   fitnessDrillIllustration: {
-    redoMessage: "Vous avez terminé l'exercice !",
+    redoMessage: "Tu as terminé l'exercice !",
   },
   drillListPage: {
     availableDrills: {

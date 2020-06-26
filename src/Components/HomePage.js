@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 import { StyleSheet, View, Text, ImageBackground, TouchableHighlight } from 'react-native';
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
@@ -13,9 +15,7 @@ import ourPlays from '../../assets/HomePage/ourplays.jpg';
 import essential from '../../assets/HomePage/essential.jpg';
 import huddle from '../../assets/HomePage/huddle.png';
 import { DrillTypes } from '../Fixtures/config';
-
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-import { Ionicons } from '@expo/vector-icons';
+import FeedbackButton from './home/FeedbackButton';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -128,6 +128,14 @@ const Theory = props => {
 };
 
 export default HomePage = props => {
+  const { navigation } = props;
+
+  useLayoutEffect(() =>
+    navigation.setOptions({
+      headerRight: () => <FeedbackButton />,
+    }),
+  );
+
   return (
     <Tab.Navigator
       initialRouteName="Frisbee"

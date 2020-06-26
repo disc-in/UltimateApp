@@ -9,6 +9,7 @@ const rootReducer = combineReducers({
   drills: (state = [], action) => state,
   trainings: (state = [], action) => state,
   programs: (state = [], action) => state,
+  fitnessPrograms: (state = [], action) => state,
   theory: (state = [], action) => state,
 });
 

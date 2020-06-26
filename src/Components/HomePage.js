@@ -32,7 +32,10 @@ const HomeScreen = props => {
           </View>
         </ImageBackground>
       </TouchableHighlight>
-      <TouchableHighlight onPress={() => props.navigation.navigate('ProgramListPage')} style={styles.menuItem}>
+      <TouchableHighlight
+        onPress={() => props.navigation.navigate('ProgramListPage', { type: DrillTypes.FRISBEE })}
+        style={styles.menuItem}
+      >
         <ImageBackground source={huddle} style={styles.image}>
           <View style={styles.wrapper}>
             <Text style={styles.text}>{I18n.t('homePage.programs')}</Text>
@@ -67,7 +70,7 @@ const Fitness = props => {
         </ImageBackground>
       </TouchableHighlight>
       <TouchableHighlight
-        onPress={() => props.navigation.navigate('DrillListPage', { type: DrillTypes.FITNESS })}
+        onPress={() => props.navigation.navigate('ProgramListPage', { type: DrillTypes.FITNESS })}
         style={styles.menuItem}
       >
         <ImageBackground source={bodyweight} style={styles.image}>
@@ -80,7 +83,7 @@ const Fitness = props => {
         </ImageBackground>
       </TouchableHighlight>
       <TouchableHighlight
-        onPress={() => props.navigation.navigate('DrillListPage', { type: DrillTypes.FITNESS })}
+        onPress={() => props.navigation.navigate('ProgramListPage', { type: DrillTypes.FITNESS })}
         style={styles.menuItem}
       >
         <ImageBackground source={gymstrong} style={styles.image}>

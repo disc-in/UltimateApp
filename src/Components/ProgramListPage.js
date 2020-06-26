@@ -8,12 +8,17 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
 import Program from './programs/Program';
+import { DrillTypes } from '../Fixtures/config';
 import arrowDark from '../../assets/arrow_dark.png';
 
 export const ProgramListPage = props => {
-  const { navigation, programs } = props;
+  const { navigation, programs, fitnessPrograms, route } = props;
 
-  const activeProgramId = programs.findIndex(program => program.id === props.activeProgram);
+  // TODO: There should be a difference regarding equipment as well. Maybe extract this to another component
+  // So that pages components are simple?
+  const displayedPrograms = route.params.type === DrillTypes.FRISBEE ? programs : fitnessPrograms;
+
+  const activeProgramId = displayedPrograms.findIndex(program => program.id === props.activeProgram);
   const [activeSections, setActiveSections] = useState([activeProgramId]);
 
   const setSections = sections => {
@@ -26,7 +31,7 @@ export const ProgramListPage = props => {
 
   const renderTraining = ({ item, index }) => {
     const training = item;
-    const program = programs[activeSections];
+    const program = displayedPrograms[activeSections];
     const onTrainingPress = () => navigation.navigate('TrainingPage', { training, program });
 
     const isDone = program
@@ -78,7 +83,7 @@ export const ProgramListPage = props => {
       <ScrollView>
         <Accordion
           activeSections={activeSections}
-          sections={programs}
+          sections={displayedPrograms}
           touchableComponent={TouchableOpacity}
           expandMultiple={false}
           renderHeader={renderHeader}
@@ -94,6 +99,7 @@ export const ProgramListPage = props => {
 const mapStateToProps = state => {
   return {
     programs: state.programs,
+    fitnessPrograms: state.fitnessPrograms,
     completeTrainings: state.completeTrainings,
   };
 };

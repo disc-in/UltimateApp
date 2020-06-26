@@ -4832,7 +4832,9 @@ export const programs = [
     title: 'Diagonal Stack',
     trainings: [diagonalStackTraining],
   },
-  //FITNESS PROGRAMS:
+];
+
+export const fitnessPrograms = [
   {
     id: 10,
     title: 'Off-season - Part 1',

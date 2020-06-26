@@ -11,7 +11,7 @@ const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
   whitelist: ['completeTrainings', 'favoriteDrills'],
-  blacklist: ['drills', 'trainings', 'programs', 'theory'],
+  blacklist: ['drills', 'trainings', 'programs', 'fitnessPrograms', 'theory'],
 };
 // Middleware: Redux Persist Persisted Reducer
 const persistedReducer = persistReducer(persistConfig, rootReducer);

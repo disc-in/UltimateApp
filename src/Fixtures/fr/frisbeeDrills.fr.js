@@ -2865,3 +2865,5 @@ export const programs = [
     trainings: [diagonalStackTraining],
   },
 ];
+
+export const fitnessPrograms = [];

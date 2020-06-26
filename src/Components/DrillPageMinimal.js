@@ -31,12 +31,13 @@ export const DrillPageMinimal = props => {
 
   const finishTraining = useCallback(() => {
     completeTraining({ training, program });
+    // TODO: Change this to include type (get it on the program or through params)
     navigation.navigate('ProgramListPage', { activeProgram: program.id });
   }, [training, navigation, program, completeTraining]);
 
   useLayoutEffect(() => {
-    const onProgressDotPress = idx => {
-      navigation.navigate('DrillPageMinimal', { training, drill: training.drills[idx] });
+    const onProgressDotPress = index => {
+      navigation.navigate('DrillPageMinimal', { training, drill: training.drills[index] });
     };
 
     const headerTitle = () => (

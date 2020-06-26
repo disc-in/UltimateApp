@@ -1,5 +1,5 @@
 import React, { useLayoutEffect } from 'react';
-import { StyleSheet, View, Text, ImageBackground, TouchableHighlight, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Text, ImageBackground, TouchableHighlight } from 'react-native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 

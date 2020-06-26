@@ -30,7 +30,7 @@ export const FeedbackButton = props => {
   };
 
   return (
-    <TouchableOpacity style={styles.feedbackButton} onPress={() => feedback()} testID="feedbackButton">
+    <TouchableOpacity style={styles.feedbackButton} onPress={feedback}>
       <MaterialCommunityIcons name="email-outline" color={theme.COLOR_PRIMARY} size={26} />
     </TouchableOpacity>
   );

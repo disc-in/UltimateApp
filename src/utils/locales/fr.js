@@ -95,13 +95,12 @@ export default {
     subject: "Retours sur l'app Disc In",
   },
   fitnessDrillIllustration: {
-    redoMessage: "Tu as fini l'exercice!",
+    redoMessage: "Tu as terminé l'exercice !",
   },
   drillListPage: {
     availableDrills: {
-      zero: '{{count}} drill available',
-      one: '{{count}} drill available',
-      other: '{{count}} drills available',
+      one: '1 exercice disponible',
+      other: '{{count}} exercices disponibles',
     },
   },
   drillPage: {

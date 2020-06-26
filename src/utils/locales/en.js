@@ -82,7 +82,6 @@ export default {
       cancel: 'Cancel',
       cta: 'Send the drill to a dev',
     },
-
     sharePlaceholder: 'Please add this drill to UltimateApp',
   },
   feedback: {

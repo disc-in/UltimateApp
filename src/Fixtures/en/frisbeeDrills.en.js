@@ -4789,54 +4789,62 @@ export const trainings = [
 export const programs = [
   {
     id: 1,
+    type: DrillTypes.FRISBEE,
     title: 'Initiation U13',
     trainings: [firstChildTraining, secondChildTraining, thirdChildTraining],
   },
   {
     id: 2,
+    type: DrillTypes.FRISBEE,
     title: 'Initiation Adult',
     trainings: [firstChildTraining, secondInintiationAdultTraining, thirdInintiationAdultTraining],
   },
   {
     id: 3,
+    type: DrillTypes.FRISBEE,
     title: 'Vertical Stack',
     trainings: [initiationVerticalTraining, secondVerticalTraining, dumpSwingTraining],
   },
   {
     id: 4,
+    type: DrillTypes.FRISBEE,
     title: 'Horizontal Stack',
     trainings: [initiationHorizontal, horizontalFlow, horizontalLine],
   },
   {
     id: 5,
+    type: DrillTypes.FRISBEE,
     title: 'Individual Defense',
     trainings: [defenseBaseTraining, defenseSecond, defenseThird],
   },
   {
     id: 6,
+    type: DrillTypes.FRISBEE,
     title: 'Zone Defense',
     trainings: [zoneCup],
   },
   {
     id: 7,
+    type: DrillTypes.FRISBEE,
     title: 'Side Stack',
     trainings: [sideStackTraining],
   },
   {
     id: 8,
+    type: DrillTypes.FRISBEE,
     title: 'Split Stack',
     trainings: [splitStackTraining],
   },
   {
     id: 9,
+    type: DrillTypes.FRISBEE,
     title: 'Diagonal Stack',
     trainings: [diagonalStackTraining],
   },
-];
-
-export const fitnessPrograms = [
   {
     id: 10,
+    type: DrillTypes.FITNESS,
+    equipmentLabel: EquipmentLabels.NONE,
     title: 'Off-season - Part 1',
     trainings: [
       fitnessWeek1,
@@ -4852,6 +4860,8 @@ export const fitnessPrograms = [
   },
   {
     id: 11,
+    type: DrillTypes.FITNESS,
+    equipmentLabel: EquipmentLabels.NONE,
     title: 'Off-season - Part 2',
     trainings: [
       fitnessWeek10,
@@ -4868,16 +4878,22 @@ export const fitnessPrograms = [
   },
   {
     id: 12,
+    type: DrillTypes.FITNESS,
+    equipmentLabel: EquipmentLabels.NONE,
     title: 'Pre-season',
     trainings: [fitnessWeek20, fitnessWeek21],
   },
   {
     id: 13,
+    type: DrillTypes.FITNESS,
+    equipmentLabel: EquipmentLabels.NONE,
     title: 'In-season',
     trainings: [diagonalStackTraining],
   },
   {
     id: 14,
+    type: DrillTypes.FITNESS,
+    equipmentLabel: EquipmentLabels.NONE,
     title: 'Peak',
     trainings: [diagonalStackTraining],
   },

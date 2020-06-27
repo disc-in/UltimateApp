@@ -12,7 +12,7 @@ import dictionary from '../../assets/HomePage/dictionary.jpg';
 import ourPlays from '../../assets/HomePage/ourplays.jpg';
 import essential from '../../assets/HomePage/essential.jpg';
 import huddle from '../../assets/HomePage/huddle.png';
-import { DrillTypes } from '../Fixtures/config';
+import { DrillTypes, EquipmentLabels } from '../Fixtures/config';
 
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
@@ -70,7 +70,12 @@ const Fitness = props => {
         </ImageBackground>
       </TouchableHighlight>
       <TouchableHighlight
-        onPress={() => props.navigation.navigate('ProgramListPage', { type: DrillTypes.FITNESS })}
+        onPress={() =>
+          props.navigation.navigate('ProgramListPage', {
+            type: DrillTypes.FITNESS,
+            equipmentLabel: EquipmentLabels.NONE,
+          })
+        }
         style={styles.menuItem}
       >
         <ImageBackground source={bodyweight} style={styles.image}>
@@ -83,7 +88,12 @@ const Fitness = props => {
         </ImageBackground>
       </TouchableHighlight>
       <TouchableHighlight
-        onPress={() => props.navigation.navigate('ProgramListPage', { type: DrillTypes.FITNESS })}
+        onPress={() =>
+          props.navigation.navigate('ProgramListPage', {
+            type: DrillTypes.FITNESS,
+            equipmentLabel: EquipmentLabels.FULL,
+          })
+        }
         style={styles.menuItem}
       >
         <ImageBackground source={gymstrong} style={styles.image}>

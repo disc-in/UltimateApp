@@ -2821,49 +2821,56 @@ export const trainings = [
 export const programs = [
   {
     id: 1,
+    type: DrillTypes.FRISBEE,
     title: 'Initiation u13',
     trainings: [firstChildTraining, secondChildTraining, thirdChildTraining],
   },
   {
     id: 2,
+    type: DrillTypes.FRISBEE,
     title: 'Initiation adultes',
     trainings: [firstChildTraining, secondInintiationAdultTraining, thirdInintiationAdultTraining],
   },
   {
     id: 3,
+    type: DrillTypes.FRISBEE,
     title: 'Stack Vertical',
     trainings: [initiationVerticalTraining, secondVerticalTraining, dumpSwingTraining],
   },
   {
     id: 4,
+    type: DrillTypes.FRISBEE,
     title: 'Stack Horizontal',
     trainings: [initiationHorizontal, horizontalFlow, horizontalLine],
   },
   {
     id: 5,
+    type: DrillTypes.FRISBEE,
     title: 'Defense individuel',
     trainings: [defenseBaseTraining, defenseSecond, defenseThird],
   },
   {
     id: 6,
+    type: DrillTypes.FRISBEE,
     title: 'Defense de Zone',
     trainings: [zoneCup],
   },
   {
     id: 7,
+    type: DrillTypes.FRISBEE,
     title: 'Stack sur le côté',
     trainings: [sideStackTraining],
   },
   {
     id: 8,
+    type: DrillTypes.FRISBEE,
     title: 'Stack en U',
     trainings: [splitStackTraining],
   },
   {
     id: 9,
+    type: DrillTypes.FRISBEE,
     title: 'Stack diagonal',
     trainings: [diagonalStackTraining],
   },
 ];
-
-export const fitnessPrograms = [];

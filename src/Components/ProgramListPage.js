@@ -5,19 +5,22 @@ import { DrillTypes } from '../Fixtures/config';
 import ProgramList from './programs/ProgramList';
 
 export const ProgramListPage = props => {
-  const { navigation, frisbeePrograms, fitnessPrograms, activeProgram, completeTrainings, route } = props;
+  const { navigation, programs, activeProgram, completeTrainings, route } = props;
 
   // TODO: There should be a difference regarding equipment as well.
   let displayedPrograms;
 
-  // Try to find programs using activeProgram
+  // Try to find programs from activeProgram
   if (activeProgram) {
-    if (frisbeePrograms.includes(activeProgram)) displayedPrograms = frisbeePrograms;
-    if (fitnessPrograms.includes(activeProgram)) displayedPrograms = fitnessPrograms;
+    displayedPrograms = programs.filter(program => program.type === activeProgram.type);
+    if (activeProgram.type === DrillTypes.FITNESS)
+      displayedPrograms = displayedPrograms.filter(program => program.equipmentLabel === activeProgram.equipmentLabel);
   }
-  // Find programs from type
+  // Find programs from params
   if (!displayedPrograms) {
-    displayedPrograms = route.params.type === DrillTypes.FRISBEE ? frisbeePrograms : fitnessPrograms;
+    displayedPrograms = programs.filter(program => program.type === route.params.type);
+    if (route.params.type === DrillTypes.FITNESS)
+      displayedPrograms = displayedPrograms.filter(program => program.equipmentLabel === route.params.equipmentLabel);
   }
 
   return (
@@ -32,8 +35,7 @@ export const ProgramListPage = props => {
 
 const mapStateToProps = state => {
   return {
-    frisbeePrograms: state.programs,
-    fitnessPrograms: state.fitnessPrograms,
+    programs: state.programs,
     completeTrainings: state.completeTrainings,
   };
 };

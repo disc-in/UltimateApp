@@ -47,7 +47,11 @@ export default {
     homePage: 'Disc In',
     drillListPage: '{{type}} drills',
     filters: 'Filters',
-    programListPage: 'Choose a program',
+    programListPage: {
+      frisbee: 'Practice programs',
+      noEquipment: 'Bodyweight programs',
+      fullEquipment: 'Gym programs',
+    },
     drillPageMinimal: '{{training}} drills',
     animationEditorPage: 'New Drill (experimental)',
     dictionaryPage: 'Dictionary',

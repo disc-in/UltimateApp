@@ -47,7 +47,11 @@ export default {
     homePage: 'Disc In',
     drillListPage: 'Exercices de {{type}}',
     filters: 'Filtres',
-    programListPage: "Programmes d'entraînement",
+    programListPage: {
+      frisbee: "Programmes d'entraînement",
+      noEquipment: 'Entraînements poids du corps',
+      fullEquipment: 'Entraînements en salle',
+    },
     drillPageMinimal: '{{training}} - exercices',
     animationEditorPage: 'Nouvel exo (expérimental)',
     dictionaryPage: 'Lexique',

@@ -5,11 +5,20 @@ import { DrillTypes } from '../Fixtures/config';
 import ProgramList from './programs/ProgramList';
 
 export const ProgramListPage = props => {
-  const { navigation, programs, fitnessPrograms, activeProgram, completeTrainings, route } = props;
+  const { navigation, frisbeePrograms, fitnessPrograms, activeProgram, completeTrainings, route } = props;
 
-  // TODO: There should be a difference regarding equipment as well. Maybe extract this to another component
-  // So that pages components are simple?
-  const displayedPrograms = route.params.type === DrillTypes.FRISBEE ? programs : fitnessPrograms;
+  // TODO: There should be a difference regarding equipment as well.
+  let displayedPrograms;
+
+  // Try to find programs using activeProgram
+  if (activeProgram) {
+    if (frisbeePrograms.includes(activeProgram)) displayedPrograms = frisbeePrograms;
+    if (fitnessPrograms.includes(activeProgram)) displayedPrograms = fitnessPrograms;
+  }
+  // Find programs from type
+  if (!displayedPrograms) {
+    displayedPrograms = route.params.type === DrillTypes.FRISBEE ? frisbeePrograms : fitnessPrograms;
+  }
 
   return (
     <ProgramList
@@ -23,7 +32,7 @@ export const ProgramListPage = props => {
 
 const mapStateToProps = state => {
   return {
-    programs: state.programs,
+    frisbeePrograms: state.programs,
     fitnessPrograms: state.fitnessPrograms,
     completeTrainings: state.completeTrainings,
   };

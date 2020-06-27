@@ -31,7 +31,6 @@ export const DrillPageMinimal = props => {
 
   const finishTraining = useCallback(() => {
     completeTraining({ training, program });
-    // TODO: Change this to include type (get it on the program or through params)
     navigation.navigate('ProgramListPage', { activeProgram: program.id });
   }, [training, navigation, program, completeTraining]);
 

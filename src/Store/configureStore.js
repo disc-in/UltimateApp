@@ -1,8 +1,6 @@
 import { AsyncStorage } from 'react-native';
-import { createStore, applyMiddleware } from 'redux';
+import { createStore } from 'redux';
 import { persistStore, persistReducer } from 'redux-persist';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import { createLogger } from 'redux-logger';
 
 import rootReducer from './Reducers';
 import fixtures from '../Fixtures';
@@ -16,11 +14,8 @@ const persistConfig = {
 // Middleware: Redux Persist Persisted Reducer
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-const enhancers = [applyMiddleware(createLogger())];
-const composedEnhancers = composeWithDevTools(...enhancers);
-
 // Redux: Store
-const store = createStore(persistedReducer, fixtures, composedEnhancers);
+const store = createStore(persistedReducer, fixtures);
 // Middleware: Redux Persist Persister
 const persistor = persistStore(store);
 

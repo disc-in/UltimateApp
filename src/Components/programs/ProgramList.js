@@ -7,7 +7,6 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import I18n from '../../utils/i18n';
 import theme from '../../styles/theme.style';
 import Program from './Program';
-import arrowDark from '../../../assets/arrow_dark.png';
 
 export const ProgramList = props => {
   const { navigation, displayedPrograms, activeProgram, completeTrainings } = props;
@@ -52,9 +51,7 @@ export const ProgramList = props => {
                 size={26}
               />
             )}
-            <View>
-              <Image style={styles.cta} source={arrowDark} />
-            </View>
+            <MaterialCommunityIcons name="chevron-right" color={theme.COLOR_PRIMARY} size={26} />
           </View>
         </View>
       </TouchableOpacity>
@@ -130,10 +127,6 @@ const styles = StyleSheet.create({
   trainingDescription: {
     fontSize: theme.FONT_SIZE_SMALL,
     color: theme.COLOR_PRIMARY,
-  },
-  cta: {
-    height: 20,
-    aspectRatio: 109 / 239,
   },
   arrowDoneContainer: {
     position: 'absolute',

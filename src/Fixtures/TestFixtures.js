@@ -53,6 +53,8 @@ export const createTraining = (override = {}) => {
 export const createProgram = (override = {}) => {
   return {
     id: 1,
+    type: DrillTypes.FITNESS,
+    equipmentLabel: EquipmentLabels.NONE,
     title: 'Beginner',
     trainings: [createTraining()],
     ...override,
@@ -260,6 +262,8 @@ export default {
   programs: [
     {
       id: 1,
+      type: DrillTypes.FITNESS,
+      equipmentLabel: EquipmentLabels.NONE,
       title: 'Beginner',
       trainings: [training, training2],
     },

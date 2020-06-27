@@ -7,7 +7,6 @@ import ProgramList from './programs/ProgramList';
 export const ProgramListPage = props => {
   const { navigation, programs, activeProgram, completeTrainings, route } = props;
 
-  // TODO: There should be a difference regarding equipment as well.
   let displayedPrograms;
 
   // Try to find programs from activeProgram

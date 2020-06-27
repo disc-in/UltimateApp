@@ -1168,17 +1168,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
                             }
                           }
                         >
-                          <View>
-                            <Image
-                              source={1}
-                              style={
-                                Object {
-                                  "aspectRatio": 0.4560669456066946,
-                                  "height": 20,
-                                }
-                              }
-                            />
-                          </View>
+                          <Text />
                         </View>
                       </View>
                     </View>
@@ -1260,17 +1250,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
                             }
                           }
                         >
-                          <View>
-                            <Image
-                              source={1}
-                              style={
-                                Object {
-                                  "aspectRatio": 0.4560669456066946,
-                                  "height": 20,
-                                }
-                              }
-                            />
-                          </View>
+                          <Text />
                         </View>
                       </View>
                     </View>

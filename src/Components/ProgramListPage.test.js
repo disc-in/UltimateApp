@@ -5,17 +5,24 @@ import { render, fireEvent, cleanup, waitForElement, act } from 'react-native-te
 
 import store from '../Store/testStore';
 import { createProgram, createTraining } from '../Fixtures/TestFixtures';
+import { DrillTypes, EquipmentLabels } from '../Fixtures/config';
 
 import ConnectedProgramListPage, { ProgramListPage } from './ProgramListPage';
 
 afterEach(cleanup);
 
 describe('<ProgramListPage />', () => {
+  const route = {
+    params: {
+      type: DrillTypes.FITNESS,
+      equipmentLabel: EquipmentLabels.NONE,
+    },
+  };
   it('renders correctly when connected', () => {
     const tree = renderer
       .create(
         <Provider store={store}>
-          <ConnectedProgramListPage />
+          <ConnectedProgramListPage route={route} />
         </Provider>,
       )
       .toJSON();
@@ -33,7 +40,7 @@ describe('<ProgramListPage />', () => {
 
     const { getByText } = render(
       <Provider store={store}>
-        <ProgramListPage programs={programs} navigation={navigation} completeTrainings={[]} />
+        <ProgramListPage route={route} programs={programs} navigation={navigation} completeTrainings={[]} />
       </Provider>,
     );
 

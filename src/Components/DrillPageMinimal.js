@@ -35,8 +35,8 @@ export const DrillPageMinimal = props => {
   }, [training, navigation, program, completeTraining]);
 
   useLayoutEffect(() => {
-    const onProgressDotPress = idx => {
-      navigation.navigate('DrillPageMinimal', { training, drill: training.drills[idx] });
+    const onProgressDotPress = index => {
+      navigation.navigate('DrillPageMinimal', { training, drill: training.drills[index] });
     };
 
     const headerTitle = () => (

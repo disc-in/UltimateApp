@@ -17,6 +17,7 @@ import DictionaryPage from '../Components/DictionaryPage';
 import TacticsPage from '../Components/TacticsPage';
 
 import I18n from '../utils/i18n';
+import { DrillTypes, EquipmentLabels } from '../Fixtures/config';
 
 const Stack = createStackNavigator();
 
@@ -42,7 +43,15 @@ export const Navigation = () => (
     <Stack.Screen
       name="ProgramListPage"
       component={ProgramListPage}
-      options={{ title: I18n.t('navigation.programListPage') }}
+      options={({ route }) => {
+        if (route.params.type === DrillTypes.FRISBEE) return { title: I18n.t('navigation.programListPage.frisbee') };
+        return {
+          title:
+            route.params.equipmentLabel === EquipmentLabels.NONE
+              ? I18n.t('navigation.programListPage.noEquipment')
+              : I18n.t('navigation.programListPage.fullEquipment'),
+        };
+      }}
     />
 
     <Stack.Screen

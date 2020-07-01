@@ -7,90 +7,88 @@ import {
   SeasonTimings,
   EquipmentLabels,
   IllustrationType,
-} from './config';
+} from '../config';
 
-import { dictionary, essentials, tactics } from './theory.en';
-
-import animationGoToTen from './Animation/AnimationGoToTen';
-import throwingMachine from './Animation/ThrowingMachine';
-import giveAndGo from './Animation/GiveAndGo';
-import threePerson from './Animation/ThreePerson';
-import redemption from './Animation/Redemption';
-import dwarDuel from './Animation/DwarfDuel';
-import backdoor from './Animation/Backdoor';
-import powerReset from './Animation/PowerReset';
-import resetOpen from './Animation/ResetOpen';
-import upline from './Animation/Upline';
-import around from './Animation/Around';
-import resetBreak from './Animation/ResetBreak';
-import ladder from './Animation/Ladder';
-import giveAndGoRace from './Animation/GiveAndGoRace';
-import blockTheUnder from './Animation/BlockTheUnder';
-import blockEverything from './Animation/BlockEverything';
-import defensiveUnder from './Animation/DefensiveUnder';
-import defenseDeep from './Animation/DefenseDeep';
-import threeVersusTwo from './Animation/ThreeVersusTwo';
-import train from './Animation/Train';
-import trainRace from './Animation/TrainRace';
-import triangleDeath from './Animation/TriangleDeath';
-import oneFakeTrain from './Animation/OneFakeTrain';
-import twoFakeTrain from './Animation/TwoFakeTrain';
-import breakSide from './Animation/BreakSide';
-import goaltimate from './Animation/Goaltimate';
-import bigEight from './Animation/BigEight';
-import theM from './Animation/TheM';
-import dishiesChain from './Animation/DishiesChain';
-import dishiesPoach from './Animation/DishiesPoach';
-import discGolfAnimation from './Animation/DiscGolf';
-import dDCAnimation from './Animation/DDC';
-import horizontalTimingAnimation from './Animation/HorizontalTiming';
-import horizontalTimingOpenAnimation from './Animation/HorizontalTimingOpen';
-import threeHorizontal from './Animation/ThreeHorizontal';
-import threeHorizontalGame from './Animation/ThreeHorizontalGame';
-import theDual from './Animation/TheDual';
-import theDualFake from './Animation/theDualFake';
-import treasureHunt from './Animation/TreasureHunt';
-import bulldogAnimation from './Animation/Bulldogs';
-import aussieRules from './Animation/AussieRules';
-import cardinalAnimation from './Animation/Cardinal';
-import horizontalToVerticalAnimation from './Animation/HorizontalToVertical';
-import horizontalDiamond from './Animation/HorizontalDiamond';
-import iso from './Animation/Iso';
-import horizontalTrapOpen from './Animation/HorizontalTrapOpen';
-import horizontalTrapBreak from './Animation/HorizontalTrapBreak';
-import horizontalTrapGame from './Animation/HorizontalTrapGame';
-import hoTrapFar from './Animation/HoTrapFar';
-import hoTrapDirect from './Animation/HoTrapDirect';
-import hoTrapGame from './Animation/HoTrapGame';
-import hoHandler from './Animation/HoHandler';
-import hoHandlerBreak from './Animation/HoHandlerBreak';
-import hoHandlerGame from './Animation/HoHandlerGame';
-import breakDanceAnimation from './Animation/BreakDance';
-import breakRace from './Animation/BreakRace';
-import longCheck from './Animation/LongCheck';
-import throwCatch from './Animation/ThrowCatch';
-import threeGame from './Animation/ThreeGame';
-import normalGameAnimation from './Animation/NormalGame';
-import endzoneAnimation from './Animation/Endzone';
-import endzoneFinition from './Animation/EndzoneFinition';
-import stopFlowAnimation from './Animation/StopFlow';
-import theTunnelAnimation from './Animation/TheTunnel';
-import leopard from './Animation/Leopard';
-import cupSwingingAnimation from './Animation/CupSwinging';
-import zoneGameAnimation from './Animation/ZoneGame';
-import diagonalOpenAnimation from './Animation/DiagonalOpen';
-import diagonalPowerAnimation from './Animation/DiagonalPower';
-import diagonalOverAnimation from './Animation/DiagonalOver';
-import diagonalGameAnimation from './Animation/DiagonalGame';
-import diagonaldualOpen from './Animation/DiagonalOpenTwo';
-import diagonaldualBreak from './Animation/DiagonalDuelBreak';
-import diagonalDualGame from './Animation/DiagonalDualGame';
-import splitIsoAnimation from './Animation/SplitIso';
-import splitGameDual from './Animation/SplitGameDual';
-import splitToVerticalAnimation from './Animation/SplitToVertical';
-import splitWindmill from './Animation/SplitWindmill';
-import sideFlow from './Animation/SideFlow';
-import sideWindmill from './Animation/SideWindmill';
+import animationGoToTen from '../Animation/AnimationGoToTen';
+import throwingMachine from '../Animation/ThrowingMachine';
+import giveAndGo from '../Animation/GiveAndGo';
+import threePerson from '../Animation/ThreePerson';
+import redemption from '../Animation/Redemption';
+import dwarDuel from '../Animation/DwarfDuel';
+import backdoor from '../Animation/Backdoor';
+import powerReset from '../Animation/PowerReset';
+import resetOpen from '../Animation/ResetOpen';
+import upline from '../Animation/Upline';
+import around from '../Animation/Around';
+import resetBreak from '../Animation/ResetBreak';
+import ladder from '../Animation/Ladder';
+import giveAndGoRace from '../Animation/GiveAndGoRace';
+import blockTheUnder from '../Animation/BlockTheUnder';
+import blockEverything from '../Animation/BlockEverything';
+import defensiveUnder from '../Animation/DefensiveUnder';
+import defenseDeep from '../Animation/DefenseDeep';
+import threeVersusTwo from '../Animation/ThreeVersusTwo';
+import train from '../Animation/Train';
+import trainRace from '../Animation/TrainRace';
+import triangleDeath from '../Animation/TriangleDeath';
+import oneFakeTrain from '../Animation/OneFakeTrain';
+import twoFakeTrain from '../Animation/TwoFakeTrain';
+import breakSide from '../Animation/BreakSide';
+import goaltimate from '../Animation/Goaltimate';
+import bigEight from '../Animation/BigEight';
+import theM from '../Animation/TheM';
+import dishiesChain from '../Animation/DishiesChain';
+import dishiesPoach from '../Animation/DishiesPoach';
+import discGolfAnimation from '../Animation/DiscGolf';
+import dDCAnimation from '../Animation/DDC';
+import horizontalTimingAnimation from '../Animation/HorizontalTiming';
+import horizontalTimingOpenAnimation from '../Animation/HorizontalTimingOpen';
+import threeHorizontal from '../Animation/ThreeHorizontal';
+import threeHorizontalGame from '../Animation/ThreeHorizontalGame';
+import theDual from '../Animation/TheDual';
+import theDualFake from '../Animation/theDualFake';
+import treasureHunt from '../Animation/TreasureHunt';
+import bulldogAnimation from '../Animation/Bulldogs';
+import aussieRules from '../Animation/AussieRules';
+import cardinalAnimation from '../Animation/Cardinal';
+import horizontalToVerticalAnimation from '../Animation/HorizontalToVertical';
+import horizontalDiamond from '../Animation/HorizontalDiamond';
+import iso from '../Animation/Iso';
+import horizontalTrapOpen from '../Animation/HorizontalTrapOpen';
+import horizontalTrapBreak from '../Animation/HorizontalTrapBreak';
+import horizontalTrapGame from '../Animation/HorizontalTrapGame';
+import hoTrapFar from '../Animation/HoTrapFar';
+import hoTrapDirect from '../Animation/HoTrapDirect';
+import hoTrapGame from '../Animation/HoTrapGame';
+import hoHandler from '../Animation/HoHandler';
+import hoHandlerBreak from '../Animation/HoHandlerBreak';
+import hoHandlerGame from '../Animation/HoHandlerGame';
+import breakDanceAnimation from '../Animation/BreakDance';
+import breakRace from '../Animation/BreakRace';
+import longCheck from '../Animation/LongCheck';
+import throwCatch from '../Animation/ThrowCatch';
+import threeGame from '../Animation/ThreeGame';
+import normalGameAnimation from '../Animation/NormalGame';
+import endzoneAnimation from '../Animation/Endzone';
+import endzoneFinition from '../Animation/EndzoneFinition';
+import stopFlowAnimation from '../Animation/StopFlow';
+import theTunnelAnimation from '../Animation/TheTunnel';
+import leopard from '../Animation/Leopard';
+import cupSwingingAnimation from '../Animation/CupSwinging';
+import zoneGameAnimation from '../Animation/ZoneGame';
+import diagonalOpenAnimation from '../Animation/DiagonalOpen';
+import diagonalPowerAnimation from '../Animation/DiagonalPower';
+import diagonalOverAnimation from '../Animation/DiagonalOver';
+import diagonalGameAnimation from '../Animation/DiagonalGame';
+import diagonaldualOpen from '../Animation/DiagonalOpenTwo';
+import diagonaldualBreak from '../Animation/DiagonalDuelBreak';
+import diagonalDualGame from '../Animation/DiagonalDualGame';
+import splitIsoAnimation from '../Animation/SplitIso';
+import splitGameDual from '../Animation/SplitGameDual';
+import splitToVerticalAnimation from '../Animation/SplitToVertical';
+import splitWindmill from '../Animation/SplitWindmill';
+import sideFlow from '../Animation/SideFlow';
+import sideWindmill from '../Animation/SideWindmill';
 
 const stabilityDrill = {
   id: 1,
@@ -701,6 +699,1770 @@ const conditioningFullbodyDrill = {
       illustrationSource: '416604913',
       sounds: true,
       repetition: '',
+      rest: '',
+      instruction: '',
+    },
+  ],
+};
+
+const mas30 = {
+  id: 8,
+  type: DrillTypes.FITNESS,
+  author: 'Edwin',
+  title: 'MAS : 30/30',
+  image: 'https://zupimages.net/up/20/19/kj0f.jpg',
+  description:
+    'At the end of a contest, at the end of a game or after five turnovers, you want to dominate the field. This program is based on a mix between (lactic) resistance, MAS and still a lot of speed and explosiveness.',
+  minimalPlayersNumber: 1,
+  equipmentLabel: EquipmentLabels.NONE,
+  equipment: 'None',
+  durationInMinutes: 35,
+  intensity: Intensities.LOW,
+  goals: [FitnessGoals.FULL_BODY],
+  seasonTiming: SeasonTimings.OFF_SEASON,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'Warm up',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431876595',
+      sounds: true,
+      repetition: '',
+      rest: '',
+      instruction: 'Moderate warm up',
+    },
+    {
+      id: 2,
+      title: 'MAS speed',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431531805',
+      sounds: false,
+      repetition: '8*(30/30)',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 3,
+      title: 'Rest',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431528434',
+      sounds: false,
+      repetition: '3 min',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 4,
+      title: 'MAS speed',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431531805',
+      sounds: false,
+      repetition: '8*(30/30)',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 5,
+      title: 'Rest',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431528434',
+      sounds: false,
+      repetition: '3"',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 6,
+      title: 'MAS speed',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431531805',
+      sounds: false,
+      repetition: '8*(30/30)',
+      rest: '',
+      instruction: '',
+    },
+  ],
+};
+
+const fartlek = {
+  id: 9,
+  type: DrillTypes.FITNESS,
+  author: 'Edwin',
+  title: 'Fartlek',
+  image: 'https://zupimages.net/up/20/19/kj0f.jpg',
+  description:
+    "Light warm-up \nFartlek 'adapted': 25' running at jogging speed with 10\"\" every minute make a slight acceleration of a few km/h more (For example, if you run at 10km/h, you can aim for 13 or 14km/h) (50 seconds jogging speed, 10 seconds slight acceleration). The goal is to go for the feeling and to concentrate on the feeling. At the end, you shouldn't be more exhausted than a big jog. ",
+  minimalPlayersNumber: 1,
+  equipmentLabel: EquipmentLabels.NONE,
+  equipment: 'None',
+  durationInMinutes: 30,
+  intensity: Intensities.LOW,
+  goals: [FitnessGoals.FULL_BODY],
+  seasonTiming: SeasonTimings.OFF_SEASON,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'Warm up',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431876595',
+      sounds: true,
+      repetition: '',
+      rest: '',
+      instruction: 'Moderate warm up',
+    },
+    {
+      id: 2,
+      title: 'Fartlek',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431521694',
+      sounds: false,
+      repetition: '25"',
+      rest: '',
+      instruction: 'For 10 seconds every minute, accelerates by a few kilometres per hour.',
+    },
+  ],
+};
+
+const suicide = {
+  id: 10,
+  type: DrillTypes.FITNESS,
+  author: 'Moby',
+  title: 'Suicide drill',
+  image: 'https://zupimages.net/up/20/19/va5f.jpg',
+  description:
+    'Big warm-up, you have to be ready to sprint. Speed to adopt that of a 400m. Recovery of 4 minutes between each series. 5 meters between each cone. End of session small jogging 10 minutes',
+  minimalPlayersNumber: 1,
+  equipmentLabel: EquipmentLabels.NONE,
+  equipment: 'None',
+  durationInMinutes: 45,
+  intensity: Intensities.HIGH,
+  goals: [FitnessGoals.WARM_UP],
+  seasonTiming: SeasonTimings.OFF_SEASON,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'A Dynamic March',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406764988',
+      sounds: false,
+      repetition: '4',
+      rest: '',
+      instruction: 'Moderate warm up',
+    },
+    {
+      id: 2,
+      title: 'Wall Fire',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406764961',
+      sounds: false,
+      repetition: '9',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 3,
+      title: 'Perfect Stretch',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431866818',
+      sounds: false,
+      repetition: '1',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 4,
+      title: 'Lunges Walk',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431868677',
+      sounds: false,
+      repetition: '1',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 5,
+      title: 'A Skips',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406760709',
+      sounds: false,
+      repetition: '3',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 6,
+      title: 'B Skips',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406760726',
+      sounds: false,
+      repetition: '3',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 7,
+      title: 'Curtsy Walk',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431867802',
+      sounds: false,
+      repetition: '6',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 8,
+      title: 'Boundings',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406764918',
+      sounds: false,
+      repetition: '2',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 9,
+      title: 'Falling Start',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406760689',
+      sounds: false,
+      repetition: '2',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 10,
+      title: 'Horizontal Crossover',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406764942',
+      sounds: false,
+      repetition: '2',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 11,
+      title: 'Suicide',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431537882',
+      sounds: false,
+      repetition: '1',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 12,
+      title: 'Rest',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431539031',
+      sounds: false,
+      repetition: '4',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 13,
+      title: 'Suicide',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431537882',
+      sounds: false,
+      repetition: '1',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 14,
+      title: 'Rest',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431539031',
+      sounds: false,
+      repetition: '4',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 15,
+      title: 'Suicide',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431537882',
+      sounds: false,
+      repetition: '1',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 16,
+      title: 'Rest',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431539031',
+      sounds: false,
+      repetition: '4',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 17,
+      title: 'Suicide',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431537882',
+      sounds: false,
+      repetition: '1',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 18,
+      title: 'Rest',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431539031',
+      sounds: false,
+      repetition: '4',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 19,
+      title: 'Suicide',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431537882',
+      sounds: false,
+      repetition: '1',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 20,
+      title: 'Rest',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431539031',
+      sounds: false,
+      repetition: '4',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 21,
+      title: 'Suicide',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431537882',
+      sounds: false,
+      repetition: '1',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 22,
+      title: 'Rest',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431539031',
+      sounds: false,
+      repetition: '4',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 23,
+      title: 'Jogging',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431540566',
+      sounds: false,
+      repetition: '10"',
+      rest: '',
+      instruction: '',
+    },
+  ],
+};
+
+const lacticSprint = {
+  id: 11,
+  type: DrillTypes.FITNESS,
+  author: 'Edwin',
+  title: 'Lactic Sprint',
+  image: 'https://zupimages.net/up/20/19/kj0f.jpg',
+  description:
+    "Intense warm up. You have to be prepared to withstand a very high effort and high speed. 3 series of 4 race repetitions over 1'30 with the maximum distance in 1'30. 3'30 recovery between each repetition. 7'30 of recovery between the two series: possibility of throwing.",
+  minimalPlayersNumber: 1,
+  equipmentLabel: EquipmentLabels.NONE,
+  equipment: 'None',
+  durationInMinutes: 40,
+  intensity: Intensities.HIGH,
+  goals: [FitnessGoals.FULL_BODY],
+  seasonTiming: SeasonTimings.OFF_SEASON,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'A Dynamic March',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406764988',
+      sounds: false,
+      repetition: '4',
+      rest: '',
+      instruction: 'Moderate warm up',
+    },
+    {
+      id: 2,
+      title: 'Wall Fire',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406764961',
+      sounds: false,
+      repetition: '9',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 3,
+      title: 'Perfect Stretch',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431866818',
+      sounds: false,
+      repetition: '1',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 4,
+      title: 'Lunges Walk',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431868677',
+      sounds: false,
+      repetition: '1',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 5,
+      title: 'A Skips',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406760709',
+      sounds: false,
+      repetition: '3',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 6,
+      title: 'B Skips',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406760726',
+      sounds: false,
+      repetition: '3',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 7,
+      title: 'Curtsy Walk',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431867802',
+      sounds: false,
+      repetition: '6',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 8,
+      title: 'Boundings',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406764918',
+      sounds: false,
+      repetition: '2',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 9,
+      title: 'Falling Start',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406760689',
+      sounds: false,
+      repetition: '2',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 10,
+      title: 'Horizontal Crossover',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406764942',
+      sounds: false,
+      repetition: '2',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 11,
+      title: 'Sprints',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431531805',
+      sounds: false,
+      repetition: "4*(1'30/3'30)",
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 12,
+      title: 'Rest',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431549240',
+      sounds: true,
+      repetition: "7'30",
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 13,
+      title: 'Sprints',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431531805',
+      sounds: false,
+      repetition: "4*(1'30/3'30)",
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 14,
+      title: 'Rest',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431549240',
+      sounds: true,
+      repetition: "7'30",
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 15,
+      title: 'Sprints',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431531805',
+      sounds: false,
+      repetition: "4*(1'30/3'30)",
+      rest: '',
+      instruction: '',
+    },
+  ],
+};
+
+const tDrill = {
+  id: 12,
+  type: DrillTypes.FITNESS,
+  author: 'Edwin',
+  title: 'Flash Team 2',
+  image: 'https://zupimages.net/up/20/19/kj0f.jpg',
+  description:
+    'Warm-up (for sprint and change of direction).\n6 repetitions of 30 meters T-drill then 6 repetitions of Shuttle 5-10-5. Then repeat. A total of 4 sets of 6 repetitions. 45sec of recovery between repetiton and 3min of recovery between sets.',
+  minimalPlayersNumber: 1,
+  equipmentLabel: EquipmentLabels.NONE,
+  equipment: 'None',
+  durationInMinutes: 45,
+  intensity: Intensities.LOW,
+  goals: [FitnessGoals.FULL_BODY],
+  seasonTiming: SeasonTimings.OFF_SEASON,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'A Dynamic March',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406764988',
+      sounds: false,
+      repetition: '4',
+      rest: '',
+      instruction: 'Moderate warm up',
+    },
+    {
+      id: 2,
+      title: 'Wall Fire',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406764961',
+      sounds: false,
+      repetition: '9',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 3,
+      title: 'Perfect Stretch',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431866818',
+      sounds: false,
+      repetition: '1',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 4,
+      title: 'Lunges Walk',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431868677',
+      sounds: false,
+      repetition: '1',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 5,
+      title: 'A Skips',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406760709',
+      sounds: false,
+      repetition: '3',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 6,
+      title: 'B Skips',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406760726',
+      sounds: false,
+      repetition: '3',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 7,
+      title: 'Curtsy Walk',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431867802',
+      sounds: false,
+      repetition: '6',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 8,
+      title: 'Boundings',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406764918',
+      sounds: false,
+      repetition: '2',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 9,
+      title: 'Falling Start',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406760689',
+      sounds: false,
+      repetition: '2',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 10,
+      title: 'Horizontal Crossover',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406764942',
+      sounds: false,
+      repetition: '2',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 11,
+      title: 'Shuttle 5-10-5',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431732936',
+      sounds: false,
+      repetition: '6',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 12,
+      title: 'Rest',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431528434',
+      sounds: false,
+      repetition: "3'",
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 13,
+      title: 'T-drill',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431734014',
+      sounds: true,
+      repetition: '6',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 14,
+      title: 'Rest',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431528434',
+      sounds: false,
+      repetition: "3'",
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 15,
+      title: 'Shuttle 5-10-5',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431732936',
+      sounds: false,
+      repetition: '6',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 16,
+      title: 'Rest',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431528434',
+      sounds: false,
+      repetition: "3'",
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 17,
+      title: 'T-drill',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431734014',
+      sounds: true,
+      repetition: '6',
+      rest: '',
+      instruction: '',
+    },
+  ],
+};
+
+const mas30Light = {
+  id: 13,
+  type: DrillTypes.FITNESS,
+  author: 'Edwin',
+  title: 'Machine 2',
+  image: 'https://zupimages.net/up/20/19/kj0f.jpg',
+  description:
+    'Big warm-up, you have to be ready to sprint. Speed to adopt that of a 400m. Recovery of 4 minutes between each series. 5 meters between each cone. End of session small jogging 10 minutes ',
+  minimalPlayersNumber: 1,
+  equipmentLabel: EquipmentLabels.NONE,
+  equipment: 'None',
+  durationInMinutes: 30,
+  intensity: Intensities.HIGH,
+  goals: [FitnessGoals.FULL_BODY],
+  seasonTiming: SeasonTimings.OFF_SEASON,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'Warm up',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431876595',
+      sounds: true,
+      repetition: '',
+      rest: '',
+      instruction: 'Moderate warm up',
+    },
+    {
+      id: 2,
+      title: 'MAS speed',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431531805',
+      sounds: false,
+      repetition: '6*(30/30)',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 3,
+      title: 'Rest',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431528434',
+      sounds: false,
+      repetition: '3 min',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 4,
+      title: 'MAS speed',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431531805',
+      sounds: false,
+      repetition: '6*(30/30)',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 5,
+      title: 'Rest',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431528434',
+      sounds: false,
+      repetition: '3 min',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 6,
+      title: 'MAS speed',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431531805',
+      sounds: false,
+      repetition: '6*(30/30)',
+      rest: '',
+      instruction: '',
+    },
+  ],
+};
+
+const circuit = {
+  id: 14,
+  type: DrillTypes.FITNESS,
+  author: 'Edwin',
+  title: 'Total Circuit',
+  image: 'https://zupimages.net/up/20/19/kj0f.jpg',
+  description: 'Follow the workout',
+  minimalPlayersNumber: 1,
+  equipmentLabel: EquipmentLabels.NONE,
+  equipment: 'None',
+  durationInMinutes: 8,
+  intensity: Intensities.HIGH,
+  goals: [FitnessGoals.FULL_BODY],
+  seasonTiming: SeasonTimings.OFF_SEASON,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'Warm up',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431876595',
+      sounds: true,
+      repetition: '',
+      rest: '',
+      instruction: 'Moderate warm up',
+    },
+    {
+      id: 2,
+      title: 'Hindu Push Up',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406233220',
+      sounds: false,
+      repetition: '30 s',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 3,
+      title: 'Plank',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406527719',
+      sounds: false,
+      repetition: '30 s',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 4,
+      title: 'Russian Twist',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431744680',
+      sounds: false,
+      repetition: '30 s',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 5,
+      title: 'Jump Lunge',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431751124',
+      sounds: false,
+      repetition: '30 s',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 6,
+      title: 'Side Plank left',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431751410',
+      sounds: false,
+      repetition: '30 s',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 7,
+      title: 'Reverse Crunch',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431751736',
+      sounds: false,
+      repetition: '30 s',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 8,
+      title: 'Side Plank Right',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431751410',
+      sounds: false,
+      repetition: '30 s',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 9,
+      title: 'Superman',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431752093',
+      sounds: false,
+      repetition: '30 s',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 10,
+      title: 'Single Leg Bridge Left',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431759737',
+      sounds: false,
+      repetition: '30 s',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 11,
+      title: 'Single Leg Bridge Right',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431759737',
+      sounds: false,
+      repetition: '30 s',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 12,
+      title: 'Jump Squat',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '407999105',
+      sounds: false,
+      repetition: '30 s',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 13,
+      title: 'Wall sit',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431760958',
+      sounds: false,
+      repetition: '30 s',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 14,
+      title: 'Jump rope / High knees',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431761388',
+      sounds: false,
+      repetition: '30 s',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 15,
+      title: 'Cossac Squat',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431760267',
+      sounds: false,
+      repetition: '1 min',
+      rest: '',
+      instruction: '',
+    },
+  ],
+};
+
+const rest = {
+  id: 15,
+  type: DrillTypes.FITNESS,
+  author: 'Edwin',
+  title: 'Recovery Week',
+  image: 'https://zupimages.net/up/20/18/hwnh.jpg',
+  description: "It's a recovery week where you need to relax and to gain energy ",
+  minimalPlayersNumber: 1,
+  equipmentLabel: EquipmentLabels.NONE,
+  equipment: 'None',
+  durationInMinutes: 120,
+  intensity: Intensities.MODERATE,
+  goals: [FitnessGoals.WARM_UP],
+  seasonTiming: SeasonTimings.OFF_SEASON,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'Time to rest',
+      illustrationType: IllustrationType.VIMEO,
+      sounds: false,
+      illustrationSource: '431767386',
+      repetition: '',
+      rest: '',
+      instruction: '',
+    },
+  ],
+};
+
+const serpentine = {
+  id: 16,
+  type: DrillTypes.FITNESS,
+  author: 'Edwin',
+  title: 'Serpentine',
+  image: 'https://zupimages.net/up/20/19/kj0f.jpg',
+  description:
+    'This workout is designed to increase your quickness, improve your footwork, and generally make you more explosive and agile.\nAfter your warmup, set up your cones to make use of the full space available to you by dropping the first at one end of your available space and another about 20 yards away. Then, fill in the space between with your remaining cones in a serpentine pattern, walking each cone about five yards away in a diagonal opposite direction from the last one. As easy as that, you have created a small agility course.',
+  minimalPlayersNumber: 1,
+  equipmentLabel: EquipmentLabels.NONE,
+  equipment: '8 cones',
+  durationInMinutes: 30,
+  intensity: Intensities.HIGH,
+  goals: [FitnessGoals.FULL_BODY],
+  seasonTiming: SeasonTimings.OFF_SEASON,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'A Dynamic March',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406764988',
+      sounds: false,
+      repetition: '4',
+      rest: '',
+      instruction: 'Moderate warm up',
+    },
+    {
+      id: 2,
+      title: 'Wall Fire',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406764961',
+      sounds: false,
+      repetition: '9',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 3,
+      title: 'Perfect Stretch',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431866818',
+      sounds: false,
+      repetition: '1',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 4,
+      title: 'Lunges Walk',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431868677',
+      sounds: false,
+      repetition: '1',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 5,
+      title: 'A Skips',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406760709',
+      sounds: false,
+      repetition: '3',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 6,
+      title: 'B Skips',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406760726',
+      sounds: false,
+      repetition: '3',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 7,
+      title: 'Curtsy Walk',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431867802',
+      sounds: false,
+      repetition: '6',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 8,
+      title: 'Boundings',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406764918',
+      sounds: false,
+      repetition: '2',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 9,
+      title: 'Falling Start',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406760689',
+      sounds: false,
+      repetition: '2',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 10,
+      title: 'Horizontal Crossover',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406764942',
+      sounds: false,
+      repetition: '2',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 11,
+      title: 'Serpentine',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431773220',
+      sounds: false,
+      repetition: '8',
+      rest: '',
+      instruction: '',
+    },
+  ],
+};
+
+const mas15 = {
+  id: 20,
+  type: DrillTypes.FITNESS,
+  author: 'Edwin',
+  title: 'Machine 5: MAS',
+  image: 'https://zupimages.net/up/20/19/kj0f.jpg',
+  description:
+    'This workout is designed to increase your quickness, improve your footwork, and generally make you more explosive and agile.\nAfter your warmup, set up your cones to make use of the full space available to you by dropping the first at one end of your available space and another about 20 yards away. Then, fill in the space between with your remaining cones in a serpentine pattern, walking each cone about five yards away in a diagonal opposite direction from the last one. As easy as that, you have created a small agility course.',
+  minimalPlayersNumber: 1,
+  equipmentLabel: EquipmentLabels.NONE,
+  equipment: '8 cones',
+  durationInMinutes: 30,
+  intensity: Intensities.HIGH,
+  goals: [FitnessGoals.FULL_BODY],
+  seasonTiming: SeasonTimings.OFF_SEASON,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'Warm up',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431876595',
+      sounds: true,
+      repetition: '',
+      rest: '',
+      instruction: 'Moderate warm up',
+    },
+    {
+      id: 2,
+      title: 'MAS speed',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431531805',
+      sounds: true,
+      repetition: '10*(15/15)',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 3,
+      title: 'Rest',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431528434',
+      sounds: true,
+      repetition: '3 min',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 4,
+      title: 'MAS speed',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431531805',
+      sounds: true,
+      repetition: '10*(15/15)',
+      rest: '',
+      instruction: '',
+    },
+  ],
+};
+
+const circuitLong = {
+  id: 21,
+  type: DrillTypes.FITNESS,
+  author: 'Edwin',
+  title: 'Machines 6: Circuit',
+  image: 'https://zupimages.net/up/20/19/kj0f.jpg',
+  description: 'Follow the workout',
+  minimalPlayersNumber: 1,
+  equipmentLabel: EquipmentLabels.NONE,
+  equipment: 'None',
+  durationInMinutes: 15,
+  intensity: Intensities.LOW,
+  goals: [FitnessGoals.FULL_BODY],
+  seasonTiming: SeasonTimings.OFF_SEASON,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'Warm up',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431876595',
+      sounds: false,
+      repetition: '',
+      rest: '',
+      instruction: 'Moderate warm up',
+    },
+    {
+      id: 2,
+      title: 'Hindu Push Up',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406233220',
+      sounds: false,
+      repetition: '30 s',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 3,
+      title: 'Plank',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406527719',
+      sounds: false,
+      repetition: '30 s',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 4,
+      title: 'Russian Twist',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431744680',
+      sounds: false,
+      repetition: '30 s',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 5,
+      title: 'Jump Lunge',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431751124',
+      sounds: false,
+      repetition: '30 s',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 6,
+      title: 'Side Plank left',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431751410',
+      sounds: false,
+      repetition: '30 s',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 7,
+      title: 'Reverse Crunch',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431751736',
+      sounds: false,
+      repetition: '30 s',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 8,
+      title: 'Side Plank Right',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431751410',
+      sounds: false,
+      repetition: '30 s',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 9,
+      title: 'Superman',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431752093',
+      sounds: false,
+      repetition: '30 s',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 10,
+      title: 'Single Leg Bridge Left',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431759737',
+      sounds: false,
+      repetition: '30 s',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 11,
+      title: 'Single Leg Bridge Right',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431759737',
+      sounds: false,
+      repetition: '30 s',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 12,
+      title: 'Jump Squat',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '407999105',
+      sounds: false,
+      repetition: '30 s',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 13,
+      title: 'Wall sit',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431760958',
+      sounds: false,
+      repetition: '30 s',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 14,
+      title: 'Jump rope / High knees',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431761388',
+      sounds: false,
+      repetition: '30 s',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 15,
+      title: 'Elbow to Tall',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431783090',
+      sounds: false,
+      repetition: '1 min',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 16,
+      title: 'High Plank',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431781738',
+      sounds: false,
+      repetition: '1 min',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 17,
+      title: 'Side Plank (Left)',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431783621',
+      sounds: false,
+      repetition: '30 s',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 18,
+      title: 'Side Plank (Right)',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431783621',
+      sounds: false,
+      repetition: '30 s',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 19,
+      title: 'Side Plank Walks',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431784478',
+      sounds: false,
+      repetition: '1 min',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 20,
+      title: 'Plank Army Crawlers',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431785259',
+      sounds: false,
+      repetition: '1 min',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 21,
+      title: 'High Plank',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431781738',
+      sounds: false,
+      repetition: '30 s',
+      rest: '',
+      instruction: '',
+    },
+  ],
+};
+
+const mas15Long = {
+  id: 22,
+  type: DrillTypes.FITNESS,
+  author: 'Edwin',
+  title: 'Flash team 7: MAS sprint',
+  image: 'https://zupimages.net/up/20/19/kj0f.jpg',
+  description: 'MAS Practice',
+  minimalPlayersNumber: 1,
+  equipmentLabel: EquipmentLabels.NONE,
+  equipment: 'None',
+  durationInMinutes: 24,
+  intensity: Intensities.HIGH,
+  goals: [FitnessGoals.FULL_BODY],
+  seasonTiming: SeasonTimings.OFF_SEASON,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'Warm up',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431876595',
+      sounds: true,
+      repetition: '',
+      rest: '',
+      instruction: 'Moderate warm up',
+    },
+    {
+      id: 2,
+      title: 'MAS speed',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431531805',
+      sounds: false,
+      repetition: '12*(15/15)',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 3,
+      title: 'Rest',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431528434',
+      sounds: false,
+      repetition: '3 min',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 4,
+      title: 'MAS speed',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431531805',
+      sounds: false,
+      repetition: '12*(15/15)',
+      rest: '',
+      instruction: '',
+    },
+  ],
+};
+
+const sprintPractice = {
+  id: 23,
+  type: DrillTypes.FITNESS,
+  author: 'Edwin',
+  title: 'Warm up Sprint',
+  image: 'https://zupimages.net/up/20/19/kj0f.jpg',
+  description: 'Intense warm up to be prepare for sprints',
+  minimalPlayersNumber: 1,
+  equipmentLabel: EquipmentLabels.NONE,
+  equipment: 'None',
+  durationInMinutes: 24,
+  intensity: Intensities.HIGH,
+  goals: [FitnessGoals.FULL_BODY],
+  seasonTiming: SeasonTimings.OFF_SEASON,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'A Dynamic March',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406764988',
+      sounds: false,
+      repetition: '4',
+      rest: '',
+      instruction: 'Moderate warm up',
+    },
+    {
+      id: 2,
+      title: 'Wall Fire',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406764961',
+      sounds: false,
+      repetition: '9',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 3,
+      title: 'Perfect Stretch',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431866818',
+      sounds: false,
+      repetition: '1',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 4,
+      title: 'Lunges Walk',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431868677',
+      sounds: false,
+      repetition: '1',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 5,
+      title: 'A Skips',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406760709',
+      sounds: false,
+      repetition: '3',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 6,
+      title: 'B Skips',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406760726',
+      sounds: false,
+      repetition: '3',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 7,
+      title: 'Curtsy Walk',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431867802',
+      sounds: false,
+      repetition: '6',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 8,
+      title: 'Boundings',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406764918',
+      sounds: false,
+      repetition: '2',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 9,
+      title: 'Falling Start',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406760689',
+      sounds: false,
+      repetition: '2',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 10,
+      title: 'Horizontal Crossover',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406764942',
+      sounds: false,
+      repetition: '2',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 11,
+      title: 'Sprint 10 m',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406765010',
+      sounds: false,
+      repetition: '4',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 12,
+      title: 'Sprint 30 m',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406765010',
+      sounds: false,
+      repetition: '4',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 13,
+      title: 'Sprint 50 m',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406765010',
+      sounds: false,
+      repetition: '2',
+      rest: '',
+      instruction: '',
+    },
+  ],
+};
+
+const ladderPractice = {
+  id: 24,
+  type: DrillTypes.FITNESS,
+  author: 'Edwin',
+  title: 'Ladder Practice',
+  image: 'https://zupimages.net/up/20/19/kj0f.jpg',
+  description: 'Intense warm up to be prepare for sprints',
+  minimalPlayersNumber: 1,
+  equipmentLabel: EquipmentLabels.NONE,
+  equipment: 'None',
+  durationInMinutes: 20,
+  intensity: Intensities.HIGH,
+  goals: [FitnessGoals.FULL_BODY],
+  seasonTiming: SeasonTimings.OFF_SEASON,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'A Dynamic March',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406764988',
+      sounds: false,
+      repetition: '4',
+      rest: '',
+      instruction: 'Moderate warm up',
+    },
+    {
+      id: 2,
+      title: 'Wall Fire',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406764961',
+      sounds: false,
+      repetition: '9',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 3,
+      title: 'Perfect Stretch',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431866818',
+      sounds: false,
+      repetition: '1',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 4,
+      title: 'Lunges Walk',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431868677',
+      sounds: false,
+      repetition: '1',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 5,
+      title: 'A Skips',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406760709',
+      sounds: false,
+      repetition: '3',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 6,
+      title: 'B Skips',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406760726',
+      sounds: false,
+      repetition: '3',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 7,
+      title: 'Curtsy Walk',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431867802',
+      sounds: false,
+      repetition: '6',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 8,
+      title: 'Boundings',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406764918',
+      sounds: false,
+      repetition: '2',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 9,
+      title: 'Falling Start',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406760689',
+      sounds: false,
+      repetition: '2',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 10,
+      title: 'Horizontal Crossover',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '406764942',
+      sounds: false,
+      repetition: '2',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 11,
+      title: 'Ladders',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '431884149',
+      sounds: false,
+      repetition: '10 min',
       rest: '',
       instruction: '',
     },
@@ -2557,7 +4319,7 @@ const trainingGame = {
     {
       id: 1,
       title: 'Practice your new stack',
-      illustrationType: IllustrationType.ANIMATION,
+      illustrationType: IllustrationType.VIMEO,
       illustrationSource: normalGameAnimation,
       repetition: '1',
       rest: '',
@@ -2638,6 +4400,7 @@ const defenseBaseTraining = {
   description: 'Practice your defense.',
   drills: [warmupGameDrill, defensePositionDrill, youShallNotPassDrill, breakDrill, normalGame],
 };
+
 const LearningByPlaying = {
   id: 10,
   title: 'Learning to throw',
@@ -2645,6 +4408,7 @@ const LearningByPlaying = {
   description: 'Practice your throw by playing game.',
   drills: [warmupGameDrill, discGolf, dDC, theTunnel],
 };
+
 const initiationHorizontal = {
   id: 11,
   title: 'Horizontal Cut',
@@ -2652,6 +4416,7 @@ const initiationHorizontal = {
   description: 'Practice how to cut in a horizontal stack',
   drills: [warmupGameDrill, theDuel, game3v3Horizontal, normalGame],
 };
+
 const horizontalFlow = {
   id: 12,
   title: 'Horizontal Flow',
@@ -2733,154 +4498,412 @@ const diagonalStackTraining = {
   drills: [warmupGameDrill, horizontalTrapOutside, diagonalIso, diagonalToVertical, trainingGame],
 };
 
-export default {
-  theory: {
-    dictionary,
-    essentials,
-    tactics,
-  },
-  favoriteDrills: [],
-  completeTrainings: [],
-  drills: [
-    // Fitness
-    stabilityDrill,
-    strengthDrill,
-    speedDrill,
-    conditioningDrill,
-    warmupGameDrill,
-    warmupDrill,
-    conditioningFullbodyDrill,
-    // Frisbee
-    basicThrowsDrill,
-    trainDrill,
-    menageATroisDrill,
-    goaltimateDrill,
-    resetOpenDrill,
-    resetBreakDrill,
-    youShallNotPassDrill,
-    aussieDrill,
-    treasureHuntDrill,
-    kyeDrill,
-    bigEightDrill,
-    dwarfDuelDrill,
-    giveAndGoDrill,
-    goToTenDrill,
-    endzoneGameDrill,
-    bulldogDrill,
-    dishieChainDrill,
-    breakDanceDrill,
-    triangleOfDeathdrill,
-    trainOfFakeDrill,
-    defensePositionDrill,
-    breakDrill,
-    bolognaMDrill,
-    discGolf,
-    dDC,
-    horizontalTiming,
-    game3v3Horizontal,
-    theDuel,
-    cardinal,
-    horizontalToVertical,
-    horizontalHandler,
-    horizontalTrapOutside,
-    horizontalTrap,
-    checkLong,
-    throwCatchThrow,
-    stopFlow,
-    theTunnel,
-    sprintDefense,
-    cupSwinging,
-    zoneGame,
-    diagonalToVertical,
-    diagonalIso,
-    splitIso,
-    splitToVertical,
-    sideToVertical,
-
-    // Games
-    normalGame,
-    game3v3,
-    longShotGame,
-    lineGame,
-    longestGame,
-    trainingGame,
-  ],
-  trainings: [
-    // Fitness
-
-    // Frisbee
-    dumpSwingTraining,
-    coed2MarkTraining,
-    firstChildTraining,
-    secondChildTraining,
-    thirdChildTraining,
-    secondInintiationAdultTraining,
-    thirdInintiationAdultTraining,
-    initiationVerticalTraining,
-    secondVerticalTraining,
-    defenseBaseTraining,
-    horizontalFlow,
-    LearningByPlaying,
-    initiationHorizontal,
-    horizontalLine,
-    defenseSecond,
-    defenseThird,
-    playingToLearn,
-    zoneCup,
-    sideStackTraining,
-    splitStackTraining,
-    diagonalStackTraining,
-  ],
-  programs: [
-    {
-      id: 1,
-      title: 'Initiation U13',
-      trainings: [firstChildTraining, secondChildTraining, thirdChildTraining],
-    },
-    {
-      id: 2,
-      title: 'Initiation Adult',
-      trainings: [firstChildTraining, secondInintiationAdultTraining, thirdInintiationAdultTraining],
-    },
-    {
-      id: 3,
-      title: 'Learning by Playing',
-      trainings: [LearningByPlaying, playingToLearn],
-    },
-    {
-      id: 4,
-      title: 'Vertical Stack',
-      trainings: [initiationVerticalTraining, secondVerticalTraining, dumpSwingTraining],
-    },
-    {
-      id: 5,
-      title: 'Horizontal Stack',
-      trainings: [initiationHorizontal, horizontalFlow, horizontalLine],
-    },
-    {
-      id: 6,
-      title: 'Individual Defense',
-      trainings: [defenseBaseTraining, defenseSecond, defenseThird],
-    },
-    {
-      id: 7,
-      title: 'Zone Defense',
-      trainings: [zoneCup],
-    },
-    {
-      id: 8,
-      title: 'Side Stack',
-      trainings: [sideStackTraining],
-    },
-    {
-      id: 9,
-      title: 'Split Stack',
-      trainings: [splitStackTraining],
-    },
-    {
-      id: 10,
-      title: 'Diagonal Stack',
-      trainings: [diagonalStackTraining],
-    },
-  ],
+//Fitness Weeks
+const fitnessWeek1 = {
+  id: 101,
+  title: "It's time to come back",
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'First week of the program',
+  drills: [mas30, fartlek, suicide],
 };
+
+const fitnessWeek2 = {
+  id: 102,
+  title: 'Second week',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Second week of the program',
+  drills: [lacticSprint, tDrill, mas30Light],
+};
+
+const fitnessWeek3 = {
+  id: 103,
+  title: 'Third week',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Third week of the program',
+  drills: [suicide, suicide, circuit],
+};
+
+const fitnessWeek4 = {
+  id: 104,
+  title: 'Rest week',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Resting is a treasure',
+  drills: [rest],
+};
+
+const fitnessWeek5 = {
+  id: 105,
+  title: 'Fifth week',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Fifth week of the program',
+  drills: [lacticSprint, serpentine, mas15],
+};
+
+const fitnessWeek6 = {
+  id: 106,
+  title: 'Sixth week',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Sixth week of the program',
+  drills: [tDrill, tDrill, circuitLong],
+};
+
+const fitnessWeek7 = {
+  id: 107,
+  title: 'Seventh week',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Seventh week of the program',
+  drills: [mas30, mas15Long, serpentine],
+};
+
+const fitnessWeek8 = {
+  id: 108,
+  title: 'Eighth week',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Eighth week of the program',
+  drills: [suicide, suicide, serpentine],
+};
+
+const fitnessWeek9 = {
+  id: 109,
+  title: 'Ninth week',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Ninth week of the program',
+  drills: [rest],
+};
+
+const fitnessWeek10 = {
+  id: 110,
+  title: 'Tenth week',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Tenth week of the program',
+  drills: [serpentine, serpentine, tDrill],
+};
+
+const fitnessWeek11 = {
+  id: 111,
+  title: 'Elevenh week',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Elevenh week of the program',
+  drills: [suicide, suicide, mas15],
+};
+
+const fitnessWeek12 = {
+  id: 112,
+  title: 'Twelfh week',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Twelfh week of the program',
+  drills: [mas15Long, mas15Long, sprintPractice],
+};
+
+const fitnessWeek13 = {
+  id: 113,
+  title: 'Thirtheenth week',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Thirtheenth week of the program',
+  drills: [serpentine, tDrill, circuitLong],
+};
+
+const fitnessWeek14 = {
+  id: 114,
+  title: 'Fourtheenth week',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Fourtheenth week of the program',
+  drills: [rest],
+};
+
+const fitnessWeek15 = {
+  id: 115,
+  title: 'Fifteenth week',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Fifteenth week of the program',
+  drills: [serpentine, serpentine, sprintPractice],
+};
+
+const fitnessWeek16 = {
+  id: 116,
+  title: 'Sixteenth week',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Sixteenth week of the program',
+  drills: [tDrill, tDrill],
+};
+
+const fitnessWeek17 = {
+  id: 117,
+  title: 'Seventeenth week',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Seventeenth week of the program',
+  drills: [mas15, mas15],
+};
+
+const fitnessWeek18 = {
+  id: 118,
+  title: 'Eighteenth week',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Eighteenth week of the program',
+  drills: [tDrill, tDrill],
+};
+
+const fitnessWeek19 = {
+  id: 119,
+  title: 'Nineteenth week',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Nineteenth week of the program',
+  drills: [rest],
+};
+
+const fitnessWeek20 = {
+  id: 120,
+  title: 'Twentieth week',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Twentieth week of the program',
+  drills: [serpentine, serpentine, ladderPractice],
+};
+
+const fitnessWeek21 = {
+  id: 21,
+  title: 'Twenty-first week',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Twenty-first week of the program',
+  drills: [tDrill, tDrill],
+};
+
+export const drills = [
+  // Fitness
+  stabilityDrill,
+  strengthDrill,
+  speedDrill,
+  conditioningDrill,
+  warmupGameDrill,
+  warmupDrill,
+  conditioningFullbodyDrill,
+  fartlek,
+  mas30,
+  suicide,
+  tDrill,
+  lacticSprint,
+  mas30Light,
+  circuit,
+  rest,
+  serpentine,
+  mas15,
+  circuitLong,
+  mas15Long,
+  sprintPractice,
+  ladderPractice,
+
+  // Frisbee
+  basicThrowsDrill,
+  trainDrill,
+  menageATroisDrill,
+  goaltimateDrill,
+  resetOpenDrill,
+  resetBreakDrill,
+  youShallNotPassDrill,
+  aussieDrill,
+  treasureHuntDrill,
+  kyeDrill,
+  bigEightDrill,
+  dwarfDuelDrill,
+  giveAndGoDrill,
+  goToTenDrill,
+  endzoneGameDrill,
+  bulldogDrill,
+  dishieChainDrill,
+  breakDanceDrill,
+  triangleOfDeathdrill,
+  trainOfFakeDrill,
+  defensePositionDrill,
+  breakDrill,
+  bolognaMDrill,
+  discGolf,
+  dDC,
+  horizontalTiming,
+  game3v3Horizontal,
+  theDuel,
+  cardinal,
+  horizontalToVertical,
+  horizontalHandler,
+  horizontalTrapOutside,
+  horizontalTrap,
+  checkLong,
+  throwCatchThrow,
+  stopFlow,
+  theTunnel,
+  sprintDefense,
+  cupSwinging,
+  zoneGame,
+  diagonalToVertical,
+  diagonalIso,
+  splitIso,
+  splitToVertical,
+  sideToVertical,
+
+  // Games
+  normalGame,
+  game3v3,
+  longShotGame,
+  lineGame,
+  longestGame,
+  trainingGame,
+];
+
+export const trainings = [
+  // Fitness
+  fitnessWeek1,
+  fitnessWeek2,
+  fitnessWeek3,
+  fitnessWeek4,
+  fitnessWeek5,
+  fitnessWeek6,
+  fitnessWeek7,
+  fitnessWeek8,
+  fitnessWeek9,
+  fitnessWeek10,
+  fitnessWeek11,
+  fitnessWeek12,
+  fitnessWeek13,
+  fitnessWeek14,
+  fitnessWeek15,
+  fitnessWeek16,
+  fitnessWeek17,
+  fitnessWeek18,
+  fitnessWeek19,
+  fitnessWeek20,
+  fitnessWeek21,
+
+  // Frisbee
+  dumpSwingTraining,
+  coed2MarkTraining,
+  firstChildTraining,
+  secondChildTraining,
+  thirdChildTraining,
+  secondInintiationAdultTraining,
+  thirdInintiationAdultTraining,
+  initiationVerticalTraining,
+  secondVerticalTraining,
+  defenseBaseTraining,
+  horizontalFlow,
+  LearningByPlaying,
+  initiationHorizontal,
+  horizontalLine,
+  defenseSecond,
+  defenseThird,
+  playingToLearn,
+  zoneCup,
+  sideStackTraining,
+  splitStackTraining,
+  diagonalStackTraining,
+];
+
+export const programs = [
+  {
+    id: 1,
+    type: DrillTypes.FRISBEE,
+    title: 'Initiation U13',
+    trainings: [firstChildTraining, secondChildTraining, thirdChildTraining],
+  },
+  {
+    id: 2,
+    type: DrillTypes.FRISBEE,
+    title: 'Initiation Adult',
+    trainings: [firstChildTraining, secondInintiationAdultTraining, thirdInintiationAdultTraining],
+  },
+  {
+    id: 3,
+    type: DrillTypes.FRISBEE,
+    title: 'Vertical Stack',
+    trainings: [initiationVerticalTraining, secondVerticalTraining, dumpSwingTraining],
+  },
+  {
+    id: 4,
+    type: DrillTypes.FRISBEE,
+    title: 'Horizontal Stack',
+    trainings: [initiationHorizontal, horizontalFlow, horizontalLine],
+  },
+  {
+    id: 5,
+    type: DrillTypes.FRISBEE,
+    title: 'Individual Defense',
+    trainings: [defenseBaseTraining, defenseSecond, defenseThird],
+  },
+  {
+    id: 6,
+    type: DrillTypes.FRISBEE,
+    title: 'Zone Defense',
+    trainings: [zoneCup],
+  },
+  {
+    id: 7,
+    type: DrillTypes.FRISBEE,
+    title: 'Side Stack',
+    trainings: [sideStackTraining],
+  },
+  {
+    id: 8,
+    type: DrillTypes.FRISBEE,
+    title: 'Split Stack',
+    trainings: [splitStackTraining],
+  },
+  {
+    id: 9,
+    type: DrillTypes.FRISBEE,
+    title: 'Diagonal Stack',
+    trainings: [diagonalStackTraining],
+  },
+  {
+    id: 10,
+    type: DrillTypes.FITNESS,
+    equipmentLabel: EquipmentLabels.NONE,
+    title: 'Off-season - Part 1',
+    trainings: [
+      fitnessWeek1,
+      fitnessWeek2,
+      fitnessWeek3,
+      fitnessWeek4,
+      fitnessWeek5,
+      fitnessWeek6,
+      fitnessWeek7,
+      fitnessWeek8,
+      fitnessWeek9,
+    ],
+  },
+  {
+    id: 11,
+    type: DrillTypes.FITNESS,
+    equipmentLabel: EquipmentLabels.NONE,
+    title: 'Off-season - Part 2',
+    trainings: [
+      fitnessWeek10,
+      fitnessWeek11,
+      fitnessWeek12,
+      fitnessWeek13,
+      fitnessWeek14,
+      fitnessWeek15,
+      fitnessWeek16,
+      fitnessWeek17,
+      fitnessWeek18,
+      fitnessWeek19,
+    ],
+  },
+  {
+    id: 12,
+    type: DrillTypes.FITNESS,
+    equipmentLabel: EquipmentLabels.NONE,
+    title: 'Pre-season',
+    trainings: [fitnessWeek20, fitnessWeek21],
+  },
+  {
+    id: 13,
+    type: DrillTypes.FITNESS,
+    equipmentLabel: EquipmentLabels.NONE,
+    title: 'In-season',
+    trainings: [diagonalStackTraining],
+  },
+  {
+    id: 14,
+    type: DrillTypes.FITNESS,
+    equipmentLabel: EquipmentLabels.NONE,
+    title: 'Peak',
+    trainings: [diagonalStackTraining],
+  },
+];

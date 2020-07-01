@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { render, fireEvent, cleanup } from 'react-native-testing-library';
-import { connect, Provider } from 'react-redux';
+import { Provider } from 'react-redux';
 
 import { createProgram, createTraining } from '../../Fixtures/TestFixtures';
 import store from '../../Store/testStore';

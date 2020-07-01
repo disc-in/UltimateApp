@@ -1,0 +1,686 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProgramList /> renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "height": "100%",
+      "paddingVertical": 10,
+    }
+  }
+>
+  <RCTScrollView>
+    <View>
+      <View>
+        <View
+          style={Object {}}
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#fff",
+                  "elevation": 3,
+                  "marginBottom": 10,
+                  "padding": 10,
+                  "shadowOffset": Object {
+                    "height": 1,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 0.3,
+                  "shadowRadius": 3,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "backgroundColor": "#fff",
+                    "paddingHorizontal": 20,
+                    "paddingVertical": 10,
+                    "width": "100%",
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#232b2b",
+                      "fontSize": 20,
+                      "fontWeight": "bold",
+                    }
+                  }
+                >
+                  Program 1
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#232b2b",
+                      "fontSize": 14,
+                      "textAlign": "right",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  0/1 trainings
+                </Text>
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#f1f1f1",
+                      "borderRadius": 2,
+                      "height": 3,
+                      "marginTop": 5,
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Array [
+                        Object {
+                          "bottom": 0,
+                          "left": 0,
+                          "position": "absolute",
+                          "right": 0,
+                          "top": 0,
+                        },
+                        Object {
+                          "backgroundColor": "#2a9e91",
+                          "borderRadius": 5,
+                          "width": "50%",
+                        },
+                        Object {
+                          "width": "0%",
+                        },
+                      ]
+                    }
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            pointerEvents="none"
+            style={
+              Object {
+                "height": 0,
+                "overflow": "hidden",
+              }
+            }
+          >
+            <View
+              onLayout={[Function]}
+              style={Object {}}
+            >
+              <RCTScrollView
+                contentContainerStyle={
+                  Object {
+                    "marginBottom": 10,
+                  }
+                }
+                data={
+                  Array [
+                    Object {
+                      "description": "This training session aims at..",
+                      "drills": Array [
+                        Object {
+                          "author": "Author",
+                          "description": "Description of the drill",
+                          "durationInMinutes": 10,
+                          "equipment": "Equipment needs for the drill",
+                          "equipmentLabel": "None",
+                          "goals": Array [
+                            "Full body",
+                          ],
+                          "id": 1,
+                          "image": "https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg",
+                          "intensity": "Low",
+                          "level": "Beginner",
+                          "minimalPlayersNumber": 1,
+                          "seasonTiming": "Off-season",
+                          "steps": Array [
+                            Object {
+                              "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
+                              "illustrationType": "youtube",
+                              "subtitle": "This is a subtitle",
+                              "title": "Warmup",
+                            },
+                          ],
+                          "title": "Fitness Drill Title",
+                          "type": "fitness",
+                        },
+                      ],
+                      "id": 1,
+                      "image": "https://cdn3.sportngin.com/attachments/photo/be7e-106813275/Screen_Shot_2018-07-19_at_3.53.39_PM_large.png",
+                      "source": "** Ultimate App **",
+                      "title": "First practice",
+                    },
+                  ]
+                }
+                disableVirtualization={false}
+                getItem={[Function]}
+                getItemCount={[Function]}
+                horizontal={false}
+                initialNumToRender={10}
+                keyExtractor={[Function]}
+                maxToRenderPerBatch={10}
+                numColumns={1}
+                onContentSizeChange={[Function]}
+                onEndReachedThreshold={2}
+                onLayout={[Function]}
+                onMomentumScrollEnd={[Function]}
+                onScroll={[Function]}
+                onScrollBeginDrag={[Function]}
+                onScrollEndDrag={[Function]}
+                removeClippedSubviews={false}
+                renderItem={[Function]}
+                scrollEventThrottle={50}
+                stickyHeaderIndices={Array []}
+                updateCellsBatchingPeriod={50}
+                viewabilityConfigCallbackPairs={Array []}
+                windowSize={21}
+              >
+                <View>
+                  <View
+                    onLayout={[Function]}
+                    style={null}
+                  >
+                    <View
+                      accessible={true}
+                      focusable={true}
+                      isTVSelectable={true}
+                      onClick={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "#fff",
+                          "borderBottomColor": "#e5e5e5",
+                          "borderBottomWidth": 1,
+                          "flexDirection": "row",
+                          "justifyContent": "space-between",
+                          "opacity": 1,
+                          "padding": 10,
+                          "paddingLeft": 30,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "flexBasis": "75%",
+                          }
+                        }
+                      >
+                        <Text
+                          style={
+                            Object {
+                              "color": "#232b2b",
+                              "fontSize": 16,
+                              "fontWeight": "bold",
+                            }
+                          }
+                        >
+                          1
+                           - 
+                          First practice
+                        </Text>
+                        <Text
+                          style={
+                            Object {
+                              "color": "#232b2b",
+                              "fontSize": 14,
+                            }
+                          }
+                        >
+                          This training session aims at..
+                        </Text>
+                      </View>
+                      <View
+                        style={
+                          Object {
+                            "position": "absolute",
+                            "right": 30,
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignItems": "center",
+                              "flexDirection": "row",
+                              "justifyContent": "space-between",
+                            }
+                          }
+                        >
+                          <Text />
+                        </View>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </RCTScrollView>
+            </View>
+          </View>
+        </View>
+        <View
+          style={Object {}}
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#fff",
+                  "elevation": 3,
+                  "marginBottom": 10,
+                  "padding": 10,
+                  "shadowOffset": Object {
+                    "height": 1,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 0.3,
+                  "shadowRadius": 3,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "backgroundColor": "#fff",
+                    "paddingHorizontal": 20,
+                    "paddingVertical": 10,
+                    "width": "100%",
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#232b2b",
+                      "fontSize": 20,
+                      "fontWeight": "bold",
+                    }
+                  }
+                >
+                  Program 2
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#232b2b",
+                      "fontSize": 14,
+                      "textAlign": "right",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  0/2 trainings
+                </Text>
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#f1f1f1",
+                      "borderRadius": 2,
+                      "height": 3,
+                      "marginTop": 5,
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Array [
+                        Object {
+                          "bottom": 0,
+                          "left": 0,
+                          "position": "absolute",
+                          "right": 0,
+                          "top": 0,
+                        },
+                        Object {
+                          "backgroundColor": "#2a9e91",
+                          "borderRadius": 5,
+                          "width": "50%",
+                        },
+                        Object {
+                          "width": "0%",
+                        },
+                      ]
+                    }
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            pointerEvents="none"
+            style={
+              Object {
+                "height": 0,
+                "overflow": "hidden",
+              }
+            }
+          >
+            <View
+              onLayout={[Function]}
+              style={Object {}}
+            >
+              <RCTScrollView
+                contentContainerStyle={
+                  Object {
+                    "marginBottom": 10,
+                  }
+                }
+                data={
+                  Array [
+                    Object {
+                      "description": "This training session aims at..",
+                      "drills": Array [
+                        Object {
+                          "author": "Author",
+                          "description": "Description of the drill",
+                          "durationInMinutes": 10,
+                          "equipment": "Equipment needs for the drill",
+                          "equipmentLabel": "None",
+                          "goals": Array [
+                            "Full body",
+                          ],
+                          "id": 1,
+                          "image": "https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg",
+                          "intensity": "Low",
+                          "level": "Beginner",
+                          "minimalPlayersNumber": 1,
+                          "seasonTiming": "Off-season",
+                          "steps": Array [
+                            Object {
+                              "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
+                              "illustrationType": "youtube",
+                              "subtitle": "This is a subtitle",
+                              "title": "Warmup",
+                            },
+                          ],
+                          "title": "Fitness Drill Title",
+                          "type": "fitness",
+                        },
+                      ],
+                      "id": 1,
+                      "image": "https://cdn3.sportngin.com/attachments/photo/be7e-106813275/Screen_Shot_2018-07-19_at_3.53.39_PM_large.png",
+                      "source": "** Ultimate App **",
+                      "title": "First Training",
+                    },
+                    Object {
+                      "description": "This training session aims at..",
+                      "drills": Array [
+                        Object {
+                          "author": "Author",
+                          "description": "Description of the drill",
+                          "durationInMinutes": 10,
+                          "equipment": "Equipment needs for the drill",
+                          "equipmentLabel": "None",
+                          "goals": Array [
+                            "Full body",
+                          ],
+                          "id": 1,
+                          "image": "https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg",
+                          "intensity": "Low",
+                          "level": "Beginner",
+                          "minimalPlayersNumber": 1,
+                          "seasonTiming": "Off-season",
+                          "steps": Array [
+                            Object {
+                              "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
+                              "illustrationType": "youtube",
+                              "subtitle": "This is a subtitle",
+                              "title": "Warmup",
+                            },
+                          ],
+                          "title": "Fitness Drill Title",
+                          "type": "fitness",
+                        },
+                      ],
+                      "id": 2,
+                      "image": "https://cdn3.sportngin.com/attachments/photo/be7e-106813275/Screen_Shot_2018-07-19_at_3.53.39_PM_large.png",
+                      "source": "** Ultimate App **",
+                      "title": "Second Training",
+                    },
+                  ]
+                }
+                disableVirtualization={false}
+                getItem={[Function]}
+                getItemCount={[Function]}
+                horizontal={false}
+                initialNumToRender={10}
+                keyExtractor={[Function]}
+                maxToRenderPerBatch={10}
+                numColumns={1}
+                onContentSizeChange={[Function]}
+                onEndReachedThreshold={2}
+                onLayout={[Function]}
+                onMomentumScrollEnd={[Function]}
+                onScroll={[Function]}
+                onScrollBeginDrag={[Function]}
+                onScrollEndDrag={[Function]}
+                removeClippedSubviews={false}
+                renderItem={[Function]}
+                scrollEventThrottle={50}
+                stickyHeaderIndices={Array []}
+                updateCellsBatchingPeriod={50}
+                viewabilityConfigCallbackPairs={Array []}
+                windowSize={21}
+              >
+                <View>
+                  <View
+                    onLayout={[Function]}
+                    style={null}
+                  >
+                    <View
+                      accessible={true}
+                      focusable={true}
+                      isTVSelectable={true}
+                      onClick={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "#fff",
+                          "borderBottomColor": "#e5e5e5",
+                          "borderBottomWidth": 1,
+                          "flexDirection": "row",
+                          "justifyContent": "space-between",
+                          "opacity": 1,
+                          "padding": 10,
+                          "paddingLeft": 30,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "flexBasis": "75%",
+                          }
+                        }
+                      >
+                        <Text
+                          style={
+                            Object {
+                              "color": "#232b2b",
+                              "fontSize": 16,
+                              "fontWeight": "bold",
+                            }
+                          }
+                        >
+                          1
+                           - 
+                          First Training
+                        </Text>
+                        <Text
+                          style={
+                            Object {
+                              "color": "#232b2b",
+                              "fontSize": 14,
+                            }
+                          }
+                        >
+                          This training session aims at..
+                        </Text>
+                      </View>
+                      <View
+                        style={
+                          Object {
+                            "position": "absolute",
+                            "right": 30,
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignItems": "center",
+                              "flexDirection": "row",
+                              "justifyContent": "space-between",
+                            }
+                          }
+                        >
+                          <Text />
+                        </View>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    onLayout={[Function]}
+                    style={null}
+                  >
+                    <View
+                      accessible={true}
+                      focusable={true}
+                      isTVSelectable={true}
+                      onClick={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "#fff",
+                          "borderBottomColor": "#e5e5e5",
+                          "borderBottomWidth": 1,
+                          "flexDirection": "row",
+                          "justifyContent": "space-between",
+                          "opacity": 1,
+                          "padding": 10,
+                          "paddingLeft": 30,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "flexBasis": "75%",
+                          }
+                        }
+                      >
+                        <Text
+                          style={
+                            Object {
+                              "color": "#232b2b",
+                              "fontSize": 16,
+                              "fontWeight": "bold",
+                            }
+                          }
+                        >
+                          2
+                           - 
+                          Second Training
+                        </Text>
+                        <Text
+                          style={
+                            Object {
+                              "color": "#232b2b",
+                              "fontSize": 14,
+                            }
+                          }
+                        >
+                          This training session aims at..
+                        </Text>
+                      </View>
+                      <View
+                        style={
+                          Object {
+                            "position": "absolute",
+                            "right": 30,
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignItems": "center",
+                              "flexDirection": "row",
+                              "justifyContent": "space-between",
+                            }
+                          }
+                        >
+                          <Text />
+                        </View>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </RCTScrollView>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

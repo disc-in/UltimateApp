@@ -1,7 +1,7 @@
 import React, { useLayoutEffect } from 'react';
 import { StyleSheet, View, Text, ImageBackground, TouchableHighlight } from 'react-native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
 
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
@@ -14,8 +14,8 @@ import dictionary from '../../assets/HomePage/dictionary.jpg';
 import ourPlays from '../../assets/HomePage/ourplays.jpg';
 import essential from '../../assets/HomePage/essential.jpg';
 import huddle from '../../assets/HomePage/huddle.png';
-import { DrillTypes } from '../Fixtures/config';
 import FeedbackButton from './home/FeedbackButton';
+import { DrillTypes, EquipmentLabels } from '../Fixtures/config';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -32,7 +32,10 @@ const HomeScreen = props => {
           </View>
         </ImageBackground>
       </TouchableHighlight>
-      <TouchableHighlight onPress={() => props.navigation.navigate('ProgramListPage')} style={styles.menuItem}>
+      <TouchableHighlight
+        onPress={() => props.navigation.navigate('ProgramListPage', { type: DrillTypes.FRISBEE })}
+        style={styles.menuItem}
+      >
         <ImageBackground source={huddle} style={styles.image}>
           <View style={styles.wrapper}>
             <Text style={styles.text}>{I18n.t('homePage.programs')}</Text>
@@ -67,7 +70,12 @@ const Fitness = props => {
         </ImageBackground>
       </TouchableHighlight>
       <TouchableHighlight
-        onPress={() => props.navigation.navigate('DrillListPage', { type: DrillTypes.FITNESS })}
+        onPress={() =>
+          props.navigation.navigate('ProgramListPage', {
+            type: DrillTypes.FITNESS,
+            equipmentLabel: EquipmentLabels.NONE,
+          })
+        }
         style={styles.menuItem}
       >
         <ImageBackground source={bodyweight} style={styles.image}>
@@ -80,7 +88,12 @@ const Fitness = props => {
         </ImageBackground>
       </TouchableHighlight>
       <TouchableHighlight
-        onPress={() => props.navigation.navigate('DrillListPage', { type: DrillTypes.FITNESS })}
+        onPress={() =>
+          props.navigation.navigate('ProgramListPage', {
+            type: DrillTypes.FITNESS,
+            equipmentLabel: EquipmentLabels.FULL,
+          })
+        }
         style={styles.menuItem}
       >
         <ImageBackground source={gymstrong} style={styles.image}>

@@ -4400,6 +4400,7 @@ const defenseBaseTraining = {
   description: 'Practice your defense.',
   drills: [warmupGameDrill, defensePositionDrill, youShallNotPassDrill, breakDrill, normalGame],
 };
+
 const LearningByPlaying = {
   id: 10,
   title: 'Learning to throw',
@@ -4407,6 +4408,7 @@ const LearningByPlaying = {
   description: 'Practice your throw by playing game.',
   drills: [warmupGameDrill, discGolf, dDC, theTunnel],
 };
+
 const initiationHorizontal = {
   id: 11,
   title: 'Horizontal Cut',
@@ -4414,6 +4416,7 @@ const initiationHorizontal = {
   description: 'Practice how to cut in a horizontal stack',
   drills: [warmupGameDrill, theDuel, game3v3Horizontal, normalGame],
 };
+
 const horizontalFlow = {
   id: 12,
   title: 'Horizontal Flow',
@@ -4583,6 +4586,7 @@ const fitnessWeek11 = {
   description: 'Elevenh week of the program',
   drills: [suicide, suicide, mas15],
 };
+
 const fitnessWeek12 = {
   id: 112,
   title: 'Twelfh week',
@@ -4590,6 +4594,7 @@ const fitnessWeek12 = {
   description: 'Twelfh week of the program',
   drills: [mas15Long, mas15Long, sprintPractice],
 };
+
 const fitnessWeek13 = {
   id: 113,
   title: 'Thirtheenth week',
@@ -4597,6 +4602,7 @@ const fitnessWeek13 = {
   description: 'Thirtheenth week of the program',
   drills: [serpentine, tDrill, circuitLong],
 };
+
 const fitnessWeek14 = {
   id: 114,
   title: 'Fourtheenth week',
@@ -4604,6 +4610,7 @@ const fitnessWeek14 = {
   description: 'Fourtheenth week of the program',
   drills: [rest],
 };
+
 const fitnessWeek15 = {
   id: 115,
   title: 'Fifteenth week',
@@ -4611,6 +4618,7 @@ const fitnessWeek15 = {
   description: 'Fifteenth week of the program',
   drills: [serpentine, serpentine, sprintPractice],
 };
+
 const fitnessWeek16 = {
   id: 116,
   title: 'Sixteenth week',
@@ -4634,6 +4642,7 @@ const fitnessWeek18 = {
   description: 'Eighteenth week of the program',
   drills: [tDrill, tDrill],
 };
+
 const fitnessWeek19 = {
   id: 119,
   title: 'Nineteenth week',

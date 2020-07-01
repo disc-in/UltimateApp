@@ -69,9 +69,10 @@ export default {
     drills: 'Drills',
     programs: 'Practice Programs',
     leanTitle: 'Lean Fit',
-    leanSubtitle: 'Get lean and fit over 6 weeks with a balanced plan that builds endurance',
+    leanSubtitle: 'Find workouts to get lean and fit!',
     bodyweightTitle: 'Bodyweight only',
-    bodyweightSubtitle: 'Push your strenght and improve muscle tone over the season - all without weights',
+    bodyweightSubtitle:
+      'A program designed to push your strenght and improve muscle tone over the season - all without weights',
     gymTitle: 'Gym Strong',
     gymSubtitle: 'Build full-body strenght with a focus on weight training over the season',
     dictionary: 'Dictionary',

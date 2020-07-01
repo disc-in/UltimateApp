@@ -354,7 +354,7 @@ const strengthDrill = {
   id: 2,
   type: DrillTypes.FITNESS,
   author: 'Moby',
-  title: 'Strenght Off-season 1',
+  title: 'Strenght Legs',
   image: 'https://zupimages.net/up/20/19/qxbk.jpg',
   description: 'The first strength practice of the season',
   minimalPlayersNumber: 1,
@@ -593,7 +593,7 @@ const conditioningDrill = {
   id: 4,
   type: DrillTypes.FITNESS,
   author: 'Moby',
-  title: 'Conditioning Off-season 1',
+  title: 'Ab Workout',
   image: 'https://zupimages.net/up/20/19/kj0f.jpg',
   description: 'Try to follow her for your conditioning',
   minimalPlayersNumber: 1,
@@ -601,7 +601,7 @@ const conditioningDrill = {
   equipment: 'None',
   durationInMinutes: 10,
   intensity: Intensities.HIGH,
-  goals: [FitnessGoals.FULL_BODY],
+  goals: [FitnessGoals.CONDITIONING],
   seasonTiming: SeasonTimings.OFF_SEASON,
   level: Levels.BEGINNER,
   steps: [
@@ -817,7 +817,7 @@ const fartlek = {
       title: 'Fartlek',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '431521694',
-      sounds: false,
+      sounds: true,
       repetition: '25"',
       rest: '',
       instruction: 'For 10 seconds every minute, accelerates by a few kilometres per hour.',
@@ -1249,7 +1249,7 @@ const tDrill = {
   id: 12,
   type: DrillTypes.FITNESS,
   author: 'Edwin',
-  title: 'Flash Team 2',
+  title: 'T-Drill',
   image: 'https://zupimages.net/up/20/19/kj0f.jpg',
   description:
     'Warm-up (for sprint and change of direction).\n6 repetitions of 30 meters T-drill then 6 repetitions of Shuttle 5-10-5. Then repeat. A total of 4 sets of 6 repetitions. 45sec of recovery between repetiton and 3min of recovery between sets.',
@@ -1439,7 +1439,7 @@ const mas30Light = {
   id: 13,
   type: DrillTypes.FITNESS,
   author: 'Edwin',
-  title: 'Machine 2',
+  title: "MAS 30'",
   image: 'https://zupimages.net/up/20/19/kj0f.jpg',
   description:
     'Big warm-up, you have to be ready to sprint. Speed to adopt that of a 400m. Recovery of 4 minutes between each series. 5 meters between each cone. End of session small jogging 10 minutes ',
@@ -1832,9 +1832,9 @@ const serpentine = {
     },
     {
       id: 11,
-      title: 'Serpentine',
+      title: 'Serpentines',
       illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431773220',
+      illustrationSource: '434366737',
       sounds: false,
       repetition: '8',
       rest: '',
@@ -1907,7 +1907,7 @@ const circuitLong = {
   id: 21,
   type: DrillTypes.FITNESS,
   author: 'Edwin',
-  title: 'Machines 6: Circuit',
+  title: 'Full-Body Circuit',
   image: 'https://zupimages.net/up/20/19/kj0f.jpg',
   description: 'Follow the workout',
   minimalPlayersNumber: 1,
@@ -2136,7 +2136,7 @@ const mas15Long = {
   id: 22,
   type: DrillTypes.FITNESS,
   author: 'Edwin',
-  title: 'Flash team 7: MAS sprint',
+  title: "MAS 15'",
   image: 'https://zupimages.net/up/20/19/kj0f.jpg',
   description: 'MAS Practice',
   minimalPlayersNumber: 1,
@@ -4400,7 +4400,6 @@ const defenseBaseTraining = {
   description: 'Practice your defense.',
   drills: [warmupGameDrill, defensePositionDrill, youShallNotPassDrill, breakDrill, normalGame],
 };
-
 const LearningByPlaying = {
   id: 10,
   title: 'Learning to throw',
@@ -4408,7 +4407,6 @@ const LearningByPlaying = {
   description: 'Practice your throw by playing game.',
   drills: [warmupGameDrill, discGolf, dDC, theTunnel],
 };
-
 const initiationHorizontal = {
   id: 11,
   title: 'Horizontal Cut',
@@ -4416,7 +4414,6 @@ const initiationHorizontal = {
   description: 'Practice how to cut in a horizontal stack',
   drills: [warmupGameDrill, theDuel, game3v3Horizontal, normalGame],
 };
-
 const horizontalFlow = {
   id: 12,
   title: 'Horizontal Flow',
@@ -4501,7 +4498,7 @@ const diagonalStackTraining = {
 //Fitness Weeks
 const fitnessWeek1 = {
   id: 101,
-  title: "It's time to come back",
+  title: 'Time to come back',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'First week of the program',
   drills: [mas30, fartlek, suicide],
@@ -4509,7 +4506,7 @@ const fitnessWeek1 = {
 
 const fitnessWeek2 = {
   id: 102,
-  title: 'Second week',
+  title: 'T-Drill',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Second week of the program',
   drills: [lacticSprint, tDrill, mas30Light],
@@ -4517,7 +4514,7 @@ const fitnessWeek2 = {
 
 const fitnessWeek3 = {
   id: 103,
-  title: 'Third week',
+  title: 'Sprint',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Third week of the program',
   drills: [suicide, suicide, circuit],
@@ -4533,7 +4530,7 @@ const fitnessWeek4 = {
 
 const fitnessWeek5 = {
   id: 105,
-  title: 'Fifth week',
+  title: 'Serpentine',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Fifth week of the program',
   drills: [lacticSprint, serpentine, mas15],
@@ -4541,7 +4538,7 @@ const fitnessWeek5 = {
 
 const fitnessWeek6 = {
   id: 106,
-  title: 'Sixth week',
+  title: 'T-Drill',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Sixth week of the program',
   drills: [tDrill, tDrill, circuitLong],
@@ -4549,7 +4546,7 @@ const fitnessWeek6 = {
 
 const fitnessWeek7 = {
   id: 107,
-  title: 'Seventh week',
+  title: 'MAS',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Seventh week of the program',
   drills: [mas30, mas15Long, serpentine],
@@ -4557,7 +4554,7 @@ const fitnessWeek7 = {
 
 const fitnessWeek8 = {
   id: 108,
-  title: 'Eighth week',
+  title: 'Sprint drill',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Eighth week of the program',
   drills: [suicide, suicide, serpentine],
@@ -4573,7 +4570,7 @@ const fitnessWeek9 = {
 
 const fitnessWeek10 = {
   id: 110,
-  title: 'Tenth week',
+  title: 'Serpentine',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Tenth week of the program',
   drills: [serpentine, serpentine, tDrill],
@@ -4581,47 +4578,42 @@ const fitnessWeek10 = {
 
 const fitnessWeek11 = {
   id: 111,
-  title: 'Elevenh week',
+  title: 'Sprint drill',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Elevenh week of the program',
   drills: [suicide, suicide, mas15],
 };
-
 const fitnessWeek12 = {
   id: 112,
-  title: 'Twelfh week',
+  title: "MAS 15'",
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Twelfh week of the program',
   drills: [mas15Long, mas15Long, sprintPractice],
 };
-
 const fitnessWeek13 = {
   id: 113,
-  title: 'Thirtheenth week',
+  title: 'Serpentine + T-Drill',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Thirtheenth week of the program',
   drills: [serpentine, tDrill, circuitLong],
 };
-
 const fitnessWeek14 = {
   id: 114,
-  title: 'Fourtheenth week',
+  title: 'Rest',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Fourtheenth week of the program',
   drills: [rest],
 };
-
 const fitnessWeek15 = {
   id: 115,
-  title: 'Fifteenth week',
+  title: 'Serpentine',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Fifteenth week of the program',
   drills: [serpentine, serpentine, sprintPractice],
 };
-
 const fitnessWeek16 = {
   id: 116,
-  title: 'Sixteenth week',
+  title: 'T-Drill',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Sixteenth week of the program',
   drills: [tDrill, tDrill],
@@ -4629,7 +4621,7 @@ const fitnessWeek16 = {
 
 const fitnessWeek17 = {
   id: 117,
-  title: 'Seventeenth week',
+  title: "MAS 15'",
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Seventeenth week of the program',
   drills: [mas15, mas15],
@@ -4637,15 +4629,14 @@ const fitnessWeek17 = {
 
 const fitnessWeek18 = {
   id: 118,
-  title: 'Eighteenth week',
+  title: 'T-Drill',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Eighteenth week of the program',
   drills: [tDrill, tDrill],
 };
-
 const fitnessWeek19 = {
   id: 119,
-  title: 'Nineteenth week',
+  title: 'Rest',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Nineteenth week of the program',
   drills: [rest],
@@ -4653,18 +4644,402 @@ const fitnessWeek19 = {
 
 const fitnessWeek20 = {
   id: 120,
-  title: 'Twentieth week',
+  title: 'Serpentine',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Twentieth week of the program',
   drills: [serpentine, serpentine, ladderPractice],
 };
 
 const fitnessWeek21 = {
-  id: 21,
-  title: 'Twenty-first week',
+  id: 121,
+  title: 'T-Drill',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Twenty-first week of the program',
   drills: [tDrill, tDrill],
+};
+
+const fitnessWeek22 = {
+  id: 122,
+  title: 'Rest',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Twenty-second week of the program',
+  drills: [rest],
+};
+
+const fitnessWeek23 = {
+  id: 123,
+  title: 'Serpentine',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Twenty-third week of the program',
+  drills: [serpentine, serpentine],
+};
+
+const fitnessWeek24 = {
+  id: 124,
+  title: 'Serpentine',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Twenty-fourth week of the program',
+  drills: [tDrill, tDrill],
+};
+
+const fitnessWeek25 = {
+  id: 125,
+  title: 'Circuit + MAS',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Twenty-fifth week of the program',
+  drills: [circuitLong, mas15Long],
+};
+
+const fitnessWeek26 = {
+  id: 126,
+  title: 'Serpentine',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Twenty-sixth week of the program',
+  drills: [serpentine, serpentine, ladderPractice],
+};
+const fitnessWeek27 = {
+  id: 127,
+  title: 'T-Drill',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Twenty-seventh week of the program',
+  drills: [tDrill, tDrill],
+};
+
+const fitnessWeek28 = {
+  id: 128,
+  title: 'Rest',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Twenty-eighth week of the program',
+  drills: [rest],
+};
+
+const fitnessWeek29 = {
+  id: 129,
+  title: 'Rest',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Twenty-ninth week of the program',
+  drills: [suicide, serpentine, sprintPractice],
+};
+
+const fitnessWeek30 = {
+  id: 130,
+  title: 'Rest',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Thirthieth week of the program',
+  drills: [serpentine, tDrill, suicide],
+};
+
+const fitnessWeek31 = {
+  id: 131,
+  title: 'Rest',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'thirty-first week of the program',
+  drills: [rest],
+};
+
+const fitnessWeek32 = {
+  id: 132,
+  title: 'Sprint + MAS',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Thirty-second week of the program',
+  drills: [mas30, tDrill, sprintPractice],
+};
+
+const fitnessWeek33 = {
+  id: 133,
+  title: 'Serpentine',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Thirty-third week of the program',
+  drills: [serpentine, serpentine],
+};
+
+const fitnessWeek34 = {
+  id: 134,
+  title: 'T-Drill',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Thirty-fourth week of the program',
+  drills: [tDrill, tDrill],
+};
+
+const fitnessWeek35 = {
+  id: 135,
+  title: 'Rest',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Thirty-fifth week of the program',
+  drills: [rest],
+};
+
+const fitnessWeek36 = {
+  id: 136,
+  title: 'Rest',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Thirty-sixth week of the program',
+  drills: [rest],
+};
+
+const fitnessWeek37 = {
+  id: 137,
+  title: 'MAS',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Thirty-seventh week of the program',
+  drills: [fartlek, mas15],
+};
+
+const fitnessWeek38 = {
+  id: 138,
+  title: 'Sprint',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Thirty-eighth week of the program',
+  drills: [sprintPractice, sprintPractice],
+};
+
+const fitnessWeek39 = {
+  id: 139,
+  title: 'MAS + T-Drill',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Thirty-ninth week of the program',
+  drills: [mas30Light, tDrill],
+};
+
+const fitnessWeek40 = {
+  id: 140,
+  title: 'Sprints',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Fortieth week of the program',
+  drills: [sprintPractice, sprintPractice],
+};
+
+const fitnessWeek41 = {
+  id: 141,
+  title: 'T-Drill',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Forty-first week of the program',
+  drills: [tDrill, tDrill],
+};
+
+const fitnessFull1 = {
+  id: 201,
+  title: 'Time to come back',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'First week of the program',
+  drills: [mas30, fartlek, suicide],
+};
+
+const fitnessFull2 = {
+  id: 202,
+  title: 'T-Drill',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Second week of the program',
+  drills: [lacticSprint, tDrill, mas30Light],
+};
+
+const fitnessFull3 = {
+  id: 203,
+  title: 'Sprint',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Third week of the program',
+  drills: [suicide, suicide, circuit],
+};
+
+const fitnessFull4 = {
+  id: 204,
+  title: 'Rest week',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Resting is a treasure',
+  drills: [rest],
+};
+
+const fitnessFull5 = {
+  id: 205,
+  title: 'Serpentine',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Fifth week of the program',
+  drills: [lacticSprint, serpentine, mas15],
+};
+
+const fitnessFull6 = {
+  id: 206,
+  title: 'T-Drill',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Sixth week of the program',
+  drills: [tDrill, tDrill, circuitLong],
+};
+
+const fitnessFull7 = {
+  id: 207,
+  title: 'MAS',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Seventh week of the program',
+  drills: [mas30, mas15Long, serpentine],
+};
+
+const fitnessFull8 = {
+  id: 208,
+  title: 'Sprint drill',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Eighth week of the program',
+  drills: [suicide, suicide, serpentine],
+};
+
+const fitnessFull9 = {
+  id: 209,
+  title: 'Ninth week',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Ninth week of the program',
+  drills: [rest],
+};
+
+const fitnessFull10 = {
+  id: 210,
+  title: 'Serpentine',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Tenth week of the program',
+  drills: [serpentine, serpentine, tDrill],
+};
+
+const fitnessFull11 = {
+  id: 211,
+  title: 'Sprint drill',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Elevenh week of the program',
+  drills: [suicide, suicide, mas15],
+};
+const fitnessFull12 = {
+  id: 212,
+  title: "MAS 15'",
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Twelfh week of the program',
+  drills: [mas15Long, mas15Long, sprintPractice],
+};
+const fitnessFull13 = {
+  id: 213,
+  title: 'Serpentine + T-Drill',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Thirtheenth week of the program',
+  drills: [serpentine, tDrill, circuitLong],
+};
+const fitnessFull14 = {
+  id: 214,
+  title: 'Rest',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Fourtheenth week of the program',
+  drills: [rest],
+};
+const fitnessFull15 = {
+  id: 215,
+  title: 'Serpentine',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Fifteenth week of the program',
+  drills: [serpentine, serpentine, sprintPractice],
+};
+const fitnessFull16 = {
+  id: 216,
+  title: 'T-Drill',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Sixteenth week of the program',
+  drills: [tDrill, tDrill],
+};
+
+const fitnessFull17 = {
+  id: 217,
+  title: "MAS 15'",
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Seventeenth week of the program',
+  drills: [mas15, mas15],
+};
+
+const fitnessFull18 = {
+  id: 218,
+  title: 'T-Drill',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Eighteenth week of the program',
+  drills: [tDrill, tDrill],
+};
+const fitnessFull19 = {
+  id: 219,
+  title: 'Rest',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Nineteenth week of the program',
+  drills: [rest],
+};
+
+const fitnessFull20 = {
+  id: 220,
+  title: 'Serpentine',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Twentieth week of the program',
+  drills: [serpentine, serpentine, ladderPractice],
+};
+
+const fitnessFull21 = {
+  id: 221,
+  title: 'T-Drill',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Twenty-first week of the program',
+  drills: [tDrill, tDrill],
+};
+
+const fitnessFull22 = {
+  id: 222,
+  title: 'Rest',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Twenty-second week of the program',
+  drills: [rest],
+};
+
+const fitnessFull23 = {
+  id: 223,
+  title: 'Serpentine',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Twenty-third week of the program',
+  drills: [serpentine, serpentine],
+};
+
+const fitnessFull24 = {
+  id: 224,
+  title: 'Serpentine',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Twenty-fourth week of the program',
+  drills: [tDrill, tDrill],
+};
+
+const fitnessFull25 = {
+  id: 225,
+  title: 'Circuit + MAS',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Twenty-fifth week of the program',
+  drills: [circuitLong, mas15Long],
+};
+
+const fitnessFull26 = {
+  id: 226,
+  title: 'Serpentine',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Twenty-sixth week of the program',
+  drills: [serpentine, serpentine, ladderPractice],
+};
+const fitnessFull27 = {
+  id: 227,
+  title: 'T-Drill',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Twenty-seventh week of the program',
+  drills: [tDrill, tDrill],
+};
+
+const fitnessFull28 = {
+  id: 228,
+  title: 'Rest',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Twenty-eighth week of the program',
+  drills: [rest],
+};
+
+const fitnessFull29 = {
+  id: 229,
+  title: 'Rest',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Twenty-ninth week of the program',
+  drills: [suicide, serpentine, sprintPractice],
 };
 
 export const drills = [
@@ -4770,6 +5145,55 @@ export const trainings = [
   fitnessWeek19,
   fitnessWeek20,
   fitnessWeek21,
+  fitnessWeek22,
+  fitnessWeek23,
+  fitnessWeek24,
+  fitnessWeek25,
+  fitnessWeek26,
+  fitnessWeek27,
+  fitnessWeek28,
+  fitnessWeek29,
+  fitnessWeek30,
+  fitnessWeek31,
+  fitnessWeek32,
+  fitnessWeek33,
+  fitnessWeek34,
+  fitnessWeek35,
+  fitnessWeek36,
+  fitnessWeek37,
+  fitnessWeek38,
+  fitnessWeek39,
+  fitnessWeek40,
+  fitnessWeek41,
+  fitnessFull1,
+  fitnessFull2,
+  fitnessFull3,
+  fitnessFull4,
+  fitnessFull5,
+  fitnessFull6,
+  fitnessFull7,
+  fitnessFull8,
+  fitnessFull9,
+  fitnessFull10,
+  fitnessFull11,
+  fitnessFull12,
+  fitnessFull13,
+  fitnessFull14,
+  fitnessFull15,
+  fitnessFull16,
+  fitnessFull17,
+  fitnessFull18,
+  fitnessFull19,
+  fitnessFull20,
+  fitnessFull21,
+  fitnessFull22,
+  fitnessFull23,
+  fitnessFull24,
+  fitnessFull25,
+  fitnessFull26,
+  fitnessFull27,
+  fitnessFull28,
+  fitnessFull29,
 
   // Frisbee
   dumpSwingTraining,
@@ -4883,6 +5307,7 @@ export const programs = [
       fitnessWeek17,
       fitnessWeek18,
       fitnessWeek19,
+      fitnessWeek20,
     ],
   },
   {
@@ -4890,20 +5315,98 @@ export const programs = [
     type: DrillTypes.FITNESS,
     equipmentLabel: EquipmentLabels.NONE,
     title: 'Pre-season',
-    trainings: [fitnessWeek20, fitnessWeek21],
+    trainings: [
+      fitnessWeek21,
+      fitnessWeek22,
+      fitnessWeek23,
+      fitnessWeek24,
+      fitnessWeek25,
+      fitnessWeek26,
+      fitnessWeek27,
+      fitnessWeek28,
+      fitnessWeek29,
+      fitnessWeek30,
+    ],
   },
   {
     id: 13,
     type: DrillTypes.FITNESS,
     equipmentLabel: EquipmentLabels.NONE,
     title: 'In-season',
-    trainings: [diagonalStackTraining],
+    trainings: [
+      fitnessWeek31,
+      fitnessWeek32,
+      fitnessWeek33,
+      fitnessWeek34,
+      fitnessWeek35,
+      fitnessWeek36,
+      fitnessWeek37,
+      fitnessWeek38,
+    ],
   },
   {
     id: 14,
     type: DrillTypes.FITNESS,
     equipmentLabel: EquipmentLabels.NONE,
     title: 'Peak',
-    trainings: [diagonalStackTraining],
+    trainings: [fitnessWeek39, fitnessWeek40, fitnessWeek41],
+  },
+  {
+    id: 15,
+    type: DrillTypes.FITNESS,
+    equipmentLabel: EquipmentLabels.FULL,
+    title: 'Off-season ',
+    trainings: [
+      fitnessFull1,
+      fitnessFull2,
+      fitnessFull3,
+      fitnessFull4,
+      fitnessFull5,
+      fitnessFull6,
+      fitnessFull7,
+      fitnessFull8,
+      fitnessFull9,
+      fitnessFull10,
+    ],
+  },
+  {
+    id: 16,
+    type: DrillTypes.FITNESS,
+    equipmentLabel: EquipmentLabels.FULL,
+    title: 'Pre-season',
+    trainings: [
+      fitnessFull10,
+      fitnessFull11,
+      fitnessFull12,
+      fitnessFull13,
+      fitnessFull14,
+      fitnessFull15,
+      fitnessFull16,
+      fitnessFull17,
+      fitnessFull18,
+    ],
+  },
+  {
+    id: 17,
+    type: DrillTypes.FITNESS,
+    equipmentLabel: EquipmentLabels.FULL,
+    title: 'In-season',
+    trainings: [
+      fitnessFull19,
+      fitnessFull20,
+      fitnessFull21,
+      fitnessFull22,
+      fitnessFull23,
+      fitnessFull24,
+      fitnessFull25,
+      fitnessFull26,
+    ],
+  },
+  {
+    id: 18,
+    type: DrillTypes.FITNESS,
+    equipmentLabel: EquipmentLabels.FULL,
+    title: 'Peak',
+    trainings: [fitnessFull27, fitnessFull28, fitnessFull29],
   },
 ];

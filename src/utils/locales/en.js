@@ -89,6 +89,16 @@ export default {
     },
     sharePlaceholder: 'Please add this drill to UltimateApp',
   },
+  feedback: {
+    alert: {
+      title: 'Get in touch!',
+      content:
+        'We are always looking for ideas and feedback to improve the app.\n\nWould you like to send us a message?',
+      cancel: 'Cancel',
+      cta: 'Send',
+    },
+    subject: 'Feedback concerning Disc In',
+  },
   fitnessDrillIllustration: {
     redoMessage: 'You have completed the drill!',
   },

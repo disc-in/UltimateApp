@@ -10,7 +10,7 @@
       "android",
       "web"
     ],
-    "version": "0.0.0",
+    "version": "0.0.1",
     "githubUrl": "https://github.com/UltimateApp/UltimateApp",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

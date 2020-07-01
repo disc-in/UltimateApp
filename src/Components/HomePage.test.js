@@ -12,10 +12,12 @@ jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
 
 describe('<HomePage />', () => {
   it('renders correctly', () => {
+    const navigation = { setOptions: jest.fn() };
+
     const tree = renderer
       .create(
         <NavigationContainer>
-          <HomePage />
+          <HomePage navigation={navigation} />
         </NavigationContainer>,
       )
       .toJSON();

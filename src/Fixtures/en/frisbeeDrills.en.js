@@ -7067,7 +7067,7 @@ const trainingGame = {
     {
       id: 1,
       title: 'Practice your new stack',
-      illustrationType: IllustrationType.VIMEO,
+      illustrationType: IllustrationType.ANIMATION,
       illustrationSource: normalGameAnimation,
       repetition: '1',
       rest: '',

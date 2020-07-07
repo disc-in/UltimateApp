@@ -1248,17 +1248,17 @@ const tDrill = {
   id: 12,
   type: DrillTypes.FITNESS,
   author: '',
-  title: 'Flash Team 2',
+  title: 'T Drill',
   image: 'https://zupimages.net/up/20/19/kj0f.jpg',
   description:
     'Échauffement pour des sprints et changements de direction.\n6 répétitions de  T-drill sur 30 mètres puis 6 répétitions de navettes 5-10-5. A répéter 2 fois. 45 sec de repos entre les répétitions, 3 min de repos entre les séries.',
   minimalPlayersNumber: 1,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: 'Aucun',
-  durationInMinutes: 45,
-  intensity: Intensities.LOW,
+  durationInMinutes: 22,
+  intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY],
-  seasonTiming: SeasonTimings.OFF_SEASON,
+  seasonTiming: SeasonTimings.PRE_SEASON,
   level: Levels.INTERMEDIATE,
   steps: [
     {

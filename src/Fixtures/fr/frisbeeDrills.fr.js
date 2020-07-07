@@ -675,35 +675,6 @@ const warmupDrill = {
   ],
 };
 
-const conditioningFullbodyDrill = {
-  id: 7,
-  type: DrillTypes.FITNESS,
-  author: 'Pamela Reif',
-  title: 'Endurance',
-  image: 'https://zupimages.net/up/20/19/kj0f.jpg',
-  description: "Suivez la vidéo pour travailler sur l'ensemble du corps ",
-  minimalPlayersNumber: 1,
-  equipmentLabel: EquipmentLabels.NONE,
-  equipment: 'Aucun',
-  durationInMinutes: 20,
-  intensity: Intensities.MODERATE,
-  goals: [FitnessGoals.FULL_BODY],
-  seasonTiming: SeasonTimings.OFF_SEASON,
-  level: Levels.INTERMEDIATE,
-  steps: [
-    {
-      id: 1,
-      title: 'Suivez là',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '416604913',
-      sounds: true,
-      repetition: '',
-      rest: '',
-      instruction: '',
-    },
-  ],
-};
-
 const mas30 = {
   id: 8,
   type: DrillTypes.FITNESS,
@@ -6172,8 +6143,8 @@ const dDC = {
     {
       id: 2,
       title: 'DDC Video',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: '429982987',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '436158587',
       repetition: '',
       rest: '',
       instruction: '',
@@ -6723,8 +6694,8 @@ const zoneGame = {
     {
       id: 2,
       title: 'Zone Video',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: '431159653',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '436156281',
       repetition: '',
       rest: '',
       instruction: '',
@@ -7903,7 +7874,6 @@ export const drills = [
   strengthDrill,
   speedDrill,
   conditioningDrill,
-  conditioningFullbodyDrill,
   tDrill,
   lacticSprint,
   circuit,

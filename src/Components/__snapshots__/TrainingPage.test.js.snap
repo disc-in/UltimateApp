@@ -938,7 +938,9 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
                   "fontSize": 14,
                 }
               }
-            />
+            >
+              Author
+            </Text>
             <Text
               style={
                 Object {
@@ -1070,7 +1072,9 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
                   "fontSize": 14,
                 }
               }
-            />
+            >
+              Author
+            </Text>
             <Text
               style={
                 Object {
@@ -2178,7 +2182,9 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
                   "fontSize": 14,
                 }
               }
-            />
+            >
+              Author
+            </Text>
             <Text
               style={
                 Object {
@@ -2310,7 +2316,9 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
                   "fontSize": 14,
                 }
               }
-            />
+            >
+              Author
+            </Text>
             <Text
               style={
                 Object {

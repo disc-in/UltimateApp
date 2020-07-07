@@ -1323,7 +1323,9 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
                   "fontSize": 14,
                 }
               }
-            />
+            >
+              Author
+            </Text>
             <Text
               style={
                 Object {
@@ -1454,7 +1456,9 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
                   "fontSize": 14,
                 }
               }
-            />
+            >
+              Author
+            </Text>
             <Text
               style={
                 Object {
@@ -1841,7 +1845,9 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
                   "fontSize": 14,
                 }
               }
-            />
+            >
+              Author
+            </Text>
             <Text
               style={
                 Object {
@@ -1972,7 +1978,9 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
                   "fontSize": 14,
                 }
               }
-            />
+            >
+              Author
+            </Text>
             <Text
               style={
                 Object {
@@ -2103,7 +2111,9 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
                   "fontSize": 14,
                 }
               }
-            />
+            >
+              Author
+            </Text>
             <Text
               style={
                 Object {
@@ -2490,7 +2500,9 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
                   "fontSize": 14,
                 }
               }
-            />
+            >
+              Author
+            </Text>
             <Text
               style={
                 Object {
@@ -2621,7 +2633,9 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
                   "fontSize": 14,
                 }
               }
-            />
+            >
+              Author
+            </Text>
             <Text
               style={
                 Object {
@@ -2752,7 +2766,9 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
                   "fontSize": 14,
                 }
               }
-            />
+            >
+              Author
+            </Text>
             <Text
               style={
                 Object {

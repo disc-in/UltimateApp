@@ -6132,7 +6132,7 @@ const dDC = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: 'DDC',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: dDCAnimation,
       repetition: '',
@@ -6233,7 +6233,7 @@ const theDuel = {
   type: DrillTypes.FRISBEE,
   author: 'Furious George',
   title: 'Nothing like a duel',
-  image: 'https://zupimages.net/up/20/19/cd36.jpg',
+  image: 'https://zupimages.net/up/20/28/ncjr.jpg',
   description: 'Nothing better than a duel to work on the different aspects of the game',
   minimalPlayersNumber: 4,
   equipmentLabel: EquipmentLabels.NONE,
@@ -6554,7 +6554,7 @@ const stopFlow = {
   type: DrillTypes.FRISBEE,
   author: 'Colony',
   title: 'Stoping the Flow',
-  image: 'https://zupimages.net/up/20/19/cd36.jpg',
+  image: 'https://zupimages.net/up/20/28/2b8i.jpg',
   description: 'Learn to quickly identify dangerous option and deny it.',
   minimalPlayersNumber: 5,
   equipmentLabel: EquipmentLabels.NONE,

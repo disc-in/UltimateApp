@@ -297,14 +297,14 @@ export const essentials = [
         id: 3,
         title: 'Hammer',
         text: 'Rowan McDonnell',
-        video: '423999439',
+        video: '436132303',
         animation: '',
       },
       {
         id: 4,
         title: 'Scoober',
         text: 'Rowan McDonnell',
-        video: '423999364',
+        video: '436137969',
         animation: '',
       },
       {
@@ -369,7 +369,7 @@ export const tactics = [
         id: 1,
         title: 'How does vertical stacks work?',
         text: 'That Drone Guy Ty',
-        video: '424002454',
+        video: '436149607',
         animation: '',
       },
     ],
@@ -381,29 +381,16 @@ export const tactics = [
         id: 2,
         title: 'How does horizontal stacks work?',
         text: 'That Drone Guy Ty',
-        video: '424002425',
+        video: '436151076',
         animation: '',
       },
     ],
   },
-  {
-    title: 'Attaque de Endzone',
-    pages: [
-      {
-        id: 3,
-        title: 'How to score a point?',
-        text: 'example de texte',
-        video: '413628757',
-        animation: '',
-      },
-    ],
-  },
-
   {
     title: 'Handling',
     pages: [
       {
-        id: 4,
+        id: 3,
         title: 'Handler Cutting',
         text: 'Rise Up',
         video: '424511928',

@@ -10,7 +10,7 @@ const DrillList = props => {
   const onDrillPress = props.onDrillPress || (item => navigation.navigate('DrillPage', { drill: item }));
 
   const renderDrill = ({ item }) => {
-    const { title, type, source, image, goals } = item;
+    const { title, type, image, goals, author } = item;
 
     const imageMainData = type === DrillTypes.FRISBEE ? 'minimalPlayersNumber' : 'durationInMinutes';
     const imageMainDataLegend = type === DrillTypes.FRISBEE ? 'players' : 'min';
@@ -21,7 +21,7 @@ const DrillList = props => {
           <Text style={list.imageText}>{imageMainDataLegend}</Text>
         </ImageBackground>
         <View style={list.itemContentContainer}>
-          <Text style={list.source}>{source}</Text>
+          <Text style={list.source}>{author}</Text>
           <Text style={list.title}>{title}</Text>
           <Text style={list.numberOfPlayers}>
             {goals

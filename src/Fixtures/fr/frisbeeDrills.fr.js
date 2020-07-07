@@ -93,7 +93,7 @@ import sideWindmill from '../Animation/SideWindmill';
 const stabilityDrill = {
   id: 1,
   type: DrillTypes.FITNESS,
-  author: 'Moby',
+  author: '',
   title: 'La vingtaine de la vitesse',
   image: 'https://zupimages.net/up/20/19/75s2.jpg',
   description:
@@ -353,7 +353,7 @@ const stabilityDrill = {
 const strengthDrill = {
   id: 2,
   type: DrillTypes.FITNESS,
-  author: 'Moby',
+  author: '',
   title: 'Force hors-saison 1',
   image: 'https://zupimages.net/up/20/19/qxbk.jpg',
   description: 'La première séance de force de la saison',
@@ -492,7 +492,7 @@ const strengthDrill = {
 const speedDrill = {
   id: 3,
   type: DrillTypes.FITNESS,
-  author: 'Moby',
+  author: '',
   title: 'Vitesse hors-saison 1',
   image: 'https://zupimages.net/up/20/19/vt6g.jpg',
   description: 'Idéal pour reprendre les séances physiques avec une première séance orientée vitesse.',
@@ -591,7 +591,7 @@ const speedDrill = {
 const conditioningDrill = {
   id: 4,
   type: DrillTypes.FITNESS,
-  author: 'Moby',
+  author: '',
   title: 'Endurance hors-saison 1',
   image: 'https://zupimages.net/up/20/19/kj0f.jpg',
   description: 'Suivez la vidéo pour cette première séance de reprise',
@@ -620,7 +620,7 @@ const conditioningDrill = {
 const warmupGameDrill = {
   id: 5,
   type: DrillTypes.FITNESS,
-  author: 'Moby',
+  author: '',
   title: 'Échauffment pour un match',
   image: 'https://zupimages.net/up/20/19/f2bd.jpg',
   description: 'Suivez les exercices de la vidéo pour préparer les organismes à une sénce à intensité de match',
@@ -649,7 +649,7 @@ const warmupGameDrill = {
 const warmupDrill = {
   id: 6,
   type: DrillTypes.FITNESS,
-  author: 'Moby',
+  author: '',
   title: 'Échauffment basique',
   image: 'https://zupimages.net/up/20/19/va5f.jpg',
   description: "Suivez la vidéo pour préparer le corps à l'effort",
@@ -707,7 +707,7 @@ const conditioningFullbodyDrill = {
 const mas30 = {
   id: 8,
   type: DrillTypes.FITNESS,
-  author: 'Edwin',
+  author: '',
   title: 'VMA : 30/30',
   image: 'https://zupimages.net/up/20/19/kj0f.jpg',
   description:
@@ -787,7 +787,7 @@ const mas30 = {
 const fartlek = {
   id: 9,
   type: DrillTypes.FITNESS,
-  author: 'Edwin',
+  author: '',
   title: 'Fartlek',
   image: 'https://zupimages.net/up/20/19/kj0f.jpg',
   description:
@@ -827,7 +827,7 @@ const fartlek = {
 const suicide = {
   id: 10,
   type: DrillTypes.FITNESS,
-  author: 'Moby',
+  author: '',
   title: 'Suicide',
   image: 'https://zupimages.net/up/20/19/va5f.jpg',
   description:
@@ -1077,7 +1077,7 @@ const suicide = {
 const lacticSprint = {
   id: 11,
   type: DrillTypes.FITNESS,
-  author: 'Edwin',
+  author: '',
   title: 'Sprint Lactique',
   image: 'https://zupimages.net/up/20/19/kj0f.jpg',
   description:
@@ -1247,7 +1247,7 @@ const lacticSprint = {
 const tDrill = {
   id: 12,
   type: DrillTypes.FITNESS,
-  author: 'Edwin',
+  author: '',
   title: 'Flash Team 2',
   image: 'https://zupimages.net/up/20/19/kj0f.jpg',
   description:
@@ -1437,9 +1437,9 @@ const tDrill = {
 const mas30Light = {
   id: 13,
   type: DrillTypes.FITNESS,
-  author: 'Edwin',
+  author: '',
   title: 'Machine 2',
-  image: 'https://zupimages.net/up/20/19/kj0f.jpg',
+  image: 'https://zupimages.net/up/20/28/fo2i.jpg',
   description:
     "Échauffement pour des sprints. A réaliser à la vitesse d'un 400m. 4 minutes de repos entre les séries. 5 mètres entre les cônes. Terminer la séance avec un jogging de 10 minutes.",
   minimalPlayersNumber: 1,
@@ -1517,7 +1517,7 @@ const mas30Light = {
 const circuit = {
   id: 14,
   type: DrillTypes.FITNESS,
-  author: 'Edwin',
+  author: '',
   title: 'Total Circuit',
   image: 'https://zupimages.net/up/20/19/kj0f.jpg',
   description: 'Un peu de renforcement musculaire',
@@ -1686,7 +1686,7 @@ const circuit = {
 const rest = {
   id: 15,
   type: DrillTypes.FITNESS,
-  author: 'Edwin',
+  author: '',
   title: 'Semaine de repos',
   image: 'https://zupimages.net/up/20/18/hwnh.jpg',
   description: "C'est la semaine de repos, pour laisser le corps reprendre des forces",
@@ -1715,7 +1715,7 @@ const rest = {
 const serpentine = {
   id: 16,
   type: DrillTypes.FITNESS,
-  author: 'Edwin',
+  author: '',
   title: 'Serpentine',
   image: 'https://zupimages.net/up/20/19/kj0f.jpg',
   description:
@@ -1845,9 +1845,9 @@ const serpentine = {
 const mas15 = {
   id: 20,
   type: DrillTypes.FITNESS,
-  author: 'Edwin',
+  author: '',
   title: 'Machine 5: VMA',
-  image: 'https://zupimages.net/up/20/19/kj0f.jpg',
+  image: 'https://zupimages.net/up/20/28/fo2i.jpg',
   description:
     "Cette séance est conçue pour améliorer la vitesse, ton jeu de jambes et te rendre plus agile et explosif.\nAprès l'échauffement, installe tes cônes pour utiliser un maximum d'espace dans un carré de 20m de côté. Ensuite, installe les autres à l'intérieur du carré en forme de serpent, chacun à environ 4 mètres en diagonale . Cela paraît simple, mais tu viens de créer un bon exo d'agilité.",
   minimalPlayersNumber: 1,
@@ -1905,7 +1905,7 @@ const mas15 = {
 const circuitLong = {
   id: 21,
   type: DrillTypes.FITNESS,
-  author: 'Edwin',
+  author: '',
   title: 'Machines 6: Circuit',
   image: 'https://zupimages.net/up/20/19/kj0f.jpg',
   description: 'Un peu de renforcement musculaire',
@@ -2134,9 +2134,9 @@ const circuitLong = {
 const mas15Long = {
   id: 22,
   type: DrillTypes.FITNESS,
-  author: 'Edwin',
-  title: 'Flash team 7: Sprint VMA',
-  image: 'https://zupimages.net/up/20/19/kj0f.jpg',
+  author: '',
+  title: 'Sprint VMA',
+  image: 'https://zupimages.net/up/20/28/fo2i.jpg',
   description: 'Séance de VMA',
   minimalPlayersNumber: 1,
   equipmentLabel: EquipmentLabels.NONE,
@@ -2193,7 +2193,7 @@ const mas15Long = {
 const sprintPractice = {
   id: 23,
   type: DrillTypes.FITNESS,
-  author: 'Edwin',
+  author: '',
   title: 'Sprints',
   image: 'https://zupimages.net/up/20/19/kj0f.jpg',
   description: 'Échauffement intense pour être prêt pour des sprints !',
@@ -2342,7 +2342,7 @@ const sprintPractice = {
 const ladderPractice = {
   id: 24,
   type: DrillTypes.FITNESS,
-  author: 'Edwin',
+  author: '',
   title: 'Échelles',
   image: 'https://zupimages.net/up/20/19/kj0f.jpg',
   description: 'Intense warm up to be prepare for sprints',
@@ -5311,13 +5311,13 @@ const strenght5 = {
 const basicThrowsDrill = {
   id: 1001,
   type: DrillTypes.FRISBEE,
-  author: 'Rowan McDonnell',
+  author: 'Mooncatchers',
   title: 'Lancers de base',
   image: 'https://zupimages.net/up/20/19/zgxt.jpg',
   description: 'Exercices de lancer simples pour apprendre à lancer le frisbee',
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 disque pour 2 joueurs',
+  equipment: '1 disque',
   durationInMinutes: 20,
   intensity: Intensities.LOW,
   goals: [FrisbeeGoals.THROWING],
@@ -5349,7 +5349,7 @@ const basicThrowsDrill = {
 const breakDrill = {
   id: 1002,
   type: DrillTypes.FRISBEE,
-  author: 'Martin',
+  author: 'Friselis',
   title: 'Cuts vers le côté fermé',
   image: 'https://zupimages.net/up/20/19/83fx.jpg',
   description: "Pour apprendre à jouer dans le côté fermé, et empêcher l'adversaire de le faire !",
@@ -5358,7 +5358,7 @@ const breakDrill = {
   equipment: '6 disques - 6 plots',
   durationInMinutes: 20,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.BREAK, FrisbeeGoals.MARK],
+  goals: [FrisbeeGoals.BREAK, FrisbeeGoals.MARK, FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -5372,11 +5372,18 @@ const breakDrill = {
     },
     {
       id: 2,
+      title: 'Sans le pied de pivot',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: breakSide,
+      instruction: 'Le lanceur doit essayer de breaker mais sans réaliser de pied de pivot',
+    },
+    {
+      id: 3,
       title: 'La Grande Muraille de Chine',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: breakSide,
       instruction:
-        "Si l'on veut faire travailler la marque, on peut insister sur le fait de ne jamais se prendre 2 fois de suite le même break. Il s'agit d'observer quelle est la passe préférentielle de l'attaquant et de tout faire pour la bloquer. On peut compter les points en valorisant les marques qui ont provoqué une passe ratée ou hors-timing",
+        "Le lanceur peut de nouveau utiliser toutes les feintes possibles. Si l'on veut faire travailler la marque, on peut insister sur le fait de ne jamais se prendre 2 fois de suite le même break. Il s'agit d'observer quelle est la passe préférentielle de l'attaquant et de tout faire pour la bloquer. On peut compter les points en valorisant les marques qui ont provoqué une passe ratée ou hors-timing",
     },
   ],
 };
@@ -5394,7 +5401,7 @@ const treasureHuntDrill = {
   equipment: '10 discs - 10 cones',
   durationInMinutes: 20,
   intensity: Intensities.LOW,
-  goals: [FrisbeeGoals.PLAY],
+  goals: [FrisbeeGoals.PLAY, FrisbeeGoals.COMMUNICATION],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -5423,7 +5430,7 @@ const kyeDrill = {
   equipment: '1 disque - 2 plots',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.PLAY, FrisbeeGoals.COMMUNICATION],
+  goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.MARK],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -5443,7 +5450,7 @@ const kyeDrill = {
 const bigEightDrill = {
   id: 1005,
   type: DrillTypes.FRISBEE,
-  author: 'Moby',
+  author: 'Mooncatchers',
   title: 'The big 8',
   image: 'https://zupimages.net/up/20/19/5209.jpg',
   description: 'Making a pass circuit where each player will try to work on their throws',
@@ -5452,7 +5459,7 @@ const bigEightDrill = {
   equipment: '8 discs - 8 cones',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.THROWING],
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -5472,7 +5479,7 @@ const bigEightDrill = {
 const trainDrill = {
   id: 1006,
   type: DrillTypes.FRISBEE,
-  author: 'Moby',
+  author: 'Iznogood',
   title: 'Le train',
   image: 'https://zupimages.net/up/20/19/ac8s.jpg',
   description: 'Idéal pour travailler la continuité sur un stack vertical',
@@ -5511,7 +5518,7 @@ const trainDrill = {
 const giveAndGoDrill = {
   id: 1007,
   type: DrillTypes.FRISBEE,
-  author: 'Moby',
+  author: 'Freezzz beezzz',
   title: 'Give and Go',
   image: 'https://zupimages.net/up/20/19/s9fe.jpg',
   description: 'Suivez votre disque après la passe aussi vite que possible',
@@ -5548,7 +5555,7 @@ const giveAndGoDrill = {
 const aussieDrill = {
   id: 1008,
   type: DrillTypes.FRISBEE,
-  author: 'Matt Hill',
+  author: 'Head of States',
   title: 'Aussie games',
   image: 'https://zupimages.net/up/20/19/78g2.png',
   description: 'You can run with the disc',
@@ -5577,7 +5584,7 @@ const aussieDrill = {
 const bolognaMDrill = {
   id: 1009,
   type: DrillTypes.FRISBEE,
-  author: 'Bologna',
+  author: 'CUSB',
   title: 'The M',
   image: 'https://zupimages.net/up/20/19/akuy.jpg',
   description: 'Follow the M',
@@ -5605,7 +5612,7 @@ const bolognaMDrill = {
 const goToTenDrill = {
   id: 1010,
   type: DrillTypes.FRISBEE,
-  author: 'Moby',
+  author: "Jack'suns",
   title: 'Go to 10',
   image: 'https://zupimages.net/up/20/19/rcyt.jpg',
   description: 'First team with 10 completes passes win',
@@ -5633,7 +5640,7 @@ const goToTenDrill = {
 const endzoneGameDrill = {
   id: 1011,
   type: DrillTypes.FRISBEE,
-  author: 'Moby',
+  author: 'Black Fish',
   title: 'Endzone Game',
   image: 'https://zupimages.net/up/20/25/71b2.jpg',
   description: 'Game to 5. If you score, your team stay in offense',
@@ -5671,7 +5678,7 @@ const endzoneGameDrill = {
 const bulldogDrill = {
   id: 1012,
   type: DrillTypes.FRISBEE,
-  author: 'Moby',
+  author: 'Kaal Soup',
   title: 'British Bulldog',
   image: 'https://zupimages.net/up/20/19/tf79.jpg',
   description:
@@ -5701,7 +5708,7 @@ const bulldogDrill = {
 const menageATroisDrill = {
   id: 1013,
   type: DrillTypes.FRISBEE,
-  author: 'Moby',
+  author: 'Tchac',
   title: 'Ménage à trois',
   image: 'https://zupimages.net/up/20/19/ai3z.jpg',
   description: "Le lanceur essaie de faire sa passe au receveur en s'aidant de n'importe quelle feinte",
@@ -5740,7 +5747,7 @@ const menageATroisDrill = {
 const dwarfDuelDrill = {
   id: 1014,
   type: DrillTypes.FRISBEE,
-  author: 'Moby',
+  author: 'PUC',
   title: 'Le duel des nains',
   image: 'https://zupimages.net/up/20/19/3m3k.jpg',
   description: 'Interdiction de sauter, tout est dans le positionnement !',
@@ -5769,7 +5776,7 @@ const dwarfDuelDrill = {
 const dishieChainDrill = {
   id: 1015,
   type: DrillTypes.FRISBEE,
-  author: 'Mooncatcher',
+  author: 'Mooncatchers',
   title: 'Dishie Chain',
   image: 'https://zupimages.net/up/20/19/stdq.jpg',
   description: 'Basic long passes drill. You want your players to alternate between throwing, running and passing',
@@ -5799,7 +5806,8 @@ const dishieChainDrill = {
       illustrationSource: dishiesPoach,
       repetition: '',
       rest: '',
-      instruction: 'Add a defensive player to work on the poach with a side stack',
+      instruction:
+        'Add a defensive player to work on the poach with a side stack. The thrower has to throw to the free player.',
     },
   ],
 };
@@ -5807,7 +5815,7 @@ const dishieChainDrill = {
 const breakDanceDrill = {
   id: 1016,
   type: DrillTypes.FRISBEE,
-  author: 'Moby',
+  author: 'Disc Joker',
   title: 'Break Dance',
   image: 'https://zupimages.net/up/20/19/agsd.jpg',
   description: 'Making a christmas tree in the break',
@@ -5846,7 +5854,7 @@ const breakDanceDrill = {
 const triangleOfDeathdrill = {
   id: 1017,
   type: DrillTypes.FRISBEE,
-  author: 'Moby',
+  author: 'Forward',
   title: 'Le Triangle de la mort',
   image: 'https://zupimages.net/up/20/19/kmlc.jpg',
   description: 'Lancer 10 longues à la suite aussi loin et aussi vite que possible',
@@ -5875,7 +5883,7 @@ const triangleOfDeathdrill = {
 const trainOfFakeDrill = {
   id: 1018,
   type: DrillTypes.FRISBEE,
-  author: 'Moby',
+  author: 'Iznogood',
   title: 'Le Train des feintes',
   image: 'https://zupimages.net/up/20/19/ac8s.jpg',
   description: 'Idéal pour travailler la continuité sur un stack vertical',
@@ -5924,7 +5932,7 @@ const trainOfFakeDrill = {
 const resetOpenDrill = {
   id: 1019,
   type: DrillTypes.FRISBEE,
-  author: 'Moby',
+  author: 'Tchac',
   title: 'Reset Open',
   image: 'https://zupimages.net/up/20/19/tzk3.jpg',
   description: 'Faire des cuts dans le bon timing, attraper puis lancer immédiatement',
@@ -5973,7 +5981,7 @@ const resetOpenDrill = {
 const resetBreakDrill = {
   id: 1020,
   type: DrillTypes.FRISBEE,
-  author: 'Moby',
+  author: 'Tchac',
   title: 'Reset Break',
   image: 'https://zupimages.net/up/20/19/w90f.jpg',
   description: 'Faire des cuts dans le bon timing, attraper puis lancer immédiatement',
@@ -6022,7 +6030,7 @@ const resetBreakDrill = {
 const youShallNotPassDrill = {
   id: 1021,
   type: DrillTypes.FRISBEE,
-  author: 'Moby',
+  author: 'Belgium Open',
   title: 'Vous ne passerez pas',
   image: 'https://zupimages.net/up/20/19/90z6.jpg',
   description: "Utiliser son corps pour empêcher l'attaquant de recevoir le disque",
@@ -6070,7 +6078,7 @@ const youShallNotPassDrill = {
 const defensePositionDrill = {
   id: 1022,
   type: DrillTypes.FRISBEE,
-  author: 'Moby',
+  author: 'Sockeye',
   title: 'Positionnement défensif',
   image: 'https://zupimages.net/up/20/19/zigu.jpg',
   description: "Se positionner correctement en fonction de la stratégie de l'équipe",
@@ -6108,7 +6116,7 @@ const defensePositionDrill = {
 const discGolf = {
   id: 1023,
   type: DrillTypes.FRISBEE,
-  author: 'Moby',
+  author: 'Colony',
   title: 'Disc Golf',
   image: 'https://zupimages.net/up/20/25/f4bu.jpg',
   description:
@@ -6176,7 +6184,7 @@ const dDC = {
 const horizontalTiming = {
   id: 1025,
   type: DrillTypes.FRISBEE,
-  author: 'Moby',
+  author: 'Wizard',
   title: 'Horizontal Timing',
   image: 'https://zupimages.net/up/20/25/zn5l.jpg',
   description: 'Complete drill to work on the timing of the cutter and handler in a horizontal stack',
@@ -6214,7 +6222,7 @@ const horizontalTiming = {
 const game3v3Horizontal = {
   id: 1026,
   type: DrillTypes.FRISBEE,
-  author: 'Moby',
+  author: 'Mooncatchers',
   title: 'Diamond Cut',
   image: 'hhttps://zupimages.net/up/20/25/2vga.jpg',
   description: 'work of freeing up spaces in a horizontal stack',
@@ -6252,7 +6260,7 @@ const game3v3Horizontal = {
 const theDuel = {
   id: 1027,
   type: DrillTypes.FRISBEE,
-  author: 'Moby',
+  author: 'Furious George',
   title: 'Nothing like a duel',
   image: 'https://zupimages.net/up/20/19/cd36.jpg',
   description: 'Nothing better than a duel to work on the different aspects of the game',
@@ -6291,7 +6299,7 @@ const theDuel = {
 const cardinal = {
   id: 1028,
   type: DrillTypes.FRISBEE,
-  author: 'Edwin',
+  author: 'PUC',
   title: 'Cardinal Point',
   image: 'https://zupimages.net/up/20/25/xtik.png',
   description: 'Learning to throw in any position',
@@ -6320,7 +6328,7 @@ const cardinal = {
 const horizontalToVertical = {
   id: 1029,
   type: DrillTypes.FRISBEE,
-  author: 'Moby',
+  author: 'Mubidisk',
   title: 'Horizontal Flow',
   image: 'https://zupimages.net/up/20/25/kecr.jpg',
   description: 'Learning to create a powerful flow from a static position.',
@@ -6369,7 +6377,7 @@ const horizontalToVertical = {
 const horizontalTrap = {
   id: 1030,
   type: DrillTypes.FRISBEE,
-  author: 'Moby',
+  author: 'Mubidisk',
   title: 'Trap with the Open',
   image: 'https://zupimages.net/up/20/25/zkfl.jpg',
   description: 'Learning to use the horizontal stack to get out of the line with the cutter in the open side',
@@ -6417,7 +6425,7 @@ const horizontalTrap = {
 const horizontalTrapOutside = {
   id: 1031,
   type: DrillTypes.FRISBEE,
-  author: 'Moby',
+  author: 'Mubidisk',
   title: 'Trap with the Break',
   image: 'https://zupimages.net/up/20/25/zkfl.jpg',
   description: 'Learning to use the horizontal stack to get out of the line with the cutter in the break side',
@@ -6466,7 +6474,7 @@ const horizontalTrapOutside = {
 const horizontalHandler = {
   id: 1032,
   type: DrillTypes.FRISBEE,
-  author: 'Moby',
+  author: 'Euforia',
   title: 'Trap with the handlers',
   image: 'https://zupimages.net/up/20/25/zkfl.jpg',
   description: 'Learning to use the horizontal stack to get out of the line with the handler',
@@ -6515,7 +6523,7 @@ const horizontalHandler = {
 const checkLong = {
   id: 1033,
   type: DrillTypes.FRISBEE,
-  author: 'Moby',
+  author: 'Disk Joker',
   title: 'Long is your new weapon',
   image: 'https://zupimages.net/up/20/25/pzn1.jpg',
   description: 'Learning to throw deep as a cutter and to get information as a cutter',
@@ -6544,7 +6552,7 @@ const checkLong = {
 const throwCatchThrow = {
   id: 1034,
   type: DrillTypes.FRISBEE,
-  author: 'Edwin',
+  author: 'PUC',
   title: 'Double Disc',
   image: 'https://zupimages.net/up/20/25/gf41.jpg',
   description: 'Work by pair. The goal is to improve your trhowing and catching speed',
@@ -6579,7 +6587,7 @@ const stopFlow = {
   description: 'Learn to quickly identify dangerous option and deny it.',
   minimalPlayersNumber: 5,
   equipmentLabel: EquipmentLabels.NONE,
-  equipment: '1 discs ',
+  equipment: '1 disc ',
   durationInMinutes: 12,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.DEFENSE],
@@ -6660,7 +6668,7 @@ const sprintDefense = {
 const cupSwinging = {
   id: 1038,
   type: DrillTypes.FRISBEE,
-  author: 'Moby',
+  author: 'Black Fish',
   title: 'Swinging with the cup',
   image: 'https://zupimages.net/up/20/25/019o.jpg',
   description: 'Practicing the defense against the swing as a 3 players cup',
@@ -6689,7 +6697,7 @@ const cupSwinging = {
 const zoneGame = {
   id: 1039,
   type: DrillTypes.FRISBEE,
-  author: 'Moby',
+  author: 'Mooncatchers',
   title: 'Try to beat our zone',
   image: 'https://zupimages.net/up/20/25/fnkl.jpg',
   description: 'Trying to score a point against the zone defense with as few attempts as possible',
@@ -6727,7 +6735,7 @@ const zoneGame = {
 const goaltimateDrill = {
   id: 1040,
   type: DrillTypes.FRISBEE,
-  author: 'Moby',
+  author: '',
   title: 'Goaltimate',
   image: 'https://zupimages.net/up/20/19/gce7.jpg',
   description:
@@ -6766,7 +6774,7 @@ const goaltimateDrill = {
 const diagonalToVertical = {
   id: 1041,
   type: DrillTypes.FRISBEE,
-  author: 'Moby',
+  author: 'Belgium Open',
   title: 'Diagonal to Vertical',
   image: 'https://zupimages.net/up/20/25/iqn0.jpg',
   description: 'Train the team to make the perfect transition from a diagonal stack to a vertical flow',
@@ -6873,7 +6881,7 @@ const diagonalIso = {
 const splitIso = {
   id: 1043,
   type: DrillTypes.FRISBEE,
-  author: 'Mooncatchers',
+  author: 'Iznogood',
   title: 'Split Iso',
   image: 'https://zupimages.net/up/20/25/k6hi.jpg',
   description: 'Train the team to make the perfect transition from a diagonal stack to a vertical flow',
@@ -6912,7 +6920,7 @@ const splitIso = {
 const splitToVertical = {
   id: 1044,
   type: DrillTypes.FRISBEE,
-  author: 'Moby',
+  author: 'Iznogood',
   title: 'Split to Vertical',
   image: 'https://zupimages.net/up/20/25/uqd5.jpg',
   description: 'Train the team to make the perfect transition from a split stack to a vertical flow',
@@ -6950,7 +6958,7 @@ const splitToVertical = {
 const sideToVertical = {
   id: 1045,
   type: DrillTypes.FRISBEE,
-  author: 'Moby',
+  author: 'Iznogood',
   title: 'Side to Vertical',
   image: 'https://zupimages.net/up/20/25/zpuq.jpg',
   description: 'Train the team to make the perfect transition from a side stack to a vertical flow',
@@ -6988,8 +6996,8 @@ const sideToVertical = {
 
 const normalGame = {
   id: 2001,
-  type: DrillTypes.GAME,
-  author: 'Martin',
+  type: DrillTypes.FRISBEE,
+  author: '',
   title: 'Match 7 contre 7',
   image:
     'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
@@ -7018,8 +7026,8 @@ const normalGame = {
 
 const game3v3 = {
   id: 2002,
-  type: DrillTypes.GAME,
-  author: 'Martin',
+  type: DrillTypes.FRISBEE,
+  author: '',
   title: 'Match 3 contre 3',
   image:
     'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
@@ -7048,8 +7056,8 @@ const game3v3 = {
 
 const longShotGame = {
   id: 2003,
-  type: DrillTypes.GAME,
-  author: 'Martin',
+  type: DrillTypes.FRISBEE,
+  author: 'PUC',
   title: 'Match spécial longues',
   image:
     'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
@@ -7078,8 +7086,8 @@ const longShotGame = {
 
 const lineGame = {
   id: 2004,
-  type: DrillTypes.GAME,
-  author: 'Moby',
+  type: DrillTypes.FRISBEE,
+  author: '',
   title: 'Breaking the mark oriented game',
   image:
     'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
@@ -7108,8 +7116,8 @@ const lineGame = {
 
 const longestGame = {
   id: 2005,
-  type: DrillTypes.GAME,
-  author: 'Moby',
+  type: DrillTypes.FRISBEE,
+  author: 'KYE',
   title: 'The disc is gold',
   image:
     'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
@@ -7139,9 +7147,9 @@ const longestGame = {
 
 const trainingGame = {
   id: 2006,
-  type: DrillTypes.GAME,
-  author: 'Moby',
-  title: 'The disc is gold',
+  type: DrillTypes.FRISBEE,
+  author: '',
+  title: 'Entrainement du nouveau Stack',
   image:
     'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
   description: 'Just a classical game on the whole field. ',

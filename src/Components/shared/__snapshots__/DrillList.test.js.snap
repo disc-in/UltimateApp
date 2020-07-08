@@ -195,7 +195,9 @@ exports[`<DrillList /> renders correctly 1`] = `
                 "fontSize": 14,
               }
             }
-          />
+          >
+            Author
+          </Text>
           <Text
             style={
               Object {

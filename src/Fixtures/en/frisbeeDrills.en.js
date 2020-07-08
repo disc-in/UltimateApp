@@ -539,7 +539,7 @@ const warmupDrill = {
       title: 'Ultimate warm-up',
       illustrationType: IllustrationType.VIMEO,
       sounds: true,
-      illustrationSource: '415430252',
+      illustrationSource: '436481012',
       repetition: '',
       rest: '',
       instruction: '',
@@ -2919,7 +2919,7 @@ const strenght16 = {
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
   seasonTiming: SeasonTimings.IN_SEASON,
-  level: Levels.HIGH,
+  level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
@@ -3018,7 +3018,7 @@ const agility16 = {
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
   seasonTiming: SeasonTimings.IN_SEASON,
-  level: Levels.HIGH,
+  level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
@@ -3117,7 +3117,7 @@ const agility15 = {
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
   seasonTiming: SeasonTimings.IN_SEASON,
-  level: Levels.HIGH,
+  level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
@@ -3226,7 +3226,7 @@ const strenght15 = {
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
   seasonTiming: SeasonTimings.IN_SEASON,
-  level: Levels.HIGH,
+  level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
@@ -3315,7 +3315,7 @@ const strenght14 = {
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
   seasonTiming: SeasonTimings.IN_SEASON,
-  level: Levels.HIGH,
+  level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
@@ -3404,7 +3404,7 @@ const agility14 = {
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
   seasonTiming: SeasonTimings.IN_SEASON,
-  level: Levels.HIGH,
+  level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
@@ -3493,7 +3493,7 @@ const agility13 = {
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
   seasonTiming: SeasonTimings.IN_SEASON,
-  level: Levels.HIGH,
+  level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
@@ -3582,7 +3582,7 @@ const strenght13 = {
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
   seasonTiming: SeasonTimings.IN_SEASON,
-  level: Levels.HIGH,
+  level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
@@ -3661,7 +3661,7 @@ const agility12 = {
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
   seasonTiming: SeasonTimings.IN_SEASON,
-  level: Levels.HIGH,
+  level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
@@ -3760,7 +3760,7 @@ const strenght12 = {
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
   seasonTiming: SeasonTimings.IN_SEASON,
-  level: Levels.HIGH,
+  level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
@@ -3839,7 +3839,7 @@ const agility11 = {
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
   seasonTiming: SeasonTimings.IN_SEASON,
-  level: Levels.HIGH,
+  level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
@@ -3938,7 +3938,7 @@ const strenght11 = {
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
   seasonTiming: SeasonTimings.IN_SEASON,
-  level: Levels.HIGH,
+  level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
@@ -4027,7 +4027,7 @@ const agility10 = {
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
   seasonTiming: SeasonTimings.PRE_SEASON,
-  level: Levels.HIGH,
+  level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
@@ -4126,7 +4126,7 @@ const strenght10 = {
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
   seasonTiming: SeasonTimings.PRE_SEASON,
-  level: Levels.HIGH,
+  level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
@@ -4215,7 +4215,7 @@ const agility9 = {
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
   seasonTiming: SeasonTimings.PRE_SEASON,
-  level: Levels.HIGH,
+  level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
@@ -4314,7 +4314,7 @@ const strenght9 = {
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
   seasonTiming: SeasonTimings.PRE_SEASON,
-  level: Levels.HIGH,
+  level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
@@ -4392,18 +4392,18 @@ const strenght9 = {
 const agility8 = {
   id: 47,
   type: DrillTypes.FITNESS,
-  author: '',
+  author: ' ',
   title: 'Explosivity - Pre-Season',
   image: 'https://zupimages.net/up/20/28/ezu6.jpg',
   description: 'Works on explosiveness and stability ',
   minimalPlayersNumber: 1,
   equipmentLabel: EquipmentLabels.FULL,
   equipment: 'Box - Dumbbell',
-  durationInMinutes: 30,
+  durationInMinutes: 25,
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
   seasonTiming: SeasonTimings.PRE_SEASON,
-  level: Levels.HIGH,
+  level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
@@ -4502,7 +4502,7 @@ const strenght8 = {
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
   seasonTiming: SeasonTimings.PRE_SEASON,
-  level: Levels.HIGH,
+  level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
@@ -4591,7 +4591,7 @@ const agility7 = {
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
   seasonTiming: SeasonTimings.PRE_SEASON,
-  level: Levels.HIGH,
+  level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
@@ -4690,7 +4690,7 @@ const strenght7 = {
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
   seasonTiming: SeasonTimings.PRE_SEASON,
-  level: Levels.HIGH,
+  level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
@@ -4789,7 +4789,7 @@ const agility6 = {
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
   seasonTiming: SeasonTimings.OFF_SEASON,
-  level: Levels.HIGH,
+  level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
@@ -4878,7 +4878,7 @@ const strenght6 = {
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
   seasonTiming: SeasonTimings.OFF_SEASON,
-  level: Levels.HIGH,
+  level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
@@ -4977,7 +4977,7 @@ const agility5 = {
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
   seasonTiming: SeasonTimings.OFF_SEASON,
-  level: Levels.HIGH,
+  level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
@@ -5076,7 +5076,7 @@ const strenght5 = {
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
   seasonTiming: SeasonTimings.OFF_SEASON,
-  level: Levels.HIGH,
+  level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,

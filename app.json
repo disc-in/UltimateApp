@@ -12,15 +12,21 @@
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "assetBundlePatterns": ["assets/**/*"],
     "ios": {
+      "bundleIdentifier": "com.yourcompany.yourappname",
+      "buildNumber": "1.0.0",
       "supportsTablet": true,
       "infoPlist": {
         "CFBundleAllowMixedLocalizations": true
       }
+    },
+    "android": {
+      "package": "com.yourcompany.yourappname",
+      "versionCode": 1
     }
   }
 }

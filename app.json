@@ -5,11 +5,7 @@
     "slug": "ultimate-app",
     "privacy": "unlisted",
     "sdkVersion": "37.0.0",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
+    "platforms": ["ios", "android", "web"],
     "version": "0.0.1",
     "githubUrl": "https://github.com/UltimateApp/UltimateApp",
     "orientation": "portrait",
@@ -19,9 +15,7 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "assets/**/*"
-    ],
+    "assetBundlePatterns": ["assets/**/*"],
     "ios": {
       "supportsTablet": true,
       "infoPlist": {

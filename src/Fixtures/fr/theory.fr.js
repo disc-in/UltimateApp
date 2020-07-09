@@ -6,14 +6,13 @@ export const dictionary = [
       {
         id: 0,
         text: 'Break',
-        definition:
-          'When Forcing you are making the player holding the disc throw a certain direction. A break is when your attempt fails and they throw the direction you are guarding against. A teammate may yell “no break!” if there is an opposing player wide open on the guarded side, this means try extra hard to guard that side.',
+        definition: 'Fait, pour un lanceur, de réussir une passe du côté fermé',
       },
       {
         id: 1,
         text: 'Brick',
         definition:
-          'Happens when a freshly pulled disc goes out-of-bounds. The receiving team take the disc to the brick-mark which is centrally located and 20 yards in-field from the first end zone line. A brick is signified by clapping hands once over head or by calling “Brick.”',
+          "La règle du « brick » indique que quand si l'engagement franchit les lignes de touches à moins de 18 m de la ligne de but, vous pouvez commencer à jouer à 18 m de la ligne de but (au milieu du terrain). Le joueur le signale en appelant (« brick ») avant de prendre le disque.",
       },
     ],
   },
@@ -25,30 +24,49 @@ export const dictionary = [
         id: 0,
         text: 'Callahan',
         definition:
-          'It is when you catch an opponents pass in his/her end zone resulting in a point for the catchers team. This rarely ever happens, ever.',
+          'Interception du disque par un joueur de l’équipe en défensive dans la zone des buts de l’adversaire.',
       },
       {
         id: 1,
-        text: 'Clear out',
+        text: 'Côté ouvert',
         definition:
-          'This can mean two things. 1) Clear out can mean an area is getting too clustered with people and to throw the disc to openness and 2) If someone is Clogging The Lane they may be told to “clear out.”',
+          'Portion du terrain qui n’est pas couverte par le marqueur, où le porteur du disque peut faire une passe sans entrave',
       },
       {
         id: 2,
-        text: 'Cup',
-        definition: 'An extremely common and highly effective defensive zone tactic in Ultimate Frisbee.',
+        text: 'Côté fermé',
+        definition:
+          'Portion du terrain qui est couverte par le marqueur, où ce dernier tente d’empêcher le porteur du disque de faire une passe.',
       },
       {
         id: 3,
-        text: 'Cut',
+        text: 'Courbe extérieure',
         definition:
-          'A juke or sudden change in direction while trying to get open to receive the disc. An in-cut is when you run towards the thrower while an out-cut is the opposite; Running away from the thrower in hope to catch a deeper pass.',
+          '(Outside out) Effet que le lanceur imprime à la trajectoire du disque, de manière à ce que celuici s’éloigne d’abord de l’axe de lancer sans jamais le traverser, et qu’il revienne en direction de la cible à la fin de sa course.',
       },
       {
         id: 4,
+        text: 'Courbe intérieur',
+        definition:
+          '(Inside out) Effet que le lanceur imprime à la trajectoire du disque, de manière à ce que celui-ci traverse, au début de sa course, l’axe de lancer avant de revenir vers la cible.',
+      },
+      {
+        id: 5,
+        text: 'Cup',
+        definition:
+          'Formation utilisée en défensive de zone, composée de trois défenseurs positionnés en demi-cercle autour du porteur du disque, ce qui restreint ce dernier à tenter des passes courtes.',
+      },
+      {
+        id: 6,
+        text: 'Cut',
+        definition:
+          'Tentative de démarquage faite par un joueur de l’équipe offensive dans le but de recevoir une passe du porteur du disque.',
+      },
+      {
+        id: 7,
         text: 'Cutter',
         definition:
-          'The two main offensive positions in Ultimate are the handler and the cutter. The cutters job is to cut, juke, and get open for a handler to pass to them. The main job of the cutter is to catch at all costs, and then to return it to a handler and repeat.',
+          'Joueur de l’équipe offensive qui tente de se démarquer pour recevoir une passe du porteur du disque',
       },
     ],
   },
@@ -58,14 +76,14 @@ export const dictionary = [
     data: [
       {
         id: 0,
-        text: 'Double Team',
+        text: 'Dive',
         definition:
-          'When holding the disc only one player can be within 10 feet of you, usually the player stalling you. If another player is within the 10 feet you can call “double team” and the stall count will restart. Note: opposing players are allowed to run and defend teammates within the 10 feet as long as they aren’t intentionally trying to block you. ',
+          'Saut au cours duquel le joueur propulse tout son corps dans une certaine direction pour tenter d’attraper un disque qu’il ne peut atteindre en étirant simplement le bras, puis tombe au sol, sur une partie du corps autre que ses pieds.',
       },
       {
         id: 1,
         text: 'Dump',
-        definition: 'Passing it backward to someone behind you, usually a Handler.',
+        definition: 'Passe courte faite au joueur en soutien dans le but de relancer l’attaque.',
       },
     ],
   },
@@ -76,8 +94,7 @@ export const dictionary = [
       {
         id: 0,
         text: 'Endzone',
-        definition:
-          'Just like in Football. In outdoor Ultimate the end zones are 25 yards deep. These dimensions can be altered as long as both end zones are equal. A player must catch the disc in the end zone to score a point.',
+        definition: 'La zone de but.',
       },
     ],
   },
@@ -88,53 +105,76 @@ export const dictionary = [
       {
         id: 0,
         text: 'Flick',
-        definition: 'Next to backhand, the flick is the most commonly used Ultimate Throw.',
+        definition:
+          'Lancer exécuté en tenant le disque face vers le haut, du côté du bras sollicité, en le relâchant généralement à hauteur de la taille, le coude près du corps, et en le faisant pivoter de l’extérieur vers l’intérieur.',
       },
       {
         id: 1,
-        text: 'Fast Stall',
-        definition:
-          'We all get antsy sometimes especially in the heat of play. Each stall count is supposed to be one-second long but in the midst of battle we may count faster then a second which can be called by the thrower, known as a stallout. If the staller doesn’t agree with the throwers call, they can Contest the call causing the stall count to move back only 2 seconds. If the play is not contested the count goes back to zero. A stall count for outdoor Ultimate is 10 seconds while an indoor game is usually 7 seconds.',
+        text: 'Flow',
+        definition: 'Suite rapide et continue de passes courtes au sein de l’équipe offensive.',
       },
       {
         id: 2,
-        text: 'Forcing',
+        text: 'Force Backhand',
+        definition: 'Couvrir le porteur du disque de façon à l’obliger à lancer le disque du revers.',
+      },
+      {
+        id: 2,
+        text: 'Force Flick or Forehand',
+        definition: 'Couvrir le porteur du disque de façon à l’obliger à exécuter un lancer droit',
+      },
+      {
+        id: 2,
+        text: 'Force Straight',
         definition:
-          'You can force forehand, force backhand or force home/away. Forcing means to make the opposing thrower throw a certain way. For example to force backhand would mean to stand on their right side completely giving them the ability to backhand. But making it next to impossible to throw a Flick. You would have successfully forced them to throw a backhand which is huge when it comes to plays and strategy. Forcing flick would be stopping the opposing thrower from throwing a backhand. As you can see in the picture to the right the thrower is being forced to flick it. He has a wide open flick but it will be very challenging to backhand. The force is agreed upon and understood by the entire team before a play to maximize effectiveness. Please checkout Stack to learn more about why forcing is so important.',
+          'Couvrir la partie située devant le porteur du disque, perpendiculairement aux lignes de côté, de façon à l’obliger à faire des passes latérales.',
+      },
+      {
+        id: 3,
+        text: 'Forehand',
+        definition:
+          'Lancer exécuté en tenant le disque face vers le haut, du côté du bras sollicité, en le relâchant généralement à hauteur de la taille, le coude près du corps, et en le faisant pivoter de l’extérieur vers l’intérieur.',
       },
     ],
   },
   {
     id: 6,
+    title: 'G',
+    data: [
+      {
+        id: 0,
+        text: 'Give & Go',
+        definition:
+          'Manœuvre offensive où le porteur du disque fait une passe courte à un de ses joueurs et se dirige rapidement dans un espace libre près de celui-ci afin de recevoir à nouveau le disque.',
+      },
+    ],
+  },
+  {
+    id: 7,
     title: 'H',
     data: [
       {
         id: 0,
         text: 'Handler',
         definition:
-          'There are really only two main positions in Ultimate, The handler and the cutter. The handler is the one that handles the disc. Typically, the handler is an experienced player that has mastered at least the three main throws of Ultimate.. the hammer, backhand, and forehand. The handlers job is to stay back while the cutters try to get open. The handler will throw to the cutter to hopefully progress up the field. Since not everyone is capable of being a handler, the term can also used to describe a person’s skill level.',
+          'Joueur de l’équipe offensive dont le rôle principal est d’assurer la possession du disque et d’orienter l’attaque.',
       },
       {
         id: 1,
         text: 'Hammer',
-        definition: ' A very common used Ultimate Throw which is thrown over the head.',
+        definition:
+          'Lancer renversé exécuté en tenant le disque au-dessus de la tête à un angle d’environ 45 degrés par rapport au sol, face vers le bas, et en le relâchant après avoir fait un mouvement ascendant de l’arrière vers l’avant.',
       },
       {
         id: 2,
-        text: 'Huck',
-        definition: 'A long throw down field. Huck may be spelled differently depending on the country you play.',
-      },
-    ],
-  },
-  {
-    id: 7,
-    title: 'I',
-    data: [
-      {
-        id: 1,
-        text: 'Iso',
+        text: 'Horizontal Stack',
         definition:
-          'On offense, A teammate may yell “Iso ______!” (The blank being someone’s name or nickname). This means for everyone else to clear away from that person so they can receive a pass. Opposing players usually don’t know your teammates names so this play is meant to take advantage of that.',
+          'Formation offensive qui consiste en l’alignement des traceurs sur une ligne parallèle aux lignes de fond afin qu’ils puissent se démarquer à tour de rôle et recevoir une passe du porteur du disque.',
+      },
+      {
+        id: 3,
+        text: 'Huck',
+        definition: 'Passe qui parcourt généralement au moins la moitié de la longueur du terrain',
       },
     ],
   },
@@ -146,7 +186,17 @@ export const dictionary = [
         id: 0,
         text: 'Layout',
         definition:
-          'Basically another word for a Bid. A layout is more when you are running and dive forward with two hands out sliding flat on your chest to catch or block the disc. A bid is a more broad term meaning ANY type of dive.',
+          'Saut au cours duquel le joueur propulse tout son corps dans une certaine direction pour tenter d’attraper un disque qu’il ne peut atteindre en étirant simplement le bras, puis tombe au sol, sur une partie du corps autre que ses pieds.',
+      },
+      {
+        id: 1,
+        text: 'Lead Pass',
+        definition: 'Passe exécutée devant le traceur ou le meneur de jeu.',
+      },
+      {
+        id: 2,
+        text: 'Longue',
+        definition: '(Huck)Passe qui parcourt généralement au moins la moitié de la longueur du terrain',
       },
     ],
   },
@@ -158,118 +208,177 @@ export const dictionary = [
         id: 0,
         text: 'Man on Man D',
         definition:
-          'The most common defensive tactic in Ultimate. Simply put, you are assigned one man (or woman) on the other team. It is up to you to guard that man at all costs, never leave him or let him out of your reach.',
+          'Stratégie défensive qui consiste à jumeler chaque joueur de l’équipe défensive à un joueur de l’équipe adverse qu’il devra couvrir',
       },
       {
         id: 1,
-        text: 'Mark',
-        definition:
-          'When you are told to cover a specific person they are your mark. Stay on your mark at all costs.  It is your job to not let that single person get the disc, and to escape them when you are trying to get open for the disc.',
+        text: 'Marqueur',
+        definition: 'Joueur de l’équipe défensive qui couvre le porteur du disque.',
       },
       {
         id: 2,
-        text: 'Mismatch',
+        text: 'Mur',
         definition:
-          'When playing Man Defense, you will be assigned a mark to cover and to stay on throughout the entire point. Typically, you will be marking someone equal, or close to equal, your height and skill level. A Mismatch occurs when one of the two opposing players is significantly better or worse than the other. An example could be putting a 5′ 2″ guy on an opposing 6′ 5″ guy or putting a rookie player on a veteran player. Mismatches will always occur especially if the other teams skill levels are unknown.',
+          'Formation utilisée en défensive de zone, composée de trois défenseurs positionnés devant le porteur du disque, en ligne droite parallèle à la zone des buts, et d’un chasseur, ce qui restreint le porteur à tenter des passes courtes.',
       },
     ],
   },
   {
     id: 10,
-    title: 'P',
+    title: 'N',
     data: [
       {
         id: 0,
-        text: 'Pancake',
+        text: 'No Break',
         definition:
-          'A type of catch where a player claps his/her hands on the top and bottom of the disc. This is the most secure way to catch but severely limits one’s reach.',
+          'Interjection utilisée par les joueurs en défensive pour indiquer au marqueur qu’il doit éviter qu’une passe soit exécutée du côté fermé.',
       },
       {
         id: 1,
-        text: 'Pick',
+        text: 'No Line',
         definition:
-          'When guarding a man on defense you are given the right to guard them without interference. So say your on defense and guarding an opposing player by basically following them everywhere they go.',
-      },
-      {
-        id: 2,
-        text: 'Pivot Foot',
-        definition:
-          'Like in basketball you must establish a foot to twist and turn on when holding the disc. This is your pivot foot. If you are a righty your pivot should be your left foot and visa versa.',
-      },
-      {
-        id: 3,
-        text: 'Poach',
-        definition:
-          'A player would yell “Poach!” if he/she is WIDE open. Not just a little open but really open. 99% of the time the player yelling poach would receive the disc.',
-      },
-      {
-        id: 4,
-        text: 'Pull',
-        definition: 'The first throw off to start the game or to start a new point.',
+          'Interjection utilisée pour indiquer au marqueur qu’il doit empêcher le porteur du disque, situé près des lignes de côté, de faire une passe vers ces mêmes lignes.',
       },
     ],
   },
   {
     id: 11,
-    title: 'S',
+    title: 'O',
     data: [
       {
         id: 0,
-        text: 'Scoober',
-        definition: 'A type of Ultimate Throw commonly used in tight situations.',
-      },
-      {
-        id: 1,
-        text: 'Stack',
-        definition: 'A very common strategy used by many teams.',
-      },
-      {
-        id: 2,
-        text: 'Stall',
+        text: 'Offensive Zone',
         definition:
-          'A player only has ten seconds to throw the disc. But only if an opposing player is within ten feet of them and stalling them. You would run up and say, loud enough for the thrower to hear, STALL 1, STALL 2, STALL 3…..STALL 10.',
-      },
-      {
-        id: 3,
-        text: 'Strike',
-        definition:
-          'When a player is forcing a particular way they are leaving a portion of the field completely open. It is your teams’ job to guard that open portion of the field. Sometimes an opposing player will stray away from a team member and become completely open. A team member would yell “Strike!” for you to change your force for about 3 seconds, long enough for them to get back on their man. Make sure you return to your normal force right after.',
-      },
-      {
-        id: 4,
-        text: 'Swing',
-        definition:
-          'When you have the disc someone may yell at you to “Swing!” meaning switch the field. In other words throw it to somebody on the opposite sideline. This usually happens when both teams starts clustering on one side of the field when the entire other side is vacant.',
+          'Stratégie offensive qui consiste, pour les joueurs à l’attaque, à se placer à différents endroits spécifiques sur le terrain pour contrer la défensive de zone et progresser.',
       },
     ],
   },
   {
     id: 12,
+    title: 'P',
+    data: [
+      {
+        id: 0,
+        text: 'Pick',
+        definition:
+          'Blocage, intentionnel ou non, qui survient lorsqu’un joueur offensif se déplace de façon qu’un joueur défensif couvrant un traceur se trouve entravé.',
+      },
+      {
+        id: 1,
+        text: 'Poach',
+        definition: 'Abandonner intentionnellement une couverture pour aider les autres joueurs en défensive.',
+      },
+      {
+        id: 2,
+        text: 'Pull',
+        definition:
+          'Mise au jeu exécutée en lançant le disque en direction de l’équipe adverse à partir de la zone des buts de l’équipe en possession du disque.',
+      },
+      {
+        id: 3,
+        text: 'Push Pass',
+        definition:
+          'Lancer exécuté en tenant le disque face vers le haut, du côté du bras sollicité, et en le relâchant tout en le faisant pivoter de l’intérieur vers l’extérieur.',
+      },
+    ],
+  },
+  {
+    id: 14,
+    title: 'S',
+    data: [
+      {
+        id: 0,
+        text: 'Scoober',
+        definition:
+          'Lancer renversé croisé exécuté en tenant le disque au-dessus de l’épaule opposée au bras sollicité, face vers le bas, et en le relâchant après avoir fait un mouvement circulaire de l’arrière vers l’avant.',
+      },
+      {
+        id: 1,
+        text: 'Stack',
+        definition:
+          'Formation offensive qui consiste en l’alignement des traceurs sur une ligne imaginaire afin qu’ils puissent se démarquer à tour de rôle et recevoir une passe du porteur du disque.',
+      },
+      {
+        id: 2,
+        text: 'Strip',
+        definition:
+          'Faute qui survient lorsqu’un joueur défensif fait perdre le disque à son adversaire alors que celui-ci en avait le contrôle.',
+      },
+      {
+        id: 3,
+        text: 'Swing',
+        definition: 'Passe exécutée parallèlement à la ligne de fond.',
+      },
+    ],
+  },
+  {
+    id: 15,
+    title: 'R',
+    data: [
+      {
+        id: 0,
+        text: 'Revers',
+        definition:
+          'Lancer exécuté en tenant le disque face vers le haut, du côté opposé au bras sollicité, et en le relâchant après avoir fait un mouvement de l’arrière vers l’avant.',
+      },
+      {
+        id: 1,
+        text: 'Reset',
+        definition:
+          'Joueur de l’équipe offensive situé derrière le porteur du disque ou tout juste à côté de celui-ci.',
+      },
+    ],
+  },
+  {
+    id: 16,
     title: 'T',
     data: [
       {
         id: 0,
         text: 'Travel',
         definition:
-          'Is a type of foul. When holding the disc you cannot move (you’re allowed to slow down to a stop if caught while running). Traveling is similar to Basketball. You must establish a pivot foot in which you can swing your body back and forth on. If you throw righty you would usually plant your left foot to pivot on. A travel is when your pivot foot lifts off the ground before you throw the disc.',
+          'Faute qui survient lorsqu’un traceur ne s’immobilise pas rapidement après avoir attrapé le disque, qu’un porteur n’établit pas de pivot avant de lancer le disque ou qu’il ne maintient pas, du moins en partie, son pivot en exécutant une passe.',
       },
       {
         id: 1,
         text: 'Turn/Turnover',
-        definition:
-          'A team has possession of the disc until there is a turnover. It is how it sounds, you turn it over to the other team. Players usually call it a “turn” for short. A turn is a result of a dropped or defended pass, a stall-out, an un-contested foul, or an out-of-bounds.',
+        definition: 'Changement de possession du disque.',
       },
     ],
   },
   {
-    id: 13,
+    id: 17,
+    title: 'U',
+    data: [
+      {
+        id: 0,
+        text: 'Up',
+        definition:
+          'Interjection utilisée par le marqueur pour signaler aux défenseurs que le disque vient d’être lancé.',
+      },
+    ],
+  },
+  {
+    id: 18,
+    title: 'V',
+    data: [
+      {
+        id: 0,
+        text: 'Vertical Stack',
+        definition:
+          'Stratégie défensive qui consiste, pour les joueurs, à couvrir l’adversaire en occupant les espaces libres sur le terrain.',
+      },
+    ],
+  },
+  {
+    id: 19,
     title: 'Z',
     data: [
       {
         id: 0,
         text: 'Zone',
         definition:
-          'There are two types of defensive tactics in Ultimate, zone and man defense. Zone is when you guard a specific portion of the field while man defense focuses on guarding a specific player. The most effective form of zone defense in Ultimate is known as the Cup.',
+          'Stratégie défensive qui consiste, pour les joueurs, à couvrir l’adversaire en occupant les espaces libres sur le terrain.',
       },
     ],
   },
@@ -281,14 +390,14 @@ export const essentials = [
     pages: [
       {
         id: 1,
-        title: 'Backhand',
+        title: 'Revers',
         text: 'Rowan McDonnell',
         video: '415565763',
         animation: '',
       },
       {
         id: 2,
-        title: 'Forehand',
+        title: 'Coup droit',
         text: 'Rowan McDonnell',
         video: '415569048',
         animation: '',
@@ -309,7 +418,7 @@ export const essentials = [
       },
       {
         id: 5,
-        title: 'How to Backhand Pull Like a Boss',
+        title: 'Comment faire un pull ?',
         text: 'Ryan Lowe',
         video: '424514096',
         animation: '',
@@ -317,18 +426,18 @@ export const essentials = [
     ],
   },
   {
-    title: 'Catching',
+    title: 'Reception',
     pages: [
       {
         id: 1,
-        title: 'The art of catching',
+        title: "L'art du rattrapage",
         text: 'Rise Up',
         video: '424266555',
         animation: '',
       },
       {
         id: 2,
-        title: 'How to Layout',
+        title: 'Comment sauter',
         text: 'Brodie Smith',
         video: '424514902',
         animation: '',
@@ -340,7 +449,7 @@ export const essentials = [
     pages: [
       {
         id: 1,
-        title: 'How to make a perfect cut?',
+        title: 'Comment faire le cut parfait ?',
         text: 'Rise Up Ultimate',
         video: '436160363',
         animation: '',

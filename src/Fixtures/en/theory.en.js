@@ -31,7 +31,7 @@ export const dictionary = [
         id: 1,
         text: 'Clear out',
         definition:
-          'This can mean two things. 1) Clear out can mean an area is getting too clustered with people and to throw the disc to openness and 2) If someone is Clogging The Lane they may be told to “clear out.”',
+          'To get out of the area where the thrower wants to pass the disc. Absolutely necessary after making an unsuccessful cut or after throwing the pass. The importance of this is often underplayed to beginners.',
       },
       {
         id: 2,
@@ -42,7 +42,7 @@ export const dictionary = [
         id: 3,
         text: 'Cut',
         definition:
-          'A juke or sudden change in direction while trying to get open to receive the disc. An in-cut is when you run towards the thrower while an out-cut is the opposite; Running away from the thrower in hope to catch a deeper pass.',
+          'An attempt to get free to receive the pass. Usually starting with a body fake and/or a sudden change in direction or speed.',
       },
       {
         id: 4,
@@ -65,7 +65,8 @@ export const dictionary = [
       {
         id: 1,
         text: 'Dump',
-        definition: 'Passing it backward to someone behind you, usually a Handler.',
+        definition:
+          'Player who stands behind the thrower in order to help out (must get free for an easy pass) when the offence gets in trouble.This is a short pass, usually backwards, made when there are no good options up field to reset the stall count.',
       },
     ],
   },
@@ -76,8 +77,7 @@ export const dictionary = [
       {
         id: 0,
         text: 'Endzone',
-        definition:
-          'Just like in Football. In outdoor Ultimate the end zones are 25 yards deep. These dimensions can be altered as long as both end zones are equal. A player must catch the disc in the end zone to score a point.',
+        definition: 'Area at the either end of the pitch within which a point is scored.',
       },
     ],
   },
@@ -87,20 +87,32 @@ export const dictionary = [
     data: [
       {
         id: 0,
-        text: 'Flick',
-        definition: 'Next to backhand, the flick is the most commonly used Ultimate Throw.',
-      },
-      {
-        id: 1,
         text: 'Fast Stall',
         definition:
           'We all get antsy sometimes especially in the heat of play. Each stall count is supposed to be one-second long but in the midst of battle we may count faster then a second which can be called by the thrower, known as a stallout. If the staller doesn’t agree with the throwers call, they can Contest the call causing the stall count to move back only 2 seconds. If the play is not contested the count goes back to zero. A stall count for outdoor Ultimate is 10 seconds while an indoor game is usually 7 seconds.',
       },
       {
+        id: 1,
+        text: 'Flick',
+        definition:
+          'To throw the disc from the right side of the body for right handed players (or from the left for left handed players). The motion is similar in some respects to the forehand in tennis.',
+      },
+      {
         id: 2,
+        text: 'Flow',
+        definition: 'A series of quick passes to well timed cuts – should result in an easy score.',
+      },
+      {
+        id: 3,
         text: 'Forcing',
         definition:
-          'You can force forehand, force backhand or force home/away. Forcing means to make the opposing thrower throw a certain way. For example to force backhand would mean to stand on their right side completely giving them the ability to backhand. But making it next to impossible to throw a Flick. You would have successfully forced them to throw a backhand which is huge when it comes to plays and strategy. Forcing flick would be stopping the opposing thrower from throwing a backhand. As you can see in the picture to the right the thrower is being forced to flick it. He has a wide open flick but it will be very challenging to backhand. The force is agreed upon and understood by the entire team before a play to maximize effectiveness. Please checkout Stack to learn more about why forcing is so important.',
+          'To make it as difficult as possible for the thrower to throw the disc in one direction (usually one side of the field) in an attempt to make (force) him/her to make a pass to the other side. See the relevant section for how and why this is done.',
+      },
+      {
+        id: 4,
+        text: 'Forehand',
+        definition:
+          'To throw the disc from the right side of the body for right handed players (or from the left for left handed players). The motion is similar in some respects to the forehand in tennis.',
       },
     ],
   },
@@ -117,7 +129,8 @@ export const dictionary = [
       {
         id: 1,
         text: 'Hammer',
-        definition: ' A very common used Ultimate Throw which is thrown over the head.',
+        definition:
+          ' An overhead throw with a forehand grip in which the frisbee is released at an angle so that it flattens out and flies upside down.',
       },
       {
         id: 2,
@@ -134,7 +147,7 @@ export const dictionary = [
         id: 1,
         text: 'Iso',
         definition:
-          'On offense, A teammate may yell “Iso ______!” (The blank being someone’s name or nickname). This means for everyone else to clear away from that person so they can receive a pass. Opposing players usually don’t know your teammates names so this play is meant to take advantage of that.',
+          'In this offensive strategy three of the cutters line up deeper than usual (this can vary from 5 yards farther downfield to at the end zone) while the remaining cutter lines up closer to the handlers. This closest cutter is known as the "feature," or "German." The idea behind this strategy is that it opens up space for the feature to cut, and at the same time it allows handlers to focus all of their attention on only one cutter. ',
       },
     ],
   },
@@ -146,7 +159,7 @@ export const dictionary = [
         id: 0,
         text: 'Layout',
         definition:
-          'Basically another word for a Bid. A layout is more when you are running and dive forward with two hands out sliding flat on your chest to catch or block the disc. A bid is a more broad term meaning ANY type of dive.',
+          'When the player dives the catch or intercept the disc. Also referred to as “going ho” (from going horizontal).',
       },
     ],
   },
@@ -158,7 +171,7 @@ export const dictionary = [
         id: 0,
         text: 'Man on Man D',
         definition:
-          'The most common defensive tactic in Ultimate. Simply put, you are assigned one man (or woman) on the other team. It is up to you to guard that man at all costs, never leave him or let him out of your reach.',
+          'The most common type of defence. Each person on defense marks an offence player and attempts to stay as close as possible with the intention of getting an interception or forcing a mistake.',
       },
       {
         id: 1,
@@ -192,9 +205,9 @@ export const dictionary = [
       },
       {
         id: 2,
-        text: 'Pivot Foot',
+        text: 'Pivot',
         definition:
-          'Like in basketball you must establish a foot to twist and turn on when holding the disc. This is your pivot foot. If you are a righty your pivot should be your left foot and visa versa.',
+          'When you plant your foot (left for right handers and right for left handers) and step to the side (allowing you the throw around the marker).',
       },
       {
         id: 3,
@@ -205,7 +218,8 @@ export const dictionary = [
       {
         id: 4,
         text: 'Pull',
-        definition: 'The first throw off to start the game or to start a new point.',
+        definition:
+          'When a defender moves away from their marker to try and make an interception on a pass to another player.',
       },
     ],
   },
@@ -216,7 +230,8 @@ export const dictionary = [
       {
         id: 0,
         text: 'Scoober',
-        definition: 'A type of Ultimate Throw commonly used in tight situations.',
+        definition:
+          'a fast, difficult-to-intercept throw; similar to a hammer, a scoober is held overhead, but with a backhand grip.',
       },
       {
         id: 1,
@@ -227,7 +242,7 @@ export const dictionary = [
         id: 2,
         text: 'Stall',
         definition:
-          'A player only has ten seconds to throw the disc. But only if an opposing player is within ten feet of them and stalling them. You would run up and say, loud enough for the thrower to hear, STALL 1, STALL 2, STALL 3…..STALL 10.',
+          'The player holding the disc has just ten seconds to pass it to a team-mate – the defender marking the player with the disc counts to ten out loud, and if the disc has not been released on “ten” the defender takes possession. Forcing the thrower to make a less-than-ideal pass as the “stall count” nears ten is the idea behind most defensive strategies.',
       },
       {
         id: 3,
@@ -238,8 +253,12 @@ export const dictionary = [
       {
         id: 4,
         text: 'Swing',
-        definition:
-          'When you have the disc someone may yell at you to “Swing!” meaning switch the field. In other words throw it to somebody on the opposite sideline. This usually happens when both teams starts clustering on one side of the field when the entire other side is vacant.',
+        definition: ' A pass across the field to look for options on the other side of the pitch.',
+      },
+      {
+        id: 5,
+        text: 'Switch',
+        definition: 'This is when two defenders exchange the offensive players that they are marking.',
       },
     ],
   },
@@ -251,7 +270,7 @@ export const dictionary = [
         id: 0,
         text: 'Travel',
         definition:
-          'Is a type of foul. When holding the disc you cannot move (you’re allowed to slow down to a stop if caught while running). Traveling is similar to Basketball. You must establish a pivot foot in which you can swing your body back and forth on. If you throw righty you would usually plant your left foot to pivot on. A travel is when your pivot foot lifts off the ground before you throw the disc.',
+          'A violation which can be called when a receiver of a throw does not attempt to stop immediately or drags their planted foot before a throw. This means the disc must go back to where it was before the throw.',
       },
       {
         id: 1,
@@ -269,7 +288,7 @@ export const dictionary = [
         id: 0,
         text: 'Zone',
         definition:
-          'There are two types of defensive tactics in Ultimate, zone and man defense. Zone is when you guard a specific portion of the field while man defense focuses on guarding a specific player. The most effective form of zone defense in Ultimate is known as the Cup.',
+          'Defensive strategy where defensive players mark zones or areas of the pitch trying to prevent space to pass into. Usually has a ‘wall’ or a ‘cup’ formation.',
       },
     ],
   },

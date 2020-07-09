@@ -353,7 +353,7 @@ export const essentials = [
       {
         id: 1,
         title: 'Force',
-        text: 'Colonel Saul',
+        text: 'Colonel Shaun',
         video: '436152686',
         animation: '',
       },

@@ -107,6 +107,7 @@ export default {
       one: '1 exercice disponible',
       other: '{{count}} exercices disponibles',
     },
+    filter: 'FILTRE',
   },
   drillPage: {
     minutes: 'minutes',

@@ -3,7 +3,6 @@ import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 import DrillList from './shared/DrillList';
 import { DrillTypes } from '../Fixtures/config';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
@@ -36,7 +35,7 @@ export const DrillListPage = props => {
         }}
         testID="filterButton"
       >
-        <MaterialCommunityIcons name="filter" color={theme.BACKGROUND_COLOR} size={40} />
+        <Text style={styles.titleCenter}>{I18n.t('drillListPage.filter')}</Text>
       </TouchableOpacity>
     </View>
   );
@@ -78,5 +77,10 @@ const styles = StyleSheet.create({
   filterButtonImage: {
     width: '100%',
     height: '100%',
+  },
+  titleCenter: {
+    color: theme.COLOR_PRIMARY_LIGHT,
+    fontSize: 13,
+    fontWeight: 'bold',
   },
 });

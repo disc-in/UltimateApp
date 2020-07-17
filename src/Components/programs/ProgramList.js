@@ -70,20 +70,36 @@ export const ProgramList = props => {
   };
 
   return (
-    <View style={styles.programList}>
-      <ScrollView>
-        <Accordion
-          activeSections={activeSections}
-          sections={displayedPrograms}
-          touchableComponent={TouchableOpacity}
-          expandMultiple={false}
-          renderHeader={renderHeader}
-          renderContent={renderContent}
-          duration={400}
-          onChange={setSections}
-        />
-      </ScrollView>
-    </View>
+    <>
+      <View style={styles.programList}>
+        <ScrollView>
+          <Accordion
+            activeSections={activeSections}
+            sections={displayedPrograms}
+            touchableComponent={TouchableOpacity}
+            expandMultiple={false}
+            renderHeader={renderHeader}
+            renderContent={renderContent}
+            duration={400}
+            onChange={setSections}
+          />
+        </ScrollView>
+      </View>
+      <View style={styles.programList}>
+        <ScrollView>
+          <Accordion
+            activeSections={activeSections}
+            sections={displayedPrograms}
+            touchableComponent={TouchableOpacity}
+            expandMultiple={false}
+            renderHeader={renderHeader}
+            renderContent={renderContent}
+            duration={400}
+            onChange={setSections}
+          />
+        </ScrollView>
+      </View>
+    </>
   );
 };
 

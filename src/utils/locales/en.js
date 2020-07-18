@@ -58,6 +58,7 @@ export default {
     essentialPage: 'Essential',
     tacticsPage: 'Tactics',
     videoPage: 'Videos',
+    videoListPage: 'Ultimate Videos',
   },
   shared: {
     back: 'Back',

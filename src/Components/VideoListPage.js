@@ -1,33 +1,71 @@
-import React from 'react';
-import { StyleSheet, View, ImageBackground, Text, TouchableHighlight } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, View, ImageBackground, Text, TouchableHighlight, SectionList, Dimensions } from 'react-native';
+import { connect } from 'react-redux';
 
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
 import frisbeeGlove from '../../assets/HomePage/frisbeeglove.jpg';
 
+const screenDimension = Dimensions.get('window');
+
 export const VideoListPage = props => {
-  return (
-    <View style={styles.drillListPage}>
-      <View>
-        <TouchableHighlight onPress={() => props.navigation.navigate('VideoPage')}>
-          <ImageBackground source={frisbeeGlove} style={styles.image}>
-            <View style={styles.timer}>
-              <Text style={styles.textTimer}>1:42</Text>
+  const { navigation, storeDrills } = props;
+
+  const [selectedItem, setSelectedItem] = useState({
+    id: 0,
+    text: '',
+    definition: '',
+  });
+
+  const _onPressItem = item => {
+    setSelectedItem(item);
+  };
+
+  const _renderItem = ({ dictionary }) => {
+    return (
+      <View style={styles.drillListPage}>
+        <View>
+          <TouchableHighlight onPress={() => props.navigation.navigate('VideoPage')}>
+            <ImageBackground source={frisbeeGlove} style={styles.image}>
+              <View style={styles.timer}>
+                <Text style={styles.textTimer}>1:42</Text>
+              </View>
+            </ImageBackground>
+          </TouchableHighlight>
+          <View style={styles.title}>
+            <Text style={styles.text}>La defense de zone de Buzz Bullet</Text>
+            <View style={styles.authorWrapper}>
+              <Text style={styles.textAuthor}>Ultiworld</Text>
             </View>
-          </ImageBackground>
-        </TouchableHighlight>
-        <View style={styles.title}>
-          <Text style={styles.text}>La defense de zone de Buzz Bullet</Text>
-          <View style={styles.authorWrapper}>
-            <Text style={styles.textAuthor}>Ultiworld</Text>
           </View>
         </View>
       </View>
+    );
+  };
+
+  const renderSectionHeader = ({ section }) => {
+    return <Text style={styles.header}>{section.title}</Text>;
+  };
+
+  return (
+    <View style={styles.dictionaryPage} width={screenDimension.width}>
+      {/* <SectionList
+        sections={dictionary}
+        renderItem={item => _renderItem(item)}
+        renderSectionHeader={renderSectionHeader}
+        keyExtractor={({ id }) => id}
+      /> */}
     </View>
   );
 };
 
-export default VideoListPage;
+const mapStateToProps = state => {
+  return {
+    dictionary: state.theory.dictionary,
+  };
+};
+
+export default connect(mapStateToProps)(VideoListPage);
 
 const styles = StyleSheet.create({
   drillListPage: {

@@ -6911,7 +6911,7 @@ const normalGame = {
   equipment: '8 cones - 1 disc',
   durationInMinutes: 20,
   intensity: Intensities.LOW,
-  goals: [FitnessGoals.CORE],
+  goals: [FrisbeeGoals.PLAY],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [

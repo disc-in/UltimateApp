@@ -15,6 +15,7 @@ import AnimationEditorPage from '../Components/AnimationEditorPage';
 import EssentialPage from '../Components/EssentialPage';
 import DictionaryPage from '../Components/DictionaryPage';
 import TacticsPage from '../Components/TacticsPage';
+import VideoListPage from '../Components/VideoListPage';
 
 import I18n from '../utils/i18n';
 import { DrillTypes, EquipmentLabels } from '../Fixtures/config';
@@ -84,5 +85,6 @@ export const Navigation = () => (
       options={{ title: I18n.t('navigation.essentialPage') }}
     />
     <Stack.Screen name="TacticsPage" component={TacticsPage} options={{ title: I18n.t('navigation.tacticsPage') }} />
+    <Stack.Screen name="VideoListPage" component={VideoListPage} options={{ title: I18n.t('navigation.videoPage') }} />
   </Stack.Navigator>
 );

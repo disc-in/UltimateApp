@@ -1521,7 +1521,17 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
     }
     testID="filterButton"
   >
-    <Text />
+    <Text
+      style={
+        Object {
+          "color": "#fff",
+          "fontSize": 13,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      FILTER
+    </Text>
   </View>
 </View>
 `;
@@ -2176,7 +2186,17 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
     }
     testID="filterButton"
   >
-    <Text />
+    <Text
+      style={
+        Object {
+          "color": "#fff",
+          "fontSize": 13,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      FILTER
+    </Text>
   </View>
 </View>
 `;
@@ -2831,7 +2851,17 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
     }
     testID="filterButton"
   >
-    <Text />
+    <Text
+      style={
+        Object {
+          "color": "#fff",
+          "fontSize": 13,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      FILTER
+    </Text>
   </View>
 </View>
 `;

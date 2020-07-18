@@ -69,7 +69,7 @@ export default {
     drills: 'Exercices',
     programs: "Programmes d'entraînement",
     leanTitle: 'Affuté',
-    leanSubtitle: 'De nombreux exerices pour retrouver la forme ou la maintenir !',
+    leanSubtitle: 'De nombreux exercises pour retrouver la forme ou la maintenir !',
     bodyweightTitle: 'Poids du corps',
     bodyweightSubtitle:
       'Des programmes conçus pour gagner en force et en tonus musculaire au cours de la saison - juste avec le poids du corps',
@@ -107,6 +107,7 @@ export default {
       one: '1 exercice disponible',
       other: '{{count}} exercices disponibles',
     },
+    filter: 'FILTRE',
   },
   drillPage: {
     minutes: 'minutes',

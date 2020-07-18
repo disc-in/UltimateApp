@@ -89,6 +89,8 @@ import splitToVerticalAnimation from '../Animation/SplitToVertical';
 import splitWindmill from '../Animation/SplitWindmill';
 import sideFlow from '../Animation/SideFlow';
 import sideWindmill from '../Animation/SideWindmill';
+import checkLongKidAnimation from '../Animation/CheckLongKid';
+import adaptMark from '../Animation/AdaptMark';
 
 const stabilityDrill = {
   id: 1,
@@ -6838,6 +6840,64 @@ const sideToVertical = {
   ],
 };
 
+const checkLongKid = {
+  id: 1046,
+  type: DrillTypes.FRISBEE,
+  author: 'Puc Ultimate',
+  title: 'Check & Run',
+  image: 'https://zupimages.net/up/20/29/hhdl.jpg',
+  description: 'A little game to learn to read a disc when the player is running as fast as possible',
+  minimalPlayersNumber: 8,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disc',
+  durationInMinutes: 15,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.CATCH, FrisbeeGoals.CUTTING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'Check & Long',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: checkLongKidAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'When the long thrower (an experience player/coach/teacher) is checking with the cutter, the cutter go long as fast as possible. The goal is to make the longest complete pass. Making it fun by asking the cutter to call the check he wants to do (elbow, double foot,...). When a cutter catch the long, everyone celebrate.',
+    },
+  ],
+};
+
+const adaptToTheMark = {
+  id: 1047,
+  type: DrillTypes.FRISBEE,
+  author: 'Puc Ultimate',
+  title: 'Adapt to the Mark',
+  image: 'https://zupimages.net/up/20/29/7a6g.jpg',
+  description: 'Drill in which the reset handler has to adapt to the mark',
+  minimalPlayersNumber: 10,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '3 cones - 4 discs',
+  durationInMinutes: 20,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.HANDLING, FrisbeeGoals.COMMUNICATION],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.ADVANCED,
+  steps: [
+    {
+      id: 1,
+      title: 'Adaptation à la marque',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: adaptMark,
+      repetition: '',
+      rest: '',
+      instruction:
+        'A first pass is made to a middle. The player who made the pass becomes the reset. He must adapt to the mark applied. If the mark is in the direction of the line, the reset makes a Up line cut and throws a long. If the mark is in the direction of the center, the players make a give & go followed by a long.',
+    },
+  ],
+};
+
 const normalGame = {
   id: 2001,
   type: DrillTypes.FRISBEE,
@@ -7013,6 +7073,35 @@ const trainingGame = {
   ],
 };
 
+const helpGame = {
+  id: 2007,
+  type: DrillTypes.FRISBEE,
+  author: '',
+  title: 'Match with a mixed level',
+  image: 'https://zupimages.net/up/20/28/up1j.jpg',
+  description:
+    "Let's play a game where an experience player can help the beginner to develop a better game. The goal of the experience player is to make everyone touching the disc. If there is only one experience player, we recommend this player/coach to play with the team with to play with the team that's having the hardest time playing  ",
+  minimalPlayersNumber: 10,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '8 cones - 1 disc ',
+  durationInMinutes: 15,
+  intensity: Intensities.HIGH,
+  goals: [FrisbeeGoals.PLAY],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'Experience player helping',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: normalGameAnimation,
+      repetition: '',
+      rest: '',
+      instruction: 'Classical game. The experience player are also playing to help to develop a better ultimate.',
+    },
+  ],
+};
+
 const initiationVerticalTraining = {
   id: 1,
   title: 'Vertical Stack',
@@ -7042,7 +7131,7 @@ const firstChildTraining = {
   title: 'First Time',
   image: 'https://zupimages.net/up/20/19/a7io.png',
   description: 'Training will allow the players to learn the basics of ultimate while having fun',
-  drills: [warmupDrill, basicThrowsDrill, dwarfDuelDrill, game3v3],
+  drills: [warmupDrill, basicThrowsDrill, aussieDrill, dwarfDuelDrill, helpGame],
 };
 
 const secondChildTraining = {
@@ -7177,6 +7266,14 @@ const diagonalStackTraining = {
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'First practice to learn the diagonal Stack',
   drills: [warmupGameDrill, horizontalTrapOutside, diagonalIso, diagonalToVertical, trainingGame],
+};
+
+const kidInitiation = {
+  id: 22,
+  title: 'Initiation Children U10',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'First practice to learn to play with a disc',
+  drills: [warmupGameDrill, basicThrowsDrill, aussieDrill, checkLongKid],
 };
 
 //Fitness Weeks
@@ -7792,6 +7889,7 @@ export const drills = [
   splitIso,
   splitToVertical,
   sideToVertical,
+  checkLongKid,
 
   // Games
   normalGame,
@@ -7800,6 +7898,7 @@ export const drills = [
   lineGame,
   longestGame,
   trainingGame,
+  helpGame,
 ];
 
 export const trainings = [
@@ -7897,65 +7996,72 @@ export const trainings = [
   sideStackTraining,
   splitStackTraining,
   diagonalStackTraining,
+  kidInitiation,
 ];
 
 export const programs = [
   {
     id: 1,
     type: DrillTypes.FRISBEE,
+    title: 'Initiation U10',
+    trainings: [kidInitiation],
+  },
+  {
+    id: 2,
+    type: DrillTypes.FRISBEE,
     title: 'Initiation U13',
     trainings: [firstChildTraining, secondChildTraining, thirdChildTraining],
   },
   {
-    id: 2,
+    id: 3,
     type: DrillTypes.FRISBEE,
     title: 'Initiation Adult',
     trainings: [firstChildTraining, secondInintiationAdultTraining, thirdInintiationAdultTraining],
   },
   {
-    id: 3,
+    id: 4,
     type: DrillTypes.FRISBEE,
     title: 'Vertical Stack',
     trainings: [initiationVerticalTraining, secondVerticalTraining, dumpSwingTraining],
   },
   {
-    id: 4,
+    id: 5,
     type: DrillTypes.FRISBEE,
     title: 'Horizontal Stack',
     trainings: [initiationHorizontal, horizontalFlow, horizontalLine],
   },
   {
-    id: 5,
+    id: 6,
     type: DrillTypes.FRISBEE,
     title: 'Individual Defense',
     trainings: [defenseBaseTraining, defenseSecond, defenseThird],
   },
   {
-    id: 6,
+    id: 7,
     type: DrillTypes.FRISBEE,
     title: 'Zone Defense',
     trainings: [zoneCup],
   },
   {
-    id: 7,
+    id: 8,
     type: DrillTypes.FRISBEE,
     title: 'Side Stack',
     trainings: [sideStackTraining],
   },
   {
-    id: 8,
+    id: 9,
     type: DrillTypes.FRISBEE,
     title: 'Split Stack',
     trainings: [splitStackTraining],
   },
   {
-    id: 9,
+    id: 10,
     type: DrillTypes.FRISBEE,
     title: 'Diagonal Stack',
     trainings: [diagonalStackTraining],
   },
   {
-    id: 10,
+    id: 11,
     type: DrillTypes.FITNESS,
     equipmentLabel: EquipmentLabels.NONE,
     title: 'Off-season - Part 1',
@@ -7972,7 +8078,7 @@ export const programs = [
     ],
   },
   {
-    id: 11,
+    id: 12,
     type: DrillTypes.FITNESS,
     equipmentLabel: EquipmentLabels.NONE,
     title: 'Off-season - Part 2',
@@ -7991,7 +8097,7 @@ export const programs = [
     ],
   },
   {
-    id: 12,
+    id: 13,
     type: DrillTypes.FITNESS,
     equipmentLabel: EquipmentLabels.NONE,
     title: 'Pre-season',
@@ -8009,7 +8115,7 @@ export const programs = [
     ],
   },
   {
-    id: 13,
+    id: 14,
     type: DrillTypes.FITNESS,
     equipmentLabel: EquipmentLabels.NONE,
     title: 'In-season',
@@ -8025,14 +8131,14 @@ export const programs = [
     ],
   },
   {
-    id: 14,
+    id: 15,
     type: DrillTypes.FITNESS,
     equipmentLabel: EquipmentLabels.NONE,
     title: 'Peak',
     trainings: [fitnessWeek39, fitnessWeek40, fitnessWeek41],
   },
   {
-    id: 15,
+    id: 16,
     type: DrillTypes.FITNESS,
     equipmentLabel: EquipmentLabels.FULL,
     title: 'Off-season ',
@@ -8050,7 +8156,7 @@ export const programs = [
     ],
   },
   {
-    id: 16,
+    id: 17,
     type: DrillTypes.FITNESS,
     equipmentLabel: EquipmentLabels.FULL,
     title: 'Pre-season',
@@ -8067,7 +8173,7 @@ export const programs = [
     ],
   },
   {
-    id: 17,
+    id: 18,
     type: DrillTypes.FITNESS,
     equipmentLabel: EquipmentLabels.FULL,
     title: 'In-season',
@@ -8083,7 +8189,7 @@ export const programs = [
     ],
   },
   {
-    id: 18,
+    id: 19,
     type: DrillTypes.FITNESS,
     equipmentLabel: EquipmentLabels.FULL,
     title: 'Peak',

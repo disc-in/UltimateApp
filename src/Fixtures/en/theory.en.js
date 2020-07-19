@@ -431,7 +431,7 @@ export const tactics = [
         title: 'How does horizontal stacks work?',
         text: 'That Drone Guy Ty',
         video: '436151076',
-        illustration: 'https://zupimages.net/up/20/25/k6hi.jpg',
+        illustration: 'https://zupimages.net/up/20/25/742g.jpeg',
         time: '1:42',
         description:
           "Ici faite attention au flow mise en place par l'équipe japonaise. Tout est fluide, sans prise de risque inutile.",

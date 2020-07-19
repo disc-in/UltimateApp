@@ -20,7 +20,6 @@ import { DrillTypes, EquipmentLabels } from '../Fixtures/config';
 const Tab = createMaterialBottomTabNavigator();
 
 const HomeScreen = props => {
-  console.log('PROPS HOMEPAGE', props);
   return (
     <View style={styles.mainContainer}>
       <TouchableHighlight

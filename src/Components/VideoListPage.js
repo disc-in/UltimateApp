@@ -58,13 +58,7 @@ const Item = ({ item, onPress }) => (
 export const VideoListPage = props => {
   const { navigation } = props;
 
-  //   const onVideoPress = ({ item }) => {
-  //     setSelectedItem(item);
-  //   };
-
   const onVideoPress = props.onDrillPress || (item => navigation.navigate('VideoPage', { video: item.video }));
-
-  const [selectedItem, setSelectedItem] = useState(null);
 
   const renderItem = ({ item }) => <Item item={item} onPress={() => onVideoPress(item)} />;
 

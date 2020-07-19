@@ -13,12 +13,14 @@ import simulator from '../../assets/HomePage/simulator.jpg';
 import dictionary from '../../assets/HomePage/dictionary.jpg';
 import ourPlays from '../../assets/HomePage/ourplays.jpg';
 import essential from '../../assets/HomePage/essential.jpg';
+import huddle from '../../assets/HomePage/huddle.png';
 import FeedbackButton from './home/FeedbackButton';
 import { DrillTypes, EquipmentLabels } from '../Fixtures/config';
 
 const Tab = createMaterialBottomTabNavigator();
 
 const HomeScreen = props => {
+  console.log('PROPS HOMEPAGE', props);
   return (
     <View style={styles.mainContainer}>
       <TouchableHighlight
@@ -31,25 +33,20 @@ const HomeScreen = props => {
           </View>
         </ImageBackground>
       </TouchableHighlight>
-      <View style={styles.menuItem}>
-        <View style={styles.image}>
-          <View style={styles.icons}>
-            <TouchableHighlight onPress={() => props.navigation.navigate('AnimationEditorPage')}>
-              <Ionicons name="md-clipboard" color={theme.COLOR_PRIMARY} size={60} />
-            </TouchableHighlight>
-            <TouchableHighlight onPress={() => props.navigation.navigate('VideoListPage')}>
-              <Ionicons name="ios-videocam" color={theme.COLOR_PRIMARY} size={60} />
-            </TouchableHighlight>
-          </View>
-        </View>
-      </View>
       <TouchableHighlight
         onPress={() => props.navigation.navigate('ProgramListPage', { type: DrillTypes.FRISBEE })}
         style={styles.menuItem}
       >
-        <ImageBackground source={ourPlays} style={styles.image}>
+        <ImageBackground source={huddle} style={styles.image}>
           <View style={styles.wrapper}>
             <Text style={styles.text}>{I18n.t('homePage.programs')}</Text>
+          </View>
+        </ImageBackground>
+      </TouchableHighlight>
+      <TouchableHighlight onPress={() => props.navigation.navigate('AnimationEditorPage')} style={styles.menuItem}>
+        <ImageBackground source={ourPlays} style={styles.image}>
+          <View style={styles.wrapper}>
+            <Text style={styles.text}>{I18n.t('homePage.editor')}</Text>
           </View>
         </ImageBackground>
       </TouchableHighlight>
@@ -181,7 +178,7 @@ export default HomePage = props => {
         component={Theory}
         options={{
           tabBarLabel: I18n.t('homePage.theoryTab'),
-          tabBarIcon: ({ color }) => <Ionicons name="ios-school" color={color} size={26} />,
+          tabBarIcon: ({ color }) => <Ionicons name="md-clipboard" color={color} size={26} />,
         }}
       />
     </Tab.Navigator>
@@ -250,11 +247,5 @@ const styles = StyleSheet.create({
   },
   headerContainer: {
     marginRight: 20,
-  },
-  icons: {
-    flex: 1,
-    justifyContent: 'space-around',
-    alignItems: 'center',
-    flexDirection: 'row',
   },
 });

@@ -393,35 +393,50 @@ export const essentials = [
         title: 'Revers',
         text: 'Rowan McDonnell',
         video: '415565763',
-        animation: '',
+        illustration: 'https://zupimages.net/up/20/25/k6hi.jpg',
+        time: '1:42',
+        description:
+          "Ici faite attention au flow mise en place par l'équipe japonaise. Tout est fluide, sans prise de risque inutile.",
       },
       {
         id: 2,
         title: 'Coup droit',
         text: 'Rowan McDonnell',
         video: '415569048',
-        animation: '',
+        illustration: 'https://zupimages.net/up/20/25/k6hi.jpg',
+        time: '1:42',
+        description:
+          "Ici faite attention au flow mise en place par l'équipe japonaise. Tout est fluide, sans prise de risque inutile.",
       },
       {
         id: 3,
         title: 'Hammer',
         text: 'Rowan McDonnell',
         video: '436132303',
-        animation: '',
+        illustration: 'https://zupimages.net/up/20/25/k6hi.jpg',
+        time: '1:42',
+        description:
+          "Ici faite attention au flow mise en place par l'équipe japonaise. Tout est fluide, sans prise de risque inutile.",
       },
       {
         id: 4,
         title: 'Scoober',
         text: 'Rowan McDonnell',
         video: '436137969',
-        animation: '',
+        illustration: 'https://zupimages.net/up/20/25/k6hi.jpg',
+        time: '1:42',
+        description:
+          "Ici faite attention au flow mise en place par l'équipe japonaise. Tout est fluide, sans prise de risque inutile.",
       },
       {
         id: 5,
         title: 'Comment faire un pull ?',
         text: 'Ryan Lowe',
         video: '424514096',
-        animation: '',
+        illustration: 'https://zupimages.net/up/20/25/k6hi.jpg',
+        time: '1:42',
+        description:
+          "Ici faite attention au flow mise en place par l'équipe japonaise. Tout est fluide, sans prise de risque inutile.",
       },
     ],
   },
@@ -433,14 +448,20 @@ export const essentials = [
         title: "L'art du rattrapage",
         text: 'Rise Up',
         video: '424266555',
-        animation: '',
+        illustration: 'https://zupimages.net/up/20/25/k6hi.jpg',
+        time: '1:42',
+        description:
+          "Ici faite attention au flow mise en place par l'équipe japonaise. Tout est fluide, sans prise de risque inutile.",
       },
       {
         id: 2,
         title: 'Comment sauter',
         text: 'Brodie Smith',
         video: '424514902',
-        animation: '',
+        illustration: 'https://zupimages.net/up/20/25/k6hi.jpg',
+        time: '1:42',
+        description:
+          "Ici faite attention au flow mise en place par l'équipe japonaise. Tout est fluide, sans prise de risque inutile.",
       },
     ],
   },
@@ -452,7 +473,10 @@ export const essentials = [
         title: 'Comment faire le cut parfait ?',
         text: 'Rise Up Ultimate',
         video: '436160363',
-        animation: '',
+        illustration: 'https://zupimages.net/up/20/25/k6hi.jpg',
+        time: '1:42',
+        description:
+          "Ici faite attention au flow mise en place par l'équipe japonaise. Tout est fluide, sans prise de risque inutile.",
       },
     ],
   },
@@ -464,7 +488,10 @@ export const essentials = [
         title: 'Force',
         text: 'Colonel Shaun',
         video: '436152686',
-        animation: '',
+        illustration: 'https://zupimages.net/up/20/25/k6hi.jpg',
+        time: '1:42',
+        description:
+          "Ici faite attention au flow mise en place par l'équipe japonaise. Tout est fluide, sans prise de risque inutile.",
       },
     ],
   },
@@ -479,7 +506,10 @@ export const tactics = [
         title: 'How does vertical stacks work?',
         text: 'That Drone Guy Ty',
         video: '436149607',
-        animation: '',
+        illustration: 'https://zupimages.net/up/20/25/k6hi.jpg',
+        time: '1:42',
+        description:
+          "Ici faite attention au flow mise en place par l'équipe japonaise. Tout est fluide, sans prise de risque inutile.",
       },
     ],
   },
@@ -491,7 +521,10 @@ export const tactics = [
         title: 'How does horizontal stacks work?',
         text: 'That Drone Guy Ty',
         video: '436151076',
-        animation: '',
+        illustration: 'https://zupimages.net/up/20/25/k6hi.jpg',
+        time: '1:42',
+        description:
+          "Ici faite attention au flow mise en place par l'équipe japonaise. Tout est fluide, sans prise de risque inutile.",
       },
     ],
   },
@@ -503,55 +536,10 @@ export const tactics = [
         title: 'Handler Cutting',
         text: 'Rise Up',
         video: '424511928',
-        animation: '',
-      },
-    ],
-  },
-];
-
-export const videos = [
-  {
-    title: 'ZONE DEFENSE',
-    pages: [
-      {
-        id: 1,
-        title: 'Video 1',
-        text: 'That Drone Guy Ty',
-        video: '436149607',
-      },
-      {
-        id: 2,
-        title: 'Video 2',
-        text: 'That Drone Guy Ty',
-        video: '436149607',
-      },
-      {
-        id: 3,
-        title: 'Video 3',
-        text: 'That Drone Guy Ty',
-        video: '424514096',
-      },
-    ],
-  },
-  {
-    title: 'Horizontal Stack',
-    pages: [
-      {
-        id: 1,
-        title: 'How does horizontal stacks work?',
-        text: 'That Drone Guy Ty',
-        video: '436151076',
-      },
-    ],
-  },
-  {
-    title: 'Handling',
-    pages: [
-      {
-        id: 1,
-        title: 'Handler Cutting',
-        text: 'Rise Up',
-        video: '424511928',
+        illustration: 'https://zupimages.net/up/20/25/k6hi.jpg',
+        time: '1:42',
+        description:
+          "Ici faite attention au flow mise en place par l'équipe japonaise. Tout est fluide, sans prise de risque inutile.",
       },
     ],
   },

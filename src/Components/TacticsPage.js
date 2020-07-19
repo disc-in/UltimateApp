@@ -1,33 +1,44 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, Text, Dimensions, Modal, TouchableHighlight, FlatList } from 'react-native';
+import { View, StyleSheet, Text, Dimensions, Modal, TouchableHighlight, FlatList, ImageBackground } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { connect } from 'react-redux';
 
 import I18n from '../utils/i18n';
-import VimeoVideo from './VimeoVideo';
 import theme from '../styles/theme.style';
 
 const screenDimension = Dimensions.get('window');
 
-const TacticsPage = ({ tactics }) => {
+const TacticsPage = ({ props, tactics }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [theorySubject, setTheorySubject] = useState('Vertical Stack');
   const [modalVisible, setModalVisible] = useState(false);
 
+  console.log('PROPS Tactics', props);
+
+  // const onImagePress = item => navigation.navigate('VideoPage');
+
   const renderContent = ({ item }) => {
     return (
-      <>
+      <View style={styles.container}>
         <View style={styles.titleContainer}>
           <Text style={styles.title}>{item.title}</Text>
         </View>
-        <View style={styles.container}>
-          <VimeoVideo vimeoId={item.video} screenWidth={screenDimension.width} sounds />
+        <View style={styles.containerImage}>
+          <View style={styles.container}>
+            {/* <TouchableHighlight onPress={() => onImagePress(item)}> */}
+            <ImageBackground source={{ uri: item.illustration }} style={styles.image}>
+              <View style={styles.timer}>
+                <Text style={styles.textTimer}>{item.time}</Text>
+              </View>
+            </ImageBackground>
+            {/* </TouchableHighlight> */}
+          </View>
+          <View style={styles.instructionContainer}>
+            <Text style={styles.instruction}>{item.text}</Text>
+          </View>
+          <View style={styles.lines} />
         </View>
-        <View style={styles.instructionContainer}>
-          <Text style={styles.instruction}>{item.text}</Text>
-        </View>
-        <View style={styles.lines} />
-      </>
+      </View>
     );
   };
 
@@ -84,6 +95,7 @@ const TacticsPage = ({ tactics }) => {
       </View>
       <View style={styles.displayTheory}>
         <FlatList
+          {...props}
           data={tactics[selectedIndex].pages}
           contentContainerStyle={styles.listContainer}
           keyExtractor={item => item.id.toString()}
@@ -216,5 +228,28 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     fontSize: theme.FONT_SIZE_LARGE,
+  },
+  image: {
+    height: 250,
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+    borderRadius: 5,
+    backgroundColor: 'rgb(0,0,0)',
+  },
+  timer: {
+    backgroundColor: theme.COLOR_PRIMARY,
+    paddingHorizontal: 5,
+    position: 'absolute',
+    right: 5,
+    bottom: 10,
+  },
+  textTimer: {
+    color: theme.COLOR_PRIMARY_LIGHT,
+    fontSize: theme.FONT_SIZE_MEDIUM,
+    textAlign: 'center',
+  },
+  containerImage: {
+    width: screenDimension.width,
   },
 });

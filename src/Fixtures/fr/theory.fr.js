@@ -508,3 +508,51 @@ export const tactics = [
     ],
   },
 ];
+
+export const videos = [
+  {
+    title: 'ZONE DEFENSE',
+    pages: [
+      {
+        id: 1,
+        title: 'Video 1',
+        text: 'That Drone Guy Ty',
+        video: '436149607',
+      },
+      {
+        id: 2,
+        title: 'Video 2',
+        text: 'That Drone Guy Ty',
+        video: '436149607',
+      },
+      {
+        id: 3,
+        title: 'Video 3',
+        text: 'That Drone Guy Ty',
+        video: '424514096',
+      },
+    ],
+  },
+  {
+    title: 'Horizontal Stack',
+    pages: [
+      {
+        id: 1,
+        title: 'How does horizontal stacks work?',
+        text: 'That Drone Guy Ty',
+        video: '436151076',
+      },
+    ],
+  },
+  {
+    title: 'Handling',
+    pages: [
+      {
+        id: 1,
+        title: 'Handler Cutting',
+        text: 'Rise Up',
+        video: '424511928',
+      },
+    ],
+  },
+];

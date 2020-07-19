@@ -6,6 +6,7 @@ import VimeoVideo from '../Components/VimeoVideo';
 const screenDimension = Dimensions.get('window');
 
 export const VideoPage = props => {
+  const { video } = props;
   return (
     <View style={styles.contentWrapper}>
       <View style={styles.videoAlone}>
@@ -52,7 +53,7 @@ const styles = StyleSheet.create({
   },
   description: {
     color: theme.COLOR_PRIMARY,
-    fontSize: theme.FONT_SIZE_SMALL,
-    paddingHorizontal: 5,
+    fontSize: theme.FONT_SIZE_MEDIUM,
+    paddingHorizontal: 10,
   },
 });

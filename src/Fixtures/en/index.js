@@ -1,4 +1,4 @@
-import { dictionary, essentials, tactics } from './theory.en';
+import { dictionary, essentials, tactics, videos } from './theory.en';
 import { drills, trainings, programs } from './frisbeeDrills.en';
 
 export default {
@@ -6,6 +6,7 @@ export default {
     dictionary,
     essentials,
     tactics,
+    videos,
   },
   favoriteDrills: [],
   completeTrainings: [],

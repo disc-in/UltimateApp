@@ -1,77 +1,91 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, ImageBackground, Text, TouchableHighlight, SectionList, Dimensions } from 'react-native';
+import { StyleSheet, View, ImageBackground, Text, TouchableHighlight, FlatList } from 'react-native';
 import { connect } from 'react-redux';
 
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
-import frisbeeGlove from '../../assets/HomePage/frisbeeglove.jpg';
 
-const screenDimension = Dimensions.get('window');
+const DATA = [
+  {
+    id: '1',
+    title: 'Video 1',
+    text: 'That Drone Guy Ty',
+    video: '436149607',
+    author: 'Moby',
+    time: '1:42',
+    illustration: 'https://zupimages.net/up/20/28/fo2i.jpg',
+  },
+  {
+    id: '2',
+    title: 'Video 2',
+    text: 'That Drone Guy Ty',
+    video: '436152686',
+    author: 'Ultiworld',
+    time: '1:45',
+    illustration: 'https://zupimages.net/up/20/25/742g.jpeg',
+  },
+  {
+    id: '3',
+    title: 'Video 3',
+    text: 'That Drone Guy Ty',
+    video: '424514096',
+    author: 'Rise up',
+    time: '1:46',
+    illustration: 'https://zupimages.net/up/20/25/k6hi.jpg',
+  },
+];
 
-export const VideoListPage = props => {
-  const { navigation, storeDrills } = props;
-
-  const [selectedItem, setSelectedItem] = useState({
-    id: 0,
-    text: '',
-    definition: '',
-  });
-
-  const _onPressItem = item => {
-    setSelectedItem(item);
-  };
-
-  const _renderItem = ({ dictionary }) => {
-    return (
-      <View style={styles.drillListPage}>
-        <View>
-          <TouchableHighlight onPress={() => props.navigation.navigate('VideoPage')}>
-            <ImageBackground source={frisbeeGlove} style={styles.image}>
-              <View style={styles.timer}>
-                <Text style={styles.textTimer}>1:42</Text>
-              </View>
-            </ImageBackground>
-          </TouchableHighlight>
-          <View style={styles.title}>
-            <Text style={styles.text}>La defense de zone de Buzz Bullet</Text>
-            <View style={styles.authorWrapper}>
-              <Text style={styles.textAuthor}>Ultiworld</Text>
-            </View>
+const Item = ({ item, onPress }) => (
+  <View style={styles.drillListPage}>
+    <View>
+      <TouchableHighlight onPress={onPress}>
+        <ImageBackground source={{ uri: item.illustration }} style={styles.image}>
+          <View style={styles.timer}>
+            <Text style={styles.textTimer}>{item.time}</Text>
           </View>
+        </ImageBackground>
+      </TouchableHighlight>
+      <View style={styles.title}>
+        <Text style={styles.text}>{item.title}</Text>
+        <View style={styles.authorWrapper}>
+          <Text style={styles.textAuthor}>{item.author}</Text>
         </View>
       </View>
-    );
-  };
+    </View>
+  </View>
+);
 
-  const renderSectionHeader = ({ section }) => {
-    return <Text style={styles.header}>{section.title}</Text>;
-  };
+export const VideoListPage = props => {
+  const { navigation } = props;
+
+  //   const onVideoPress = ({ item }) => {
+  //     setSelectedItem(item);
+  //   };
+
+  const onVideoPress = props.onDrillPress || (item => navigation.navigate('VideoPage', { video: item.video }));
+
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  const renderItem = ({ item }) => <Item item={item} onPress={() => onVideoPress(item)} />;
 
   return (
-    <View style={styles.dictionaryPage} width={screenDimension.width}>
-      {/* <SectionList
-        sections={dictionary}
-        renderItem={item => _renderItem(item)}
-        renderSectionHeader={renderSectionHeader}
-        keyExtractor={({ id }) => id}
-      /> */}
+    <View style={styles.container}>
+      <FlatList data={DATA} renderItem={renderItem} keyExtractor={item => item.id} />
     </View>
   );
 };
 
 const mapStateToProps = state => {
   return {
-    dictionary: state.theory.dictionary,
+    dictionary: state.theory.videos,
   };
 };
 
 export default connect(mapStateToProps)(VideoListPage);
 
 const styles = StyleSheet.create({
-  drillListPage: {
-    paddingTop: 10,
-    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
-    height: '100%',
+  container: {
+    flex: 1,
   },
   image: {
     height: 200,

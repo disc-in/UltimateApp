@@ -8,14 +8,14 @@ import theme from '../styles/theme.style';
 
 const screenDimension = Dimensions.get('window');
 
-const TacticsPage = ({ props, tactics }) => {
+const TacticsPage = props => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [theorySubject, setTheorySubject] = useState('Vertical Stack');
   const [modalVisible, setModalVisible] = useState(false);
 
-  console.log('PROPS Tactics', props);
+  const { navigation } = props;
 
-  // const onImagePress = item => navigation.navigate('VideoPage');
+  const onImagePress = item => navigation.navigate('VideoPage', { video: item });
 
   const renderContent = ({ item }) => {
     return (
@@ -25,13 +25,13 @@ const TacticsPage = ({ props, tactics }) => {
         </View>
         <View style={styles.containerImage}>
           <View style={styles.container}>
-            {/* <TouchableHighlight onPress={() => onImagePress(item)}> */}
-            <ImageBackground source={{ uri: item.illustration }} style={styles.image}>
-              <View style={styles.timer}>
-                <Text style={styles.textTimer}>{item.time}</Text>
-              </View>
-            </ImageBackground>
-            {/* </TouchableHighlight> */}
+            <TouchableHighlight onPress={() => onImagePress(item)}>
+              <ImageBackground source={{ uri: item.illustration }} style={styles.image}>
+                <View style={styles.timer}>
+                  <Text style={styles.textTimer}>{item.time}</Text>
+                </View>
+              </ImageBackground>
+            </TouchableHighlight>
           </View>
           <View style={styles.instructionContainer}>
             <Text style={styles.instruction}>{item.text}</Text>
@@ -53,7 +53,7 @@ const TacticsPage = ({ props, tactics }) => {
       >
         <View style={styles.centeredView}>
           <View style={styles.modalViewTheory}>
-            {tactics.map((topic, index) => (
+            {props.tactics.map((topic, index) => (
               <TouchableHighlight
                 style={styles.subjectButton}
                 key={index}
@@ -96,7 +96,7 @@ const TacticsPage = ({ props, tactics }) => {
       <View style={styles.displayTheory}>
         <FlatList
           {...props}
-          data={tactics[selectedIndex].pages}
+          data={props.tactics[selectedIndex].pages}
           contentContainerStyle={styles.listContainer}
           keyExtractor={item => item.id.toString()}
           renderItem={renderContent}

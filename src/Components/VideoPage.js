@@ -6,23 +6,22 @@ import VimeoVideo from '../Components/VimeoVideo';
 const screenDimension = Dimensions.get('window');
 
 export const VideoPage = props => {
-  const { video } = props;
+  const { route, navigation } = props;
+  const video = route.params.video;
+
   return (
     <View style={styles.contentWrapper}>
       <View style={styles.videoAlone}>
-        <VimeoVideo vimeoId="436151076" screenWidth={screenDimension.width} />
+        <VimeoVideo vimeoId={video.video} screenWidth={screenDimension.width} sounds shouldPlay />
       </View>
       <View style={styles.title}>
-        <Text style={styles.text}>La defense de zone de Buzz Bullet</Text>
+        <Text style={styles.text}>{video.title}</Text>
         <View style={styles.authorWrapper}>
-          <Text style={styles.textAuthor}>Ultiworld</Text>
+          <Text style={styles.textAuthor}>{video.text}</Text>
         </View>
       </View>
       <View>
-        <Text style={styles.description}>
-          Ici faite attention au flow mise en place par l'équipe japonaise. Tout est fluide, sans prise de risque
-          inutile. Au championnat du monde on va chercher à avoir le même savoir faire.
-        </Text>
+        <Text style={styles.description}>{video.description}</Text>
       </View>
     </View>
   );

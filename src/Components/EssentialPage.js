@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, Text, Dimensions, Modal, TouchableHighlight, FlatList } from 'react-native';
+import { View, StyleSheet, Text, Dimensions, Modal, TouchableHighlight, FlatList, ImageBackground } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { connect } from 'react-redux';
 
@@ -9,25 +9,37 @@ import VimeoVideo from './VimeoVideo';
 
 const screenDimension = Dimensions.get('window');
 
-const EssentialPage = ({ essentials }) => {
+const EssentialPage = props => {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [theorySubject, setTheorySubject] = useState(essentials[0].title);
+  const [theorySubject, setTheorySubject] = useState(props.essentials[0].title);
   const [modalVisible, setModalVisible] = useState(false);
+
+  const { navigation } = props;
+
+  const onImagePress = item => navigation.navigate('VideoPage', { video: item });
 
   const renderContent = ({ item }) => {
     return (
-      <>
+      <View style={styles.container}>
         <View style={styles.titleContainer}>
           <Text style={styles.title}>{item.title}</Text>
         </View>
-        <View style={styles.container}>
-          <VimeoVideo vimeoId={item.video} screenWidth={screenDimension.width} sounds />
+        <View style={styles.containerImage}>
+          <View style={styles.container}>
+            <TouchableHighlight onPress={() => onImagePress(item)}>
+              <ImageBackground source={{ uri: item.illustration }} style={styles.image}>
+                <View style={styles.timer}>
+                  <Text style={styles.textTimer}>{item.time}</Text>
+                </View>
+              </ImageBackground>
+            </TouchableHighlight>
+          </View>
+          <View style={styles.instructionContainer}>
+            <Text style={styles.instruction}>{item.text}</Text>
+          </View>
+          <View style={styles.lines} />
         </View>
-        <View style={styles.instructionContainer}>
-          <Text style={styles.instruction}>{item.text}</Text>
-        </View>
-        <View style={styles.lines} />
-      </>
+      </View>
     );
   };
 
@@ -35,7 +47,7 @@ const EssentialPage = ({ essentials }) => {
     return (
       <View style={styles.container}>
         <FlatList
-          data={essentials[selectedIndex].pages}
+          data={props.essentials[selectedIndex].pages}
           contentContainerStyle={styles.listContainer}
           keyExtractor={item => item.id.toString()}
           renderItem={renderContent}
@@ -55,7 +67,7 @@ const EssentialPage = ({ essentials }) => {
       >
         <View style={styles.centeredView}>
           <View style={styles.modalViewTheory}>
-            {essentials.map((topic, index) => (
+            {props.essentials.map((topic, index) => (
               <TouchableHighlight
                 style={styles.subjectButton}
                 key={index}
@@ -224,5 +236,28 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     fontSize: theme.FONT_SIZE_LARGE,
+  },
+  image: {
+    height: 250,
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+    borderRadius: 5,
+    backgroundColor: 'rgb(0,0,0)',
+  },
+  timer: {
+    backgroundColor: theme.COLOR_PRIMARY,
+    paddingHorizontal: 5,
+    position: 'absolute',
+    right: 5,
+    bottom: 10,
+  },
+  textTimer: {
+    color: theme.COLOR_PRIMARY_LIGHT,
+    fontSize: theme.FONT_SIZE_MEDIUM,
+    textAlign: 'center',
+  },
+  containerImage: {
+    width: screenDimension.width,
   },
 });

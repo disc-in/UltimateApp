@@ -7001,7 +7001,7 @@ const lineGame = {
   goals: [FrisbeeGoals.PLAY, FrisbeeGoals.THROWING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
-  steps: [
+  steps: [git 
     {
       id: 1,
       title: '',

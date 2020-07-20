@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
-import VimeoVideo from './VimeoVideo';
 
 const screenDimension = Dimensions.get('window');
 
@@ -52,6 +51,7 @@ const EssentialPage = props => {
           keyExtractor={item => item.id.toString()}
           renderItem={renderContent}
         />
+        <Text style={styles.bottom} />
       </View>
     );
   };
@@ -259,5 +259,8 @@ const styles = StyleSheet.create({
   },
   containerImage: {
     width: screenDimension.width,
+  },
+  bottom: {
+    height: 30,
   },
 });

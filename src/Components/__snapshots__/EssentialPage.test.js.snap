@@ -268,25 +268,6 @@ exports[`<EssentialPage /> renders correctly 1`] = `
               <View
                 style={
                   Object {
-                    "paddingVertical": 15,
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "fontSize": 16,
-                      "fontWeight": "bold",
-                      "paddingLeft": 10,
-                    }
-                  }
-                >
-                  How to make a perfect cut?
-                </Text>
-              </View>
-              <View
-                style={
-                  Object {
                     "backgroundColor": "#fff",
                     "flex": 1,
                   }
@@ -295,99 +276,150 @@ exports[`<EssentialPage /> renders correctly 1`] = `
                 <View
                   style={
                     Object {
-                      "alignItems": "center",
-                      "flex": 1,
-                      "height": 250,
-                      "justifyContent": "center",
+                      "paddingVertical": 15,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "fontSize": 16,
+                        "fontWeight": "bold",
+                        "paddingLeft": 10,
+                      }
+                    }
+                  >
+                    How to make a perfect cut?
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "width": 750,
                     }
                   }
                 >
                   <View
                     style={
                       Object {
-                        "position": "absolute",
+                        "backgroundColor": "#fff",
+                        "flex": 1,
                       }
                     }
                   >
-                    <ActivityIndicator
-                      animating={true}
-                      color="#A6A6A6"
-                      hidesWhenStopped={true}
-                      size="large"
-                    />
-                    <Text>
-                      Loading...
+                    <View
+                      accessible={true}
+                      focusable={true}
+                      isTVSelectable={true}
+                      onClick={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={null}
+                    >
+                      <View
+                        accessibilityIgnoresInvertColors={true}
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "backgroundColor": "rgb(0,0,0)",
+                            "borderRadius": 5,
+                            "height": 250,
+                            "justifyContent": "center",
+                            "width": "100%",
+                          }
+                        }
+                      >
+                        <Image
+                          source={
+                            Object {
+                              "uri": undefined,
+                            }
+                          }
+                          style={
+                            Array [
+                              Object {
+                                "bottom": 0,
+                                "left": 0,
+                                "position": "absolute",
+                                "right": 0,
+                                "top": 0,
+                              },
+                              Object {
+                                "height": 250,
+                                "width": "100%",
+                              },
+                              undefined,
+                            ]
+                          }
+                        />
+                        <View
+                          style={
+                            Object {
+                              "backgroundColor": "#232b2b",
+                              "bottom": 10,
+                              "paddingHorizontal": 5,
+                              "position": "absolute",
+                              "right": 5,
+                            }
+                          }
+                        >
+                          <Text
+                            style={
+                              Object {
+                                "color": "#fff",
+                                "fontSize": 16,
+                                "textAlign": "center",
+                              }
+                            }
+                          />
+                        </View>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "paddingVertical": 15,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "fontSize": 14,
+                          "paddingLeft": 10,
+                        }
+                      }
+                    >
+                      Rise Up Ultimate
                     </Text>
                   </View>
                   <View
-                    pointerEvents="box-none"
                     style={
                       Object {
-                        "height": 250,
-                        "overflow": "hidden",
-                        "width": 750,
+                        "borderBottomColor": "#e5e5e5",
+                        "borderBottomWidth": 1,
                       }
                     }
-                  >
-                    <ViewManagerAdapter_ExpoVideoView
-                      proxiedProperties={
-                        Object {
-                          "onError": [Function],
-                          "onFullscreenUpdate": [Function],
-                          "onLoad": [Function],
-                          "onLoadStart": [Function],
-                          "onReadyForDisplay": [Function],
-                          "onStatusUpdate": [Function],
-                          "resizeMode": "mock",
-                          "source": undefined,
-                          "status": Object {},
-                          "useNativeControls": true,
-                        }
-                      }
-                      style={
-                        Object {
-                          "bottom": 0,
-                          "left": 0,
-                          "position": "absolute",
-                          "right": 0,
-                          "top": 0,
-                        }
-                      }
-                    />
-                  </View>
+                  />
                 </View>
               </View>
-              <View
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "paddingVertical": 15,
-                    "textAlign": "center",
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "fontSize": 14,
-                      "paddingLeft": 10,
-                    }
-                  }
-                >
-                  Rise Up Ultimate
-                </Text>
-              </View>
-              <View
-                style={
-                  Object {
-                    "borderBottomColor": "#e5e5e5",
-                    "borderBottomWidth": 1,
-                  }
-                }
-              />
             </View>
           </View>
         </RCTScrollView>
+        <Text
+          style={
+            Object {
+              "height": 30,
+            }
+          }
+        />
       </View>
     </View>
   </View>

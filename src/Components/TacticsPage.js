@@ -102,6 +102,7 @@ const TacticsPage = props => {
           renderItem={renderContent}
         />
       </View>
+      <Text style={styles.bottom} />
     </View>
   );
 };
@@ -251,5 +252,8 @@ const styles = StyleSheet.create({
   },
   containerImage: {
     width: screenDimension.width,
+  },
+  bottom: {
+    height: 30,
   },
 });

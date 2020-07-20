@@ -422,12 +422,5 @@ exports[`<TacticsPage /> renders correctly 1`] = `
       </View>
     </RCTScrollView>
   </View>
-  <Text
-    style={
-      Object {
-        "height": 30,
-      }
-    }
-  />
 </View>
 `;

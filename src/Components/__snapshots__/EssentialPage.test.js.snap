@@ -413,13 +413,6 @@ exports[`<EssentialPage /> renders correctly 1`] = `
             </View>
           </View>
         </RCTScrollView>
-        <Text
-          style={
-            Object {
-              "height": 30,
-            }
-          }
-        />
       </View>
     </View>
   </View>

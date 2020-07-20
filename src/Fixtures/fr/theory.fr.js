@@ -501,13 +501,22 @@ export const tactics = [
         time: '2:23',
         description: '',
       },
+      {
+        id: 2,
+        title: 'Stack Vertical Endzone',
+        text: 'AUC Mayhem',
+        video: '439808313',
+        illustration: 'https://zupimages.net/up/20/30/s33y.jpg',
+        time: '4:54',
+        description: '',
+      },
     ],
   },
   {
     title: 'Stack Horizontal',
     pages: [
       {
-        id: 2,
+        id: 1,
         title: 'How does horizontal stacks work?',
         text: 'That Drone Guy Ty',
         video: '436151076',
@@ -521,12 +530,35 @@ export const tactics = [
     title: 'Handling',
     pages: [
       {
-        id: 3,
+        id: 1,
         title: 'Handler Cutting',
         text: 'Rise Up',
         video: '424511928',
         illustration: 'https://zupimages.net/up/20/30/gbjz.jpg',
         time: '15:42',
+        description: '',
+      },
+    ],
+  },
+  {
+    title: 'Defense de Zone',
+    pages: [
+      {
+        id: 1,
+        title: 'Defense de Zone',
+        text: 'NSU Sharks Ultimate',
+        video: '439923596',
+        illustration: 'https://zupimages.net/up/20/30/zmag.jpg',
+        time: '19:43',
+        description: '',
+      },
+      {
+        id: 2,
+        title: 'Premier Rideau',
+        text: 'SenatorBus',
+        video: '439924993',
+        illustration: 'https://zupimages.net/up/20/30/lbl7.jpg',
+        time: '0:40',
         description: '',
       },
     ],

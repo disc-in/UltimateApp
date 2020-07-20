@@ -51,7 +51,6 @@ const EssentialPage = props => {
           keyExtractor={item => item.id.toString()}
           renderItem={renderContent}
         />
-        <Text style={styles.bottom} />
       </View>
     );
   };

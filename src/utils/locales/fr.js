@@ -58,7 +58,6 @@ export default {
     essentialPage: 'Les bases du jeu',
     tacticsPage: 'Tactiques',
     videoPage: 'Vidéos',
-    videoListPage: "Vidéo d'Ultimate",
   },
   shared: {
     back: 'Retour',

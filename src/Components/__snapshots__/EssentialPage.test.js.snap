@@ -5,7 +5,8 @@ exports[`<EssentialPage /> renders correctly 1`] = `
   style={
     Object {
       "backgroundColor": "#fff",
-      "flex": 1,
+      "height": "100%",
+      "paddingTop": 10,
     }
   }
 >
@@ -133,7 +134,9 @@ exports[`<EssentialPage /> renders correctly 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "paddingTop": 20,
+        "borderBottomColor": "#e5e5e5",
+        "borderBottomWidth": 1,
+        "paddingVertical": 10,
       }
     }
   >
@@ -173,6 +176,8 @@ exports[`<EssentialPage /> renders correctly 1`] = `
           style={
             Object {
               "alignItems": "center",
+              "borderBottomColor": "#e5e5e5",
+              "borderBottomWidth": 1,
               "flexDirection": "row",
               "justifyContent": "space-between",
             }
@@ -191,230 +196,176 @@ exports[`<EssentialPage /> renders correctly 1`] = `
           </Text>
           <Text />
         </View>
-        <View
-          style={
-            Object {
-              "borderBottomColor": "#e5e5e5",
-              "borderBottomWidth": 1,
-            }
-          }
-        />
       </View>
     </View>
   </View>
-  <View
-    style={
-      Object {
-        "alignItems": "center",
-        "paddingTop": 20,
-      }
+  <RCTScrollView
+    data={
+      Array [
+        Object {
+          "animation": "",
+          "id": 1,
+          "text": "Rise Up Ultimate",
+          "title": "How to make a perfect cut?",
+          "video": "424000350",
+        },
+      ]
     }
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    numColumns={1}
+    onContentSizeChange={[Function]}
+    onEndReachedThreshold={2}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={Array []}
+    updateCellsBatchingPeriod={50}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={21}
   >
     <View>
       <View
-        style={
-          Object {
-            "backgroundColor": "#fff",
-            "flex": 1,
-          }
-        }
+        onLayout={[Function]}
+        style={null}
       >
-        <RCTScrollView
-          contentContainerStyle={
-            Object {
-              "paddingBottom": 50,
-              "paddingVertical": 10,
-            }
-          }
-          data={
-            Array [
-              Object {
-                "animation": "",
-                "id": 1,
-                "text": "Rise Up Ultimate",
-                "title": "How to make a perfect cut?",
-                "video": "424000350",
-              },
-            ]
-          }
-          disableVirtualization={false}
-          getItem={[Function]}
-          getItemCount={[Function]}
-          horizontal={false}
-          initialNumToRender={10}
-          keyExtractor={[Function]}
-          maxToRenderPerBatch={10}
-          numColumns={1}
-          onContentSizeChange={[Function]}
-          onEndReachedThreshold={2}
-          onLayout={[Function]}
-          onMomentumScrollEnd={[Function]}
-          onScroll={[Function]}
-          onScrollBeginDrag={[Function]}
-          onScrollEndDrag={[Function]}
-          removeClippedSubviews={false}
-          renderItem={[Function]}
-          scrollEventThrottle={50}
-          stickyHeaderIndices={Array []}
-          updateCellsBatchingPeriod={50}
-          viewabilityConfigCallbackPairs={Array []}
-          windowSize={21}
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={null}
         >
-          <View>
+          <View
+            style={null}
+          >
             <View
-              onLayout={[Function]}
-              style={null}
+              style={
+                Object {
+                  "paddingVertical": 15,
+                }
+              }
             >
-              <View
+              <Text
                 style={
                   Object {
-                    "backgroundColor": "#fff",
-                    "flex": 1,
+                    "fontSize": 16,
+                    "fontWeight": "bold",
+                    "paddingLeft": 10,
                   }
                 }
               >
+                How to make a perfect cut?
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "borderBottomColor": "#e5e5e5",
+                  "borderBottomWidth": 1,
+                  "width": 750,
+                }
+              }
+            >
+              <View
+                accessibilityIgnoresInvertColors={true}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "rgb(0,0,0)",
+                    "borderRadius": 5,
+                    "height": 250,
+                    "justifyContent": "center",
+                    "width": "100%",
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "uri": undefined,
+                    }
+                  }
+                  style={
+                    Array [
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                      Object {
+                        "height": 250,
+                        "width": "100%",
+                      },
+                      undefined,
+                    ]
+                  }
+                />
                 <View
                   style={
                     Object {
-                      "paddingVertical": 15,
+                      "backgroundColor": "#232b2b",
+                      "bottom": 10,
+                      "paddingHorizontal": 5,
+                      "position": "absolute",
+                      "right": 5,
                     }
                   }
                 >
                   <Text
                     style={
                       Object {
+                        "color": "#fff",
                         "fontSize": 16,
-                        "fontWeight": "bold",
-                        "paddingLeft": 10,
-                      }
-                    }
-                  >
-                    How to make a perfect cut?
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "width": 750,
-                    }
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#fff",
-                        "flex": 1,
-                      }
-                    }
-                  >
-                    <View
-                      accessible={true}
-                      focusable={true}
-                      isTVSelectable={true}
-                      onClick={[Function]}
-                      onResponderGrant={[Function]}
-                      onResponderMove={[Function]}
-                      onResponderRelease={[Function]}
-                      onResponderTerminate={[Function]}
-                      onResponderTerminationRequest={[Function]}
-                      onStartShouldSetResponder={[Function]}
-                      style={null}
-                    >
-                      <View
-                        accessibilityIgnoresInvertColors={true}
-                        style={
-                          Object {
-                            "alignItems": "center",
-                            "backgroundColor": "rgb(0,0,0)",
-                            "borderRadius": 5,
-                            "height": 250,
-                            "justifyContent": "center",
-                            "width": "100%",
-                          }
-                        }
-                      >
-                        <Image
-                          source={
-                            Object {
-                              "uri": undefined,
-                            }
-                          }
-                          style={
-                            Array [
-                              Object {
-                                "bottom": 0,
-                                "left": 0,
-                                "position": "absolute",
-                                "right": 0,
-                                "top": 0,
-                              },
-                              Object {
-                                "height": 250,
-                                "width": "100%",
-                              },
-                              undefined,
-                            ]
-                          }
-                        />
-                        <View
-                          style={
-                            Object {
-                              "backgroundColor": "#232b2b",
-                              "bottom": 10,
-                              "paddingHorizontal": 5,
-                              "position": "absolute",
-                              "right": 5,
-                            }
-                          }
-                        >
-                          <Text
-                            style={
-                              Object {
-                                "color": "#fff",
-                                "fontSize": 16,
-                                "textAlign": "center",
-                              }
-                            }
-                          />
-                        </View>
-                      </View>
-                    </View>
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "paddingVertical": 15,
                         "textAlign": "center",
-                      }
-                    }
-                  >
-                    <Text
-                      style={
-                        Object {
-                          "fontSize": 14,
-                          "paddingLeft": 10,
-                        }
-                      }
-                    >
-                      Rise Up Ultimate
-                    </Text>
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "borderBottomColor": "#e5e5e5",
-                        "borderBottomWidth": 1,
                       }
                     }
                   />
                 </View>
               </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "paddingVertical": 15,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "fontSize": 14,
+                      "paddingLeft": 10,
+                    }
+                  }
+                >
+                  Rise Up Ultimate
+                </Text>
+              </View>
             </View>
           </View>
-        </RCTScrollView>
+        </View>
       </View>
     </View>
-  </View>
+  </RCTScrollView>
 </View>
 `;

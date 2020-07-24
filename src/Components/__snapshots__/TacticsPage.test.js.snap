@@ -5,7 +5,8 @@ exports[`<TacticsPage /> renders correctly 1`] = `
   style={
     Object {
       "backgroundColor": "#fff",
-      "flex": 1,
+      "height": "100%",
+      "paddingTop": 10,
     }
   }
 >
@@ -133,7 +134,9 @@ exports[`<TacticsPage /> renders correctly 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "paddingTop": 20,
+        "borderBottomColor": "#e5e5e5",
+        "borderBottomWidth": 1,
+        "paddingVertical": 10,
       }
     }
   >
@@ -173,6 +176,8 @@ exports[`<TacticsPage /> renders correctly 1`] = `
           style={
             Object {
               "alignItems": "center",
+              "borderBottomColor": "#e5e5e5",
+              "borderBottomWidth": 1,
               "flexDirection": "row",
               "justifyContent": "space-between",
             }
@@ -191,95 +196,64 @@ exports[`<TacticsPage /> renders correctly 1`] = `
           </Text>
           <Text />
         </View>
-        <View
-          style={
-            Object {
-              "borderBottomColor": "#e5e5e5",
-              "borderBottomWidth": 1,
-            }
-          }
-        />
       </View>
     </View>
   </View>
-  <View
-    style={
-      Object {
-        "alignItems": "center",
-        "paddingTop": 20,
-      }
-    }
-  >
-    <RCTScrollView
-      contentContainerStyle={
+  <RCTScrollView
+    data={
+      Array [
         Object {
-          "paddingBottom": 50,
-          "paddingVertical": 10,
-        }
-      }
-      data={
-        Array [
-          Object {
-            "animation": "",
-            "id": 1,
-            "text": "That Drone Guy Ty",
-            "title": "How does vertical stacks work?",
-            "video": "424002454",
-          },
-        ]
-      }
-      disableVirtualization={false}
-      dispatch={[Function]}
-      getItem={[Function]}
-      getItemCount={[Function]}
-      horizontal={false}
-      initialNumToRender={10}
-      keyExtractor={[Function]}
-      maxToRenderPerBatch={10}
-      numColumns={1}
-      onContentSizeChange={[Function]}
-      onEndReachedThreshold={2}
-      onLayout={[Function]}
-      onMomentumScrollEnd={[Function]}
-      onScroll={[Function]}
-      onScrollBeginDrag={[Function]}
-      onScrollEndDrag={[Function]}
-      removeClippedSubviews={false}
-      renderItem={[Function]}
-      scrollEventThrottle={50}
-      stickyHeaderIndices={Array []}
-      tactics={
-        Array [
-          Object {
-            "pages": Array [
-              Object {
-                "animation": "",
-                "id": 1,
-                "text": "That Drone Guy Ty",
-                "title": "How does vertical stacks work?",
-                "video": "424002454",
-              },
-            ],
-            "title": "Vertical Stack",
-          },
-        ]
-      }
-      updateCellsBatchingPeriod={50}
-      viewabilityConfigCallbackPairs={Array []}
-      windowSize={21}
-    >
-      <View>
+          "animation": "",
+          "id": 1,
+          "text": "That Drone Guy Ty",
+          "title": "How does vertical stacks work?",
+          "video": "424002454",
+        },
+      ]
+    }
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    numColumns={1}
+    onContentSizeChange={[Function]}
+    onEndReachedThreshold={2}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={Array []}
+    updateCellsBatchingPeriod={50}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={21}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
         <View
-          onLayout={[Function]}
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
           style={null}
         >
           <View
-            style={
-              Object {
-                "backgroundColor": "#fff",
-                "flex": 1,
-              }
-            }
+            style={null}
           >
             <View
               style={
@@ -303,89 +277,68 @@ exports[`<TacticsPage /> renders correctly 1`] = `
             <View
               style={
                 Object {
+                  "borderBottomColor": "#e5e5e5",
+                  "borderBottomWidth": 1,
                   "width": 750,
                 }
               }
             >
               <View
+                accessibilityIgnoresInvertColors={true}
                 style={
                   Object {
-                    "backgroundColor": "#fff",
-                    "flex": 1,
+                    "alignItems": "center",
+                    "backgroundColor": "rgb(0,0,0)",
+                    "borderRadius": 5,
+                    "height": 250,
+                    "justifyContent": "center",
+                    "width": "100%",
                   }
                 }
               >
+                <Image
+                  source={
+                    Object {
+                      "uri": undefined,
+                    }
+                  }
+                  style={
+                    Array [
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                      Object {
+                        "height": 250,
+                        "width": "100%",
+                      },
+                      undefined,
+                    ]
+                  }
+                />
                 <View
-                  accessible={true}
-                  focusable={true}
-                  isTVSelectable={true}
-                  onClick={[Function]}
-                  onResponderGrant={[Function]}
-                  onResponderMove={[Function]}
-                  onResponderRelease={[Function]}
-                  onResponderTerminate={[Function]}
-                  onResponderTerminationRequest={[Function]}
-                  onStartShouldSetResponder={[Function]}
-                  style={null}
+                  style={
+                    Object {
+                      "backgroundColor": "#232b2b",
+                      "bottom": 10,
+                      "paddingHorizontal": 5,
+                      "position": "absolute",
+                      "right": 5,
+                    }
+                  }
                 >
-                  <View
-                    accessibilityIgnoresInvertColors={true}
+                  <Text
                     style={
                       Object {
-                        "alignItems": "center",
-                        "backgroundColor": "rgb(0,0,0)",
-                        "borderRadius": 5,
-                        "height": 250,
-                        "justifyContent": "center",
-                        "width": "100%",
+                        "color": "#fff",
+                        "fontSize": 16,
+                        "textAlign": "center",
                       }
                     }
-                  >
-                    <Image
-                      source={
-                        Object {
-                          "uri": undefined,
-                        }
-                      }
-                      style={
-                        Array [
-                          Object {
-                            "bottom": 0,
-                            "left": 0,
-                            "position": "absolute",
-                            "right": 0,
-                            "top": 0,
-                          },
-                          Object {
-                            "height": 250,
-                            "width": "100%",
-                          },
-                          undefined,
-                        ]
-                      }
-                    />
-                    <View
-                      style={
-                        Object {
-                          "backgroundColor": "#232b2b",
-                          "bottom": 10,
-                          "paddingHorizontal": 5,
-                          "position": "absolute",
-                          "right": 5,
-                        }
-                      }
-                    >
-                      <Text
-                        style={
-                          Object {
-                            "color": "#fff",
-                            "fontSize": 16,
-                            "textAlign": "center",
-                          }
-                        }
-                      />
-                    </View>
-                  </View>
+                  />
                 </View>
               </View>
               <View
@@ -408,19 +361,11 @@ exports[`<TacticsPage /> renders correctly 1`] = `
                   That Drone Guy Ty
                 </Text>
               </View>
-              <View
-                style={
-                  Object {
-                    "borderBottomColor": "#e5e5e5",
-                    "borderBottomWidth": 1,
-                  }
-                }
-              />
             </View>
           </View>
         </View>
       </View>
-    </RCTScrollView>
-  </View>
+    </View>
+  </RCTScrollView>
 </View>
 `;

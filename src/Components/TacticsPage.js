@@ -19,31 +19,28 @@ const TacticsPage = props => {
 
   const renderContent = ({ item }) => {
     return (
-      <View style={styles.container}>
-        <View style={styles.titleContainer}>
-          <Text style={styles.title}>{item.title}</Text>
-        </View>
-        <View style={styles.containerImage}>
-          <View style={styles.container}>
-            <TouchableHighlight onPress={() => onImagePress(item)}>
-              <ImageBackground source={{ uri: item.illustration }} style={styles.image}>
-                <View style={styles.timer}>
-                  <Text style={styles.textTimer}>{item.time}</Text>
-                </View>
-              </ImageBackground>
-            </TouchableHighlight>
+      <TouchableHighlight onPress={() => onImagePress(item)}>
+        <View>
+          <View style={styles.titleContainer}>
+            <Text style={styles.title}>{item.title}</Text>
           </View>
-          <View style={styles.instructionContainer}>
-            <Text style={styles.instruction}>{item.text}</Text>
+          <View style={styles.containerImage}>
+            <ImageBackground source={{ uri: item.illustration }} style={styles.image}>
+              <View style={styles.timer}>
+                <Text style={styles.textTimer}>{item.time}</Text>
+              </View>
+            </ImageBackground>
+            <View style={styles.authorContainer}>
+              <Text style={styles.author}>{item.text}</Text>
+            </View>
           </View>
-          <View style={styles.lines} />
         </View>
-      </View>
+      </TouchableHighlight>
     );
   };
 
   return (
-    <View style={styles.container}>
+    <View style={styles.tacticsPage}>
       <Modal
         animationType="fade"
         visible={modalVisible}
@@ -77,7 +74,7 @@ const TacticsPage = props => {
           </View>
         </View>
       </Modal>
-      <View style={styles.displayTheory}>
+      <View style={styles.dropdownContainer}>
         <TouchableHighlight
           style={styles.subjectModal}
           onPress={() => {
@@ -89,19 +86,14 @@ const TacticsPage = props => {
               <Text style={{ ...styles.textStyle, color: theme.COLOR_PRIMARY }}>{theorySubject}</Text>
               <MaterialCommunityIcons name="chevron-down" color={theme.COLOR_PRIMARY} size={26} />
             </View>
-            <View style={styles.lines} />
           </View>
         </TouchableHighlight>
       </View>
-      <View style={styles.displayTheory}>
-        <FlatList
-          {...props}
-          data={props.tactics[selectedIndex].pages}
-          contentContainerStyle={styles.listContainer}
-          keyExtractor={item => item.id.toString()}
-          renderItem={renderContent}
-        />
-      </View>
+      <FlatList
+        data={props.tactics[selectedIndex].pages}
+        keyExtractor={item => item.id.toString()}
+        renderItem={renderContent}
+      />
     </View>
   );
 };
@@ -115,34 +107,10 @@ const mapStateToProps = state => {
 export default connect(mapStateToProps)(TacticsPage);
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: theme.COLOR_PRIMARY_LIGHT,
-  },
-  title: {
-    fontSize: theme.FONT_SIZE_MEDIUM,
-    fontWeight: 'bold',
-    paddingLeft: 10,
-  },
-  lines: {
-    borderBottomColor: theme.COLOR_SECONDARY_LIGHT,
-    borderBottomWidth: 1,
-  },
-  titleContainer: {
-    paddingVertical: 15,
-  },
-  instructionContainer: {
-    paddingVertical: 15,
-    textAlign: 'center',
-    alignItems: 'center',
-  },
-  instruction: {
-    fontSize: theme.FONT_SIZE_SMALL,
-    paddingLeft: 10,
-  },
-  listContainer: {
-    paddingVertical: 10,
-    paddingBottom: 50,
+  tacticsPage: {
+    paddingTop: 10,
+    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
+    height: '100%',
   },
   centeredView: {
     flex: 1,
@@ -173,17 +141,18 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
   },
-  returnButton: {
-    backgroundColor: theme.COLOR_PRIMARY,
-    borderRadius: 10,
-    padding: 10,
-    paddingHorizontal: 20,
-    elevation: 2,
-    width: 120,
-  },
-  displayTheory: {
+  dropdownContainer: {
     alignItems: 'center',
-    paddingTop: 20,
+    paddingVertical: 10,
+    borderBottomColor: theme.COLOR_SECONDARY_LIGHT,
+    borderBottomWidth: 1,
+  },
+  dropdown: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    borderBottomColor: theme.COLOR_SECONDARY_LIGHT,
+    borderBottomWidth: 1,
   },
   subjectModal: {
     backgroundColor: theme.COLOR_PRIMARY_LIGHT,
@@ -199,11 +168,6 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.2,
     shadowRadius: 1.41,
-  },
-  dropdown: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
   },
   subjectButton: {
     backgroundColor: theme.COLOR_SECONDARY_LIGHT,
@@ -229,6 +193,36 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: theme.FONT_SIZE_LARGE,
   },
+  returnButton: {
+    backgroundColor: theme.COLOR_PRIMARY,
+    borderRadius: 10,
+    padding: 10,
+    paddingHorizontal: 20,
+    elevation: 2,
+    width: 120,
+  },
+  titleContainer: {
+    paddingVertical: 15,
+  },
+  title: {
+    fontSize: theme.FONT_SIZE_MEDIUM,
+    fontWeight: 'bold',
+    paddingLeft: 10,
+  },
+  authorContainer: {
+    paddingVertical: 15,
+    textAlign: 'center',
+    alignItems: 'center',
+  },
+  author: {
+    fontSize: theme.FONT_SIZE_SMALL,
+    paddingLeft: 10,
+  },
+  containerImage: {
+    width: screenDimension.width,
+    borderBottomColor: theme.COLOR_SECONDARY_LIGHT,
+    borderBottomWidth: 1,
+  },
   image: {
     height: 250,
     alignItems: 'center',
@@ -248,8 +242,5 @@ const styles = StyleSheet.create({
     color: theme.COLOR_PRIMARY_LIGHT,
     fontSize: theme.FONT_SIZE_MEDIUM,
     textAlign: 'center',
-  },
-  containerImage: {
-    width: screenDimension.width,
   },
 });

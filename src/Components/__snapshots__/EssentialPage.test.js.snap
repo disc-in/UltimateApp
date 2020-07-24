@@ -51,7 +51,6 @@ exports[`<EssentialPage /> renders correctly 1`] = `
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -96,7 +95,6 @@ exports[`<EssentialPage /> renders correctly 1`] = `
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -143,7 +141,6 @@ exports[`<EssentialPage /> renders correctly 1`] = `
     <View
       accessible={true}
       focusable={true}
-      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -169,9 +166,7 @@ exports[`<EssentialPage /> renders correctly 1`] = `
         }
       }
     >
-      <View
-        style={null}
-      >
+      <View>
         <View
           style={
             Object {
@@ -218,7 +213,6 @@ exports[`<EssentialPage /> renders correctly 1`] = `
     initialNumToRender={10}
     keyExtractor={[Function]}
     maxToRenderPerBatch={10}
-    numColumns={1}
     onContentSizeChange={[Function]}
     onEndReachedThreshold={2}
     onLayout={[Function]}
@@ -242,7 +236,6 @@ exports[`<EssentialPage /> renders correctly 1`] = `
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -250,11 +243,8 @@ exports[`<EssentialPage /> renders correctly 1`] = `
           onResponderTerminate={[Function]}
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
-          style={null}
         >
-          <View
-            style={null}
-          >
+          <View>
             <View
               style={
                 Object {

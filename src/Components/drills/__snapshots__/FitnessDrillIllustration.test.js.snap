@@ -117,7 +117,6 @@ exports[`<FitnessDrillIllustration /> links to any step and finishes at the end 
     keyExtractor={[Function]}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
-    numColumns={1}
     onContentSizeChange={[Function]}
     onEndReachedThreshold={2}
     onLayout={[Function]}
@@ -141,7 +140,6 @@ exports[`<FitnessDrillIllustration /> links to any step and finishes at the end 
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -194,7 +192,6 @@ exports[`<FitnessDrillIllustration /> links to any step and finishes at the end 
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -247,7 +244,6 @@ exports[`<FitnessDrillIllustration /> links to any step and finishes at the end 
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -294,7 +290,6 @@ exports[`<FitnessDrillIllustration /> links to any step and finishes at the end 
           <View
             accessible={true}
             focusable={true}
-            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -369,7 +364,6 @@ exports[`<FitnessDrillIllustration /> links to any step and finishes at the end 
     <View
       accessible={true}
       focusable={true}
-      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -527,7 +521,6 @@ exports[`<FitnessDrillIllustration /> renders correctly 1`] = `
     keyExtractor={[Function]}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
-    numColumns={1}
     onContentSizeChange={[Function]}
     onEndReachedThreshold={2}
     onLayout={[Function]}
@@ -551,7 +544,6 @@ exports[`<FitnessDrillIllustration /> renders correctly 1`] = `
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -598,7 +590,6 @@ exports[`<FitnessDrillIllustration /> renders correctly 1`] = `
           <View
             accessible={true}
             focusable={true}
-            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -642,7 +633,6 @@ exports[`<FitnessDrillIllustration /> renders correctly 1`] = `
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -693,7 +683,6 @@ exports[`<FitnessDrillIllustration /> renders correctly 1`] = `
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}

@@ -215,16 +215,4 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     padding: 20,
   },
-  editorLink: {
-    alignItems: 'center',
-    width: '100%',
-    flex: 1,
-    paddingRight: 10,
-  },
-  bottomPage: {
-    height: 105,
-  },
-  headerContainer: {
-    marginRight: 20,
-  },
 });

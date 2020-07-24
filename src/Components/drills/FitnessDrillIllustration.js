@@ -6,7 +6,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import I18n from '../../utils/i18n';
 import Animation from '../animation/Animation';
-import VimeoVideo from '../VimeoVideo';
+import VimeoVideo from '../shared/VimeoVideo';
 import { IllustrationType } from '../../Fixtures/config';
 import theme from '../../styles/theme.style';
 import Drill from '../animation/Drill';

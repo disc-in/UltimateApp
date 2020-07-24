@@ -3,8 +3,8 @@ import { View, ActivityIndicator, StyleSheet, Text } from 'react-native';
 import { Video } from 'expo-av';
 import * as ScreenOrientation from 'expo-screen-orientation';
 
-import I18n from '../utils/i18n';
-import theme from '../styles/theme.style';
+import I18n from '../../utils/i18n';
+import theme from '../../styles/theme.style';
 
 const VimeoVideo = ({ vimeoId, screenWidth, sounds, shouldPlay }) => {
   const videoElem = useRef(null);

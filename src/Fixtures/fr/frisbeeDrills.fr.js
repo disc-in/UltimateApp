@@ -594,7 +594,7 @@ const warmupGameDrill = {
   id: 5,
   type: DrillTypes.FITNESS,
   author: '',
-  title: 'Échauffment pour un match',
+  title: 'Échauffement pour un match',
   image: 'https://zupimages.net/up/20/19/f2bd.jpg',
   description: 'Suivez les exercices de la vidéo pour préparer les organismes à une sénce à intensité de match',
   minimalPlayersNumber: 1,
@@ -667,13 +667,13 @@ const mas30 = {
   steps: [
     {
       id: 1,
-      title: 'Échauffment',
+      title: 'Échauffement',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
-      instruction: 'Échauffment modéré',
+      instruction: 'Échauffement modéré',
     },
     {
       id: 2,
@@ -6565,7 +6565,7 @@ const theTunnel = {
   author: 'CUSB',
   title: 'Le Tunnel',
   image: 'https://zupimages.net/up/20/25/742g.jpeg',
-  description: 'Echauffement pour se concentrer sur la réactivité en défense.',
+  description: 'Réactivité en défense.',
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '4 plots ',
@@ -6592,7 +6592,7 @@ const sprintDefense = {
   id: 1037,
   type: DrillTypes.FRISBEE,
   author: 'Lucky Grass',
-  title: 'Echauffement pour se concentrer sur la réactivité en défense.',
+  title: 'Réactivité en défense.',
   image: 'https://zupimages.net/up/20/25/5pqg.jpg',
   description: 'Warm up drill to focus on the reactivity in defense.',
   minimalPlayersNumber: 2,
@@ -6727,7 +6727,7 @@ const diagonalToVertical = {
   id: 1041,
   type: DrillTypes.FRISBEE,
   author: 'Belgium Open',
-  title: 'Diagonal Stack vers Vertical Flow',
+  title: 'Diagonal vers Vertical',
   image: 'https://zupimages.net/up/20/25/iqn0.jpg',
   description: "Entrainer l'équipe à faire la transition parfaite d'un stack diagonal à un flow vertical",
   minimalPlayersNumber: 8,
@@ -7018,7 +7018,7 @@ const normalGame = {
   equipment: '8 plots - 1 disque',
   durationInMinutes: 20,
   intensity: Intensities.LOW,
-  goals: [FitnessGoals.CORE],
+  goals: [FrisbeeGoals.PLAY],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -7155,7 +7155,7 @@ const trainingGame = {
   id: 2006,
   type: DrillTypes.FRISBEE,
   author: '',
-  title: 'Entrainement du nouveau Stack',
+  title: 'Match- Nouveau Stack',
   image: 'https://zupimages.net/up/20/28/up1j.jpg',
   description: "Un match classique dans lequel on va travailler le stack entrainer à l'entrainement. ",
   minimalPlayersNumber: 14,
@@ -7184,7 +7184,7 @@ const helpGame = {
   id: 2007,
   type: DrillTypes.FRISBEE,
   author: '',
-  title: 'Match avec un mixte de niveau',
+  title: 'Match - mixte de niveau',
   image: 'https://zupimages.net/up/20/28/up1j.jpg',
   description:
     "Jouons à un match où un joueur expérimenté peut aider les débutants à développer un meilleur jeu. Le but du joueur expérimenté est de faire en sorte que tout le monde touche le disque. S'il n'y a qu'un seul joueur expérimenté, nous recommandons à ce joueur/entraîneur de jouer avec l'équipe qui a le plus de difficulté à jouer.",
@@ -7262,7 +7262,7 @@ const secondInintiationAdultTraining = {
   id: 7,
   title: 'Défense & Longues',
   image: 'https://zupimages.net/up/20/19/cd36.jpg',
-  description: '',
+  description: 'Apprendre les bases nécessaires pour faire de bonnes défenses',
   drills: [warmupDrill, menageATroisDrill, checkLong, trainDrill, normalGame],
 };
 
@@ -7356,7 +7356,7 @@ const zoneCup = {
 
 const sideStackTraining = {
   id: 19,
-  title: 'Initation to Side Stack',
+  title: 'Initation au Stack sur le côté',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Premier entrainement pour entrainer le Side Stack',
   drills: [warmupGameDrill, horizontalTrapOutside, sideToVertical, trainingGame],
@@ -7364,7 +7364,7 @@ const sideStackTraining = {
 
 const splitStackTraining = {
   id: 20,
-  title: 'Initiation to Split Stack',
+  title: 'Initiation au Stack en U',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Premier entrainement pour entrainer le Split Stack',
   drills: [warmupGameDrill, horizontalTrapOutside, splitIso, splitToVertical, trainingGame],
@@ -7372,7 +7372,7 @@ const splitStackTraining = {
 
 const diagonalStackTraining = {
   id: 21,
-  title: 'Initiation to Diagonal Stack',
+  title: 'Initiation au Stack Diagonal',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Premier entrainement pour entrainer le Stack Diagonal ',
   drills: [warmupGameDrill, horizontalTrapOutside, diagonalIso, diagonalToVertical, trainingGame],
@@ -7382,7 +7382,7 @@ const kidInitiation = {
   id: 22,
   title: 'Initiation Enfant U10',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'First practice to learn to play with a disc',
+  description: "Découvrir l'ultimate en s'amusant",
   drills: [warmupGameDrill, basicThrowsDrill, aussieDrill, checkLongKid],
 };
 

@@ -27,7 +27,7 @@ We use [jest](https://jestjs.io/docs/en/tutorial-react-native) and [react-native
 
 ### Mock http records
 
-We use [nock](https://github.com/nock/nock) to mock HTTP calls. Have look at an example [here](https://github.com/UltimateApp/UltimateApp/blob/master/src/Components/VimeoVideo.test.js).
+We use [nock](https://github.com/nock/nock) to mock HTTP calls. Have look at an example [here](https://github.com/UltimateApp/UltimateApp/blob/master/src/Components/shared/VimeoVideo.test.js).
 
 To get the expected return from Nock, you can run your tests without mocking and record the http calls. The documentation is [there](https://github.com/nock/nock#recording).
 

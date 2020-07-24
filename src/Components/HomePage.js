@@ -61,11 +61,9 @@ const Fitness = props => {
         style={styles.menuItem}
       >
         <ImageBackground source={leanfit} style={styles.image}>
-          <View style={styles.wrapperCenter}>
-            <Text style={styles.titleCenter}>{I18n.t('homePage.leanTitle')}</Text>
-            <View style={styles.description}>
-              <Text style={styles.textFitness}>{I18n.t('homePage.leanSubtitle')}</Text>
-            </View>
+          <View style={styles.wrapper}>
+            <Text style={styles.fitnessTitle}>{I18n.t('homePage.leanTitle')}</Text>
+            <Text style={styles.textFitness}>{I18n.t('homePage.leanSubtitle')}</Text>
           </View>
         </ImageBackground>
       </TouchableHighlight>
@@ -79,11 +77,9 @@ const Fitness = props => {
         style={styles.menuItem}
       >
         <ImageBackground source={bodyweight} style={styles.image}>
-          <View style={styles.wrapperCenter}>
-            <Text style={styles.titleCenter}>{I18n.t('homePage.bodyweightTitle')}</Text>
-            <View style={styles.description}>
-              <Text style={styles.textFitness}>{I18n.t('homePage.bodyweightSubtitle')}</Text>
-            </View>
+          <View style={styles.wrapper}>
+            <Text style={styles.fitnessTitle}>{I18n.t('homePage.bodyweightTitle')}</Text>
+            <Text style={styles.textFitness}>{I18n.t('homePage.bodyweightSubtitle')}</Text>
           </View>
         </ImageBackground>
       </TouchableHighlight>
@@ -97,11 +93,9 @@ const Fitness = props => {
         style={styles.menuItem}
       >
         <ImageBackground source={gymstrong} style={styles.image}>
-          <View style={styles.wrapperCenter}>
-            <Text style={styles.titleCenter}>{I18n.t('homePage.gymTitle')}</Text>
-            <View style={styles.description}>
-              <Text style={styles.textFitness}>{I18n.t('homePage.gymSubtitle')}</Text>
-            </View>
+          <View style={styles.wrapper}>
+            <Text style={styles.fitnessTitle}>{I18n.t('homePage.gymTitle')}</Text>
+            <Text style={styles.textFitness}>{I18n.t('homePage.gymSubtitle')}</Text>
           </View>
         </ImageBackground>
       </TouchableHighlight>
@@ -207,14 +201,13 @@ const styles = StyleSheet.create({
     fontSize: 28,
     fontWeight: 'bold',
   },
-  titleCenter: {
+  fitnessTitle: {
     color: theme.COLOR_PRIMARY_LIGHT,
     fontSize: 28,
   },
   textFitness: {
     color: theme.COLOR_PRIMARY_LIGHT,
-    fontSize: theme.FONT_SIZE_SMALL,
-    textAlign: 'center',
+    fontSize: theme.FONT_SIZE_MEDIUM,
   },
   wrapper: {
     position: 'absolute',
@@ -226,20 +219,11 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     padding: 20,
   },
-  wrapperCenter: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
   editorLink: {
     alignItems: 'center',
     width: '100%',
     flex: 1,
     paddingRight: 10,
-  },
-  description: {
-    alignItems: 'center',
-    width: '70%',
   },
   bottomPage: {
     height: 105,

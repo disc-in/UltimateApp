@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Dimensions, Text } from 'react-native';
 import theme from '../styles/theme.style';
-import VimeoVideo from '../Components/VimeoVideo';
+import VimeoVideo from './shared/VimeoVideo';
 
 const screenDimension = Dimensions.get('window');
 

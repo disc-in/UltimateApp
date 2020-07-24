@@ -57,7 +57,6 @@ export default {
     dictionaryPage: 'Lexique',
     essentialPage: 'Les bases du jeu',
     tacticsPage: 'Tactiques',
-    videoPage: 'Vidéos',
   },
   shared: {
     back: 'Retour',

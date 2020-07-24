@@ -54,7 +54,6 @@ export const Navigation = () => (
         };
       }}
     />
-
     <Stack.Screen
       name="TrainingPage"
       component={TrainingPage}
@@ -85,6 +84,10 @@ export const Navigation = () => (
       options={{ title: I18n.t('navigation.essentialPage') }}
     />
     <Stack.Screen name="TacticsPage" component={TacticsPage} options={{ title: I18n.t('navigation.tacticsPage') }} />
-    <Stack.Screen name="VideoPage" component={VideoPage} options={{ title: I18n.t('navigation.videoPage') }} />
+    <Stack.Screen
+      name="VideoPage"
+      component={VideoPage}
+      options={({ route }) => ({ title: route.params.video.title })}
+    />
   </Stack.Navigator>
 );

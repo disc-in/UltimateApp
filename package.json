@@ -13,7 +13,6 @@
     "prettier-fix": "prettier 'src/**/*.{ts,tsx,js,jsx}' --write"
   },
   "dependencies": {
-    "@react-native-community/masked-view": "0.1.10",
     "@react-navigation/material-bottom-tabs": "^5.2.9",
     "@react-navigation/native": "^5.1.1",
     "@react-navigation/routers": "^5.3.0",
@@ -21,7 +20,10 @@
     "expo": "^38.0.0",
     "expo-av": "~8.2.1",
     "expo-localization": "~8.2.1",
+    "expo-mail-composer": "~8.2.1",
+    "expo-screen-orientation": "~1.1.1",
     "i18n-js": "^3.5.1",
+    "jest": "^26.1.0",
     "react": "16.11.0",
     "react-dom": "16.11.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.2.tar.gz",
@@ -41,12 +43,9 @@
     "react-native-webview": "9.4.0",
     "react-redux": "^7.2.0",
     "redux": "^4.0.5",
-    "redux-devtools-extension": "^2.13.8",
-    "redux-logger": "^3.0.6",
     "redux-persist": "^5.10.0",
     "watchman": "^1.0.0",
-    "expo-screen-orientation": "~1.1.1",
-    "expo-mail-composer": "~8.2.1"
+    "@react-native-community/masked-view": "0.1.10"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

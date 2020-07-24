@@ -28,7 +28,7 @@ const HomeScreen = props => {
       >
         <ImageBackground source={frisbeeGlove} style={styles.image}>
           <View style={styles.wrapper}>
-            <Text style={styles.text}>{I18n.t('homePage.drills')}</Text>
+            <Text style={styles.title}>{I18n.t('homePage.drills')}</Text>
           </View>
         </ImageBackground>
       </TouchableHighlight>
@@ -38,14 +38,14 @@ const HomeScreen = props => {
       >
         <ImageBackground source={huddle} style={styles.image}>
           <View style={styles.wrapper}>
-            <Text style={styles.text}>{I18n.t('homePage.programs')}</Text>
+            <Text style={styles.title}>{I18n.t('homePage.programs')}</Text>
           </View>
         </ImageBackground>
       </TouchableHighlight>
       <TouchableHighlight onPress={() => props.navigation.navigate('AnimationEditorPage')} style={styles.menuItem}>
         <ImageBackground source={ourPlays} style={styles.image}>
           <View style={styles.wrapper}>
-            <Text style={styles.text}>{I18n.t('homePage.editor')}</Text>
+            <Text style={styles.title}>{I18n.t('homePage.editor')}</Text>
           </View>
         </ImageBackground>
       </TouchableHighlight>
@@ -62,8 +62,8 @@ const Fitness = props => {
       >
         <ImageBackground source={leanfit} style={styles.image}>
           <View style={styles.wrapper}>
-            <Text style={styles.fitnessTitle}>{I18n.t('homePage.leanTitle')}</Text>
-            <Text style={styles.textFitness}>{I18n.t('homePage.leanSubtitle')}</Text>
+            <Text style={styles.title}>{I18n.t('homePage.leanTitle')}</Text>
+            <Text style={styles.subtitle}>{I18n.t('homePage.leanSubtitle')}</Text>
           </View>
         </ImageBackground>
       </TouchableHighlight>
@@ -78,8 +78,8 @@ const Fitness = props => {
       >
         <ImageBackground source={bodyweight} style={styles.image}>
           <View style={styles.wrapper}>
-            <Text style={styles.fitnessTitle}>{I18n.t('homePage.bodyweightTitle')}</Text>
-            <Text style={styles.textFitness}>{I18n.t('homePage.bodyweightSubtitle')}</Text>
+            <Text style={styles.title}>{I18n.t('homePage.bodyweightTitle')}</Text>
+            <Text style={styles.subtitle}>{I18n.t('homePage.bodyweightSubtitle')}</Text>
           </View>
         </ImageBackground>
       </TouchableHighlight>
@@ -94,8 +94,8 @@ const Fitness = props => {
       >
         <ImageBackground source={gymstrong} style={styles.image}>
           <View style={styles.wrapper}>
-            <Text style={styles.fitnessTitle}>{I18n.t('homePage.gymTitle')}</Text>
-            <Text style={styles.textFitness}>{I18n.t('homePage.gymSubtitle')}</Text>
+            <Text style={styles.title}>{I18n.t('homePage.gymTitle')}</Text>
+            <Text style={styles.subtitle}>{I18n.t('homePage.gymSubtitle')}</Text>
           </View>
         </ImageBackground>
       </TouchableHighlight>
@@ -109,7 +109,7 @@ const Theory = props => {
       <TouchableHighlight onPress={() => props.navigation.navigate('DictionaryPage')} style={styles.menuItem}>
         <ImageBackground source={dictionary} style={styles.image}>
           <View style={styles.wrapper}>
-            <Text style={styles.text}>{I18n.t('homePage.dictionary')}</Text>
+            <Text style={styles.title}>{I18n.t('homePage.dictionary')}</Text>
           </View>
         </ImageBackground>
       </TouchableHighlight>
@@ -119,14 +119,14 @@ const Theory = props => {
       >
         <ImageBackground source={essential} style={styles.image}>
           <View style={styles.wrapper}>
-            <Text style={styles.text}>{I18n.t('homePage.essential')}</Text>
+            <Text style={styles.title}>{I18n.t('homePage.essential')}</Text>
           </View>
         </ImageBackground>
       </TouchableHighlight>
       <TouchableHighlight onPress={() => props.navigation.navigate('TacticsPage')} style={styles.menuItem}>
         <ImageBackground source={simulator} style={styles.image}>
           <View style={styles.wrapper}>
-            <Text style={styles.text}>{I18n.t('homePage.tactics')}</Text>
+            <Text style={styles.title}>{I18n.t('homePage.tactics')}</Text>
           </View>
         </ImageBackground>
       </TouchableHighlight>
@@ -196,16 +196,12 @@ const styles = StyleSheet.create({
   image: {
     height: '100%',
   },
-  text: {
+  title: {
     color: theme.COLOR_PRIMARY_LIGHT,
     fontSize: 28,
     fontWeight: 'bold',
   },
-  fitnessTitle: {
-    color: theme.COLOR_PRIMARY_LIGHT,
-    fontSize: 28,
-  },
-  textFitness: {
+  subtitle: {
     color: theme.COLOR_PRIMARY_LIGHT,
     fontSize: theme.FONT_SIZE_MEDIUM,
   },

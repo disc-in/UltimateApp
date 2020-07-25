@@ -46,7 +46,7 @@ class DisplayedElement extends React.Component {
       },
 
       onPanResponderMove: this.props.movable
-        ? Animated.event([null, { dx: this.offset.x, dy: this.offset.y }])
+        ? Animated.event([null, { dx: this.offset.x, dy: this.offset.y }], { useNativeDriver: false })
         : undefined,
 
       onPanResponderRelease: (event, gestureState) => {

@@ -29,10 +29,12 @@ const FitnessDrillIllustration = props => {
         toValue: 0,
         duration: 800,
         easing: Easing.easeOutQuint,
+        useNativeDriver: false,
       }),
       Animated.timing(opacityUnchecked, {
         toValue: 1,
         duration: 10,
+        useNativeDriver: false,
       }),
     ]).start(() => {
       const newIndex = (activeIndex + 1) % (stepsCount + 1);

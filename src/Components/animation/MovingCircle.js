@@ -35,7 +35,9 @@ class MovingCircle extends React.Component {
       },
 
       // Called when a move is made
-      onPanResponderMove: Animated.event([null, { dx: this.currentPosition.x, dy: this.currentPosition.y }]),
+      onPanResponderMove: Animated.event([null, { dx: this.currentPosition.x, dy: this.currentPosition.y }], {
+        useNativeDriver: false,
+      }),
 
       onPanResponderRelease: (evt, gesturestate) => {
         this.props.onMoveEnd(

@@ -262,6 +262,7 @@ class AnimationEditor extends React.Component {
         duration: 0,
         easing: Easing.linear,
         key: 0,
+        useNativeDriver: false,
       }).start();
 
     newAnimation.removeStep();

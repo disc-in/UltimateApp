@@ -13,7 +13,7 @@ const Dot = props => {
 const useAnimation = targetValue => {
   const animatedValue = useRef(new Animated.Value(targetValue)).current;
   const startAnimation = () => {
-    Animated.timing(animatedValue, { toValue: targetValue }).start();
+    Animated.timing(animatedValue, { toValue: targetValue, useNativeDriver: false }).start();
   };
   useEffect(startAnimation, [targetValue]);
   return animatedValue;

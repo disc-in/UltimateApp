@@ -21,7 +21,9 @@ class DraggableDisplayedElement extends React.Component {
       onStartShouldSetPanResponder: () => true,
 
       // Called when a move is made
-      onPanResponderMove: Animated.event([null, { dx: this.currentPosition.x, dy: this.currentPosition.y }]),
+      onPanResponderMove: Animated.event([null, { dx: this.currentPosition.x, dy: this.currentPosition.y }], {
+        useNativeDriver: false,
+      }),
 
       onPanResponderRelease: (event, gestureState) => {
         this.props.onMoveEnd(this.props.type, gestureState.moveX, gestureState.moveY);

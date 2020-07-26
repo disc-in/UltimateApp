@@ -45,7 +45,8 @@
     "react-redux": "^7.2.0",
     "redux": "^4.0.5",
     "redux-persist": "^5.10.0",
-    "watchman": "^1.0.0"
+    "watchman": "^1.0.0",
+    "@react-native-community/picker": "1.6.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

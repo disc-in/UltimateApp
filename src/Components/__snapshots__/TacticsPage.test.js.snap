@@ -29,7 +29,7 @@ exports[`<TacticsPage /> renders correctly 1`] = `
         }
       }
     >
-      Choose a topic: 
+      Choose a topic:
     </Text>
     <View
       style={

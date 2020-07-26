@@ -15,8 +15,6 @@ import { connect } from 'react-redux';
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
 
-const screenDimension = Dimensions.get('window');
-
 const TacticsPage = props => {
   // Default is second choice so that it is clear we use a picker on iOS
   const [selectedIndex, setSelectedIndex] = useState(1);
@@ -42,7 +40,7 @@ const TacticsPage = props => {
   return (
     <View style={styles.tacticsPage}>
       <View style={styles.pickerContainer}>
-        <Text style={styles.topic}>Choose a topic: </Text>
+        <Text style={styles.topic}>{I18n.t('tacticsPage.chooseTopic')}</Text>
         <Picker
           selectedValue={selectedIndex}
           style={styles.picker}

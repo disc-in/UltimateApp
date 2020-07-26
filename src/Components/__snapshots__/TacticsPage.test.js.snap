@@ -6,197 +6,69 @@ exports[`<TacticsPage /> renders correctly 1`] = `
     Object {
       "backgroundColor": "#fff",
       "height": "100%",
-      "paddingTop": 10,
     }
   }
 >
-  <Modal
-    animationType="fade"
-    hardwareAccelerated={false}
-    onRequestClose={[Function]}
-    visible={false}
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "flex": 1,
-          "justifyContent": "center",
-          "marginTop": 22,
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "white",
-            "borderRadius": 20,
-            "elevation": 5,
-            "height": "70%",
-            "justifyContent": "space-around",
-            "margin": 20,
-            "padding": 15,
-            "shadowColor": "#000",
-            "shadowOffset": Object {
-              "height": 2,
-              "width": 0,
-            },
-            "shadowOpacity": 0.25,
-            "shadowRadius": 3.84,
-            "width": "80%",
-          }
-        }
-      >
-        <View
-          accessible={true}
-          focusable={true}
-          isTVSelectable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "backgroundColor": "#e5e5e5",
-              "borderColor": "#232b2b",
-              "borderRadius": 2,
-              "borderWidth": 1,
-              "elevation": 2,
-              "marginHorizontal": 5,
-              "padding": 10,
-              "paddingHorizontal": 5,
-              "shadowColor": "#000",
-              "shadowOffset": Object {
-                "height": 1,
-                "width": 0,
-              },
-              "shadowOpacity": 0.2,
-              "shadowRadius": 1.41,
-              "width": "100%",
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "color": "#232b2b",
-                "fontSize": 20,
-                "fontWeight": "bold",
-                "textAlign": "center",
-              }
-            }
-          >
-            Vertical Stack
-          </Text>
-        </View>
-        <View
-          accessible={true}
-          focusable={true}
-          isTVSelectable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "backgroundColor": "#232b2b",
-              "borderRadius": 10,
-              "elevation": 2,
-              "padding": 10,
-              "paddingHorizontal": 20,
-              "width": 120,
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "color": "white",
-                "fontWeight": "bold",
-                "textAlign": "center",
-              }
-            }
-          >
-            Back
-          </Text>
-        </View>
-      </View>
-    </View>
-  </Modal>
   <View
     style={
       Object {
         "alignItems": "center",
         "borderBottomColor": "#e5e5e5",
-        "borderBottomWidth": 1,
-        "paddingVertical": 10,
+        "borderBottomWidth": 2,
+        "flexDirection": "row",
+        "height": 70,
+        "padding": 10,
       }
     }
   >
-    <View
-      accessible={true}
-      focusable={true}
-      isTVSelectable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
+    <Text
       style={
         Object {
-          "backgroundColor": "#fff",
-          "borderRadius": 5,
-          "elevation": 2,
-          "padding": 10,
-          "paddingVertical": 10,
-          "shadowColor": "#000",
-          "shadowOffset": Object {
-            "height": 1,
-            "width": 0,
-          },
-          "shadowOpacity": 0.2,
-          "shadowRadius": 1.41,
-          "width": "50%",
+          "fontSize": 16,
+          "fontWeight": "bold",
         }
       }
     >
-      <View
-        style={null}
-      >
-        <View
-          style={
+      Choose a topic: 
+    </Text>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "marginHorizontal": 20,
+        }
+      }
+    >
+      <RCTPicker
+        items={
+          Array [
             Object {
-              "alignItems": "center",
-              "borderBottomColor": "#e5e5e5",
-              "borderBottomWidth": 1,
-              "flexDirection": "row",
-              "justifyContent": "space-between",
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "color": "#232b2b",
-                "fontWeight": "bold",
-                "textAlign": "center",
-              }
-            }
-          >
-            Vertical Stack
-          </Text>
-          <Text />
-        </View>
-      </View>
+              "label": "Vertical Stack",
+              "textColor": undefined,
+              "value": 0,
+            },
+            Object {
+              "label": "Horizontal Stack",
+              "textColor": undefined,
+              "value": 1,
+            },
+          ]
+        }
+        onChange={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        selectedIndex={1}
+        style={
+          Array [
+            Object {
+              "height": 216,
+            },
+            Object {
+              "fontSize": 14,
+            },
+          ]
+        }
+      />
     </View>
   </View>
   <RCTScrollView
@@ -230,6 +102,11 @@ exports[`<TacticsPage /> renders correctly 1`] = `
     renderItem={[Function]}
     scrollEventThrottle={50}
     stickyHeaderIndices={Array []}
+    style={
+      Object {
+        "backgroundColor": "#fff",
+      }
+    }
     updateCellsBatchingPeriod={50}
     viewabilityConfigCallbackPairs={Array []}
     windowSize={21}
@@ -253,115 +130,89 @@ exports[`<TacticsPage /> renders correctly 1`] = `
           style={null}
         >
           <View
-            style={null}
+            style={
+              Object {
+                "borderBottomColor": "#e5e5e5",
+                "borderBottomWidth": 1,
+              }
+            }
           >
-            <View
+            <Text
               style={
                 Object {
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                  "paddingLeft": 10,
                   "paddingVertical": 15,
                 }
               }
             >
-              <Text
-                style={
-                  Object {
-                    "fontSize": 16,
-                    "fontWeight": "bold",
-                    "paddingLeft": 10,
-                  }
-                }
-              >
-                How does vertical stacks work?
-              </Text>
-            </View>
+              How does vertical stacks work?
+            </Text>
             <View
+              accessibilityIgnoresInvertColors={true}
               style={
                 Object {
-                  "borderBottomColor": "#e5e5e5",
-                  "borderBottomWidth": 1,
-                  "width": 750,
+                  "height": 250,
                 }
               }
             >
-              <View
-                accessibilityIgnoresInvertColors={true}
-                style={
+              <Image
+                source={
                   Object {
-                    "alignItems": "center",
-                    "backgroundColor": "rgb(0,0,0)",
-                    "borderRadius": 5,
-                    "height": 250,
-                    "justifyContent": "center",
-                    "width": "100%",
+                    "uri": undefined,
                   }
                 }
-              >
-                <Image
-                  source={
+                style={
+                  Array [
                     Object {
-                      "uri": undefined,
-                    }
-                  }
-                  style={
-                    Array [
-                      Object {
-                        "bottom": 0,
-                        "left": 0,
-                        "position": "absolute",
-                        "right": 0,
-                        "top": 0,
-                      },
-                      Object {
-                        "height": 250,
-                        "width": "100%",
-                      },
-                      undefined,
-                    ]
-                  }
-                />
-                <View
-                  style={
-                    Object {
-                      "backgroundColor": "#232b2b",
-                      "bottom": 10,
-                      "paddingHorizontal": 5,
+                      "bottom": 0,
+                      "left": 0,
                       "position": "absolute",
-                      "right": 5,
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#fff",
-                        "fontSize": 16,
-                        "textAlign": "center",
-                      }
-                    }
-                  />
-                </View>
-              </View>
+                      "right": 0,
+                      "top": 0,
+                    },
+                    Object {
+                      "height": 250,
+                      "width": undefined,
+                    },
+                    undefined,
+                  ]
+                }
+              />
               <View
                 style={
                   Object {
-                    "alignItems": "center",
-                    "paddingVertical": 15,
-                    "textAlign": "center",
+                    "backgroundColor": "#232b2b",
+                    "bottom": 10,
+                    "paddingHorizontal": 5,
+                    "position": "absolute",
+                    "right": 5,
                   }
                 }
               >
                 <Text
                   style={
                     Object {
-                      "fontSize": 14,
-                      "paddingLeft": 10,
+                      "color": "#fff",
+                      "fontSize": 16,
                     }
                   }
-                >
-                  That Drone Guy Ty
-                </Text>
+                />
               </View>
             </View>
+            <Text
+              style={
+                Object {
+                  "fontSize": 14,
+                  "paddingLeft": 10,
+                  "paddingVertical": 15,
+                  "textAlign": "center",
+                }
+              }
+            >
+              That Drone Guy Ty
+            </Text>
           </View>
         </View>
       </View>

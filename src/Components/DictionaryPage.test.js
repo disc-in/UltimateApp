@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 
 import store from '../Store/testStore';
 
-import ConnectedDictionaryPage, { DictionaryPage } from './DictionaryPage';
+import ConnectedDictionaryPage from './DictionaryPage';
 
 beforeEach(() => jest.useFakeTimers()); // for Modal behaviour
 

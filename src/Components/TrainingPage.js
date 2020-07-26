@@ -22,7 +22,7 @@ export function getTrainingMinimalPlayersNumber(training) {
   return Math.max(...minimalPlayersNumberList);
 }
 
-export const TrainingPage = props => {
+const TrainingPage = props => {
   const { navigation, route } = props;
   const { training, program } = route.params;
 

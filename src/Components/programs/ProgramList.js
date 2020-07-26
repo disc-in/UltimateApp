@@ -8,7 +8,7 @@ import I18n from '../../utils/i18n';
 import theme from '../../styles/theme.style';
 import Program from './Program';
 
-export const ProgramList = props => {
+const ProgramList = props => {
   const { navigation, displayedPrograms, activeProgram, completeTrainings } = props;
 
   const activeProgramId = displayedPrograms.findIndex(program => program.id === activeProgram);

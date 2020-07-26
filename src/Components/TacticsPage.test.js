@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 
 import store from '../Store/testStore';
 
-import ConnectedTacticsPage, { TacticsPage } from './TacticsPage';
+import ConnectedTacticsPage from './TacticsPage';
 
 beforeEach(() => jest.useFakeTimers()); // for Modal behaviour
 

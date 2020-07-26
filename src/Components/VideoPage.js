@@ -5,7 +5,7 @@ import VimeoVideo from './shared/VimeoVideo';
 
 const screenDimension = Dimensions.get('window');
 
-export const VideoPage = props => {
+const VideoPage = props => {
   const { route, navigation } = props;
   const video = route.params.video;
 

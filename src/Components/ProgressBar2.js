@@ -19,7 +19,7 @@ const useAnimation = targetValue => {
   return animatedValue;
 };
 
-export const ProgressBar = props => {
+const ProgressBar = props => {
   const { total, current, onDotPress } = props;
 
   const width = useAnimation((current - 1) / (total - 1)).interpolate({

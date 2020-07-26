@@ -8,7 +8,7 @@ import buttonValidation from '../../assets/check_dark.png';
 
 import theme from '../styles/theme.style';
 
-export const AnimationEditorPage = props => {
+const AnimationEditorPage = props => {
   const [currentAnimationState, saveAnimationState] = useState(null);
   const navigation = props.navigation;
 

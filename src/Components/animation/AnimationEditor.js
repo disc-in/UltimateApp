@@ -326,12 +326,12 @@ const styles = StyleSheet.create({
   actionsArea: {
     marginHorizontal: 30,
     marginTop: 10,
-    height: 50,
+    height: 80,
   },
   draggableArea: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'flex-start',
+    justifyContent: 'space-around',
   },
   deletionArea: {
     flex: 1,

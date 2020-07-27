@@ -124,6 +124,9 @@ export default {
     finish: 'Finish Training!',
     next: 'Next drill',
   },
+  essentialsPage: {
+    chooseTopic: 'Choose a topic:',
+  },
   fitnessFilters: {
     favorites: 'Favorites only',
     level: 'Level',
@@ -148,5 +151,8 @@ export default {
     program: {
       completion: '{{done}}/{{total}} trainings',
     },
+  },
+  tacticsPage: {
+    chooseTopic: 'Choose a topic:',
   },
 };

@@ -436,7 +436,7 @@ export const essentials = [
     ],
   },
   {
-    title: 'Reception',
+    title: 'Réception',
     pages: [
       {
         id: 1,
@@ -449,7 +449,7 @@ export const essentials = [
       },
       {
         id: 2,
-        title: 'Comment sauter',
+        title: 'Comment plonger',
         text: 'Brodie Smith',
         video: '424514902',
         illustration: 'https://zupimages.net/up/20/30/040p.jpg',
@@ -550,7 +550,7 @@ export const tactics = [
     ],
   },
   {
-    title: 'Defense de Zone',
+    title: 'Défense de Zone',
     pages: [
       {
         id: 1,

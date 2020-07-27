@@ -123,6 +123,9 @@ export default {
     finish: "Terminer l'entraînement !",
     next: 'Exercice suivant',
   },
+  essentialsPage: {
+    chooseTopic: 'Choisis un sujet :',
+  },
   fitnessFilters: {
     favorites: 'Seulement mes favoris',
     level: 'Niveau',
@@ -147,5 +150,8 @@ export default {
     program: {
       completion: '{{done}}/{{total}} entraînements',
     },
+  },
+  tacticsPage: {
+    chooseTopic: 'Choisis un sujet :',
   },
 };

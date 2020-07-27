@@ -1,11 +1,14 @@
 import React from 'react';
 import { View, Picker, StyleSheet } from 'react-native';
 
+import theme from '../../styles/theme.style';
+
 const BackgroundPicker = props => {
   return (
     <Picker
       selectedValue={props.selectedBackground}
       style={styles.picker}
+      itemStyle={styles.itemStyle}
       onValueChange={(itemValue, itemIndex) => {
         props.onBackgroundChange(itemValue);
       }}
@@ -22,7 +25,11 @@ export default BackgroundPicker;
 
 const styles = StyleSheet.create({
   picker: {
-    height: 50,
+    height: 80,
     width: 150,
+  },
+  itemStyle: {
+    fontSize: theme.FONT_SIZE_SMALL,
+    height: 80,
   },
 });

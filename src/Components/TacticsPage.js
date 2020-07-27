@@ -1,39 +1,28 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, Text, Dimensions, Modal, TouchableHighlight, FlatList, ImageBackground } from 'react-native';
+import { View, StyleSheet, Text, Picker, TouchableHighlight, FlatList, ImageBackground } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { connect } from 'react-redux';
 
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
 
-const screenDimension = Dimensions.get('window');
-
 const TacticsPage = props => {
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const [theorySubject, setTheorySubject] = useState('Vertical Stack');
-  const [modalVisible, setModalVisible] = useState(false);
+  // Default is second choice so that it is clear we use a picker on iOS
+  const [selectedIndex, setSelectedIndex] = useState(1);
 
-  const { navigation } = props;
-
-  const onImagePress = item => navigation.navigate('VideoPage', { video: item });
+  const onImagePress = item => props.navigation.navigate('VideoPage', { video: item });
 
   const renderContent = ({ item }) => {
     return (
       <TouchableHighlight onPress={() => onImagePress(item)}>
-        <View>
-          <View style={styles.titleContainer}>
-            <Text style={styles.title}>{item.title}</Text>
-          </View>
-          <View style={styles.containerImage}>
-            <ImageBackground source={{ uri: item.illustration }} style={styles.image}>
-              <View style={styles.timer}>
-                <Text style={styles.textTimer}>{item.time}</Text>
-              </View>
-            </ImageBackground>
-            <View style={styles.authorContainer}>
-              <Text style={styles.author}>{item.text}</Text>
+        <View style={styles.itemContainer}>
+          <Text style={styles.title}>{item.title}</Text>
+          <ImageBackground source={{ uri: item.illustration }} style={styles.image}>
+            <View style={styles.timer}>
+              <Text style={styles.textTimer}>{item.time}</Text>
             </View>
-          </View>
+          </ImageBackground>
+          <Text style={styles.author}>{item.text}</Text>
         </View>
       </TouchableHighlight>
     );
@@ -41,57 +30,25 @@ const TacticsPage = props => {
 
   return (
     <View style={styles.tacticsPage}>
-      <Modal
-        animationType="fade"
-        visible={modalVisible}
-        onRequestClose={() => {
-          setModalVisible(!modalVisible);
-        }}
-      >
-        <View style={styles.centeredView}>
-          <View style={styles.modalViewTheory}>
-            {props.tactics.map((topic, index) => (
-              <TouchableHighlight
-                style={styles.subjectButton}
-                key={index}
-                onPress={() => {
-                  setSelectedIndex(index);
-                  setTheorySubject(topic.title);
-                  setModalVisible(!modalVisible);
-                }}
-              >
-                <Text style={styles.subjectText}>{topic.title}</Text>
-              </TouchableHighlight>
-            ))}
-            <TouchableHighlight
-              style={styles.returnButton}
-              onPress={() => {
-                setModalVisible(!modalVisible);
-              }}
-            >
-              <Text style={styles.textStyle}>{I18n.t('shared.back')}</Text>
-            </TouchableHighlight>
-          </View>
-        </View>
-      </Modal>
-      <View style={styles.dropdownContainer}>
-        <TouchableHighlight
-          style={styles.subjectModal}
-          onPress={() => {
-            setModalVisible(true);
+      <View style={styles.pickerContainer}>
+        <Text style={styles.topic}>{I18n.t('tacticsPage.chooseTopic')}</Text>
+        <Picker
+          selectedValue={selectedIndex}
+          style={styles.picker}
+          itemStyle={styles.pickerItemStyle}
+          onValueChange={(itemValue, itemIndex) => {
+            setSelectedIndex(itemIndex);
           }}
         >
-          <View>
-            <View style={styles.dropdown}>
-              <Text style={{ ...styles.textStyle, color: theme.COLOR_PRIMARY }}>{theorySubject}</Text>
-              <MaterialCommunityIcons name="chevron-down" color={theme.COLOR_PRIMARY} size={26} />
-            </View>
-          </View>
-        </TouchableHighlight>
+          {props.tactics.map((topic, index) => (
+            <Picker.Item key={index} label={topic.title} value={index} />
+          ))}
+        </Picker>
       </View>
       <FlatList
+        style={styles.tacticsList}
         data={props.tactics[selectedIndex].pages}
-        keyExtractor={item => item.id.toString()}
+        keyExtractor={(item, index) => index.toString()}
         renderItem={renderContent}
       />
     </View>
@@ -108,128 +65,49 @@ export default connect(mapStateToProps)(TacticsPage);
 
 const styles = StyleSheet.create({
   tacticsPage: {
-    paddingTop: 10,
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     height: '100%',
   },
-  centeredView: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 22,
-  },
-  modalViewTheory: {
-    width: '80%',
-    height: '70%',
-    justifyContent: 'space-around',
-    margin: 20,
-    backgroundColor: 'white',
-    borderRadius: 20,
-    padding: 15,
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5,
-  },
-  textStyle: {
-    color: 'white',
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-  dropdownContainer: {
-    alignItems: 'center',
-    paddingVertical: 10,
-    borderBottomColor: theme.COLOR_SECONDARY_LIGHT,
-    borderBottomWidth: 1,
-  },
-  dropdown: {
+  pickerContainer: {
+    height: 70,
+    padding: 10,
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
     borderBottomColor: theme.COLOR_SECONDARY_LIGHT,
-    borderBottomWidth: 1,
+    borderBottomWidth: 2,
   },
-  subjectModal: {
-    backgroundColor: theme.COLOR_PRIMARY_LIGHT,
-    borderRadius: 5,
-    padding: 10,
-    width: '50%',
-    paddingVertical: 10,
-    elevation: 2,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.2,
-    shadowRadius: 1.41,
-  },
-  subjectButton: {
-    backgroundColor: theme.COLOR_SECONDARY_LIGHT,
-    width: '100%',
-    borderRadius: 2,
-    padding: 10,
-    paddingHorizontal: 5,
-    marginHorizontal: 5,
-    elevation: 2,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.2,
-    shadowRadius: 1.41,
-    borderWidth: 1,
-    borderColor: theme.COLOR_PRIMARY,
-  },
-  subjectText: {
-    color: theme.COLOR_PRIMARY,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    fontSize: theme.FONT_SIZE_LARGE,
-  },
-  returnButton: {
-    backgroundColor: theme.COLOR_PRIMARY,
-    borderRadius: 10,
-    padding: 10,
-    paddingHorizontal: 20,
-    elevation: 2,
-    width: 120,
-  },
-  titleContainer: {
-    paddingVertical: 15,
-  },
-  title: {
+  topic: {
     fontSize: theme.FONT_SIZE_MEDIUM,
     fontWeight: 'bold',
-    paddingLeft: 10,
   },
-  authorContainer: {
-    paddingVertical: 15,
-    textAlign: 'center',
-    alignItems: 'center',
+  picker: {
+    flex: 1,
+    marginHorizontal: 20,
   },
-  author: {
+  pickerItemStyle: {
     fontSize: theme.FONT_SIZE_SMALL,
-    paddingLeft: 10,
   },
-  containerImage: {
-    width: screenDimension.width,
+  tacticsList: {
+    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
+  },
+  itemContainer: {
     borderBottomColor: theme.COLOR_SECONDARY_LIGHT,
     borderBottomWidth: 1,
+  },
+  title: {
+    paddingVertical: 15,
+    paddingLeft: 10,
+    fontSize: theme.FONT_SIZE_MEDIUM,
+    fontWeight: 'bold',
+  },
+  author: {
+    paddingVertical: 15,
+    paddingLeft: 10,
+    textAlign: 'center',
+    fontSize: theme.FONT_SIZE_SMALL,
   },
   image: {
     height: 250,
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '100%',
-    borderRadius: 5,
-    backgroundColor: 'rgb(0,0,0)',
   },
   timer: {
     backgroundColor: theme.COLOR_PRIMARY,
@@ -241,6 +119,5 @@ const styles = StyleSheet.create({
   textTimer: {
     color: theme.COLOR_PRIMARY_LIGHT,
     fontSize: theme.FONT_SIZE_MEDIUM,
-    textAlign: 'center',
   },
 });

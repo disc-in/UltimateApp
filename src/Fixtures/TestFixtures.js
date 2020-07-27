@@ -239,10 +239,34 @@ export default {
           },
         ],
       },
+      {
+        title: 'Throwing',
+        pages: [
+          {
+            id: 1,
+            title: 'How to make a perfect throw?',
+            text: 'Rise Up Ultimate',
+            video: '424000350',
+            animation: '',
+          },
+        ],
+      },
     ],
     tactics: [
       {
         title: 'Vertical Stack',
+        pages: [
+          {
+            id: 1,
+            title: 'How does vertical stacks work?',
+            text: 'That Drone Guy Ty',
+            video: '424002454',
+            animation: '',
+          },
+        ],
+      },
+      {
+        title: 'Horizontal Stack',
         pages: [
           {
             id: 1,

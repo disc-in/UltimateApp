@@ -187,7 +187,7 @@ const styles = StyleSheet.create({
     paddingBottom: 20,
     paddingTop: 5,
     bottom: 0,
-    backgroundColor: 'white',
+    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     width: '100%',
     alignItems: 'center',
   },

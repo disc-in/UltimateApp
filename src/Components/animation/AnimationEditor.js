@@ -271,7 +271,7 @@ class AnimationEditor extends React.Component {
 
   render() {
     return (
-      <View style={styles.mainContainer} onLayout={this.onLayout}>
+      <View onLayout={this.onLayout}>
         <Animation
           onLayout={this.onLayout}
           editable
@@ -318,11 +318,6 @@ class AnimationEditor extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  mainContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'stretch',
-  },
   actionsArea: {
     marginHorizontal: 30,
     marginTop: 10,

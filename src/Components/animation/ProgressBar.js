@@ -75,7 +75,7 @@ class ProgressBar extends React.Component {
 
         {/* Play button */}
         <TouchableOpacity
-          style={[styles.playBtn, { left: this.state.stateFromProps.playLeft }]}
+          style={[styles.playButton, { left: this.state.stateFromProps.playLeft }]}
           onPress={() => this.props.playAnimation()}
         >
           <MaterialCommunityIcons name="play" color={theme.COLOR_PRIMARY} size={36} />
@@ -297,7 +297,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: PROGRESS_BAR_MIDDLE + 1 + DOT_SIZE / 2,
   },
-  playBtn: {
+  playButton: {
     position: 'absolute',
     width: 2 * DOT_SIZE,
     height: 2 * DOT_SIZE,

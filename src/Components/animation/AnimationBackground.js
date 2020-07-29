@@ -32,82 +32,62 @@ const AnimationBackground = props => {
   switch (props.background) {
     case 'zone':
       return (
-        <View
-          style={[
-            styles.background,
-            {
-              height: props.animationHeight,
-              width: props.animationWidth,
-            },
-          ]}
-        >
+        <View style={{ height: props.animationHeight, width: props.animationWidth }}>
           {/* Right vertical bar */}
           <View
             style={[
-              { height: fieldHeight },
-              { width: linesWidth },
-              { borderRadius: 1 },
-              { borderWidth: 1 },
-              { backgroundColor: 'black' },
-              { position: 'absolute' },
-              { top: topMargin },
-              { left: leftRightMargin + fieldWidth },
+              styles.bar,
+              {
+                height: fieldHeight,
+                width: linesWidth,
+                top: topMargin,
+                left: leftRightMargin + fieldWidth,
+              },
             ]}
           />
 
           {/* Left vertical bar */}
           <View
             style={[
-              { height: fieldHeight },
-              { width: linesWidth },
-              { borderRadius: 1 },
-              { borderWidth: 1 },
-              { backgroundColor: 'gray' },
-              { position: 'absolute' },
-              { top: topMargin },
-              { left: leftRightMargin },
+              styles.bar,
+              {
+                height: fieldHeight,
+                width: linesWidth,
+                top: topMargin,
+                left: leftRightMargin,
+              },
             ]}
           />
 
           {/* Top horizontal bar */}
           <View
             style={[
-              { height: linesWidth },
-              { width: fieldWidth },
-              { borderRadius: 1 },
-              { borderWidth: 1 },
-              { backgroundColor: 'gray' },
-              { position: 'absolute' },
-              { top: topMargin },
-              { left: leftRightMargin },
+              styles.bar,
+              {
+                height: linesWidth,
+                width: fieldWidth,
+                top: topMargin,
+                left: leftRightMargin,
+              },
             ]}
           />
 
           {/* Zone horizontal bar */}
           <View
             style={[
-              { height: linesWidth },
-              { width: fieldWidth },
-              { borderRadius: 1 },
-              { borderWidth: 1 },
-              { backgroundColor: 'gray' },
-              { position: 'absolute' },
-              { top: zoneLineTop },
-              { left: leftRightMargin },
+              styles.bar,
+              {
+                height: linesWidth,
+                width: fieldWidth,
+                top: zoneLineTop,
+                left: leftRightMargin,
+              },
             ]}
           />
 
           {/* Brick */}
           <View
-            style={[
-              { position: 'absolute' },
-              { left: brickLeft },
-              { top: brickZoneTop },
-              { borderRadius: brickRadius },
-              { borderWidth: 1 },
-              { borderColor: 'gray' },
-              { backgroundColor: 'white' },
-            ]}
+            style={[styles.brick, { left: brickLeft }, { top: brickZoneTop }, { borderRadius: brickRadius }]}
             height={2 * brickRadius}
             width={2 * brickRadius}
           />
@@ -115,82 +95,62 @@ const AnimationBackground = props => {
       );
     case '3/4 field':
       return (
-        <View
-          style={[
-            styles.background,
-            {
-              height: props.animationHeight,
-              width: props.animationWidth,
-            },
-          ]}
-        >
+        <View style={{ height: props.animationHeight, width: props.animationWidth }}>
           {/* Right vertical bar */}
           <View
             style={[
-              { height: fieldHeight },
-              { width: linesWidth },
-              { borderRadius: 1 },
-              { borderWidth: 1 },
-              { backgroundColor: 'black' },
-              { position: 'absolute' },
-              { top: topMargin },
-              { left: leftRightMargin + fieldWidth },
+              styles.bar,
+              {
+                height: fieldHeight,
+                width: linesWidth,
+                top: topMargin,
+                left: leftRightMargin + fieldWidth,
+              },
             ]}
           />
 
           {/* Left vertical bar */}
           <View
             style={[
-              { height: fieldHeight },
-              { width: linesWidth },
-              { borderRadius: 1 },
-              { borderWidth: 1 },
-              { backgroundColor: 'gray' },
-              { position: 'absolute' },
-              { top: topMargin },
-              { left: leftRightMargin },
+              styles.bar,
+              {
+                height: fieldHeight,
+                width: linesWidth,
+                top: topMargin,
+                left: leftRightMargin,
+              },
             ]}
           />
 
           {/* Top horizontal bar */}
           <View
             style={[
-              { height: linesWidth },
-              { width: fieldWidth },
-              { borderRadius: 1 },
-              { borderWidth: 1 },
-              { backgroundColor: 'gray' },
-              { position: 'absolute' },
-              { top: topMargin },
-              { left: leftRightMargin },
+              styles.bar,
+              {
+                height: linesWidth,
+                width: fieldWidth,
+                top: topMargin,
+                left: leftRightMargin,
+              },
             ]}
           />
 
           {/* Zone horizontal bar */}
           <View
             style={[
-              { height: linesWidth },
-              { width: fieldWidth },
-              { borderRadius: 1 },
-              { borderWidth: 1 },
-              { backgroundColor: 'gray' },
-              { position: 'absolute' },
-              { top: threeQuarterLineTop },
-              { left: leftRightMargin },
+              styles.bar,
+              {
+                height: linesWidth,
+                width: fieldWidth,
+                top: threeQuarterLineTop,
+                left: leftRightMargin,
+              },
             ]}
           />
 
           {/* Brick */}
           <View
-            style={[
-              { position: 'absolute' },
-              { left: brickLeft },
-              { top: brick34Top },
-              { borderRadius: brickRadius },
-              { borderWidth: 1 },
-              { borderColor: 'gray' },
-              { backgroundColor: 'white' },
-            ]}
+            style={[styles.brick, { left: brickLeft }, { top: brick34Top }, { borderRadius: brickRadius }]}
             height={2 * brickRadius}
             width={2 * brickRadius}
           />
@@ -198,68 +158,56 @@ const AnimationBackground = props => {
       );
     case 'rectangle':
       return (
-        <View
-          style={[
-            styles.background,
-            {
-              height: props.animationHeight,
-              width: props.animationWidth,
-            },
-          ]}
-        >
+        <View style={{ height: props.animationHeight, width: props.animationWidth }}>
           {/* Right vertical bar */}
           <View
             style={[
-              { height: fieldHeight },
-              { width: linesWidth },
-              { borderRadius: 1 },
-              { borderWidth: 1 },
-              { backgroundColor: 'black' },
-              { position: 'absolute' },
-              { top: topMargin },
-              { left: leftRightMargin + fieldWidth },
+              styles.bar,
+              {
+                height: fieldHeight,
+                width: linesWidth,
+                top: topMargin,
+                left: leftRightMargin + fieldWidth,
+              },
             ]}
           />
 
           {/* Left vertical bar */}
           <View
             style={[
-              { height: fieldHeight },
-              { width: linesWidth },
-              { borderRadius: 1 },
-              { borderWidth: 1 },
-              { backgroundColor: 'gray' },
-              { position: 'absolute' },
-              { top: topMargin },
-              { left: leftRightMargin },
+              styles.bar,
+              {
+                height: fieldHeight,
+                width: linesWidth,
+                top: topMargin,
+                left: leftRightMargin,
+              },
             ]}
           />
 
           {/* Top horizontal bar */}
           <View
             style={[
-              { height: linesWidth },
-              { width: fieldWidth },
-              { borderRadius: 1 },
-              { borderWidth: 1 },
-              { backgroundColor: 'gray' },
-              { position: 'absolute' },
-              { top: topMargin },
-              { left: leftRightMargin },
+              styles.bar,
+              {
+                height: linesWidth,
+                width: fieldWidth,
+                top: topMargin,
+                left: leftRightMargin,
+              },
             ]}
           />
 
           {/* Top horizontal bar */}
           <View
             style={[
-              { height: linesWidth },
-              { width: fieldWidth },
-              { borderRadius: 1 },
-              { borderWidth: 1 },
-              { backgroundColor: 'gray' },
-              { position: 'absolute' },
-              { top: fieldHeight + topMargin },
-              { left: leftRightMargin },
+              styles.bar,
+              {
+                height: linesWidth,
+                width: fieldWidth,
+                top: fieldHeight + topMargin,
+                left: leftRightMargin,
+              },
             ]}
           />
         </View>
@@ -272,9 +220,15 @@ const AnimationBackground = props => {
 export default AnimationBackground;
 
 const styles = StyleSheet.create({
-  background: {
+  bar: {
     position: 'absolute',
-    top: 0,
-    bottom: 0,
+    backgroundColor: 'black',
+    borderRadius: 1,
+    borderWidth: 1,
+  },
+  brick: {
+    position: 'absolute',
+    borderWidth: 1,
+    borderColor: 'black',
   },
 });

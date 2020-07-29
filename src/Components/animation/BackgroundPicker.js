@@ -2,6 +2,8 @@ import React from 'react';
 import { View, Picker, StyleSheet } from 'react-native';
 
 import theme from '../../styles/theme.style';
+import I18n from '../../utils/i18n';
+import { AnimationBackgrounds } from '../../Fixtures/config';
 
 const BackgroundPicker = props => {
   return (
@@ -13,10 +15,9 @@ const BackgroundPicker = props => {
         props.onBackgroundChange(itemValue);
       }}
     >
-      <Picker.Item label="Endzone" value="zone" />
-      <Picker.Item label="3/4 field" value="3/4 field" />
-      <Picker.Item label="Rectangle" value="rectangle" />
-      <Picker.Item label="Empty" value="empty" />
+      {Object.values(AnimationBackgrounds).map(background => (
+        <Picker.Item label={I18n.t(`data.animationBackgrounds.${background}`)} value={background} key={background} />
+      ))}
     </Picker>
   );
 };

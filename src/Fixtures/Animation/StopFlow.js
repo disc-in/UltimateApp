@@ -68,7 +68,7 @@ const stopFlow = {
   ],
   ids: ['offense', 'offense', 'offense', 'defense', 'defense', 'disc', 'defense', 'disc'],
   texts: [1, 2, 3, 1, 2, 1, 3, 2],
-  background: 'zone',
+  background: 'endzone',
 };
 
 export default stopFlow;

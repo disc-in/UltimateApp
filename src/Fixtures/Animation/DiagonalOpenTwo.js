@@ -72,7 +72,7 @@ const diagonalOpenTwo = {
   ],
   ids: ['triangle', 'triangle', 'offense', 'offense', 'offense', 'defense', 'defense', 'defense', 'disc', 'triangle'],
   texts: ['', '', 1, 2, 3, 1, 2, 3, 1, ''],
-  background: '3/4 field',
+  background: 'three quarters field',
 };
 
 export default diagonalOpenTwo;

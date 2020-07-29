@@ -663,19 +663,19 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
             items={
               Array [
                 Object {
+                  "label": "Rectangle",
+                  "textColor": undefined,
+                  "value": "rectangle",
+                },
+                Object {
                   "label": "Endzone",
                   "textColor": undefined,
-                  "value": "zone",
+                  "value": "endzone",
                 },
                 Object {
                   "label": "3/4 field",
                   "textColor": undefined,
-                  "value": "3/4 field",
-                },
-                Object {
-                  "label": "Rectangle",
-                  "textColor": undefined,
-                  "value": "rectangle",
+                  "value": "three quarters field",
                 },
                 Object {
                   "label": "Empty",
@@ -687,7 +687,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
             onChange={[Function]}
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
-            selectedIndex={0}
+            selectedIndex={1}
             style={
               Array [
                 Object {

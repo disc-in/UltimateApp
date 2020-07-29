@@ -101,7 +101,7 @@ const diagonalGame = {
   ],
   ids: ['defense', 'offense', 'offense', 'offense', 'offense', 'offense', 'offense', 'offense', 'disc'],
   texts: [1, 1, 2, 3, 4, 5, 6, 7, 1],
-  background: '3/4 field',
+  background: 'three quarters field',
 };
 
 export default diagonalGame;

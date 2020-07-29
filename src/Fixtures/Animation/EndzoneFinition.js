@@ -99,7 +99,7 @@ const endzoneFinition = {
     'defense',
   ],
   texts: [1, 1, 2, 2, 3, 4, 5, '3', 1, 4, 5],
-  background: 'zone',
+  background: 'endzone',
 };
 
 export default endzoneFinition;

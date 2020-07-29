@@ -1,19 +1,14 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 
+import { AnimationBackgrounds } from '../../Fixtures/config';
+
 /**
- * Background of an animation.
- * The possible backgrounds are:
- * - "zone": used for end-zone plays. Display a zone and part of the central area (1/3 zone, 2/3 field)
- * - "3/4 field": used for non end-zone plays. Display a zone and part of the central area (1/4 zone, 3/4 field)
- * - "rectangle": rectangle around the animation zone
- *
  * If props.background does not match any of the above types, the background will be empty.
  *
  * The props must contain:
  * - animationWidth, animationHeight: the dimension of the animation area
  * - background: the background type
- *
  */
 const AnimationBackground = props => {
   const topMargin = props.animationHeight * 0.05;
@@ -30,7 +25,7 @@ const AnimationBackground = props => {
   const brick34Top = threeQuarterLineTop + fieldHeight * 0.24 - 2 * brickRadius;
 
   switch (props.background) {
-    case 'zone':
+    case AnimationBackgrounds.ENDZONE:
       return (
         <View style={{ height: props.animationHeight, width: props.animationWidth }}>
           {/* Right vertical bar */}
@@ -93,7 +88,7 @@ const AnimationBackground = props => {
           />
         </View>
       );
-    case '3/4 field':
+    case AnimationBackgrounds.THREE_QUARTERS_FIELD:
       return (
         <View style={{ height: props.animationHeight, width: props.animationWidth }}>
           {/* Right vertical bar */}
@@ -156,7 +151,7 @@ const AnimationBackground = props => {
           />
         </View>
       );
-    case 'rectangle':
+    case AnimationBackgrounds.RECTANGLE:
       return (
         <View style={{ height: props.animationHeight, width: props.animationWidth }}>
           {/* Right vertical bar */}
@@ -212,6 +207,8 @@ const AnimationBackground = props => {
           />
         </View>
       );
+    case AnimationBackgrounds.EMPTY:
+      return null;
     default:
       return null;
   }

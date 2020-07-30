@@ -8,7 +8,7 @@ import theme from '../styles/theme.style';
 import FitnessDrillIllustration from './drills/FitnessDrillIllustration';
 import FrisbeeDrillIllustration from './drills/FrisbeeDrillIllustration';
 import ButtonNext from './shared/Button';
-import Progress from './ProgressBar2';
+import ProgressBar from './drills/ProgressBar';
 import { completeTraining } from '../Store/Actions/programAction';
 import { DrillTypes } from '../Fixtures/config';
 
@@ -44,7 +44,7 @@ export const DrillPageMinimal = props => {
         <Text style={styles.headerTitleText}>
           {I18n.t('drillPageMinimal.headerTitle', { trainingTitle: training.title })}
         </Text>
-        <Progress total={training.drills.length} current={currentDrillIndex + 1} onDotPress={onProgressDotPress} />
+        <ProgressBar total={training.drills.length} current={currentDrillIndex + 1} onDotPress={onProgressDotPress} />
       </View>
     );
     navigation.setOptions({

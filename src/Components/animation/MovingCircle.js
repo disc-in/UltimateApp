@@ -49,18 +49,16 @@ class MovingCircle extends React.Component {
   }
 
   render() {
-    var panStyle = {
-      transform: this.currentPosition.getTranslateTransform(),
-    };
-
     return (
       <Animated.View
         {...this.panResponder.panHandlers}
         style={[
-          panStyle,
           styles.circle,
-          { left: this.props.cx - this.props.radius },
-          { top: this.props.cy - this.props.radius },
+          {
+            transform: this.currentPosition.getTranslateTransform(),
+            left: this.props.cx - this.props.radius,
+            top: this.props.cy - this.props.radius,
+          },
         ]}
         height={2 * this.props.radius}
         width={2 * this.props.radius}

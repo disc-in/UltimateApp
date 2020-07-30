@@ -119,18 +119,18 @@ export const dictionary = [
         definition: 'Couvrir le porteur du disque de façon à l’obliger à lancer le disque du revers.',
       },
       {
-        id: 2,
+        id: 3,
         text: 'Force Flick or Forehand',
         definition: 'Couvrir le porteur du disque de façon à l’obliger à exécuter un lancer droit',
       },
       {
-        id: 2,
+        id: 4,
         text: 'Force Straight',
         definition:
           'Couvrir la partie située devant le porteur du disque, perpendiculairement aux lignes de côté, de façon à l’obliger à faire des passes latérales.',
       },
       {
-        id: 3,
+        id: 5,
         text: 'Forehand',
         definition:
           'Lancer exécuté en tenant le disque face vers le haut, du côté du bras sollicité, en le relâchant généralement à hauteur de la taille, le coude près du corps, et en le faisant pivoter de l’extérieur vers l’intérieur.',

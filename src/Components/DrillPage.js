@@ -96,7 +96,11 @@ export const DrillPage = props => {
       <View style={styles.description}>
         <View style={styles.descriptionItem}>
           <Text style={styles.descriptionTitle}>{I18n.t('drillPage.goal')}</Text>
-          <Text style={styles.descriptionText}>{drill.goals ? drill.goals.join(' - ') : ''}</Text>
+          <Text style={styles.descriptionText}>
+            {drill.goals
+              .map(goal => I18n.t(`data.fitnessGoals.${goal}`, { defaults: [{ scope: `data.frisbeeGoals.${goal}` }] }))
+              .join(', ')}
+          </Text>
         </View>
       </View>
       <View style={styles.lines} />

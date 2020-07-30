@@ -82,19 +82,18 @@ export default connect(mapStateToProps)(DictionaryPage);
 const styles = StyleSheet.create({
   dictionaryPage: {
     backgroundColor: theme.COLOR_PRIMARY_LIGHT,
-    paddingTop: 20,
   },
   header: {
     padding: 15,
     marginBottom: 5,
-    backgroundColor: theme.COLOR_PRIMARY,
+    backgroundColor: theme.COLOR_SECONDARY,
     color: 'white',
     fontWeight: 'bold',
   },
   row: {
     padding: 15,
-    marginBottom: 5,
-    backgroundColor: theme.COLOR_SECONDARY_LIGHT,
+    borderBottomWidth: 1,
+    borderBottomColor: theme.COLOR_SECONDARY_LIGHT,
   },
   centeredView: {
     flex: 1,
@@ -126,15 +125,14 @@ const styles = StyleSheet.create({
     fontSize: theme.FONT_SIZE_LARGE,
   },
   returnButton: {
-    backgroundColor: theme.COLOR_PRIMARY,
+    backgroundColor: theme.MAIN_COLOR,
     borderRadius: 10,
-    padding: 10,
+    paddingVertical: 10,
     paddingHorizontal: 20,
-    elevation: 2,
     width: 120,
   },
   returnButtonText: {
-    color: 'white',
+    color: theme.COLOR_PRIMARY_LIGHT,
     fontWeight: 'bold',
     textAlign: 'center',
   },

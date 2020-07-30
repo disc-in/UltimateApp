@@ -67,7 +67,7 @@ const splitIso = {
   ],
   ids: ['offense', 'defense', 'offense', 'offense', 'defense', 'defense', 'triangle', 'triangle', 'disc'],
   texts: [1, 1, 2, 3, 2, 3, '', '', 1],
-  background: 'zone',
+  background: 'endzone',
 };
 
 export default splitIso;

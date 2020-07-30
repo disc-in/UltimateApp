@@ -1,4 +1,12 @@
-import { Intensities, Levels, FrisbeeGoals, FitnessGoals, SeasonTimings, EquipmentLabels } from '../../Fixtures/config';
+import {
+  Intensities,
+  Levels,
+  FrisbeeGoals,
+  FitnessGoals,
+  SeasonTimings,
+  EquipmentLabels,
+  AnimationBackgrounds,
+} from '../../Fixtures/config';
 
 export default {
   data: {
@@ -41,6 +49,12 @@ export default {
       [Intensities.LOW]: 'Low',
       [Intensities.MODERATE]: 'Moderate',
       [Intensities.HIGH]: 'High',
+    },
+    animationBackgrounds: {
+      [AnimationBackgrounds.RECTANGLE]: 'Rectangle',
+      [AnimationBackgrounds.ENDZONE]: 'Endzone',
+      [AnimationBackgrounds.THREE_QUARTERS_FIELD]: '3/4 field',
+      [AnimationBackgrounds.EMPTY]: 'Empty',
     },
   },
   navigation: {

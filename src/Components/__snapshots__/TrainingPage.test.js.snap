@@ -1118,7 +1118,7 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "white",
+        "backgroundColor": "#fff",
         "bottom": 0,
         "paddingBottom": 20,
         "paddingTop": 5,
@@ -2362,7 +2362,7 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "white",
+        "backgroundColor": "#fff",
         "bottom": 0,
         "paddingBottom": 20,
         "paddingTop": 5,

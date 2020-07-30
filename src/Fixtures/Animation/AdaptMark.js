@@ -200,7 +200,7 @@ const adaptMark = {
     'disc',
   ],
   texts: ['1', 2, 3, 1, 1, 2, 2, 1, 3, '3', 4, 4, 2],
-  background: '3/4 field',
+  background: 'three quarters field',
 };
 
 export default adaptMark;

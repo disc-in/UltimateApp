@@ -10,7 +10,7 @@ class Drill {
     this.positions = (animation && animation.positions) || [[], []];
     this.ids = (animation && animation.ids) || [];
     this.texts = (animation && animation.texts) || [];
-    this.background = (animation && animation.background) || 'zone';
+    this.background = (animation && animation.background) || 'endzone';
   }
 
   /** Get the position of an element at a given step.

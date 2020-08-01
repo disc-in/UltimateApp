@@ -37,7 +37,7 @@ const DrillList = props => {
     <FlatList
       {...props}
       data={drillsToDisplay}
-      keyExtractor={item => item.id.toString()}
+      keyExtractor={(item, index) => index.toString()}
       renderItem={renderDrill}
       contentContainerStyle={list.contentContainer}
     />

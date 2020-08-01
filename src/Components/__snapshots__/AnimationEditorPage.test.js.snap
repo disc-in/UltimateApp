@@ -12,20 +12,12 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
 >
   <View
     onLayout={[Function]}
-    style={
-      Object {
-        "alignItems": "stretch",
-        "flex": 1,
-        "justifyContent": "center",
-      }
-    }
   >
     <View
       style={
         Array [
           Object {
             "alignItems": "flex-start",
-            "backgroundColor": "white",
             "flexDirection": "row",
             "justifyContent": "center",
           },
@@ -40,75 +32,62 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
     >
       <View
         style={
-          Array [
-            Object {
-              "bottom": 0,
-              "position": "absolute",
-              "top": 0,
-            },
-            Object {
-              "height": 952.8571428571429,
-              "width": 750,
-            },
-          ]
+          Object {
+            "height": 952.8571428571429,
+            "width": 750,
+          }
         }
       >
         <View
           style={
             Array [
               Object {
-                "height": 809.9285714285714,
+                "backgroundColor": "black",
+                "borderRadius": 1,
+                "borderWidth": 1,
+                "position": "absolute",
               },
               Object {
+                "height": 809.9285714285714,
+                "left": 712.5,
+                "top": 47.642857142857146,
                 "width": 3.375,
               },
-              Object {
-                "borderRadius": 1,
-              },
-              Object {
-                "borderWidth": 1,
-              },
+            ]
+          }
+        />
+        <View
+          style={
+            Array [
               Object {
                 "backgroundColor": "black",
-              },
-              Object {
+                "borderRadius": 1,
+                "borderWidth": 1,
                 "position": "absolute",
               },
-              Object {
-                "top": 47.642857142857146,
-              },
-              Object {
-                "left": 712.5,
-              },
-            ]
-          }
-        />
-        <View
-          style={
-            Array [
               Object {
                 "height": 809.9285714285714,
-              },
-              Object {
+                "left": 37.5,
+                "top": 47.642857142857146,
                 "width": 3.375,
               },
+            ]
+          }
+        />
+        <View
+          style={
+            Array [
               Object {
+                "backgroundColor": "black",
                 "borderRadius": 1,
-              },
-              Object {
                 "borderWidth": 1,
-              },
-              Object {
-                "backgroundColor": "gray",
-              },
-              Object {
                 "position": "absolute",
               },
               Object {
-                "top": 47.642857142857146,
-              },
-              Object {
+                "height": 3.375,
                 "left": 37.5,
+                "top": 47.642857142857146,
+                "width": 675,
               },
             ]
           }
@@ -117,58 +96,16 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
           style={
             Array [
               Object {
-                "height": 3.375,
-              },
-              Object {
-                "width": 675,
-              },
-              Object {
+                "backgroundColor": "black",
                 "borderRadius": 1,
-              },
-              Object {
                 "borderWidth": 1,
-              },
-              Object {
-                "backgroundColor": "gray",
-              },
-              Object {
                 "position": "absolute",
               },
               Object {
-                "top": 47.642857142857146,
-              },
-              Object {
+                "height": 3.375,
                 "left": 37.5,
-              },
-            ]
-          }
-        />
-        <View
-          style={
-            Array [
-              Object {
-                "height": 3.375,
-              },
-              Object {
-                "width": 675,
-              },
-              Object {
-                "borderRadius": 1,
-              },
-              Object {
-                "borderWidth": 1,
-              },
-              Object {
-                "backgroundColor": "gray",
-              },
-              Object {
-                "position": "absolute",
-              },
-              Object {
                 "top": 371.61428571428576,
-              },
-              Object {
-                "left": 37.5,
+                "width": 675,
               },
             ]
           }
@@ -178,6 +115,8 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
           style={
             Array [
               Object {
+                "borderColor": "black",
+                "borderWidth": 1,
                 "position": "absolute",
               },
               Object {
@@ -188,15 +127,6 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
               },
               Object {
                 "borderRadius": 16.875,
-              },
-              Object {
-                "borderWidth": 1,
-              },
-              Object {
-                "borderColor": "gray",
-              },
-              Object {
-                "backgroundColor": "white",
               },
             ]
           }
@@ -517,7 +447,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
     <View
       style={
         Object {
-          "height": 50,
+          "height": 80,
           "marginHorizontal": 30,
           "marginTop": 10,
         }
@@ -528,7 +458,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
           Object {
             "alignItems": "center",
             "flexDirection": "row",
-            "justifyContent": "flex-start",
+            "justifyContent": "space-around",
           }
         }
       >
@@ -724,7 +654,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
         <View
           style={
             Object {
-              "height": 50,
+              "height": 80,
               "width": 150,
             }
           }
@@ -733,19 +663,19 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
             items={
               Array [
                 Object {
+                  "label": "Rectangle",
+                  "textColor": undefined,
+                  "value": "rectangle",
+                },
+                Object {
                   "label": "Endzone",
                   "textColor": undefined,
-                  "value": "zone",
+                  "value": "endzone",
                 },
                 Object {
                   "label": "3/4 field",
                   "textColor": undefined,
-                  "value": "3/4 field",
-                },
-                Object {
-                  "label": "Rectangle",
-                  "textColor": undefined,
-                  "value": "rectangle",
+                  "value": "three quarters field",
                 },
                 Object {
                   "label": "Empty",
@@ -757,13 +687,16 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
             onChange={[Function]}
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
-            selectedIndex={0}
+            selectedIndex={1}
             style={
               Array [
                 Object {
                   "height": 216,
                 },
-                undefined,
+                Object {
+                  "fontSize": 14,
+                  "height": 80,
+                },
               ]
             }
           />

@@ -6,8 +6,6 @@ import store from '../Store/testStore';
 
 import ConectedEssentialPage, { EssentialPage } from './EssentialPage';
 
-beforeEach(() => jest.useFakeTimers()); // for Modal behaviour
-
 describe('<EssentialPage />', () => {
   it('renders correctly', () => {
     const tree = renderer

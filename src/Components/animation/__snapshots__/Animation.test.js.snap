@@ -6,7 +6,6 @@ exports[`<Animation /> renders correctly 1`] = `
     Array [
       Object {
         "alignItems": "flex-start",
-        "backgroundColor": "white",
         "flexDirection": "row",
         "justifyContent": "center",
       },
@@ -21,75 +20,62 @@ exports[`<Animation /> renders correctly 1`] = `
 >
   <View
     style={
-      Array [
-        Object {
-          "bottom": 0,
-          "position": "absolute",
-          "top": 0,
-        },
-        Object {
-          "height": 100,
-          "width": 100,
-        },
-      ]
+      Object {
+        "height": 100,
+        "width": 100,
+      }
     }
   >
     <View
       style={
         Array [
           Object {
-            "height": 85,
+            "backgroundColor": "black",
+            "borderRadius": 1,
+            "borderWidth": 1,
+            "position": "absolute",
           },
           Object {
+            "height": 85,
+            "left": 95,
+            "top": 5,
             "width": 0.425,
           },
-          Object {
-            "borderRadius": 1,
-          },
-          Object {
-            "borderWidth": 1,
-          },
+        ]
+      }
+    />
+    <View
+      style={
+        Array [
           Object {
             "backgroundColor": "black",
-          },
-          Object {
+            "borderRadius": 1,
+            "borderWidth": 1,
             "position": "absolute",
           },
-          Object {
-            "top": 5,
-          },
-          Object {
-            "left": 95,
-          },
-        ]
-      }
-    />
-    <View
-      style={
-        Array [
           Object {
             "height": 85,
-          },
-          Object {
+            "left": 5,
+            "top": 5,
             "width": 0.425,
           },
+        ]
+      }
+    />
+    <View
+      style={
+        Array [
           Object {
+            "backgroundColor": "black",
             "borderRadius": 1,
-          },
-          Object {
             "borderWidth": 1,
-          },
-          Object {
-            "backgroundColor": "gray",
-          },
-          Object {
             "position": "absolute",
           },
           Object {
-            "top": 5,
-          },
-          Object {
+            "height": 0.425,
             "left": 5,
+            "top": 5,
+            "width": 90,
           },
         ]
       }
@@ -98,58 +84,16 @@ exports[`<Animation /> renders correctly 1`] = `
       style={
         Array [
           Object {
-            "height": 0.425,
-          },
-          Object {
-            "width": 90,
-          },
-          Object {
+            "backgroundColor": "black",
             "borderRadius": 1,
-          },
-          Object {
             "borderWidth": 1,
-          },
-          Object {
-            "backgroundColor": "gray",
-          },
-          Object {
             "position": "absolute",
           },
           Object {
-            "top": 5,
-          },
-          Object {
+            "height": 0.425,
             "left": 5,
-          },
-        ]
-      }
-    />
-    <View
-      style={
-        Array [
-          Object {
-            "height": 0.425,
-          },
-          Object {
-            "width": 90,
-          },
-          Object {
-            "borderRadius": 1,
-          },
-          Object {
-            "borderWidth": 1,
-          },
-          Object {
-            "backgroundColor": "gray",
-          },
-          Object {
-            "position": "absolute",
-          },
-          Object {
             "top": 39,
-          },
-          Object {
-            "left": 5,
+            "width": 90,
           },
         ]
       }
@@ -159,6 +103,8 @@ exports[`<Animation /> renders correctly 1`] = `
       style={
         Array [
           Object {
+            "borderColor": "black",
+            "borderWidth": 1,
             "position": "absolute",
           },
           Object {
@@ -169,15 +115,6 @@ exports[`<Animation /> renders correctly 1`] = `
           },
           Object {
             "borderRadius": 2.125,
-          },
-          Object {
-            "borderWidth": 1,
-          },
-          Object {
-            "borderColor": "gray",
-          },
-          Object {
-            "backgroundColor": "white",
           },
         ]
       }

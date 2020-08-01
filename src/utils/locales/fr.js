@@ -1,4 +1,12 @@
-import { Intensities, Levels, FrisbeeGoals, FitnessGoals, SeasonTimings, EquipmentLabels } from '../../Fixtures/config';
+import {
+  Intensities,
+  Levels,
+  FrisbeeGoals,
+  FitnessGoals,
+  SeasonTimings,
+  EquipmentLabels,
+  AnimationBackgrounds,
+} from '../../Fixtures/config';
 
 export default {
   data: {
@@ -42,6 +50,12 @@ export default {
       [Intensities.MODERATE]: 'Modérée',
       [Intensities.HIGH]: 'Haute',
     },
+    animationBackgrounds: {
+      [AnimationBackgrounds.RECTANGLE]: 'Rectangle',
+      [AnimationBackgrounds.ENDZONE]: 'Endzone',
+      [AnimationBackgrounds.THREE_QUARTERS_FIELD]: '3/4 terrain',
+      [AnimationBackgrounds.EMPTY]: 'Vide',
+    },
   },
   navigation: {
     homePage: 'Disc In',
@@ -64,17 +78,16 @@ export default {
   homePage: {
     frisbeeTab: 'Frisbee',
     fitnessTab: 'Fitness',
-    theoryTab: 'Theorie',
+    theoryTab: 'Théorie',
     editor: 'Editeur',
     drills: 'Exercices',
     programs: "Programmes d'entraînement",
-    leanTitle: 'Affuté',
-    leanSubtitle: 'De nombreux exercises pour retrouver la forme ou la maintenir !',
-    bodyweightTitle: 'Poids du corps',
-    bodyweightSubtitle:
-      'Des programmes conçus pour gagner en force et en tonus musculaire au cours de la saison - juste avec le poids du corps',
+    leanTitle: 'Exercices',
+    leanSubtitle: 'Tous nos exercises pour garder la forme !',
+    bodyweightTitle: 'Sans matériel',
+    bodyweightSubtitle: 'Des programmes conçus pour plusieurs semaines',
     gymTitle: 'En salle',
-    gymSubtitle: 'Un programme conçu pour développer la force pendant la saison avec du matériel',
+    gymSubtitle: 'Des programmes conçus pour plusieurs semaines avec du matériel',
     dictionary: 'Lexique',
     essential: 'Les bases du jeu',
     tactics: 'Tactiques',
@@ -107,14 +120,14 @@ export default {
       one: '1 exercice disponible',
       other: '{{count}} exercices disponibles',
     },
-    filter: 'FILTRE',
+    filter: 'FILTRER',
   },
   drillPage: {
     minutes: 'minutes',
     players: 'joueurs',
     level: 'niveau',
     start: 'Start',
-    goal: 'Objectifs',
+    goal: 'Thèmes',
     equipment: 'Matériel',
     description: 'Description',
   },
@@ -124,13 +137,16 @@ export default {
     finish: "Terminer l'entraînement !",
     next: 'Exercice suivant',
   },
+  essentialsPage: {
+    chooseTopic: 'Choisis un sujet :',
+  },
   fitnessFilters: {
     favorites: 'Seulement mes favoris',
     level: 'Niveau',
     intensity: 'Intensité',
     equipment: 'Matériel',
     seasonTiming: 'Temporalité',
-    goals: 'Objectifs',
+    goals: 'Thèmes',
     duration: 'durée',
     durationLabel: 'Combien de temps as-tu ?   {{duration}} mins',
   },
@@ -148,5 +164,8 @@ export default {
     program: {
       completion: '{{done}}/{{total}} entraînements',
     },
+  },
+  tacticsPage: {
+    chooseTopic: 'Choisis un sujet :',
   },
 };

@@ -187,7 +187,6 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     flexDirection: 'row',
     justifyContent: 'center',
-    backgroundColor: 'white',
   },
 });
 

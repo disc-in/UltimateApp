@@ -6911,7 +6911,7 @@ const normalGame = {
   equipment: '8 cones - 1 disc',
   durationInMinutes: 20,
   intensity: Intensities.LOW,
-  goals: [FitnessGoals.CORE],
+  goals: [FrisbeeGoals.PLAY],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -6989,7 +6989,7 @@ const lineGame = {
   id: 2004,
   type: DrillTypes.FRISBEE,
   author: '',
-  title: 'Breaking the mark oriented game',
+  title: 'Breaking the mark - game',
   image: 'https://zupimages.net/up/20/28/rxqd.jpg',
   description:
     'Just a classical game on the whole field. Only exception: After a turn-over, the offensive player has to start from the closest sideline.',

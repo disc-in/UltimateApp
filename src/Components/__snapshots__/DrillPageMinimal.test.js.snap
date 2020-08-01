@@ -232,7 +232,7 @@ Array [
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "white",
+        "backgroundColor": "#fff",
         "bottom": 0,
         "paddingBottom": 10,
         "paddingTop": 5,

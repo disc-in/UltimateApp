@@ -1,4 +1,12 @@
-import { Intensities, Levels, FrisbeeGoals, FitnessGoals, SeasonTimings, EquipmentLabels } from '../../Fixtures/config';
+import {
+  Intensities,
+  Levels,
+  FrisbeeGoals,
+  FitnessGoals,
+  SeasonTimings,
+  EquipmentLabels,
+  AnimationBackgrounds,
+} from '../../Fixtures/config';
 
 export default {
   data: {
@@ -42,6 +50,12 @@ export default {
       [Intensities.MODERATE]: 'Moderate',
       [Intensities.HIGH]: 'High',
     },
+    animationBackgrounds: {
+      [AnimationBackgrounds.RECTANGLE]: 'Rectangle',
+      [AnimationBackgrounds.ENDZONE]: 'Endzone',
+      [AnimationBackgrounds.THREE_QUARTERS_FIELD]: '3/4 field',
+      [AnimationBackgrounds.EMPTY]: 'Empty',
+    },
   },
   navigation: {
     homePage: 'Disc In',
@@ -55,7 +69,7 @@ export default {
     drillPageMinimal: '{{training}} drills',
     animationEditorPage: 'New Drill (experimental)',
     dictionaryPage: 'Dictionary',
-    essentialPage: 'Essential',
+    essentialPage: 'Basics',
     tacticsPage: 'Tactics',
   },
   shared: {
@@ -68,15 +82,14 @@ export default {
     editor: 'Editor',
     drills: 'Drills',
     programs: 'Practice Programs',
-    leanTitle: 'Lean Fit',
-    leanSubtitle: 'Find workouts to get lean and fit!',
+    leanTitle: 'All workouts',
+    leanSubtitle: 'Browse all our workouts to get fit!',
     bodyweightTitle: 'Bodyweight only',
-    bodyweightSubtitle:
-      'A program designed to push your strenght and improve muscle tone over the season - all without weights',
-    gymTitle: 'Gym Strong',
-    gymSubtitle: 'Build full-body strenght with a focus on weight training over the season',
+    bodyweightSubtitle: 'A program to prepare your body all year long, no equipment required',
+    gymTitle: 'Hit the gym',
+    gymSubtitle: 'A program using more specific equipment over the season',
     dictionary: 'Dictionary',
-    essential: 'Essential',
+    essential: 'Basics',
     tactics: 'Tactics',
   },
   animationEditor: {
@@ -125,6 +138,9 @@ export default {
     finish: 'Finish Training!',
     next: 'Next drill',
   },
+  essentialsPage: {
+    chooseTopic: 'Choose a topic:',
+  },
   fitnessFilters: {
     favorites: 'Favorites only',
     level: 'Level',
@@ -149,5 +165,8 @@ export default {
     program: {
       completion: '{{done}}/{{total}} trainings',
     },
+  },
+  tacticsPage: {
+    chooseTopic: 'Choose a topic:',
   },
 };

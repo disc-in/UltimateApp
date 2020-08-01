@@ -127,7 +127,7 @@ const zoneGame = {
     'disc',
   ],
   texts: [1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7, 1],
-  background: 'zone',
+  background: 'endzone',
 };
 
 export default zoneGame;

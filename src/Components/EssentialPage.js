@@ -1,103 +1,56 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, Text, Dimensions, Modal, TouchableHighlight, FlatList } from 'react-native';
+import { View, StyleSheet, Text, Picker, TouchableHighlight, FlatList, ImageBackground } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { connect } from 'react-redux';
 
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
-import VimeoVideo from './VimeoVideo';
 
-const screenDimension = Dimensions.get('window');
+const EssentialPage = props => {
+  // Default is second choice so that it is clear we use a picker on iOS
+  const [selectedIndex, setSelectedIndex] = useState(1);
 
-const EssentialPage = ({ essentials }) => {
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const [theorySubject, setTheorySubject] = useState(essentials[0].title);
-  const [modalVisible, setModalVisible] = useState(false);
+  const onImagePress = item => props.navigation.navigate('VideoPage', { video: item });
 
   const renderContent = ({ item }) => {
     return (
-      <>
-        <View style={styles.titleContainer}>
+      <TouchableHighlight onPress={() => onImagePress(item)}>
+        <View style={styles.itemContainer}>
           <Text style={styles.title}>{item.title}</Text>
+          <ImageBackground source={{ uri: item.illustration }} style={styles.image}>
+            <View style={styles.timer}>
+              <Text style={styles.textTimer}>{item.time}</Text>
+            </View>
+          </ImageBackground>
+          <Text style={styles.author}>{item.text}</Text>
         </View>
-        <View style={styles.container}>
-          <VimeoVideo vimeoId={item.video} screenWidth={screenDimension.width} sounds />
-        </View>
-        <View style={styles.instructionContainer}>
-          <Text style={styles.instruction}>{item.text}</Text>
-        </View>
-        <View style={styles.lines} />
-      </>
-    );
-  };
-
-  const displayTheory = () => {
-    return (
-      <View style={styles.container}>
-        <FlatList
-          data={essentials[selectedIndex].pages}
-          contentContainerStyle={styles.listContainer}
-          keyExtractor={item => item.id.toString()}
-          renderItem={renderContent}
-        />
-      </View>
+      </TouchableHighlight>
     );
   };
 
   return (
-    <View style={styles.container}>
-      <Modal
-        animationType="fade"
-        visible={modalVisible}
-        onRequestClose={() => {
-          setModalVisible(!modalVisible);
-        }}
-      >
-        <View style={styles.centeredView}>
-          <View style={styles.modalViewTheory}>
-            {essentials.map((topic, index) => (
-              <TouchableHighlight
-                style={styles.subjectButton}
-                key={index}
-                onPress={() => {
-                  setSelectedIndex(index);
-                  setTheorySubject(topic.title);
-                  setModalVisible(!modalVisible);
-                }}
-              >
-                <Text style={styles.subjectText}>{topic.title}</Text>
-              </TouchableHighlight>
-            ))}
-            <TouchableHighlight
-              style={styles.returnButton}
-              onPress={() => {
-                setModalVisible(!modalVisible);
-              }}
-            >
-              <Text style={styles.textStyle}>{I18n.t('shared.back')}</Text>
-            </TouchableHighlight>
-          </View>
-        </View>
-      </Modal>
-      <View style={styles.displayTheory}>
-        <TouchableHighlight
-          style={styles.subjectModal}
-          onPress={() => {
-            setModalVisible(true);
+    <View style={styles.esssentialsPage}>
+      <View style={styles.pickerContainer}>
+        <Text style={styles.topic}>{I18n.t('essentialsPage.chooseTopic')}</Text>
+        <Picker
+          selectedValue={selectedIndex}
+          style={styles.picker}
+          itemStyle={styles.pickerItemStyle}
+          onValueChange={(itemValue, itemIndex) => {
+            setSelectedIndex(itemIndex);
           }}
         >
-          <View>
-            <View style={styles.dropdown}>
-              <Text style={{ ...styles.textStyle, color: theme.COLOR_PRIMARY }}>{theorySubject}</Text>
-              <MaterialCommunityIcons name="chevron-down" color={theme.COLOR_PRIMARY} size={26} />
-            </View>
-            <View style={styles.lines} />
-          </View>
-        </TouchableHighlight>
+          {props.essentials.map((topic, index) => (
+            <Picker.Item key={index} label={topic.title} value={index} />
+          ))}
+        </Picker>
       </View>
-      <View style={styles.displayTheory}>
-        <View>{displayTheory()}</View>
-      </View>
+      <FlatList
+        style={styles.essentialsList}
+        data={props.essentials[selectedIndex].pages}
+        keyExtractor={(item, index) => index.toString()}
+        renderItem={renderContent}
+      />
     </View>
   );
 };
@@ -111,118 +64,60 @@ const mapStateToProps = state => {
 export default connect(mapStateToProps)(EssentialPage);
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: theme.COLOR_PRIMARY_LIGHT,
+  esssentialsPage: {
+    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
+    height: '100%',
   },
-  title: {
+  pickerContainer: {
+    height: 70,
+    padding: 10,
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderBottomColor: theme.COLOR_SECONDARY_LIGHT,
+    borderBottomWidth: 2,
+  },
+  topic: {
     fontSize: theme.FONT_SIZE_MEDIUM,
     fontWeight: 'bold',
-    paddingLeft: 10,
   },
-  lines: {
+  picker: {
+    flex: 1,
+    marginHorizontal: 20,
+  },
+  pickerItemStyle: {
+    fontSize: theme.FONT_SIZE_SMALL,
+  },
+  essentialsList: {
+    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
+  },
+  itemContainer: {
     borderBottomColor: theme.COLOR_SECONDARY_LIGHT,
     borderBottomWidth: 1,
   },
-
-  titleContainer: {
+  title: {
     paddingVertical: 15,
-  },
-  instructionContainer: {
-    paddingVertical: 15,
-    textAlign: 'center',
-    alignItems: 'center',
-  },
-  instruction: { fontSize: theme.FONT_SIZE_SMALL, paddingLeft: 10 },
-  listContainer: {
-    paddingVertical: 10,
-    paddingBottom: 50,
-  },
-  centeredView: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 22,
-  },
-
-  modalViewTheory: {
-    width: '80%',
-    height: '70%',
-    justifyContent: 'space-around',
-    margin: 20,
-    backgroundColor: 'white',
-    borderRadius: 20,
-    padding: 15,
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5,
-  },
-
-  textStyle: {
-    color: 'white',
+    paddingLeft: 10,
+    fontSize: theme.FONT_SIZE_MEDIUM,
     fontWeight: 'bold',
-    textAlign: 'center',
   },
-  returnButton: {
+  author: {
+    paddingVertical: 15,
+    paddingLeft: 10,
+    textAlign: 'center',
+    fontSize: theme.FONT_SIZE_SMALL,
+  },
+  image: {
+    height: 250,
+  },
+  timer: {
     backgroundColor: theme.COLOR_PRIMARY,
-    borderRadius: 10,
-    padding: 10,
-    paddingHorizontal: 20,
-    elevation: 2,
-    width: 120,
-  },
-  displayTheory: {
-    alignItems: 'center',
-    paddingTop: 20,
-  },
-  subjectModal: {
-    backgroundColor: theme.COLOR_PRIMARY_LIGHT,
-    borderRadius: 5,
-    padding: 10,
-    width: '50%',
-    paddingVertical: 10,
-    elevation: 2,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.2,
-    shadowRadius: 1.41,
-  },
-  dropdown: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  },
-  subjectButton: {
-    backgroundColor: theme.COLOR_SECONDARY_LIGHT,
-    width: '100%',
-    borderRadius: 2,
-    padding: 10,
     paddingHorizontal: 5,
-    marginHorizontal: 5,
-    elevation: 2,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.2,
-    shadowRadius: 1.41,
-    borderWidth: 1,
-    borderColor: theme.COLOR_PRIMARY,
+    position: 'absolute',
+    right: 5,
+    bottom: 10,
   },
-  subjectText: {
-    color: theme.COLOR_PRIMARY,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    fontSize: theme.FONT_SIZE_LARGE,
+  textTimer: {
+    color: theme.COLOR_PRIMARY_LIGHT,
+    fontSize: theme.FONT_SIZE_MEDIUM,
   },
 });

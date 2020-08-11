@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Animated, Dimensions, Easing, View, Picker } from 'react-native';
+import { StatusBar, StyleSheet, Animated, Dimensions, Easing, View, Picker } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import Animation from './Animation';
@@ -25,6 +25,9 @@ class AnimationEditor extends React.Component {
         defense: 1,
         disc: 1,
         triangle: 1,
+        animationTopMargin: 0,
+        animationHeight: 100,
+        animationWidth: 100,
       },
       isElementMoving: false,
     };
@@ -53,6 +56,15 @@ class AnimationEditor extends React.Component {
   };
 
   onLayout = e => {
+    if (this.marker) {
+      this.marker.measure((x, y, width, height, pageX, pageY) => {
+        this.setState({
+          dLeft: pageX,
+          dTop: pageY,
+        });
+      });
+    }
+
     this.editorHeight = e.nativeEvent.layout.height;
     this.editorWidth = e.nativeEvent.layout.width;
 
@@ -60,24 +72,40 @@ class AnimationEditor extends React.Component {
     this.setState({
       width: this.editorWidth,
       height: this.editorHeight,
-      dTop: e.nativeEvent.layout.y,
-      dLeft: e.nativeEvent.layout.x,
     });
 
     // Create the elements in the horizontal bar
     this.initialElements = [];
 
-    var animationWidth = this.editorWidth * this.wRatio;
-    var animationHeight = this.editorHeight * this.hRatio;
+    var { height, width } = Dimensions.get('window');
+    var animationWidth = width * this.wRatio;
+    var animationHeight = height * this.hRatio;
 
     this.setState(prevState => ({
       playerRadius: Math.min(animationWidth, animationHeight) / 12,
     }));
   };
 
+  setAnimationDimension = (height, width) => {
+    this.setState({
+      animationHeight: height,
+      animationWidth: width,
+    });
+  };
+
+  setAnimationTopMargin = topMargin => {
+    this.setState({
+      animationTopMargin: topMargin,
+    });
+  };
+
   addElementToAnimation = (type, x, y) => {
-    // TODO: Fix y offset
-    const position = this._positionPixelToPercent(x, y - 50);
+    var { height, width } = Dimensions.get('window');
+
+    this.screenHeight = height;
+    this.screenWidth = width;
+
+    const position = this._positionPixelToPercent(x, y);
     if (position[0] <= 1 && position[1] <= 0.88 && position[0] >= 0 && position[1] >= 0) {
       const text = this.state.labels[type];
 
@@ -104,9 +132,10 @@ class AnimationEditor extends React.Component {
    * y2: corresponding vertical position in percentage (=0 if centered)
    */
   _positionPixelToPercent = (x, y) => {
+    /* Here we assume that there is no view at the left or the bottom of the editor */
     return [
-      (x - this.state.dLeft) / (this.state.width * this.wRatio),
-      (y - this.state.dTop) / (this.state.height * this.hRatio),
+      (x - this.state.dLeft) / this.state.animationWidth,
+      (y - this.state.animationTopMargin) / this.state.animationHeight,
     ];
   };
 
@@ -215,8 +244,6 @@ class AnimationEditor extends React.Component {
     var newPosition = [currentPosition[0] + xDeltaPercent, currentPosition[1] + yDeltaPercent];
 
     var newAnimation = this._copyAnimation();
-    var animationWidth = this.state.width * this.wRatio;
-    var animationHeight = this.state.height * this.hRatio;
 
     /* If the element is dropped on the trash area */
     if (newPosition[1] > 0.85) {
@@ -271,13 +298,19 @@ class AnimationEditor extends React.Component {
 
   render() {
     return (
-      <View onLayout={this.onLayout}>
+      <View
+        ref={ref => {
+          this.marker = ref;
+        }}
+        onLayout={this.onLayout}
+      >
         <Animation
-          onLayout={this.onLayout}
           editable
           animation={this.state.animation}
           onMoveStart={this.onMoveStart}
           onElementMoveEnd={this.onElementMoveEnd}
+          onDimensionSet={this.setAnimationDimension}
+          onTopMarginSet={this.setAnimationTopMargin}
           onCutMove={this.cutMove}
           widthRatio={1}
           heightRatio={this.hRatio}

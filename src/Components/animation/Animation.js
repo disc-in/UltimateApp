@@ -57,7 +57,10 @@ class Animation extends React.Component {
     var { height, width } = Dimensions.get('window');
 
     this.animationWidth = width * this.props.widthRatio;
+
     this.animationHeight = height * this.props.heightRatio;
+    if (this.props.onDimensionSet !== null && this.props.onDimensionSet !== undefined)
+      this.props.onDimensionSet(this.animationHeight, this.animationWidth);
   }
 
   playAnimation = () => {
@@ -133,7 +136,23 @@ class Animation extends React.Component {
 
   render() {
     return (
-      <View style={[styles.mainContainer, { height: this.animationHeight }, { width: this.animationWidth }]}>
+      <View
+        ref={ref => {
+          this.marker = ref;
+        }}
+        onLayout={({ nativeEvent }) => {
+          if (this.marker) {
+            this.marker.measure((x, y, width, height, pageX, pageY) => {
+              this.dTop = pageY;
+              this.dLeft = pageX;
+
+              if (this.props.onTopMarginSet !== undefined && this.props.onTopMarginSet !== null)
+                this.props.onTopMarginSet(this.dTop);
+            });
+          }
+        }}
+        style={[styles.mainContainer, { height: this.animationHeight }, { width: this.animationWidth }]}
+      >
         {this.animationWidth && (
           <AnimationBackground
             animationWidth={this.animationWidth}
@@ -148,6 +167,7 @@ class Animation extends React.Component {
             positionPercentToPixel={this._positionPercentToPixel}
             animation={this.props.animation}
             onMoveEnd={this.props.onCutMove}
+            topMargin={this.dTop}
           />
         )}
         {this.props.animation.ids.map((id, index) => (
@@ -159,6 +179,7 @@ class Animation extends React.Component {
             movable={this.props.editable}
             onMoveStart={this.props.onMoveStart}
             onMoveEnd={this.props.onElementMoveEnd}
+            topMargin={this.dTop}
             animationWidth={this.animationWidth}
             animationHeight={this.animationHeight}
             animation={this.props.animation}

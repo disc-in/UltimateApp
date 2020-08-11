@@ -161,6 +161,27 @@ class DisplayedElement extends React.Component {
 }
 
 const _initializeStateFromProps = props => {
+  /* Get the element width */
+  var width = 0;
+
+  const playerRadius = Math.min(props.animationWidth, props.animationHeight) / 12;
+  const discRadius = playerRadius / 1.5;
+  const coneSize = playerRadius / 2;
+
+  switch (props.type) {
+    case 'defense':
+    case 'offense':
+      width = playerRadius;
+      break;
+    case 'disc':
+      width = discRadius;
+      break;
+    case 'triangle':
+      width = coneSize / 2;
+  }
+
+  width /= 2;
+
   /* Positions of the element at each step of the drill */
   const xPositions = [];
   const yPositions = [];
@@ -175,8 +196,8 @@ const _initializeStateFromProps = props => {
     /* Get the element initial position */
     const initialPosition = props.positionPercentToPixel(currentPositions[0][0], currentPositions[0][1]);
 
-    xPositions.push(initialPosition[0]);
-    yPositions.push(initialPosition[1]);
+    xPositions.push(initialPosition[0] - width);
+    yPositions.push(initialPosition[1] - width - props.topMargin);
     time.push(stepId);
 
     /* If there is a count-cut */
@@ -197,8 +218,8 @@ const _initializeStateFromProps = props => {
           Math.pow(counterCutPosition[0] - finalPosition[0], 2) + Math.pow(counterCutPosition[1] - finalPosition[1], 2),
         );
 
-        xPositions.push(counterCutPosition[0]);
-        yPositions.push(counterCutPosition[1]);
+        xPositions.push(counterCutPosition[0] - width);
+        yPositions.push(counterCutPosition[1] - width - props.topMargin);
         time.push(stepId + firstCutLength / (firstCutLength + secondCutLength));
       }
     }
@@ -245,8 +266,8 @@ const styles = StyleSheet.create({
     backgroundColor: theme.DISC_COLOR,
   },
   discText: {
-    width: 0,
-    height: 0,
+    color: theme.DISC_TEXT_COLOR,
+    fontWeight: 'bold',
   },
   triangle: {
     backgroundColor: 'transparent',

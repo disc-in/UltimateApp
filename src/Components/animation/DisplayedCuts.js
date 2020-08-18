@@ -51,10 +51,8 @@ class DisplayedCuts extends React.Component {
             { transform: [{ rotate: cut.angle2.__getValue() }] },
           ]}
         />
-        {cut.cutCircle !== null && cut.cutCircle !== undefined ? cut.cutCircle.render() : undefined}
-        {cut.countercutCircle !== null && cut.countercutCircle !== undefined
-          ? cut.countercutCircle.render()
-          : undefined}
+        {cut?.cutCircle}
+        {cut?.countercutCircle}
       </View>
     );
   };
@@ -62,20 +60,18 @@ class DisplayedCuts extends React.Component {
   render() {
     return (
       <Animated.View key="1" style={[{ position: 'absolute', left: 0, top: 0 }]} height="100%" width="100%">
-        {this.state.stateFromProps.cuts !== undefined && this.state.stateFromProps.cuts !== null
-          ? this.state.stateFromProps.cuts[this.state.step]?.map(item => {
-              return (
-                <Animated.View
-                  key={item.key}
-                  style={[{ position: 'absolute', left: 0, top: 0 }]}
-                  height="100%"
-                  width="100%"
-                >
-                  {this.state.stateFromProps.cuts[this.state.step]?.map(this._displayCut)}
-                </Animated.View>
-              );
-            })
-          : undefined}
+        {this.state.stateFromProps?.cuts[this.state.step]?.map(item => {
+          return (
+            <Animated.View
+              key={item.key}
+              style={[{ position: 'absolute', left: 0, top: 0 }]}
+              height="100%"
+              width="100%"
+            >
+              {this.state.stateFromProps.cuts[this.state.step]?.map(this._displayCut)}
+            </Animated.View>
+          );
+        })}
       </Animated.View>
     );
   }

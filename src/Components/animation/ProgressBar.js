@@ -146,20 +146,26 @@ const HITBOX_SLOP = 10;
 
 const _initializeStateFromProps = props => {
   // Horizontal position of each dot
-  var progressBarDots = [];
+  let progressBarDots = [];
 
   // Width of the progress bar
-  var progressBarWidth = props.animationWidth - 135;
+  let progressBarWidth = props.animationWidth - 135;
 
   if (props.readonly) progressBarWidth = props.animationWidth - 35;
 
-  var stepWidth = progressBarWidth / props.stepCount;
+  const stepWidth = progressBarWidth / props.stepCount;
+
+  progressBarWidth -= stepWidth;
+  let playLeft = 10 + props.stepCount * stepWidth;
+  if (props.readonly) {
+    playLeft -= stepWidth - DOT_SIZE / 4;
+  }
 
   // Set the horizontal position in pixels of each dot on the progress bar
-  for (var i = 0; i < props.stepCount; i++) {
-    var touchableWidth = stepWidth;
-    var left = 10 + i * stepWidth;
-    var touchableLeft = left;
+  for (let i = 0; i < props.stepCount; i++) {
+    let touchableWidth = stepWidth;
+    const left = 10 + i * stepWidth;
+    let touchableLeft = left;
 
     if (i === 0)
       if (props.readonly) touchableWidth = 0;
@@ -176,21 +182,19 @@ const _initializeStateFromProps = props => {
     progressBarDots = Object.freeze(progressBarDots.concat(frozenObj));
   }
 
-  var playLeft = 10 + props.stepCount * stepWidth;
-
   /* Create an array with all the step numbers */
-  var time = [];
-  for (var stepId = 0; stepId < props.stepCount; stepId++) time.push(stepId);
+  const time = [];
+  for (let stepId = 0; stepId < props.stepCount; stepId++) time.push(stepId);
 
   /* Interpolation of the step dots opacity */
-  var interpolatedOpacities = [];
+  const interpolatedOpacities = [];
 
   /* For each dot */
-  for (var dotId = 0; dotId < props.stepCount; dotId++) {
-    var opacity = [];
+  for (let dotId = 0; dotId < props.stepCount; dotId++) {
+    const opacity = [];
 
     /* For each step */
-    for (stepId = 0; stepId < props.stepCount; stepId++) {
+    for (let stepId = 0; stepId < props.stepCount; stepId++) {
       if (dotId <= stepId)
         /* If the dot is visible */
         opacity.push(1);
@@ -205,18 +209,11 @@ const _initializeStateFromProps = props => {
     );
   }
 
-  if (props.readonly) {
-    progressBarWidth -= stepWidth;
-    playLeft -= stepWidth - DOT_SIZE / 4;
-  }
-
   return {
     animationHeight: props.animationHeight,
     animationWidth: props.animationWidth,
-    stepCount: props.stepCount,
     progressBarDots,
     progressBarWidth,
-    addStepLeft: 10 + props.stepCount * stepWidth,
     interpolatedOpacities,
     interpolatedWidth: props.currentStepAV.interpolate({
       // Interpolation of the current step which enables to get the current progress bar width

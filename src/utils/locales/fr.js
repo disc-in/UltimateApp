@@ -100,7 +100,7 @@ export default {
       cancel: 'Annuler',
       cta: "Envoyer à l'équipe",
     },
-    sharePlaceholder: "Pouvez-vous ajouter cet exercices à l'application ?",
+    sharePlaceholder: "Pouvez-vous ajouter cet exercice à l'application ?",
   },
   feedback: {
     alert: {

@@ -23,30 +23,9 @@ class ProgressBar extends React.Component {
     };
   }
 
-  _addStepButtonClicked() {
-    if (this.props.onStepAdded() !== undefined && this.props.onStepAdded !== null) this.props.onStepAdded();
-  }
-
   render() {
     return (
       <View style={[{ position: 'absolute', left: 0, top: 0 }]} height="100%" width="100%">
-        {/* Gray dots */}
-        {!this.props.readonly &&
-          this.state.stateFromProps.progressBarDots?.map(item => (
-            <View style={[styles.gray, styles.dot, { left: item.left }]} key={item.key} />
-          ))}
-
-        {/* Step number */}
-        {!this.props.readonly &&
-          this.state.stateFromProps.progressBarDots?.map(item => (
-            <Text
-              style={[styles.progressBarNumbers, { left: item.left + 4 }]}
-              key={item.key + 2 * this.state.stateFromProps.progressBarDots.length}
-            >
-              {item.key + 1}
-            </Text>
-          ))}
-
         {/* Gray bar */}
         <View
           style={[
@@ -56,7 +35,21 @@ class ProgressBar extends React.Component {
             { width: this.state.stateFromProps.progressBarWidth },
           ]}
         />
+        {/* Black bar */}
+        <Animated.View
+          style={[
+            styles.black,
+            styles.progressBar,
+            this.props.readonly && styles.largeProgressBar,
+            { width: this.state.stateFromProps.interpolatedWidth },
+          ]}
+        />
 
+        {/* Gray dots */}
+        {!this.props.readonly &&
+          this.state.stateFromProps.progressBarDots?.map(item => (
+            <View style={[styles.gray, styles.dot, { left: item.left }]} key={item.key} />
+          ))}
         {/* Black dots */}
         {!this.props.readonly &&
           this.state.stateFromProps.progressBarDots?.map(item => (
@@ -72,24 +65,26 @@ class ProgressBar extends React.Component {
               key={item.key + this.state.stateFromProps.progressBarDots.length}
             />
           ))}
+        {/* White squares */}
+        {this.props.readonly &&
+          this.state.stateFromProps.progressBarDots?.map(item => (
+            <Animated.View
+              style={[styles.white, styles.square]}
+              key={item.key + this.state.stateFromProps.progressBarDots.length}
+              left={item.left + 3}
+            />
+          ))}
 
-        {/* Play button */}
-        <TouchableOpacity
-          style={[styles.playButton, { left: this.state.stateFromProps.playLeft }]}
-          onPress={() => this.props.playAnimation()}
-        >
-          <MaterialCommunityIcons name="play" color={theme.COLOR_PRIMARY} size={36} />
-        </TouchableOpacity>
-
-        {/* Black bar */}
-        <Animated.View
-          style={[
-            styles.black,
-            styles.progressBar,
-            this.props.readonly && styles.largeProgressBar,
-            { width: this.state.stateFromProps.interpolatedWidth },
-          ]}
-        />
+        {/* Step number */}
+        {!this.props.readonly &&
+          this.state.stateFromProps.progressBarDots?.map(item => (
+            <Text
+              style={[styles.progressBarNumbers, { left: item.left + 4 }]}
+              key={item.key + 2 * this.state.stateFromProps.progressBarDots.length}
+            >
+              {item.key + 1}
+            </Text>
+          ))}
 
         {/* Clickable areas to move to each step */}
         {this.state.stateFromProps.progressBarDots?.map((item, idx, arr) => (
@@ -110,16 +105,13 @@ class ProgressBar extends React.Component {
           />
         ))}
 
-        {/* White squares */}
-        {this.props.readonly &&
-          this.state.stateFromProps.progressBarDots?.map(item => (
-            <Animated.View
-              style={[styles.white, styles.square]}
-              key={item.key + this.state.stateFromProps.progressBarDots.length}
-              left={item.left + 3}
-            />
-          ))}
-
+        {/* Play button */}
+        <TouchableOpacity
+          style={[styles.playButton, { left: this.state.stateFromProps.playLeft }]}
+          onPress={() => this.props.playAnimation()}
+        >
+          <MaterialCommunityIcons name="play" color={theme.COLOR_PRIMARY} size={36} />
+        </TouchableOpacity>
         {/* Buttons: add step, remove step, trash */}
         {!this.props.readonly && (
           <View style={[StyleSheet.absoluteFill]} height="100%" width="100%">

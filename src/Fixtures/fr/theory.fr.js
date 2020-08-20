@@ -46,7 +46,7 @@ export const dictionary = [
       },
       {
         id: 4,
-        text: 'Courbe intérieur',
+        text: 'Courbe intérieure',
         definition:
           '(Inside out) Effet que le lanceur imprime à la trajectoire du disque, de manière à ce que celui-ci traverse, au début de sa course, l’axe de lancer avant de revenir vers la cible.',
       },
@@ -54,7 +54,7 @@ export const dictionary = [
         id: 5,
         text: 'Cup',
         definition:
-          'Formation utilisée en défensive de zone, composée de trois défenseurs positionnés en demi-cercle autour du porteur du disque, ce qui restreint ce dernier à tenter des passes courtes.',
+          'Formation utilisée en défensive de zone, composée de trois défenseurs positionnés en demi-cercle autour du porteur du disque, ce qui contraint ce dernier à tenter des passes courtes.',
       },
       {
         id: 6,

@@ -14,7 +14,6 @@ class ProgressBar extends React.Component {
   // - animationWidth/animationHeight: size in pixel of the animation
   // - stepCount: the number of steps
   // - currentStepAV: an animated value which represents the current step
-  // - getStepAnimation(): set the animation to a given step
   constructor(props) {
     super(props);
 
@@ -145,9 +144,6 @@ const PROGRESS_BAR_MIDDLE = 15;
 const HITBOX_SLOP = 10;
 
 const _initializeStateFromProps = props => {
-  // Horizontal position of each dot
-  let progressBarDots = [];
-
   // Width of the progress bar
   let progressBarWidth = props.animationWidth - 135;
 
@@ -162,6 +158,7 @@ const _initializeStateFromProps = props => {
   }
 
   // Set the horizontal position in pixels of each dot on the progress bar
+  let progressBarDots = [];
   for (let i = 0; i < props.stepCount; i++) {
     let touchableWidth = stepWidth;
     const left = 10 + i * stepWidth;
@@ -186,20 +183,12 @@ const _initializeStateFromProps = props => {
   const time = [];
   for (let stepId = 0; stepId < props.stepCount; stepId++) time.push(stepId);
 
-  /* Interpolation of the step dots opacity */
+  /* For each dot interpolate the step dots opacity */
   const interpolatedOpacities = [];
-
-  /* For each dot */
   for (let dotId = 0; dotId < props.stepCount; dotId++) {
-    const opacity = [];
-
-    /* For each step */
-    for (let stepId = 0; stepId < props.stepCount; stepId++) {
-      if (dotId <= stepId)
-        /* If the dot is visible */
-        opacity.push(1);
-      else opacity.push(0); /* If the dot is transparent */
-    }
+    const opacity = new Array(props.stepCount);
+    opacity.fill(0, 0, dotId);
+    opacity.fill(1, dotId, props.stepCount);
 
     interpolatedOpacities.push(
       props.currentStepAV.interpolate({

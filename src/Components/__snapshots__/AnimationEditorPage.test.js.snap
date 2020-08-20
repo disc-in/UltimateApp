@@ -164,6 +164,37 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
                 "backgroundColor": "gray",
               },
               Object {
+                "bottom": 13,
+                "height": 4,
+                "left": 20,
+                "position": "absolute",
+              },
+              false,
+              Object {
+                "width": 307.5,
+              },
+            ]
+          }
+        />
+        <View
+          style={
+            Object {
+              "backgroundColor": "black",
+              "bottom": 13,
+              "height": 4,
+              "left": 20,
+              "position": "absolute",
+              "width": 0,
+            }
+          }
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "gray",
+              },
+              Object {
                 "borderRadius": 10,
                 "borderWidth": 0,
                 "bottom": 7.5,
@@ -201,55 +232,6 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
               },
               Object {
                 "left": 317.5,
-              },
-            ]
-          }
-        />
-        <Text
-          style={
-            Array [
-              Object {
-                "bottom": 23.5,
-                "position": "absolute",
-              },
-              Object {
-                "left": 14,
-              },
-            ]
-          }
-        >
-          1
-        </Text>
-        <Text
-          style={
-            Array [
-              Object {
-                "bottom": 23.5,
-                "position": "absolute",
-              },
-              Object {
-                "left": 321.5,
-              },
-            ]
-          }
-        >
-          2
-        </Text>
-        <View
-          style={
-            Array [
-              Object {
-                "backgroundColor": "gray",
-              },
-              Object {
-                "bottom": 13,
-                "height": 4,
-                "left": 20,
-                "position": "absolute",
-              },
-              false,
-              Object {
-                "width": 615,
               },
             ]
           }
@@ -292,46 +274,36 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
             }
           }
         />
-        <View
-          accessible={true}
-          focusable={true}
-          isTVSelectable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
+        <Text
           style={
-            Object {
-              "alignItems": "center",
-              "borderRadius": 10,
-              "borderWidth": 0,
-              "bottom": 0,
-              "height": 30,
-              "justifyContent": "center",
-              "left": 625,
-              "opacity": 1,
-              "position": "absolute",
-              "width": 30,
-            }
+            Array [
+              Object {
+                "bottom": 23.5,
+                "position": "absolute",
+              },
+              Object {
+                "left": 14,
+              },
+            ]
           }
         >
-          <Text />
-        </View>
-        <View
+          1
+        </Text>
+        <Text
           style={
-            Object {
-              "backgroundColor": "black",
-              "bottom": 13,
-              "height": 4,
-              "left": 20,
-              "position": "absolute",
-              "width": 0,
-            }
+            Array [
+              Object {
+                "bottom": 23.5,
+                "position": "absolute",
+              },
+              Object {
+                "left": 321.5,
+              },
+            ]
           }
-        />
+        >
+          2
+        </Text>
         <View
           accessible={true}
           focusable={true}
@@ -376,6 +348,34 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
             }
           }
         />
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "borderRadius": 10,
+              "borderWidth": 0,
+              "bottom": 0,
+              "height": 30,
+              "justifyContent": "center",
+              "left": 625,
+              "opacity": 1,
+              "position": "absolute",
+              "width": 30,
+            }
+          }
+        >
+          <Text />
+        </View>
         <View
           height="100%"
           style={

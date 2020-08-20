@@ -855,34 +855,6 @@ exports[`<Animation /> renders correctly 1`] = `
       }
     />
     <View
-      accessible={true}
-      focusable={true}
-      isTVSelectable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "alignItems": "center",
-          "borderRadius": 10,
-          "borderWidth": 0,
-          "bottom": 0,
-          "height": 30,
-          "justifyContent": "center",
-          "left": 67.91666666666667,
-          "opacity": 1,
-          "position": "absolute",
-          "width": 30,
-        }
-      }
-    >
-      <Text />
-    </View>
-    <View
       style={
         Object {
           "backgroundColor": "black",
@@ -891,6 +863,90 @@ exports[`<Animation /> renders correctly 1`] = `
           "left": 20,
           "position": "absolute",
           "width": 0,
+        }
+      }
+    />
+    <View
+      left={13}
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderWidth": 0,
+          "bottom": 7.5,
+          "color": "white",
+          "height": 15,
+          "position": "absolute",
+          "width": 7.5,
+        }
+      }
+    />
+    <View
+      left={23.833333333333336}
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderWidth": 0,
+          "bottom": 7.5,
+          "color": "white",
+          "height": 15,
+          "position": "absolute",
+          "width": 7.5,
+        }
+      }
+    />
+    <View
+      left={34.66666666666667}
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderWidth": 0,
+          "bottom": 7.5,
+          "color": "white",
+          "height": 15,
+          "position": "absolute",
+          "width": 7.5,
+        }
+      }
+    />
+    <View
+      left={45.5}
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderWidth": 0,
+          "bottom": 7.5,
+          "color": "white",
+          "height": 15,
+          "position": "absolute",
+          "width": 7.5,
+        }
+      }
+    />
+    <View
+      left={56.333333333333336}
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderWidth": 0,
+          "bottom": 7.5,
+          "color": "white",
+          "height": 15,
+          "position": "absolute",
+          "width": 7.5,
+        }
+      }
+    />
+    <View
+      left={67.16666666666667}
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderWidth": 0,
+          "bottom": 7.5,
+          "color": "white",
+          "height": 15,
+          "position": "absolute",
+          "width": 7.5,
         }
       }
     />
@@ -1033,89 +1089,33 @@ exports[`<Animation /> renders correctly 1`] = `
       }
     />
     <View
-      left={13}
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "backgroundColor": "white",
+          "alignItems": "center",
+          "borderRadius": 10,
           "borderWidth": 0,
-          "bottom": 7.5,
-          "color": "white",
-          "height": 15,
+          "bottom": 0,
+          "height": 30,
+          "justifyContent": "center",
+          "left": 67.91666666666667,
+          "opacity": 1,
           "position": "absolute",
-          "width": 7.5,
+          "width": 30,
         }
       }
-    />
-    <View
-      left={23.833333333333336}
-      style={
-        Object {
-          "backgroundColor": "white",
-          "borderWidth": 0,
-          "bottom": 7.5,
-          "color": "white",
-          "height": 15,
-          "position": "absolute",
-          "width": 7.5,
-        }
-      }
-    />
-    <View
-      left={34.66666666666667}
-      style={
-        Object {
-          "backgroundColor": "white",
-          "borderWidth": 0,
-          "bottom": 7.5,
-          "color": "white",
-          "height": 15,
-          "position": "absolute",
-          "width": 7.5,
-        }
-      }
-    />
-    <View
-      left={45.5}
-      style={
-        Object {
-          "backgroundColor": "white",
-          "borderWidth": 0,
-          "bottom": 7.5,
-          "color": "white",
-          "height": 15,
-          "position": "absolute",
-          "width": 7.5,
-        }
-      }
-    />
-    <View
-      left={56.333333333333336}
-      style={
-        Object {
-          "backgroundColor": "white",
-          "borderWidth": 0,
-          "bottom": 7.5,
-          "color": "white",
-          "height": 15,
-          "position": "absolute",
-          "width": 7.5,
-        }
-      }
-    />
-    <View
-      left={67.16666666666667}
-      style={
-        Object {
-          "backgroundColor": "white",
-          "borderWidth": 0,
-          "bottom": 7.5,
-          "color": "white",
-          "height": 15,
-          "position": "absolute",
-          "width": 7.5,
-        }
-      }
-    />
+    >
+      <Text />
+    </View>
   </View>
 </View>
 `;

@@ -24,104 +24,102 @@ class ProgressBar extends React.Component {
 
   render() {
     return (
-      <View style={[{ position: 'absolute', left: 0, top: 0 }]} height="100%" width="100%">
-        {/* Gray bar */}
-        <View
-          style={[
-            styles.gray,
-            styles.progressBar,
-            this.props.readonly && styles.largeProgressBar,
-            { width: this.state.stateFromProps.progressBarWidth },
-          ]}
-        />
-        {/* Black bar */}
-        <Animated.View
-          style={[
-            styles.black,
-            styles.progressBar,
-            this.props.readonly && styles.largeProgressBar,
-            { width: this.state.stateFromProps.interpolatedWidth },
-          ]}
-        />
-
-        {/* Gray dots */}
-        {!this.props.readonly &&
-          this.state.stateFromProps.progressBarDots?.map(item => (
-            <View style={[styles.gray, styles.dot, { left: item.left }]} key={item.key} />
-          ))}
-        {/* Black dots */}
-        {!this.props.readonly &&
-          this.state.stateFromProps.progressBarDots?.map(item => (
-            <Animated.View
-              style={[
-                styles.black,
-                styles.dot,
-                {
-                  opacity: this.state.stateFromProps.interpolatedOpacities[item.key],
-                  left: item.left,
-                },
-              ]}
-              key={item.key + this.state.stateFromProps.progressBarDots.length}
-            />
-          ))}
-        {/* White squares */}
-        {this.props.readonly &&
-          this.state.stateFromProps.progressBarDots?.map(item => (
-            <Animated.View
-              style={[styles.white, styles.square]}
-              key={item.key + this.state.stateFromProps.progressBarDots.length}
-              left={item.left + 3}
-            />
-          ))}
-
-        {/* Step number */}
-        {!this.props.readonly &&
-          this.state.stateFromProps.progressBarDots?.map(item => (
-            <Text
-              style={[styles.progressBarNumbers, { left: item.left + 4 }]}
-              key={item.key + 2 * this.state.stateFromProps.progressBarDots.length}
-            >
-              {item.key + 1}
-            </Text>
-          ))}
-
-        {/* Clickable areas to move to each step */}
-        {this.state.stateFromProps.progressBarDots?.map((item, idx, arr) => (
-          <TouchableOpacity
-            style={
-              this.props.readonly
-                ? [
-                    styles.largeHitBox,
-                    {
-                      width: item.touchableWidth,
-                      left: item.touchableLeft,
-                    },
-                  ]
-                : [styles.dotHitBox, { left: item.left - DOT_SIZE / 2 }]
-            }
-            onPress={() => this.props.goToStep(item.key)}
-            key={1000 + item.key}
+      <View style={styles.mainContainer}>
+        <View style={styles.barArea}>
+          {/* Gray bar */}
+          <View
+            style={[
+              styles.progressBar,
+              this.props.readonly && styles.largeProgressBar,
+              { width: this.state.stateFromProps.progressBarWidth },
+            ]}
           />
-        ))}
+          {/* Black bar */}
+          <Animated.View
+            style={[
+              styles.progressBar,
+              styles.black,
+              this.props.readonly && styles.largeProgressBar,
+              { width: this.state.stateFromProps.interpolatedWidth },
+            ]}
+          />
 
-        {/* Play button */}
-        <TouchableOpacity
-          style={[styles.playButton, { left: this.state.stateFromProps.playLeft }]}
-          onPress={() => this.props.playAnimation()}
-        >
-          <MaterialCommunityIcons name="play" color={theme.COLOR_PRIMARY} size={36} />
-        </TouchableOpacity>
-        {/* Buttons: add step, remove step, trash */}
-        {!this.props.readonly && (
-          <View style={[StyleSheet.absoluteFill]} height="100%" width="100%">
-            <TouchableOpacity style={[styles.icon, { right: 40 }]} onPress={() => this.props.onStepAdded()}>
-              <MaterialCommunityIcons name="plus-box" color={theme.COLOR_PRIMARY} size={22} />
-            </TouchableOpacity>
-            <TouchableOpacity style={[styles.icon, { right: 10 }]} onPress={() => this.props.onStepRemoved()}>
-              <MaterialCommunityIcons name="minus-box" color={theme.COLOR_PRIMARY} size={22} />
-            </TouchableOpacity>
-          </View>
-        )}
+          {/* Gray dots */}
+          {!this.props.readonly &&
+            this.state.stateFromProps.progressBarDots?.map(item => (
+              <View style={[styles.dot, { left: item.left }]} key={item.key} />
+            ))}
+          {/* Black dots */}
+          {!this.props.readonly &&
+            this.state.stateFromProps.progressBarDots?.map(item => (
+              <Animated.View
+                style={[
+                  styles.dot,
+                  styles.black,
+                  {
+                    opacity: this.state.stateFromProps.interpolatedOpacities[item.key],
+                    left: item.left,
+                  },
+                ]}
+                key={item.key + this.state.stateFromProps.progressBarDots.length}
+              />
+            ))}
+          {/* White squares */}
+          {this.props.readonly &&
+            this.state.stateFromProps.progressBarDots?.map(item => (
+              <Animated.View
+                style={styles.square}
+                key={item.key + this.state.stateFromProps.progressBarDots.length}
+                left={item.left}
+              />
+            ))}
+
+          {/* Step number */}
+          {!this.props.readonly &&
+            this.state.stateFromProps.progressBarDots?.map(item => (
+              <Text
+                style={[styles.progressBarNumbers, { left: item.left + 4 }]}
+                key={item.key + 2 * this.state.stateFromProps.progressBarDots.length}
+              >
+                {item.key + 1}
+              </Text>
+            ))}
+
+          {/* Clickable areas to move to each step */}
+          {this.state.stateFromProps.progressBarDots?.map((item, idx, arr) => (
+            <TouchableOpacity
+              style={
+                this.props.readonly
+                  ? [
+                      styles.largeHitBox,
+                      {
+                        width: item.touchableWidth,
+                        left: item.touchableLeft,
+                      },
+                    ]
+                  : [styles.dotHitBox, { left: item.left - DOT_SIZE / 2 }]
+              }
+              onPress={() => this.props.goToStep(item.key)}
+              key={1000 + item.key}
+            />
+          ))}
+        </View>
+
+        <View style={styles.controlsArea}>
+          <TouchableOpacity style={styles.playButton} onPress={() => this.props.playAnimation()}>
+            <MaterialCommunityIcons name="play" color={theme.COLOR_PRIMARY} size={36} />
+          </TouchableOpacity>
+          {!this.props.readonly && (
+            <>
+              <TouchableOpacity style={styles.icon} onPress={() => this.props.onStepAdded()}>
+                <MaterialCommunityIcons name="plus-box" color={theme.COLOR_PRIMARY} size={22} />
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.icon} onPress={() => this.props.onStepRemoved()}>
+                <MaterialCommunityIcons name="minus-box" color={theme.COLOR_PRIMARY} size={22} />
+              </TouchableOpacity>
+            </>
+          )}
+        </View>
       </View>
     );
   }
@@ -140,28 +138,19 @@ class ProgressBar extends React.Component {
 export default ProgressBar;
 
 const DOT_SIZE = 15;
-const PROGRESS_BAR_MIDDLE = 15;
 const HITBOX_SLOP = 10;
 
 const _initializeStateFromProps = props => {
-  // Width of the progress bar
   let progressBarWidth = props.animationWidth - 135;
-
   if (props.readonly) progressBarWidth = props.animationWidth - 35;
-
   const stepWidth = progressBarWidth / props.stepCount;
-
   progressBarWidth -= stepWidth;
-  let playLeft = 10 + props.stepCount * stepWidth;
-  if (props.readonly) {
-    playLeft -= stepWidth - DOT_SIZE / 4;
-  }
 
   // Set the horizontal position in pixels of each dot on the progress bar
   let progressBarDots = [];
   for (let i = 0; i < props.stepCount; i++) {
     let touchableWidth = stepWidth;
-    const left = 10 + i * stepWidth;
+    const left = i * stepWidth;
     let touchableLeft = left;
 
     if (i === 0)
@@ -209,80 +198,64 @@ const _initializeStateFromProps = props => {
       inputRange: [0, 1],
       outputRange: [0, stepWidth],
     }),
-    playLeft,
   };
 };
 
 const styles = StyleSheet.create({
+  mainContainer: {
+    flexDirection: 'row',
+    padding: 10,
+  },
+  barArea: {
+    flex: 1,
+  },
+  controlsArea: {
+    flexDirection: 'row',
+    minWidth: 100,
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+  },
+  progressBar: {
+    position: 'absolute',
+    backgroundColor: 'gray',
+    top: (DOT_SIZE - 4) / 2,
+    height: 4,
+  },
+  largeProgressBar: {
+    top: (DOT_SIZE + 10) / 2,
+    height: 10,
+  },
   dot: {
     position: 'absolute',
+    backgroundColor: 'gray',
     height: DOT_SIZE,
     width: DOT_SIZE,
     borderRadius: 10,
     borderWidth: 0,
-    bottom: PROGRESS_BAR_MIDDLE - DOT_SIZE / 2,
-    textAlign: 'center',
-    textAlignVertical: 'center',
-    includeFontPadding: false,
-    color: 'white',
-  },
-  icon: {
-    position: 'absolute',
-    borderRadius: 10,
-    borderWidth: 0,
-    bottom: PROGRESS_BAR_MIDDLE - DOT_SIZE / 2 - 2,
   },
   square: {
     position: 'absolute',
-    height: DOT_SIZE,
+    height: '100%',
     width: DOT_SIZE / 2,
-    borderWidth: 0,
-    bottom: PROGRESS_BAR_MIDDLE - DOT_SIZE / 2,
-    color: 'white',
+    backgroundColor: 'white',
   },
   dotHitBox: {
     position: 'absolute',
-    bottom: 0,
+    top: 0,
     height: DOT_SIZE + HITBOX_SLOP,
     width: DOT_SIZE + HITBOX_SLOP,
   },
   largeHitBox: {
     position: 'absolute',
-    height: PROGRESS_BAR_MIDDLE + HITBOX_SLOP,
-    bottom: 0,
+    height: HITBOX_SLOP,
+    top: 0,
     backgroundColor: 'transparent',
-  },
-  white: {
-    backgroundColor: 'white',
   },
   black: {
     backgroundColor: 'black',
   },
-  gray: {
-    backgroundColor: 'gray',
-  },
-  progressBar: {
-    position: 'absolute',
-    bottom: PROGRESS_BAR_MIDDLE - 4 / 2,
-    height: 4,
-    left: 20,
-  },
-  largeProgressBar: {
-    height: 10,
-    bottom: PROGRESS_BAR_MIDDLE - 10 / 2,
-  },
   progressBarNumbers: {
     position: 'absolute',
-    bottom: PROGRESS_BAR_MIDDLE + 1 + DOT_SIZE / 2,
-  },
-  playButton: {
-    position: 'absolute',
-    width: 2 * DOT_SIZE,
-    height: 2 * DOT_SIZE,
-    justifyContent: 'center',
-    alignItems: 'center',
-    bottom: PROGRESS_BAR_MIDDLE - DOT_SIZE,
-    borderRadius: 10,
-    borderWidth: 0,
+    top: DOT_SIZE,
   },
 });

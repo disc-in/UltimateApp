@@ -86,7 +86,7 @@ class ProgressBar extends React.Component {
             ))}
 
           {/* Clickable areas to move to each step */}
-          {this.state.stateFromProps.progressBarDots?.map((item, idx, arr) => (
+          {this.state.stateFromProps.progressBarDots?.map((item, idx) => (
             <TouchableOpacity
               style={
                 this.props.readonly
@@ -138,7 +138,6 @@ class ProgressBar extends React.Component {
 export default ProgressBar;
 
 const DOT_SIZE = 15;
-const HITBOX_SLOP = 10;
 
 const _initializeStateFromProps = props => {
   let progressBarWidth = props.animationWidth - 135;
@@ -231,7 +230,6 @@ const styles = StyleSheet.create({
     height: DOT_SIZE,
     width: DOT_SIZE,
     borderRadius: 10,
-    borderWidth: 0,
   },
   square: {
     position: 'absolute',
@@ -241,15 +239,12 @@ const styles = StyleSheet.create({
   },
   dotHitBox: {
     position: 'absolute',
-    top: 0,
-    height: DOT_SIZE + HITBOX_SLOP,
-    width: DOT_SIZE + HITBOX_SLOP,
+    height: '100%',
+    width: DOT_SIZE * 2,
   },
   largeHitBox: {
     position: 'absolute',
-    height: HITBOX_SLOP,
-    top: 0,
-    backgroundColor: 'transparent',
+    height: '100%',
   },
   black: {
     backgroundColor: 'black',

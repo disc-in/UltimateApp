@@ -937,12 +937,10 @@ exports[`<Animation /> renders correctly 1`] = `
           onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "backgroundColor": "transparent",
-              "height": 10,
+              "height": "100%",
               "left": 0,
               "opacity": 1,
               "position": "absolute",
-              "top": 0,
               "width": 0,
             }
           }
@@ -960,12 +958,10 @@ exports[`<Animation /> renders correctly 1`] = `
           onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "backgroundColor": "transparent",
-              "height": 10,
+              "height": "100%",
               "left": 0,
               "opacity": 1,
               "position": "absolute",
-              "top": 0,
               "width": 10.833333333333334,
             }
           }
@@ -983,12 +979,10 @@ exports[`<Animation /> renders correctly 1`] = `
           onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "backgroundColor": "transparent",
-              "height": 10,
+              "height": "100%",
               "left": 10.833333333333334,
               "opacity": 1,
               "position": "absolute",
-              "top": 0,
               "width": 10.833333333333334,
             }
           }
@@ -1006,12 +1000,10 @@ exports[`<Animation /> renders correctly 1`] = `
           onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "backgroundColor": "transparent",
-              "height": 10,
+              "height": "100%",
               "left": 21.666666666666664,
               "opacity": 1,
               "position": "absolute",
-              "top": 0,
               "width": 10.833333333333334,
             }
           }
@@ -1029,12 +1021,10 @@ exports[`<Animation /> renders correctly 1`] = `
           onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "backgroundColor": "transparent",
-              "height": 10,
+              "height": "100%",
               "left": 32.5,
               "opacity": 1,
               "position": "absolute",
-              "top": 0,
               "width": 10.833333333333334,
             }
           }
@@ -1052,12 +1042,10 @@ exports[`<Animation /> renders correctly 1`] = `
           onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "backgroundColor": "transparent",
-              "height": 10,
+              "height": "100%",
               "left": 43.333333333333336,
               "opacity": 1,
               "position": "absolute",
-              "top": 0,
               "width": 10.833333333333334,
             }
           }

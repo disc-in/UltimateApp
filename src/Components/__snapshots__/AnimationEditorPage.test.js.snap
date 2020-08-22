@@ -186,7 +186,6 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
                   Object {
                     "backgroundColor": "gray",
                     "borderRadius": 10,
-                    "borderWidth": 0,
                     "height": 15,
                     "position": "absolute",
                     "width": 15,
@@ -203,7 +202,6 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
                   Object {
                     "backgroundColor": "gray",
                     "borderRadius": 10,
-                    "borderWidth": 0,
                     "height": 15,
                     "position": "absolute",
                     "width": 15,
@@ -219,7 +217,6 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
                 Object {
                   "backgroundColor": "black",
                   "borderRadius": 10,
-                  "borderWidth": 0,
                   "height": 15,
                   "left": 0,
                   "opacity": 1,
@@ -233,7 +230,6 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
                 Object {
                   "backgroundColor": "black",
                   "borderRadius": 10,
-                  "borderWidth": 0,
                   "height": 15,
                   "left": 307.5,
                   "opacity": 0,
@@ -285,12 +281,11 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
               onStartShouldSetResponder={[Function]}
               style={
                 Object {
-                  "height": 25,
+                  "height": "100%",
                   "left": -7.5,
                   "opacity": 1,
                   "position": "absolute",
-                  "top": 0,
-                  "width": 25,
+                  "width": 30,
                 }
               }
             />
@@ -307,12 +302,11 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
               onStartShouldSetResponder={[Function]}
               style={
                 Object {
-                  "height": 25,
+                  "height": "100%",
                   "left": 300,
                   "opacity": 1,
                   "position": "absolute",
-                  "top": 0,
-                  "width": 25,
+                  "width": 30,
                 }
               }
             />

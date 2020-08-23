@@ -54,7 +54,7 @@ const DictionaryPage = ({ dictionary }) => {
           <View style={styles.modalView}>
             <Text style={styles.modalTitle}>{selectedItem.text}</Text>
             {selectedItem.translation && (
-              <Text style={styles.modalText}>
+              <Text style={[styles.modalText, styles.italic]}>
                 {I18n.t('dictionaryPage.translation')}
                 {selectedItem.translation}
               </Text>
@@ -119,15 +119,18 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 5,
   },
+  modalTitle: {
+    marginBottom: 20,
+    fontWeight: 'bold',
+    fontSize: theme.FONT_SIZE_LARGE,
+  },
   modalText: {
     marginBottom: 20,
     fontSize: theme.FONT_SIZE_MEDIUM,
     alignSelf: 'flex-start',
   },
-  modalTitle: {
-    marginBottom: 20,
-    fontWeight: 'bold',
-    fontSize: theme.FONT_SIZE_LARGE,
+  italic: {
+    fontStyle: 'italic',
   },
   returnButton: {
     backgroundColor: theme.MAIN_COLOR,

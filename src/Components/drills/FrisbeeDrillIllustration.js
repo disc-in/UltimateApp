@@ -73,7 +73,7 @@ const FrisbeeDrillIllustration = props => {
     return (
       <View style={styles.contentWrapper}>
         <View style={[{ height: 250 }, styles.videoAlone]}>
-          <VimeoVideo vimeoId={illustrationSource} screenWidth={screenDimension.width} sounds={sounds} />
+          <VimeoVideo vimeoId={illustrationSource} sounds={sounds} />
         </View>
       </View>
     );

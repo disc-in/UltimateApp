@@ -11,8 +11,6 @@ import { IllustrationType } from '../../Fixtures/config';
 import theme from '../../styles/theme.style';
 import Drill from '../animation/Drill';
 
-const screenDimension = Dimensions.get('window');
-
 const FitnessDrillIllustration = props => {
   const [activeIndex, setActiveIndex] = useState(0);
   const opacityUnchecked = useRef(new Animated.Value(1)).current;
@@ -170,7 +168,7 @@ const FitnessDrillIllustration = props => {
     return (
       <>
         <View style={[{ height: 250 }, isUniqueStep && styles.videoAlone]}>
-          <VimeoVideo vimeoId={illustrationSource} screenWidth={screenDimension.width} sounds={sounds} />
+          <VimeoVideo vimeoId={illustrationSource} sounds={sounds} />
         </View>
         {!isUniqueStep && (
           <FlatList

@@ -59,11 +59,7 @@ const FitnessDrillIllustration = props => {
     return (
       <>
         <View style={{ height: 250 }}>
-          <WebView
-            source={{
-              uri: illustrationSource,
-            }}
-          />
+          <WebView source={{ uri: illustrationSource }} />
         </View>
         {stepsCount > 1 && (
           <>
@@ -74,13 +70,7 @@ const FitnessDrillIllustration = props => {
                     <Text style={styles.fitness}>{title}</Text>
                   </View>
                   <TouchableOpacity style={styles.container} onPress={() => checkAnimation()}>
-                    <Animated.View
-                      style={[
-                        {
-                          opacity: opacityUnchecked,
-                        },
-                      ]}
-                    >
+                    <Animated.View style={{ opacity: opacityUnchecked }}>
                       <MaterialCommunityIcons
                         style={styles.buttonNext}
                         name="check-circle-outline"
@@ -88,13 +78,7 @@ const FitnessDrillIllustration = props => {
                         size={26}
                       />
                     </Animated.View>
-                    <Animated.View
-                      style={[
-                        {
-                          opacity: opacityChecked,
-                        },
-                      ]}
-                    >
+                    <Animated.View style={{ opacity: opacityChecked }}>
                       <MaterialCommunityIcons
                         style={styles.buttonNext}
                         name="check-circle"
@@ -129,13 +113,7 @@ const FitnessDrillIllustration = props => {
         </View>
         {isCurrent && (
           <TouchableOpacity style={styles.doneAnimation} onPress={() => checkAnimation()} testID="doneIcon">
-            <Animated.View
-              style={[
-                {
-                  opacity: opacityUnchecked,
-                },
-              ]}
-            >
+            <Animated.View style={{ opacity: opacityUnchecked }}>
               <MaterialCommunityIcons
                 style={styles.buttonNext}
                 name="check-circle-outline"
@@ -143,13 +121,7 @@ const FitnessDrillIllustration = props => {
                 size={26}
               />
             </Animated.View>
-            <Animated.View
-              style={[
-                {
-                  opacity: opacityChecked,
-                },
-              ]}
-            >
+            <Animated.View style={{ opacity: opacityChecked }}>
               <MaterialCommunityIcons
                 style={styles.buttonNext}
                 name="check-circle"

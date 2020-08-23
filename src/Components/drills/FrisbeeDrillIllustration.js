@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { View, StyleSheet, Text, Dimensions, TouchableOpacity, SafeAreaView } from 'react-native';
+import { View, ScrollView, StyleSheet, Text, Dimensions, TouchableOpacity, SafeAreaView } from 'react-native';
 import { WebView } from 'react-native-webview';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -95,9 +95,11 @@ const FrisbeeDrillIllustration = props => {
       <>
         {renderTitle(item.title, index)}
         <View style={styles.pagination}>{renderPagination()}</View>
-        {item.illustrationType === IllustrationType.ANIMATION && displayAnimation(item)}
-        {item.illustrationType === IllustrationType.YOUTUBE && displayYoutube(item)}
-        {item.illustrationType === IllustrationType.VIMEO && displayVimeo(item)}
+        <ScrollView>
+          {item.illustrationType === IllustrationType.ANIMATION && displayAnimation(item)}
+          {item.illustrationType === IllustrationType.YOUTUBE && displayYoutube(item)}
+          {item.illustrationType === IllustrationType.VIMEO && displayVimeo(item)}
+        </ScrollView>
       </>
     );
   };

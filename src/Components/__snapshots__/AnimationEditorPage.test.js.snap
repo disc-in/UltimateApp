@@ -317,7 +317,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
                 "alignItems": "center",
                 "flexDirection": "row",
                 "justifyContent": "space-evenly",
-                "minWidth": 100,
+                "paddingHorizontal": 10,
               }
             }
           >

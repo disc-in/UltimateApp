@@ -106,15 +106,15 @@ class ProgressBar extends React.Component {
         </View>
 
         <View style={styles.controlsArea}>
-          <TouchableOpacity style={styles.playButton} onPress={() => this.props.playAnimation()}>
+          <TouchableOpacity onPress={() => this.props.playAnimation()}>
             <MaterialCommunityIcons name="play" color={theme.COLOR_PRIMARY} size={36} />
           </TouchableOpacity>
           {!this.props.readonly && (
             <>
-              <TouchableOpacity style={styles.icon} onPress={() => this.props.onStepAdded()}>
+              <TouchableOpacity onPress={() => this.props.onStepAdded()}>
                 <MaterialCommunityIcons name="plus-box" color={theme.COLOR_PRIMARY} size={22} />
               </TouchableOpacity>
-              <TouchableOpacity style={styles.icon} onPress={() => this.props.onStepRemoved()}>
+              <TouchableOpacity onPress={() => this.props.onStepRemoved()}>
                 <MaterialCommunityIcons name="minus-box" color={theme.COLOR_PRIMARY} size={22} />
               </TouchableOpacity>
             </>
@@ -210,7 +210,7 @@ const styles = StyleSheet.create({
   },
   controlsArea: {
     flexDirection: 'row',
-    minWidth: 100,
+    paddingHorizontal: 10,
     justifyContent: 'space-evenly',
     alignItems: 'center',
   },

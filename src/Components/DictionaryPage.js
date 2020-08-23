@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, Text, Dimensions, SectionList, Modal, TouchableHighlight } from 'react-native';
+import { View, StyleSheet, Text, SectionList, Modal, TouchableHighlight } from 'react-native';
 import { connect } from 'react-redux';
 
 import I18n from '../utils/i18n';
@@ -53,6 +53,12 @@ const DictionaryPage = ({ dictionary }) => {
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
             <Text style={styles.modalTitle}>{selectedItem.text}</Text>
+            {selectedItem.translation && (
+              <Text style={styles.modalText}>
+                {I18n.t('dictionaryPage.translation')}
+                {selectedItem.translation}
+              </Text>
+            )}
             <Text style={styles.modalText}>{selectedItem.definition}</Text>
             <TouchableHighlight
               style={styles.returnButton}
@@ -116,6 +122,7 @@ const styles = StyleSheet.create({
   modalText: {
     marginBottom: 20,
     fontSize: theme.FONT_SIZE_MEDIUM,
+    alignSelf: 'flex-start',
   },
   modalTitle: {
     marginBottom: 20,

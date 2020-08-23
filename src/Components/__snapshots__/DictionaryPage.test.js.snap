@@ -206,6 +206,7 @@ exports[`<DictionaryPage /> renders correctly 1`] = `
         >
           
         </Text>
+        
         <Text
           style={
             Object {

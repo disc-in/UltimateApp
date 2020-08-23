@@ -1,10 +1,8 @@
 export const dictionary = [
   {
-    id: 0,
     title: 'A',
     data: [
       {
-        id: 0,
         text: 'Away',
         translation: 'Loin',
         definition:
@@ -13,17 +11,14 @@ export const dictionary = [
     ],
   },
   {
-    id: 1,
     title: 'B',
     data: [
       {
-        id: 0,
         text: 'Break',
         translation: null,
         definition: 'Fait, pour un lanceur, de réussir une passe du côté fermé',
       },
       {
-        id: 1,
         text: 'Brick',
         translation: null,
         definition:
@@ -32,60 +27,51 @@ export const dictionary = [
     ],
   },
   {
-    id: 2,
     title: 'C',
     data: [
       {
-        id: 0,
         text: 'Callahan',
         translation: null,
         definition:
           'Interception du disque par un joueur de l’équipe en défensive dans la zone des buts de l’adversaire.',
       },
       {
-        id: 1,
         text: 'Côté ouvert',
         translation: null,
         definition:
           'Portion du terrain qui n’est pas couverte par le marqueur, où le porteur du disque peut faire une passe sans entrave',
       },
       {
-        id: 2,
         text: 'Côté fermé',
         translation: null,
         definition:
           'Portion du terrain qui est couverte par le marqueur, où ce dernier tente d’empêcher le porteur du disque de faire une passe.',
       },
       {
-        id: 3,
         text: 'Courbe extérieure',
         translation: null,
         definition:
           '(Outside out) Effet que le lanceur imprime à la trajectoire du disque, de manière à ce que celuici s’éloigne d’abord de l’axe de lancer sans jamais le traverser, et qu’il revienne en direction de la cible à la fin de sa course.',
       },
       {
-        id: 4,
         text: 'Courbe intérieure',
         translation: null,
         definition:
           '(Inside out) Effet que le lanceur imprime à la trajectoire du disque, de manière à ce que celui-ci traverse, au début de sa course, l’axe de lancer avant de revenir vers la cible.',
       },
       {
-        id: 5,
         text: 'Cup',
         translation: null,
         definition:
           'Formation utilisée en défensive de zone, composée de trois défenseurs positionnés en demi-cercle autour du porteur du disque, ce qui contraint ce dernier à tenter des passes courtes.',
       },
       {
-        id: 6,
         text: 'Cut',
         translation: null,
         definition:
           'Tentative de démarquage faite par un joueur de l’équipe offensive dans le but de recevoir une passe du porteur du disque.',
       },
       {
-        id: 7,
         text: 'Cutter',
         translation: null,
         definition:
@@ -94,18 +80,15 @@ export const dictionary = [
     ],
   },
   {
-    id: 3,
     title: 'D',
     data: [
       {
-        id: 0,
         text: 'Dive',
         translation: null,
         definition:
           'Saut au cours duquel le joueur propulse tout son corps dans une certaine direction pour tenter d’attraper un disque qu’il ne peut atteindre en étirant simplement le bras, puis tombe au sol, sur une partie du corps autre que ses pieds.',
       },
       {
-        id: 1,
         text: 'Dump',
         translation: null,
         definition: 'Passe courte faite au joueur en soutien dans le but de relancer l’attaque.',
@@ -113,11 +96,9 @@ export const dictionary = [
     ],
   },
   {
-    id: 4,
     title: 'E',
     data: [
       {
-        id: 0,
         text: 'Endzone',
         translation: null,
         definition: 'La zone de but.',
@@ -125,43 +106,36 @@ export const dictionary = [
     ],
   },
   {
-    id: 5,
     title: 'F',
     data: [
       {
-        id: 0,
         text: 'Flick',
         translation: null,
         definition:
           'Lancer exécuté en tenant le disque face vers le haut, du côté du bras sollicité, en le relâchant généralement à hauteur de la taille, le coude près du corps, et en le faisant pivoter de l’extérieur vers l’intérieur.',
       },
       {
-        id: 1,
         text: 'Flow',
         translation: null,
         definition: 'Suite rapide et continue de passes courtes au sein de l’équipe offensive.',
       },
       {
-        id: 2,
         text: 'Force Backhand',
         translation: null,
         definition: 'Couvrir le porteur du disque de façon à l’obliger à lancer le disque du revers.',
       },
       {
-        id: 3,
         text: 'Force Flick or Forehand',
         translation: null,
         definition: 'Couvrir le porteur du disque de façon à l’obliger à exécuter un lancer droit',
       },
       {
-        id: 4,
         text: 'Force Straight',
         translation: null,
         definition:
           'Couvrir la partie située devant le porteur du disque, perpendiculairement aux lignes de côté, de façon à l’obliger à faire des passes latérales.',
       },
       {
-        id: 5,
         text: 'Forehand',
         translation: null,
         definition:
@@ -170,11 +144,9 @@ export const dictionary = [
     ],
   },
   {
-    id: 6,
     title: 'G',
     data: [
       {
-        id: 0,
         text: 'Give & Go',
         translation: null,
         definition:
@@ -183,32 +155,27 @@ export const dictionary = [
     ],
   },
   {
-    id: 7,
     title: 'H',
     data: [
       {
-        id: 0,
         text: 'Handler',
         translation: null,
         definition:
           'Joueur de l’équipe offensive dont le rôle principal est d’assurer la possession du disque et d’orienter l’attaque.',
       },
       {
-        id: 1,
         text: 'Hammer',
         translation: null,
         definition:
           'Lancer renversé exécuté en tenant le disque au-dessus de la tête à un angle d’environ 45 degrés par rapport au sol, face vers le bas, et en le relâchant après avoir fait un mouvement ascendant de l’arrière vers l’avant.',
       },
       {
-        id: 2,
         text: 'Horizontal Stack',
         translation: null,
         definition:
           'Formation offensive qui consiste en l’alignement des traceurs sur une ligne parallèle aux lignes de fond afin qu’ils puissent se démarquer à tour de rôle et recevoir une passe du porteur du disque.',
       },
       {
-        id: 3,
         text: 'Huck',
         translation: null,
         definition: 'Passe qui parcourt généralement au moins la moitié de la longueur du terrain',
@@ -216,24 +183,20 @@ export const dictionary = [
     ],
   },
   {
-    id: 8,
     title: 'L',
     data: [
       {
-        id: 0,
         text: 'Layout',
         translation: null,
         definition:
           'Saut au cours duquel le joueur propulse tout son corps dans une certaine direction pour tenter d’attraper un disque qu’il ne peut atteindre en étirant simplement le bras, puis tombe au sol, sur une partie du corps autre que ses pieds.',
       },
       {
-        id: 1,
         text: 'Lead Pass',
         translation: null,
         definition: 'Passe exécutée devant le traceur ou le meneur de jeu.',
       },
       {
-        id: 2,
         text: 'Longue',
         translation: null,
         definition: '(Huck)Passe qui parcourt généralement au moins la moitié de la longueur du terrain',
@@ -241,24 +204,20 @@ export const dictionary = [
     ],
   },
   {
-    id: 9,
     title: 'M',
     data: [
       {
-        id: 0,
         text: 'Man on Man D',
         translation: null,
         definition:
           'Stratégie défensive qui consiste à jumeler chaque joueur de l’équipe défensive à un joueur de l’équipe adverse qu’il devra couvrir',
       },
       {
-        id: 1,
         text: 'Marqueur',
         translation: null,
         definition: 'Joueur de l’équipe défensive qui couvre le porteur du disque.',
       },
       {
-        id: 2,
         text: 'Mur',
         translation: null,
         definition:
@@ -267,18 +226,15 @@ export const dictionary = [
     ],
   },
   {
-    id: 10,
     title: 'N',
     data: [
       {
-        id: 0,
         text: 'No Break',
         translation: null,
         definition:
           'Interjection utilisée par les joueurs en défensive pour indiquer au marqueur qu’il doit éviter qu’une passe soit exécutée du côté fermé.',
       },
       {
-        id: 1,
         text: 'No Line',
         translation: null,
         definition:
@@ -287,11 +243,9 @@ export const dictionary = [
     ],
   },
   {
-    id: 11,
     title: 'O',
     data: [
       {
-        id: 0,
         text: 'Offensive Zone',
         translation: null,
         definition:
@@ -300,31 +254,26 @@ export const dictionary = [
     ],
   },
   {
-    id: 12,
     title: 'P',
     data: [
       {
-        id: 0,
         text: 'Pick',
         translation: null,
         definition:
           'Blocage, intentionnel ou non, qui survient lorsqu’un joueur offensif se déplace de façon qu’un joueur défensif couvrant un traceur se trouve entravé.',
       },
       {
-        id: 1,
         text: 'Poach',
         translation: null,
         definition: 'Abandonner intentionnellement une couverture pour aider les autres joueurs en défensive.',
       },
       {
-        id: 2,
         text: 'Pull',
         translation: null,
         definition:
           'Mise au jeu exécutée en lançant le disque en direction de l’équipe adverse à partir de la zone des buts de l’équipe en possession du disque.',
       },
       {
-        id: 3,
         text: 'Push Pass',
         translation: null,
         definition:
@@ -333,32 +282,27 @@ export const dictionary = [
     ],
   },
   {
-    id: 14,
     title: 'S',
     data: [
       {
-        id: 0,
         text: 'Scoober',
         translation: null,
         definition:
           'Lancer renversé croisé exécuté en tenant le disque au-dessus de l’épaule opposée au bras sollicité, face vers le bas, et en le relâchant après avoir fait un mouvement circulaire de l’arrière vers l’avant.',
       },
       {
-        id: 1,
         text: 'Stack',
         translation: null,
         definition:
           'Formation offensive qui consiste en l’alignement des traceurs sur une ligne imaginaire afin qu’ils puissent se démarquer à tour de rôle et recevoir une passe du porteur du disque.',
       },
       {
-        id: 2,
         text: 'Strip',
         translation: null,
         definition:
           'Faute qui survient lorsqu’un joueur défensif fait perdre le disque à son adversaire alors que celui-ci en avait le contrôle.',
       },
       {
-        id: 3,
         text: 'Swing',
         translation: null,
         definition: 'Passe exécutée parallèlement à la ligne de fond.',
@@ -366,18 +310,15 @@ export const dictionary = [
     ],
   },
   {
-    id: 15,
     title: 'R',
     data: [
       {
-        id: 0,
         text: 'Revers',
         translation: null,
         definition:
           'Lancer exécuté en tenant le disque face vers le haut, du côté opposé au bras sollicité, et en le relâchant après avoir fait un mouvement de l’arrière vers l’avant.',
       },
       {
-        id: 1,
         text: 'Reset',
         translation: null,
         definition:
@@ -386,18 +327,15 @@ export const dictionary = [
     ],
   },
   {
-    id: 16,
     title: 'T',
     data: [
       {
-        id: 0,
         text: 'Travel',
         translation: null,
         definition:
           'Faute qui survient lorsqu’un traceur ne s’immobilise pas rapidement après avoir attrapé le disque, qu’un porteur n’établit pas de pivot avant de lancer le disque ou qu’il ne maintient pas, du moins en partie, son pivot en exécutant une passe.',
       },
       {
-        id: 1,
         text: 'Turn/Turnover',
         translation: null,
         definition: 'Changement de possession du disque.',
@@ -405,11 +343,9 @@ export const dictionary = [
     ],
   },
   {
-    id: 17,
     title: 'U',
     data: [
       {
-        id: 0,
         text: 'Up',
         translation: null,
         definition:
@@ -418,11 +354,9 @@ export const dictionary = [
     ],
   },
   {
-    id: 18,
     title: 'V',
     data: [
       {
-        id: 0,
         text: 'Vertical Stack',
         translation: null,
         definition:
@@ -431,11 +365,9 @@ export const dictionary = [
     ],
   },
   {
-    id: 19,
     title: 'Z',
     data: [
       {
-        id: 0,
         text: 'Zone',
         translation: null,
         definition:

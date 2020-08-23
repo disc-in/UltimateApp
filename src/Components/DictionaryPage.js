@@ -8,8 +8,8 @@ import theme from '../styles/theme.style';
 const DictionaryPage = ({ dictionary }) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedItem, setSelectedItem] = useState({
-    id: 0,
     text: '',
+    translation: '',
     definition: '',
   });
 
@@ -40,7 +40,7 @@ const DictionaryPage = ({ dictionary }) => {
         sections={dictionary}
         renderItem={renderItem}
         renderSectionHeader={renderSectionHeader}
-        keyExtractor={({ id }) => id}
+        keyExtractor={({ text }) => text}
       />
       <Modal
         animationType="slide"

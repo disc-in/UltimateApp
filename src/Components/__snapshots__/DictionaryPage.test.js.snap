@@ -7,7 +7,6 @@ exports[`<DictionaryPage /> renders correctly 1`] = `
       "backgroundColor": "#fff",
     }
   }
-  width={750}
 >
   <RCTScrollView
     data={

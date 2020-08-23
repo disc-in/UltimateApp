@@ -5,8 +5,6 @@ import { connect } from 'react-redux';
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
 
-const screenDimension = Dimensions.get('window');
-
 const DictionaryPage = ({ dictionary }) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedItem, setSelectedItem] = useState({
@@ -20,7 +18,7 @@ const DictionaryPage = ({ dictionary }) => {
     setModalVisible(true);
   };
 
-  const _renderItem = ({ item }) => {
+  const renderItem = ({ item }) => {
     return (
       <TouchableHighlight
         onPress={() => {
@@ -37,10 +35,10 @@ const DictionaryPage = ({ dictionary }) => {
   };
 
   return (
-    <View style={styles.dictionaryPage} width={screenDimension.width}>
+    <View style={styles.dictionaryPage}>
       <SectionList
         sections={dictionary}
-        renderItem={item => _renderItem(item)}
+        renderItem={renderItem}
         renderSectionHeader={renderSectionHeader}
         keyExtractor={({ id }) => id}
       />

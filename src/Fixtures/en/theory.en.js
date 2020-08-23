@@ -1,5 +1,16 @@
 export const dictionary = [
   {
+    title: 'A',
+    data: [
+      {
+        text: 'Away',
+        translation: null,
+        definition:
+          'Side of the field opposite from where your stuff is. Often used to describe the force ("Force away")',
+      },
+    ],
+  },
+  {
     title: 'B',
     data: [
       {

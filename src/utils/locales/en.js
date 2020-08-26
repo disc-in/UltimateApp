@@ -115,6 +115,9 @@ export default {
   fitnessDrillIllustration: {
     redoMessage: 'You have completed the drill!',
   },
+  dictionaryPage: {
+    translation: 'Translation: ',
+  },
   drillListPage: {
     availableDrills: {
       zero: '{{count}} drill available',

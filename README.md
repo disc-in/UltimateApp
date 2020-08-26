@@ -43,6 +43,13 @@ To release a new version of the app :
 2. Create a release on Github
 3. `expo publish --release-channel staging`
 
+## 🙏 Thanks
+
+Thanks a lot to everyone helping `Disc In` become an awesome app!
+
+* Every direct [contributor](https://github.com/UltimateApp/UltimateApp/graphs/contributors) to the code
+* Cheikh F. Ndiaye
+* Martin VDD
 
 ## License
 

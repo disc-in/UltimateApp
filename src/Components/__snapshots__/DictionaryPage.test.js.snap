@@ -7,7 +7,6 @@ exports[`<DictionaryPage /> renders correctly 1`] = `
       "backgroundColor": "#fff",
     }
   }
-  width={750}
 >
   <RCTScrollView
     data={
@@ -207,9 +206,11 @@ exports[`<DictionaryPage /> renders correctly 1`] = `
         >
           
         </Text>
+        
         <Text
           style={
             Object {
+              "alignSelf": "flex-start",
               "fontSize": 16,
               "marginBottom": 20,
             }

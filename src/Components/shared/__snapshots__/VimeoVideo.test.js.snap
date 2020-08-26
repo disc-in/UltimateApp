@@ -28,7 +28,7 @@ exports[`<VimeoVideo /> displays a message on error 1`] = `
       Object {
         "height": 250,
         "overflow": "hidden",
-        "width": 480,
+        "width": "100%",
       }
     }
   >
@@ -95,7 +95,7 @@ exports[`<VimeoVideo /> loads the video 1`] = `
       Object {
         "height": 250,
         "overflow": "hidden",
-        "width": 480,
+        "width": "100%",
       }
     }
   >

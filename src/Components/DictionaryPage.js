@@ -1,17 +1,15 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, Text, Dimensions, SectionList, Modal, TouchableHighlight } from 'react-native';
+import { View, StyleSheet, Text, SectionList, Modal, TouchableHighlight } from 'react-native';
 import { connect } from 'react-redux';
 
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
 
-const screenDimension = Dimensions.get('window');
-
 const DictionaryPage = ({ dictionary }) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedItem, setSelectedItem] = useState({
-    id: 0,
     text: '',
+    translation: '',
     definition: '',
   });
 
@@ -20,7 +18,7 @@ const DictionaryPage = ({ dictionary }) => {
     setModalVisible(true);
   };
 
-  const _renderItem = ({ item }) => {
+  const renderItem = ({ item }) => {
     return (
       <TouchableHighlight
         onPress={() => {
@@ -37,12 +35,12 @@ const DictionaryPage = ({ dictionary }) => {
   };
 
   return (
-    <View style={styles.dictionaryPage} width={screenDimension.width}>
+    <View style={styles.dictionaryPage}>
       <SectionList
         sections={dictionary}
-        renderItem={item => _renderItem(item)}
+        renderItem={renderItem}
         renderSectionHeader={renderSectionHeader}
-        keyExtractor={({ id }) => id}
+        keyExtractor={({ text }) => text}
       />
       <Modal
         animationType="slide"
@@ -55,6 +53,12 @@ const DictionaryPage = ({ dictionary }) => {
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
             <Text style={styles.modalTitle}>{selectedItem.text}</Text>
+            {selectedItem.translation && (
+              <Text style={[styles.modalText, styles.italic]}>
+                {I18n.t('dictionaryPage.translation')}
+                {selectedItem.translation}
+              </Text>
+            )}
             <Text style={styles.modalText}>{selectedItem.definition}</Text>
             <TouchableHighlight
               style={styles.returnButton}
@@ -115,14 +119,18 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 5,
   },
-  modalText: {
-    marginBottom: 20,
-    fontSize: theme.FONT_SIZE_MEDIUM,
-  },
   modalTitle: {
     marginBottom: 20,
     fontWeight: 'bold',
     fontSize: theme.FONT_SIZE_LARGE,
+  },
+  modalText: {
+    marginBottom: 20,
+    fontSize: theme.FONT_SIZE_MEDIUM,
+    alignSelf: 'flex-start',
+  },
+  italic: {
+    fontStyle: 'italic',
   },
   returnButton: {
     backgroundColor: theme.MAIN_COLOR,

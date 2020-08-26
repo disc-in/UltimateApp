@@ -3,8 +3,6 @@ import { StyleSheet, View, Dimensions, Text } from 'react-native';
 import theme from '../styles/theme.style';
 import VimeoVideo from './shared/VimeoVideo';
 
-const screenDimension = Dimensions.get('window');
-
 export const VideoPage = props => {
   const { route, navigation } = props;
   const video = route.params.video;
@@ -12,7 +10,7 @@ export const VideoPage = props => {
   return (
     <View style={styles.contentWrapper}>
       <View style={styles.videoAlone}>
-        <VimeoVideo vimeoId={video.video} screenWidth={screenDimension.width} sounds shouldPlay />
+        <VimeoVideo vimeoId={video.video} sounds shouldPlay />
       </View>
       <View style={styles.title}>
         <Text style={styles.text}>{video.title}</Text>

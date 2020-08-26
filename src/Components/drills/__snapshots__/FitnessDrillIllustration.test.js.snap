@@ -51,7 +51,7 @@ exports[`<FitnessDrillIllustration /> links to any step and finishes at the end 
           Object {
             "height": 250,
             "overflow": "hidden",
-            "width": 750,
+            "width": "100%",
           }
         }
       >
@@ -461,7 +461,7 @@ exports[`<FitnessDrillIllustration /> renders correctly 1`] = `
           Object {
             "height": 250,
             "overflow": "hidden",
-            "width": 750,
+            "width": "100%",
           }
         }
       >

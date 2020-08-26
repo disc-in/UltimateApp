@@ -2,7 +2,7 @@
 
 exports[`<DrillPageMinimal /> renders correctly with a training and a drill 1`] = `
 Array [
-  <RCTScrollView
+  <View
     style={
       Object {
         "backgroundColor": "#fff",
@@ -11,223 +11,214 @@ Array [
       }
     }
   >
-    <View>
-      <View
+    <View
+      style={
+        Object {
+          "flexGrow": 0,
+          "flexShrink": 1,
+          "marginVertical": 10,
+        }
+      }
+    >
+      <Text
         style={
           Object {
-            "alignItems": "center",
-            "flexBasis": 60,
-            "flexGrow": 0,
-            "flexShrink": 1,
-            "justifyContent": "center",
-            "marginTop": 10,
+            "fontSize": 20,
+            "fontWeight": "bold",
+            "textAlign": "center",
           }
         }
       >
-        <Text
-          style={
-            Object {
-              "fontSize": 20,
-              "fontWeight": "bold",
-              "marginLeft": 10,
-              "marginTop": 10,
-              "textAlign": "center",
-            }
+        Fitness Drill Title
+      </Text>
+      <View
+        accessible={true}
+        focusable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+            "position": "absolute",
+            "right": 30,
           }
-        >
-          Fitness Drill Title
-        </Text>
-        <View
-          accessible={true}
-          focusable={true}
-          isTVSelectable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "opacity": 1,
-              "position": "absolute",
-              "right": 30,
-              "top": 10,
-            }
-          }
-          testID="detailsButton"
-        >
-          <Text />
-        </View>
+        }
+        testID="detailsButton"
+      >
+        <Text />
       </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexGrow": 1,
+          "flexShrink": 0,
+        }
+      }
+    >
       <View
         style={
           Object {
-            "flexBasis": "50%",
-            "flexGrow": 1,
-            "flexShrink": 0,
+            "flex": 1,
           }
         }
       >
         <View
           style={
             Object {
-              "flex": 1,
+              "height": 250,
             }
           }
         >
           <View
             style={
-              Object {
-                "height": 250,
-              }
+              Array [
+                Object {
+                  "flex": 1,
+                  "overflow": "hidden",
+                },
+                undefined,
+              ]
             }
           >
-            <View
+            <RNCWebView
+              cacheEnabled={true}
+              javaScriptEnabled={true}
+              messagingEnabled={false}
+              onContentProcessDidTerminate={[Function]}
+              onHttpError={[Function]}
+              onLoadingError={[Function]}
+              onLoadingFinish={[Function]}
+              onLoadingProgress={[Function]}
+              onLoadingStart={[Function]}
+              onMessage={[Function]}
+              onShouldStartLoadWithRequest={[Function]}
+              source={
+                Object {
+                  "uri": "https://www.youtube.com/embed/JkVHrA5o23o",
+                }
+              }
               style={
                 Array [
                   Object {
                     "flex": 1,
                     "overflow": "hidden",
                   },
+                  Object {
+                    "backgroundColor": "#ffffff",
+                  },
                   undefined,
                 ]
               }
-            >
-              <RNCWebView
-                cacheEnabled={true}
-                javaScriptEnabled={true}
-                messagingEnabled={false}
-                onContentProcessDidTerminate={[Function]}
-                onHttpError={[Function]}
-                onLoadingError={[Function]}
-                onLoadingFinish={[Function]}
-                onLoadingProgress={[Function]}
-                onLoadingStart={[Function]}
-                onMessage={[Function]}
-                onShouldStartLoadWithRequest={[Function]}
-                source={
-                  Object {
-                    "uri": "https://www.youtube.com/embed/JkVHrA5o23o",
-                  }
-                }
-                style={
-                  Array [
-                    Object {
-                      "flex": 1,
-                      "overflow": "hidden",
-                    },
-                    Object {
-                      "backgroundColor": "#ffffff",
-                    },
-                    undefined,
-                  ]
-                }
-                useSharedProcessPool={true}
-              />
-            </View>
+              useSharedProcessPool={true}
+            />
           </View>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "padding": 20,
+            }
+          }
+        >
           <View
             style={
               Object {
+                "alignSelf": "flex-end",
                 "flexDirection": "row",
-                "padding": 20,
               }
             }
           >
             <View
               style={
                 Object {
-                  "alignSelf": "flex-end",
                   "flexDirection": "row",
+                  "justifyContent": "space-between",
                 }
               }
             >
               <View
                 style={
                   Object {
-                    "flexDirection": "row",
-                    "justifyContent": "space-between",
+                    "flex": 6,
+                  }
+                }
+              >
+                <Text>
+                  Warmup
+                </Text>
+              </View>
+              <View
+                accessible={true}
+                focusable={true}
+                isTVSelectable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "flex": 1,
+                    "opacity": 1,
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "flex": 6,
-                    }
-                  }
-                >
-                  <Text>
-                    Warmup
-                  </Text>
-                </View>
-                <View
-                  accessible={true}
-                  focusable={true}
-                  isTVSelectable={true}
-                  onClick={[Function]}
-                  onResponderGrant={[Function]}
-                  onResponderMove={[Function]}
-                  onResponderRelease={[Function]}
-                  onResponderTerminate={[Function]}
-                  onResponderTerminationRequest={[Function]}
-                  onStartShouldSetResponder={[Function]}
-                  style={
-                    Object {
-                      "flex": 1,
                       "opacity": 1,
                     }
                   }
                 >
-                  <View
-                    style={
-                      Object {
-                        "opacity": 1,
-                      }
+                  <Text />
+                </View>
+                <View
+                  style={
+                    Object {
+                      "opacity": 0,
                     }
-                  >
-                    <Text />
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "opacity": 0,
-                      }
-                    }
-                  >
-                    <Text />
-                  </View>
+                  }
+                >
+                  <Text />
                 </View>
               </View>
             </View>
           </View>
-          <View
-            style={
-              Object {
-                "borderBottomColor": "#DCDCDC",
-                "borderBottomWidth": 1,
-              }
-            }
-          />
-          <Text
-            style={
-              Object {
-                "alignItems": "center",
-                "color": "#232b2b",
-                "fontSize": 16,
-                "justifyContent": "center",
-                "marginBottom": 20,
-                "marginLeft": 20,
-                "marginTop": 20,
-              }
-            }
-          />
         </View>
+        <View
+          style={
+            Object {
+              "borderBottomColor": "#DCDCDC",
+              "borderBottomWidth": 1,
+            }
+          }
+        />
+        <Text
+          style={
+            Object {
+              "alignItems": "center",
+              "color": "#232b2b",
+              "fontSize": 16,
+              "justifyContent": "center",
+              "marginBottom": 20,
+              "marginLeft": 20,
+              "marginTop": 20,
+            }
+          }
+        />
       </View>
     </View>
-  </RCTScrollView>,
+  </View>,
   <View
     style={
       Object {

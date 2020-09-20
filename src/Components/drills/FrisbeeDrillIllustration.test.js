@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { render, cleanup } from 'react-native-testing-library';
+import { render, cleanup } from '@testing-library/react-native';
 import { createDrill } from '../../Fixtures/TestFixtures';
 
 import FrisbeeDrillIllustration from './FrisbeeDrillIllustration';

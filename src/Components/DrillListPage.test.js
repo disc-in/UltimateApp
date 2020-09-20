@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
-import { render, fireEvent, cleanup } from 'react-native-testing-library';
+import { render, fireEvent, cleanup } from '@testing-library/react-native';
 import store from '../Store/testStore';
 import { createDrill } from '../Fixtures/TestFixtures';
 import { DrillTypes } from '../Fixtures/config';

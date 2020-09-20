@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { render, fireEvent, cleanup, waitFor } from 'react-native-testing-library';
+import { render, fireEvent, cleanup, waitFor } from '@testing-library/react-native';
 
 import { createDrill } from '../../Fixtures/TestFixtures';
 import { IllustrationType, DrillTypes } from '../../Fixtures/config';

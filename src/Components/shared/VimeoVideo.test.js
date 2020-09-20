@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, cleanup, waitFor } from 'react-native-testing-library';
+import { render, cleanup, waitFor } from '@testing-library/react-native';
 import nock from 'nock';
 
 import VimeoVideo from './VimeoVideo';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, cleanup, fireEvent } from 'react-native-testing-library';
+import { render, cleanup, fireEvent } from '@testing-library/react-native';
 
 import ProgressBar from './ProgressBar';
 

@@ -9,8 +9,6 @@ import fixtures from '../Fixtures/TestFixtures';
 import store from '../Store/testStore';
 
 import ConnectedDrillPageMinimal, { DrillPageMinimal } from './DrillPageMinimal';
-
-afterEach(cleanup);
 beforeEach(() => jest.useFakeTimers()); // for Animated
 jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
 

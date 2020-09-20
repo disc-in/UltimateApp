@@ -1,15 +1,13 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
-import { render, fireEvent, cleanup, waitForElement, act } from 'react-native-testing-library';
+import { render, fireEvent, cleanup, waitFor } from 'react-native-testing-library';
 
 import store from '../Store/testStore';
 import { createProgram, createTraining } from '../Fixtures/TestFixtures';
 import { DrillTypes, EquipmentLabels } from '../Fixtures/config';
 
 import ConnectedProgramListPage, { ProgramListPage } from './ProgramListPage';
-
-afterEach(cleanup);
 
 describe('<ProgramListPage />', () => {
   const route = {
@@ -54,10 +52,8 @@ describe('<ProgramListPage />', () => {
 
     await fireEvent.press(getByText('1 - First Training'));
 
-    await act(async () => {
-      await waitForElement(() => {
-        expect(navigation.navigate).toBeCalledWith('TrainingPage', { program: program2, training: firstTraining });
-      });
+    await waitFor(() => {
+      expect(navigation.navigate).toBeCalledWith('TrainingPage', { program: program2, training: firstTraining });
     });
   });
 });

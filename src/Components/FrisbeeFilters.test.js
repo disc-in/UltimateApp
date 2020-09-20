@@ -13,8 +13,6 @@ import ConnectedFrisbeeFilters, { FrisbeeFilters } from './FrisbeeFilters';
 
 jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
 
-afterEach(cleanup);
-
 describe('<FrisbeeFilters />', () => {
   const beginnerDrill = createDrill({
     id: 1,

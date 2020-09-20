@@ -8,8 +8,6 @@ import store from '../../Store/testStore';
 
 import ConnectedProgram, { Program } from './Program';
 
-afterEach(cleanup);
-
 describe('<Program />', () => {
   let program = createProgram();
 

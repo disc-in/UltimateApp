@@ -3,8 +3,6 @@ import { render, cleanup, fireEvent } from 'react-native-testing-library';
 
 import ProgressBar from './ProgressBar';
 
-afterEach(cleanup);
-
 describe('<ProgressBar />', () => {
   it('renders correctly', () => {
     const onDotPress = jest.fn();

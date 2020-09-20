@@ -6,8 +6,6 @@ import HeaderButton from './HeaderButton';
 
 import buttonValidation from '../../../assets/check_dark.png';
 
-afterEach(cleanup);
-
 describe('<HeaderButton />', () => {
   it('renders correctly', () => {
     const tree = renderer.create(<HeaderButton image={buttonValidation} />).toJSON();

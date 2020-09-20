@@ -4,8 +4,6 @@ import { render, fireEvent, cleanup } from 'react-native-testing-library';
 
 import Checkbox from './Checkbox';
 
-afterEach(cleanup);
-
 describe('<Checkbox />', () => {
   it('renders correctly', () => {
     const tree = renderer.create(<Checkbox title="OK" />).toJSON();

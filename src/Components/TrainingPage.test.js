@@ -5,8 +5,6 @@ import fixtures from '../Fixtures/TestFixtures';
 
 import TrainingPage from './TrainingPage';
 
-afterEach(cleanup);
-
 describe('<TrainingPage />', () => {
   const navigation = { navigate: jest.fn() };
   const program = fixtures.programs[0];

@@ -4,8 +4,6 @@ import { render, fireEvent, cleanup } from 'react-native-testing-library';
 
 import Button from './Button';
 
-afterEach(cleanup);
-
 describe('<Button />', () => {
   it('renders correctly', () => {
     const tree = renderer.create(<Button text="OK" />).toJSON();

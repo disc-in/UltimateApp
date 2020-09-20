@@ -13,8 +13,6 @@ import ConnectedFitnessFilters, { FitnessFilters } from './FitnessFilters';
 
 jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
 
-afterEach(cleanup);
-
 describe('<FitnessFilters />', () => {
   const beginnerDrill = createDrill({ id: 1, level: Levels.BEGINNER });
   const intermediateDrill = createDrill({ id: 2, level: Levels.INTERMEDIATE });

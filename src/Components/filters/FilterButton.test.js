@@ -4,8 +4,6 @@ import { render, fireEvent, cleanup } from 'react-native-testing-library';
 
 import FilterButton from './FilterButton';
 
-afterEach(cleanup);
-
 describe('<FilterButton />', () => {
   it('renders correctly', () => {
     const tree = renderer.create(<FilterButton title="OK" />).toJSON();

@@ -5,8 +5,6 @@ import { createDrill } from '../../Fixtures/TestFixtures';
 
 import DrillList from './DrillList';
 
-afterEach(cleanup);
-
 describe('<DrillList />', () => {
   it('renders correctly', () => {
     const drills = [createDrill()];

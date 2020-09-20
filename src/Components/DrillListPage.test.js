@@ -8,8 +8,6 @@ import { DrillTypes } from '../Fixtures/config';
 
 import ConnectedDrillListPage, { DrillListPage } from './DrillListPage';
 
-afterEach(cleanup);
-
 describe('<DrillListPage />', () => {
   it('renders correctly when connected', () => {
     const route = {

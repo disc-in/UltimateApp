@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Easing, Animated, Dimensions, View, Image } from 'react-native';
+import { Easing, Animated, Dimensions, View, Image } from 'react-native';
 
 import DisplayedElement from './DisplayedElement';
 import DisplayedCuts from './DisplayedCuts';
@@ -136,82 +136,78 @@ class Animation extends React.Component {
 
   render() {
     return (
-      <View
-        ref={ref => {
-          this.marker = ref;
-        }}
-        onLayout={({ nativeEvent }) => {
-          if (this.marker) {
-            this.marker.measure((x, y, width, height, pageX, pageY) => {
-              // On iOS, when the left margin is = 0, pageX can be equal to the whole width instead of 0
-              if (pageX > 0.99 * width) pageX = 0;
+      <View>
+        <View
+          ref={ref => {
+            this.marker = ref;
+          }}
+          onLayout={({ nativeEvent }) => {
+            if (this.marker) {
+              this.marker.measure((x, y, width, height, pageX, pageY) => {
+                // On iOS, when the left margin is = 0, pageX can be equal to the whole width instead of 0
+                if (pageX > 0.99 * width) pageX = 0;
 
-              this.dTop = pageY;
-              this.dLeft = pageX;
+                this.dTop = pageY;
+                this.dLeft = pageX;
 
-              if (this.props.onTopMarginSet !== undefined && this.props.onTopMarginSet !== null)
-                this.props.onTopMarginSet(this.dTop);
-            });
-          }
-        }}
-        style={[styles.mainContainer, { height: this.animationHeight }, { width: this.animationWidth }]}
-      >
-        {this.animationWidth && (
-          <AnimationBackground
+                if (this.props.onTopMarginSet !== undefined && this.props.onTopMarginSet !== null)
+                  this.props.onTopMarginSet(this.dTop);
+              });
+            }
+          }}
+          style={{ height: this.animationHeight, width: this.animationWidth }}
+        >
+          {this.animationWidth && (
+            <AnimationBackground
+              animationWidth={this.animationWidth}
+              animationHeight={this.animationHeight}
+              background={this.props.animation.background}
+            />
+          )}
+
+          {this.props.editable && !this.state.animationPlaying && (
+            <DisplayedCuts
+              step={this.state.currentStep}
+              positionPercentToPixel={this._positionPercentToPixel}
+              animation={this.props.animation}
+              onMoveEnd={this.props.onCutMove}
+              topMargin={this.dTop}
+            />
+          )}
+          {this.props.animation.ids.map((id, index) => (
+            <DisplayedElement
+              type={id}
+              number={this.props.animation.texts[index]}
+              key={index}
+              eId={index}
+              movable={this.props.editable}
+              onMoveStart={this.props.onMoveStart}
+              onMoveEnd={this.props.onElementMoveEnd}
+              topMargin={this.dTop}
+              animationWidth={this.animationWidth}
+              animationHeight={this.animationHeight}
+              animation={this.props.animation}
+              currentStepAV={this.currentStepAV}
+              positionPercentToPixel={this._positionPercentToPixel}
+            />
+          ))}
+        </View>
+        <View>
+          <ProgressBar
+            readonly={!this.props.editable}
             animationWidth={this.animationWidth}
             animationHeight={this.animationHeight}
-            background={this.props.animation.background}
-          />
-        )}
-
-        {this.props.editable && !this.state.animationPlaying && (
-          <DisplayedCuts
-            step={this.state.currentStep}
-            positionPercentToPixel={this._positionPercentToPixel}
-            animation={this.props.animation}
-            onMoveEnd={this.props.onCutMove}
-            topMargin={this.dTop}
-          />
-        )}
-        {this.props.animation.ids.map((id, index) => (
-          <DisplayedElement
-            type={id}
-            number={this.props.animation.texts[index]}
-            key={index}
-            eId={index}
-            movable={this.props.editable}
-            onMoveStart={this.props.onMoveStart}
-            onMoveEnd={this.props.onElementMoveEnd}
-            topMargin={this.dTop}
-            animationWidth={this.animationWidth}
-            animationHeight={this.animationHeight}
-            animation={this.props.animation}
+            stepCount={this.props.animation.stepCount()}
             currentStepAV={this.currentStepAV}
-            positionPercentToPixel={this._positionPercentToPixel}
+            goToStep={this.playStep}
+            playAnimation={this.playAnimation}
+            onStepAdded={this.props.onStepAdded}
+            onStepRemoved={this.props.onStepRemoved}
           />
-        ))}
-        <ProgressBar
-          readonly={!this.props.editable}
-          animationWidth={this.animationWidth}
-          animationHeight={this.animationHeight}
-          stepCount={this.props.animation.stepCount()}
-          currentStepAV={this.currentStepAV}
-          goToStep={this.playStep}
-          playAnimation={this.playAnimation}
-          onStepAdded={this.props.onStepAdded}
-          onStepRemoved={this.props.onStepRemoved}
-        />
+        </View>
       </View>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  mainContainer: {
-    alignItems: 'flex-start',
-    flexDirection: 'row',
-    justifyContent: 'center',
-  },
-});
 
 export default Animation;

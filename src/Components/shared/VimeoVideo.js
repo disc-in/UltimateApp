@@ -6,7 +6,7 @@ import * as ScreenOrientation from 'expo-screen-orientation';
 import I18n from '../../utils/i18n';
 import theme from '../../styles/theme.style';
 
-const VimeoVideo = ({ vimeoId, screenWidth, sounds, shouldPlay }) => {
+const VimeoVideo = ({ vimeoId, sounds, shouldPlay }) => {
   const videoElem = useRef(null);
   const [isBuffering, setBuffer] = useState(true);
   const [error, setError] = useState();
@@ -78,7 +78,7 @@ const VimeoVideo = ({ vimeoId, screenWidth, sounds, shouldPlay }) => {
         ref={videoElem}
         resizeMode={Video.RESIZE_MODE_CONTAIN}
         useNativeControls
-        style={{ width: screenWidth, height: 250 }}
+        style={{ width: '100%', height: 250 }}
         onLoadStart={() => setBuffer(true)}
         onLoad={playVideoLoaded}
         onFullscreenUpdate={async ({ fullscreenUpdate }) => {

@@ -33,7 +33,7 @@ class AnimationEditor extends React.Component {
     };
 
     /** Vertical ratio of the space of the editor in which the animation is displayed */
-    this.hRatio = 5 / 7;
+    this.hRatio = 5 / 8;
 
     /** Horizontal ratio of the space of the editor in which the animation is displayed */
     this.wRatio = 1;
@@ -71,22 +71,16 @@ class AnimationEditor extends React.Component {
     this.editorHeight = e.nativeEvent.layout.height;
     this.editorWidth = e.nativeEvent.layout.width;
 
+    const { height, width } = Dimensions.get('window');
+    const animationWidth = this.editorWidth * this.wRatio;
+    const animationHeight = this.editorHeight * this.hRatio;
+
     //TODO see why this is needed...
     this.setState({
       width: this.editorWidth,
       height: this.editorHeight,
-    });
-
-    // Create the elements in the horizontal bar
-    this.initialElements = [];
-
-    var { height, width } = Dimensions.get('window');
-    var animationWidth = width * this.wRatio;
-    var animationHeight = height * this.hRatio;
-
-    this.setState(prevState => ({
       playerRadius: Math.min(animationWidth, animationHeight) / 12,
-    }));
+    });
   };
 
   setAnimationDimension = (height, width) => {
@@ -250,7 +244,7 @@ class AnimationEditor extends React.Component {
     var newAnimation = this._copyAnimation();
 
     /* If the element is dropped on the trash area */
-    if (newPosition[1] > 0.85) {
+    if (newPosition[1] > 1) {
       newAnimation.removeElement(elementIndex);
 
       const labels = { ...this.state.labels };

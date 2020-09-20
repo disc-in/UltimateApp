@@ -56,7 +56,7 @@ export const DrillPageMinimal = props => {
 
   return (
     <>
-      <ScrollView style={styles.drillPage}>
+      <View style={styles.drillPage}>
         <View style={styles.titleContainer}>
           <Text style={styles.title}>{drill.title}</Text>
           <TouchableOpacity style={styles.detailsButton} onPress={goToFullDrill} testID="detailsButton">
@@ -67,7 +67,7 @@ export const DrillPageMinimal = props => {
           {drill.type === DrillTypes.FRISBEE && <FrisbeeDrillIllustration drill={drill} />}
           {drill.type === DrillTypes.FITNESS && <FitnessDrillIllustration drill={drill} />}
         </View>
-      </ScrollView>
+      </View>
       <View style={styles.footer}>
         {isLastTraining ? (
           <ButtonNext onPress={finishTraining} text={I18n.t('drillPageMinimal.finish')} />
@@ -115,27 +115,20 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   titleContainer: {
-    flexBasis: 60,
     flexShrink: 1,
     flexGrow: 0,
-    marginTop: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
+    marginVertical: 10,
   },
   title: {
     fontSize: theme.FONT_SIZE_LARGE,
     fontWeight: 'bold',
     textAlign: 'center',
-    marginTop: 10,
-    marginLeft: 10,
   },
   detailsButton: {
     position: 'absolute',
     right: 30,
-    top: 10,
   },
   illustration: {
-    flexBasis: '50%',
     flexGrow: 1,
     flexShrink: 0,
   },

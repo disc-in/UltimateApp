@@ -93,7 +93,7 @@ const throwingLadder = {
   ],
   ids: ['offense', 'offense', 'offense', 'offense', 'offense', 'offense', 'offense', 'defense', 'disc'],
   texts: [1, 2, 3, 4, 5, 6, 7, 1, 1],
-  background: '3/4 field',
+  background: 'three quarters field',
 };
 
 export default throwingLadder;

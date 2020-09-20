@@ -30,7 +30,7 @@ class AnimationEditor extends React.Component {
     };
 
     /** Vertical ratio of the space of the editor in which the animation is displayed */
-    this.hRatio = 5 / 7;
+    this.hRatio = 5 / 8;
 
     /** Horizontal ratio of the space of the editor in which the animation is displayed */
     this.wRatio = 1;
@@ -56,23 +56,17 @@ class AnimationEditor extends React.Component {
     this.editorHeight = e.nativeEvent.layout.height;
     this.editorWidth = e.nativeEvent.layout.width;
 
+    const animationWidth = this.editorWidth * this.wRatio;
+    const animationHeight = this.editorHeight * this.hRatio;
+
     //TODO see why this is needed...
     this.setState({
       width: this.editorWidth,
       height: this.editorHeight,
       dTop: e.nativeEvent.layout.y,
       dLeft: e.nativeEvent.layout.x,
-    });
-
-    // Create the elements in the horizontal bar
-    this.initialElements = [];
-
-    var animationWidth = this.editorWidth * this.wRatio;
-    var animationHeight = this.editorHeight * this.hRatio;
-
-    this.setState(prevState => ({
       playerRadius: Math.min(animationWidth, animationHeight) / 12,
-    }));
+    });
   };
 
   addElementToAnimation = (type, x, y) => {
@@ -219,7 +213,7 @@ class AnimationEditor extends React.Component {
     var animationHeight = this.state.height * this.hRatio;
 
     /* If the element is dropped on the trash area */
-    if (newPosition[1] > 0.85) {
+    if (newPosition[1] > 1) {
       newAnimation.removeElement(elementIndex);
 
       const labels = { ...this.state.labels };
@@ -272,7 +266,7 @@ class AnimationEditor extends React.Component {
 
   render() {
     return (
-      <View style={styles.mainContainer} onLayout={this.onLayout}>
+      <View onLayout={this.onLayout}>
         <Animation
           onLayout={this.onLayout}
           editable
@@ -319,20 +313,15 @@ class AnimationEditor extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  mainContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'stretch',
-  },
   actionsArea: {
     marginHorizontal: 30,
     marginTop: 10,
-    height: 50,
+    height: 80,
   },
   draggableArea: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'flex-start',
+    justifyContent: 'space-around',
   },
   deletionArea: {
     flex: 1,

@@ -1,4 +1,12 @@
-import { Intensities, Levels, FrisbeeGoals, FitnessGoals, SeasonTimings, EquipmentLabels } from '../../Fixtures/config';
+import {
+  Intensities,
+  Levels,
+  FrisbeeGoals,
+  FitnessGoals,
+  SeasonTimings,
+  EquipmentLabels,
+  AnimationBackgrounds,
+} from '../../Fixtures/config';
 
 export default {
   data: {
@@ -42,6 +50,12 @@ export default {
       [Intensities.MODERATE]: 'Modérée',
       [Intensities.HIGH]: 'Haute',
     },
+    animationBackgrounds: {
+      [AnimationBackgrounds.RECTANGLE]: 'Rectangle',
+      [AnimationBackgrounds.ENDZONE]: 'Endzone',
+      [AnimationBackgrounds.THREE_QUARTERS_FIELD]: '3/4 terrain',
+      [AnimationBackgrounds.EMPTY]: 'Vide',
+    },
   },
   navigation: {
     homePage: 'Disc In',
@@ -64,7 +78,7 @@ export default {
   homePage: {
     frisbeeTab: 'Frisbee',
     fitnessTab: 'Fitness',
-    theoryTab: 'Theorie',
+    theoryTab: 'Théorie',
     editor: 'Editeur',
     drills: 'Exercices',
     programs: "Programmes d'entraînement",
@@ -86,7 +100,7 @@ export default {
       cancel: 'Annuler',
       cta: "Envoyer à l'équipe",
     },
-    sharePlaceholder: "Pouvez-vous ajouter cet exercices à l'application ?",
+    sharePlaceholder: "Pouvez-vous ajouter cet exercice à l'application ?",
   },
   feedback: {
     alert: {
@@ -101,19 +115,22 @@ export default {
   fitnessDrillIllustration: {
     redoMessage: "Tu as terminé l'exercice !",
   },
+  dictionaryPage: {
+    translation: 'Traduction : ',
+  },
   drillListPage: {
     availableDrills: {
       one: '1 exercice disponible',
       other: '{{count}} exercices disponibles',
     },
-    filter: 'FILTRE',
+    filter: 'FILTRER',
   },
   drillPage: {
     minutes: 'minutes',
     players: 'joueurs',
     level: 'niveau',
     start: 'Start',
-    goal: 'Objectifs',
+    goal: 'Thèmes',
     equipment: 'Matériel',
     description: 'Description',
   },
@@ -123,13 +140,16 @@ export default {
     finish: "Terminer l'entraînement !",
     next: 'Exercice suivant',
   },
+  essentialsPage: {
+    chooseTopic: 'Choisis un sujet :',
+  },
   fitnessFilters: {
     favorites: 'Seulement mes favoris',
     level: 'Niveau',
     intensity: 'Intensité',
     equipment: 'Matériel',
     seasonTiming: 'Temporalité',
-    goals: 'Objectifs',
+    goals: 'Thèmes',
     duration: 'durée',
     durationLabel: 'Combien de temps as-tu ?   {{duration}} mins',
   },
@@ -147,5 +167,8 @@ export default {
     program: {
       completion: '{{done}}/{{total}} entraînements',
     },
+  },
+  tacticsPage: {
+    chooseTopic: 'Choisis un sujet :',
   },
 };

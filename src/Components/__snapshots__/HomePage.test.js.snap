@@ -61,6 +61,7 @@ exports[`<HomePage /> renders correctly 1`] = `
           <View
             accessible={true}
             focusable={true}
+            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -134,6 +135,7 @@ exports[`<HomePage /> renders correctly 1`] = `
           <View
             accessible={true}
             focusable={true}
+            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -207,6 +209,7 @@ exports[`<HomePage /> renders correctly 1`] = `
           <View
             accessible={true}
             focusable={true}
+            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -317,7 +320,6 @@ exports[`<HomePage /> renders correctly 1`] = `
       }
     >
       <View
-        forwardedRef={[Function]}
         onLayout={[Function]}
         pointerEvents="box-none"
         style={
@@ -334,6 +336,11 @@ exports[`<HomePage /> renders correctly 1`] = `
       >
         <View
           accessibilityRole="button"
+          accessibilityStates={
+            Array [
+              "selected",
+            ]
+          }
           accessible={true}
           focusable={true}
           onClick={[Function]}
@@ -529,6 +536,11 @@ exports[`<HomePage /> renders correctly 1`] = `
         </View>
         <View
           accessibilityRole="button"
+          accessibilityStates={
+            Array [
+              "selected",
+            ]
+          }
           accessible={true}
           focusable={true}
           onClick={[Function]}
@@ -724,6 +736,11 @@ exports[`<HomePage /> renders correctly 1`] = `
         </View>
         <View
           accessibilityRole="button"
+          accessibilityStates={
+            Array [
+              "selected",
+            ]
+          }
           accessible={true}
           focusable={true}
           onClick={[Function]}

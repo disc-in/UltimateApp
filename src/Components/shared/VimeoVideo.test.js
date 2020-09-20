@@ -8,7 +8,6 @@ afterEach(cleanup);
 
 describe('<VimeoVideo />', () => {
   const VIMEO_VIDEO_ID = '407999139';
-  const screenWidth = 480;
 
   it('loads the video', async () => {
     const scope = nock('https://player.vimeo.com:443', { encodedQueryParams: true })
@@ -73,7 +72,7 @@ describe('<VimeoVideo />', () => {
         ],
       );
 
-    const { getByText, toJSON } = render(<VimeoVideo vimeoId={VIMEO_VIDEO_ID} screenWidth={screenWidth} />);
+    const { getByText, toJSON } = render(<VimeoVideo vimeoId={VIMEO_VIDEO_ID} />);
 
     expect(getByText('Loading...')).toBeDefined(); // Displayed by default
 
@@ -90,7 +89,7 @@ describe('<VimeoVideo />', () => {
       .get(`/video/${VIMEO_VIDEO_ID}/config`)
       .reply(404, {});
 
-    const { getByText, toJSON } = render(<VimeoVideo vimeoId={VIMEO_VIDEO_ID} screenWidth={screenWidth} />);
+    const { getByText, toJSON } = render(<VimeoVideo vimeoId={VIMEO_VIDEO_ID} />);
 
     await act(async () => {
       await waitForElement(() => scope.isDone());

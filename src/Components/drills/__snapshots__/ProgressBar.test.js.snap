@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ProgressBar2 /> renders correctly 1`] = `
+exports[`<ProgressBar /> renders correctly 1`] = `
 <View
   style={
     Object {
@@ -50,6 +50,7 @@ exports[`<ProgressBar2 /> renders correctly 1`] = `
     <View
       accessible={true}
       focusable={true}
+      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -72,6 +73,7 @@ exports[`<ProgressBar2 /> renders correctly 1`] = `
     <View
       accessible={true}
       focusable={true}
+      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -94,6 +96,7 @@ exports[`<ProgressBar2 /> renders correctly 1`] = `
     <View
       accessible={true}
       focusable={true}
+      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -116,6 +119,7 @@ exports[`<ProgressBar2 /> renders correctly 1`] = `
     <View
       accessible={true}
       focusable={true}
+      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -138,6 +142,7 @@ exports[`<ProgressBar2 /> renders correctly 1`] = `
     <View
       accessible={true}
       focusable={true}
+      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -160,6 +165,7 @@ exports[`<ProgressBar2 /> renders correctly 1`] = `
     <View
       accessible={true}
       focusable={true}
+      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}

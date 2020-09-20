@@ -1,382 +1,498 @@
 export const dictionary = [
   {
-    id: 1,
-    title: 'B',
+    title: 'A',
     data: [
       {
-        id: 0,
-        text: 'Break',
-        definition: 'Fait, pour un lanceur, de réussir une passe du côté fermé',
-      },
-      {
-        id: 1,
-        text: 'Brick',
+        text: 'Away',
+        translation: 'loin',
         definition:
-          "La règle du « brick » indique que quand si l'engagement franchit les lignes de touches à moins de 18 m de la ligne de but, vous pouvez commencer à jouer à 18 m de la ligne de but (au milieu du terrain). Le joueur le signale en appelant (« brick ») avant de prendre le disque.",
+          "Côté du terrain à l'opposé de l'endroit où sont posées les affaires de l'équipe. Peut servir à désigner la force (\"Force away\")",
       },
     ],
   },
   {
-    id: 2,
+    title: 'B',
+    data: [
+      {
+        text: 'Backhand',
+        translation: 'revers',
+        definition: 'Le lancer en revers. Se dit aussi plus simplement back.',
+      },
+      {
+        text: 'Break',
+        translation: 'casser',
+        definition: 'Fait, pour un lanceur, de réussir une passe du côté fermé',
+      },
+      {
+        text: 'Break side',
+        translation: 'Côté fermé',
+        definition: "Côté du terrain où l’on essaye d'empêcher le lanceur de faire une passe.",
+      },
+      {
+        text: 'Brick',
+        translation: null,
+        definition:
+          "La règle du « brick » indique que quand si l'engagement franchit les lignes de touches avant de toucher le sol, vous pouvez commencer à jouer à 18m de la ligne de but, au milieu du terrain. Le joueur le signale en appelant (« brick ») avant de prendre le disque.",
+      },
+    ],
+  },
+  {
     title: 'C',
     data: [
       {
-        id: 0,
-        text: 'Callahan',
+        text: 'Call',
+        translation: 'appel',
         definition:
-          'Interception du disque par un joueur de l’équipe en défensive dans la zone des buts de l’adversaire.',
+          'Signalement par un joueur d’un manquement aux règles (faute, infraction ou violation) constaté sur le terrain.',
       },
       {
-        id: 1,
+        text: 'Callahan',
+        translation: null,
+        definition:
+          "Interception du disque par un joueur de l’équipe en défense dans la zone d'en-but de l’adversaire.",
+      },
+      {
+        text: 'Catch',
+        translation: 'rattraper',
+        definition: 'Réception et maîtrise du disque par un receveur.',
+      },
+      {
+        text: 'Check',
+        translation: 'contrôle, vérification',
+        definition:
+          'Action de toucher le disque avec la main du défenseur ou le sol pour relancer le jeu suite à un arrêt de jeu.',
+      },
+      {
+        text: 'Contre-cut',
+        translation: 'contre-appel',
+        definition: 'Deuxième course rapide pour se démarquer après un cut.',
+      },
+      {
         text: 'Côté ouvert',
+        translation: null,
         definition:
           'Portion du terrain qui n’est pas couverte par le marqueur, où le porteur du disque peut faire une passe sans entrave',
       },
       {
-        id: 2,
         text: 'Côté fermé',
+        translation: null,
         definition:
           'Portion du terrain qui est couverte par le marqueur, où ce dernier tente d’empêcher le porteur du disque de faire une passe.',
       },
       {
-        id: 3,
         text: 'Courbe extérieure',
+        translation: null,
         definition:
           '(Outside out) Effet que le lanceur imprime à la trajectoire du disque, de manière à ce que celuici s’éloigne d’abord de l’axe de lancer sans jamais le traverser, et qu’il revienne en direction de la cible à la fin de sa course.',
       },
       {
-        id: 4,
-        text: 'Courbe intérieur',
+        text: 'Courbe intérieure',
+        translation: null,
         definition:
           '(Inside out) Effet que le lanceur imprime à la trajectoire du disque, de manière à ce que celui-ci traverse, au début de sa course, l’axe de lancer avant de revenir vers la cible.',
       },
       {
-        id: 5,
         text: 'Cup',
+        translation: 'tasse',
         definition:
-          'Formation utilisée en défensive de zone, composée de trois défenseurs positionnés en demi-cercle autour du porteur du disque, ce qui restreint ce dernier à tenter des passes courtes.',
+          'Formation utilisée en défensive de zone, composée de trois défenseurs positionnés en demi-cercle autour du porteur du disque, ce qui contraint ce dernier à tenter des passes courtes.',
       },
       {
-        id: 6,
         text: 'Cut',
+        translation: 'appel',
         definition:
           'Tentative de démarquage faite par un joueur de l’équipe offensive dans le but de recevoir une passe du porteur du disque.',
       },
       {
-        id: 7,
         text: 'Cutter',
+        translation: 'receveur',
         definition:
           'Joueur de l’équipe offensive qui tente de se démarquer pour recevoir une passe du porteur du disque',
       },
     ],
   },
   {
-    id: 3,
     title: 'D',
     data: [
       {
-        id: 0,
         text: 'Dive',
+        translation: 'plongeon',
         definition:
           'Saut au cours duquel le joueur propulse tout son corps dans une certaine direction pour tenter d’attraper un disque qu’il ne peut atteindre en étirant simplement le bras, puis tombe au sol, sur une partie du corps autre que ses pieds.',
       },
       {
-        id: 1,
+        text: 'Drop',
+        translation: null,
+        definition: 'Rater sa réception, relâcher le disque.',
+      },
+      {
         text: 'Dump',
-        definition: 'Passe courte faite au joueur en soutien dans le but de relancer l’attaque.',
+        translation: null,
+        definition: 'Passe courte faite à un joueur en soutien dans le but de relancer l’attaque.',
       },
     ],
   },
   {
-    id: 4,
     title: 'E',
     data: [
       {
-        id: 0,
         text: 'Endzone',
-        definition: 'La zone de but.',
+        translation: null,
+        definition: 'La zone dans laquelle une équipe doit marquer.',
       },
     ],
   },
   {
-    id: 5,
     title: 'F',
     data: [
       {
-        id: 0,
-        text: 'Flick',
+        text: 'Fake',
+        translation: 'feinte',
         definition:
-          'Lancer exécuté en tenant le disque face vers le haut, du côté du bras sollicité, en le relâchant généralement à hauteur de la taille, le coude près du corps, et en le faisant pivoter de l’extérieur vers l’intérieur.',
+          'Feinte de lancer. Souvent utilisée pour communiquer non-verbalement avec les receveurs et/ou pour déplacer la marque.',
       },
       {
-        id: 1,
+        text: 'Flick',
+        translation: 'coup droit',
+        definition:
+          'Lancer exécuté en tenant le disque face vers le haut, du côté du bras sollicité, en le relâchant généralement à hauteur de la taille, le coude près du corps, et en le faisant pivoter de l’extérieur vers l’intérieur. Se dit aussi forehand ou side.',
+      },
+      {
         text: 'Flow',
+        translation: null,
         definition: 'Suite rapide et continue de passes courtes au sein de l’équipe offensive.',
       },
       {
-        id: 2,
         text: 'Force Backhand',
+        translation: 'force revers',
         definition: 'Couvrir le porteur du disque de façon à l’obliger à lancer le disque du revers.',
       },
       {
-        id: 2,
         text: 'Force Flick or Forehand',
+        translation: 'force coup droit',
         definition: 'Couvrir le porteur du disque de façon à l’obliger à exécuter un lancer droit',
       },
       {
-        id: 2,
         text: 'Force Straight',
+        translation: 'force à plat',
         definition:
           'Couvrir la partie située devant le porteur du disque, perpendiculairement aux lignes de côté, de façon à l’obliger à faire des passes latérales.',
       },
       {
-        id: 3,
         text: 'Forehand',
+        translation: 'coup droit',
         definition:
-          'Lancer exécuté en tenant le disque face vers le haut, du côté du bras sollicité, en le relâchant généralement à hauteur de la taille, le coude près du corps, et en le faisant pivoter de l’extérieur vers l’intérieur.',
+          'Lancer exécuté en tenant le disque face vers le haut, du côté du bras sollicité, en le relâchant généralement à hauteur de la taille, le coude près du corps, et en le faisant pivoter de l’extérieur vers l’intérieur. Se dit aussi flick ou forehand.',
       },
     ],
   },
   {
-    id: 6,
     title: 'G',
     data: [
       {
-        id: 0,
         text: 'Give & Go',
+        translation: 'passe-et-va',
         definition:
           'Manœuvre offensive où le porteur du disque fait une passe courte à un de ses joueurs et se dirige rapidement dans un espace libre près de celui-ci afin de recevoir à nouveau le disque.',
       },
     ],
   },
   {
-    id: 7,
     title: 'H',
     data: [
       {
-        id: 0,
+        text: 'Hammer',
+        translation: 'lancer marteau',
+        definition:
+          'Lancer renversé exécuté en tenant le disque au-dessus de la tête à un angle d’environ 45 degrés par rapport au sol, face vers le bas, et en le relâchant après avoir fait un mouvement ascendant de l’arrière vers l’avant. Se dit aussi upside',
+      },
+      {
         text: 'Handler',
+        translation: null,
         definition:
           'Joueur de l’équipe offensive dont le rôle principal est d’assurer la possession du disque et d’orienter l’attaque.',
       },
       {
-        id: 1,
-        text: 'Hammer',
+        text: 'Home',
+        translation: 'maison',
         definition:
-          'Lancer renversé exécuté en tenant le disque au-dessus de la tête à un angle d’environ 45 degrés par rapport au sol, face vers le bas, et en le relâchant après avoir fait un mouvement ascendant de l’arrière vers l’avant.',
+          'Côté du terrain où sont posées les affaires de l\'équipe. Peut servir à désigner la force ("Force home")',
       },
       {
-        id: 2,
         text: 'Horizontal Stack',
+        translation: null,
         definition:
           'Formation offensive qui consiste en l’alignement des traceurs sur une ligne parallèle aux lignes de fond afin qu’ils puissent se démarquer à tour de rôle et recevoir une passe du porteur du disque.',
       },
       {
-        id: 3,
         text: 'Huck',
-        definition: 'Passe qui parcourt généralement au moins la moitié de la longueur du terrain',
+        translation: null,
+        definition: 'Passe qui parcourt généralement au moins la moitié de la longueur du terrain. Se dit aussi Longue',
+      },
+      {
+        text: 'Huddle',
+        translation: null,
+        definition:
+          'Réunion en cercle des deux équipes en fin de match afin d’effectuer un bilan de la rencontre au niveau sportif et de l’“esprit du jeu”. Se dit aussi ronde.',
       },
     ],
   },
   {
-    id: 8,
+    title: 'I',
+    data: [
+      {
+        text: 'Inside-out',
+        translation: null,
+        definition: 'Passe en coup droit ou revers avec une courbe intérieure. Se dit aussi plus simplement inside.',
+      },
+    ],
+  },
+  {
     title: 'L',
     data: [
       {
-        id: 0,
-        text: 'Layout',
+        text: 'Lay out',
+        translation: null,
         definition:
-          'Saut au cours duquel le joueur propulse tout son corps dans une certaine direction pour tenter d’attraper un disque qu’il ne peut atteindre en étirant simplement le bras, puis tombe au sol, sur une partie du corps autre que ses pieds.',
+          'Saut au cours duquel le joueur propulse tout son corps dans une certaine direction pour tenter d’attraper un disque qu’il ne peut atteindre en étirant simplement le bras, puis tombe au sol, sur une partie du corps autre que ses pieds. Se dit aussi dive.',
       },
       {
-        id: 1,
         text: 'Lead Pass',
+        translation: null,
         definition: 'Passe exécutée devant le traceur ou le meneur de jeu.',
       },
       {
-        id: 2,
         text: 'Longue',
-        definition: '(Huck)Passe qui parcourt généralement au moins la moitié de la longueur du terrain',
+        translation: null,
+        definition: 'Passe qui parcourt généralement au moins la moitié de la longueur du terrain. Se dit aussi Huck',
       },
     ],
   },
   {
-    id: 9,
     title: 'M',
     data: [
       {
-        id: 0,
         text: 'Man on Man D',
+        translation: 'Défense individuelle',
         definition:
           'Stratégie défensive qui consiste à jumeler chaque joueur de l’équipe défensive à un joueur de l’équipe adverse qu’il devra couvrir',
       },
       {
-        id: 1,
         text: 'Marqueur',
+        translation: null,
         definition: 'Joueur de l’équipe défensive qui couvre le porteur du disque.',
       },
       {
-        id: 2,
+        text: 'Middle',
+        translation: 'milieu',
+        definition:
+          'Poste de milieu de terrain, relayeur (voir : cutter). Dans certaines équipes, les cutters sont parfois différenciés suivant qu’ils proposent des appels “courts”, souvent vers le porteur du disque (middle) ou des appels au fond, vers la zone d’en-but (long). Plus généralement, cutter et middle sont synonymes.',
+      },
+      {
         text: 'Mur',
+        translation: 'wall',
         definition:
           'Formation utilisée en défensive de zone, composée de trois défenseurs positionnés devant le porteur du disque, en ligne droite parallèle à la zone des buts, et d’un chasseur, ce qui restreint le porteur à tenter des passes courtes.',
       },
     ],
   },
   {
-    id: 10,
     title: 'N',
     data: [
       {
-        id: 0,
         text: 'No Break',
+        translation: null,
         definition:
           'Interjection utilisée par les joueurs en défensive pour indiquer au marqueur qu’il doit éviter qu’une passe soit exécutée du côté fermé.',
       },
       {
-        id: 1,
         text: 'No Line',
+        translation: null,
         definition:
           'Interjection utilisée pour indiquer au marqueur qu’il doit empêcher le porteur du disque, situé près des lignes de côté, de faire une passe vers ces mêmes lignes.',
       },
     ],
   },
   {
-    id: 11,
     title: 'O',
     data: [
       {
-        id: 0,
         text: 'Offensive Zone',
+        translation: null,
         definition:
           'Stratégie offensive qui consiste, pour les joueurs à l’attaque, à se placer à différents endroits spécifiques sur le terrain pour contrer la défensive de zone et progresser.',
+      },
+      {
+        text: 'Open side',
+        translation: 'côté ouvert',
+        definition: 'Zone du terrain où l’on force l’attaque à jouer.',
       },
     ],
   },
   {
-    id: 12,
     title: 'P',
     data: [
       {
-        id: 0,
         text: 'Pick',
+        translation: 'obstruction',
         definition:
           'Blocage, intentionnel ou non, qui survient lorsqu’un joueur offensif se déplace de façon qu’un joueur défensif couvrant un traceur se trouve entravé.',
       },
       {
-        id: 1,
+        text: 'Play',
+        translation: 'jeu',
+        definition: 'Séquence offensive de jeu prédéfinie.',
+      },
+      {
         text: 'Poach',
+        translation: null,
         definition: 'Abandonner intentionnellement une couverture pour aider les autres joueurs en défensive.',
       },
       {
-        id: 2,
         text: 'Pull',
+        translation: null,
         definition:
           'Mise au jeu exécutée en lançant le disque en direction de l’équipe adverse à partir de la zone des buts de l’équipe en possession du disque.',
       },
       {
-        id: 3,
         text: 'Push Pass',
+        translation: null,
         definition:
           'Lancer exécuté en tenant le disque face vers le haut, du côté du bras sollicité, et en le relâchant tout en le faisant pivoter de l’intérieur vers l’extérieur.',
       },
     ],
   },
   {
-    id: 14,
-    title: 'S',
-    data: [
-      {
-        id: 0,
-        text: 'Scoober',
-        definition:
-          'Lancer renversé croisé exécuté en tenant le disque au-dessus de l’épaule opposée au bras sollicité, face vers le bas, et en le relâchant après avoir fait un mouvement circulaire de l’arrière vers l’avant.',
-      },
-      {
-        id: 1,
-        text: 'Stack',
-        definition:
-          'Formation offensive qui consiste en l’alignement des traceurs sur une ligne imaginaire afin qu’ils puissent se démarquer à tour de rôle et recevoir une passe du porteur du disque.',
-      },
-      {
-        id: 2,
-        text: 'Strip',
-        definition:
-          'Faute qui survient lorsqu’un joueur défensif fait perdre le disque à son adversaire alors que celui-ci en avait le contrôle.',
-      },
-      {
-        id: 3,
-        text: 'Swing',
-        definition: 'Passe exécutée parallèlement à la ligne de fond.',
-      },
-    ],
-  },
-  {
-    id: 15,
     title: 'R',
     data: [
       {
-        id: 0,
+        text: 'Recyclage',
+        translation: null,
+        definition: "Le fait de libérer l'espace de jeu une fois un appel effectué.",
+      },
+      {
         text: 'Revers',
+        translation: null,
         definition:
           'Lancer exécuté en tenant le disque face vers le haut, du côté opposé au bras sollicité, et en le relâchant après avoir fait un mouvement de l’arrière vers l’avant.',
       },
       {
-        id: 1,
         text: 'Reset',
+        translation: null,
         definition:
           'Joueur de l’équipe offensive situé derrière le porteur du disque ou tout juste à côté de celui-ci.',
+      },
+      {
+        text: 'Ronde',
+        translation: null,
+        definition: 'Voir Huddle.',
       },
     ],
   },
   {
-    id: 16,
+    title: 'S',
+    data: [
+      {
+        text: 'Scoober',
+        translation: 'lancer soucoupe',
+        definition:
+          'Lancer renversé croisé exécuté en tenant le disque au-dessus de l’épaule opposée au bras sollicité, face vers le bas, et en le relâchant après avoir fait un mouvement circulaire de l’arrière vers l’avant.',
+      },
+      {
+        text: 'Side',
+        translation: 'coup droit',
+        definition: 'Voir Flick.',
+      },
+      {
+        text: 'Side line',
+        translation: 'ligne latérale',
+        definition:
+          'Ligne des remplaçants. Généralement, elle encourage et donne des indications de jeu à son équipe (en attaque ou en défense). On dit aussi "La side". Attention à la confusion avec le coup droit qui est aussi appelé side.',
+      },
+      {
+        text: 'Spin',
+        translation: 'faire tourner',
+        definition: 'Rotation du disque',
+      },
+      {
+        text: 'Stack',
+        translation: null,
+        definition:
+          'Formation offensive qui consiste en l’alignement des traceurs sur une ligne imaginaire afin qu’ils puissent se démarquer à tour de rôle et recevoir une passe du porteur du disque.',
+      },
+      {
+        text: 'Strip',
+        translation: null,
+        definition:
+          'Faute qui survient lorsqu’un joueur défensif fait perdre le disque à son adversaire alors que celui-ci en avait le contrôle.',
+      },
+      {
+        text: 'Swing',
+        translation: null,
+        definition: 'Passe exécutée parallèlement à la ligne de fond.',
+      },
+      {
+        text: 'Switch',
+        translation: 'échanger',
+        definition:
+          'Le fait pour deux défenseurs en marquage individuel d’échanger les attaquants sur lesquels ils défendent.',
+      },
+    ],
+  },
+  {
     title: 'T',
     data: [
       {
-        id: 0,
+        text: 'Time-out',
+        translation: 'temps mort',
+        definition: "Arrêt de jeu (demandée par le joueur en possession du disque ou après qu'un point soit marqué).",
+      },
+      {
         text: 'Travel',
+        translation: null,
         definition:
           'Faute qui survient lorsqu’un traceur ne s’immobilise pas rapidement après avoir attrapé le disque, qu’un porteur n’établit pas de pivot avant de lancer le disque ou qu’il ne maintient pas, du moins en partie, son pivot en exécutant une passe.',
       },
       {
-        id: 1,
         text: 'Turn/Turnover',
+        translation: null,
         definition: 'Changement de possession du disque.',
       },
     ],
   },
   {
-    id: 17,
     title: 'U',
     data: [
       {
-        id: 0,
         text: 'Up',
+        translation: null,
         definition:
           'Interjection utilisée par le marqueur pour signaler aux défenseurs que le disque vient d’être lancé.',
+      },
+      {
+        text: 'Upside',
+        translation: "à l'envers",
+        definition: 'Voir Hammer.',
       },
     ],
   },
   {
-    id: 18,
     title: 'V',
     data: [
       {
-        id: 0,
         text: 'Vertical Stack',
+        translation: null,
         definition:
           'Stratégie défensive qui consiste, pour les joueurs, à couvrir l’adversaire en occupant les espaces libres sur le terrain.',
       },
     ],
   },
   {
-    id: 19,
     title: 'Z',
     data: [
       {
-        id: 0,
         text: 'Zone',
+        translation: null,
         definition:
           'Stratégie défensive qui consiste, pour les joueurs, à couvrir l’adversaire en occupant les espaces libres sur le terrain.',
       },
@@ -436,7 +552,7 @@ export const essentials = [
     ],
   },
   {
-    title: 'Reception',
+    title: 'Réception',
     pages: [
       {
         id: 1,
@@ -449,7 +565,7 @@ export const essentials = [
       },
       {
         id: 2,
-        title: 'Comment sauter',
+        title: 'Comment plonger',
         text: 'Brodie Smith',
         video: '424514902',
         illustration: 'https://zupimages.net/up/20/30/040p.jpg',
@@ -550,7 +666,7 @@ export const tactics = [
     ],
   },
   {
-    title: 'Defense de Zone',
+    title: 'Défense de Zone',
     pages: [
       {
         id: 1,

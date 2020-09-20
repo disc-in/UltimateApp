@@ -1,4 +1,12 @@
-import { Intensities, Levels, FrisbeeGoals, FitnessGoals, SeasonTimings, EquipmentLabels } from '../../Fixtures/config';
+import {
+  Intensities,
+  Levels,
+  FrisbeeGoals,
+  FitnessGoals,
+  SeasonTimings,
+  EquipmentLabels,
+  AnimationBackgrounds,
+} from '../../Fixtures/config';
 
 export default {
   data: {
@@ -41,6 +49,12 @@ export default {
       [Intensities.LOW]: 'Low',
       [Intensities.MODERATE]: 'Moderate',
       [Intensities.HIGH]: 'High',
+    },
+    animationBackgrounds: {
+      [AnimationBackgrounds.RECTANGLE]: 'Rectangle',
+      [AnimationBackgrounds.ENDZONE]: 'Endzone',
+      [AnimationBackgrounds.THREE_QUARTERS_FIELD]: '3/4 field',
+      [AnimationBackgrounds.EMPTY]: 'Empty',
     },
   },
   navigation: {
@@ -101,6 +115,9 @@ export default {
   fitnessDrillIllustration: {
     redoMessage: 'You have completed the drill!',
   },
+  dictionaryPage: {
+    translation: 'Translation: ',
+  },
   drillListPage: {
     availableDrills: {
       zero: '{{count}} drill available',
@@ -123,6 +140,9 @@ export default {
     details: 'DETAILS',
     finish: 'Finish Training!',
     next: 'Next drill',
+  },
+  essentialsPage: {
+    chooseTopic: 'Choose a topic:',
   },
   fitnessFilters: {
     favorites: 'Favorites only',
@@ -148,5 +168,8 @@ export default {
     program: {
       completion: '{{done}}/{{total}} trainings',
     },
+  },
+  tacticsPage: {
+    chooseTopic: 'Choose a topic:',
   },
 };

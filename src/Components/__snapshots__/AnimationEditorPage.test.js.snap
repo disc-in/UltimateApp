@@ -12,356 +12,42 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
 >
   <View
     onLayout={[Function]}
-    style={
-      Object {
-        "alignItems": "stretch",
-        "flex": 1,
-        "justifyContent": "center",
-      }
-    }
   >
-    <View
-      style={
-        Array [
+    <View>
+      <View
+        style={
           Object {
-            "alignItems": "flex-start",
-            "backgroundColor": "white",
-            "flexDirection": "row",
-            "justifyContent": "center",
-          },
-          Object {
-            "height": 952.8571428571429,
-          },
-          Object {
+            "height": 833.75,
             "width": 750,
-          },
-        ]
-      }
-    >
-      <View
-        style={
-          Array [
+          }
+        }
+      >
+        <View
+          style={
             Object {
-              "bottom": 0,
-              "position": "absolute",
-              "top": 0,
-            },
-            Object {
-              "height": 952.8571428571429,
+              "height": 833.75,
               "width": 750,
-            },
-          ]
-        }
-      >
-        <View
-          style={
-            Array [
-              Object {
-                "height": 809.9285714285714,
-              },
-              Object {
-                "width": 3.375,
-              },
-              Object {
-                "borderRadius": 1,
-              },
-              Object {
-                "borderWidth": 1,
-              },
-              Object {
-                "backgroundColor": "black",
-              },
-              Object {
-                "position": "absolute",
-              },
-              Object {
-                "top": 47.642857142857146,
-              },
-              Object {
-                "left": 712.5,
-              },
-            ]
-          }
-        />
-        <View
-          style={
-            Array [
-              Object {
-                "height": 809.9285714285714,
-              },
-              Object {
-                "width": 3.375,
-              },
-              Object {
-                "borderRadius": 1,
-              },
-              Object {
-                "borderWidth": 1,
-              },
-              Object {
-                "backgroundColor": "gray",
-              },
-              Object {
-                "position": "absolute",
-              },
-              Object {
-                "top": 47.642857142857146,
-              },
-              Object {
-                "left": 37.5,
-              },
-            ]
-          }
-        />
-        <View
-          style={
-            Array [
-              Object {
-                "height": 3.375,
-              },
-              Object {
-                "width": 675,
-              },
-              Object {
-                "borderRadius": 1,
-              },
-              Object {
-                "borderWidth": 1,
-              },
-              Object {
-                "backgroundColor": "gray",
-              },
-              Object {
-                "position": "absolute",
-              },
-              Object {
-                "top": 47.642857142857146,
-              },
-              Object {
-                "left": 37.5,
-              },
-            ]
-          }
-        />
-        <View
-          style={
-            Array [
-              Object {
-                "height": 3.375,
-              },
-              Object {
-                "width": 675,
-              },
-              Object {
-                "borderRadius": 1,
-              },
-              Object {
-                "borderWidth": 1,
-              },
-              Object {
-                "backgroundColor": "gray",
-              },
-              Object {
-                "position": "absolute",
-              },
-              Object {
-                "top": 371.61428571428576,
-              },
-              Object {
-                "left": 37.5,
-              },
-            ]
-          }
-        />
-        <View
-          height={33.75}
-          style={
-            Array [
-              Object {
-                "position": "absolute",
-              },
-              Object {
-                "left": 358.125,
-              },
-              Object {
-                "top": 605.1407142857144,
-              },
-              Object {
-                "borderRadius": 16.875,
-              },
-              Object {
-                "borderWidth": 1,
-              },
-              Object {
-                "borderColor": "gray",
-              },
-              Object {
-                "backgroundColor": "white",
-              },
-            ]
-          }
-          width={33.75}
-        />
-      </View>
-      <View
-        height="100%"
-        style={
-          Array [
-            Object {
-              "left": 0,
-              "position": "absolute",
-              "top": 0,
-            },
-          ]
-        }
-        width="100%"
-      />
-      <View
-        height="100%"
-        style={
-          Array [
-            Object {
-              "left": 0,
-              "position": "absolute",
-              "top": 0,
-            },
-          ]
-        }
-        width="100%"
-      >
-        <View
-          style={
-            Array [
-              Object {
-                "backgroundColor": "gray",
-              },
-              Object {
-                "borderRadius": 10,
-                "borderWidth": 0,
-                "bottom": 7.5,
-                "color": "white",
-                "height": 15,
-                "includeFontPadding": false,
-                "position": "absolute",
-                "textAlign": "center",
-                "textAlignVertical": "center",
-                "width": 15,
-              },
-              Object {
-                "left": 10,
-              },
-            ]
-          }
-        />
-        <View
-          style={
-            Array [
-              Object {
-                "backgroundColor": "gray",
-              },
-              Object {
-                "borderRadius": 10,
-                "borderWidth": 0,
-                "bottom": 7.5,
-                "color": "white",
-                "height": 15,
-                "includeFontPadding": false,
-                "position": "absolute",
-                "textAlign": "center",
-                "textAlignVertical": "center",
-                "width": 15,
-              },
-              Object {
-                "left": 317.5,
-              },
-            ]
-          }
-        />
-        <Text
-          style={
-            Array [
-              Object {
-                "bottom": 23.5,
-                "position": "absolute",
-              },
-              Object {
-                "left": 14,
-              },
-            ]
-          }
-        >
-          1
-        </Text>
-        <Text
-          style={
-            Array [
-              Object {
-                "bottom": 23.5,
-                "position": "absolute",
-              },
-              Object {
-                "left": 321.5,
-              },
-            ]
-          }
-        >
-          2
-        </Text>
-        <View
-          style={
-            Array [
-              Object {
-                "backgroundColor": "gray",
-              },
-              Object {
-                "bottom": 13,
-                "height": 4,
-                "left": 20,
-                "position": "absolute",
-              },
-              false,
-              Object {
-                "width": 615,
-              },
-            ]
-          }
-        />
-        <View
-          style={
-            Object {
-              "backgroundColor": "black",
-              "borderRadius": 10,
-              "borderWidth": 0,
-              "bottom": 7.5,
-              "color": "white",
-              "height": 15,
-              "includeFontPadding": false,
-              "left": 10,
-              "opacity": 1,
-              "position": "absolute",
-              "textAlign": "center",
-              "textAlignVertical": "center",
-              "width": 15,
             }
           }
-        />
-        <View
-          style={
-            Object {
-              "backgroundColor": "black",
-              "borderRadius": 10,
-              "borderWidth": 0,
-              "bottom": 7.5,
-              "color": "white",
-              "height": 15,
-              "includeFontPadding": false,
-              "left": 317.5,
-              "opacity": 0,
-              "position": "absolute",
-              "textAlign": "center",
-              "textAlignVertical": "center",
-              "width": 15,
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "black",
+                  "borderRadius": 1,
+                  "borderWidth": 1,
+                  "position": "absolute",
+                },
+                Object {
+                  "height": 708.6875,
+                  "left": 712.5,
+                  "top": 41.6875,
+                  "width": 3.375,
+                },
+              ]
             }
+<<<<<<< HEAD
           }
         />
         <View
@@ -386,24 +72,88 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
               "opacity": 1,
               "position": "absolute",
               "width": 30,
+=======
+          />
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "black",
+                  "borderRadius": 1,
+                  "borderWidth": 1,
+                  "position": "absolute",
+                },
+                Object {
+                  "height": 708.6875,
+                  "left": 37.5,
+                  "top": 41.6875,
+                  "width": 3.375,
+                },
+              ]
+>>>>>>> master
             }
-          }
-        >
-          <Text />
+          />
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "black",
+                  "borderRadius": 1,
+                  "borderWidth": 1,
+                  "position": "absolute",
+                },
+                Object {
+                  "height": 3.375,
+                  "left": 37.5,
+                  "top": 41.6875,
+                  "width": 675,
+                },
+              ]
+            }
+          />
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "black",
+                  "borderRadius": 1,
+                  "borderWidth": 1,
+                  "position": "absolute",
+                },
+                Object {
+                  "height": 3.375,
+                  "left": 37.5,
+                  "top": 325.1625,
+                  "width": 675,
+                },
+              ]
+            }
+          />
+          <View
+            height={33.75}
+            style={
+              Array [
+                Object {
+                  "borderColor": "black",
+                  "borderWidth": 1,
+                  "position": "absolute",
+                },
+                Object {
+                  "left": 358.125,
+                },
+                Object {
+                  "top": 525.2793750000001,
+                },
+                Object {
+                  "borderRadius": 16.875,
+                },
+              ]
+            }
+            width={33.75}
+          />
         </View>
         <View
-          style={
-            Object {
-              "backgroundColor": "black",
-              "bottom": 13,
-              "height": 4,
-              "left": 20,
-              "position": "absolute",
-              "width": 0,
-            }
-          }
-        />
-        <View
+<<<<<<< HEAD
           accessible={true}
           focusable={true}
           onClick={[Function]}
@@ -413,54 +163,42 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
           onResponderTerminate={[Function]}
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "bottom": 0,
-              "height": 25,
-              "left": 2.5,
-              "opacity": 1,
-              "position": "absolute",
-              "width": 25,
-            }
-          }
-        />
-        <View
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "bottom": 0,
-              "height": 25,
-              "left": 310,
-              "opacity": 1,
-              "position": "absolute",
-              "width": 25,
-            }
-          }
-        />
-        <View
+=======
           height="100%"
+>>>>>>> master
           style={
-            Array [
-              Object {
-                "bottom": 0,
-                "left": 0,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-              },
-            ]
+            Object {
+              "left": 0,
+              "position": "absolute",
+              "top": 0,
+            }
           }
           width="100%"
+        />
+      </View>
+      <View>
+        <View
+<<<<<<< HEAD
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+=======
+>>>>>>> master
+          style={
+            Object {
+              "flexDirection": "row",
+              "padding": 10,
+            }
+          }
         >
           <View
+<<<<<<< HEAD
             accessible={true}
             focusable={true}
             onClick={[Function]}
@@ -470,20 +208,174 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
             onResponderTerminate={[Function]}
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
+=======
+>>>>>>> master
             style={
               Object {
-                "borderRadius": 10,
-                "borderWidth": 0,
-                "bottom": 5.5,
-                "opacity": 1,
-                "position": "absolute",
-                "right": 40,
+                "flex": 1,
               }
             }
           >
-            <Text />
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "gray",
+                    "height": 4,
+                    "position": "absolute",
+                    "top": 5.5,
+                  },
+                  false,
+                  Object {
+                    "width": 307.5,
+                  },
+                ]
+              }
+            />
+            <View
+              style={
+                Object {
+                  "backgroundColor": "black",
+                  "height": 4,
+                  "position": "absolute",
+                  "top": 5.5,
+                  "width": 0,
+                }
+              }
+            />
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "gray",
+                    "borderRadius": 10,
+                    "height": 15,
+                    "position": "absolute",
+                    "width": 15,
+                  },
+                  Object {
+                    "left": 0,
+                  },
+                ]
+              }
+            />
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "gray",
+                    "borderRadius": 10,
+                    "height": 15,
+                    "position": "absolute",
+                    "width": 15,
+                  },
+                  Object {
+                    "left": 307.5,
+                  },
+                ]
+              }
+            />
+            <View
+              style={
+                Object {
+                  "backgroundColor": "black",
+                  "borderRadius": 10,
+                  "height": 15,
+                  "left": 0,
+                  "opacity": 1,
+                  "position": "absolute",
+                  "width": 15,
+                }
+              }
+            />
+            <View
+              style={
+                Object {
+                  "backgroundColor": "black",
+                  "borderRadius": 10,
+                  "height": 15,
+                  "left": 307.5,
+                  "opacity": 0,
+                  "position": "absolute",
+                  "width": 15,
+                }
+              }
+            />
+            <Text
+              style={
+                Array [
+                  Object {
+                    "position": "absolute",
+                    "top": 15,
+                  },
+                  Object {
+                    "left": 4,
+                  },
+                ]
+              }
+            >
+              1
+            </Text>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "position": "absolute",
+                    "top": 15,
+                  },
+                  Object {
+                    "left": 311.5,
+                  },
+                ]
+              }
+            >
+              2
+            </Text>
+            <View
+              accessible={true}
+              focusable={true}
+              isTVSelectable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "height": "100%",
+                  "left": -7.5,
+                  "opacity": 1,
+                  "position": "absolute",
+                  "width": 30,
+                }
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              isTVSelectable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "height": "100%",
+                  "left": 300,
+                  "opacity": 1,
+                  "position": "absolute",
+                  "width": 30,
+                }
+              }
+            />
           </View>
           <View
+<<<<<<< HEAD
             accessible={true}
             focusable={true}
             onClick={[Function]}
@@ -493,18 +385,74 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
             onResponderTerminate={[Function]}
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
+=======
+>>>>>>> master
             style={
               Object {
-                "borderRadius": 10,
-                "borderWidth": 0,
-                "bottom": 5.5,
-                "opacity": 1,
-                "position": "absolute",
-                "right": 10,
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "space-evenly",
+                "paddingHorizontal": 10,
               }
             }
           >
-            <Text />
+            <View
+              accessible={true}
+              focusable={true}
+              isTVSelectable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <View
+              accessible={true}
+              focusable={true}
+              isTVSelectable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <View
+              accessible={true}
+              focusable={true}
+              isTVSelectable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
           </View>
         </View>
       </View>
@@ -512,7 +460,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
     <View
       style={
         Object {
-          "height": 50,
+          "height": 80,
           "marginHorizontal": 30,
           "marginTop": 10,
         }
@@ -523,7 +471,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
           Object {
             "alignItems": "center",
             "flexDirection": "row",
-            "justifyContent": "flex-start",
+            "justifyContent": "space-around",
           }
         }
       >
@@ -719,7 +667,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
         <View
           style={
             Object {
-              "height": 50,
+              "height": 80,
               "width": 150,
             }
           }
@@ -728,19 +676,19 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
             items={
               Array [
                 Object {
+                  "label": "Rectangle",
+                  "textColor": undefined,
+                  "value": "rectangle",
+                },
+                Object {
                   "label": "Endzone",
                   "textColor": undefined,
-                  "value": "zone",
+                  "value": "endzone",
                 },
                 Object {
                   "label": "3/4 field",
                   "textColor": undefined,
-                  "value": "3/4 field",
-                },
-                Object {
-                  "label": "Rectangle",
-                  "textColor": undefined,
-                  "value": "rectangle",
+                  "value": "three quarters field",
                 },
                 Object {
                   "label": "Empty",
@@ -750,13 +698,22 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
               ]
             }
             onChange={[Function]}
+<<<<<<< HEAD
             selectedIndex={0}
+=======
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            selectedIndex={1}
+>>>>>>> master
             style={
               Array [
                 Object {
                   "height": 216,
                 },
-                undefined,
+                Object {
+                  "fontSize": 14,
+                  "height": 80,
+                },
               ]
             }
           />

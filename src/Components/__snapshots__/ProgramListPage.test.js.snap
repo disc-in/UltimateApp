@@ -18,6 +18,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
           <View
             accessible={true}
             focusable={true}
+            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -127,7 +128,6 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
             }
           >
             <View
-              forwardedRef={[Function]}
               onLayout={[Function]}
               style={Object {}}
             >
@@ -1074,6 +1074,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
                 initialNumToRender={10}
                 keyExtractor={[Function]}
                 maxToRenderPerBatch={10}
+                numColumns={1}
                 onContentSizeChange={[Function]}
                 onEndReachedThreshold={2}
                 onLayout={[Function]}
@@ -1097,6 +1098,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
                     <View
                       accessible={true}
                       focusable={true}
+                      isTVSelectable={true}
                       onClick={[Function]}
                       onResponderGrant={[Function]}
                       onResponderMove={[Function]}
@@ -1178,6 +1180,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
                     <View
                       accessible={true}
                       focusable={true}
+                      isTVSelectable={true}
                       onClick={[Function]}
                       onResponderGrant={[Function]}
                       onResponderMove={[Function]}

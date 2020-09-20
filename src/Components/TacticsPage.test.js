@@ -6,8 +6,6 @@ import store from '../Store/testStore';
 
 import ConnectedTacticsPage from './TacticsPage';
 
-beforeEach(() => jest.useFakeTimers()); // for Modal behaviour
-
 describe('<TacticsPage />', () => {
   it('renders correctly', () => {
     const tree = renderer

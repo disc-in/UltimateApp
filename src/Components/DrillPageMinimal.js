@@ -8,7 +8,7 @@ import theme from '../styles/theme.style';
 import FitnessDrillIllustration from './drills/FitnessDrillIllustration';
 import FrisbeeDrillIllustration from './drills/FrisbeeDrillIllustration';
 import ButtonNext from './shared/Button';
-import Progress from './ProgressBar2';
+import ProgressBar from './drills/ProgressBar';
 import { completeTraining } from '../Store/Actions/programAction';
 import { DrillTypes } from '../Fixtures/config';
 
@@ -44,7 +44,7 @@ export const DrillPageMinimal = props => {
         <Text style={styles.headerTitleText}>
           {I18n.t('drillPageMinimal.headerTitle', { trainingTitle: training.title })}
         </Text>
-        <Progress total={training.drills.length} current={currentDrillIndex + 1} onDotPress={onProgressDotPress} />
+        <ProgressBar total={training.drills.length} current={currentDrillIndex + 1} onDotPress={onProgressDotPress} />
       </View>
     );
     navigation.setOptions({
@@ -56,7 +56,7 @@ export const DrillPageMinimal = props => {
 
   return (
     <>
-      <ScrollView style={styles.drillPage}>
+      <View style={styles.drillPage}>
         <View style={styles.titleContainer}>
           <Text style={styles.title}>{drill.title}</Text>
           <TouchableOpacity style={styles.detailsButton} onPress={goToFullDrill} testID="detailsButton">
@@ -67,7 +67,7 @@ export const DrillPageMinimal = props => {
           {drill.type === DrillTypes.FRISBEE && <FrisbeeDrillIllustration drill={drill} />}
           {drill.type === DrillTypes.FITNESS && <FitnessDrillIllustration drill={drill} />}
         </View>
-      </ScrollView>
+      </View>
       <View style={styles.footer}>
         {isLastTraining ? (
           <ButtonNext onPress={finishTraining} text={I18n.t('drillPageMinimal.finish')} />
@@ -115,27 +115,20 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   titleContainer: {
-    flexBasis: 60,
     flexShrink: 1,
     flexGrow: 0,
-    marginTop: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
+    marginVertical: 10,
   },
   title: {
     fontSize: theme.FONT_SIZE_LARGE,
     fontWeight: 'bold',
     textAlign: 'center',
-    marginTop: 10,
-    marginLeft: 10,
   },
   detailsButton: {
     position: 'absolute',
     right: 30,
-    top: 10,
   },
   illustration: {
-    flexBasis: '50%',
     flexGrow: 1,
     flexShrink: 0,
   },
@@ -144,7 +137,7 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
     paddingTop: 5,
     bottom: 0,
-    backgroundColor: 'white',
+    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     width: '100%',
     alignItems: 'center',
   },

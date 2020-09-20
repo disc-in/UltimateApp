@@ -1202,6 +1202,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
     initialNumToRender={10}
     keyExtractor={[Function]}
     maxToRenderPerBatch={10}
+    numColumns={1}
     onContentSizeChange={[Function]}
     onEndReachedThreshold={2}
     onLayout={[Function]}
@@ -1225,6 +1226,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
         <View
           accessible={true}
           focusable={true}
+          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1357,6 +1359,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
         <View
           accessible={true}
           focusable={true}
+          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1487,6 +1490,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
   <View
     accessible={true}
     focusable={true}
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -1730,6 +1734,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
     initialNumToRender={10}
     keyExtractor={[Function]}
     maxToRenderPerBatch={10}
+    numColumns={1}
     onContentSizeChange={[Function]}
     onEndReachedThreshold={2}
     onLayout={[Function]}
@@ -1753,6 +1758,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
         <View
           accessible={true}
           focusable={true}
+          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1885,6 +1891,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
         <View
           accessible={true}
           focusable={true}
+          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -2017,6 +2024,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
         <View
           accessible={true}
           focusable={true}
+          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -2147,6 +2155,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
   <View
     accessible={true}
     focusable={true}
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -2390,6 +2399,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
     initialNumToRender={10}
     keyExtractor={[Function]}
     maxToRenderPerBatch={10}
+    numColumns={1}
     onContentSizeChange={[Function]}
     onEndReachedThreshold={2}
     onLayout={[Function]}
@@ -2413,6 +2423,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
         <View
           accessible={true}
           focusable={true}
+          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -2545,6 +2556,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
         <View
           accessible={true}
           focusable={true}
+          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -2677,6 +2689,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
         <View
           accessible={true}
           focusable={true}
+          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -2807,6 +2820,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
   <View
     accessible={true}
     focusable={true}
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}

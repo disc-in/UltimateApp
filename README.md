@@ -31,11 +31,6 @@ We use [nock](https://github.com/nock/nock) to mock HTTP calls. Have look at an 
 
 To get the expected return from Nock, you can run your tests without mocking and record the http calls. The documentation is [there](https://github.com/nock/nock#recording).
 
-### 🆘 Help! 
-If you need to understand the basic specifications of the app, have a look at [the wiki](https://github.com/UltimateApp/UltimateApp/wiki).
-
-And feel free to ask questions!
-
 ## Release
 
 To release a new version of the app :
@@ -43,6 +38,14 @@ To release a new version of the app :
 2. Create a release on Github
 3. `expo publish --release-channel staging`
 
+## 🙏 Thanks
+
+Thanks a lot to everyone helping `Disc In` become an awesome app!
+
+* Every direct [contributor](https://github.com/UltimateApp/UltimateApp/graphs/contributors) to the code
+* Cheikh F. Ndiaye (better french dictionary)
+* Martin VDD (better UX)
+* Scott Graber (better english wording)
 
 ## License
 

@@ -69,7 +69,7 @@ const around = {
   ],
   ids: ['offense', 'defense', 'offense', 'disc'],
   texts: [1, 1, 2, 1],
-  background: 'zone',
+  background: 'endzone',
 };
 
 export default around;

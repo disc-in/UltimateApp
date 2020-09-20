@@ -55,3 +55,10 @@ export const IllustrationType = {
   YOUTUBE: 'youtube',
   ANIMATION: 'animation',
 };
+
+export const AnimationBackgrounds = {
+  RECTANGLE: 'rectangle',
+  ENDZONE: 'endzone',
+  THREE_QUARTERS_FIELD: 'three quarters field',
+  EMPTY: 'empty',
+};

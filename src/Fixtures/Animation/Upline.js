@@ -41,7 +41,7 @@ const upline = {
   ],
   ids: ['defense', 'offense', 'offense', 'disc'],
   texts: [1, 1, 2, 1],
-  background: '3/4 field',
+  background: 'three quarters field',
 };
 
 export default upline;

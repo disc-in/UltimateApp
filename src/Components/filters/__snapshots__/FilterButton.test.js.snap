@@ -4,6 +4,7 @@ exports[`<FilterButton /> renders correctly 1`] = `
 <View
   accessible={true}
   focusable={false}
+  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -41,6 +42,7 @@ exports[`<FilterButton /> renders correctly when active 1`] = `
 <View
   accessible={true}
   focusable={false}
+  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}

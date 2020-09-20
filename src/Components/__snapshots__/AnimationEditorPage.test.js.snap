@@ -15,6 +15,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
   >
     <View>
       <View
+        onLayout={[Function]}
         style={
           Object {
             "height": 833.75,

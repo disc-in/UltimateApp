@@ -143,6 +143,9 @@ class Animation extends React.Component {
         onLayout={({ nativeEvent }) => {
           if (this.marker) {
             this.marker.measure((x, y, width, height, pageX, pageY) => {
+              // On iOS, when the left margin is = 0, pageX can be equal to the whole width instead of 0
+              if (pageX > 0.99 * width) pageX = 0;
+
               this.dTop = pageY;
               this.dLeft = pageX;
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StatusBar, StyleSheet, Animated, Dimensions, Easing, View, Picker } from 'react-native';
+import { StyleSheet, Animated, Dimensions, Easing, View, Picker } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import Animation from './Animation';
@@ -9,7 +9,6 @@ import Drill from './Drill';
 import theme from '../../styles/theme.style';
 
 import debug from './debug';
-import { EndOfLineState } from 'typescript';
 
 class AnimationEditor extends React.Component {
   constructor(props) {

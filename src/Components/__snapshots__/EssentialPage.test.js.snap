@@ -39,7 +39,7 @@ exports[`<EssentialPage /> renders correctly 1`] = `
         }
       }
     >
-      <RCTPicker
+      <RNCPicker
         items={
           Array [
             Object {

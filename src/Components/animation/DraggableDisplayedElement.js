@@ -3,93 +3,81 @@ import { StyleSheet, Animated, PanResponder } from 'react-native';
 
 import theme from '../../styles/theme.style';
 
-/** An element displayed in a drill animation */
-class DraggableDisplayedElement extends React.Component {
-  /* Props must contain:
-      - type: which indicates how to display the element: "offense", "defense", "triangle" or "disc"
-      - number: string defined if there is something written on the element
-    */
-  constructor(props) {
-    super(props);
+/* Props must contain:
+    - type: which indicates how to display the element: "offense", "defense", "triangle" or "disc"
+    - number: string defined if there is something written on the element
+*/
+const DraggableDisplayedElement = props => {
+  const { playerRadius, type, number } = props;
+  /* Current position of the element in pixels */
+  const currentPosition = new Animated.ValueXY({ x: 0, y: 0 });
 
-    /* Current position of the element in pixels */
-    this.currentPosition = new Animated.ValueXY({ x: 0, y: 0 });
+  const panResponder = PanResponder.create({
+    onStartShouldSetPanResponder: () => true,
 
-    // Initiate the panResponder
-    this.panResponder = PanResponder.create({
-      // Ask to be the responder
-      onStartShouldSetPanResponder: () => true,
+    onPanResponderMove: Animated.event([null, { dx: currentPosition.x, dy: currentPosition.y }]),
 
-      // Called when a move is made
-      onPanResponderMove: Animated.event([null, { dx: this.currentPosition.x, dy: this.currentPosition.y }]),
+    onPanResponderRelease: (event, gestureState) => {
+      props.onMoveEnd(type, gestureState.moveX, gestureState.moveY);
+      currentPosition.setValue({ x: 0, y: 0 });
+    },
+  });
 
-      onPanResponderRelease: (event, gestureState) => {
-        // this.props.onMoveEnd(this.props.type, gestureState.dx, gestureState.dy);
-        this.props.onMoveEnd(this.props.type, gestureState.moveX, gestureState.moveY);
-        this.currentPosition.setValue({ x: 0, y: 0 });
-      },
-    });
+  const discRadius = playerRadius / 1.5;
+  const coneSize = playerRadius / 2;
+
+  const panStyle = { transform: currentPosition.getTranslateTransform() };
+  let itemStyle, textStyle;
+
+  switch (type) {
+    case 'defense':
+    case 'offense':
+      itemStyle = [
+        panStyle,
+        styles.draggableDisplayedElement,
+        type == 'defense' ? styles.defense : styles.offense,
+        {
+          height: playerRadius,
+          width: playerRadius,
+          borderRadius: playerRadius,
+        },
+      ];
+      textStyle = styles.playerText;
+      break;
+    case 'disc':
+      itemStyle = [
+        panStyle,
+        styles.draggableDisplayedElement,
+        styles.disc,
+        {
+          height: discRadius,
+          width: discRadius,
+          borderRadius: discRadius,
+          borderWidth: discRadius / 10,
+        },
+      ];
+      textStyle = styles.discText;
+      break;
+    case 'triangle':
+      itemStyle = [
+        panStyle,
+        styles.draggableDisplayedElement,
+        styles.triangle,
+        {
+          borderLeftWidth: coneSize / 2,
+          borderRightWidth: coneSize / 2,
+          borderBottomWidth: coneSize,
+        },
+      ];
+      textStyle = styles.triangleText;
   }
 
-  render() {
-    const discRadius = this.props.playerRadius / 1.5;
-    const coneSize = this.props.playerRadius / 2;
-
-    const panStyle = {
-      transform: this.currentPosition.getTranslateTransform(),
-    };
-
-    let itemStyle, textStyle;
-    switch (this.props.type) {
-      case 'defense':
-      case 'offense':
-        itemStyle = [
-          panStyle,
-          styles.draggableDisplayedElement,
-          this.props.type === 'defense' ? styles.defense : styles.offense,
-          {
-            height: this.props.playerRadius,
-            width: this.props.playerRadius,
-            borderRadius: this.props.playerRadius,
-          },
-        ];
-        textStyle = styles.playerText;
-        break;
-      case 'disc':
-        itemStyle = [
-          panStyle,
-          styles.draggableDisplayedElement,
-          styles.disc,
-          {
-            height: discRadius,
-            width: discRadius,
-            borderRadius: discRadius,
-            borderWidth: discRadius / 10,
-          },
-        ];
-        textStyle = styles.discText;
-        break;
-      case 'triangle':
-        itemStyle = [
-          panStyle,
-          styles.draggableDisplayedElement,
-          styles.triangle,
-          {
-            borderLeftWidth: coneSize / 2,
-            borderRightWidth: coneSize / 2,
-            borderBottomWidth: coneSize,
-          },
-        ];
-        textStyle = styles.triangleText;
-    }
-
-    return (
-      <Animated.View {...this.panResponder.panHandlers} style={itemStyle} key={this.props.type}>
-        <Animated.Text style={textStyle}>{this.props.number}</Animated.Text>
-      </Animated.View>
-    );
-  }
-}
+  return (
+    <Animated.View {...panResponder.panHandlers} style={itemStyle} key={type}>
+      <Animated.Text style={textStyle}>{number}</Animated.Text>
+    </Animated.View>
+  );
+};
 
 export default DraggableDisplayedElement;
 

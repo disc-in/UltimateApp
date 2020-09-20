@@ -9,6 +9,7 @@ import Drill from './Drill';
 import theme from '../../styles/theme.style';
 
 import debug from './debug';
+import { EndOfLineState } from 'typescript';
 
 class AnimationEditor extends React.Component {
   constructor(props) {
@@ -58,6 +59,9 @@ class AnimationEditor extends React.Component {
   onLayout = e => {
     if (this.marker) {
       this.marker.measure((x, y, width, height, pageX, pageY) => {
+        // On iOS, when the left margin is = 0, pageX can be equal to the whole width instead of 0
+        if (pageX > 0.99 * width) pageX = 0;
+
         this.setState({
           dLeft: pageX,
           dTop: pageY,
@@ -106,6 +110,7 @@ class AnimationEditor extends React.Component {
     this.screenWidth = width;
 
     const position = this._positionPixelToPercent(x, y);
+
     if (position[0] <= 1 && position[1] <= 0.88 && position[0] >= 0 && position[1] >= 0) {
       const text = this.state.labels[type];
 

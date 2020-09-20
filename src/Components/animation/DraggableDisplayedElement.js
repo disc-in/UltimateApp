@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Easing, Animated, View, PanResponder } from 'react-native';
+import { StyleSheet, Animated, PanResponder } from 'react-native';
 
 import theme from '../../styles/theme.style';
 
@@ -46,7 +46,7 @@ class DraggableDisplayedElement extends React.Component {
         itemStyle = [
           panStyle,
           styles.draggableDisplayedElement,
-          this.props.type == 'defense' ? styles.defense : styles.offense,
+          this.props.type === 'defense' ? styles.defense : styles.offense,
           {
             height: this.props.playerRadius,
             width: this.props.playerRadius,

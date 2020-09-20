@@ -6,7 +6,7 @@ import configureMockStore from 'redux-mock-store';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrill } from '../Fixtures/TestFixtures';
-import { render, fireEvent, cleanup } from '@testing-library/react-native';
+import { render, fireEvent } from '@testing-library/react-native';
 import { Levels, FrisbeeGoals, DrillTypes } from '../Fixtures/config';
 
 import ConnectedFrisbeeFilters, { FrisbeeFilters } from './FrisbeeFilters';

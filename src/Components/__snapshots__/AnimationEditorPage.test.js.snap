@@ -47,32 +47,6 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
                 },
               ]
             }
-<<<<<<< HEAD
-          }
-        />
-        <View
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "borderRadius": 10,
-              "borderWidth": 0,
-              "bottom": 0,
-              "height": 30,
-              "justifyContent": "center",
-              "left": 625,
-              "opacity": 1,
-              "position": "absolute",
-              "width": 30,
-=======
           />
           <View
             style={
@@ -90,7 +64,6 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
                   "width": 3.375,
                 },
               ]
->>>>>>> master
             }
           />
           <View
@@ -153,19 +126,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
           />
         </View>
         <View
-<<<<<<< HEAD
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-=======
           height="100%"
->>>>>>> master
           style={
             Object {
               "left": 0,
@@ -178,18 +139,6 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
       </View>
       <View>
         <View
-<<<<<<< HEAD
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-=======
->>>>>>> master
           style={
             Object {
               "flexDirection": "row",
@@ -198,18 +147,6 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
           }
         >
           <View
-<<<<<<< HEAD
-            accessible={true}
-            focusable={true}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-=======
->>>>>>> master
             style={
               Object {
                 "flex": 1,
@@ -334,7 +271,6 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
             <View
               accessible={true}
               focusable={true}
-              isTVSelectable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -355,7 +291,6 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
             <View
               accessible={true}
               focusable={true}
-              isTVSelectable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -375,18 +310,6 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
             />
           </View>
           <View
-<<<<<<< HEAD
-            accessible={true}
-            focusable={true}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-=======
->>>>>>> master
             style={
               Object {
                 "alignItems": "center",
@@ -399,7 +322,6 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
             <View
               accessible={true}
               focusable={true}
-              isTVSelectable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -418,7 +340,6 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
             <View
               accessible={true}
               focusable={true}
-              isTVSelectable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -437,7 +358,6 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
             <View
               accessible={true}
               focusable={true}
-              isTVSelectable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -698,13 +618,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
               ]
             }
             onChange={[Function]}
-<<<<<<< HEAD
-            selectedIndex={0}
-=======
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
             selectedIndex={1}
->>>>>>> master
             style={
               Array [
                 Object {

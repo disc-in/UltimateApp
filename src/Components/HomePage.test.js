@@ -1,6 +1,5 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { render, fireEvent, cleanup } from '@testing-library/react-native';
 import { NavigationContainer } from '@react-navigation/native';
 
 import { DrillTypes } from '../Fixtures/config';

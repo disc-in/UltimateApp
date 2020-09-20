@@ -1,6 +1,5 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { render, fireEvent, cleanup } from '@testing-library/react-native';
 import { Provider } from 'react-redux';
 
 import { createProgram, createTraining } from '../../Fixtures/TestFixtures';

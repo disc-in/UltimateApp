@@ -74,9 +74,8 @@ describe('<VimeoVideo />', () => {
 
     expect(getByText('Loading...')).toBeDefined(); // Displayed by default
 
-    await waitFor(() => scope.isDone());
+    await waitFor(() => getByText('Loading...'));
 
-    expect(getByText('Loading...')).toBeDefined(); // Displayed while buffering
     expect(toJSON()).toMatchSnapshot();
   });
 
@@ -86,8 +85,6 @@ describe('<VimeoVideo />', () => {
       .reply(404, {});
 
     const { getByText, toJSON } = render(<VimeoVideo vimeoId={VIMEO_VIDEO_ID} />);
-
-    await waitFor(() => scope.isDone());
 
     await waitFor(() => getByText('Oopsie! There was an error loading the video...'));
 

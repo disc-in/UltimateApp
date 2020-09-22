@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Animated, Dimensions, Easing, View, Picker } from 'react-native';
+import { StyleSheet, Animated, Dimensions, Easing, View } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import Animation from './Animation';
@@ -8,12 +8,13 @@ import BackgroundPicker from './BackgroundPicker';
 import Drill from './Drill';
 import theme from '../../styles/theme.style';
 
-import debug from './debug';
-
 class AnimationEditor extends React.Component {
   constructor(props) {
     super(props);
+
+    console.log('Editor constructor, props.animation: ' + props.animation);
     this.state = {
+      // animation: new Drill(props.animation) || new Drill(),
       animation: new Drill(),
       dTop: 0, // Distance between the top of the window and the editor
       dLeft: 0, // Distance between the left of the window and the editor
@@ -309,6 +310,26 @@ class AnimationEditor extends React.Component {
       </View>
     );
   }
+
+  // /** Used to update the cuts when a modification is made in the animation */
+  // static getDerivedStateFromProps(props, state) {
+  //   console.log('getDerivedState: props: ', props);
+  //   console.log('getDerivedState: state: ', state);
+  //   if (props.animation === undefined || props.animation === null) {
+  //     console.log('1 : props undef');
+  //     return false;
+  //   } else {
+  //     let animation = new Drill(props.animation);
+
+  //     if (state.animation === undefined || state.animation === null || !state.animation.isEqualTo(animation)) {
+  //       console.log('2 : state undef or state and props not equal');
+  //       return { animation };
+  //     } else {
+  //       console.log('3 : state and props are equal');
+  //       return null;
+  //     }
+  //   }
+  // }
 }
 
 const styles = StyleSheet.create({
@@ -330,5 +351,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
-
 export default AnimationEditor;

@@ -8,7 +8,7 @@ import fixtures from '../Fixtures';
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
-  whitelist: ['completeTrainings', 'favoriteDrills'],
+  whitelist: ['completeTrainings', 'favoriteDrills', 'customeAnimations'],
   blacklist: ['drills', 'trainings', 'programs', 'theory'],
 };
 // Middleware: Redux Persist Persisted Reducer

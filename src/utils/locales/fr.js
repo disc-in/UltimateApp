@@ -93,6 +93,25 @@ export default {
     tactics: 'Tactiques',
   },
   animationEditor: {
+    untitledAnimation: 'Animation sans titre',
+    drillManager: {
+      ok: 'OK',
+      overwriteAnimation: 'Ecraser une animation ?',
+      askOverwrite: 'Une animation contenant ce titre existe déjà. Voulez-vous la supprimer ?',
+      enterAnimationTitle: "Entrer le titre de l'animation",
+      titleManager: "Gestionnaire d'animations",
+      currentTitle: 'Animation courante : ',
+      validate: 'Valider',
+      save: 'Sauvegarder',
+      rename: 'Renommer',
+      saveLocally: 'Sauvegarder sur cet appareil',
+      load: 'Charger une autre animation',
+      cancel: 'Annuler',
+      clickHereToRename: 'Appuyer ici pour renommer',
+      cta: "Envoyer à l'équipe de développement",
+      enterTitle: "Entrer le titre de l'animation",
+      openTitle: "Séléctionner l'animation que vous souhaitez ouvrir",
+    },
     comingSoon: {
       title: "C'est pour bientôt !",
       content:

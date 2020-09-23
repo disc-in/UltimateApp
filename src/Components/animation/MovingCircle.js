@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     height: 20,
     width: 20,
-    borderRadius: 20,
+    borderRadius: 10,
     borderWidth: 1,
     borderColor: 'green',
     backgroundColor: 'white',

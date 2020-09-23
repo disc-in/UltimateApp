@@ -14,7 +14,6 @@ class AnimationEditor extends React.Component {
 
     this.state = {
       animation: new Drill(props.animation) || new Drill(),
-      // animation: new Drill(),
       dTop: 0, // Distance between the top of the window and the editor
       dLeft: 0, // Distance between the left of the window and the editor
       width: 0,
@@ -309,13 +308,15 @@ class AnimationEditor extends React.Component {
     );
   }
 
-  /** Used to update the cuts when a modification is made in the animation */
+  /** Used to update the animation when an animation is opened in AnimationEditorPage */
   static getDerivedStateFromProps(props, state) {
     if (props.animation === undefined || props.animation === null) return false;
     else {
       const animation = new Drill(props.animation);
 
+      // If a new animation is opened
       if (state.animation === undefined || state.animation === null || !state.animation.isEqualTo(animation)) {
+        // Set the current step to 0
         Animated.timing(state.currentStepAV, {
           toValue: 0,
           duration: 0,
@@ -323,6 +324,7 @@ class AnimationEditor extends React.Component {
           key: 0,
         }).start();
 
+        // Adjust the labels according to the number of each element of each type in the opened animation
         const labels = {
           offense: 1,
           defense: 1,

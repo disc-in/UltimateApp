@@ -46,12 +46,12 @@ describe('<FitnessDrillIllustration />', () => {
     expect(getByText('3 Second Step')).toBeDefined();
     expect(getByText('3 Third Step')).toBeDefined();
 
-    await fireEvent.press(getByText('3 Third Step'));
+    fireEvent.press(getByText('3 Third Step'));
 
     // Third step is current
     expect(toJSON()).toMatchSnapshot();
 
-    await fireEvent.press(getByTestId('doneIcon'));
+    fireEvent.press(getByTestId('doneIcon'));
 
     await waitFor(() => expect(getByText('You have completed the drill!')).toBeDefined());
 

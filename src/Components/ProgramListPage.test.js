@@ -45,12 +45,12 @@ describe('<ProgramListPage />', () => {
     expect(getByText('Program 1')).toBeDefined();
     expect(getByText('Program 2')).toBeDefined();
 
-    await fireEvent.press(getByText('Program 2'));
+    fireEvent.press(getByText('Program 2'));
 
     expect(getByText('1 - First Training')).toBeDefined();
     expect(getByText('2 - Second Training')).toBeDefined();
 
-    await fireEvent.press(getByText('1 - First Training'));
+    fireEvent.press(getByText('1 - First Training'));
 
     await waitFor(() => {
       expect(navigation.navigate).toBeCalledWith('TrainingPage', { program: program2, training: firstTraining });

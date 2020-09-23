@@ -52,7 +52,7 @@ describe('<DrillPage />', () => {
       </Provider>,
     );
 
-    await fireEvent.press(getByTestId('favoriteButton'));
+    fireEvent.press(getByTestId('favoriteButton'));
 
     await waitFor(() => expect(toggleFavorite).toBeCalledWith(drill));
   });

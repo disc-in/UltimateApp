@@ -19,13 +19,14 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import theme from '../styles/theme.style';
 
 import { connect } from 'react-redux';
-import { saveAnimation } from '../Store/Actions/animationAction';
+import { saveAnimation, deleteAnimation } from '../Store/Actions/animationAction';
 
 export const AnimationEditorPage = props => {
   const [currentAnimationState, saveAnimationState] = useState(null);
   const [modalManagerVisible, setModalManagerVisible] = useState(false);
   const [modalTitleVisible, setModalTitleVisible] = useState(false);
   const [modalOpenVisible, setModalOpenVisible] = useState(false);
+  const [modalDeleteVisible, setModalDeleteVisible] = useState(false);
   const [animationTempTitle, setAnimationTempTitle] = useState('');
   const [animationTitle, setAnimationTitle] = useState(I18n.t('animationEditor.untitledAnimation'));
   const navigation = props.navigation;
@@ -61,6 +62,7 @@ export const AnimationEditorPage = props => {
           onPress: () => {
             props.saveAnimation({ title: animationTempTitle, value: currentAnimationState });
             setAnimationTitle(animationTempTitle);
+            navigation.setOptions({ headerTitle: animationTempTitle });
           },
         },
       ],
@@ -81,6 +83,7 @@ export const AnimationEditorPage = props => {
       else {
         props.saveAnimation({ title: animationTempTitle, oldTitle: animationTitle, drill: currentAnimationState });
         setAnimationTitle(animationTempTitle);
+        navigation.setOptions({ headerTitle: animationTempTitle });
       }
     }
   };
@@ -98,25 +101,60 @@ export const AnimationEditorPage = props => {
   };
 
   const openAnimation = item => {
-    console.log('the animation opened: ', item);
     setAnimationTitle(item.title);
+    navigation.setOptions({ headerTitle: item.title });
     setAnimationTempTitle(item.title);
     saveAnimationState(item.drill);
   };
 
-  //animationType="slide"
+  const createNewAnimation = () => {
+    const emptyAnimation = {
+      positions: [[], []],
+      ids: [],
+      texts: [],
+      background: 'endzone',
+    };
+
+    // Create the title of the new animation
+    const defaultTitle = I18n.t('animationEditor.untitledAnimation');
+    let newTitle = defaultTitle;
+
+    const titleId = props.customeAnimations.findIndex(item => item.title === newTitle);
+
+    // If a saved animation already has the default title
+    if (titleId !== -1) {
+      let counter = 1;
+
+      do {
+        newTitle = defaultTitle + ' (' + counter + ')';
+        counter += 1;
+      } while (props.customeAnimations.findIndex(item => item.title === newTitle) !== -1);
+    }
+
+    saveAnimationState(emptyAnimation);
+    setAnimationTitle(newTitle);
+    setAnimationTempTitle(newTitle);
+    setModalManagerVisible(false);
+    navigation.setOptions({ headerTitle: newTitle });
+  };
+
+  const deleteAnimation = item => {
+    // Envoyer l'action de suppression
+    props.deleteAnimation(item.title);
+
+    if (item.title === animationTitle) createNewAnimation();
+  };
+
   return (
     <View style={styles.animationEditorPage}>
       <AnimationEditor onAnimationChange={saveAnimationState} animation={currentAnimationState} />
 
       {/* Modal to manage the dirlls */}
-      <Modal visible={modalManagerVisible} animationType="slide">
+      <Modal visible={modalManagerVisible}>
         <View style={styles.centeredView}>
           <View style={styles.modalTitleView}>
             <Text style={styles.modalTitleText}>{`${I18n.t('animationEditor.drillManager.titleManager')}`}</Text>
-            <Text style={styles.modalText}>{`${I18n.t('animationEditor.drillManager.currentTitle') +
-              '\n' +
-              animationTitle}`}</Text>
+            <Text style={styles.modalText}>{`${'"' + animationTitle + '"'} `}</Text>
 
             {/* Save button */}
             <TouchableHighlight
@@ -151,6 +189,16 @@ export const AnimationEditorPage = props => {
               <Text style={styles.textStyle}>{`${I18n.t('animationEditor.drillManager.cta')}`}</Text>
             </TouchableHighlight>
 
+            {/* New animation button */}
+            <TouchableHighlight
+              style={{ ...styles.openButton, backgroundColor: '#2196F3' }}
+              onPress={() => {
+                createNewAnimation();
+              }}
+            >
+              <Text style={styles.textStyle}>{`${I18n.t('animationEditor.drillManager.newAnimation')}`}</Text>
+            </TouchableHighlight>
+
             {/* Load button */}
             {props.customeAnimations !== undefined &&
             props.customeAnimations !== null &&
@@ -168,12 +216,28 @@ export const AnimationEditorPage = props => {
               <View />
             )}
 
+            {/* Delete button */}
+            {props.customeAnimations !== undefined &&
+            props.customeAnimations !== null &&
+            props.customeAnimations.length > 0 ? (
+              <TouchableHighlight
+                style={{ ...styles.openButton, backgroundColor: '#2196F3' }}
+                onPress={() => {
+                  setModalManagerVisible(false);
+                  setModalDeleteVisible(true);
+                }}
+              >
+                <Text style={styles.textStyle}>{`${I18n.t('animationEditor.drillManager.delete')}`}</Text>
+              </TouchableHighlight>
+            ) : (
+              <View />
+            )}
+
             {/* Cancel button */}
             <TouchableHighlight
               style={{ ...styles.openButton, backgroundColor: '#2196F3' }}
               onPress={() => {
                 setModalManagerVisible(false);
-                console.log('value: ', props.customeAnimations);
               }}
             >
               <Text style={styles.textStyle}>{`${I18n.t('animationEditor.drillManager.cancel')}`}</Text>
@@ -182,7 +246,43 @@ export const AnimationEditorPage = props => {
         </View>
       </Modal>
 
-      {/* Modal to open existing animations */}
+      {/* Modal to delete an existing animations */}
+      <Modal visible={modalDeleteVisible}>
+        <View style={styles.centeredView}>
+          <View style={styles.modalTitleView}>
+            <Text style={styles.modalTitleText}>{`${I18n.t('animationEditor.drillManager.deleteTitle')}`}</Text>
+
+            <FlatList
+              data={props.customeAnimations}
+              keyExtractor={item => item.title.toString()}
+              renderItem={({ item }) => (
+                <TouchableWithoutFeedback
+                  onPress={() => {
+                    setModalDeleteVisible(false);
+                    deleteAnimation(item);
+                  }}
+                >
+                  <View>
+                    <Text style={styles.item}>{item.title}</Text>
+                  </View>
+                </TouchableWithoutFeedback>
+              )}
+            />
+
+            <TouchableHighlight
+              style={{ ...styles.openButton, backgroundColor: '#2196F3' }}
+              onPress={() => {
+                setModalDeleteVisible(false);
+                setModalManagerVisible(true);
+              }}
+            >
+              <Text style={styles.textStyle}>{`${I18n.t('animationEditor.drillManager.cancel')}`}</Text>
+            </TouchableHighlight>
+          </View>
+        </View>
+      </Modal>
+
+      {/* Modal to open an existing animations */}
       <Modal visible={modalOpenVisible}>
         <View style={styles.centeredView}>
           <View style={styles.modalTitleView}>
@@ -195,12 +295,11 @@ export const AnimationEditorPage = props => {
                 <TouchableWithoutFeedback
                   onPress={() => {
                     setModalOpenVisible(false);
-                    console.log('item: ', item);
                     openAnimation(item);
                   }}
                 >
                   <View>
-                    <Text>{item.title}</Text>
+                    <Text style={styles.item}>{item.title}</Text>
                   </View>
                 </TouchableWithoutFeedback>
               )}
@@ -210,6 +309,7 @@ export const AnimationEditorPage = props => {
               style={{ ...styles.openButton, backgroundColor: '#2196F3' }}
               onPress={() => {
                 setModalOpenVisible(false);
+                setModalManagerVisible(true);
               }}
             >
               <Text style={styles.textStyle}>{`${I18n.t('animationEditor.drillManager.cancel')}`}</Text>
@@ -244,6 +344,7 @@ export const AnimationEditorPage = props => {
                 onPress={() => {
                   setAnimationTempTitle(animationTitle);
                   setModalTitleVisible(false);
+                  setModalManagerVisible(true);
                 }}
               >
                 <Text style={styles.textStyle}>{`${I18n.t('animationEditor.drillManager.cancel')}`}</Text>
@@ -262,7 +363,7 @@ const mapStateToProps = state => {
   };
 };
 
-const mapDispatchToProps = { saveAnimation };
+const mapDispatchToProps = { saveAnimation, deleteAnimation };
 
 export default connect(mapStateToProps, mapDispatchToProps)(AnimationEditorPage);
 
@@ -290,6 +391,12 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
+  },
+  item: {
+    backgroundColor: '#d5f6ffff',
+    padding: 10,
+    marginVertical: 8,
+    marginHorizontal: 10,
   },
   openButton: {
     backgroundColor: '#F194FF',

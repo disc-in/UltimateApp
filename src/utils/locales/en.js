@@ -93,6 +93,28 @@ export default {
     tactics: 'Tactics',
   },
   animationEditor: {
+    untitledAnimation: 'Unamed animation',
+    drillManager: {
+      ok: 'OK',
+      overwriteAnimation: 'Overwrite an animation?',
+      askOverwrite: 'An animation with this title already exist. Do you want to overwrite it?',
+      enterAnimationTitle: 'Enter the animation title',
+      titleManager: 'Animation manager',
+      currentTitle: 'Current animation',
+      validate: 'Validate',
+      save: 'Save',
+      rename: 'Rename',
+      saveLocally: 'Save on this device',
+      load: 'Open a saved animation',
+      delete: 'Delete a saved animation',
+      cancel: 'Cancel',
+      clickHereToRename: 'Click here to enter the new name',
+      cta: 'Send to the development team',
+      enterTitle: 'Enter the animation title',
+      openTitle: 'Which animation do you want to open?',
+      deleteTitle: 'Which animation do you want to delete?',
+      newAnimation: 'Create a new animation',
+    },
     comingSoon: {
       title: 'Coming soon',
       content:

@@ -12,10 +12,9 @@ class AnimationEditor extends React.Component {
   constructor(props) {
     super(props);
 
-    console.log('Editor constructor, props.animation: ' + props.animation);
     this.state = {
-      // animation: new Drill(props.animation) || new Drill(),
-      animation: new Drill(),
+      animation: new Drill(props.animation) || new Drill(),
+      // animation: new Drill(),
       dTop: 0, // Distance between the top of the window and the editor
       dLeft: 0, // Distance between the left of the window and the editor
       width: 0,
@@ -28,6 +27,7 @@ class AnimationEditor extends React.Component {
         triangle: 1,
       },
       isElementMoving: false,
+      currentStepAV: new Animated.Value(0), // Enables to update  the current step inside an animation
     };
 
     /** Vertical ratio of the space of the editor in which the animation is displayed */
@@ -38,9 +38,7 @@ class AnimationEditor extends React.Component {
 
     this.currentStep = 0;
 
-    // Enables to update  the current step inside an animation
-    this.currentStepAV = new Animated.Value(0);
-    this.currentStepAV.addListener(progress => {
+    this.state.currentStepAV.addListener(progress => {
       this.currentStep = progress.value;
     });
 
@@ -229,7 +227,6 @@ class AnimationEditor extends React.Component {
       /* If the element is not moved outside of the animation area, updated its coordinates */
       newAnimation.positions[Math.ceil(this.currentStep)][elementIndex] = [newPosition];
     }
-
     this.saveAnimation(newAnimation);
     this.setState({ isElementMoving: false });
   };
@@ -252,7 +249,7 @@ class AnimationEditor extends React.Component {
 
     /* If the last step is currently displayed */
     if (this.currentStep === this.state.animation.stepCount() - 1)
-      Animated.timing(this.currentStepAV, {
+      Animated.timing(this.state.currentStepAV, {
         toValue: this.state.animation.stepCount() - 2,
         duration: 0,
         easing: Easing.linear,
@@ -271,6 +268,7 @@ class AnimationEditor extends React.Component {
           onLayout={this.onLayout}
           editable
           animation={this.state.animation}
+          currentStep={this.currentStep}
           onMoveStart={this.onMoveStart}
           onElementMoveEnd={this.onElementMoveEnd}
           onCutMove={this.cutMove}
@@ -281,7 +279,7 @@ class AnimationEditor extends React.Component {
           onStepChange={this.displayStepDescription}
           onStepAdded={this.addStep}
           onStepRemoved={this.removeStep}
-          currentStepAV={this.currentStepAV}
+          currentStepAV={this.state.currentStepAV}
         />
 
         <View style={styles.actionsArea}>
@@ -311,25 +309,35 @@ class AnimationEditor extends React.Component {
     );
   }
 
-  // /** Used to update the cuts when a modification is made in the animation */
-  // static getDerivedStateFromProps(props, state) {
-  //   console.log('getDerivedState: props: ', props);
-  //   console.log('getDerivedState: state: ', state);
-  //   if (props.animation === undefined || props.animation === null) {
-  //     console.log('1 : props undef');
-  //     return false;
-  //   } else {
-  //     let animation = new Drill(props.animation);
+  /** Used to update the cuts when a modification is made in the animation */
+  static getDerivedStateFromProps(props, state) {
+    if (props.animation === undefined || props.animation === null) return false;
+    else {
+      const animation = new Drill(props.animation);
 
-  //     if (state.animation === undefined || state.animation === null || !state.animation.isEqualTo(animation)) {
-  //       console.log('2 : state undef or state and props not equal');
-  //       return { animation };
-  //     } else {
-  //       console.log('3 : state and props are equal');
-  //       return null;
-  //     }
-  //   }
-  // }
+      if (state.animation === undefined || state.animation === null || !state.animation.isEqualTo(animation)) {
+        Animated.timing(state.currentStepAV, {
+          toValue: 0,
+          duration: 0,
+          easing: Easing.linear,
+          key: 0,
+        }).start();
+
+        const labels = {
+          offense: 1,
+          defense: 1,
+          disc: 1,
+          triangle: 1,
+        };
+
+        for (let type of animation.ids) labels[type] += 1;
+        return {
+          animation,
+          labels,
+        };
+      } else return null;
+    }
+  }
 }
 
 const styles = StyleSheet.create({

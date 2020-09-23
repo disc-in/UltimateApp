@@ -99,9 +99,10 @@ class Drill {
   isEqualTo(otherDrill) {
     var isEqual = otherDrill !== undefined && otherDrill !== null;
 
-    if (isEqual && this.elemCount() !== otherDrill.elemCount) isEqual = false;
+    if (isEqual && this.elemCount() !== otherDrill.elemCount()) isEqual = false;
 
     if (isEqual && this.background !== otherDrill.background) isEqual = false;
+
     var elemId = 0;
 
     while (isEqual && elemId < this.elemCount()) {

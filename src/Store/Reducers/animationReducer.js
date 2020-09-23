@@ -15,6 +15,13 @@ function animationReducer(state = initialState, action) {
         nextState[animationIndex] = action.value;
       } else nextState = [...nextState, action.value];
       return nextState || state;
+
+    case 'DELETE_ANIMATION':
+      animationIndex = state.findIndex(item => item.title === action.value);
+      nextState = state.filter((item, index) => index !== animationIndex);
+
+      return nextState || state;
+
     default:
       return state;
   }

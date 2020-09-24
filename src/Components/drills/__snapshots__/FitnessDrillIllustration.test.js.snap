@@ -117,7 +117,6 @@ exports[`<FitnessDrillIllustration /> links to any step and finishes at the end 
     keyExtractor={[Function]}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
-    numColumns={1}
     onContentSizeChange={[Function]}
     onEndReachedThreshold={2}
     onLayout={[Function]}
@@ -141,7 +140,6 @@ exports[`<FitnessDrillIllustration /> links to any step and finishes at the end 
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -194,7 +192,6 @@ exports[`<FitnessDrillIllustration /> links to any step and finishes at the end 
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -247,7 +244,6 @@ exports[`<FitnessDrillIllustration /> links to any step and finishes at the end 
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -294,7 +290,6 @@ exports[`<FitnessDrillIllustration /> links to any step and finishes at the end 
           <View
             accessible={true}
             focusable={true}
-            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -317,7 +312,30 @@ exports[`<FitnessDrillIllustration /> links to any step and finishes at the end 
                 }
               }
             >
-              <Text />
+              <Text
+                allowFontScaling={false}
+                style={
+                  Array [
+                    Object {
+                      "color": "#A6A6A6",
+                      "fontSize": 26,
+                    },
+                    Object {
+                      "marginLeft": 20,
+                      "position": "absolute",
+                      "right": 0,
+                    },
+                    Object {
+                      "fontFamily": "material-community",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    Object {},
+                  ]
+                }
+              >
+                
+              </Text>
             </View>
             <View
               style={
@@ -326,7 +344,30 @@ exports[`<FitnessDrillIllustration /> links to any step and finishes at the end 
                 }
               }
             >
-              <Text />
+              <Text
+                allowFontScaling={false}
+                style={
+                  Array [
+                    Object {
+                      "color": "#2a9e91",
+                      "fontSize": 26,
+                    },
+                    Object {
+                      "marginLeft": 20,
+                      "position": "absolute",
+                      "right": 0,
+                    },
+                    Object {
+                      "fontFamily": "material-community",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    Object {},
+                  ]
+                }
+              >
+                
+              </Text>
             </View>
           </View>
         </View>
@@ -369,7 +410,6 @@ exports[`<FitnessDrillIllustration /> links to any step and finishes at the end 
     <View
       accessible={true}
       focusable={true}
-      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -527,7 +567,6 @@ exports[`<FitnessDrillIllustration /> renders correctly 1`] = `
     keyExtractor={[Function]}
     maxToRenderPerBatch={10}
     nestedScrollEnabled={true}
-    numColumns={1}
     onContentSizeChange={[Function]}
     onEndReachedThreshold={2}
     onLayout={[Function]}
@@ -551,7 +590,6 @@ exports[`<FitnessDrillIllustration /> renders correctly 1`] = `
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -598,7 +636,6 @@ exports[`<FitnessDrillIllustration /> renders correctly 1`] = `
           <View
             accessible={true}
             focusable={true}
-            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -642,7 +679,6 @@ exports[`<FitnessDrillIllustration /> renders correctly 1`] = `
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -693,7 +729,6 @@ exports[`<FitnessDrillIllustration /> renders correctly 1`] = `
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}

@@ -61,7 +61,6 @@ exports[`<HomePage /> renders correctly 1`] = `
           <View
             accessible={true}
             focusable={true}
-            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -135,7 +134,6 @@ exports[`<HomePage /> renders correctly 1`] = `
           <View
             accessible={true}
             focusable={true}
-            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -209,7 +207,6 @@ exports[`<HomePage /> renders correctly 1`] = `
           <View
             accessible={true}
             focusable={true}
-            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -320,6 +317,7 @@ exports[`<HomePage /> renders correctly 1`] = `
       }
     >
       <View
+        forwardedRef={[Function]}
         onLayout={[Function]}
         pointerEvents="box-none"
         style={
@@ -336,11 +334,6 @@ exports[`<HomePage /> renders correctly 1`] = `
       >
         <View
           accessibilityRole="button"
-          accessibilityStates={
-            Array [
-              "selected",
-            ]
-          }
           accessible={true}
           focusable={true}
           onClick={[Function]}
@@ -389,7 +382,26 @@ exports[`<HomePage /> renders correctly 1`] = `
                   }
                 }
               >
-                <Text />
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#fff",
+                        "fontSize": 26,
+                      },
+                      undefined,
+                      Object {
+                        "fontFamily": "ionicons",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  
+                </Text>
               </View>
               <View
                 style={
@@ -404,7 +416,26 @@ exports[`<HomePage /> renders correctly 1`] = `
                   }
                 }
               >
-                <Text />
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#A6A6A6",
+                        "fontSize": 26,
+                      },
+                      undefined,
+                      Object {
+                        "fontFamily": "ionicons",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  
+                </Text>
               </View>
               <View
                 style={
@@ -536,11 +567,6 @@ exports[`<HomePage /> renders correctly 1`] = `
         </View>
         <View
           accessibilityRole="button"
-          accessibilityStates={
-            Array [
-              "selected",
-            ]
-          }
           accessible={true}
           focusable={true}
           onClick={[Function]}
@@ -589,7 +615,26 @@ exports[`<HomePage /> renders correctly 1`] = `
                   }
                 }
               >
-                <Text />
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#fff",
+                        "fontSize": 26,
+                      },
+                      undefined,
+                      Object {
+                        "fontFamily": "ionicons",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  
+                </Text>
               </View>
               <View
                 style={
@@ -604,7 +649,26 @@ exports[`<HomePage /> renders correctly 1`] = `
                   }
                 }
               >
-                <Text />
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#A6A6A6",
+                        "fontSize": 26,
+                      },
+                      undefined,
+                      Object {
+                        "fontFamily": "ionicons",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  
+                </Text>
               </View>
               <View
                 style={
@@ -736,11 +800,6 @@ exports[`<HomePage /> renders correctly 1`] = `
         </View>
         <View
           accessibilityRole="button"
-          accessibilityStates={
-            Array [
-              "selected",
-            ]
-          }
           accessible={true}
           focusable={true}
           onClick={[Function]}
@@ -789,7 +848,26 @@ exports[`<HomePage /> renders correctly 1`] = `
                   }
                 }
               >
-                <Text />
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#fff",
+                        "fontSize": 26,
+                      },
+                      undefined,
+                      Object {
+                        "fontFamily": "ionicons",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  
+                </Text>
               </View>
               <View
                 style={
@@ -804,7 +882,26 @@ exports[`<HomePage /> renders correctly 1`] = `
                   }
                 }
               >
-                <Text />
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#A6A6A6",
+                        "fontSize": 26,
+                      },
+                      undefined,
+                      Object {
+                        "fontFamily": "ionicons",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  
+                </Text>
               </View>
               <View
                 style={

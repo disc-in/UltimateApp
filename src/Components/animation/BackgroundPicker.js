@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Picker, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
+import { Picker } from '@react-native-community/picker';
 
 import theme from '../../styles/theme.style';
 import I18n from '../../utils/i18n';

@@ -13,13 +13,13 @@ const Dot = props => {
 const useAnimation = targetValue => {
   const animatedValue = useRef(new Animated.Value(targetValue)).current;
   const startAnimation = () => {
-    Animated.timing(animatedValue, { toValue: targetValue }).start();
+    Animated.timing(animatedValue, { toValue: targetValue, useNativeDriver: false }).start();
   };
   useEffect(startAnimation, [targetValue]);
   return animatedValue;
 };
 
-export const ProgressBar = props => {
+const ProgressBar = props => {
   const { total, current, onDotPress } = props;
 
   const width = useAnimation((current - 1) / (total - 1)).interpolate({

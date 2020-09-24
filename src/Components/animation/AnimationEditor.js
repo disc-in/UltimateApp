@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Animated, Dimensions, Easing, View, Picker } from 'react-native';
+import { StyleSheet, Animated, Dimensions, Easing, View } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import Animation from './Animation';
@@ -256,6 +256,7 @@ class AnimationEditor extends React.Component {
         duration: 0,
         easing: Easing.linear,
         key: 0,
+        useNativeDriver: false,
       }).start();
 
     newAnimation.removeStep();

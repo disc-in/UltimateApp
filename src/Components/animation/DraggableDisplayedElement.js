@@ -15,7 +15,9 @@ const DraggableDisplayedElement = props => {
   const panResponder = PanResponder.create({
     onStartShouldSetPanResponder: () => true,
 
-    onPanResponderMove: Animated.event([null, { dx: currentPosition.x, dy: currentPosition.y }]),
+    onPanResponderMove: Animated.event([null, { dx: currentPosition.x, dy: currentPosition.y }], {
+      useNativeDriver: false,
+    }),
 
     onPanResponderRelease: (event, gestureState) => {
       props.onMoveEnd(type, gestureState.moveX, gestureState.moveY);

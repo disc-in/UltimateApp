@@ -23,7 +23,7 @@ Found a bug? Take 5 minutes to [report it](https://github.com/UltimateApp/Ultima
 ### Tests
 
 We expect every code introduced via a pull-request to be tested.
-We use [jest](https://jestjs.io/docs/en/tutorial-react-native) and [react-native-testing-library](https://callstack.github.io/react-native-testing-library/) as testing frameworks. Please refer to the documentation, look at [existing tests](https://github.com/UltimateApp/UltimateApp/blob/master/src/Components/DrillListPage.test.js) or ask questions if needed.
+We use [jest](https://jestjs.io/docs/en/tutorial-react-native) and [React Native Testing Library](https://callstack.github.io/react-native-testing-library/) as testing frameworks. Please refer to the documentation, look at [existing tests](https://github.com/UltimateApp/UltimateApp/blob/master/src/Components/DrillListPage.test.js) or ask questions if needed.
 
 ### Mock http records
 

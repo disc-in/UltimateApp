@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, Text, Picker, TouchableHighlight, FlatList, ImageBackground } from 'react-native';
+import { View, StyleSheet, Text, TouchableHighlight, FlatList, ImageBackground } from 'react-native';
+import { Picker } from '@react-native-community/picker';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { connect } from 'react-redux';
 

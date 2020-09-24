@@ -1,14 +1,11 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { render, fireEvent, cleanup } from 'react-native-testing-library';
 import { Provider } from 'react-redux';
 
 import { createProgram, createTraining } from '../../Fixtures/TestFixtures';
 import store from '../../Store/testStore';
 
 import ConnectedProgram, { Program } from './Program';
-
-afterEach(cleanup);
 
 describe('<Program />', () => {
   let program = createProgram();

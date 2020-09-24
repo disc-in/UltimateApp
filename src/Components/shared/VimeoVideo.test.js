@@ -80,9 +80,7 @@ describe('<VimeoVideo />', () => {
   });
 
   it('displays a message on error', async () => {
-    const scope = nock('https://player.vimeo.com')
-      .get(`/video/${VIMEO_VIDEO_ID}/config`)
-      .reply(404, {});
+    const scope = nock('https://player.vimeo.com').get(`/video/${VIMEO_VIDEO_ID}/config`).reply(404, {});
 
     const { getByText, toJSON } = render(<VimeoVideo vimeoId={VIMEO_VIDEO_ID} />);
 

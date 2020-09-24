@@ -8,11 +8,11 @@ import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
 import * as list from '../styles/list.style';
 
-export const DrillListPage = props => {
+export const DrillListPage = (props) => {
   const { navigation, route, storeDrills } = props;
   const { type, currentFilters } = route.params;
 
-  const storeDrillsForType = storeDrills.filter(drill => drill.type === type);
+  const storeDrillsForType = storeDrills.filter((drill) => drill.type === type);
   const displayedDrills = currentFilters?.displayedDrills || storeDrillsForType;
 
   const sortingProperty = type === DrillTypes.FRISBEE ? 'minimalPlayersNumber' : 'durationInMinutes';
@@ -41,7 +41,7 @@ export const DrillListPage = props => {
   );
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     storeDrills: state.drills,
   };

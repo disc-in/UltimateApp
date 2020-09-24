@@ -12,7 +12,7 @@ import Drill from '../animation/Drill';
 
 const screenDimension = Dimensions.get('window');
 
-const FrisbeeDrillIllustration = props => {
+const FrisbeeDrillIllustration = (props) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const currentStep = props.drill.steps[activeIndex];
 
@@ -140,7 +140,7 @@ const FrisbeeDrillIllustration = props => {
         sliderWidth={screenDimension.width}
         itemWidth={screenDimension.width}
         renderItem={renderStep}
-        onSnapToItem={index => setActiveIndex(index)}
+        onSnapToItem={(index) => setActiveIndex(index)}
       />
     </SafeAreaView>
   );

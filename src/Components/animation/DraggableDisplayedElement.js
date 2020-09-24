@@ -7,7 +7,7 @@ import theme from '../../styles/theme.style';
     - type: which indicates how to display the element: "offense", "defense", "triangle" or "disc"
     - number: string defined if there is something written on the element
 */
-const DraggableDisplayedElement = props => {
+const DraggableDisplayedElement = (props) => {
   const { playerRadius, type, number } = props;
   /* Current position of the element in pixels */
   const currentPosition = new Animated.ValueXY({ x: 0, y: 0 });

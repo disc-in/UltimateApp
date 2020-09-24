@@ -6,7 +6,7 @@ import theme from '../../styles/theme.style';
 import I18n from '../../utils/i18n';
 import { AnimationBackgrounds } from '../../Fixtures/config';
 
-const BackgroundPicker = props => {
+const BackgroundPicker = (props) => {
   return (
     <Picker
       selectedValue={props.selectedBackground}
@@ -16,7 +16,7 @@ const BackgroundPicker = props => {
         props.onBackgroundChange(itemValue);
       }}
     >
-      {Object.values(AnimationBackgrounds).map(background => (
+      {Object.values(AnimationBackgrounds).map((background) => (
         <Picker.Item label={I18n.t(`data.animationBackgrounds.${background}`)} value={background} key={background} />
       ))}
     </Picker>

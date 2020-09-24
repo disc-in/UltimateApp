@@ -34,7 +34,7 @@ describe('<FitnessFilters />', () => {
       const drills = [beginnerDrill, intermediateDrill, advancedDrill];
       const navigate = jest.fn();
 
-      const DummyScreen = props => null;
+      const DummyScreen = (props) => null;
       const Stack = createStackNavigator();
 
       const mockstore = configureMockStore()({
@@ -54,7 +54,7 @@ describe('<FitnessFilters />', () => {
                   previousType: DrillTypes.FITNESS,
                 }}
                 listeners={({ navigation }) => ({
-                  transitionStart: e => {
+                  transitionStart: (e) => {
                     navigation.navigate = navigate;
                   },
                 })}
@@ -110,7 +110,7 @@ describe('<FitnessFilters />', () => {
       const drills = [lowDrill, moderateDrill, highDrill];
       const navigate = jest.fn();
 
-      const DummyScreen = props => null;
+      const DummyScreen = (props) => null;
       const Stack = createStackNavigator();
 
       const mockstore = configureMockStore()({
@@ -130,7 +130,7 @@ describe('<FitnessFilters />', () => {
                   previousType: DrillTypes.FITNESS,
                 }}
                 listeners={({ navigation }) => ({
-                  transitionStart: e => {
+                  transitionStart: (e) => {
                     navigation.navigate = navigate;
                   },
                 })}
@@ -186,7 +186,7 @@ describe('<FitnessFilters />', () => {
       const drills = [noEquimentDrill, basicEquimentDrill, fullEquipmentDrill];
       const navigate = jest.fn();
 
-      const DummyScreen = props => null;
+      const DummyScreen = (props) => null;
       const Stack = createStackNavigator();
 
       const mockstore = configureMockStore()({
@@ -206,7 +206,7 @@ describe('<FitnessFilters />', () => {
                   previousType: DrillTypes.FITNESS,
                 }}
                 listeners={({ navigation }) => ({
-                  transitionStart: e => {
+                  transitionStart: (e) => {
                     navigation.navigate = navigate;
                   },
                 })}
@@ -262,7 +262,7 @@ describe('<FitnessFilters />', () => {
       const drills = [offDrill, preDrill, inDrill];
       const navigate = jest.fn();
 
-      const DummyScreen = props => null;
+      const DummyScreen = (props) => null;
       const Stack = createStackNavigator();
 
       const mockstore = configureMockStore()({
@@ -282,7 +282,7 @@ describe('<FitnessFilters />', () => {
                   previousType: DrillTypes.FITNESS,
                 }}
                 listeners={({ navigation }) => ({
-                  transitionStart: e => {
+                  transitionStart: (e) => {
                     navigation.navigate = navigate;
                   },
                 })}
@@ -341,7 +341,7 @@ describe('<FitnessFilters />', () => {
       const drills = [legsDrill, upperDrill, fullDrill, legsCoreDrill];
       const navigate = jest.fn();
 
-      const DummyScreen = props => null;
+      const DummyScreen = (props) => null;
       const Stack = createStackNavigator();
 
       const mockstore = configureMockStore()({
@@ -361,7 +361,7 @@ describe('<FitnessFilters />', () => {
                   previousType: DrillTypes.FITNESS,
                 }}
                 listeners={({ navigation }) => ({
-                  transitionStart: e => {
+                  transitionStart: (e) => {
                     navigation.navigate = navigate;
                   },
                 })}
@@ -419,7 +419,7 @@ describe('<FitnessFilters />', () => {
       const drills = [oneMinuteDrill, twoMinutesDrill, tenMinutesDrill];
       const navigate = jest.fn();
 
-      const DummyScreen = props => null;
+      const DummyScreen = (props) => null;
       const Stack = createStackNavigator();
 
       const mockstore = configureMockStore()({
@@ -439,7 +439,7 @@ describe('<FitnessFilters />', () => {
                   previousType: DrillTypes.FITNESS,
                 }}
                 listeners={({ navigation }) => ({
-                  transitionStart: e => {
+                  transitionStart: (e) => {
                     navigation.navigate = navigate;
                   },
                 })}
@@ -480,7 +480,7 @@ describe('<FitnessFilters />', () => {
       const drills = [beginnerDrill, intermediateDrill, advancedDrill];
       const navigate = jest.fn();
 
-      const DummyScreen = props => null;
+      const DummyScreen = (props) => null;
       const Stack = createStackNavigator();
 
       const mockstore = configureMockStore()({
@@ -501,7 +501,7 @@ describe('<FitnessFilters />', () => {
                   previousType: DrillTypes.FITNESS,
                 }}
                 listeners={({ navigation }) => ({
-                  transitionStart: e => {
+                  transitionStart: (e) => {
                     navigation.navigate = navigate;
                   },
                 })}
@@ -545,7 +545,7 @@ describe('<FitnessFilters />', () => {
       const drills = [oneMinuteDrill, twoMinutesDrill, tenMinutesDrill];
       const navigate = jest.fn();
 
-      const DummyScreen = props => null;
+      const DummyScreen = (props) => null;
       const Stack = createStackNavigator();
 
       const mockstore = configureMockStore()({
@@ -565,7 +565,7 @@ describe('<FitnessFilters />', () => {
                   previousType: DrillTypes.FITNESS,
                 }}
                 listeners={({ navigation }) => ({
-                  transitionStart: e => {
+                  transitionStart: (e) => {
                     navigation.navigate = navigate;
                   },
                 })}

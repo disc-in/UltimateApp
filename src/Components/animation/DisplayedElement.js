@@ -160,7 +160,7 @@ class DisplayedElement extends React.Component {
   }
 }
 
-const _initializeStateFromProps = props => {
+const _initializeStateFromProps = (props) => {
   /* Positions of the element at each step of the drill */
   const xPositions = [];
   const yPositions = [];

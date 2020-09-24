@@ -97,7 +97,7 @@ export default {
     drillManager: {
       ok: 'OK',
       overwriteAnimation: 'Ecraser une animation ?',
-      askOverwrite: 'Une animation contenant ce titre existe déjà. Voulez-vous la supprimer ?',
+      askOverwrite: 'Voulez-vous la remplacer  ?',
       enterAnimationTitle: "Entrer le titre de l'animation",
       titleManager: "Gestionnaire d'animations",
       currentTitle: 'Animation courante',
@@ -111,6 +111,7 @@ export default {
       clickHereToRename: 'Appuyer ici pour renommer',
       cta: "Envoyer à l'équipe de développement",
       enterTitle: "Entrer le titre de l'animation",
+      alreadyUsedTitle: 'Ce titre est déjà utilisé par une autre application',
       openTitle: "Séléctionner l'animation que vous souhaitez ouvrir",
       deleteTitle: "Séléctionner l'animation que vous souhaitez supprimer",
       newAnimation: 'Créer une nouvelle animation',

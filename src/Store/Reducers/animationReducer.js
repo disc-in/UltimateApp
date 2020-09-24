@@ -15,6 +15,9 @@ function animationReducer(state = initialState, action) {
       if (animationIndex !== -1) {
         nextState[animationIndex] = action.value;
       } else nextState = [...nextState, action.value];
+
+      if (nextState !== undefined && nextState !== null) nextState.sort((a, b) => (a.title > b.title ? 1 : -1));
+
       return nextState || state;
 
     case 'DELETE_ANIMATION':

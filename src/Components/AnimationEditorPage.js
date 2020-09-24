@@ -46,7 +46,7 @@ export const AnimationEditorPage = props => {
 
   // Called when the user chose for the animation a title which is already used by another animation
   const askOverwriteAnimation = () => {
-    Alert.prompt(
+    Alert.alert(
       I18n.t('animationEditor.drillManager.alreadyUsedTitle'),
       I18n.t('animationEditor.drillManager.askOverwrite'),
       [
@@ -60,7 +60,7 @@ export const AnimationEditorPage = props => {
         {
           text: I18n.t('animationEditor.drillManager.validate'),
           onPress: () => {
-            props.saveAnimation({ title: animationTempTitle, value: currentAnimationState });
+            props.saveAnimation({ title: animationTempTitle, oldTitle: animationTitle, value: currentAnimationState });
             setAnimationTitle(animationTempTitle);
             navigation.setOptions({ headerTitle: animationTempTitle });
           },
@@ -324,7 +324,10 @@ export const AnimationEditorPage = props => {
           <View style={styles.modalTitleView}>
             <Text style={styles.modalTitleText}>{`${I18n.t('animationEditor.drillManager.enterTitle')}`}</Text>
 
+            <Text style={styles.modalText}>{`${'"' + animationTitle + '"'} `}</Text>
+
             <TextInput
+              style={{ margin: 5, marginBottom: 20 }}
               placeholder={I18n.t('animationEditor.drillManager.clickHereToRename')}
               onChangeText={text => setAnimationTempTitle(text)}
             />

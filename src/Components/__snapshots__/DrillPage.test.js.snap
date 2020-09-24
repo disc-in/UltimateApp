@@ -110,6 +110,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
             >
               <Text
                 accessibilityRole="header"
+                aria-level="1"
                 numberOfLines={1}
                 onLayout={[Function]}
                 style={

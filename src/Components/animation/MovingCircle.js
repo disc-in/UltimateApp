@@ -28,7 +28,9 @@ const MovingCircle = props => {
       currentPosition.setValue({ x: 0, y: 0 });
     },
 
-    onPanResponderMove: Animated.event([null, { dx: currentPosition.x, dy: currentPosition.y }]),
+    onPanResponderMove: Animated.event([null, { dx: currentPosition.x, dy: currentPosition.y }], {
+      useNativeDriver: false,
+    }),
 
     onPanResponderRelease: (evt, gesturestate) => {
       props.onMoveEnd(props.elemId, currentPosition.x._value, currentPosition.y._value, props.isCounterCut);

@@ -272,7 +272,6 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
             <View
               accessible={true}
               focusable={true}
-              isTVSelectable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -293,7 +292,6 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
             <View
               accessible={true}
               focusable={true}
-              isTVSelectable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -325,7 +323,6 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
             <View
               accessible={true}
               focusable={true}
-              isTVSelectable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -344,7 +341,6 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
             <View
               accessible={true}
               focusable={true}
-              isTVSelectable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -363,7 +359,6 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
             <View
               accessible={true}
               focusable={true}
-              isTVSelectable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -598,7 +593,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
             }
           }
         >
-          <RCTPicker
+          <RNCPicker
             items={
               Array [
                 Object {
@@ -624,8 +619,6 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
               ]
             }
             onChange={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
             selectedIndex={1}
             style={
               Array [

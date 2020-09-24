@@ -5,15 +5,13 @@ import configureMockStore from 'redux-mock-store';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrill } from '../Fixtures/TestFixtures';
-import { render, fireEvent, cleanup } from 'react-native-testing-library';
+import { render, fireEvent } from '@testing-library/react-native';
 import store from '../Store/testStore';
 import { Levels, Intensities, EquipmentLabels, SeasonTimings, FitnessGoals, DrillTypes } from '../Fixtures/config';
 
 import ConnectedFitnessFilters, { FitnessFilters } from './FitnessFilters';
 
 jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
-
-afterEach(cleanup);
 
 describe('<FitnessFilters />', () => {
   const beginnerDrill = createDrill({ id: 1, level: Levels.BEGINNER });

@@ -1,10 +1,8 @@
 import React from 'react';
-import { render, cleanup, waitForElement, act } from 'react-native-testing-library';
+import { render, waitFor } from '@testing-library/react-native';
 import nock from 'nock';
 
 import VimeoVideo from './VimeoVideo';
-
-afterEach(cleanup);
 
 describe('<VimeoVideo />', () => {
   const VIMEO_VIDEO_ID = '407999139';
@@ -76,11 +74,8 @@ describe('<VimeoVideo />', () => {
 
     expect(getByText('Loading...')).toBeDefined(); // Displayed by default
 
-    await act(async () => {
-      await waitForElement(() => scope.isDone());
-    });
+    await waitFor(() => getByText('Loading...'));
 
-    expect(getByText('Loading...')).toBeDefined(); // Displayed while buffering
     expect(toJSON()).toMatchSnapshot();
   });
 
@@ -91,13 +86,8 @@ describe('<VimeoVideo />', () => {
 
     const { getByText, toJSON } = render(<VimeoVideo vimeoId={VIMEO_VIDEO_ID} />);
 
-    await act(async () => {
-      await waitForElement(() => scope.isDone());
-    });
+    await waitFor(() => getByText('Oopsie! There was an error loading the video...'));
 
-    await act(async () => {
-      await waitForElement(() => getByText('Oopsie! There was an error loading the video...'));
-    });
     expect(toJSON()).toMatchSnapshot();
   });
 });

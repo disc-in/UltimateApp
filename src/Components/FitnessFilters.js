@@ -220,6 +220,7 @@ export class FitnessFilters extends React.Component {
     );
   }
 }
+
 const mapStateToProps = state => {
   return {
     favoriteDrills: state.favoriteDrills,

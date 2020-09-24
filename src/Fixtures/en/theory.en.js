@@ -427,7 +427,7 @@ export const tactics = [
         id: 1,
         title: 'How does horizontal stacks work?',
         text: 'That Drone Guy Ty',
-        video: '439808313',
+        video: '436151076',
         illustration: 'https://zupimages.net/up/20/30/95ye.jpg',
         time: '2:38',
         description: '',

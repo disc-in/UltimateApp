@@ -2,7 +2,7 @@
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "test": "jest --watch --coverage=false --changedSince=master",
-    "test-ci": "jest --coverage=false",
+    "test-ci": "jest --coverage=true",
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",

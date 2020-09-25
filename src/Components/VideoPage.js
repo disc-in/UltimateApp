@@ -3,7 +3,7 @@ import { StyleSheet, View, Text } from 'react-native';
 import theme from '../styles/theme.style';
 import VimeoVideo from './shared/VimeoVideo';
 
-const VideoPage = props => {
+const VideoPage = (props) => {
   const { route, navigation } = props;
   const video = route.params.video;
 

@@ -5,9 +5,9 @@ import I18n from '../../utils/i18n';
 import * as list from '../../styles/list.style';
 import { DrillTypes } from '../../Fixtures/config';
 
-const DrillList = props => {
+const DrillList = (props) => {
   const { navigation, drillsToDisplay } = props;
-  const onDrillPress = props.onDrillPress || (item => navigation.navigate('DrillPage', { drill: item }));
+  const onDrillPress = props.onDrillPress || ((item) => navigation.navigate('DrillPage', { drill: item }));
 
   const renderDrill = ({ item }) => {
     const { title, type, image, goals, author } = item;
@@ -25,7 +25,9 @@ const DrillList = props => {
           <Text style={list.title}>{title}</Text>
           <Text style={list.numberOfPlayers}>
             {goals
-              .map(goal => I18n.t(`data.fitnessGoals.${goal}`, { defaults: [{ scope: `data.frisbeeGoals.${goal}` }] }))
+              .map((goal) =>
+                I18n.t(`data.fitnessGoals.${goal}`, { defaults: [{ scope: `data.frisbeeGoals.${goal}` }] }),
+              )
               .join(', ')}
           </Text>
         </View>

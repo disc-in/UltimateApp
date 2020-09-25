@@ -3,14 +3,14 @@ import { StyleSheet, Animated, View, TouchableOpacity } from 'react-native';
 
 const range = (min, max) => new Array(max - min + 1).fill(0).map((_, i) => min + i);
 
-const Dot = props => {
+const Dot = (props) => {
   const { full, onPress } = props;
   const dotStyles = [styles.dot, full ? styles.dotActivated : styles.dotGrey];
 
   return <TouchableOpacity style={dotStyles} onPress={onPress} testID="progress-bar-dot" />;
 };
 
-const useAnimation = targetValue => {
+const useAnimation = (targetValue) => {
   const animatedValue = useRef(new Animated.Value(targetValue)).current;
   const startAnimation = () => {
     Animated.timing(animatedValue, { toValue: targetValue, useNativeDriver: false }).start();
@@ -19,7 +19,7 @@ const useAnimation = targetValue => {
   return animatedValue;
 };
 
-const ProgressBar = props => {
+const ProgressBar = (props) => {
   const { total, current, onDotPress } = props;
 
   const width = useAnimation((current - 1) / (total - 1)).interpolate({
@@ -33,7 +33,7 @@ const ProgressBar = props => {
         <Animated.View style={styles.lineBackground} />
         <Animated.View style={[styles.lineFiller, { width }]} />
 
-        {range(1, total).map(index => (
+        {range(1, total).map((index) => (
           <Dot key={index} onPress={() => onDotPress(index - 1)} full={index <= current} />
         ))}
       </View>

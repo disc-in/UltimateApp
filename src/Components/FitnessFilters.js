@@ -49,9 +49,9 @@ export class FitnessFilters extends React.Component {
   }
 
   onPressedChange(target, value) {
-    this.setState(prevState => {
+    this.setState((prevState) => {
       const newValue = prevState[target].includes(value)
-        ? prevState[target].filter(v => v !== value)
+        ? prevState[target].filter((v) => v !== value)
         : prevState[target].concat([value]);
       return {
         [target]: newValue,
@@ -61,7 +61,7 @@ export class FitnessFilters extends React.Component {
 
   onFavoritesChange() {
     this.setState(
-      prevState => ({
+      (prevState) => ({
         selectedFavorites: !prevState.selectedFavorites,
       }),
       this.applyFilters,
@@ -85,19 +85,19 @@ export class FitnessFilters extends React.Component {
     let newData = this.props.route.params.initialData;
 
     if (selectedFavorites) {
-      const favoriteIds = favoriteDrills.map(favorite => favorite.id);
-      newData = newData.filter(drill => favoriteIds.includes(drill.id));
+      const favoriteIds = favoriteDrills.map((favorite) => favorite.id);
+      newData = newData.filter((drill) => favoriteIds.includes(drill.id));
     }
-    if (selectedLevels.length > 0) newData = newData.filter(drill => selectedLevels.includes(drill.level));
+    if (selectedLevels.length > 0) newData = newData.filter((drill) => selectedLevels.includes(drill.level));
     if (selectedIntensities.length > 0)
-      newData = newData.filter(drill => selectedIntensities.includes(drill.intensity));
+      newData = newData.filter((drill) => selectedIntensities.includes(drill.intensity));
     if (selectedEquipmentLabels.length > 0)
-      newData = newData.filter(drill => selectedEquipmentLabels.includes(drill.equipmentLabel));
+      newData = newData.filter((drill) => selectedEquipmentLabels.includes(drill.equipmentLabel));
     if (selectedSeasonTimings.length > 0)
-      newData = newData.filter(drill => selectedSeasonTimings.includes(drill.seasonTiming));
+      newData = newData.filter((drill) => selectedSeasonTimings.includes(drill.seasonTiming));
     if (selectedGoals.length > 0)
-      newData = newData.filter(drill => drill.goals.filter(goal => selectedGoals.includes(goal)).length > 0);
-    if (durationInMinutes) newData = newData.filter(drill => drill.durationInMinutes <= durationInMinutes);
+      newData = newData.filter((drill) => drill.goals.filter((goal) => selectedGoals.includes(goal)).length > 0);
+    if (durationInMinutes) newData = newData.filter((drill) => drill.durationInMinutes <= durationInMinutes);
 
     this.setState({ displayedDrills: newData }, callback);
   }
@@ -146,7 +146,7 @@ export class FitnessFilters extends React.Component {
           </View>
           <Text style={filterStyle.filterTitle}>{I18n.t('fitnessFilters.level')}</Text>
           <View style={filterStyle.filter}>
-            {Object.values(Levels).map(level => (
+            {Object.values(Levels).map((level) => (
               <Button
                 title={I18n.t(`data.levels.${level}`)}
                 onPress={() => this.onPressedChange('selectedLevels', level)}
@@ -157,7 +157,7 @@ export class FitnessFilters extends React.Component {
           </View>
           <Text style={filterStyle.filterTitle}>{I18n.t('fitnessFilters.intensity')}</Text>
           <View style={filterStyle.filter}>
-            {Object.values(Intensities).map(intensity => (
+            {Object.values(Intensities).map((intensity) => (
               <Button
                 title={I18n.t(`data.intensities.${intensity}`)}
                 onPress={() => this.onPressedChange('selectedIntensities', intensity)}
@@ -168,7 +168,7 @@ export class FitnessFilters extends React.Component {
           </View>
           <Text style={filterStyle.filterTitle}>{I18n.t('fitnessFilters.equipment')}</Text>
           <View style={filterStyle.filter}>
-            {Object.values(EquipmentLabels).map(equipmentLabel => (
+            {Object.values(EquipmentLabels).map((equipmentLabel) => (
               <Button
                 title={I18n.t(`data.equipmentLabels.${equipmentLabel}`)}
                 onPress={() => this.onPressedChange('selectedEquipmentLabels', equipmentLabel)}
@@ -180,8 +180,8 @@ export class FitnessFilters extends React.Component {
           <Text style={filterStyle.filterTitle}>{I18n.t('fitnessFilters.seasonTiming')}</Text>
           <View style={filterStyle.filter}>
             {Object.values(SeasonTimings)
-              .filter(value => value !== SeasonTimings.ANYTIME)
-              .map(seasonTiming => (
+              .filter((value) => value !== SeasonTimings.ANYTIME)
+              .map((seasonTiming) => (
                 <Button
                   title={I18n.t(`data.seasonTimings.${seasonTiming}`)}
                   onPress={() => this.onPressedChange('selectedSeasonTimings', seasonTiming)}
@@ -193,10 +193,10 @@ export class FitnessFilters extends React.Component {
           <Text style={filterStyle.filterTitle}>{I18n.t('fitnessFilters.goals')}</Text>
           <View style={filterStyle.filter}>
             {this.props.route.params.initialData
-              .map(drill => drill.goals)
+              .map((drill) => drill.goals)
               .reduce((x, y) => x.concat(y), [])
               .filter((goal, index, array) => array.indexOf(goal) === index)
-              .map(goal => (
+              .map((goal) => (
                 <Checkbox
                   title={I18n.t(`data.fitnessGoals.${goal}`)}
                   onPress={() => this.onPressedChange('selectedGoals', goal)}
@@ -221,7 +221,7 @@ export class FitnessFilters extends React.Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     favoriteDrills: state.favoriteDrills,
   };

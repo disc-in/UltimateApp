@@ -19,7 +19,7 @@ class DisplayedCuts extends React.Component {
     };
   }
 
-  _displayCut = cut => {
+  _displayCut = (cut) => {
     return (
       <View key={cut.key}>
         <Animated.View
@@ -85,7 +85,7 @@ class DisplayedCuts extends React.Component {
   }
 }
 
-const _initializeStateFromProps = props => {
+const _initializeStateFromProps = (props) => {
   const animationSize = props.positionPercentToPixel(1, 1);
   const playerRadius = Math.min(animationSize[0], animationSize[1]) / 12;
   const discRadius = playerRadius / 2;

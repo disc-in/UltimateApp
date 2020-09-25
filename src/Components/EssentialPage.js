@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, Text, TouchableHighlight, FlatList, ImageBackground } from 'react-native';
+import { View, StyleSheet, Text, TouchableOpacity, FlatList, ImageBackground } from 'react-native';
 import { Picker } from '@react-native-community/picker';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { connect } from 'react-redux';
@@ -7,15 +7,15 @@ import { connect } from 'react-redux';
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
 
-const EssentialPage = props => {
+const EssentialPage = (props) => {
   // Default is second choice so that it is clear we use a picker on iOS
   const [selectedIndex, setSelectedIndex] = useState(1);
 
-  const onImagePress = item => props.navigation.navigate('VideoPage', { video: item });
+  const onImagePress = (item) => props.navigation.navigate('VideoPage', { video: item });
 
   const renderContent = ({ item }) => {
     return (
-      <TouchableHighlight onPress={() => onImagePress(item)}>
+      <TouchableOpacity onPress={() => onImagePress(item)}>
         <View style={styles.itemContainer}>
           <Text style={styles.title}>{item.title}</Text>
           <ImageBackground source={{ uri: item.illustration }} style={styles.image}>
@@ -25,7 +25,7 @@ const EssentialPage = props => {
           </ImageBackground>
           <Text style={styles.author}>{item.text}</Text>
         </View>
-      </TouchableHighlight>
+      </TouchableOpacity>
     );
   };
 
@@ -56,7 +56,7 @@ const EssentialPage = props => {
   );
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     essentials: state.theory.essentials,
   };

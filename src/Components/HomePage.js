@@ -19,7 +19,7 @@ import { DrillTypes, EquipmentLabels } from '../Fixtures/config';
 
 const Tab = createMaterialBottomTabNavigator();
 
-const HomeScreen = props => {
+const HomeScreen = (props) => {
   return (
     <View style={styles.mainContainer}>
       <TouchableHighlight
@@ -53,7 +53,7 @@ const HomeScreen = props => {
   );
 };
 
-const Fitness = props => {
+const Fitness = (props) => {
   return (
     <View style={styles.mainContainer}>
       <TouchableHighlight
@@ -103,7 +103,7 @@ const Fitness = props => {
   );
 };
 
-const Theory = props => {
+const Theory = (props) => {
   return (
     <View style={styles.mainContainer}>
       <TouchableHighlight onPress={() => props.navigation.navigate('DictionaryPage')} style={styles.menuItem}>
@@ -134,7 +134,7 @@ const Theory = props => {
   );
 };
 
-export default HomePage = props => {
+export default HomePage = (props) => {
   const { navigation } = props;
 
   useLayoutEffect(() =>

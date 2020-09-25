@@ -3,7 +3,7 @@ import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 
 import theme from '../../styles/theme.style';
 
-const Button = props => {
+const Button = (props) => {
   const buttonLight = props.buttonLight ? styles.buttonLight : styles.button;
   const textLight = props.buttonLight ? styles.textLight : styles.text;
 

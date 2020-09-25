@@ -28,7 +28,7 @@ class Animation extends React.Component {
       this.currentStepAV = this.props.currentStepAV;
     else this.currentStepAV = new Animated.Value(0);
 
-    this.currentStepAV.addListener(progress => {
+    this.currentStepAV.addListener((progress) => {
       this.setState({ currentStep: progress.value });
     });
 
@@ -99,7 +99,7 @@ class Animation extends React.Component {
     );
   };
 
-  playStep = stepId => {
+  playStep = (stepId) => {
     this.setState(
       {
         animationPlaying: true,

@@ -11,7 +11,7 @@ import { IllustrationType } from '../../Fixtures/config';
 import theme from '../../styles/theme.style';
 import Drill from '../animation/Drill';
 
-const FitnessDrillIllustration = props => {
+const FitnessDrillIllustration = (props) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const opacityUnchecked = useRef(new Animated.Value(1)).current;
   const opacityChecked = opacityUnchecked.interpolate({ inputRange: [0, 1], outputRange: [1, 0] });
@@ -149,7 +149,7 @@ const FitnessDrillIllustration = props => {
             nestedScrollEnabled
             ref={flatListRef}
             data={props.drill.steps}
-            keyExtractor={item => item.id.toString()}
+            keyExtractor={(item) => item.id.toString()}
             renderItem={renderStep}
           />
         )}

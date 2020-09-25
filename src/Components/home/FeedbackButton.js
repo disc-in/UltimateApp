@@ -6,7 +6,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import I18n from '../../utils/i18n';
 import theme from '../../styles/theme.style';
 
-export const FeedbackButton = props => {
+export const FeedbackButton = (props) => {
   const feedback = () => {
     Alert.alert(
       I18n.t('feedback.alert.title'),

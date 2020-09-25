@@ -42,7 +42,7 @@ class AnimationEditor extends React.Component {
 
     // Enables to update  the current step inside an animation
     this.currentStepAV = new Animated.Value(0);
-    this.currentStepAV.addListener(progress => {
+    this.currentStepAV.addListener((progress) => {
       this.currentStep = progress.value;
     });
 
@@ -55,7 +55,7 @@ class AnimationEditor extends React.Component {
     this.setState({ animation: newAnimation }, cb);
   };
 
-  onLayout = e => {
+  onLayout = (e) => {
     if (this.marker) {
       this.marker.measure((x, y, width, height, pageX, pageY) => {
         // On iOS, when the left margin is = 0, pageX can be equal to the whole width instead of 0
@@ -67,7 +67,7 @@ class AnimationEditor extends React.Component {
         });
       });
     }
-
+    
     this.editorHeight = e.nativeEvent.layout.height;
     this.editorWidth = e.nativeEvent.layout.width;
 
@@ -117,7 +117,7 @@ class AnimationEditor extends React.Component {
     }
   };
 
-  onBackgroundChange = value => {
+  onBackgroundChange = (value) => {
     var newAnimation = this._copyAnimation();
     newAnimation.background = value;
     this.saveAnimation(newAnimation);
@@ -328,7 +328,7 @@ class AnimationEditor extends React.Component {
             </View>
           ) : (
             <View style={styles.draggableArea}>
-              {['offense', 'defense', 'disc', 'triangle'].map(type => (
+              {['offense', 'defense', 'disc', 'triangle'].map((type) => (
                 <DraggableDisplayedElement
                   type={type}
                   playerRadius={this.state.playerRadius}

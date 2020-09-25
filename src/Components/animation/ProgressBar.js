@@ -46,12 +46,12 @@ class ProgressBar extends React.Component {
 
           {/* Gray dots */}
           {!this.props.readonly &&
-            this.state.stateFromProps.progressBarDots?.map(item => (
+            this.state.stateFromProps.progressBarDots?.map((item) => (
               <View style={[styles.dot, { left: item.left }]} key={item.key} />
             ))}
           {/* Black dots */}
           {!this.props.readonly &&
-            this.state.stateFromProps.progressBarDots?.map(item => (
+            this.state.stateFromProps.progressBarDots?.map((item) => (
               <Animated.View
                 style={[
                   styles.dot,
@@ -66,7 +66,7 @@ class ProgressBar extends React.Component {
             ))}
           {/* White squares */}
           {this.props.readonly &&
-            this.state.stateFromProps.progressBarDots?.map(item => (
+            this.state.stateFromProps.progressBarDots?.map((item) => (
               <Animated.View
                 style={styles.square}
                 key={item.key + this.state.stateFromProps.progressBarDots.length}
@@ -76,7 +76,7 @@ class ProgressBar extends React.Component {
 
           {/* Step number */}
           {!this.props.readonly &&
-            this.state.stateFromProps.progressBarDots?.map(item => (
+            this.state.stateFromProps.progressBarDots?.map((item) => (
               <Text
                 style={[styles.progressBarNumbers, { left: item.left + 4 }]}
                 key={item.key + 2 * this.state.stateFromProps.progressBarDots.length}
@@ -139,7 +139,7 @@ export default ProgressBar;
 
 const DOT_SIZE = 15;
 
-const _initializeStateFromProps = props => {
+const _initializeStateFromProps = (props) => {
   let progressBarWidth = props.animationWidth - 135;
   if (props.readonly) progressBarWidth = props.animationWidth - 35;
   const stepWidth = progressBarWidth / props.stepCount;

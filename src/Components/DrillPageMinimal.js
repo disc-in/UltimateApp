@@ -12,7 +12,7 @@ import ProgressBar from './drills/ProgressBar';
 import { completeTraining } from '../Store/Actions/programAction';
 import { DrillTypes } from '../Fixtures/config';
 
-export const DrillPageMinimal = props => {
+export const DrillPageMinimal = (props) => {
   const { route, navigation, completeTraining } = props;
   const { drill, training, program } = route.params;
 
@@ -35,7 +35,7 @@ export const DrillPageMinimal = props => {
   }, [training, navigation, program, completeTraining]);
 
   useLayoutEffect(() => {
-    const onProgressDotPress = index => {
+    const onProgressDotPress = (index) => {
       navigation.navigate('DrillPageMinimal', { training, drill: training.drills[index] });
     };
 

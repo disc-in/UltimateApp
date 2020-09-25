@@ -86,6 +86,11 @@ exports[`<DictionaryPage /> renders correctly 1`] = `
           onResponderTerminate={[Function]}
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
         >
           <Text
             style={
@@ -114,6 +119,11 @@ exports[`<DictionaryPage /> renders correctly 1`] = `
           onResponderTerminate={[Function]}
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
         >
           <Text
             style={
@@ -206,6 +216,7 @@ exports[`<DictionaryPage /> renders correctly 1`] = `
             Object {
               "backgroundColor": "#2a9e91",
               "borderRadius": 10,
+              "opacity": 1,
               "paddingHorizontal": 20,
               "paddingVertical": 10,
               "width": 120,

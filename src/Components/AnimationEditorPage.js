@@ -8,7 +8,7 @@ import buttonValidation from '../../assets/check_dark.png';
 
 import theme from '../styles/theme.style';
 
-const AnimationEditorPage = props => {
+const AnimationEditorPage = (props) => {
   const [currentAnimationState, saveAnimationState] = useState(null);
   const navigation = props.navigation;
 
@@ -35,7 +35,7 @@ const AnimationEditorPage = props => {
       title: I18n.t('animationEditor.sharePlaceholder'),
       message:
         '----- ENCODED DRILL -------\n' + JSON.stringify(currentAnimationState) + '\n---------------------------',
-    }).catch(err => console.log(err));
+    }).catch((err) => console.log(err));
   };
 
   return (

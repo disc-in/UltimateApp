@@ -160,7 +160,7 @@ class DisplayedElement extends React.Component {
   }
 }
 
-const _initializeStateFromProps = props => {
+const _initializeStateFromProps = (props) => {
   /* Get the element width */
   var width = 0;
 

@@ -49,7 +49,7 @@ describe('<FrisbeeFilters />', () => {
       const drills = [beginnerDrill, intermediateDrill, advancedDrill];
       const navigate = jest.fn();
 
-      const DummyScreen = props => null;
+      const DummyScreen = (props) => null;
       const Stack = createStackNavigator();
 
       const mockStore = configureMockStore()({
@@ -69,7 +69,7 @@ describe('<FrisbeeFilters />', () => {
                   previousType: DrillTypes.FRISBEE,
                 }}
                 listeners={({ navigation }) => ({
-                  transitionStart: e => {
+                  transitionStart: (e) => {
                     navigation.navigate = navigate;
                   },
                 })}
@@ -123,7 +123,7 @@ describe('<FrisbeeFilters />', () => {
       const drills = [defenseDrill, handlingDrill, throwingDrill, handlingDefenseDrill];
       const navigate = jest.fn();
 
-      const DummyScreen = props => null;
+      const DummyScreen = (props) => null;
       const Stack = createStackNavigator();
 
       const mockStore = configureMockStore()({
@@ -143,7 +143,7 @@ describe('<FrisbeeFilters />', () => {
                   previousType: DrillTypes.FRISBEE,
                 }}
                 listeners={({ navigation }) => ({
-                  transitionStart: e => {
+                  transitionStart: (e) => {
                     navigation.navigate = navigate;
                   },
                 })}
@@ -198,7 +198,7 @@ describe('<FrisbeeFilters />', () => {
       const drills = [onePersonDrill, twoPeopleDrill, tenPeopleDrill];
       const navigate = jest.fn();
 
-      const DummyScreen = props => null;
+      const DummyScreen = (props) => null;
       const Stack = createStackNavigator();
 
       const mockStore = configureMockStore()({
@@ -218,7 +218,7 @@ describe('<FrisbeeFilters />', () => {
                   previousType: DrillTypes.FRISBEE,
                 }}
                 listeners={({ navigation }) => ({
-                  transitionStart: e => {
+                  transitionStart: (e) => {
                     navigation.navigate = navigate;
                   },
                 })}
@@ -256,7 +256,7 @@ describe('<FrisbeeFilters />', () => {
       const drills = [beginnerDrill, intermediateDrill, advancedDrill];
       const navigate = jest.fn();
 
-      const DummyScreen = props => null;
+      const DummyScreen = (props) => null;
       const Stack = createStackNavigator();
 
       const mockstore = configureMockStore()({
@@ -276,7 +276,7 @@ describe('<FrisbeeFilters />', () => {
                   previousType: DrillTypes.FRISBEE,
                 }}
                 listeners={({ navigation }) => ({
-                  transitionStart: e => {
+                  transitionStart: (e) => {
                     navigation.navigate = navigate;
                   },
                 })}
@@ -317,7 +317,7 @@ describe('<FrisbeeFilters />', () => {
       const drills = [onePersonDrill, twoPeopleDrill, tenPeopleDrill];
       const navigate = jest.fn();
 
-      const DummyScreen = props => null;
+      const DummyScreen = (props) => null;
       const Stack = createStackNavigator();
 
       const mockStore = configureMockStore()({
@@ -337,7 +337,7 @@ describe('<FrisbeeFilters />', () => {
                   previousType: DrillTypes.FRISBEE,
                 }}
                 listeners={({ navigation }) => ({
-                  transitionStart: e => {
+                  transitionStart: (e) => {
                     navigation.navigate = navigate;
                   },
                 })}

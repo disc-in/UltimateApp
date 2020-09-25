@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, Text, SectionList, Modal, TouchableHighlight } from 'react-native';
+import { View, StyleSheet, Text, SectionList, Modal, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 
 import I18n from '../utils/i18n';
@@ -13,20 +13,20 @@ const DictionaryPage = ({ dictionary }) => {
     definition: '',
   });
 
-  const _onPressItem = item => {
+  const _onPressItem = (item) => {
     setSelectedItem(item);
     setModalVisible(true);
   };
 
   const renderItem = ({ item }) => {
     return (
-      <TouchableHighlight
+      <TouchableOpacity
         onPress={() => {
           _onPressItem(item);
         }}
       >
         <Text style={styles.row}>{item.text}</Text>
-      </TouchableHighlight>
+      </TouchableOpacity>
     );
   };
 
@@ -60,14 +60,14 @@ const DictionaryPage = ({ dictionary }) => {
               </Text>
             )}
             <Text style={styles.modalText}>{selectedItem.definition}</Text>
-            <TouchableHighlight
+            <TouchableOpacity
               style={styles.returnButton}
               onPress={() => {
                 setModalVisible(!modalVisible);
               }}
             >
               <Text style={styles.returnButtonText}>{I18n.t('shared.back')}</Text>
-            </TouchableHighlight>
+            </TouchableOpacity>
           </View>
         </View>
       </Modal>
@@ -75,7 +75,7 @@ const DictionaryPage = ({ dictionary }) => {
   );
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     dictionary: state.theory.dictionary,
   };

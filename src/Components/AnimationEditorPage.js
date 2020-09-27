@@ -16,11 +16,8 @@ import { connect } from 'react-redux';
 import { saveDrill, deleteDrill } from '../Store/Actions/drillAction';
 
 export const AnimationEditorPage = props => {
-  // CurrentDrillState is an object which contains:
-  // - String title: the current title of the drill
-  // - Drill drill: an object which represents the drill (positions of the elements, their number, ...)
-  // - String oldTitle: (optional) previous name of the drill (in case it must be renamed)
-  const [currentDrillState, saveDrillState] = useState(null);
+  // Current drill opened in the editor
+  const [currentDrillState, setDrillState] = useState(null);
 
   // modalRenameVisible is true if the modal which enables to rename the current drill is displayed
   const [modalRenameVisible, setModalRenameVisible] = useState(false);
@@ -35,6 +32,11 @@ export const AnimationEditorPage = props => {
   const [drillTempTitle, setDrillTempTitle] = useState('');
   const navigation = props.navigation;
 
+  // isDrillSaved is true if the current drill opened in the editor is:
+  // - a new one which has not yet been edited;
+  // - saved as is in redux (i.e., the latest modifications have been saved)
+  const [isDrillSaved, setIsDrillSaved] = useState(true);
+
   useLayoutEffect(() => {
     navigation.setOptions({
       headerRight: () => (
@@ -48,12 +50,24 @@ export const AnimationEditorPage = props => {
               onPress={() => setModalOpenVisible(true)}
             />
           ) : null}
-          <MaterialCommunityIcons name="plus" color={theme.COLOR_PRIMARY} size={26} onPress={() => createNewDrill()} />
+          <MaterialCommunityIcons
+            name="plus"
+            color={theme.COLOR_PRIMARY}
+            size={26}
+            onPress={() => checkModificationsBeforeCreatingNewDrill()}
+          />
           <CurrentDrillManager save={saveLocally} rename={() => setModalRenameVisible(true)} contribute={doShare} />
         </View>
       ),
     });
   });
+
+  const drillChangedInEditor = drill => {
+    setDrillState(drill);
+    setIsDrillSaved(false);
+
+    navigation.setOptions({ headerTitle: drillTitle + ' *' });
+  };
 
   // Called when the user choose for the drill a title which is already used by another drill
   const askOverwriteDrill = () => {
@@ -73,6 +87,7 @@ export const AnimationEditorPage = props => {
           onPress: () => {
             props.saveDrill({ title: drillTempTitle, oldTitle: drillTitle, value: currentDrillState });
             setDrillTitle(drillTempTitle);
+            setIsDrillSaved(true);
             navigation.setOptions({ headerTitle: drillTempTitle });
           },
         },
@@ -92,13 +107,40 @@ export const AnimationEditorPage = props => {
       else {
         props.saveDrill({ title: drillTempTitle, oldTitle: drillTitle, drill: currentDrillState });
         setDrillTitle(drillTempTitle);
+        setIsDrillSaved(true);
         navigation.setOptions({ headerTitle: drillTempTitle });
       }
     }
   };
 
+  // Called when the user choose for the drill a title which is already used by another drill
+  const askConfirmationToDelete = drill => {
+    Alert.alert(
+      drill.title,
+      I18n.t('drillEditor.drillManager.deleteConfirmation'),
+      [
+        {
+          text: I18n.t('drillEditor.drillManager.cancel'),
+          style: 'cancel',
+          onPress: () => {
+            setModalOpenVisible(true);
+          },
+        },
+        {
+          text: I18n.t('drillEditor.drillManager.validate'),
+          onPress: () => {
+            deleteDrill(drill);
+          },
+        },
+      ],
+      'secure-text',
+    );
+  };
+
   const saveLocally = title => {
     props.saveDrill({ title: drillTitle, drill: currentDrillState });
+    setIsDrillSaved(true);
+    navigation.setOptions({ headerTitle: drillTitle });
   };
 
   const doShare = () => {
@@ -108,11 +150,80 @@ export const AnimationEditorPage = props => {
     }).catch(err => console.log(err));
   };
 
-  const openDrill = item => {
-    setDrillTitle(item.title);
-    navigation.setOptions({ headerTitle: item.title });
-    setDrillTempTitle(item.title);
-    saveDrillState(item.drill);
+  // Called when the user wants to open a drill
+  const checkModificationsBeforeOpening = drill => {
+    if (isDrillSaved) openDrill(drill);
+    else {
+      Alert.alert(
+        I18n.t('drillEditor.drillManager.saveModifications'),
+        I18n.t('drillEditor.drillManager.saveModifications2') +
+          drillTitle +
+          I18n.t('drillEditor.drillManager.saveModifications3'),
+        [
+          {
+            text: I18n.t('drillEditor.drillManager.cancel'),
+            style: 'cancel',
+            onPress: () => {},
+          },
+          {
+            text: I18n.t('drillEditor.drillManager.saveAndOpen'),
+            onPress: () => {
+              props.saveDrill({ title: drillTitle, drill: currentDrillState });
+              openDrill(drill);
+            },
+          },
+          {
+            text: I18n.t('drillEditor.drillManager.openWithoutSaving'),
+            onPress: () => {
+              openDrill(drill);
+            },
+          },
+        ],
+        'secure-text',
+      );
+    }
+  };
+
+  const openDrill = drill => {
+    setDrillTitle(drill.title);
+    navigation.setOptions({ headerTitle: drill.title });
+    setDrillTempTitle(drill.title);
+    setDrillState(drill.drill);
+    setIsDrillSaved(true);
+  };
+
+  // Called when the user wants to create a new drill
+  const checkModificationsBeforeCreatingNewDrill = () => {
+    if (isDrillSaved) createNewDrill();
+    else {
+      Alert.alert(
+        I18n.t('drillEditor.drillManager.saveModifications'),
+        I18n.t('drillEditor.drillManager.saveModifications2') +
+          drillTitle +
+          I18n.t('drillEditor.drillManager.saveModifications3'),
+        [
+          {
+            text: I18n.t('drillEditor.drillManager.cancel'),
+            style: 'cancel',
+            onPress: () => {},
+          },
+          {
+            text: I18n.t('drillEditor.drillManager.saveAndCreate'),
+            onPress: () => {
+              props.saveDrill({ title: drillTitle, drill: currentDrillState });
+              createNewDrill();
+            },
+          },
+          {
+            text: I18n.t('drillEditor.drillManager.createWithoutSaving'),
+            onPress: () => {
+              createNewDrill();
+            },
+          },
+        ],
+        'secure-text',
+      );
+    }
   };
 
   const createNewDrill = () => {
@@ -139,7 +250,8 @@ export const AnimationEditorPage = props => {
       } while (props.customeDrills.findIndex(item => item.title === newTitle) !== -1);
     }
 
-    saveDrillState(emptyDrill);
+    setDrillState(emptyDrill);
+    setIsDrillSaved(true);
     setDrillTitle(newTitle);
     setDrillTempTitle(newTitle);
     navigation.setOptions({ headerTitle: newTitle });
@@ -158,8 +270,8 @@ export const AnimationEditorPage = props => {
         {modalOpenVisible ? (
           <SavedDrillModal
             savedDrills={props.customeDrills}
-            openDrill={item => openDrill(item)}
-            deleteDrill={item => deleteDrill(item)}
+            openDrill={drill => checkModificationsBeforeOpening(drill)}
+            deleteDrill={item => askConfirmationToDelete(item)}
             close={() => setModalOpenVisible(false)}
           />
         ) : null}
@@ -172,7 +284,7 @@ export const AnimationEditorPage = props => {
           />
         ) : null}
 
-        <AnimationEditor onAnimationChange={saveDrillState} animation={currentDrillState} />
+        <AnimationEditor onAnimationChange={drillChangedInEditor} animation={currentDrillState} />
       </View>
     </Provider>
   );

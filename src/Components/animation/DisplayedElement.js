@@ -46,7 +46,7 @@ class DisplayedElement extends React.Component {
       },
 
       onPanResponderMove: this.props.movable
-        ? Animated.event([null, { dx: this.offset.x, dy: this.offset.y }])
+        ? Animated.event([null, { dx: this.offset.x, dy: this.offset.y }], { useNativeDriver: false })
         : undefined,
 
       onPanResponderRelease: (event, gestureState) => {
@@ -160,7 +160,7 @@ class DisplayedElement extends React.Component {
   }
 }
 
-const _initializeStateFromProps = props => {
+const _initializeStateFromProps = (props) => {
   /* Positions of the element at each step of the drill */
   const xPositions = [];
   const yPositions = [];

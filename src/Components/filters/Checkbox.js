@@ -3,7 +3,7 @@ import { StyleSheet, View } from 'react-native';
 import { CheckBox as NativeCheckbox } from 'react-native-elements';
 import theme from '../../styles/theme.style';
 
-const Checkbox = props => {
+const Checkbox = (props) => {
   return (
     <View style={styles.container}>
       <NativeCheckbox

@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 
 import store from '../Store/testStore';
 
-import ConectedEssentialPage, { EssentialPage } from './EssentialPage';
+import ConectedEssentialPage from './EssentialPage';
 
 describe('<EssentialPage />', () => {
   it('renders correctly', () => {

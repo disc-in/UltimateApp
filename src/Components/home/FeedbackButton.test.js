@@ -1,11 +1,11 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { create, act } from 'react-test-renderer';
 
 import FeedbackButton from './FeedbackButton';
 
 describe('<FeedbackButton />', () => {
-  it('renders correctly', () => {
-    const tree = renderer.create(<FeedbackButton />).toJSON();
-    expect(tree).toMatchSnapshot();
+  it('renders correctly', async () => {
+    const tree = create(<FeedbackButton />).toJSON();
+    await act(async () => expect(tree).toMatchSnapshot());
   });
 });

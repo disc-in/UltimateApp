@@ -44,34 +44,12 @@ exports[`<DictionaryPage /> renders correctly 1`] = `
     onScrollBeginDrag={[Function]}
     onScrollEndDrag={[Function]}
     renderItem={[Function]}
-    renderSectionHeader={[Function]}
     scrollEventThrottle={50}
-    sections={
-      Array [
-        Object {
-          "data": Array [
-            Object {
-              "definition": "When Forcing you are making the player holding the disc throw a certain direction. A break is when your attempt fails and they throw the direction you are guarding against. A teammate may yell “no break!” if there is an opposing player wide open on the guarded side, this means try extra hard to guard that side.",
-              "id": 0,
-              "text": "Break",
-            },
-            Object {
-              "definition": "Happens when a freshly pulled disc goes out-of-bounds. The receiving team take the disc to the brick-mark which is centrally located and 20 yards in-field from the first end zone line. A brick is signified by clapping hands once over head or by calling “Brick.”",
-              "id": 1,
-              "text": "Brick",
-            },
-          ],
-          "id": 1,
-          "title": "B",
-        },
-      ]
-    }
     stickyHeaderIndices={
       Array [
         0,
       ]
     }
-    stickySectionHeadersEnabled={true}
     updateCellsBatchingPeriod={50}
     windowSize={21}
   >
@@ -101,7 +79,6 @@ exports[`<DictionaryPage /> renders correctly 1`] = `
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -109,7 +86,11 @@ exports[`<DictionaryPage /> renders correctly 1`] = `
           onResponderTerminate={[Function]}
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
-          style={null}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
         >
           <Text
             style={
@@ -131,7 +112,6 @@ exports[`<DictionaryPage /> renders correctly 1`] = `
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -139,7 +119,11 @@ exports[`<DictionaryPage /> renders correctly 1`] = `
           onResponderTerminate={[Function]}
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
-          style={null}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
         >
           <Text
             style={
@@ -221,7 +205,6 @@ exports[`<DictionaryPage /> renders correctly 1`] = `
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -233,6 +216,7 @@ exports[`<DictionaryPage /> renders correctly 1`] = `
             Object {
               "backgroundColor": "#2a9e91",
               "borderRadius": 10,
+              "opacity": 1,
               "paddingHorizontal": 20,
               "paddingVertical": 10,
               "width": 120,

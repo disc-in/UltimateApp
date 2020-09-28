@@ -723,7 +723,6 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
     initialNumToRender={10}
     keyExtractor={[Function]}
     maxToRenderPerBatch={10}
-    numColumns={1}
     onContentSizeChange={[Function]}
     onDrillPress={[Function]}
     onEndReachedThreshold={2}
@@ -840,7 +839,6 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -974,7 +972,6 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1130,7 +1127,6 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
     <View
       accessible={true}
       focusable={true}
-      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -1891,7 +1887,6 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
     initialNumToRender={10}
     keyExtractor={[Function]}
     maxToRenderPerBatch={10}
-    numColumns={1}
     onContentSizeChange={[Function]}
     onDrillPress={[Function]}
     onEndReachedThreshold={2}
@@ -1970,7 +1965,6 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
             <View
               accessible={true}
               focusable={true}
-              isTVSelectable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -2084,7 +2078,6 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -2218,7 +2211,6 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -2374,7 +2366,6 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
     <View
       accessible={true}
       focusable={true}
-      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}

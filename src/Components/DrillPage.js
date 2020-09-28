@@ -23,7 +23,7 @@ import FitnessDrillIllustration from './drills/FitnessDrillIllustration';
 import FrisbeeDrillIllustration from './drills/FrisbeeDrillIllustration';
 import { DrillTypes } from '../Fixtures/config';
 
-export const DrillPage = props => {
+export const DrillPage = (props) => {
   const { route, navigation } = props;
 
   // Create Component refs
@@ -46,7 +46,7 @@ export const DrillPage = props => {
 
   const displayFavoriteButton = () => {
     let icon = 'heart-outline';
-    if (props.favoriteDrills.findIndex(item => item.id === props.route.params.drill.id) !== -1) {
+    if (props.favoriteDrills.findIndex((item) => item.id === props.route.params.drill.id) !== -1) {
       icon = 'heart';
     }
 
@@ -98,7 +98,9 @@ export const DrillPage = props => {
           <Text style={styles.descriptionTitle}>{I18n.t('drillPage.goal')}</Text>
           <Text style={styles.descriptionText}>
             {drill.goals
-              .map(goal => I18n.t(`data.fitnessGoals.${goal}`, { defaults: [{ scope: `data.frisbeeGoals.${goal}` }] }))
+              .map((goal) =>
+                I18n.t(`data.fitnessGoals.${goal}`, { defaults: [{ scope: `data.frisbeeGoals.${goal}` }] }),
+              )
               .join(', ')}
           </Text>
         </View>
@@ -228,7 +230,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     favoriteDrills: state.favoriteDrills,
   };

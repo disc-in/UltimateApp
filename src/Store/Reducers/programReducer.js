@@ -5,7 +5,7 @@ function programReducer(state = initialState, action) {
   switch (action.type) {
     case 'COMPLETE_TRAINING':
       const existingCompletionIndex = state.findIndex(
-        item => item.training.id === action.value.training.id && item.program.id === action.value.program.id,
+        (item) => item.training.id === action.value.training.id && item.program.id === action.value.program.id,
       );
       if (existingCompletionIndex === -1) {
         nextState = [...state, action.value];

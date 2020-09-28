@@ -3,7 +3,7 @@ import { StyleSheet, View } from 'react-native';
 
 import theme from '../../styles/theme.style';
 
-const ListItem = props => {
+const ListItem = (props) => {
   return <View style={styles.listItem}>{props.children}</View>;
 };
 

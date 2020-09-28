@@ -5440,7 +5440,7 @@ const trainDrill = {
   steps: [
     {
       id: 1,
-      title: 'Le train classique',
+      title: 'Le Train Classique',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: train,
       repetition: '',
@@ -5450,7 +5450,16 @@ const trainDrill = {
     },
     {
       id: 2,
-      title: 'Les aventuriers du rail',
+      title: 'Le Train Classique',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462695757',
+      repetition: '',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 2,
+      title: 'Les aventuriers du Rail',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: trainRace,
       repetition: '',
@@ -5672,16 +5681,25 @@ const menageATroisDrill = {
   steps: [
     {
       id: 1,
-      title: 'Marque à plat',
+      title: 'Marque Straight',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: threePerson,
       repetition: '',
       rest: '',
       instruction:
-        "Le défenseur place une marque à plat (marque straight). Il fait 3 passages en défense avant d'être remplacé.",
+        "Le défenseur place une marque à plat (marque straight). Lorsque le lanceur lance le disque, il devient alors le défenseur. L/'objectif de l'attaquant et de battre le défenseur avec des feintes réalistes",
     },
     {
       id: 2,
+      title: 'Marque straight',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462695161',
+      repetition: '',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 3,
       title: 'Rédemption',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: redemption,
@@ -5719,6 +5737,15 @@ const dwarfDuelDrill = {
       instruction:
         "Le coach ou un joueur expérimenté lance des longues.\nQuand l'attaquant commence à courir, le défenseur peur se déplacer. Aucun des deux joueurs n'a le droit de sauter pour attraper le frisbee.",
     },
+    {
+      id: 2,
+      title: 'Dwarf Duel',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462695083',
+      repetition: '',
+      rest: '',
+      instruction: '',
+    },
   ],
 };
 
@@ -5751,6 +5778,15 @@ const dishieChainDrill = {
     },
     {
       id: 2,
+      title: 'Focus on Offense',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462694949',
+      repetition: '',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 3,
       title: 'Eclater un poach',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: dishiesPoach,
@@ -5758,6 +5794,15 @@ const dishieChainDrill = {
       rest: '',
       instruction:
         "Ajouter un défenseur à l'exercice précédent pour similer un poach sur un side stack.\nLe possesseur du disque doit chercher à faire une passe au joueur libre",
+    },
+    {
+      id: 4,
+      title: 'Adding a Poach',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462697155',
+      repetition: '',
+      rest: '',
+      instruction: '',
     },
   ],
 };
@@ -5848,7 +5893,7 @@ const trainOfFakeDrill = {
   steps: [
     {
       id: 1,
-      title: 'Le train classique',
+      title: 'Le Train Classique',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: train,
       repetition: '',
@@ -5858,7 +5903,16 @@ const trainOfFakeDrill = {
     },
     {
       id: 2,
-      title: 'Avec 1 feinte',
+      title: 'Le Train Classique',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462695757',
+      repetition: '',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 3,
+      title: 'Avec 1 Feinte',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: oneFakeTrain,
       repetition: '',
@@ -5867,14 +5921,32 @@ const trainOfFakeDrill = {
         "Mettre en place un train classique. Cette fois, le lanceur peut décider de faire une deuxième feinte quand le cutter fait son deuxième appel. Si c'est le cas, le cutter libère l'espace et retourne dans le stack en 2e position. Le lanceur regarde alors le handler de soutien qui fait un appel vers l'avant et reçoit la passe. L'exercice continue.",
     },
     {
-      id: 3,
-      title: 'Avec 2 feintes',
+      id: 4,
+      title: 'Avec 1 Feinte',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462695420',
+      repetition: '',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 5,
+      title: 'Avec 2 Feintes',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: twoFakeTrain,
       repetition: '',
       rest: '',
       instruction:
         "Mettre en place un train classique. Cette fois, quand le soutien fait son cut vers l'avant, le lanceur peut faire une deuxième feinte. Si c'est le cas, le premier joueur du stack fait un cut pour recevoir un dump. L'exercice continue.",
+    },
+    {
+      id: 6,
+      title: 'With Two Fakes',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462696097',
+      repetition: '',
+      rest: '',
+      instruction: '',
     },
   ],
 };
@@ -5907,6 +5979,15 @@ const resetOpenDrill = {
     },
     {
       id: 2,
+      title: 'Par derrière',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462694656',
+      repetition: '',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 3,
       title: 'Power position',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: powerReset,
@@ -5916,14 +5997,32 @@ const resetOpenDrill = {
         "Le placement est le même que pour la première version. Cette fois, quand le contact visuel est établi, le soutien fait un cut vers l'avant et reçoit une passe devant lui.",
     },
     {
-      id: 3,
-      title: 'Situation de match',
+      id: 4,
+      title: 'Power Reset',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462695562',
+      repetition: '',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 5,
+      title: 'Situation de Match',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: resetOpen,
       repetition: '',
       rest: '',
       instruction:
         "Le placement est le même. La défense sur le soutien est à 100%. L'attaquant doit choisir une des deux options de cut pour se démarquer. Il ne peut faire qu'une feinte. Chaque équipe de 2 faire le même nombre d'essais, et celle qui réussi le plus de passes gagne !",
+    },
+    {
+      id: 6,
+      title: 'Situation de Match',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462696413',
+      repetition: '',
+      rest: '',
+      instruction: '',
     },
   ],
 };
@@ -5946,7 +6045,7 @@ const resetBreakDrill = {
   steps: [
     {
       id: 1,
-      title: 'The 45° Upline',
+      title: 'Le Upline Cut à 45°',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: upline,
       repetition: '',
@@ -5956,7 +6055,16 @@ const resetBreakDrill = {
     },
     {
       id: 2,
-      title: 'The Easy Reset',
+      title: 'Le Upline Cut à 45°',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462696489',
+      repetition: '',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 3,
+      title: 'Le Reset Facile',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: around,
       repetition: '',
@@ -5965,7 +6073,16 @@ const resetBreakDrill = {
         "Le placement est le même. Quane le contact visuel est établi, le lanceur contourne sa marque par l'arrière pour faire sa passe au soutien. La passe doit arriver à peu près à hauteur du lanceur, là où le soutien se trouvait initialement. C'est la passe qui déclenche le cut du soutien.",
     },
     {
-      id: 3,
+      id: 4,
+      title: 'Le Reset Facile',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: upline,
+      repetition: '462694618',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 5,
       title: 'Situation de match',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: resetBreak,
@@ -5973,6 +6090,15 @@ const resetBreakDrill = {
       rest: '',
       instruction:
         "Le placement est le même. La défense est à 100%. Le soutien doit choisir une des deux solutions pour faire son cut et recevoir le disque. Le soutien ne peut changer de direction qu'une fois. Chaque équipe de 2 faire le même nombre d'essais, et celle qui réussi le plus de passes gagne !",
+    },
+    {
+      id: 6,
+      title: 'Situation de match',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: '462696185',
+      repetition: '',
+      rest: '',
+      instruction: '',
     },
   ],
 };
@@ -6005,6 +6131,15 @@ const youShallNotPassDrill = {
     },
     {
       id: 2,
+      title: 'Blocking the Under',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462695379',
+      repetition: '',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 3,
       title: 'Bloquez tout !',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: blockEverything,
@@ -6013,7 +6148,16 @@ const youShallNotPassDrill = {
       instruction: "Même exercice, mais le lanceur a le droit de lancer la longue si c'est pertinent",
     },
     {
-      id: 3,
+      id: 4,
+      title: 'Bloquez tout !',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462695250',
+      repetition: '',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 5,
       title: 'Comptez les points',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: blockEverything,
@@ -6251,7 +6395,7 @@ const cardinal = {
   id: 1028,
   type: DrillTypes.FRISBEE,
   author: 'PUC',
-  title: 'Les points Cardinaux',
+  title: 'Les Points Cardinaux',
   image: 'https://zupimages.net/up/20/25/xtik.png',
   description: 'Apprenez à lancer dans toutes les positions',
   minimalPlayersNumber: 2,
@@ -6265,13 +6409,22 @@ const cardinal = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: 'Les Points Cardinaux',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: cardinalAnimation,
       repetition: '',
       rest: '',
       instruction:
         'imaginez un compas avec votre pied pivot au centre. Pivot N et lancer. Pivot NE et lancer. Pivot E et lancer et ainsi de suite autour du compas. Faire quatre fois le tour, en lançant deux fois les coups droits et deux fois les revers.',
+    },
+    {
+      id: 2,
+      title: 'Les Points Cardinaux',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462694734',
+      repetition: '',
+      rest: '',
+      instruction: '',
     },
   ],
 };
@@ -6519,13 +6672,22 @@ const throwCatchThrow = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: 'Double Disque',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: throwCatch,
       repetition: '',
       rest: '',
       instruction:
         "Le receveur a déjà un disque dans les mains. L'objectif est de ne jamais avoir les deux disques simultanément dans les mains. Quand le receveur est sur le point de recevoir le disque il lance son disque dans les airs, il attrape l'autre disque, il le lance, et rattrape son disque.",
+    },
+    {
+      id: 2,
+      title: 'Double Disque',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462695929',
+      repetition: '',
+      rest: '',
+      instruction: '',
     },
   ],
 };
@@ -6548,13 +6710,22 @@ const stopFlow = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: 'Arrete le Flow',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: stopFlowAnimation,
       repetition: '',
       rest: '',
       instruction:
         'Le defenseur ne regarde pas le disque et ne bloque pas le premier lancer. Quand le lancer est rattrapé, le second cutter doit faire un cut en ligne droite. Le premier defenseur doit essayer de bloquer la continuité.',
+    },
+    {
+      id: 2,
+      title: 'Arrete le Flow',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462695656',
+      repetition: '',
+      rest: '',
+      instruction: '',
     },
   ],
 };

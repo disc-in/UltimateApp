@@ -32,7 +32,8 @@
     },
     "android": {
       "package": "com.discin.discin",
-      "versionCode": 1
+      "versionCode": 1,
+      "permissions" : []
     }
   }
 }

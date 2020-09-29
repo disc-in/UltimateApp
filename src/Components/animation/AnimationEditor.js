@@ -59,7 +59,11 @@ class AnimationEditor extends React.Component {
     if (this.marker) {
       this.marker.measure((x, y, width, height, pageX, pageY) => {
         // On iOS, when the left margin is = 0, pageX can be equal to the whole width instead of 0
-        if (pageX > 0.99 * width) pageX = 0;
+
+        if (pageX === undefined) pageX = this.state.dLeft;
+        else if (pageX > 0.99 * width) pageX = 0;
+
+        if (pageY === undefined) pageY = this.state.dTop;
 
         this.setState({
           dLeft: pageX,
@@ -67,7 +71,7 @@ class AnimationEditor extends React.Component {
         });
       });
     }
-    
+
     this.editorHeight = e.nativeEvent.layout.height;
     this.editorWidth = e.nativeEvent.layout.width;
 
@@ -90,7 +94,7 @@ class AnimationEditor extends React.Component {
     });
   };
 
-  setAnimationTopMargin = topMargin => {
+  setAnimationTopMargin = (topMargin) => {
     this.setState({
       animationTopMargin: topMargin,
     });
@@ -298,7 +302,7 @@ class AnimationEditor extends React.Component {
   render() {
     return (
       <View
-        ref={ref => {
+        ref={(ref) => {
           this.marker = ref;
         }}
         onLayout={this.onLayout}

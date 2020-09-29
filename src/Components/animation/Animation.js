@@ -142,7 +142,7 @@ class Animation extends React.Component {
     return (
       <View>
         <View
-          ref={ref => {
+          ref={(ref) => {
             this.marker = ref;
           }}
           onLayout={({ nativeEvent }) => {
@@ -151,8 +151,9 @@ class Animation extends React.Component {
                 // On iOS, when the left margin is = 0, pageX can be equal to the whole width instead of 0
                 if (pageX > 0.99 * width) pageX = 0;
 
-                this.dTop = pageY;
-                this.dLeft = pageX;
+                if (pageY !== undefined) this.dTop = pageY;
+
+                if (pageX !== undefined) this.dLeft = pageX;
 
                 if (this.props.onTopMarginSet !== undefined && this.props.onTopMarginSet !== null)
                   this.props.onTopMarginSet(this.dTop);

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Animated, PanResponder, StyleSheet } from 'react-native';
 
-const MovingCircle = props => {
+const MovingCircle = (props) => {
   const currentPosition = new Animated.ValueXY({ x: 0, y: 0 });
 
   // Add a listener on each coordinate offset to get its value at the end of each move
@@ -14,7 +14,7 @@ const MovingCircle = props => {
 
   let _val = { x: 0, y: 0 };
 
-  currentPosition.addListener(value => (_val = value)); // Initialize PanResponder with move handling
+  currentPosition.addListener((value) => (_val = value)); // Initialize PanResponder with move handling
 
   const panResponder = PanResponder.create({
     onStartShouldSetPanResponder: () => true,
@@ -28,7 +28,9 @@ const MovingCircle = props => {
       currentPosition.setValue({ x: 0, y: 0 });
     },
 
-    onPanResponderMove: Animated.event([null, { dx: currentPosition.x, dy: currentPosition.y }]),
+    onPanResponderMove: Animated.event([null, { dx: currentPosition.x, dy: currentPosition.y }], {
+      useNativeDriver: false,
+    }),
 
     onPanResponderRelease: (evt, gesturestate) => {
       props.onMoveEnd(props.elemId, currentPosition.x._value, currentPosition.y._value, props.isCounterCut);

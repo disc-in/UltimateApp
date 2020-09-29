@@ -47,6 +47,7 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
     enableMomentum={false}
     enableSnap={true}
     firstItem={0}
+    forwardedRef={[Function]}
     getItem={[Function]}
     getItemCount={[Function]}
     hasParallaxImages={false}
@@ -65,7 +66,6 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
     loop={false}
     loopClonesPerSide={3}
     maxToRenderPerBatch={13}
-    numColumns={1}
     onContentSizeChange={[Function]}
     onEndReachedThreshold={2}
     onLayout={[Function]}
@@ -192,6 +192,8 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
                   >
                     <RNCWebView
                       cacheEnabled={true}
+                      injectedJavaScriptBeforeContentLoadedForMainFrameOnly={true}
+                      injectedJavaScriptForMainFrameOnly={true}
                       javaScriptEnabled={true}
                       messagingEnabled={false}
                       onContentProcessDidTerminate={[Function]}

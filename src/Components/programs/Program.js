@@ -6,7 +6,7 @@ import I18n from '../../utils/i18n';
 import theme from '../../styles/theme.style';
 import ListItem from '../shared/ListItem';
 
-export const Program = props => {
+export const Program = (props) => {
   const { title, trainings } = props.program;
 
   const completeTrainingsCount = props.completeTrainings
@@ -30,7 +30,7 @@ export const Program = props => {
   );
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   completeTrainings: state.completeTrainings,
 });
 

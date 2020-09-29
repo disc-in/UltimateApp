@@ -34,7 +34,6 @@ Array [
       <View
         accessible={true}
         focusable={true}
-        isTVSelectable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -89,6 +88,8 @@ Array [
           >
             <RNCWebView
               cacheEnabled={true}
+              injectedJavaScriptBeforeContentLoadedForMainFrameOnly={true}
+              injectedJavaScriptForMainFrameOnly={true}
               javaScriptEnabled={true}
               messagingEnabled={false}
               onContentProcessDidTerminate={[Function]}
@@ -158,7 +159,6 @@ Array [
               <View
                 accessible={true}
                 focusable={true}
-                isTVSelectable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -235,7 +235,6 @@ Array [
     <View
       accessible={true}
       focusable={true}
-      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}

@@ -22,16 +22,16 @@ export function getTrainingMinimalPlayersNumber(training) {
   return Math.max(...minimalPlayersNumberList);
 }
 
-export const TrainingPage = props => {
+const TrainingPage = (props) => {
   const { navigation, route } = props;
   const { training, program } = route.params;
 
-  const onDrillPress = drill => navigation.navigate('DrillPageMinimal', { drill, training, program });
+  const onDrillPress = (drill) => navigation.navigate('DrillPageMinimal', { drill, training, program });
   const goToFirstDrill = () =>
     navigation.navigate('DrillPageMinimal', { drill: training.drills[0], training, program });
 
   const currentTrainingIndex = program
-    ? program.trainings.findIndex(programTraining => programTraining.id === training.id)
+    ? program.trainings.findIndex((programTraining) => programTraining.id === training.id)
     : null;
   const isFirstTraining = program ? currentTrainingIndex === 0 : true;
   const isLastTraining = program ? currentTrainingIndex === program.trainings.length - 1 : true;

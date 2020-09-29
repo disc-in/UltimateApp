@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { ScrollView, StyleSheet, Text, View, TouchableOpacity, FlatList, Image } from 'react-native';
-import * as Animatable from 'react-native-animatable';
 import Accordion from 'react-native-collapsible/Accordion';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
@@ -8,13 +7,13 @@ import I18n from '../../utils/i18n';
 import theme from '../../styles/theme.style';
 import Program from './Program';
 
-export const ProgramList = props => {
+const ProgramList = (props) => {
   const { navigation, displayedPrograms, activeProgram, completeTrainings } = props;
 
-  const activeProgramId = displayedPrograms.findIndex(program => program.id === activeProgram);
+  const activeProgramId = displayedPrograms.findIndex((program) => program.id === activeProgram);
   const [activeSections, setActiveSections] = useState([activeProgramId]);
 
-  const setSections = sections => {
+  const setSections = (sections) => {
     setActiveSections(sections);
   };
 
@@ -29,7 +28,7 @@ export const ProgramList = props => {
 
     const isDone = program
       ? completeTrainings.find(
-          complete => program.id === complete.program.id && training.id === complete.training.id,
+          (complete) => program.id === complete.program.id && training.id === complete.training.id,
         ) !== undefined
       : false;
 
@@ -63,7 +62,7 @@ export const ProgramList = props => {
       <FlatList
         contentContainerStyle={styles.trainingsList}
         data={section.trainings}
-        keyExtractor={item => item.id.toString()}
+        keyExtractor={(item) => item.id.toString()}
         renderItem={renderTraining}
       />
     );

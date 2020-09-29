@@ -10,7 +10,7 @@ import { AnimationBackgrounds } from '../../Fixtures/config';
  * - animationWidth, animationHeight: the dimension of the animation area
  * - background: the background type
  */
-const AnimationBackground = props => {
+const AnimationBackground = (props) => {
   const topMargin = props.animationHeight * 0.05;
   const bottomMargin = props.animationHeight * 0.1;
   const leftRightMargin = props.animationWidth * 0.05;

@@ -28,7 +28,7 @@ class Animation extends React.Component {
       this.currentStepAV = this.props.currentStepAV;
     else this.currentStepAV = new Animated.Value(0);
 
-    this.currentStepAV.addListener(progress => {
+    this.currentStepAV.addListener((progress) => {
       this.setState({ currentStep: progress.value });
     });
 
@@ -75,6 +75,7 @@ class Animation extends React.Component {
             duration: 0,
             easing: Easing.linear,
             key: 0,
+            useNativeDriver: false,
           }),
         );
 
@@ -84,6 +85,7 @@ class Animation extends React.Component {
             duration: this.state.stepLength * (this.props.animation.stepCount() - 1),
             easing: Easing.linear,
             key: 1,
+            useNativeDriver: false,
           }),
         );
 
@@ -94,7 +96,7 @@ class Animation extends React.Component {
     );
   };
 
-  playStep = stepId => {
+  playStep = (stepId) => {
     this.setState(
       {
         animationPlaying: true,
@@ -111,6 +113,7 @@ class Animation extends React.Component {
             duration: 0,
             easing: Easing.linear,
             key: 0,
+            useNativeDriver: false,
           }),
         );
 
@@ -122,6 +125,7 @@ class Animation extends React.Component {
               duration: this.state.stepLength,
               easing: Easing.linear,
               key: 1,
+              useNativeDriver: false,
             }),
           );
         }

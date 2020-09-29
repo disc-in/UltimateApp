@@ -7,7 +7,7 @@ import theme from '../../styles/theme.style';
     - type: which indicates how to display the element: "offense", "defense", "triangle" or "disc"
     - number: string defined if there is something written on the element
 */
-const DraggableDisplayedElement = props => {
+const DraggableDisplayedElement = (props) => {
   const { playerRadius, type, number } = props;
   /* Current position of the element in pixels */
   const currentPosition = new Animated.ValueXY({ x: 0, y: 0 });
@@ -15,7 +15,9 @@ const DraggableDisplayedElement = props => {
   const panResponder = PanResponder.create({
     onStartShouldSetPanResponder: () => true,
 
-    onPanResponderMove: Animated.event([null, { dx: currentPosition.x, dy: currentPosition.y }]),
+    onPanResponderMove: Animated.event([null, { dx: currentPosition.x, dy: currentPosition.y }], {
+      useNativeDriver: false,
+    }),
 
     onPanResponderRelease: (event, gestureState) => {
       props.onMoveEnd(type, gestureState.moveX, gestureState.moveY);

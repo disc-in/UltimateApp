@@ -3,7 +3,7 @@ import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 
 import theme from '../../styles/theme.style';
 
-const StartButton = props => {
+const StartButton = (props) => {
   return (
     <TouchableOpacity onPress={props.onPress} testID="startButton" style={styles.button}>
       <Text style={styles.text}>{props.text}</Text>

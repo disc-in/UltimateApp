@@ -1,10 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { render, fireEvent, cleanup } from 'react-native-testing-library';
+import { render, fireEvent } from '@testing-library/react-native';
 
 import FilterButton from './FilterButton';
-
-afterEach(cleanup);
 
 describe('<FilterButton />', () => {
   it('renders correctly', () => {

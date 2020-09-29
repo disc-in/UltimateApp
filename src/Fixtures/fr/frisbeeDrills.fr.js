@@ -5687,7 +5687,7 @@ const menageATroisDrill = {
       repetition: '',
       rest: '',
       instruction:
-        "Le défenseur place une marque à plat (marque straight). Lorsque le lanceur lance le disque, il devient alors le défenseur. L/'objectif de l'attaquant et de battre le défenseur avec des feintes réalistes",
+        "Le défenseur place une marque à plat (marque straight). Lorsque le lanceur lance le disque, il devient alors le défenseur. L'objectif de l'attaquant est de battre le défenseur avec des feintes réalistes",
     },
     {
       id: 2,
@@ -6075,7 +6075,7 @@ const resetBreakDrill = {
     {
       id: 4,
       title: 'Le Reset Facile',
-      illustrationType: IllustrationType.ANIMATION,
+      illustrationType: IllustrationType.VIMEO,
       illustrationSource: upline,
       repetition: '462694618',
       rest: '',
@@ -6094,7 +6094,7 @@ const resetBreakDrill = {
     {
       id: 6,
       title: 'Situation de match',
-      illustrationType: IllustrationType.ANIMATION,
+      illustrationType: IllustrationType.VIMEO,
       illustrationSource: '462696185',
       repetition: '',
       rest: '',
@@ -6710,7 +6710,7 @@ const stopFlow = {
   steps: [
     {
       id: 1,
-      title: 'Arrete le Flow',
+      title: 'Arrête le Flow',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: stopFlowAnimation,
       repetition: '',
@@ -6720,7 +6720,7 @@ const stopFlow = {
     },
     {
       id: 2,
-      title: 'Arrete le Flow',
+      title: 'Arrête le Flow',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '462695656',
       repetition: '',

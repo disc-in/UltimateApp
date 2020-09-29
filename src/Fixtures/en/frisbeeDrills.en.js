@@ -5583,7 +5583,7 @@ const menageATroisDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'The defensive player does a flat mark. The thrower becomes the next defender. The offensive player try to beat the defender with fakes',
+        'The defensive player does a flat mark. The thrower becomes the next defender. The offensive player tries to beat the defender with fakes',
     },
     {
       id: 2,
@@ -5970,7 +5970,7 @@ const resetBreakDrill = {
     {
       id: 4,
       title: 'The Easy Reset',
-      illustrationType: IllustrationType.ANIMATION,
+      illustrationType: IllustrationType.VIMEO,
       illustrationSource: upline,
       repetition: '462694618',
       rest: '',
@@ -5989,7 +5989,7 @@ const resetBreakDrill = {
     {
       id: 6,
       title: 'Game Situation',
-      illustrationType: IllustrationType.ANIMATION,
+      illustrationType: IllustrationType.VIMEO,
       illustrationSource: '462696185',
       repetition: '',
       rest: '',

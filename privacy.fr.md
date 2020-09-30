@@ -21,7 +21,7 @@ Ces règles s’appliquent à tous les services proposés par l’application Di
 
 ## Modifications
 
-Les présentes Règles de confidentialité peuvent être amenées à évoluer. Le cas échéant, nous publierons toute modification sur cette page, afin que vous soyez informé.e.s de telles évolutions.
+Les présentes Règles de confidentialité peuvent être amenées à évoluer. Le cas échéant, nous publierons toute modification sur cette page et mettrons à jour la date de "Dernière modification", afin que vous soyez informé.e.s de telles évolutions.
 
 ## Contact
 

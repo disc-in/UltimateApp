@@ -5349,6 +5349,15 @@ const trainDrill = {
     },
     {
       id: 2,
+      title: 'Normal Train',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462695757',
+      repetition: '',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 3,
       title: 'Racing train',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: trainRace,
@@ -5573,10 +5582,20 @@ const menageATroisDrill = {
       illustrationSource: threePerson,
       repetition: '',
       rest: '',
-      instruction: 'The defensive player does a flat mark, five times before switching roles.',
+      instruction:
+        'The defensive player does a flat mark. The thrower becomes the next defender. The offensive player tries to beat the defender with fakes',
     },
     {
       id: 2,
+      title: 'Flat Mark',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462695161',
+      repetition: '',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 3,
       title: 'Redemption',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: redemption,
@@ -5606,13 +5625,22 @@ const dwarfDuelDrill = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: 'Dwarf Duel',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: dwarDuel,
       repetition: '',
       rest: '',
       instruction:
         'The coach (or an experienced player) throws hucks.\nWhen the offensive player starts to run, the defensive player can move. Neither player can jump to catch the disc',
+    },
+    {
+      id: 2,
+      title: 'Dwarf Duel',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462695083',
+      repetition: '',
+      rest: '',
+      instruction: '',
     },
   ],
 };
@@ -5645,13 +5673,31 @@ const dishieChainDrill = {
     },
     {
       id: 2,
-      title: 'Adding a poach',
+      title: 'Focus on Offense',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462694949',
+      repetition: '',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 3,
+      title: 'Adding a Poach',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: dishiesPoach,
       repetition: '',
       rest: '',
       instruction:
         'Add a defensive player to work on the poach with a side stack. The thrower has to throw to the free player.',
+    },
+    {
+      id: 4,
+      title: 'Adding a Poach',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462697155',
+      repetition: '',
+      rest: '',
+      instruction: '',
     },
   ],
 };
@@ -5742,7 +5788,7 @@ const trainOfFakeDrill = {
   steps: [
     {
       id: 1,
-      title: 'Normal train',
+      title: 'Normal Train',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: train,
       repetition: '',
@@ -5752,7 +5798,16 @@ const trainOfFakeDrill = {
     },
     {
       id: 2,
-      title: 'With One fake',
+      title: 'Normal Train',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462695757',
+      repetition: '',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 3,
+      title: 'With One Fake',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: oneFakeTrain,
       repetition: '',
@@ -5761,14 +5816,32 @@ const trainOfFakeDrill = {
         'Set up the normal train drill. This time, however, the thrower can choose to make a second fake while the cutters is cutting in. If they do, the cutters clears to the second position in the stack (from the front), the thrower looks at the dump, the dump cuts upline and receives a pass. The drill continues.',
     },
     {
-      id: 3,
-      title: 'With two fakes',
+      id: 4,
+      title: 'With One Fake',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462695420',
+      repetition: '',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 5,
+      title: 'With Two Fakes',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: twoFakeTrain,
       repetition: '',
       rest: '',
       instruction:
         'Set up the One Fake Train Drill. This time, when the reset cuts upline, the thrower can again fake. If they do, the front of the stack cuts back and receives a dump in the reset position. The drill continues.',
+    },
+    {
+      id: 6,
+      title: 'With Two Fakes',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462696097',
+      repetition: '',
+      rest: '',
+      instruction: '',
     },
   ],
 };
@@ -5801,6 +5874,15 @@ const resetOpenDrill = {
     },
     {
       id: 2,
+      title: 'The Backdoor',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462694656',
+      repetition: '',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 3,
       title: 'Power Reset',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: powerReset,
@@ -5810,7 +5892,16 @@ const resetOpenDrill = {
         'The set-up is the same as in "The Backdoor." This time, when eye contact is made, the reset cuts up-field and receives a pass in front of them.',
     },
     {
-      id: 3,
+      id: 4,
+      title: 'Power Reset',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462695562',
+      repetition: '',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 5,
       title: 'Game Situation',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: resetOpen,
@@ -5818,6 +5909,15 @@ const resetOpenDrill = {
       rest: '',
       instruction:
         'The set-up is the same as in "the Backdoor." The defense on the reset is real, and the reset must choose one of the two directions to cut to receive a pass. The reset is not allowed more than one juke. Each team does the same number of attempts, whichever team completes the most passes wins!',
+    },
+    {
+      id: 6,
+      title: 'Game Situation',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462696413',
+      repetition: '',
+      rest: '',
+      instruction: '',
     },
   ],
 };
@@ -5850,6 +5950,15 @@ const resetBreakDrill = {
     },
     {
       id: 2,
+      title: 'The 45° Upline',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462696489',
+      repetition: '',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 3,
       title: 'The Easy Reset',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: around,
@@ -5859,7 +5968,16 @@ const resetBreakDrill = {
         'Same set-up as "The 45° Upline." When eye contact is made, the thrower throws around the mark with the goal that the reset catches about where they had started before moving up field. The reset only moves once the pass is thrown. Switch sides.',
     },
     {
-      id: 3,
+      id: 4,
+      title: 'The Easy Reset',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: upline,
+      repetition: '462694618',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 5,
       title: 'Game Situation',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: resetBreak,
@@ -5867,6 +5985,15 @@ const resetBreakDrill = {
       rest: '',
       instruction:
         'Same set-up as "The 45° Upline." The defense on the reset is real, and the reset must choose one of the two directions to cut to receive a pass. The reset is not allowed more than one juke. Each team does the same number of attempts, whichever team completes the most passes wins!',
+    },
+    {
+      id: 6,
+      title: 'Game Situation',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462696185',
+      repetition: '',
+      rest: '',
+      instruction: '',
     },
   ],
 };
@@ -5899,6 +6026,15 @@ const youShallNotPassDrill = {
     },
     {
       id: 2,
+      title: 'Blocking the Under',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462695379',
+      repetition: '',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 3,
       title: 'Blocking Everything',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: blockEverything,
@@ -5908,7 +6044,16 @@ const youShallNotPassDrill = {
         'The same exercise as "Blocking the Under," but the thrower is allowed to throw both deep and under.',
     },
     {
-      id: 3,
+      id: 4,
+      title: 'Blocking Everything',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462695250',
+      repetition: '',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 5,
       title: 'Make It Count',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: blockEverything,
@@ -6160,13 +6305,22 @@ const cardinal = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: 'Cardinal Point',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: cardinalAnimation,
       repetition: '',
       rest: '',
       instruction:
         'Kung-fu throwing : imagine a compass with your pivot foot at the center. Pivot N and throw. Pivot NE and throw. Pivot E and throw and so on around the compass. Go four times around, twice throwing forehands and twice throwing backhands.',
+    },
+    {
+      id: 2,
+      title: 'Cardinal Point',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462694734',
+      repetition: '',
+      rest: '',
+      instruction: '',
     },
   ],
 };
@@ -6413,13 +6567,22 @@ const throwCatchThrow = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: 'Double Disc',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: throwCatch,
       repetition: '',
       rest: '',
       instruction:
         'The receiver already has a disc in its hands.  The goal is to never have two discs simultaneously in your hands. When the receiver is about to receive the other disc he throws in the air (to himself) his disc, he catches the other disc, throws it, catch his disc. If this is succeeded, then he throws his disc to the other player that already has his one disc in its hands.',
+    },
+    {
+      id: 2,
+      title: 'Double Disc',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462695929',
+      repetition: '',
+      rest: '',
+      instruction: '',
     },
   ],
 };
@@ -6442,13 +6605,22 @@ const stopFlow = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: 'Stop the Flow',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: stopFlowAnimation,
       repetition: '',
       rest: '',
       instruction:
         "The defenders of the first throw are not looking at the disc and they can't make a defense a the first throw. When the throw is made, the second cutter has to make a straight cut. The first defender try to block the continuity ",
+    },
+    {
+      id: 2,
+      title: 'Stop the Flow',
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462695656',
+      repetition: '',
+      rest: '',
+      instruction: '',
     },
   ],
 };

@@ -12,6 +12,7 @@
     "version": "0.1.0",
     "githubUrl": "https://github.com/UltimateApp/UltimateApp",
     "orientation": "portrait",
+    "primaryColor": "#2a9e91",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
@@ -31,7 +32,8 @@
     },
     "android": {
       "package": "com.discin.discin",
-      "versionCode": 1
+      "versionCode": 1,
+      "permissions" : []
     }
   }
 }

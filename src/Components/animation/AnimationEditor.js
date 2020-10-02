@@ -45,9 +45,6 @@ class AnimationEditor extends React.Component {
     this.currentStepAV.addListener((progress) => {
       this.currentStep = progress.value;
     });
-
-    this.editorHeight = 100;
-    this.editorWidth = 100;
   }
 
   saveAnimation = (newAnimation, cb) => {
@@ -58,29 +55,26 @@ class AnimationEditor extends React.Component {
   onLayout = (e) => {
     if (this.marker) {
       this.marker.measure((x, y, width, height, pageX, pageY) => {
+        let dLeft = pageX || this.state.dLeft;
         // On iOS, when the left margin is = 0, pageX can be equal to the whole width instead of 0
-        if (pageX === undefined) pageX = this.state.dLeft;
-        else if (pageX > 0.99 * width) pageX = 0;
+        if (dLeft > 0.99 * width) dLeft = 0;
 
-        if (pageY === undefined) pageY = this.state.dTop;
+        const dTop = pageY || this.state.dTop;
 
-        this.setState({
-          dLeft: pageX,
-          dTop: pageY,
-        });
+        this.setState({ dLeft, dTop });
       });
     }
 
-    this.editorHeight = e.nativeEvent.layout.height;
-    this.editorWidth = e.nativeEvent.layout.width;
+    const editorHeight = e.nativeEvent.layout.height;
+    const editorWidth = e.nativeEvent.layout.width;
 
-    const animationWidth = this.editorWidth * this.wRatio;
-    const animationHeight = this.editorHeight * this.hRatio;
+    const animationWidth = editorWidth * this.wRatio;
+    const animationHeight = editorHeight * this.hRatio;
 
     //TODO see why this is needed...
     this.setState({
-      width: this.editorWidth,
-      height: this.editorHeight,
+      width: editorWidth,
+      height: editorHeight,
       playerRadius: Math.min(animationWidth, animationHeight) / 12,
     });
   };

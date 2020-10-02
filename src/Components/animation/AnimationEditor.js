@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Animated, Dimensions, Easing, View } from 'react-native';
+import { StyleSheet, Animated, Easing, View } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import Animation from './Animation';
@@ -59,7 +59,6 @@ class AnimationEditor extends React.Component {
     if (this.marker) {
       this.marker.measure((x, y, width, height, pageX, pageY) => {
         // On iOS, when the left margin is = 0, pageX can be equal to the whole width instead of 0
-
         if (pageX === undefined) pageX = this.state.dLeft;
         else if (pageX > 0.99 * width) pageX = 0;
 
@@ -75,7 +74,6 @@ class AnimationEditor extends React.Component {
     this.editorHeight = e.nativeEvent.layout.height;
     this.editorWidth = e.nativeEvent.layout.width;
 
-    const { height, width } = Dimensions.get('window');
     const animationWidth = this.editorWidth * this.wRatio;
     const animationHeight = this.editorHeight * this.hRatio;
 
@@ -101,8 +99,6 @@ class AnimationEditor extends React.Component {
   };
 
   addElementToAnimation = (type, x, y) => {
-    var { height, width } = Dimensions.get('window');
-
     const position = this._positionPixelToPercent(x, y);
 
     if (position[0] <= 1 && position[1] <= 0.88 && position[0] >= 0 && position[1] >= 0) {
@@ -155,9 +151,6 @@ class AnimationEditor extends React.Component {
     newAnimation.positions = Array(2);
     newAnimation.positions[0] = [];
     newAnimation.positions[1] = [];
-
-    /* Get the dimension of the screen and then initialize the animation */
-    var { height, width } = Dimensions.get('window');
 
     this.saveAnimation(newAnimation);
   }

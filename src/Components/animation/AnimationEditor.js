@@ -222,8 +222,8 @@ class AnimationEditor extends React.Component {
   };
 
   onElementMoveEnd = (elementIndex, type, xDelta, yDelta) => {
-    var currentPosition = this.state.animation.getPositionsAtStep(elementIndex, Math.ceil(this.currentStep));
-    currentPosition = currentPosition[0];
+    var currentPositions = this.state.animation.getPositionsAtStep(elementIndex, Math.ceil(this.currentStep));
+    const currentPosition = currentPositions[0];
     var xDeltaPercent = xDelta / (this.state.width * this.wRatio);
     var yDeltaPercent = yDelta / (this.state.height * this.hRatio);
 
@@ -244,8 +244,11 @@ class AnimationEditor extends React.Component {
       else if (newPosition[0] > 1) newPosition[0] = 1;
       if (newPosition[1] < 0) newPosition[1] = 0;
 
+      const newPositions = [newPosition];
+      if (currentPositions.length > 1) newPositions.push(currentPositions[1]);
+
       /* If the element is not moved outside of the animation area, updated its coordinates */
-      newAnimation.positions[Math.ceil(this.currentStep)][elementIndex] = [newPosition];
+      newAnimation.positions[Math.ceil(this.currentStep)][elementIndex] = newPositions;
     }
 
     this.saveAnimation(newAnimation);

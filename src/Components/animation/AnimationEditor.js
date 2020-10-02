@@ -308,8 +308,7 @@ class AnimationEditor extends React.Component {
           widthRatio={1}
           heightRatio={this.hRatio}
           dTop={this.state.dTop}
-          lTop={this.state.lTop}
-          onStepChange={this.displayStepDescription}
+          dLeft={this.state.dLeft}
           onStepAdded={this.addStep}
           onStepRemoved={this.removeStep}
           currentStepAV={this.currentStepAV}

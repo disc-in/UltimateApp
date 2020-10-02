@@ -10,16 +10,9 @@ class Animation extends React.Component {
   constructor(props) {
     super(props);
 
-    var initialStep = 0;
-
-    // If the current step is fixed by the parent (used in the editor)
-    if (props.currentStep !== undefined && props.currentStep !== null) initialStep = props.currentStep;
-
-    if (props.onStepChange !== undefined && props.onStepChange !== null) props.onStepChange(initialStep);
-
     this.state = {
       stepLength: 1000, // Duration of a step in milliseconds
-      currentStep: initialStep, // Current step displayed on the phone
+      currentStep: props.currentStep || 0, // Current step displayed on the phone
       animationPlaying: false,
     };
 
@@ -52,15 +45,13 @@ class Animation extends React.Component {
     return [this.animationWidth * x + this.dLeft, this.animationHeight * y + this.dTop];
   };
 
-  /** Once we get the screen size, create the DisplayedElement used in the animation and set them to their initial position */
   componentDidMount() {
     var { height, width } = Dimensions.get('window');
 
     this.animationWidth = width * this.props.widthRatio;
 
     this.animationHeight = height * this.props.heightRatio;
-    if (this.props.onDimensionSet !== null && this.props.onDimensionSet !== undefined)
-      this.props.onDimensionSet(this.animationHeight, this.animationWidth);
+    if (this.props.editable) this.props.onDimensionSet(this.animationHeight, this.animationWidth);
   }
 
   playAnimation = () => {
@@ -146,17 +137,15 @@ class Animation extends React.Component {
             this.marker = ref;
           }}
           onLayout={({ nativeEvent }) => {
-            if (this.marker) {
+            if (this.props.editable) {
               this.marker.measure((x, y, width, height, pageX, pageY) => {
                 // On iOS, when the left margin is = 0, pageX can be equal to the whole width instead of 0
                 if (pageX > 0.99 * width) pageX = 0;
 
                 if (pageY !== undefined) this.dTop = pageY;
-
                 if (pageX !== undefined) this.dLeft = pageX;
 
-                if (this.props.onTopMarginSet !== undefined && this.props.onTopMarginSet !== null)
-                  this.props.onTopMarginSet(this.dTop);
+                this.props.onTopMarginSet(this.dTop);
               });
             }
           }}

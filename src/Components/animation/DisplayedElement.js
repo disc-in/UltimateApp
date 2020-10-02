@@ -61,7 +61,7 @@ class DisplayedElement extends React.Component {
   }
 
   static getDerivedStateFromProps(props, state) {
-    var isEqual = true;
+    let isEqual = true;
 
     /* If most of the attributes are equal */
     if (
@@ -161,26 +161,20 @@ class DisplayedElement extends React.Component {
 }
 
 const _initializeStateFromProps = (props) => {
-  /* Get the element width */
-  var width = 0;
+  let width = 0;
 
-  const playerRadius = Math.min(props.animationWidth, props.animationHeight) / 12;
-  const discRadius = playerRadius / 1.5;
-  const coneSize = playerRadius / 2;
-
+  const playerRadius = Math.min(props.animationWidth, props.animationHeight) / 24;
   switch (props.type) {
     case 'defense':
     case 'offense':
       width = playerRadius;
       break;
     case 'disc':
-      width = discRadius;
+      width = playerRadius / 1.5;
       break;
     case 'triangle':
-      width = coneSize / 2;
+      width = playerRadius / 4;
   }
-
-  width /= 2;
 
   /* Positions of the element at each step of the drill */
   const xPositions = [];

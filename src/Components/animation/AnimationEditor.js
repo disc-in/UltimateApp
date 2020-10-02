@@ -25,10 +25,10 @@ class AnimationEditor extends React.Component {
         defense: 1,
         disc: 1,
         triangle: 1,
-        animationTopMargin: 0,
-        animationHeight: 100,
-        animationWidth: 100,
       },
+      animationTopMargin: 0,
+      animationHeight: 100,
+      animationWidth: 100,
       isElementMoving: false,
     };
 
@@ -102,9 +102,6 @@ class AnimationEditor extends React.Component {
 
   addElementToAnimation = (type, x, y) => {
     var { height, width } = Dimensions.get('window');
-
-    this.screenHeight = height;
-    this.screenWidth = width;
 
     const position = this._positionPixelToPercent(x, y);
 

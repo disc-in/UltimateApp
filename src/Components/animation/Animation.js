@@ -55,7 +55,7 @@ class Animation extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.animation !== this.props.animation) {
+    if (!this.props.editable && prevProps.animation !== this.props.animation) {
       this.resetAnimation();
     }
   }

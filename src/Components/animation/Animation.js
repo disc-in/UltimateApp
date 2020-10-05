@@ -54,6 +54,31 @@ class Animation extends React.Component {
     if (this.props.editable) this.props.onDimensionSet(this.animationHeight, this.animationWidth);
   }
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.animation !== this.props.animation) {
+      this.resetAnimation();
+    }
+  }
+
+  resetAnimation = () => {
+    this.setState(
+      {
+        currentStep: 0,
+      },
+      () => {
+        Animated.sequence([
+          Animated.timing(this.currentStepAV, {
+            toValue: 0,
+            duration: 0,
+            easing: Easing.linear,
+            key: 0,
+            useNativeDriver: false,
+          }),
+        ]).start();
+      },
+    );
+  };
+
   playAnimation = () => {
     this.setState(
       {

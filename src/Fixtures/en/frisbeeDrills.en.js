@@ -636,7 +636,7 @@ const fartlek = {
   title: 'Fartlek',
   image: 'https://zupimages.net/up/20/19/kj0f.jpg',
   description:
-    "Light warm-up \nFartlek 'adapted': 25' running at jogging speed with 10\"\" every minute make a slight acceleration of a few km/h more (For example, if you run at 10km/h, you can aim for 13 or 14km/h) (50 seconds jogging speed, 10 seconds slight acceleration). The goal is to go for the feeling and to concentrate on the feeling. At the end, you shouldn't be more exhausted than a big jog. ",
+    "Light warm-up \nFartlek 'adapted': 25' running at jogging speed with 10\"\" every minute make a slight acceleration of a few km/h more (For example, if you run at 10km/h, you can aim for 13 or 14km/h) (50 seconds jogging speed, 10 seconds slight acceleration). The goal is to go for the feeling and to concentrate on the feeling. At the end, you shouldn't be more exhausted than a big jog.",
   minimalPlayersNumber: 1,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: 'None',
@@ -6234,7 +6234,7 @@ const game3v3Horizontal = {
       repetition: '',
       rest: '',
       instruction:
-        'Two teams compete against each other. They alternate positions every 2 throws. The goal is to score a point with a maximum of 2 passes. The cutter in the open side starts to move and the cutter has to adapt by making a opposite cut. ',
+        'Two teams compete against each other. They alternate positions every 2 throws. The goal is to score a point with a maximum of 2 passes. The cutter in the open side starts to move and the cutter has to adapt by making a opposite cut.',
     },
     {
       id: 2,
@@ -6707,7 +6707,7 @@ const cupSwinging = {
       repetition: '',
       rest: '',
       instruction:
-        'The 3 players cup as to move together to deny the throw to the cutter. The handlers can only make a flat throw to the cutter. Their goal is to swing quickly to get around the cup. ',
+        'The 3 players cup as to move together to deny the throw to the cutter. The handlers can only make a flat throw to the cutter. Their goal is to swing quickly to get around the cup.',
     },
   ],
 };
@@ -6823,7 +6823,7 @@ const diagonalToVertical = {
       repetition: '',
       rest: '',
       instruction:
-        'Same start but the force is different. The two deepest player go in the break side. The first cutter has to cut to gain a power position. The following cutter go deep and then it become a classic train situation. ',
+        'Same start but the force is different. The two deepest player go in the break side. The first cutter has to cut to gain a power position. The following cutter go deep and then it become a classic train situation.',
     },
     {
       id: 3,
@@ -7222,7 +7222,7 @@ const trainingGame = {
   author: '',
   title: 'Practice the new Stack',
   image: 'https://zupimages.net/up/20/28/up1j.jpg',
-  description: 'Just a classical game on the whole field. ',
+  description: 'Just a classical game on the whole field.',
   minimalPlayersNumber: 14,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '8 cones - 1 disc ',
@@ -7371,7 +7371,7 @@ const horizontalLine = {
   id: 13,
   title: 'Horizontal Trap',
   image: 'https://zupimages.net/up/20/19/skjl.jpg',
-  description: 'Practice how to get out of the line with a Ho stack',
+  description: 'Practice how to get out of the line with a Horizontal stack',
   drills: [warmupGameDrill, horizontalTrap, horizontalTrapOutside, horizontalHandler, lineGame],
 };
 
@@ -7420,7 +7420,7 @@ const sideStackTraining = {
   id: 19,
   title: 'Initation to Side Stack',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'First practice to learn the basics of Side Stack',
+  description: 'First practice to learn the basics of the Side Stack',
   drills: [warmupGameDrill, horizontalTrapOutside, sideToVertical, trainingGame],
 };
 
@@ -7428,7 +7428,7 @@ const splitStackTraining = {
   id: 20,
   title: 'Initiation to Split Stack',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'First practice to learn the basics of Split Stack',
+  description: 'First practice to learn the basics of the Split Stack',
   drills: [warmupGameDrill, horizontalTrapOutside, splitIso, splitToVertical, trainingGame],
 };
 

@@ -2430,13 +2430,13 @@ const agility1 = {
   steps: [
     {
       id: 1,
-      title: 'Warm up',
+      title: 'Échauffement',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
-      instruction: 'Moderate warm up',
+      instruction: 'Échauffement modéré',
     },
     {
       id: 2,
@@ -2539,13 +2539,13 @@ const strenght1 = {
   steps: [
     {
       id: 1,
-      title: 'Warm up',
+      title: 'Échauffement',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
-      instruction: 'Moderate warm up',
+      instruction: 'Échauffement modéré',
     },
     {
       id: 2,
@@ -2638,13 +2638,13 @@ const strenght2 = {
   steps: [
     {
       id: 1,
-      title: 'Warm up',
+      title: 'Échauffement',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
-      instruction: 'Moderate warm up',
+      instruction: 'Échauffement modéré',
     },
     {
       id: 2,
@@ -2727,13 +2727,13 @@ const agility2 = {
   steps: [
     {
       id: 1,
-      title: 'Warm up',
+      title: 'Échauffement',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
-      instruction: 'Moderate warm up',
+      instruction: 'Échauffement modéré',
     },
     {
       id: 2,
@@ -2826,13 +2826,13 @@ const agility3 = {
   steps: [
     {
       id: 1,
-      title: 'Warm up',
+      title: 'Échauffement',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
-      instruction: 'Moderate warm up',
+      instruction: 'Échauffement modéré',
     },
     {
       id: 2,
@@ -2935,13 +2935,13 @@ const strenght3 = {
   steps: [
     {
       id: 1,
-      title: 'Warm up',
+      title: 'Échauffement',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
-      instruction: 'Moderate warm up',
+      instruction: 'Échauffement modéré',
     },
     {
       id: 2,
@@ -3024,13 +3024,13 @@ const strenght16 = {
   steps: [
     {
       id: 1,
-      title: 'Warm up',
+      title: 'Échauffement',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
-      instruction: 'Moderate warm up',
+      instruction: 'Échauffement modéré',
     },
     {
       id: 2,
@@ -3123,13 +3123,13 @@ const agility16 = {
   steps: [
     {
       id: 1,
-      title: 'Warm up',
+      title: 'Échauffement',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
-      instruction: 'Moderate warm up',
+      instruction: 'Échauffement modéré',
     },
     {
       id: 2,
@@ -3222,13 +3222,13 @@ const agility15 = {
   steps: [
     {
       id: 1,
-      title: 'Warm up',
+      title: 'Échauffement',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
-      instruction: 'Moderate warm up',
+      instruction: 'Échauffement modéré',
     },
     {
       id: 2,
@@ -3331,13 +3331,13 @@ const strenght15 = {
   steps: [
     {
       id: 1,
-      title: 'Warm up',
+      title: 'Échauffement',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
-      instruction: 'Moderate warm up',
+      instruction: 'Échauffement modéré',
     },
     {
       id: 2,
@@ -3420,13 +3420,13 @@ const strenght14 = {
   steps: [
     {
       id: 1,
-      title: 'Warm up',
+      title: 'Échauffement',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
-      instruction: 'Moderate warm up',
+      instruction: 'Échauffement modéré',
     },
     {
       id: 2,
@@ -3495,7 +3495,7 @@ const agility14 = {
   id: 36,
   type: DrillTypes.FITNESS,
   author: '',
-  title: 'In-Season',
+  title: 'En saison',
   image: 'https://zupimages.net/up/20/19/kj0f.jpg',
   description: "Travail sur l'explosivité et la stabilité ",
   minimalPlayersNumber: 1,
@@ -3509,13 +3509,13 @@ const agility14 = {
   steps: [
     {
       id: 1,
-      title: 'Warm up',
+      title: 'Échauffement',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
-      instruction: 'Moderate warm up',
+      instruction: 'Échauffement modéré',
     },
     {
       id: 2,
@@ -3584,7 +3584,7 @@ const agility13 = {
   id: 37,
   type: DrillTypes.FITNESS,
   author: '',
-  title: 'In-Season',
+  title: 'En saison',
   image: 'https://zupimages.net/up/20/19/kj0f.jpg',
   description: "Travail sur l'explosivité et la stabilité ",
   minimalPlayersNumber: 1,
@@ -3598,13 +3598,13 @@ const agility13 = {
   steps: [
     {
       id: 1,
-      title: 'Warm up',
+      title: 'Échauffement',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
-      instruction: 'Moderate warm up',
+      instruction: 'Échauffement modéré',
     },
     {
       id: 2,
@@ -3687,13 +3687,13 @@ const strenght13 = {
   steps: [
     {
       id: 1,
-      title: 'Warm up',
+      title: 'Échauffement',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
-      instruction: 'Moderate warm up',
+      instruction: 'Échauffement modéré',
     },
     {
       id: 2,
@@ -3766,13 +3766,13 @@ const agility12 = {
   steps: [
     {
       id: 1,
-      title: 'Warm up',
+      title: 'Échauffement',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
-      instruction: 'Moderate warm up',
+      instruction: 'Échauffement modéré',
     },
     {
       id: 2,
@@ -3865,13 +3865,13 @@ const strenght12 = {
   steps: [
     {
       id: 1,
-      title: 'Warm up',
+      title: 'Échauffement',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
-      instruction: 'Moderate warm up',
+      instruction: 'Échauffement modéré',
     },
     {
       id: 2,
@@ -3944,13 +3944,13 @@ const agility11 = {
   steps: [
     {
       id: 1,
-      title: 'Warm up',
+      title: 'Échauffement',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
-      instruction: 'Moderate warm up',
+      instruction: 'Échauffement modéré',
     },
     {
       id: 2,
@@ -4043,13 +4043,13 @@ const strenght11 = {
   steps: [
     {
       id: 1,
-      title: 'Warm up',
+      title: 'Échauffement',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
-      instruction: 'Moderate warm up',
+      instruction: 'Échauffement modéré',
     },
     {
       id: 2,
@@ -4132,13 +4132,13 @@ const agility10 = {
   steps: [
     {
       id: 1,
-      title: 'Warm up',
+      title: 'Échauffement',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
-      instruction: 'Moderate warm up',
+      instruction: 'Échauffement modéré',
     },
     {
       id: 2,
@@ -4231,13 +4231,13 @@ const strenght10 = {
   steps: [
     {
       id: 1,
-      title: 'Warm up',
+      title: 'Échauffement',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
-      instruction: 'Moderate warm up',
+      instruction: 'Échauffement modéré',
     },
     {
       id: 2,
@@ -4320,13 +4320,13 @@ const agility9 = {
   steps: [
     {
       id: 1,
-      title: 'Warm up',
+      title: 'Échauffement',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
-      instruction: 'Moderate warm up',
+      instruction: 'Échauffement modéré',
     },
     {
       id: 2,
@@ -4419,13 +4419,13 @@ const strenght9 = {
   steps: [
     {
       id: 1,
-      title: 'Warm up',
+      title: 'Échauffement',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
-      instruction: 'Moderate warm up',
+      instruction: 'Échauffement modéré',
     },
     {
       id: 2,
@@ -4508,13 +4508,13 @@ const agility8 = {
   steps: [
     {
       id: 1,
-      title: 'Warm up',
+      title: 'Échauffement',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
-      instruction: 'Moderate warm up',
+      instruction: 'Échauffement modéré',
     },
     {
       id: 2,
@@ -4607,13 +4607,13 @@ const strenght8 = {
   steps: [
     {
       id: 1,
-      title: 'Warm up',
+      title: 'Échauffement',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
-      instruction: 'Moderate warm up',
+      instruction: 'Échauffement modéré',
     },
     {
       id: 2,
@@ -4696,13 +4696,13 @@ const agility7 = {
   steps: [
     {
       id: 1,
-      title: 'Warm up',
+      title: 'Échauffement',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
-      instruction: 'Moderate warm up',
+      instruction: 'Échauffement modéré',
     },
     {
       id: 2,
@@ -4795,13 +4795,13 @@ const strenght7 = {
   steps: [
     {
       id: 1,
-      title: 'Warm up',
+      title: 'Échauffement',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
-      instruction: 'Moderate warm up',
+      instruction: 'Échauffement modéré',
     },
     {
       id: 2,
@@ -4894,13 +4894,13 @@ const agility6 = {
   steps: [
     {
       id: 1,
-      title: 'Warm up',
+      title: 'Échauffement',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
-      instruction: 'Moderate warm up',
+      instruction: 'Échauffement modéré',
     },
     {
       id: 2,
@@ -4983,13 +4983,13 @@ const strenght6 = {
   steps: [
     {
       id: 1,
-      title: 'Warm up',
+      title: 'Échauffement',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
-      instruction: 'Moderate warm up',
+      instruction: 'Échauffement modéré',
     },
     {
       id: 2,
@@ -5082,13 +5082,13 @@ const agility5 = {
   steps: [
     {
       id: 1,
-      title: 'Warm up',
+      title: 'Échauffement',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
-      instruction: 'Moderate warm up',
+      instruction: 'Échauffement modéré',
     },
     {
       id: 2,
@@ -5181,13 +5181,13 @@ const strenght5 = {
   steps: [
     {
       id: 1,
-      title: 'Warm up',
+      title: 'Échauffement',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
-      instruction: 'Moderate warm up',
+      instruction: 'Échauffement modéré',
     },
     {
       id: 2,
@@ -5285,7 +5285,7 @@ const basicThrowsDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'Les joueurs se font face en binôme, sur deux lignes pour se faire des passes. Le coach décide quel lancer ils font. Si le disque tombe, le binôme correspondant se déplace tout à droite de la ligne. A la fin du temps, la paire la plus à gauche gagne !',
+        'Les joueurs se font face en binôme, sur deux lignes pour se faire des passes. Le coach décide quel lancer ils réalisent. Si le disque tombe, le binôme correspondant se déplace tout à droite de la ligne. A la fin du temps, la paire la plus à gauche gagne !',
     },
   ],
 };
@@ -5312,7 +5312,7 @@ const breakDrill = {
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: breakSide,
       instruction:
-        "Deux lignes de joueurs se font face, à environ 20 mètres de distance. Une force est décidée pour l'exercice. Le premier joueur d'une ligne est le lanceur, il est défendu par une marque qui applique la force. Le premier joueur de l'autre ligne faire un cut vers le lanceur dans le côté ouvert, puis quand le lanceur faire une feinte, il faire un contre-cut horizontal vers le côté fermé. Le lanceur doit alors casser sa marque pour réussir sa passe dans le côté fermé. Le lanceur fait ensuite le cut suivant vers l'autre ligne. La marque devient le prochain lanceur et le joueur suivant devient la marque. Les joueurs en attente doivent avoir quelques disques.",
+        "Deux lignes de joueurs se font face, à environ 20 mètres de distance. Une force est décidée pour l'exercice. Le premier joueur d'une ligne est le lanceur, il est défendu par une marque qui applique la force. Le premier joueur de l'autre ligne fait un cut vers le lanceur dans le côté ouvert, puis quand le lanceur fait une feinte, il réalise un contre-cut horizontal vers le côté fermé. Le lanceur doit alors casser sa marque pour réussir sa passe dans le côté fermé. Le lanceur devient ensuite le cutter suivant vers l'autre ligne. La marque devient le prochain lanceur et le joueur suivant devient la marque. Les joueurs en attente doivent avoir quelques disques.",
     },
     {
       id: 2,
@@ -5643,7 +5643,7 @@ const bulldogDrill = {
     "L'épervier se place au milieu du terrain. Tous les joueurs restants sont dans une zone protégée. Le jeu consiste à traverser l’intégralité du terrain sans se faire toucher par l’épervier. Le dernier joueur en liberté remporte la partie.",
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '4 cones',
+  equipment: '4 plots',
   durationInMinutes: 10,
   intensity: Intensities.LOW,
   goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.PLAY, FrisbeeGoals.COMMUNICATION],
@@ -6193,7 +6193,7 @@ const defensePositionDrill = {
       repetition: '',
       rest: '',
       instruction:
-        "Un lanceur est en place avec une marque qui applique une force. Un receveur commence à n'importe quel plot, avec un défenseur qui se place à 45° devant lui, dans le côté ouvert. Le receveur court vers les cones dans n'importe quel ordre et le défenseur doit maintenir son positionnement par rapport au receveur en permanence.",
+        "Un lanceur est en place avec une marque qui applique une force. Un receveur commence à n'importe quel plot, avec un défenseur qui se place à 45° devant lui, dans le côté ouvert. Le receveur court vers les plots dans n'importe quel ordre et le défenseur doit maintenir son positionnement par rapport au receveur en permanence.",
     },
     {
       id: 2,
@@ -6502,7 +6502,7 @@ const horizontalTrap = {
       repetition: '',
       rest: '',
       instruction:
-        "Le lanceurs est bloqué sur la ligne. Seulement 2 joueurs peuvent cutter entre les 4 plots. Le joueur le plus près de la ligne initie et l'autre effectue un mouvement opposé. L'objectif est de gagner le plus de mètres possibles en 2 lancers.",
+        "Le lanceur est bloqué sur la ligne. Seulement 2 joueurs peuvent cutter entre les 4 plots. Le joueur le plus près de la ligne initie et l'autre effectue un mouvement opposé. L'objectif est de gagner le plus de mètres possibles en 2 lancers.",
     },
     {
       id: 2,
@@ -6600,7 +6600,7 @@ const horizontalHandler = {
       repetition: '',
       rest: '',
       instruction:
-        "Le compte augmente.Le handler en soutient avance pour former un angle de 45° et initie un cut sur la ligne. L'autre joueur fait la continuité. La seconde option est de jouer avec le second handler avec le break around et jouer immédiatemment dans le coté fermé. Faire une rotation tous les 3 lancers.",
+        "Le compte augmente. Le handler en soutien avance pour former un angle de 45° et initie un cut sur la ligne. L'autre joueur fait la continuité. La seconde option est de jouer avec le second handler qui peut enchaîner avec un break around pour jouer immédiatemment dans le coté fermé. Faire une rotation tous les 3 lancers.",
     },
     {
       id: 2,
@@ -6610,7 +6610,7 @@ const horizontalHandler = {
       repetition: '',
       rest: '',
       instruction:
-        "Même situation mais maintenant le handler de soutient fait un cut dans coté fermé. L'autre handler fait le cut opposé. Le joueur 4 fait toujours la continuité.",
+        "Même situation, mais maintenant le handler de soutien fait un cut dans le coté fermé. L'autre handler fait le cut opposé. Le joueur 4 fait toujours la continuité.",
     },
     {
       id: 3,
@@ -6620,7 +6620,7 @@ const horizontalHandler = {
       repetition: '',
       rest: '',
       instruction:
-        "4 équipes de 3 joueurs s'opposent. Le but de l'attaque est de compléter 2 passes. Si une équipe réussit, elle reste en attaque.",
+        "4 équipes de 3 joueurs s'opposent. Le but de l'attaque est de compléter 2 passes. Si elle réussit, elle reste en attaque.",
     },
   ],
 };
@@ -6696,7 +6696,7 @@ const stopFlow = {
   id: 1035,
   type: DrillTypes.FRISBEE,
   author: 'Colony',
-  title: 'Bloqué le Flow',
+  title: 'Arrête le Flow',
   image: 'https://zupimages.net/up/20/28/2b8i.jpg',
   description: 'Apprendre à être rapide pour identifier les options dangereuses et les bloquer.',
   minimalPlayersNumber: 5,
@@ -6736,7 +6736,7 @@ const theTunnel = {
   author: 'CUSB',
   title: 'Le Tunnel',
   image: 'https://zupimages.net/up/20/25/742g.jpeg',
-  description: 'Réactivité en défense.',
+  description: 'Réactivité en défense',
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '4 plots ',
@@ -6765,7 +6765,7 @@ const sprintDefense = {
   author: 'Lucky Grass',
   title: 'Réactivité en défense.',
   image: 'https://zupimages.net/up/20/25/5pqg.jpg',
-  description: 'Warm up drill to focus on the reactivity in defense.',
+  description: 'Échauffement drill to focus on the reactivity in defense.',
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '4 plots ',
@@ -6783,7 +6783,7 @@ const sprintDefense = {
       repetition: '',
       rest: '',
       instruction:
-        "1 vs 1. L'objectif de l'attaquant est de toucher le plot extérieur avant que le défenseur touche le plot intérieur.\nLes deux doivent toucher le cone intérieur opposé avant de chancher de direction. Le défenseur peut commencer quand les deux pieds de l'attaquant ont décollé.",
+        "1 vs 1. L'objectif de l'attaquant est de toucher le plot extérieur avant que le défenseur touche le plot intérieur.\nLes deux doivent toucher le plot intérieur opposé avant de chancher de direction. Le défenseur peut commencer quand les deux pieds de l'attaquant ont décollé.",
     },
   ],
 };
@@ -6794,7 +6794,7 @@ const cupSwinging = {
   author: 'Black Fish',
   title: 'Swinging avec la cup',
   image: 'https://zupimages.net/up/20/25/019o.jpg',
-  description: 'Entrainer la cup de 3 joueurs contre les swings.',
+  description: 'Entraîner la cup de 3 joueurs contre les swings.',
   minimalPlayersNumber: 7,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disque ',
@@ -6812,7 +6812,7 @@ const cupSwinging = {
       repetition: '',
       rest: '',
       instruction:
-        'Les 3 joueurs formant la cup bougent ensemble pour empécher la passe au cutter. Les handlers peuvent seulement faire des lancers à plats.\nIls veulent swinger le plus vite possible pour passer autour de la cup. ',
+        'Les 3 joueurs formant la cup bougent ensemble pour empêcher la passe au cutter. Les handlers peuvent seulement faire des lancers à plats.\nIls veulent swinger le plus vite possible pour passer autour de la cup.',
     },
   ],
 };
@@ -6900,7 +6900,7 @@ const diagonalToVertical = {
   author: 'Belgium Open',
   title: 'Diagonal vers Vertical',
   image: 'https://zupimages.net/up/20/25/iqn0.jpg',
-  description: "Entrainer l'équipe à faire la transition parfaite d'un stack diagonal à un flow vertical",
+  description: "Entraîner l'équipe à faire la transition parfaite d'un stack diagonal à un flow vertical",
   minimalPlayersNumber: 8,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque ',
@@ -6928,7 +6928,7 @@ const diagonalToVertical = {
       repetition: '',
       rest: '',
       instruction:
-        'Même situation mais la force est différente. Les 2 cutters éloignes vont dans le coté fermé.\nLe premier cutter doit obtenir une position idéal de lancer. Le cutter suivant va longue et ca devient la situation classique du train. ',
+        'Même situation mais la force est différente. Les 2 cutters éloignes vont dans le coté fermé.\nLe premier cutter doit obtenir une position idéal de lancer. Le cutter suivant va longue et ca devient la situation classique du train.',
     },
     {
       id: 3,
@@ -6958,7 +6958,7 @@ const diagonalIso = {
   author: 'Mooncatchers',
   title: "L'Iso en Diagonal",
   image: 'https://zupimages.net/up/20/25/vozh.jpg',
-  description: "Entrainer l'équipe à faire la transition parfaite d'un stack diagonal à un flow vertical",
+  description: "Entraîner l'équipe à faire la transition parfaite d'un stack diagonal à un flow vertical",
   minimalPlayersNumber: 8,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque ',
@@ -7007,7 +7007,7 @@ const splitIso = {
   author: 'Iznogood',
   title: "L'Iso ouvert en Split",
   image: 'https://zupimages.net/up/20/25/k6hi.jpg',
-  description: "Entrainer l'équipe à faire la transition parfaite d'un split stack à un flow vertical",
+  description: "Entraîner l'équipe à faire la transition parfaite d'un split stack à un flow vertical",
   minimalPlayersNumber: 8,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque ',
@@ -7025,7 +7025,7 @@ const splitIso = {
       repetition: '',
       rest: '',
       instruction:
-        "Les 2 cutters peuvent seulement cutter entre les cones et la ligne. Le cutter le plus proche du lanceur initie. Exercice pour trouver l'angle parfait pour avoir un bon timing.",
+        "Les 2 cutters peuvent seulement cutter entre les plots et la ligne. Le cutter le plus proche du lanceur initie. Exercice pour trouver l'angle parfait pour avoir un bon timing.",
     },
     {
       id: 2,
@@ -7046,7 +7046,7 @@ const splitToVertical = {
   author: 'Iznogood',
   title: "L'Iso en Split",
   image: 'https://zupimages.net/up/20/25/uqd5.jpg',
-  description: "Entrainer l'équipe à faire la transition parfaite d'un split stack à un flow vertical",
+  description: "Entraîner l'équipe à faire la transition parfaite d'un split stack à un flow vertical",
   minimalPlayersNumber: 8,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque ',
@@ -7085,7 +7085,7 @@ const sideToVertical = {
   author: 'Iznogood',
   title: 'Side vers Vertical',
   image: 'https://zupimages.net/up/20/25/zpuq.jpg',
-  description: "Entrainer l'équipe à faire la transition parfaite d'un side stack à un flow vertical",
+  description: "Entraîner l'équipe à faire la transition parfaite d'un side stack à un flow vertical",
   minimalPlayersNumber: 8,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque ',
@@ -7113,7 +7113,7 @@ const sideToVertical = {
       repetition: '',
       rest: '',
       instruction:
-        'Tous les joueurs du side stack libèrent vers le coté opposé. Un joueur désigné revient et obtient le disque. Cette position devrait entrainer une position favorable pour une continuité en longue.',
+        'Tous les joueurs du side stack libèrent vers le coté opposé. Un joueur désigné revient et obtient le disque. Cette position devrait entraîner une position favorable pour une continuité en longue.',
     },
   ],
 };
@@ -7171,7 +7171,7 @@ const adaptToTheMark = {
       repetition: '',
       rest: '',
       instruction:
-        "Une première passe est faite sur un middle. Le joueur qui a fait la passe devient le soutien. Il doit s'adapter à la marque appliquée. Si la marque est en direction de la ligne, le joueur de soutient fait un cut-Up line et lance une longue. Si la marque est en direction du centre, les joueurs effectuent un une-deux qui est suivi par une longue.",
+        "Une première passe est faite sur un middle. Le joueur qui a fait la passe devient le soutien. Il doit s'adapter à la marque appliquée. Si la marque est en direction de la ligne, le joueur de soutien fait un cut-Up line et lance une longue. Si la marque est en direction du centre, les joueurs effectuent un une-deux qui est suivi par une longue.",
     },
   ],
 };
@@ -7241,7 +7241,7 @@ const longShotGame = {
   title: 'Match spécial longues',
   image: 'https://zupimages.net/up/20/28/c16q.jpg',
   description:
-    "Un match classique à 7 contre 7 sur grand terrain. Seule exception : une équipe marque 2 points s'il y a eu une longue réussie sur l'attaque qui a mené au point !",
+    "Un match classique à 7 contre 7 sur grand terrain. L'objectif est de mettre en avant le jeu en longue et d'encourager les joueurs à prendre des risques.",
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '8 plots - 1 disque',
@@ -7258,7 +7258,7 @@ const longShotGame = {
       illustrationSource: normalGameAnimation,
       repetition: '1',
       rest: '',
-      instruction: '2 points if there was a successful long shot on the offense that lead to scoring!',
+      instruction: "Une équipe marque 2 points s'il y a eu une longue réussie sur l'attaque qui a mené au point !",
     },
   ],
 };
@@ -7287,7 +7287,7 @@ const lineGame = {
       illustrationSource: normalGameAnimation,
       repetition: '1',
       rest: '',
-      instruction: 'After a turn-over, the disc has to start from the sideline.',
+      instruction: 'Après un turnover, le jeu reprend avec le disque sur la sideline.',
     },
   ],
 };
@@ -7299,10 +7299,10 @@ const longestGame = {
   title: "Match : le disque est de l'or",
   image: 'https://zupimages.net/up/20/28/g0fq.jpg',
   description:
-    "Un match classique sur tout le terrain. Utilisez un chronomètre pour calculer le temps utiliser par une équipe pour marquer un point.\nL'équipe qui a réussit à conserver le disque le plus longtemps sans turn-over gagne 3 points de plus à la fin du match.",
+    "Un match classique sur tout le terrain. Utilisez un chronomètre pour calculer le temps utilisé par une équipe pour marquer un point.\nL'équipe qui a réussit à conserver le disque le plus longtemps sans turn-over gagne 3 points de plus à la fin du match.",
   minimalPlayersNumber: 14,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '8 plots - 1 disque - 1 chronometre',
+  equipment: '8 plots - 1 disque - 1 chronomètre',
   durationInMinutes: 15,
   intensity: Intensities.HIGH,
   goals: [FrisbeeGoals.PLAY, FrisbeeGoals.THROWING],
@@ -7317,7 +7317,7 @@ const longestGame = {
       repetition: '',
       rest: '',
       instruction:
-        "Match Classique. L'équipe qui a conserver le disque le plus longtemps sans turn-over marque 3 points supplémentaires à la fin du match.",
+        "Match Classique. L'équipe qui a conservé le disque le plus longtemps sans turn-over marque 3 points supplémentaires à la fin du match.",
     },
   ],
 };
@@ -7328,7 +7328,7 @@ const trainingGame = {
   author: '',
   title: 'Match- Nouveau Stack',
   image: 'https://zupimages.net/up/20/28/up1j.jpg',
-  description: "Un match classique dans lequel on va travailler le stack entrainer à l'entrainement. ",
+  description: "Un match classique dans lequel on va travailler le stack pratiqué pendant l'entraînement.",
   minimalPlayersNumber: 14,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '8 plots - 1 disque ',
@@ -7340,13 +7340,13 @@ const trainingGame = {
   steps: [
     {
       id: 1,
-      title: 'Entrainer le nouveau stack',
+      title: 'Pratiquer le nouveau stack',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: normalGameAnimation,
       repetition: '',
       rest: '',
       instruction:
-        "Match classique. Après un turn-over, les attaquants doivent recommencer avec le stack travailler pendant l'entrainement.",
+        "Match classique. Après un turn-over, les attaquants doivent recommencer avec le stack travaillé pendant l'entraînement.",
     },
   ],
 };
@@ -7375,8 +7375,7 @@ const helpGame = {
       illustrationSource: normalGameAnimation,
       repetition: '',
       rest: '',
-      instruction:
-        'Jeu classique. Les joueurs expérimentés jouent également pour aider à développer un meilleur ultimate.',
+      instruction: 'Jeu classique. Les joueurs expérimentés jouent également pour aider à progresser.',
     },
   ],
 };
@@ -7449,7 +7448,7 @@ const defenseBaseTraining = {
   id: 9,
   title: 'Positionnement en défense',
   image: 'https://zupimages.net/up/20/19/skjl.jpg',
-  description: 'Entrainer votre défense',
+  description: 'Entraîner votre défense',
   drills: [warmupGameDrill, defensePositionDrill, youShallNotPassDrill, breakDrill, normalGame],
 };
 
@@ -7457,7 +7456,7 @@ const LearningByPlaying = {
   id: 10,
   title: 'Apprendre à lancer',
   image: 'https://zupimages.net/up/20/19/skjl.jpg',
-  description: 'Entrainer vos lancers longs.',
+  description: 'Améliorer vos lancers longs.',
   drills: [warmupGameDrill, discGolf, dDC, theTunnel],
 };
 
@@ -7465,47 +7464,47 @@ const initiationHorizontal = {
   id: 11,
   title: 'Cut Horizontal',
   image: 'https://zupimages.net/up/20/19/skjl.jpg',
-  description: 'Entrainer vos cuts dans un stack Horizontal',
+  description: 'Améliorer vos cuts dans un stack Horizontal',
   drills: [warmupGameDrill, theDuel, game3v3Horizontal, normalGame],
 };
 
 const horizontalFlow = {
   id: 12,
-  title: 'Horizontal Flow',
+  title: 'Le flow horizontal',
   image: 'https://zupimages.net/up/20/19/skjl.jpg',
-  description: 'Entrainer pour obtenir le flow',
+  description: 'Pour obtenir le flow',
   drills: [warmupGameDrill, horizontalTiming, horizontalToVertical, longShotGame],
 };
 
 const horizontalLine = {
   id: 13,
-  title: 'Horizontal Trap',
+  title: 'Sortie de ligne Horizontal',
   image: 'https://zupimages.net/up/20/19/skjl.jpg',
-  description: 'Entrainer pour sortir de la ligne avec un horizontal Stack.',
+  description: 'Sortir de la ligne avec un horizontal Stack.',
   drills: [warmupGameDrill, horizontalTrap, horizontalTrapOutside, horizontalHandler, lineGame],
 };
 
 const coed2MarkTraining = {
   id: 14,
-  title: 'Build your Defense',
+  title: 'Construire la défense',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'Entrainer la marque et à breaker vos adversaires.',
+  description: "S'entraîner à la marque et à breaker vos adversaires.",
   drills: [warmupGameDrill, kyeDrill, breakDrill, normalGame],
 };
 
 const defenseSecond = {
   id: 15,
-  title: 'Stop the Flow',
+  title: 'Arrêter the Flow',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'Cet entrainement pour apprendre à stopper le flow',
+  description: 'Pour apprendre à stopper le flow',
   drills: [warmupGameDrill, theTunnel, resetBreakDrill, youShallNotPassDrill, normalGame],
 };
 
 const defenseThird = {
   id: 16,
-  title: 'No more Reset',
+  title: 'Pas de Reset',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'Apprendre à utiliser ton corps pour arreter le flow',
+  description: 'Utiliser son corps pour arrêter le flow',
   drills: [warmupGameDrill, kyeDrill, stopFlow, dwarfDuelDrill, normalGame],
 };
 
@@ -7514,14 +7513,14 @@ const playingToLearn = {
   title: 'Ultimate Games',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Jouer des matchs pour apprendre les bases',
-  drills: [warmupGameDrill],
+  drills: [warmupGameDrill, helpGame, normalGame],
 };
 
 const zoneCup = {
   id: 18,
-  title: 'Initiation Cup',
+  title: 'Initiation à la zone',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: "Premier entrainement pour entrainer la cup d'une défense de zone",
+  description: "Premier entraînement pour découvrir la cup d'une défense de zone",
   drills: [bulldogDrill, warmupGameDrill, cupSwinging, zoneGame],
 };
 
@@ -7529,7 +7528,7 @@ const sideStackTraining = {
   id: 19,
   title: 'Initation au Stack sur le côté',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'Premier entrainement pour entrainer le Side Stack',
+  description: 'Premier entraînement pour découvrir le Side Stack',
   drills: [warmupGameDrill, horizontalTrapOutside, sideToVertical, trainingGame],
 };
 
@@ -7537,7 +7536,7 @@ const splitStackTraining = {
   id: 20,
   title: 'Initiation au Stack en U',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'Premier entrainement pour entrainer le Split Stack',
+  description: 'Premier entraînement pour découvrir le Split Stack',
   drills: [warmupGameDrill, horizontalTrapOutside, splitIso, splitToVertical, trainingGame],
 };
 
@@ -7545,7 +7544,7 @@ const diagonalStackTraining = {
   id: 21,
   title: 'Initiation au Stack Diagonal',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'Premier entrainement pour entrainer le Stack Diagonal ',
+  description: 'Premier entraînement pour découvrir le Stack Diagonal ',
   drills: [warmupGameDrill, horizontalTrapOutside, diagonalIso, diagonalToVertical, trainingGame],
 };
 
@@ -7560,9 +7559,9 @@ const kidInitiation = {
 //Fitness Weeks
 const fitnessWeek1 = {
   id: 101,
-  title: "It's time to come back",
+  title: 'Retour aux affaires',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'Premier semaine du programme',
+  description: 'Première semaine du programme',
   drills: [mas30, fartlek, suicide],
 };
 
@@ -7722,7 +7721,7 @@ const fitnessWeek21 = {
   id: 121,
   title: 'T-Drill',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'Vingt et unième semaine du programme',
+  description: 'Vingt-et-unième semaine du programme',
   drills: [tDrill, tDrill],
 };
 
@@ -7746,7 +7745,7 @@ const fitnessWeek24 = {
   id: 124,
   title: 'Serpentine',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'Vingt quatrième semaine du programme',
+  description: 'Vingt-quatrième semaine du programme',
   drills: [tDrill, tDrill],
 };
 
@@ -7754,7 +7753,7 @@ const fitnessWeek25 = {
   id: 125,
   title: 'Circuit + MAS',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'Vingt cinquième semaine du programme',
+  description: 'Vingt-cinquième semaine du programme',
   drills: [circuitLong, mas15Long],
 };
 
@@ -7762,14 +7761,14 @@ const fitnessWeek26 = {
   id: 126,
   title: 'Serpentine',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'Vingt  sixième semaine du programme',
+  description: 'Vingt-sixième semaine du programme',
   drills: [serpentine, serpentine, ladderPractice],
 };
 const fitnessWeek27 = {
   id: 127,
   title: 'T-Drill',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'Vingt septième semaine du programme',
+  description: 'Vingt-septième semaine du programme',
   drills: [tDrill, tDrill],
 };
 
@@ -7777,7 +7776,7 @@ const fitnessWeek28 = {
   id: 128,
   title: 'Repos',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'Vingt huitième semaine du programme',
+  description: 'Vingt-huitième semaine du programme',
   drills: [rest],
 };
 
@@ -7785,7 +7784,7 @@ const fitnessWeek29 = {
   id: 129,
   title: 'Serpentine',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'Vingt neuvième semaine du programme',
+  description: 'Vingt-neuvième semaine du programme',
   drills: [suicide, serpentine, sprintPractice],
 };
 
@@ -7801,7 +7800,7 @@ const fitnessWeek31 = {
   id: 131,
   title: 'Repos',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'Trente et unième semaine du programme',
+  description: 'Trente-et-unième semaine du programme',
   drills: [rest],
 };
 
@@ -7809,7 +7808,7 @@ const fitnessWeek32 = {
   id: 132,
   title: 'Sprint + VMA',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'Trente Deuxième semaine du programme',
+  description: 'Trente-deuxième semaine du programme',
   drills: [mas30, tDrill, sprintPractice],
 };
 
@@ -7817,7 +7816,7 @@ const fitnessWeek33 = {
   id: 133,
   title: 'Serpentine',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'Trente troisième semaine du programme',
+  description: 'Trente-troisième semaine du programme',
   drills: [serpentine, serpentine],
 };
 
@@ -7825,13 +7824,13 @@ const fitnessWeek34 = {
   id: 134,
   title: 'T-Drill',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'Trente quatrième semaine du programme',
+  description: 'Trente-quatrième semaine du programme',
   drills: [tDrill, tDrill],
 };
 
 const fitnessWeek35 = {
   id: 135,
-  title: 'Rest',
+  title: 'Repos',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Trente-cinquième semaine du programme',
   drills: [rest],
@@ -7839,7 +7838,7 @@ const fitnessWeek35 = {
 
 const fitnessWeek36 = {
   id: 136,
-  title: 'Rest',
+  title: 'Repos',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Trente-sixième semaine du programme',
   drills: [rest],
@@ -7881,7 +7880,7 @@ const fitnessWeek41 = {
   id: 141,
   title: 'T-Drill',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'Quarante et unième semaine du programme',
+  description: 'Quarante-et-unième semaine du programme',
   drills: [tDrill, tDrill],
 };
 
@@ -7889,7 +7888,7 @@ const fitnessFull1 = {
   id: 201,
   title: 'Off-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'Premiere semaine du programme',
+  description: 'Première semaine du programme',
   drills: [agility1, strenght1, suicide],
 };
 
@@ -7959,7 +7958,7 @@ const fitnessFull9 = {
 
 const fitnessFull10 = {
   id: 210,
-  title: 'Pre-Season',
+  title: 'Pré-saison',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Dixième semaine du programme',
   drills: [agility6, strenght6, tDrill],
@@ -7967,42 +7966,42 @@ const fitnessFull10 = {
 
 const fitnessFull11 = {
   id: 211,
-  title: 'Pre-Season',
+  title: 'Pré-saison',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Onzième semaine du programme',
   drills: [agility7, strenght7, mas15],
 };
 const fitnessFull12 = {
   id: 212,
-  title: 'Pre-Season',
+  title: 'Pré-saison',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Douzième semaine du programme',
   drills: [agility7, strenght7, mas15Long],
 };
 const fitnessFull13 = {
   id: 213,
-  title: 'Pre-Season',
+  title: 'Pré-saison',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Treizième semaine du programme',
   drills: [agility8, strenght8, tDrill],
 };
 const fitnessFull14 = {
   id: 214,
-  title: 'Pre-Season',
+  title: 'Pré-saison',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Quatorzième semaine du programme',
   drills: [agility8, strenght8, serpentine],
 };
 const fitnessFull15 = {
   id: 215,
-  title: 'Pre-Season',
+  title: 'Pré-saison',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Quinzième semaine du programme',
   drills: [agility9, strenght9, serpentine],
 };
 const fitnessFull16 = {
   id: 216,
-  title: 'Pre-Season',
+  title: 'Pré-saison',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Seizième semaine du programme',
   drills: [agility9, strenght9, tDrill],
@@ -8010,7 +8009,7 @@ const fitnessFull16 = {
 
 const fitnessFull17 = {
   id: 217,
-  title: 'Pre-Season',
+  title: 'Pré-saison',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Dix-septième semaine du programme',
   drills: [agility10, strenght10, mas15],
@@ -8018,14 +8017,14 @@ const fitnessFull17 = {
 
 const fitnessFull18 = {
   id: 218,
-  title: 'Pre-Season',
+  title: 'Pré-saison',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Dix-huitème semaine du programme',
   drills: [agility10, strenght10, tDrill],
 };
 const fitnessFull19 = {
   id: 219,
-  title: 'In-Season',
+  title: 'En saison',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Dix-neuvième semaine du programme',
   drills: [agility11, strenght11, serpentine],
@@ -8033,7 +8032,7 @@ const fitnessFull19 = {
 
 const fitnessFull20 = {
   id: 220,
-  title: 'In-Season',
+  title: 'En saison',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Vingtième semaine du programme',
   drills: [agility11, strenght11, ladderPractice],
@@ -8041,23 +8040,23 @@ const fitnessFull20 = {
 
 const fitnessFull21 = {
   id: 221,
-  title: 'In-Season',
+  title: 'En saison',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'Vingt et unième semaine du programme',
+  description: 'Vingt-et-unième semaine du programme',
   drills: [agility12, strenght12, tDrill],
 };
 
 const fitnessFull22 = {
   id: 222,
-  title: 'In-Season',
+  title: 'En saison',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'Vingt-Deuxième semaine du programme',
+  description: 'Vingt-deuxième semaine du programme',
   drills: [agility12, strenght12, serpentine],
 };
 
 const fitnessFull23 = {
   id: 223,
-  title: 'In-Season',
+  title: 'En saison',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Vingt-troisième semaine du programme',
   drills: [agility13, strenght13, serpentine],
@@ -8065,48 +8064,48 @@ const fitnessFull23 = {
 
 const fitnessFull24 = {
   id: 224,
-  title: 'In-Season',
+  title: 'En saison',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'Vingt quatrième semaine du programme',
+  description: 'Vingt-quatrième semaine du programme',
   drills: [agility13, strenght13, tDrill],
 };
 
 const fitnessFull25 = {
   id: 225,
-  title: 'In-Season',
+  title: 'En saison',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'Vingt cinquième semaine du programme',
+  description: 'Vingt-cinquième semaine du programme',
   drills: [agility14, strenght14, mas15Long],
 };
 
 const fitnessFull26 = {
   id: 226,
-  title: 'In-Season',
+  title: 'En saison',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'Vingt sixième semaine du programme',
+  description: 'Vingt-sixième semaine du programme',
   drills: [agility14, strenght14, ladderPractice],
 };
 const fitnessFull27 = {
   id: 227,
-  title: 'Peak',
+  title: 'Pic de forme',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'Vingt septième semaine du programme',
+  description: 'Vingt-septième semaine du programme',
   drills: [agility15, strenght15, tDrill],
 };
 
 const fitnessFull28 = {
   id: 228,
-  title: 'Peak',
+  title: 'Pic de forme',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'Vingt huitième semaine du programme',
+  description: 'Vingt-huitième semaine du programme',
   drills: [agility15, strenght15, sprintPractice],
 };
 
 const fitnessFull29 = {
   id: 229,
-  title: 'Peak',
+  title: 'Pic de forme',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'Vingt neuvième semaine du programme',
+  description: 'Vingt-neuvième semaine du programme',
   drills: [agility16, strenght16, sprintPractice],
 };
 
@@ -8322,13 +8321,13 @@ export const programs = [
   {
     id: 6,
     type: DrillTypes.FRISBEE,
-    title: 'Defense individuel',
+    title: 'Défense individuelle',
     trainings: [defenseBaseTraining, defenseSecond, defenseThird],
   },
   {
     id: 7,
     type: DrillTypes.FRISBEE,
-    title: 'Defense de Zone',
+    title: 'Défense de Zone',
     trainings: [zoneCup],
   },
   {

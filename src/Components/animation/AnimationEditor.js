@@ -95,7 +95,8 @@ class AnimationEditor extends React.Component {
   addElementToAnimation = (type, x, y) => {
     const position = this._positionPixelToPercent(x, y);
 
-    if (position[0] <= 1 && position[1] <= 0.88 && position[0] >= 0 && position[1] >= 0) {
+    // 0.90 more or less matches the position of the progress bar in Animation
+    if (position[0] <= 1 && position[1] <= 0.9 && position[0] >= 0 && position[1] >= 0) {
       const text = this.state.labels[type];
 
       const labels = { ...this.state.labels };

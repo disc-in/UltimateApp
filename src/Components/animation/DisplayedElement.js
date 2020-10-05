@@ -9,7 +9,7 @@ import debug from './debug';
 class DisplayedElement extends React.Component {
   /* Props must contain:
       - type: which indicates how to display the element: "offense", "defense", "triangle" or "disc"
-      - movable: true if element can be moved by the user
+      - editable: true if element can be moved by the user
       - number: string defined if there is something written on the element
       - eId: element index in the list of elements of the drill (-1 if it is not currently in a drill)
     */
@@ -32,7 +32,7 @@ class DisplayedElement extends React.Component {
       onPanResponderGrant: () => {
         if (this.props.onMoveStart !== undefined && this.props.onMoveStart !== null) this.props.onMoveStart();
 
-        if (this.props.movable) {
+        if (this.props.editable) {
           this.setState({
             isMoving: true,
           });
@@ -45,12 +45,12 @@ class DisplayedElement extends React.Component {
         }
       },
 
-      onPanResponderMove: this.props.movable
+      onPanResponderMove: this.props.editable
         ? Animated.event([null, { dx: this.offset.x, dy: this.offset.y }], { useNativeDriver: false })
         : undefined,
 
       onPanResponderRelease: (event, gestureState) => {
-        if (this.props.movable && this.props.onMoveEnd !== undefined && this.props.onMoveEnd !== null) {
+        if (this.props.editable && this.props.onMoveEnd !== undefined && this.props.onMoveEnd !== null) {
           this.props.onMoveEnd(this.props.eId, this.props.type, gestureState.dx, gestureState.dy);
         }
         this.setState({

@@ -199,7 +199,7 @@ class Animation extends React.Component {
               number={this.props.animation.texts[index]}
               key={index}
               eId={index}
-              movable={this.props.editable}
+              editable={this.props.editable}
               onMoveStart={this.props.onMoveStart}
               onMoveEnd={this.props.onElementMoveEnd}
               topMargin={this.dTop}

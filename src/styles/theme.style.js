@@ -16,11 +16,11 @@ export default {
   MAIN_COLOR: '#2a9e91',
 
   // animations
-  CONE_COLOR: '#FEA500',
-  DEFENSE_COLOR: '#AFAFAF',
+  CONE_COLOR: '#feae19',
+  DEFENSE_COLOR: '#9d9d9d',
   PLAYER_TEXT_COLOR: '#fff',
-  DISC_TEXT_COLOR: 'black',
   CUT_COLOR: 'green',
   DISC_COLOR: 'white',
   DISC_BORDER: 'black',
+  DISC_TEXT_COLOR: 'black',
 };

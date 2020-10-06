@@ -24,8 +24,8 @@ const AnimationBackground = (props) => {
 
   const brickRadius = linesWidth * 10;
   const brickLeft = leftRightMargin + fieldWidth / 2 - brickRadius / 2;
-  const brickZoneTop = zoneLineTop + fieldHeight * 0.33 - 2 * brickRadius;
-  const brick34Top = threeQuarterLineTop + fieldHeight * 0.24 - 2 * brickRadius;
+  const brickZoneTop = zoneLineTop + fieldHeight * 0.4 - 2 * brickRadius;
+  const brick34Top = threeQuarterLineTop + fieldHeight * 0.33 - 2 * brickRadius;
 
   const Brick = ({ top }) => (
     <MaterialCommunityIcons name="close" style={[styles.brick, { left: brickLeft, top }]} size={brickRadius} />
@@ -145,7 +145,7 @@ const AnimationBackground = (props) => {
             ]}
           />
 
-          <Brick top={brickZoneTop} />
+          <Brick top={brick34Top} />
         </View>
       );
     case AnimationBackgrounds.RECTANGLE:

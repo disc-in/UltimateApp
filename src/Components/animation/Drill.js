@@ -1,5 +1,3 @@
-import debug from './debug';
-
 // Each drill has an attribute "positions" which is a 4D array:
 // - positions[stepId][elemId][subStepId][coordinateId]
 //
@@ -167,33 +165,33 @@ class Drill {
   }
 
   log() {
-    debug('== Positions');
+    console.log('== Positions');
 
     if (this.positions !== undefined && this.positions !== null) {
       /* For each step */
       for (var stepId = 0; stepId < this.positions.length; stepId++) {
-        debug('step ' + stepId);
+        console.log('step ' + stepId);
 
         for (var elementId = 0; elementId < this.positions[stepId].length; elementId++) {
-          debug('\telement ' + elementId);
+          console.log('\telement ' + elementId);
 
           if (this.positions[stepId][elementId] !== null && this.positions[stepId][elementId] !== undefined) {
             for (var cutId = 0; cutId < this.positions[stepId][elementId].length; cutId++) {
-              debug('\t\tcut ' + cutId);
+              console.log('\t\tcut ' + cutId);
 
               if (
                 this.positions[stepId][elementId][cutId] !== undefined &&
                 this.positions[stepId][elementId][cutId] !== null
               ) {
-                debug('\t\t\tx: ' + this.positions[stepId][elementId][cutId][0]);
-                debug('\t\t\ty: ' + this.positions[stepId][elementId][cutId][1]);
-              } else debug('\t\t\t' + this.positions[stepId][elementId][cutId]);
+                console.log('\t\t\tx: ' + this.positions[stepId][elementId][cutId][0]);
+                console.log('\t\t\ty: ' + this.positions[stepId][elementId][cutId][1]);
+              } else console.log('\t\t\t' + this.positions[stepId][elementId][cutId]);
             }
-          } else debug('\t\t' + this.positions[stepId][elementId]);
+          } else console.log('\t\t' + this.positions[stepId][elementId]);
         }
       }
     } else {
-      debug(this.positions);
+      console.log(this.positions);
     }
   }
 }

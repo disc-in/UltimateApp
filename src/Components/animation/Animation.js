@@ -54,6 +54,12 @@ class Animation extends React.Component {
     if (this.props.editable) this.props.onDimensionSet(this.animationHeight, this.animationWidth);
   }
 
+  componentDidUpdate(prevProps) {
+    if (!this.props.editable && prevProps.animation !== this.props.animation) {
+      this.currentStepAV.setValue(0);
+    }
+  }
+
   playAnimation = () => {
     this.setState(
       {
@@ -174,7 +180,7 @@ class Animation extends React.Component {
               number={this.props.animation.texts[index]}
               key={index}
               eId={index}
-              movable={this.props.editable}
+              editable={this.props.editable}
               onMoveStart={this.props.onMoveStart}
               onMoveEnd={this.props.onElementMoveEnd}
               topMargin={this.dTop}

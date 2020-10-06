@@ -8,8 +8,6 @@ import BackgroundPicker from './BackgroundPicker';
 import Drill from './Drill';
 import theme from '../../styles/theme.style';
 
-import debug from './debug';
-
 class AnimationEditor extends React.Component {
   constructor(props) {
     super(props);
@@ -217,9 +215,7 @@ class AnimationEditor extends React.Component {
       newAnimation.positions[previousStepId][elemId][1].push(newPositionY);
     }
 
-    this.saveAnimation(newAnimation, () => {
-      this.state.animation.log();
-    });
+    this.saveAnimation(newAnimation);
   };
 
   onElementMoveEnd = (elementIndex, type, xDelta, yDelta) => {

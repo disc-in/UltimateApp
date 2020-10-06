@@ -8,8 +8,6 @@ import DrillList from './shared/DrillList';
 import Button from './shared/Button';
 import theme from '../styles/theme.style';
 import { swipeConfig } from '../styles/config';
-import iconNextTraining from '../../assets/next_training.png';
-import iconPrevTraining from '../../assets/prev_training.png';
 import { convertMinsToTime } from '../utils/time';
 
 export function getTrainingDuration(training) {
@@ -50,7 +48,7 @@ const TrainingPage = (props) => {
       <View style={styles.programNavigation}>
         {!isFirstTraining && (
           <TouchableOpacity style={styles.btnPrevNext} onPress={onPrevPress} testID="goToPrev">
-            <Image style={styles.navTraining} source={iconPrevTraining} />
+            <MaterialCommunityIcons name="chevron-left" style={styles.navChevron} />
           </TouchableOpacity>
         )}
         <View style={styles.programInfo}>
@@ -64,7 +62,7 @@ const TrainingPage = (props) => {
         </View>
         {!isLastTraining && (
           <TouchableOpacity style={[styles.btnPrevNext, styles.btnNext]} onPress={onNextPress} testID="goToNext">
-            <Image style={styles.navTraining} source={iconNextTraining} />
+            <MaterialCommunityIcons name="chevron-right" style={styles.navChevron} />
           </TouchableOpacity>
         )}
       </View>
@@ -150,10 +148,9 @@ const styles = StyleSheet.create({
     left: 'auto',
     right: 10,
   },
-  navTraining: {
-    width: 20,
-    height: 60,
-    resizeMode: 'contain',
+  navChevron: {
+    fontSize: 42,
+    color: theme.COLOR_PRIMARY,
   },
   descriptionText: {
     color: theme.COLOR_SECONDARY,

@@ -1,14 +1,13 @@
 import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity, Image } from 'react-native';
 import GestureRecognizer from 'react-native-swipe-gestures';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import I18n from '../utils/i18n';
 import DrillList from './shared/DrillList';
 import Button from './shared/Button';
 import theme from '../styles/theme.style';
 import { swipeConfig } from '../styles/config';
-import iconPlayers from '../../assets/ic_players.png';
-import iconClock from '../../assets/ic_clock.png';
 import iconNextTraining from '../../assets/next_training.png';
 import iconPrevTraining from '../../assets/prev_training.png';
 import { convertMinsToTime } from '../utils/time';
@@ -77,11 +76,11 @@ const TrainingPage = (props) => {
       {program && programNavigation()}
       <View style={styles.infos}>
         <View style={styles.info}>
-          <Image style={styles.infoIcon} source={iconPlayers} />
+          <MaterialCommunityIcons name="account-multiple" color={theme.COLOR_PRIMARY} size={22} />
           <Text style={styles.infoValue}>{getTrainingMinimalPlayersNumber(training)}+</Text>
         </View>
         <View style={styles.info}>
-          <Image style={styles.infoIcon} source={iconClock} />
+          <MaterialCommunityIcons name="clock-outline" color={theme.COLOR_PRIMARY} size={22} />
           <Text style={styles.infoValue}>{convertMinsToTime(getTrainingDuration(training))}</Text>
         </View>
       </View>
@@ -119,9 +118,6 @@ const styles = StyleSheet.create({
     height: '100%',
     flex: 1,
   },
-  trainingPageContent: {
-    paddingBottom: 50,
-  },
   overview: {
     paddingLeft: 20,
     paddingRight: 20,
@@ -154,6 +150,11 @@ const styles = StyleSheet.create({
     left: 'auto',
     right: 10,
   },
+  navTraining: {
+    width: 20,
+    height: 60,
+    resizeMode: 'contain',
+  },
   descriptionText: {
     color: theme.COLOR_SECONDARY,
     fontSize: theme.FONT_SIZE_MEDIUM,
@@ -165,15 +166,6 @@ const styles = StyleSheet.create({
   },
   info: {
     alignItems: 'center',
-  },
-  navTraining: {
-    width: 20,
-    height: 60,
-    resizeMode: 'contain',
-  },
-  infoIcon: {
-    width: 20,
-    height: 20,
   },
   infoValue: {
     color: theme.COLOR_SECONDARY,

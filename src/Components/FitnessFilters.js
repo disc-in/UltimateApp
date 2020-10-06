@@ -9,8 +9,6 @@ import Button from './filters/FilterButton';
 import Checkbox from './filters/Checkbox';
 import Slider from './filters/Slider';
 import HeaderButton from './shared/HeaderButton';
-import iconRedo from '../../assets/redo_arrow.png';
-import buttonValidation from '../../assets/check_dark.png';
 
 export class FitnessFilters extends React.Component {
   constructor(props) {
@@ -113,8 +111,8 @@ export class FitnessFilters extends React.Component {
     this.props.navigation.setOptions({
       headerRight: () => (
         <View style={{ flexDirection: 'row' }}>
-          <HeaderButton image={iconRedo} onPress={() => this.resetFilters()} testID="resetButton" />
-          <HeaderButton image={buttonValidation} onPress={() => this.validateFilters()} testID="validateButton" />
+          <HeaderButton icon="restart" onPress={() => this.resetFilters()} testID="resetButton" />
+          <HeaderButton icon="check" onPress={() => this.validateFilters()} testID="validateButton" />
         </View>
       ),
     });

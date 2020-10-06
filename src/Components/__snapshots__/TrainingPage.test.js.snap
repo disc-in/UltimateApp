@@ -771,15 +771,7 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
                 }
               }
             >
-              <Image
-                source={1}
-                style={
-                  Object {
-                    "height": 20,
-                    "width": 20,
-                  }
-                }
-              />
+              <Text />
               <Text
                 style={
                   Object {
@@ -799,15 +791,7 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
                 }
               }
             >
-              <Image
-                source={1}
-                style={
-                  Object {
-                    "height": 20,
-                    "width": 20,
-                  }
-                }
-              />
+              <Text />
               <Text
                 style={
                   Object {
@@ -1982,16 +1966,29 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
               }
               testID="goToNext"
             >
-              <Image
-                source={1}
+              <Text
+                allowFontScaling={false}
                 style={
-                  Object {
-                    "height": 60,
-                    "resizeMode": "contain",
-                    "width": 20,
-                  }
+                  Array [
+                    Object {
+                      "color": undefined,
+                      "fontSize": 12,
+                    },
+                    Object {
+                      "color": "#232b2b",
+                      "fontSize": 42,
+                    },
+                    Object {
+                      "fontFamily": "material-community",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    Object {},
+                  ]
                 }
-              />
+              >
+                
+              </Text>
             </View>
           </View>
           <View
@@ -2010,15 +2007,26 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
                 }
               }
             >
-              <Image
-                source={1}
+              <Text
+                allowFontScaling={false}
                 style={
-                  Object {
-                    "height": 20,
-                    "width": 20,
-                  }
+                  Array [
+                    Object {
+                      "color": "#232b2b",
+                      "fontSize": 22,
+                    },
+                    undefined,
+                    Object {
+                      "fontFamily": "material-community",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    Object {},
+                  ]
                 }
-              />
+              >
+                
+              </Text>
               <Text
                 style={
                   Object {
@@ -2038,15 +2046,26 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
                 }
               }
             >
-              <Image
-                source={1}
+              <Text
+                allowFontScaling={false}
                 style={
-                  Object {
-                    "height": 20,
-                    "width": 20,
-                  }
+                  Array [
+                    Object {
+                      "color": "#232b2b",
+                      "fontSize": 22,
+                    },
+                    undefined,
+                    Object {
+                      "fontFamily": "material-community",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    Object {},
+                  ]
                 }
-              />
+              >
+                
+              </Text>
               <Text
                 style={
                   Object {

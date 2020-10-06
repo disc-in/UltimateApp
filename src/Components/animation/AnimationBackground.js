@@ -1,7 +1,9 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import { AnimationBackgrounds } from '../../Fixtures/config';
+import theme from '../../styles/theme.style';
 
 /**
  * If props.background does not match any of the above types, the background will be empty.
@@ -17,12 +19,17 @@ const AnimationBackground = (props) => {
   const fieldHeight = props.animationHeight - topMargin - bottomMargin;
   const fieldWidth = props.animationWidth - 2 * leftRightMargin;
   const linesWidth = Math.min(fieldHeight, fieldWidth) * 0.005;
-  const brickRadius = linesWidth * 5;
   const zoneLineTop = topMargin + fieldHeight * 0.4;
   const threeQuarterLineTop = topMargin + fieldHeight * 0.24;
-  const brickLeft = leftRightMargin + fieldWidth / 2 - brickRadius;
+
+  const brickRadius = linesWidth * 10;
+  const brickLeft = leftRightMargin + fieldWidth / 2 - brickRadius / 2;
   const brickZoneTop = zoneLineTop + fieldHeight * 0.33 - 2 * brickRadius;
   const brick34Top = threeQuarterLineTop + fieldHeight * 0.24 - 2 * brickRadius;
+
+  const Brick = ({ top }) => (
+    <MaterialCommunityIcons name="close" style={[styles.brick, { left: brickLeft, top }]} size={brickRadius} />
+  );
 
   switch (props.background) {
     case AnimationBackgrounds.ENDZONE:
@@ -80,12 +87,7 @@ const AnimationBackground = (props) => {
             ]}
           />
 
-          {/* Brick */}
-          <View
-            style={[styles.brick, { left: brickLeft }, { top: brickZoneTop }, { borderRadius: brickRadius }]}
-            height={2 * brickRadius}
-            width={2 * brickRadius}
-          />
+          <Brick top={brickZoneTop} />
         </View>
       );
     case AnimationBackgrounds.THREE_QUARTERS_FIELD:
@@ -143,12 +145,7 @@ const AnimationBackground = (props) => {
             ]}
           />
 
-          {/* Brick */}
-          <View
-            style={[styles.brick, { left: brickLeft }, { top: brick34Top }, { borderRadius: brickRadius }]}
-            height={2 * brickRadius}
-            width={2 * brickRadius}
-          />
+          <Brick top={brickZoneTop} />
         </View>
       );
     case AnimationBackgrounds.RECTANGLE:
@@ -193,7 +190,7 @@ const AnimationBackground = (props) => {
             ]}
           />
 
-          {/* Top horizontal bar */}
+          {/* Bottom horizontal bar */}
           <View
             style={[
               styles.bar,
@@ -219,13 +216,11 @@ export default AnimationBackground;
 const styles = StyleSheet.create({
   bar: {
     position: 'absolute',
-    backgroundColor: 'black',
-    borderRadius: 1,
+    backgroundColor: theme.COLOR_PRIMARY,
     borderWidth: 1,
   },
   brick: {
     position: 'absolute',
-    borderWidth: 1,
-    borderColor: 'black',
+    color: theme.COLOR_SECONDARY,
   },
 });

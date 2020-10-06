@@ -13,7 +13,7 @@ import simulator from '../../assets/HomePage/simulator.jpg';
 import dictionary from '../../assets/HomePage/dictionary.jpg';
 import ourPlays from '../../assets/HomePage/ourplays.jpg';
 import essential from '../../assets/HomePage/essential.jpg';
-import huddle from '../../assets/HomePage/huddle.png';
+import huddle from '../../assets/HomePage/huddle.jpg';
 import FeedbackButton from './home/FeedbackButton';
 import { DrillTypes, EquipmentLabels } from '../Fixtures/config';
 

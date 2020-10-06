@@ -13,10 +13,10 @@ exports[`<FeedbackButton /> renders correctly 1`] = `
   onStartShouldSetResponder={[Function]}
   style={
     Object {
-      "marginRight": 20,
       "opacity": 1,
     }
   }
+  testID="headerButton"
 >
   <Text />
 </View>

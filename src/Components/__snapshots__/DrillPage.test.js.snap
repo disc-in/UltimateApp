@@ -150,7 +150,6 @@ exports[`<DrillPage /> renders correctly 1`] = `
                 onStartShouldSetResponder={[Function]}
                 style={
                   Object {
-                    "marginRight": 20,
                     "opacity": 1,
                   }
                 }

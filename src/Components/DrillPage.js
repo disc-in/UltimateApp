@@ -1,24 +1,13 @@
 import React, { useRef, useLayoutEffect } from 'react';
-import {
-  ScrollView,
-  StyleSheet,
-  View,
-  Text,
-  ImageBackground,
-  TouchableOpacity,
-  Dimensions,
-  findNodeHandle,
-} from 'react-native';
+import { ScrollView, StyleSheet, View, Text, ImageBackground, Dimensions, findNodeHandle } from 'react-native';
 import { connect } from 'react-redux';
 import { useHeaderHeight } from '@react-navigation/stack';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import I18n from '../utils/i18n';
-import StartButton from './shared/StartButton';
 import { toggleFavorite } from '../Store/Actions/favoriteAction';
-
 import theme from '../styles/theme.style';
-
+import StartButton from './shared/StartButton';
+import HeaderButton from './shared/HeaderButton';
 import FitnessDrillIllustration from './drills/FitnessDrillIllustration';
 import FrisbeeDrillIllustration from './drills/FrisbeeDrillIllustration';
 import { DrillTypes } from '../Fixtures/config';
@@ -50,15 +39,7 @@ export const DrillPage = (props) => {
       icon = 'heart';
     }
 
-    return (
-      <TouchableOpacity
-        style={styles.favoriteContainer}
-        onPress={() => props.toggleFavorite(drill)}
-        testID="favoriteButton"
-      >
-        <MaterialCommunityIcons name={icon} color={theme.COLOR_PRIMARY} size={26} />
-      </TouchableOpacity>
-    );
+    return <HeaderButton icon={icon} onPress={() => props.toggleFavorite(drill)} testID="favoriteButton" />;
   };
 
   useLayoutEffect(() =>
@@ -224,9 +205,6 @@ const styles = StyleSheet.create({
   lines: {
     borderBottomColor: theme.COLOR_SECONDARY_LIGHT,
     borderBottomWidth: 1,
-  },
-  favoriteContainer: {
-    marginRight: 20,
   },
 });
 

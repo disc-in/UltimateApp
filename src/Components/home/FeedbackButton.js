@@ -1,10 +1,11 @@
 import React from 'react';
-import { StyleSheet, TouchableOpacity, Alert } from 'react-native';
+import { Alert } from 'react-native';
 import * as MailComposer from 'expo-mail-composer';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import I18n from '../../utils/i18n';
 import theme from '../../styles/theme.style';
+import HeaderButton from '../shared/HeaderButton';
 
 export const FeedbackButton = (props) => {
   const feedback = () => {
@@ -29,17 +30,7 @@ export const FeedbackButton = (props) => {
     alert(result.status);
   };
 
-  return (
-    <TouchableOpacity style={styles.feedbackButton} onPress={feedback}>
-      <MaterialCommunityIcons name="email-outline" color={theme.COLOR_PRIMARY} size={26} />
-    </TouchableOpacity>
-  );
+  return <HeaderButton icon="email-outline" onPress={feedback} />;
 };
 
 export default FeedbackButton;
-
-const styles = StyleSheet.create({
-  feedbackButton: {
-    marginRight: 20,
-  },
-});

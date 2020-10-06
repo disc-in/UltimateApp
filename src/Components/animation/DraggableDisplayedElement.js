@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Easing, Animated, View, PanResponder } from 'react-native';
+import { StyleSheet, Animated, PanResponder } from 'react-native';
 
 import theme from '../../styles/theme.style';
 
@@ -29,8 +29,8 @@ const DraggableDisplayedElement = (props) => {
   const coneSize = playerRadius / 2;
 
   const panStyle = { transform: currentPosition.getTranslateTransform() };
-
   let itemStyle, textStyle;
+
   switch (type) {
     case 'defense':
     case 'offense':

@@ -121,16 +121,15 @@ const _initializeStateFromProps = (props) => {
               props.animation.positions[stepId][elemId][0][0],
               props.animation.positions[stepId][elemId][0][1],
             );
+            startingPosition[1] -= props.topMargin;
 
-            _addOffset(props.animation, startingPosition, elemId, coneSize, playerRadius);
             elemCut.push(startingPosition);
 
             const positions = props.animation.getPositionsAtStep(elemId, stepId - 1);
-
             // For each substep in this cut add the position(s) of the cut
             for (let subStepId = 0; subStepId < positions.length; subStepId++) {
               const pos = props.positionPercentToPixel(positions[subStepId][0], positions[subStepId][1]);
-              _addOffset(props.animation, pos, elemId, coneSize, playerRadius);
+              pos[1] -= props.topMargin;
 
               elemCut.push(pos);
             }
@@ -208,31 +207,6 @@ const _initializeStateFromProps = (props) => {
     cuts,
     animation: props.animation,
   };
-};
-
-/** Add an offset to the position so that the cut is placed at the center of the element (otherwise it would be at its top left) */
-const _addOffset = (animation, pos, elemId, coneSize, playerRadius) => {
-  switch (animation.ids[elemId]) {
-    case 'triangle':
-      pos[0] += coneSize / 2;
-      pos[1] += coneSize / 2;
-      break;
-
-    case 'offense':
-      pos[0] += playerRadius / 2;
-      pos[1] += playerRadius / 2;
-      break;
-
-    case 'defense':
-      pos[0] += playerRadius / 2;
-      pos[1] += playerRadius / 2;
-      break;
-
-    case 'disc':
-      pos[0] += playerRadius / 2;
-      pos[1] += playerRadius / 2;
-      break;
-  }
 };
 
 export default DisplayedCuts;

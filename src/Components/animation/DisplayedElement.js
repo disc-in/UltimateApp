@@ -3,8 +3,6 @@ import { StyleSheet, Easing, Animated, View, Text, PanResponder } from 'react-na
 
 import theme from '../../styles/theme.style';
 
-import debug from './debug';
-
 /** An element displayed in a drill animation */
 class DisplayedElement extends React.Component {
   /* Props must contain:

@@ -23,8 +23,7 @@ exports[`<Animation /> renders correctly 1`] = `
         style={
           Array [
             Object {
-              "backgroundColor": "black",
-              "borderRadius": 1,
+              "backgroundColor": "#232b2b",
               "borderWidth": 1,
               "position": "absolute",
             },
@@ -41,8 +40,7 @@ exports[`<Animation /> renders correctly 1`] = `
         style={
           Array [
             Object {
-              "backgroundColor": "black",
-              "borderRadius": 1,
+              "backgroundColor": "#232b2b",
               "borderWidth": 1,
               "position": "absolute",
             },
@@ -59,8 +57,7 @@ exports[`<Animation /> renders correctly 1`] = `
         style={
           Array [
             Object {
-              "backgroundColor": "black",
-              "borderRadius": 1,
+              "backgroundColor": "#232b2b",
               "borderWidth": 1,
               "position": "absolute",
             },
@@ -77,8 +74,7 @@ exports[`<Animation /> renders correctly 1`] = `
         style={
           Array [
             Object {
-              "backgroundColor": "black",
-              "borderRadius": 1,
+              "backgroundColor": "#232b2b",
               "borderWidth": 1,
               "position": "absolute",
             },
@@ -91,28 +87,7 @@ exports[`<Animation /> renders correctly 1`] = `
           ]
         }
       />
-      <View
-        height={4.25}
-        style={
-          Array [
-            Object {
-              "borderColor": "black",
-              "borderWidth": 1,
-              "position": "absolute",
-            },
-            Object {
-              "left": 47.875,
-            },
-            Object {
-              "top": 62.8,
-            },
-            Object {
-              "borderRadius": 2.125,
-            },
-          ]
-        }
-        width={4.25}
-      />
+      <Text />
     </View>
     <View
       onMoveShouldSetResponder={[Function]}
@@ -131,7 +106,7 @@ exports[`<Animation /> renders correctly 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "transparent",
-          "borderBottomColor": "#FEA500",
+          "borderBottomColor": "#feae19",
           "borderBottomWidth": 4.166666666666667,
           "borderColor": "transparent",
           "borderLeftWidth": 2.0833333333333335,
@@ -182,7 +157,7 @@ exports[`<Animation /> renders correctly 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "transparent",
-          "borderBottomColor": "#FEA500",
+          "borderBottomColor": "#feae19",
           "borderBottomWidth": 4.166666666666667,
           "borderColor": "transparent",
           "borderLeftWidth": 2.0833333333333335,
@@ -233,7 +208,7 @@ exports[`<Animation /> renders correctly 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "transparent",
-          "borderBottomColor": "#FEA500",
+          "borderBottomColor": "#feae19",
           "borderBottomWidth": 4.166666666666667,
           "borderColor": "transparent",
           "borderLeftWidth": 2.0833333333333335,
@@ -284,7 +259,7 @@ exports[`<Animation /> renders correctly 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "transparent",
-          "borderBottomColor": "#FEA500",
+          "borderBottomColor": "#feae19",
           "borderBottomWidth": 4.166666666666667,
           "borderColor": "transparent",
           "borderLeftWidth": 2.0833333333333335,
@@ -335,7 +310,7 @@ exports[`<Animation /> renders correctly 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "transparent",
-          "borderBottomColor": "#FEA500",
+          "borderBottomColor": "#feae19",
           "borderBottomWidth": 4.166666666666667,
           "borderColor": "transparent",
           "borderLeftWidth": 2.0833333333333335,
@@ -386,7 +361,7 @@ exports[`<Animation /> renders correctly 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "transparent",
-          "borderBottomColor": "#FEA500",
+          "borderBottomColor": "#feae19",
           "borderBottomWidth": 4.166666666666667,
           "borderColor": "transparent",
           "borderLeftWidth": 2.0833333333333335,
@@ -437,7 +412,7 @@ exports[`<Animation /> renders correctly 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "transparent",
-          "borderBottomColor": "#FEA500",
+          "borderBottomColor": "#feae19",
           "borderBottomWidth": 4.166666666666667,
           "borderColor": "transparent",
           "borderLeftWidth": 2.0833333333333335,
@@ -488,7 +463,7 @@ exports[`<Animation /> renders correctly 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "transparent",
-          "borderBottomColor": "#FEA500",
+          "borderBottomColor": "#feae19",
           "borderBottomWidth": 4.166666666666667,
           "borderColor": "transparent",
           "borderLeftWidth": 2.0833333333333335,

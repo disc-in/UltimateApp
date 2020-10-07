@@ -91,6 +91,8 @@ import sideFlow from '../Animation/SideFlow';
 import sideWindmill from '../Animation/SideWindmill';
 import checkLongKidAnimation from '../Animation/CheckLongKid';
 import adaptMark from '../Animation/AdaptMark';
+import ghost from '../Animation/Ghost';
+import ladderGhost from '../Animation/LadderGhost';
 
 const stabilityDrill = {
   id: 1,
@@ -5188,6 +5190,16 @@ const basicThrowsDrill = {
       instruction:
         'Players stand in two lines facing a partner and pass back and forth. The coach decides what throw they do. If the disc falls, the pair moves to the right most spot in the line. The pair at the left when the time is over wins!',
     },
+    {
+      id: 3,
+      title: 'With Ghosts',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: ladderGhost,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Same situation and objective. To increase the difficulty, one or more players (the ghosts) will circulate between the throwers with the objective of provoking a turn-over. The ghosts are not allowed to touch the discs or the offensive players.',
+    },
   ],
 };
 
@@ -5563,7 +5575,7 @@ const menageATroisDrill = {
   id: 1013,
   type: DrillTypes.FRISBEE,
   author: 'Tchac',
-  title: 'Three-person drill',
+  title: 'Three-person Drill',
   image: 'https://zupimages.net/up/20/19/ai3z.jpg',
   description: 'The thrower tries to reach the target by using any fake possible',
   minimalPlayersNumber: 3,
@@ -6022,7 +6034,7 @@ const youShallNotPassDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'Set up both an offense line and a defense line. One attacker and one defender each run to the box then cut deep at the same time. The offensive player must cut back towards the thrower to try to catch the disc in the box, they are only allowed to change their direction this one time. The defender must position themself so that the offense cannot pass them to return to the box. The thrower may only throw to under cuts.',
+        'Set up both an offense line and a defense line. One offensive player and one defender each run to the box then cut deep at the same time. The offensive player must cut back towards the thrower to try to catch the disc in the box, they are only allowed to change their direction this one time. The defender must position themself so that the offense cannot pass them to return to the box. The thrower may only throw to under cuts.',
     },
     {
       id: 2,
@@ -6658,7 +6670,7 @@ const sprintDefense = {
   id: 1037,
   type: DrillTypes.FRISBEE,
   author: 'Lucky Grass',
-  title: "The leopard's defense",
+  title: "The Leopard's Defense",
   image: 'https://zupimages.net/up/20/25/5pqg.jpg',
   description: 'Warm up drill to focus on the reactivity in defense.',
   minimalPlayersNumber: 2,
@@ -6678,7 +6690,7 @@ const sprintDefense = {
       repetition: '',
       rest: '',
       instruction:
-        'One offensive player against a defender. The goal of the offensive player is touch the outside cone before that the defender touch the inside one. They both have to touch the inside cone before switching their direction. The defensive player can start running when the both feet of the attacker left the ground.',
+        'One offensive player against a defender. The goal of the offensive player is touch the outside cone before that the defender touch the inside one. They both have to touch the inside cone before switching their direction. The defensive player can start running when the both feet of the offensive player left the ground.',
     },
   ],
 };
@@ -7059,13 +7071,42 @@ const adaptToTheMark = {
   steps: [
     {
       id: 1,
-      title: 'Adaptation à la marque',
+      title: 'Adaptation to the Mark',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: adaptMark,
       repetition: '',
       rest: '',
       instruction:
         'A first pass is made to a middle. The player who made the pass becomes the reset. He must adapt to the mark applied. If the mark is in the direction of the line, the reset makes a Up line cut and throws a long. If the mark is in the direction of the center, the players make a give & go followed by a long.',
+    },
+  ],
+};
+
+const ghostMark = {
+  id: 1048,
+  type: DrillTypes.FRISBEE,
+  author: 'Puc Ultimate',
+  title: 'The Ghost',
+  image: 'https://zupimages.net/up/20/41/447u.jpg',
+  description: 'Players practice catching the disc in difficult situations.',
+  minimalPlayersNumber: 3,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disc',
+  durationInMinutes: 10,
+  intensity: Intensities.LOW,
+  goals: [FrisbeeGoals.CATCH],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'The Ghost Mark',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: ghost,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Two players throw in pairs. The defending players, without touching the disc and the offensive players, must interfere with the catch. They can, for example, pass in front of the disk at the last moment If a turn-over is caused, without the defenders touching the disc, the roles are reversed. ',
     },
   ],
 };
@@ -7190,7 +7231,7 @@ const longestGame = {
   id: 2005,
   type: DrillTypes.FRISBEE,
   author: 'KYE',
-  title: 'The disc is gold',
+  title: 'Disc is Gold',
   image: 'https://zupimages.net/up/20/28/g0fq.jpg',
   description:
     'Just a classical game on the whole field. Uses a stopwatch to calculate the time spent for a team to score a point. The team that took the longest time to score a point without a turnover gains 3 more points at the end of the game.',
@@ -8062,6 +8103,8 @@ export const drills = [
   splitToVertical,
   sideToVertical,
   checkLongKid,
+  adaptToTheMark,
+  ghostMark,
 
   // Games
   normalGame,

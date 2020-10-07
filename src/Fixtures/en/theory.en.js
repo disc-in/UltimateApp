@@ -413,7 +413,7 @@ export const tactics = [
         id: 2,
         title: 'Endzone Vertical Stack',
         text: 'AUC Mayhem',
-        video: '436149607',
+        video: '439808313',
         illustration: 'https://zupimages.net/up/20/30/s33y.jpg',
         time: '4:54',
         description: '',

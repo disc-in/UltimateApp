@@ -7106,7 +7106,7 @@ const ghostMark = {
       repetition: '',
       rest: '',
       instruction:
-        'Two players throw in pairs. The defending players, without touching the disc and the offensive players, must interfere with the catch. They can, for example, pass in front of the disk at the last moment If a turn-over is caused, without the defenders touching the disc, the roles are reversed. ',
+        'Two players throw in pairs. The defending players, without touching the disc and the offensive players, try to interfere with the catch. They can, for example, pass in front of the disk at the last moment. If a turn-over is caused, without the defenders touching the disc, the roles are reversed.',
     },
   ],
 };

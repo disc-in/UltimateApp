@@ -5297,7 +5297,7 @@ const basicThrowsDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'Même situation et objectif. Pour augmenter la difficulté, un ou plusieurs joueurs (les fantômes) vont circuler entre les lanceurs dans l\'objectif de provoquer de turn-over. Les fantômes n\'ont pas le droit de toucher les disques ou les attaquants. ',
+        "Même situation et objectif. Pour augmenter la difficulté, un ou plusieurs joueurs (les fantômes) vont circuler entre les lanceurs dans l'objectif de provoquer un turn-over. Les fantômes n'ont pas le droit de toucher les disques ou les attaquants.",
     },
   ],
 };
@@ -7165,7 +7165,8 @@ const adaptToTheMark = {
   author: 'Puc Ultimate',
   title: 'Adaptation à la marque',
   image: 'https://zupimages.net/up/20/29/7a6g.jpg',
-  description: "Exercice dans lequel le handler de soutien doit s'adapter à la marque. Travail de placement, d'adaption et de lancer",
+  description:
+    "Exercice dans lequel le handler de soutien doit s'adapter à la marque. Travail de placement, d'adaption et de lancer",
   minimalPlayersNumber: 10,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '3 plots - 4 disques',
@@ -7212,7 +7213,7 @@ const ghostMark = {
       repetition: '',
       rest: '',
       instruction:
-        "Deux joueurs lancent par pair. Les joueurs en défense, sans toucher le disque et les attaquants, doivent gêner la réception. Ils peuvent, par exemple, passer devant le disque au dernier moment. Si un turn-over est provoqué, sans que les défenseurs touchent le disque, les rôles s'inversent. ",
+        "Deux joueurs lancent par paire. Les joueurs en défense, sans toucher le disque et les attaquants, doivent gêner la réception. Ils peuvent, par exemple, passer devant le disque au dernier moment. Si un turn-over est provoqué, sans que les défenseurs touchent le disque, les rôles s'inversent.",
     },
   ],
 };

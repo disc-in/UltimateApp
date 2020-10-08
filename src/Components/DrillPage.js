@@ -14,14 +14,12 @@ import { useHeaderHeight } from '@react-navigation/stack';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import I18n from '../utils/i18n';
-import StartButton from './shared/StartButton';
 import { toggleFavorite } from '../Store/Actions/favoriteAction';
-
+import { DrillTypes } from '../Fixtures/config';
 import theme from '../styles/theme.style';
-
 import FitnessDrillIllustration from './drills/FitnessDrillIllustration';
 import FrisbeeDrillIllustration from './drills/FrisbeeDrillIllustration';
-import { DrillTypes } from '../Fixtures/config';
+import StartButton from './drills/StartButton';
 
 export const DrillPage = props => {
   const { route, navigation } = props;

@@ -2,10 +2,10 @@ import React from 'react';
 import { StyleSheet, Animated, Dimensions, Easing, View } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-import Animation from './Animation';
+import Animation from '../animation/Animation';
 import DraggableDisplayedElement from './DraggableDisplayedElement';
 import BackgroundPicker from './BackgroundPicker';
-import Drill from './Drill';
+import Drill from '../animation/Drill';
 import theme from '../../styles/theme.style';
 
 class AnimationEditor extends React.Component {
@@ -332,7 +332,7 @@ class AnimationEditor extends React.Component {
           triangle: 1,
         };
 
-        for (let type of animation.ids) labels[type] += 1;
+        for (const type of animation.ids) labels[type] += 1;
         return {
           animation,
           labels,

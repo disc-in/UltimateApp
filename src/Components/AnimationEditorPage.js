@@ -4,11 +4,11 @@ import { Share, StyleSheet, View, Alert } from 'react-native';
 import { Provider } from 'react-native-paper';
 
 import I18n from '../utils/i18n';
-import AnimationEditor from './animation/AnimationEditor';
+import AnimationEditor from './editor/AnimationEditor';
 import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
-import CurrentDrillManager from './animation/CurrentDrillManager';
-import SavedDrillModal from './animation/SavedDrillModal';
-import RenameDrillModal from './animation/RenameDrillModal';
+import CurrentDrillManager from './editor/CurrentDrillManager';
+import SavedDrillModal from './editor/SavedDrillModal';
+import RenameDrillModal from './editor/RenameDrillModal';
 
 import theme from '../styles/theme.style';
 
@@ -42,7 +42,7 @@ export const AnimationEditorPage = props => {
       headerRight: () => (
         <View style={{ flexDirection: 'row', paddingLeft: 10 }}>
           {/* Display the button to open drills only if there is at least one saved drill */}
-          {props.customeDrills.length > 0 ? (
+          {props.customDrills.length > 0 ? (
             <Ionicons
               style={{ paddingRight: 10 }}
               name="md-clipboard"
@@ -99,7 +99,7 @@ export const AnimationEditorPage = props => {
   const updateTitle = () => {
     // If the title has changed
     if (drillTempTitle !== drillTitle) {
-      const drillIndex = props.customeDrills.findIndex(item => item.title === drillTempTitle);
+      const drillIndex = props.customDrills.findIndex(item => item.title === drillTempTitle);
 
       // If the new title is already given to another drill
       if (drillIndex !== -1) askOverwriteDrill();
@@ -238,7 +238,7 @@ export const AnimationEditorPage = props => {
     const defaultTitle = I18n.t('drillEditor.untitledDrill');
     let newTitle = defaultTitle;
 
-    const titleId = props.customeDrills.findIndex(item => item.title === newTitle);
+    const titleId = props.customDrills.findIndex(item => item.title === newTitle);
 
     // If a saved drill already has the default title
     if (titleId !== -1) {
@@ -247,7 +247,7 @@ export const AnimationEditorPage = props => {
       do {
         newTitle = defaultTitle + ' (' + counter + ')';
         counter += 1;
-      } while (props.customeDrills.findIndex(item => item.title === newTitle) !== -1);
+      } while (props.customDrills.findIndex(item => item.title === newTitle) !== -1);
     }
 
     setDrillState(emptyDrill);
@@ -269,7 +269,7 @@ export const AnimationEditorPage = props => {
       <View style={styles.centeredView}>
         {modalOpenVisible ? (
           <SavedDrillModal
-            savedDrills={props.customeDrills}
+            savedDrills={props.customDrills}
             openDrill={drill => checkModificationsBeforeOpening(drill)}
             deleteDrill={item => askConfirmationToDelete(item)}
             close={() => setModalOpenVisible(false)}
@@ -292,7 +292,7 @@ export const AnimationEditorPage = props => {
 
 const mapStateToProps = state => {
   return {
-    customeDrills: state.customeDrills,
+    customDrills: state.customDrills,
   };
 };
 

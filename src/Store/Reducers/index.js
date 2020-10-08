@@ -7,7 +7,7 @@ import drillReducer from './drillReducer';
 const rootReducer = combineReducers({
   favoriteDrills: favoriteReducer,
   completeTrainings: programReducer,
-  customeDrills: drillReducer,
+  customDrills: drillReducer,
   drills: (state = [], action) => state,
   trainings: (state = [], action) => state,
   programs: (state = [], action) => state,

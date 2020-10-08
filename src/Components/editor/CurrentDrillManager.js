@@ -7,7 +7,7 @@ import theme from '../../styles/theme.style';
 import I18n from '../../utils/i18n';
 import HeaderButton from '../shared/HeaderButton';
 
-const CurrentDrillManagerMenu = (props) => {
+const CurrentDrillManager = (props) => {
   const [visible, setVisible] = useState(false);
 
   const openMenu = () => {
@@ -56,4 +56,4 @@ const CurrentDrillManagerMenu = (props) => {
   );
 };
 
-export default CurrentDrillManagerMenu;
+export default CurrentDrillManager;

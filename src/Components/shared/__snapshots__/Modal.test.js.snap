@@ -6,8 +6,31 @@ exports[`<Modal /> renders correctly 1`] = `
   hardwareAccelerated={false}
   onRequestClose={[MockFunction]}
   transparent={true}
+  useNativeDriver={true}
   visible={true}
 >
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "rgba(0,0,0,0.5)",
+        "bottom": 0,
+        "left": 0,
+        "opacity": 1,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  />
   <View
     style={
       Object {

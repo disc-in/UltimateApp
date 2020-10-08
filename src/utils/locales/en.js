@@ -96,7 +96,7 @@ export default {
     untitledDrill: 'Unnamed drill',
     drillManager: {
       askOverwrite: 'A drill with this title already exist. Do you want to overwrite it?',
-      validate: 'Validate',
+      overwrite: 'Overwrite',
       save: 'Save',
       rename: 'Rename',
       new: 'New',

@@ -6,7 +6,8 @@ import I18n from '../../utils/i18n';
 
 const Modal = ({ title, visible, onClose, children }) => {
   return (
-    <NativeModal animationType="fade" transparent visible={visible} onRequestClose={onClose}>
+    <NativeModal animationType="fade" transparent useNativeDriver visible={visible} onRequestClose={onClose}>
+      <TouchableOpacity style={styles.backdrop} activeOpacity={1} onPress={onClose} />
       <View style={styles.centeredView}>
         <View style={styles.modalView}>
           <Text style={styles.titleText}>{title}</Text>
@@ -21,6 +22,14 @@ const Modal = ({ title, visible, onClose, children }) => {
 };
 
 const styles = StyleSheet.create({
+  backdrop: {
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    backgroundColor: 'rgba(0,0,0,0.5)',
+  },
   centeredView: {
     flex: 1,
     justifyContent: 'center',

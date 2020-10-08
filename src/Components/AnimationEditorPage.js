@@ -73,7 +73,7 @@ export const AnimationEditorPage = (props) => {
         },
       },
       {
-        text: I18n.t('drillEditor.drillManager.validate'),
+        text: I18n.t('drillEditor.drillManager.overwrite'),
         onPress: () => {
           props.saveDrill({ title: drillTempTitle, oldTitle: drillTitle, value: currentDrill });
           setDrillTitle(drillTempTitle);

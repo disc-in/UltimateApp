@@ -96,7 +96,7 @@ export default {
     untitledDrill: 'Exercice sans titre',
     drillManager: {
       askOverwrite: 'Voulez-vous le remplacer ?',
-      validate: 'Valider',
+      overwrite: 'Remplacer',
       save: 'Sauvegarder',
       rename: 'Renommer',
       new: 'Nouveau',

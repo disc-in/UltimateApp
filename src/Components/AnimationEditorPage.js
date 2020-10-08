@@ -147,10 +147,8 @@ export const AnimationEditorPage = (props) => {
     if (isDrillSaved) openDrill(drill);
     else {
       Alert.alert(
-        I18n.t('drillEditor.drillManager.saveModifications'),
-        I18n.t('drillEditor.drillManager.saveModifications2') +
-          drillTitle +
-          I18n.t('drillEditor.drillManager.saveModifications3'),
+        I18n.t('drillEditor.drillManager.saveModificationsTitle'),
+        I18n.t('drillEditor.drillManager.saveModificationsText', { title: drillTitle }),
         [
           {
             text: I18n.t('drillEditor.drillManager.cancel'),
@@ -158,14 +156,14 @@ export const AnimationEditorPage = (props) => {
             onPress: () => {},
           },
           {
-            text: I18n.t('drillEditor.drillManager.saveAndOpen'),
+            text: I18n.t('drillEditor.drillManager.yes'),
             onPress: () => {
               props.saveDrill({ title: drillTitle, drill: currentDrillState });
               openDrill(drill);
             },
           },
           {
-            text: I18n.t('drillEditor.drillManager.openWithoutSaving'),
+            text: I18n.t('drillEditor.drillManager.no'),
             onPress: () => {
               openDrill(drill);
             },
@@ -189,10 +187,8 @@ export const AnimationEditorPage = (props) => {
     if (isDrillSaved) createNewDrill();
     else {
       Alert.alert(
-        I18n.t('drillEditor.drillManager.saveModifications'),
-        I18n.t('drillEditor.drillManager.saveModifications2') +
-          drillTitle +
-          I18n.t('drillEditor.drillManager.saveModifications3'),
+        I18n.t('drillEditor.drillManager.saveModificationsTitle'),
+        I18n.t('drillEditor.drillManager.saveModificationsText', { title: drillTitle }),
         [
           {
             text: I18n.t('drillEditor.drillManager.cancel'),
@@ -200,14 +196,14 @@ export const AnimationEditorPage = (props) => {
             onPress: () => {},
           },
           {
-            text: I18n.t('drillEditor.drillManager.saveAndCreate'),
+            text: I18n.t('drillEditor.drillManager.yes'),
             onPress: () => {
               props.saveDrill({ title: drillTitle, drill: currentDrillState });
               createNewDrill();
             },
           },
           {
-            text: I18n.t('drillEditor.drillManager.createWithoutSaving'),
+            text: I18n.t('drillEditor.drillManager.no'),
             onPress: () => {
               createNewDrill();
             },

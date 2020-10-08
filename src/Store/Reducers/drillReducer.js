@@ -17,9 +17,7 @@ function drillReducer(state = initialState, action) {
         nextState[drillIndex] = action.value;
       } else nextState = [...nextState, action.value];
 
-      if (nextState !== undefined && nextState !== null) nextState.sort((a, b) => (a.title > b.title ? 1 : -1));
-
-      return nextState || state;
+      return nextState;
 
     case 'DELETE_DRILL':
       drillIndex = state.findIndex((item) => item.title === action.value);

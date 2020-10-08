@@ -23,7 +23,8 @@ exports[`<Modal /> renders correctly 1`] = `
           "alignItems": "center",
           "backgroundColor": "white",
           "borderRadius": 20,
-          "elevation": 5,
+          "elevation": 10,
+          "maxWidth": "80%",
           "padding": 20,
           "shadowColor": "#000",
           "shadowOffset": Object {
@@ -62,8 +63,9 @@ exports[`<Modal /> renders correctly 1`] = `
         onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "backgroundColor": "#2a9e91",
+            "borderColor": "#2a9e91",
             "borderRadius": 10,
+            "borderWidth": 1,
             "marginTop": 20,
             "opacity": 1,
             "paddingHorizontal": 20,
@@ -75,7 +77,7 @@ exports[`<Modal /> renders correctly 1`] = `
         <Text
           style={
             Object {
-              "color": "#fff",
+              "color": "#2a9e91",
               "fontWeight": "bold",
               "textAlign": "center",
             }

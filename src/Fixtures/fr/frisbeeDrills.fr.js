@@ -5260,7 +5260,8 @@ const basicThrowsDrill = {
   author: 'Mooncatchers',
   title: 'Lancers de base',
   image: 'https://zupimages.net/up/20/19/zgxt.jpg',
-  description: 'Exercices de lancer simples pour apprendre à lancer le frisbee',
+  description:
+    "Exercices de lancer simples pour apprendre à lancer le frisbee \nEn match: Il est nécessaire de maitriser plusieurs types de lancer pour s'adapter à toutes les situations",
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque',
@@ -5308,7 +5309,8 @@ const breakDrill = {
   author: 'Friselis',
   title: 'Cuts vers le côté fermé',
   image: 'https://zupimages.net/up/20/19/83fx.jpg',
-  description: "Pour apprendre à jouer dans le côté fermé, et empêcher l'adversaire de le faire !",
+  description:
+    "Pour apprendre à jouer dans le côté fermé, et empêcher l'adversaire de le faire !\nEn match: Les défenseurs cherchent à orienter le jeu en limitant les options de passes par une marque. Si les attaquants parviennent à breaker, ils augmentent drastiquement les possibilités de passes.",
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '6 disques - 6 plots',
@@ -5351,7 +5353,7 @@ const treasureHuntDrill = {
   title: 'Chasse aux trésors',
   image: 'https://zupimages.net/up/20/19/z7lq.jpg',
   description:
-    "Deux équipes s'opposent. L'objectif est de ramener les 5 frisbees dans un carré délimité par les cônes. Les joueurs ne sont pas autorisés à marcher avec le frisbee. Lorsqu'un frisbee tombe ou est intercepté, il doit être ramené au point de départ par l'équipe attaquante. La première équipe qui \"sauve\" tous ses frisbees gagne.",
+    "Deux équipes s'opposent. L'objectif est de ramener les 5 frisbees dans un carré délimité par les cônes. Les joueurs ne sont pas autorisés à marcher avec le frisbee. Lorsqu'un frisbee tombe ou est intercepté, il doit être ramené au point de départ par l'équipe attaquante. La première équipe qui \"sauve\" tous ses frisbees gagne.\nEn match: Afin de réaliser des défenses collectives, il est important de travailler sur la communication entre les joueurs. Une communication efficace permettra de faire des switchs judicieux.",
   minimalPlayersNumber: 10,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '10 disques - 10 plots',
@@ -5381,7 +5383,7 @@ const kyeDrill = {
   title: '3 vs 2',
   image: 'https://zupimages.net/up/20/19/zgxt.jpg',
   description:
-    "Situation de match. L'équipe de 2 reste en défense s'ils arrivent à provoquer un turnover. Les lancers longs sont interdits.",
+    "Situation de match. L'équipe de 2 reste en défense s'ils arrivent à provoquer un turnover. Les lancers longs sont interdits.\nEn match: Parfois une situation de surnombre est crée (après une longue notamment). Il faut alors que les attaquants réussissent à jouer rapidement pour gagner du terrain sans qu'un autre défenseur puisse les rejoindre. Les défenseurs cherchent à ralentir le plus possible les attaquants en laissant le porteur du frisbee sans marque",
   minimalPlayersNumber: 5,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque - 2 plots',
@@ -5411,7 +5413,7 @@ const bigEightDrill = {
   title: 'Le Grand 8',
   image: 'https://zupimages.net/up/20/19/5209.jpg',
   description:
-    "Suivre un circuit de passes qui va permettre de travailler l'enchainement parfait pour dérouler dans le break",
+    "Suivre un circuit de passes qui va permettre de travailler l'enchainement parfait pour dérouler dans le break\nEn match: Afin d'assurer une bonne continuation, il est nécessaire de travailler le timing des cuts et la technique. Le play travaillé dans cet exercice permettra de sortir de la ligne et de progresser rapidement du côté fermé",
   minimalPlayersNumber: 16,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '8 disques - 8 plots',
@@ -5440,7 +5442,8 @@ const trainDrill = {
   author: 'Iznogood',
   title: 'Le train',
   image: 'https://zupimages.net/up/20/19/ac8s.jpg',
-  description: 'Idéal pour travailler la continuité sur un stack vertical',
+  description:
+    "Idéal pour travailler la continuité sur un stack vertical\nEn match : Une première passe a été effectuée et l'équipe attaquant doit se repositionner pour obtenir des options de continuités fluides et efficaces",
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque',
@@ -5488,7 +5491,8 @@ const giveAndGoDrill = {
   author: 'Freezzz beezzz',
   title: 'Give and Go',
   image: 'https://zupimages.net/up/20/19/s9fe.jpg',
-  description: 'Suivez votre disque après la passe aussi vite que possible',
+  description:
+    "Suivez votre disque après la passe aussi vite que possible\nEn match: Les une-deux rapides permettent aux attaquants de gagner du terrain et de bénéficier de position plus avantageuse pour lancer. Le lanceur cherche à bénéficier au maximum de l'inertie du défenseur pour prendre de l'avance sur son cut",
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque - 12 plots',
@@ -5526,7 +5530,7 @@ const aussieDrill = {
   title: 'Le jeu Australien',
   image: 'https://zupimages.net/up/20/19/78g2.png',
   description:
-    'Un jeu ludique avec les frisbees qui va permettre aux joueurs de prendre du plaisir et de travailler la communication avec un disque',
+    'Un jeu ludique avec les frisbees qui va permettre aux joueurs de prendre du plaisir et de travailler la communication avec un disque\nEn match: Cet exercice ludique permet de travailler la communication des défenseurs. Celle ci est primordiale afin de réaliser des switchs sur les terrains et/ou une défense de zone efficace. En attaque, cet exercice permet de travailler la détection des joueurs démarqués',
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '4 disques - 20 plots',
@@ -5555,7 +5559,8 @@ const bolognaMDrill = {
   author: 'CUSB',
   title: 'Le M',
   image: 'https://zupimages.net/up/20/19/akuy.jpg',
-  description: 'Suivez le M pour travailler votre Dump & Swing',
+  description:
+    "Suivez le M pour travailler votre Dump & Swing\nEn match: Cet exercice permet de travailler le timing nécessaire pour sortir de la ligne. Le premier cut correspond à la course effectuée par le premier du stack lorsque l'on souhaite recentrer le disque",
   minimalPlayersNumber: 10,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque - 6 plots',
@@ -5584,7 +5589,8 @@ const goToTenDrill = {
   author: "Jack'suns",
   title: 'Passe à 10',
   image: 'https://zupimages.net/up/20/19/rcyt.jpg',
-  description: 'Première équipe qui complète 10 passes gagne',
+  description:
+    "Première équipe qui complète 10 passes gagne\nEn match: Il est important de savoir conserver le disque le plus longtemps possible. Ce savoir est particulièrement utile contre une défense de zone ou à l'approche de la endzone",
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque - 4 plots',
@@ -5652,7 +5658,7 @@ const bulldogDrill = {
   title: 'Epervier',
   image: 'https://zupimages.net/up/20/19/tf79.jpg',
   description:
-    "L'épervier se place au milieu du terrain. Tous les joueurs restants sont dans une zone protégée. Le jeu consiste à traverser l’intégralité du terrain sans se faire toucher par l’épervier. Le dernier joueur en liberté remporte la partie.",
+    "L'épervier se place au milieu du terrain. Tous les joueurs restants sont dans une zone protégée. Le jeu consiste à traverser l’intégralité du terrain sans se faire toucher par l’épervier. Le dernier joueur en liberté remporte la partie.\nEn match: Les défenseurs travaillent la situation de rideau dans une défense de zone. Ils doivent communiquer entre eux et se déplacer de manière uniforme afin de pas laisser d'espace entre eux",
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '4 plots',
@@ -5729,7 +5735,8 @@ const dwarfDuelDrill = {
   author: 'PUC',
   title: 'Le duel des nains',
   image: 'https://zupimages.net/up/20/19/3m3k.jpg',
-  description: 'Interdiction de sauter, tout est dans le positionnement !',
+  description:
+    'Interdiction de sauter, tout est dans le positionnement !\nEn match:Une longue est lancée et il faut remporter son duel. Si dans ce duel, votre taille est un désavantage, il est nécessaire de bloquer votre adversaire par la course (sans provoquer de contact)',
   minimalPlayersNumber: 3,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque - 2 plots',
@@ -5768,7 +5775,7 @@ const dishieChainDrill = {
   title: 'Chaine du Dishie',
   image: 'https://zupimages.net/up/20/19/stdq.jpg',
   description:
-    'Exercice de base de longues passes. Vous voulez que vos joueurs alternent entre lancer, courir et passer',
+    "Exercice de base de longues passes. Vous voulez que vos joueurs alternent entre lancer, courir et passer\nEn match: lorsque des défenseurs encerclent un vertical stack, ils les entourent et effectuent des switchs. Afin de percer cette défense, les attaquants doivent attaquer, à 2, le même défenseur. Le défenseur devra alors choisir l'un des attaquants et le lanceur pourra jouer sur l'attaquant laissé libre",
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque - 2 plots',
@@ -5825,7 +5832,8 @@ const breakDanceDrill = {
   author: 'Disc Joker',
   title: 'Le Sapin de Noël',
   image: 'https://zupimages.net/up/20/19/agsd.jpg',
-  description: 'Travailler la continuité dans le break',
+  description:
+    "Travailler la continuité dans le break\nEn match: L'intérêt d'un vertical stack est de libérer 2 zones de jeu. Lorsqu'une équipe parvient à jouer du côté fermé, elle doit chercher à rapidement gagner du terrain par une succession de passes",
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '5 disques - 10 plots',
@@ -5864,7 +5872,8 @@ const triangleOfDeathdrill = {
   author: 'Forward',
   title: 'Le Triangle de la mort',
   image: 'https://zupimages.net/up/20/19/kmlc.jpg',
-  description: 'Lancer 10 longues à la suite aussi loin et aussi vite que possible',
+  description:
+    'Lancer 10 longues à la suite aussi loin et aussi vite que possible\nEn match: Il faut être capable de rapidement retrouver son équilibre et analyser la course du cutter. Le lanceur effectue, alors, une longue afin de gagner le plus de terrain possible',
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '10 disque - 3 plots',
@@ -5882,7 +5891,7 @@ const triangleOfDeathdrill = {
       repetition: '',
       rest: '',
       instruction:
-        "Installer un petit triangle de 3 plots à environ 3 mètres de distance, pointe vers le terrain. On lanceur commence à une extrémité. Un joueur se place à quelques mètres en retrait avec une dizaine de disques. Les autres joueurs forment un stack vertical.\n\nLe lanceur court vers la point du triangle puis vers l'autre extrémité, reçoit une petite passe flottante du joueur en retrait et lance une longue sur le premier cutter. Il fait ensuite immédiatement la même chose de l'autre côté. A répéter une dizaine de fois d'affilée, ou jusqu'à ce que tous les attaquants aient reçu un disque.",
+        "Installer un petit triangle de 3 plots à environ 3 mètres de distance, pointe vers le terrain. On lanceur commence à une extrémité. Un joueur se place à quelques mètres en retrait avec une dizaine de disques. Les autres joueurs forment un stack vertical.\nLe lanceur court vers la point du triangle puis vers l'autre extrémité, reçoit une petite passe flottante du joueur en retrait et lance une longue sur le premier cutter. Il fait ensuite immédiatement la même chose de l'autre côté. A répéter une dizaine de fois d'affilée, ou jusqu'à ce que tous les attaquants aient reçu un disque.",
     },
   ],
 };
@@ -5893,7 +5902,8 @@ const trainOfFakeDrill = {
   author: 'Iznogood',
   title: 'Le Train des feintes',
   image: 'https://zupimages.net/up/20/19/ac8s.jpg',
-  description: 'Idéal pour travailler la continuité sur un stack vertical',
+  description:
+    'Idéal pour travailler la continuité sur un stack vertical\nEn match: La première passe a été effectuée et les attaquants doivent se mettre en place pour effectuer une attaque fluide. La première option de jeu reste le côté ouvert. Si celui est bloqué un renversement rapide doit être effectué pour jouer du côté fermé',
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque',
@@ -5969,7 +5979,8 @@ const resetOpenDrill = {
   author: 'Tchac',
   title: "Reset dans l'Ouvert",
   image: 'https://zupimages.net/up/20/19/tzk3.jpg',
-  description: 'Faire des cuts dans le bon timing, attraper puis lancer immédiatement',
+  description:
+    "Faire des cuts dans le bon timing, attraper puis lancer immédiatement\nEn match: La passe sur les middles n'a pas été possible, il faut dorénavant jouer sur l'handler de soutien. Celui-ci se trouve du côté vers lequel oriente la force(ouvert), il doit effectuer le mouvement vu dans cet exercice",
   minimalPlayersNumber: 4,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disque',
@@ -5987,7 +5998,7 @@ const resetOpenDrill = {
       repetition: '',
       rest: '',
       instruction:
-        "Le lanceur est défendu par une marque qui applique une force et son handler de soutien se place à 45° derrière lui, du côté ouvert.\nLe lanceur  commence par regarder vers l'avant pour simuler une situationde jeu, avant de se tourner vers son soutien et d'établir un contact visuel avec lui. Ensuite, le soutien fait un cut derrière le lanceur et reçoit le disque.\nLe disque est alors renvoyé au lanceur pour refaire l'exercice de l'autre côté en inversant la force.",
+        "Le lanceur est défendu par une marque qui applique une force et son handler de soutien se place à 45° derrière lui, du côté ouvert.\nLe lanceur commence par regarder vers l'avant pour simuler une situation de jeu, avant de se tourner vers son soutien et d'établir un contact visuel avec lui. Ensuite, le soutien fait un cut derrière le lanceur et reçoit le disque.\nLe disque est alors renvoyé au lanceur pour refaire l'exercice de l'autre côté en inversant la force.",
     },
     {
       id: 2,
@@ -6045,7 +6056,8 @@ const resetBreakDrill = {
   author: 'Tchac',
   title: 'Reset Break',
   image: 'https://zupimages.net/up/20/19/w90f.jpg',
-  description: 'Faire des cuts dans le bon timing, attraper puis lancer immédiatement',
+  description:
+    "Faire des cuts dans le bon timing, attraper puis lancer immédiatement\nEn match: La passe sur les middles n'a pas été possible, il faut dorénavant jouer sur l'handler de soutien. Celui-ci se trouve du côté opposé à la force(fermé), il doit effectuer le mouvement vu dans cet exercice",
   minimalPlayersNumber: 4,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disque',
@@ -6121,7 +6133,8 @@ const youShallNotPassDrill = {
   author: 'Belgium Open',
   title: 'Vous ne passerez pas !',
   image: 'https://zupimages.net/up/20/19/90z6.jpg',
-  description: "Utiliser son corps pour empêcher l'attaquant de recevoir le disque",
+  description:
+    "Utiliser son corps pour empêcher l'attaquant de recevoir le disque\nEn match: Les défenseurs expériementés peuvent utiliser leur corps pour bloquer la course d'un adversaire. Afin de ne pas faire de faute, le défenseur doit se placer dans la trajectoire de l'attaquant suffisamment en avance pour permettre à l'attaquant de l'éviter",
   minimalPlayersNumber: 4,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque - 4 plots',
@@ -6187,7 +6200,8 @@ const defensePositionDrill = {
   author: 'Sockeye',
   title: 'Positionnement défensif',
   image: 'https://zupimages.net/up/20/19/zigu.jpg',
-  description: "Se positionner correctement en fonction de la stratégie de l'équipe",
+  description:
+    "Se positionner correctement en fonction de la stratégie de l'équipe\nEn match: De manière équivalente à la force, les défenseurs sur les cutters doivent privilégier les options qu'ils souhaitent bloquer. L'objectif des défenseurs est de sortir les attaquants de leur zone de confort",
   minimalPlayersNumber: 4,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disque - 5 plots',
@@ -6255,7 +6269,8 @@ const dDC = {
   author: '',
   title: 'DDC',
   image: 'https://zupimages.net/up/20/25/t73e.jpg',
-  description: 'Double disc court est un sport de frisbee qui combine rapidité, stratégie et capacité de lancer.',
+  description:
+    "Double disc court est un sport de frisbee qui combine rapidité, stratégie et capacité de lancer.\nEn match : LE DDC permet de travailler la maîtrise des courbes de passes et la communication. La gain technique permet de s'adapter au situation de match",
   minimalPlayersNumber: 4,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '2 disques - 8 plots',
@@ -6293,7 +6308,8 @@ const horizontalTiming = {
   author: 'Wizard',
   title: "Le Timing de l'Horizontal",
   image: 'https://zupimages.net/up/20/25/zn5l.jpg',
-  description: 'Complete drill to work on the timing of the cutter and handler in a horizontal stack',
+  description:
+    "Complete drill to work on the timing of the cutter and handler in a horizontal stack\nEn match : Après la réception du pull, les attaquants peuvent chercher à mettre en place un play avec un stack Horizontal. L'intérêt est de gagner beaucoup de terrain en peu de passes",
   minimalPlayersNumber: 5,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disque',
@@ -6331,7 +6347,8 @@ const game3v3Horizontal = {
   author: 'Mooncatchers',
   title: 'Le Diamant',
   image: 'https://zupimages.net/up/20/25/2vga.jpg',
-  description: "Travail de libérer l'espace sur un stack horizontal",
+  description:
+    "Travail de libérer l'espace sur un stack horizontal\nEn match : Sur un stack horizontal, l'objectif est d'isolé un groupe une paire de cutter et de gagner le plus de terrain possible avec le minimum de lancers",
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disque - 8 plots',
@@ -6370,7 +6387,8 @@ const theDuel = {
   author: 'Furious George',
   title: "Rien de mieux qu'un duel",
   image: 'https://zupimages.net/up/20/28/ncjr.jpg',
-  description: "Rien de mieux qu'un duel pour travailler sur les différents aspects du jeu",
+  description:
+    "Rien de mieux qu'un duel pour travailler sur les différents aspects du jeu\nEn match : La grande majorité des tactiques ont pour objectif d'isoler un ou plusieurs joueurs afin de limiter les défenses collectives. Dans cet exercice, l'objectif est de travailler le duel qui résulte d'une tactique bien effectuée",
   minimalPlayersNumber: 4,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disque ',
@@ -6409,7 +6427,8 @@ const cardinal = {
   author: 'PUC',
   title: 'Les Points Cardinaux',
   image: 'https://zupimages.net/up/20/25/xtik.png',
-  description: 'Apprenez à lancer dans toutes les positions',
+  description:
+    "Apprenez à lancer dans toutes les positions\nEn match: Il faut être capable de s'adapter à la marque mise en place. Etre capable de lancer en permet de lancer plus rapidement",
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disque ',
@@ -6447,7 +6466,8 @@ const horizontalToVertical = {
   author: 'Mubidisk',
   title: 'Flow Horizontal',
   image: 'https://zupimages.net/up/20/25/kecr.jpg',
-  description: "Apprendre à créer un flow horizontal à partir d'une position statique.",
+  description:
+    "Apprendre à créer un flow horizontal à partir d'une position statique.\nEn match : Un play a été effectué avec un stack horizontal. L'objectif est de retrouver le plus rapidement possible un déroulement d'attaque fluide (le flow)",
   minimalPlayersNumber: 7,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disque ',
@@ -6496,7 +6516,8 @@ const horizontalTrap = {
   author: 'Mubidisk',
   title: "Débloqué dans l'Ouvert",
   image: 'https://zupimages.net/up/20/25/zkfl.jpg',
-  description: 'Apprendre à utiliser le stack horizontal pour sortir de la ligne avec les cutter dans le coté ouvert.',
+  description:
+    'Apprendre à utiliser le stack horizontal pour sortir de la ligne avec les cutters dans le coté ouvert.\nEn match : Le possesseur du disque est bloqué près de la ligne de touche et cherche à recentrer le disque ou à gagner beaucoup de terrain. Une des tactique utilisées peut-être un stack horizontal. Dans cet exercice, le travail de cut est effectué par les middles situés en face du lanceur',
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disc ',
@@ -6545,7 +6566,8 @@ const horizontalTrapOutside = {
   author: 'Mubidisk',
   title: 'Débloqué avec le Fermé',
   image: 'https://zupimages.net/up/20/25/zkfl.jpg',
-  description: 'Apprendre à utiliser le stack horizontal pour sortir de la ligne avec les cutter dans le coté fermé.',
+  description:
+    'Apprendre à utiliser le stack horizontal pour sortir de la ligne avec les cutter dans le coté fermé.\nEn match : Le possesseur du disque est bloqué près de la ligne de touche et cherche à recentrer le disque ou à gagner beaucoup de terrain. Une des tactique utilisées peut-être un stack horizontal. Dans cet exercice, le travail de cut est effectué par les middles situés dans le côté fermé',
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disque ',
@@ -6594,7 +6616,8 @@ const horizontalHandler = {
   author: 'Euforia',
   title: 'Débloqué avec les Handlers',
   image: 'https://zupimages.net/up/20/25/zkfl.jpg',
-  description: 'Apprendre à utiliser le stack horizontal pour sortir de la ligne avec les handlers.',
+  description:
+    'Apprendre à utiliser le stack horizontal pour sortir de la ligne avec les handlers.\nEn match : Le possesseur du disque est bloqué près de la ligne de touche et cherche à recentrer le disque ou à gagner beaucoup de terrain. Une des tactique utilisées peut-être un stack horizontal. Dans cet exercice, le travail de cut est effectué par les handlers',
   minimalPlayersNumber: 8,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disque ',
@@ -6643,7 +6666,8 @@ const checkLong = {
   author: 'Disk Joker',
   title: 'La longue est ta nouvelle arme',
   image: 'https://zupimages.net/up/20/25/pzn1.jpg',
-  description: 'Apprendre à lancer longue comme un lanceur et à prendre des informations comme un cutter.',
+  description:
+    "Apprendre à lancer des longues et à prendre des informations en tant que cutter\n En match : Le cutter doit observer le déroulement de l'action afin d'obtenir le meilleur timing pour sa course. Le lanceur doit ajuster trouver rapidement son équilibre et lancer dans la course du cutter",
   minimalPlayersNumber: 3,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disc ',
@@ -6672,7 +6696,8 @@ const throwCatchThrow = {
   author: 'PUC',
   title: 'Double Disc',
   image: 'https://zupimages.net/up/20/25/gf41.jpg',
-  description: "Travaille par paire. L'objectif est d'améliorer vos lancers et la vitesse de rattrapage.",
+  description:
+    "Travaille par paire. L'objectif est d'améliorer vos lancers et la vitesse de rattrapage.\nEn match : Gagner en dextérité avec le disque permet de lancer plus rapidement. Cet atout permet de breaker la marque davantage",
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '2 disques ',
@@ -6710,7 +6735,8 @@ const stopFlow = {
   author: 'Colony',
   title: 'Arrête le Flow',
   image: 'https://zupimages.net/up/20/28/2b8i.jpg',
-  description: 'Apprendre à être rapide pour identifier les options dangereuses et les bloquer.',
+  description:
+    "Apprendre à être rapide pour identifier les options dangereuses et les bloquer.\nEn match : Les attaquants ont pris de vitesse les défenseurs grâce à la première passe. L'objectif du défenseur est de ralentir l'attaque en bloquant l'option la plus dangereuse avec sa marque",
   minimalPlayersNumber: 5,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disque ',
@@ -6748,7 +6774,8 @@ const theTunnel = {
   author: 'CUSB',
   title: 'Le Tunnel',
   image: 'https://zupimages.net/up/20/25/742g.jpeg',
-  description: 'Réactivité en défense',
+  description:
+    "Réactivité en défense \nEn match : Les défenseurs cherchent à bloquer une direction du cutter(le under cut dans l'animation) en se plaçant toujours entre le lanceur et le cutter. Le défenseur doit aussi chercher à rester à proximité de l'attaquant sur l'option de cut opposé (longue)",
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '4 plots ',
@@ -6777,7 +6804,8 @@ const sprintDefense = {
   author: 'Lucky Grass',
   title: 'Réactivité en Défense.',
   image: 'https://zupimages.net/up/20/25/5pqg.jpg',
-  description: 'Échauffement drill to focus on the reactivity in defense.',
+  description:
+    "Exerice d'échauffement pour travailler la réactivité en défenses\nEn match : Un défenseur doit s'adapter le plus rapidement possible au course du cutter",
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '4 plots ',
@@ -6806,7 +6834,8 @@ const cupSwinging = {
   author: 'Black Fish',
   title: 'Swinging avec la cup',
   image: 'https://zupimages.net/up/20/25/019o.jpg',
-  description: 'Entraîner la cup de 3 joueurs contre les swings.',
+  description:
+    "Entraîner la cup de 3 joueurs contre les swings. \nEn match : Lorsqu'une défense de zone est mise en place, les joueurs formant le premier rideau doivent se déplacer de manière uniforme sans laisser d'espace suffisant pour qu'un lancer puisse être effectué entre eux",
   minimalPlayersNumber: 7,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disque ',
@@ -6874,7 +6903,7 @@ const goaltimateDrill = {
   title: 'Goaltimate',
   image: 'https://zupimages.net/up/20/19/gce7.jpg',
   description:
-    "L'objectif est de marquer des points en lançant un disque à un coéquipier dans une petite zone de marquage, à travers un grand cerceau semi-circulaire appelé but.",
+    "L'objectif est de marquer des points en lançant un disque à un coéquipier dans une petite zone de marquage, à travers un grand cerceau semi-circulaire appelé but.\nEn match : Lorsque les défenses deviennent plus compactes, il est nécessaire de savoir jouer dans les petits espaces. Le Goaltimate permet aussi de travailler la défense en switchant",
   minimalPlayersNumber: 8,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque - 10 plots or 1 but',
@@ -6912,7 +6941,8 @@ const diagonalToVertical = {
   author: 'Belgium Open',
   title: 'Diagonal vers Vertical',
   image: 'https://zupimages.net/up/20/25/iqn0.jpg',
-  description: "Entraîner l'équipe à faire la transition parfaite d'un stack diagonal à un flow vertical",
+  description:
+    "Entraîner l'équipe à faire la transition parfaite d'un stack diagonal à un flow vertical \nEn match : Un play après le pull a été effectué avec un stack diagonal. L'objectif est de réaliser la transition la plus rapide possible du play vers un flow vertical",
   minimalPlayersNumber: 8,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque ',
@@ -7019,7 +7049,8 @@ const splitIso = {
   author: 'Iznogood',
   title: "L'Iso ouvert en Split",
   image: 'https://zupimages.net/up/20/25/k6hi.jpg',
-  description: "Entraîner l'équipe à faire la transition parfaite d'un split stack à un flow vertical",
+  description:
+    "Entraîner l'équipe à faire la transition parfaite d'un split stack à un flow vertical\nEn match : Le Split permet d'isoler une paire de joueurs afin d'éviter les poachs des autres défenseurs",
   minimalPlayersNumber: 8,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque ',
@@ -7058,7 +7089,8 @@ const splitToVertical = {
   author: 'Iznogood',
   title: "L'Iso en Split",
   image: 'https://zupimages.net/up/20/25/uqd5.jpg',
-  description: "Entraîner l'équipe à faire la transition parfaite d'un split stack à un flow vertical",
+  description:
+    "Entraîner l'équipe à faire la transition parfaite d'un split stack à un flow vertical\nEn match : Un pull est receptionné et un play avec un stack Split est effectué. L'objectif est d'effectuer la transition la plus rapide entre un stack split et un flow vertical",
   minimalPlayersNumber: 8,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque ',
@@ -7195,7 +7227,8 @@ const ghostMark = {
   author: 'Puc Ultimate',
   title: 'Le Fantôme',
   image: 'https://zupimages.net/up/20/41/447u.jpg',
-  description: "Les joueurs s'entrainent à réceptionner le disque dans des situations difficiles",
+  description:
+    "Les joueurs s'entrainent à réceptionner le disque dans des situations difficiles\nEn match : il est important d'être capable d'effectuer une réception sans un contact visuel continu.",
   minimalPlayersNumber: 3,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque',

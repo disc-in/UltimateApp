@@ -64,29 +64,24 @@ export const AnimationEditorPage = (props) => {
 
   // Called when the user choose for the drill a title which is already used by another drill
   const askOverwriteDrill = () => {
-    Alert.alert(
-      I18n.t('drillEditor.drillManager.alreadyUsedTitle'),
-      I18n.t('drillEditor.drillManager.askOverwrite'),
-      [
-        {
-          text: I18n.t('drillEditor.drillManager.cancel'),
-          style: 'cancel',
-          onPress: () => {
-            setModalRenameVisible(true);
-          },
+    Alert.alert(I18n.t('drillEditor.drillManager.alreadyUsedTitle'), I18n.t('drillEditor.drillManager.askOverwrite'), [
+      {
+        text: I18n.t('drillEditor.drillManager.cancel'),
+        style: 'cancel',
+        onPress: () => {
+          setModalRenameVisible(true);
         },
-        {
-          text: I18n.t('drillEditor.drillManager.validate'),
-          onPress: () => {
-            props.saveDrill({ title: drillTempTitle, oldTitle: drillTitle, value: currentDrill });
-            setDrillTitle(drillTempTitle);
-            setIsDrillSaved(true);
-            navigation.setOptions({ headerTitle: drillTempTitle });
-          },
+      },
+      {
+        text: I18n.t('drillEditor.drillManager.validate'),
+        onPress: () => {
+          props.saveDrill({ title: drillTempTitle, oldTitle: drillTitle, value: currentDrill });
+          setDrillTitle(drillTempTitle);
+          setIsDrillSaved(true);
+          navigation.setOptions({ headerTitle: drillTempTitle });
         },
-      ],
-      'secure-text',
-    );
+      },
+    ]);
   };
 
   const updateTitle = () => {
@@ -158,7 +153,6 @@ export const AnimationEditorPage = (props) => {
             },
           },
         ],
-        'secure-text',
       );
     }
   };

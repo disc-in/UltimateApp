@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Modal, Alert, Text, FlatList, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Alert, Text, FlatList, TouchableOpacity } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import theme from '../../styles/theme.style';
 import I18n from '../../utils/i18n';
 import HeaderButton from '../shared/HeaderButton';
+import Modal from '../shared/Modal';
 
 const SavedDrillsList = (props) => {
   const [modalOpened, setModalOpened] = useState(false);
@@ -56,113 +57,62 @@ const SavedDrillsList = (props) => {
   return (
     <View>
       <HeaderButton icon="clipboard-text-outline" onPress={() => setModalOpened(true)} />
-      {modalOpened && (
-        <Modal
-          animationType="fade"
-          transparent
-          visible
-          onRequestClose={() => {
-            setModalOpened(false);
-          }}
-        >
-          <View style={styles.centeredView}>
-            <View style={styles.modalView}>
-              <Text style={styles.titleText}>{`${I18n.t('drillEditor.drillManager.savedDrills')}`}</Text>
-              <FlatList
-                data={props.savedDrills}
-                keyExtractor={(item) => item.title.toString()}
-                style={{ flexGrow: 0 }}
-                ListEmptyComponent={() => (
-                  <View>
-                    <Text>{I18n.t('drillEditor.drillManager.empty')}</Text>
-                  </View>
-                )}
-                renderItem={({ item }) => (
-                  <TouchableOpacity
-                    onPress={() => {
-                      setModalOpened(false);
-                      beforeOpening(item);
-                    }}
-                  >
-                    <View style={styles.item}>
-                      <Text>{item.title}</Text>
-                      <MaterialCommunityIcons
-                        style={styles.deleteIcon}
-                        name="trash-can"
-                        onPress={() => {
-                          deletionConfirmation(item);
-                        }}
-                      />
-                    </View>
-                  </TouchableOpacity>
-                )}
-              />
-              <TouchableOpacity
-                style={styles.returnButton}
-                onPress={() => {
-                  setModalOpened(false);
-                }}
-              >
-                <Text style={styles.returnButtonText}>{I18n.t('shared.back')}</Text>
-              </TouchableOpacity>
+      <Modal
+        title={I18n.t('drillEditor.drillManager.savedDrills')}
+        visible={modalOpened}
+        onClose={() => setModalOpened(false)}
+      >
+        <FlatList
+          data={props.savedDrills}
+          keyExtractor={(item) => item.title.toString()}
+          style={{ flexGrow: 0 }}
+          ListEmptyComponent={() => (
+            <View>
+              <Text>{I18n.t('drillEditor.drillManager.empty')}</Text>
             </View>
-          </View>
-        </Modal>
-      )}
+          )}
+          renderItem={({ item }) => (
+            <TouchableOpacity
+              onPress={() => {
+                setModalOpened(false);
+                beforeOpening(item);
+              }}
+            >
+              <View style={styles.item}>
+                <View style={styles.itemTitle}>
+                  <Text style={styles.itemTitleText}>{item.title}</Text>
+                </View>
+                <MaterialCommunityIcons
+                  style={styles.deleteIcon}
+                  name="trash-can"
+                  onPress={() => {
+                    deletionConfirmation(item);
+                  }}
+                />
+              </View>
+            </TouchableOpacity>
+          )}
+        />
+      </Modal>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  centeredView: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  modalView: {
-    backgroundColor: 'white',
-    borderRadius: 20,
-    padding: 20,
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5,
-  },
-  titleText: {
-    fontWeight: 'bold',
-    fontSize: 20,
-    marginBottom: 20,
-    textAlign: 'center',
-  },
   item: {
-    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     padding: 10,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+    borderBottomColor: theme.COLOR_SECONDARY_LIGHT,
+    borderBottomWidth: 1,
+  },
+  itemTitle: {
+    flexBasis: '90%',
   },
   deleteIcon: {
-    marginLeft: 10,
     color: theme.COLOR_PRIMARY,
     fontSize: theme.FONT_SIZE_LARGE,
-  },
-  returnButton: {
-    backgroundColor: theme.MAIN_COLOR,
-    borderRadius: 10,
-    marginTop: 20,
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    width: 120,
-  },
-  returnButtonText: {
-    color: theme.COLOR_PRIMARY_LIGHT,
-    fontWeight: 'bold',
-    textAlign: 'center',
   },
 });
 

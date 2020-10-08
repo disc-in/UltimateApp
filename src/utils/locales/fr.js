@@ -104,11 +104,13 @@ export default {
       share: 'Contribuer',
       alreadyUsedTitle: 'Ce titre est déjà utilisé par un autre exercice',
       savedDrills: 'Exercices sauvegardés',
+      empty: "Vous n'avez pas encore sauvegardé d'exercices",
       saveModificationsTitle: 'Voulez-vous sauvegarder les modifications ?',
       saveModificationsText:
         'L\'exercice "{{title}}" a été modifié.\n\nSouhaitez-vous conserver ces modifications avant de le fermer ?',
       cancel: 'Annuler',
       yes: 'Oui',
+      delete: 'Supprimer',
       no: 'Non',
       deleteConfirmation: 'Voulez-vous vraiment supprimer cet exercice ?',
     },

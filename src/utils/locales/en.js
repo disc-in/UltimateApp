@@ -104,11 +104,13 @@ export default {
       share: 'Contribute',
       alreadyUsedTitle: 'This title is already used by another drill',
       savedDrills: 'Saved drills',
+      empty: "You haven't saved any drills yet",
       saveModificationsTitle: 'Do you want to save the current drill?',
       saveModificationsText:
         "The drill '{{title}}' has been modified.\n\nDo you want to save these modifications before closing it?",
       cancel: 'Cancel',
       yes: 'Yes',
+      delete: 'Delete',
       no: 'No',
       deleteConfirmation: 'Do you really want to delete this drill?',
     },

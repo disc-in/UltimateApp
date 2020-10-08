@@ -188,8 +188,9 @@ exports[`<DictionaryPage /> renders correctly 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "white",
-            "borderRadius": 20,
+            "borderRadius": 10,
             "elevation": 10,
+            "maxHeight": "80%",
             "maxWidth": "80%",
             "padding": 20,
             "shadowColor": "#000",
@@ -238,9 +239,13 @@ exports[`<DictionaryPage /> renders correctly 1`] = `
           onStartShouldSetResponder={[Function]}
           style={
             Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
               "borderColor": "#2a9e91",
-              "borderRadius": 10,
+              "borderRadius": 5,
               "borderWidth": 1,
+              "height": 40,
+              "justifyContent": "center",
               "marginTop": 20,
               "opacity": 1,
               "paddingHorizontal": 20,
@@ -248,11 +253,13 @@ exports[`<DictionaryPage /> renders correctly 1`] = `
               "width": 120,
             }
           }
+          testID="button"
         >
           <Text
             style={
               Object {
                 "color": "#2a9e91",
+                "fontSize": 16,
                 "fontWeight": "bold",
                 "textAlign": "center",
               }

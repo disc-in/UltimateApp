@@ -3,6 +3,7 @@ import { StyleSheet, Modal as NativeModal, View, Text, TouchableOpacity } from '
 
 import theme from '../../styles/theme.style';
 import I18n from '../../utils/i18n';
+import Button from './Button';
 
 const Modal = ({ title, visible, onClose, children }) => {
   return (
@@ -12,9 +13,7 @@ const Modal = ({ title, visible, onClose, children }) => {
         <View style={styles.modalView}>
           <Text style={styles.titleText}>{title}</Text>
           {children}
-          <TouchableOpacity style={styles.returnButton} onPress={onClose}>
-            <Text style={styles.returnButtonText}>{I18n.t('shared.back')}</Text>
-          </TouchableOpacity>
+          <Button buttonLight onPress={onClose} text={I18n.t('shared.back')} style={styles.backButton} />
         </View>
       </View>
     </NativeModal>
@@ -36,9 +35,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   modalView: {
+    maxHeight: '80%',
     maxWidth: '80%',
     backgroundColor: 'white',
-    borderRadius: 20,
+    borderRadius: 10,
     padding: 20,
     alignItems: 'center',
     shadowColor: '#000',
@@ -56,19 +56,9 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     textAlign: 'center',
   },
-  returnButton: {
-    borderColor: theme.MAIN_COLOR,
-    borderRadius: 10,
-    borderWidth: 1,
+  backButton: {
     marginTop: 20,
-    paddingVertical: 10,
-    paddingHorizontal: 20,
     width: 120,
-  },
-  returnButtonText: {
-    color: theme.MAIN_COLOR,
-    fontWeight: 'bold',
-    textAlign: 'center',
   },
 });
 

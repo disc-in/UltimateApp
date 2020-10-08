@@ -60,7 +60,7 @@ const SavedDrillsList = (props) => {
       <Modal title={I18n.t('editor.savedDrillsList.title')} visible={modalOpened} onClose={() => setModalOpened(false)}>
         <FlatList
           data={props.savedDrills}
-          keyExtractor={(item) => item.title.toString()}
+          keyExtractor={(item) => item.title}
           style={{ flexGrow: 0 }}
           ListEmptyComponent={() => (
             <View>

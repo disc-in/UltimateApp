@@ -7,6 +7,7 @@ import theme from '../../styles/theme.style';
 import I18n from '../../utils/i18n';
 import { renameDrill } from '../../Store/Actions/drillAction';
 import Modal from '../shared/Modal';
+import Button from '../shared/Button';
 
 const RenameDrillModal = (props) => {
   const inputRef = useRef();
@@ -28,7 +29,7 @@ const RenameDrillModal = (props) => {
   return (
     <View>
       <Modal
-        title={props.currentDrill.title}
+        title={props.currentDrill.title || I18n.t('animationEditorPage.untitledDrill')}
         visible
         onClose={() => {
           props.close();
@@ -44,9 +45,7 @@ const RenameDrillModal = (props) => {
               onChangeText={checkNewTitle}
               ref={inputRef}
             />
-            <MaterialCommunityIcons
-              name="check"
-              style={styles.ctaIcon}
+            <Button
               onPress={() => {
                 if (!alreadyExists) {
                   props.renameDrill(props.currentDrill.title, newTitle);
@@ -55,9 +54,13 @@ const RenameDrillModal = (props) => {
                   props.close();
                 }
               }}
+              text={I18n.t('editor.renameDrillModal.cta')}
+              style={styles.cta}
             />
+            {alreadyExists && (
+              <Text style={styles.alreadyExists}>{I18n.t('editor.renameDrillModal.alreadyExists')}</Text>
+            )}
           </View>
-          {alreadyExists && <Text style={styles.alreadyExists}>{I18n.t('editor.renameDrillModal.alreadyExists')}</Text>}
         </ScrollView>
       </Modal>
     </View>
@@ -76,16 +79,15 @@ export default connect(mapStateToProps, mapDispatchToProps)(RenameDrillModal);
 
 const styles = StyleSheet.create({
   form: {
-    flexDirection: 'row',
     alignItems: 'center',
   },
   input: {
     flexBasis: '80%',
     marginHorizontal: 5,
   },
-  ctaIcon: {
-    color: theme.COLOR_PRIMARY,
-    fontSize: theme.FONT_SIZE_LARGE,
+  cta: {
+    marginTop: 10,
+    width: 120,
   },
   alreadyExists: {
     fontStyle: 'italic',

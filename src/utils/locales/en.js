@@ -118,6 +118,7 @@ export default {
     renameDrillModal: {
       placeholder: 'Click here to enter the new name',
       alreadyExists: 'This title is already in use',
+      cta: 'Apply',
     },
   },
   feedback: {

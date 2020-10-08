@@ -118,6 +118,7 @@ export default {
     renameDrillModal: {
       placeholder: 'Appuyer ici pour renommer',
       alreadyExists: 'Ce nom existe déjà',
+      cta: 'Valider',
     },
   },
   feedback: {

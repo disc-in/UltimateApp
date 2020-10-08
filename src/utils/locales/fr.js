@@ -95,14 +95,12 @@ export default {
   drillEditor: {
     untitledDrill: 'Exercice sans titre',
     drillManager: {
-      askOverwrite: 'Voulez-vous le remplacer ?',
-      overwrite: 'Remplacer',
       save: 'Sauvegarder',
       rename: 'Renommer',
       new: 'Nouveau',
       clickHereToRename: 'Appuyer ici pour renommer',
+      alreadyExists: 'Ce nom existe déjà',
       share: 'Contribuer',
-      alreadyUsedTitle: 'Ce titre est déjà utilisé par un autre exercice',
       savedDrills: 'Exercices sauvegardés',
       empty: "Vous n'avez pas encore sauvegardé d'exercices",
       saveModificationsTitle: 'Voulez-vous sauvegarder les modifications ?',

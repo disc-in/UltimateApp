@@ -1,4 +1,4 @@
-import { saveDrill, deleteDrill } from './drillAction';
+import { saveDrill, renameDrill, deleteDrill } from './drillAction';
 import { createDrill } from '../../Fixtures/TestFixtures';
 
 describe('saveDrill', () => {
@@ -9,7 +9,16 @@ describe('saveDrill', () => {
   });
 });
 
-describe('saveDrill', () => {
+describe('renameDrill', () => {
+  it('renders correctly', () => {
+    expect(renameDrill('previous title', 'new title')).toEqual({
+      type: 'RENAME_DRILL',
+      value: { oldTitle: 'previous title', newTitle: 'new title' },
+    });
+  });
+});
+
+describe('deleteDrill', () => {
   const title = 'title';
 
   it('renders correctly', () => {

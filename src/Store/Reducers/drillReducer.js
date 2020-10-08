@@ -4,12 +4,7 @@ function drillReducer(state = initialState, action) {
   let nextState;
   switch (action.type) {
     case 'SAVE_DRILL':
-      // If the saved drill previously had another title, remove the drill with this old title
-      const oldDrillIndex = state.findIndex((item) => item.title === action.value.oldTitle);
-
-      if (oldDrillIndex !== -1) {
-        nextState = state.filter((item, index) => index !== oldDrillIndex);
-      } else nextState = [...state];
+      nextState = [...state];
 
       // If the drill is already saved, replace it; otherwise add it
       let drillIndex = nextState.findIndex((item) => item.title === action.value.title);
@@ -17,6 +12,15 @@ function drillReducer(state = initialState, action) {
         nextState[drillIndex] = action.value;
       } else nextState = [...nextState, action.value];
 
+      return nextState;
+
+    case 'RENAME_DRILL':
+      nextState = [...state];
+
+      const index = state.findIndex((item) => item.title === action.value.oldTitle);
+      if (index !== -1) {
+        nextState[index].title = action.value.newTitle;
+      }
       return nextState;
 
     case 'DELETE_DRILL':

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text } from 'react-native';
+import { Share, Text } from 'react-native';
 import { Menu, Divider } from 'react-native-paper';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
@@ -15,6 +15,13 @@ const CurrentDrillManager = (props) => {
   };
   const closeMenu = () => {
     setVisible(false);
+  };
+
+  const contribute = () => {
+    Share.share({
+      title: I18n.t('drillEditor.sharePlaceholder'),
+      message: '----- ENCODED DRILL -------\n' + JSON.stringify(props.currentDrill) + '\n---------------------------',
+    }).catch((err) => console.log(err));
   };
 
   return (
@@ -46,7 +53,7 @@ const CurrentDrillManager = (props) => {
       <Divider />
       <Menu.Item
         onPress={() => {
-          props.contribute();
+          contribute();
           closeMenu();
         }}
         icon="share-outline"

@@ -95,14 +95,12 @@ export default {
   drillEditor: {
     untitledDrill: 'Unnamed drill',
     drillManager: {
-      askOverwrite: 'A drill with this title already exist. Do you want to overwrite it?',
-      overwrite: 'Overwrite',
       save: 'Save',
       rename: 'Rename',
       new: 'New',
       clickHereToRename: 'Click here to enter the new name',
+      alreadyExists: 'This title is already in use',
       share: 'Contribute',
-      alreadyUsedTitle: 'This title is already used by another drill',
       savedDrills: 'Saved drills',
       empty: "You haven't saved any drills yet",
       saveModificationsTitle: 'Do you want to save the current drill?',

@@ -6,7 +6,6 @@ describe('drillReducer', () => {
     drill: {
       positions: [0],
     },
-    oldTitle: 'Old title',
     title: 'Title',
   };
   const initialState = [drill];
@@ -17,7 +16,6 @@ describe('drillReducer', () => {
         drill: {
           positions: [1],
         },
-        oldTitle: 'Old title',
         title: 'Title',
       };
       expect(drillReducer(initialState, { type: 'SAVE_DRILL', value: newDrill })).toEqual([newDrill]);
@@ -32,16 +30,23 @@ describe('drillReducer', () => {
       };
       expect(drillReducer(initialState, { type: 'SAVE_DRILL', value: newDrill })).toEqual([drill, newDrill]);
     });
+  });
 
+  describe('When handling RENAME_DRILL', () => {
     it('when renaming an existing drill', () => {
-      const newDrill = {
-        drill: {
-          positions: [0],
-        },
+      const value = {
         oldTitle: 'Title',
-        title: 'New Title',
+        newTitle: 'New Title',
       };
-      expect(drillReducer(initialState, { type: 'SAVE_DRILL', value: newDrill })).toEqual([newDrill]);
+      expect(drillReducer(initialState, { type: 'RENAME_DRILL', value })).toEqual([{ ...drill, title: 'New Title' }]);
+    });
+
+    it('when renaming an unknown drill', () => {
+      const value = {
+        oldTitle: 'Unknown title',
+        newTitle: 'New Title',
+      };
+      expect(drillReducer(initialState, { type: 'DELETE_DRILL', value: 'unknown drill' })).toEqual([drill]);
     });
   });
 

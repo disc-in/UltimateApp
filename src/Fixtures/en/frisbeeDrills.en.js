@@ -5162,7 +5162,7 @@ const basicThrowsDrill = {
   title: 'Throwing Routine',
   image: 'https://zupimages.net/up/20/19/zgxt.jpg',
   description:
-    'Basic drills to learn how to throw. \nIn game : In match: It is necessary to master several types of throws to adapt to all situations.',
+    'Basic drills to learn how to throw. \nIn game: It is necessary to master several types of throws to adapt to all situations.',
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disc',

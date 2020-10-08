@@ -91,6 +91,8 @@ import sideFlow from '../Animation/SideFlow';
 import sideWindmill from '../Animation/SideWindmill';
 import checkLongKidAnimation from '../Animation/CheckLongKid';
 import adaptMark from '../Animation/AdaptMark';
+import ghost from '../Animation/Ghost';
+import ladderGhost from '../Animation/LadderGhost';
 
 const stabilityDrill = {
   id: 1,
@@ -5287,6 +5289,16 @@ const basicThrowsDrill = {
       instruction:
         'Les joueurs se font face en binôme, sur deux lignes pour se faire des passes. Le coach décide quel lancer ils réalisent. Si le disque tombe, le binôme correspondant se déplace tout à droite de la ligne. A la fin du temps, la paire la plus à gauche gagne !',
     },
+    {
+      id: 3,
+      title: 'Avec des fantômes',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: ladderGhost,
+      repetition: '',
+      rest: '',
+      instruction:
+        "Même situation et objectif. Pour augmenter la difficulté, un ou plusieurs joueurs (les fantômes) vont circuler entre les lanceurs dans l'objectif de provoquer un turn-over. Les fantômes n'ont pas le droit de toucher les disques ou les attaquants.",
+    },
   ],
 };
 
@@ -6763,7 +6775,7 @@ const sprintDefense = {
   id: 1037,
   type: DrillTypes.FRISBEE,
   author: 'Lucky Grass',
-  title: 'Réactivité en défense.',
+  title: 'Réactivité en Défense.',
   image: 'https://zupimages.net/up/20/25/5pqg.jpg',
   description: 'Échauffement drill to focus on the reactivity in defense.',
   minimalPlayersNumber: 2,
@@ -7153,7 +7165,8 @@ const adaptToTheMark = {
   author: 'Puc Ultimate',
   title: 'Adaptation à la marque',
   image: 'https://zupimages.net/up/20/29/7a6g.jpg',
-  description: "Exercice dans lequel le handler de soutien doit s'adapter à la marque",
+  description:
+    "Exercice dans lequel le handler de soutien doit s'adapter à la marque. Travail de placement, d'adaption et de lancer",
   minimalPlayersNumber: 10,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '3 plots - 4 disques',
@@ -7172,6 +7185,35 @@ const adaptToTheMark = {
       rest: '',
       instruction:
         "Une première passe est faite sur un middle. Le joueur qui a fait la passe devient le soutien. Il doit s'adapter à la marque appliquée. Si la marque est en direction de la ligne, le joueur de soutien fait un cut-Up line et lance une longue. Si la marque est en direction du centre, les joueurs effectuent un une-deux qui est suivi par une longue.",
+    },
+  ],
+};
+
+const ghostMark = {
+  id: 1048,
+  type: DrillTypes.FRISBEE,
+  author: 'Puc Ultimate',
+  title: 'Le Fantôme',
+  image: 'https://zupimages.net/up/20/41/447u.jpg',
+  description: "Les joueurs s'entrainent à réceptionner le disque dans des situations difficiles",
+  minimalPlayersNumber: 3,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disque',
+  durationInMinutes: 10,
+  intensity: Intensities.LOW,
+  goals: [FrisbeeGoals.CATCH],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'La Marque Fantôme',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: ghost,
+      repetition: '',
+      rest: '',
+      instruction:
+        "Deux joueurs lancent par paire. Les joueurs en défense, sans toucher le disque et les attaquants, doivent gêner la réception. Ils peuvent, par exemple, passer devant le disque au dernier moment. Si un turn-over est provoqué, sans que les défenseurs touchent le disque, les rôles s'inversent.",
     },
   ],
 };
@@ -8178,6 +8220,7 @@ export const drills = [
   sideToVertical,
   checkLongKid,
   adaptToTheMark,
+  ghostMark,
 
   // Games
   normalGame,

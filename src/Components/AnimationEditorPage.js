@@ -7,6 +7,7 @@ import { Provider } from 'react-native-paper';
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
 import { saveDrill, deleteDrill } from '../Store/Actions/drillAction';
+import HeaderButton from './shared/HeaderButton';
 import AnimationEditor from './editor/AnimationEditor';
 import CurrentDrillManager from './editor/CurrentDrillManager';
 import SavedDrillModal from './editor/SavedDrillModal';
@@ -39,22 +40,15 @@ export const AnimationEditorPage = (props) => {
     navigation.setOptions({
       headerRight: () => (
         <View style={{ flexDirection: 'row', paddingLeft: 10 }}>
-          {/* Display the button to open drills only if there is at least one saved drill */}
           {props.customDrills.length > 0 ? (
-            <Ionicons
-              style={{ paddingRight: 10 }}
-              name="md-clipboard"
-              size={26}
-              onPress={() => setModalOpenVisible(true)}
-            />
+            <HeaderButton icon="clipboard-text-outline" onPress={() => setModalOpenVisible(true)} />
           ) : null}
-          <MaterialCommunityIcons
-            name="plus"
-            color={theme.COLOR_PRIMARY}
-            size={26}
-            onPress={() => checkModificationsBeforeCreatingNewDrill()}
+          <CurrentDrillManager
+            save={saveLocally}
+            rename={() => setModalRenameVisible(true)}
+            contribute={doShare}
+            new={checkModificationsBeforeCreatingNewDrill}
           />
-          <CurrentDrillManager save={saveLocally} rename={() => setModalRenameVisible(true)} contribute={doShare} />
         </View>
       ),
     });
@@ -256,7 +250,6 @@ export const AnimationEditorPage = (props) => {
   };
 
   const deleteDrill = (item) => {
-    // Envoyer l'action de suppression
     props.deleteDrill(item.title);
 
     if (item.title === drillTitle) createNewDrill();

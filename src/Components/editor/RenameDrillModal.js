@@ -67,7 +67,7 @@ class RenameDrillModal extends React.Component {
                     <TextInput
                       style={styles.input}
                       placeholder={I18n.t('drillEditor.drillManager.clickHereToRename')}
-                      onChangeText={text => this.props.textModified(text.trim())}
+                      onChangeText={(text) => this.props.textModified(text.trim())}
                       ref={this.inputRef}
                     />
 

@@ -32,7 +32,7 @@ class SavedDrillModal extends React.Component {
                 <Text style={styles.modalTitleText}>{`${I18n.t('drillEditor.drillManager.savedDrills')}`}</Text>
                 <FlatList
                   data={this.props.savedDrills}
-                  keyExtractor={item => item.title.toString()}
+                  keyExtractor={(item) => item.title.toString()}
                   style={{ flexGrow: 0, backgroundColor: theme.BACKGROUND_COLOR }}
                   renderItem={({ item }) => (
                     <TouchableWithoutFeedback

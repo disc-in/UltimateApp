@@ -40,7 +40,7 @@ const RenameDrillModal = (props) => {
           <View style={styles.form}>
             <TextInput
               style={styles.input}
-              placeholder={I18n.t('drillEditor.drillManager.clickHereToRename')}
+              placeholder={I18n.t('editor.renameDrillModal.placeholder')}
               onChangeText={checkNewTitle}
               ref={inputRef}
             />
@@ -57,9 +57,7 @@ const RenameDrillModal = (props) => {
               }}
             />
           </View>
-          {alreadyExists && (
-            <Text style={styles.alreadyExists}>{I18n.t('drillEditor.drillManager.alreadyExists')}</Text>
-          )}
+          {alreadyExists && <Text style={styles.alreadyExists}>{I18n.t('editor.renameDrillModal.alreadyExists')}</Text>}
         </ScrollView>
       </Modal>
     </View>

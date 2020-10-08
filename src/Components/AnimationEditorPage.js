@@ -21,7 +21,10 @@ export const AnimationEditorPage = (props) => {
   };
 
   // Current drill opened in the editor
-  const [currentDrill, setCurrentDrill] = useState({ drill: emptyDrill, title: I18n.t('drillEditor.untitledDrill') });
+  const [currentDrill, setCurrentDrill] = useState({
+    drill: emptyDrill,
+    title: I18n.t('animationEditorPage.untitledDrill'),
+  });
 
   // modalRenameVisible is true if the modal which enables to rename the current drill is displayed
   const [modalRenameVisible, setModalRenameVisible] = useState(false);
@@ -89,23 +92,23 @@ export const AnimationEditorPage = (props) => {
     if (isDrillSaved) createNewDrill();
     else {
       Alert.alert(
-        I18n.t('drillEditor.drillManager.saveModificationsTitle'),
-        I18n.t('drillEditor.drillManager.saveModificationsText', { title: currentDrill?.title }),
+        I18n.t('editor.saveModificationsTitle'),
+        I18n.t('editor.saveModificationsText', { title: currentDrill?.title }),
         [
           {
-            text: I18n.t('drillEditor.drillManager.cancel'),
+            text: I18n.t('shared.cancel'),
             style: 'cancel',
             onPress: () => {},
           },
           {
-            text: I18n.t('drillEditor.drillManager.yes'),
+            text: I18n.t('shared.yes'),
             onPress: () => {
               props.saveDrill(currentDrill);
               createNewDrill();
             },
           },
           {
-            text: I18n.t('drillEditor.drillManager.no'),
+            text: I18n.t('shared.no'),
             onPress: () => {
               createNewDrill();
             },
@@ -117,7 +120,7 @@ export const AnimationEditorPage = (props) => {
 
   const createNewDrill = () => {
     // Create the title of the new drill
-    const defaultTitle = I18n.t('drillEditor.untitledDrill');
+    const defaultTitle = I18n.t('animationEditorPage.untitledDrill');
     let newTitle = defaultTitle;
 
     const titleId = props.customDrills.findIndex((item) => item.title === newTitle);

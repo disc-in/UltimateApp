@@ -19,7 +19,7 @@ const CurrentDrillManager = (props) => {
 
   const contribute = () => {
     Share.share({
-      title: I18n.t('drillEditor.sharePlaceholder'),
+      title: I18n.t('editor.currentDrillManager.sharePlaceholder'),
       message: '----- ENCODED DRILL -------\n' + JSON.stringify(props.currentDrill) + '\n---------------------------',
     }).catch((err) => console.log(err));
   };
@@ -32,7 +32,7 @@ const CurrentDrillManager = (props) => {
           closeMenu();
         }}
         icon="content-save-outline"
-        title={I18n.t('drillEditor.drillManager.save')}
+        title={I18n.t('editor.currentDrillManager.save')}
       />
       <Menu.Item
         onPress={() => {
@@ -40,7 +40,7 @@ const CurrentDrillManager = (props) => {
           closeMenu();
         }}
         icon="pencil"
-        title={I18n.t('drillEditor.drillManager.rename')}
+        title={I18n.t('editor.currentDrillManager.rename')}
       />
       <Menu.Item
         onPress={() => {
@@ -48,7 +48,7 @@ const CurrentDrillManager = (props) => {
           closeMenu();
         }}
         icon="plus"
-        title={I18n.t('drillEditor.drillManager.new')}
+        title={I18n.t('editor.currentDrillManager.new')}
       />
       <Divider />
       <Menu.Item
@@ -57,7 +57,7 @@ const CurrentDrillManager = (props) => {
           closeMenu();
         }}
         icon="share-outline"
-        title={I18n.t('drillEditor.drillManager.share')}
+        title={I18n.t('editor.currentDrillManager.share')}
       />
     </Menu>
   );

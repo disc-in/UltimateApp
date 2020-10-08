@@ -14,23 +14,23 @@ const SavedDrillsList = (props) => {
     if (props.isDrillSaved) props.onOpen(drill);
     else {
       Alert.alert(
-        I18n.t('drillEditor.drillManager.saveModificationsTitle'),
-        I18n.t('drillEditor.drillManager.saveModificationsText', { title: props.drillTitle }),
+        I18n.t('editor.saveModificationsTitle'),
+        I18n.t('editor.saveModificationsText', { title: props.drillTitle }),
         [
           {
-            text: I18n.t('drillEditor.drillManager.cancel'),
+            text: I18n.t('shared.cancel'),
             style: 'cancel',
             onPress: () => {},
           },
           {
-            text: I18n.t('drillEditor.drillManager.yes'),
+            text: I18n.t('shared.yes'),
             onPress: () => {
               props.saveCurrentDrill();
               props.onOpen(drill);
             },
           },
           {
-            text: I18n.t('drillEditor.drillManager.no'),
+            text: I18n.t('shared.no'),
             onPress: () => {
               props.onOpen(drill);
             },
@@ -41,13 +41,13 @@ const SavedDrillsList = (props) => {
   };
 
   const deletionConfirmation = (drill) => {
-    Alert.alert(drill.title, I18n.t('drillEditor.drillManager.deleteConfirmation'), [
+    Alert.alert(drill.title, I18n.t('editor.savedDrillsList.deleteConfirmation'), [
       {
-        text: I18n.t('drillEditor.drillManager.cancel'),
+        text: I18n.t('editor.cancel'),
         style: 'cancel',
       },
       {
-        text: I18n.t('drillEditor.drillManager.delete'),
+        text: I18n.t('editor.savedDrillsList.delete'),
         style: 'destructive',
         onPress: () => props.onDelete(drill),
       },
@@ -57,18 +57,14 @@ const SavedDrillsList = (props) => {
   return (
     <View>
       <HeaderButton icon="clipboard-text-outline" onPress={() => setModalOpened(true)} />
-      <Modal
-        title={I18n.t('drillEditor.drillManager.savedDrills')}
-        visible={modalOpened}
-        onClose={() => setModalOpened(false)}
-      >
+      <Modal title={I18n.t('editor.savedDrillsList.title')} visible={modalOpened} onClose={() => setModalOpened(false)}>
         <FlatList
           data={props.savedDrills}
           keyExtractor={(item) => item.title.toString()}
           style={{ flexGrow: 0 }}
           ListEmptyComponent={() => (
             <View>
-              <Text>{I18n.t('drillEditor.drillManager.empty')}</Text>
+              <Text>{I18n.t('editor.savedDrillsList.empty')}</Text>
             </View>
           )}
           renderItem={({ item }) => (

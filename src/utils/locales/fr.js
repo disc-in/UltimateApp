@@ -74,6 +74,9 @@ export default {
   },
   shared: {
     back: 'Retour',
+    cancel: 'Annuler',
+    yes: 'Oui',
+    no: 'Non',
   },
   homePage: {
     frisbeeTab: 'Frisbee',
@@ -92,34 +95,30 @@ export default {
     essential: 'Les bases du jeu',
     tactics: 'Tactiques',
   },
-  drillEditor: {
+  animationEditorPage: {
     untitledDrill: 'Exercice sans titre',
-    drillManager: {
+  },
+  editor: {
+    saveModificationsTitle: 'Voulez-vous sauvegarder les modifications ?',
+    saveModificationsText:
+      'L\'exercice "{{title}}" a été modifié.\n\nSouhaitez-vous conserver ces modifications avant de le fermer ?',
+    savedDrillsList: {
+      title: 'Exercices sauvegardés',
+      empty: "Vous n'avez pas encore sauvegardé d'exercices",
+      delete: 'Supprimer',
+      deleteConfirmation: 'Voulez-vous vraiment supprimer cet exercice ?',
+    },
+    currentDrillManager: {
       save: 'Sauvegarder',
       rename: 'Renommer',
       new: 'Nouveau',
-      clickHereToRename: 'Appuyer ici pour renommer',
-      alreadyExists: 'Ce nom existe déjà',
       share: 'Contribuer',
-      savedDrills: 'Exercices sauvegardés',
-      empty: "Vous n'avez pas encore sauvegardé d'exercices",
-      saveModificationsTitle: 'Voulez-vous sauvegarder les modifications ?',
-      saveModificationsText:
-        'L\'exercice "{{title}}" a été modifié.\n\nSouhaitez-vous conserver ces modifications avant de le fermer ?',
-      cancel: 'Annuler',
-      yes: 'Oui',
-      delete: 'Supprimer',
-      no: 'Non',
-      deleteConfirmation: 'Voulez-vous vraiment supprimer cet exercice ?',
+      sharePlaceholder: "Pouvez-vous ajouter cet exercice à l'application ?",
     },
-    comingSoon: {
-      title: "C'est pour bientôt !",
-      content:
-        "Vous pourrez bientôt ajouter des exercices, séances et programmes d'entraînements.\nPour l'instant, vous pouvez nous envoyer par mail votre nouvel exercice.",
-      cancel: 'Annuler',
-      cta: "Envoyer à l'équipe",
+    renameDrillModal: {
+      placeholder: 'Appuyer ici pour renommer',
+      alreadyExists: 'Ce nom existe déjà',
     },
-    sharePlaceholder: "Pouvez-vous ajouter cet exercice à l'application ?",
   },
   feedback: {
     alert: {

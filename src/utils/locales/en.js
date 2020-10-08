@@ -74,6 +74,9 @@ export default {
   },
   shared: {
     back: 'Back',
+    cancel: 'Cancel',
+    yes: 'Yes',
+    no: 'No',
   },
   homePage: {
     frisbeeTab: 'Frisbee',
@@ -92,34 +95,30 @@ export default {
     essential: 'Basics',
     tactics: 'Tactics',
   },
-  drillEditor: {
+  animationEditorPage: {
     untitledDrill: 'Unnamed drill',
-    drillManager: {
+  },
+  editor: {
+    saveModificationsTitle: 'Do you want to save the current drill?',
+    saveModificationsText:
+      "The drill '{{title}}' has been modified.\n\nDo you want to save these modifications before closing it?",
+    savedDrillsList: {
+      title: 'Saved drills',
+      empty: "You haven't saved any drills yet",
+      delete: 'Delete',
+      deleteConfirmation: 'Do you really want to delete this drill?',
+    },
+    currentDrillManager: {
       save: 'Save',
       rename: 'Rename',
       new: 'New',
-      clickHereToRename: 'Click here to enter the new name',
-      alreadyExists: 'This title is already in use',
       share: 'Contribute',
-      savedDrills: 'Saved drills',
-      empty: "You haven't saved any drills yet",
-      saveModificationsTitle: 'Do you want to save the current drill?',
-      saveModificationsText:
-        "The drill '{{title}}' has been modified.\n\nDo you want to save these modifications before closing it?",
-      cancel: 'Cancel',
-      yes: 'Yes',
-      delete: 'Delete',
-      no: 'No',
-      deleteConfirmation: 'Do you really want to delete this drill?',
+      sharePlaceholder: 'Please add this drill to UltimateApp',
     },
-    comingSoon: {
-      title: 'Coming soon',
-      content:
-        'Soon you will be able to create drills, training sessions and programs.\nFor now you can only send your new drill to an ultimate app dev.',
-      cancel: 'Cancel',
-      cta: 'Send the drill to a dev',
+    renameDrillModal: {
+      placeholder: 'Click here to enter the new name',
+      alreadyExists: 'This title is already in use',
     },
-    sharePlaceholder: 'Please add this drill to UltimateApp',
   },
   feedback: {
     alert: {

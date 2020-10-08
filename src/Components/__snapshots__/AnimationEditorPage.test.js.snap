@@ -24,6 +24,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
     >
       <View>
         <View
+          onLayout={[Function]}
           style={
             Object {
               "height": 833.75,
@@ -43,8 +44,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
               style={
                 Array [
                   Object {
-                    "backgroundColor": "black",
-                    "borderRadius": 1,
+                    "backgroundColor": "#232b2b",
                     "borderWidth": 1,
                     "position": "absolute",
                   },
@@ -61,8 +61,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
               style={
                 Array [
                   Object {
-                    "backgroundColor": "black",
-                    "borderRadius": 1,
+                    "backgroundColor": "#232b2b",
                     "borderWidth": 1,
                     "position": "absolute",
                   },
@@ -79,8 +78,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
               style={
                 Array [
                   Object {
-                    "backgroundColor": "black",
-                    "borderRadius": 1,
+                    "backgroundColor": "#232b2b",
                     "borderWidth": 1,
                     "position": "absolute",
                   },
@@ -97,8 +95,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
               style={
                 Array [
                   Object {
-                    "backgroundColor": "black",
-                    "borderRadius": 1,
+                    "backgroundColor": "#232b2b",
                     "borderWidth": 1,
                     "position": "absolute",
                   },
@@ -111,28 +108,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
                 ]
               }
             />
-            <View
-              height={33.75}
-              style={
-                Array [
-                  Object {
-                    "borderColor": "black",
-                    "borderWidth": 1,
-                    "position": "absolute",
-                  },
-                  Object {
-                    "left": 358.125,
-                  },
-                  Object {
-                    "top": 525.2793750000001,
-                  },
-                  Object {
-                    "borderRadius": 16.875,
-                  },
-                ]
-              }
-              width={33.75}
-            />
+            <Text />
           </View>
           <View
             height="100%"
@@ -280,7 +256,6 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
               <View
                 accessible={true}
                 focusable={true}
-                isTVSelectable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -301,7 +276,6 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
               <View
                 accessible={true}
                 focusable={true}
-                isTVSelectable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -333,7 +307,6 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
               <View
                 accessible={true}
                 focusable={true}
-                isTVSelectable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -352,7 +325,6 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
               <View
                 accessible={true}
                 focusable={true}
-                isTVSelectable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -371,7 +343,6 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
               <View
                 accessible={true}
                 focusable={true}
-                isTVSelectable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -471,7 +442,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
             style={
               Object {
                 "alignItems": "center",
-                "backgroundColor": "#AFAFAF",
+                "backgroundColor": "#9d9d9d",
                 "borderRadius": 0,
                 "height": 0,
                 "justifyContent": "center",
@@ -566,7 +537,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
               Object {
                 "alignItems": "center",
                 "backgroundColor": "transparent",
-                "borderBottomColor": "#FEA500",
+                "borderBottomColor": "#feae19",
                 "borderBottomWidth": 0,
                 "borderColor": "transparent",
                 "borderLeftWidth": 0,
@@ -606,7 +577,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
               }
             }
           >
-            <RCTPicker
+            <RNCPicker
               items={
                 Array [
                   Object {
@@ -632,8 +603,6 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
                 ]
               }
               onChange={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
               selectedIndex={1}
               style={
                 Array [

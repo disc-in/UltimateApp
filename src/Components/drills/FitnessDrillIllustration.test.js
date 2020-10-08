@@ -1,13 +1,11 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { render, fireEvent, cleanup, waitForElement, act } from 'react-native-testing-library';
+import { render, fireEvent, waitFor } from '@testing-library/react-native';
 
 import { createDrill } from '../../Fixtures/TestFixtures';
 import { IllustrationType, DrillTypes } from '../../Fixtures/config';
 
 import FitnessDrillIllustration from './FitnessDrillIllustration';
-
-afterEach(cleanup);
 
 describe('<FitnessDrillIllustration />', () => {
   const steps = [
@@ -48,16 +46,15 @@ describe('<FitnessDrillIllustration />', () => {
     expect(getByText('3 Second Step')).toBeDefined();
     expect(getByText('3 Third Step')).toBeDefined();
 
-    await fireEvent.press(getByText('3 Third Step'));
+    fireEvent.press(getByText('3 Third Step'));
 
     // Third step is current
     expect(toJSON()).toMatchSnapshot();
 
-    await fireEvent.press(getByTestId('doneIcon'));
+    fireEvent.press(getByTestId('doneIcon'));
 
-    await act(async () => {
-      await waitForElement(() => expect(getByText('You have completed the drill!')).toBeDefined());
-    });
+    await waitFor(() => expect(getByText('You have completed the drill!')).toBeDefined());
+
     // Finished state displayed
     expect(toJSON()).toMatchSnapshot();
   });

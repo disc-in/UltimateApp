@@ -6,14 +6,12 @@ import configureMockStore from 'redux-mock-store';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrill } from '../Fixtures/TestFixtures';
-import { render, fireEvent, cleanup } from 'react-native-testing-library';
+import { render, fireEvent } from '@testing-library/react-native';
 import { Levels, FrisbeeGoals, DrillTypes } from '../Fixtures/config';
 
 import ConnectedFrisbeeFilters, { FrisbeeFilters } from './FrisbeeFilters';
 
 jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
-
-afterEach(cleanup);
 
 describe('<FrisbeeFilters />', () => {
   const beginnerDrill = createDrill({
@@ -51,7 +49,7 @@ describe('<FrisbeeFilters />', () => {
       const drills = [beginnerDrill, intermediateDrill, advancedDrill];
       const navigate = jest.fn();
 
-      const DummyScreen = props => null;
+      const DummyScreen = (props) => null;
       const Stack = createStackNavigator();
 
       const mockStore = configureMockStore()({
@@ -71,7 +69,7 @@ describe('<FrisbeeFilters />', () => {
                   previousType: DrillTypes.FRISBEE,
                 }}
                 listeners={({ navigation }) => ({
-                  transitionStart: e => {
+                  transitionStart: (e) => {
                     navigation.navigate = navigate;
                   },
                 })}
@@ -125,7 +123,7 @@ describe('<FrisbeeFilters />', () => {
       const drills = [defenseDrill, handlingDrill, throwingDrill, handlingDefenseDrill];
       const navigate = jest.fn();
 
-      const DummyScreen = props => null;
+      const DummyScreen = (props) => null;
       const Stack = createStackNavigator();
 
       const mockStore = configureMockStore()({
@@ -145,7 +143,7 @@ describe('<FrisbeeFilters />', () => {
                   previousType: DrillTypes.FRISBEE,
                 }}
                 listeners={({ navigation }) => ({
-                  transitionStart: e => {
+                  transitionStart: (e) => {
                     navigation.navigate = navigate;
                   },
                 })}
@@ -200,7 +198,7 @@ describe('<FrisbeeFilters />', () => {
       const drills = [onePersonDrill, twoPeopleDrill, tenPeopleDrill];
       const navigate = jest.fn();
 
-      const DummyScreen = props => null;
+      const DummyScreen = (props) => null;
       const Stack = createStackNavigator();
 
       const mockStore = configureMockStore()({
@@ -220,7 +218,7 @@ describe('<FrisbeeFilters />', () => {
                   previousType: DrillTypes.FRISBEE,
                 }}
                 listeners={({ navigation }) => ({
-                  transitionStart: e => {
+                  transitionStart: (e) => {
                     navigation.navigate = navigate;
                   },
                 })}
@@ -258,7 +256,7 @@ describe('<FrisbeeFilters />', () => {
       const drills = [beginnerDrill, intermediateDrill, advancedDrill];
       const navigate = jest.fn();
 
-      const DummyScreen = props => null;
+      const DummyScreen = (props) => null;
       const Stack = createStackNavigator();
 
       const mockstore = configureMockStore()({
@@ -278,7 +276,7 @@ describe('<FrisbeeFilters />', () => {
                   previousType: DrillTypes.FRISBEE,
                 }}
                 listeners={({ navigation }) => ({
-                  transitionStart: e => {
+                  transitionStart: (e) => {
                     navigation.navigate = navigate;
                   },
                 })}
@@ -319,7 +317,7 @@ describe('<FrisbeeFilters />', () => {
       const drills = [onePersonDrill, twoPeopleDrill, tenPeopleDrill];
       const navigate = jest.fn();
 
-      const DummyScreen = props => null;
+      const DummyScreen = (props) => null;
       const Stack = createStackNavigator();
 
       const mockStore = configureMockStore()({
@@ -339,7 +337,7 @@ describe('<FrisbeeFilters />', () => {
                   previousType: DrillTypes.FRISBEE,
                 }}
                 listeners={({ navigation }) => ({
-                  transitionStart: e => {
+                  transitionStart: (e) => {
                     navigation.navigate = navigate;
                   },
                 })}

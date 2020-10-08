@@ -4,7 +4,6 @@ exports[`<HeaderButton /> renders correctly 1`] = `
 <View
   accessible={true}
   focusable={false}
-  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -19,15 +18,6 @@ exports[`<HeaderButton /> renders correctly 1`] = `
   }
   testID="headerButton"
 >
-  <Image
-    source={1}
-    style={
-      Object {
-        "height": 20,
-        "marginRight": 20,
-        "width": 20,
-      }
-    }
-  />
+  <Text />
 </View>
 `;

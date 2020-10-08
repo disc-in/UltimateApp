@@ -1,11 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { render, fireEvent, cleanup } from 'react-native-testing-library';
 import { createDrill } from '../../Fixtures/TestFixtures';
 
 import DrillList from './DrillList';
-
-afterEach(cleanup);
 
 describe('<DrillList />', () => {
   it('renders correctly', () => {

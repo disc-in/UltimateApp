@@ -3,6 +3,7 @@
 exports[`<Animation /> renders correctly 1`] = `
 <View>
   <View
+    onLayout={[Function]}
     style={
       Object {
         "height": 100,
@@ -22,8 +23,7 @@ exports[`<Animation /> renders correctly 1`] = `
         style={
           Array [
             Object {
-              "backgroundColor": "black",
-              "borderRadius": 1,
+              "backgroundColor": "#232b2b",
               "borderWidth": 1,
               "position": "absolute",
             },
@@ -40,8 +40,7 @@ exports[`<Animation /> renders correctly 1`] = `
         style={
           Array [
             Object {
-              "backgroundColor": "black",
-              "borderRadius": 1,
+              "backgroundColor": "#232b2b",
               "borderWidth": 1,
               "position": "absolute",
             },
@@ -58,8 +57,7 @@ exports[`<Animation /> renders correctly 1`] = `
         style={
           Array [
             Object {
-              "backgroundColor": "black",
-              "borderRadius": 1,
+              "backgroundColor": "#232b2b",
               "borderWidth": 1,
               "position": "absolute",
             },
@@ -76,8 +74,7 @@ exports[`<Animation /> renders correctly 1`] = `
         style={
           Array [
             Object {
-              "backgroundColor": "black",
-              "borderRadius": 1,
+              "backgroundColor": "#232b2b",
               "borderWidth": 1,
               "position": "absolute",
             },
@@ -90,28 +87,7 @@ exports[`<Animation /> renders correctly 1`] = `
           ]
         }
       />
-      <View
-        height={4.25}
-        style={
-          Array [
-            Object {
-              "borderColor": "black",
-              "borderWidth": 1,
-              "position": "absolute",
-            },
-            Object {
-              "left": 47.875,
-            },
-            Object {
-              "top": 62.8,
-            },
-            Object {
-              "borderRadius": 2.125,
-            },
-          ]
-        }
-        width={4.25}
-      />
+      <Text />
     </View>
     <View
       onMoveShouldSetResponder={[Function]}
@@ -130,7 +106,7 @@ exports[`<Animation /> renders correctly 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "transparent",
-          "borderBottomColor": "#FEA500",
+          "borderBottomColor": "#feae19",
           "borderBottomWidth": 4.166666666666667,
           "borderColor": "transparent",
           "borderLeftWidth": 2.0833333333333335,
@@ -144,10 +120,10 @@ exports[`<Animation /> renders correctly 1`] = `
           "top": 0,
           "transform": Array [
             Object {
-              "translateX": 30,
+              "translateX": 28.958333333333332,
             },
             Object {
-              "translateY": 30,
+              "translateY": 28.958333333333332,
             },
           ],
         }
@@ -181,7 +157,7 @@ exports[`<Animation /> renders correctly 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "transparent",
-          "borderBottomColor": "#FEA500",
+          "borderBottomColor": "#feae19",
           "borderBottomWidth": 4.166666666666667,
           "borderColor": "transparent",
           "borderLeftWidth": 2.0833333333333335,
@@ -195,10 +171,10 @@ exports[`<Animation /> renders correctly 1`] = `
           "top": 0,
           "transform": Array [
             Object {
-              "translateX": 30,
+              "translateX": 28.958333333333332,
             },
             Object {
-              "translateY": 60,
+              "translateY": 58.958333333333336,
             },
           ],
         }
@@ -232,7 +208,7 @@ exports[`<Animation /> renders correctly 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "transparent",
-          "borderBottomColor": "#FEA500",
+          "borderBottomColor": "#feae19",
           "borderBottomWidth": 4.166666666666667,
           "borderColor": "transparent",
           "borderLeftWidth": 2.0833333333333335,
@@ -246,10 +222,10 @@ exports[`<Animation /> renders correctly 1`] = `
           "top": 0,
           "transform": Array [
             Object {
-              "translateX": 60,
+              "translateX": 58.958333333333336,
             },
             Object {
-              "translateY": 30,
+              "translateY": 28.958333333333332,
             },
           ],
         }
@@ -283,7 +259,7 @@ exports[`<Animation /> renders correctly 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "transparent",
-          "borderBottomColor": "#FEA500",
+          "borderBottomColor": "#feae19",
           "borderBottomWidth": 4.166666666666667,
           "borderColor": "transparent",
           "borderLeftWidth": 2.0833333333333335,
@@ -297,10 +273,10 @@ exports[`<Animation /> renders correctly 1`] = `
           "top": 0,
           "transform": Array [
             Object {
-              "translateX": 60,
+              "translateX": 58.958333333333336,
             },
             Object {
-              "translateY": 60,
+              "translateY": 58.958333333333336,
             },
           ],
         }
@@ -334,7 +310,7 @@ exports[`<Animation /> renders correctly 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "transparent",
-          "borderBottomColor": "#FEA500",
+          "borderBottomColor": "#feae19",
           "borderBottomWidth": 4.166666666666667,
           "borderColor": "transparent",
           "borderLeftWidth": 2.0833333333333335,
@@ -348,10 +324,10 @@ exports[`<Animation /> renders correctly 1`] = `
           "top": 0,
           "transform": Array [
             Object {
-              "translateX": 45,
+              "translateX": 43.958333333333336,
             },
             Object {
-              "translateY": 20,
+              "translateY": 18.958333333333332,
             },
           ],
         }
@@ -385,7 +361,7 @@ exports[`<Animation /> renders correctly 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "transparent",
-          "borderBottomColor": "#FEA500",
+          "borderBottomColor": "#feae19",
           "borderBottomWidth": 4.166666666666667,
           "borderColor": "transparent",
           "borderLeftWidth": 2.0833333333333335,
@@ -399,10 +375,10 @@ exports[`<Animation /> renders correctly 1`] = `
           "top": 0,
           "transform": Array [
             Object {
-              "translateX": 20,
+              "translateX": 18.958333333333332,
             },
             Object {
-              "translateY": 45,
+              "translateY": 43.958333333333336,
             },
           ],
         }
@@ -436,7 +412,7 @@ exports[`<Animation /> renders correctly 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "transparent",
-          "borderBottomColor": "#FEA500",
+          "borderBottomColor": "#feae19",
           "borderBottomWidth": 4.166666666666667,
           "borderColor": "transparent",
           "borderLeftWidth": 2.0833333333333335,
@@ -450,10 +426,10 @@ exports[`<Animation /> renders correctly 1`] = `
           "top": 0,
           "transform": Array [
             Object {
-              "translateX": 45,
+              "translateX": 43.958333333333336,
             },
             Object {
-              "translateY": 70,
+              "translateY": 68.95833333333333,
             },
           ],
         }
@@ -487,7 +463,7 @@ exports[`<Animation /> renders correctly 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "transparent",
-          "borderBottomColor": "#FEA500",
+          "borderBottomColor": "#feae19",
           "borderBottomWidth": 4.166666666666667,
           "borderColor": "transparent",
           "borderLeftWidth": 2.0833333333333335,
@@ -501,10 +477,10 @@ exports[`<Animation /> renders correctly 1`] = `
           "top": 0,
           "transform": Array [
             Object {
-              "translateX": 70,
+              "translateX": 68.95833333333333,
             },
             Object {
-              "translateY": 45,
+              "translateY": 43.958333333333336,
             },
           ],
         }
@@ -548,10 +524,10 @@ exports[`<Animation /> renders correctly 1`] = `
           "top": 0,
           "transform": Array [
             Object {
-              "translateX": 30,
+              "translateX": 25.833333333333332,
             },
             Object {
-              "translateY": 30,
+              "translateY": 25.833333333333332,
             },
           ],
           "width": 8.333333333333334,
@@ -596,10 +572,10 @@ exports[`<Animation /> renders correctly 1`] = `
           "top": 0,
           "transform": Array [
             Object {
-              "translateX": 16,
+              "translateX": 11.833333333333332,
             },
             Object {
-              "translateY": 30,
+              "translateY": 25.833333333333332,
             },
           ],
           "width": 8.333333333333334,
@@ -644,10 +620,10 @@ exports[`<Animation /> renders correctly 1`] = `
           "top": 0,
           "transform": Array [
             Object {
-              "translateX": 60,
+              "translateX": 55.833333333333336,
             },
             Object {
-              "translateY": 30,
+              "translateY": 25.833333333333332,
             },
           ],
           "width": 8.333333333333334,
@@ -692,10 +668,10 @@ exports[`<Animation /> renders correctly 1`] = `
           "top": 0,
           "transform": Array [
             Object {
-              "translateX": 60,
+              "translateX": 55.833333333333336,
             },
             Object {
-              "translateY": 60,
+              "translateY": 55.833333333333336,
             },
           ],
           "width": 8.333333333333334,
@@ -740,10 +716,10 @@ exports[`<Animation /> renders correctly 1`] = `
           "top": 0,
           "transform": Array [
             Object {
-              "translateX": 30,
+              "translateX": 25.833333333333332,
             },
             Object {
-              "translateY": 60,
+              "translateY": 55.833333333333336,
             },
           ],
           "width": 8.333333333333334,
@@ -790,10 +766,10 @@ exports[`<Animation /> renders correctly 1`] = `
           "top": 0,
           "transform": Array [
             Object {
-              "translateX": 36,
+              "translateX": 33.22222222222222,
             },
             Object {
-              "translateY": 36,
+              "translateY": 33.22222222222222,
             },
           ],
           "width": 5.555555555555556,
@@ -803,8 +779,8 @@ exports[`<Animation /> renders correctly 1`] = `
       <Text
         style={
           Object {
-            "height": 0,
-            "width": 0,
+            "color": "black",
+            "fontWeight": "bold",
           }
         }
       >
@@ -927,7 +903,6 @@ exports[`<Animation /> renders correctly 1`] = `
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -948,7 +923,6 @@ exports[`<Animation /> renders correctly 1`] = `
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -969,7 +943,6 @@ exports[`<Animation /> renders correctly 1`] = `
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -990,7 +963,6 @@ exports[`<Animation /> renders correctly 1`] = `
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1011,7 +983,6 @@ exports[`<Animation /> renders correctly 1`] = `
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1032,7 +1003,6 @@ exports[`<Animation /> renders correctly 1`] = `
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1064,7 +1034,6 @@ exports[`<Animation /> renders correctly 1`] = `
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}

@@ -9,8 +9,6 @@ import Button from './filters/FilterButton';
 import Checkbox from './filters/Checkbox';
 import Slider from './filters/Slider';
 import HeaderButton from './shared/HeaderButton';
-import iconRedo from '../../assets/redo_arrow.png';
-import buttonValidation from '../../assets/check_dark.png';
 
 export class FrisbeeFilters extends React.Component {
   constructor(props) {
@@ -44,16 +42,16 @@ export class FrisbeeFilters extends React.Component {
 
   onFavoritesChange() {
     this.setState(
-      prevState => ({
+      (prevState) => ({
         selectedFavorites: !prevState.selectedFavorites,
       }),
       this.applyFilters,
     );
   }
   onPressedChange(target, value) {
-    this.setState(prevState => {
+    this.setState((prevState) => {
       const newValue = prevState[target].includes(value)
-        ? prevState[target].filter(v => v !== value)
+        ? prevState[target].filter((v) => v !== value)
         : prevState[target].concat([value]);
       return {
         [target]: newValue,
@@ -71,13 +69,13 @@ export class FrisbeeFilters extends React.Component {
     let newData = this.props.route.params.initialData;
 
     if (selectedFavorites) {
-      const favoriteIds = favoriteDrills.map(favorite => favorite.id);
-      newData = newData.filter(drill => favoriteIds.includes(drill.id));
+      const favoriteIds = favoriteDrills.map((favorite) => favorite.id);
+      newData = newData.filter((drill) => favoriteIds.includes(drill.id));
     }
-    if (selectedLevels.length > 0) newData = newData.filter(drill => selectedLevels.includes(drill.level));
+    if (selectedLevels.length > 0) newData = newData.filter((drill) => selectedLevels.includes(drill.level));
     if (selectedGoals.length > 0)
-      newData = newData.filter(drill => drill.goals.filter(goal => selectedGoals.includes(goal)).length > 0);
-    if (numberOfPlayers) newData = newData.filter(drill => drill.minimalPlayersNumber <= numberOfPlayers);
+      newData = newData.filter((drill) => drill.goals.filter((goal) => selectedGoals.includes(goal)).length > 0);
+    if (numberOfPlayers) newData = newData.filter((drill) => drill.minimalPlayersNumber <= numberOfPlayers);
 
     this.setState({ displayedDrills: newData }, callback);
   }
@@ -93,8 +91,8 @@ export class FrisbeeFilters extends React.Component {
     this.props.navigation.setOptions({
       headerRight: () => (
         <View style={{ flexDirection: 'row' }}>
-          <HeaderButton image={iconRedo} onPress={() => this.resetFilters()} testID="resetButton" />
-          <HeaderButton image={buttonValidation} onPress={() => this.validateFilters()} testID="validateButton" />
+          <HeaderButton icon="restart" onPress={() => this.resetFilters()} testID="resetButton" />
+          <HeaderButton icon="check" onPress={() => this.validateFilters()} testID="validateButton" />
         </View>
       ),
     });
@@ -117,7 +115,7 @@ export class FrisbeeFilters extends React.Component {
           </View>
           <Text style={filterStyle.filterTitle}>{I18n.t('fitnessFilters.level')}</Text>
           <View style={filterStyle.filter}>
-            {Object.values(Levels).map(level => (
+            {Object.values(Levels).map((level) => (
               <Button
                 title={I18n.t(`data.levels.${level}`)}
                 onPress={() => this.onPressedChange('selectedLevels', level)}
@@ -129,10 +127,10 @@ export class FrisbeeFilters extends React.Component {
           <Text style={filterStyle.filterTitle}>{I18n.t('fitnessFilters.goals')}</Text>
           <View style={filterStyle.filter}>
             {this.props.route.params.initialData
-              .map(drill => drill.goals)
+              .map((drill) => drill.goals)
               .reduce((x, y) => x.concat(y), [])
               .filter((goal, index, array) => array.indexOf(goal) === index)
-              .map(goal => (
+              .map((goal) => (
                 <Checkbox
                   title={I18n.t(`data.frisbeeGoals.${goal}`)}
                   onPress={() => this.onPressedChange('selectedGoals', goal)}
@@ -158,7 +156,7 @@ export class FrisbeeFilters extends React.Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     favoriteDrills: state.favoriteDrills,
   };

@@ -79,7 +79,7 @@ export default {
     frisbeeTab: 'Frisbee',
     fitnessTab: 'Fitness',
     theoryTab: 'Théorie',
-    editor: 'Editeur',
+    editor: 'Éditeur',
     drills: 'Exercices',
     programs: "Programmes d'entraînement",
     leanTitle: 'Exercices',

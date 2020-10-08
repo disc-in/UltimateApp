@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { create, act } from 'react-test-renderer';
 
 import animationSquare from '../../Fixtures/Animation/AnimationSquare';
 import Drill from './Drill';
@@ -7,8 +7,8 @@ import Drill from './Drill';
 import Animation from './Animation';
 
 describe('<Animation />', () => {
-  it('renders correctly', () => {
-    const tree = renderer.create(<Animation animation={new Drill(animationSquare)} />).toJSON();
-    expect(tree).toMatchSnapshot();
+  it('renders correctly', async () => {
+    const tree = create(<Animation animation={new Drill(animationSquare)} />).toJSON();
+    await act(async () => expect(tree).toMatchSnapshot());
   });
 });

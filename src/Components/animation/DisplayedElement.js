@@ -3,13 +3,11 @@ import { StyleSheet, Easing, Animated, View, Text, PanResponder } from 'react-na
 
 import theme from '../../styles/theme.style';
 
-import debug from './debug';
-
 /** An element displayed in a drill animation */
 class DisplayedElement extends React.Component {
   /* Props must contain:
       - type: which indicates how to display the element: "offense", "defense", "triangle" or "disc"
-      - movable: true if element can be moved by the user
+      - editable: true if element can be moved by the user
       - number: string defined if there is something written on the element
       - eId: element index in the list of elements of the drill (-1 if it is not currently in a drill)
     */
@@ -32,7 +30,7 @@ class DisplayedElement extends React.Component {
       onPanResponderGrant: () => {
         if (this.props.onMoveStart !== undefined && this.props.onMoveStart !== null) this.props.onMoveStart();
 
-        if (this.props.movable) {
+        if (this.props.editable) {
           this.setState({
             isMoving: true,
           });
@@ -45,12 +43,12 @@ class DisplayedElement extends React.Component {
         }
       },
 
-      onPanResponderMove: this.props.movable
-        ? Animated.event([null, { dx: this.offset.x, dy: this.offset.y }])
+      onPanResponderMove: this.props.editable
+        ? Animated.event([null, { dx: this.offset.x, dy: this.offset.y }], { useNativeDriver: false })
         : undefined,
 
       onPanResponderRelease: (event, gestureState) => {
-        if (this.props.movable && this.props.onMoveEnd !== undefined && this.props.onMoveEnd !== null) {
+        if (this.props.editable && this.props.onMoveEnd !== undefined && this.props.onMoveEnd !== null) {
           this.props.onMoveEnd(this.props.eId, this.props.type, gestureState.dx, gestureState.dy);
         }
         this.setState({
@@ -61,7 +59,7 @@ class DisplayedElement extends React.Component {
   }
 
   static getDerivedStateFromProps(props, state) {
-    var isEqual = true;
+    let isEqual = true;
 
     /* If most of the attributes are equal */
     if (
@@ -160,7 +158,22 @@ class DisplayedElement extends React.Component {
   }
 }
 
-const _initializeStateFromProps = props => {
+const _initializeStateFromProps = (props) => {
+  let width = 0;
+
+  const playerRadius = Math.min(props.animationWidth, props.animationHeight) / 24;
+  switch (props.type) {
+    case 'defense':
+    case 'offense':
+      width = playerRadius;
+      break;
+    case 'disc':
+      width = playerRadius / 1.5;
+      break;
+    case 'triangle':
+      width = playerRadius / 4;
+  }
+
   /* Positions of the element at each step of the drill */
   const xPositions = [];
   const yPositions = [];
@@ -175,8 +188,8 @@ const _initializeStateFromProps = props => {
     /* Get the element initial position */
     const initialPosition = props.positionPercentToPixel(currentPositions[0][0], currentPositions[0][1]);
 
-    xPositions.push(initialPosition[0]);
-    yPositions.push(initialPosition[1]);
+    xPositions.push(initialPosition[0] - width);
+    yPositions.push(initialPosition[1] - width - props.topMargin);
     time.push(stepId);
 
     /* If there is a count-cut */
@@ -197,8 +210,8 @@ const _initializeStateFromProps = props => {
           Math.pow(counterCutPosition[0] - finalPosition[0], 2) + Math.pow(counterCutPosition[1] - finalPosition[1], 2),
         );
 
-        xPositions.push(counterCutPosition[0]);
-        yPositions.push(counterCutPosition[1]);
+        xPositions.push(counterCutPosition[0] - width);
+        yPositions.push(counterCutPosition[1] - width - props.topMargin);
         time.push(stepId + firstCutLength / (firstCutLength + secondCutLength));
       }
     }
@@ -245,8 +258,8 @@ const styles = StyleSheet.create({
     backgroundColor: theme.DISC_COLOR,
   },
   discText: {
-    width: 0,
-    height: 0,
+    color: theme.DISC_TEXT_COLOR,
+    fontWeight: 'bold',
   },
   triangle: {
     backgroundColor: 'transparent',

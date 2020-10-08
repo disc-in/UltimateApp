@@ -1,27 +1,19 @@
 import React, { useRef, useLayoutEffect } from 'react';
-import {
-  ScrollView,
-  StyleSheet,
-  View,
-  Text,
-  ImageBackground,
-  TouchableOpacity,
-  Dimensions,
-  findNodeHandle,
-} from 'react-native';
+import { ScrollView, StyleSheet, View, Text, ImageBackground, Dimensions, findNodeHandle } from 'react-native';
 import { connect } from 'react-redux';
 import { useHeaderHeight } from '@react-navigation/stack';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import I18n from '../utils/i18n';
 import { toggleFavorite } from '../Store/Actions/favoriteAction';
 import { DrillTypes } from '../Fixtures/config';
 import theme from '../styles/theme.style';
+
 import FitnessDrillIllustration from './drills/FitnessDrillIllustration';
 import FrisbeeDrillIllustration from './drills/FrisbeeDrillIllustration';
 import StartButton from './drills/StartButton';
+import HeaderButton from './shared/HeaderButton';
 
-export const DrillPage = props => {
+export const DrillPage = (props) => {
   const { route, navigation } = props;
 
   // Create Component refs
@@ -44,19 +36,11 @@ export const DrillPage = props => {
 
   const displayFavoriteButton = () => {
     let icon = 'heart-outline';
-    if (props.favoriteDrills.findIndex(item => item.id === props.route.params.drill.id) !== -1) {
+    if (props.favoriteDrills.findIndex((item) => item.id === props.route.params.drill.id) !== -1) {
       icon = 'heart';
     }
 
-    return (
-      <TouchableOpacity
-        style={styles.favoriteContainer}
-        onPress={() => props.toggleFavorite(drill)}
-        testID="favoriteButton"
-      >
-        <MaterialCommunityIcons name={icon} color={theme.COLOR_PRIMARY} size={26} />
-      </TouchableOpacity>
-    );
+    return <HeaderButton icon={icon} onPress={() => props.toggleFavorite(drill)} testID="favoriteButton" />;
   };
 
   useLayoutEffect(() =>
@@ -96,7 +80,9 @@ export const DrillPage = props => {
           <Text style={styles.descriptionTitle}>{I18n.t('drillPage.goal')}</Text>
           <Text style={styles.descriptionText}>
             {drill.goals
-              .map(goal => I18n.t(`data.fitnessGoals.${goal}`, { defaults: [{ scope: `data.frisbeeGoals.${goal}` }] }))
+              .map((goal) =>
+                I18n.t(`data.fitnessGoals.${goal}`, { defaults: [{ scope: `data.frisbeeGoals.${goal}` }] }),
+              )
               .join(', ')}
           </Text>
         </View>
@@ -221,12 +207,9 @@ const styles = StyleSheet.create({
     borderBottomColor: theme.COLOR_SECONDARY_LIGHT,
     borderBottomWidth: 1,
   },
-  favoriteContainer: {
-    marginRight: 20,
-  },
 });
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     favoriteDrills: state.favoriteDrills,
   };

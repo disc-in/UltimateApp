@@ -39,7 +39,7 @@ exports[`<EssentialPage /> renders correctly 1`] = `
         }
       }
     >
-      <RCTPicker
+      <RNCPicker
         items={
           Array [
             Object {
@@ -55,8 +55,6 @@ exports[`<EssentialPage /> renders correctly 1`] = `
           ]
         }
         onChange={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
         selectedIndex={1}
         style={
           Array [
@@ -90,7 +88,6 @@ exports[`<EssentialPage /> renders correctly 1`] = `
     initialNumToRender={10}
     keyExtractor={[Function]}
     maxToRenderPerBatch={10}
-    numColumns={1}
     onContentSizeChange={[Function]}
     onEndReachedThreshold={2}
     onLayout={[Function]}
@@ -119,7 +116,6 @@ exports[`<EssentialPage /> renders correctly 1`] = `
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -127,7 +123,11 @@ exports[`<EssentialPage /> renders correctly 1`] = `
           onResponderTerminate={[Function]}
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
-          style={null}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
         >
           <View
             style={

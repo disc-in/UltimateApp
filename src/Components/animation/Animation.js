@@ -10,16 +10,9 @@ class Animation extends React.Component {
   constructor(props) {
     super(props);
 
-    var initialStep = 0;
-
-    // If the current step is fixed by the parent (used in the editor)
-    if (props.currentStep !== undefined && props.currentStep !== null) initialStep = props.currentStep;
-
-    if (props.onStepChange !== undefined && props.onStepChange !== null) props.onStepChange(initialStep);
-
     this.state = {
       stepLength: 1000, // Duration of a step in milliseconds
-      currentStep: initialStep, // Current step displayed on the phone
+      currentStep: props.currentStep || 0, // Current step displayed on the phone
       animationPlaying: false,
     };
 
@@ -28,7 +21,7 @@ class Animation extends React.Component {
       this.currentStepAV = this.props.currentStepAV;
     else this.currentStepAV = new Animated.Value(0);
 
-    this.currentStepAV.addListener(progress => {
+    this.currentStepAV.addListener((progress) => {
       this.setState({ currentStep: progress.value });
     });
 
@@ -52,12 +45,19 @@ class Animation extends React.Component {
     return [this.animationWidth * x + this.dLeft, this.animationHeight * y + this.dTop];
   };
 
-  /** Once we get the screen size, create the DisplayedElement used in the animation and set them to their initial position */
   componentDidMount() {
     var { height, width } = Dimensions.get('window');
 
     this.animationWidth = width * this.props.widthRatio;
+
     this.animationHeight = height * this.props.heightRatio;
+    if (this.props.editable) this.props.onDimensionSet(this.animationHeight, this.animationWidth);
+  }
+
+  componentDidUpdate(prevProps) {
+    if (!this.props.editable && prevProps.animation !== this.props.animation) {
+      this.currentStepAV.setValue(0);
+    }
   }
 
   playAnimation = () => {
@@ -75,6 +75,7 @@ class Animation extends React.Component {
             duration: 0,
             easing: Easing.linear,
             key: 0,
+            useNativeDriver: false,
           }),
         );
 
@@ -84,6 +85,7 @@ class Animation extends React.Component {
             duration: this.state.stepLength * (this.props.animation.stepCount() - 1),
             easing: Easing.linear,
             key: 1,
+            useNativeDriver: false,
           }),
         );
 
@@ -94,7 +96,7 @@ class Animation extends React.Component {
     );
   };
 
-  playStep = stepId => {
+  playStep = (stepId) => {
     this.setState(
       {
         animationPlaying: true,
@@ -111,6 +113,7 @@ class Animation extends React.Component {
             duration: 0,
             easing: Easing.linear,
             key: 0,
+            useNativeDriver: false,
           }),
         );
 
@@ -122,6 +125,7 @@ class Animation extends React.Component {
               duration: this.state.stepLength,
               easing: Easing.linear,
               key: 1,
+              useNativeDriver: false,
             }),
           );
         }
@@ -134,7 +138,25 @@ class Animation extends React.Component {
   render() {
     return (
       <View>
-        <View style={{ height: this.animationHeight, width: this.animationWidth }}>
+        <View
+          ref={(ref) => {
+            this.marker = ref;
+          }}
+          onLayout={({ nativeEvent }) => {
+            if (this.props.editable) {
+              this.marker.measure((x, y, width, height, pageX, pageY) => {
+                // On iOS, when the left margin is = 0, pageX can be equal to the whole width instead of 0
+                if (pageX > 0.99 * width) pageX = 0;
+
+                if (pageY !== undefined) this.dTop = pageY;
+                if (pageX !== undefined) this.dLeft = pageX;
+
+                this.props.onTopMarginSet(this.dTop);
+              });
+            }
+          }}
+          style={{ height: this.animationHeight, width: this.animationWidth }}
+        >
           {this.animationWidth && (
             <AnimationBackground
               animationWidth={this.animationWidth}
@@ -149,6 +171,7 @@ class Animation extends React.Component {
               positionPercentToPixel={this._positionPercentToPixel}
               animation={this.props.animation}
               onMoveEnd={this.props.onCutMove}
+              topMargin={this.dTop}
             />
           )}
           {this.props.animation.ids.map((id, index) => (
@@ -157,9 +180,10 @@ class Animation extends React.Component {
               number={this.props.animation.texts[index]}
               key={index}
               eId={index}
-              movable={this.props.editable}
+              editable={this.props.editable}
               onMoveStart={this.props.onMoveStart}
               onMoveEnd={this.props.onElementMoveEnd}
+              topMargin={this.dTop}
               animationWidth={this.animationWidth}
               animationHeight={this.animationHeight}
               animation={this.props.animation}

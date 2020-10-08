@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { render, fireEvent, cleanup } from 'react-native-testing-library';
+import { render, fireEvent } from '@testing-library/react-native';
 import { connect, Provider } from 'react-redux';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -9,8 +9,6 @@ import fixtures from '../Fixtures/TestFixtures';
 import store from '../Store/testStore';
 
 import ConnectedDrillPageMinimal, { DrillPageMinimal } from './DrillPageMinimal';
-
-afterEach(cleanup);
 beforeEach(() => jest.useFakeTimers()); // for Animated
 jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
 

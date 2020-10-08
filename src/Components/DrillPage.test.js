@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { connect, Provider } from 'react-redux';
 
-import { render, fireEvent, cleanup, waitForElement, act } from 'react-native-testing-library';
+import { render, fireEvent, waitFor } from '@testing-library/react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -12,8 +12,6 @@ import { createDrill } from '../Fixtures/TestFixtures';
 import ConnectedDrillPage, { DrillPage } from './DrillPage';
 
 jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
-
-afterEach(cleanup);
 
 describe('<DrillPage />', () => {
   afterEach(() => jest.clearAllMocks());
@@ -54,10 +52,8 @@ describe('<DrillPage />', () => {
       </Provider>,
     );
 
-    await fireEvent.press(getByTestId('favoriteButton'));
+    fireEvent.press(getByTestId('favoriteButton'));
 
-    await act(async () => {
-      await waitForElement(() => expect(toggleFavorite).toBeCalledWith(drill));
-    });
+    await waitFor(() => expect(toggleFavorite).toBeCalledWith(drill));
   });
 });

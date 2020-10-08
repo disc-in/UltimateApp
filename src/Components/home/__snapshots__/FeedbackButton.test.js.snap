@@ -4,7 +4,6 @@ exports[`<FeedbackButton /> renders correctly 1`] = `
 <View
   accessible={true}
   focusable={true}
-  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -14,10 +13,10 @@ exports[`<FeedbackButton /> renders correctly 1`] = `
   onStartShouldSetResponder={[Function]}
   style={
     Object {
-      "marginRight": 20,
       "opacity": 1,
     }
   }
+  testID="headerButton"
 >
   <Text />
 </View>

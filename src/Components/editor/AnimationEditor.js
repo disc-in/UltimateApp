@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Animated, Dimensions, Easing, View } from 'react-native';
+import { StyleSheet, Animated, Easing, View } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import Animation from '../animation/Animation';
@@ -25,8 +25,11 @@ class AnimationEditor extends React.Component {
         disc: 1,
         triangle: 1,
       },
+      animationTopMargin: 0,
+      animationHeight: 100,
+      animationWidth: 100,
       isElementMoving: false,
-      currentStepAV: new Animated.Value(0), // Enables to update  the current step inside an animation
+      currentStepAV: new Animated.Value(0), // Enables to update the current step inside an animation
     };
 
     /** Vertical ratio of the space of the editor in which the animation is displayed */
@@ -37,12 +40,9 @@ class AnimationEditor extends React.Component {
 
     this.currentStep = 0;
 
-    this.state.currentStepAV.addListener(progress => {
+    this.state.currentStepAV.addListener((progress) => {
       this.currentStep = progress.value;
     });
-
-    this.editorHeight = 100;
-    this.editorWidth = 100;
   }
 
   saveAnimation = (newAnimation, cb) => {
@@ -50,27 +50,51 @@ class AnimationEditor extends React.Component {
     this.setState({ animation: newAnimation }, cb);
   };
 
-  onLayout = e => {
-    this.editorHeight = e.nativeEvent.layout.height;
-    this.editorWidth = e.nativeEvent.layout.width;
+  onLayout = (e) => {
+    if (this.marker) {
+      this.marker.measure((x, y, width, height, pageX, pageY) => {
+        let dLeft = pageX || this.state.dLeft;
+        // On iOS, when the left margin is = 0, pageX can be equal to the whole width instead of 0
+        if (dLeft > 0.99 * width) dLeft = 0;
 
-    const animationWidth = this.editorWidth * this.wRatio;
-    const animationHeight = this.editorHeight * this.hRatio;
+        const dTop = pageY || this.state.dTop;
+
+        this.setState({ dLeft, dTop });
+      });
+    }
+
+    const editorHeight = e.nativeEvent.layout.height;
+    const editorWidth = e.nativeEvent.layout.width;
+
+    const animationWidth = editorWidth * this.wRatio;
+    const animationHeight = editorHeight * this.hRatio;
 
     //TODO see why this is needed...
     this.setState({
-      width: this.editorWidth,
-      height: this.editorHeight,
-      dTop: e.nativeEvent.layout.y,
-      dLeft: e.nativeEvent.layout.x,
+      width: editorWidth,
+      height: editorHeight,
       playerRadius: Math.min(animationWidth, animationHeight) / 12,
     });
   };
 
+  setAnimationDimension = (height, width) => {
+    this.setState({
+      animationHeight: height,
+      animationWidth: width,
+    });
+  };
+
+  setAnimationTopMargin = (topMargin) => {
+    this.setState({
+      animationTopMargin: topMargin,
+    });
+  };
+
   addElementToAnimation = (type, x, y) => {
-    // TODO: Fix y offset
-    const position = this._positionPixelToPercent(x, y - 50);
-    if (position[0] <= 1 && position[1] <= 0.88 && position[0] >= 0 && position[1] >= 0) {
+    const position = this._positionPixelToPercent(x, y);
+
+    // 0.90 more or less matches the position of the progress bar in Animation
+    if (position[0] <= 1 && position[1] <= 0.9 && position[0] >= 0 && position[1] >= 0) {
       const text = this.state.labels[type];
 
       const labels = { ...this.state.labels };
@@ -83,7 +107,7 @@ class AnimationEditor extends React.Component {
     }
   };
 
-  onBackgroundChange = value => {
+  onBackgroundChange = (value) => {
     var newAnimation = this._copyAnimation();
     newAnimation.background = value;
     this.saveAnimation(newAnimation);
@@ -96,9 +120,10 @@ class AnimationEditor extends React.Component {
    * y2: corresponding vertical position in percentage (=0 if centered)
    */
   _positionPixelToPercent = (x, y) => {
+    /* Here we assume that there is no view at the left or the bottom of the editor */
     return [
-      (x - this.state.dLeft) / (this.state.width * this.wRatio),
-      (y - this.state.dTop) / (this.state.height * this.hRatio),
+      (x - this.state.dLeft) / this.state.animationWidth,
+      (y - this.state.animationTopMargin) / this.state.animationHeight,
     ];
   };
 
@@ -119,9 +144,6 @@ class AnimationEditor extends React.Component {
     newAnimation.positions = Array(2);
     newAnimation.positions[0] = [];
     newAnimation.positions[1] = [];
-
-    /* Get the dimension of the screen and then initialize the animation */
-    var { height, width } = Dimensions.get('window');
 
     this.saveAnimation(newAnimation);
   }
@@ -193,22 +215,18 @@ class AnimationEditor extends React.Component {
       newAnimation.positions[previousStepId][elemId][1].push(newPositionY);
     }
 
-    this.saveAnimation(newAnimation, () => {
-      this.state.animation.log();
-    });
+    this.saveAnimation(newAnimation);
   };
 
   onElementMoveEnd = (elementIndex, type, xDelta, yDelta) => {
-    var currentPosition = this.state.animation.getPositionsAtStep(elementIndex, Math.ceil(this.currentStep));
-    currentPosition = currentPosition[0];
+    var currentPositions = this.state.animation.getPositionsAtStep(elementIndex, Math.ceil(this.currentStep));
+    const currentPosition = currentPositions[0];
     var xDeltaPercent = xDelta / (this.state.width * this.wRatio);
     var yDeltaPercent = yDelta / (this.state.height * this.hRatio);
 
     var newPosition = [currentPosition[0] + xDeltaPercent, currentPosition[1] + yDeltaPercent];
 
     var newAnimation = this._copyAnimation();
-    var animationWidth = this.state.width * this.wRatio;
-    var animationHeight = this.state.height * this.hRatio;
 
     /* If the element is dropped on the trash area */
     if (newPosition[1] > 1) {
@@ -223,8 +241,11 @@ class AnimationEditor extends React.Component {
       else if (newPosition[0] > 1) newPosition[0] = 1;
       if (newPosition[1] < 0) newPosition[1] = 0;
 
+      const newPositions = [newPosition];
+      if (currentPositions.length > 1) newPositions.push(currentPositions[1]);
+
       /* If the element is not moved outside of the animation area, updated its coordinates */
-      newAnimation.positions[Math.ceil(this.currentStep)][elementIndex] = [newPosition];
+      newAnimation.positions[Math.ceil(this.currentStep)][elementIndex] = newPositions;
     }
     this.saveAnimation(newAnimation);
     this.setState({ isElementMoving: false });
@@ -253,6 +274,7 @@ class AnimationEditor extends React.Component {
         duration: 0,
         easing: Easing.linear,
         key: 0,
+        useNativeDriver: false,
       }).start();
 
     newAnimation.removeStep();
@@ -262,20 +284,25 @@ class AnimationEditor extends React.Component {
 
   render() {
     return (
-      <View onLayout={this.onLayout}>
+      <View
+        ref={(ref) => {
+          this.marker = ref;
+        }}
+        onLayout={this.onLayout}
+      >
         <Animation
-          onLayout={this.onLayout}
           editable
           animation={this.state.animation}
           currentStep={this.currentStep}
           onMoveStart={this.onMoveStart}
           onElementMoveEnd={this.onElementMoveEnd}
+          onDimensionSet={this.setAnimationDimension}
+          onTopMarginSet={this.setAnimationTopMargin}
           onCutMove={this.cutMove}
           widthRatio={1}
           heightRatio={this.hRatio}
           dTop={this.state.dTop}
-          lTop={this.state.lTop}
-          onStepChange={this.displayStepDescription}
+          dLeft={this.state.dLeft}
           onStepAdded={this.addStep}
           onStepRemoved={this.removeStep}
           currentStepAV={this.state.currentStepAV}
@@ -288,7 +315,7 @@ class AnimationEditor extends React.Component {
             </View>
           ) : (
             <View style={styles.draggableArea}>
-              {['offense', 'defense', 'disc', 'triangle'].map(type => (
+              {['offense', 'defense', 'disc', 'triangle'].map((type) => (
                 <DraggableDisplayedElement
                   type={type}
                   playerRadius={this.state.playerRadius}

@@ -18,21 +18,21 @@ const VimeoVideo = ({ vimeoId, sounds, shouldPlay }) => {
     setError(null);
 
     fetch(vimeoUrlSource)
-      .then(res => res.json())
-      .then(res => {
+      .then((res) => res.json())
+      .then((res) => {
         const videoArray = res.request.files.progressive;
-        const videoVimeoQuality = videoArray.find(videoObject => videoObject.quality === '540p');
+        const videoVimeoQuality = videoArray.find((videoObject) => videoObject.quality === '540p');
         if (videoVimeoQuality) {
           return videoVimeoQuality.url;
         }
       })
-      .then(url => {
+      .then((url) => {
         if (aborted) return;
         return videoElem.current.loadAsync({
           uri: url,
         });
       })
-      .catch(e => {
+      .catch((e) => {
         if (aborted) return;
         setError(e);
         setBuffer(false);

@@ -1,21 +1,18 @@
 import React, { useState, useLayoutEffect } from 'react';
 import { Share, StyleSheet, View, Alert } from 'react-native';
-
+import { connect } from 'react-redux';
+import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
 import { Provider } from 'react-native-paper';
 
 import I18n from '../utils/i18n';
+import theme from '../styles/theme.style';
+import { saveDrill, deleteDrill } from '../Store/Actions/drillAction';
 import AnimationEditor from './editor/AnimationEditor';
-import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
 import CurrentDrillManager from './editor/CurrentDrillManager';
 import SavedDrillModal from './editor/SavedDrillModal';
 import RenameDrillModal from './editor/RenameDrillModal';
 
-import theme from '../styles/theme.style';
-
-import { connect } from 'react-redux';
-import { saveDrill, deleteDrill } from '../Store/Actions/drillAction';
-
-export const AnimationEditorPage = props => {
+export const AnimationEditorPage = (props) => {
   // Current drill opened in the editor
   const [currentDrillState, setDrillState] = useState(null);
 
@@ -30,6 +27,7 @@ export const AnimationEditorPage = props => {
 
   // drillTempTitle contains the temporary name of the title. If the drill is saved it will be assigned this new name if it is different from drillTitle
   const [drillTempTitle, setDrillTempTitle] = useState('');
+
   const navigation = props.navigation;
 
   // isDrillSaved is true if the current drill opened in the editor is:
@@ -62,7 +60,7 @@ export const AnimationEditorPage = props => {
     });
   });
 
-  const drillChangedInEditor = drill => {
+  const drillChangedInEditor = (drill) => {
     setDrillState(drill);
     setIsDrillSaved(false);
 
@@ -99,7 +97,7 @@ export const AnimationEditorPage = props => {
   const updateTitle = () => {
     // If the title has changed
     if (drillTempTitle !== drillTitle) {
-      const drillIndex = props.customDrills.findIndex(item => item.title === drillTempTitle);
+      const drillIndex = props.customDrills.findIndex((item) => item.title === drillTempTitle);
 
       // If the new title is already given to another drill
       if (drillIndex !== -1) askOverwriteDrill();
@@ -114,7 +112,7 @@ export const AnimationEditorPage = props => {
   };
 
   // Called when the user choose for the drill a title which is already used by another drill
-  const askConfirmationToDelete = drill => {
+  const askConfirmationToDelete = (drill) => {
     Alert.alert(
       drill.title,
       I18n.t('drillEditor.drillManager.deleteConfirmation'),
@@ -137,7 +135,7 @@ export const AnimationEditorPage = props => {
     );
   };
 
-  const saveLocally = title => {
+  const saveLocally = (title) => {
     props.saveDrill({ title: drillTitle, drill: currentDrillState });
     setIsDrillSaved(true);
     navigation.setOptions({ headerTitle: drillTitle });
@@ -147,11 +145,11 @@ export const AnimationEditorPage = props => {
     Share.share({
       title: I18n.t('drillEditor.sharePlaceholder'),
       message: '----- ENCODED DRILL -------\n' + JSON.stringify(currentDrillState) + '\n---------------------------',
-    }).catch(err => console.log(err));
+    }).catch((err) => console.log(err));
   };
 
   // Called when the user wants to open a drill
-  const checkModificationsBeforeOpening = drill => {
+  const checkModificationsBeforeOpening = (drill) => {
     if (isDrillSaved) openDrill(drill);
     else {
       Alert.alert(
@@ -184,7 +182,7 @@ export const AnimationEditorPage = props => {
     }
   };
 
-  const openDrill = drill => {
+  const openDrill = (drill) => {
     setDrillTitle(drill.title);
     navigation.setOptions({ headerTitle: drill.title });
     setDrillTempTitle(drill.title);
@@ -238,7 +236,7 @@ export const AnimationEditorPage = props => {
     const defaultTitle = I18n.t('drillEditor.untitledDrill');
     let newTitle = defaultTitle;
 
-    const titleId = props.customDrills.findIndex(item => item.title === newTitle);
+    const titleId = props.customDrills.findIndex((item) => item.title === newTitle);
 
     // If a saved drill already has the default title
     if (titleId !== -1) {
@@ -247,7 +245,7 @@ export const AnimationEditorPage = props => {
       do {
         newTitle = defaultTitle + ' (' + counter + ')';
         counter += 1;
-      } while (props.customDrills.findIndex(item => item.title === newTitle) !== -1);
+      } while (props.customDrills.findIndex((item) => item.title === newTitle) !== -1);
     }
 
     setDrillState(emptyDrill);
@@ -257,7 +255,7 @@ export const AnimationEditorPage = props => {
     navigation.setOptions({ headerTitle: newTitle });
   };
 
-  const deleteDrill = item => {
+  const deleteDrill = (item) => {
     // Envoyer l'action de suppression
     props.deleteDrill(item.title);
 
@@ -270,15 +268,15 @@ export const AnimationEditorPage = props => {
         {modalOpenVisible ? (
           <SavedDrillModal
             savedDrills={props.customDrills}
-            openDrill={drill => checkModificationsBeforeOpening(drill)}
-            deleteDrill={item => askConfirmationToDelete(item)}
+            openDrill={(drill) => checkModificationsBeforeOpening(drill)}
+            deleteDrill={(item) => askConfirmationToDelete(item)}
             close={() => setModalOpenVisible(false)}
           />
         ) : null}
         {modalRenameVisible ? (
           <RenameDrillModal
             drillTitle={drillTitle}
-            textModified={title => setDrillTempTitle(title)}
+            textModified={(title) => setDrillTempTitle(title)}
             confirmNewName={() => updateTitle()}
             close={() => setModalRenameVisible(false)}
           />
@@ -290,7 +288,7 @@ export const AnimationEditorPage = props => {
   );
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     customDrills: state.customDrills,
   };

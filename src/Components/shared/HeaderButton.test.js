@@ -1,16 +1,12 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { render, fireEvent, cleanup } from 'react-native-testing-library';
+import { render, fireEvent } from '@testing-library/react-native';
 
 import HeaderButton from './HeaderButton';
 
-import buttonValidation from '../../../assets/check_dark.png';
-
-afterEach(cleanup);
-
 describe('<HeaderButton />', () => {
   it('renders correctly', () => {
-    const tree = renderer.create(<HeaderButton image={buttonValidation} />).toJSON();
+    const tree = renderer.create(<HeaderButton icon="check" />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 

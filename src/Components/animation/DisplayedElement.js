@@ -258,7 +258,7 @@ const styles = StyleSheet.create({
     backgroundColor: theme.DISC_COLOR,
   },
   discText: {
-    color: theme.DISC_TEXT_COLOR,
+    color: theme.BACKGROUND_COLOR,
     fontWeight: 'bold',
   },
   triangle: {

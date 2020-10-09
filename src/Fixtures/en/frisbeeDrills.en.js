@@ -495,7 +495,7 @@ const strengthDrill = {
 
 const warmupGameDrill = {
   id: 5,
-  type: DrillTypes.FITNESS,
+  type: DrillTypes.FRISBEE,
   author: '',
   title: 'Warm-up Game ready',
   image: 'https://zupimages.net/up/20/19/f2bd.jpg',
@@ -524,7 +524,7 @@ const warmupGameDrill = {
 
 const warmupDrill = {
   id: 6,
-  type: DrillTypes.FITNESS,
+  type: DrillTypes.FRISBEE,
   author: '',
   title: 'Warm-up Ultimate',
   image: 'https://zupimages.net/up/20/19/va5f.jpg',
@@ -8140,14 +8140,14 @@ export const drills = [
   adaptToTheMark,
   ghostMark,
 
-  // Games
-  normalGame,
-  game3v3,
-  longShotGame,
-  lineGame,
-  longestGame,
-  trainingGame,
-  helpGame,
+  // // Games
+  // normalGame,
+  // game3v3,
+  // longShotGame,
+  // lineGame,
+  // longestGame,
+  // trainingGame,
+  // helpGame,
 ];
 
 export const trainings = [

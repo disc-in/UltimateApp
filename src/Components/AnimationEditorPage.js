@@ -2,7 +2,6 @@ import React, { useState, useEffect, useLayoutEffect } from 'react';
 import { StyleSheet, View, Alert } from 'react-native';
 import { connect } from 'react-redux';
 import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
-import { Provider } from 'react-native-paper';
 
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
@@ -12,32 +11,27 @@ import CurrentDrillManager from './editor/CurrentDrillManager';
 import SavedDrillsList from './editor/SavedDrillsList';
 import RenameDrillModal from './editor/RenameDrillModal';
 
-export const AnimationEditorPage = (props) => {
-  const emptyDrill = {
+const newDrill = {
+  drill: {
     positions: [[], []],
     ids: [],
     texts: [],
     background: 'endzone',
-  };
+  },
+  title: I18n.t('animationEditorPage.untitledDrill'),
+};
 
-  // Current drill opened in the editor
-  const [currentDrill, setCurrentDrill] = useState({
-    drill: emptyDrill,
-    title: undefined,
-  });
+export const AnimationEditorPage = (props) => {
+  const [currentDrill, setCurrentDrill] = useState(newDrill);
 
   // modalRenameVisible is true if the modal which enables to rename the current drill is displayed
   const [modalRenameVisible, setModalRenameVisible] = useState(false);
 
-  const navigation = props.navigation;
-
-  // isDrillSaved is true if the current drill opened in the editor is:
-  // - a new one which has not yet been edited;
-  // - saved as is in redux (i.e., the latest modifications have been saved)
+  // isDrillSaved is true unless there are unsaved changes on the current drill
   const [isDrillSaved, setIsDrillSaved] = useState(true);
 
   useLayoutEffect(() => {
-    navigation.setOptions({
+    props.navigation.setOptions({
       headerRight: () => (
         <View style={{ flexDirection: 'row', paddingLeft: 10 }}>
           <SavedDrillsList
@@ -69,7 +63,7 @@ export const AnimationEditorPage = (props) => {
     const unsavedAsterisk = isDrillSaved ? '' : ' *';
     const displayedTitle = `${drillTitle} ${unsavedAsterisk}`;
 
-    navigation.setOptions({ headerTitle: displayedTitle });
+    props.navigation.setOptions({ headerTitle: displayedTitle });
   };
 
   const drillChangedInEditor = (drill) => {
@@ -78,8 +72,8 @@ export const AnimationEditorPage = (props) => {
   };
 
   const saveCurrentDrill = () => {
-    if (!currentDrill.title) {
-      const defaultTitle = I18n.t('animationEditorPage.untitledDrill');
+    const defaultTitle = I18n.t('animationEditorPage.untitledDrill');
+    if (currentDrill.title == I18n.t('animationEditorPage.untitledDrill')) {
       let newTitle = defaultTitle;
 
       let counter = 1;
@@ -130,7 +124,7 @@ export const AnimationEditorPage = (props) => {
   };
 
   const createNewDrill = () => {
-    setCurrentDrill({ drill: emptyDrill, title: undefined });
+    setCurrentDrill(newDrill);
     setIsDrillSaved(true);
   };
 
@@ -141,19 +135,13 @@ export const AnimationEditorPage = (props) => {
   };
 
   return (
-    <Provider>
-      <View style={styles.centeredView}>
-        {modalRenameVisible ? (
-          <RenameDrillModal
-            currentDrill={currentDrill}
-            onRename={setTitle}
-            close={() => setModalRenameVisible(false)}
-          />
-        ) : null}
+    <View style={styles.centeredView}>
+      {modalRenameVisible ? (
+        <RenameDrillModal currentDrill={currentDrill} onRename={setTitle} close={() => setModalRenameVisible(false)} />
+      ) : null}
 
-        <AnimationEditor onAnimationChange={drillChangedInEditor} animation={currentDrill.drill} />
-      </View>
-    </Provider>
+      <AnimationEditor onAnimationChange={drillChangedInEditor} animation={currentDrill.drill} />
+    </View>
   );
 };
 

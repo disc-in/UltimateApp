@@ -107,7 +107,7 @@ const stabilityDrill = {
     "It's the first session of our program, we start with stability drill to build solid base for the rest of the season",
   minimalPlayersNumber: 1,
   equipmentLabel: EquipmentLabels.NONE,
-  equipment: 'Kettlebell - Dumbbell',
+  equipment: 'Kettlebellss - Dumbbell',
   durationInMinutes: 20,
   intensity: Intensities.LOW,
   goals: [FitnessGoals.LEGS, FitnessGoals.UPPER],
@@ -156,7 +156,7 @@ const stabilityDrill = {
     },
     {
       id: 5,
-      title: 'Dual Gorilla Kettlebell Rows',
+      title: 'Dual Gorilla Kettlebells Rows',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '406747038',
       sounds: false,
@@ -216,7 +216,7 @@ const stabilityDrill = {
     },
     {
       id: 11,
-      title: 'Dual Gorilla Kettlebell Rows',
+      title: 'Dual Gorilla Kettlebells Rows',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '406747038',
       sounds: false,
@@ -276,7 +276,7 @@ const stabilityDrill = {
     },
     {
       id: 17,
-      title: 'Dual Gorilla Kettlebell Rows',
+      title: 'Dual Gorilla Kettlebells Rows',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '406747038',
       sounds: false,
@@ -336,7 +336,7 @@ const stabilityDrill = {
     },
     {
       id: 23,
-      title: 'Dual Gorilla Kettlebell Rows',
+      title: 'Dual Gorilla Kettlebells Rows',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '406747038',
       sounds: false,
@@ -361,12 +361,12 @@ const strengthDrill = {
   id: 2,
   type: DrillTypes.FITNESS,
   author: '',
-  title: 'Strenght Legs',
+  title: 'Strength Legs',
   image: 'https://zupimages.net/up/20/28/s5vc.jpg',
   description: 'The first strength practice of the season',
   minimalPlayersNumber: 1,
   equipmentLabel: EquipmentLabels.FULL,
-  equipment: 'Kettlebell - Dumbbell - Tow bar',
+  equipment: 'Kettlebells - Dumbbell - Tow bar',
   durationInMinutes: 15,
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY],
@@ -669,7 +669,7 @@ const fartlek = {
       sounds: true,
       repetition: '25"',
       rest: '',
-      instruction: 'For 10 seconds every minute, accelerates by a few kilometres per hour.',
+      instruction: 'For 10 seconds every minute, accelerates by a few kilometers per hour.',
     },
   ],
 };
@@ -1101,7 +1101,7 @@ const tDrill = {
   title: 'T-Drill',
   image: 'https://zupimages.net/up/20/28/7q43.jpg',
   description:
-    'Warm-up (for sprint and change of direction).\n6 repetitions of 30 meters T-drill then 6 repetitions of Shuttle 5-10-5. Then repeat. A total of 4 sets of 6 repetitions. 45sec of recovery between repetiton and 3min of recovery between sets.',
+    'Warm-up (for sprint and change of direction).\n6 repetitions of 30 meters T-drill then 6 repetitions of Shuttle 5-10-5. Then repeat. A total of 4 sets of 6 repetitions. 45sec of recovery between repetition and 3min of recovery between sets.',
   minimalPlayersNumber: 1,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: 'None',
@@ -1368,7 +1368,7 @@ const circuit = {
   id: 14,
   type: DrillTypes.FITNESS,
   author: '',
-  title: 'Core Strenght',
+  title: 'Core Strength',
   image: 'https://zupimages.net/up/20/19/kj0f.jpg',
   description: 'Follow the workout',
   minimalPlayersNumber: 1,
@@ -1522,7 +1522,7 @@ const circuit = {
     },
     {
       id: 15,
-      title: 'Cossac Squat',
+      title: 'Cossack Squat',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '431760267',
       sounds: false,
@@ -2327,7 +2327,7 @@ const agility1 = {
   description: 'Works on explosiveness and stability',
   minimalPlayersNumber: 1,
   equipmentLabel: EquipmentLabels.FULL,
-  equipment: 'Dumbbells - Kettlebells',
+  equipment: 'Dumbbells - Kettlebellss',
   durationInMinutes: 25,
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
@@ -2396,7 +2396,7 @@ const agility1 = {
     },
     {
       id: 7,
-      title: 'Gorilla Kettlebell Rows',
+      title: 'Gorilla Kettlebells Rows',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '406747038',
       sounds: false,
@@ -2427,7 +2427,7 @@ const agility1 = {
   ],
 };
 
-const strenght1 = {
+const strength1 = {
   id: 26,
   type: DrillTypes.FITNESS,
   author: '',
@@ -2436,7 +2436,7 @@ const strenght1 = {
   description: 'Works on strength gain ',
   minimalPlayersNumber: 1,
   equipmentLabel: EquipmentLabels.FULL,
-  equipment: 'Tow bar - Kettlebell - Box - Bench',
+  equipment: 'Tow bar - Kettlebells - Box - Bench',
   durationInMinutes: 25,
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
@@ -2485,7 +2485,7 @@ const strenght1 = {
     },
     {
       id: 5,
-      title: 'Banded Russian Kettlebell Swings',
+      title: 'Banded Russian Kettlebells Swings',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '406746857',
       sounds: false,
@@ -2526,7 +2526,7 @@ const strenght1 = {
   ],
 };
 
-const strenght2 = {
+const strength2 = {
   id: 27,
   type: DrillTypes.FITNESS,
   author: '',
@@ -2535,7 +2535,7 @@ const strenght2 = {
   description: 'Works on strength gain ',
   minimalPlayersNumber: 1,
   equipmentLabel: EquipmentLabels.FULL,
-  equipment: 'Tow bar - Kettlebell - Barbell - Landmine',
+  equipment: 'Tow bar - Kettlebells - Barbell - Landmine',
   durationInMinutes: 25,
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
@@ -2574,7 +2574,7 @@ const strenght2 = {
     },
     {
       id: 4,
-      title: 'Banded Russian Kettlebell Swings',
+      title: 'Banded Russian Kettlebells Swings',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '406746857',
       sounds: false,
@@ -2823,7 +2823,7 @@ const agility3 = {
   ],
 };
 
-const strenght3 = {
+const strength3 = {
   id: 30,
   type: DrillTypes.FITNESS,
   author: '',
@@ -2832,7 +2832,7 @@ const strenght3 = {
   description: 'Works on strength gain ',
   minimalPlayersNumber: 1,
   equipmentLabel: EquipmentLabels.FULL,
-  equipment: 'Kettlebell - Dumbbell - Box - Barbell',
+  equipment: 'Kettlebells - Dumbbell - Box - Barbell',
   durationInMinutes: 30,
   intensity: Intensities.MODERATE,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
@@ -2912,7 +2912,7 @@ const strenght3 = {
   ],
 };
 
-const strenght16 = {
+const strength16 = {
   id: 31,
   type: DrillTypes.FITNESS,
   author: '',
@@ -2921,7 +2921,7 @@ const strenght16 = {
   description: 'Works on strength gain ',
   minimalPlayersNumber: 1,
   equipmentLabel: EquipmentLabels.FULL,
-  equipment: 'Kettlebell - Dumbbell - Tow bar - Barbell - Band',
+  equipment: 'Kettlebells - Dumbbell - Tow bar - Barbell - Band',
   durationInMinutes: 30,
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
@@ -3119,7 +3119,7 @@ const agility15 = {
   description: 'Works on explosiveness and stability ',
   minimalPlayersNumber: 1,
   equipmentLabel: EquipmentLabels.FULL,
-  equipment: 'Band - Ball - Kettlebell',
+  equipment: 'Band - Ball - Kettlebells',
   durationInMinutes: 30,
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
@@ -3158,7 +3158,7 @@ const agility15 = {
     },
     {
       id: 4,
-      title: 'Hip Mobility 9090 Kettlebell',
+      title: 'Hip Mobility 9090 Kettlebells',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '436142352',
       sounds: false,
@@ -3178,7 +3178,7 @@ const agility15 = {
     },
     {
       id: 6,
-      title: 'Kettlebell Overhead Reverse Lunge (Left)',
+      title: 'Kettlebells Overhead Reverse Lunge (Left)',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '436140507',
       sounds: false,
@@ -3188,7 +3188,7 @@ const agility15 = {
     },
     {
       id: 7,
-      title: 'Kettlebell Overhead Reverse Lunge (Right)',
+      title: 'Kettlebells Overhead Reverse Lunge (Right)',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '436140507',
       sounds: false,
@@ -3219,7 +3219,7 @@ const agility15 = {
   ],
 };
 
-const strenght15 = {
+const strength15 = {
   id: 34,
   type: DrillTypes.FITNESS,
   author: '',
@@ -3308,7 +3308,7 @@ const strenght15 = {
   ],
 };
 
-const strenght14 = {
+const strength14 = {
   id: 35,
   type: DrillTypes.FITNESS,
   author: '',
@@ -3575,7 +3575,7 @@ const agility13 = {
   ],
 };
 
-const strenght13 = {
+const strength13 = {
   id: 38,
   type: DrillTypes.FITNESS,
   author: '',
@@ -3663,7 +3663,7 @@ const agility12 = {
   description: 'Works on explosiveness and stability ',
   minimalPlayersNumber: 1,
   equipmentLabel: EquipmentLabels.FULL,
-  equipment: 'Landmine - Kettlebell - Dumbbell',
+  equipment: 'Landmine - Kettlebells - Dumbbell',
   durationInMinutes: 30,
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
@@ -3742,7 +3742,7 @@ const agility12 = {
     },
     {
       id: 8,
-      title: 'American Kettlebell Swings',
+      title: 'American Kettlebells Swings',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '434507234',
       sounds: false,
@@ -3753,7 +3753,7 @@ const agility12 = {
   ],
 };
 
-const strenght12 = {
+const strength12 = {
   id: 40,
   type: DrillTypes.FITNESS,
   author: '',
@@ -3931,7 +3931,7 @@ const agility11 = {
   ],
 };
 
-const strenght11 = {
+const strength11 = {
   id: 42,
   type: DrillTypes.FITNESS,
   author: '',
@@ -4029,7 +4029,7 @@ const agility10 = {
   description: 'Works on explosiveness and stability ',
   minimalPlayersNumber: 1,
   equipmentLabel: EquipmentLabels.FULL,
-  equipment: 'Box - Kettlebell - Dumbbell',
+  equipment: 'Box - Kettlebells - Dumbbell',
   durationInMinutes: 30,
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
@@ -4098,7 +4098,7 @@ const agility10 = {
     },
     {
       id: 7,
-      title: 'Kettlebell Cross Body Split Squat (Left)',
+      title: 'Kettlebells Cross Body Split Squat (Left)',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '435781381',
       sounds: false,
@@ -4108,7 +4108,7 @@ const agility10 = {
     },
     {
       id: 8,
-      title: 'Kettlebell Cross Body Split Squat (Left)',
+      title: 'Kettlebells Cross Body Split Squat (Left)',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '435781381',
       sounds: false,
@@ -4119,7 +4119,7 @@ const agility10 = {
   ],
 };
 
-const strenght10 = {
+const strength10 = {
   id: 44,
   type: DrillTypes.FITNESS,
   author: '',
@@ -4307,7 +4307,7 @@ const agility9 = {
   ],
 };
 
-const strenght9 = {
+const strength9 = {
   id: 46,
   type: DrillTypes.FITNESS,
   author: '',
@@ -4495,7 +4495,7 @@ const agility8 = {
   ],
 };
 
-const strenght8 = {
+const strength8 = {
   id: 48,
   type: DrillTypes.FITNESS,
   author: '',
@@ -4593,7 +4593,7 @@ const agility7 = {
   description: 'Works on explosiveness and stability ',
   minimalPlayersNumber: 1,
   equipmentLabel: EquipmentLabels.FULL,
-  equipment: 'Kettlebell - Band - Box - Dumbbell',
+  equipment: 'Kettlebells - Band - Box - Dumbbell',
   durationInMinutes: 30,
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
@@ -4612,7 +4612,7 @@ const agility7 = {
     },
     {
       id: 2,
-      title: 'Russian Kettlebell Swing',
+      title: 'Russian Kettlebells Swing',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '435858810',
       sounds: false,
@@ -4683,7 +4683,7 @@ const agility7 = {
   ],
 };
 
-const strenght7 = {
+const strength7 = {
   id: 50,
   type: DrillTypes.FITNESS,
   author: '',
@@ -4791,7 +4791,7 @@ const agility6 = {
   description: 'Works on explosiveness and stability ',
   minimalPlayersNumber: 1,
   equipmentLabel: EquipmentLabels.FULL,
-  equipment: 'Kettlebell - Landmine - Dumbbell',
+  equipment: 'Kettlebells - Landmine - Dumbbell',
   durationInMinutes: 30,
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
@@ -4810,7 +4810,7 @@ const agility6 = {
     },
     {
       id: 2,
-      title: 'Russian Kettlebell Swing',
+      title: 'Russian Kettlebells Swing',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '435858810',
       sounds: false,
@@ -4871,7 +4871,7 @@ const agility6 = {
   ],
 };
 
-const strenght6 = {
+const strength6 = {
   id: 52,
   type: DrillTypes.FITNESS,
   author: '',
@@ -4979,7 +4979,7 @@ const agility5 = {
   description: 'Works on explosiveness and stability ',
   minimalPlayersNumber: 1,
   equipmentLabel: EquipmentLabels.FULL,
-  equipment: 'Kettlebell - Band - Dumbbell',
+  equipment: 'Kettlebells - Band - Dumbbell',
   durationInMinutes: 30,
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
@@ -4998,7 +4998,7 @@ const agility5 = {
     },
     {
       id: 2,
-      title: 'Russian Kettlebell Swing',
+      title: 'Russian Kettlebells Swing',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '435858810',
       sounds: false,
@@ -5069,7 +5069,7 @@ const agility5 = {
   ],
 };
 
-const strenght5 = {
+const strength5 = {
   id: 54,
   type: DrillTypes.FITNESS,
   author: '',
@@ -5257,7 +5257,7 @@ const treasureHuntDrill = {
   title: 'Treasure Hunt',
   image: 'https://zupimages.net/up/20/19/z7lq.jpg',
   description:
-    '2 teams are fighting. The objective is to bring the 5 Frisbees back into a square delimited by the cones.\nPlayers are not allowed to walk with the Frisbee. When a Frisbee falls or is intercepted, it must be brought back to the starting point by the attacking team. The first team that "saves" all its frisbees wins.\n\nIn game: In order to achieve collective defenses, it is important to work on communication between players. An efficient communication will allow to make judicious switches.',
+    '2 teams are competing. The objective is to bring the 5 Frisbees back into a square delimited by the cones.\nPlayers are not allowed to walk with the Frisbee. When a Frisbee falls or is intercepted, it must be brought back to the starting point by the attacking team. The first team that "saves" all its frisbees wins.\n\nIn game: In order to achieve collective defenses, it is important to work on communication between players. An efficient communication will allow to make judicious switches.',
   minimalPlayersNumber: 10,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '10 discs - 10 cones',
@@ -5287,7 +5287,7 @@ const kyeDrill = {
   title: '3 vs 2',
   image: 'https://zupimages.net/up/20/19/zgxt.jpg',
   description:
-    'The team with two players stays on defense if they successfully force a turnover\n\nIn game: Sometimes a situation of overnumber is created (after a long time in particular). In this case, the attackers have to be able to play quickly to gain ground without another defender being able to join them. Defenders try to slow down the attackers as much as possible by leaving the wearer of the Frisbee without a mark',
+    'The team with two players stays on defense if they successfully force a turnover\n\nIn game: Sometimes a situation of overload is created (after a long time in particular). In this case, the attackers have to be able to play quickly to gain ground without another defender being able to join them. Defenders try to slow down the attackers as much as possible by leaving the wearer of the Frisbee without a mark',
   minimalPlayersNumber: 5,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disc - 2 cones',
@@ -5305,7 +5305,7 @@ const kyeDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'The defense can count without being close to the thrower.The stall is at 5 and the offensice player can’t make a long hrow.\nIf there is a turn over the defensive players stay in defense.',
+        'The defense can count without being close to the thrower.The stall is at 5 and the offensive player can’t make a long throw.\nIf there is a turn over the defensive players stay in defense.',
     },
   ],
 };
@@ -5783,7 +5783,7 @@ const breakDanceDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'The 2 teams are racing. \nWhen the disc reach the last player, he has to run as fast as possible to start a new serie. \nFirst team that make the complete rotation win!',
+        'The 2 teams are racing. \nWhen the disc reach the last player, he has to run as fast as possible to start a new series. \nFirst team that make the complete rotation win!',
     },
   ],
 };
@@ -6074,7 +6074,7 @@ const youShallNotPassDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'Set up both an offense line and a defense line. One offensive player and one defender each run to the box then cut deep at the same time. The offensive player must cut back towards the thrower to try to catch the disc in the box, they are only allowed to change their direction this one time. The defender must position themself so that the offense cannot pass them to return to the box. The thrower may only throw to under cuts.',
+        'Set up both an offense line and a defense line. One offensive player and one defender each run to the box then cut deep at the same time. The offensive player must cut back towards the thrower to try to catch the disc in the box, they are only allowed to change their direction this one time. The defender must position themselves so that the offense cannot pass them to return to the box. The thrower may only throw to under cuts.',
     },
     {
       id: 2,
@@ -6329,7 +6329,7 @@ const theDuel = {
       repetition: '',
       rest: '',
       instruction:
-        "The cutter after initating can't make any fake. The thrower has to react quickly. Rotate every Three throws ",
+        "The cutter after initiating can't make any fake. The thrower has to react quickly. Rotate every Three throws ",
     },
     {
       id: 2,
@@ -6654,7 +6654,7 @@ const stopFlow = {
   id: 1035,
   type: DrillTypes.FRISBEE,
   author: 'Colony',
-  title: 'Stoping the Flow',
+  title: 'Stopping the Flow',
   image: 'https://zupimages.net/up/20/28/2b8i.jpg',
   description:
     'Learn to quickly identify dangerous option and deny it.\n\nIn game: The attackers took the defenders by storm with the first pass. The objective of the defender is to slow down the attack by blocking the most dangerous option with his mark.',
@@ -7902,7 +7902,7 @@ const fitnessFull1 = {
   title: 'Off-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'First week of the program',
-  drills: [agility1, strenght1, suicide],
+  drills: [agility1, strength1, suicide],
 };
 
 const fitnessFull2 = {
@@ -7910,7 +7910,7 @@ const fitnessFull2 = {
   title: 'Off-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Second week of the program',
-  drills: [agility1, strenght1, mas30Light],
+  drills: [agility1, strength1, mas30Light],
 };
 
 const fitnessFull3 = {
@@ -7918,7 +7918,7 @@ const fitnessFull3 = {
   title: 'Off-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Third week of the program',
-  drills: [agility2, strenght2, lacticSprint],
+  drills: [agility2, strength2, lacticSprint],
 };
 
 const fitnessFull4 = {
@@ -7926,7 +7926,7 @@ const fitnessFull4 = {
   title: 'Off-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Fourth week of the program',
-  drills: [agility2, strenght2, mas30Light],
+  drills: [agility2, strength2, mas30Light],
 };
 
 const fitnessFull5 = {
@@ -7934,7 +7934,7 @@ const fitnessFull5 = {
   title: 'Off-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Fifth week of the program',
-  drills: [agility3, strenght3, serpentine],
+  drills: [agility3, strength3, serpentine],
 };
 
 const fitnessFull6 = {
@@ -7942,7 +7942,7 @@ const fitnessFull6 = {
   title: 'Off-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Sixth week of the program',
-  drills: [agility3, strenght3, mas30],
+  drills: [agility3, strength3, mas30],
 };
 
 const fitnessFull7 = {
@@ -7950,7 +7950,7 @@ const fitnessFull7 = {
   title: 'Off-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Seventh week of the program',
-  drills: [agility5, strenght5, mas30],
+  drills: [agility5, strength5, mas30],
 };
 
 const fitnessFull8 = {
@@ -7958,7 +7958,7 @@ const fitnessFull8 = {
   title: 'Off-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Eighth week of the program',
-  drills: [agility5, strenght5, suicide],
+  drills: [agility5, strength5, suicide],
 };
 
 const fitnessFull9 = {
@@ -7966,7 +7966,7 @@ const fitnessFull9 = {
   title: 'Off-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Ninth week of the program',
-  drills: [agility6, strenght6, suicide],
+  drills: [agility6, strength6, suicide],
 };
 
 const fitnessFull10 = {
@@ -7974,7 +7974,7 @@ const fitnessFull10 = {
   title: 'Pre-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Tenth week of the program',
-  drills: [agility6, strenght6, tDrill],
+  drills: [agility6, strength6, tDrill],
 };
 
 const fitnessFull11 = {
@@ -7982,42 +7982,42 @@ const fitnessFull11 = {
   title: 'Pre-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Elevenh week of the program',
-  drills: [agility7, strenght7, mas15],
+  drills: [agility7, strength7, mas15],
 };
 const fitnessFull12 = {
   id: 212,
   title: 'Pre-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Twelfh week of the program',
-  drills: [agility7, strenght7, mas15Long],
+  drills: [agility7, strength7, mas15Long],
 };
 const fitnessFull13 = {
   id: 213,
   title: 'Pre-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Thirtheenth week of the program',
-  drills: [agility8, strenght8, tDrill],
+  drills: [agility8, strength8, tDrill],
 };
 const fitnessFull14 = {
   id: 214,
   title: 'Pre-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Fourtheenth week of the program',
-  drills: [agility8, strenght8, serpentine],
+  drills: [agility8, strength8, serpentine],
 };
 const fitnessFull15 = {
   id: 215,
   title: 'Pre-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Fifteenth week of the program',
-  drills: [agility9, strenght9, serpentine],
+  drills: [agility9, strength9, serpentine],
 };
 const fitnessFull16 = {
   id: 216,
   title: 'Pre-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Sixteenth week of the program',
-  drills: [agility9, strenght9, tDrill],
+  drills: [agility9, strength9, tDrill],
 };
 
 const fitnessFull17 = {
@@ -8025,7 +8025,7 @@ const fitnessFull17 = {
   title: 'Pre-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Seventeenth week of the program',
-  drills: [agility10, strenght10, mas15],
+  drills: [agility10, strength10, mas15],
 };
 
 const fitnessFull18 = {
@@ -8033,14 +8033,14 @@ const fitnessFull18 = {
   title: 'Pre-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Eighteenth week of the program',
-  drills: [agility10, strenght10, tDrill],
+  drills: [agility10, strength10, tDrill],
 };
 const fitnessFull19 = {
   id: 219,
   title: 'In-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Nineteenth week of the program',
-  drills: [agility11, strenght11, serpentine],
+  drills: [agility11, strength11, serpentine],
 };
 
 const fitnessFull20 = {
@@ -8048,7 +8048,7 @@ const fitnessFull20 = {
   title: 'In-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Twentieth week of the program',
-  drills: [agility11, strenght11, ladderPractice],
+  drills: [agility11, strength11, ladderPractice],
 };
 
 const fitnessFull21 = {
@@ -8056,7 +8056,7 @@ const fitnessFull21 = {
   title: 'In-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Twenty-first week of the program',
-  drills: [agility12, strenght12, tDrill],
+  drills: [agility12, strength12, tDrill],
 };
 
 const fitnessFull22 = {
@@ -8064,7 +8064,7 @@ const fitnessFull22 = {
   title: 'In-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Twenty-second week of the program',
-  drills: [agility12, strenght12, serpentine],
+  drills: [agility12, strength12, serpentine],
 };
 
 const fitnessFull23 = {
@@ -8072,7 +8072,7 @@ const fitnessFull23 = {
   title: 'In-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Twenty-third week of the program',
-  drills: [agility13, strenght13, serpentine],
+  drills: [agility13, strength13, serpentine],
 };
 
 const fitnessFull24 = {
@@ -8080,7 +8080,7 @@ const fitnessFull24 = {
   title: 'In-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Twenty-fourth week of the program',
-  drills: [agility13, strenght13, tDrill],
+  drills: [agility13, strength13, tDrill],
 };
 
 const fitnessFull25 = {
@@ -8088,7 +8088,7 @@ const fitnessFull25 = {
   title: 'In-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Twenty-fifth week of the program',
-  drills: [agility14, strenght14, mas15Long],
+  drills: [agility14, strength14, mas15Long],
 };
 
 const fitnessFull26 = {
@@ -8096,14 +8096,14 @@ const fitnessFull26 = {
   title: 'In-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Twenty-sixth week of the program',
-  drills: [agility14, strenght14, ladderPractice],
+  drills: [agility14, strength14, ladderPractice],
 };
 const fitnessFull27 = {
   id: 227,
   title: 'Peak',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Twenty-seventh week of the program',
-  drills: [agility15, strenght15, tDrill],
+  drills: [agility15, strength15, tDrill],
 };
 
 const fitnessFull28 = {
@@ -8111,7 +8111,7 @@ const fitnessFull28 = {
   title: 'Peak',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Twenty-eighth week of the program',
-  drills: [agility15, strenght15, sprintPractice],
+  drills: [agility15, strength15, sprintPractice],
 };
 
 const fitnessFull29 = {
@@ -8119,7 +8119,7 @@ const fitnessFull29 = {
   title: 'Peak',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Twenty-ninth week of the program',
-  drills: [agility16, strenght16, sprintPractice],
+  drills: [agility16, strength16, sprintPractice],
 };
 
 export const drills = [
@@ -8137,10 +8137,10 @@ export const drills = [
   agility8,
   agility10,
   agility15,
-  strenght5,
-  strenght8,
-  strenght10,
-  strenght15,
+  strength5,
+  strength8,
+  strength10,
+  strength15,
 
   // Frisbee
   basicThrowsDrill,

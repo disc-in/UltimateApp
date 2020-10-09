@@ -1621,7 +1621,7 @@ const circuit = {
     },
     {
       id: 15,
-      title: 'Cossac Squat',
+      title: 'Cossack Squat',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '431760267',
       sounds: false,
@@ -2294,7 +2294,7 @@ const ladderPractice = {
   author: '',
   title: 'Échelles',
   image: 'https://zupimages.net/up/20/19/kj0f.jpg',
-  description: 'Echauffement intense pour être prêt pour des sprint.\nAlterner les exercices présentés sur la video.',
+  description: 'Échauffement intense pour être prêt pour des sprint.\nAlterner les exercices présentés sur la video.',
   minimalPlayersNumber: 1,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: 'Aucun',
@@ -2526,7 +2526,7 @@ const agility1 = {
   ],
 };
 
-const strenght1 = {
+const strength1 = {
   id: 26,
   type: DrillTypes.FITNESS,
   author: '',
@@ -2625,7 +2625,7 @@ const strenght1 = {
   ],
 };
 
-const strenght2 = {
+const strength2 = {
   id: 27,
   type: DrillTypes.FITNESS,
   author: '',
@@ -2922,7 +2922,7 @@ const agility3 = {
   ],
 };
 
-const strenght3 = {
+const strength3 = {
   id: 30,
   type: DrillTypes.FITNESS,
   author: '',
@@ -3011,7 +3011,7 @@ const strenght3 = {
   ],
 };
 
-const strenght16 = {
+const strength16 = {
   id: 31,
   type: DrillTypes.FITNESS,
   author: '',
@@ -3318,7 +3318,7 @@ const agility15 = {
   ],
 };
 
-const strenght15 = {
+const strength15 = {
   id: 34,
   type: DrillTypes.FITNESS,
   author: '',
@@ -3407,7 +3407,7 @@ const strenght15 = {
   ],
 };
 
-const strenght14 = {
+const strength14 = {
   id: 35,
   type: DrillTypes.FITNESS,
   author: '',
@@ -3674,7 +3674,7 @@ const agility13 = {
   ],
 };
 
-const strenght13 = {
+const strength13 = {
   id: 38,
   type: DrillTypes.FITNESS,
   author: '',
@@ -3852,7 +3852,7 @@ const agility12 = {
   ],
 };
 
-const strenght12 = {
+const strength12 = {
   id: 40,
   type: DrillTypes.FITNESS,
   author: '',
@@ -4030,7 +4030,7 @@ const agility11 = {
   ],
 };
 
-const strenght11 = {
+const strength11 = {
   id: 42,
   type: DrillTypes.FITNESS,
   author: '',
@@ -4218,7 +4218,7 @@ const agility10 = {
   ],
 };
 
-const strenght10 = {
+const strength10 = {
   id: 44,
   type: DrillTypes.FITNESS,
   author: '',
@@ -4406,7 +4406,7 @@ const agility9 = {
   ],
 };
 
-const strenght9 = {
+const strength9 = {
   id: 46,
   type: DrillTypes.FITNESS,
   author: '',
@@ -4594,7 +4594,7 @@ const agility8 = {
   ],
 };
 
-const strenght8 = {
+const strength8 = {
   id: 48,
   type: DrillTypes.FITNESS,
   author: '',
@@ -4782,7 +4782,7 @@ const agility7 = {
   ],
 };
 
-const strenght7 = {
+const strength7 = {
   id: 50,
   type: DrillTypes.FITNESS,
   author: '',
@@ -4970,7 +4970,7 @@ const agility6 = {
   ],
 };
 
-const strenght6 = {
+const strength6 = {
   id: 52,
   type: DrillTypes.FITNESS,
   author: '',
@@ -5168,7 +5168,7 @@ const agility5 = {
   ],
 };
 
-const strenght5 = {
+const strength5 = {
   id: 54,
   type: DrillTypes.FITNESS,
   author: '',
@@ -5356,7 +5356,7 @@ const treasureHuntDrill = {
   title: 'Chasse aux trésors',
   image: 'https://zupimages.net/up/20/19/z7lq.jpg',
   description:
-    "Deux équipes s'opposent. L'objectif est de ramener les 5 frisbees dans un carré délimité par les cônes. Les joueurs ne sont pas autorisés à marcher avec le frisbee. Lorsqu'un frisbee tombe ou est intercepté, il doit être ramené au point de départ par l'équipe attaquante. La première équipe qui \"sauve\" tous ses frisbees gagne.\n\nEn match: Afin de réaliser des défenses collectives, il est important de travailler sur la communication entre les joueurs. Une communication efficace permettra de faire des switchs judicieux.",
+    "Deux équipes s'opposent. L'objectif est de ramener les 5 frisbees dans un carré délimité par les cônes. Les joueurs ne sont pas autorisés à marcher avec le frisbee. Lorsqu'un frisbee tombe ou est intercepté, il doit être ramené au point de départ par l'équipe attaquante. La première équipe qui \"sauve\" tous ses frisbees gagne.\n\nEn match: Afin de réaliser des défenses collectives, il est important de travailler sur la communication entre les joueurs. Une communication efficace permettra de faire des switches judicieux.",
   minimalPlayersNumber: 10,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '10 disques - 10 plots',
@@ -5404,7 +5404,7 @@ const kyeDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'Les défenseurs jouent à 2 contre 3. Ils peuvent compter en étant à plus de 3 mètres du possesseur du disque. Les attaquants ne peuvent faire de longues passes. Le compte est à 5.\nSi il y a un turn-over, les defenseurs restent en défense et les attaquants sont remplacés par les suivants.',
+        'Les défenseurs jouent à 2 contre 3. Ils peuvent compter en étant à plus de 3 mètres du possesseur du disque. Les attaquants ne peuvent faire de longues passes. Le compte est à 5.\nSi il y a un turn-over, les défenseurs restent en défense et les attaquants sont remplacés par les suivants.',
     },
   ],
 };
@@ -5416,7 +5416,7 @@ const bigEightDrill = {
   title: 'Le Grand 8',
   image: 'https://zupimages.net/up/20/19/5209.jpg',
   description:
-    "Suivre un circuit de passes qui va permettre de travailler l'enchainement parfait pour dérouler dans le break\n\nEn match: Afin d'assurer une bonne continuation, il est nécessaire de travailler le timing des cuts et la technique. Le play travaillé dans cet exercice permettra de sortir de la ligne et de progresser rapidement du côté fermé",
+    "Suivre un circuit de passes qui va permettre de travailler l'enchaînement parfait pour dérouler dans le break\n\nEn match: Afin d'assurer une bonne continuation, il est nécessaire de travailler le timing des cuts et la technique. Le play travaillé dans cet exercice permettra de sortir de la ligne et de progresser rapidement du côté fermé",
   minimalPlayersNumber: 16,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '8 disques - 8 plots',
@@ -5553,7 +5553,7 @@ const aussieDrill = {
   title: 'Le jeu Australien',
   image: 'https://zupimages.net/up/20/19/78g2.png',
   description:
-    'Un jeu ludique avec les frisbees qui va permettre aux joueurs de prendre du plaisir et de travailler la communication avec un disque\n\nEn match: Cet exercice ludique permet de travailler la communication des défenseurs. Celle ci est primordiale afin de réaliser des switchs sur les terrains et/ou une défense de zone efficace. En attaque, cet exercice permet de travailler la détection des joueurs démarqués',
+    'Un jeu ludique avec les frisbees qui va permettre aux joueurs de prendre du plaisir et de travailler la communication avec un disque\n\nEn match: Cet exercice ludique permet de travailler la communication des défenseurs. Celle ci est primordiale afin de réaliser des switches sur les terrains et/ou une défense de zone efficace. En attaque, cet exercice permet de travailler la détection des joueurs démarqués',
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '4 disques - 20 plots',
@@ -5669,7 +5669,7 @@ const endzoneGameDrill = {
       repetition: '',
       rest: '',
       instruction:
-        "Tous les joueurs commencent derrière le disque. L'objectif est de travailler la continuité sur les longues.\nMême règle que précedemment",
+        "Tous les joueurs commencent derrière le disque. L'objectif est de travailler la continuité sur les longues.\nMême règle que précédemment",
     },
   ],
 };
@@ -5678,7 +5678,7 @@ const bulldogDrill = {
   id: 1012,
   type: DrillTypes.FRISBEE,
   author: 'Kaal Soup',
-  title: 'Epervier',
+  title: 'Épervier',
   image: 'https://zupimages.net/up/20/19/tf79.jpg',
   description:
     "L'épervier se place au milieu du terrain. Tous les joueurs restants sont dans une zone protégée. Le jeu consiste à traverser l’intégralité du terrain sans se faire toucher par l’épervier. Le dernier joueur en liberté remporte la partie.\n\nEn match: Les défenseurs travaillent la situation de rideau dans une défense de zone. Ils doivent communiquer entre eux et se déplacer de manière uniforme afin de pas laisser d'espace entre eux",
@@ -5795,10 +5795,10 @@ const dishieChainDrill = {
   id: 1015,
   type: DrillTypes.FRISBEE,
   author: 'Mooncatchers',
-  title: 'Chaine du Dishie',
+  title: 'Chaîne du Dishie',
   image: 'https://zupimages.net/up/20/19/stdq.jpg',
   description:
-    "Exercice de base de longues passes. Vous voulez que vos joueurs alternent entre lancer, courir et passer\n\nEn match: lorsque des défenseurs encerclent un vertical stack, ils les entourent et effectuent des switchs. Afin de percer cette défense, les attaquants doivent attaquer, à 2, le même défenseur. Le défenseur devra alors choisir l'un des attaquants et le lanceur pourra jouer sur l'attaquant laissé libre",
+    "Exercice de base de longues passes. Vous voulez que vos joueurs alternent entre lancer, courir et passer\n\nEn match: lorsque des défenseurs encerclent un vertical stack, ils les entourent et effectuent des switches. Afin de percer cette défense, les attaquants doivent attaquer, à 2, le même défenseur. Le défenseur devra alors choisir l'un des attaquants et le lanceur pourra jouer sur l'attaquant laissé libre",
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque - 2 plots',
@@ -5810,7 +5810,7 @@ const dishieChainDrill = {
   steps: [
     {
       id: 1,
-      title: 'La chaine des catapultes',
+      title: 'La chaîne des catapultes',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: dishiesChain,
       repetition: '',
@@ -5829,13 +5829,13 @@ const dishieChainDrill = {
     },
     {
       id: 3,
-      title: 'Eclater un poach',
+      title: 'Éclater un Poach',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: dishiesPoach,
       repetition: '',
       rest: '',
       instruction:
-        "Ajouter un défenseur à l'exercice précédent pour similer un poach sur un side stack.\nLe possesseur du disque doit chercher à faire une passe au joueur libre",
+        "Ajouter un défenseur à l'exercice précédent pour simuler un poach sur un side stack.\nLe possesseur du disque doit chercher à faire une passe au joueur libre",
     },
     {
       id: 4,
@@ -6117,7 +6117,7 @@ const resetBreakDrill = {
       repetition: '',
       rest: '',
       instruction:
-        "Le placement est le même. Quane le contact visuel est établi, le lanceur contourne sa marque par l'arrière pour faire sa passe au soutien. La passe doit arriver à peu près à hauteur du lanceur, là où le soutien se trouvait initialement. C'est la passe qui déclenche le cut du soutien.",
+        "Le placement est le même. Quand le contact visuel est établi, le lanceur contourne sa marque par l'arrière pour faire sa passe au soutien. La passe doit arriver à peu près à hauteur du lanceur, là où le soutien se trouvait initialement. C'est la passe qui déclenche le cut du soutien.",
     },
     {
       id: 4,
@@ -6157,7 +6157,7 @@ const youShallNotPassDrill = {
   title: 'Vous ne passerez pas !',
   image: 'https://zupimages.net/up/20/19/90z6.jpg',
   description:
-    "Utiliser son corps pour empêcher l'attaquant de recevoir le disque\n\nEn match: Les défenseurs expériementés peuvent utiliser leur corps pour bloquer la course d'un adversaire. Afin de ne pas faire de faute, le défenseur doit se placer dans la trajectoire de l'attaquant suffisamment en avance pour permettre à l'attaquant de l'éviter",
+    "Utiliser son corps pour empêcher l'attaquant de recevoir le disque\n\nEn match: Les défenseurs expérimentés peuvent utiliser leur corps pour bloquer la course d'un adversaire. Afin de ne pas faire de faute, le défenseur doit se placer dans la trajectoire de l'attaquant suffisamment en avance pour permettre à l'attaquant de l'éviter",
   minimalPlayersNumber: 4,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque - 4 plots',
@@ -6175,7 +6175,7 @@ const youShallNotPassDrill = {
       repetition: '',
       rest: '',
       instruction:
-        "L'attaquant et le défenseur courrent vers le carré central puis vers le fond du terrain. L'attaquant doit faire un contre-cut vers le disque pour recevoir une passe dans le carré. Il ne peut pas rechanger de direction. Le défenseur doit se positionner pour empêcher l'attaquant de le dépasser pour atteindre le carré. Le lanceur ne peut pas lancer sur le premier cut en longue",
+        "L'attaquant et le défenseur courent vers le carré central puis vers le fond du terrain. L'attaquant doit faire un contre-cut vers le disque pour recevoir une passe dans le carré. Il ne peut pas rechanger de direction. Le défenseur doit se positionner pour empêcher l'attaquant de le dépasser pour atteindre le carré. Le lanceur ne peut pas lancer sur le premier cut en longue",
     },
     {
       id: 2,
@@ -6389,7 +6389,7 @@ const game3v3Horizontal = {
       repetition: '',
       rest: '',
       instruction:
-        "2 équipes s'opposent. Ils alternent tous les 2 lancers. L'objectif est de marquer en maximum 2 lancers.\nLe cutter dans le coté ouvert commence le mouvement et lautre cutter effectue le mouvement opposé.",
+        "2 équipes s'opposent. Ils alternent tous les 2 lancers. L'objectif est de marquer en maximum 2 lancers.\nLe cutter dans le coté ouvert commence le mouvement et l'autre cutter effectue le mouvement opposé.",
     },
     {
       id: 2,
@@ -6439,7 +6439,7 @@ const theDuel = {
       repetition: '',
       rest: '',
       instruction:
-        'Même situation que précedemment mais le lanceur peut faire une feinte et le cutter doit changer de direction.',
+        'Même situation que précédemment mais le lanceur peut faire une feinte et le cutter doit changer de direction.',
     },
   ],
 };
@@ -6451,7 +6451,7 @@ const cardinal = {
   title: 'Les Points Cardinaux',
   image: 'https://zupimages.net/up/20/25/xtik.png',
   description:
-    "Apprenez à lancer dans toutes les positions\n\nEn match: Il faut être capable de s'adapter à la marque mise en place. Etre capable de lancer en permet de lancer plus rapidement",
+    "Apprenez à lancer dans toutes les positions\n\nEn match: Il faut être capable de s'adapter à la marque mise en place. Être capable de lancer en permet de lancer plus rapidement",
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disque ',
@@ -6658,7 +6658,7 @@ const horizontalHandler = {
       repetition: '',
       rest: '',
       instruction:
-        "Le compte augmente. Le handler en soutien avance pour former un angle de 45° et initie un cut sur la ligne. L'autre joueur fait la continuité. La seconde option est de jouer avec le second handler qui peut enchaîner avec un break around pour jouer immédiatemment dans le coté fermé. Faire une rotation tous les 3 lancers.",
+        "Le compte augmente. Le handler en soutien avance pour former un angle de 45° et initie un cut sur la ligne. L'autre joueur fait la continuité. La seconde option est de jouer avec le second handler qui peut enchaîner avec un break around pour jouer immédiatement dans le coté fermé. Faire une rotation tous les 3 lancers.",
     },
     {
       id: 2,
@@ -6777,7 +6777,7 @@ const stopFlow = {
       repetition: '',
       rest: '',
       instruction:
-        'Le defenseur ne regarde pas le disque et ne bloque pas le premier lancer. Quand le lancer est rattrapé, le second cutter doit faire un cut en ligne droite. Le premier defenseur doit essayer de bloquer la continuité.',
+        'Le défenseur ne regarde pas le disque et ne bloque pas le premier lancer. Quand le lancer est rattrapé, le second cutter doit faire un cut en ligne droite. Le premier défenseur doit essayer de bloquer la continuité.',
     },
     {
       id: 2,
@@ -6846,7 +6846,7 @@ const sprintDefense = {
       repetition: '',
       rest: '',
       instruction:
-        "1 vs 1. L'objectif de l'attaquant est de toucher le plot extérieur avant que le défenseur touche le plot intérieur.\nLes deux doivent toucher le plot intérieur opposé avant de chancher de direction. Le défenseur peut commencer quand les deux pieds de l'attaquant ont décollé.",
+        "1 vs 1. L'objectif de l'attaquant est de toucher le plot extérieur avant que le défenseur touche le plot intérieur.\nLes deux doivent toucher le plot intérieur opposé avant de changer de direction. Le défenseur peut commencer quand les deux pieds de l'attaquant ont décollé.",
     },
   ],
 };
@@ -8016,7 +8016,7 @@ const fitnessFull1 = {
   title: 'Off-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Première semaine du programme',
-  drills: [agility1, strenght1, suicide],
+  drills: [agility1, strength1, suicide],
 };
 
 const fitnessFull2 = {
@@ -8024,7 +8024,7 @@ const fitnessFull2 = {
   title: 'Off-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Deuxième semaine du programme',
-  drills: [agility1, strenght1, mas30Light],
+  drills: [agility1, strength1, mas30Light],
 };
 
 const fitnessFull3 = {
@@ -8032,7 +8032,7 @@ const fitnessFull3 = {
   title: 'Off-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Troisème semaine du programme',
-  drills: [agility2, strenght2, lacticSprint],
+  drills: [agility2, strength2, lacticSprint],
 };
 
 const fitnessFull4 = {
@@ -8040,7 +8040,7 @@ const fitnessFull4 = {
   title: 'Off-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Quatrième semaine du programme',
-  drills: [agility2, strenght2, mas30Light],
+  drills: [agility2, strength2, mas30Light],
 };
 
 const fitnessFull5 = {
@@ -8048,7 +8048,7 @@ const fitnessFull5 = {
   title: 'Off-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Cinquième semaine du programme',
-  drills: [agility3, strenght3, serpentine],
+  drills: [agility3, strength3, serpentine],
 };
 
 const fitnessFull6 = {
@@ -8056,7 +8056,7 @@ const fitnessFull6 = {
   title: 'Off-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Sixième semaine du programme',
-  drills: [agility3, strenght3, mas30],
+  drills: [agility3, strength3, mas30],
 };
 
 const fitnessFull7 = {
@@ -8064,7 +8064,7 @@ const fitnessFull7 = {
   title: 'Off-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Septième semaine du programme',
-  drills: [agility5, strenght5, mas30],
+  drills: [agility5, strength5, mas30],
 };
 
 const fitnessFull8 = {
@@ -8072,7 +8072,7 @@ const fitnessFull8 = {
   title: 'Off-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Huitième semaine du programme',
-  drills: [agility5, strenght5, suicide],
+  drills: [agility5, strength5, suicide],
 };
 
 const fitnessFull9 = {
@@ -8080,7 +8080,7 @@ const fitnessFull9 = {
   title: 'Off-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Neuvième semaine du programme',
-  drills: [agility6, strenght6, suicide],
+  drills: [agility6, strength6, suicide],
 };
 
 const fitnessFull10 = {
@@ -8088,7 +8088,7 @@ const fitnessFull10 = {
   title: 'Pré-saison',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Dixième semaine du programme',
-  drills: [agility6, strenght6, tDrill],
+  drills: [agility6, strength6, tDrill],
 };
 
 const fitnessFull11 = {
@@ -8096,42 +8096,42 @@ const fitnessFull11 = {
   title: 'Pré-saison',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Onzième semaine du programme',
-  drills: [agility7, strenght7, mas15],
+  drills: [agility7, strength7, mas15],
 };
 const fitnessFull12 = {
   id: 212,
   title: 'Pré-saison',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Douzième semaine du programme',
-  drills: [agility7, strenght7, mas15Long],
+  drills: [agility7, strength7, mas15Long],
 };
 const fitnessFull13 = {
   id: 213,
   title: 'Pré-saison',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Treizième semaine du programme',
-  drills: [agility8, strenght8, tDrill],
+  drills: [agility8, strength8, tDrill],
 };
 const fitnessFull14 = {
   id: 214,
   title: 'Pré-saison',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Quatorzième semaine du programme',
-  drills: [agility8, strenght8, serpentine],
+  drills: [agility8, strength8, serpentine],
 };
 const fitnessFull15 = {
   id: 215,
   title: 'Pré-saison',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Quinzième semaine du programme',
-  drills: [agility9, strenght9, serpentine],
+  drills: [agility9, strength9, serpentine],
 };
 const fitnessFull16 = {
   id: 216,
   title: 'Pré-saison',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Seizième semaine du programme',
-  drills: [agility9, strenght9, tDrill],
+  drills: [agility9, strength9, tDrill],
 };
 
 const fitnessFull17 = {
@@ -8139,7 +8139,7 @@ const fitnessFull17 = {
   title: 'Pré-saison',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Dix-septième semaine du programme',
-  drills: [agility10, strenght10, mas15],
+  drills: [agility10, strength10, mas15],
 };
 
 const fitnessFull18 = {
@@ -8147,14 +8147,14 @@ const fitnessFull18 = {
   title: 'Pré-saison',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Dix-huitème semaine du programme',
-  drills: [agility10, strenght10, tDrill],
+  drills: [agility10, strength10, tDrill],
 };
 const fitnessFull19 = {
   id: 219,
   title: 'En saison',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Dix-neuvième semaine du programme',
-  drills: [agility11, strenght11, serpentine],
+  drills: [agility11, strength11, serpentine],
 };
 
 const fitnessFull20 = {
@@ -8162,7 +8162,7 @@ const fitnessFull20 = {
   title: 'En saison',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Vingtième semaine du programme',
-  drills: [agility11, strenght11, ladderPractice],
+  drills: [agility11, strength11, ladderPractice],
 };
 
 const fitnessFull21 = {
@@ -8170,7 +8170,7 @@ const fitnessFull21 = {
   title: 'En saison',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Vingt-et-unième semaine du programme',
-  drills: [agility12, strenght12, tDrill],
+  drills: [agility12, strength12, tDrill],
 };
 
 const fitnessFull22 = {
@@ -8178,7 +8178,7 @@ const fitnessFull22 = {
   title: 'En saison',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Vingt-deuxième semaine du programme',
-  drills: [agility12, strenght12, serpentine],
+  drills: [agility12, strength12, serpentine],
 };
 
 const fitnessFull23 = {
@@ -8186,7 +8186,7 @@ const fitnessFull23 = {
   title: 'En saison',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Vingt-troisième semaine du programme',
-  drills: [agility13, strenght13, serpentine],
+  drills: [agility13, strength13, serpentine],
 };
 
 const fitnessFull24 = {
@@ -8194,7 +8194,7 @@ const fitnessFull24 = {
   title: 'En saison',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Vingt-quatrième semaine du programme',
-  drills: [agility13, strenght13, tDrill],
+  drills: [agility13, strength13, tDrill],
 };
 
 const fitnessFull25 = {
@@ -8202,7 +8202,7 @@ const fitnessFull25 = {
   title: 'En saison',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Vingt-cinquième semaine du programme',
-  drills: [agility14, strenght14, mas15Long],
+  drills: [agility14, strength14, mas15Long],
 };
 
 const fitnessFull26 = {
@@ -8210,14 +8210,14 @@ const fitnessFull26 = {
   title: 'En saison',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Vingt-sixième semaine du programme',
-  drills: [agility14, strenght14, ladderPractice],
+  drills: [agility14, strength14, ladderPractice],
 };
 const fitnessFull27 = {
   id: 227,
   title: 'Pic de forme',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Vingt-septième semaine du programme',
-  drills: [agility15, strenght15, tDrill],
+  drills: [agility15, strength15, tDrill],
 };
 
 const fitnessFull28 = {
@@ -8225,7 +8225,7 @@ const fitnessFull28 = {
   title: 'Pic de forme',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Vingt-huitième semaine du programme',
-  drills: [agility15, strenght15, sprintPractice],
+  drills: [agility15, strength15, sprintPractice],
 };
 
 const fitnessFull29 = {
@@ -8233,7 +8233,7 @@ const fitnessFull29 = {
   title: 'Pic de forme',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Vingt-neuvième semaine du programme',
-  drills: [agility16, strenght16, sprintPractice],
+  drills: [agility16, strength16, sprintPractice],
 };
 
 export const drills = [
@@ -8252,10 +8252,10 @@ export const drills = [
   agility8,
   agility10,
   agility15,
-  strenght5,
-  strenght8,
-  strenght10,
-  strenght15,
+  strength5,
+  strength8,
+  strength10,
+  strength15,
 
   // Frisbee
   basicThrowsDrill,

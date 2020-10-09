@@ -5162,7 +5162,7 @@ const basicThrowsDrill = {
   title: 'Throwing Routine',
   image: 'https://zupimages.net/up/20/19/zgxt.jpg',
   description:
-    'Basic drills to learn how to throw. \nIn game: It is necessary to master several types of throws to adapt to all situations.',
+    'Basic drills to learn how to throw. \n\nIn game: It is necessary to master several types of throws to adapt to all situations.',
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disc',
@@ -5211,7 +5211,7 @@ const breakDrill = {
   title: 'Cuts to the Break Side',
   image: 'https://zupimages.net/up/20/19/83fx.jpg',
   description:
-    'Cutting from the open side to the break side. The drill is both for the thrower and the mark.\nIn game: Defenders seek to direct play by limiting the options for passing through a mark. If the attackers manage to break, they drastically increase the passing options.',
+    'Cutting from the open side to the break side. The drill is both for the thrower and the mark.\n\nIn game: Defenders seek to direct play by limiting the options for passing through a mark. If the attackers manage to break, they drastically increase the passing options.',
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '6 discs - 2 cones',
@@ -5254,7 +5254,7 @@ const treasureHuntDrill = {
   title: 'Treasure Hunt',
   image: 'https://zupimages.net/up/20/19/z7lq.jpg',
   description:
-    '2 teams are fighting. The objective is to bring the 5 Frisbees back into a square delimited by the cones.\nPlayers are not allowed to walk with the Frisbee. When a Frisbee falls or is intercepted, it must be brought back to the starting point by the attacking team. The first team that "saves" all its frisbees wins.\nIn game: In order to achieve collective defenses, it is important to work on communication between players. An efficient communication will allow to make judicious switches.',
+    '2 teams are fighting. The objective is to bring the 5 Frisbees back into a square delimited by the cones.\nPlayers are not allowed to walk with the Frisbee. When a Frisbee falls or is intercepted, it must be brought back to the starting point by the attacking team. The first team that "saves" all its frisbees wins.\n\nIn game: In order to achieve collective defenses, it is important to work on communication between players. An efficient communication will allow to make judicious switches.',
   minimalPlayersNumber: 10,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '10 discs - 10 cones',
@@ -5284,7 +5284,7 @@ const kyeDrill = {
   title: '3 vs 2',
   image: 'https://zupimages.net/up/20/19/zgxt.jpg',
   description:
-    'The team with two players stays on defense if they successfully force a turnover\nIn game: Sometimes a situation of overnumber is created (after a long time in particular). In this case, the attackers have to be able to play quickly to gain ground without another defender being able to join them. Defenders try to slow down the attackers as much as possible by leaving the wearer of the Frisbee without a mark',
+    'The team with two players stays on defense if they successfully force a turnover\n\nIn game: Sometimes a situation of overnumber is created (after a long time in particular). In this case, the attackers have to be able to play quickly to gain ground without another defender being able to join them. Defenders try to slow down the attackers as much as possible by leaving the wearer of the Frisbee without a mark',
   minimalPlayersNumber: 5,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disc - 2 cones',
@@ -5314,7 +5314,7 @@ const bigEightDrill = {
   title: 'The big 8',
   image: 'https://zupimages.net/up/20/19/5209.jpg',
   description:
-    'Making a pass circuit where each player will try to work on their throws\nIn game:In order to ensure a good continuation, it is necessary to work on the timing of the cuts and the technique. The play worked on in this exercise will allow to go out of the line and to progress quickly on the closed side.',
+    'Making a pass circuit where each player will try to work on their throws\n\nIn game:In order to ensure a good continuation, it is necessary to work on the timing of the cuts and the technique. The play worked on in this exercise will allow to go out of the line and to progress quickly on the closed side.',
   minimalPlayersNumber: 16,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '8 discs - 8 cones',
@@ -5344,7 +5344,7 @@ const trainDrill = {
   title: 'The Train',
   image: 'https://zupimages.net/up/20/19/ac8s.jpg',
   description:
-    'This is a drill which works on the flow of a vertical stack\nIn game: A first pass has been made and the attacking team needs to reposition itself to obtain smooth and efficient continuity options.',
+    'This is a drill which works on the flow of a vertical stack\n\nIn game: A first pass has been made and the attacking team needs to reposition itself to obtain smooth and efficient continuity options.',
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disc',
@@ -5393,7 +5393,7 @@ const giveAndGoDrill = {
   title: 'Give-N-Go',
   image: 'https://zupimages.net/up/20/19/s9fe.jpg',
   description:
-    "Follow your disc as fast as possible\nIn game: The quick one-two allows the attackers to gain ground and have a more advantageous position to throw. The thrower seeks to take maximum advantage of the defender's inertia to get ahead of his cut.",
+    "Follow your disc as fast as possible\n\nIn game: The quick one-two allows the attackers to gain ground and have a more advantageous position to throw. The thrower seeks to take maximum advantage of the defender's inertia to get ahead of his cut.",
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disc - 12 cones',
@@ -5431,7 +5431,7 @@ const aussieDrill = {
   title: 'Aussie games',
   image: 'https://zupimages.net/up/20/19/78g2.png',
   description:
-    "You can run with the disc\nIn game: This playful exercise allows to work on the defenders' communication. This is essential in order to realize switches on the field and/or an efficient zone defense. In attack, this exercise allows you to work on the detection of the players who are not marked out.",
+    "You can run with the disc\n\nIn game: This playful exercise allows to work on the defenders' communication. This is essential in order to realize switches on the field and/or an efficient zone defense. In attack, this exercise allows you to work on the detection of the players who are not marked out.",
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '4 discs - 20 cones',
@@ -5461,7 +5461,7 @@ const bolognaMDrill = {
   title: 'The M',
   image: 'https://zupimages.net/up/20/19/akuy.jpg',
   description:
-    'Follow the M\nIn game: This drill allows you to work on the timing needed to get out of the line. The first cut corresponds to the stroke made by the first in the stack when you want to re-center the disc.',
+    'Follow the M\n\nIn game: This drill allows you to work on the timing needed to get out of the line. The first cut corresponds to the stroke made by the first in the stack when you want to re-center the disc.',
   minimalPlayersNumber: 10,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '5 disc - 6 cones',
@@ -5490,7 +5490,7 @@ const goToTenDrill = {
   title: 'Go to 10',
   image: 'https://zupimages.net/up/20/19/rcyt.jpg',
   description:
-    'First team with 10 completes passes win\nIn game: It is important to know how to keep the disk as long as possible. This knowledge is particularly useful against a zone defense or when approaching the endzone.',
+    'First team with 10 completes passes win\n\nIn game: It is important to know how to keep the disk as long as possible. This knowledge is particularly useful against a zone defense or when approaching the endzone.',
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disc - 4 cones',
@@ -5557,7 +5557,7 @@ const bulldogDrill = {
   title: 'British Bulldog',
   image: 'https://zupimages.net/up/20/19/tf79.jpg',
   description:
-    'The bulldogs stand in the middle of the play area. All remaining players stand at one end of the area (home). The aim of the game is to run from one end of the field of play to the other, without being caught by the bulldogs. When a player is caught, they become a bulldog themselves.\nIn game:The defenders work the curtain situation in a zone defense. They have to communicate with each other and move uniformly in order not to leave any space between them.',
+    'The bulldogs stand in the middle of the play area. All remaining players stand at one end of the area (home). The aim of the game is to run from one end of the field of play to the other, without being caught by the bulldogs. When a player is caught, they become a bulldog themselves.\n\nIn game:The defenders work the curtain situation in a zone defense. They have to communicate with each other and move uniformly in order not to leave any space between them.',
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '4 cones',
@@ -5635,7 +5635,7 @@ const dwarfDuelDrill = {
   title: 'Dwarf Duel',
   image: 'https://zupimages.net/up/20/19/3m3k.jpg',
   description:
-    'Duel without jumping, all about positioning\nIn game:A long one is thrown and you have to win your duel. If in this duel, your size is a disadvantage, it is necessary to block your opponent by running (without causing contact).',
+    'Duel without jumping, all about positioning\n\nIn game:A long one is thrown and you have to win your duel. If in this duel, your size is a disadvantage, it is necessary to block your opponent by running (without causing contact).',
   minimalPlayersNumber: 3,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disc - 2 cones',
@@ -5674,7 +5674,7 @@ const dishieChainDrill = {
   title: 'Dishie Chain',
   image: 'https://zupimages.net/up/20/19/stdq.jpg',
   description:
-    'Basic long passes drill. You want your players to alternate between throwing, running and passing\nIn game: when defenders circle a vertical stack, they surround them and make switches. In order to break through this defense, the attackers must attack, in pairs, the same defender. The defender will then have to choose one of the attackers and the thrower will be able to play on the attacker left free.',
+    'Basic long passes drill. You want your players to alternate between throwing, running and passing\n\nIn game: when defenders circle a vertical stack, they surround them and make switches. In order to break through this defense, the attackers must attack, in pairs, the same defender. The defender will then have to choose one of the attackers and the thrower will be able to play on the attacker left free.',
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disc - 2 cones',
@@ -5732,7 +5732,7 @@ const breakDanceDrill = {
   title: 'Break Dance',
   image: 'https://zupimages.net/up/20/19/agsd.jpg',
   description:
-    'Making a christmas tree in the break\nIn game: The interest of a vertical stack is to free 2 play zones. When a team manages to play on the closed side, it must try to quickly gain ground by a succession of passes.',
+    'Making a christmas tree in the break\n\nIn game: The interest of a vertical stack is to free 2 play zones. When a team manages to play on the closed side, it must try to quickly gain ground by a succession of passes.',
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '5 discs - 10 cones',
@@ -5772,7 +5772,7 @@ const triangleOfDeathdrill = {
   title: 'The Triangle of Death',
   image: 'https://zupimages.net/up/20/19/kmlc.jpg',
   description:
-    "Throwing 10 hucks in a row as far and as fast as possible\nIn game: You must be able to quickly regain your balance and analyze the cutter's stroke. The thrower then performs a long one in order to gain as much ground as possible.",
+    "Throwing 10 hucks in a row as far and as fast as possible\n\nIn game: You must be able to quickly regain your balance and analyze the cutter's stroke. The thrower then performs a long one in order to gain as much ground as possible.",
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '10 disc - 3 cones',
@@ -5802,7 +5802,7 @@ const trainOfFakeDrill = {
   title: 'The Fake Train',
   image: 'https://zupimages.net/up/20/19/ac8s.jpg',
   description:
-    'This is a drill which works on the flow of a vertical stack\nIn game: The first pass has been made and the attackers must set up for a fluid attack. The first play option remains the open side. If the open side is blocked a quick reversal must be made to play on the break side.',
+    'This is a drill which works on the flow of a vertical stack\n\nIn game: The first pass has been made and the attackers must set up for a fluid attack. The first play option remains the open side. If the open side is blocked a quick reversal must be made to play on the break side.',
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disc',
@@ -5879,7 +5879,7 @@ const resetOpenDrill = {
   title: 'Reset Open',
   image: 'https://zupimages.net/up/20/19/tzk3.jpg',
   description:
-    'Cutting with good timing; throwing immediately after catching\nIn game: The pass on the middles was not possible, now you have to play on the support handler. This one is on the side towards which the force is directed (open), he has to perform the movement seen in this exercise.',
+    'Cutting with good timing; throwing immediately after catching\n\nIn game: The pass on the middles was not possible, now you have to play on the support handler. This one is on the side towards which the force is directed (open), he has to perform the movement seen in this exercise.',
   minimalPlayersNumber: 4,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disc',
@@ -5956,7 +5956,7 @@ const resetBreakDrill = {
   title: 'Reset Break',
   image: 'https://zupimages.net/up/20/19/w90f.jpg',
   description:
-    'Cutting with good timing; throwing immediately after catching\nIn game: The pass on the middles was not possible, now you have to play on the support handler. This one is on the opposite side to the force (break), he must perform the movement seen in this exercise.',
+    'Cutting with good timing; throwing immediately after catching\n\nIn game: The pass on the middles was not possible, now you have to play on the support handler. This one is on the opposite side to the force (break), he must perform the movement seen in this exercise.',
   minimalPlayersNumber: 4,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disc',
@@ -6033,7 +6033,7 @@ const youShallNotPassDrill = {
   title: 'You Shall Not Pass',
   image: 'https://zupimages.net/up/20/19/90z6.jpg',
   description:
-    "Using your body to prevent your opponent from getting to the disc\nIn game: Experienced defenders can use their bodies to block an opponent's run. In order not to make a fault, the defender must place himself in the trajectory of the attacker sufficiently in advance to allow the attacker to avoid him.",
+    "Using your body to prevent your opponent from getting to the disc\n\nIn game: Experienced defenders can use their bodies to block an opponent's run. In order not to make a fault, the defender must place himself in the trajectory of the attacker sufficiently in advance to allow the attacker to avoid him.",
   minimalPlayersNumber: 4,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disc - 4 cones',
@@ -6101,7 +6101,7 @@ const defensePositionDrill = {
   title: 'Defense Positioning',
   image: 'https://zupimages.net/up/20/19/zigu.jpg',
   description:
-    "Maintaining good positioning and adapting to the team's defense\nIn game: Equivalent to force, defenders on cutters must favor the options they wish to block. The goal of the defenders is to take the attackers out of their comfort zone.",
+    "Maintaining good positioning and adapting to the team's defense\n\nIn game: Equivalent to force, defenders on cutters must favor the options they wish to block. The goal of the defenders is to take the attackers out of their comfort zone.",
   minimalPlayersNumber: 4,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disc - 5 cones',
@@ -6171,7 +6171,7 @@ const dDC = {
   title: 'DDC',
   image: 'https://zupimages.net/up/20/25/t73e.jpg',
   description:
-    'Double disc court is a frisbee sport which combines quickness, strategy, and throwing ability\nIn game: The DDC allows you to work on the control of passing curves and communication. The technical gain allows you to adapt to the match situation',
+    'Double disc court is a frisbee sport which combines quickness, strategy, and throwing ability\n\nIn game: The DDC allows you to work on the control of passing curves and communication. The technical gain allows you to adapt to the match situation',
   minimalPlayersNumber: 4,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '2 discs - 8 cones',
@@ -6210,7 +6210,7 @@ const horizontalTiming = {
   title: 'Horizontal Timing',
   image: 'https://zupimages.net/up/20/25/zn5l.jpg',
   description:
-    'Complete drill to work on the timing of the cutter and handler in a horizontal stack\nIn game:After receiving the pull, the attackers can try to set up a play with a Horizontal stack. The interest is to gain a lot of ground in a few passes.',
+    'Complete drill to work on the timing of the cutter and handler in a horizontal stack\n\nIn game:After receiving the pull, the attackers can try to set up a play with a Horizontal stack. The interest is to gain a lot of ground in a few passes.',
   minimalPlayersNumber: 5,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disc',
@@ -6249,7 +6249,7 @@ const game3v3Horizontal = {
   title: 'Diamond Cut',
   image: 'https://zupimages.net/up/20/25/2vga.jpg',
   description:
-    'Work of freeing up spaces in a horizontal stack\nIn game: On a horizontal stack, the objective is to isolate a group a pair of cutters and to gain as much ground as possible with the minimum number of throws.',
+    'Work of freeing up spaces in a horizontal stack\n\nIn game: On a horizontal stack, the objective is to isolate a group a pair of cutters and to gain as much ground as possible with the minimum number of throws.',
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disc - 8 cones',
@@ -6288,7 +6288,7 @@ const theDuel = {
   title: 'Nothing like a duel',
   image: 'https://zupimages.net/up/20/28/ncjr.jpg',
   description:
-    'Nothing better than a duel to work on the different aspects of the game\nIn game: The vast majority of tactics aim to isolate one or more players in order to limit collective defenses. In this exercise, the objective is to work on the duel that results from a well-performed tactic.',
+    'Nothing better than a duel to work on the different aspects of the game\n\nIn game: The vast majority of tactics aim to isolate one or more players in order to limit collective defenses. In this exercise, the objective is to work on the duel that results from a well-performed tactic.',
   minimalPlayersNumber: 4,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disc ',
@@ -6328,7 +6328,7 @@ const cardinal = {
   title: 'Cardinal Point',
   image: 'https://zupimages.net/up/20/25/xtik.png',
   description:
-    'Learning to throw in any position\nIn game: You have to be able to adapt to the mark you are setting up. Being able to throw allows you to launch more quickly.',
+    'Learning to throw in any position\n\nIn game: You have to be able to adapt to the mark you are setting up. Being able to throw allows you to launch more quickly.',
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disc ',
@@ -6367,7 +6367,7 @@ const horizontalToVertical = {
   title: 'Horizontal Flow',
   image: 'https://zupimages.net/up/20/25/kecr.jpg',
   description:
-    'Learning to create a powerful flow from a static position.\nIn game: A play was made with a horizontal stack. The goal is to find as quickly as possible a fluid attack (the flow).',
+    'Learning to create a powerful flow from a static position.\n\nIn game: A play was made with a horizontal stack. The goal is to find as quickly as possible a fluid attack (the flow).',
   minimalPlayersNumber: 7,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disc ',
@@ -6417,7 +6417,7 @@ const horizontalTrap = {
   title: 'Trap with the Open',
   image: 'https://zupimages.net/up/20/25/zkfl.jpg',
   description:
-    'Learning to use the horizontal stack to get out of the line with the cutter in the open side\nIn game, The owner of the disc is stuck near the sideline and tries to center the disc or gain a lot of ground. One of the tactics used may be a horizontal stack. In this exercise, the cut work is done by the middles in front of the thrower.',
+    'Learning to use the horizontal stack to get out of the line with the cutter in the open side\n\nIn game, The owner of the disc is stuck near the sideline and tries to center the disc or gain a lot of ground. One of the tactics used may be a horizontal stack. In this exercise, the cut work is done by the middles in front of the thrower.',
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disc ',
@@ -6515,7 +6515,7 @@ const horizontalHandler = {
   title: 'Trap with the handlers',
   image: 'https://zupimages.net/up/20/25/zkfl.jpg',
   description:
-    'Learning to use the horizontal stack to get out of the line with the handler\nIn game: The owner of the disc is stuck near the sideline and tries to center the disc or gain a lot of ground. One of the tactics used may be a horizontal stack. In this exercise, the cut work is done by the handlers.',
+    'Learning to use the horizontal stack to get out of the line with the handler\n\nIn game: The owner of the disc is stuck near the sideline and tries to center the disc or gain a lot of ground. One of the tactics used may be a horizontal stack. In this exercise, the cut work is done by the handlers.',
   minimalPlayersNumber: 8,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disc ',
@@ -6565,7 +6565,7 @@ const checkLong = {
   title: 'Long is your new weapon',
   image: 'https://zupimages.net/up/20/25/pzn1.jpg',
   description:
-    "Learning to throw deep as a thrower and to get information as a cutter\nIn game: The cutter must observe the progress of the action in order to obtain the best timing for its run. The thrower must adjust to quickly find his balance and throw into the cutter's stroke.",
+    "Learning to throw deep as a thrower and to get information as a cutter\n\nIn game: The cutter must observe the progress of the action in order to obtain the best timing for its run. The thrower must adjust to quickly find his balance and throw into the cutter's stroke.",
   minimalPlayersNumber: 3,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disc ',
@@ -6595,7 +6595,7 @@ const throwCatchThrow = {
   title: 'Double Disc',
   image: 'https://zupimages.net/up/20/25/gf41.jpg',
   description:
-    'Work by pair. The goal is to improve your throwing and catching speed\nIn game:Gaining dexterity with the discus allows you to throw faster. This asset allows to break the mark more',
+    'Work by pair. The goal is to improve your throwing and catching speed\n\nIn game:Gaining dexterity with the discus allows you to throw faster. This asset allows to break the mark more',
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '2 discs ',
@@ -6634,7 +6634,7 @@ const stopFlow = {
   title: 'Stoping the Flow',
   image: 'https://zupimages.net/up/20/28/2b8i.jpg',
   description:
-    'Learn to quickly identify dangerous option and deny it.\nIn game: The attackers took the defenders by storm with the first pass. The objective of the defender is to slow down the attack by blocking the most dangerous option with his mark.',
+    'Learn to quickly identify dangerous option and deny it.\n\nIn game: The attackers took the defenders by storm with the first pass. The objective of the defender is to slow down the attack by blocking the most dangerous option with his mark.',
   minimalPlayersNumber: 5,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disc',
@@ -6673,7 +6673,7 @@ const theTunnel = {
   title: 'The Tunnel',
   image: 'https://zupimages.net/up/20/25/742g.jpeg',
   description:
-    'Warm up drill to focus on the reactivity in defense.\nIn game: The defenders try to block a direction of the cutter (the under cut in the animation) by always placing themselves between the thrower and the cutter. The defender must also try to stay close to the attacker on the opposite (long) cut option.',
+    'Warm up drill to focus on the reactivity in defense.\n\nIn game: The defenders try to block a direction of the cutter (the under cut in the animation) by always placing themselves between the thrower and the cutter. The defender must also try to stay close to the attacker on the opposite (long) cut option.',
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '4 cones ',
@@ -6703,7 +6703,7 @@ const sprintDefense = {
   title: "The Leopard's Defense",
   image: 'https://zupimages.net/up/20/25/5pqg.jpg',
   description:
-    'Warm up drill to focus on the reactivity in defense.\nIn game: A defender must adapt to the cutter stroke as quickly as possible.',
+    'Warm up drill to focus on the reactivity in defense.\n\nIn game: A defender must adapt to the cutter stroke as quickly as possible.',
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '4 cones ',
@@ -6733,7 +6733,7 @@ const cupSwinging = {
   title: 'Swinging with the cup',
   image: 'https://zupimages.net/up/20/25/019o.jpg',
   description:
-    'Practicing the defense against the swing as a 3 players cup\nIn game: When a zone defense is set up, the players forming the first curtain must move uniformly without leaving enough space for a throw to be made between them.',
+    'Practicing the defense against the swing as a 3 players cup\n\nIn game: When a zone defense is set up, the players forming the first curtain must move uniformly without leaving enough space for a throw to be made between them.',
   minimalPlayersNumber: 7,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disc ',
@@ -6840,7 +6840,7 @@ const diagonalToVertical = {
   title: 'Diagonal to Vertical',
   image: 'https://zupimages.net/up/20/25/iqn0.jpg',
   description:
-    'Train the team to make the perfect transition from a diagonal stack to a vertical flow\nIn game: A play after the pull was made with a diagonal stack. The goal is to achieve the fastest possible transition of the play to a vertical flow.',
+    'Train the team to make the perfect transition from a diagonal stack to a vertical flow\n\nIn game: A play after the pull was made with a diagonal stack. The goal is to achieve the fastest possible transition of the play to a vertical flow.',
   minimalPlayersNumber: 8,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disc ',
@@ -6987,7 +6987,7 @@ const splitToVertical = {
   title: 'Split to Vertical',
   image: 'https://zupimages.net/up/20/25/uqd5.jpg',
   description:
-    'Train the team to make the perfect transition from a split stack to a vertical flow\nIn game: The Split allows to isolate a pair of players in order to avoid the poaches of the other defenders.',
+    'Train the team to make the perfect transition from a split stack to a vertical flow\n\nIn game: The Split allows to isolate a pair of players in order to avoid the poaches of the other defenders.',
   minimalPlayersNumber: 8,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disc ',

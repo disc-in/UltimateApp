@@ -93,6 +93,7 @@ import checkLongKidAnimation from '../Animation/CheckLongKid';
 import adaptMark from '../Animation/AdaptMark';
 import ghost from '../Animation/Ghost';
 import ladderGhost from '../Animation/LadderGhost';
+import fishAnimation from '../Animation/Fish';
 
 const stabilityDrill = {
   id: 1,
@@ -5461,7 +5462,7 @@ const trainDrill = {
       repetition: '',
       rest: '',
       instruction:
-        "Mettre en place un stack vertcal de 5 attaquants, un lanceur et un handler de soutien. Choisir une force. Le dernier attaquant du stack déclenche un appel en longue tout en regardant le lanceur. Quand le lanceur fait une feinte, l'attaquant fait un contre-cut dans l'espace ouvert et reçoit le disque. L'attaquant suivant doit commencer son cut en longue pour être à pleine vitesse quand le précédent attrape le disque. Le reste du stack se replace à hauteur pour assurer la continuité, le lanceur devient handler de soutien et le soutien devient premier du stack. Répéter sur la longueur du terrain.",
+        "Mettre en place un stack vertical de 5 attaquants, un lanceur et un handler de soutien. Choisir une force. Le dernier attaquant du stack déclenche un appel en longue tout en regardant le lanceur. Quand le lanceur fait une feinte, l'attaquant fait un contre-cut dans l'espace ouvert et reçoit le disque. L'attaquant suivant doit commencer son cut en longue pour être à pleine vitesse quand le précédent attrape le disque. Le reste du stack se replace à hauteur pour assurer la continuité, le lanceur devient handler de soutien et le soutien devient premier du stack. Répéter sur la longueur du terrain.",
     },
     {
       id: 2,
@@ -6515,7 +6516,7 @@ const horizontalTrap = {
   type: DrillTypes.FRISBEE,
   author: 'Mubidisk',
   title: "Débloqué dans l'Ouvert",
-  image: 'https://zupimages.net/up/20/25/zkfl.jpg',
+  image: 'https://zupimages.net/up/20/41/y1ki.jpg',
   description:
     'Apprendre à utiliser le stack horizontal pour sortir de la ligne avec les cutters dans le coté ouvert.\n\nEn match : Le possesseur du disque est bloqué près de la ligne de touche et cherche à recentrer le disque ou à gagner beaucoup de terrain. Une des tactique utilisées peut-être un stack horizontal. Dans cet exercice, le travail de cut est effectué par les middles situés en face du lanceur',
   minimalPlayersNumber: 6,
@@ -7247,6 +7248,35 @@ const ghostMark = {
       rest: '',
       instruction:
         "Deux joueurs lancent par paire. Les joueurs en défense, sans toucher le disque et les attaquants, doivent gêner la réception. Ils peuvent, par exemple, passer devant le disque au dernier moment. Si un turn-over est provoqué, sans que les défenseurs touchent le disque, les rôles s'inversent.",
+    },
+  ],
+};
+
+const fish = {
+  id: 1049,
+  type: DrillTypes.FRISBEE,
+  author: 'Puc Ultimate',
+  title: 'La Pêche',
+  image: 'https://zupimages.net/up/20/41/n148.jpg',
+  description: "Les joueurs s'entrainent à lancer de manière précise le disque sur une cible statique.",
+  minimalPlayersNumber: 8,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disque par paire',
+  durationInMinutes: 10,
+  intensity: Intensities.LOW,
+  goals: [FrisbeeGoals.CATCH, FrisbeeGoals.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'La Pêche',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: fishAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        "Les joueurs jouent par paire. L'objectif est de récupérer le plus de plots possible. Un joueur de la paire court au niveau d'un plot. Son coéquipier lui envoie le disque d'une manière définie par le coach. Si, et seulement si, le joueur attrape le disque en restant à porter de pivot du plot, il peut le ramasser et le ramener dans son camp. Son coéquipier à son tour court, les rôles s'inversent. L'équipe ayant ramassé le plus de disque l'emporte",
     },
   ],
 };
@@ -8254,6 +8284,7 @@ export const drills = [
   checkLongKid,
   adaptToTheMark,
   ghostMark,
+  fish,
 
   // // Games
   // normalGame,

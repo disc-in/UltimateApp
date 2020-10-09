@@ -93,6 +93,7 @@ import checkLongKidAnimation from '../Animation/CheckLongKid';
 import adaptMark from '../Animation/AdaptMark';
 import ghost from '../Animation/Ghost';
 import ladderGhost from '../Animation/LadderGhost';
+import fishAnimation from '../Animation/Fish';
 
 const stabilityDrill = {
   id: 1,
@@ -5311,7 +5312,7 @@ const bigEightDrill = {
   id: 1005,
   type: DrillTypes.FRISBEE,
   author: 'Mooncatchers',
-  title: 'The big 8',
+  title: 'The Big 8',
   image: 'https://zupimages.net/up/20/19/5209.jpg',
   description:
     'Making a pass circuit where each player will try to work on their throws\n\nIn game:In order to ensure a good continuation, it is necessary to work on the timing of the cuts and the technique. The play worked on in this exercise will allow to go out of the line and to progress quickly on the closed side.',
@@ -6415,7 +6416,7 @@ const horizontalTrap = {
   type: DrillTypes.FRISBEE,
   author: 'Mubidisk',
   title: 'Trap with the Open',
-  image: 'https://zupimages.net/up/20/25/zkfl.jpg',
+  image: 'https://zupimages.net/up/20/41/y1ki.jpg',
   description:
     'Learning to use the horizontal stack to get out of the line with the cutter in the open side\n\nIn game, The owner of the disc is stuck near the sideline and tries to center the disc or gain a lot of ground. One of the tactics used may be a horizontal stack. In this exercise, the cut work is done by the middles in front of the thrower.',
   minimalPlayersNumber: 6,
@@ -7141,6 +7142,35 @@ const ghostMark = {
       rest: '',
       instruction:
         'Two players throw in pairs. The defending players, without touching the disc and the offensive players, try to interfere with the catch. They can, for example, pass in front of the disk at the last moment. If a turn-over is caused, without the defenders touching the disc, the roles are reversed.',
+    },
+  ],
+};
+
+const fish = {
+  id: 1049,
+  type: DrillTypes.FRISBEE,
+  author: 'Puc Ultimate',
+  title: 'Fishing',
+  image: 'https://zupimages.net/up/20/41/n148.jpg',
+  description: 'Players practice accurately throwing the disc to a static target.',
+  minimalPlayersNumber: 8,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disque par paire',
+  durationInMinutes: 10,
+  intensity: Intensities.LOW,
+  goals: [FrisbeeGoals.CATCH, FrisbeeGoals.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'Fishing',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: fishAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Players play in pairs. The objective is to collect as many blocks as possible. One player of the pair runs at the level of a block. His teammate sends him the disc in a way defined by the coach. If, and only if, the player catches the disc while remaining at the pivot of the block, he can pick it up and bring it back to his side. His teammate in turn runs, the roles are reversed. The team having picked up the most disc wins.',
     },
   ],
 };
@@ -8139,6 +8169,7 @@ export const drills = [
   checkLongKid,
   adaptToTheMark,
   ghostMark,
+  fish,
 
   // // Games
   // normalGame,

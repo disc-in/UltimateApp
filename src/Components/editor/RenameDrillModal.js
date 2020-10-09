@@ -9,7 +9,7 @@ import { renameDrill } from '../../Store/Actions/drillAction';
 import Modal from '../shared/Modal';
 import Button from '../shared/Button';
 
-const RenameDrillModal = (props) => {
+export const RenameDrillModal = (props) => {
   const inputRef = useRef();
 
   const [newTitle, setNewTitle] = useState('');

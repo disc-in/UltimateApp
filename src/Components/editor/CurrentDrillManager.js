@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Share, Text } from 'react-native';
+import { Alert, Share, Text } from 'react-native';
 import { Menu, Divider } from 'react-native-paper';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
@@ -25,11 +25,12 @@ const CurrentDrillManager = (props) => {
   };
 
   const checkBeforeNewDrill = () => {
-    if (props.isDrillSaved) props.createNewDrill();
-    else {
+    if (props.isDrillSaved) {
+      props.new();
+    } else {
       Alert.alert(
         I18n.t('editor.saveModificationsTitle'),
-        I18n.t('editor.saveModificationsText', { title: currentDrill.title }),
+        I18n.t('editor.saveModificationsText', { title: props.currentDrill.title }),
         [
           {
             text: I18n.t('shared.cancel'),
@@ -40,13 +41,13 @@ const CurrentDrillManager = (props) => {
             text: I18n.t('shared.yes'),
             onPress: () => {
               props.save();
-              props.createNewDrill();
+              props.new();
             },
           },
           {
             text: I18n.t('shared.no'),
             onPress: () => {
-              props.createNewDrill();
+              props.new();
             },
           },
         ],

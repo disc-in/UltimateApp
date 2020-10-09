@@ -24,7 +24,6 @@ class AnimationEditor extends React.Component {
         disc: 1,
         triangle: 1,
       },
-      animationTopMargin: 0,
       animationHeight: 100,
       animationWidth: 100,
       isElementMoving: false,
@@ -84,12 +83,6 @@ class AnimationEditor extends React.Component {
     });
   };
 
-  setAnimationTopMargin = (topMargin) => {
-    this.setState({
-      animationTopMargin: topMargin,
-    });
-  };
-
   addElementToAnimation = (type, x, y) => {
     const position = this._positionPixelToPercent(x, y);
 
@@ -121,10 +114,7 @@ class AnimationEditor extends React.Component {
    */
   _positionPixelToPercent = (x, y) => {
     /* Here we assume that there is no view at the left or the bottom of the editor */
-    return [
-      (x - this.state.dLeft) / this.state.animationWidth,
-      (y - this.state.animationTopMargin) / this.state.animationHeight,
-    ];
+    return [(x - this.state.dLeft) / this.state.animationWidth, (y - this.state.dTop) / this.state.animationHeight];
   };
 
   _copyAnimation() {
@@ -297,9 +287,8 @@ class AnimationEditor extends React.Component {
           onMoveStart={this.onMoveStart}
           onElementMoveEnd={this.onElementMoveEnd}
           onDimensionSet={this.setAnimationDimension}
-          onTopMarginSet={this.setAnimationTopMargin}
           onCutMove={this.cutMove}
-          widthRatio={1}
+          widthRatio={this.wRatio}
           heightRatio={this.hRatio}
           dTop={this.state.dTop}
           dLeft={this.state.dLeft}

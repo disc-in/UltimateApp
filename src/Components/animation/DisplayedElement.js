@@ -258,7 +258,7 @@ const styles = StyleSheet.create({
     backgroundColor: theme.DISC_COLOR,
   },
   discText: {
-    color: theme.BACKGROUND_COLOR,
+    color: theme.BACKGROUND_COLOR, //The color is white to avoid to have a number in the disc,
     fontWeight: 'bold',
   },
   triangle: {

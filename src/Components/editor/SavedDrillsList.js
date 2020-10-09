@@ -43,7 +43,7 @@ const SavedDrillsList = (props) => {
   const deletionConfirmation = (drill) => {
     Alert.alert(drill.title, I18n.t('editor.savedDrillsList.deleteConfirmation'), [
       {
-        text: I18n.t('editor.cancel'),
+        text: I18n.t('shared.cancel'),
         style: 'cancel',
       },
       {

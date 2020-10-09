@@ -24,6 +24,36 @@ const CurrentDrillManager = (props) => {
     }).catch((err) => console.log(err));
   };
 
+  const checkBeforeNewDrill = () => {
+    if (props.isDrillSaved) props.createNewDrill();
+    else {
+      Alert.alert(
+        I18n.t('editor.saveModificationsTitle'),
+        I18n.t('editor.saveModificationsText', { title: currentDrill.title }),
+        [
+          {
+            text: I18n.t('shared.cancel'),
+            style: 'cancel',
+            onPress: () => {},
+          },
+          {
+            text: I18n.t('shared.yes'),
+            onPress: () => {
+              props.save();
+              props.createNewDrill();
+            },
+          },
+          {
+            text: I18n.t('shared.no'),
+            onPress: () => {
+              props.createNewDrill();
+            },
+          },
+        ],
+      );
+    }
+  };
+
   return (
     <Menu visible={visible} onDismiss={closeMenu} anchor={<HeaderButton icon="dots-vertical" onPress={openMenu} />}>
       <Menu.Item
@@ -44,7 +74,7 @@ const CurrentDrillManager = (props) => {
       />
       <Menu.Item
         onPress={() => {
-          props.new();
+          checkBeforeNewDrill();
           closeMenu();
         }}
         icon="plus"

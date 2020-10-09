@@ -44,9 +44,10 @@ export const AnimationEditorPage = (props) => {
           />
           <CurrentDrillManager
             currentDrill={currentDrill}
+            isDrillSaved={isDrillSaved}
             save={saveCurrentDrill}
+            new={createNewDrill}
             rename={() => setModalRenameVisible(true)}
-            new={checkModificationsBeforeCreatingNewDrill}
           />
         </View>
       ),
@@ -90,37 +91,6 @@ export const AnimationEditorPage = (props) => {
   const openDrill = (drill) => {
     setCurrentDrill(drill);
     setIsDrillSaved(true);
-  };
-
-  // Called when the user wants to create a new drill
-  const checkModificationsBeforeCreatingNewDrill = () => {
-    if (isDrillSaved) createNewDrill();
-    else {
-      Alert.alert(
-        I18n.t('editor.saveModificationsTitle'),
-        I18n.t('editor.saveModificationsText', { title: currentDrill.title }),
-        [
-          {
-            text: I18n.t('shared.cancel'),
-            style: 'cancel',
-            onPress: () => {},
-          },
-          {
-            text: I18n.t('shared.yes'),
-            onPress: () => {
-              saveCurrentDrill();
-              createNewDrill();
-            },
-          },
-          {
-            text: I18n.t('shared.no'),
-            onPress: () => {
-              createNewDrill();
-            },
-          },
-        ],
-      );
-    }
   };
 
   const createNewDrill = () => {

@@ -94,6 +94,8 @@ import adaptMark from '../Animation/AdaptMark';
 import ghost from '../Animation/Ghost';
 import ladderGhost from '../Animation/LadderGhost';
 import fishAnimation from '../Animation/Fish';
+import reverseEightAnimation from '../Animation/ReverseEight';
+import reverseEightTargetAnimation from '../Animation/ReverseEightTarget';
 
 const stabilityDrill = {
   id: 1,
@@ -5426,13 +5428,33 @@ const bigEightDrill = {
   steps: [
     {
       id: 1,
-      title: 'Le grand 8',
+      title: 'Le Grand 8',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: bigEight,
       repetition: '',
       rest: '',
       instruction:
-        'Voici la rotation : \nHandler au centre du terrain \nPasse par derrière pour effectuer le reset \nPremier du stack fait la continuité dans le break \nDernier du stack va en longue et se place dans comme handler central du coté opposé',
+        'Rotation: \n1- Handler au centre du terrain \n2- Passe par derrière pour effectuer le reset \n3- Premier du stack fait la continuité dans le break \n4- Dernier du stack va en longue et se place comme handler central du coté opposé',
+    },
+    {
+      id: 2,
+      title: 'Break & Continuité',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: reverseEightAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Rotation : \n1- Marque sur le lanceur orienté ligne\n2-Lanceur trappé\n3-Premier du Stack qui attrape le swing\n4-Continuité du deuxième du stack\n5-Courir en Longue dans le fermé',
+    },
+    {
+      id: 3,
+      title: 'Soyons Précis',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: reverseEightTargetAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Même situation à laquelle on rajoute une cible pour la longue passe. Il faut alors chronométrer en combien de temps 20 passes ont été attrapées dans les carrés',
     },
   ],
 };

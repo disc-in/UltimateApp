@@ -5386,7 +5386,7 @@ const kyeDrill = {
   title: '3 vs 2',
   image: 'https://zupimages.net/up/20/19/zgxt.jpg',
   description:
-    "Situation de match. L'équipe de 2 reste en défense s'ils arrivent à provoquer un turnover. Les lancers longs sont interdits.\n\nEn match : Parfois une situation de surnombre est crée (après une longue notamment). Il faut alors que les attaquants réussissent à jouer rapidement pour gagner du terrain sans qu'un autre défenseur puisse les rejoindre. Les défenseurs cherchent à ralentir le plus possible les attaquants en laissant le porteur du frisbee sans marque",
+    "Situation de match. L'équipe de 2 reste en défense s'ils arrivent à provoquer un turnover. Les lancers longs sont interdits.\n\nEn match : Parfois une situation de surnombre est créée (après une longue notamment). Il faut alors que les attaquants réussissent à jouer rapidement pour gagner du terrain sans qu'un autre défenseur puisse les rejoindre. Les défenseurs cherchent à ralentir le plus possible les attaquants en laissant le porteur du frisbee sans marque",
   minimalPlayersNumber: 5,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque - 2 plots',
@@ -5553,7 +5553,7 @@ const aussieDrill = {
   title: 'Le jeu Australien',
   image: 'https://zupimages.net/up/20/19/78g2.png',
   description:
-    'Un jeu ludique avec les frisbees qui va permettre aux joueurs de prendre du plaisir et de travailler la communication avec un disque\n\nEn match : Cet exercice ludique permet de travailler la communication des défenseurs. Celle ci est primordiale afin de réaliser des switches sur les terrains et/ou une défense de zone efficace. En attaque, cet exercice permet de travailler la détection des joueurs démarqués',
+    'Un jeu ludique avec les frisbees qui va permettre aux joueurs de prendre du plaisir et de travailler la communication avec un disque\n\nEn match : Cet exercice ludique permet de travailler la communication des défenseurs. Celle-ci est primordiale afin de réaliser des switches et/ou une défense de zone efficace. En attaque, cet exercice permet de travailler la détection des joueurs démarqués',
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '4 disques - 20 plots',
@@ -6451,7 +6451,7 @@ const cardinal = {
   title: 'Les Points Cardinaux',
   image: 'https://zupimages.net/up/20/25/xtik.png',
   description:
-    "Apprenez à lancer dans toutes les positions\n\nEn match : Il faut être capable de s'adapter à la marque mise en place. Être capable de lancer en permet de lancer plus rapidement",
+    "Apprenez à lancer dans toutes les positions\n\nEn match : Il faut être capable de s'adapter à la marque mise en place. Être capable de lancer rapidement permet d'être plus efficace pour battre la marque",
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disque ',
@@ -6690,7 +6690,7 @@ const checkLong = {
   title: 'La longue est ta nouvelle arme',
   image: 'https://zupimages.net/up/20/25/pzn1.jpg',
   description:
-    "Apprendre à lancer des longues et à prendre des informations en tant que cutter\n En match : Le cutter doit observer le déroulement de l'action afin d'obtenir le meilleur timing pour sa course. Le lanceur doit ajuster trouver rapidement son équilibre et lancer dans la course du cutter",
+    "Apprendre à lancer des longues et à prendre des informations en tant que cutter\n En match : Le cutter doit observer le déroulement de l'action afin d'obtenir le meilleur timing pour sa course. Le lanceur doit trouver rapidement son équilibre et lancer dans la course du cutter",
   minimalPlayersNumber: 3,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disc ',
@@ -6720,7 +6720,7 @@ const throwCatchThrow = {
   title: 'Double Disc',
   image: 'https://zupimages.net/up/20/25/gf41.jpg',
   description:
-    "Travaille par paire. L'objectif est d'améliorer vos lancers et la vitesse de rattrapage.\n\nEn match : Gagner en dextérité avec le disque permet de lancer plus rapidement. Cet atout permet de breaker la marque davantage",
+    "Travail par paire. L'objectif est d'améliorer vos lancers et la vitesse de rattrapage.\n\nEn match : Gagner en dextérité avec le disque permet de lancer plus rapidement. Cet atout permet de breaker la marque davantage",
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '2 disques ',
@@ -6798,7 +6798,7 @@ const theTunnel = {
   title: 'Le Tunnel',
   image: 'https://zupimages.net/up/20/25/742g.jpeg',
   description:
-    "Réactivité en défense \n\nEn match : Les défenseurs cherchent à bloquer une direction du cutter(le under cut dans l'animation) en se plaçant toujours entre le lanceur et le cutter. Le défenseur doit aussi chercher à rester à proximité de l'attaquant sur l'option de cut opposé (longue)",
+    "Réactivité en défense \n\nEn match : Les défenseurs cherchent à bloquer une direction du cutter (le under cut dans l'animation) en se plaçant toujours entre le lanceur et le cutter. Le défenseur doit aussi chercher à rester à proximité de l'attaquant sur l'option de cut opposé (longue)",
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '4 plots ',
@@ -6828,7 +6828,7 @@ const sprintDefense = {
   title: 'Réactivité en Défense.',
   image: 'https://zupimages.net/up/20/25/5pqg.jpg',
   description:
-    "Exerice d'échauffement pour travailler la réactivité en défenses\n\nEn match : Un défenseur doit s'adapter le plus rapidement possible au course du cutter",
+    "Exercice d'échauffement pour travailler la réactivité en défenses\n\nEn match : Un défenseur doit s'adapter le plus rapidement possible à la course du cutter",
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '4 plots ',

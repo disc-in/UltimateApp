@@ -5214,7 +5214,7 @@ const breakDrill = {
   title: 'Cuts to the Break Side',
   image: 'https://zupimages.net/up/20/19/83fx.jpg',
   description:
-    'Cutting from the open side to the break side. The drill is both for the thrower and the mark.\n\nIn game: Defenders Defenders seek to limit the options for passing through a mark. If the attackers manage to break, they drastically increase the passing options.',
+    'Cutting from the open side to the break side. The drill is both for the thrower and the mark.\n\nIn game: Defenders seek to limit the options for passing through a mark. If the attackers manage to break, they drastically increase the passing options.',
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '6 discs - 2 cones',
@@ -5454,7 +5454,7 @@ const aussieDrill = {
   title: 'Aussie games',
   image: 'https://zupimages.net/up/20/19/78g2.png',
   description:
-    "You can run with the disc\n\nIn game: This playful exercise allows to work on the defenders' communication. This is essential in order to realize switches on the field and/or an efficient zone defense. In offense, this exercise enable you to work on the detection of the players who are not marked out.",
+    "You can run with the disc\n\nIn game: This playful exercise allows to work on the defenders' communication. This is essential in order to realize switches on the field and/or an efficient zone defense. On offense, this exercise enables you to work on the detection of the players who are not marked out.",
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '4 discs - 20 cones',

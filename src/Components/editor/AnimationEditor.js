@@ -138,16 +138,6 @@ class AnimationEditor extends React.Component {
     return newAnimation;
   }
 
-  componentDidMount() {
-    var newAnimation = this._copyAnimation();
-
-    newAnimation.positions = Array(2);
-    newAnimation.positions[0] = [];
-    newAnimation.positions[1] = [];
-
-    this.saveAnimation(newAnimation);
-  }
-
   componentDidUpdate(prevProps) {
     const animation = new Drill(this.props.animation);
 

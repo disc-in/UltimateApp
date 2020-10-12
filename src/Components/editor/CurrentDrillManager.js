@@ -3,7 +3,6 @@ import { Alert, Share, Text } from 'react-native';
 import { Menu, Divider } from 'react-native-paper';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-import theme from '../../styles/theme.style';
 import I18n from '../../utils/i18n';
 import HeaderButton from '../shared/HeaderButton';
 

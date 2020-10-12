@@ -3,7 +3,6 @@ import { StyleSheet, View, Text, TextInput, InteractionManager, ScrollView } fro
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { connect } from 'react-redux';
 
-import theme from '../../styles/theme.style';
 import I18n from '../../utils/i18n';
 import { renameDrill } from '../../Store/Actions/drillAction';
 import Modal from '../shared/Modal';

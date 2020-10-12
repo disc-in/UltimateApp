@@ -1,10 +1,8 @@
 import React, { useState, useEffect, useLayoutEffect } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { connect } from 'react-redux';
-import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
 
 import I18n from '../utils/i18n';
-import theme from '../styles/theme.style';
 import { saveDrill, deleteDrill } from '../Store/Actions/drillAction';
 import AnimationEditor from './editor/AnimationEditor';
 import CurrentDrillManager from './editor/CurrentDrillManager';

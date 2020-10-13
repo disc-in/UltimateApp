@@ -41,7 +41,7 @@ export const DrillPageMinimal = (props) => {
 
     const headerTitle = () => (
       <View style={styles.headerTitle}>
-        <Text style={styles.headerTitleText}>
+        <Text numberOfLines={1} style={styles.headerTitleText}>
           {I18n.t('drillPageMinimal.headerTitle', { trainingTitle: training.title })}
         </Text>
         <ProgressBar total={training.drills.length} current={currentDrillIndex + 1} onDotPress={onProgressDotPress} />
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
     marginLeft: '10%',
     marginTop: 15,
     marginBottom: 5,
-    width: '100%',
+    width: '80%',
   },
   titleContainer: {
     flexShrink: 1,
@@ -123,10 +123,11 @@ const styles = StyleSheet.create({
     fontSize: theme.FONT_SIZE_LARGE,
     fontWeight: 'bold',
     textAlign: 'center',
+    marginRight: 46, // Matches the details icon width
   },
   detailsButton: {
     position: 'absolute',
-    right: 30,
+    right: 20,
   },
   illustration: {
     flexGrow: 1,

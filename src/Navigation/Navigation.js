@@ -71,7 +71,12 @@ export const Navigation = () => (
     <Stack.Screen
       name="AnimationEditorPage"
       component={AnimationEditorPage}
-      options={() => ({ title: I18n.t('navigation.animationEditorPage') })}
+      options={() => ({
+        title: I18n.t('navigation.animationEditorPage'),
+        headerTitleContainerStyle: {
+          right: 100, // Matches the 2 icons width, and margin
+        },
+      })}
     />
     <Stack.Screen
       name="DictionaryPage"

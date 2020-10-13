@@ -35,6 +35,7 @@ export const imageTextMain = {
   fontSize: theme.FONT_SIZE_MEDIUM,
 };
 export const itemContentContainer = {
+  flex: 1,
   padding: 5,
   paddingBottom: 10,
 };

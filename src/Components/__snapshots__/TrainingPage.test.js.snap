@@ -748,10 +748,9 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
             Object {
               "borderBottomColor": "#e5e5e5",
               "borderBottomWidth": 2,
-              "marginVertical": 20,
-              "paddingBottom": 20,
-              "paddingLeft": 20,
-              "paddingRight": 20,
+              "marginVertical": 10,
+              "paddingBottom": 10,
+              "paddingHorizontal": 10,
             }
           }
         >
@@ -907,6 +906,7 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
           <View
             style={
               Object {
+                "flex": 1,
                 "padding": 5,
                 "paddingBottom": 10,
               }
@@ -924,6 +924,7 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
               Author
             </Text>
             <Text
+              numberOfLines={1}
               style={
                 Object {
                   "flex": 3,
@@ -1040,6 +1041,7 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
           <View
             style={
               Object {
+                "flex": 1,
                 "padding": 5,
                 "paddingBottom": 10,
               }
@@ -1057,6 +1059,7 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
               Author
             </Text>
             <Text
+              numberOfLines={1}
               style={
                 Object {
                   "flex": 3,
@@ -1896,10 +1899,9 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
             Object {
               "borderBottomColor": "#e5e5e5",
               "borderBottomWidth": 2,
-              "marginVertical": 20,
-              "paddingBottom": 20,
-              "paddingLeft": 20,
-              "paddingRight": 20,
+              "marginVertical": 10,
+              "paddingBottom": 10,
+              "paddingHorizontal": 10,
             }
           }
         >
@@ -1917,10 +1919,12 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
                 Object {
                   "alignItems": "center",
                   "justifyContent": "center",
+                  "marginHorizontal": 40,
                 }
               }
             >
               <Text
+                numberOfLines={1}
                 style={
                   Object {
                     "fontSize": 20,
@@ -1961,7 +1965,7 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
                   "left": "auto",
                   "opacity": 1,
                   "position": "absolute",
-                  "right": 10,
+                  "right": 0,
                 }
               }
               testID="goToNext"
@@ -2181,6 +2185,7 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
           <View
             style={
               Object {
+                "flex": 1,
                 "padding": 5,
                 "paddingBottom": 10,
               }
@@ -2198,6 +2203,7 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
               Author
             </Text>
             <Text
+              numberOfLines={1}
               style={
                 Object {
                   "flex": 3,
@@ -2314,6 +2320,7 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
           <View
             style={
               Object {
+                "flex": 1,
                 "padding": 5,
                 "paddingBottom": 10,
               }
@@ -2331,6 +2338,7 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
               Author
             </Text>
             <Text
+              numberOfLines={1}
               style={
                 Object {
                   "flex": 3,

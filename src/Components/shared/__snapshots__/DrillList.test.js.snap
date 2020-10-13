@@ -180,6 +180,7 @@ exports[`<DrillList /> renders correctly 1`] = `
         <View
           style={
             Object {
+              "flex": 1,
               "padding": 5,
               "paddingBottom": 10,
             }
@@ -197,6 +198,7 @@ exports[`<DrillList /> renders correctly 1`] = `
             Author
           </Text>
           <Text
+            numberOfLines={1}
             style={
               Object {
                 "flex": 3,

@@ -136,7 +136,7 @@ const stabilityDrill = {
     },
     {
       id: 3,
-      title: 'Goblet Squats Cossaques',
+      title: 'Goblet Squats Cosaques',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '406747476',
       sounds: false,
@@ -196,7 +196,7 @@ const stabilityDrill = {
     },
     {
       id: 9,
-      title: 'Goblet Squats Cossaques',
+      title: 'Goblet Squats Cosaques',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '406747476',
       sounds: false,
@@ -256,7 +256,7 @@ const stabilityDrill = {
     },
     {
       id: 15,
-      title: 'Goblet Squats Cossaques',
+      title: 'Goblet Squats Cosaques',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '406747476',
       sounds: false,
@@ -316,7 +316,7 @@ const stabilityDrill = {
     },
     {
       id: 21,
-      title: 'Goblet Squats Cossaques',
+      title: 'Goblet Squats Cosaques',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '406747476',
       sounds: false,
@@ -375,7 +375,7 @@ const strengthDrill = {
   steps: [
     {
       id: 1,
-      title: 'Goblet Squats Cossaques',
+      title: 'Goblet Squats Cosaques',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '406747476',
       sounds: false,
@@ -415,7 +415,7 @@ const strengthDrill = {
     },
     {
       id: 5,
-      title: 'Goblet Squats Cossaques',
+      title: 'Goblet Squats Cosaques',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '406747476',
       sounds: false,
@@ -455,7 +455,7 @@ const strengthDrill = {
     },
     {
       id: 9,
-      title: 'Goblet Squats Cossaques',
+      title: 'Goblet Squats Cosaques',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '406747476',
       sounds: false,
@@ -6003,7 +6003,7 @@ const resetOpenDrill = {
   title: "Reset dans l'Ouvert",
   image: 'https://zupimages.net/up/20/19/tzk3.jpg',
   description:
-    "Faire des cuts dans le bon timing, attraper puis lancer immédiatement\n\nEn match : La passe sur les middles n'a pas été possible, il faut dorénavant jouer sur l'handler de soutien. Celui-ci se trouve du côté vers lequel oriente la force(ouvert), il doit effectuer le mouvement vu dans cet exercice",
+    "Faire des cuts dans le bon timing, attraper puis lancer immédiatement\n\nEn match : La passe sur les middles n'a pas été possible, il faut dorénavant jouer sur le handler de soutien. Celui-ci se trouve du côté vers lequel on oriente la force(ouvert), il doit effectuer le mouvement vu dans cet exercice",
   minimalPlayersNumber: 4,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disque',
@@ -6080,7 +6080,7 @@ const resetBreakDrill = {
   title: 'Reset Break',
   image: 'https://zupimages.net/up/20/19/w90f.jpg',
   description:
-    "Faire des cuts dans le bon timing, attraper puis lancer immédiatement\n\nEn match : La passe sur les middles n'a pas été possible, il faut dorénavant jouer sur l'handler de soutien. Celui-ci se trouve du côté opposé à la force(fermé), il doit effectuer le mouvement vu dans cet exercice",
+    "Faire des cuts dans le bon timing, attraper puis lancer immédiatement\n\nEn match : La passe sur les middles n'a pas été possible, il faut dorénavant jouer sur le handler de soutien. Celui-ci se trouve du côté opposé à la force (fermé), il doit effectuer le mouvement vu dans cet exercice",
   minimalPlayersNumber: 4,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disque',
@@ -6371,7 +6371,7 @@ const game3v3Horizontal = {
   title: 'Le Diamant',
   image: 'https://zupimages.net/up/20/25/2vga.jpg',
   description:
-    "Travail de libérer l'espace sur un stack horizontal\n\nEn match : Sur un stack horizontal, l'objectif est d'isolé un groupe une paire de cutter et de gagner le plus de terrain possible avec le minimum de lancers",
+    "Travail de libérer l'espace sur un stack horizontal\n\nEn match : Sur un stack horizontal, l'objectif est d'isolé une paire de cutter et de gagner le plus de terrain possible avec le minimum de lancers",
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disque - 8 plots',

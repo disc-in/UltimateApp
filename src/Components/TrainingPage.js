@@ -52,7 +52,9 @@ const TrainingPage = (props) => {
           </TouchableOpacity>
         )}
         <View style={styles.programInfo}>
-          <Text style={styles.title}>{training.title}</Text>
+          <Text numberOfLines={1} style={styles.title}>
+            {training.title}
+          </Text>
           {program.trainings.length > 1 && (
             <Text style={styles.subtitle}>
               {' '}
@@ -117,10 +119,9 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   overview: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20,
-    marginVertical: 20,
+    paddingHorizontal: 10,
+    paddingBottom: 10,
+    marginVertical: 10,
     borderBottomWidth: 2,
     borderBottomColor: theme.COLOR_SECONDARY_LIGHT,
   },
@@ -137,16 +138,17 @@ const styles = StyleSheet.create({
     fontSize: theme.FONT_SIZE_LARGE,
   },
   programInfo: {
+    marginHorizontal: 40,
     alignItems: 'center',
     justifyContent: 'center',
   },
   btnPrevNext: {
     position: 'absolute',
-    left: 10,
+    left: 0,
   },
   btnNext: {
     left: 'auto',
-    right: 10,
+    right: 0,
   },
   navChevron: {
     fontSize: 42,

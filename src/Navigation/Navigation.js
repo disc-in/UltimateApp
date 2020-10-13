@@ -23,7 +23,7 @@ import { DrillTypes, EquipmentLabels } from '../Fixtures/config';
 const Stack = createStackNavigator();
 
 export const Navigation = () => (
-  <Stack.Navigator screenOptions={{ headerBackTitleVisible: false }}>
+  <Stack.Navigator screenOptions={{ headerBackTitleVisible: false, gestureEnabled: false }}>
     <Stack.Screen name="HomePage" component={HomePage} options={{ title: I18n.t('navigation.homePage') }} />
     <Stack.Screen
       name="DrillListPage"

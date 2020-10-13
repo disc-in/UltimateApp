@@ -60,8 +60,8 @@ export const AnimationEditorPage = (props) => {
 
   const setTitle = () => {
     const drillTitle = currentDrill.title || I18n.t('animationEditorPage.untitledDrill');
-    const unsavedAsterisk = isDrillSaved ? '' : ' *';
-    const displayedTitle = `${drillTitle} ${unsavedAsterisk}`;
+    const unsavedAsterisk = isDrillSaved ? '' : '* ';
+    const displayedTitle = `${unsavedAsterisk}${drillTitle}`;
 
     props.navigation.setOptions({ headerTitle: displayedTitle });
   };

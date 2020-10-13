@@ -11,8 +11,9 @@ const SavedDrillsList = (props) => {
   const [modalOpened, setModalOpened] = useState(false);
 
   const beforeOpening = (drill) => {
-    if (props.isDrillSaved) props.onOpen(drill);
-    else {
+    if (props.isDrillSaved) {
+      props.onOpen(drill);
+    } else {
       Alert.alert(
         I18n.t('editor.saveModificationsTitle'),
         I18n.t('editor.saveModificationsText', { title: props.drillTitle }),

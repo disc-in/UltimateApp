@@ -3,6 +3,7 @@ import { StyleSheet, View } from 'react-native';
 import { connect } from 'react-redux';
 
 import I18n from '../utils/i18n';
+import theme from '../styles/theme.style';
 import { saveDrill, deleteDrill } from '../Store/Actions/drillAction';
 import AnimationEditor from './editor/AnimationEditor';
 import CurrentDrillManager from './editor/CurrentDrillManager';
@@ -125,8 +126,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(AnimationEditorPage)
 
 const styles = StyleSheet.create({
   centeredView: {
+    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
   },
 });

@@ -9,12 +9,8 @@ import HeaderButton from '../shared/HeaderButton';
 const CurrentDrillManager = (props) => {
   const [visible, setVisible] = useState(false);
 
-  const openMenu = () => {
-    setVisible(true);
-  };
-  const closeMenu = () => {
-    setVisible(false);
-  };
+  const openMenu = () => setVisible(true);
+  const closeMenu = () => setVisible(false);
 
   const contribute = () => {
     Share.share({

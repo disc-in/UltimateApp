@@ -113,7 +113,7 @@ export default {
       rename: 'Rename',
       new: 'New',
       share: 'Contribute',
-      sharePlaceholder: 'Please add this drill to UltimateApp',
+      sharePlaceholder: 'Please add this drill to Disc In',
     },
     renameDrillModal: {
       placeholder: 'Click here to enter the new name',

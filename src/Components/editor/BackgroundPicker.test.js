@@ -1,6 +1,5 @@
 import React from 'react';
 import { render, waitFor, fireEvent } from '@testing-library/react-native';
-import { AnimationBackgrounds } from '../../Fixtures/config';
 
 import BackgroundPicker from './BackgroundPicker';
 

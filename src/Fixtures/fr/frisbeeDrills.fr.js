@@ -6371,7 +6371,7 @@ const game3v3Horizontal = {
   title: 'Le Diamant',
   image: 'https://zupimages.net/up/20/25/2vga.jpg',
   description:
-    "Travail de libérer l'espace sur un stack horizontal\n\nEn match : Sur un stack horizontal, l'objectif est d'isolé une paire de cutter et de gagner le plus de terrain possible avec le minimum de lancers",
+    "Travail de libérer l'espace sur un stack horizontal\n\nEn match : Sur un stack horizontal, l'objectif est d'isoler une paire de cutters et de gagner le plus de terrain possible avec le minimum de lancers",
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disque - 8 plots',

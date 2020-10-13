@@ -1,4 +1,4 @@
-# 🥏 UltimateApp
+# 🥏 UltimateApp - Disc In
 
 Developing an app to enhance Ultimate coaching abilities
 

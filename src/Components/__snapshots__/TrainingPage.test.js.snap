@@ -1121,12 +1121,13 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
       style={
         Object {
           "alignItems": "center",
-          "backgroundColor": "#232b2b",
+          "backgroundColor": "#2a9e91",
           "borderRadius": 5,
           "height": 40,
           "justifyContent": "center",
           "opacity": 1,
-          "padding": 10,
+          "paddingHorizontal": 20,
+          "paddingVertical": 10,
           "width": "80%",
         }
       }
@@ -2395,12 +2396,13 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
       style={
         Object {
           "alignItems": "center",
-          "backgroundColor": "#232b2b",
+          "backgroundColor": "#2a9e91",
           "borderRadius": 5,
           "height": 40,
           "justifyContent": "center",
           "opacity": 1,
-          "padding": 10,
+          "paddingHorizontal": 20,
+          "paddingVertical": 10,
           "width": "80%",
         }
       }

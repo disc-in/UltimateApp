@@ -2,17 +2,18 @@ import React from 'react';
 import { StyleSheet, Animated, Easing, View } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-import Animation from './Animation';
+import Animation from '../animation/Animation';
 import DraggableDisplayedElement from './DraggableDisplayedElement';
 import BackgroundPicker from './BackgroundPicker';
-import Drill from './Drill';
+import Drill from '../animation/Drill';
 import theme from '../../styles/theme.style';
 
 class AnimationEditor extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
-      animation: new Drill(),
+      animation: new Drill(props.animation),
       dTop: 0, // Distance between the top of the window and the editor
       dLeft: 0, // Distance between the left of the window and the editor
       width: 0,
@@ -28,6 +29,7 @@ class AnimationEditor extends React.Component {
       animationHeight: 100,
       animationWidth: 100,
       isElementMoving: false,
+      currentStepAV: new Animated.Value(0), // Enables to update the current step inside an animation
     };
 
     /** Vertical ratio of the space of the editor in which the animation is displayed */
@@ -38,9 +40,7 @@ class AnimationEditor extends React.Component {
 
     this.currentStep = 0;
 
-    // Enables to update  the current step inside an animation
-    this.currentStepAV = new Animated.Value(0);
-    this.currentStepAV.addListener((progress) => {
+    this.state.currentStepAV.addListener((progress) => {
       this.currentStep = progress.value;
     });
   }
@@ -138,14 +138,24 @@ class AnimationEditor extends React.Component {
     return newAnimation;
   }
 
-  componentDidMount() {
-    var newAnimation = this._copyAnimation();
+  componentDidUpdate(prevProps) {
+    const animation = new Drill(this.props.animation);
 
-    newAnimation.positions = Array(2);
-    newAnimation.positions[0] = [];
-    newAnimation.positions[1] = [];
+    if (!this.state.animation.isEqualTo(animation)) {
+      this.state.currentStepAV.setValue(0);
 
-    this.saveAnimation(newAnimation);
+      const labels = {
+        offense: 1,
+        defense: 1,
+        disc: 1,
+        triangle: 1,
+      };
+      for (const type of animation.ids) labels[type] += 1;
+      this.setState({
+        animation,
+        labels,
+      });
+    }
   }
 
   cutMove = (elemId, xDelta, yDelta, isCounterCut) => {
@@ -247,7 +257,6 @@ class AnimationEditor extends React.Component {
       /* If the element is not moved outside of the animation area, updated its coordinates */
       newAnimation.positions[Math.ceil(this.currentStep)][elementIndex] = newPositions;
     }
-
     this.saveAnimation(newAnimation);
     this.setState({ isElementMoving: false });
   };
@@ -270,7 +279,7 @@ class AnimationEditor extends React.Component {
 
     /* If the last step is currently displayed */
     if (this.currentStep === this.state.animation.stepCount() - 1)
-      Animated.timing(this.currentStepAV, {
+      Animated.timing(this.state.currentStepAV, {
         toValue: this.state.animation.stepCount() - 2,
         duration: 0,
         easing: Easing.linear,
@@ -294,6 +303,7 @@ class AnimationEditor extends React.Component {
         <Animation
           editable
           animation={this.state.animation}
+          currentStep={this.currentStep}
           onMoveStart={this.onMoveStart}
           onElementMoveEnd={this.onElementMoveEnd}
           onDimensionSet={this.setAnimationDimension}
@@ -305,7 +315,7 @@ class AnimationEditor extends React.Component {
           dLeft={this.state.dLeft}
           onStepAdded={this.addStep}
           onStepRemoved={this.removeStep}
-          currentStepAV={this.currentStepAV}
+          currentStepAV={this.state.currentStepAV}
         />
 
         <View style={styles.actionsArea}>
@@ -355,5 +365,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
-
 export default AnimationEditor;

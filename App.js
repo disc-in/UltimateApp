@@ -4,15 +4,16 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { Platform, AsyncStorage } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { enableScreens } from 'react-native-screens';
-import { Provider } from 'react-redux';
+import { Provider as ReduxProvider } from 'react-redux';
 import { Navigation } from './src/Navigation';
 import { store, persistor } from './src/Store/configureStore';
+import { Provider as PaperProvider } from 'react-native-paper';
 
 if (Platform.OS !== 'web') enableScreens();
 
 const PERSISTENCE_KEY = 'NAVIGATION_STATE';
 
-const App = props => {
+const App = (props) => {
   const [isReady, setIsReady] = React.useState(false);
   const [initialState, setInitialState] = React.useState();
 
@@ -38,16 +39,18 @@ const App = props => {
   }
 
   return (
-    <Provider store={store}>
+    <ReduxProvider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <NavigationContainer
-          initialState={initialState}
-          onStateChange={state => AsyncStorage.setItem(PERSISTENCE_KEY, JSON.stringify(state))}
-        >
-          <Navigation />
-        </NavigationContainer>
+        <PaperProvider>
+          <NavigationContainer
+            initialState={initialState}
+            onStateChange={(state) => AsyncStorage.setItem(PERSISTENCE_KEY, JSON.stringify(state))}
+          >
+            <Navigation />
+          </NavigationContainer>
+        </PaperProvider>
       </PersistGate>
-    </Provider>
+    </ReduxProvider>
   );
 };
 

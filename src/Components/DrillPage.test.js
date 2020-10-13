@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { create, act } from 'react-test-renderer';
 import { connect, Provider } from 'react-redux';
 
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
@@ -18,20 +18,18 @@ describe('<DrillPage />', () => {
 
   const drill = createDrill();
 
-  it('renders correctly', () => {
+  it('renders correctly', async () => {
     const Stack = createStackNavigator();
-    const tree = renderer
-      .create(
-        <Provider store={store}>
-          <NavigationContainer>
-            <Stack.Navigator>
-              <Stack.Screen name="DrillPage" component={ConnectedDrillPage} initialParams={{ drill }} />
-            </Stack.Navigator>
-          </NavigationContainer>
-        </Provider>,
-      )
-      .toJSON();
-    expect(tree).toMatchSnapshot();
+    const tree = create(
+      <Provider store={store}>
+        <NavigationContainer>
+          <Stack.Navigator>
+            <Stack.Screen name="DrillPage" component={ConnectedDrillPage} initialParams={{ drill }} />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </Provider>,
+    ).toJSON();
+    await act(async () => expect(tree).toMatchSnapshot());
   });
 
   it('toggles favorite drill', async () => {

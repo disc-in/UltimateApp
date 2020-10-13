@@ -67,13 +67,16 @@ export default {
       fullEquipment: 'Entraînements en salle',
     },
     drillPageMinimal: '{{training}} - exercices',
-    animationEditorPage: 'Nouvel exo (expérimental)',
+    animationEditorPage: 'Nouvel exercice',
     dictionaryPage: 'Lexique',
     essentialPage: 'Les bases du jeu',
     tacticsPage: 'Tactiques',
   },
   shared: {
     back: 'Retour',
+    cancel: 'Annuler',
+    yes: 'Oui',
+    no: 'Non',
   },
   homePage: {
     frisbeeTab: 'Frisbee',
@@ -92,15 +95,31 @@ export default {
     essential: 'Les bases du jeu',
     tactics: 'Tactiques',
   },
-  animationEditor: {
-    comingSoon: {
-      title: "C'est pour bientôt !",
-      content:
-        "Vous pourrez bientôt ajouter des exercices, séances et programmes d'entraînements.\nPour l'instant, vous pouvez nous envoyer par mail votre nouvel exercice.",
-      cancel: 'Annuler',
-      cta: "Envoyer à l'équipe",
+  animationEditorPage: {
+    untitledDrill: 'Exercice sans titre',
+  },
+  editor: {
+    saveModificationsTitle: 'Voulez-vous sauvegarder les modifications ?',
+    saveModificationsText:
+      'L\'exercice "{{title}}" a été modifié.\n\nSouhaitez-vous conserver ces modifications avant de le fermer ?',
+    savedDrillsList: {
+      title: 'Exercices sauvegardés',
+      empty: "Vous n'avez pas encore sauvegardé d'exercices",
+      delete: 'Supprimer',
+      deleteConfirmation: 'Voulez-vous vraiment supprimer cet exercice ?',
     },
-    sharePlaceholder: "Pouvez-vous ajouter cet exercice à l'application ?",
+    currentDrillManager: {
+      save: 'Sauvegarder',
+      rename: 'Renommer',
+      new: 'Nouveau',
+      share: 'Contribuer',
+      sharePlaceholder: "Pouvez-vous ajouter cet exercice à l'application ?",
+    },
+    renameDrillModal: {
+      placeholder: 'Appuyer ici pour renommer',
+      alreadyExists: 'Ce nom existe déjà',
+      cta: 'Valider',
+    },
   },
   feedback: {
     alert: {

@@ -5,12 +5,13 @@ import { useHeaderHeight } from '@react-navigation/stack';
 
 import I18n from '../utils/i18n';
 import { toggleFavorite } from '../Store/Actions/favoriteAction';
+import { DrillTypes } from '../Fixtures/config';
 import theme from '../styles/theme.style';
-import StartButton from './shared/StartButton';
-import HeaderButton from './shared/HeaderButton';
+
 import FitnessDrillIllustration from './drills/FitnessDrillIllustration';
 import FrisbeeDrillIllustration from './drills/FrisbeeDrillIllustration';
-import { DrillTypes } from '../Fixtures/config';
+import StartButton from './drills/StartButton';
+import HeaderButton from './shared/HeaderButton';
 
 export const DrillPage = (props) => {
   const { route, navigation } = props;

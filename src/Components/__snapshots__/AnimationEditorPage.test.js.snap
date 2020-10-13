@@ -6,7 +6,6 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
     Object {
       "backgroundColor": "#fff",
       "flex": 1,
-      "width": "100%",
     }
   }
 >

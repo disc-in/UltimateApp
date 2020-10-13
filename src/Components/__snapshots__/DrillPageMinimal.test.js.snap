@@ -25,6 +25,7 @@ Array [
           Object {
             "fontSize": 20,
             "fontWeight": "bold",
+            "marginRight": 46,
             "textAlign": "center",
           }
         }
@@ -45,7 +46,7 @@ Array [
           Object {
             "opacity": 1,
             "position": "absolute",
-            "right": 30,
+            "right": 20,
           }
         }
         testID="detailsButton"
@@ -245,12 +246,13 @@ Array [
       style={
         Object {
           "alignItems": "center",
-          "backgroundColor": "#232b2b",
+          "backgroundColor": "#2a9e91",
           "borderRadius": 5,
           "height": 40,
           "justifyContent": "center",
           "opacity": 1,
-          "padding": 10,
+          "paddingHorizontal": 20,
+          "paddingVertical": 10,
           "width": "80%",
         }
       }

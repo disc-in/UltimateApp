@@ -22,7 +22,9 @@ const DrillList = (props) => {
         </ImageBackground>
         <View style={list.itemContentContainer}>
           <Text style={list.source}>{author}</Text>
-          <Text style={list.title}>{title}</Text>
+          <Text numberOfLines={1} style={list.title}>
+            {title}
+          </Text>
           <Text style={list.numberOfPlayers}>
             {goals
               .map((goal) =>

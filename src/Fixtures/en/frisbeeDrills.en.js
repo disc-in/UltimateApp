@@ -93,6 +93,9 @@ import checkLongKidAnimation from '../Animation/CheckLongKid';
 import adaptMark from '../Animation/AdaptMark';
 import ghost from '../Animation/Ghost';
 import ladderGhost from '../Animation/LadderGhost';
+import fishAnimation from '../Animation/Fish';
+import reverseEightAnimation from '../Animation/ReverseEight';
+import reverseEightTargetAnimation from '../Animation/ReverseEightTarget';
 
 const stabilityDrill = {
   id: 1,
@@ -104,7 +107,7 @@ const stabilityDrill = {
     "It's the first session of our program, we start with stability drill to build solid base for the rest of the season",
   minimalPlayersNumber: 1,
   equipmentLabel: EquipmentLabels.NONE,
-  equipment: 'Kettlebell - Dumbbell',
+  equipment: 'Kettlebells - Dumbbell',
   durationInMinutes: 20,
   intensity: Intensities.LOW,
   goals: [FitnessGoals.LEGS, FitnessGoals.UPPER],
@@ -153,7 +156,7 @@ const stabilityDrill = {
     },
     {
       id: 5,
-      title: 'Dual Gorilla Kettlebell Rows',
+      title: 'Dual Gorilla Kettlebells Rows',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '406747038',
       sounds: false,
@@ -213,7 +216,7 @@ const stabilityDrill = {
     },
     {
       id: 11,
-      title: 'Dual Gorilla Kettlebell Rows',
+      title: 'Dual Gorilla Kettlebells Rows',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '406747038',
       sounds: false,
@@ -273,7 +276,7 @@ const stabilityDrill = {
     },
     {
       id: 17,
-      title: 'Dual Gorilla Kettlebell Rows',
+      title: 'Dual Gorilla Kettlebells Rows',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '406747038',
       sounds: false,
@@ -333,7 +336,7 @@ const stabilityDrill = {
     },
     {
       id: 23,
-      title: 'Dual Gorilla Kettlebell Rows',
+      title: 'Dual Gorilla Kettlebells Rows',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '406747038',
       sounds: false,
@@ -358,12 +361,12 @@ const strengthDrill = {
   id: 2,
   type: DrillTypes.FITNESS,
   author: '',
-  title: 'Strenght Legs',
+  title: 'Strength Legs',
   image: 'https://zupimages.net/up/20/28/s5vc.jpg',
   description: 'The first strength practice of the season',
   minimalPlayersNumber: 1,
   equipmentLabel: EquipmentLabels.FULL,
-  equipment: 'Kettlebell - Dumbbell - Tow bar',
+  equipment: 'Kettlebells - Dumbbell - Tow bar',
   durationInMinutes: 15,
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY],
@@ -495,7 +498,7 @@ const strengthDrill = {
 
 const warmupGameDrill = {
   id: 5,
-  type: DrillTypes.FITNESS,
+  type: DrillTypes.FRISBEE,
   author: '',
   title: 'Warm-up Game ready',
   image: 'https://zupimages.net/up/20/19/f2bd.jpg',
@@ -524,7 +527,7 @@ const warmupGameDrill = {
 
 const warmupDrill = {
   id: 6,
-  type: DrillTypes.FITNESS,
+  type: DrillTypes.FRISBEE,
   author: '',
   title: 'Warm-up Ultimate',
   image: 'https://zupimages.net/up/20/19/va5f.jpg',
@@ -666,7 +669,7 @@ const fartlek = {
       sounds: true,
       repetition: '25"',
       rest: '',
-      instruction: 'For 10 seconds every minute, accelerates by a few kilometres per hour.',
+      instruction: 'For 10 seconds every minute, accelerates by a few kilometers per hour.',
     },
   ],
 };
@@ -1098,7 +1101,7 @@ const tDrill = {
   title: 'T-Drill',
   image: 'https://zupimages.net/up/20/28/7q43.jpg',
   description:
-    'Warm-up (for sprint and change of direction).\n6 repetitions of 30 meters T-drill then 6 repetitions of Shuttle 5-10-5. Then repeat. A total of 4 sets of 6 repetitions. 45sec of recovery between repetiton and 3min of recovery between sets.',
+    'Warm-up (for sprint and change of direction).\n6 repetitions of 30 meters T-drill then 6 repetitions of Shuttle 5-10-5. Then repeat. A total of 4 sets of 6 repetitions. 45sec of recovery between repetition and 3min of recovery between sets.',
   minimalPlayersNumber: 1,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: 'None',
@@ -1365,7 +1368,7 @@ const circuit = {
   id: 14,
   type: DrillTypes.FITNESS,
   author: '',
-  title: 'Core Strenght',
+  title: 'Core Strength',
   image: 'https://zupimages.net/up/20/19/kj0f.jpg',
   description: 'Follow the workout',
   minimalPlayersNumber: 1,
@@ -1519,7 +1522,7 @@ const circuit = {
     },
     {
       id: 15,
-      title: 'Cossac Squat',
+      title: 'Cossack Squat',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '431760267',
       sounds: false,
@@ -2393,7 +2396,7 @@ const agility1 = {
     },
     {
       id: 7,
-      title: 'Gorilla Kettlebell Rows',
+      title: 'Gorilla Kettlebells Rows',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '406747038',
       sounds: false,
@@ -2424,7 +2427,7 @@ const agility1 = {
   ],
 };
 
-const strenght1 = {
+const strength1 = {
   id: 26,
   type: DrillTypes.FITNESS,
   author: '',
@@ -2433,7 +2436,7 @@ const strenght1 = {
   description: 'Works on strength gain ',
   minimalPlayersNumber: 1,
   equipmentLabel: EquipmentLabels.FULL,
-  equipment: 'Tow bar - Kettlebell - Box - Bench',
+  equipment: 'Tow bar - Kettlebells - Box - Bench',
   durationInMinutes: 25,
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
@@ -2482,7 +2485,7 @@ const strenght1 = {
     },
     {
       id: 5,
-      title: 'Banded Russian Kettlebell Swings',
+      title: 'Banded Russian Kettlebells Swings',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '406746857',
       sounds: false,
@@ -2523,7 +2526,7 @@ const strenght1 = {
   ],
 };
 
-const strenght2 = {
+const strength2 = {
   id: 27,
   type: DrillTypes.FITNESS,
   author: '',
@@ -2532,7 +2535,7 @@ const strenght2 = {
   description: 'Works on strength gain ',
   minimalPlayersNumber: 1,
   equipmentLabel: EquipmentLabels.FULL,
-  equipment: 'Tow bar - Kettlebell - Barbell - Landmine',
+  equipment: 'Tow bar - Kettlebells - Barbell - Landmine',
   durationInMinutes: 25,
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
@@ -2571,7 +2574,7 @@ const strenght2 = {
     },
     {
       id: 4,
-      title: 'Banded Russian Kettlebell Swings',
+      title: 'Banded Russian Kettlebells Swings',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '406746857',
       sounds: false,
@@ -2820,7 +2823,7 @@ const agility3 = {
   ],
 };
 
-const strenght3 = {
+const strength3 = {
   id: 30,
   type: DrillTypes.FITNESS,
   author: '',
@@ -2829,7 +2832,7 @@ const strenght3 = {
   description: 'Works on strength gain ',
   minimalPlayersNumber: 1,
   equipmentLabel: EquipmentLabels.FULL,
-  equipment: 'Kettlebell - Dumbbell - Box - Barbell',
+  equipment: 'Kettlebells - Dumbbell - Box - Barbell',
   durationInMinutes: 30,
   intensity: Intensities.MODERATE,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
@@ -2909,7 +2912,7 @@ const strenght3 = {
   ],
 };
 
-const strenght16 = {
+const strength16 = {
   id: 31,
   type: DrillTypes.FITNESS,
   author: '',
@@ -2918,7 +2921,7 @@ const strenght16 = {
   description: 'Works on strength gain ',
   minimalPlayersNumber: 1,
   equipmentLabel: EquipmentLabels.FULL,
-  equipment: 'Kettlebell - Dumbbell - Tow bar - Barbell - Band',
+  equipment: 'Kettlebells - Dumbbell - Tow bar - Barbell - Band',
   durationInMinutes: 30,
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
@@ -3116,7 +3119,7 @@ const agility15 = {
   description: 'Works on explosiveness and stability ',
   minimalPlayersNumber: 1,
   equipmentLabel: EquipmentLabels.FULL,
-  equipment: 'Band - Ball - Kettlebell',
+  equipment: 'Band - Ball - Kettlebells',
   durationInMinutes: 30,
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
@@ -3155,7 +3158,7 @@ const agility15 = {
     },
     {
       id: 4,
-      title: 'Hip Mobility 9090 Kettlebell',
+      title: 'Hip Mobility 9090 Kettlebells',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '436142352',
       sounds: false,
@@ -3175,7 +3178,7 @@ const agility15 = {
     },
     {
       id: 6,
-      title: 'Kettlebell Overhead Reverse Lunge (Left)',
+      title: 'Kettlebells Overhead Reverse Lunge (Left)',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '436140507',
       sounds: false,
@@ -3185,7 +3188,7 @@ const agility15 = {
     },
     {
       id: 7,
-      title: 'Kettlebell Overhead Reverse Lunge (Right)',
+      title: 'Kettlebells Overhead Reverse Lunge (Right)',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '436140507',
       sounds: false,
@@ -3216,7 +3219,7 @@ const agility15 = {
   ],
 };
 
-const strenght15 = {
+const strength15 = {
   id: 34,
   type: DrillTypes.FITNESS,
   author: '',
@@ -3305,7 +3308,7 @@ const strenght15 = {
   ],
 };
 
-const strenght14 = {
+const strength14 = {
   id: 35,
   type: DrillTypes.FITNESS,
   author: '',
@@ -3572,7 +3575,7 @@ const agility13 = {
   ],
 };
 
-const strenght13 = {
+const strength13 = {
   id: 38,
   type: DrillTypes.FITNESS,
   author: '',
@@ -3660,7 +3663,7 @@ const agility12 = {
   description: 'Works on explosiveness and stability ',
   minimalPlayersNumber: 1,
   equipmentLabel: EquipmentLabels.FULL,
-  equipment: 'Landmine - Kettlebell - Dumbbell',
+  equipment: 'Landmine - Kettlebells - Dumbbell',
   durationInMinutes: 30,
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
@@ -3739,7 +3742,7 @@ const agility12 = {
     },
     {
       id: 8,
-      title: 'American Kettlebell Swings',
+      title: 'American Kettlebells Swings',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '434507234',
       sounds: false,
@@ -3750,7 +3753,7 @@ const agility12 = {
   ],
 };
 
-const strenght12 = {
+const strength12 = {
   id: 40,
   type: DrillTypes.FITNESS,
   author: '',
@@ -3928,7 +3931,7 @@ const agility11 = {
   ],
 };
 
-const strenght11 = {
+const strength11 = {
   id: 42,
   type: DrillTypes.FITNESS,
   author: '',
@@ -4026,7 +4029,7 @@ const agility10 = {
   description: 'Works on explosiveness and stability ',
   minimalPlayersNumber: 1,
   equipmentLabel: EquipmentLabels.FULL,
-  equipment: 'Box - Kettlebell - Dumbbell',
+  equipment: 'Box - Kettlebells - Dumbbell',
   durationInMinutes: 30,
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
@@ -4095,7 +4098,7 @@ const agility10 = {
     },
     {
       id: 7,
-      title: 'Kettlebell Cross Body Split Squat (Left)',
+      title: 'Kettlebells Cross Body Split Squat (Left)',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '435781381',
       sounds: false,
@@ -4105,7 +4108,7 @@ const agility10 = {
     },
     {
       id: 8,
-      title: 'Kettlebell Cross Body Split Squat (Left)',
+      title: 'Kettlebells Cross Body Split Squat (Left)',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '435781381',
       sounds: false,
@@ -4116,7 +4119,7 @@ const agility10 = {
   ],
 };
 
-const strenght10 = {
+const strength10 = {
   id: 44,
   type: DrillTypes.FITNESS,
   author: '',
@@ -4304,7 +4307,7 @@ const agility9 = {
   ],
 };
 
-const strenght9 = {
+const strength9 = {
   id: 46,
   type: DrillTypes.FITNESS,
   author: '',
@@ -4492,7 +4495,7 @@ const agility8 = {
   ],
 };
 
-const strenght8 = {
+const strength8 = {
   id: 48,
   type: DrillTypes.FITNESS,
   author: '',
@@ -4590,7 +4593,7 @@ const agility7 = {
   description: 'Works on explosiveness and stability ',
   minimalPlayersNumber: 1,
   equipmentLabel: EquipmentLabels.FULL,
-  equipment: 'Kettlebell - Band - Box - Dumbbell',
+  equipment: 'Kettlebells - Band - Box - Dumbbell',
   durationInMinutes: 30,
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
@@ -4609,7 +4612,7 @@ const agility7 = {
     },
     {
       id: 2,
-      title: 'Russian Kettlebell Swing',
+      title: 'Russian Kettlebells Swing',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '435858810',
       sounds: false,
@@ -4680,7 +4683,7 @@ const agility7 = {
   ],
 };
 
-const strenght7 = {
+const strength7 = {
   id: 50,
   type: DrillTypes.FITNESS,
   author: '',
@@ -4788,7 +4791,7 @@ const agility6 = {
   description: 'Works on explosiveness and stability ',
   minimalPlayersNumber: 1,
   equipmentLabel: EquipmentLabels.FULL,
-  equipment: 'Kettlebell - Landmine - Dumbbell',
+  equipment: 'Kettlebells - Landmine - Dumbbell',
   durationInMinutes: 30,
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
@@ -4807,7 +4810,7 @@ const agility6 = {
     },
     {
       id: 2,
-      title: 'Russian Kettlebell Swing',
+      title: 'Russian Kettlebells Swing',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '435858810',
       sounds: false,
@@ -4868,7 +4871,7 @@ const agility6 = {
   ],
 };
 
-const strenght6 = {
+const strength6 = {
   id: 52,
   type: DrillTypes.FITNESS,
   author: '',
@@ -4976,7 +4979,7 @@ const agility5 = {
   description: 'Works on explosiveness and stability ',
   minimalPlayersNumber: 1,
   equipmentLabel: EquipmentLabels.FULL,
-  equipment: 'Kettlebell - Band - Dumbbell',
+  equipment: 'Kettlebells - Band - Dumbbell',
   durationInMinutes: 30,
   intensity: Intensities.HIGH,
   goals: [FitnessGoals.FULL_BODY, FitnessGoals.LEGS, FitnessGoals.UPPER],
@@ -4995,7 +4998,7 @@ const agility5 = {
     },
     {
       id: 2,
-      title: 'Russian Kettlebell Swing',
+      title: 'Russian Kettlebells Swing',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '435858810',
       sounds: false,
@@ -5066,7 +5069,7 @@ const agility5 = {
   ],
 };
 
-const strenght5 = {
+const strength5 = {
   id: 54,
   type: DrillTypes.FITNESS,
   author: '',
@@ -5161,7 +5164,8 @@ const basicThrowsDrill = {
   author: 'Mooncatchers',
   title: 'Throwing Routine',
   image: 'https://zupimages.net/up/20/19/zgxt.jpg',
-  description: 'Basic drills to learn how to throw',
+  description:
+    'Basic drills to learn how to throw. \n\nIn game: It is necessary to master several types of throws to adapt to all situations.',
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disc',
@@ -5209,7 +5213,8 @@ const breakDrill = {
   author: 'Friselis',
   title: 'Cuts to the Break Side',
   image: 'https://zupimages.net/up/20/19/83fx.jpg',
-  description: 'Cutting from the open side to the break side. The drill is both for the thrower and the mark.',
+  description:
+    'Cutting from the open side to the break side. The drill is both for the thrower and the mark.\n\nIn game: Defenders seek to limit the options for passing through a mark. If the attackers manage to break, they drastically increase the passing options.',
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '6 discs - 2 cones',
@@ -5252,7 +5257,7 @@ const treasureHuntDrill = {
   title: 'Treasure Hunt',
   image: 'https://zupimages.net/up/20/19/z7lq.jpg',
   description:
-    '2 teams are fighting. The objective is to bring the 5 Frisbees back into a square delimited by the cones.\nPlayers are not allowed to walk with the Frisbee. When a Frisbee falls or is intercepted, it must be brought back to the starting point by the attacking team. The first team that "saves" all its frisbees wins.',
+    '2 teams are competing. The objective is to bring the 5 Frisbees back into a square delimited by the cones.\nPlayers are not allowed to walk with the Frisbee. When a Frisbee falls or is intercepted, it must be brought back to the starting point by the attacking team. The first team that "saves" all its frisbees wins.\n\nIn game: In order to achieve collective defenses, it is important to work on communication between players. An efficient communication will allow to make judicious switches.',
   minimalPlayersNumber: 10,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '10 discs - 10 cones',
@@ -5281,7 +5286,8 @@ const kyeDrill = {
   author: 'Kye',
   title: '3 vs 2',
   image: 'https://zupimages.net/up/20/19/zgxt.jpg',
-  description: 'The team with two players stays on defense if they successfully force a turnover',
+  description:
+    'The team with two players stays on defense if they successfully force a turnover\n\nIn game: Sometimes a situation of overload is created (after a long time in particular). In this case, the attackers have to be able to play quickly to gain ground without another defender being able to catch up. Defenders try to slow down the attackers as much as possible by leaving the wearer of the Frisbee without a mark',
   minimalPlayersNumber: 5,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disc - 2 cones',
@@ -5299,7 +5305,7 @@ const kyeDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'The defense can count without being close to the thrower.The stall is at 5 and the offensice player can’t make a long hrow.\nIf there is a turn over the defensive players stay in defense.',
+        'The defense can count without being close to the thrower.The stall is at 5 and the offensive player can’t make a long throw.\nIf there is a turn over the defensive players stay in defense.',
     },
   ],
 };
@@ -5308,9 +5314,10 @@ const bigEightDrill = {
   id: 1005,
   type: DrillTypes.FRISBEE,
   author: 'Mooncatchers',
-  title: 'The big 8',
+  title: 'The Big 8',
   image: 'https://zupimages.net/up/20/19/5209.jpg',
-  description: 'Making a pass circuit where each player will try to work on their throws',
+  description:
+    'Making a pass circuit where each player will try to work on their throws\n\nIn game: In order to ensure a good continuation, it is necessary to work on the timing of the cuts and the technique. The play worked on in this exercise will allow to go out of the line and to progress quickly on the break side.',
   minimalPlayersNumber: 16,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '8 discs - 8 cones',
@@ -5322,13 +5329,33 @@ const bigEightDrill = {
   steps: [
     {
       id: 1,
-      title: '',
+      title: 'The Big 8',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: bigEight,
       repetition: '',
       rest: '',
       instruction:
-        'Here is the rotation: \nHandler in the middle \nReset going for the backdoor \nFirst of the stack following in the break \nLast of the stack going long \nSame but in opposite position ',
+        'Rotation: \n1- Handler in the middle \n2- Reset going for the backdoor \n3- First of the stack following in the break \nLast of the stack going long \n4- Same but in opposite position ',
+    },
+    {
+      id: 2,
+      title: 'Break & Continuity',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: reverseEightAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Rotation : \n1- Mark oriented line \n2-Trapped Thrower\n3-First of the Stack catching the swing\n4-Continuity of the second of the stack\n5- Long run in the break',
+    },
+    {
+      id: 3,
+      title: "Let's be precise",
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: reverseEightTargetAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Same situation with the addition of a target for the long pass. We have to time how long the players need to complete 20 passes caught in the squares.',
     },
   ],
 };
@@ -5339,7 +5366,8 @@ const trainDrill = {
   author: 'Iznogood',
   title: 'The Train',
   image: 'https://zupimages.net/up/20/19/ac8s.jpg',
-  description: 'This is a drill which works on the flow of a vertical stack',
+  description:
+    'This is a drill which works on the flow of a vertical stack\n\nIn game: A first pass has been made and the attacking team needs to reposition itself to obtain smooth and efficient continuity options.',
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disc',
@@ -5387,7 +5415,8 @@ const giveAndGoDrill = {
   author: 'Freezzz beezzz',
   title: 'Give-N-Go',
   image: 'https://zupimages.net/up/20/19/s9fe.jpg',
-  description: 'Follow your disc as fast as possible',
+  description:
+    "Follow your disc as fast as possible\n\nIn game: The quick give'n'go allows the attackers to gain ground and have a more advantageous position to throw. The thrower seeks to take maximum advantage of the defender's inertia to get ahead of his cut.",
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disc - 12 cones',
@@ -5424,7 +5453,8 @@ const aussieDrill = {
   author: 'Head of States',
   title: 'Aussie games',
   image: 'https://zupimages.net/up/20/19/78g2.png',
-  description: 'You can run with the disc',
+  description:
+    "You can run with the disc\n\nIn game: This playful exercise allows to work on the defenders' communication. This is essential in order to realize switches on the field and/or an efficient zone defense. On offense, this exercise enables you to work on the detection of the players who are not marked out.",
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '4 discs - 20 cones',
@@ -5453,7 +5483,8 @@ const bolognaMDrill = {
   author: 'CUSB',
   title: 'The M',
   image: 'https://zupimages.net/up/20/19/akuy.jpg',
-  description: 'Follow the M',
+  description:
+    'Follow the M\n\nIn game: This drill allows you to work on the timing needed to get out of the line. The first cut corresponds to the stroke made by the first in the stack when you want to re-center the disc.',
   minimalPlayersNumber: 10,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '5 disc - 6 cones',
@@ -5481,7 +5512,8 @@ const goToTenDrill = {
   author: "Jack'suns",
   title: 'Go to 10',
   image: 'https://zupimages.net/up/20/19/rcyt.jpg',
-  description: 'First team with 10 completes passes win',
+  description:
+    'First team with 10 complete passes win\n\nIn game: It is important to know how to keep the disk as long as possible. This knowledge is particularly useful against a zone defense or when approaching the endzone.',
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disc - 4 cones',
@@ -5548,7 +5580,7 @@ const bulldogDrill = {
   title: 'British Bulldog',
   image: 'https://zupimages.net/up/20/19/tf79.jpg',
   description:
-    'The bulldogs stand in the middle of the play area. All remaining players stand at one end of the area (home). The aim of the game is to run from one end of the field of play to the other, without being caught by the bulldogs. When a player is caught, they become a bulldog themselves.',
+    'The bulldogs stand in the middle of the play area. All remaining players stand at one end of the area (home). The aim of the game is to run from one end of the field of play to the other, without being caught by the bulldogs. When a player is caught, they become a bulldog themselves.\n\nIn game: The defenders work the curtain situation in a zone defense. They have to communicate with each other and move uniformly in order not to leave any space between them.',
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '4 cones',
@@ -5625,7 +5657,8 @@ const dwarfDuelDrill = {
   author: 'PUC',
   title: 'Dwarf Duel',
   image: 'https://zupimages.net/up/20/19/3m3k.jpg',
-  description: 'Duel without jumping, all about positioning',
+  description:
+    'Duel without jumping, all about positioning\n\nIn game: A long one is thrown and you have to win your duel. If in this duel, your size is a disadvantage, it is necessary to block your opponent by running (without causing contact).',
   minimalPlayersNumber: 3,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disc - 2 cones',
@@ -5663,7 +5696,8 @@ const dishieChainDrill = {
   author: 'Mooncatchers',
   title: 'Dishie Chain',
   image: 'https://zupimages.net/up/20/19/stdq.jpg',
-  description: 'Basic long passes drill. You want your players to alternate between throwing, running and passing',
+  description:
+    'Basic long passes drill. You want your players to alternate between throwing, running and passing\n\nIn game: When defenders circle a vertical stack, they surround them and make switches. In order to break through this defense, the attackers must attack, in pairs, the same defender. The defender will then have to choose one of the attackers and the thrower will be able to play on the attacker left free.',
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disc - 2 cones',
@@ -5720,7 +5754,8 @@ const breakDanceDrill = {
   author: 'Disc Joker',
   title: 'Break Dance',
   image: 'https://zupimages.net/up/20/19/agsd.jpg',
-  description: 'Making a christmas tree in the break',
+  description:
+    'Making a christmas tree in the break\n\nIn game: The interest of a vertical stack is to free 2 play zones. When a team manages to play on the break side, it must try to quickly gain ground by a succession of passes.',
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '5 discs - 10 cones',
@@ -5748,7 +5783,7 @@ const breakDanceDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'The 2 teams are racing. \nWhen the disc reach the last player, he has to run as fast as possible to start a new serie. \nFirst team that make the complete rotation win!',
+        'The 2 teams are racing. \nWhen the disc reach the last player, he has to run as fast as possible to start a new series. \nFirst team that make the complete rotation win!',
     },
   ],
 };
@@ -5759,7 +5794,8 @@ const triangleOfDeathdrill = {
   author: 'Forward',
   title: 'The Triangle of Death',
   image: 'https://zupimages.net/up/20/19/kmlc.jpg',
-  description: 'Throwing 10 hucks in a row as far and as fast as possible',
+  description:
+    "Throwing 10 hucks in a row as far and as fast as possible\n\nIn game: You must be able to quickly regain your balance and analyze the cutter's stroke. The thrower then performs a long one in order to gain as much ground as possible.",
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '10 disc - 3 cones',
@@ -5788,7 +5824,8 @@ const trainOfFakeDrill = {
   author: 'Iznogood',
   title: 'The Fake Train',
   image: 'https://zupimages.net/up/20/19/ac8s.jpg',
-  description: 'This is a drill which works on the flow of a vertical stack',
+  description:
+    'This is a drill which works on the flow of a vertical stack\n\nIn game: The first pass has been made and the attackers must set up for a fluid attack. The first play option remains the open side. If the open side is blocked a quick reversal must be made to play on the break side.',
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disc',
@@ -5864,7 +5901,8 @@ const resetOpenDrill = {
   author: 'Tchac',
   title: 'Reset Open',
   image: 'https://zupimages.net/up/20/19/tzk3.jpg',
-  description: 'Cutting with good timing; throwing immediately after catching',
+  description:
+    'Cutting with good timing; throwing immediately after catching\n\nIn game: The pass on the middles was not possible, now you have to play on the support handler. This one is on the side towards which the force is directed (open), he has to perform the movement seen in this exercise.',
   minimalPlayersNumber: 4,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disc',
@@ -5940,7 +5978,8 @@ const resetBreakDrill = {
   author: 'Tchac',
   title: 'Reset Break',
   image: 'https://zupimages.net/up/20/19/w90f.jpg',
-  description: 'Cutting with good timing; throwing immediately after catching',
+  description:
+    'Cutting with good timing; throwing immediately after catching\n\nIn game: The pass on the middles was not possible, now you have to play on the support handler. This one is on the opposite side to the force (break), he must perform the movement seen in this exercise.',
   minimalPlayersNumber: 4,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disc',
@@ -6016,7 +6055,8 @@ const youShallNotPassDrill = {
   author: 'Belgium Open',
   title: 'You Shall Not Pass',
   image: 'https://zupimages.net/up/20/19/90z6.jpg',
-  description: 'Using your body to prevent your opponent from getting to the disc',
+  description:
+    "Using your body to prevent your opponent from getting to the disc\n\nIn game: Experienced defenders can use their bodies to block an opponent's run. In order not to make a fault, the defender must place himself in the trajectory of the attacker sufficiently in advance to allow the attacker to avoid him.",
   minimalPlayersNumber: 4,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disc - 4 cones',
@@ -6034,7 +6074,7 @@ const youShallNotPassDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'Set up both an offense line and a defense line. One offensive player and one defender each run to the box then cut deep at the same time. The offensive player must cut back towards the thrower to try to catch the disc in the box, they are only allowed to change their direction this one time. The defender must position themself so that the offense cannot pass them to return to the box. The thrower may only throw to under cuts.',
+        'Set up both an offense line and a defense line. One offensive player and one defender each run to the box then cut deep at the same time. The offensive player must cut back towards the thrower to try to catch the disc in the box, they are only allowed to change their direction this one time. The defender must position themselves so that the offense cannot pass them to return to the box. The thrower may only throw to under cuts.',
     },
     {
       id: 2,
@@ -6083,7 +6123,8 @@ const defensePositionDrill = {
   author: 'Sockeye',
   title: 'Defense Positioning',
   image: 'https://zupimages.net/up/20/19/zigu.jpg',
-  description: "Maintaining good positioning and adapting to the team's defense",
+  description:
+    "Maintaining good positioning and adapting to the team's defense\n\nIn game: Equivalent to force, defenders on cutters must favor the options they wish to block. The goal of the defenders is to take the attackers out of their comfort zone.",
   minimalPlayersNumber: 4,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disc - 5 cones',
@@ -6152,7 +6193,8 @@ const dDC = {
   author: '',
   title: 'DDC',
   image: 'https://zupimages.net/up/20/25/t73e.jpg',
-  description: 'Double disc court is a frisbee sport which combines quickness, strategy, and throwing ability.',
+  description:
+    'Double disc court is a frisbee sport which combines quickness, strategy, and throwing ability\n\nIn game: The DDC allows you to work on the control of passing curves and communication. The technical gain allows you to adapt to the match situation',
   minimalPlayersNumber: 4,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '2 discs - 8 cones',
@@ -6190,7 +6232,8 @@ const horizontalTiming = {
   author: 'Wizard',
   title: 'Horizontal Timing',
   image: 'https://zupimages.net/up/20/25/zn5l.jpg',
-  description: 'Complete drill to work on the timing of the cutter and handler in a horizontal stack',
+  description:
+    'Complete drill to work on the timing of the cutter and handler in a horizontal stack\n\nIn game: After receiving the pull, the attackers can try to set up a play with a Horizontal stack. The interest is to gain a lot of ground in a few passes.',
   minimalPlayersNumber: 5,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disc',
@@ -6228,7 +6271,8 @@ const game3v3Horizontal = {
   author: 'Mooncatchers',
   title: 'Diamond Cut',
   image: 'https://zupimages.net/up/20/25/2vga.jpg',
-  description: 'work of freeing up spaces in a horizontal stack',
+  description:
+    'Work of freeing up spaces in a horizontal stack\n\nIn game: On a horizontal stack, the objective is to isolate a group a pair of cutters and to gain as much ground as possible with the minimum number of throws.',
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disc - 8 cones',
@@ -6266,7 +6310,8 @@ const theDuel = {
   author: 'Furious George',
   title: 'Nothing like a duel',
   image: 'https://zupimages.net/up/20/28/ncjr.jpg',
-  description: 'Nothing better than a duel to work on the different aspects of the game',
+  description:
+    'Nothing better than a duel to work on the different aspects of the game\n\nIn game: The vast majority of tactics aim to isolate one or more players in order to limit collective defenses. In this exercise, the objective is to work on the duel that results from a well-performed tactic.',
   minimalPlayersNumber: 4,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disc ',
@@ -6284,7 +6329,7 @@ const theDuel = {
       repetition: '',
       rest: '',
       instruction:
-        "The cutter after initating can't make any fake. The thrower has to react quickly. Rotate every Three throws ",
+        "The cutter after initiating can't make any fake. The thrower has to react quickly. Rotate every Three throws ",
     },
     {
       id: 2,
@@ -6305,7 +6350,8 @@ const cardinal = {
   author: 'PUC',
   title: 'Cardinal Point',
   image: 'https://zupimages.net/up/20/25/xtik.png',
-  description: 'Learning to throw in any position',
+  description:
+    'Learning to throw in any position\n\nIn game: You have to be able to adapt to the mark you are setting up. Being able to throw allows you to launch more quickly.',
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disc ',
@@ -6343,7 +6389,8 @@ const horizontalToVertical = {
   author: 'Mubidisk',
   title: 'Horizontal Flow',
   image: 'https://zupimages.net/up/20/25/kecr.jpg',
-  description: 'Learning to create a powerful flow from a static position.',
+  description:
+    'Learning to create a powerful flow from a static position.\n\nIn game: A play was made with a horizontal stack. The goal is to find as quickly as possible a fluid attack (the flow).',
   minimalPlayersNumber: 7,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disc ',
@@ -6391,8 +6438,9 @@ const horizontalTrap = {
   type: DrillTypes.FRISBEE,
   author: 'Mubidisk',
   title: 'Trap with the Open',
-  image: 'https://zupimages.net/up/20/25/zkfl.jpg',
-  description: 'Learning to use the horizontal stack to get out of the line with the cutter in the open side',
+  image: 'https://zupimages.net/up/20/41/y1ki.jpg',
+  description:
+    'Learning to use the horizontal stack to get out of the line with the cutter in the open side\n\nIn game, The owner of the disc is stuck near the sideline and tries to center the disc or gain a lot of ground. One of the tactics used may be a horizontal stack. In this exercise, the cut work is done by the middles in front of the thrower.',
   minimalPlayersNumber: 6,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disc ',
@@ -6489,7 +6537,8 @@ const horizontalHandler = {
   author: 'Euforia',
   title: 'Trap with the handlers',
   image: 'https://zupimages.net/up/20/25/zkfl.jpg',
-  description: 'Learning to use the horizontal stack to get out of the line with the handler',
+  description:
+    'Learning to use the horizontal stack to get out of the line with the handler\n\nIn game: The owner of the disc is stuck near the sideline and tries to center the disc or gain a lot of ground. One of the tactics used may be a horizontal stack. In this exercise, the cut work is done by the handlers.',
   minimalPlayersNumber: 8,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disc ',
@@ -6538,7 +6587,8 @@ const checkLong = {
   author: 'Disk Joker',
   title: 'Long is your new weapon',
   image: 'https://zupimages.net/up/20/25/pzn1.jpg',
-  description: 'Learning to throw deep as a thrower and to get information as a cutter',
+  description:
+    "Learning to throw deep as a thrower and to get information as a cutter\n\nIn game: The cutter must observe the progress of the action in order to obtain the best timing for its run. The thrower must adjust to quickly find his balance and throw into the cutter's stroke.",
   minimalPlayersNumber: 3,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disc ',
@@ -6567,7 +6617,8 @@ const throwCatchThrow = {
   author: 'PUC',
   title: 'Double Disc',
   image: 'https://zupimages.net/up/20/25/gf41.jpg',
-  description: 'Work by pair. The goal is to improve your throwing and catching speed',
+  description:
+    'Work by pair. The goal is to improve your throwing and catching speed\n\nIn game: Gaining dexterity with the discus allows you to throw faster. This asset allows to break the mark more',
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '2 discs ',
@@ -6603,9 +6654,10 @@ const stopFlow = {
   id: 1035,
   type: DrillTypes.FRISBEE,
   author: 'Colony',
-  title: 'Stoping the Flow',
+  title: 'Stopping the Flow',
   image: 'https://zupimages.net/up/20/28/2b8i.jpg',
-  description: 'Learn to quickly identify dangerous option and deny it.',
+  description:
+    'Learn to quickly identify dangerous option and deny it.\n\nIn game: The attackers took the defenders by storm with the first pass. The objective of the defender is to slow down the attack by blocking the most dangerous option with his mark.',
   minimalPlayersNumber: 5,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disc',
@@ -6643,7 +6695,8 @@ const theTunnel = {
   author: 'CUSB',
   title: 'The Tunnel',
   image: 'https://zupimages.net/up/20/25/742g.jpeg',
-  description: 'Warm up drill to focus on the reactivity in defense.',
+  description:
+    'Warm up drill to focus on the reactivity in defense.\n\nIn game: The defenders try to block a direction of the cutter (the under cut in the animation) by always placing themselves between the thrower and the cutter. The defender must also try to stay close to the attacker on the opposite (long) cut option.',
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '4 cones ',
@@ -6672,7 +6725,8 @@ const sprintDefense = {
   author: 'Lucky Grass',
   title: "The Leopard's Defense",
   image: 'https://zupimages.net/up/20/25/5pqg.jpg',
-  description: 'Warm up drill to focus on the reactivity in defense.',
+  description:
+    'Warm up drill to focus on the reactivity in defense.\n\nIn game: A defender must adapt to the cutter stroke as quickly as possible.',
   minimalPlayersNumber: 2,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '4 cones ',
@@ -6701,7 +6755,8 @@ const cupSwinging = {
   author: 'Black Fish',
   title: 'Swinging with the cup',
   image: 'https://zupimages.net/up/20/25/019o.jpg',
-  description: 'Practicing the defense against the swing as a 3 players cup',
+  description:
+    'Practicing the defense against the swing as a 3 players cup\n\nIn game: When a zone defense is set up, the players forming the first curtain must move uniformly without leaving enough space for a throw to be made between them.',
   minimalPlayersNumber: 7,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disc ',
@@ -6807,7 +6862,8 @@ const diagonalToVertical = {
   author: 'Belgium Open',
   title: 'Diagonal to Vertical',
   image: 'https://zupimages.net/up/20/25/iqn0.jpg',
-  description: 'Train the team to make the perfect transition from a diagonal stack to a vertical flow',
+  description:
+    'Train the team to make the perfect transition from a diagonal stack to a vertical flow\n\nIn game: A play after the pull was made with a diagonal stack. The goal is to achieve the fastest possible transition of the play to a vertical flow.',
   minimalPlayersNumber: 8,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disc ',
@@ -6953,7 +7009,8 @@ const splitToVertical = {
   author: 'Iznogood',
   title: 'Split to Vertical',
   image: 'https://zupimages.net/up/20/25/uqd5.jpg',
-  description: 'Train the team to make the perfect transition from a split stack to a vertical flow',
+  description:
+    'Train the team to make the perfect transition from a split stack to a vertical flow\n\nIn game: The Split allows to isolate a pair of players in order to avoid the poaches of the other defenders.',
   minimalPlayersNumber: 8,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disc ',
@@ -7107,6 +7164,35 @@ const ghostMark = {
       rest: '',
       instruction:
         'Two players throw in pairs. The defending players, without touching the disc and the offensive players, try to interfere with the catch. They can, for example, pass in front of the disk at the last moment. If a turn-over is caused, without the defenders touching the disc, the roles are reversed.',
+    },
+  ],
+};
+
+const fish = {
+  id: 1049,
+  type: DrillTypes.FRISBEE,
+  author: 'Puc Ultimate',
+  title: 'Fishing',
+  image: 'https://zupimages.net/up/20/41/n148.jpg',
+  description: 'Players practice accurately throwing the disc to a static target.',
+  minimalPlayersNumber: 8,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disque par paire',
+  durationInMinutes: 10,
+  intensity: Intensities.LOW,
+  goals: [FrisbeeGoals.CATCH, FrisbeeGoals.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'Fishing',
+      illustrationType: IllustrationType.ANIMATION,
+      illustrationSource: fishAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Players play in pairs. The objective is to collect as many blocks as possible. One player of the pair runs at the level of a block. His teammate sends him the disc in a way defined by the coach. If, and only if, the player catches the disc while remaining at the pivot of the block, he can pick it up and bring it back to his side. His teammate in turn runs, the roles are reversed. The team having picked up the most disc wins.',
     },
   ],
 };
@@ -7816,7 +7902,7 @@ const fitnessFull1 = {
   title: 'Off-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'First week of the program',
-  drills: [agility1, strenght1, suicide],
+  drills: [agility1, strength1, suicide],
 };
 
 const fitnessFull2 = {
@@ -7824,7 +7910,7 @@ const fitnessFull2 = {
   title: 'Off-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Second week of the program',
-  drills: [agility1, strenght1, mas30Light],
+  drills: [agility1, strength1, mas30Light],
 };
 
 const fitnessFull3 = {
@@ -7832,7 +7918,7 @@ const fitnessFull3 = {
   title: 'Off-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Third week of the program',
-  drills: [agility2, strenght2, lacticSprint],
+  drills: [agility2, strength2, lacticSprint],
 };
 
 const fitnessFull4 = {
@@ -7840,7 +7926,7 @@ const fitnessFull4 = {
   title: 'Off-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Fourth week of the program',
-  drills: [agility2, strenght2, mas30Light],
+  drills: [agility2, strength2, mas30Light],
 };
 
 const fitnessFull5 = {
@@ -7848,7 +7934,7 @@ const fitnessFull5 = {
   title: 'Off-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Fifth week of the program',
-  drills: [agility3, strenght3, serpentine],
+  drills: [agility3, strength3, serpentine],
 };
 
 const fitnessFull6 = {
@@ -7856,7 +7942,7 @@ const fitnessFull6 = {
   title: 'Off-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Sixth week of the program',
-  drills: [agility3, strenght3, mas30],
+  drills: [agility3, strength3, mas30],
 };
 
 const fitnessFull7 = {
@@ -7864,7 +7950,7 @@ const fitnessFull7 = {
   title: 'Off-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Seventh week of the program',
-  drills: [agility5, strenght5, mas30],
+  drills: [agility5, strength5, mas30],
 };
 
 const fitnessFull8 = {
@@ -7872,7 +7958,7 @@ const fitnessFull8 = {
   title: 'Off-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Eighth week of the program',
-  drills: [agility5, strenght5, suicide],
+  drills: [agility5, strength5, suicide],
 };
 
 const fitnessFull9 = {
@@ -7880,7 +7966,7 @@ const fitnessFull9 = {
   title: 'Off-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Ninth week of the program',
-  drills: [agility6, strenght6, suicide],
+  drills: [agility6, strength6, suicide],
 };
 
 const fitnessFull10 = {
@@ -7888,7 +7974,7 @@ const fitnessFull10 = {
   title: 'Pre-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Tenth week of the program',
-  drills: [agility6, strenght6, tDrill],
+  drills: [agility6, strength6, tDrill],
 };
 
 const fitnessFull11 = {
@@ -7896,42 +7982,42 @@ const fitnessFull11 = {
   title: 'Pre-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Elevenh week of the program',
-  drills: [agility7, strenght7, mas15],
+  drills: [agility7, strength7, mas15],
 };
 const fitnessFull12 = {
   id: 212,
   title: 'Pre-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Twelfh week of the program',
-  drills: [agility7, strenght7, mas15Long],
+  drills: [agility7, strength7, mas15Long],
 };
 const fitnessFull13 = {
   id: 213,
   title: 'Pre-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Thirtheenth week of the program',
-  drills: [agility8, strenght8, tDrill],
+  drills: [agility8, strength8, tDrill],
 };
 const fitnessFull14 = {
   id: 214,
   title: 'Pre-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Fourtheenth week of the program',
-  drills: [agility8, strenght8, serpentine],
+  drills: [agility8, strength8, serpentine],
 };
 const fitnessFull15 = {
   id: 215,
   title: 'Pre-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Fifteenth week of the program',
-  drills: [agility9, strenght9, serpentine],
+  drills: [agility9, strength9, serpentine],
 };
 const fitnessFull16 = {
   id: 216,
   title: 'Pre-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Sixteenth week of the program',
-  drills: [agility9, strenght9, tDrill],
+  drills: [agility9, strength9, tDrill],
 };
 
 const fitnessFull17 = {
@@ -7939,7 +8025,7 @@ const fitnessFull17 = {
   title: 'Pre-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Seventeenth week of the program',
-  drills: [agility10, strenght10, mas15],
+  drills: [agility10, strength10, mas15],
 };
 
 const fitnessFull18 = {
@@ -7947,14 +8033,14 @@ const fitnessFull18 = {
   title: 'Pre-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Eighteenth week of the program',
-  drills: [agility10, strenght10, tDrill],
+  drills: [agility10, strength10, tDrill],
 };
 const fitnessFull19 = {
   id: 219,
   title: 'In-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Nineteenth week of the program',
-  drills: [agility11, strenght11, serpentine],
+  drills: [agility11, strength11, serpentine],
 };
 
 const fitnessFull20 = {
@@ -7962,7 +8048,7 @@ const fitnessFull20 = {
   title: 'In-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Twentieth week of the program',
-  drills: [agility11, strenght11, ladderPractice],
+  drills: [agility11, strength11, ladderPractice],
 };
 
 const fitnessFull21 = {
@@ -7970,7 +8056,7 @@ const fitnessFull21 = {
   title: 'In-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Twenty-first week of the program',
-  drills: [agility12, strenght12, tDrill],
+  drills: [agility12, strength12, tDrill],
 };
 
 const fitnessFull22 = {
@@ -7978,7 +8064,7 @@ const fitnessFull22 = {
   title: 'In-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Twenty-second week of the program',
-  drills: [agility12, strenght12, serpentine],
+  drills: [agility12, strength12, serpentine],
 };
 
 const fitnessFull23 = {
@@ -7986,7 +8072,7 @@ const fitnessFull23 = {
   title: 'In-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Twenty-third week of the program',
-  drills: [agility13, strenght13, serpentine],
+  drills: [agility13, strength13, serpentine],
 };
 
 const fitnessFull24 = {
@@ -7994,7 +8080,7 @@ const fitnessFull24 = {
   title: 'In-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Twenty-fourth week of the program',
-  drills: [agility13, strenght13, tDrill],
+  drills: [agility13, strength13, tDrill],
 };
 
 const fitnessFull25 = {
@@ -8002,7 +8088,7 @@ const fitnessFull25 = {
   title: 'In-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Twenty-fifth week of the program',
-  drills: [agility14, strenght14, mas15Long],
+  drills: [agility14, strength14, mas15Long],
 };
 
 const fitnessFull26 = {
@@ -8010,14 +8096,14 @@ const fitnessFull26 = {
   title: 'In-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Twenty-sixth week of the program',
-  drills: [agility14, strenght14, ladderPractice],
+  drills: [agility14, strength14, ladderPractice],
 };
 const fitnessFull27 = {
   id: 227,
   title: 'Peak',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Twenty-seventh week of the program',
-  drills: [agility15, strenght15, tDrill],
+  drills: [agility15, strength15, tDrill],
 };
 
 const fitnessFull28 = {
@@ -8025,7 +8111,7 @@ const fitnessFull28 = {
   title: 'Peak',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Twenty-eighth week of the program',
-  drills: [agility15, strenght15, sprintPractice],
+  drills: [agility15, strength15, sprintPractice],
 };
 
 const fitnessFull29 = {
@@ -8033,7 +8119,7 @@ const fitnessFull29 = {
   title: 'Peak',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Twenty-ninth week of the program',
-  drills: [agility16, strenght16, sprintPractice],
+  drills: [agility16, strength16, sprintPractice],
 };
 
 export const drills = [
@@ -8051,10 +8137,10 @@ export const drills = [
   agility8,
   agility10,
   agility15,
-  strenght5,
-  strenght8,
-  strenght10,
-  strenght15,
+  strength5,
+  strength8,
+  strength10,
+  strength15,
 
   // Frisbee
   basicThrowsDrill,
@@ -8105,15 +8191,17 @@ export const drills = [
   checkLongKid,
   adaptToTheMark,
   ghostMark,
+  fish,
 
-  // Games
-  normalGame,
-  game3v3,
-  longShotGame,
-  lineGame,
-  longestGame,
-  trainingGame,
-  helpGame,
+  // Commenting game drills because we don't want them in the drill list, only part of programs
+  // // Games
+  // normalGame,
+  // game3v3,
+  // longShotGame,
+  // lineGame,
+  // longestGame,
+  // trainingGame,
+  // helpGame,
 ];
 
 export const trainings = [

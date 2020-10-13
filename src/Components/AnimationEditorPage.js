@@ -1,55 +1,132 @@
-import React, { useState, useLayoutEffect } from 'react';
-import { Share, StyleSheet, View, Alert } from 'react-native';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
+import { StyleSheet, View } from 'react-native';
+import { connect } from 'react-redux';
 
 import I18n from '../utils/i18n';
-import AnimationEditor from './animation/AnimationEditor';
-import HeaderButton from './shared/HeaderButton';
-
 import theme from '../styles/theme.style';
+import { saveDrill, deleteDrill } from '../Store/Actions/drillAction';
+import AnimationEditor from './editor/AnimationEditor';
+import CurrentDrillManager from './editor/CurrentDrillManager';
+import SavedDrillsList from './editor/SavedDrillsList';
+import RenameDrillModal from './editor/RenameDrillModal';
 
-const AnimationEditorPage = (props) => {
-  const [currentAnimationState, saveAnimationState] = useState(null);
-  const navigation = props.navigation;
+const newDrill = {
+  drill: {
+    positions: [[], []],
+    ids: [],
+    texts: [],
+    background: 'endzone',
+  },
+  title: I18n.t('animationEditorPage.untitledDrill'),
+};
+
+export const AnimationEditorPage = (props) => {
+  const [currentDrill, setCurrentDrill] = useState(newDrill);
+
+  // modalRenameVisible is true if the modal which enables to rename the current drill is displayed
+  const [modalRenameVisible, setModalRenameVisible] = useState(false);
+
+  // isDrillSaved is true unless there are unsaved changes on the current drill
+  const [isDrillSaved, setIsDrillSaved] = useState(true);
 
   useLayoutEffect(() => {
-    navigation.setOptions({
-      headerRight: () => <HeaderButton icon="check" onPress={askShare} />,
-    });
+    props.navigation.setOptions({
+      headerRight: () => (
+        <View style={{ flexDirection: 'row', paddingLeft: 10 }}>
+          <SavedDrillsList
+            savedDrills={props.customDrills}
+            isDrillSaved={isDrillSaved}
+            drillTitle={currentDrill.title}
+            onDelete={onDelete}
+            onOpen={openDrill}
+            saveCurrentDrill={saveCurrentDrill}
+          />
+          <CurrentDrillManager
+            currentDrill={currentDrill}
+            isDrillSaved={isDrillSaved}
+            save={saveCurrentDrill}
+            new={createNewDrill}
+            rename={() => setModalRenameVisible(true)}
+          />
+        </View>
+      ),
+    }),
+      [];
   });
 
-  const askShare = () => {
-    Alert.alert(
-      I18n.t('animationEditor.comingSoon.title'),
-      I18n.t('animationEditor.comingSoon.content'),
-      [
-        { text: I18n.t('animationEditor.comingSoon.cancel'), style: 'cancel' },
-        { text: I18n.t('animationEditor.comingSoon.cta'), onPress: doShare },
-      ],
-      { cancelable: true },
-    );
+  useEffect(() => {
+    setTitle();
+  }, [currentDrill, isDrillSaved]);
+
+  const setTitle = () => {
+    const drillTitle = currentDrill.title || I18n.t('animationEditorPage.untitledDrill');
+    const unsavedAsterisk = isDrillSaved ? '' : ' *';
+    const displayedTitle = `${drillTitle} ${unsavedAsterisk}`;
+
+    props.navigation.setOptions({ headerTitle: displayedTitle });
   };
 
-  const doShare = () => {
-    Share.share({
-      title: I18n.t('animationEditor.sharePlaceholder'),
-      message:
-        '----- ENCODED DRILL -------\n' + JSON.stringify(currentAnimationState) + '\n---------------------------',
-    }).catch((err) => console.log(err));
+  const drillChangedInEditor = (drill) => {
+    setCurrentDrill({ drill, title: currentDrill.title });
+    setIsDrillSaved(false);
+  };
+
+  const saveCurrentDrill = () => {
+    const defaultTitle = I18n.t('animationEditorPage.untitledDrill');
+    if (currentDrill.title == I18n.t('animationEditorPage.untitledDrill')) {
+      let newTitle = defaultTitle;
+
+      let counter = 1;
+      while (props.customDrills.findIndex((item) => item.title === newTitle) !== -1) {
+        newTitle = defaultTitle + ' (' + counter + ')';
+        counter += 1;
+      }
+      currentDrill.title = newTitle;
+    }
+    props.saveDrill(currentDrill);
+    setIsDrillSaved(true);
+  };
+
+  const openDrill = (drill) => {
+    setCurrentDrill(drill);
+    setIsDrillSaved(true);
+  };
+
+  const createNewDrill = () => {
+    setCurrentDrill(newDrill);
+    setIsDrillSaved(true);
+  };
+
+  const onDelete = (drill) => {
+    props.deleteDrill(drill.title);
+
+    if (drill.title === currentDrill.title) createNewDrill();
   };
 
   return (
-    <View style={styles.animationEditorPage}>
-      <AnimationEditor onAnimationChange={saveAnimationState} />
+    <View style={styles.centeredView}>
+      {modalRenameVisible ? (
+        <RenameDrillModal currentDrill={currentDrill} onRename={setTitle} close={() => setModalRenameVisible(false)} />
+      ) : null}
+
+      <AnimationEditor onAnimationChange={drillChangedInEditor} animation={currentDrill.drill} />
     </View>
   );
 };
 
-export default AnimationEditorPage;
+const mapStateToProps = (state) => {
+  return {
+    customDrills: state.customDrills,
+  };
+};
+
+const mapDispatchToProps = { saveDrill, deleteDrill };
+
+export default connect(mapStateToProps, mapDispatchToProps)(AnimationEditorPage);
 
 const styles = StyleSheet.create({
-  animationEditorPage: {
+  centeredView: {
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     flex: 1,
-    width: '100%',
   },
 });

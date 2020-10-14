@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Animated, Easing, View } from 'react-native';
+import { StyleSheet, Animated, Easing, View, Platform } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import Animation from '../animation/Animation';
@@ -56,16 +56,16 @@ class AnimationEditor extends React.Component {
         let dLeft = pageX || this.state.dLeft;
         // On iOS, when the left margin is = 0, pageX can be equal to the whole width instead of 0
         if (dLeft > 0.99 * width) dLeft = 0;
-
+        if (Platform.OS === 'ios') {
+          dLeft = 0;
+        }
         const dTop = pageY || this.state.dTop;
-
         this.setState({ dLeft, dTop });
       });
     }
 
     const editorHeight = e.nativeEvent.layout.height;
     const editorWidth = e.nativeEvent.layout.width;
-
     const animationWidth = editorWidth * this.wRatio;
     const animationHeight = editorHeight * this.hRatio;
 

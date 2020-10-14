@@ -1,5 +1,5 @@
 import React, { useLayoutEffect, useCallback } from 'react';
-import { Platform, StyleSheet, ScrollView, View, Text, TouchableOpacity } from 'react-native';
+import { Platform, StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 

@@ -502,7 +502,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
           <Text
             style={
               Object {
-                "color": "black",
+                "color": "white",
                 "fontWeight": "bold",
               }
             }

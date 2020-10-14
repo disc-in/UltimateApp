@@ -1,5 +1,6 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
+import { Platform } from 'react-native';
 
 import HomePage from '../Components/HomePage';
 import DrillListPage from '../Components/DrillListPage';
@@ -74,8 +75,14 @@ export const Navigation = () => (
       options={() => ({
         title: I18n.t('navigation.animationEditorPage'),
         headerTitleContainerStyle: {
-          right: 100, // Matches the 2 icons width, and margin
-          // left: -45,
+          ...Platform.select({
+            ios: {
+              left: -45,
+            },
+            default: {
+              right: 100, // Matches the 2 icons width, and margin
+            },
+          }),
         },
       })}
     />

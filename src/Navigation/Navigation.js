@@ -75,6 +75,7 @@ export const Navigation = () => (
         title: I18n.t('navigation.animationEditorPage'),
         headerTitleContainerStyle: {
           right: 100, // Matches the 2 icons width, and margin
+          // left: -45,
         },
       })}
     />

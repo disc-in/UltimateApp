@@ -1,5 +1,5 @@
 import React from 'react';
-import { Easing, Animated, Dimensions, View, Image } from 'react-native';
+import { Easing, Animated, Dimensions, View, Platform } from 'react-native';
 
 import DisplayedElement from './DisplayedElement';
 import DisplayedCuts from './DisplayedCuts';
@@ -32,7 +32,11 @@ class Animation extends React.Component {
     this.dTop = this.props.dTop || 0;
 
     // Distance between the left of the window and the animation area
-    this.dLeft = this.props.dLeft || 0;
+    if (Platform.OS === 'ios') {
+      this.dLeft = 0;
+    } else {
+      this.dLeft = this.props.dLeft || 0;
+    }
   }
 
   /** Convert a position (x, y) in percentages of the animation area in a position (x2, y2) in pixels of the phone screen
@@ -42,7 +46,11 @@ class Animation extends React.Component {
    * y2: corresponding vertical position in pixel (=0 if centered)
    */
   _positionPercentToPixel = (x, y) => {
-    return [this.animationWidth * x + this.dLeft, this.animationHeight * y + this.dTop];
+    if (Platform.OS === 'ios') {
+      return [this.animationWidth * x + 0, this.animationHeight * y + this.dTop];
+    } else {
+      return [this.animationWidth * x + this.dLeft, this.animationHeight * y + this.dTop];
+    }
   };
 
   componentDidMount() {
@@ -149,7 +157,11 @@ class Animation extends React.Component {
                 if (pageX > 0.99 * width) pageX = 0;
 
                 if (pageY !== undefined) this.dTop = pageY;
+
                 if (pageX !== undefined) this.dLeft = pageX;
+                if (Platform.OS === 'ios') {
+                  pageX = 0;
+                }
 
                 this.props.onTopMarginSet(this.dTop);
               });

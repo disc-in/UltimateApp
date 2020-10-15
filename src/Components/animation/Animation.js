@@ -164,6 +164,7 @@ class Animation extends React.Component {
                 }
 
                 this.props.onTopMarginSet(this.dTop);
+
               });
             }
           }}

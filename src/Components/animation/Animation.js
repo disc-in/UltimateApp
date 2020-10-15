@@ -157,14 +157,11 @@ class Animation extends React.Component {
                 if (pageX > 0.99 * width) pageX = 0;
 
                 if (pageY !== undefined) this.dTop = pageY;
-
                 if (pageX !== undefined) this.dLeft = pageX;
+
                 if (Platform.OS === 'ios') {
                   pageX = 0;
                 }
-
-                this.props.onTopMarginSet(this.dTop);
-
               });
             }
           }}

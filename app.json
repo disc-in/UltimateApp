@@ -4,11 +4,7 @@
     "description": "Empowering Ultimate coaches to prepare appropriate trainings for their teams",
     "slug": "ultimate-app",
     "privacy": "unlisted",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
+    "platforms": ["ios", "android", "web"],
     "version": "0.1.0",
     "githubUrl": "https://github.com/UltimateApp/UltimateApp",
     "orientation": "portrait",
@@ -19,12 +15,10 @@
       "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "assets/**/*"
-    ],
+    "assetBundlePatterns": ["assets/**/*"],
     "ios": {
       "bundleIdentifier": "com.discin.discin",
-      "buildNumber": "1.0.0",
+      "buildNumber": "1.0.1",
       "supportsTablet": true,
       "infoPlist": {
         "CFBundleAllowMixedLocalizations": true
@@ -32,8 +26,8 @@
     },
     "android": {
       "package": "com.discin.discin",
-      "versionCode": 1,
-      "permissions" : []
+      "versionCode": 2,
+      "permissions": []
     }
   }
 }

@@ -3,9 +3,9 @@
     "name": "Disc In",
     "description": "Empowering Ultimate coaches to prepare appropriate trainings for their teams",
     "slug": "ultimate-app",
-    "privacy": "unlisted",
+    "privacy": "public",
     "platforms": ["ios", "android", "web"],
-    "version": "0.1.0",
+    "version": "0.2.0",
     "githubUrl": "https://github.com/UltimateApp/UltimateApp",
     "orientation": "portrait",
     "primaryColor": "#2a9e91",
@@ -18,7 +18,7 @@
     "assetBundlePatterns": ["assets/**/*"],
     "ios": {
       "bundleIdentifier": "com.discin.discin",
-      "buildNumber": "1.0.1",
+      "buildNumber": "0.2.0",
       "supportsTablet": true,
       "infoPlist": {
         "CFBundleAllowMixedLocalizations": true

@@ -32,7 +32,7 @@ export const AnimationEditorPage = (props) => {
   useLayoutEffect(() => {
     props.navigation.setOptions({
       headerRight: () => (
-        <View style={{ flexDirection: 'row', paddingLeft: 10 }}>
+        <View style={{ flexDirection: 'row' }}>
           <SavedDrillsList
             savedDrills={props.customDrills}
             isDrillSaved={isDrillSaved}

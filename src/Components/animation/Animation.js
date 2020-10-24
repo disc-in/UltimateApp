@@ -46,7 +46,11 @@ class Animation extends React.Component {
    * y2: corresponding vertical position in pixel (=0 if centered)
    */
   _positionPercentToPixel = (x, y) => {
-    return [this.animationWidth * x + this.dLeft, this.animationHeight * y + this.dTop];
+    if (Platform.OS === 'ios') {
+      return [this.animationWidth * x + 0, this.animationHeight * y + this.dTop];
+    } else {
+      return [this.animationWidth * x + this.dLeft, this.animationHeight * y + this.dTop];
+    }
   };
 
   componentDidMount() {

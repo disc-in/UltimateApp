@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Easing, Animated, View, Text, PanResponder } from 'react-native';
+import { StyleSheet, Animated, PanResponder } from 'react-native';
 
 import theme from '../../styles/theme.style';
 

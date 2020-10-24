@@ -1,5 +1,6 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
+import { Platform } from 'react-native';
 
 import HomePage from '../Components/HomePage';
 import DrillListPage from '../Components/DrillListPage';
@@ -23,7 +24,7 @@ import { DrillTypes, EquipmentLabels } from '../Fixtures/config';
 const Stack = createStackNavigator();
 
 export const Navigation = () => (
-  <Stack.Navigator screenOptions={{ headerBackTitleVisible: false }}>
+  <Stack.Navigator screenOptions={{ headerBackTitleVisible: false, gestureEnabled: false }}>
     <Stack.Screen name="HomePage" component={HomePage} options={{ title: I18n.t('navigation.homePage') }} />
     <Stack.Screen
       name="DrillListPage"
@@ -74,7 +75,14 @@ export const Navigation = () => (
       options={() => ({
         title: I18n.t('navigation.animationEditorPage'),
         headerTitleContainerStyle: {
-          right: 100, // Matches the 2 icons width, and margin
+          ...Platform.select({
+            ios: {
+              left: -45,
+            },
+            default: {
+              right: 100, // Matches the 2 icons width, and margin
+            },
+          }),
         },
       })}
     />

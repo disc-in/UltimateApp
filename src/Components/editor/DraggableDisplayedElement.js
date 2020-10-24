@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
   },
   discText: {
     fontWeight: 'bold',
-    color: theme.DISC_TEXT_COLOR,
+    color: theme.DISC_COLOR, //Make the number in the disc invisible,
   },
   triangle: {
     backgroundColor: 'transparent',

@@ -7,7 +7,6 @@ exports[`<Player /> renders defense correctly 1`] = `
       Object {
         "alignItems": "center",
         "justifyContent": "center",
-        "marginRight": 10,
         "textAlign": "center",
         "textAlignVertical": "center",
       },
@@ -42,7 +41,6 @@ exports[`<Player /> renders offense correctly 1`] = `
       Object {
         "alignItems": "center",
         "justifyContent": "center",
-        "marginRight": 10,
         "textAlign": "center",
         "textAlignVertical": "center",
       },

@@ -27,7 +27,6 @@ export default Player;
 
 const styles = StyleSheet.create({
   player: {
-    marginRight: 10,
     textAlign: 'center',
     textAlignVertical: 'center',
     alignItems: 'center',

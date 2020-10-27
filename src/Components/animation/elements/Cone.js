@@ -25,7 +25,6 @@ export default Disc;
 
 const styles = StyleSheet.create({
   cone: {
-    marginRight: 10,
     textAlign: 'center',
     textAlignVertical: 'center',
     alignItems: 'center',

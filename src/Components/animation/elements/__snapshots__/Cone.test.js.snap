@@ -11,7 +11,6 @@ exports[`<Cone /> renders correctly 1`] = `
         "borderColor": "transparent",
         "borderStyle": "solid",
         "justifyContent": "center",
-        "marginRight": 10,
         "textAlign": "center",
         "textAlignVertical": "center",
       },

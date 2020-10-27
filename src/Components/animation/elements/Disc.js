@@ -26,7 +26,6 @@ export default Disc;
 
 const styles = StyleSheet.create({
   disc: {
-    marginRight: 10,
     textAlign: 'center',
     textAlignVertical: 'center',
     alignItems: 'center',

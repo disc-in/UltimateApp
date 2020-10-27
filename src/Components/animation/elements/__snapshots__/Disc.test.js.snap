@@ -9,7 +9,6 @@ exports[`<Disc /> renders correctly 1`] = `
         "backgroundColor": "white",
         "borderColor": "black",
         "justifyContent": "center",
-        "marginRight": 10,
         "textAlign": "center",
         "textAlignVertical": "center",
       },

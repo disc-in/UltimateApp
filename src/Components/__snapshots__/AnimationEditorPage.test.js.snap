@@ -385,6 +385,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
           onStartShouldSetResponderCapture={[Function]}
           style={
             Object {
+              "marginRight": 10,
               "transform": Array [
                 Object {
                   "translateX": 0,
@@ -402,7 +403,6 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
                 Object {
                   "alignItems": "center",
                   "justifyContent": "center",
-                  "marginRight": 10,
                   "textAlign": "center",
                   "textAlignVertical": "center",
                 },
@@ -444,6 +444,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
           onStartShouldSetResponderCapture={[Function]}
           style={
             Object {
+              "marginRight": 10,
               "transform": Array [
                 Object {
                   "translateX": 0,
@@ -461,7 +462,6 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
                 Object {
                   "alignItems": "center",
                   "justifyContent": "center",
-                  "marginRight": 10,
                   "textAlign": "center",
                   "textAlignVertical": "center",
                 },
@@ -503,6 +503,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
           onStartShouldSetResponderCapture={[Function]}
           style={
             Object {
+              "marginRight": 10,
               "transform": Array [
                 Object {
                   "translateX": 0,
@@ -522,7 +523,6 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
                   "backgroundColor": "white",
                   "borderColor": "black",
                   "justifyContent": "center",
-                  "marginRight": 10,
                   "textAlign": "center",
                   "textAlignVertical": "center",
                 },
@@ -562,6 +562,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
           onStartShouldSetResponderCapture={[Function]}
           style={
             Object {
+              "marginRight": 10,
               "transform": Array [
                 Object {
                   "translateX": 0,
@@ -583,7 +584,6 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
                   "borderColor": "transparent",
                   "borderStyle": "solid",
                   "justifyContent": "center",
-                  "marginRight": 10,
                   "textAlign": "center",
                   "textAlignVertical": "center",
                 },

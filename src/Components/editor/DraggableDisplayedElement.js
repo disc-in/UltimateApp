@@ -1,7 +1,10 @@
 import React from 'react';
-import { StyleSheet, Animated, PanResponder } from 'react-native';
+import { Animated, PanResponder } from 'react-native';
 
 import theme from '../../styles/theme.style';
+import Disc from '../animation/elements/Disc';
+import Player from '../animation/elements/Player';
+import Cone from '../animation/elements/Cone';
 
 /* Props must contain:
     - type: which indicates how to display the element: "offense", "defense", "triangle" or "disc"
@@ -28,95 +31,22 @@ const DraggableDisplayedElement = (props) => {
   const discRadius = playerRadius / 1.5;
   const coneSize = playerRadius / 2;
 
-  const panStyle = { transform: currentPosition.getTranslateTransform() };
-  let itemStyle, textStyle;
-
-  switch (type) {
-    case 'defense':
-    case 'offense':
-      itemStyle = [
-        panStyle,
-        styles.draggableDisplayedElement,
-        type == 'defense' ? styles.defense : styles.offense,
-        {
-          height: playerRadius,
-          width: playerRadius,
-          borderRadius: playerRadius,
-        },
-      ];
-      textStyle = styles.playerText;
-      break;
-    case 'disc':
-      itemStyle = [
-        panStyle,
-        styles.draggableDisplayedElement,
-        styles.disc,
-        {
-          height: discRadius,
-          width: discRadius,
-          borderRadius: discRadius,
-          borderWidth: discRadius / 10,
-        },
-      ];
-      textStyle = styles.discText;
-      break;
-    case 'triangle':
-      itemStyle = [
-        panStyle,
-        styles.draggableDisplayedElement,
-        styles.triangle,
-        {
-          borderLeftWidth: coneSize / 2,
-          borderRightWidth: coneSize / 2,
-          borderBottomWidth: coneSize,
-        },
-      ];
-      textStyle = styles.triangleText;
-  }
+  const panStyle = {
+    transform: currentPosition.getTranslateTransform(),
+  };
 
   return (
-    <Animated.View {...panResponder.panHandlers} style={itemStyle} key={type}>
-      <Animated.Text style={textStyle}>{number}</Animated.Text>
+    <Animated.View {...panResponder.panHandlers} style={panStyle} key={type}>
+      {
+        {
+          defense: <Player width={playerRadius} number={number} type={type} />,
+          offense: <Player width={playerRadius} number={number} type={type} />,
+          triangle: <Cone width={coneSize} number={number} />,
+          disc: <Disc width={discRadius} number={number} />,
+        }[type]
+      }
     </Animated.View>
   );
 };
 
 export default DraggableDisplayedElement;
-
-const styles = StyleSheet.create({
-  draggableDisplayedElement: {
-    marginRight: 10,
-    textAlign: 'center',
-    textAlignVertical: 'center',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  defense: {
-    backgroundColor: theme.DEFENSE_COLOR,
-  },
-  offense: {
-    backgroundColor: theme.MAIN_COLOR,
-  },
-  playerText: {
-    color: theme.PLAYER_TEXT_COLOR,
-    fontWeight: 'bold',
-  },
-  disc: {
-    borderColor: theme.DISC_BORDER,
-    backgroundColor: theme.DISC_COLOR,
-  },
-  discText: {
-    fontWeight: 'bold',
-    color: theme.DISC_COLOR, //Make the number in the disc invisible,
-  },
-  triangle: {
-    backgroundColor: 'transparent',
-    borderStyle: 'solid',
-    borderColor: 'transparent',
-    borderBottomColor: theme.CONE_COLOR,
-  },
-  triangleText: {
-    width: 0,
-    height: 0,
-  },
-});

@@ -779,7 +779,7 @@ exports[`<Animation /> renders correctly 1`] = `
       <Text
         style={
           Object {
-            "color": "#f1f1f1",
+            "color": "white",
             "fontWeight": "bold",
           }
         }

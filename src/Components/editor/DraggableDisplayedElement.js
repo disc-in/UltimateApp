@@ -11,7 +11,7 @@ import Cone from '../animation/elements/Cone';
     - number: string defined if there is something written on the element
 */
 const DraggableDisplayedElement = (props) => {
-  const { playerRadius, type, number } = props;
+  const { draggableBaseWidth, type, number } = props;
   /* Current position of the element in pixels */
   const currentPosition = new Animated.ValueXY({ x: 0, y: 0 });
 
@@ -28,9 +28,6 @@ const DraggableDisplayedElement = (props) => {
     },
   });
 
-  const discRadius = playerRadius / 1.5;
-  const coneSize = playerRadius / 2;
-
   const panStyle = {
     transform: currentPosition.getTranslateTransform(),
   };
@@ -39,10 +36,10 @@ const DraggableDisplayedElement = (props) => {
     <Animated.View {...panResponder.panHandlers} style={panStyle} key={type}>
       {
         {
-          defense: <Player width={playerRadius} number={number} type={type} />,
-          offense: <Player width={playerRadius} number={number} type={type} />,
-          triangle: <Cone width={coneSize} number={number} />,
-          disc: <Disc width={discRadius} number={number} />,
+          defense: <Player baseWidth={draggableBaseWidth} number={number} type={type} />,
+          offense: <Player baseWidth={draggableBaseWidth} number={number} type={type} />,
+          triangle: <Cone baseWidth={draggableBaseWidth} number={number} />,
+          disc: <Disc baseWidth={draggableBaseWidth} number={number} />,
         }[type]
       }
     </Animated.View>

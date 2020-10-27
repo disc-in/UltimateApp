@@ -14,10 +14,10 @@ exports[`<Disc /> renders correctly 1`] = `
         "textAlignVertical": "center",
       },
       Object {
-        "borderRadius": 10,
-        "borderWidth": 1,
-        "height": 10,
-        "width": 10,
+        "borderRadius": 6.666666666666667,
+        "borderWidth": 0.6666666666666667,
+        "height": 6.666666666666667,
+        "width": 6.666666666666667,
       },
     ]
   }

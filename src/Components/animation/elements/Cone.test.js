@@ -5,7 +5,7 @@ import Cone from './Cone';
 
 describe('<Cone />', () => {
   it('renders correctly', async () => {
-    const tree = create(<Cone width={10} number={1} />).toJSON();
+    const tree = create(<Cone baseWidth={10} number={1} />).toJSON();
     await act(async () => expect(tree).toMatchSnapshot());
   });
 });

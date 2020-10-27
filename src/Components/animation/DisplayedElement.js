@@ -105,19 +105,16 @@ class DisplayedElement extends React.Component {
           ],
         };
 
-    // TODO: put the constant coefficient used in the following somewhere to avoir writing them twice (in this class and in DrillCuts and DraggableDisplayedElements)
-    const playerRadius = Math.min(this.props.animationWidth, this.props.animationHeight) / 12;
-    const discRadius = playerRadius / 1.5;
-    const coneSize = playerRadius / 2;
+    const baseWidth = Math.min(this.props.animationWidth, this.props.animationHeight) / 12;
 
     return (
       <Animated.View {...this.panResponder.panHandlers} style={[panStyle, styles.displayedElement]}>
         {
           {
-            defense: <Player width={playerRadius} number={this.props.number} type={this.props.type} />,
-            offense: <Player width={playerRadius} number={this.props.number} type={this.props.type} />,
-            triangle: <Cone width={coneSize} number={this.props.number} />,
-            disc: <Disc width={discRadius} number={this.props.number} />,
+            defense: <Player baseWidth={baseWidth} number={this.props.number} type={this.props.type} />,
+            offense: <Player baseWidth={baseWidth} number={this.props.number} type={this.props.type} />,
+            triangle: <Cone baseWidth={baseWidth} number={this.props.number} />,
+            disc: <Disc baseWidth={baseWidth} number={this.props.number} />,
           }[this.props.type]
         }
       </Animated.View>

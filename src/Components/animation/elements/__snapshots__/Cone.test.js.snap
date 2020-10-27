@@ -16,9 +16,9 @@ exports[`<Cone /> renders correctly 1`] = `
         "textAlignVertical": "center",
       },
       Object {
-        "borderBottomWidth": 10,
-        "borderLeftWidth": 5,
-        "borderRightWidth": 5,
+        "borderBottomWidth": 5,
+        "borderLeftWidth": 2.5,
+        "borderRightWidth": 2.5,
       },
     ]
   }

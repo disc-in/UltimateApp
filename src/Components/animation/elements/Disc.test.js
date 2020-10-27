@@ -5,7 +5,7 @@ import Disc from './Disc';
 
 describe('<Disc />', () => {
   it('renders correctly', async () => {
-    const tree = create(<Disc width={10} number={1} />).toJSON();
+    const tree = create(<Disc baseWidth={10} number={1} />).toJSON();
     await act(async () => expect(tree).toMatchSnapshot());
   });
 });

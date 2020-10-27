@@ -87,9 +87,7 @@ class DisplayedCuts extends React.Component {
 
 const _initializeStateFromProps = (props) => {
   const animationSize = props.positionPercentToPixel(1, 1);
-  const playerRadius = Math.min(animationSize[0], animationSize[1]) / 12;
-  const discRadius = playerRadius / 2;
-  const coneSize = (playerRadius * 5) / 16;
+  const movingCircleWidth = Math.min(animationSize[0], animationSize[1]) / 48;
 
   /* 2D array: this.cuts[stepId][cutId]
    * Each cut contains:
@@ -184,7 +182,7 @@ const _initializeStateFromProps = (props) => {
                   elemId,
                   cx: x1,
                   cy: y1,
-                  radius: discRadius / 2,
+                  radius: movingCircleWidth,
                   isCounterCut: false,
                 }),
                 countercutCircle: new MovingCircle({
@@ -192,7 +190,7 @@ const _initializeStateFromProps = (props) => {
                   elemId,
                   cx: counterCutX,
                   cy: counterCutY,
-                  radius: discRadius / 2,
+                  radius: movingCircleWidth,
                   isCounterCut: true,
                 }),
               });

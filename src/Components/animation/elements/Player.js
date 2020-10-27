@@ -3,8 +3,8 @@ import { StyleSheet, View, Text } from 'react-native';
 
 import theme from '../../../styles/theme.style';
 
-const Player = ({ width, type, number }) => {
-  const playerRadius = width;
+const Player = ({ baseWidth, type, number }) => {
+  const playerRadius = baseWidth;
 
   const itemStyle = [
     styles.player,

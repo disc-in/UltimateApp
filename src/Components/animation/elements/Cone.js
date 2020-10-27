@@ -3,13 +3,14 @@ import { StyleSheet, View, Text } from 'react-native';
 
 import theme from '../../../styles/theme.style';
 
-const Disc = ({ width, number }) => {
+const Disc = ({ baseWidth, number }) => {
+  const coneWidth = baseWidth / 2;
   const itemStyle = [
     styles.cone,
     {
-      borderLeftWidth: width / 2,
-      borderRightWidth: width / 2,
-      borderBottomWidth: width,
+      borderLeftWidth: coneWidth / 2,
+      borderRightWidth: coneWidth / 2,
+      borderBottomWidth: coneWidth,
     },
   ];
 

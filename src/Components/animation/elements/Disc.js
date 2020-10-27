@@ -3,14 +3,15 @@ import { StyleSheet, View, Text } from 'react-native';
 
 import theme from '../../../styles/theme.style';
 
-const Disc = ({ width, number }) => {
+const Disc = ({ baseWidth, number }) => {
+  const discWidth = baseWidth / 1.5;
   const itemStyle = [
     styles.disc,
     {
-      height: width,
-      width,
-      borderRadius: width,
-      borderWidth: width / 10,
+      height: discWidth,
+      width: discWidth,
+      borderRadius: discWidth,
+      borderWidth: discWidth / 10,
     },
   ];
 

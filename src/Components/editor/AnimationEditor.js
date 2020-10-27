@@ -18,7 +18,7 @@ class AnimationEditor extends React.Component {
       dLeft: 0, // Distance between the left of the window and the editor
       width: 0,
       height: 0,
-      playerRadius: 0,
+      draggableBaseWidth: 0,
       labels: {
         offense: 1,
         defense: 1,
@@ -72,7 +72,7 @@ class AnimationEditor extends React.Component {
     this.setState({
       width: editorWidth,
       height: editorHeight,
-      playerRadius: Math.min(animationWidth, animationHeight) / 12,
+      draggableBaseWidth: Math.min(animationWidth, animationHeight) / 12,
     });
   };
 
@@ -317,7 +317,7 @@ class AnimationEditor extends React.Component {
               {['offense', 'defense', 'disc', 'triangle'].map((type) => (
                 <DraggableDisplayedElement
                   type={type}
-                  playerRadius={this.state.playerRadius}
+                  draggableBaseWidth={this.state.draggableBaseWidth}
                   onMoveEnd={this.addElementToAnimation}
                   number={this.state.labels[type]}
                   key={type}

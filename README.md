@@ -16,9 +16,18 @@ npm run start
 
 ## 👏 Contributing
 
-If you want to contribute to the projet, just pick up a free issue from the [list](https://github.com/UltimateApp/UltimateApp/issues) and start developing. You can then open a pull-request so that your contribution can be merged into the master branch.
+If you want to contribute to the projet, just pick up an issue from the [list](https://github.com/UltimateApp/UltimateApp/issues) and start fixing it. You can then open a pull-request so that your contribution can be merged into the master branch.
 
 Found a bug? Take 5 minutes to [report it](https://github.com/UltimateApp/UltimateApp/issues/new?assignees=&labels=bug&template=bug_report.md&title=)
+
+Not a developer? We always need people to help us with:
+* improving the **wording** of the application, drills, training programs, to make it easier to understand;
+* drawing the **animations** of the drills in the app;
+* **testing** the app;
+* **gathering feedback** from our users;
+* **processing the feedbacks** we get to decide which features should be implemented;
+
+Feel free to contact us on [facebook](https://www.facebook.com/DiscInApp) or by email (ultimate.discin_at_gmail.com) to discuss it.
 
 ### Tests
 

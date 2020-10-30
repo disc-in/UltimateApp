@@ -60,6 +60,6 @@ Thanks a lot to everyone helping `Disc In` become an awesome app!
 * Alpha testing: Tiphaine Champetier, Ludovic Romano, Fred Risse, Edwin Grappin, Marie Collet, Hugues Andrieux, Vincent Peltre, Pablo, Lili Magerand, Quentin Siour, John Kofi, Guillaume Giroux
 * Videos: Paulin Huger, the PUC players (Nalini, Mario, Mehdi, Seb, Puzzy, Luc, Quentin)
 
-## License
+## 📜 License
 
 The app source code is made available under the [MIT license](LICENSE).

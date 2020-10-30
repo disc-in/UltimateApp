@@ -7,7 +7,7 @@ Developing an app to enhance Ultimate coaching abilities
 You need a recent version of nodejs.
 
 ```
-git clone git@github.com:UltimateApp/UltimateApp.git
+git clone git@github.com:disc-in/UltimateApp.git
 cd UltimateApp
 npm install -g expo-cli
 npm install
@@ -16,9 +16,9 @@ npm run start
 
 ## 👏 Contributing
 
-If you want to contribute to the projet, just pick up an issue from the [list](https://github.com/UltimateApp/UltimateApp/issues) and start fixing it. You can then open a pull-request so that your contribution can be merged into the master branch.
+If you want to contribute to the projet, just pick up an issue from the [list](https://github.com/disc-in/UltimateApp/issues) and start fixing it. You can then open a pull-request so that your contribution can be merged into the master branch.
 
-Found a bug? Take 5 minutes to [report it](https://github.com/UltimateApp/UltimateApp/issues/new?assignees=&labels=bug&template=bug_report.md&title=)
+Found a bug? Take 5 minutes to [report it](https://github.com/disc-in/UltimateApp/issues/new?assignees=&labels=bug&template=bug_report.md&title=)
 
 Not a developer? We always need people to help us with:
 * improving the **wording** of the application, drills, training programs, to make it easier to understand;
@@ -32,11 +32,11 @@ Feel free to contact us on [facebook](https://www.facebook.com/DiscInApp) or by 
 ### Tests
 
 We expect every code introduced via a pull-request to be tested.
-We use [jest](https://jestjs.io/docs/en/tutorial-react-native) and [React Native Testing Library](https://callstack.github.io/react-native-testing-library/) as testing frameworks. Please refer to the documentation, look at [existing tests](https://github.com/UltimateApp/UltimateApp/blob/master/src/Components/DrillListPage.test.js) or ask questions if needed.
+We use [jest](https://jestjs.io/docs/en/tutorial-react-native) and [React Native Testing Library](https://callstack.github.io/react-native-testing-library/) as testing frameworks. Please refer to the documentation, look at [existing tests](https://github.com/disc-in/UltimateApp/blob/master/src/Components/DrillListPage.test.js) or ask questions if needed.
 
 ### Mock http records
 
-We use [nock](https://github.com/nock/nock) to mock HTTP calls. Have look at an example [here](https://github.com/UltimateApp/UltimateApp/blob/master/src/Components/shared/VimeoVideo.test.js).
+We use [nock](https://github.com/nock/nock) to mock HTTP calls. Have look at an example [here](https://github.com/disc-in/UltimateApp/blob/master/src/Components/shared/VimeoVideo.test.js).
 
 To get the expected return from Nock, you can run your tests without mocking and record the http calls. The documentation is [there](https://github.com/nock/nock#recording).
 
@@ -52,10 +52,13 @@ To release a new version of the app :
 
 Thanks a lot to everyone helping `Disc In` become an awesome app!
 
-* Every direct [contributor](https://github.com/UltimateApp/UltimateApp/graphs/contributors) to the code
-* Cheikh F. Ndiaye (better french dictionary)
-* Martin VDD (better UX)
-* Scott Graber (better english wording)
+* Every direct [contributor](https://github.com/disc-in/UltimateApp/graphs/contributors) to the code
+* UX design: Martin VDD
+* Wording: Scott Graber, Anja Hopma
+* French dictionary: Cheikh F. Ndiaye
+* Visual contents (photos): [Focus Ultimate France](https://www.facebook.com/ultifocus/)
+* Alpha testing: Tiphaine Champetier, Ludovic Romano, Fred Risse, Edwin Grappin, Marie Collet, Hugues Andrieux, Vincent Peltre, Pablo, Lili Magerand, Quentin Siour, John Kofi, Guillaume Giroux
+* Videos: Paulin Huger, the PUC players (Nalini, Mario, Mehdi, Seb, Puzzy, Luc, Quentin)
 
 ## License
 

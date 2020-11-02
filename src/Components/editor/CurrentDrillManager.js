@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { Alert, Share, Text } from 'react-native';
+import { Alert, Text } from 'react-native';
 import { Menu, Divider } from 'react-native-paper';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import * as FileSystem from 'expo-file-system';
+import * as Sharing from 'expo-sharing';
 
 import I18n from '../../utils/i18n';
 import HeaderButton from '../shared/HeaderButton';
@@ -12,11 +14,20 @@ const CurrentDrillManager = (props) => {
   const openMenu = () => setVisible(true);
   const closeMenu = () => setVisible(false);
 
-  const contribute = () => {
-    Share.share({
-      title: I18n.t('editor.currentDrillManager.sharePlaceholder'),
-      message: '----- ENCODED DRILL -------\n' + JSON.stringify(props.currentDrill) + '\n---------------------------',
-    }).catch((err) => console.log(err));
+  const contribute = async () => {
+    const fileUri = FileSystem.documentDirectory + props.currentDrill.title + '.discin';
+    console.log(fileUri);
+    await FileSystem.writeAsStringAsync(fileUri, JSON.stringify(props.currentDrill), {
+      encoding: FileSystem.EncodingType.UTF8,
+    });
+    console.log('written');
+    await Sharing.shareAsync(fileUri);
+    console.log('shared');
+
+    // Share.share({
+    //   title: I18n.t('editor.currentDrillManager.sharePlaceholder'),
+    //   message: '----- ENCODED DRILL -------\n' + JSON.stringify(props.currentDrill) + '\n---------------------------',
+    // }).catch((err) => console.log(err));
   };
 
   const checkBeforeNewDrill = () => {

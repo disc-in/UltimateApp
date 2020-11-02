@@ -112,8 +112,8 @@ export default {
       save: 'Sauvegarder',
       rename: 'Renommer',
       new: 'Nouveau',
-      share: 'Contribuer',
-      sharePlaceholder: "Pouvez-vous ajouter cet exercice à l'application ?",
+      share: 'Partager',
+      import: 'Importer',
     },
     renameDrillModal: {
       placeholder: 'Appuyer ici pour renommer',

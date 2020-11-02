@@ -112,8 +112,8 @@ export default {
       save: 'Save',
       rename: 'Rename',
       new: 'New',
-      share: 'Contribute',
-      sharePlaceholder: 'Please add this drill to Disc In',
+      share: 'Share',
+      import: 'Import',
     },
     renameDrillModal: {
       placeholder: 'Click here to enter the new name',

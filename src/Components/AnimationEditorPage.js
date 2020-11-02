@@ -44,6 +44,7 @@ export const AnimationEditorPage = (props) => {
           <CurrentDrillManager
             currentDrill={currentDrill}
             isDrillSaved={isDrillSaved}
+            openDrill={openDrill}
             save={saveCurrentDrill}
             new={createNewDrill}
             rename={() => setModalRenameVisible(true)}

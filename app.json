@@ -22,7 +22,8 @@
       "supportsTablet": true,
       "infoPlist": {
         "CFBundleAllowMixedLocalizations": true
-      }
+      },
+      "usesIcloudStorage": true
     },
     "android": {
       "package": "com.discin.discin",

@@ -719,7 +719,133 @@ Array [
                     ]
                   }
                 >
-                  Contribute
+                  Share
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                false,
+                Array [
+                  Object {
+                    "height": 48,
+                    "justifyContent": "center",
+                    "maxWidth": 280,
+                    "minWidth": 112,
+                    "paddingHorizontal": 8,
+                  },
+                  undefined,
+                ],
+              ]
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flexDirection": "row",
+                }
+              }
+            >
+              <View
+                pointerEvents="box-none"
+                style={
+                  Array [
+                    Object {
+                      "marginHorizontal": 8,
+                    },
+                    Object {
+                      "width": 40,
+                    },
+                  ]
+                }
+              >
+                <Text
+                  accessibilityElementsHidden={true}
+                  allowFontScaling={false}
+                  importantForAccessibility="no-hide-descendants"
+                  pointerEvents="none"
+                  style={
+                    Array [
+                      Object {
+                        "color": "rgba(0, 0, 0, 0.54)",
+                        "fontSize": 24,
+                      },
+                      Array [
+                        Object {
+                          "transform": Array [
+                            Object {
+                              "scaleX": 1,
+                            },
+                          ],
+                        },
+                        Object {
+                          "backgroundColor": "transparent",
+                        },
+                      ],
+                      Object {
+                        "fontFamily": "material-community",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  
+                </Text>
+              </View>
+              <View
+                pointerEvents="none"
+                style={
+                  Array [
+                    Object {
+                      "marginHorizontal": 8,
+                    },
+                    Object {
+                      "justifyContent": "center",
+                      "maxWidth": 264,
+                      "minWidth": 96,
+                    },
+                    Object {
+                      "maxWidth": 192,
+                    },
+                  ]
+                }
+              >
+                <Text
+                  numberOfLines={1}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#000000",
+                        "fontFamily": "System",
+                        "fontWeight": "400",
+                        "textAlign": "left",
+                      },
+                      Array [
+                        Object {
+                          "fontSize": 16,
+                        },
+                        Object {
+                          "color": "rgba(0, 0, 0, 0.87)",
+                        },
+                        undefined,
+                      ],
+                    ]
+                  }
+                >
+                  Import
                 </Text>
               </View>
             </View>

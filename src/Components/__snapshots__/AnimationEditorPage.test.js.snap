@@ -385,14 +385,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
           onStartShouldSetResponderCapture={[Function]}
           style={
             Object {
-              "alignItems": "center",
-              "backgroundColor": "#2a9e91",
-              "borderRadius": 0,
-              "height": 0,
-              "justifyContent": "center",
               "marginRight": 10,
-              "textAlign": "center",
-              "textAlignVertical": "center",
               "transform": Array [
                 Object {
                   "translateX": 0,
@@ -401,20 +394,40 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
                   "translateY": 0,
                 },
               ],
-              "width": 0,
             }
           }
         >
-          <Text
+          <View
             style={
-              Object {
-                "color": "#fff",
-                "fontWeight": "bold",
-              }
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "justifyContent": "center",
+                  "textAlign": "center",
+                  "textAlignVertical": "center",
+                },
+                Object {
+                  "backgroundColor": "#2a9e91",
+                },
+                Object {
+                  "borderRadius": 0,
+                  "height": 0,
+                  "width": 0,
+                },
+              ]
             }
           >
-            1
-          </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#fff",
+                  "fontWeight": "bold",
+                }
+              }
+            >
+              1
+            </Text>
+          </View>
         </View>
         <View
           onMoveShouldSetResponder={[Function]}
@@ -431,14 +444,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
           onStartShouldSetResponderCapture={[Function]}
           style={
             Object {
-              "alignItems": "center",
-              "backgroundColor": "#9d9d9d",
-              "borderRadius": 0,
-              "height": 0,
-              "justifyContent": "center",
               "marginRight": 10,
-              "textAlign": "center",
-              "textAlignVertical": "center",
               "transform": Array [
                 Object {
                   "translateX": 0,
@@ -447,20 +453,40 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
                   "translateY": 0,
                 },
               ],
-              "width": 0,
             }
           }
         >
-          <Text
+          <View
             style={
-              Object {
-                "color": "#fff",
-                "fontWeight": "bold",
-              }
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "justifyContent": "center",
+                  "textAlign": "center",
+                  "textAlignVertical": "center",
+                },
+                Object {
+                  "backgroundColor": "#9d9d9d",
+                },
+                Object {
+                  "borderRadius": 0,
+                  "height": 0,
+                  "width": 0,
+                },
+              ]
             }
           >
-            1
-          </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#fff",
+                  "fontWeight": "bold",
+                }
+              }
+            >
+              1
+            </Text>
+          </View>
         </View>
         <View
           onMoveShouldSetResponder={[Function]}
@@ -477,16 +503,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
           onStartShouldSetResponderCapture={[Function]}
           style={
             Object {
-              "alignItems": "center",
-              "backgroundColor": "white",
-              "borderColor": "black",
-              "borderRadius": 0,
-              "borderWidth": 0,
-              "height": 0,
-              "justifyContent": "center",
               "marginRight": 10,
-              "textAlign": "center",
-              "textAlignVertical": "center",
               "transform": Array [
                 Object {
                   "translateX": 0,
@@ -495,20 +512,40 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
                   "translateY": 0,
                 },
               ],
-              "width": 0,
             }
           }
         >
-          <Text
+          <View
             style={
-              Object {
-                "color": "white",
-                "fontWeight": "bold",
-              }
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "white",
+                  "borderColor": "black",
+                  "justifyContent": "center",
+                  "textAlign": "center",
+                  "textAlignVertical": "center",
+                },
+                Object {
+                  "borderRadius": 0,
+                  "borderWidth": 0,
+                  "height": 0,
+                  "width": 0,
+                },
+              ]
             }
           >
-            1
-          </Text>
+            <Text
+              style={
+                Object {
+                  "color": "white",
+                  "fontWeight": "bold",
+                }
+              }
+            >
+              1
+            </Text>
+          </View>
         </View>
         <View
           onMoveShouldSetResponder={[Function]}
@@ -525,18 +562,7 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
           onStartShouldSetResponderCapture={[Function]}
           style={
             Object {
-              "alignItems": "center",
-              "backgroundColor": "transparent",
-              "borderBottomColor": "#feae19",
-              "borderBottomWidth": 0,
-              "borderColor": "transparent",
-              "borderLeftWidth": 0,
-              "borderRightWidth": 0,
-              "borderStyle": "solid",
-              "justifyContent": "center",
               "marginRight": 10,
-              "textAlign": "center",
-              "textAlignVertical": "center",
               "transform": Array [
                 Object {
                   "translateX": 0,
@@ -548,16 +574,38 @@ exports[`<AnimationEditorPage /> renders correctly 1`] = `
             }
           }
         >
-          <Text
+          <View
             style={
-              Object {
-                "height": 0,
-                "width": 0,
-              }
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "transparent",
+                  "borderBottomColor": "#feae19",
+                  "borderColor": "transparent",
+                  "borderStyle": "solid",
+                  "justifyContent": "center",
+                  "textAlign": "center",
+                  "textAlignVertical": "center",
+                },
+                Object {
+                  "borderBottomWidth": 0,
+                  "borderLeftWidth": 0,
+                  "borderRightWidth": 0,
+                },
+              ]
             }
           >
-            1
-          </Text>
+            <Text
+              style={
+                Object {
+                  "height": 0,
+                  "width": 0,
+                }
+              }
+            >
+              1
+            </Text>
+          </View>
         </View>
         <View
           style={

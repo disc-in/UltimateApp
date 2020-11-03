@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Disc /> renders correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "borderColor": "black",
+        "justifyContent": "center",
+        "textAlign": "center",
+        "textAlignVertical": "center",
+      },
+      Object {
+        "borderRadius": 6.666666666666667,
+        "borderWidth": 0.6666666666666667,
+        "height": 6.666666666666667,
+        "width": 6.666666666666667,
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "white",
+        "fontWeight": "bold",
+      }
+    }
+  >
+    1
+  </Text>
+</View>
+`;

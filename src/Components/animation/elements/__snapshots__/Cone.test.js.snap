@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Cone /> renders correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "borderBottomColor": "#feae19",
+        "borderColor": "transparent",
+        "borderStyle": "solid",
+        "justifyContent": "center",
+        "textAlign": "center",
+        "textAlignVertical": "center",
+      },
+      Object {
+        "borderBottomWidth": 5,
+        "borderLeftWidth": 2.5,
+        "borderRightWidth": 2.5,
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Object {
+        "height": 0,
+        "width": 0,
+      }
+    }
+  >
+    1
+  </Text>
+</View>
+`;

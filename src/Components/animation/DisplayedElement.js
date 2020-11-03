@@ -2,6 +2,9 @@ import React from 'react';
 import { StyleSheet, Animated, PanResponder } from 'react-native';
 
 import theme from '../../styles/theme.style';
+import Disc from './elements/Disc';
+import Player from './elements/Player';
+import Cone from './elements/Cone';
 
 /** An element displayed in a drill animation */
 class DisplayedElement extends React.Component {
@@ -102,57 +105,18 @@ class DisplayedElement extends React.Component {
           ],
         };
 
-    // TODO: put the constant coefficient used in the following somewhere to avoir writing them twice (in this class and in DrillCuts)
-    const playerRadius = Math.min(this.props.animationWidth, this.props.animationHeight) / 12;
-    const discRadius = playerRadius / 1.5;
-    const coneSize = playerRadius / 2;
+    const baseWidth = Math.min(this.props.animationWidth, this.props.animationHeight) / 12;
 
-    let itemStyle, textStyle;
-    switch (this.props.type) {
-      case 'defense':
-      case 'offense':
-        itemStyle = [
-          panStyle,
-          styles.displayedElement,
-          this.props.type == 'defense' ? styles.defense : styles.offense,
-          {
-            height: playerRadius,
-            width: playerRadius,
-            borderRadius: playerRadius,
-          },
-        ];
-        textStyle = styles.playerText;
-        break;
-      case 'disc':
-        itemStyle = [
-          panStyle,
-          styles.displayedElement,
-          styles.disc,
-          {
-            height: discRadius,
-            width: discRadius,
-            borderRadius: discRadius,
-            borderWidth: discRadius / 10,
-          },
-        ];
-        textStyle = styles.discText;
-        break;
-      case 'triangle':
-        itemStyle = [
-          panStyle,
-          styles.displayedElement,
-          styles.triangle,
-          {
-            borderLeftWidth: coneSize / 2,
-            borderRightWidth: coneSize / 2,
-            borderBottomWidth: coneSize,
-          },
-        ];
-        textStyle = styles.triangleText;
-    }
     return (
-      <Animated.View {...this.panResponder.panHandlers} style={itemStyle}>
-        <Animated.Text style={textStyle}>{this.props.number}</Animated.Text>
+      <Animated.View {...this.panResponder.panHandlers} style={[panStyle, styles.displayedElement]}>
+        {
+          {
+            defense: <Player baseWidth={baseWidth} number={this.props.number} type={this.props.type} />,
+            offense: <Player baseWidth={baseWidth} number={this.props.number} type={this.props.type} />,
+            triangle: <Cone baseWidth={baseWidth} number={this.props.number} />,
+            disc: <Disc baseWidth={baseWidth} number={this.props.number} />,
+          }[this.props.type]
+        }
       </Animated.View>
     );
   }
@@ -236,40 +200,8 @@ const _initializeStateFromProps = (props) => {
 const styles = StyleSheet.create({
   displayedElement: {
     position: 'absolute',
-    textAlign: 'center',
-    textAlignVertical: 'center',
-    alignItems: 'center',
-    justifyContent: 'center',
     top: 0,
     left: 0,
-  },
-  defense: {
-    backgroundColor: theme.DEFENSE_COLOR,
-  },
-  offense: {
-    backgroundColor: theme.MAIN_COLOR,
-  },
-  playerText: {
-    color: theme.PLAYER_TEXT_COLOR,
-    fontWeight: 'bold',
-  },
-  disc: {
-    borderColor: theme.DISC_BORDER,
-    backgroundColor: theme.DISC_COLOR,
-  },
-  discText: {
-    color: theme.BACKGROUND_COLOR, //The color is white to avoid to have a number in the disc,
-    fontWeight: 'bold',
-  },
-  triangle: {
-    backgroundColor: 'transparent',
-    borderStyle: 'solid',
-    borderColor: 'transparent',
-    borderBottomColor: theme.CONE_COLOR,
-  },
-  triangleText: {
-    width: 0,
-    height: 0,
   },
 });
 

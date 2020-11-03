@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Player /> renders defense correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+        "textAlign": "center",
+        "textAlignVertical": "center",
+      },
+      Object {
+        "backgroundColor": "#9d9d9d",
+      },
+      Object {
+        "borderRadius": 10,
+        "height": 10,
+        "width": 10,
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#fff",
+        "fontWeight": "bold",
+      }
+    }
+  >
+    1
+  </Text>
+</View>
+`;
+
+exports[`<Player /> renders offense correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+        "textAlign": "center",
+        "textAlignVertical": "center",
+      },
+      Object {
+        "backgroundColor": "#2a9e91",
+      },
+      Object {
+        "borderRadius": 10,
+        "height": 10,
+        "width": 10,
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#fff",
+        "fontWeight": "bold",
+      }
+    }
+  >
+    1
+  </Text>
+</View>
+`;

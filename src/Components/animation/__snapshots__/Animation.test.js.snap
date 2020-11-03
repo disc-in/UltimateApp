@@ -104,19 +104,8 @@ exports[`<Animation /> renders correctly 1`] = `
       onStartShouldSetResponderCapture={[Function]}
       style={
         Object {
-          "alignItems": "center",
-          "backgroundColor": "transparent",
-          "borderBottomColor": "#feae19",
-          "borderBottomWidth": 4.166666666666667,
-          "borderColor": "transparent",
-          "borderLeftWidth": 2.0833333333333335,
-          "borderRightWidth": 2.0833333333333335,
-          "borderStyle": "solid",
-          "justifyContent": "center",
           "left": 0,
           "position": "absolute",
-          "textAlign": "center",
-          "textAlignVertical": "center",
           "top": 0,
           "transform": Array [
             Object {
@@ -129,16 +118,38 @@ exports[`<Animation /> renders correctly 1`] = `
         }
       }
     >
-      <Text
+      <View
         style={
-          Object {
-            "height": 0,
-            "width": 0,
-          }
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "borderBottomColor": "#feae19",
+              "borderColor": "transparent",
+              "borderStyle": "solid",
+              "justifyContent": "center",
+              "textAlign": "center",
+              "textAlignVertical": "center",
+            },
+            Object {
+              "borderBottomWidth": 4.166666666666667,
+              "borderLeftWidth": 2.0833333333333335,
+              "borderRightWidth": 2.0833333333333335,
+            },
+          ]
         }
       >
-        
-      </Text>
+        <Text
+          style={
+            Object {
+              "height": 0,
+              "width": 0,
+            }
+          }
+        >
+          
+        </Text>
+      </View>
     </View>
     <View
       onMoveShouldSetResponder={[Function]}
@@ -155,19 +166,8 @@ exports[`<Animation /> renders correctly 1`] = `
       onStartShouldSetResponderCapture={[Function]}
       style={
         Object {
-          "alignItems": "center",
-          "backgroundColor": "transparent",
-          "borderBottomColor": "#feae19",
-          "borderBottomWidth": 4.166666666666667,
-          "borderColor": "transparent",
-          "borderLeftWidth": 2.0833333333333335,
-          "borderRightWidth": 2.0833333333333335,
-          "borderStyle": "solid",
-          "justifyContent": "center",
           "left": 0,
           "position": "absolute",
-          "textAlign": "center",
-          "textAlignVertical": "center",
           "top": 0,
           "transform": Array [
             Object {
@@ -180,16 +180,38 @@ exports[`<Animation /> renders correctly 1`] = `
         }
       }
     >
-      <Text
+      <View
         style={
-          Object {
-            "height": 0,
-            "width": 0,
-          }
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "borderBottomColor": "#feae19",
+              "borderColor": "transparent",
+              "borderStyle": "solid",
+              "justifyContent": "center",
+              "textAlign": "center",
+              "textAlignVertical": "center",
+            },
+            Object {
+              "borderBottomWidth": 4.166666666666667,
+              "borderLeftWidth": 2.0833333333333335,
+              "borderRightWidth": 2.0833333333333335,
+            },
+          ]
         }
       >
-        
-      </Text>
+        <Text
+          style={
+            Object {
+              "height": 0,
+              "width": 0,
+            }
+          }
+        >
+          
+        </Text>
+      </View>
     </View>
     <View
       onMoveShouldSetResponder={[Function]}
@@ -206,19 +228,8 @@ exports[`<Animation /> renders correctly 1`] = `
       onStartShouldSetResponderCapture={[Function]}
       style={
         Object {
-          "alignItems": "center",
-          "backgroundColor": "transparent",
-          "borderBottomColor": "#feae19",
-          "borderBottomWidth": 4.166666666666667,
-          "borderColor": "transparent",
-          "borderLeftWidth": 2.0833333333333335,
-          "borderRightWidth": 2.0833333333333335,
-          "borderStyle": "solid",
-          "justifyContent": "center",
           "left": 0,
           "position": "absolute",
-          "textAlign": "center",
-          "textAlignVertical": "center",
           "top": 0,
           "transform": Array [
             Object {
@@ -231,16 +242,38 @@ exports[`<Animation /> renders correctly 1`] = `
         }
       }
     >
-      <Text
+      <View
         style={
-          Object {
-            "height": 0,
-            "width": 0,
-          }
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "borderBottomColor": "#feae19",
+              "borderColor": "transparent",
+              "borderStyle": "solid",
+              "justifyContent": "center",
+              "textAlign": "center",
+              "textAlignVertical": "center",
+            },
+            Object {
+              "borderBottomWidth": 4.166666666666667,
+              "borderLeftWidth": 2.0833333333333335,
+              "borderRightWidth": 2.0833333333333335,
+            },
+          ]
         }
       >
-        
-      </Text>
+        <Text
+          style={
+            Object {
+              "height": 0,
+              "width": 0,
+            }
+          }
+        >
+          
+        </Text>
+      </View>
     </View>
     <View
       onMoveShouldSetResponder={[Function]}
@@ -257,19 +290,8 @@ exports[`<Animation /> renders correctly 1`] = `
       onStartShouldSetResponderCapture={[Function]}
       style={
         Object {
-          "alignItems": "center",
-          "backgroundColor": "transparent",
-          "borderBottomColor": "#feae19",
-          "borderBottomWidth": 4.166666666666667,
-          "borderColor": "transparent",
-          "borderLeftWidth": 2.0833333333333335,
-          "borderRightWidth": 2.0833333333333335,
-          "borderStyle": "solid",
-          "justifyContent": "center",
           "left": 0,
           "position": "absolute",
-          "textAlign": "center",
-          "textAlignVertical": "center",
           "top": 0,
           "transform": Array [
             Object {
@@ -282,16 +304,38 @@ exports[`<Animation /> renders correctly 1`] = `
         }
       }
     >
-      <Text
+      <View
         style={
-          Object {
-            "height": 0,
-            "width": 0,
-          }
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "borderBottomColor": "#feae19",
+              "borderColor": "transparent",
+              "borderStyle": "solid",
+              "justifyContent": "center",
+              "textAlign": "center",
+              "textAlignVertical": "center",
+            },
+            Object {
+              "borderBottomWidth": 4.166666666666667,
+              "borderLeftWidth": 2.0833333333333335,
+              "borderRightWidth": 2.0833333333333335,
+            },
+          ]
         }
       >
-        
-      </Text>
+        <Text
+          style={
+            Object {
+              "height": 0,
+              "width": 0,
+            }
+          }
+        >
+          
+        </Text>
+      </View>
     </View>
     <View
       onMoveShouldSetResponder={[Function]}
@@ -308,19 +352,8 @@ exports[`<Animation /> renders correctly 1`] = `
       onStartShouldSetResponderCapture={[Function]}
       style={
         Object {
-          "alignItems": "center",
-          "backgroundColor": "transparent",
-          "borderBottomColor": "#feae19",
-          "borderBottomWidth": 4.166666666666667,
-          "borderColor": "transparent",
-          "borderLeftWidth": 2.0833333333333335,
-          "borderRightWidth": 2.0833333333333335,
-          "borderStyle": "solid",
-          "justifyContent": "center",
           "left": 0,
           "position": "absolute",
-          "textAlign": "center",
-          "textAlignVertical": "center",
           "top": 0,
           "transform": Array [
             Object {
@@ -333,16 +366,38 @@ exports[`<Animation /> renders correctly 1`] = `
         }
       }
     >
-      <Text
+      <View
         style={
-          Object {
-            "height": 0,
-            "width": 0,
-          }
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "borderBottomColor": "#feae19",
+              "borderColor": "transparent",
+              "borderStyle": "solid",
+              "justifyContent": "center",
+              "textAlign": "center",
+              "textAlignVertical": "center",
+            },
+            Object {
+              "borderBottomWidth": 4.166666666666667,
+              "borderLeftWidth": 2.0833333333333335,
+              "borderRightWidth": 2.0833333333333335,
+            },
+          ]
         }
       >
-        
-      </Text>
+        <Text
+          style={
+            Object {
+              "height": 0,
+              "width": 0,
+            }
+          }
+        >
+          
+        </Text>
+      </View>
     </View>
     <View
       onMoveShouldSetResponder={[Function]}
@@ -359,19 +414,8 @@ exports[`<Animation /> renders correctly 1`] = `
       onStartShouldSetResponderCapture={[Function]}
       style={
         Object {
-          "alignItems": "center",
-          "backgroundColor": "transparent",
-          "borderBottomColor": "#feae19",
-          "borderBottomWidth": 4.166666666666667,
-          "borderColor": "transparent",
-          "borderLeftWidth": 2.0833333333333335,
-          "borderRightWidth": 2.0833333333333335,
-          "borderStyle": "solid",
-          "justifyContent": "center",
           "left": 0,
           "position": "absolute",
-          "textAlign": "center",
-          "textAlignVertical": "center",
           "top": 0,
           "transform": Array [
             Object {
@@ -384,16 +428,38 @@ exports[`<Animation /> renders correctly 1`] = `
         }
       }
     >
-      <Text
+      <View
         style={
-          Object {
-            "height": 0,
-            "width": 0,
-          }
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "borderBottomColor": "#feae19",
+              "borderColor": "transparent",
+              "borderStyle": "solid",
+              "justifyContent": "center",
+              "textAlign": "center",
+              "textAlignVertical": "center",
+            },
+            Object {
+              "borderBottomWidth": 4.166666666666667,
+              "borderLeftWidth": 2.0833333333333335,
+              "borderRightWidth": 2.0833333333333335,
+            },
+          ]
         }
       >
-        
-      </Text>
+        <Text
+          style={
+            Object {
+              "height": 0,
+              "width": 0,
+            }
+          }
+        >
+          
+        </Text>
+      </View>
     </View>
     <View
       onMoveShouldSetResponder={[Function]}
@@ -410,19 +476,8 @@ exports[`<Animation /> renders correctly 1`] = `
       onStartShouldSetResponderCapture={[Function]}
       style={
         Object {
-          "alignItems": "center",
-          "backgroundColor": "transparent",
-          "borderBottomColor": "#feae19",
-          "borderBottomWidth": 4.166666666666667,
-          "borderColor": "transparent",
-          "borderLeftWidth": 2.0833333333333335,
-          "borderRightWidth": 2.0833333333333335,
-          "borderStyle": "solid",
-          "justifyContent": "center",
           "left": 0,
           "position": "absolute",
-          "textAlign": "center",
-          "textAlignVertical": "center",
           "top": 0,
           "transform": Array [
             Object {
@@ -435,16 +490,38 @@ exports[`<Animation /> renders correctly 1`] = `
         }
       }
     >
-      <Text
+      <View
         style={
-          Object {
-            "height": 0,
-            "width": 0,
-          }
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "borderBottomColor": "#feae19",
+              "borderColor": "transparent",
+              "borderStyle": "solid",
+              "justifyContent": "center",
+              "textAlign": "center",
+              "textAlignVertical": "center",
+            },
+            Object {
+              "borderBottomWidth": 4.166666666666667,
+              "borderLeftWidth": 2.0833333333333335,
+              "borderRightWidth": 2.0833333333333335,
+            },
+          ]
         }
       >
-        
-      </Text>
+        <Text
+          style={
+            Object {
+              "height": 0,
+              "width": 0,
+            }
+          }
+        >
+          
+        </Text>
+      </View>
     </View>
     <View
       onMoveShouldSetResponder={[Function]}
@@ -461,19 +538,8 @@ exports[`<Animation /> renders correctly 1`] = `
       onStartShouldSetResponderCapture={[Function]}
       style={
         Object {
-          "alignItems": "center",
-          "backgroundColor": "transparent",
-          "borderBottomColor": "#feae19",
-          "borderBottomWidth": 4.166666666666667,
-          "borderColor": "transparent",
-          "borderLeftWidth": 2.0833333333333335,
-          "borderRightWidth": 2.0833333333333335,
-          "borderStyle": "solid",
-          "justifyContent": "center",
           "left": 0,
           "position": "absolute",
-          "textAlign": "center",
-          "textAlignVertical": "center",
           "top": 0,
           "transform": Array [
             Object {
@@ -486,16 +552,38 @@ exports[`<Animation /> renders correctly 1`] = `
         }
       }
     >
-      <Text
+      <View
         style={
-          Object {
-            "height": 0,
-            "width": 0,
-          }
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "borderBottomColor": "#feae19",
+              "borderColor": "transparent",
+              "borderStyle": "solid",
+              "justifyContent": "center",
+              "textAlign": "center",
+              "textAlignVertical": "center",
+            },
+            Object {
+              "borderBottomWidth": 4.166666666666667,
+              "borderLeftWidth": 2.0833333333333335,
+              "borderRightWidth": 2.0833333333333335,
+            },
+          ]
         }
       >
-        
-      </Text>
+        <Text
+          style={
+            Object {
+              "height": 0,
+              "width": 0,
+            }
+          }
+        >
+          
+        </Text>
+      </View>
     </View>
     <View
       onMoveShouldSetResponder={[Function]}
@@ -512,15 +600,8 @@ exports[`<Animation /> renders correctly 1`] = `
       onStartShouldSetResponderCapture={[Function]}
       style={
         Object {
-          "alignItems": "center",
-          "backgroundColor": "#2a9e91",
-          "borderRadius": 8.333333333333334,
-          "height": 8.333333333333334,
-          "justifyContent": "center",
           "left": 0,
           "position": "absolute",
-          "textAlign": "center",
-          "textAlignVertical": "center",
           "top": 0,
           "transform": Array [
             Object {
@@ -530,20 +611,40 @@ exports[`<Animation /> renders correctly 1`] = `
               "translateY": 25.833333333333332,
             },
           ],
-          "width": 8.333333333333334,
         }
       }
     >
-      <Text
+      <View
         style={
-          Object {
-            "color": "#fff",
-            "fontWeight": "bold",
-          }
+          Array [
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "textAlign": "center",
+              "textAlignVertical": "center",
+            },
+            Object {
+              "backgroundColor": "#2a9e91",
+            },
+            Object {
+              "borderRadius": 8.333333333333334,
+              "height": 8.333333333333334,
+              "width": 8.333333333333334,
+            },
+          ]
         }
       >
-        1
-      </Text>
+        <Text
+          style={
+            Object {
+              "color": "#fff",
+              "fontWeight": "bold",
+            }
+          }
+        >
+          1
+        </Text>
+      </View>
     </View>
     <View
       onMoveShouldSetResponder={[Function]}
@@ -560,15 +661,8 @@ exports[`<Animation /> renders correctly 1`] = `
       onStartShouldSetResponderCapture={[Function]}
       style={
         Object {
-          "alignItems": "center",
-          "backgroundColor": "#2a9e91",
-          "borderRadius": 8.333333333333334,
-          "height": 8.333333333333334,
-          "justifyContent": "center",
           "left": 0,
           "position": "absolute",
-          "textAlign": "center",
-          "textAlignVertical": "center",
           "top": 0,
           "transform": Array [
             Object {
@@ -578,20 +672,40 @@ exports[`<Animation /> renders correctly 1`] = `
               "translateY": 25.833333333333332,
             },
           ],
-          "width": 8.333333333333334,
         }
       }
     >
-      <Text
+      <View
         style={
-          Object {
-            "color": "#fff",
-            "fontWeight": "bold",
-          }
+          Array [
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "textAlign": "center",
+              "textAlignVertical": "center",
+            },
+            Object {
+              "backgroundColor": "#2a9e91",
+            },
+            Object {
+              "borderRadius": 8.333333333333334,
+              "height": 8.333333333333334,
+              "width": 8.333333333333334,
+            },
+          ]
         }
       >
-        2
-      </Text>
+        <Text
+          style={
+            Object {
+              "color": "#fff",
+              "fontWeight": "bold",
+            }
+          }
+        >
+          2
+        </Text>
+      </View>
     </View>
     <View
       onMoveShouldSetResponder={[Function]}
@@ -608,15 +722,8 @@ exports[`<Animation /> renders correctly 1`] = `
       onStartShouldSetResponderCapture={[Function]}
       style={
         Object {
-          "alignItems": "center",
-          "backgroundColor": "#2a9e91",
-          "borderRadius": 8.333333333333334,
-          "height": 8.333333333333334,
-          "justifyContent": "center",
           "left": 0,
           "position": "absolute",
-          "textAlign": "center",
-          "textAlignVertical": "center",
           "top": 0,
           "transform": Array [
             Object {
@@ -626,20 +733,40 @@ exports[`<Animation /> renders correctly 1`] = `
               "translateY": 25.833333333333332,
             },
           ],
-          "width": 8.333333333333334,
         }
       }
     >
-      <Text
+      <View
         style={
-          Object {
-            "color": "#fff",
-            "fontWeight": "bold",
-          }
+          Array [
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "textAlign": "center",
+              "textAlignVertical": "center",
+            },
+            Object {
+              "backgroundColor": "#2a9e91",
+            },
+            Object {
+              "borderRadius": 8.333333333333334,
+              "height": 8.333333333333334,
+              "width": 8.333333333333334,
+            },
+          ]
         }
       >
-        3
-      </Text>
+        <Text
+          style={
+            Object {
+              "color": "#fff",
+              "fontWeight": "bold",
+            }
+          }
+        >
+          3
+        </Text>
+      </View>
     </View>
     <View
       onMoveShouldSetResponder={[Function]}
@@ -656,15 +783,8 @@ exports[`<Animation /> renders correctly 1`] = `
       onStartShouldSetResponderCapture={[Function]}
       style={
         Object {
-          "alignItems": "center",
-          "backgroundColor": "#2a9e91",
-          "borderRadius": 8.333333333333334,
-          "height": 8.333333333333334,
-          "justifyContent": "center",
           "left": 0,
           "position": "absolute",
-          "textAlign": "center",
-          "textAlignVertical": "center",
           "top": 0,
           "transform": Array [
             Object {
@@ -674,20 +794,40 @@ exports[`<Animation /> renders correctly 1`] = `
               "translateY": 55.833333333333336,
             },
           ],
-          "width": 8.333333333333334,
         }
       }
     >
-      <Text
+      <View
         style={
-          Object {
-            "color": "#fff",
-            "fontWeight": "bold",
-          }
+          Array [
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "textAlign": "center",
+              "textAlignVertical": "center",
+            },
+            Object {
+              "backgroundColor": "#2a9e91",
+            },
+            Object {
+              "borderRadius": 8.333333333333334,
+              "height": 8.333333333333334,
+              "width": 8.333333333333334,
+            },
+          ]
         }
       >
-        4
-      </Text>
+        <Text
+          style={
+            Object {
+              "color": "#fff",
+              "fontWeight": "bold",
+            }
+          }
+        >
+          4
+        </Text>
+      </View>
     </View>
     <View
       onMoveShouldSetResponder={[Function]}
@@ -704,15 +844,8 @@ exports[`<Animation /> renders correctly 1`] = `
       onStartShouldSetResponderCapture={[Function]}
       style={
         Object {
-          "alignItems": "center",
-          "backgroundColor": "#2a9e91",
-          "borderRadius": 8.333333333333334,
-          "height": 8.333333333333334,
-          "justifyContent": "center",
           "left": 0,
           "position": "absolute",
-          "textAlign": "center",
-          "textAlignVertical": "center",
           "top": 0,
           "transform": Array [
             Object {
@@ -722,20 +855,40 @@ exports[`<Animation /> renders correctly 1`] = `
               "translateY": 55.833333333333336,
             },
           ],
-          "width": 8.333333333333334,
         }
       }
     >
-      <Text
+      <View
         style={
-          Object {
-            "color": "#fff",
-            "fontWeight": "bold",
-          }
+          Array [
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "textAlign": "center",
+              "textAlignVertical": "center",
+            },
+            Object {
+              "backgroundColor": "#2a9e91",
+            },
+            Object {
+              "borderRadius": 8.333333333333334,
+              "height": 8.333333333333334,
+              "width": 8.333333333333334,
+            },
+          ]
         }
       >
-        5
-      </Text>
+        <Text
+          style={
+            Object {
+              "color": "#fff",
+              "fontWeight": "bold",
+            }
+          }
+        >
+          5
+        </Text>
+      </View>
     </View>
     <View
       onMoveShouldSetResponder={[Function]}
@@ -752,17 +905,8 @@ exports[`<Animation /> renders correctly 1`] = `
       onStartShouldSetResponderCapture={[Function]}
       style={
         Object {
-          "alignItems": "center",
-          "backgroundColor": "white",
-          "borderColor": "black",
-          "borderRadius": 5.555555555555556,
-          "borderWidth": 0.5555555555555556,
-          "height": 5.555555555555556,
-          "justifyContent": "center",
           "left": 0,
           "position": "absolute",
-          "textAlign": "center",
-          "textAlignVertical": "center",
           "top": 0,
           "transform": Array [
             Object {
@@ -772,20 +916,40 @@ exports[`<Animation /> renders correctly 1`] = `
               "translateY": 33.22222222222222,
             },
           ],
-          "width": 5.555555555555556,
         }
       }
     >
-      <Text
+      <View
         style={
-          Object {
-            "color": "#f1f1f1",
-            "fontWeight": "bold",
-          }
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "white",
+              "borderColor": "black",
+              "justifyContent": "center",
+              "textAlign": "center",
+              "textAlignVertical": "center",
+            },
+            Object {
+              "borderRadius": 5.555555555555556,
+              "borderWidth": 0.5555555555555556,
+              "height": 5.555555555555556,
+              "width": 5.555555555555556,
+            },
+          ]
         }
       >
-        
-      </Text>
+        <Text
+          style={
+            Object {
+              "color": "white",
+              "fontWeight": "bold",
+            }
+          }
+        >
+          
+        </Text>
+      </View>
     </View>
   </View>
   <View>

@@ -78,6 +78,12 @@ export default {
     yes: 'Yes',
     no: 'No',
   },
+  utils: {
+    snackbar: {
+      success: 'Success',
+      error: 'Error',
+    },
+  },
   homePage: {
     frisbeeTab: 'Frisbee',
     fitnessTab: 'Fitness',
@@ -114,6 +120,8 @@ export default {
       new: 'New',
       share: 'Share',
       import: 'Import',
+      importSuccess: 'The drill "{{title}}" has been imported successfully!',
+      importError: 'Could not import the drill',
     },
     renameDrillModal: {
       placeholder: 'Click here to enter the new name',

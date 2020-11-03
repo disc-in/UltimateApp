@@ -7,6 +7,7 @@ import * as Sharing from 'expo-sharing';
 import * as DocumentPicker from 'expo-document-picker';
 
 import I18n from '../../utils/i18n';
+import { showSuccess, showError } from '../../utils/flashMessage';
 import HeaderButton from '../shared/HeaderButton';
 
 const CurrentDrillManager = (props) => {
@@ -29,13 +30,14 @@ const CurrentDrillManager = (props) => {
       try {
         const drill = JSON.parse(file);
         props.openDrill(drill);
+        showSuccess(I18n.t('editor.currentDrillManager.importSuccess', { title: drill.title }));
         // TODO: Don't know if it should save the drill or just open it
       } catch (error) {
-        // TODO: We should provide feedback
+        showError(I18n.t('editor.currentDrillManager.importError'));
         console.log(error);
       }
     } else {
-      // TODO: We should provide feedback
+      showError(I18n.t('editor.currentDrillManager.importError'));
       console.log(result);
     }
   };

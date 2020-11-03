@@ -9,15 +9,13 @@ import * as DocumentPicker from 'expo-document-picker';
 import I18n from '../../utils/i18n';
 import HeaderButton from '../shared/HeaderButton';
 
-MIME_TYPE = 'text/discin';
-
 const CurrentDrillManager = (props) => {
   const [visible, setVisible] = useState(false);
 
   const openMenu = () => setVisible(true);
   const closeMenu = () => setVisible(false);
 
-  const share = async () => {
+  const sharePlay = async () => {
     const fileUri = FileSystem.cacheDirectory + props.currentDrill.title + '.discin';
     await FileSystem.writeAsStringAsync(fileUri, JSON.stringify(props.currentDrill));
     await Sharing.shareAsync(fileUri);
@@ -27,10 +25,15 @@ const CurrentDrillManager = (props) => {
     // TODO: Maybe filter by MIME type
     const result = await DocumentPicker.getDocumentAsync();
     if (result.type === 'success') {
-      const drill = await FileSystem.readAsStringAsync(result.uri);
-      props.openDrill(JSON.parse(drill));
-      // TODO: Don't know if it should save the drill or just open it
-      // TODO: What if the opened file is not from Disc In ?
+      const file = await FileSystem.readAsStringAsync(result.uri);
+      try {
+        const drill = JSON.parse(file);
+        props.openDrill(drill);
+        // TODO: Don't know if it should save the drill or just open it
+      } catch (error) {
+        // TODO: We should provide feedback
+        console.log(error);
+      }
     } else {
       // TODO: We should provide feedback
       console.log(result);
@@ -97,7 +100,7 @@ const CurrentDrillManager = (props) => {
       <Divider />
       <Menu.Item
         onPress={() => {
-          share();
+          sharePlay();
           closeMenu();
         }}
         icon="share-outline"

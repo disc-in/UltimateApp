@@ -1,11 +1,19 @@
 import React from 'react';
 import { render, waitFor } from '@testing-library/react-native';
 import nock from 'nock';
+import { NavigationContext } from '@react-navigation/native';
 
 import VimeoVideo from './VimeoVideo';
 
 describe('<VimeoVideo />', () => {
   const VIMEO_VIDEO_ID = '407999139';
+
+  // fake NavigationContext value data
+  const navContext = {
+    isFocused: () => true,
+    // addListener returns an unscubscribe function.
+    addListener: jest.fn(() => jest.fn()),
+  };
 
   it('loads the video', async () => {
     const scope = nock('https://player.vimeo.com:443', { encodedQueryParams: true })
@@ -70,7 +78,11 @@ describe('<VimeoVideo />', () => {
         ],
       );
 
-    const { getByText, toJSON } = render(<VimeoVideo vimeoId={VIMEO_VIDEO_ID} />);
+    const { getByText, toJSON } = render(
+      <NavigationContext.Provider value={navContext}>
+        <VimeoVideo vimeoId={VIMEO_VIDEO_ID} />
+      </NavigationContext.Provider>,
+    );
 
     expect(getByText('Loading...')).toBeDefined(); // Displayed by default
 
@@ -82,7 +94,11 @@ describe('<VimeoVideo />', () => {
   it('displays a message on error', async () => {
     const scope = nock('https://player.vimeo.com').get(`/video/${VIMEO_VIDEO_ID}/config`).reply(404, {});
 
-    const { getByText, toJSON } = render(<VimeoVideo vimeoId={VIMEO_VIDEO_ID} />);
+    const { getByText, toJSON } = render(
+      <NavigationContext.Provider value={navContext}>
+        <VimeoVideo vimeoId={VIMEO_VIDEO_ID} />
+      </NavigationContext.Provider>,
+    );
 
     await waitFor(() => getByText('Oopsie! There was an error loading the video...'));
 

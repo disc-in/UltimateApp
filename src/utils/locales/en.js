@@ -78,6 +78,12 @@ export default {
     yes: 'Yes',
     no: 'No',
   },
+  utils: {
+    snackbar: {
+      success: 'Success 👍',
+      error: 'Oh no... 😥',
+    },
+  },
   homePage: {
     frisbeeTab: 'Frisbee',
     fitnessTab: 'Fitness',
@@ -119,6 +125,7 @@ export default {
       placeholder: 'Click here to enter the new name',
       alreadyExists: 'This name already exists',
       empty: 'You cannot set an empty name',
+      renameSuccess: 'The drill was successfully renamed!',
       cta: 'Apply',
     },
   },

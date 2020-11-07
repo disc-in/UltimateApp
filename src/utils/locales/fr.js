@@ -78,6 +78,12 @@ export default {
     yes: 'Oui',
     no: 'Non',
   },
+  utils: {
+    snackbar: {
+      success: 'Succès 👍',
+      error: 'Oh non... 😥',
+    },
+  },
   homePage: {
     frisbeeTab: 'Frisbee',
     fitnessTab: 'Fitness',
@@ -119,6 +125,7 @@ export default {
       placeholder: 'Appuyer ici pour renommer',
       alreadyExists: 'Ce nom existe déjà',
       empty: 'Le nom ne peut pas être vide',
+      renameSuccess: "L'exo a été renommé avec succès",
       cta: 'Valider',
     },
   },

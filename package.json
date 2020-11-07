@@ -31,6 +31,7 @@
     "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.0.tar.gz",
     "react-native-collapsible": "^1.5.2",
     "react-native-elements": "^1.2.7",
+    "react-native-flash-message": "^0.1.17",
     "react-native-gesture-handler": "~1.7.0",
     "react-native-kill-packager": "^1.0.0",
     "react-native-paper": "^3.11.0",

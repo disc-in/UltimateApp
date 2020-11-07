@@ -6,6 +6,7 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 
 import I18n from '../../utils/i18n';
+import { showSuccess } from '../../utils/flashMessage';
 import { renameDrill } from '../../Store/Actions/drillAction';
 import Modal from '../shared/Modal';
 import Button from '../shared/Button';
@@ -46,6 +47,7 @@ export const RenameDrillModal = (props) => {
               props.renameDrill(props.currentDrill.title, values.name);
               props.currentDrill.title = values.name;
               props.onRename();
+              showSuccess(I18n.t('editor.renameDrillModal.renameSuccess'));
               props.close();
             }}
           >

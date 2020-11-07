@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, waitFor, fireEvent } from '@testing-library/react-native';
+import { render, waitFor, fireEvent, act } from '@testing-library/react-native';
 import { Provider as PaperProvider } from 'react-native-paper';
 
 import animationSquare from '../../Fixtures/Animation/AnimationSquare';
@@ -50,7 +50,7 @@ describe('<RenameDrillModal />', () => {
     // Fill input
     fireEvent(getByPlaceholderText('Click here to enter the new name'), 'onChangeText', 'New Title');
 
-    await fireEvent.press(getByText('Back'));
+    await act(async () => await fireEvent.press(getByText('Back')));
 
     expect(onRename).not.toBeCalled();
     expect(renameDrill).not.toBeCalled();
@@ -75,7 +75,7 @@ describe('<RenameDrillModal />', () => {
     // Fill input
     fireEvent(getByPlaceholderText('Click here to enter the new name'), 'onChangeText', 'New Title');
 
-    await fireEvent.press(getByText('Apply'));
+    await act(async () => await fireEvent.press(getByText('Apply')));
 
     expect(onRename).toBeCalled();
     expect(renameDrill).toBeCalled();

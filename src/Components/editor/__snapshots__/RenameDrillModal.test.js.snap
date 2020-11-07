@@ -111,6 +111,7 @@ exports[`<RenameDrillModal /> renders correctly 1`] = `
                     }
                   }
                   underlineColorAndroid="transparent"
+                  value="Square"
                 />
                 <View
                   accessible={true}

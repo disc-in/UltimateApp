@@ -43,7 +43,7 @@ export const RenameDrillModal = (props) => {
                   I18n.t('editor.renameDrillModal.alreadyExists'),
                 ),
             })}
-            onSubmit={(values, other) => {
+            onSubmit={(values) => {
               props.renameDrill(props.currentDrill.title, values.name);
               props.currentDrill.title = values.name;
               props.onRename();

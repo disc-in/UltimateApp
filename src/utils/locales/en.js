@@ -117,7 +117,8 @@ export default {
     },
     renameDrillModal: {
       placeholder: 'Click here to enter the new name',
-      alreadyExists: 'This title is already in use',
+      alreadyExists: 'This name already exists',
+      empty: 'You cannot set an empty name',
       cta: 'Apply',
     },
   },

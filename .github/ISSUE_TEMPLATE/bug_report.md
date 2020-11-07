@@ -11,7 +11,7 @@ assignees: ''
 
 ### Environment
 
-<!-- Are you using the app on Android, a web browser... ? -->
+<!-- Are you using the app on Android, a web browser… ? -->
 
 ### Steps to Reproduce
 

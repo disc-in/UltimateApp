@@ -81,7 +81,7 @@ export default {
   utils: {
     snackbar: {
       success: 'Success 👍',
-      error: 'Oh no... 😥',
+      error: 'Oh no… 😥',
     },
   },
   homePage: {
@@ -188,8 +188,8 @@ export default {
     start: 'Start training',
   },
   vimeoVideo: {
-    loading: 'Loading...',
-    error: 'Oopsie! There was an error loading the video...',
+    loading: 'Loading…',
+    error: 'Oopsie! There was an error loading the video…',
   },
   programs: {
     program: {

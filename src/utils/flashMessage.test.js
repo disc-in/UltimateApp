@@ -17,7 +17,7 @@ describe('flashMessage', () => {
     expect(showMessage).toHaveBeenCalledWith({
       description: 'success message',
       floating: 'true',
-      message: 'Success',
+      message: 'Success 👍',
       textStyle: {
         fontSize: 14,
       },
@@ -33,7 +33,7 @@ describe('flashMessage', () => {
     expect(showMessage).toHaveBeenCalledWith({
       description: 'error message',
       floating: 'true',
-      message: 'Error',
+      message: 'Oh no… 😥',
       textStyle: {
         fontSize: 14,
       },

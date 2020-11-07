@@ -7209,7 +7209,7 @@ const checkLongKid = {
       repetition: '',
       rest: '',
       instruction:
-        "Quand le lanceur(un joueur expériementé/entraineur) fait un check avec le cutter, ce dernier doit courir le plus rapidement possible en longue. L'objectif est de compléter la passe la plus longue. Rendez ça marrant en demandant au cutter d'annoncer le check qu'ils veulent faire (coude, double pieds...). Si un cutter attrape la longue, tout le monde doit célébrer.",
+        "Quand le lanceur(un joueur expériementé/entraineur) fait un check avec le cutter, ce dernier doit courir le plus rapidement possible en longue. L'objectif est de compléter la passe la plus longue. Rendez ça marrant en demandant au cutter d'annoncer le check qu'ils veulent faire (coude, double pieds…). Si un cutter attrape la longue, tout le monde doit célébrer.",
     },
   ],
 };

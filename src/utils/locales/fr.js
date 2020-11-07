@@ -81,7 +81,7 @@ export default {
   utils: {
     snackbar: {
       success: 'Succès 👍',
-      error: 'Oh non... 😥',
+      error: 'Oh non… 😥',
     },
   },
   homePage: {
@@ -187,7 +187,7 @@ export default {
     start: "Commencer l'entraînement",
   },
   vimeoVideo: {
-    loading: 'Chargement...',
+    loading: 'Chargement…',
     error: 'Oups ! Une erreur est survenue pendant le chargement de la vidéo',
   },
   programs: {

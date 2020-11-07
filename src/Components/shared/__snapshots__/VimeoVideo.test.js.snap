@@ -19,7 +19,7 @@ exports[`<VimeoVideo /> displays a message on error 1`] = `
     }
   >
     <Text>
-      Oopsie! There was an error loading the video...
+      Oopsie! There was an error loading the video…
     </Text>
   </View>
   <View
@@ -86,7 +86,7 @@ exports[`<VimeoVideo /> loads the video 1`] = `
       size="large"
     />
     <Text>
-      Loading...
+      Loading…
     </Text>
   </View>
   <View

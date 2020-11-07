@@ -7105,7 +7105,7 @@ const checkLongKid = {
       repetition: '',
       rest: '',
       instruction:
-        'When the long thrower (an experience player/coach/teacher) is checking with the cutter, the cutter go long as fast as possible. The goal is to make the longest complete pass. Making it fun by asking the cutter to call the check he wants to do (elbow, double foot,...). When a cutter catch the long, everyone celebrate.',
+        'When the long thrower (an experience player/coach/teacher) is checking with the cutter, the cutter go long as fast as possible. The goal is to make the longest complete pass. Making it fun by asking the cutter to call the check he wants to do (elbow, double foot…). When a cutter catch the long, everyone celebrate.',
     },
   ],
 };

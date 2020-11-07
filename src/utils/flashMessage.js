@@ -3,8 +3,8 @@ import FlashMessage, { showMessage } from 'react-native-flash-message';
 import theme from '../styles/theme.style';
 import I18n from './i18n';
 
-export const showSuccess = (description) => {
-  showMessage({
+export const showSuccess = (description, ref = null) => {
+  const params = {
     message: I18n.t('utils.snackbar.success'),
     description,
     type: 'success',
@@ -15,11 +15,12 @@ export const showSuccess = (description) => {
     textStyle: {
       fontSize: theme.FONT_SIZE_SMALL,
     },
-  });
+  };
+  ref ? ref.showMessage(params) : showMessage(params);
 };
 
-export const showError = (description) => {
-  showMessage({
+export const showError = (description, ref = null) => {
+  const params = {
     message: I18n.t('utils.snackbar.error'),
     description,
     type: 'danger',
@@ -30,7 +31,8 @@ export const showError = (description) => {
     textStyle: {
       fontSize: theme.FONT_SIZE_SMALL,
     },
-  });
+  };
+  ref ? ref.showMessage(params) : showMessage(params);
 };
 
 export default FlashMessage;

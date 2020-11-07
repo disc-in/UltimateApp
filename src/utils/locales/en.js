@@ -113,6 +113,7 @@ export default {
       empty: "You haven't saved any drills yet",
       delete: 'Delete',
       deleteConfirmation: 'Do you really want to delete this drill?',
+      deleteSuccess: "The drill '{{title}}' has been deleted.",
     },
     currentDrillManager: {
       save: 'Save',

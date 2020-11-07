@@ -113,6 +113,7 @@ export default {
       empty: "Vous n'avez pas encore sauvegardé d'exercices",
       delete: 'Supprimer',
       deleteConfirmation: 'Voulez-vous vraiment supprimer cet exercice ?',
+      deleteSuccess: 'L\'exo "{{title}}" a été supprimé.',
     },
     currentDrillManager: {
       save: 'Sauvegarder',

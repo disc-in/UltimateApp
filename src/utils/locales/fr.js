@@ -116,6 +116,7 @@ export default {
     },
     currentDrillManager: {
       save: 'Sauvegarder',
+      saveSuccess: 'L\'exo "{{title}}" a été sauvegardé',
       rename: 'Renommer',
       new: 'Nouveau',
       share: 'Contribuer',

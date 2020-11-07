@@ -116,6 +116,7 @@ export default {
     },
     currentDrillManager: {
       save: 'Save',
+      saveSuccess: "The drill has been saved as '{{title}}'",
       rename: 'Rename',
       new: 'New',
       share: 'Contribute',

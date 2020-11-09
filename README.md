@@ -3,6 +3,7 @@
 Developing an app to enhance Ultimate coaching abilities
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/402f7b59a331b4c23e0f/maintainability)](https://codeclimate.com/github/disc-in/UltimateApp/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/402f7b59a331b4c23e0f/test_coverage)](https://codeclimate.com/github/disc-in/UltimateApp/test_coverage)
 
 ## ⌨️ Development
 

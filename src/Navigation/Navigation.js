@@ -12,6 +12,7 @@ import TrainingPage from '../Components/TrainingPage';
 import ProgramListPage from '../Components/ProgramListPage';
 
 import PlayEditorPage from '../Components/PlayEditorPage';
+import DrillEditorPage from '../Components/DrillEditorPage';
 
 import EssentialPage from '../Components/EssentialPage';
 import DictionaryPage from '../Components/DictionaryPage';
@@ -85,6 +86,11 @@ export const Navigation = () => (
           }),
         },
       })}
+    />
+    <Stack.Screen
+      name="DrillEditorPage"
+      component={DrillEditorPage}
+      options={{ title: I18n.t('navigation.drillEditorPage') }}
     />
     <Stack.Screen
       name="DictionaryPage"

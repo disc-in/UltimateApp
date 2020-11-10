@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DrillEditorPage /> renders correctly 1`] = `
+<View>
+  <Text>
+    Coming soon.
+  </Text>
+</View>
+`;

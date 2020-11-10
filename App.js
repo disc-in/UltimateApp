@@ -5,9 +5,10 @@ import { Platform, AsyncStorage } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { enableScreens } from 'react-native-screens';
 import { Provider as ReduxProvider } from 'react-redux';
+import { Provider as PaperProvider } from 'react-native-paper';
 import { Navigation } from './src/Navigation';
 import { store, persistor } from './src/Store/configureStore';
-import { Provider as PaperProvider } from 'react-native-paper';
+import FlashMessage from './src/utils/flashMessage';
 
 if (Platform.OS !== 'web') enableScreens();
 
@@ -48,6 +49,7 @@ const App = (props) => {
           >
             <Navigation />
           </NavigationContainer>
+          <FlashMessage position="bottom" />
         </PaperProvider>
       </PersistGate>
     </ReduxProvider>

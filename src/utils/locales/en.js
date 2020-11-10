@@ -78,6 +78,12 @@ export default {
     yes: 'Yes',
     no: 'No',
   },
+  utils: {
+    snackbar: {
+      success: 'Success 👍',
+      error: 'Oh no… 😥',
+    },
+  },
   homePage: {
     frisbeeTab: 'Frisbee',
     fitnessTab: 'Fitness',
@@ -107,9 +113,11 @@ export default {
       empty: "You haven't saved any drills yet",
       delete: 'Delete',
       deleteConfirmation: 'Do you really want to delete this drill?',
+      deleteSuccess: "The drill '{{title}}' has been deleted.",
     },
     currentDrillManager: {
       save: 'Save',
+      saveSuccess: "The drill has been saved as '{{title}}'",
       rename: 'Rename',
       new: 'New',
       share: 'Contribute',
@@ -117,7 +125,9 @@ export default {
     },
     renameDrillModal: {
       placeholder: 'Click here to enter the new name',
-      alreadyExists: 'This title is already in use',
+      alreadyExists: 'This name already exists',
+      empty: 'You cannot set an empty name',
+      renameSuccess: 'The drill was successfully renamed!',
       cta: 'Apply',
     },
   },
@@ -180,8 +190,8 @@ export default {
     start: 'Start training',
   },
   vimeoVideo: {
-    loading: 'Loading...',
-    error: 'Oopsie! There was an error loading the video...',
+    loading: 'Loading…',
+    error: 'Oopsie! There was an error loading the video…',
   },
   programs: {
     program: {

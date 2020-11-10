@@ -84,9 +84,9 @@ describe('<VimeoVideo />', () => {
       </NavigationContext.Provider>,
     );
 
-    expect(getByText('Loading...')).toBeDefined(); // Displayed by default
+    expect(getByText('Loading…')).toBeDefined(); // Displayed by default
 
-    await waitFor(() => getByText('Loading...'));
+    await waitFor(() => getByText('Loading…'));
 
     expect(toJSON()).toMatchSnapshot();
   });
@@ -100,7 +100,7 @@ describe('<VimeoVideo />', () => {
       </NavigationContext.Provider>,
     );
 
-    await waitFor(() => getByText('Oopsie! There was an error loading the video...'));
+    await waitFor(() => getByText('Oopsie! There was an error loading the video…'));
 
     expect(toJSON()).toMatchSnapshot();
   });

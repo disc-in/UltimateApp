@@ -4,6 +4,7 @@ import { Menu, Divider } from 'react-native-paper';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import I18n from '../../utils/i18n';
+import { showSuccess } from '../../utils/flashMessage';
 import HeaderButton from '../shared/HeaderButton';
 
 const CurrentDrillManager = (props) => {
@@ -36,6 +37,7 @@ const CurrentDrillManager = (props) => {
             text: I18n.t('shared.yes'),
             onPress: () => {
               props.save();
+              showSuccess(I18n.t('editor.currentDrillManager.saveSuccess', { title: props.currentDrill.title }));
               props.new();
             },
           },
@@ -55,6 +57,7 @@ const CurrentDrillManager = (props) => {
       <Menu.Item
         onPress={() => {
           props.save();
+          showSuccess(I18n.t('editor.currentDrillManager.saveSuccess', { title: props.currentDrill.title }));
           closeMenu();
         }}
         icon="content-save-outline"

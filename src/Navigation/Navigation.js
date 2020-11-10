@@ -11,7 +11,7 @@ import FitnessFilters from '../Components/FitnessFilters';
 import TrainingPage from '../Components/TrainingPage';
 import ProgramListPage from '../Components/ProgramListPage';
 
-import AnimationEditorPage from '../Components/AnimationEditorPage';
+import PlayEditorPage from '../Components/PlayEditorPage';
 
 import EssentialPage from '../Components/EssentialPage';
 import DictionaryPage from '../Components/DictionaryPage';
@@ -70,10 +70,10 @@ export const Navigation = () => (
       })}
     />
     <Stack.Screen
-      name="AnimationEditorPage"
-      component={AnimationEditorPage}
+      name="PlayEditorPage"
+      component={PlayEditorPage}
       options={() => ({
-        title: I18n.t('navigation.animationEditorPage'),
+        title: I18n.t('navigation.playEditorPage'),
         headerTitleContainerStyle: {
           ...Platform.select({
             ios: {

@@ -23,7 +23,7 @@ export const RenameDrillModal = (props) => {
   return (
     <View>
       <Modal
-        title={props.currentDrill.title || I18n.t('animationEditorPage.untitledDrill')}
+        title={props.currentDrill.title || I18n.t('playEditorPage.untitledPlay')}
         visible
         onClose={() => {
           props.close();

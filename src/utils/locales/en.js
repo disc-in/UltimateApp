@@ -67,7 +67,7 @@ export default {
       fullEquipment: 'Gym programs',
     },
     drillPageMinimal: '{{training}} drills',
-    animationEditorPage: 'New Drill',
+    playEditorPage: 'New Play',
     dictionaryPage: 'Dictionary',
     essentialPage: 'Basics',
     tacticsPage: 'Tactics',
@@ -101,8 +101,8 @@ export default {
     essential: 'Basics',
     tactics: 'Tactics',
   },
-  animationEditorPage: {
-    untitledDrill: 'Unnamed drill',
+  playEditorPage: {
+    untitledPlay: 'Unnamed play',
   },
   editor: {
     saveModificationsTitle: 'Do you want to save the current drill?',

@@ -67,7 +67,7 @@ export default {
       fullEquipment: 'Entraînements en salle',
     },
     drillPageMinimal: '{{training}} - exercices',
-    animationEditorPage: 'Nouvel exercice',
+    playEditorPage: 'Nouvelle tactique',
     dictionaryPage: 'Lexique',
     essentialPage: 'Les bases du jeu',
     tacticsPage: 'Tactiques',
@@ -101,8 +101,8 @@ export default {
     essential: 'Les bases du jeu',
     tactics: 'Tactiques',
   },
-  animationEditorPage: {
-    untitledDrill: 'Exercice sans titre',
+  playEditorPage: {
+    untitledPlay: 'Tactique sans titre',
   },
   editor: {
     saveModificationsTitle: 'Voulez-vous sauvegarder les modifications ?',

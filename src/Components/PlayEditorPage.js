@@ -17,10 +17,10 @@ const newDrill = {
     texts: [],
     background: 'endzone',
   },
-  title: I18n.t('animationEditorPage.untitledDrill'),
+  title: I18n.t('playEditorPage.untitledPlay'),
 };
 
-export const AnimationEditorPage = (props) => {
+export const PlayEditorPage = (props) => {
   const [currentDrill, setCurrentDrill] = useState(newDrill);
 
   // modalRenameVisible is true if the modal which enables to rename the current drill is displayed
@@ -59,7 +59,7 @@ export const AnimationEditorPage = (props) => {
   }, [currentDrill, isDrillSaved]);
 
   const setTitle = () => {
-    const drillTitle = currentDrill.title || I18n.t('animationEditorPage.untitledDrill');
+    const drillTitle = currentDrill.title || I18n.t('playEditorPage.untitledPlay');
     const unsavedAsterisk = isDrillSaved ? '' : '* ';
     const displayedTitle = `${unsavedAsterisk}${drillTitle}`;
 
@@ -72,8 +72,8 @@ export const AnimationEditorPage = (props) => {
   };
 
   const saveCurrentDrill = () => {
-    const defaultTitle = I18n.t('animationEditorPage.untitledDrill');
-    if (currentDrill.title == I18n.t('animationEditorPage.untitledDrill')) {
+    const defaultTitle = I18n.t('playEditorPage.untitledPlay');
+    if (currentDrill.title == I18n.t('playEditorPage.untitledPlay')) {
       let newTitle = defaultTitle;
 
       let counter = 1;
@@ -122,7 +122,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = { saveDrill, deleteDrill };
 
-export default connect(mapStateToProps, mapDispatchToProps)(AnimationEditorPage);
+export default connect(mapStateToProps, mapDispatchToProps)(PlayEditorPage);
 
 const styles = StyleSheet.create({
   centeredView: {

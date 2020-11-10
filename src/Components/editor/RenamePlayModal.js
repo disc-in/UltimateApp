@@ -7,11 +7,11 @@ import * as Yup from 'yup';
 
 import I18n from '../../utils/i18n';
 import { showSuccess } from '../../utils/flashMessage';
-import { renameDrill } from '../../Store/Actions/drillAction';
+import { renamePlay } from '../../Store/Actions/playAction';
 import Modal from '../shared/Modal';
 import Button from '../shared/Button';
 
-export const RenameDrillModal = (props) => {
+export const RenamePlayModal = (props) => {
   const inputRef = useRef();
 
   useEffect(() => {
@@ -23,7 +23,7 @@ export const RenameDrillModal = (props) => {
   return (
     <View>
       <Modal
-        title={props.currentDrill.title || I18n.t('playEditorPage.untitledPlay')}
+        title={props.currentPlay.title || I18n.t('playEditorPage.untitledPlay')}
         visible
         onClose={() => {
           props.close();
@@ -33,21 +33,21 @@ export const RenameDrillModal = (props) => {
         /* Otherwise the first press on the validation button will only close the keyboard and not trigger onPress */}
         <ScrollView keyboardShouldPersistTaps="always" directionalLockEnabled style={{ flexGrow: 0 }}>
           <Formik
-            initialValues={{ name: props.currentDrill.title }}
+            initialValues={{ name: props.currentPlay.title }}
             validationSchema={Yup.object({
               name: Yup.string()
                 .trim()
-                .required(I18n.t('editor.renameDrillModal.empty'))
+                .required(I18n.t('editor.renamePlayModal.empty'))
                 .notOneOf(
-                  props.customDrills.map((drill) => drill.title),
-                  I18n.t('editor.renameDrillModal.alreadyExists'),
+                  props.customPlays.map((play) => play.title),
+                  I18n.t('editor.renamePlayModal.alreadyExists'),
                 ),
             })}
             onSubmit={(values) => {
-              props.renameDrill(props.currentDrill.title, values.name);
-              props.currentDrill.title = values.name;
+              props.renamePlay(props.currentPlay.title, values.name);
+              props.currentPlay.title = values.name;
               props.onRename();
-              showSuccess(I18n.t('editor.renameDrillModal.renameSuccess'));
+              showSuccess(I18n.t('editor.renamePlayModal.renameSuccess'));
               props.close();
             }}
           >
@@ -55,7 +55,7 @@ export const RenameDrillModal = (props) => {
               <View style={styles.form}>
                 <TextInput
                   style={styles.input}
-                  placeholder={I18n.t('editor.renameDrillModal.placeholder')}
+                  placeholder={I18n.t('editor.renamePlayModal.placeholder')}
                   onChangeText={handleChange('name')}
                   value={values.name}
                   ref={inputRef}
@@ -63,7 +63,7 @@ export const RenameDrillModal = (props) => {
                 {touched.name && errors.name && <Text style={styles.error}>{errors.name}</Text>}
                 <Button
                   onPress={handleSubmit}
-                  text={I18n.t('editor.renameDrillModal.cta')}
+                  text={I18n.t('editor.renamePlayModal.cta')}
                   style={styles.cta}
                   disabled={!isValid}
                 />
@@ -78,13 +78,13 @@ export const RenameDrillModal = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    customDrills: state.customDrills,
+    customPlays: state.customPlays,
   };
 };
 
-const mapDispatchToProps = { renameDrill };
+const mapDispatchToProps = { renamePlay };
 
-export default connect(mapStateToProps, mapDispatchToProps)(RenameDrillModal);
+export default connect(mapStateToProps, mapDispatchToProps)(RenamePlayModal);
 
 const styles = StyleSheet.create({
   form: {

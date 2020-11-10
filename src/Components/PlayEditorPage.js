@@ -4,14 +4,14 @@ import { connect } from 'react-redux';
 
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
-import { saveDrill, deleteDrill } from '../Store/Actions/drillAction';
+import { savePlay, deletePlay } from '../Store/Actions/playAction';
 import AnimationEditor from './editor/AnimationEditor';
-import CurrentDrillManager from './editor/CurrentDrillManager';
-import SavedDrillsList from './editor/SavedDrillsList';
-import RenameDrillModal from './editor/RenameDrillModal';
+import CurrentPlayManager from './editor/CurrentPlayManager';
+import SavedPlaysList from './editor/SavedPlaysList';
+import RenamePlayModal from './editor/RenamePlayModal';
 
-const newDrill = {
-  drill: {
+const newPlay = {
+  play: {
     positions: [[], []],
     ids: [],
     texts: [],
@@ -21,31 +21,31 @@ const newDrill = {
 };
 
 export const PlayEditorPage = (props) => {
-  const [currentDrill, setCurrentDrill] = useState(newDrill);
+  const [currentPlay, setCurrentPlay] = useState(newPlay);
 
-  // modalRenameVisible is true if the modal which enables to rename the current drill is displayed
+  // modalRenameVisible is true if the modal which enables to rename the current play is displayed
   const [modalRenameVisible, setModalRenameVisible] = useState(false);
 
-  // isDrillSaved is true unless there are unsaved changes on the current drill
-  const [isDrillSaved, setIsDrillSaved] = useState(true);
+  // isPlaySaved is true unless there are unsaved changes on the current play
+  const [isPlaySaved, setIsPlaySaved] = useState(true);
 
   useLayoutEffect(() => {
     props.navigation.setOptions({
       headerRight: () => (
         <View style={{ flexDirection: 'row' }}>
-          <SavedDrillsList
-            savedDrills={props.customDrills}
-            isDrillSaved={isDrillSaved}
-            drillTitle={currentDrill.title}
+          <SavedPlaysList
+            savedPlays={props.customPlays}
+            isPlaySaved={isPlaySaved}
+            playTitle={currentPlay.title}
             onDelete={onDelete}
-            onOpen={openDrill}
-            saveCurrentDrill={saveCurrentDrill}
+            onOpen={openPlay}
+            saveCurrentPlay={saveCurrentPlay}
           />
-          <CurrentDrillManager
-            currentDrill={currentDrill}
-            isDrillSaved={isDrillSaved}
-            save={saveCurrentDrill}
-            new={createNewDrill}
+          <CurrentPlayManager
+            currentPlay={currentPlay}
+            isPlaySaved={isPlaySaved}
+            save={saveCurrentPlay}
+            new={createNewPlay}
             rename={() => setModalRenameVisible(true)}
           />
         </View>
@@ -56,71 +56,71 @@ export const PlayEditorPage = (props) => {
 
   useEffect(() => {
     setTitle();
-  }, [currentDrill, isDrillSaved]);
+  }, [currentPlay, isPlaySaved]);
 
   const setTitle = () => {
-    const drillTitle = currentDrill.title || I18n.t('playEditorPage.untitledPlay');
-    const unsavedAsterisk = isDrillSaved ? '' : '* ';
-    const displayedTitle = `${unsavedAsterisk}${drillTitle}`;
+    const playTitle = currentPlay.title || I18n.t('playEditorPage.untitledPlay');
+    const unsavedAsterisk = isPlaySaved ? '' : '* ';
+    const displayedTitle = `${unsavedAsterisk}${playTitle}`;
 
     props.navigation.setOptions({ headerTitle: displayedTitle });
   };
 
-  const drillChangedInEditor = (drill) => {
-    setCurrentDrill({ drill, title: currentDrill.title });
-    setIsDrillSaved(false);
+  const playChangedInEditor = (play) => {
+    setCurrentPlay({ play, title: currentPlay.title });
+    setIsPlaySaved(false);
   };
 
-  const saveCurrentDrill = () => {
+  const saveCurrentPlay = () => {
     const defaultTitle = I18n.t('playEditorPage.untitledPlay');
-    if (currentDrill.title == I18n.t('playEditorPage.untitledPlay')) {
+    if (currentPlay.title == I18n.t('playEditorPage.untitledPlay')) {
       let newTitle = defaultTitle;
 
       let counter = 1;
-      while (props.customDrills.findIndex((item) => item.title === newTitle) !== -1) {
+      while (props.customPlays.findIndex((item) => item.title === newTitle) !== -1) {
         newTitle = defaultTitle + ' (' + counter + ')';
         counter += 1;
       }
-      currentDrill.title = newTitle;
+      currentPlay.title = newTitle;
     }
-    props.saveDrill(currentDrill);
-    setIsDrillSaved(true);
+    props.savePlay(currentPlay);
+    setIsPlaySaved(true);
   };
 
-  const openDrill = (drill) => {
-    setCurrentDrill(drill);
-    setIsDrillSaved(true);
+  const openPlay = (play) => {
+    setCurrentPlay(play);
+    setIsPlaySaved(true);
   };
 
-  const createNewDrill = () => {
-    setCurrentDrill(newDrill);
-    setIsDrillSaved(true);
+  const createNewPlay = () => {
+    setCurrentPlay(newPlay);
+    setIsPlaySaved(true);
   };
 
-  const onDelete = (drill) => {
-    props.deleteDrill(drill.title);
+  const onDelete = (play) => {
+    props.deletePlay(play.title);
 
-    if (drill.title === currentDrill.title) createNewDrill();
+    if (play.title === currentPlay.title) createNewPlay();
   };
 
   return (
     <View style={styles.centeredView}>
       {modalRenameVisible ? (
-        <RenameDrillModal currentDrill={currentDrill} onRename={setTitle} close={() => setModalRenameVisible(false)} />
+        <RenamePlayModal currentPlay={currentPlay} onRename={setTitle} close={() => setModalRenameVisible(false)} />
       ) : null}
 
-      <AnimationEditor onAnimationChange={drillChangedInEditor} animation={currentDrill.drill} />
+      <AnimationEditor onAnimationChange={playChangedInEditor} animation={currentPlay.play} />
     </View>
   );
 };
 
 const mapStateToProps = (state) => {
   return {
-    customDrills: state.customDrills,
+    customPlays: state.customPlays,
   };
 };
 
-const mapDispatchToProps = { saveDrill, deleteDrill };
+const mapDispatchToProps = { savePlay, deletePlay };
 
 export default connect(mapStateToProps, mapDispatchToProps)(PlayEditorPage);
 

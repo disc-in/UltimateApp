@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SavedDrillsList /> renders an empty state with no drills 1`] = `
+exports[`<SavedPlaysList /> renders an empty state with no plays 1`] = `
 <View>
   <View
     accessible={true}
@@ -112,7 +112,7 @@ exports[`<SavedDrillsList /> renders an empty state with no drills 1`] = `
             }
           }
         >
-          Saved drills
+          Saved plays
         </Text>
         <RCTScrollView
           ListEmptyComponent={[Function]}
@@ -147,7 +147,7 @@ exports[`<SavedDrillsList /> renders an empty state with no drills 1`] = `
           <View>
             <View>
               <Text>
-                You haven't saved any drills yet
+                You haven't saved any plays yet
               </Text>
             </View>
           </View>
@@ -216,7 +216,7 @@ exports[`<SavedDrillsList /> renders an empty state with no drills 1`] = `
 </View>
 `;
 
-exports[`<SavedDrillsList /> renders correctly with drills 1`] = `
+exports[`<SavedPlaysList /> renders correctly with plays 1`] = `
 <View>
   <View
     accessible={true}
@@ -306,14 +306,14 @@ exports[`<SavedDrillsList /> renders correctly with drills 1`] = `
             }
           }
         >
-          Saved drills
+          Saved plays
         </Text>
         <RCTScrollView
           ListEmptyComponent={[Function]}
           data={
             Array [
               Object {
-                "drill": Object {
+                "play": Object {
                   "ids": Array [
                     "triangle",
                     "triangle",

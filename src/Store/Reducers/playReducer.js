@@ -1,22 +1,22 @@
 const initialState = [];
 
-function drillReducer(state = initialState, action) {
+function playReducer(state = initialState, action) {
   let nextState;
   switch (action.type) {
-    case 'SAVE_DRILL':
-      // If the drill is already saved, replace it; otherwise add it
-      const drillIndex = state.findIndex((item) => item.title === action.value.title);
+    case 'SAVE_PLAY':
+      // If the play is already saved, replace it; otherwise add it
+      const playIndex = state.findIndex((item) => item.title === action.value.title);
 
-      if (drillIndex !== -1) {
+      if (playIndex !== -1) {
         nextState = [...state];
-        nextState[drillIndex] = action.value;
+        nextState[playIndex] = action.value;
       } else {
         nextState = [...state, action.value];
       }
 
       return nextState;
 
-    case 'RENAME_DRILL':
+    case 'RENAME_PLAY':
       nextState = [...state];
 
       const index = state.findIndex((item) => item.title === action.value.oldTitle);
@@ -25,7 +25,7 @@ function drillReducer(state = initialState, action) {
       }
       return nextState;
 
-    case 'DELETE_DRILL':
+    case 'DELETE_PLAY':
       return state.filter((item) => item.title !== action.value);
 
     default:
@@ -33,4 +33,4 @@ function drillReducer(state = initialState, action) {
   }
 }
 
-export default drillReducer;
+export default playReducer;

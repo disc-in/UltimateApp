@@ -1,12 +1,12 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-
+import { render, fireEvent, waitFor } from '@testing-library/react-native';
 import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+
 import { createDrill } from '../Fixtures/TestFixtures';
-import { render, fireEvent } from '@testing-library/react-native';
 import { Levels, FrisbeeGoals, DrillTypes } from '../Fixtures/config';
 
 import ConnectedFrisbeeFilters, { FrisbeeFilters } from './FrisbeeFilters';
@@ -32,6 +32,9 @@ describe('<FrisbeeFilters />', () => {
     goals: [FrisbeeGoals.HANDLING],
     level: Levels.ADVANCED,
   });
+  const mockStore = configureMockStore()({
+    favoriteDrills: [],
+  });
 
   it('renders correctly', () => {
     const route = {
@@ -52,33 +55,31 @@ describe('<FrisbeeFilters />', () => {
       const DummyScreen = (props) => null;
       const Stack = createStackNavigator();
 
-      const mockStore = configureMockStore()({
-        favoriteDrills: [],
-      });
-
-      const { getByText, getByTestId } = render(
-        <Provider store={mockStore}>
-          <NavigationContainer>
-            <Stack.Navigator>
-              <Stack.Screen
-                name="FrisbeeFilters"
-                component={ConnectedFrisbeeFilters}
-                initialParams={{
-                  initialData: drills,
-                  previousScreen: 'DrillListPage',
-                  previousType: DrillTypes.FRISBEE,
-                }}
-                listeners={({ navigation }) => ({
-                  transitionStart: (e) => {
-                    navigation.navigate = navigate;
-                  },
-                })}
-              />
-              <Stack.Screen name="DrillListPage" component={DummyScreen} />
-            </Stack.Navigator>
-          </NavigationContainer>
-          ,
-        </Provider>,
+      const { getByText, getByTestId } = await waitFor(() =>
+        render(
+          <Provider store={mockStore}>
+            <NavigationContainer>
+              <Stack.Navigator>
+                <Stack.Screen
+                  name="FrisbeeFilters"
+                  component={ConnectedFrisbeeFilters}
+                  initialParams={{
+                    initialData: drills,
+                    previousScreen: 'DrillListPage',
+                    previousType: DrillTypes.FRISBEE,
+                  }}
+                  listeners={({ navigation }) => ({
+                    transitionStart: (e) => {
+                      navigation.navigate = navigate;
+                    },
+                  })}
+                />
+                <Stack.Screen name="DrillListPage" component={DummyScreen} />
+              </Stack.Navigator>
+            </NavigationContainer>
+            ,
+          </Provider>,
+        ),
       );
 
       expect(getByText('3 drills available')).toBeDefined();
@@ -126,33 +127,31 @@ describe('<FrisbeeFilters />', () => {
       const DummyScreen = (props) => null;
       const Stack = createStackNavigator();
 
-      const mockStore = configureMockStore()({
-        favoriteDrills: [],
-      });
-
-      const { getByText, getByTestId } = render(
-        <Provider store={mockStore}>
-          <NavigationContainer>
-            <Stack.Navigator>
-              <Stack.Screen
-                name="FrisbeeFilters"
-                component={ConnectedFrisbeeFilters}
-                initialParams={{
-                  initialData: drills,
-                  previousScreen: 'DrillListPage',
-                  previousType: DrillTypes.FRISBEE,
-                }}
-                listeners={({ navigation }) => ({
-                  transitionStart: (e) => {
-                    navigation.navigate = navigate;
-                  },
-                })}
-              />
-              <Stack.Screen name="DrillListPage" component={DummyScreen} />
-            </Stack.Navigator>
-          </NavigationContainer>
-          ,
-        </Provider>,
+      const { getByText, getByTestId } = await waitFor(() =>
+        render(
+          <Provider store={mockStore}>
+            <NavigationContainer>
+              <Stack.Navigator>
+                <Stack.Screen
+                  name="FrisbeeFilters"
+                  component={ConnectedFrisbeeFilters}
+                  initialParams={{
+                    initialData: drills,
+                    previousScreen: 'DrillListPage',
+                    previousType: DrillTypes.FRISBEE,
+                  }}
+                  listeners={({ navigation }) => ({
+                    transitionStart: (e) => {
+                      navigation.navigate = navigate;
+                    },
+                  })}
+                />
+                <Stack.Screen name="DrillListPage" component={DummyScreen} />
+              </Stack.Navigator>
+            </NavigationContainer>
+            ,
+          </Provider>,
+        ),
       );
 
       expect(getByText('4 drills available')).toBeDefined();
@@ -201,33 +200,31 @@ describe('<FrisbeeFilters />', () => {
       const DummyScreen = (props) => null;
       const Stack = createStackNavigator();
 
-      const mockStore = configureMockStore()({
-        favoriteDrills: [],
-      });
-
-      const { getByText, getByTestId } = render(
-        <Provider store={mockStore}>
-          <NavigationContainer>
-            <Stack.Navigator>
-              <Stack.Screen
-                name="FrisbeeFilters"
-                component={ConnectedFrisbeeFilters}
-                initialParams={{
-                  initialData: drills,
-                  previousScreen: 'DrillListPage',
-                  previousType: DrillTypes.FRISBEE,
-                }}
-                listeners={({ navigation }) => ({
-                  transitionStart: (e) => {
-                    navigation.navigate = navigate;
-                  },
-                })}
-              />
-              <Stack.Screen name="DrillListPage" component={DummyScreen} />
-            </Stack.Navigator>
-          </NavigationContainer>
-          ,
-        </Provider>,
+      const { getByText, getByTestId } = await waitFor(() =>
+        render(
+          <Provider store={mockStore}>
+            <NavigationContainer>
+              <Stack.Navigator>
+                <Stack.Screen
+                  name="FrisbeeFilters"
+                  component={ConnectedFrisbeeFilters}
+                  initialParams={{
+                    initialData: drills,
+                    previousScreen: 'DrillListPage',
+                    previousType: DrillTypes.FRISBEE,
+                  }}
+                  listeners={({ navigation }) => ({
+                    transitionStart: (e) => {
+                      navigation.navigate = navigate;
+                    },
+                  })}
+                />
+                <Stack.Screen name="DrillListPage" component={DummyScreen} />
+              </Stack.Navigator>
+            </NavigationContainer>
+            ,
+          </Provider>,
+        ),
       );
 
       expect(getByText('Number of players: -')).toBeDefined();
@@ -263,29 +260,31 @@ describe('<FrisbeeFilters />', () => {
         favoriteDrills: [intermediateDrill],
       });
 
-      const { getByText, getByTestId } = render(
-        <Provider store={mockstore}>
-          <NavigationContainer>
-            <Stack.Navigator>
-              <Stack.Screen
-                name="FrisbeeFilters"
-                component={ConnectedFrisbeeFilters}
-                initialParams={{
-                  initialData: drills,
-                  previousScreen: 'DrillListPage',
-                  previousType: DrillTypes.FRISBEE,
-                }}
-                listeners={({ navigation }) => ({
-                  transitionStart: (e) => {
-                    navigation.navigate = navigate;
-                  },
-                })}
-              />
-              <Stack.Screen name="DrillListPage" component={DummyScreen} />
-            </Stack.Navigator>
-          </NavigationContainer>
-          ,
-        </Provider>,
+      const { getByText, getByTestId } = await waitFor(() =>
+        render(
+          <Provider store={mockstore}>
+            <NavigationContainer>
+              <Stack.Navigator>
+                <Stack.Screen
+                  name="FrisbeeFilters"
+                  component={ConnectedFrisbeeFilters}
+                  initialParams={{
+                    initialData: drills,
+                    previousScreen: 'DrillListPage',
+                    previousType: DrillTypes.FRISBEE,
+                  }}
+                  listeners={({ navigation }) => ({
+                    transitionStart: (e) => {
+                      navigation.navigate = navigate;
+                    },
+                  })}
+                />
+                <Stack.Screen name="DrillListPage" component={DummyScreen} />
+              </Stack.Navigator>
+            </NavigationContainer>
+            ,
+          </Provider>,
+        ),
       );
 
       expect(getByText('3 drills available')).toBeDefined();
@@ -320,33 +319,31 @@ describe('<FrisbeeFilters />', () => {
       const DummyScreen = (props) => null;
       const Stack = createStackNavigator();
 
-      const mockStore = configureMockStore()({
-        favoriteDrills: [],
-      });
-
-      const { getByText, getByTestId } = render(
-        <Provider store={mockStore}>
-          <NavigationContainer>
-            <Stack.Navigator>
-              <Stack.Screen
-                name="FrisbeeFilters"
-                component={ConnectedFrisbeeFilters}
-                initialParams={{
-                  initialData: drills,
-                  previousScreen: 'DrillListPage',
-                  previousType: DrillTypes.FRISBEE,
-                }}
-                listeners={({ navigation }) => ({
-                  transitionStart: (e) => {
-                    navigation.navigate = navigate;
-                  },
-                })}
-              />
-              <Stack.Screen name="DrillListPage" component={DummyScreen} />
-            </Stack.Navigator>
-          </NavigationContainer>
-          ,
-        </Provider>,
+      const { getByText, getByTestId } = await waitFor(() =>
+        render(
+          <Provider store={mockStore}>
+            <NavigationContainer>
+              <Stack.Navigator>
+                <Stack.Screen
+                  name="FrisbeeFilters"
+                  component={ConnectedFrisbeeFilters}
+                  initialParams={{
+                    initialData: drills,
+                    previousScreen: 'DrillListPage',
+                    previousType: DrillTypes.FRISBEE,
+                  }}
+                  listeners={({ navigation }) => ({
+                    transitionStart: (e) => {
+                      navigation.navigate = navigate;
+                    },
+                  })}
+                />
+                <Stack.Screen name="DrillListPage" component={DummyScreen} />
+              </Stack.Navigator>
+            </NavigationContainer>
+            ,
+          </Provider>,
+        ),
       );
 
       expect(getByText('Number of players: -')).toBeDefined();

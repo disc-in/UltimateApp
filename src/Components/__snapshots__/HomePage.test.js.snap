@@ -54,7 +54,7 @@ exports[`<HomePage /> renders correctly 1`] = `
             Object {
               "backgroundColor": "#fff",
               "height": "100%",
-              "paddingTop": 7,
+              "paddingTop": 5,
             }
           }
         >
@@ -70,9 +70,8 @@ exports[`<HomePage /> renders correctly 1`] = `
             onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "flexBasis": "25%",
-                "flexGrow": 1,
-                "marginBottom": 5,
+                "flexBasis": "33%",
+                "marginBottom": 2,
               }
             }
           >
@@ -143,9 +142,8 @@ exports[`<HomePage /> renders correctly 1`] = `
             onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "flexBasis": "25%",
-                "flexGrow": 1,
-                "marginBottom": 5,
+                "flexBasis": "33%",
+                "marginBottom": 2,
               }
             }
           >
@@ -205,148 +203,164 @@ exports[`<HomePage /> renders correctly 1`] = `
             </View>
           </View>
           <View
-            accessible={true}
-            focusable={true}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
             style={
-              Object {
-                "flexBasis": "25%",
-                "flexGrow": 1,
-                "marginBottom": 5,
-              }
+              Array [
+                Object {
+                  "flexBasis": "33%",
+                  "marginBottom": 2,
+                },
+                Object {
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                },
+              ]
             }
           >
             <View
-              accessibilityIgnoresInvertColors={true}
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
               style={
-                Object {
-                  "height": "100%",
-                }
+                Array [
+                  Object {
+                    "flexGrow": 1,
+                  },
+                  Object {
+                    "marginRight": 2,
+                  },
+                ]
               }
             >
-              <Image
-                source={1}
-                style={
-                  Array [
-                    Object {
-                      "bottom": 0,
-                      "left": 0,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                    },
-                    Object {
-                      "height": "100%",
-                      "width": undefined,
-                    },
-                    undefined,
-                  ]
-                }
-              />
               <View
+                accessibilityIgnoresInvertColors={true}
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "bottom": 0,
-                    "justifyContent": "center",
-                    "left": 0,
-                    "padding": 20,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
+                    "height": "100%",
                   }
                 }
               >
-                <Text
+                <Image
+                  source={1}
+                  style={
+                    Array [
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                      Object {
+                        "height": "100%",
+                        "width": undefined,
+                      },
+                      undefined,
+                    ]
+                  }
+                />
+                <View
                   style={
                     Object {
-                      "color": "#fff",
-                      "fontSize": 28,
-                      "fontWeight": "bold",
+                      "alignItems": "flex-start",
+                      "bottom": 0,
+                      "justifyContent": "center",
+                      "left": 0,
+                      "padding": 20,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
                     }
                   }
                 >
-                  Drill Editor
-                </Text>
+                  <Text
+                    style={
+                      Object {
+                        "color": "#fff",
+                        "fontSize": 28,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    Drill Editor
+                  </Text>
+                </View>
               </View>
             </View>
-          </View>
-          <View
-            accessible={true}
-            focusable={true}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
-              Object {
-                "flexBasis": "25%",
-                "flexGrow": 1,
-                "marginBottom": 5,
-              }
-            }
-          >
             <View
-              accessibilityIgnoresInvertColors={true}
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
               style={
                 Object {
-                  "height": "100%",
+                  "flexGrow": 1,
                 }
               }
             >
-              <Image
-                source={1}
-                style={
-                  Array [
-                    Object {
-                      "bottom": 0,
-                      "left": 0,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                    },
-                    Object {
-                      "height": "100%",
-                      "width": undefined,
-                    },
-                    undefined,
-                  ]
-                }
-              />
               <View
+                accessibilityIgnoresInvertColors={true}
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "bottom": 0,
-                    "justifyContent": "center",
-                    "left": 0,
-                    "padding": 20,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
+                    "height": "100%",
                   }
                 }
               >
-                <Text
+                <Image
+                  source={1}
+                  style={
+                    Array [
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                      Object {
+                        "height": "100%",
+                        "width": undefined,
+                      },
+                      undefined,
+                    ]
+                  }
+                />
+                <View
                   style={
                     Object {
-                      "color": "#fff",
-                      "fontSize": 28,
-                      "fontWeight": "bold",
+                      "alignItems": "flex-start",
+                      "bottom": 0,
+                      "justifyContent": "center",
+                      "left": 0,
+                      "padding": 20,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
                     }
                   }
                 >
-                  Play Editor
-                </Text>
+                  <Text
+                    style={
+                      Object {
+                        "color": "#fff",
+                        "fontSize": 28,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    Play Editor
+                  </Text>
+                </View>
               </View>
             </View>
           </View>

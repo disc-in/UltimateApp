@@ -19,7 +19,7 @@ import { DrillTypes, EquipmentLabels } from '../Fixtures/config';
 
 const Tab = createMaterialBottomTabNavigator();
 
-const HomeScreen = (props) => {
+const FrisbeeTab = (props) => {
   return (
     <View style={styles.mainContainer}>
       <TouchableHighlight
@@ -42,25 +42,30 @@ const HomeScreen = (props) => {
           </View>
         </ImageBackground>
       </TouchableHighlight>
-      <TouchableHighlight onPress={() => props.navigation.navigate('DrillEditorPage')} style={styles.menuItem}>
-        <ImageBackground source={ourPlays} style={styles.image}>
-          <View style={styles.wrapper}>
-            <Text style={styles.title}>{I18n.t('homePage.drillEditor')}</Text>
-          </View>
-        </ImageBackground>
-      </TouchableHighlight>
-      <TouchableHighlight onPress={() => props.navigation.navigate('PlayEditorPage')} style={styles.menuItem}>
-        <ImageBackground source={ourPlays} style={styles.image}>
-          <View style={styles.wrapper}>
-            <Text style={styles.title}>{I18n.t('homePage.playEditor')}</Text>
-          </View>
-        </ImageBackground>
-      </TouchableHighlight>
+      <View style={[styles.menuItem, styles.menuItemWrapper]}>
+        <TouchableHighlight
+          onPress={() => props.navigation.navigate('DrillEditorPage')}
+          style={[styles.innerMenuItem, styles.firstInnerMenuItem]}
+        >
+          <ImageBackground source={ourPlays} style={styles.image}>
+            <View style={styles.wrapper}>
+              <Text style={styles.title}>{I18n.t('homePage.drillEditor')}</Text>
+            </View>
+          </ImageBackground>
+        </TouchableHighlight>
+        <TouchableHighlight onPress={() => props.navigation.navigate('PlayEditorPage')} style={styles.innerMenuItem}>
+          <ImageBackground source={ourPlays} style={styles.image}>
+            <View style={styles.wrapper}>
+              <Text style={styles.title}>{I18n.t('homePage.playEditor')}</Text>
+            </View>
+          </ImageBackground>
+        </TouchableHighlight>
+      </View>
     </View>
   );
 };
 
-const Fitness = (props) => {
+const FitnessTab = (props) => {
   return (
     <View style={styles.mainContainer}>
       <TouchableHighlight
@@ -110,7 +115,7 @@ const Fitness = (props) => {
   );
 };
 
-const Theory = (props) => {
+const TheoryTab = (props) => {
   return (
     <View style={styles.mainContainer}>
       <TouchableHighlight onPress={() => props.navigation.navigate('DictionaryPage')} style={styles.menuItem}>
@@ -159,7 +164,7 @@ export default HomePage = (props) => {
     >
       <Tab.Screen
         name="Frisbee"
-        component={HomeScreen}
+        component={FrisbeeTab}
         options={{
           tabBarLabel: I18n.t('homePage.frisbeeTab'),
           tabBarIcon: ({ color }) => <Ionicons name="ios-disc" color={color} size={26} />,
@@ -167,7 +172,7 @@ export default HomePage = (props) => {
       />
       <Tab.Screen
         name="Fitness"
-        component={Fitness}
+        component={FitnessTab}
         options={{
           tabBarLabel: I18n.t('homePage.fitnessTab'),
           tabBarIcon: ({ color }) => <Ionicons name="ios-fitness" color={color} size={26} />,
@@ -175,7 +180,7 @@ export default HomePage = (props) => {
       />
       <Tab.Screen
         name="Theory"
-        component={Theory}
+        component={TheoryTab}
         options={{
           tabBarLabel: I18n.t('homePage.theoryTab'),
           tabBarIcon: ({ color }) => <Ionicons name="md-clipboard" color={color} size={26} />,
@@ -188,7 +193,7 @@ export default HomePage = (props) => {
 const styles = StyleSheet.create({
   mainContainer: {
     height: '100%',
-    paddingTop: 7,
+    paddingTop: 5,
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
   },
   imageContainer: {
@@ -196,21 +201,21 @@ const styles = StyleSheet.create({
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
   },
   menuItem: {
-    flexBasis: '25%',
+    flexBasis: '33%',
+    marginBottom: 2,
+  },
+  menuItemWrapper: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  innerMenuItem: {
     flexGrow: 1,
-    marginBottom: 5,
+  },
+  firstInnerMenuItem: {
+    marginRight: 2,
   },
   image: {
     height: '100%',
-  },
-  title: {
-    color: theme.COLOR_PRIMARY_LIGHT,
-    fontSize: 28,
-    fontWeight: 'bold',
-  },
-  subtitle: {
-    color: theme.COLOR_PRIMARY_LIGHT,
-    fontSize: theme.FONT_SIZE_MEDIUM,
   },
   wrapper: {
     position: 'absolute',
@@ -221,5 +226,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'flex-start',
     padding: 20,
+  },
+  title: {
+    color: theme.COLOR_PRIMARY_LIGHT,
+    fontSize: 28,
+    fontWeight: 'bold',
+  },
+  subtitle: {
+    color: theme.COLOR_PRIMARY_LIGHT,
+    fontSize: theme.FONT_SIZE_MEDIUM,
   },
 });

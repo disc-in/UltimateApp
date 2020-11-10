@@ -95,14 +95,8 @@ const FrisbeeDrillIllustration = (props) => {
       <>
         {renderTitle(item.title, index)}
         <View>
-          <View style={styles.floating}>
-            <View style={styles.counter}>
-              <Text style={styles.textCounter}>
-                {activeIndex + 1}/{props.drill.steps.length}
-              </Text>
-            </View>
-          </View>
-          <View style={styles.pagination}>{renderPagination()}</View>
+          {renderCounter(index)}
+          <View style={styles.pagination}>{renderPagination(index)}</View>
         </View>
         <ScrollView>
           {item.illustrationType === IllustrationType.ANIMATION && displayAnimation(item)}
@@ -113,11 +107,23 @@ const FrisbeeDrillIllustration = (props) => {
     );
   };
 
-  const renderPagination = () => {
+  const renderCounter = (index) => {
+    return (
+      <View style={styles.floating}>
+        <View style={styles.counter}>
+          <Text style={styles.textCounter}>
+            {index + 1}/{props.drill.steps.length}
+          </Text>
+        </View>
+      </View>
+    );
+  };
+
+  const renderPagination = (index) => {
     return (
       <Pagination
         dotsLength={props.drill.steps.length}
-        activeDotIndex={activeIndex}
+        activeDotIndex={index}
         containerStyle={{
           backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
           paddingVertical: 0,

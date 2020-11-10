@@ -42,7 +42,7 @@ exports[`<FitnessDrillIllustration /> links to any step and finishes at the end 
           size="large"
         />
         <Text>
-          Loading...
+          Loading…
         </Text>
       </View>
       <View
@@ -492,7 +492,7 @@ exports[`<FitnessDrillIllustration /> renders correctly 1`] = `
           size="large"
         />
         <Text>
-          Loading...
+          Loading…
         </Text>
       </View>
       <View

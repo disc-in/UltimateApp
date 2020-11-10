@@ -2,8 +2,11 @@ import React, { useState, useEffect, useRef } from 'react';
 import { StyleSheet, View, Text, TextInput, InteractionManager, ScrollView } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { connect } from 'react-redux';
+import { Formik } from 'formik';
+import * as Yup from 'yup';
 
 import I18n from '../../utils/i18n';
+import { showSuccess } from '../../utils/flashMessage';
 import { renameDrill } from '../../Store/Actions/drillAction';
 import Modal from '../shared/Modal';
 import Button from '../shared/Button';
@@ -11,19 +14,11 @@ import Button from '../shared/Button';
 export const RenameDrillModal = (props) => {
   const inputRef = useRef();
 
-  const [newTitle, setNewTitle] = useState('');
-  const [alreadyExists, setAlreadyExists] = useState(false);
-
   useEffect(() => {
     InteractionManager.runAfterInteractions(() => {
       inputRef.current.focus();
     });
   }, []);
-
-  const checkNewTitle = (text) => {
-    setNewTitle(text);
-    setAlreadyExists(props.customDrills.some((drill) => drill.title === text));
-  };
 
   return (
     <View>
@@ -37,29 +32,44 @@ export const RenameDrillModal = (props) => {
         {/* keyboardShouldPersistTaps enables to keep the keyboard visible.*/
         /* Otherwise the first press on the validation button will only close the keyboard and not trigger onPress */}
         <ScrollView keyboardShouldPersistTaps="always" directionalLockEnabled style={{ flexGrow: 0 }}>
-          <View style={styles.form}>
-            <TextInput
-              style={styles.input}
-              placeholder={I18n.t('editor.renameDrillModal.placeholder')}
-              onChangeText={checkNewTitle}
-              ref={inputRef}
-            />
-            <Button
-              onPress={() => {
-                if (!alreadyExists) {
-                  props.renameDrill(props.currentDrill.title, newTitle);
-                  props.currentDrill.title = newTitle;
-                  props.onRename();
-                  props.close();
-                }
-              }}
-              text={I18n.t('editor.renameDrillModal.cta')}
-              style={styles.cta}
-            />
-            {alreadyExists && (
-              <Text style={styles.alreadyExists}>{I18n.t('editor.renameDrillModal.alreadyExists')}</Text>
+          <Formik
+            initialValues={{ name: props.currentDrill.title }}
+            validationSchema={Yup.object({
+              name: Yup.string()
+                .trim()
+                .required(I18n.t('editor.renameDrillModal.empty'))
+                .notOneOf(
+                  props.customDrills.map((drill) => drill.title),
+                  I18n.t('editor.renameDrillModal.alreadyExists'),
+                ),
+            })}
+            onSubmit={(values) => {
+              props.renameDrill(props.currentDrill.title, values.name);
+              props.currentDrill.title = values.name;
+              props.onRename();
+              showSuccess(I18n.t('editor.renameDrillModal.renameSuccess'));
+              props.close();
+            }}
+          >
+            {({ handleSubmit, handleChange, errors, values, touched, isValid }) => (
+              <View style={styles.form}>
+                <TextInput
+                  style={styles.input}
+                  placeholder={I18n.t('editor.renameDrillModal.placeholder')}
+                  onChangeText={handleChange('name')}
+                  value={values.name}
+                  ref={inputRef}
+                />
+                {touched.name && errors.name && <Text style={styles.error}>{errors.name}</Text>}
+                <Button
+                  onPress={handleSubmit}
+                  text={I18n.t('editor.renameDrillModal.cta')}
+                  style={styles.cta}
+                  disabled={!isValid}
+                />
+              </View>
             )}
-          </View>
+          </Formik>
         </ScrollView>
       </Modal>
     </View>
@@ -88,7 +98,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     width: 120,
   },
-  alreadyExists: {
+  error: {
     fontStyle: 'italic',
     color: 'red',
   },

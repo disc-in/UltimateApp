@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { StyleSheet, View, Alert, Text, FlatList, TouchableOpacity } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import theme from '../../styles/theme.style';
 import I18n from '../../utils/i18n';
+import FlashMessage, { showSuccess } from '../../utils/flashMessage';
 import HeaderButton from '../shared/HeaderButton';
 import Modal from '../shared/Modal';
 
 const SavedDrillsList = (props) => {
   const [modalOpened, setModalOpened] = useState(false);
+  const modalFlash = useRef(null);
 
   const beforeOpening = (drill) => {
     if (props.isDrillSaved) {
@@ -27,6 +29,7 @@ const SavedDrillsList = (props) => {
             text: I18n.t('shared.yes'),
             onPress: () => {
               props.saveCurrentDrill();
+              showSuccess(I18n.t('editor.currentDrillManager.saveSuccess', { title: props.drillTitle }));
               props.onOpen(drill);
             },
           },
@@ -50,7 +53,10 @@ const SavedDrillsList = (props) => {
       {
         text: I18n.t('editor.savedDrillsList.delete'),
         style: 'destructive',
-        onPress: () => props.onDelete(drill),
+        onPress: () => {
+          props.onDelete(drill);
+          showSuccess(I18n.t('editor.savedDrillsList.deleteSuccess', { title: props.drillTitle }), modalFlash.current);
+        },
       },
     ]);
   };
@@ -90,6 +96,7 @@ const SavedDrillsList = (props) => {
             </TouchableOpacity>
           )}
         />
+        <FlashMessage ref={modalFlash} position="bottom" />
       </Modal>
     </View>
   );

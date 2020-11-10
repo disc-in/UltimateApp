@@ -78,6 +78,12 @@ export default {
     yes: 'Oui',
     no: 'Non',
   },
+  utils: {
+    snackbar: {
+      success: 'Succès 👍',
+      error: 'Oh non… 😥',
+    },
+  },
   homePage: {
     frisbeeTab: 'Frisbee',
     fitnessTab: 'Fitness',
@@ -107,9 +113,11 @@ export default {
       empty: "Vous n'avez pas encore sauvegardé d'exercices",
       delete: 'Supprimer',
       deleteConfirmation: 'Voulez-vous vraiment supprimer cet exercice ?',
+      deleteSuccess: 'L\'exo "{{title}}" a été supprimé.',
     },
     currentDrillManager: {
       save: 'Sauvegarder',
+      saveSuccess: 'L\'exo "{{title}}" a été sauvegardé',
       rename: 'Renommer',
       new: 'Nouveau',
       share: 'Contribuer',
@@ -118,6 +126,8 @@ export default {
     renameDrillModal: {
       placeholder: 'Appuyer ici pour renommer',
       alreadyExists: 'Ce nom existe déjà',
+      empty: 'Le nom ne peut pas être vide',
+      renameSuccess: "L'exo a été renommé avec succès",
       cta: 'Valider',
     },
   },
@@ -179,7 +189,7 @@ export default {
     start: "Commencer l'entraînement",
   },
   vimeoVideo: {
-    loading: 'Chargement...',
+    loading: 'Chargement…',
     error: 'Oups ! Une erreur est survenue pendant le chargement de la vidéo',
   },
   programs: {

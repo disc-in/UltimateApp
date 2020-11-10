@@ -153,6 +153,23 @@ exports[`<SavedDrillsList /> renders an empty state with no drills 1`] = `
           </View>
         </RCTScrollView>
         <View
+          style={
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "opacity": 0,
+              "position": "absolute",
+              "right": 0,
+              "transform": Array [
+                Object {
+                  "translateY": 48,
+                },
+              ],
+              "zIndex": 99,
+            }
+          }
+        />
+        <View
           accessible={true}
           focusable={true}
           onClick={[Function]}
@@ -644,6 +661,23 @@ exports[`<SavedDrillsList /> renders correctly with drills 1`] = `
             </View>
           </View>
         </RCTScrollView>
+        <View
+          style={
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "opacity": 0,
+              "position": "absolute",
+              "right": 0,
+              "transform": Array [
+                Object {
+                  "translateY": 48,
+                },
+              ],
+              "zIndex": 99,
+            }
+          }
+        />
         <View
           accessible={true}
           focusable={true}

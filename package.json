@@ -24,12 +24,14 @@
     "expo-localization": "~9.0.0",
     "expo-mail-composer": "~8.4.0",
     "expo-screen-orientation": "~2.0.0",
+    "formik": "^2.2.2",
     "i18n-js": "^3.7.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.0.tar.gz",
     "react-native-collapsible": "^1.5.2",
     "react-native-elements": "^1.2.7",
+    "react-native-flash-message": "^0.1.17",
     "react-native-gesture-handler": "~1.7.0",
     "react-native-kill-packager": "^1.0.0",
     "react-native-paper": "^3.11.0",
@@ -43,7 +45,8 @@
     "react-redux": "^7.2.1",
     "redux": "^4.0.5",
     "redux-persist": "^5.10.0",
-    "watchman": "^1.0.0"
+    "watchman": "^1.0.0",
+    "yup": "^0.29.3"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",

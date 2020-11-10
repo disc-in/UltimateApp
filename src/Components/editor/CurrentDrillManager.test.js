@@ -190,7 +190,7 @@ describe('<CurrentDrillManager />', () => {
       isDrillSaved = false;
       jest.spyOn(Alert, 'alert');
 
-      const { getByTestId, getByText, debug } = await waitFor(() =>
+      const { getByTestId, getByText } = await waitFor(() =>
         render(
           <PaperProvider>
             <CurrentDrillManager

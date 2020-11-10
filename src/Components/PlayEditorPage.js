@@ -66,8 +66,8 @@ export const PlayEditorPage = (props) => {
     props.navigation.setOptions({ headerTitle: displayedTitle });
   };
 
-  const playChangedInEditor = (play) => {
-    setCurrentPlay({ play, title: currentPlay.title });
+  const onAnimationChange = (animation) => {
+    setCurrentPlay({ animation, title: currentPlay.title });
     setIsPlaySaved(false);
   };
 
@@ -109,7 +109,7 @@ export const PlayEditorPage = (props) => {
         <RenamePlayModal currentPlay={currentPlay} onRename={setTitle} close={() => setModalRenameVisible(false)} />
       ) : null}
 
-      <AnimationEditor onAnimationChange={playChangedInEditor} animation={currentPlay.animation} />
+      <AnimationEditor onAnimationChange={onAnimationChange} animation={currentPlay.animation} />
     </View>
   );
 };

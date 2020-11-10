@@ -313,7 +313,7 @@ exports[`<SavedPlaysList /> renders correctly with plays 1`] = `
           data={
             Array [
               Object {
-                "play": Object {
+                "animation": Object {
                   "ids": Array [
                     "triangle",
                     "triangle",

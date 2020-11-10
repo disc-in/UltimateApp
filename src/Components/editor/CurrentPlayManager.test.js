@@ -16,7 +16,7 @@ describe('<CurrentPlayManager />', () => {
   const _new = jest.fn();
   const rename = jest.fn();
   let isPlaySaved = true;
-  const currentPlay = { play: animationSquare, title: 'Square' };
+  const currentPlay = { animation: animationSquare, title: 'Square' };
 
   it('renders correctly', async () => {
     const { toJSON, getByTestId } = await waitFor(() =>

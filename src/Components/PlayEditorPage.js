@@ -11,7 +11,7 @@ import SavedPlaysList from './editor/SavedPlaysList';
 import RenamePlayModal from './editor/RenamePlayModal';
 
 const newPlay = {
-  play: {
+  animation: {
     positions: [[], []],
     ids: [],
     texts: [],
@@ -109,7 +109,7 @@ export const PlayEditorPage = (props) => {
         <RenamePlayModal currentPlay={currentPlay} onRename={setTitle} close={() => setModalRenameVisible(false)} />
       ) : null}
 
-      <AnimationEditor onAnimationChange={playChangedInEditor} animation={currentPlay.play} />
+      <AnimationEditor onAnimationChange={playChangedInEditor} animation={currentPlay.animation} />
     </View>
   );
 };

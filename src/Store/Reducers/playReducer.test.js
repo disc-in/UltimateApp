@@ -2,7 +2,7 @@ import playReducer from './playReducer';
 
 describe('playReducer', () => {
   const play = {
-    play: {
+    animation: {
       positions: [0],
     },
     title: 'Title',
@@ -12,7 +12,7 @@ describe('playReducer', () => {
   describe('When handling SAVE_PLAY', () => {
     it('when saving an existing play', () => {
       const newPlay = {
-        play: {
+        animation: {
           positions: [1],
         },
         title: 'Title',
@@ -22,7 +22,7 @@ describe('playReducer', () => {
 
     it('when saving a new play', () => {
       const newPlay = {
-        play: {
+        animation: {
           positions: [1],
         },
         title: 'New Title',

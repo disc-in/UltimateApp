@@ -3,7 +3,7 @@ import { createPlay } from '../../Fixtures/TestFixtures';
 
 describe('savePlay', () => {
   const play = {
-    play: {},
+    animation: {},
     title: 'Title',
   };
 

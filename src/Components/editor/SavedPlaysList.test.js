@@ -11,7 +11,7 @@ describe('<SavedPlaysList />', () => {
   const onDelete = jest.fn();
   const isPlaySaved = true;
   const playTitle = 'Title';
-  const savedPlays = [{ play: animationSquare, title: 'Square' }];
+  const savedPlays = [{ animation: animationSquare, title: 'Square' }];
 
   it('renders correctly with plays', async () => {
     const tree = create(

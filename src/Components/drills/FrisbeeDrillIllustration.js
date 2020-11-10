@@ -94,7 +94,16 @@ const FrisbeeDrillIllustration = (props) => {
     return (
       <>
         {renderTitle(item.title, index)}
-        <View style={styles.pagination}>{renderPagination()}</View>
+        <View>
+          <View style={styles.floating}>
+            <View style={styles.counter}>
+              <Text style={styles.textCounter}>
+                {activeIndex + 1}/{props.drill.steps.length}
+              </Text>
+            </View>
+          </View>
+          <View style={styles.pagination}>{renderPagination()}</View>
+        </View>
         <ScrollView>
           {item.illustrationType === IllustrationType.ANIMATION && displayAnimation(item)}
           {item.illustrationType === IllustrationType.YOUTUBE && displayYoutube(item)}
@@ -178,6 +187,22 @@ const styles = StyleSheet.create({
   centerContainer: {
     flex: 1,
     alignItems: 'center',
+  },
+  counter: {
+    width: 32,
+    height: 25,
+    borderRadius: 50,
+    backgroundColor: theme.COLOR_PRIMARY,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  textCounter: {
+    color: theme.COLOR_PRIMARY_LIGHT,
+    fontSize: 12,
+  },
+  floating: {
+    position: 'absolute',
+    right: '6%',
   },
 });
 

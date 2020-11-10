@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { View, ActivityIndicator, StyleSheet, Text } from 'react-native';
 import { Video } from 'expo-av';
 import * as ScreenOrientation from 'expo-screen-orientation';
+import { useFocusEffect } from '@react-navigation/native';
 
 import I18n from '../../utils/i18n';
 import theme from '../../styles/theme.style';
@@ -40,6 +41,15 @@ const VimeoVideo = ({ vimeoId, sounds, shouldPlay }) => {
 
     return () => (aborted = true);
   }, [vimeoId]);
+
+  // Stop playing the video on screen change
+  useFocusEffect(
+    React.useCallback(() => {
+      return () => {
+        videoElem.current.pauseAsync();
+      };
+    }, []),
+  );
 
   const playVideoLoaded = () => {
     videoElem.current.setStatusAsync({

@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
+import { NavigationContext } from '@react-navigation/native';
 
 import { createDrill } from '../../Fixtures/TestFixtures';
 import { IllustrationType, DrillTypes } from '../../Fixtures/config';
@@ -33,13 +34,30 @@ describe('<FitnessDrillIllustration />', () => {
   ];
   const drill = createDrill({ type: DrillTypes.FITNESS, title: 'Hot Box', steps });
 
+  // fake NavigationContext value data
+  const navContext = {
+    isFocused: () => true,
+    // addListener returns an unscubscribe function.
+    addListener: jest.fn(() => jest.fn()),
+  };
+
   it('renders correctly', () => {
-    const tree = renderer.create(<FitnessDrillIllustration drill={drill} />).toJSON();
+    const tree = renderer
+      .create(
+        <NavigationContext.Provider value={navContext}>
+          <FitnessDrillIllustration drill={drill} />
+        </NavigationContext.Provider>,
+      )
+      .toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('links to any step and finishes at the end', async () => {
-    const { getByText, getByTestId, toJSON } = render(<FitnessDrillIllustration drill={drill} />);
+    const { getByText, getByTestId, toJSON } = render(
+      <NavigationContext.Provider value={navContext}>
+        <FitnessDrillIllustration drill={drill} />
+      </NavigationContext.Provider>,
+    );
 
     // All steps rendered
     expect(getByText('3 First Step')).toBeDefined();

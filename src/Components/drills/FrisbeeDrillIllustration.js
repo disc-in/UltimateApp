@@ -94,8 +94,8 @@ const FrisbeeDrillIllustration = (props) => {
     return (
       <>
         {renderTitle(item.title, index)}
-        <View>
-          {renderCounter(index)}
+        <View style={styles.dotCounter}>
+          <View>{renderCounter(index)}</View>
           <View style={styles.pagination}>{renderPagination(index)}</View>
         </View>
         <ScrollView>
@@ -108,15 +108,17 @@ const FrisbeeDrillIllustration = (props) => {
   };
 
   const renderCounter = (index) => {
-    return (
-      <View style={styles.floating}>
-        <View style={styles.counter}>
-          <Text style={styles.textCounter}>
-            {index + 1}/{props.drill.steps.length}
-          </Text>
+    if (props.drill.steps.length !== 1) {
+      return (
+        <View style={styles.floating}>
+          <View style={styles.counter}>
+            <Text style={styles.textCounter}>
+              {index + 1}/{props.drill.steps.length}
+            </Text>
+          </View>
         </View>
-      </View>
-    );
+      );
+    }
   };
 
   const renderPagination = (index) => {
@@ -209,6 +211,9 @@ const styles = StyleSheet.create({
   floating: {
     position: 'absolute',
     right: '6%',
+  },
+  dotCounter: {
+    backgroundColor: 'pink',
   },
 });
 

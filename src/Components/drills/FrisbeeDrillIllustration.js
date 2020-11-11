@@ -96,8 +96,10 @@ const FrisbeeDrillIllustration = (props) => {
         {renderTitle(item.title, index)}
         <View>
           <View>{renderCounter(index)}</View>
-          <View style={styles.paginationGroup}>
-            <View style={styles.pagination}>{renderPagination(index)}</View>
+          <View style={styles.verticalSpace}>
+            <View style={styles.paginationFloat}>
+              <View style={styles.pagination}>{renderPagination(index)}</View>
+            </View>
           </View>
         </View>
         <ScrollView>
@@ -218,7 +220,7 @@ const styles = StyleSheet.create({
     elevation: 10,
     zIndex: 100,
   },
-  paginationGroup: {
+  paginationFloat: {
     position: 'absolute',
     top: 0,
     left: 0,
@@ -226,6 +228,9 @@ const styles = StyleSheet.create({
     bottom: 0,
     justifyContent: 'center',
     alignItems: 'center',
+    paddingVertical: 10,
+  },
+  verticalSpace: {
     paddingVertical: 10,
   },
 });

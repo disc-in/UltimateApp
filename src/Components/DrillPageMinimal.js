@@ -5,6 +5,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
+import HeaderButton from './shared/HeaderButton';
 import FitnessDrillIllustration from './drills/FitnessDrillIllustration';
 import FrisbeeDrillIllustration from './drills/FrisbeeDrillIllustration';
 import ButtonNext from './shared/Button';
@@ -42,27 +43,33 @@ export const DrillPageMinimal = (props) => {
     const headerTitle = () => (
       <View style={styles.headerTitle}>
         <Text numberOfLines={1} style={styles.headerTitleText}>
-          {I18n.t('drillPageMinimal.headerTitle', { trainingTitle: training.title })}
+          {I18n.t('drillPageMinimal.headerTitle', { trainingTitle: drill.title })}
         </Text>
-        <ProgressBar total={training.drills.length} current={currentDrillIndex + 1} onDotPress={onProgressDotPress} />
+        <View style={styles.topContainer}>
+          <ProgressBar total={training.drills.length} current={currentDrillIndex + 1} onDotPress={onProgressDotPress} />
+        </View>
       </View>
     );
+
+    const headerRight = () => {
+      <View>
+        <TouchableOpacity onPress={goToFullDrill} testID="detailsButton">
+          <MaterialCommunityIcons name="information-outline" color={theme.COLOR_PRIMARY} size={26} />
+        </TouchableOpacity>
+      </View>;
+    };
+
     navigation.setOptions({
       headerTitleAlign: 'center',
       headerStyle: { height: 100 },
       headerTitle,
+      headerRight,
     });
-  }, [navigation, currentDrillIndex, training]);
+  });
 
   return (
     <>
       <View style={styles.drillPage}>
-        <View style={styles.titleContainer}>
-          <Text style={styles.title}>{drill.title}</Text>
-          <TouchableOpacity style={styles.detailsButton} onPress={goToFullDrill} testID="detailsButton">
-            <MaterialCommunityIcons name="information-outline" color={theme.COLOR_PRIMARY} size={26} />
-          </TouchableOpacity>
-        </View>
         <View style={styles.illustration}>
           {drill.type === DrillTypes.FRISBEE && <FrisbeeDrillIllustration drill={drill} />}
           {drill.type === DrillTypes.FITNESS && <FitnessDrillIllustration drill={drill} />}
@@ -112,7 +119,7 @@ const styles = StyleSheet.create({
     marginLeft: '10%',
     marginTop: 15,
     marginBottom: 5,
-    width: '80%',
+    width: '100%',
   },
   titleContainer: {
     flexShrink: 1,
@@ -124,10 +131,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     marginRight: 46, // Matches the details icon width
-  },
-  detailsButton: {
-    position: 'absolute',
-    right: 20,
   },
   illustration: {
     flexGrow: 1,
@@ -142,4 +145,5 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
   },
+  topContainer: {},
 });

@@ -66,7 +66,7 @@ export default {
       noEquipment: 'Bodyweight programs',
       fullEquipment: 'Gym programs',
     },
-    drillPageMinimal: '{{training}} drills',
+    drillPageMinimal: '{{training}}',
     animationEditorPage: 'New Drill',
     dictionaryPage: 'Dictionary',
     essentialPage: 'Basics',
@@ -165,7 +165,7 @@ export default {
     description: 'Description',
   },
   drillPageMinimal: {
-    headerTitle: '{{trainingTitle}} Drills',
+    headerTitle: '{{trainingTitle}}',
     details: 'DETAILS',
     finish: 'Finish Training!',
     next: 'Next drill',

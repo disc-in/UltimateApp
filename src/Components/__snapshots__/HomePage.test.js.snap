@@ -287,7 +287,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                       }
                     }
                   >
-                    Drill Editor
+                    My Drills
                   </Text>
                 </View>
               </View>
@@ -358,7 +358,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                       }
                     }
                   >
-                    Play Editor
+                    My Playbook
                   </Text>
                 </View>
               </View>

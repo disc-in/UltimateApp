@@ -9,6 +9,7 @@ import VimeoVideo from '../shared/VimeoVideo';
 import { IllustrationType } from '../../Fixtures/config';
 import theme from '../../styles/theme.style';
 import Drill from '../animation/Drill';
+import autoMergeLevel1 from 'redux-persist/es/stateReconciler/autoMergeLevel1';
 
 const screenDimension = Dimensions.get('window');
 
@@ -94,9 +95,11 @@ const FrisbeeDrillIllustration = (props) => {
     return (
       <>
         {renderTitle(item.title, index)}
-        <View style={styles.dotCounter}>
+        <View>
           <View>{renderCounter(index)}</View>
-          <View style={styles.pagination}>{renderPagination(index)}</View>
+          <View style={styles.paginationGroup}>
+            <View style={styles.pagination}>{renderPagination(index)}</View>
+          </View>
         </View>
         <ScrollView>
           {item.illustrationType === IllustrationType.ANIMATION && displayAnimation(item)}
@@ -177,7 +180,9 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   pagination: {
+    position: 'absolute',
     paddingVertical: 10,
+    zIndex: 0,
   },
   line: {
     height: 40,
@@ -211,9 +216,18 @@ const styles = StyleSheet.create({
   floating: {
     position: 'absolute',
     right: '6%',
+    elevation: 10,
+    zIndex: 100,
   },
-  dotCounter: {
-    backgroundColor: 'pink',
+  paginationGroup: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingVertical: 10,
   },
 });
 

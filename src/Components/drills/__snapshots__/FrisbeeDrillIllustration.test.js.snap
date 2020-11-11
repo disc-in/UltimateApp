@@ -161,6 +161,7 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
             <View
               style={
                 Object {
+                  "paddingBottom": 20,
                   "paddingVertical": 10,
                 }
               }
@@ -184,7 +185,6 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
                     Object {
                       "paddingVertical": 10,
                       "position": "absolute",
-                      "zIndex": 0,
                     }
                   }
                 />

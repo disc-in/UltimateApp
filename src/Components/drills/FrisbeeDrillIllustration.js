@@ -183,7 +183,6 @@ const styles = StyleSheet.create({
   pagination: {
     position: 'absolute',
     paddingVertical: 10,
-    zIndex: 0,
   },
   line: {
     height: 40,
@@ -217,8 +216,6 @@ const styles = StyleSheet.create({
   floating: {
     position: 'absolute',
     right: '6%',
-    elevation: 10,
-    zIndex: 100,
   },
   paginationFloat: {
     position: 'absolute',
@@ -232,6 +229,7 @@ const styles = StyleSheet.create({
   },
   verticalSpace: {
     paddingVertical: 10,
+    paddingBottom: 20,
   },
 });
 

@@ -163,6 +163,7 @@ export default {
     goal: 'Good for',
     equipment: 'Equipment',
     description: 'Description',
+    inGame: 'In Game',
   },
   drillPageMinimal: {
     headerTitle: '{{trainingTitle}} Drills',

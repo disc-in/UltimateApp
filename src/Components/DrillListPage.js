@@ -46,7 +46,7 @@ export const DrillListPage = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    storeDrills: state.drills,
+    storeDrills: [...state.drills, ...state.customDrills],
   };
 };
 

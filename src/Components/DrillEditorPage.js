@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { View } from 'react-native';
+import { connect } from 'react-redux';
 
 import I18n from '../utils/i18n';
+import { saveDrill } from '../Store/Actions/drillAction';
 import { DrillTypes, IllustrationType } from '../Fixtures/config';
 import AnimationEditor from './editor/AnimationEditor';
 
@@ -16,7 +18,7 @@ const newDrill = {
   equipment: undefined,
   durationInMinutes: undefined,
   intensity: undefined,
-  goals: undefined,
+  goals: [],
   seasonTiming: undefined,
   level: undefined,
   steps: [
@@ -42,6 +44,7 @@ export const DrillEditorPage = (props) => {
     const newCurrentDrill = { ...currentDrill };
     newCurrentDrill.steps[0].illustrationSource = animation;
     setCurrentDrill(newCurrentDrill);
+    props.saveDrill(newCurrentDrill);
   };
 
   return (
@@ -51,4 +54,6 @@ export const DrillEditorPage = (props) => {
   );
 };
 
-export default DrillEditorPage;
+const mapDispatchToProps = { saveDrill };
+
+export default connect(null, mapDispatchToProps)(DrillEditorPage);

@@ -9,7 +9,6 @@ import VimeoVideo from '../shared/VimeoVideo';
 import { IllustrationType } from '../../Fixtures/config';
 import theme from '../../styles/theme.style';
 import Drill from '../animation/Drill';
-import autoMergeLevel1 from 'redux-persist/es/stateReconciler/autoMergeLevel1';
 
 const screenDimension = Dimensions.get('window');
 

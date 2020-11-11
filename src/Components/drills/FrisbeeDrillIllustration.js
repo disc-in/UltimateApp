@@ -35,7 +35,7 @@ const FrisbeeDrillIllustration = (props) => {
                 carouselRef.current.snapToPrev();
               }}
             >
-              <MaterialCommunityIcons name="chevron-double-left" color={theme.COLOR_PRIMARY} size={26} />
+              <MaterialCommunityIcons name="arrow-left-bold" color={theme.COLOR_PRIMARY} size={26} />
             </TouchableOpacity>
           )}
         </View>
@@ -47,7 +47,7 @@ const FrisbeeDrillIllustration = (props) => {
                 carouselRef.current.snapToNext();
               }}
             >
-              <MaterialCommunityIcons name="chevron-double-right" color={theme.COLOR_PRIMARY} size={26} />
+              <MaterialCommunityIcons name="arrow-right-bold" color={theme.COLOR_PRIMARY} size={26} />
             </TouchableOpacity>
           )}
         </View>
@@ -94,8 +94,8 @@ const FrisbeeDrillIllustration = (props) => {
     return (
       <>
         {renderTitle(item.title, index)}
-        <View style={styles.pagination}>{renderPagination()}</View>
         <ScrollView>
+          <View style={styles.pagination}>{renderPagination()}</View>
           {item.illustrationType === IllustrationType.ANIMATION && displayAnimation(item)}
           {item.illustrationType === IllustrationType.YOUTUBE && displayYoutube(item)}
           {item.illustrationType === IllustrationType.VIMEO && displayVimeo(item)}
@@ -114,8 +114,8 @@ const FrisbeeDrillIllustration = (props) => {
           paddingVertical: 0,
         }}
         dotStyle={{
-          width: 8,
-          height: 8,
+          width: 10,
+          height: 10,
           borderRadius: 5,
           marginHorizontal: 5,
           backgroundColor: theme.MAIN_COLOR,

@@ -5644,7 +5644,7 @@ const goToTenDrill = {
       repetition: '',
       rest: '',
       instruction:
-        "Première équipe qui complète 10 passes gagne. Compte à 6. Pour un niveau débutant, l'équipe en attaque peut jouer en surnombre ",
+        "Première équipe qui complète 10 passes gagne. Compte à 6. Pour un niveau débutant, l'équipe en attaque peut jouer en surnombre",
     },
   ],
 };
@@ -5657,7 +5657,7 @@ const endzoneGameDrill = {
   image: 'https://zupimages.net/up/20/25/71b2.jpg',
   description: 'Match à 5. Si une équipe marque, elle reste en attaque',
   minimalPlayersNumber: 12,
-  inGame: 'Il est primordial de réussir à convertir les occasions ',
+  inGame: 'Il est primordial de réussir à convertir les occasions.',
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque - 4 plots',
   durationInMinutes: 15,
@@ -6174,7 +6174,7 @@ const resetBreakDrill = {
       repetition: '',
       rest: '',
       instruction:
-        "Le placement est le même. La défense est à 100%. Le soutien doit choisir une des deux solutions pour faire son cut et recevoir le disque. Le soutien ne peut changer de direction qu'une fois. Chaque équipe de 2 faire le même nombre d'essais, et celle qui réussi le plus de passes gagne !",
+        "Le placement est le même. La défense est à 100%. Le soutien doit choisir une des deux solutions pour faire son cut et recevoir le disque. Le soutien ne peut changer de direction qu'une fois. Chaque équipe de 2 fait le même nombre d'essais, et celle qui réussit le plus de passes gagne !",
     },
     {
       id: 6,
@@ -6184,7 +6184,7 @@ const resetBreakDrill = {
       repetition: '',
       rest: '',
       instruction:
-        "Le placement est le même. La défense est à 100%. Le soutien doit choisir une des deux solutions pour faire son cut et recevoir le disque. Le soutien ne peut changer de direction qu'une fois. Chaque équipe de 2 faire le même nombre d'essais, et celle qui réussi le plus de passes gagne !",
+        "Le placement est le même. La défense est à 100%. Le soutien doit choisir une des deux solutions pour faire son cut et recevoir le disque. Le soutien ne peut changer de direction qu'une fois. Chaque équipe de 2 fait le même nombre d'essais, et celle qui réussit le plus de passes gagne !",
     },
   ],
 };

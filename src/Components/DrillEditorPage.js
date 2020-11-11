@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Text, ScrollView, TextInput } from 'react-native';
+import { StyleSheet, View, ScrollView } from 'react-native';
 import { connect } from 'react-redux';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
@@ -9,6 +9,8 @@ import theme from '../styles/theme.style';
 import { saveDrill } from '../Store/Actions/drillAction';
 import { DrillTypes, IllustrationType } from '../Fixtures/config';
 import AnimationEditor from './editor/AnimationEditor';
+import FormGroup from './shared/form/FormGroup';
+import Input from './shared/form/Input';
 import Button from './shared/Button';
 
 const newDrill = {
@@ -76,30 +78,24 @@ export const DrillEditorPage = (props) => {
       >
         {({ handleSubmit, handleChange, errors, values, touched, isValid }) => (
           <View style={styles.form}>
-            <Text>Title</Text>
-            {touched.title && errors.title && <Text style={styles.error}>{errors.title}</Text>}
-            <TextInput onChangeText={handleChange('title')} value={values.title} />
-            <Text>Description</Text>
-            {touched.description && errors.description && <Text style={styles.error}>{errors.description}</Text>}
-            <TextInput onChangeText={handleChange('description')} value={values.description} />
-            <Text>Author</Text>
-            {touched.author && errors.author && <Text style={styles.error}>{errors.author}</Text>}
-            <TextInput onChangeText={handleChange('author')} value={values.author} />
-            <Text>Number of players</Text>
-            {touched.minimalPlayersNumber && errors.minimalPlayersNumber && (
-              <Text style={styles.error}>{errors.minimalPlayersNumber}</Text>
-            )}
-            <TextInput
-              onChangeText={handleChange('minimalPlayersNumber')}
-              value={values.minimalPlayersNumber}
-              keyboardType="number-pad"
-            />
-            <Text>Equipment</Text>
-            {touched.equipement && errors.equipement && <Text style={styles.error}>{errors.equipement}</Text>}
-            <TextInput onChangeText={handleChange('equipement')} value={values.equipement} />
-            <Text>Duration</Text>
-            {touched.duration && errors.duration && <Text style={styles.error}>{errors.duration}</Text>}
-            <TextInput onChangeText={handleChange('duration')} value={values.duration} keyboardType="number-pad" />
+            <FormGroup>
+              <Input fieldName="title" label="Title" />
+            </FormGroup>
+            <FormGroup>
+              <Input fieldName="description" label="Description" />
+            </FormGroup>
+            <FormGroup>
+              <Input fieldName="author" label="Author" />
+            </FormGroup>
+            <FormGroup>
+              <Input fieldName="minimalPlayersNumber" keyboardType="number-pad" label="Minimal number of players" />
+            </FormGroup>
+            <FormGroup>
+              <Input fieldName="equipement" label="Equipment" />
+            </FormGroup>
+            <FormGroup>
+              <Input fieldName="duration" keyboardType="number-pad" label="Duration" />
+            </FormGroup>
             <Button onPress={handleSubmit} text={I18n.t('editor.renamePlayModal.cta')} style={styles.cta} />
           </View>
         )}
@@ -121,14 +117,10 @@ export default connect(mapStateToProps, mapDispatchToProps)(DrillEditorPage);
 const styles = StyleSheet.create({
   form: {
     flex: 1,
-    padding: 10,
+    padding: 20,
   },
   cta: {
     marginTop: 10,
     width: 120,
-  },
-  error: {
-    fontStyle: 'italic',
-    color: 'red',
   },
 });

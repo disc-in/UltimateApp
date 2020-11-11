@@ -94,8 +94,8 @@ const FrisbeeDrillIllustration = (props) => {
     return (
       <>
         {renderTitle(item.title, index)}
+        <View style={styles.pagination}>{renderPagination()}</View>
         <ScrollView>
-          <View style={styles.pagination}>{renderPagination()}</View>
           {item.illustrationType === IllustrationType.ANIMATION && displayAnimation(item)}
           {item.illustrationType === IllustrationType.YOUTUBE && displayYoutube(item)}
           {item.illustrationType === IllustrationType.VIMEO && displayVimeo(item)}

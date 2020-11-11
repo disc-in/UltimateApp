@@ -103,6 +103,9 @@ export default {
     essential: 'Les bases du jeu',
     tactics: 'Tactiques',
   },
+  drillEditorPage: {
+    untitledDrill: 'Exo sans titre',
+  },
   playEditorPage: {
     untitledPlay: 'Tactique sans titre',
   },

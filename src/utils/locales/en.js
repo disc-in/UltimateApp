@@ -103,6 +103,9 @@ export default {
     essential: 'Basics',
     tactics: 'Tactics',
   },
+  drillEditorPage: {
+    untitledDrill: 'Unnamed drill',
+  },
   playEditorPage: {
     untitledPlay: 'Unnamed play',
   },

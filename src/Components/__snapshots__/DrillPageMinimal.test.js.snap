@@ -14,49 +14,6 @@ Array [
     <View
       style={
         Object {
-          "flexGrow": 0,
-          "flexShrink": 1,
-          "marginVertical": 10,
-        }
-      }
-    >
-      <Text
-        style={
-          Object {
-            "fontSize": 20,
-            "fontWeight": "bold",
-            "marginRight": 46,
-            "textAlign": "center",
-          }
-        }
-      >
-        Fitness Drill Title
-      </Text>
-      <View
-        accessible={true}
-        focusable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "opacity": 1,
-            "position": "absolute",
-            "right": 20,
-          }
-        }
-        testID="detailsButton"
-      >
-        <Text />
-      </View>
-    </View>
-    <View
-      style={
-        Object {
           "flexGrow": 1,
           "flexShrink": 0,
         }

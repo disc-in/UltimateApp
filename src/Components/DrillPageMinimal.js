@@ -5,7 +5,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
-import HeaderButton from './shared/HeaderButton';
+
 import FitnessDrillIllustration from './drills/FitnessDrillIllustration';
 import FrisbeeDrillIllustration from './drills/FrisbeeDrillIllustration';
 import ButtonNext from './shared/Button';
@@ -45,18 +45,20 @@ export const DrillPageMinimal = (props) => {
         <Text numberOfLines={1} style={styles.headerTitleText}>
           {I18n.t('drillPageMinimal.headerTitle', { trainingTitle: drill.title })}
         </Text>
-        <View style={styles.topContainer}>
+        <View >
           <ProgressBar total={training.drills.length} current={currentDrillIndex + 1} onDotPress={onProgressDotPress} />
         </View>
       </View>
     );
 
     const headerRight = () => {
-      <View>
-        <TouchableOpacity onPress={goToFullDrill} testID="detailsButton">
-          <MaterialCommunityIcons name="information-outline" color={theme.COLOR_PRIMARY} size={26} />
-        </TouchableOpacity>
-      </View>;
+      return (
+        <View style={styles.headerRight}>
+          <TouchableOpacity onPress={goToFullDrill} testID="detailsButton">
+            <MaterialCommunityIcons name="information-outline" color={theme.COLOR_PRIMARY} size={35} />
+          </TouchableOpacity>
+        </View>
+      )
     };
 
     navigation.setOptions({
@@ -65,7 +67,7 @@ export const DrillPageMinimal = (props) => {
       headerTitle,
       headerRight,
     });
-  });
+  }, [navigation, currentDrillIndex, training]);
 
   return (
     <>
@@ -145,5 +147,7 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
   },
-  topContainer: {},
+  headerRight: {
+    marginRight: 20,
+  },
 });

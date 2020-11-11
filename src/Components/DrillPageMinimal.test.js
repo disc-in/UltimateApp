@@ -30,13 +30,13 @@ describe('<DrillPageMinimal />', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('links to drill page', async () => {
-    const { getByTestId } = render(<DrillPageMinimal navigation={navigation} route={route} />);
+  // it('links to drill page', async () => {
+  //   const { getByTestId } = render(<DrillPageMinimal navigation={navigation} route={route} />);
 
-    await fireEvent.press(getByTestId('detailsButton'));
+  //   await fireEvent.press(getByTestId('detailsButton'));
 
-    expect(navigation.navigate).toBeCalledWith('DrillPage', { drill });
-  });
+  //   expect(navigation.navigate).toBeCalledWith('DrillPage', { drill });
+  // });
 
   it('links to next drill within training when finished', async () => {
     const { getByText } = render(<DrillPageMinimal navigation={navigation} route={route} />);

@@ -5525,7 +5525,7 @@ const giveAndGoDrill = {
   description: 'Suivez votre disque après la passe aussi vite que possible.',
   minimalPlayersNumber: 2,
   inGame:
-    "Les une-deux rapides permettent aux attaquants de gagner du terrain et de bénéficier de position plus avantageuse pour lancer. Le lanceur cherche à bénéficier au maximum de l'inertie du défenseur pour prendre de l'avance sur son cut",
+    "Les une-deux rapides permettent aux attaquants de gagner du terrain et de bénéficier de positions plus avantageuses pour lancer. Le lanceur cherche à bénéficier au maximum de l'inertie du défenseur pour prendre de l'avance sur son cut",
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque - 12 plots',
   durationInMinutes: 10,
@@ -6093,7 +6093,7 @@ const resetOpenDrill = {
       repetition: '',
       rest: '',
       instruction:
-        "Le placement est le même. La défense sur le soutien est à 100%. L'attaquant doit choisir une des deux options de cut pour se démarquer. Il ne peut faire qu'une feinte. Chaque équipe de 2 faire le même nombre d'essais, et celle qui réussi le plus de passes gagne !",
+        "Le placement est le même. La défense sur le soutien est à 100%. L'attaquant doit choisir une des deux options de cut pour se démarquer. Il ne peut faire qu'une feinte. Chaque équipe de 2 fait le même nombre d'essais, et celle qui réussit le plus de passes gagne !",
     },
     {
       id: 6,
@@ -6103,7 +6103,7 @@ const resetOpenDrill = {
       repetition: '',
       rest: '',
       instruction:
-        "Le placement est le même. La défense sur le soutien est à 100%. L'attaquant doit choisir une des deux options de cut pour se démarquer. Il ne peut faire qu'une feinte. Chaque équipe de 2 faire le même nombre d'essais, et celle qui réussi le plus de passes gagne !",
+        "Le placement est le même. La défense sur le soutien est à 100%. L'attaquant doit choisir une des deux options de cut pour se démarquer. Il ne peut faire qu'une feinte. Chaque équipe de 2 fait le même nombre d'essais, et celle qui réussit le plus de passes gagne !",
     },
   ],
 };
@@ -6386,7 +6386,7 @@ const horizontalTiming = {
   author: 'Wizard',
   title: "Le Timing de l'Horizontal",
   image: 'https://zupimages.net/up/20/25/zn5l.jpg',
-  description: 'Complete drill to work on the timing of the cutter and handler in a horizontal stack.',
+  description: 'Un exercice complet pour travailler le timing entre le cutter et le handler, dans un stack horizontal.',
   minimalPlayersNumber: 5,
   inGame:
     "Après la réception du pull, les attaquants peuvent chercher à mettre en place un play avec un stack Horizontal. L'intérêt est de gagner beaucoup de terrain en peu de passes",
@@ -6528,7 +6528,7 @@ const cardinal = {
       repetition: '',
       rest: '',
       instruction:
-        'Imaginez un compas avec votre pied pivot au centre. Pivot N et lancer. Pivot NE et lancer. Pivot E et lancer et ainsi de suite autour du compas. Faire quatre fois le tour, en lançant deux fois les coups droits et deux fois les revers.',
+        'Imaginez un compas avec votre pied de pivot au centre. Pivot N et lancer. Pivot NE et lancer. Pivot E et lancer et ainsi de suite autour du compas. Faire quatre fois le tour, en lançant deux fois les coups droits et deux fois les revers.',
     },
     {
       id: 2,
@@ -6538,7 +6538,7 @@ const cardinal = {
       repetition: '',
       rest: '',
       instruction:
-        'Imaginez un compas avec votre pied pivot au centre. Pivot N et lancer. Pivot NE et lancer. Pivot E et lancer et ainsi de suite autour du compas. Faire quatre fois le tour, en lançant deux fois les coups droits et deux fois les revers.',
+        'Imaginez un compas avec votre pied de pivot au centre. Pivot N et lancer. Pivot NE et lancer. Pivot E et lancer et ainsi de suite autour du compas. Faire quatre fois le tour, en lançant deux fois les coups droits et deux fois les revers.',
     },
   ],
 };
@@ -6552,7 +6552,7 @@ const horizontalToVertical = {
   description: "Apprendre à créer un flow horizontal à partir d'une position statique.",
   minimalPlayersNumber: 7,
   inGame:
-    "Un play a été effectué avec un stack horizontal. L'objectif est de retrouver le plus rapidement possible un déroulement d'attaque fluide (le flow=",
+    "Un play a été effectué avec un stack horizontal. L'objectif est de retrouver le plus rapidement possible un déroulement d'attaque fluide (le flow)",
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disque',
   durationInMinutes: 20,
@@ -6867,7 +6867,7 @@ const theTunnel = {
   author: 'CUSB',
   title: 'Le Tunnel',
   image: 'https://zupimages.net/up/20/25/742g.jpeg',
-  description: 'Réactivité en défense.',
+  description: "Un exercice intense pour travailler la réactivité en défense.",
   minimalPlayersNumber: 2,
   inGame:
     "Les défenseurs cherchent à bloquer une direction du cutter (le under cut dans l'animation) en se plaçant toujours entre le lanceur et le cutter. Le défenseur doit aussi chercher à rester à proximité de l'attaquant sur l'option de cut opposé (longue)",
@@ -6898,7 +6898,7 @@ const sprintDefense = {
   author: 'Lucky Grass',
   title: 'Réactivité en Défense',
   image: 'https://zupimages.net/up/20/25/5pqg.jpg',
-  description: "Exercice d'échauffement pour travailler la réactivité en défenses.",
+  description: "Exercice d'échauffement pour travailler la réactivité en défense.",
   minimalPlayersNumber: 2,
   inGame: "Un défenseur doit s'adapter le plus rapidement possible à la course du cutter",
   equipmentLabel: EquipmentLabels.NONE,
@@ -7019,7 +7019,7 @@ const goaltimateDrill = {
       repetition: '',
       rest: '',
       instruction:
-        "4 contre 4. Compte de 5 \nÀ chaque fois qu'il y a un turnover, la nouvelle équipe offensive doit \"nettoyer\" le disque en l'ammenant dans la zone de dégagement, et peut alors attaquer le but. \nUn point est obtenu lorsqu'une passe  traversant le cerceau et est attrapée dans la zone d'en-but par votre coéquipier",
+        "4 contre 4. Compte de 5 \nÀ chaque fois qu'il y a un turnover, la nouvelle équipe offensive doit \"nettoyer\" le disque en l'ammenant dans la zone de dégagement, et peut alors attaquer le but. \nUn point est obtenu lorsqu'une passe traversant le cerceau est attrapée dans la zone d'en-but par votre coéquipier",
     },
     {
       id: 2,
@@ -7029,7 +7029,7 @@ const goaltimateDrill = {
       repetition: '',
       rest: '',
       instruction:
-        "4 contre 4. Compte de 5 \nÀ chaque fois qu'il y a un turnover, la nouvelle équipe offensive doit \"nettoyer\" le disque en l'ammenant dans la zone de dégagement, et peut alors attaquer le but. \nUn point est obtenu lorsqu'une passe  traversant le cerceau et est attrapée dans la zone d'en-but par votre coéquipier",
+        "4 contre 4. Compte de 5 \nÀ chaque fois qu'il y a un turnover, la nouvelle équipe offensive doit \"nettoyer\" le disque en l'ammenant dans la zone de dégagement, et peut alors attaquer le but. \nUn point est obtenu lorsqu'une passe traversant le cerceau est attrapée dans la zone d'en-but par votre coéquipier",
     },
   ],
 };

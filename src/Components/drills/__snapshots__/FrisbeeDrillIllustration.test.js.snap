@@ -156,15 +156,15 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
             </Text>
             <View />
           </View>
+          <View
+            style={
+              Object {
+                "paddingVertical": 10,
+              }
+            }
+          />
           <RCTScrollView>
             <View>
-              <View
-                style={
-                  Object {
-                    "paddingVertical": 10,
-                  }
-                }
-              />
               <View
                 style={
                   Object {

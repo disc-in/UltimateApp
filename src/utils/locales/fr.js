@@ -179,6 +179,7 @@ export default {
   },
   fitnessFilters: {
     favorites: 'Seulement mes favoris',
+    custom: 'Seulement mes exos',
     level: 'Niveau',
     intensity: 'Intensité',
     equipment: 'Matériel',

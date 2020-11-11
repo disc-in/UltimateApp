@@ -27,6 +27,7 @@ const newDrill = {
   goals: [],
   seasonTiming: undefined,
   level: undefined,
+  custom: true,
   steps: [
     {
       id: 1,

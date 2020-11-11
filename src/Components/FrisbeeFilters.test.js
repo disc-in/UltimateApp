@@ -108,6 +108,7 @@ describe('<FrisbeeFilters />', () => {
         type: DrillTypes.FRISBEE,
         currentFilters: {
           selectedFavorites: false,
+          selectedCustomDrills: false,
           selectedLevels: [Levels.ADVANCED],
           selectedGoals: [],
           numberOfPlayers: undefined,
@@ -182,6 +183,7 @@ describe('<FrisbeeFilters />', () => {
         type: DrillTypes.FRISBEE,
         currentFilters: {
           selectedFavorites: false,
+          selectedCustomDrills: false,
           selectedLevels: [],
           selectedGoals: [FrisbeeGoals.HANDLING],
           numberOfPlayers: undefined,
@@ -241,6 +243,7 @@ describe('<FrisbeeFilters />', () => {
         type: DrillTypes.FRISBEE,
         currentFilters: {
           selectedFavorites: false,
+          selectedCustomDrills: false,
           selectedLevels: [],
           selectedGoals: [],
           numberOfPlayers: 5,
@@ -299,10 +302,67 @@ describe('<FrisbeeFilters />', () => {
         type: DrillTypes.FRISBEE,
         currentFilters: {
           selectedFavorites: true,
+          selectedCustomDrills: false,
           selectedLevels: [],
           selectedGoals: [],
           numberOfPlayers: undefined,
           displayedDrills: [intermediateDrill],
+        },
+      });
+    });
+
+    it('filters custom drills', async () => {
+      const customAdvancedDrill = { ...advancedDrill, custom: true };
+      const drills = [beginnerDrill, intermediateDrill, customAdvancedDrill];
+      const navigate = jest.fn();
+
+      const DummyScreen = (props) => null;
+      const Stack = createStackNavigator();
+
+      const { getByText, getByTestId } = await waitFor(() =>
+        render(
+          <Provider store={mockStore}>
+            <NavigationContainer>
+              <Stack.Navigator>
+                <Stack.Screen
+                  name="FrisbeeFilters"
+                  component={ConnectedFrisbeeFilters}
+                  initialParams={{
+                    initialData: drills,
+                    previousScreen: 'DrillListPage',
+                    previousType: DrillTypes.FRISBEE,
+                  }}
+                  listeners={({ navigation }) => ({
+                    transitionStart: (e) => {
+                      navigation.navigate = navigate;
+                    },
+                  })}
+                />
+                <Stack.Screen name="DrillListPage" component={DummyScreen} />
+              </Stack.Navigator>
+            </NavigationContainer>
+            ,
+          </Provider>,
+        ),
+      );
+
+      expect(getByText('3 drills available')).toBeDefined();
+
+      await fireEvent.press(getByText('My drills only'));
+
+      expect(getByText('1 drill available')).toBeDefined();
+
+      await fireEvent.press(getByTestId('validateButton'));
+
+      expect(navigate).toBeCalledWith('DrillListPage', {
+        type: DrillTypes.FRISBEE,
+        currentFilters: {
+          selectedFavorites: false,
+          selectedCustomDrills: true,
+          selectedLevels: [],
+          selectedGoals: [],
+          numberOfPlayers: undefined,
+          displayedDrills: [customAdvancedDrill],
         },
       });
     });
@@ -365,6 +425,7 @@ describe('<FrisbeeFilters />', () => {
         type: DrillTypes.FRISBEE,
         currentFilters: {
           selectedFavorites: false,
+          selectedCustomDrills: false,
           selectedLevels: [],
           selectedGoals: [],
           numberOfPlayers: undefined,

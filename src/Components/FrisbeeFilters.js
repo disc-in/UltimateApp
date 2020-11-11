@@ -18,6 +18,7 @@ export class FrisbeeFilters extends React.Component {
     const { filters, initialData } = props.route.params;
     this.state = {
       selectedFavorites: filters?.selectedFavorites || false,
+      selectedCustomDrills: filters?.selectedCustomDrills || false,
       selectedLevels: filters?.selectedLevels || [],
       selectedGoals: filters?.selectedGoals || [],
       numberOfPlayers: filters?.numberOfPlayers || undefined,
@@ -31,6 +32,7 @@ export class FrisbeeFilters extends React.Component {
     this.setState(
       {
         selectedFavorites: false,
+        selectedCustomDrills: false,
         selectedLevels: [],
         selectedGoals: [],
         numberOfPlayers: undefined,
@@ -41,10 +43,10 @@ export class FrisbeeFilters extends React.Component {
     );
   }
 
-  onFavoritesChange() {
+  onBooleanChange(target) {
     this.setState(
       (prevState) => ({
-        selectedFavorites: !prevState.selectedFavorites,
+        [target]: !prevState[target],
       }),
       this.applyFilters,
     );
@@ -66,12 +68,15 @@ export class FrisbeeFilters extends React.Component {
 
   applyFilters(callback = () => {}) {
     const { favoriteDrills } = this.props;
-    const { selectedFavorites, selectedLevels, selectedGoals, numberOfPlayers } = this.state;
+    const { selectedFavorites, selectedCustomDrills, selectedLevels, selectedGoals, numberOfPlayers } = this.state;
     let newData = this.props.route.params.initialData;
 
     if (selectedFavorites) {
       const favoriteIds = favoriteDrills.map((favorite) => favorite.id);
       newData = newData.filter((drill) => favoriteIds.includes(drill.id));
+    }
+    if (selectedCustomDrills) {
+      newData = newData.filter((drill) => drill.custom);
     }
     if (selectedLevels.length > 0) newData = newData.filter((drill) => selectedLevels.includes(drill.level));
     if (selectedGoals.length > 0)
@@ -95,15 +100,22 @@ export class FrisbeeFilters extends React.Component {
   }
 
   render() {
-    const { selectedFavorites, selectedLevels, selectedGoals, numberOfPlayers } = this.state;
+    const { selectedFavorites, selectedCustomDrills, selectedLevels, selectedGoals, numberOfPlayers } = this.state;
     return (
       <View style={filterStyle.wrapper}>
         <ScrollView contentContainerStyle={filterStyle.filters}>
           <View style={filterStyle.filter}>
             <Button
               title={I18n.t('fitnessFilters.favorites')}
-              onPress={() => this.onFavoritesChange()}
+              onPress={() => this.onBooleanChange('selectedFavorites')}
               active={selectedFavorites}
+            />
+          </View>
+          <View style={filterStyle.filter}>
+            <Button
+              title={I18n.t('fitnessFilters.custom')}
+              onPress={() => this.onBooleanChange('selectedCustomDrills')}
+              active={selectedCustomDrills}
             />
           </View>
           <Text style={filterStyle.filterTitle}>{I18n.t('fitnessFilters.level')}</Text>

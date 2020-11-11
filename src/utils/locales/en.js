@@ -180,6 +180,7 @@ export default {
   },
   fitnessFilters: {
     favorites: 'Favorites only',
+    custom: 'My drills only',
     level: 'Level',
     intensity: 'Intensity',
     equipment: 'Equipment',

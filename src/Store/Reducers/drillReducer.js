@@ -2,7 +2,6 @@ const initialState = [];
 
 function drillReducer(state = initialState, action) {
   let nextState;
-  console.log(action.type);
   switch (action.type) {
     case 'SAVE_DRILL':
       // If the drill is already saved, replace it; otherwise add it

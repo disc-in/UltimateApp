@@ -12,6 +12,7 @@ import FitnessDrillIllustration from './drills/FitnessDrillIllustration';
 import FrisbeeDrillIllustration from './drills/FrisbeeDrillIllustration';
 import StartButton from './drills/StartButton';
 import HeaderButton from './shared/HeaderButton';
+import customDrillsImage from '../../assets/HomePage/customDrills.jpg';
 
 export const DrillPage = (props) => {
   const { route, navigation } = props;
@@ -49,9 +50,10 @@ export const DrillPage = (props) => {
     }),
   );
 
+  const imageSource = drill.custom ? customDrillsImage : { uri: drill.image };
   return (
     <ScrollView ref={drillScrollView} style={styles.drillPage}>
-      <ImageBackground source={{ uri: drill.image }} style={imageStyles} imageStyle={styles.imageOpacity}>
+      <ImageBackground source={imageSource} style={imageStyles} imageStyle={styles.imageOpacity}>
         <View style={styles.titleContainer}>
           <Text style={styles.title}>{drill.title}</Text>
           <Text style={styles.author}>{drill.author}</Text>

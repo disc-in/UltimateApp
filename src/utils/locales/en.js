@@ -105,6 +105,7 @@ export default {
   },
   drillEditorPage: {
     untitledDrill: 'Unnamed drill',
+    cta: 'Save',
   },
   playEditorPage: {
     untitledPlay: 'Unnamed play',

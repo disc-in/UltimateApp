@@ -11,7 +11,8 @@ import gymstrong from '../../assets/HomePage/gymstrong.jpg';
 import leanfit from '../../assets/HomePage/leanfit.jpg';
 import simulator from '../../assets/HomePage/simulator.jpg';
 import dictionary from '../../assets/HomePage/dictionary.jpg';
-import ourPlays from '../../assets/HomePage/ourplays.jpg';
+import customDrills from '../../assets/HomePage/customDrills.jpg';
+import playbook from '../../assets/HomePage/playbook.jpg';
 import essential from '../../assets/HomePage/essential.jpg';
 import huddle from '../../assets/HomePage/huddle.jpg';
 import FeedbackButton from './home/FeedbackButton';
@@ -47,14 +48,14 @@ const FrisbeeTab = (props) => {
           onPress={() => props.navigation.navigate('DrillEditorPage')}
           style={[styles.innerMenuItem, styles.firstInnerMenuItem]}
         >
-          <ImageBackground source={ourPlays} style={styles.image}>
+          <ImageBackground source={customDrills} style={styles.image}>
             <View style={styles.wrapper}>
               <Text style={styles.title}>{I18n.t('homePage.drillEditor')}</Text>
             </View>
           </ImageBackground>
         </TouchableHighlight>
         <TouchableHighlight onPress={() => props.navigation.navigate('PlayEditorPage')} style={styles.innerMenuItem}>
-          <ImageBackground source={ourPlays} style={styles.image}>
+          <ImageBackground source={playbook} style={styles.image}>
             <View style={styles.wrapper}>
               <Text style={styles.title}>{I18n.t('homePage.playEditor')}</Text>
             </View>

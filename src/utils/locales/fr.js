@@ -105,6 +105,7 @@ export default {
   },
   drillEditorPage: {
     untitledDrill: 'Exo sans titre',
+    cta: 'Enregistrer',
   },
   playEditorPage: {
     untitledPlay: 'Tactique sans titre',

@@ -1732,7 +1732,7 @@ exports[`<DrillEditorPage /> renders correctly 1`] = `
             }
           }
         >
-          Apply
+          Save
         </Text>
       </View>
     </View>

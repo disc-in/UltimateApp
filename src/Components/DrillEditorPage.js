@@ -97,7 +97,7 @@ export const DrillEditorPage = (props) => {
             <FormGroup>
               <Input fieldName="duration" keyboardType="number-pad" label="Duration" />
             </FormGroup>
-            <Button onPress={handleSubmit} text={I18n.t('editor.renamePlayModal.cta')} style={styles.cta} />
+            <Button onPress={handleSubmit} text={I18n.t('drillEditorPage.cta')} style={styles.cta} />
           </View>
         )}
       </Formik>

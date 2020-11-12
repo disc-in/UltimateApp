@@ -162,6 +162,7 @@ export default {
     goal: 'Thèmes',
     equipment: 'Matériel',
     description: 'Description',
+    inGame: 'En Match',
   },
   drillPageMinimal: {
     headerTitle: 'Exercices de {{trainingTitle}}',

@@ -35,7 +35,7 @@ const FrisbeeDrillIllustration = (props) => {
                 carouselRef.current.snapToPrev();
               }}
             >
-              <MaterialCommunityIcons name="chevron-double-left" color={theme.COLOR_PRIMARY} size={26} />
+              <MaterialCommunityIcons name="arrow-left-bold" color={theme.COLOR_SECONDARY} size={26} />
             </TouchableOpacity>
           )}
         </View>
@@ -47,7 +47,7 @@ const FrisbeeDrillIllustration = (props) => {
                 carouselRef.current.snapToNext();
               }}
             >
-              <MaterialCommunityIcons name="chevron-double-right" color={theme.COLOR_PRIMARY} size={26} />
+              <MaterialCommunityIcons name="arrow-right-bold" color={theme.COLOR_SECONDARY} size={26} />
             </TouchableOpacity>
           )}
         </View>
@@ -72,7 +72,7 @@ const FrisbeeDrillIllustration = (props) => {
   const displayVimeo = ({ illustrationSource, sounds }) => {
     return (
       <View style={styles.contentWrapper}>
-        <View style={[{ height: 250 }, styles.videoAlone]}>
+        <View style={[{ height: 250, marginRight: 13, marginLeft: 3 }, styles.videoAlone]}>
           <VimeoVideo vimeoId={illustrationSource} sounds={sounds} />
         </View>
       </View>
@@ -82,10 +82,12 @@ const FrisbeeDrillIllustration = (props) => {
   const displayAnimation = ({ illustrationSource, instruction }) => {
     return (
       <>
-        <View style={styles.contentWrapper}>
-          <Animation widthRatio={1} heightRatio={1 / 2} animation={new Drill(illustrationSource)} />
+        <View style={styles.wrapperCard}>
+          <View style={styles.contentWrapper}>
+            <Animation widthRatio={1} heightRatio={1 / 2} animation={new Drill(illustrationSource)} />
+          </View>
+          <Text style={styles.instruction}>{instruction}</Text>
         </View>
-        <Text style={styles.instruction}>{instruction}</Text>
       </>
     );
   };
@@ -94,7 +96,6 @@ const FrisbeeDrillIllustration = (props) => {
     return (
       <>
         {renderTitle(item.title, index)}
-        <View style={styles.pagination}>{renderPagination()}</View>
         <ScrollView>
           {item.illustrationType === IllustrationType.ANIMATION && displayAnimation(item)}
           {item.illustrationType === IllustrationType.YOUTUBE && displayYoutube(item)}
@@ -114,8 +115,8 @@ const FrisbeeDrillIllustration = (props) => {
           paddingVertical: 0,
         }}
         dotStyle={{
-          width: 8,
-          height: 8,
+          width: 10,
+          height: 10,
           borderRadius: 5,
           marginHorizontal: 5,
           backgroundColor: theme.MAIN_COLOR,
@@ -133,15 +134,18 @@ const FrisbeeDrillIllustration = (props) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Carousel
-        layout="default"
-        ref={carouselRef}
-        data={props.drill.steps}
-        sliderWidth={screenDimension.width}
-        itemWidth={screenDimension.width}
-        renderItem={renderStep}
-        onSnapToItem={(index) => setActiveIndex(index)}
-      />
+      <View style={styles.pagination}>{renderPagination()}</View>
+      <View style={styles.card}>
+        <Carousel
+          layout="default"
+          ref={carouselRef}
+          data={props.drill.steps}
+          sliderWidth={screenDimension.width}
+          itemWidth={screenDimension.width}
+          renderItem={renderStep}
+          onSnapToItem={(index) => setActiveIndex(index)}
+        />
+      </View>
     </SafeAreaView>
   );
 };
@@ -171,6 +175,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: theme.FONT_SIZE_MEDIUM,
+    fontWeight: 'bold',
     color: theme.COLOR_PRIMARY,
     textAlign: 'center',
   },
@@ -178,6 +183,21 @@ const styles = StyleSheet.create({
   centerContainer: {
     flex: 1,
     alignItems: 'center',
+  },
+  card: {
+    marginHorizontal: 5,
+    shadowOffset: {
+      width: 0,
+      height: 0,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 0,
+    elevation: 2,
+    borderTopColor: 'black',
+    borderRadius: 2,
+  },
+  wrapperCard: {
+    marginRight: 5,
   },
 });
 

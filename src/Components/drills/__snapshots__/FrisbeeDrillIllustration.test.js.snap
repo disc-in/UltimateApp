@@ -9,228 +9,246 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
     }
   }
 >
-  <RCTScrollView
-    activeAnimationOptions={null}
-    activeAnimationType="timing"
-    activeSlideAlignment="center"
-    activeSlideOffset={20}
-    apparitionDelay={0}
-    automaticallyAdjustContentInsets={false}
-    autoplay={false}
-    autoplayDelay={1000}
-    autoplayInterval={3000}
-    callbackOffsetMargin={5}
-    containerCustomStyle={Object {}}
-    contentContainerCustomStyle={Object {}}
-    contentContainerStyle={
-      Array [
-        Object {
-          "paddingLeft": 0,
-          "paddingRight": 0,
-        },
-        Object {},
-      ]
-    }
-    data={
-      Array [
-        Object {
-          "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
-          "illustrationType": "youtube",
-          "subtitle": "This is a subtitle",
-          "title": "Warmup",
-        },
-      ]
-    }
-    decelerationRate="fast"
-    directionalLockEnabled={true}
-    disableVirtualization={false}
-    enableMomentum={false}
-    enableSnap={true}
-    firstItem={0}
-    forwardedRef={[Function]}
-    getItem={[Function]}
-    getItemCount={[Function]}
-    hasParallaxImages={false}
-    horizontal={true}
-    inactiveSlideOpacity={0.7}
-    inactiveSlideScale={0.9}
-    inactiveSlideShift={0}
-    initialNumToRender={6}
-    invertStickyHeaders={false}
-    inverted={false}
-    itemWidth={750}
-    keyExtractor={[Function]}
-    layout="default"
-    lockScrollTimeoutDuration={1000}
-    lockScrollWhileSnapping={false}
-    loop={false}
-    loopClonesPerSide={3}
-    maxToRenderPerBatch={13}
-    onContentSizeChange={[Function]}
-    onEndReachedThreshold={2}
-    onLayout={[Function]}
-    onMomentumScrollEnd={[Function]}
-    onResponderRelease={[Function]}
-    onScroll={[Function]}
-    onScrollBeginDrag={[Function]}
-    onScrollEndDrag={[Function]}
-    onSnapToItem={[Function]}
-    onStartShouldSetResponderCapture={[Function]}
-    onTouchEnd={[Function]}
-    onTouchStart={[Function]}
-    overScrollMode="never"
-    pinchGestureEnabled={false}
-    removeClippedSubviews={true}
-    renderItem={[Function]}
-    scrollEnabled={true}
-    scrollEventThrottle={1}
-    scrollsToTop={false}
-    shouldOptimizeUpdates={true}
-    showsHorizontalScrollIndicator={false}
-    showsVerticalScrollIndicator={false}
-    slideStyle={Object {}}
-    sliderWidth={750}
-    stickyHeaderIndices={Array []}
+  <View
     style={
       Object {
-        "flexDirection": "row",
-        "opacity": 0,
-        "width": 750,
+        "paddingVertical": 10,
       }
     }
-    swipeThreshold={20}
-    updateCellsBatchingPeriod={50}
-    useScrollView={false}
-    vertical={false}
-    viewabilityConfigCallbackPairs={Array []}
-    windowSize={13}
+  />
+  <View
+    style={
+      Object {
+        "borderRadius": 2,
+        "borderTopColor": "black",
+        "elevation": 2,
+        "marginHorizontal": 5,
+        "shadowOffset": Object {
+          "height": 0,
+          "width": 0,
+        },
+        "shadowOpacity": 0.3,
+        "shadowRadius": 0,
+      }
+    }
   >
-    <View>
-      <View
-        onLayout={[Function]}
-        style={
-          Array [
-            Object {
-              "flexDirection": "row",
-            },
-            null,
-          ]
+    <RCTScrollView
+      activeAnimationOptions={null}
+      activeAnimationType="timing"
+      activeSlideAlignment="center"
+      activeSlideOffset={20}
+      apparitionDelay={0}
+      automaticallyAdjustContentInsets={false}
+      autoplay={false}
+      autoplayDelay={1000}
+      autoplayInterval={3000}
+      callbackOffsetMargin={5}
+      containerCustomStyle={Object {}}
+      contentContainerCustomStyle={Object {}}
+      contentContainerStyle={
+        Array [
+          Object {
+            "paddingLeft": 0,
+            "paddingRight": 0,
+          },
+          Object {},
+        ]
+      }
+      data={
+        Array [
+          Object {
+            "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
+            "illustrationType": "youtube",
+            "subtitle": "This is a subtitle",
+            "title": "Warmup",
+          },
+        ]
+      }
+      decelerationRate="fast"
+      directionalLockEnabled={true}
+      disableVirtualization={false}
+      enableMomentum={false}
+      enableSnap={true}
+      firstItem={0}
+      forwardedRef={[Function]}
+      getItem={[Function]}
+      getItemCount={[Function]}
+      hasParallaxImages={false}
+      horizontal={true}
+      inactiveSlideOpacity={0.7}
+      inactiveSlideScale={0.9}
+      inactiveSlideShift={0}
+      initialNumToRender={6}
+      invertStickyHeaders={false}
+      inverted={false}
+      itemWidth={750}
+      keyExtractor={[Function]}
+      layout="default"
+      lockScrollTimeoutDuration={1000}
+      lockScrollWhileSnapping={false}
+      loop={false}
+      loopClonesPerSide={3}
+      maxToRenderPerBatch={13}
+      onContentSizeChange={[Function]}
+      onEndReachedThreshold={2}
+      onLayout={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onResponderRelease={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      onSnapToItem={[Function]}
+      onStartShouldSetResponderCapture={[Function]}
+      onTouchEnd={[Function]}
+      onTouchStart={[Function]}
+      overScrollMode="never"
+      pinchGestureEnabled={false}
+      removeClippedSubviews={true}
+      renderItem={[Function]}
+      scrollEnabled={true}
+      scrollEventThrottle={1}
+      scrollsToTop={false}
+      shouldOptimizeUpdates={true}
+      showsHorizontalScrollIndicator={false}
+      showsVerticalScrollIndicator={false}
+      slideStyle={Object {}}
+      sliderWidth={750}
+      stickyHeaderIndices={Array []}
+      style={
+        Object {
+          "flexDirection": "row",
+          "opacity": 0,
+          "width": 750,
         }
-      >
+      }
+      swipeThreshold={20}
+      updateCellsBatchingPeriod={50}
+      useScrollView={false}
+      vertical={false}
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={13}
+    >
+      <View>
         <View
-          pointerEvents="box-none"
+          onLayout={[Function]}
           style={
-            Object {
-              "opacity": 1,
-              "transform": Array [
-                Object {
-                  "scale": 1,
-                },
-              ],
-              "width": 750,
-            }
+            Array [
+              Object {
+                "flexDirection": "row",
+              },
+              null,
+            ]
           }
         >
           <View
+            pointerEvents="box-none"
             style={
               Object {
-                "alignItems": "center",
-                "flexDirection": "row",
-                "height": 40,
-                "justifyContent": "space-between",
-                "marginHorizontal": 30,
+                "opacity": 1,
+                "transform": Array [
+                  Object {
+                    "scale": 1,
+                  },
+                ],
+                "width": 750,
               }
             }
           >
-            <View />
-            <Text
+            <View
               style={
                 Object {
-                  "color": "#232b2b",
-                  "fontSize": 16,
-                  "textAlign": "center",
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "height": 40,
+                  "justifyContent": "space-between",
+                  "marginHorizontal": 30,
                 }
               }
             >
-              Warmup
-            </Text>
-            <View />
-          </View>
-          <View
-            style={
-              Object {
-                "paddingVertical": 10,
-              }
-            }
-          />
-          <RCTScrollView>
-            <View>
-              <View
+              <View />
+              <Text
                 style={
                   Object {
-                    "minHeight": 375,
+                    "color": "#232b2b",
+                    "fontSize": 16,
+                    "fontWeight": "bold",
+                    "textAlign": "center",
                   }
                 }
               >
+                Warmup
+              </Text>
+              <View />
+            </View>
+            <RCTScrollView>
+              <View>
                 <View
                   style={
                     Object {
-                      "height": 250,
+                      "minHeight": 375,
                     }
                   }
                 >
                   <View
                     style={
-                      Array [
-                        Object {
-                          "flex": 1,
-                          "overflow": "hidden",
-                        },
-                        undefined,
-                      ]
+                      Object {
+                        "height": 250,
+                      }
                     }
                   >
-                    <RNCWebView
-                      cacheEnabled={true}
-                      injectedJavaScriptBeforeContentLoadedForMainFrameOnly={true}
-                      injectedJavaScriptForMainFrameOnly={true}
-                      javaScriptEnabled={true}
-                      messagingEnabled={false}
-                      onContentProcessDidTerminate={[Function]}
-                      onHttpError={[Function]}
-                      onLoadingError={[Function]}
-                      onLoadingFinish={[Function]}
-                      onLoadingProgress={[Function]}
-                      onLoadingStart={[Function]}
-                      onMessage={[Function]}
-                      onShouldStartLoadWithRequest={[Function]}
-                      source={
-                        Object {
-                          "uri": "https://www.youtube.com/embed/JkVHrA5o23o",
-                        }
-                      }
+                    <View
                       style={
                         Array [
                           Object {
                             "flex": 1,
                             "overflow": "hidden",
                           },
-                          Object {
-                            "backgroundColor": "#ffffff",
-                          },
                           undefined,
                         ]
                       }
-                      useSharedProcessPool={true}
-                    />
+                    >
+                      <RNCWebView
+                        cacheEnabled={true}
+                        injectedJavaScriptBeforeContentLoadedForMainFrameOnly={true}
+                        injectedJavaScriptForMainFrameOnly={true}
+                        javaScriptEnabled={true}
+                        messagingEnabled={false}
+                        onContentProcessDidTerminate={[Function]}
+                        onHttpError={[Function]}
+                        onLoadingError={[Function]}
+                        onLoadingFinish={[Function]}
+                        onLoadingProgress={[Function]}
+                        onLoadingStart={[Function]}
+                        onMessage={[Function]}
+                        onShouldStartLoadWithRequest={[Function]}
+                        source={
+                          Object {
+                            "uri": "https://www.youtube.com/embed/JkVHrA5o23o",
+                          }
+                        }
+                        style={
+                          Array [
+                            Object {
+                              "flex": 1,
+                              "overflow": "hidden",
+                            },
+                            Object {
+                              "backgroundColor": "#ffffff",
+                            },
+                            undefined,
+                          ]
+                        }
+                        useSharedProcessPool={true}
+                      />
+                    </View>
                   </View>
                 </View>
               </View>
-            </View>
-          </RCTScrollView>
+            </RCTScrollView>
+          </View>
         </View>
       </View>
-    </View>
-  </RCTScrollView>
+    </RCTScrollView>
+  </View>
 </RCTSafeAreaView>
 `;

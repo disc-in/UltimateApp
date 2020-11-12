@@ -9,6 +9,7 @@ import Button from './filters/FilterButton';
 import Checkbox from './filters/Checkbox';
 import Slider from './filters/Slider';
 import HeaderButton from './shared/HeaderButton';
+import CtaButton from './shared/Button';
 
 export class FitnessFilters extends React.Component {
   constructor(props) {
@@ -109,12 +110,7 @@ export class FitnessFilters extends React.Component {
 
   componentDidMount() {
     this.props.navigation.setOptions({
-      headerRight: () => (
-        <View style={{ flexDirection: 'row' }}>
-          <HeaderButton icon="restart" onPress={() => this.resetFilters()} testID="resetButton" />
-          <HeaderButton icon="check" onPress={() => this.validateFilters()} testID="validateButton" />
-        </View>
-      ),
+      headerRight: () => <HeaderButton icon="restart" onPress={() => this.resetFilters()} testID="resetButton" />,
     });
   }
 
@@ -131,9 +127,6 @@ export class FitnessFilters extends React.Component {
 
     return (
       <View style={filterStyle.wrapper}>
-        <Text style={filterStyle.counter}>
-          {I18n.t('drillListPage.availableDrills', { count: this.state.displayedDrills.length })}
-        </Text>
         <ScrollView contentContainerStyle={filterStyle.filters}>
           <View style={filterStyle.filter}>
             <Button
@@ -214,6 +207,12 @@ export class FitnessFilters extends React.Component {
             testID="durationSlider"
           />
         </ScrollView>
+        <View style={filterStyle.footer}>
+          <CtaButton
+            onPress={() => this.validateFilters()}
+            text={I18n.t('fitnessFilters.cta', { count: this.state.displayedDrills.length })}
+          />
+        </View>
       </View>
     );
   }

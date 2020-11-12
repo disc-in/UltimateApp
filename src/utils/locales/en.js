@@ -183,6 +183,11 @@ export default {
     goals: 'Goals',
     duration: 'Duration',
     durationLabel: 'How much time do you have?   {{duration}} mins',
+    cta: {
+      zero: '{{count}} available drills',
+      one: 'See {{count}} drill',
+      other: 'See {{count}} drills',
+    },
   },
   frisbeeFilters: {
     numberOfPlayersLabel: 'Number of players: {{number}}',

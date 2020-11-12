@@ -9,6 +9,7 @@ import VimeoVideo from '../shared/VimeoVideo';
 import { IllustrationType } from '../../Fixtures/config';
 import theme from '../../styles/theme.style';
 import Drill from '../animation/Drill';
+import ToggleButton from '../shared/ToggleButton';
 
 const screenDimension = Dimensions.get('window');
 
@@ -84,6 +85,9 @@ const FrisbeeDrillIllustration = (props) => {
       <>
         <View style={styles.contentWrapper}>
           <Animation widthRatio={1} heightRatio={1 / 2} animation={new Drill(illustrationSource)} />
+        </View>
+        <View style={styles.toggleButton}>
+          <ToggleButton></ToggleButton>
         </View>
         <Text style={styles.instruction}>{instruction}</Text>
       </>
@@ -178,6 +182,10 @@ const styles = StyleSheet.create({
   centerContainer: {
     flex: 1,
     alignItems: 'center',
+  },
+  toggleButton: {
+    alignItems: 'center',
+    marginBottom: 10,
   },
 });
 

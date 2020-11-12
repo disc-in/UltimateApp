@@ -6055,8 +6055,8 @@ const resetBreakDrill = {
       id: 4,
       title: 'The Easy Reset',
       illustrationType: IllustrationType.VIMEO,
-      illustrationSource: upline,
-      repetition: '462694618',
+      illustrationSource: '462694618',
+      repetition: '',
       rest: '',
       instruction:
         'Same set-up as "The 45° Upline." When eye contact is made, the thrower throws around the mark with the goal that the reset catches about where they had started before moving up field. The reset only moves once the pass is thrown. Switch sides.',

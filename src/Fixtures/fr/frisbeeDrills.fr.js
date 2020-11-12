@@ -5359,7 +5359,8 @@ const treasureHuntDrill = {
   description:
     "Deux équipes s'opposent. L'objectif est de ramener les 5 frisbees dans un carré délimité par les cônes. Les joueurs ne sont pas autorisés à marcher avec le frisbee. Lorsqu'un frisbee tombe ou est intercepté, il doit être ramené au point de départ par l'équipe attaquante. La première équipe qui \"sauve\" tous ses frisbees gagne.",
   minimalPlayersNumber: 10,
-  inGame: 'Afin de réaliser des défenses collectives, il est important de travailler sur la communication entre les joueurs. Une communication efficace permettra de faire des switches judicieux.',
+  inGame:
+    'Afin de réaliser des défenses collectives, il est important de travailler sur la communication entre les joueurs. Une communication efficace permettra de faire des switches judicieux.',
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '10 disques - 10 plots',
   durationInMinutes: 20,
@@ -5471,10 +5472,10 @@ const trainDrill = {
   author: 'Iznogood',
   title: 'Le train',
   image: 'https://zupimages.net/up/20/19/ac8s.jpg',
-  description:
-    "Idéal pour travailler la continuité sur un stack vertical.",
+  description: 'Idéal pour travailler la continuité sur un stack vertical.',
   minimalPlayersNumber: 6,
-  inGame: "Une première passe a été effectuée et l'équipe attaquant doit se repositionner pour obtenir des options de continuités fluides et efficaces",
+  inGame:
+    "Une première passe a été effectuée et l'équipe attaquant doit se repositionner pour obtenir des options de continuités fluides et efficaces",
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque',
   durationInMinutes: 10,
@@ -5777,10 +5778,10 @@ const dwarfDuelDrill = {
   author: 'PUC',
   title: 'Le duel des nains',
   image: 'https://zupimages.net/up/20/19/3m3k.jpg',
-  description:
-    'Interdiction de sauter, tout est dans le positionnement !',
+  description: 'Interdiction de sauter, tout est dans le positionnement !',
   minimalPlayersNumber: 3,
-  inGame: "Une longue est lancée et il faut remporter son duel. Si dans ce duel, votre taille est un désavantage, il est nécessaire de bloquer votre adversaire par la course (sans provoquer de contact)",
+  inGame:
+    'Une longue est lancée et il faut remporter son duel. Si dans ce duel, votre taille est un désavantage, il est nécessaire de bloquer votre adversaire par la course (sans provoquer de contact)',
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque - 2 plots',
   durationInMinutes: 10,
@@ -6160,8 +6161,8 @@ const resetBreakDrill = {
       id: 4,
       title: 'Le Reset Facile',
       illustrationType: IllustrationType.VIMEO,
-      illustrationSource: upline,
-      repetition: '462694618',
+      illustrationSource: '462694618',
+      repetition: '',
       rest: '',
       instruction:
         "Le placement est le même. Quand le contact visuel est établi, le lanceur contourne sa marque par l'arrière pour faire sa passe au soutien. La passe doit arriver à peu près à hauteur du lanceur, là où le soutien se trouvait initialement. C'est la passe qui déclenche le cut du soutien.",
@@ -6600,8 +6601,7 @@ const horizontalTrap = {
   author: 'Mubidisk',
   title: "Débloqué dans l'Ouvert",
   image: 'https://zupimages.net/up/20/41/y1ki.jpg',
-  description:
-    'Apprendre à utiliser le stack horizontal pour sortir de la ligne avec les cutters dans le coté ouvert.',
+  description: 'Apprendre à utiliser le stack horizontal pour sortir de la ligne avec les cutters dans le coté ouvert.',
   minimalPlayersNumber: 6,
   inGame:
     'Le possesseur du disque est bloqué près de la ligne de touche et cherche à recentrer le disque ou à gagner beaucoup de terrain. Une des tactique utilisées peut-être un stack horizontal. Dans cet exercice, le travail de cut est effectué par les middles situés en face du lanceur',
@@ -6867,7 +6867,7 @@ const theTunnel = {
   author: 'CUSB',
   title: 'Le Tunnel',
   image: 'https://zupimages.net/up/20/25/742g.jpeg',
-  description: "Un exercice intense pour travailler la réactivité en défense.",
+  description: 'Un exercice intense pour travailler la réactivité en défense.',
   minimalPlayersNumber: 2,
   inGame:
     "Les défenseurs cherchent à bloquer une direction du cutter (le under cut dans l'animation) en se plaçant toujours entre le lanceur et le cutter. Le défenseur doit aussi chercher à rester à proximité de l'attaquant sur l'option de cut opposé (longue)",

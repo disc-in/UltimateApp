@@ -701,52 +701,6 @@ exports[`<DrillPage /> renders correctly 1`] = `
                         <View
                           style={
                             Object {
-                              "borderBottomColor": "#e5e5e5",
-                              "borderBottomWidth": 1,
-                            }
-                          }
-                        />
-                        <View
-                          style={
-                            Object {
-                              "padding": 20,
-                            }
-                          }
-                        >
-                          <View
-                            style={
-                              Object {
-                                "marginBottom": 15,
-                              }
-                            }
-                          >
-                            <Text
-                              style={
-                                Object {
-                                  "color": "#232b2b",
-                                  "fontSize": 20,
-                                  "fontWeight": "bold",
-                                  "marginBottom": 10,
-                                  "textAlign": "center",
-                                }
-                              }
-                            >
-                              In Game
-                            </Text>
-                            <Text
-                              style={
-                                Object {
-                                  "color": "#A6A6A6",
-                                  "fontSize": 16,
-                                  "textAlign": "center",
-                                }
-                              }
-                            />
-                          </View>
-                        </View>
-                        <View
-                          style={
-                            Object {
                               "flex": 1,
                             }
                           }

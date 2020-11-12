@@ -101,13 +101,17 @@ export const DrillPage = (props) => {
           <Text style={styles.descriptionText}>{drill.description}</Text>
         </View>
       </View>
-      <View style={styles.lines} />
-      <View style={styles.description}>
-        <View style={styles.descriptionItem}>
-          <Text style={styles.descriptionTitle}>{I18n.t('drillPage.inGame')}</Text>
-          <Text style={styles.descriptionText}>{drill.inGame}</Text>
-        </View>
-      </View>
+      {drill.type === DrillTypes.FRISBEE && drill.inGame && (
+        <>
+          <View style={styles.lines} />
+          <View style={styles.description}>
+            <View style={styles.descriptionItem}>
+              <Text style={styles.descriptionTitle}>{I18n.t('drillPage.inGame')}</Text>
+              <Text style={styles.descriptionText}>{drill.inGame}</Text>
+            </View>
+          </View>
+        </>
+      )}
       <View style={styles.animation}>
         {drill.type === DrillTypes.FRISBEE && <FrisbeeDrillIllustration drill={drill} />}
         {drill.type === DrillTypes.FITNESS && <FitnessDrillIllustration drill={drill} />}

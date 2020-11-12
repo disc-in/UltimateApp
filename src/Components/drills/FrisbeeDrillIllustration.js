@@ -36,6 +36,7 @@ const FrisbeeDrillIllustration = (props) => {
               }}
             >
               <MaterialCommunityIcons name="arrow-left-bold" color={theme.COLOR_SECONDARY} size={26} />
+
             </TouchableOpacity>
           )}
         </View>

@@ -25,6 +25,10 @@ class ProgressBar extends React.Component {
   render() {
     return (
       <View style={styles.mainContainer}>
+        <TouchableOpacity style={styles.playButton} onPress={() => this.props.playAnimation()}>
+          <MaterialCommunityIcons name="play" color={theme.COLOR_PRIMARY} size={40} />
+        </TouchableOpacity>
+
         <View style={styles.barArea}>
           {/* Gray bar */}
           <View
@@ -105,21 +109,16 @@ class ProgressBar extends React.Component {
           ))}
         </View>
 
-        <View style={styles.controlsArea}>
-          <TouchableOpacity onPress={() => this.props.playAnimation()}>
-            <MaterialCommunityIcons name="play" color={theme.COLOR_PRIMARY} size={36} />
-          </TouchableOpacity>
-          {!this.props.readonly && (
-            <>
-              <TouchableOpacity onPress={() => this.props.onStepAdded()}>
-                <MaterialCommunityIcons name="plus-box" color={theme.COLOR_PRIMARY} size={22} />
-              </TouchableOpacity>
-              <TouchableOpacity onPress={() => this.props.onStepRemoved()}>
-                <MaterialCommunityIcons name="minus-box" color={theme.COLOR_PRIMARY} size={22} />
-              </TouchableOpacity>
-            </>
-          )}
-        </View>
+        {!this.props.readonly && (
+          <View style={styles.controlsArea}>
+            <TouchableOpacity onPress={() => this.props.onStepAdded()}>
+              <MaterialCommunityIcons name="plus-box" color={theme.COLOR_PRIMARY} size={22} />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => this.props.onStepRemoved()}>
+              <MaterialCommunityIcons name="minus-box" color={theme.COLOR_PRIMARY} size={22} />
+            </TouchableOpacity>
+          </View>
+        )}
       </View>
     );
   }
@@ -205,6 +204,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     padding: 10,
   },
+  playButton: {
+    paddingHorizontal: 10,
+  },
   barArea: {
     flex: 1,
   },
@@ -235,7 +237,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     height: '100%',
     width: DOT_SIZE / 2,
-    backgroundColor: 'white',
+    backgroundColor: 'black',
   },
   dotHitBox: {
     position: 'absolute',

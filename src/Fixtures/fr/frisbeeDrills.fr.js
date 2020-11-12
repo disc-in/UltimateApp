@@ -5357,9 +5357,10 @@ const treasureHuntDrill = {
   title: 'Chasse aux trésors',
   image: 'https://zupimages.net/up/20/19/z7lq.jpg',
   description:
-    "Deux équipes s'opposent. L'objectif est de ramener les 5 frisbees dans un carré délimité par les cônes. Les joueurs ne sont pas autorisés à marcher avec le frisbee. Lorsqu'un frisbee tombe ou est intercepté, il doit être ramené au point de départ par l'équipe attaquante. La première équipe qui \"sauve\" tous ses frisbees gagne.\n\nEn match : Afin de réaliser des défenses collectives, il est important de travailler sur la communication entre les joueurs. Une communication efficace permettra de faire des switches judicieux.",
+    "Deux équipes s'opposent. L'objectif est de ramener les 5 frisbees dans un carré délimité par les cônes. Les joueurs ne sont pas autorisés à marcher avec le frisbee. Lorsqu'un frisbee tombe ou est intercepté, il doit être ramené au point de départ par l'équipe attaquante. La première équipe qui \"sauve\" tous ses frisbees gagne.",
   minimalPlayersNumber: 10,
-  inGame: '-',
+  inGame:
+    'Afin de réaliser des défenses collectives, il est important de travailler sur la communication entre les joueurs. Une communication efficace permettra de faire des switches judicieux.',
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '10 disques - 10 plots',
   durationInMinutes: 20,
@@ -5388,7 +5389,7 @@ const kyeDrill = {
   title: '3 vs 2',
   image: 'https://zupimages.net/up/20/19/zgxt.jpg',
   description:
-    "Situation de match. L'équipe de 2 reste en défense s'ils arrivent à provoquer un turnover. Les lancers longs sont interdits",
+    "Situation de match. L'équipe de 2 reste en défense s'ils arrivent à provoquer un turnover. Les lancers longs sont interdits.",
   minimalPlayersNumber: 5,
   inGame:
     "Parfois une situation de surnombre est créée (après une longue notamment). Il faut alors que les attaquants réussissent à jouer rapidement pour gagner du terrain sans qu'un autre défenseur puisse les rejoindre. Les défenseurs cherchent à ralentir le plus possible les attaquants en laissant le porteur du frisbee sans marque",
@@ -5420,7 +5421,7 @@ const bigEightDrill = {
   title: 'Le Grand 8',
   image: 'https://zupimages.net/up/20/19/5209.jpg',
   description:
-    "Suivre un circuit de passes qui va permettre de travailler l'enchaînement parfait pour dérouler dans le break ",
+    "Suivre un circuit de passes qui va permettre de travailler l'enchaînement parfait pour dérouler dans le break.",
   minimalPlayersNumber: 16,
   inGame:
     "Afin d'assurer une bonne continuation, il est nécessaire de travailler le timing des cuts et la technique. Le play travaillé dans cet exercice permettra de sortir de la ligne et de progresser rapidement du côté fermé",
@@ -5471,10 +5472,10 @@ const trainDrill = {
   author: 'Iznogood',
   title: 'Le train',
   image: 'https://zupimages.net/up/20/19/ac8s.jpg',
-  description:
-    "Idéal pour travailler la continuité sur un stack vertical\n\nEn match : Une première passe a été effectuée et l'équipe attaquant doit se repositionner pour obtenir des options de continuités fluides et efficaces",
+  description: 'Idéal pour travailler la continuité sur un stack vertical.',
   minimalPlayersNumber: 6,
-  inGame: 'Garantir un flow pour pouvoir attaquer sans difficulté',
+  inGame:
+    "Une première passe a été effectuée et l'équipe attaquant doit se repositionner pour obtenir des options de continuités fluides et efficaces",
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque',
   durationInMinutes: 10,
@@ -5522,10 +5523,10 @@ const giveAndGoDrill = {
   author: 'Freezzz beezzz',
   title: 'Give and Go',
   image: 'https://zupimages.net/up/20/19/s9fe.jpg',
-  description: 'Suivez votre disque après la passe aussi vite que possible ',
+  description: 'Suivez votre disque après la passe aussi vite que possible.',
   minimalPlayersNumber: 2,
   inGame:
-    "Les une-deux rapides permettent aux attaquants de gagner du terrain et de bénéficier de position plus avantageuse pour lancer. Le lanceur cherche à bénéficier au maximum de l'inertie du défenseur pour prendre de l'avance sur son cut",
+    "Les une-deux rapides permettent aux attaquants de gagner du terrain et de bénéficier de positions plus avantageuses pour lancer. Le lanceur cherche à bénéficier au maximum de l'inertie du défenseur pour prendre de l'avance sur son cut",
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque - 12 plots',
   durationInMinutes: 10,
@@ -5562,7 +5563,7 @@ const aussieDrill = {
   title: 'Le jeu Australien',
   image: 'https://zupimages.net/up/20/19/78g2.png',
   description:
-    'Un jeu ludique avec les frisbees qui va permettre aux joueurs de prendre du plaisir et de travailler la communication avec un disque ',
+    'Un jeu ludique avec les frisbees qui va permettre aux joueurs de prendre du plaisir et de travailler la communication avec un disque.',
   minimalPlayersNumber: 12,
   inGame:
     'Cet exercice ludique permet de travailler la communication des défenseurs. Celle-ci est primordiale afin de réaliser des switches et/ou une défense de zone efficace. En attaque, cet exercice permet de travailler la détection des joueurs démarqués',
@@ -5593,7 +5594,7 @@ const bolognaMDrill = {
   author: 'CUSB',
   title: 'Le M',
   image: 'https://zupimages.net/up/20/19/akuy.jpg',
-  description: 'Suivez le M pour travailler votre Dump & Swing ',
+  description: 'Suivez le M pour travailler votre Dump & Swing.',
   minimalPlayersNumber: 10,
   inGame:
     "Cet exercice permet de travailler le timing nécessaire pour sortir de la ligne. Le premier cut correspond à la course effectuée par le premier du stack lorsque l'on souhaite recentrer le disque",
@@ -5624,7 +5625,7 @@ const goToTenDrill = {
   author: "Jack'suns",
   title: 'Passe à 10',
   image: 'https://zupimages.net/up/20/19/rcyt.jpg',
-  description: 'Première équipe qui complète 10 passes gagne ',
+  description: 'Première équipe qui complète 10 passes gagne.',
   minimalPlayersNumber: 12,
   inGame:
     "Il est important de savoir conserver le disque le plus longtemps possible. Ce savoir est particulièrement utile contre une défense de zone ou à l'approche de la endzone",
@@ -5644,7 +5645,7 @@ const goToTenDrill = {
       repetition: '',
       rest: '',
       instruction:
-        "Première équipe qui complète 10 passes gagne. Compte à 6. Pour un niveau débutant, l'équipe en attaque peut jouer en surnombre ",
+        "Première équipe qui complète 10 passes gagne. Compte à 6. Pour un niveau débutant, l'équipe en attaque peut jouer en surnombre",
     },
   ],
 };
@@ -5657,7 +5658,7 @@ const endzoneGameDrill = {
   image: 'https://zupimages.net/up/20/25/71b2.jpg',
   description: 'Match à 5. Si une équipe marque, elle reste en attaque',
   minimalPlayersNumber: 12,
-  inGame: 'Il est primordial de réussir à convertir les occasions ',
+  inGame: 'Il est primordial de réussir à convertir les occasions.',
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque - 4 plots',
   durationInMinutes: 15,
@@ -5777,10 +5778,10 @@ const dwarfDuelDrill = {
   author: 'PUC',
   title: 'Le duel des nains',
   image: 'https://zupimages.net/up/20/19/3m3k.jpg',
-  description:
-    'Interdiction de sauter, tout est dans le positionnement !\n\nEn match :Une longue est lancée et il faut remporter son duel. Si dans ce duel, votre taille est un désavantage, il est nécessaire de bloquer votre adversaire par la course (sans provoquer de contact)',
+  description: 'Interdiction de sauter, tout est dans le positionnement !',
   minimalPlayersNumber: 3,
-  inGame: "Lors d'un duel, il faut en sortir gagnant",
+  inGame:
+    'Une longue est lancée et il faut remporter son duel. Si dans ce duel, votre taille est un désavantage, il est nécessaire de bloquer votre adversaire par la course (sans provoquer de contact)',
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque - 2 plots',
   durationInMinutes: 10,
@@ -5819,7 +5820,7 @@ const dishieChainDrill = {
   title: 'Chaîne du Dishie',
   image: 'https://zupimages.net/up/20/19/stdq.jpg',
   description:
-    'Exercice de base de longues passes. Vous voulez que vos joueurs alternent entre lancer, courir et passer ',
+    'Exercice de base de longues passes. Vous voulez que vos joueurs alternent entre lancer, courir et passer.',
   minimalPlayersNumber: 12,
   inGame:
     "lorsque des défenseurs encerclent un vertical stack, ils les entourent et effectuent des switches. Afin de percer cette défense, les attaquants doivent attaquer, à 2, le même défenseur. Le défenseur devra alors choisir l'un des attaquants et le lanceur pourra jouer sur l'attaquant laissé libre",
@@ -5880,7 +5881,7 @@ const breakDanceDrill = {
   author: 'Disc Joker',
   title: 'Le Sapin de Noël',
   image: 'https://zupimages.net/up/20/19/agsd.jpg',
-  description: 'Travailler la continuité dans le break ',
+  description: 'Travailler la continuité dans le break.',
   minimalPlayersNumber: 12,
   inGame:
     "L'intérêt d'un vertical stack est de libérer 2 zones de jeu. Lorsqu'une équipe parvient à jouer du côté fermé, elle doit chercher à rapidement gagner du terrain par une succession de passes",
@@ -5921,7 +5922,7 @@ const triangleOfDeathdrill = {
   author: 'Forward',
   title: 'Le Triangle de la mort',
   image: 'https://zupimages.net/up/20/19/kmlc.jpg',
-  description: 'Lancer 10 longues à la suite aussi loin et aussi vite que possible ',
+  description: 'Lancer 10 longues à la suite aussi loin et aussi vite que possible.',
   minimalPlayersNumber: 6,
   inGame:
     'Il faut être capable de rapidement retrouver son équilibre et analyser la course du cutter. Le lanceur effectue, alors, une longue afin de gagner le plus de terrain possible',
@@ -5952,7 +5953,7 @@ const trainOfFakeDrill = {
   author: 'Iznogood',
   title: 'Le Train des feintes',
   image: 'https://zupimages.net/up/20/19/ac8s.jpg',
-  description: 'Idéal pour travailler la continuité sur un stack vertical ',
+  description: 'Idéal pour travailler la continuité sur un stack vertical.',
   minimalPlayersNumber: 6,
   inGame:
     'La première passe a été effectuée et les attaquants doivent se mettre en place pour effectuer une attaque fluide. La première option de jeu reste le côté ouvert. Si celui est bloqué un renversement rapide doit être effectué pour jouer du côté fermé',
@@ -6033,7 +6034,7 @@ const resetOpenDrill = {
   author: 'Tchac',
   title: "Reset dans l'Ouvert",
   image: 'https://zupimages.net/up/20/19/tzk3.jpg',
-  description: 'Faire des cuts dans le bon timing, attraper puis lancer immédiatement ',
+  description: 'Faire des cuts dans le bon timing, attraper puis lancer immédiatement.',
   minimalPlayersNumber: 4,
   inGame:
     "La passe sur les middles n'a pas été possible, il faut dorénavant jouer sur le handler de soutien. Celui-ci se trouve du côté vers lequel on oriente la force(ouvert), il doit effectuer le mouvement vu dans cet exercice",
@@ -6093,7 +6094,7 @@ const resetOpenDrill = {
       repetition: '',
       rest: '',
       instruction:
-        "Le placement est le même. La défense sur le soutien est à 100%. L'attaquant doit choisir une des deux options de cut pour se démarquer. Il ne peut faire qu'une feinte. Chaque équipe de 2 faire le même nombre d'essais, et celle qui réussi le plus de passes gagne !",
+        "Le placement est le même. La défense sur le soutien est à 100%. L'attaquant doit choisir une des deux options de cut pour se démarquer. Il ne peut faire qu'une feinte. Chaque équipe de 2 fait le même nombre d'essais, et celle qui réussit le plus de passes gagne !",
     },
     {
       id: 6,
@@ -6103,7 +6104,7 @@ const resetOpenDrill = {
       repetition: '',
       rest: '',
       instruction:
-        "Le placement est le même. La défense sur le soutien est à 100%. L'attaquant doit choisir une des deux options de cut pour se démarquer. Il ne peut faire qu'une feinte. Chaque équipe de 2 faire le même nombre d'essais, et celle qui réussi le plus de passes gagne !",
+        "Le placement est le même. La défense sur le soutien est à 100%. L'attaquant doit choisir une des deux options de cut pour se démarquer. Il ne peut faire qu'une feinte. Chaque équipe de 2 fait le même nombre d'essais, et celle qui réussit le plus de passes gagne !",
     },
   ],
 };
@@ -6114,7 +6115,7 @@ const resetBreakDrill = {
   author: 'Tchac',
   title: 'Reset Break',
   image: 'https://zupimages.net/up/20/19/w90f.jpg',
-  description: 'Faire des cuts dans le bon timing, attraper puis lancer immédiatement',
+  description: 'Faire des cuts dans le bon timing, attraper puis lancer immédiatement.',
   minimalPlayersNumber: 4,
   inGame:
     "La passe sur les middles n'a pas été possible, il faut dorénavant jouer sur le handler de soutien. Celui-ci se trouve du côté opposé à la force (fermé), il doit effectuer le mouvement vu dans cet exercice",
@@ -6160,8 +6161,8 @@ const resetBreakDrill = {
       id: 4,
       title: 'Le Reset Facile',
       illustrationType: IllustrationType.VIMEO,
-      illustrationSource: upline,
-      repetition: '462694618',
+      illustrationSource: '462694618',
+      repetition: '',
       rest: '',
       instruction:
         "Le placement est le même. Quand le contact visuel est établi, le lanceur contourne sa marque par l'arrière pour faire sa passe au soutien. La passe doit arriver à peu près à hauteur du lanceur, là où le soutien se trouvait initialement. C'est la passe qui déclenche le cut du soutien.",
@@ -6174,7 +6175,7 @@ const resetBreakDrill = {
       repetition: '',
       rest: '',
       instruction:
-        "Le placement est le même. La défense est à 100%. Le soutien doit choisir une des deux solutions pour faire son cut et recevoir le disque. Le soutien ne peut changer de direction qu'une fois. Chaque équipe de 2 faire le même nombre d'essais, et celle qui réussi le plus de passes gagne !",
+        "Le placement est le même. La défense est à 100%. Le soutien doit choisir une des deux solutions pour faire son cut et recevoir le disque. Le soutien ne peut changer de direction qu'une fois. Chaque équipe de 2 fait le même nombre d'essais, et celle qui réussit le plus de passes gagne !",
     },
     {
       id: 6,
@@ -6184,7 +6185,7 @@ const resetBreakDrill = {
       repetition: '',
       rest: '',
       instruction:
-        "Le placement est le même. La défense est à 100%. Le soutien doit choisir une des deux solutions pour faire son cut et recevoir le disque. Le soutien ne peut changer de direction qu'une fois. Chaque équipe de 2 faire le même nombre d'essais, et celle qui réussi le plus de passes gagne !",
+        "Le placement est le même. La défense est à 100%. Le soutien doit choisir une des deux solutions pour faire son cut et recevoir le disque. Le soutien ne peut changer de direction qu'une fois. Chaque équipe de 2 fait le même nombre d'essais, et celle qui réussit le plus de passes gagne !",
     },
   ],
 };
@@ -6195,7 +6196,7 @@ const youShallNotPassDrill = {
   author: 'Belgium Open',
   title: 'Vous ne passerez pas !',
   image: 'https://zupimages.net/up/20/19/90z6.jpg',
-  description: "Utiliser son corps pour empêcher l'attaquant de recevoir le disque ",
+  description: "Utiliser son corps pour empêcher l'attaquant de recevoir le disque.",
   minimalPlayersNumber: 4,
   inGame:
     "Les défenseurs expérimentés peuvent utiliser leur corps pour bloquer la course d'un adversaire. Afin de ne pas faire de faute, le défenseur doit se placer dans la trajectoire de l'attaquant suffisamment en avance pour permettre à l'attaquant de l'éviter",
@@ -6264,7 +6265,7 @@ const defensePositionDrill = {
   author: 'Sockeye',
   title: 'Positionnement défensif',
   image: 'https://zupimages.net/up/20/19/zigu.jpg',
-  description: "Se positionner correctement en fonction de la stratégie de l'équipe ",
+  description: "Se positionner correctement en fonction de la stratégie de l'équipe.",
   minimalPlayersNumber: 4,
   inGame:
     "De manière équivalente à la force, les défenseurs sur les cutters doivent privilégier les options qu'ils souhaitent bloquer. L'objectif des défenseurs est de sortir les attaquants de leur zone de confort",
@@ -6305,7 +6306,7 @@ const discGolf = {
   title: 'Disc-Golf',
   image: 'https://zupimages.net/up/20/25/f4bu.jpg',
   description:
-    'Les règles. Le disc-golf se joue comme le golf traditionnel, mais avec des disques de disc-golf au lieu de balles et de clubs',
+    'Les règles. Le disc-golf se joue comme le golf traditionnel, mais avec des disques de disc-golf au lieu de balles et de clubs.',
   minimalPlayersNumber: 1,
   inGame: '-',
   equipmentLabel: EquipmentLabels.NONE,
@@ -6345,7 +6346,7 @@ const dDC = {
   author: '',
   title: 'DDC',
   image: 'https://zupimages.net/up/20/25/t73e.jpg',
-  description: 'Double disc court est un sport de frisbee qui combine rapidité, stratégie et capacité de lancer',
+  description: 'Double disc court est un sport de frisbee qui combine rapidité, stratégie et capacité de lancer.',
   minimalPlayersNumber: 4,
   inGame:
     "LE DDC permet de travailler la maîtrise des courbes de passes et la communication. La gain technique permet de s'adapter au situation de match",
@@ -6386,7 +6387,7 @@ const horizontalTiming = {
   author: 'Wizard',
   title: "Le Timing de l'Horizontal",
   image: 'https://zupimages.net/up/20/25/zn5l.jpg',
-  description: 'Complete drill to work on the timing of the cutter and handler in a horizontal stack ',
+  description: 'Un exercice complet pour travailler le timing entre le cutter et le handler, dans un stack horizontal.',
   minimalPlayersNumber: 5,
   inGame:
     "Après la réception du pull, les attaquants peuvent chercher à mettre en place un play avec un stack Horizontal. L'intérêt est de gagner beaucoup de terrain en peu de passes",
@@ -6426,7 +6427,7 @@ const game3v3Horizontal = {
   author: 'Mooncatchers',
   title: 'Le Diamant',
   image: 'https://zupimages.net/up/20/25/2vga.jpg',
-  description: "Travail de libérer l'espace sur un stack horizontal ",
+  description: "Travail de libérer l'espace sur un stack horizontal.",
   minimalPlayersNumber: 6,
   inGame:
     "Sur un stack horizontal, l'objectif est d'isoler une paire de cutters et de gagner le plus de terrain possible avec le minimum de lancers",
@@ -6467,7 +6468,7 @@ const theDuel = {
   author: 'Furious George',
   title: "Rien de mieux qu'un duel",
   image: 'https://zupimages.net/up/20/28/ncjr.jpg',
-  description: "Rien de mieux qu'un duel pour travailler sur les différents aspects du jeu ",
+  description: "Rien de mieux qu'un duel pour travailler sur les différents aspects du jeu.",
   minimalPlayersNumber: 4,
   inGame:
     "La grande majorité des tactiques ont pour objectif d'isoler un ou plusieurs joueurs afin de limiter les défenses collectives. Dans cet exercice, l'objectif est de travailler le duel qui résulte d'une tactique bien effectuée",
@@ -6508,7 +6509,7 @@ const cardinal = {
   author: 'PUC',
   title: 'Les Points Cardinaux',
   image: 'https://zupimages.net/up/20/25/xtik.png',
-  description: 'Apprenez à lancer dans toutes les positions ',
+  description: 'Apprenez à lancer dans toutes les positions.',
   minimalPlayersNumber: 2,
   inGame:
     "Il faut être capable de s'adapter à la marque mise en place. Être capable de lancer rapidement permet d'être plus efficace pour battre la marque",
@@ -6528,7 +6529,7 @@ const cardinal = {
       repetition: '',
       rest: '',
       instruction:
-        'imaginez un compas avec votre pied pivot au centre. Pivot N et lancer. Pivot NE et lancer. Pivot E et lancer et ainsi de suite autour du compas. Faire quatre fois le tour, en lançant deux fois les coups droits et deux fois les revers.',
+        'Imaginez un compas avec votre pied de pivot au centre. Pivot N et lancer. Pivot NE et lancer. Pivot E et lancer et ainsi de suite autour du compas. Faire quatre fois le tour, en lançant deux fois les coups droits et deux fois les revers.',
     },
     {
       id: 2,
@@ -6538,7 +6539,7 @@ const cardinal = {
       repetition: '',
       rest: '',
       instruction:
-        'imaginez un compas avec votre pied pivot au centre. Pivot N et lancer. Pivot NE et lancer. Pivot E et lancer et ainsi de suite autour du compas. Faire quatre fois le tour, en lançant deux fois les coups droits et deux fois les revers.',
+        'Imaginez un compas avec votre pied de pivot au centre. Pivot N et lancer. Pivot NE et lancer. Pivot E et lancer et ainsi de suite autour du compas. Faire quatre fois le tour, en lançant deux fois les coups droits et deux fois les revers.',
     },
   ],
 };
@@ -6549,10 +6550,10 @@ const horizontalToVertical = {
   author: 'Mubidisk',
   title: 'Flow Horizontal',
   image: 'https://zupimages.net/up/20/25/kecr.jpg',
-  description: "Apprendre à créer un flow horizontal à partir d'une position statique",
+  description: "Apprendre à créer un flow horizontal à partir d'une position statique.",
   minimalPlayersNumber: 7,
   inGame:
-    "Un play a été effectué avec un stack horizontal. L'objectif est de retrouver le plus rapidement possible un déroulement d'attaque fluide (le flow=",
+    "Un play a été effectué avec un stack horizontal. L'objectif est de retrouver le plus rapidement possible un déroulement d'attaque fluide (le flow)",
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '1 disque',
   durationInMinutes: 20,
@@ -6600,8 +6601,7 @@ const horizontalTrap = {
   author: 'Mubidisk',
   title: "Débloqué dans l'Ouvert",
   image: 'https://zupimages.net/up/20/41/y1ki.jpg',
-  description:
-    'Apprendre à utiliser le stack horizontal pour sortir de la ligne avec les cutters dans le coté ouvert. ',
+  description: 'Apprendre à utiliser le stack horizontal pour sortir de la ligne avec les cutters dans le coté ouvert.',
   minimalPlayersNumber: 6,
   inGame:
     'Le possesseur du disque est bloqué près de la ligne de touche et cherche à recentrer le disque ou à gagner beaucoup de terrain. Une des tactique utilisées peut-être un stack horizontal. Dans cet exercice, le travail de cut est effectué par les middles situés en face du lanceur',
@@ -6652,7 +6652,7 @@ const horizontalTrapOutside = {
   author: 'Mubidisk',
   title: 'Débloqué avec le Fermé',
   image: 'https://zupimages.net/up/20/25/zkfl.jpg',
-  description: 'Apprendre à utiliser le stack horizontal pour sortir de la ligne avec les cutter dans le coté fermé. ',
+  description: 'Apprendre à utiliser le stack horizontal pour sortir de la ligne avec les cutter dans le coté fermé.',
   minimalPlayersNumber: 6,
   inGame:
     'Le possesseur du disque est bloqué près de la ligne de touche et cherche à recentrer le disque ou à gagner beaucoup de terrain. Une des tactique utilisées peut-être un stack horizontal. Dans cet exercice, le travail de cut est effectué par les middles situés dans le côté fermé',
@@ -6703,7 +6703,7 @@ const horizontalHandler = {
   author: 'Euforia',
   title: 'Débloqué avec les Handlers',
   image: 'https://zupimages.net/up/20/25/zkfl.jpg',
-  description: 'Apprendre à utiliser le stack horizontal pour sortir de la ligne avec les handlers. ',
+  description: 'Apprendre à utiliser le stack horizontal pour sortir de la ligne avec les handlers.',
   minimalPlayersNumber: 8,
   inGame:
     'Le possesseur du disque est bloqué près de la ligne de touche et cherche à recentrer le disque ou à gagner beaucoup de terrain. Une des tactique utilisées peut-être un stack horizontal. Dans cet exercice, le travail de cut est effectué par les handlers',
@@ -6754,7 +6754,7 @@ const checkLong = {
   author: 'Disk Joker',
   title: 'La longue est ta nouvelle arme',
   image: 'https://zupimages.net/up/20/25/pzn1.jpg',
-  description: 'Apprendre à lancer des longues et à prendre des informations en tant que cutter ',
+  description: 'Apprendre à lancer des longues et à prendre des informations en tant que cutter.',
   minimalPlayersNumber: 3,
   inGame:
     "Le cutter doit observer le déroulement de l'action afin d'obtenir le meilleur timing pour sa course. Le lanceur doit trouver rapidement son équilibre et lancer dans la course du cutter",
@@ -6785,7 +6785,7 @@ const throwCatchThrow = {
   author: 'PUC',
   title: 'Double Disc',
   image: 'https://zupimages.net/up/20/25/gf41.jpg',
-  description: "Travail par paire. L'objectif est d'améliorer vos lancers et la vitesse de rattrapage",
+  description: "Travail par paire. L'objectif est d'améliorer vos lancers et la vitesse de rattrapage.",
   minimalPlayersNumber: 2,
   inGame:
     'Gagner en dextérité avec le disque permet de lancer plus rapidement. Cet atout permet de breaker la marque davantage',
@@ -6799,7 +6799,7 @@ const throwCatchThrow = {
   steps: [
     {
       id: 1,
-      title: 'Double Disque',
+      title: 'Double Disques',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: throwCatch,
       repetition: '',
@@ -6809,7 +6809,7 @@ const throwCatchThrow = {
     },
     {
       id: 2,
-      title: 'Double Disque',
+      title: 'Double Disques',
       illustrationType: IllustrationType.VIMEO,
       illustrationSource: '462695929',
       repetition: '',
@@ -6826,7 +6826,7 @@ const stopFlow = {
   author: 'Colony',
   title: 'Arrête le Flow',
   image: 'https://zupimages.net/up/20/28/2b8i.jpg',
-  description: 'Apprendre à être rapide pour identifier les options dangereuses et les bloquer',
+  description: 'Apprendre à être rapide pour identifier les options dangereuses et les bloquer.',
   minimalPlayersNumber: 5,
   inGame:
     "Les attaquants ont pris de vitesse les défenseurs grâce à la première passe. L'objectif du défenseur est de ralentir l'attaque en bloquant l'option la plus dangereuse avec sa marque",
@@ -6867,7 +6867,7 @@ const theTunnel = {
   author: 'CUSB',
   title: 'Le Tunnel',
   image: 'https://zupimages.net/up/20/25/742g.jpeg',
-  description: 'Réactivité en défense ',
+  description: 'Un exercice intense pour travailler la réactivité en défense.',
   minimalPlayersNumber: 2,
   inGame:
     "Les défenseurs cherchent à bloquer une direction du cutter (le under cut dans l'animation) en se plaçant toujours entre le lanceur et le cutter. Le défenseur doit aussi chercher à rester à proximité de l'attaquant sur l'option de cut opposé (longue)",
@@ -6898,7 +6898,7 @@ const sprintDefense = {
   author: 'Lucky Grass',
   title: 'Réactivité en Défense',
   image: 'https://zupimages.net/up/20/25/5pqg.jpg',
-  description: "Exercice d'échauffement pour travailler la réactivité en défenses",
+  description: "Exercice d'échauffement pour travailler la réactivité en défense.",
   minimalPlayersNumber: 2,
   inGame: "Un défenseur doit s'adapter le plus rapidement possible à la course du cutter",
   equipmentLabel: EquipmentLabels.NONE,
@@ -6971,7 +6971,7 @@ const zoneGame = {
   steps: [
     {
       id: 1,
-      title: 'zone Game',
+      title: 'Zone Game',
       illustrationType: IllustrationType.ANIMATION,
       illustrationSource: zoneGameAnimation,
       repetition: '',
@@ -7019,7 +7019,7 @@ const goaltimateDrill = {
       repetition: '',
       rest: '',
       instruction:
-        "4 contre 4. Compte de 5 \nÀ chaque fois qu'il y a un turnover, la nouvelle équipe offensive doit \"nettoyer\" le disque en l'ammenant dans la zone de dégagement, et peut alors attaquer le but. \nUn point est obtenu lorsqu'une passe  traversant le cerceau et est attrapée dans la zone d'en-but par votre coéquipier",
+        "4 contre 4. Compte de 5 \nÀ chaque fois qu'il y a un turnover, la nouvelle équipe offensive doit \"nettoyer\" le disque en l'ammenant dans la zone de dégagement, et peut alors attaquer le but. \nUn point est obtenu lorsqu'une passe traversant le cerceau est attrapée dans la zone d'en-but par votre coéquipier",
     },
     {
       id: 2,
@@ -7029,7 +7029,7 @@ const goaltimateDrill = {
       repetition: '',
       rest: '',
       instruction:
-        "4 contre 4. Compte de 5 \nÀ chaque fois qu'il y a un turnover, la nouvelle équipe offensive doit \"nettoyer\" le disque en l'ammenant dans la zone de dégagement, et peut alors attaquer le but. \nUn point est obtenu lorsqu'une passe  traversant le cerceau et est attrapée dans la zone d'en-but par votre coéquipier",
+        "4 contre 4. Compte de 5 \nÀ chaque fois qu'il y a un turnover, la nouvelle équipe offensive doit \"nettoyer\" le disque en l'ammenant dans la zone de dégagement, et peut alors attaquer le but. \nUn point est obtenu lorsqu'une passe traversant le cerceau est attrapée dans la zone d'en-but par votre coéquipier",
     },
   ],
 };
@@ -7040,7 +7040,7 @@ const diagonalToVertical = {
   author: 'Belgium Open',
   title: 'Diagonal vers Vertical',
   image: 'https://zupimages.net/up/20/25/iqn0.jpg',
-  description: "Entraîner l'équipe à faire la transition parfaite d'un stack diagonal à un flow vertical  ",
+  description: "Entraîner l'équipe à faire la transition parfaite d'un stack diagonal à un flow vertical.",
   minimalPlayersNumber: 8,
   inGame:
     "Un play après le pull a été effectué avec un stack diagonal. L'objectif est de réaliser la transition la plus rapide possible du play vers un flow vertical",
@@ -7100,7 +7100,7 @@ const diagonalIso = {
   author: 'Mooncatchers',
   title: "L'Iso en Diagonal",
   image: 'https://zupimages.net/up/20/25/vozh.jpg',
-  description: "Entraîner l'équipe à faire la transition parfaite d'un stack diagonal à un flow vertical",
+  description: "Entraîner l'équipe à faire la transition parfaite d'un stack diagonal à un flow vertical.",
   minimalPlayersNumber: 8,
   inGame: '-',
   equipmentLabel: EquipmentLabels.BASIC,
@@ -7150,7 +7150,7 @@ const splitIso = {
   author: 'Iznogood',
   title: "L'Iso ouvert en Split",
   image: 'https://zupimages.net/up/20/25/k6hi.jpg',
-  description: "Entraîner l'équipe à faire la transition parfaite d'un split stack à un flow vertical ",
+  description: "Entraîner l'équipe à faire la transition parfaite d'un split stack à un flow vertical.",
   minimalPlayersNumber: 8,
   inGame: "Le Split permet d'isoler une paire de joueurs afin d'éviter les poachs des autres défenseurs",
   equipmentLabel: EquipmentLabels.BASIC,
@@ -7190,7 +7190,7 @@ const splitToVertical = {
   author: 'Iznogood',
   title: "L'Iso en Split",
   image: 'https://zupimages.net/up/20/25/uqd5.jpg',
-  description: "Entraîner l'équipe à faire la transition parfaite d'un split stack à un flow vertical ",
+  description: "Entraîner l'équipe à faire la transition parfaite d'un split stack à un flow vertical.",
   minimalPlayersNumber: 8,
   inGame:
     "Un pull est receptionné et un play avec un stack Split est effectué. L'objectif est d'effectuer la transition la plus rapide entre un stack split et un flow vertical",
@@ -7231,7 +7231,7 @@ const sideToVertical = {
   author: 'Iznogood',
   title: 'Side vers Vertical',
   image: 'https://zupimages.net/up/20/25/zpuq.jpg',
-  description: "Entraîner l'équipe à faire la transition parfaite d'un side stack à un flow vertical",
+  description: "Entraîner l'équipe à faire la transition parfaite d'un side stack à un flow vertical.",
   minimalPlayersNumber: 8,
   inGame: '-',
   equipmentLabel: EquipmentLabels.BASIC,
@@ -7302,7 +7302,7 @@ const adaptToTheMark = {
   title: 'Adaptation à la marque',
   image: 'https://zupimages.net/up/20/29/7a6g.jpg',
   description:
-    "Exercice dans lequel le handler de soutien doit s'adapter à la marque. Travail de placement, d'adaption et de lancer",
+    "Exercice dans lequel le handler de soutien doit s'adapter à la marque. Travail de placement, d'adaption et de lancer.",
   minimalPlayersNumber: 10,
   inGame: '-',
   equipmentLabel: EquipmentLabels.BASIC,
@@ -7332,7 +7332,7 @@ const ghostMark = {
   author: 'Puc Ultimate',
   title: 'Le Fantôme',
   image: 'https://zupimages.net/up/20/41/447u.jpg',
-  description: "Les joueurs s'entrainent à réceptionner le disque dans des situations difficiles",
+  description: "Les joueurs s'entrainent à réceptionner le disque dans des situations difficiles.",
   minimalPlayersNumber: 3,
   inGame: "Il est important d'être capable d'effectuer une réception sans un contact visuel continu.",
   equipmentLabel: EquipmentLabels.BASIC,

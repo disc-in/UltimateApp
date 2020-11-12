@@ -42,7 +42,7 @@ export class FitnessFilters extends React.Component {
         durationInMinutes: undefined,
       },
       () => {
-        this.applyFilters(this.validateFilters);
+        this.applyFilters();
       },
     );
   }

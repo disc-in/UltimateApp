@@ -36,7 +36,7 @@ export class FrisbeeFilters extends React.Component {
         numberOfPlayers: undefined,
       },
       () => {
-        this.applyFilters(this.validateFilters);
+        this.applyFilters();
       },
     );
   }

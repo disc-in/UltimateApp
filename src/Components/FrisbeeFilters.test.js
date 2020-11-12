@@ -359,6 +359,8 @@ describe('<FrisbeeFilters />', () => {
       expect(getByText('Number of players: -')).toBeDefined();
       expect(getByText('See 3 drills')).toBeDefined();
 
+      await fireEvent.press(getByText('See 3 drills'));
+
       expect(navigate).toBeCalledWith('DrillListPage', {
         type: DrillTypes.FRISBEE,
         currentFilters: {

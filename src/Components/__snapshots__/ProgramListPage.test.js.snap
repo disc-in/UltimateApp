@@ -159,20 +159,23 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
                           "seasonTiming": "In-season",
                           "steps": Array [
                             Object {
-                              "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
-                              "illustrationType": "youtube",
+                              "id": 0,
+                              "illustrationSource": "462695757",
+                              "illustrationType": "vimeo",
                               "subtitle": "This is a subtitle",
                               "title": "Warmup",
                             },
                             Object {
-                              "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
-                              "illustrationType": "youtube",
+                              "id": 1,
+                              "illustrationSource": "462695757",
+                              "illustrationType": "vimeo",
                               "subtitle": "This is a subtitle",
                               "title": "Do the drill",
                             },
                             Object {
-                              "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
-                              "illustrationType": "youtube",
+                              "id": 2,
+                              "illustrationSource": "462695757",
+                              "illustrationType": "vimeo",
                               "subtitle": "This is a subtitle",
                               "title": "Last step",
                             },
@@ -197,6 +200,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
                           "seasonTiming": "",
                           "steps": Array [
                             Object {
+                              "id": 0,
                               "illustrationSource": Object {
                                 "ids": Array [
                                   "triangle",
@@ -496,6 +500,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
                           "seasonTiming": "",
                           "steps": Array [
                             Object {
+                              "id": 0,
                               "illustrationSource": Object {
                                 "ids": Array [
                                   "triangle",
@@ -786,6 +791,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
                           "seasonTiming": "",
                           "steps": Array [
                             Object {
+                              "id": 0,
                               "illustrationSource": Object {
                                 "ids": Array [
                                   "triangle",

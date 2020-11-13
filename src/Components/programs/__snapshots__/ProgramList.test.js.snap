@@ -159,8 +159,8 @@ exports[`<ProgramList /> renders correctly 1`] = `
                           "seasonTiming": "Off-season",
                           "steps": Array [
                             Object {
-                              "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
-                              "illustrationType": "youtube",
+                              "illustrationSource": "462695757",
+                              "illustrationType": "vimeo",
                               "subtitle": "This is a subtitle",
                               "title": "Warmup",
                             },
@@ -432,8 +432,8 @@ exports[`<ProgramList /> renders correctly 1`] = `
                           "seasonTiming": "Off-season",
                           "steps": Array [
                             Object {
-                              "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
-                              "illustrationType": "youtube",
+                              "illustrationSource": "462695757",
+                              "illustrationType": "vimeo",
                               "subtitle": "This is a subtitle",
                               "title": "Warmup",
                             },
@@ -467,8 +467,8 @@ exports[`<ProgramList /> renders correctly 1`] = `
                           "seasonTiming": "Off-season",
                           "steps": Array [
                             Object {
-                              "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
-                              "illustrationType": "youtube",
+                              "illustrationSource": "462695757",
+                              "illustrationType": "vimeo",
                               "subtitle": "This is a subtitle",
                               "title": "Warmup",
                             },

@@ -46,6 +46,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           "seasonTiming": "",
           "steps": Array [
             Object {
+              "id": 0,
               "illustrationSource": Object {
                 "ids": Array [
                   "triangle",
@@ -336,6 +337,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           "seasonTiming": "",
           "steps": Array [
             Object {
+              "id": 0,
               "illustrationSource": Object {
                 "ids": Array [
                   "triangle",
@@ -631,6 +633,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           "seasonTiming": "",
           "steps": Array [
             Object {
+              "id": 0,
               "illustrationSource": Object {
                 "ids": Array [
                   "triangle",
@@ -921,6 +924,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           "seasonTiming": "",
           "steps": Array [
             Object {
+              "id": 0,
               "illustrationSource": Object {
                 "ids": Array [
                   "triangle",
@@ -1582,8 +1586,8 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           "seasonTiming": "Off-season",
           "steps": Array [
             Object {
-              "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
-              "illustrationType": "youtube",
+              "illustrationSource": "462695757",
+              "illustrationType": "vimeo",
               "subtitle": "This is a subtitle",
               "title": "Warmup",
             },
@@ -1608,8 +1612,8 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           "seasonTiming": "Off-season",
           "steps": Array [
             Object {
-              "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
-              "illustrationType": "youtube",
+              "illustrationSource": "462695757",
+              "illustrationType": "vimeo",
               "subtitle": "This is a subtitle",
               "title": "Warmup",
             },
@@ -1634,8 +1638,8 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           "seasonTiming": "Off-season",
           "steps": Array [
             Object {
-              "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
-              "illustrationType": "youtube",
+              "illustrationSource": "462695757",
+              "illustrationType": "vimeo",
               "subtitle": "This is a subtitle",
               "title": "Warmup",
             },
@@ -1665,8 +1669,8 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           "seasonTiming": "Off-season",
           "steps": Array [
             Object {
-              "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
-              "illustrationType": "youtube",
+              "illustrationSource": "462695757",
+              "illustrationType": "vimeo",
               "subtitle": "This is a subtitle",
               "title": "Warmup",
             },
@@ -1691,8 +1695,8 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           "seasonTiming": "Off-season",
           "steps": Array [
             Object {
-              "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
-              "illustrationType": "youtube",
+              "illustrationSource": "462695757",
+              "illustrationType": "vimeo",
               "subtitle": "This is a subtitle",
               "title": "Warmup",
             },
@@ -1717,8 +1721,8 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           "seasonTiming": "Off-season",
           "steps": Array [
             Object {
-              "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
-              "illustrationType": "youtube",
+              "illustrationSource": "462695757",
+              "illustrationType": "vimeo",
               "subtitle": "This is a subtitle",
               "title": "Warmup",
             },
@@ -2248,8 +2252,8 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           "seasonTiming": "Off-season",
           "steps": Array [
             Object {
-              "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
-              "illustrationType": "youtube",
+              "illustrationSource": "462695757",
+              "illustrationType": "vimeo",
               "subtitle": "This is a subtitle",
               "title": "Warmup",
             },
@@ -2274,8 +2278,8 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           "seasonTiming": "Off-season",
           "steps": Array [
             Object {
-              "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
-              "illustrationType": "youtube",
+              "illustrationSource": "462695757",
+              "illustrationType": "vimeo",
               "subtitle": "This is a subtitle",
               "title": "Warmup",
             },
@@ -2300,8 +2304,8 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           "seasonTiming": "Off-season",
           "steps": Array [
             Object {
-              "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
-              "illustrationType": "youtube",
+              "illustrationSource": "462695757",
+              "illustrationType": "vimeo",
               "subtitle": "This is a subtitle",
               "title": "Warmup",
             },
@@ -2331,8 +2335,8 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           "seasonTiming": "Off-season",
           "steps": Array [
             Object {
-              "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
-              "illustrationType": "youtube",
+              "illustrationSource": "462695757",
+              "illustrationType": "vimeo",
               "subtitle": "This is a subtitle",
               "title": "Warmup",
             },
@@ -2357,8 +2361,8 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           "seasonTiming": "Off-season",
           "steps": Array [
             Object {
-              "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
-              "illustrationType": "youtube",
+              "illustrationSource": "462695757",
+              "illustrationType": "vimeo",
               "subtitle": "This is a subtitle",
               "title": "Warmup",
             },
@@ -2383,8 +2387,8 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           "seasonTiming": "Off-season",
           "steps": Array [
             Object {
-              "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
-              "illustrationType": "youtube",
+              "illustrationSource": "462695757",
+              "illustrationType": "vimeo",
               "subtitle": "This is a subtitle",
               "title": "Warmup",
             },

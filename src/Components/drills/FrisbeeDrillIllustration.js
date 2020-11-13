@@ -35,7 +35,7 @@ const FrisbeeDrillIllustration = (props) => {
                 carouselRef.current.snapToPrev();
               }}
             >
-              <MaterialCommunityIcons name="chevron-double-left" color={theme.COLOR_PRIMARY} size={26} />
+              <MaterialCommunityIcons name="arrow-left-bold" color={theme.COLOR_PRIMARY} size={26} />
             </TouchableOpacity>
           )}
         </View>
@@ -47,7 +47,7 @@ const FrisbeeDrillIllustration = (props) => {
                 carouselRef.current.snapToNext();
               }}
             >
-              <MaterialCommunityIcons name="chevron-double-right" color={theme.COLOR_PRIMARY} size={26} />
+              <MaterialCommunityIcons name="arrow-right-bold" color={theme.COLOR_PRIMARY} size={26} />
             </TouchableOpacity>
           )}
         </View>
@@ -135,8 +135,8 @@ const FrisbeeDrillIllustration = (props) => {
           paddingVertical: 0,
         }}
         dotStyle={{
-          width: 8,
-          height: 8,
+          width: 10,
+          height: 10,
           borderRadius: 5,
           marginHorizontal: 5,
           backgroundColor: theme.MAIN_COLOR,
@@ -172,8 +172,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   instruction: {
-    marginBottom: 10,
-    marginHorizontal: 10,
+    margin: 10,
     fontSize: theme.FONT_SIZE_MEDIUM,
     color: theme.COLOR_PRIMARY,
   },

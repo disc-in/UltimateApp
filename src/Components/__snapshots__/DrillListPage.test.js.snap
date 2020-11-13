@@ -1202,6 +1202,26 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
     initialNumToRender={10}
     keyExtractor={[Function]}
     maxToRenderPerBatch={10}
+    navigation={
+      Object {
+        "navigate": [MockFunction],
+        "setOptions": [MockFunction] {
+          "calls": Array [
+            Array [
+              Object {
+                "headerRight": [Function],
+              },
+            ],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+          ],
+        },
+      }
+    }
     onContentSizeChange={[Function]}
     onEndReachedThreshold={2}
     onLayout={[Function]}
@@ -1488,51 +1508,6 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
       </View>
     </View>
   </RCTScrollView>
-  <View
-    accessible={true}
-    focusable={true}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "#2a9e91",
-        "borderRadius": 50,
-        "bottom": "5%",
-        "elevation": 10,
-        "height": 60,
-        "justifyContent": "center",
-        "opacity": 1,
-        "position": "absolute",
-        "right": "5%",
-        "shadowOffset": Object {
-          "height": 10,
-          "width": 0,
-        },
-        "shadowOpacity": 0.3,
-        "shadowRadius": 10,
-        "width": 60,
-      }
-    }
-    testID="filterButton"
-  >
-    <Text
-      style={
-        Object {
-          "color": "#fff",
-          "fontSize": 13,
-          "fontWeight": "bold",
-        }
-      }
-    >
-      FILTER
-    </Text>
-  </View>
 </View>
 `;
 
@@ -1734,6 +1709,44 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
     initialNumToRender={10}
     keyExtractor={[Function]}
     maxToRenderPerBatch={10}
+    navigation={
+      Object {
+        "navigate": [MockFunction],
+        "setOptions": [MockFunction] {
+          "calls": Array [
+            Array [
+              Object {
+                "headerRight": [Function],
+              },
+            ],
+            Array [
+              Object {
+                "headerRight": [Function],
+              },
+            ],
+            Array [
+              Object {
+                "headerRight": [Function],
+              },
+            ],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+          ],
+        },
+      }
+    }
     onContentSizeChange={[Function]}
     onEndReachedThreshold={2}
     onLayout={[Function]}
@@ -2154,51 +2167,6 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
       </View>
     </View>
   </RCTScrollView>
-  <View
-    accessible={true}
-    focusable={true}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "#2a9e91",
-        "borderRadius": 50,
-        "bottom": "5%",
-        "elevation": 10,
-        "height": 60,
-        "justifyContent": "center",
-        "opacity": 1,
-        "position": "absolute",
-        "right": "5%",
-        "shadowOffset": Object {
-          "height": 10,
-          "width": 0,
-        },
-        "shadowOpacity": 0.3,
-        "shadowRadius": 10,
-        "width": 60,
-      }
-    }
-    testID="filterButton"
-  >
-    <Text
-      style={
-        Object {
-          "color": "#fff",
-          "fontSize": 13,
-          "fontWeight": "bold",
-        }
-      }
-    >
-      FILTER
-    </Text>
-  </View>
 </View>
 `;
 
@@ -2400,6 +2368,35 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
     initialNumToRender={10}
     keyExtractor={[Function]}
     maxToRenderPerBatch={10}
+    navigation={
+      Object {
+        "navigate": [MockFunction],
+        "setOptions": [MockFunction] {
+          "calls": Array [
+            Array [
+              Object {
+                "headerRight": [Function],
+              },
+            ],
+            Array [
+              Object {
+                "headerRight": [Function],
+              },
+            ],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+          ],
+        },
+      }
+    }
     onContentSizeChange={[Function]}
     onEndReachedThreshold={2}
     onLayout={[Function]}
@@ -2820,50 +2817,5 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
       </View>
     </View>
   </RCTScrollView>
-  <View
-    accessible={true}
-    focusable={true}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "#2a9e91",
-        "borderRadius": 50,
-        "bottom": "5%",
-        "elevation": 10,
-        "height": 60,
-        "justifyContent": "center",
-        "opacity": 1,
-        "position": "absolute",
-        "right": "5%",
-        "shadowOffset": Object {
-          "height": 10,
-          "width": 0,
-        },
-        "shadowOpacity": 0.3,
-        "shadowRadius": 10,
-        "width": 60,
-      }
-    }
-    testID="filterButton"
-  >
-    <Text
-      style={
-        Object {
-          "color": "#fff",
-          "fontSize": 13,
-          "fontWeight": "bold",
-        }
-      }
-    >
-      FILTER
-    </Text>
-  </View>
 </View>
 `;

@@ -12,15 +12,7 @@ import Drill from '../animation/Drill';
 const screenDimension = Dimensions.get('window');
 
 const FrisbeeDrillIllustration = (props) => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const currentStep = props.drill.steps[activeIndex];
-
   const carouselRef = useRef(null);
-
-  // back to 0 when drill changes
-  useEffect(() => {
-    setActiveIndex(0);
-  }, [props.drill]);
 
   const renderTitle = (title, index) => {
     const isFirstStep = index === 0;
@@ -79,7 +71,7 @@ const FrisbeeDrillIllustration = (props) => {
     return (
       <>
         {renderTitle(item.title, index)}
-        <View style={styles.pagination}>{renderPagination()}</View>
+        <View style={styles.pagination}>{renderPagination(index)}</View>
         <ScrollView>
           {item.illustrationType === IllustrationType.ANIMATION && displayAnimation(item)}
           {item.illustrationType === IllustrationType.VIMEO && displayVimeo(item)}
@@ -88,11 +80,11 @@ const FrisbeeDrillIllustration = (props) => {
     );
   };
 
-  const renderPagination = () => {
+  const renderPagination = (index) => {
     return (
       <Pagination
         dotsLength={props.drill.steps.length}
-        activeDotIndex={activeIndex}
+        activeDotIndex={index}
         containerStyle={{
           backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
           paddingVertical: 0,
@@ -124,7 +116,6 @@ const FrisbeeDrillIllustration = (props) => {
         sliderWidth={screenDimension.width}
         itemWidth={screenDimension.width}
         renderItem={renderStep}
-        onSnapToItem={(index) => setActiveIndex(index)}
       />
     </SafeAreaView>
   );

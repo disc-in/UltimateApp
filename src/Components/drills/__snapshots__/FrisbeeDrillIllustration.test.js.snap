@@ -73,7 +73,6 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
     onScroll={[Function]}
     onScrollBeginDrag={[Function]}
     onScrollEndDrag={[Function]}
-    onSnapToItem={[Function]}
     onStartShouldSetResponderCapture={[Function]}
     onTouchEnd={[Function]}
     onTouchStart={[Function]}
@@ -134,121 +133,273 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
             style={
               Object {
                 "alignItems": "center",
-                "flexDirection": "row",
-                "height": 40,
-                "justifyContent": "space-between",
-                "marginHorizontal": 30,
               }
             }
           >
-            <View />
-            <Text
+            <View
               style={
                 Object {
-                  "color": "#232b2b",
-                  "fontSize": 16,
-                  "textAlign": "center",
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "height": 40,
+                  "justifyContent": "space-between",
+                  "marginHorizontal": 30,
+                }
+              }
+            >
+              <View />
+              <Text
+                style={
+                  Object {
+                    "color": "#232b2b",
+                    "fontSize": 16,
+                    "textAlign": "center",
+                  }
+                }
+              />
+              <View />
+            </View>
+            <View
+              style={
+                Object {
+                  "paddingVertical": 10,
                 }
               }
             />
-            <View />
-          </View>
-          <View
-            style={
-              Object {
-                "paddingVertical": 10,
-              }
-            }
-          />
-          <RCTScrollView>
-            <View>
-              <View
-                style={
+            <View
+              style={
+                Array [
                   Object {
-                    "minHeight": 375,
+                    "flexDirection": "row",
+                  },
+                  undefined,
+                ]
+              }
+            >
+              <View
+                accessibilityRole="button"
+                accessible={true}
+                focusable={true}
+                hitSlop={
+                  Object {
+                    "bottom": 6,
+                    "left": 6,
+                    "right": 6,
+                    "top": 6,
                   }
                 }
-              >
-                <View
-                  style={
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Array [
+                    false,
                     Array [
                       Object {
-                        "height": 250,
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "margin": 6,
+                        "overflow": "hidden",
                       },
                       Object {
-                        "flex": 1,
+                        "borderRadius": 18,
+                        "height": 36,
+                        "width": 36,
                       },
-                    ]
+                      Object {
+                        "opacity": 0.32,
+                      },
+                      Array [
+                        Object {
+                          "height": 42,
+                          "margin": 0,
+                          "width": 42,
+                        },
+                        Object {
+                          "backgroundColor": "rgba(0, 0, 0, .08)",
+                          "borderColor": "rgba(0, 0, 0, 0.29)",
+                          "borderRadius": 4,
+                        },
+                        Array [
+                          Object {
+                            "borderWidth": 0.5,
+                          },
+                          Object {
+                            "borderBottomRightRadius": 0,
+                            "borderTopRightRadius": 0,
+                          },
+                          undefined,
+                        ],
+                      ],
+                    ],
+                  ]
+                }
+              >
+                <View>
+                  <Text />
+                </View>
+              </View>
+              <View
+                accessibilityRole="button"
+                accessible={true}
+                focusable={true}
+                hitSlop={
+                  Object {
+                    "bottom": 6,
+                    "left": 6,
+                    "right": 6,
+                    "top": 6,
+                  }
+                }
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Array [
+                    false,
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "margin": 6,
+                        "overflow": "hidden",
+                      },
+                      Object {
+                        "borderRadius": 18,
+                        "height": 36,
+                        "width": 36,
+                      },
+                      false,
+                      Array [
+                        Object {
+                          "height": 42,
+                          "margin": 0,
+                          "width": 42,
+                        },
+                        Object {
+                          "backgroundColor": "transparent",
+                          "borderColor": "rgba(0, 0, 0, 0.29)",
+                          "borderRadius": 4,
+                        },
+                        Array [
+                          Object {
+                            "borderWidth": 0.5,
+                          },
+                          Object {
+                            "borderBottomLeftRadius": 0,
+                            "borderLeftWidth": 0,
+                            "borderTopLeftRadius": 0,
+                          },
+                          undefined,
+                        ],
+                      ],
+                    ],
+                  ]
+                }
+              >
+                <View>
+                  <Text />
+                </View>
+              </View>
+            </View>
+            <RCTScrollView>
+              <View>
+                <View
+                  style={
+                    Object {
+                      "minHeight": 375,
+                    }
                   }
                 >
                   <View
                     style={
-                      Object {
-                        "alignItems": "center",
-                        "flex": 1,
-                        "height": 250,
-                        "justifyContent": "center",
-                      }
+                      Array [
+                        Object {
+                          "height": 250,
+                        },
+                        Object {
+                          "flex": 1,
+                        },
+                      ]
                     }
                   >
                     <View
                       style={
                         Object {
-                          "position": "absolute",
-                        }
-                      }
-                    >
-                      <ActivityIndicator
-                        animating={true}
-                        color="#A6A6A6"
-                        hidesWhenStopped={true}
-                        size="large"
-                      />
-                      <Text>
-                        Loading…
-                      </Text>
-                    </View>
-                    <View
-                      pointerEvents="box-none"
-                      style={
-                        Object {
+                          "alignItems": "center",
+                          "flex": 1,
                           "height": 250,
-                          "overflow": "hidden",
-                          "width": "100%",
+                          "justifyContent": "center",
                         }
                       }
                     >
-                      <ViewManagerAdapter_ExpoVideoView
-                        proxiedProperties={
-                          Object {
-                            "onError": [Function],
-                            "onFullscreenUpdate": [Function],
-                            "onLoad": [Function],
-                            "onLoadStart": [Function],
-                            "onReadyForDisplay": [Function],
-                            "onStatusUpdate": [Function],
-                            "resizeMode": "mock",
-                            "source": undefined,
-                            "status": Object {},
-                            "useNativeControls": true,
-                          }
-                        }
+                      <View
                         style={
                           Object {
-                            "bottom": 0,
-                            "left": 0,
                             "position": "absolute",
-                            "right": 0,
-                            "top": 0,
                           }
                         }
-                      />
+                      >
+                        <ActivityIndicator
+                          animating={true}
+                          color="#A6A6A6"
+                          hidesWhenStopped={true}
+                          size="large"
+                        />
+                        <Text>
+                          Loading…
+                        </Text>
+                      </View>
+                      <View
+                        pointerEvents="box-none"
+                        style={
+                          Object {
+                            "height": 250,
+                            "overflow": "hidden",
+                            "width": "100%",
+                          }
+                        }
+                      >
+                        <ViewManagerAdapter_ExpoVideoView
+                          proxiedProperties={
+                            Object {
+                              "onError": [Function],
+                              "onFullscreenUpdate": [Function],
+                              "onLoad": [Function],
+                              "onLoadStart": [Function],
+                              "onReadyForDisplay": [Function],
+                              "onStatusUpdate": [Function],
+                              "resizeMode": "mock",
+                              "source": undefined,
+                              "status": Object {},
+                              "useNativeControls": true,
+                            }
+                          }
+                          style={
+                            Object {
+                              "bottom": 0,
+                              "left": 0,
+                              "position": "absolute",
+                              "right": 0,
+                              "top": 0,
+                            }
+                          }
+                        />
+                      </View>
                     </View>
                   </View>
                 </View>
               </View>
-            </View>
-          </RCTScrollView>
+            </RCTScrollView>
+          </View>
         </View>
       </View>
     </View>

@@ -1,7 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { View, ScrollView, StyleSheet, Text, Dimensions, TouchableOpacity, SafeAreaView } from 'react-native';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { ToggleButton } from 'react-native-paper';
 
 import Animation from '../animation/Animation';
 import VimeoVideo from '../shared/VimeoVideo';
@@ -13,6 +14,7 @@ const screenDimension = Dimensions.get('window');
 
 const FrisbeeDrillIllustration = (props) => {
   const carouselRef = useRef(null);
+  const [displayedIllustration, setDisplayedIllustration] = useState(IllustrationType.ANIMATION);
 
   const renderTitle = (title, index) => {
     const isFirstStep = index === 0;
@@ -69,14 +71,26 @@ const FrisbeeDrillIllustration = (props) => {
 
   const renderStep = ({ item, index }) => {
     return (
-      <>
+      <View style={{ alignItems: 'center' }}>
         {renderTitle(item.title, index)}
         <View style={styles.pagination}>{renderPagination(index)}</View>
+        <ToggleButton.Row value={displayedIllustration} onValueChange={(value) => setDisplayedIllustration(value)}>
+          <ToggleButton
+            icon="clipboard-outline"
+            value={IllustrationType.ANIMATION}
+            disabled={displayedIllustration === IllustrationType.ANIMATION}
+          />
+          <ToggleButton
+            icon="video"
+            value={IllustrationType.VIMEO}
+            disabled={displayedIllustration === IllustrationType.VIMEO}
+          />
+        </ToggleButton.Row>
         <ScrollView>
           {item.illustrationType === IllustrationType.ANIMATION && displayAnimation(item)}
           {item.illustrationType === IllustrationType.VIMEO && displayVimeo(item)}
         </ScrollView>
-      </>
+      </View>
     );
   };
 

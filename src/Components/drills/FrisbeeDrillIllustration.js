@@ -155,8 +155,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   instruction: {
-    marginBottom: 10,
-    marginHorizontal: 10,
+    margin: 10,
     fontSize: theme.FONT_SIZE_MEDIUM,
     color: theme.COLOR_PRIMARY,
   },

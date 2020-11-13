@@ -186,8 +186,8 @@ const frisbeeDrill2 = {
   steps: [
     {
       id: 0,
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      illustrationType: IllustrationType.VIMEO,
+      illustrationSource: '462695757',
     },
   ],
 };

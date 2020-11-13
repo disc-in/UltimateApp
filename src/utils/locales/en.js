@@ -153,7 +153,6 @@ export default {
       one: '{{count}} drill available',
       other: '{{count}} drills available',
     },
-    filter: 'FILTER',
   },
   drillPage: {
     minutes: 'minutes',
@@ -163,6 +162,7 @@ export default {
     goal: 'Good for',
     equipment: 'Equipment',
     description: 'Description',
+    inGame: 'In Game',
   },
   drillPageMinimal: {
     headerTitle: '{{trainingTitle}} Drills',
@@ -182,6 +182,11 @@ export default {
     goals: 'Goals',
     duration: 'Duration',
     durationLabel: 'How much time do you have?   {{duration}} mins',
+    cta: {
+      zero: '{{count}} available drills',
+      one: 'See {{count}} drill',
+      other: 'See {{count}} drills',
+    },
   },
   frisbeeFilters: {
     numberOfPlayersLabel: 'Number of players: {{number}}',

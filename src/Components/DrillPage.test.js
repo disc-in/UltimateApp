@@ -1,7 +1,6 @@
 import React from 'react';
 import { create, act } from 'react-test-renderer';
 import { connect, Provider } from 'react-redux';
-
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';

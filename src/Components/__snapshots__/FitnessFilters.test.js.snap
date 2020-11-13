@@ -6,21 +6,10 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
     Object {
       "backgroundColor": "#fff",
       "height": "100%",
+      "paddingTop": 20,
     }
   }
 >
-  <Text
-    style={
-      Object {
-        "color": "#A6A6A6",
-        "marginBottom": 20,
-        "paddingLeft": 20,
-        "paddingTop": 10,
-      }
-    }
-  >
-    2 drills available
-  </Text>
   <RCTScrollView
     contentContainerStyle={
       Object {
@@ -862,5 +851,56 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
       </View>
     </View>
   </RCTScrollView>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "bottom": 0,
+        "paddingBottom": 10,
+        "paddingTop": 5,
+        "position": "absolute",
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#2a9e91",
+          "borderRadius": 5,
+          "height": 40,
+          "justifyContent": "center",
+          "opacity": 1,
+          "paddingHorizontal": 20,
+          "paddingVertical": 10,
+          "width": "80%",
+        }
+      }
+      testID="button"
+    >
+      <Text
+        style={
+          Object {
+            "color": "#fff",
+            "fontSize": 16,
+            "textAlign": "center",
+          }
+        }
+      >
+        See 2 drills
+      </Text>
+    </View>
+  </View>
 </View>
 `;

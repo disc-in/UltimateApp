@@ -149,24 +149,21 @@ Array [
             Array [
               Object {
                 "id": 0,
-                "illustrationSource": "462695757",
-                "illustrationType": "vimeo",
                 "subtitle": "This is a subtitle",
                 "title": "Warmup",
+                "vimeoId": "462695757",
               },
               Object {
                 "id": 1,
-                "illustrationSource": "462695757",
-                "illustrationType": "vimeo",
                 "subtitle": "This is a subtitle",
                 "title": "Do the drill",
+                "vimeoId": "462695757",
               },
               Object {
                 "id": 2,
-                "illustrationSource": "462695757",
-                "illustrationType": "vimeo",
                 "subtitle": "This is a subtitle",
                 "title": "Last step",
+                "vimeoId": "462695757",
               },
             ]
           }

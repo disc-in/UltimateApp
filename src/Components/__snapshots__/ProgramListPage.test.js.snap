@@ -164,24 +164,21 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
                         "steps": Array [
                           Object {
                             "id": 0,
-                            "illustrationSource": "462695757",
-                            "illustrationType": "vimeo",
                             "subtitle": "This is a subtitle",
                             "title": "Warmup",
+                            "vimeoId": "462695757",
                           },
                           Object {
                             "id": 1,
-                            "illustrationSource": "462695757",
-                            "illustrationType": "vimeo",
                             "subtitle": "This is a subtitle",
                             "title": "Do the drill",
+                            "vimeoId": "462695757",
                           },
                           Object {
                             "id": 2,
-                            "illustrationSource": "462695757",
-                            "illustrationType": "vimeo",
                             "subtitle": "This is a subtitle",
                             "title": "Last step",
+                            "vimeoId": "462695757",
                           },
                         ],
                         "title": "Fitness Drill Title",
@@ -204,8 +201,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
                         "seasonTiming": "",
                         "steps": Array [
                           Object {
-                            "id": 0,
-                            "illustrationSource": Object {
+                            "animation": Object {
                               "ids": Array [
                                 "triangle",
                                 "triangle",
@@ -472,7 +468,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
                                 "",
                               ],
                             },
-                            "illustrationType": "animation",
+                            "id": 0,
                           },
                         ],
                         "title": "Frisbee Drill Title",
@@ -504,8 +500,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
                         "seasonTiming": "",
                         "steps": Array [
                           Object {
-                            "id": 0,
-                            "illustrationSource": Object {
+                            "animation": Object {
                               "ids": Array [
                                 "triangle",
                                 "triangle",
@@ -772,7 +767,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
                                 "",
                               ],
                             },
-                            "illustrationType": "animation",
+                            "id": 0,
                           },
                         ],
                         "title": "Frisbee Drill Title",
@@ -796,8 +791,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
                         "steps": Array [
                           Object {
                             "id": 0,
-                            "illustrationSource": "462695757",
-                            "illustrationType": "vimeo",
+                            "vimeoId": "462695757",
                           },
                         ],
                         "title": "Frisbee Drill Title",

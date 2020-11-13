@@ -6,15 +6,19 @@ import { ToggleButton } from 'react-native-paper';
 
 import Animation from '../animation/Animation';
 import VimeoVideo from '../shared/VimeoVideo';
-import { IllustrationType } from '../../Fixtures/config';
 import theme from '../../styles/theme.style';
 import Drill from '../animation/Drill';
 
 const screenDimension = Dimensions.get('window');
 
+export const IllustrationField = {
+  ANIMATION: 'animation',
+  VIMEO: 'vimeoId',
+};
+
 const FrisbeeDrillIllustration = (props) => {
   const carouselRef = useRef(null);
-  const [displayedIllustration, setDisplayedIllustration] = useState(IllustrationType.ANIMATION);
+  const [illustrationPreference, setIllustrationPreference] = useState(IllustrationField.ANIMATION);
 
   const renderTitle = (title, index) => {
     const isFirstStep = index === 0;
@@ -48,21 +52,22 @@ const FrisbeeDrillIllustration = (props) => {
     );
   };
 
-  const displayVimeo = ({ illustrationSource, sounds }) => {
+  const displayVimeo = ({ vimeoId, sounds, instruction }) => {
     return (
       <View style={styles.contentWrapper}>
         <View style={[{ height: 250 }, styles.videoAlone]}>
-          <VimeoVideo vimeoId={illustrationSource} sounds={sounds} />
+          <VimeoVideo vimeoId={vimeoId} sounds={sounds} />
         </View>
+        <Text style={styles.instruction}>{instruction}</Text>
       </View>
     );
   };
 
-  const displayAnimation = ({ illustrationSource, instruction }) => {
+  const displayAnimation = ({ animation, instruction }) => {
     return (
       <>
         <View style={styles.contentWrapper}>
-          <Animation widthRatio={1} heightRatio={1 / 2} animation={new Drill(illustrationSource)} />
+          <Animation widthRatio={1} heightRatio={1 / 2} animation={new Drill(animation)} />
         </View>
         <Text style={styles.instruction}>{instruction}</Text>
       </>
@@ -70,25 +75,35 @@ const FrisbeeDrillIllustration = (props) => {
   };
 
   const renderStep = ({ item, index }) => {
+    let illustrationField;
+    if (item.vimeoId && !item.animation) illustrationField = IllustrationField.VIMEO;
+    if (!item.vimeoId && item.animation) illustrationField = IllustrationField.ANIMATION;
+
     return (
-      <View style={{ alignItems: 'center' }}>
+      <View>
         {renderTitle(item.title, index)}
         <View style={styles.pagination}>{renderPagination(index)}</View>
-        <ToggleButton.Row value={displayedIllustration} onValueChange={(value) => setDisplayedIllustration(value)}>
-          <ToggleButton
-            icon="clipboard-outline"
-            value={IllustrationType.ANIMATION}
-            disabled={displayedIllustration === IllustrationType.ANIMATION}
-          />
-          <ToggleButton
-            icon="video"
-            value={IllustrationType.VIMEO}
-            disabled={displayedIllustration === IllustrationType.VIMEO}
-          />
-        </ToggleButton.Row>
+        {!illustrationField && (
+          <ToggleButton.Row
+            style={{ justifyContent: 'center' }}
+            value={illustrationPreference}
+            onValueChange={(value) => setIllustrationPreference(value)}
+          >
+            <ToggleButton
+              icon="clipboard-outline"
+              value={IllustrationField.ANIMATION}
+              disabled={illustrationPreference === IllustrationField.ANIMATION}
+            />
+            <ToggleButton
+              icon="video"
+              value={IllustrationField.VIMEO}
+              disabled={illustrationPreference === IllustrationField.VIMEO}
+            />
+          </ToggleButton.Row>
+        )}
         <ScrollView>
-          {item.illustrationType === IllustrationType.ANIMATION && displayAnimation(item)}
-          {item.illustrationType === IllustrationType.VIMEO && displayVimeo(item)}
+          {(illustrationField || illustrationPreference) === IllustrationField.ANIMATION && displayAnimation(item)}
+          {(illustrationField || illustrationPreference) === IllustrationField.VIMEO && displayVimeo(item)}
         </ScrollView>
       </View>
     );

@@ -52,7 +52,6 @@ export const EquipmentLabels = {
 
 export const IllustrationType = {
   VIMEO: 'vimeo',
-  YOUTUBE: 'youtube',
   ANIMATION: 'animation',
 };
 

@@ -82,27 +82,27 @@ describe('<FrisbeeFilters />', () => {
         ),
       );
 
-      expect(getByText('3 drills available')).toBeDefined();
+      expect(getByText('See 3 drills')).toBeDefined();
 
       await fireEvent.press(getByText(Levels.BEGINNER));
 
-      expect(getByText('1 drill available')).toBeDefined();
+      expect(getByText('See 1 drill')).toBeDefined();
 
       await fireEvent.press(getByText(Levels.INTERMEDIATE));
 
-      expect(getByText('2 drills available')).toBeDefined();
+      expect(getByText('See 2 drills')).toBeDefined();
 
       await fireEvent.press(getByText(Levels.BEGINNER));
 
-      expect(getByText('1 drill available')).toBeDefined();
+      expect(getByText('See 1 drill')).toBeDefined();
 
       await fireEvent.press(getByText(Levels.INTERMEDIATE));
 
-      expect(getByText('3 drills available')).toBeDefined();
+      expect(getByText('See 3 drills')).toBeDefined();
 
       await fireEvent.press(getByText(Levels.ADVANCED));
 
-      await fireEvent.press(getByTestId('validateButton'));
+      await fireEvent.press(getByText('See 1 drill'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
         type: DrillTypes.FRISBEE,
@@ -154,29 +154,29 @@ describe('<FrisbeeFilters />', () => {
         ),
       );
 
-      expect(getByText('4 drills available')).toBeDefined();
+      expect(getByText('See 4 drills')).toBeDefined();
 
       await fireEvent.press(getByText(FrisbeeGoals.DEFENSE));
 
-      expect(getByText('2 drills available')).toBeDefined();
+      expect(getByText('See 2 drills')).toBeDefined();
 
       await fireEvent.press(getByText(FrisbeeGoals.THROWING));
 
-      expect(getByText('3 drills available')).toBeDefined();
+      expect(getByText('See 3 drills')).toBeDefined();
 
       await fireEvent.press(getByText(FrisbeeGoals.DEFENSE));
 
-      expect(getByText('1 drill available')).toBeDefined();
+      expect(getByText('See 1 drill')).toBeDefined();
 
       await fireEvent.press(getByText(FrisbeeGoals.THROWING));
 
-      expect(getByText('4 drills available')).toBeDefined();
+      expect(getByText('See 4 drills')).toBeDefined();
 
       await fireEvent.press(getByText(FrisbeeGoals.HANDLING));
 
-      expect(getByText('2 drills available')).toBeDefined();
+      expect(getByText('See 2 drills')).toBeDefined();
 
-      await fireEvent.press(getByTestId('validateButton'));
+      await fireEvent.press(getByText('See 2 drills'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
         type: DrillTypes.FRISBEE,
@@ -228,14 +228,14 @@ describe('<FrisbeeFilters />', () => {
       );
 
       expect(getByText('Number of players: -')).toBeDefined();
-      expect(getByText('3 drills available')).toBeDefined();
+      expect(getByText('See 3 drills')).toBeDefined();
 
       await fireEvent(getByTestId('numberOfPlayersSlider'), 'valueChange', 5);
 
       expect(getByText('Number of players: 5')).toBeDefined();
-      expect(getByText('2 drills available')).toBeDefined();
+      expect(getByText('See 2 drills')).toBeDefined();
 
-      await fireEvent.press(getByTestId('validateButton'));
+      await fireEvent.press(getByText('See 2 drills'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
         type: DrillTypes.FRISBEE,
@@ -287,13 +287,13 @@ describe('<FrisbeeFilters />', () => {
         ),
       );
 
-      expect(getByText('3 drills available')).toBeDefined();
+      expect(getByText('See 3 drills')).toBeDefined();
 
       await fireEvent.press(getByText('Favorites only'));
 
-      expect(getByText('1 drill available')).toBeDefined();
+      expect(getByText('See 1 drill')).toBeDefined();
 
-      await fireEvent.press(getByTestId('validateButton'));
+      await fireEvent.press(getByText('See 1 drill'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
         type: DrillTypes.FRISBEE,
@@ -347,17 +347,19 @@ describe('<FrisbeeFilters />', () => {
       );
 
       expect(getByText('Number of players: -')).toBeDefined();
-      expect(getByText('3 drills available')).toBeDefined();
+      expect(getByText('See 3 drills')).toBeDefined();
 
       await fireEvent(getByTestId('numberOfPlayersSlider'), 'valueChange', 5);
 
       expect(getByText('Number of players: 5')).toBeDefined();
-      expect(getByText('2 drills available')).toBeDefined();
+      expect(getByText('See 2 drills')).toBeDefined();
 
       await fireEvent.press(getByTestId('resetButton'));
 
       expect(getByText('Number of players: -')).toBeDefined();
-      expect(getByText('3 drills available')).toBeDefined();
+      expect(getByText('See 3 drills')).toBeDefined();
+
+      await fireEvent.press(getByText('See 3 drills'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
         type: DrillTypes.FRISBEE,

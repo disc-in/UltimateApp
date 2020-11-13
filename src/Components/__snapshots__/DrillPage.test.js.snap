@@ -701,6 +701,14 @@ exports[`<DrillPage /> renders correctly 1`] = `
                         <View
                           style={
                             Object {
+                              "borderBottomColor": "#e5e5e5",
+                              "borderBottomWidth": 1,
+                            }
+                          }
+                        />
+                        <View
+                          style={
+                            Object {
                               "flex": 1,
                             }
                           }

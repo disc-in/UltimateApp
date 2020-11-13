@@ -75,35 +75,42 @@ const FrisbeeDrillIllustration = (props) => {
   };
 
   const renderStep = ({ item, index }) => {
-    let illustrationField;
-    if (item.vimeoId && !item.animation) illustrationField = IllustrationField.VIMEO;
-    if (!item.vimeoId && item.animation) illustrationField = IllustrationField.ANIMATION;
+    let illustrationUniqueField;
+    if (item.vimeoId && !item.animation) illustrationUniqueField = IllustrationField.VIMEO;
+    if (!item.vimeoId && item.animation) illustrationUniqueField = IllustrationField.ANIMATION;
 
+    const animationPressed = illustrationPreference === IllustrationField.ANIMATION;
+    const vimeoPressed = illustrationPreference === IllustrationField.VIMEO;
     return (
       <View>
         {renderTitle(item.title, index)}
         <View style={styles.pagination}>{renderPagination(index)}</View>
-        {!illustrationField && (
+        {!illustrationUniqueField && (
           <ToggleButton.Row
             style={{ justifyContent: 'center' }}
             value={illustrationPreference}
             onValueChange={(value) => setIllustrationPreference(value)}
           >
             <ToggleButton
+              color={animationPressed ? theme.MAIN_COLOR : undefined}
+              style={animationPressed ? styles.pressedToggleButton : undefined}
               icon="clipboard-outline"
               value={IllustrationField.ANIMATION}
-              disabled={illustrationPreference === IllustrationField.ANIMATION}
+              disabled={animationPressed}
             />
             <ToggleButton
               icon="video"
+              color={vimeoPressed ? theme.MAIN_COLOR : undefined}
+              style={vimeoPressed ? styles.pressedToggleButton : undefined}
               value={IllustrationField.VIMEO}
-              disabled={illustrationPreference === IllustrationField.VIMEO}
+              disabled={vimeoPressed}
             />
           </ToggleButton.Row>
         )}
         <ScrollView>
-          {(illustrationField || illustrationPreference) === IllustrationField.ANIMATION && displayAnimation(item)}
-          {(illustrationField || illustrationPreference) === IllustrationField.VIMEO && displayVimeo(item)}
+          {(illustrationUniqueField || illustrationPreference) === IllustrationField.ANIMATION &&
+            displayAnimation(item)}
+          {(illustrationUniqueField || illustrationPreference) === IllustrationField.VIMEO && displayVimeo(item)}
         </ScrollView>
       </View>
     );
@@ -171,6 +178,10 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginHorizontal: 30,
     alignItems: 'center',
+  },
+  pressedToggleButton: {
+    backgroundColor: theme.BACKGROUND_COLOR,
+    opacity: 0.8,
   },
   title: {
     fontSize: theme.FONT_SIZE_MEDIUM,

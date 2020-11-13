@@ -5046,14 +5046,6 @@ const trainDrill = {
       id: 1,
       title: 'Le Train Classique',
       animation: train,
-      repetition: '',
-      rest: '',
-      instruction:
-        "Mettre en place un stack vertical de 5 attaquants, un lanceur et un handler de soutien. Choisir une force. Le dernier attaquant du stack déclenche un appel en longue tout en regardant le lanceur. Quand le lanceur fait une feinte, l'attaquant fait un contre-cut dans l'espace ouvert et reçoit le disque. L'attaquant suivant doit commencer son cut en longue pour être à pleine vitesse quand le précédent attrape le disque. Le reste du stack se replace à hauteur pour assurer la continuité, le lanceur devient handler de soutien et le soutien devient premier du stack. Répéter sur la longueur du terrain.",
-    },
-    {
-      id: 2,
-      title: 'Le Train Classique',
       vimeoId: '462695757',
       repetition: '',
       rest: '',
@@ -5061,7 +5053,7 @@ const trainDrill = {
         "Mettre en place un stack vertical de 5 attaquants, un lanceur et un handler de soutien. Choisir une force. Le dernier attaquant du stack déclenche un appel en longue tout en regardant le lanceur. Quand le lanceur fait une feinte, l'attaquant fait un contre-cut dans l'espace ouvert et reçoit le disque. L'attaquant suivant doit commencer son cut en longue pour être à pleine vitesse quand le précédent attrape le disque. Le reste du stack se replace à hauteur pour assurer la continuité, le lanceur devient handler de soutien et le soutien devient premier du stack. Répéter sur la longueur du terrain.",
     },
     {
-      id: 3,
+      id: 2,
       title: 'Les aventuriers du Rail',
       animation: trainRace,
       repetition: '',
@@ -5290,14 +5282,6 @@ const menageATroisDrill = {
       id: 1,
       title: 'Marque Straight',
       animation: threePerson,
-      repetition: '',
-      rest: '',
-      instruction:
-        "Le défenseur place une marque à plat (marque straight). Lorsque le lanceur lance le disque, il devient alors le défenseur. L'objectif de l'attaquant est de battre le défenseur avec des feintes réalistes",
-    },
-    {
-      id: 2,
-      title: 'Marque straight',
       vimeoId: '462695161',
       repetition: '',
       rest: '',
@@ -5305,7 +5289,7 @@ const menageATroisDrill = {
         "Le défenseur place une marque à plat (marque straight). Lorsque le lanceur lance le disque, il devient alors le défenseur. L'objectif de l'attaquant est de battre le défenseur avec des feintes réalistes",
     },
     {
-      id: 3,
+      id: 2,
       title: 'Rédemption',
       animation: redemption,
       repetition: '',
@@ -5338,14 +5322,6 @@ const dwarfDuelDrill = {
       id: 1,
       title: 'Le duel',
       animation: dwarDuel,
-      repetition: '',
-      rest: '',
-      instruction:
-        "Le coach ou un joueur expérimenté lance des longues.\nQuand l'attaquant commence à courir, le défenseur peur se déplacer. Aucun des deux joueurs n'a le droit de sauter pour attraper le frisbee.",
-    },
-    {
-      id: 2,
-      title: 'Dwarf Duel',
       vimeoId: '462695083',
       repetition: '',
       rest: '',
@@ -5378,14 +5354,6 @@ const dishieChainDrill = {
       id: 1,
       title: 'La chaîne des catapultes',
       animation: dishiesChain,
-      repetition: '',
-      rest: '',
-      instruction:
-        "2 joueurs d'une colonne vont en direction du lanceur. Quand l'un d'eux reçoit le disque. Le lanceur cherche à faire une dishie quand l'autre cutter part en longue. Le cutter qui attrape la longue devient le nouveau premier lanceur de l'autre colonne",
-    },
-    {
-      id: 2,
-      title: 'Focus on Offense',
       vimeoId: '462694949',
       repetition: '',
       rest: '',
@@ -5393,17 +5361,9 @@ const dishieChainDrill = {
         "2 joueurs d'une colonne vont en direction du lanceur. Quand l'un d'eux reçoit le disque. Le lanceur cherche à faire une dishie quand l'autre cutter part en longue. Le cutter qui attrape la longue devient le nouveau premier lanceur de l'autre colonne",
     },
     {
-      id: 3,
+      id: 2,
       title: 'Éclater un Poach',
       animation: dishiesPoach,
-      repetition: '',
-      rest: '',
-      instruction:
-        "Ajouter un défenseur à l'exercice précédent pour simuler un poach sur un side stack.\nLe possesseur du disque doit chercher à faire une passe au joueur libre",
-    },
-    {
-      id: 4,
-      title: 'Adding a Poach',
       vimeoId: '462697155',
       repetition: '',
       rest: '',
@@ -5504,14 +5464,6 @@ const trainOfFakeDrill = {
       id: 1,
       title: 'Le Train Classique',
       animation: train,
-      repetition: '',
-      rest: '',
-      instruction:
-        "Mettre en place un stack vertical de 5 attaquants, un lanceur et un handler de soutien. Choisir une force. Le dernier attaquant du stack déclenche un appel en longue tout en regardant le lanceur. Quand le lanceur fait une feinte, l'attaquant fait un contre-cut dans l'espace ouvert et reçoit le disque. L'attaquant suivant doit commencer son cut en longue pour être à pleine vitesse quand le précédent attrape le disque. Le reste du stack se replace à hauteur pour assurer la continuité, le lanceur devient handler de soutien et le soutien devient premier du stack. Répéter sur la longueur du terrain.",
-    },
-    {
-      id: 2,
-      title: 'Le Train Classique',
       vimeoId: '462695757',
       repetition: '',
       rest: '',
@@ -5519,17 +5471,9 @@ const trainOfFakeDrill = {
         "Mettre en place un stack vertical de 5 attaquants, un lanceur et un handler de soutien. Choisir une force. Le dernier attaquant du stack déclenche un appel en longue tout en regardant le lanceur. Quand le lanceur fait une feinte, l'attaquant fait un contre-cut dans l'espace ouvert et reçoit le disque. L'attaquant suivant doit commencer son cut en longue pour être à pleine vitesse quand le précédent attrape le disque. Le reste du stack se replace à hauteur pour assurer la continuité, le lanceur devient handler de soutien et le soutien devient premier du stack. Répéter sur la longueur du terrain.",
     },
     {
-      id: 3,
+      id: 2,
       title: 'Avec 1 Feinte',
       animation: oneFakeTrain,
-      repetition: '',
-      rest: '',
-      instruction:
-        "Mettre en place un train classique. Cette fois, le lanceur peut décider de faire une deuxième feinte quand le cutter fait son deuxième appel. Si c'est le cas, le cutter libère l'espace et retourne dans le stack en 2e position. Le lanceur regarde alors le handler de soutien qui fait un appel vers l'avant et reçoit la passe. L'exercice continue.",
-    },
-    {
-      id: 4,
-      title: 'Avec 1 Feinte',
       vimeoId: '462695420',
       repetition: '',
       rest: '',
@@ -5537,17 +5481,9 @@ const trainOfFakeDrill = {
         "Mettre en place un train classique. Cette fois, le lanceur peut décider de faire une deuxième feinte quand le cutter fait son deuxième appel. Si c'est le cas, le cutter libère l'espace et retourne dans le stack en 2e position. Le lanceur regarde alors le handler de soutien qui fait un appel vers l'avant et reçoit la passe. L'exercice continue.",
     },
     {
-      id: 5,
+      id: 3,
       title: 'Avec 2 Feintes',
       animation: twoFakeTrain,
-      repetition: '',
-      rest: '',
-      instruction:
-        "Mettre en place un train classique. Cette fois, quand le soutien fait son cut vers l'avant, le lanceur peut faire une deuxième feinte. Si c'est le cas, le premier joueur du stack fait un cut pour recevoir un dump. L'exercice continue.",
-    },
-    {
-      id: 6,
-      title: 'With Two Fakes',
       vimeoId: '462696097',
       repetition: '',
       rest: '',
@@ -5579,14 +5515,6 @@ const resetOpenDrill = {
       id: 1,
       title: 'Par derrière',
       animation: backdoor,
-      repetition: '',
-      rest: '',
-      instruction:
-        "Le lanceur est défendu par une marque qui applique une force et son handler de soutien se place à 45° derrière lui, du côté ouvert.\nLe lanceur commence par regarder vers l'avant pour simuler une situation de jeu, avant de se tourner vers son soutien et d'établir un contact visuel avec lui. Ensuite, le soutien fait un cut derrière le lanceur et reçoit le disque.\nLe disque est alors renvoyé au lanceur pour refaire l'exercice de l'autre côté en inversant la force.",
-    },
-    {
-      id: 2,
-      title: 'Par derrière',
       vimeoId: '462694656',
       repetition: '',
       rest: '',
@@ -5594,17 +5522,9 @@ const resetOpenDrill = {
         "Le lanceur est défendu par une marque qui applique une force et son handler de soutien se place à 45° derrière lui, du côté ouvert.\nLe lanceur commence par regarder vers l'avant pour simuler une situation de jeu, avant de se tourner vers son soutien et d'établir un contact visuel avec lui. Ensuite, le soutien fait un cut derrière le lanceur et reçoit le disque.\nLe disque est alors renvoyé au lanceur pour refaire l'exercice de l'autre côté en inversant la force.",
     },
     {
-      id: 3,
+      id: 2,
       title: 'Power position',
       animation: powerReset,
-      repetition: '',
-      rest: '',
-      instruction:
-        "Le placement est le même que pour la première version. Cette fois, quand le contact visuel est établi, le soutien fait un cut vers l'avant et reçoit une passe devant lui.",
-    },
-    {
-      id: 4,
-      title: 'Power Reset',
       vimeoId: '462695562',
       repetition: '',
       rest: '',
@@ -5612,17 +5532,9 @@ const resetOpenDrill = {
         "Le placement est le même que pour la première version. Cette fois, quand le contact visuel est établi, le soutien fait un cut vers l'avant et reçoit une passe devant lui.",
     },
     {
-      id: 5,
+      id: 3,
       title: 'Situation de Match',
       animation: resetOpen,
-      repetition: '',
-      rest: '',
-      instruction:
-        "Le placement est le même. La défense sur le soutien est à 100%. L'attaquant doit choisir une des deux options de cut pour se démarquer. Il ne peut faire qu'une feinte. Chaque équipe de 2 fait le même nombre d'essais, et celle qui réussit le plus de passes gagne !",
-    },
-    {
-      id: 6,
-      title: 'Situation de Match',
       vimeoId: '462696413',
       repetition: '',
       rest: '',
@@ -5654,14 +5566,6 @@ const resetBreakDrill = {
       id: 1,
       title: 'Le Upline Cut à 45°',
       animation: upline,
-      repetition: '',
-      rest: '',
-      instruction:
-        "Le lanceur est défendu par une marque qui applique une force et son handler de soutien se place à sa hauteur, du côté fermé.\n. Le soutien se déplace tranquillement vers l'avant jusqu'à se trouver à 45° par rapport au lanceur. Quand le lanceur établit le contact visuel, le soutien fait un cut incisif vers l'avant.\nUne fois la passe réalisée, le disque est renvoyé au lanceur et l'exercice est répété plusieurs fois, en changeant la force.",
-    },
-    {
-      id: 2,
-      title: 'Le Upline Cut à 45°',
       vimeoId: '462696489',
       repetition: '',
       rest: '',
@@ -5669,17 +5573,9 @@ const resetBreakDrill = {
         "Le lanceur est défendu par une marque qui applique une force et son handler de soutien se place à sa hauteur, du côté fermé.\n. Le soutien se déplace tranquillement vers l'avant jusqu'à se trouver à 45° par rapport au lanceur. Quand le lanceur établit le contact visuel, le soutien fait un cut incisif vers l'avant.\nUne fois la passe réalisée, le disque est renvoyé au lanceur et l'exercice est répété plusieurs fois, en changeant la force.",
     },
     {
-      id: 3,
+      id: 2,
       title: 'Le Reset Facile',
       animation: around,
-      repetition: '',
-      rest: '',
-      instruction:
-        "Le placement est le même. Quand le contact visuel est établi, le lanceur contourne sa marque par l'arrière pour faire sa passe au soutien. La passe doit arriver à peu près à hauteur du lanceur, là où le soutien se trouvait initialement. C'est la passe qui déclenche le cut du soutien.",
-    },
-    {
-      id: 4,
-      title: 'Le Reset Facile',
       vimeoId: '462694618',
       repetition: '',
       rest: '',
@@ -5687,17 +5583,9 @@ const resetBreakDrill = {
         "Le placement est le même. Quand le contact visuel est établi, le lanceur contourne sa marque par l'arrière pour faire sa passe au soutien. La passe doit arriver à peu près à hauteur du lanceur, là où le soutien se trouvait initialement. C'est la passe qui déclenche le cut du soutien.",
     },
     {
-      id: 5,
+      id: 3,
       title: 'Situation de match',
       animation: resetBreak,
-      repetition: '',
-      rest: '',
-      instruction:
-        "Le placement est le même. La défense est à 100%. Le soutien doit choisir une des deux solutions pour faire son cut et recevoir le disque. Le soutien ne peut changer de direction qu'une fois. Chaque équipe de 2 fait le même nombre d'essais, et celle qui réussit le plus de passes gagne !",
-    },
-    {
-      id: 6,
-      title: 'Situation de match',
       vimeoId: '462696185',
       repetition: '',
       rest: '',
@@ -5729,14 +5617,6 @@ const youShallNotPassDrill = {
       id: 1,
       title: 'Bloquer les passes courtes',
       animation: blockTheUnder,
-      repetition: '',
-      rest: '',
-      instruction:
-        "L'attaquant et le défenseur courent vers le carré central puis vers le fond du terrain. L'attaquant doit faire un contre-cut vers le disque pour recevoir une passe dans le carré. Il ne peut pas rechanger de direction. Le défenseur doit se positionner pour empêcher l'attaquant de le dépasser pour atteindre le carré. Le lanceur ne peut pas lancer sur le premier cut en longue",
-    },
-    {
-      id: 2,
-      title: 'Blocking the Under',
       vimeoId: '462695379',
       repetition: '',
       rest: '',
@@ -5744,23 +5624,16 @@ const youShallNotPassDrill = {
         "L'attaquant et le défenseur courent vers le carré central puis vers le fond du terrain. L'attaquant doit faire un contre-cut vers le disque pour recevoir une passe dans le carré. Il ne peut pas rechanger de direction. Le défenseur doit se positionner pour empêcher l'attaquant de le dépasser pour atteindre le carré. Le lanceur ne peut pas lancer sur le premier cut en longue",
     },
     {
-      id: 3,
+      id: 2,
       title: 'Bloquez tout !',
       animation: blockEverything,
-      repetition: '',
-      rest: '',
-      instruction: "Même exercice, mais le lanceur a le droit de lancer la longue si c'est pertinent",
-    },
-    {
-      id: 4,
-      title: 'Bloquez tout !',
       vimeoId: '462695250',
       repetition: '',
       rest: '',
       instruction: "Même exercice, mais le lanceur a le droit de lancer la longue si c'est pertinent",
     },
     {
-      id: 5,
+      id: 3,
       title: 'Comptez les points',
       animation: blockEverything,
       repetition: '',
@@ -5831,14 +5704,6 @@ const discGolf = {
       id: 1,
       title: 'Disc Golf',
       animation: discGolfAnimation,
-      repetition: '',
-      rest: '',
-      instruction:
-        "Les règles: Le disc-golf se joue comme le golf traditionnel.\nUn lancer (stroke) est compté à chaque fois que le disque est lancé et lorsqu'une pénalité est encourue. L'objectif est de jouer chaque trou en un minimum de coups.",
-    },
-    {
-      id: 2,
-      title: 'Disc Golf',
       vimeoId: '475059721',
       repetition: '',
       rest: '',
@@ -5870,14 +5735,6 @@ const dDC = {
       id: 1,
       title: 'DDC',
       animation: dDCAnimation,
-      repetition: '',
-      rest: '',
-      instruction:
-        "2 équipes de 2 joueurs s'opposent. Les zones sont de 13 mètres carrés et espacés de 17 mètres. Vous obtenez un point pour un lancer qui atterrit et reste dans le terrain de l'adversaire, ou si un adversaire fait tomber votre lancer. Vos adversaires obtiennent un point si votre lancer touche l'extérieur de leur terrain. Si vous pouvez vous arranger pour que l'autre équipe touche les deux disques en même temps, vous obtenez deux points.",
-    },
-    {
-      id: 2,
-      title: 'DDC Video',
       vimeoId: '436158587',
       repetition: '',
       rest: '',
@@ -6025,14 +5882,6 @@ const cardinal = {
       id: 1,
       title: 'Les Points Cardinaux',
       animation: cardinalAnimation,
-      repetition: '',
-      rest: '',
-      instruction:
-        'Imaginez un compas avec votre pied de pivot au centre. Pivot N et lancer. Pivot NE et lancer. Pivot E et lancer et ainsi de suite autour du compas. Faire quatre fois le tour, en lançant deux fois les coups droits et deux fois les revers.',
-    },
-    {
-      id: 2,
-      title: 'Les Points Cardinaux',
       vimeoId: '462694734',
       repetition: '',
       rest: '',
@@ -6286,14 +6135,6 @@ const throwCatchThrow = {
       id: 1,
       title: 'Double Disques',
       animation: throwCatch,
-      repetition: '',
-      rest: '',
-      instruction:
-        "Le receveur a déjà un disque dans les mains. L'objectif est de ne jamais avoir les deux disques simultanément dans les mains. Quand le receveur est sur le point de recevoir le disque il lance son disque dans les airs, il attrape l'autre disque, il le lance, et rattrape son disque.",
-    },
-    {
-      id: 2,
-      title: 'Double Disques',
       vimeoId: '462695929',
       repetition: '',
       rest: '',
@@ -6325,14 +6166,6 @@ const stopFlow = {
       id: 1,
       title: 'Arrête le Flow',
       animation: stopFlowAnimation,
-      repetition: '',
-      rest: '',
-      instruction:
-        'Le défenseur ne regarde pas le disque et ne bloque pas le premier lancer. Quand le lancer est rattrapé, le second cutter doit faire un cut en ligne droite. Le premier défenseur doit essayer de bloquer la continuité.',
-    },
-    {
-      id: 2,
-      title: 'Arrête le Flow',
       vimeoId: '462695656',
       repetition: '',
       rest: '',
@@ -6806,14 +6639,6 @@ const ghostMark = {
       id: 1,
       title: 'La Marque Fantôme',
       animation: ghost,
-      repetition: '',
-      rest: '',
-      instruction:
-        "Deux joueurs lancent par paire. Les joueurs en défense, sans toucher le disque et les attaquants, doivent gêner la réception. Ils peuvent, par exemple, passer devant le disque au dernier moment. Si un turn-over est provoqué, sans que les défenseurs touchent le disque, les rôles s'inversent.",
-    },
-    {
-      id: 2,
-      title: 'La Marque Fantôme',
       vimeoId: '475061553',
       repetition: '',
       rest: '',

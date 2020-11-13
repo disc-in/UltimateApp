@@ -4953,14 +4953,6 @@ const trainDrill = {
       id: 1,
       title: 'Normal train',
       animation: train,
-      repetition: '',
-      rest: '',
-      instruction:
-        'Set up a vertical stack of 5 cutters with a thrower and a dump and decide on a force. The last cutter in the stack cuts deep while looking at the thrower. When the thrower fakes, the receiver cuts back in on the open side and receives the disc. The next player in the stack must begin their deep cut so as to be hitting full speed when the previous cutter catches the disc. The rest of the stack re-positions farther downfield, the thrower becomes the dump, the previous dump becomes the front of the stack. Repeat for the length of the field.',
-    },
-    {
-      id: 2,
-      title: 'Normal Train',
       vimeoId: '462695757',
       repetition: '',
       rest: '',
@@ -4968,7 +4960,7 @@ const trainDrill = {
         'Set up a vertical stack of 5 cutters with a thrower and a dump and decide on a force. The last cutter in the stack cuts deep while looking at the thrower. When the thrower fakes, the receiver cuts back in on the open side and receives the disc. The next player in the stack must begin their deep cut so as to be hitting full speed when the previous cutter catches the disc. The rest of the stack re-positions farther downfield, the thrower becomes the dump, the previous dump becomes the front of the stack. Repeat for the length of the field.',
     },
     {
-      id: 3,
+      id: 2,
       title: 'Racing train',
       animation: trainRace,
       repetition: '',
@@ -5011,7 +5003,7 @@ const giveAndGoDrill = {
       animation: giveAndGoRace,
       repetition: '',
       rest: '',
-      instruction: 'A race between 2 teams. First to 25 wins!',
+      instruction: 'A race between 2 teams. First team to 25 wins!',
     },
   ],
 };
@@ -5193,14 +5185,6 @@ const menageATroisDrill = {
       id: 1,
       title: 'Flat mark',
       animation: threePerson,
-      repetition: '',
-      rest: '',
-      instruction:
-        'The defensive player does a flat mark. The thrower becomes the next defender. The offensive player tries to beat the defender with fakes',
-    },
-    {
-      id: 2,
-      title: 'Flat Mark',
       vimeoId: '462695161',
       repetition: '',
       rest: '',
@@ -5208,7 +5192,7 @@ const menageATroisDrill = {
         'The defensive player does a flat mark. The thrower becomes the next defender. The offensive player tries to beat the defender with fakes',
     },
     {
-      id: 3,
+      id: 2,
       title: 'Redemption',
       animation: redemption,
       repetition: '',
@@ -5241,14 +5225,6 @@ const dwarfDuelDrill = {
       id: 1,
       title: 'Dwarf Duel',
       animation: dwarDuel,
-      repetition: '',
-      rest: '',
-      instruction:
-        'The coach (or an experienced player) throws hucks.\nWhen the offensive player starts to run, the defensive player can move. Neither player can jump to catch the disc',
-    },
-    {
-      id: 2,
-      title: 'Dwarf Duel',
       vimeoId: '462695083',
       repetition: '',
       rest: '',
@@ -5280,14 +5256,6 @@ const dishieChainDrill = {
       id: 1,
       title: 'Focus on Offense',
       animation: dishiesChain,
-      repetition: '',
-      rest: '',
-      instruction:
-        '2 columns: \n2 players from the same column go in direction of the thrower. When of them receive the disc.\n The thrower is looking ot make a dishie when the other cutter is going long.\n The cutter catching the long throw becomes the new first thrower for the other column',
-    },
-    {
-      id: 2,
-      title: 'Focus on Offense',
       vimeoId: '462694949',
       repetition: '',
       rest: '',
@@ -5295,17 +5263,9 @@ const dishieChainDrill = {
         '2 columns: \n2 players from the same column go in direction of the thrower. When of them receive the disc.\n The thrower is looking ot make a dishie when the other cutter is going long.\n The cutter catching the long throw becomes the new first thrower for the other column',
     },
     {
-      id: 3,
+      id: 2,
       title: 'Adding a Poach',
       animation: dishiesPoach,
-      repetition: '',
-      rest: '',
-      instruction:
-        'Add a defensive player to work on the poach with a side stack. The thrower has to throw to the free player.',
-    },
-    {
-      id: 4,
-      title: 'Adding a Poach',
       vimeoId: '462697155',
       repetition: '',
       rest: '',
@@ -5406,14 +5366,6 @@ const trainOfFakeDrill = {
       id: 1,
       title: 'Normal Train',
       animation: train,
-      repetition: '',
-      rest: '',
-      instruction:
-        'Set up a vertical stack of 5 cutters with a thrower and a dump and decide on a force. The last cutter in the stack cuts deep while looking at the thrower. When the thrower fakes, the receiver cuts back in on the open side and receives the disc. The next player in the stack must begin their deep cut so as to be hitting full speed when the previous cutter catches the disc. The rest of the stack re-positions farther downfield, the thrower becomes the dump, the previous dump becomes the front of the stack. Repeat for the length of the field.',
-    },
-    {
-      id: 2,
-      title: 'Normal Train',
       vimeoId: '462695757',
       repetition: '',
       rest: '',
@@ -5421,17 +5373,9 @@ const trainOfFakeDrill = {
         'Set up a vertical stack of 5 cutters with a thrower and a dump and decide on a force. The last cutter in the stack cuts deep while looking at the thrower. When the thrower fakes, the receiver cuts back in on the open side and receives the disc. The next player in the stack must begin their deep cut so as to be hitting full speed when the previous cutter catches the disc. The rest of the stack re-positions farther downfield, the thrower becomes the dump, the previous dump becomes the front of the stack. Repeat for the length of the field.',
     },
     {
-      id: 3,
+      id: 2,
       title: 'With One Fake',
       animation: oneFakeTrain,
-      repetition: '',
-      rest: '',
-      instruction:
-        'Set up the normal train drill. This time, however, the thrower can choose to make a second fake while the cutters is cutting in. If they do, the cutters clears to the second position in the stack (from the front), the thrower looks at the dump, the dump cuts upline and receives a pass. The drill continues.',
-    },
-    {
-      id: 4,
-      title: 'With One Fake',
       vimeoId: '462695420',
       repetition: '',
       rest: '',
@@ -5439,17 +5383,9 @@ const trainOfFakeDrill = {
         'Set up the normal train drill. This time, however, the thrower can choose to make a second fake while the cutters is cutting in. If they do, the cutters clears to the second position in the stack (from the front), the thrower looks at the dump, the dump cuts upline and receives a pass. The drill continues.',
     },
     {
-      id: 5,
+      id: 3,
       title: 'With Two Fakes',
       animation: twoFakeTrain,
-      repetition: '',
-      rest: '',
-      instruction:
-        'Set up the One Fake Train Drill. This time, when the reset cuts upline, the thrower can again fake. If they do, the front of the stack cuts back and receives a dump in the reset position. The drill continues.',
-    },
-    {
-      id: 6,
-      title: 'With Two Fakes',
       vimeoId: '462696097',
       repetition: '',
       rest: '',
@@ -5481,14 +5417,6 @@ const resetOpenDrill = {
       id: 1,
       title: 'The Backdoor',
       animation: backdoor,
-      repetition: '',
-      rest: '',
-      instruction:
-        "The thrower stands with a defender setting a force, and the reset handler sets up at a 45° angle behind the thrower, on the open side.\nThe thrower begins by looking up field, before turning and making eye contact with the reset. When eye contact is established, the reset makes a backdoor cut and receives a pass.\nThe disc is then sent back to the thrower, the thrower's defender switches the force, and the cut is made again in the opposite direction.",
-    },
-    {
-      id: 2,
-      title: 'The Backdoor',
       vimeoId: '462694656',
       repetition: '',
       rest: '',
@@ -5496,17 +5424,9 @@ const resetOpenDrill = {
         "The thrower stands with a defender setting a force, and the reset handler sets up at a 45° angle behind the thrower, on the open side.\nThe thrower begins by looking up field, before turning and making eye contact with the reset. When eye contact is established, the reset makes a backdoor cut and receives a pass.\nThe disc is then sent back to the thrower, the thrower's defender switches the force, and the cut is made again in the opposite direction.",
     },
     {
-      id: 3,
+      id: 2,
       title: 'Power Reset',
       animation: powerReset,
-      repetition: '',
-      rest: '',
-      instruction:
-        'The set-up is the same as in "The Backdoor." This time, when eye contact is made, the reset cuts up-field and receives a pass in front of them.',
-    },
-    {
-      id: 4,
-      title: 'Power Reset',
       vimeoId: '462695562',
       repetition: '',
       rest: '',
@@ -5514,17 +5434,9 @@ const resetOpenDrill = {
         'The set-up is the same as in "The Backdoor." This time, when eye contact is made, the reset cuts up-field and receives a pass in front of them.',
     },
     {
-      id: 5,
+      id: 3,
       title: 'Game Situation',
       animation: resetOpen,
-      repetition: '',
-      rest: '',
-      instruction:
-        'The set-up is the same as in "the Backdoor." The defense on the reset is real, and the reset must choose one of the two directions to cut to receive a pass. The reset is not allowed more than one juke. Each team does the same number of attempts, whichever team completes the most passes wins!',
-    },
-    {
-      id: 6,
-      title: 'Game Situation',
       vimeoId: '462696413',
       repetition: '',
       rest: '',
@@ -5556,14 +5468,6 @@ const resetBreakDrill = {
       id: 1,
       title: 'The 45° Upline',
       animation: upline,
-      repetition: '',
-      rest: '',
-      instruction:
-        'A thrower holds a disc with a defender who marks with a force. The reset handler begins in line horizontally with the thrower, on the break side.\nThe reset moves slowly upfield until they are at a 45° from the thrower. When the thrower makes eye contact, the reset makes a decisive upline cut.\nThe disc is then sent back to the thrower, and exercise is repeated with the opposite force.',
-    },
-    {
-      id: 2,
-      title: 'The 45° Upline',
       vimeoId: '462696489',
       repetition: '',
       rest: '',
@@ -5571,17 +5475,9 @@ const resetBreakDrill = {
         'A thrower holds a disc with a defender who marks with a force. The reset handler begins in line horizontally with the thrower, on the break side.\nThe reset moves slowly upfield until they are at a 45° from the thrower. When the thrower makes eye contact, the reset makes a decisive upline cut.\nThe disc is then sent back to the thrower, and exercise is repeated with the opposite force.',
     },
     {
-      id: 3,
+      id: 2,
       title: 'The Easy Reset',
       animation: around,
-      repetition: '',
-      rest: '',
-      instruction:
-        'Same set-up as "The 45° Upline." When eye contact is made, the thrower throws around the mark with the goal that the reset catches about where they had started before moving up field. The reset only moves once the pass is thrown. Switch sides.',
-    },
-    {
-      id: 4,
-      title: 'The Easy Reset',
       vimeoId: '462694618',
       repetition: '',
       rest: '',
@@ -5589,17 +5485,9 @@ const resetBreakDrill = {
         'Same set-up as "The 45° Upline." When eye contact is made, the thrower throws around the mark with the goal that the reset catches about where they had started before moving up field. The reset only moves once the pass is thrown. Switch sides.',
     },
     {
-      id: 5,
+      id: 3,
       title: 'Game Situation',
       animation: resetBreak,
-      repetition: '',
-      rest: '',
-      instruction:
-        'Same set-up as "The 45° Upline." The defense on the reset is real, and the reset must choose one of the two directions to cut to receive a pass. The reset is not allowed more than one juke. Each team does the same number of attempts, whichever team completes the most passes wins!',
-    },
-    {
-      id: 6,
-      title: 'Game Situation',
       vimeoId: '462696185',
       repetition: '',
       rest: '',
@@ -5631,14 +5519,6 @@ const youShallNotPassDrill = {
       id: 1,
       title: 'Blocking the Under',
       animation: blockTheUnder,
-      repetition: '',
-      rest: '',
-      instruction:
-        'Set up both an offense line and a defense line. One offensive player and one defender each run to the box then cut deep at the same time. The offensive player must cut back towards the thrower to try to catch the disc in the box, they are only allowed to change their direction this one time. The defender must position themselves so that the offense cannot pass them to return to the box. The thrower may only throw to under cuts.',
-    },
-    {
-      id: 2,
-      title: 'Blocking the Under',
       vimeoId: '462695379',
       repetition: '',
       rest: '',
@@ -5646,17 +5526,9 @@ const youShallNotPassDrill = {
         'Set up both an offense line and a defense line. One offensive player and one defender each run to the box then cut deep at the same time. The offensive player must cut back towards the thrower to try to catch the disc in the box, they are only allowed to change their direction this one time. The defender must position themselves so that the offense cannot pass them to return to the box. The thrower may only throw to under cuts.',
     },
     {
-      id: 3,
+      id: 2,
       title: 'Blocking Everything',
       animation: blockEverything,
-      repetition: '',
-      rest: '',
-      instruction:
-        'The same exercise as "Blocking the Under," but the thrower is allowed to throw both deep and under.',
-    },
-    {
-      id: 4,
-      title: 'Blocking Everything',
       vimeoId: '462695250',
       repetition: '',
       rest: '',
@@ -5664,7 +5536,7 @@ const youShallNotPassDrill = {
         'The same exercise as "Blocking the Under," but the thrower is allowed to throw both deep and under.',
     },
     {
-      id: 5,
+      id: 3,
       title: 'Make It Count',
       animation: blockEverything,
       repetition: '',
@@ -5736,14 +5608,6 @@ const discGolf = {
       id: 1,
       title: 'Disc Golf',
       animation: discGolfAnimation,
-      repetition: '',
-      rest: '',
-      instruction:
-        'The rules. Disc Golf is played like traditional golf, but with disc golf discs instead of balls and clubs. One throw (stroke) is counted each time the disc is thrown and when a penalty is incurred. The goal is to play each hole in the fewest strokes possible.',
-    },
-    {
-      id: 2,
-      title: 'Disc Golf',
       vimeoId: '475059721',
       repetition: '',
       rest: '',
@@ -5775,14 +5639,6 @@ const dDC = {
       id: 1,
       title: 'DDC',
       animation: dDCAnimation,
-      repetition: '',
-      rest: '',
-      instruction:
-        "DDC is played by two teams of two players each. The courts are 13 meters square and 17 meters apart. You get one point for a throw that lands and stays in the opponents' court, or if an opponent drops your throw. Your opponents get one point if your throw touches outside their court. If you can arrange it so that the other team is touching both discs at the same time, you get two points. That is called 'doubling' your opponents.",
-    },
-    {
-      id: 2,
-      title: 'DDC',
       vimeoId: '436158587',
       repetition: '',
       rest: '',
@@ -5929,14 +5785,6 @@ const cardinal = {
       id: 1,
       title: 'Cardinal Point',
       animation: cardinalAnimation,
-      repetition: '',
-      rest: '',
-      instruction:
-        'Kung-fu throwing : imagine a compass with your pivot foot at the center. Pivot N and throw. Pivot NE and throw. Pivot E and throw and so on around the compass. Go four times around, twice throwing forehands and twice throwing backhands.',
-    },
-    {
-      id: 2,
-      title: 'Cardinal Point',
       vimeoId: '462694734',
       repetition: '',
       rest: '',
@@ -6218,14 +6066,6 @@ const stopFlow = {
       id: 1,
       title: 'Stop the Flow',
       animation: stopFlowAnimation,
-      repetition: '',
-      rest: '',
-      instruction:
-        "The defenders of the first throw are not looking at the disc and they can't make a defense this throw. When the throw is made, the second cutter has to make a straight cut. The first defender tries to block the continuity",
-    },
-    {
-      id: 2,
-      title: 'Stop the Flow',
       vimeoId: '462695656',
       repetition: '',
       rest: '',
@@ -6695,14 +6535,6 @@ const ghostMark = {
       id: 1,
       title: 'The Ghost Mark',
       animation: ghost,
-      repetition: '',
-      rest: '',
-      instruction:
-        'Two players throw in pairs. The defending players, without touching the disc and the offensive players, try to interfere with the catch. They can, for example, pass in front of the disk at the last moment. If a turn-over is caused, without the defenders touching the disc, the roles are reversed.',
-    },
-    {
-      id: 2,
-      title: 'The Ghost Mark',
       vimeoId: '475061553',
       repetition: '',
       rest: '',

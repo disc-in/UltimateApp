@@ -25,23 +25,16 @@ class ProgressBar extends React.Component {
   render() {
     return (
       <View style={styles.mainContainer}>
+        <TouchableOpacity style={styles.controlsArea} onPress={() => this.props.playAnimation()}>
+          <MaterialCommunityIcons name="play" color={theme.COLOR_PRIMARY} size={42} />
+        </TouchableOpacity>
+
         <View style={styles.barArea}>
           {/* Gray bar */}
-          <View
-            style={[
-              styles.progressBar,
-              this.props.readonly && styles.largeProgressBar,
-              { width: this.state.stateFromProps.progressBarWidth },
-            ]}
-          />
+          <View style={[styles.progressBar, { width: this.state.stateFromProps.progressBarWidth }]} />
           {/* Black bar */}
           <Animated.View
-            style={[
-              styles.progressBar,
-              styles.black,
-              this.props.readonly && styles.largeProgressBar,
-              { width: this.state.stateFromProps.interpolatedWidth },
-            ]}
+            style={[styles.progressBar, styles.black, { width: this.state.stateFromProps.interpolatedWidth }]}
           />
 
           {/* Gray dots */}
@@ -64,6 +57,7 @@ class ProgressBar extends React.Component {
                 key={item.key + this.state.stateFromProps.progressBarDots.length}
               />
             ))}
+
           {/* White squares */}
           {this.props.readonly &&
             this.state.stateFromProps.progressBarDots?.map((item) => (
@@ -78,7 +72,7 @@ class ProgressBar extends React.Component {
           {!this.props.readonly &&
             this.state.stateFromProps.progressBarDots?.map((item) => (
               <Text
-                style={[styles.progressBarNumbers, { left: item.left + 4 }]}
+                style={[styles.progressBarNumbers, { left: item.left + 3 }]}
                 key={item.key + 2 * this.state.stateFromProps.progressBarDots.length}
               >
                 {item.key + 1}
@@ -105,21 +99,16 @@ class ProgressBar extends React.Component {
           ))}
         </View>
 
-        <View style={styles.controlsArea}>
-          <TouchableOpacity onPress={() => this.props.playAnimation()}>
-            <MaterialCommunityIcons name="play" color={theme.COLOR_PRIMARY} size={36} />
-          </TouchableOpacity>
-          {!this.props.readonly && (
-            <>
-              <TouchableOpacity onPress={() => this.props.onStepAdded()}>
-                <MaterialCommunityIcons name="plus-box" color={theme.COLOR_PRIMARY} size={22} />
-              </TouchableOpacity>
-              <TouchableOpacity onPress={() => this.props.onStepRemoved()}>
-                <MaterialCommunityIcons name="minus-box" color={theme.COLOR_PRIMARY} size={22} />
-              </TouchableOpacity>
-            </>
-          )}
-        </View>
+        {!this.props.readonly && (
+          <View style={styles.controlsArea}>
+            <TouchableOpacity onPress={() => this.props.onStepAdded()}>
+              <MaterialCommunityIcons name="plus-box" color={theme.COLOR_PRIMARY} size={30} />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => this.props.onStepRemoved()}>
+              <MaterialCommunityIcons name="minus-box" color={theme.COLOR_PRIMARY} size={30} />
+            </TouchableOpacity>
+          </View>
+        )}
       </View>
     );
   }
@@ -138,10 +127,12 @@ class ProgressBar extends React.Component {
 export default ProgressBar;
 
 const DOT_SIZE = 15;
+const BAR_TOP = 10;
+const BAR_HEIGHT = 5;
 
 const _initializeStateFromProps = (props) => {
   let progressBarWidth = props.animationWidth - 135;
-  if (props.readonly) progressBarWidth = props.animationWidth - 35;
+  if (props.readonly) progressBarWidth = props.animationWidth - 85;
   const stepWidth = progressBarWidth / props.stepCount;
   progressBarWidth -= stepWidth;
 
@@ -203,38 +194,34 @@ const _initializeStateFromProps = (props) => {
 const styles = StyleSheet.create({
   mainContainer: {
     flexDirection: 'row',
-    padding: 10,
+    paddingHorizontal: 10,
   },
   barArea: {
+    marginVertical: 10,
     flex: 1,
   },
   controlsArea: {
-    flexDirection: 'row',
-    paddingHorizontal: 10,
-    justifyContent: 'space-evenly',
-    alignItems: 'center',
+    marginHorizontal: 10,
   },
   progressBar: {
     position: 'absolute',
     backgroundColor: 'gray',
-    top: (DOT_SIZE - 4) / 2,
-    height: 4,
-  },
-  largeProgressBar: {
-    top: (DOT_SIZE + 10) / 2,
-    height: 10,
+    top: BAR_TOP,
+    height: BAR_HEIGHT,
   },
   dot: {
+    top: BAR_TOP + BAR_HEIGHT / 2 - DOT_SIZE / 2,
     position: 'absolute',
     backgroundColor: 'gray',
     height: DOT_SIZE,
     width: DOT_SIZE,
-    borderRadius: 10,
+    borderRadius: DOT_SIZE,
   },
   square: {
     position: 'absolute',
-    height: '100%',
-    width: DOT_SIZE / 2,
+    top: BAR_TOP,
+    height: BAR_HEIGHT,
+    width: BAR_HEIGHT,
     backgroundColor: 'white',
   },
   dotHitBox: {
@@ -251,6 +238,6 @@ const styles = StyleSheet.create({
   },
   progressBarNumbers: {
     position: 'absolute',
-    top: DOT_SIZE,
+    top: BAR_TOP + DOT_SIZE,
   },
 });

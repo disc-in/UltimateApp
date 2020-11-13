@@ -5,7 +5,7 @@
     "slug": "ultimate-app",
     "privacy": "public",
     "platforms": ["ios", "android", "web"],
-    "version": "0.2.0",
+    "version": "0.3.0",
     "githubUrl": "https://github.com/UltimateApp/UltimateApp",
     "orientation": "portrait",
     "primaryColor": "#2a9e91",
@@ -18,7 +18,7 @@
     "assetBundlePatterns": ["assets/**/*"],
     "ios": {
       "bundleIdentifier": "com.discin.discin",
-      "buildNumber": "0.2.0",
+      "buildNumber": "0.3.0",
       "supportsTablet": true,
       "infoPlist": {
         "CFBundleAllowMixedLocalizations": true
@@ -26,7 +26,7 @@
     },
     "android": {
       "package": "com.discin.discin",
-      "versionCode": 2,
+      "versionCode": 3,
       "permissions": []
     }
   }

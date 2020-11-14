@@ -1,203 +1,193 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<RenameDrillModal /> renders correctly 1`] = `
-<View
-  collapsable={false}
-  pointerEvents="box-none"
-  style={
-    Object {
-      "flex": 1,
-    }
-  }
->
-  <View>
-    <Modal
-      animationType="fade"
-      hardwareAccelerated={false}
-      onRequestClose={[Function]}
-      transparent={true}
-      useNativeDriver={true}
-      visible={true}
-    >
-      <View
-        accessible={true}
-        focusable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "backgroundColor": "rgba(0,0,0,0.5)",
-            "bottom": 0,
-            "left": 0,
-            "opacity": 1,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
+<View>
+  <Modal
+    animationType="fade"
+    hardwareAccelerated={false}
+    onRequestClose={[Function]}
+    transparent={true}
+    useNativeDriver={true}
+    visible={true}
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "rgba(0,0,0,0.5)",
+          "bottom": 0,
+          "left": 0,
+          "opacity": 1,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
         }
-      />
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
       <View
         style={
           Object {
             "alignItems": "center",
-            "flex": 1,
-            "justifyContent": "center",
+            "backgroundColor": "white",
+            "borderRadius": 10,
+            "elevation": 10,
+            "maxHeight": "80%",
+            "maxWidth": "80%",
+            "padding": 20,
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.25,
+            "shadowRadius": 3.84,
           }
         }
       >
+        <Text
+          style={
+            Object {
+              "fontSize": 20,
+              "fontWeight": "bold",
+              "marginBottom": 20,
+              "textAlign": "center",
+            }
+          }
+        >
+          Square
+        </Text>
+        <RCTScrollView
+          directionalLockEnabled={true}
+          keyboardShouldPersistTaps="always"
+          style={
+            Object {
+              "flexGrow": 0,
+            }
+          }
+        >
+          <View>
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                }
+              }
+            >
+              <TextInput
+                allowFontScaling={true}
+                onChangeText={[Function]}
+                placeholder="Click here to enter the new name"
+                rejectResponderTermination={true}
+                style={
+                  Object {
+                    "flexBasis": "80%",
+                    "marginHorizontal": 5,
+                  }
+                }
+                underlineColorAndroid="transparent"
+                value="Square"
+              />
+              <View
+                accessible={true}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#2a9e91",
+                    "borderRadius": 5,
+                    "height": 40,
+                    "justifyContent": "center",
+                    "marginTop": 10,
+                    "opacity": 1,
+                    "paddingHorizontal": 20,
+                    "paddingVertical": 10,
+                    "width": 120,
+                  }
+                }
+                testID="button"
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#fff",
+                      "fontSize": 16,
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  Apply
+                </Text>
+              </View>
+            </View>
+          </View>
+        </RCTScrollView>
         <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "white",
-              "borderRadius": 10,
-              "elevation": 10,
-              "maxHeight": "80%",
-              "maxWidth": "80%",
-              "padding": 20,
-              "shadowColor": "#000",
-              "shadowOffset": Object {
-                "height": 2,
-                "width": 0,
-              },
-              "shadowOpacity": 0.25,
-              "shadowRadius": 3.84,
+              "backgroundColor": "#fff",
+              "borderColor": "#2a9e91",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "height": 40,
+              "justifyContent": "center",
+              "marginTop": 20,
+              "opacity": 1,
+              "paddingHorizontal": 20,
+              "paddingVertical": 10,
+              "width": 120,
             }
           }
+          testID="button"
         >
           <Text
             style={
               Object {
-                "fontSize": 20,
+                "color": "#2a9e91",
+                "fontSize": 16,
                 "fontWeight": "bold",
-                "marginBottom": 20,
                 "textAlign": "center",
               }
             }
           >
-            Square
+            Back
           </Text>
-          <RCTScrollView
-            directionalLockEnabled={true}
-            keyboardShouldPersistTaps="always"
-            style={
-              Object {
-                "flexGrow": 0,
-              }
-            }
-          >
-            <View>
-              <View
-                style={
-                  Object {
-                    "alignItems": "center",
-                  }
-                }
-              >
-                <TextInput
-                  allowFontScaling={true}
-                  onChangeText={[Function]}
-                  placeholder="Click here to enter the new name"
-                  rejectResponderTermination={true}
-                  style={
-                    Object {
-                      "flexBasis": "80%",
-                      "marginHorizontal": 5,
-                    }
-                  }
-                  underlineColorAndroid="transparent"
-                  value="Square"
-                />
-                <View
-                  accessible={true}
-                  focusable={true}
-                  onClick={[Function]}
-                  onResponderGrant={[Function]}
-                  onResponderMove={[Function]}
-                  onResponderRelease={[Function]}
-                  onResponderTerminate={[Function]}
-                  onResponderTerminationRequest={[Function]}
-                  onStartShouldSetResponder={[Function]}
-                  style={
-                    Object {
-                      "alignItems": "center",
-                      "backgroundColor": "#2a9e91",
-                      "borderRadius": 5,
-                      "height": 40,
-                      "justifyContent": "center",
-                      "marginTop": 10,
-                      "opacity": 1,
-                      "paddingHorizontal": 20,
-                      "paddingVertical": 10,
-                      "width": 120,
-                    }
-                  }
-                  testID="button"
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#fff",
-                        "fontSize": 16,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    Apply
-                  </Text>
-                </View>
-              </View>
-            </View>
-          </RCTScrollView>
-          <View
-            accessible={true}
-            focusable={true}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#fff",
-                "borderColor": "#2a9e91",
-                "borderRadius": 5,
-                "borderWidth": 1,
-                "height": 40,
-                "justifyContent": "center",
-                "marginTop": 20,
-                "opacity": 1,
-                "paddingHorizontal": 20,
-                "paddingVertical": 10,
-                "width": 120,
-              }
-            }
-            testID="button"
-          >
-            <Text
-              style={
-                Object {
-                  "color": "#2a9e91",
-                  "fontSize": 16,
-                  "fontWeight": "bold",
-                  "textAlign": "center",
-                }
-              }
-            >
-              Back
-            </Text>
-          </View>
         </View>
       </View>
-    </Modal>
-  </View>
+    </View>
+  </Modal>
 </View>
 `;

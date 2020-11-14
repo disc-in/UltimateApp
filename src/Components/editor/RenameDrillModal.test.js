@@ -18,15 +18,13 @@ describe('<RenameDrillModal />', () => {
   it('renders correctly', async () => {
     const { toJSON } = await waitFor(() =>
       render(
-        <PaperProvider>
-          <RenameDrillModal
-            currentDrill={currentDrill}
-            onRename={onRename}
-            close={close}
-            customDrills={customDrills}
-            renameDrill={renameDrill}
-          />
-        </PaperProvider>,
+        <RenameDrillModal
+          currentDrill={currentDrill}
+          onRename={onRename}
+          close={close}
+          customDrills={customDrills}
+          renameDrill={renameDrill}
+        />,
       ),
     );
     expect(toJSON()).toMatchSnapshot();

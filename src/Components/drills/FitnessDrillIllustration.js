@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Animated, View, StyleSheet, Text, Dimensions, TouchableOpacity, FlatList } from 'react-native';
-import { WebView } from 'react-native-webview';
 import { Easing } from 'react-native-reanimated';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
@@ -54,49 +53,6 @@ const FitnessDrillIllustration = (props) => {
           <MaterialCommunityIcons name="redo-variant" color={theme.COLOR_PRIMARY} size={50} />
         </TouchableOpacity>
       </View>
-    );
-  };
-
-  const renderYoutube = ({ illustrationSource, title, instruction }) => {
-    return (
-      <>
-        <View style={{ height: 250 }}>
-          <WebView source={{ uri: illustrationSource }} />
-        </View>
-        {stepsCount > 1 && (
-          <>
-            <View style={styles.step}>
-              <View style={styles.containerAnimation}>
-                <View style={styles.descriptionAnimation}>
-                  <View style={styles.subSubWrapper}>
-                    <Text style={styles.fitness}>{title}</Text>
-                  </View>
-                  <TouchableOpacity style={styles.container} onPress={() => checkAnimation()}>
-                    <Animated.View style={{ opacity: opacityUnchecked }}>
-                      <MaterialCommunityIcons
-                        style={styles.buttonNext}
-                        name="check-circle-outline"
-                        color={theme.COLOR_PRIMARY}
-                        size={26}
-                      />
-                    </Animated.View>
-                    <Animated.View style={{ opacity: opacityChecked }}>
-                      <MaterialCommunityIcons
-                        style={styles.buttonNext}
-                        name="check-circle"
-                        color={theme.COLOR_PRIMARY}
-                        size={26}
-                      />
-                    </Animated.View>
-                  </TouchableOpacity>
-                </View>
-              </View>
-            </View>
-            <View style={styles.lines} />
-            <Text style={styles.instruction}>{instruction}</Text>
-          </>
-        )}
-      </>
     );
   };
 
@@ -199,7 +155,6 @@ const FitnessDrillIllustration = (props) => {
     <View style={styles.container}>
       {activeIndex === props.drill.steps.length && renderFinish()}
       {currentStep?.illustrationType === IllustrationType.ANIMATION && renderAnimation(currentStep)}
-      {currentStep?.illustrationType === IllustrationType.YOUTUBE && renderYoutube(currentStep)}
       {currentStep?.illustrationType === IllustrationType.VIMEO && renderVimeo(currentStep)}
     </View>
   );
@@ -225,17 +180,9 @@ const styles = StyleSheet.create({
     width: 80,
     height: 80,
   },
-  containerAnimation: {
-    flexDirection: 'row',
-    alignSelf: 'flex-end',
-  },
   step: {
     flexDirection: 'row',
     padding: 20,
-  },
-  descriptionAnimation: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
   },
   doneAnimation: {
     flex: 1,
@@ -264,13 +211,6 @@ const styles = StyleSheet.create({
     flexGrow: 0,
     flexShrink: 0,
     alignItems: 'center',
-  },
-  subSubWrapper: {
-    flex: 6,
-  },
-  lines: {
-    borderBottomColor: '#DCDCDC',
-    borderBottomWidth: 1,
   },
   instruction: {
     marginTop: 20,

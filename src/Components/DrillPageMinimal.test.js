@@ -1,9 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { render, fireEvent, act } from '@testing-library/react-native';
-import { NavigationContext, NavigationContainer } from '@react-navigation/native';
-
-import { createStackNavigator } from '@react-navigation/stack';
+import { render, fireEvent } from '@testing-library/react-native';
+import { NavigationContext } from '@react-navigation/native';
 
 import fixtures from '../Fixtures/TestFixtures';
 import store from '../Store/testStore';
@@ -38,32 +36,6 @@ describe('<DrillPageMinimal />', () => {
       </NavigationContext.Provider>,
     );
     expect(tree).toMatchSnapshot();
-  });
-
-  it('links to drill page', async () => {
-    const navigate = jest.fn();
-
-    const Stack = createStackNavigator();
-    const { getByTestId } = render(
-      <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen
-            name="DrillPageMinimal"
-            component={DrillPageMinimal}
-            initialParams={route.params}
-            listeners={({ navigation }) => ({
-              transitionStart: (e) => {
-                navigation.navigate = navigate;
-              },
-            })}
-          />
-        </Stack.Navigator>
-      </NavigationContainer>,
-    );
-
-    await act(async () => await fireEvent.press(getByTestId('detailsButton')));
-
-    expect(navigate).toBeCalledWith('DrillPage', { drill });
   });
 
   it('links to next drill within training when finished', async () => {

@@ -1,7 +1,6 @@
 import React, { useLayoutEffect, useCallback } from 'react';
-import { Platform, StyleSheet, View, ScrollView, Text, TouchableOpacity } from 'react-native';
+import { Platform, StyleSheet, View, ScrollView, Text } from 'react-native';
 import { connect } from 'react-redux';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
@@ -21,10 +20,6 @@ export const DrillPageMinimal = (props) => {
   const currentDrillIndex = training.drills.findIndex(({ id }) => id === drill.id);
   if (currentDrillIndex === -1) navigation.navigate('TrainingPage', { training });
   const isLastTraining = currentDrillIndex === training.drills.length - 1;
-
-  const goToFullDrill = useCallback(() => {
-    navigation.navigate('DrillPage', { drill });
-  }, [navigation, drill]);
 
   const goToNextDrill = useCallback(() => {
     const nextDrill = training.drills[currentDrillIndex + 1];
@@ -52,21 +47,10 @@ export const DrillPageMinimal = (props) => {
       </View>
     );
 
-    const headerRight = () => {
-      return (
-        <View style={styles.headerRight}>
-          <TouchableOpacity onPress={goToFullDrill} testID="detailsButton">
-            <MaterialCommunityIcons name="information-outline" color={theme.COLOR_PRIMARY} size={35} />
-          </TouchableOpacity>
-        </View>
-      );
-    };
-
     navigation.setOptions({
       headerTitleAlign: 'center',
       headerStyle: { height: 100 },
       headerTitle,
-      headerRight,
     });
   }, [navigation, currentDrillIndex, training]);
 
@@ -148,8 +132,5 @@ const styles = StyleSheet.create({
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     width: '100%',
     alignItems: 'center',
-  },
-  headerRight: {
-    marginRight: 20,
   },
 });

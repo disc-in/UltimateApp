@@ -1,11 +1,12 @@
 import React, { useLayoutEffect, useCallback } from 'react';
-import { Platform, StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import { Platform, StyleSheet, View, ScrollView, Text, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
 
+import Description from './drills/Description';
 import FitnessDrillIllustration from './drills/FitnessDrillIllustration';
 import FrisbeeDrillIllustration from './drills/FrisbeeDrillIllustration';
 import ButtonNext from './shared/Button';
@@ -72,10 +73,11 @@ export const DrillPageMinimal = (props) => {
   return (
     <>
       <View style={styles.drillPage}>
-        <View style={styles.illustration}>
+        <ScrollView style={styles.illustration}>
           {drill.type === DrillTypes.FRISBEE && <FrisbeeDrillIllustration drill={drill} />}
           {drill.type === DrillTypes.FITNESS && <FitnessDrillIllustration drill={drill} />}
-        </View>
+          <Description drill={drill} minimal />
+        </ScrollView>
       </View>
       <View style={styles.footer}>
         {isLastTraining ? (
@@ -121,7 +123,7 @@ const styles = StyleSheet.create({
     marginLeft: '10%',
     marginTop: 15,
     marginBottom: 5,
-    width: '100%',
+    width: '80%',
   },
   titleContainer: {
     flexShrink: 1,

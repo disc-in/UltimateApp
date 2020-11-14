@@ -8,6 +8,7 @@ import { toggleFavorite } from '../Store/Actions/favoriteAction';
 import { DrillTypes } from '../Fixtures/config';
 import theme from '../styles/theme.style';
 
+import Description from './drills/Description';
 import FitnessDrillIllustration from './drills/FitnessDrillIllustration';
 import FrisbeeDrillIllustration from './drills/FrisbeeDrillIllustration';
 import StartButton from './drills/StartButton';
@@ -74,44 +75,9 @@ export const DrillPage = (props) => {
         </View>
         <StartButton onPress={onPressStartButton} text={I18n.t('drillPage.start')} />
       </ImageBackground>
-      <View style={styles.separator} />
-      <View ref={firstDrill} style={styles.description}>
-        <View style={styles.descriptionItem}>
-          <Text style={styles.descriptionTitle}>{I18n.t('drillPage.goal')}</Text>
-          <Text style={styles.descriptionText}>
-            {drill.goals
-              .map((goal) =>
-                I18n.t(`data.fitnessGoals.${goal}`, { defaults: [{ scope: `data.frisbeeGoals.${goal}` }] }),
-              )
-              .join(', ')}
-          </Text>
-        </View>
+      <View ref={firstDrill}>
+        <Description drill={drill} />
       </View>
-      <View style={styles.lines} />
-      <View style={styles.description}>
-        <View style={styles.descriptionItem}>
-          <Text style={styles.descriptionTitle}>{I18n.t('drillPage.equipment')}</Text>
-          <Text style={styles.descriptionText}>{drill.equipment}</Text>
-        </View>
-      </View>
-      <View style={styles.lines} />
-      <View style={styles.description}>
-        <View style={styles.descriptionItem}>
-          <Text style={styles.descriptionTitle}>{I18n.t('drillPage.description')}</Text>
-          <Text style={styles.descriptionText}>{drill.description}</Text>
-        </View>
-      </View>
-      {drill.type === DrillTypes.FRISBEE && drill.inGame && (
-        <>
-          <View style={styles.lines} />
-          <View style={styles.description}>
-            <View style={styles.descriptionItem}>
-              <Text style={styles.descriptionTitle}>{I18n.t('drillPage.inGame')}</Text>
-              <Text style={styles.descriptionText}>{drill.inGame}</Text>
-            </View>
-          </View>
-        </>
-      )}
       <View style={styles.animation}>
         {drill.type === DrillTypes.FRISBEE && <FrisbeeDrillIllustration drill={drill} />}
         {drill.type === DrillTypes.FITNESS && <FitnessDrillIllustration drill={drill} />}
@@ -160,49 +126,12 @@ const styles = StyleSheet.create({
     borderRightWidth: 0.5,
     borderRightColor: theme.COLOR_PRIMARY_LIGHT,
   },
-  videoLink: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  videoLinkText: {
-    fontSize: 16,
-    fontWeight: 'bold',
-  },
-  description: {
-    padding: 20,
-  },
-  descriptionItem: {
-    marginBottom: 15,
-  },
-  descriptionTitle: {
-    marginBottom: 10,
-    textAlign: 'center',
-    fontWeight: 'bold',
-    fontSize: theme.FONT_SIZE_LARGE,
-    color: theme.COLOR_PRIMARY,
-  },
-  descriptionText: {
-    color: theme.COLOR_SECONDARY,
-    textAlign: 'center',
-    fontSize: theme.FONT_SIZE_MEDIUM,
-  },
   infoDrill: {
     color: theme.COLOR_PRIMARY_LIGHT,
     paddingHorizontal: 30,
     fontSize: theme.FONT_SIZE_LARGE,
   },
   infoSubWrapper: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  gradient: {
-    flex: 1,
-    width: 100,
-    height: 100,
-    borderRadius: 50,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -213,10 +142,6 @@ const styles = StyleSheet.create({
     color: theme.COLOR_PRIMARY_LIGHT,
     paddingHorizontal: 30,
     fontSize: theme.FONT_SIZE_SMALL,
-  },
-  lines: {
-    borderBottomColor: theme.COLOR_SECONDARY_LIGHT,
-    borderBottomWidth: 1,
   },
 });
 

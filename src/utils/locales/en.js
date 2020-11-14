@@ -130,6 +130,17 @@ export default {
       cta: 'Apply',
     },
   },
+  drills: {
+    description: {
+      goal: 'Good for',
+      equipment: 'Equipment',
+      description: 'Description',
+      inGame: 'In Game',
+    },
+    fitnessDrillIllustration: {
+      redoMessage: 'You have completed the drill!',
+    },
+  },
   feedback: {
     alert: {
       title: 'Get in touch!',
@@ -139,9 +150,6 @@ export default {
       cta: 'Send',
     },
     subject: 'Feedback concerning Disc In',
-  },
-  fitnessDrillIllustration: {
-    redoMessage: 'You have completed the drill!',
   },
   dictionaryPage: {
     translation: 'Translation: ',
@@ -158,10 +166,6 @@ export default {
     players: 'players',
     level: 'level',
     start: 'Start',
-    goal: 'Good for',
-    equipment: 'Equipment',
-    description: 'Description',
-    inGame: 'In Game',
   },
   drillPageMinimal: {
     finish: 'Finish Training!',

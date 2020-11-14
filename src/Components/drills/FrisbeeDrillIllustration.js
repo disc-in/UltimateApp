@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { View, ScrollView, StyleSheet, Text, Dimensions, TouchableOpacity, SafeAreaView } from 'react-native';
-import { WebView } from 'react-native-webview';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
@@ -55,20 +54,6 @@ const FrisbeeDrillIllustration = (props) => {
     );
   };
 
-  const displayYoutube = ({ illustrationSource }) => {
-    return (
-      <View style={styles.contentWrapper}>
-        <View style={{ height: 250 }}>
-          <WebView
-            source={{
-              uri: illustrationSource,
-            }}
-          />
-        </View>
-      </View>
-    );
-  };
-
   const displayVimeo = ({ illustrationSource, sounds }) => {
     return (
       <View style={styles.contentWrapper}>
@@ -97,7 +82,6 @@ const FrisbeeDrillIllustration = (props) => {
         <View style={styles.pagination}>{renderPagination()}</View>
         <ScrollView>
           {item.illustrationType === IllustrationType.ANIMATION && displayAnimation(item)}
-          {item.illustrationType === IllustrationType.YOUTUBE && displayYoutube(item)}
           {item.illustrationType === IllustrationType.VIMEO && displayVimeo(item)}
         </ScrollView>
       </>
@@ -151,8 +135,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   instruction: {
-    marginBottom: 10,
-    marginHorizontal: 10,
+    margin: 10,
     fontSize: theme.FONT_SIZE_MEDIUM,
     color: theme.COLOR_PRIMARY,
   },
@@ -175,10 +158,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   contentWrapper: { minHeight: 375 },
-  centerContainer: {
-    flex: 1,
-    alignItems: 'center',
-  },
 });
 
 export default FrisbeeDrillIllustration;

@@ -41,7 +41,6 @@
     "react-native-snap-carousel": "^3.9.1",
     "react-native-swipe-gestures": "^1.0.5",
     "react-native-web": "~0.13.7",
-    "react-native-webview": "10.7.0",
     "react-redux": "^7.2.1",
     "redux": "^4.0.5",
     "redux-persist": "^5.10.0",

@@ -1,9 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { render, fireEvent } from '@testing-library/react-native';
-import { connect, Provider } from 'react-redux';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContext } from '@react-navigation/native';
 
 import fixtures from '../Fixtures/TestFixtures';
 import store from '../Store/testStore';
@@ -24,14 +22,28 @@ describe('<DrillPageMinimal />', () => {
       drill,
     },
   };
+  // fake NavigationContext value data
+  const navContext = {
+    isFocused: () => true,
+    // addListener returns an unscubscribe function.
+    addListener: jest.fn(() => jest.fn()),
+  };
 
   it('renders correctly with a training and a drill', () => {
-    const tree = renderer.create(<DrillPageMinimal navigation={navigation} route={route} />).toJSON();
+    const tree = renderer.create(
+      <NavigationContext.Provider value={navContext}>
+        <DrillPageMinimal navigation={navigation} route={route} />
+      </NavigationContext.Provider>,
+    );
     expect(tree).toMatchSnapshot();
   });
 
   it('links to drill page', async () => {
-    const { getByTestId } = render(<DrillPageMinimal navigation={navigation} route={route} />);
+    const { getByTestId } = render(
+      <NavigationContext.Provider value={navContext}>
+        <DrillPageMinimal navigation={navigation} route={route} />
+      </NavigationContext.Provider>,
+    );
 
     await fireEvent.press(getByTestId('detailsButton'));
 
@@ -39,7 +51,11 @@ describe('<DrillPageMinimal />', () => {
   });
 
   it('links to next drill within training when finished', async () => {
-    const { getByText } = render(<DrillPageMinimal navigation={navigation} route={route} />);
+    const { getByText } = render(
+      <NavigationContext.Provider value={navContext}>
+        <DrillPageMinimal navigation={navigation} route={route} />
+      </NavigationContext.Provider>,
+    );
 
     await fireEvent.press(getByText('Next drill'));
 
@@ -58,7 +74,9 @@ describe('<DrillPageMinimal />', () => {
     };
 
     const { getByText } = render(
-      <DrillPageMinimal navigation={navigation} route={route} completeTraining={completeTraining} />,
+      <NavigationContext.Provider value={navContext}>
+        <DrillPageMinimal navigation={navigation} route={route} completeTraining={completeTraining} />
+      </NavigationContext.Provider>,
     );
 
     await fireEvent.press(getByText('Finish Training!'));

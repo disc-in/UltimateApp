@@ -67,27 +67,27 @@ describe('<FitnessFilters />', () => {
         ),
       );
 
-      expect(getByText('3 drills available')).toBeDefined();
+      expect(getByText('See 3 drills')).toBeDefined();
 
       await fireEvent.press(getByText(Levels.BEGINNER));
 
-      expect(getByText('1 drill available')).toBeDefined();
+      expect(getByText('See 1 drill')).toBeDefined();
 
       await fireEvent.press(getByText(Levels.INTERMEDIATE));
 
-      expect(getByText('2 drills available')).toBeDefined();
+      expect(getByText('See 2 drills')).toBeDefined();
 
       await fireEvent.press(getByText(Levels.BEGINNER));
 
-      expect(getByText('1 drill available')).toBeDefined();
+      expect(getByText('See 1 drill')).toBeDefined();
 
       await fireEvent.press(getByText(Levels.INTERMEDIATE));
 
-      expect(getByText('3 drills available')).toBeDefined();
+      expect(getByText('See 3 drills')).toBeDefined();
 
       await fireEvent.press(getByText(Levels.ADVANCED));
 
-      await fireEvent.press(getByTestId('validateButton'));
+      await fireEvent.press(getByText('See 1 drill'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
         type: DrillTypes.FITNESS,
@@ -141,27 +141,27 @@ describe('<FitnessFilters />', () => {
         ),
       );
 
-      expect(getByText('3 drills available')).toBeDefined();
+      expect(getByText('See 3 drills')).toBeDefined();
 
       await fireEvent.press(getByText(Intensities.LOW));
 
-      expect(getByText('1 drill available')).toBeDefined();
+      expect(getByText('See 1 drill')).toBeDefined();
 
       await fireEvent.press(getByText(Intensities.MODERATE));
 
-      expect(getByText('2 drills available')).toBeDefined();
+      expect(getByText('See 2 drills')).toBeDefined();
 
       await fireEvent.press(getByText(Intensities.LOW));
 
-      expect(getByText('1 drill available')).toBeDefined();
+      expect(getByText('See 1 drill')).toBeDefined();
 
       await fireEvent.press(getByText(Intensities.MODERATE));
 
-      expect(getByText('3 drills available')).toBeDefined();
+      expect(getByText('See 3 drills')).toBeDefined();
 
       await fireEvent.press(getByText(Intensities.HIGH));
 
-      await fireEvent.press(getByTestId('validateButton'));
+      await fireEvent.press(getByText('See 1 drill'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
         type: DrillTypes.FITNESS,
@@ -215,27 +215,27 @@ describe('<FitnessFilters />', () => {
         ),
       );
 
-      expect(getByText('3 drills available')).toBeDefined();
+      expect(getByText('See 3 drills')).toBeDefined();
 
       await fireEvent.press(getByText(EquipmentLabels.NONE));
 
-      expect(getByText('1 drill available')).toBeDefined();
+      expect(getByText('See 1 drill')).toBeDefined();
 
       await fireEvent.press(getByText(EquipmentLabels.BASIC));
 
-      expect(getByText('2 drills available')).toBeDefined();
+      expect(getByText('See 2 drills')).toBeDefined();
 
       await fireEvent.press(getByText(EquipmentLabels.NONE));
 
-      expect(getByText('1 drill available')).toBeDefined();
+      expect(getByText('See 1 drill')).toBeDefined();
 
       await fireEvent.press(getByText(EquipmentLabels.BASIC));
 
-      expect(getByText('3 drills available')).toBeDefined();
+      expect(getByText('See 3 drills')).toBeDefined();
 
       await fireEvent.press(getByText(EquipmentLabels.FULL));
 
-      await fireEvent.press(getByTestId('validateButton'));
+      await fireEvent.press(getByText('See 1 drill'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
         type: DrillTypes.FITNESS,
@@ -289,29 +289,29 @@ describe('<FitnessFilters />', () => {
         ),
       );
 
-      expect(getByText('3 drills available')).toBeDefined();
+      expect(getByText('See 3 drills')).toBeDefined();
 
       await fireEvent.press(getByText(SeasonTimings.OFF_SEASON));
 
-      expect(getByText('1 drill available')).toBeDefined();
+      expect(getByText('See 1 drill')).toBeDefined();
 
       await fireEvent.press(getByText(SeasonTimings.PRE_SEASON));
 
-      expect(getByText('2 drills available')).toBeDefined();
+      expect(getByText('See 2 drills')).toBeDefined();
 
       await fireEvent.press(getByText(SeasonTimings.OFF_SEASON));
 
-      expect(getByText('1 drill available')).toBeDefined();
+      expect(getByText('See 1 drill')).toBeDefined();
 
       await fireEvent.press(getByText(SeasonTimings.PRE_SEASON));
 
-      expect(getByText('3 drills available')).toBeDefined();
+      expect(getByText('See 3 drills')).toBeDefined();
 
       await fireEvent.press(getByText(SeasonTimings.IN_SEASON));
 
-      expect(getByText('1 drill available')).toBeDefined();
+      expect(getByText('See 1 drill')).toBeDefined();
 
-      await fireEvent.press(getByTestId('validateButton'));
+      await fireEvent.press(getByText('See 1 drill'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
         type: DrillTypes.FITNESS,
@@ -366,29 +366,29 @@ describe('<FitnessFilters />', () => {
         ),
       );
 
-      expect(getByText('4 drills available')).toBeDefined();
+      expect(getByText('See 4 drills')).toBeDefined();
 
       await fireEvent.press(getByText(FitnessGoals.LEGS));
 
-      expect(getByText('2 drills available')).toBeDefined();
+      expect(getByText('See 2 drills')).toBeDefined();
 
       await fireEvent.press(getByText(FitnessGoals.FULL_BODY));
 
-      expect(getByText('3 drills available')).toBeDefined();
+      expect(getByText('See 3 drills')).toBeDefined();
 
       await fireEvent.press(getByText(FitnessGoals.LEGS));
 
-      expect(getByText('1 drill available')).toBeDefined();
+      expect(getByText('See 1 drill')).toBeDefined();
 
       await fireEvent.press(getByText(FitnessGoals.FULL_BODY));
 
-      expect(getByText('4 drills available')).toBeDefined();
+      expect(getByText('See 4 drills')).toBeDefined();
 
       await fireEvent.press(getByText(FitnessGoals.UPPER));
 
-      expect(getByText('1 drill available')).toBeDefined();
+      expect(getByText('See 1 drill')).toBeDefined();
 
-      await fireEvent.press(getByTestId('validateButton'));
+      await fireEvent.press(getByText('See 1 drill'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
         type: DrillTypes.FITNESS,
@@ -443,14 +443,14 @@ describe('<FitnessFilters />', () => {
       );
 
       expect(getByText('How much time do you have?   - mins')).toBeDefined();
-      expect(getByText('3 drills available')).toBeDefined();
+      expect(getByText('See 3 drills')).toBeDefined();
 
       await fireEvent(getByTestId('durationSlider'), 'valueChange', 5);
 
       expect(getByText('How much time do you have?   5 mins')).toBeDefined();
-      expect(getByText('2 drills available')).toBeDefined();
+      expect(getByText('See 2 drills')).toBeDefined();
 
-      await fireEvent.press(getByTestId('validateButton'));
+      await fireEvent.press(getByText('See 2 drills'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
         type: DrillTypes.FITNESS,
@@ -506,13 +506,13 @@ describe('<FitnessFilters />', () => {
         ),
       );
 
-      expect(getByText('3 drills available')).toBeDefined();
+      expect(getByText('See 3 drills')).toBeDefined();
 
       await fireEvent.press(getByText('Favorites only'));
 
-      expect(getByText('1 drill available')).toBeDefined();
+      expect(getByText('See 1 drill')).toBeDefined();
 
-      await fireEvent.press(getByTestId('validateButton'));
+      await fireEvent.press(getByText('See 1 drill'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
         type: DrillTypes.FITNESS,
@@ -569,19 +569,19 @@ describe('<FitnessFilters />', () => {
       );
 
       expect(getByText('How much time do you have?   - mins')).toBeDefined();
-      expect(getByText('3 drills available')).toBeDefined();
+      expect(getByText('See 3 drills')).toBeDefined();
 
       await fireEvent(getByTestId('durationSlider'), 'valueChange', 5);
 
       expect(getByText('How much time do you have?   5 mins')).toBeDefined();
-      expect(getByText('2 drills available')).toBeDefined();
+      expect(getByText('See 2 drills')).toBeDefined();
 
       await fireEvent.press(getByTestId('resetButton'));
 
       expect(getByText('How much time do you have?   - mins')).toBeDefined();
-      expect(getByText('3 drills available')).toBeDefined();
+      expect(getByText('See 3 drills')).toBeDefined();
 
-      await fireEvent.press(getByTestId('validateButton'));
+      await fireEvent.press(getByText('See 3 drills'));
 
       expect(navigate).toBeCalledWith('DrillListPage', {
         type: DrillTypes.FITNESS,

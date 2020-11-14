@@ -1,7 +1,9 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { render, fireEvent } from '@testing-library/react-native';
-import { NavigationContext } from '@react-navigation/native';
+import { render, fireEvent, act } from '@testing-library/react-native';
+import { NavigationContext, NavigationContainer } from '@react-navigation/native';
+
+import { createStackNavigator } from '@react-navigation/stack';
 
 import fixtures from '../Fixtures/TestFixtures';
 import store from '../Store/testStore';
@@ -39,15 +41,29 @@ describe('<DrillPageMinimal />', () => {
   });
 
   it('links to drill page', async () => {
+    const navigate = jest.fn();
+
+    const Stack = createStackNavigator();
     const { getByTestId } = render(
-      <NavigationContext.Provider value={navContext}>
-        <DrillPageMinimal navigation={navigation} route={route} />
-      </NavigationContext.Provider>,
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen
+            name="DrillPageMinimal"
+            component={DrillPageMinimal}
+            initialParams={route.params}
+            listeners={({ navigation }) => ({
+              transitionStart: (e) => {
+                navigation.navigate = navigate;
+              },
+            })}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>,
     );
 
-    await fireEvent.press(getByTestId('detailsButton'));
+    await act(async () => await fireEvent.press(getByTestId('detailsButton')));
 
-    expect(navigation.navigate).toBeCalledWith('DrillPage', { drill });
+    expect(navigate).toBeCalledWith('DrillPage', { drill });
   });
 
   it('links to next drill within training when finished', async () => {

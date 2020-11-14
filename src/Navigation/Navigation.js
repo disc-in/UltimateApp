@@ -65,9 +65,7 @@ export const Navigation = () => (
     <Stack.Screen
       name="DrillPageMinimal"
       component={DrillPageMinimal}
-      options={({ route }) => ({
-        title: I18n.t('navigation.drillPageMinimal', { training: route.params.training.title }),
-      })}
+      options={({ route }) => ({ title: route.params.training.title })}
     />
     <Stack.Screen
       name="AnimationEditorPage"

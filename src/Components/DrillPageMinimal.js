@@ -43,9 +43,9 @@ export const DrillPageMinimal = (props) => {
     const headerTitle = () => (
       <View style={styles.headerTitle}>
         <Text numberOfLines={1} style={styles.headerTitleText}>
-          {I18n.t('drillPageMinimal.headerTitle', { trainingTitle: drill.title })}
+          {drill.title}
         </Text>
-        <View >
+        <View>
           <ProgressBar total={training.drills.length} current={currentDrillIndex + 1} onDotPress={onProgressDotPress} />
         </View>
       </View>
@@ -58,7 +58,7 @@ export const DrillPageMinimal = (props) => {
             <MaterialCommunityIcons name="information-outline" color={theme.COLOR_PRIMARY} size={35} />
           </TouchableOpacity>
         </View>
-      )
+      );
     };
 
     navigation.setOptions({

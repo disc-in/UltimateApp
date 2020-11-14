@@ -66,7 +66,6 @@ export default {
       noEquipment: 'Entraînements poids du corps',
       fullEquipment: 'Entraînements en salle',
     },
-    drillPageMinimal: '{{training}} ',
     animationEditorPage: 'Nouvel exercice',
     dictionaryPage: 'Lexique',
     essentialPage: 'Les bases du jeu',
@@ -165,8 +164,6 @@ export default {
     inGame: 'En Match',
   },
   drillPageMinimal: {
-    headerTitle: '{{trainingTitle}}',
-    details: 'DÉTAILS',
     finish: "Terminer l'entraînement !",
     next: 'Exercice suivant',
   },

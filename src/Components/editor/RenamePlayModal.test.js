@@ -18,15 +18,13 @@ describe('<RenamePlayModal />', () => {
   it('renders correctly', async () => {
     const { toJSON } = await waitFor(() =>
       render(
-        <PaperProvider>
-          <RenamePlayModal
-            currentPlay={currentPlay}
-            onRename={onRename}
-            close={close}
-            customPlays={customPlays}
-            renamePlay={renamePlay}
-          />
-        </PaperProvider>,
+        <RenamePlayModal
+          currentPlay={currentPlay}
+          onRename={onRename}
+          close={close}
+          customPlays={customPlays}
+          renamePlay={renamePlay}
+        />,
       ),
     );
     expect(toJSON()).toMatchSnapshot();
@@ -35,15 +33,13 @@ describe('<RenamePlayModal />', () => {
   it('does nothing when using Back', async () => {
     const { getByPlaceholderText, getByText } = await waitFor(() =>
       render(
-        <PaperProvider>
-          <RenamePlayModal
-            currentPlay={currentPlay}
-            onRename={onRename}
-            close={close}
-            customPlays={customPlays}
-            renamePlay={renamePlay}
-          />
-        </PaperProvider>,
+        <RenamePlayModal
+          currentPlay={currentPlay}
+          onRename={onRename}
+          close={close}
+          customPlays={customPlays}
+          renamePlay={renamePlay}
+        />,
       ),
     );
 
@@ -60,15 +56,13 @@ describe('<RenamePlayModal />', () => {
   it('renames the play on validation', async () => {
     const { getByPlaceholderText, getByText } = await waitFor(() =>
       render(
-        <PaperProvider>
-          <RenamePlayModal
-            currentPlay={currentPlay}
-            onRename={onRename}
-            close={close}
-            customPlays={customPlays}
-            renamePlay={renamePlay}
-          />
-        </PaperProvider>,
+        <RenamePlayModal
+          currentPlay={currentPlay}
+          onRename={onRename}
+          close={close}
+          customPlays={customPlays}
+          renamePlay={renamePlay}
+        />,
       ),
     );
 

@@ -117,14 +117,34 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
           style={
             Object {
               "flexDirection": "row",
-              "padding": 10,
+              "paddingHorizontal": 10,
             }
           }
         >
           <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "marginHorizontal": 10,
+                "opacity": 1,
+              }
+            }
+          >
+            <Text />
+          </View>
+          <View
             style={
               Object {
                 "flex": 1,
+                "marginVertical": 10,
               }
             }
           >
@@ -133,11 +153,10 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
                 Array [
                   Object {
                     "backgroundColor": "gray",
-                    "height": 4,
+                    "height": 5,
                     "position": "absolute",
-                    "top": 5.5,
+                    "top": 10,
                   },
-                  false,
                   Object {
                     "width": 307.5,
                   },
@@ -148,9 +167,9 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
               style={
                 Object {
                   "backgroundColor": "black",
-                  "height": 4,
+                  "height": 5,
                   "position": "absolute",
-                  "top": 5.5,
+                  "top": 10,
                   "width": 0,
                 }
               }
@@ -160,9 +179,10 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
                 Array [
                   Object {
                     "backgroundColor": "gray",
-                    "borderRadius": 10,
+                    "borderRadius": 15,
                     "height": 15,
                     "position": "absolute",
+                    "top": 5,
                     "width": 15,
                   },
                   Object {
@@ -176,9 +196,10 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
                 Array [
                   Object {
                     "backgroundColor": "gray",
-                    "borderRadius": 10,
+                    "borderRadius": 15,
                     "height": 15,
                     "position": "absolute",
+                    "top": 5,
                     "width": 15,
                   },
                   Object {
@@ -191,11 +212,12 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
               style={
                 Object {
                   "backgroundColor": "black",
-                  "borderRadius": 10,
+                  "borderRadius": 15,
                   "height": 15,
                   "left": 0,
                   "opacity": 1,
                   "position": "absolute",
+                  "top": 5,
                   "width": 15,
                 }
               }
@@ -204,11 +226,12 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
               style={
                 Object {
                   "backgroundColor": "black",
-                  "borderRadius": 10,
+                  "borderRadius": 15,
                   "height": 15,
                   "left": 307.5,
                   "opacity": 0,
                   "position": "absolute",
+                  "top": 5,
                   "width": 15,
                 }
               }
@@ -218,10 +241,10 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
                 Array [
                   Object {
                     "position": "absolute",
-                    "top": 15,
+                    "top": 25,
                   },
                   Object {
-                    "left": 4,
+                    "left": 3,
                   },
                 ]
               }
@@ -233,10 +256,10 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
                 Array [
                   Object {
                     "position": "absolute",
-                    "top": 15,
+                    "top": 25,
                   },
                   Object {
-                    "left": 311.5,
+                    "left": 310.5,
                   },
                 ]
               }
@@ -287,31 +310,10 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
           <View
             style={
               Object {
-                "alignItems": "center",
-                "flexDirection": "row",
-                "justifyContent": "space-evenly",
-                "paddingHorizontal": 10,
+                "marginHorizontal": 10,
               }
             }
           >
-            <View
-              accessible={true}
-              focusable={true}
-              onClick={[Function]}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
-              style={
-                Object {
-                  "opacity": 1,
-                }
-              }
-            >
-              <Text />
-            </View>
             <View
               accessible={true}
               focusable={true}

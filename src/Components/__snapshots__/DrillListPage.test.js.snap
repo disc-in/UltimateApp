@@ -46,6 +46,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           "seasonTiming": "",
           "steps": Array [
             Object {
+              "id": 0,
               "illustrationSource": Object {
                 "ids": Array [
                   "triangle",
@@ -336,274 +337,9 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           "seasonTiming": "",
           "steps": Array [
             Object {
-              "illustrationSource": Object {
-                "ids": Array [
-                  "triangle",
-                  "triangle",
-                  "triangle",
-                  "triangle",
-                  "triangle",
-                  "triangle",
-                  "triangle",
-                  "triangle",
-                  "offense",
-                  "offense",
-                  "offense",
-                  "offense",
-                  "offense",
-                  "disc",
-                ],
-                "positions": Array [
-                  Array [
-                    Array [
-                      Array [
-                        0.3,
-                        0.3,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.3,
-                        0.6,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.6,
-                        0.3,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.6,
-                        0.6,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.45,
-                        0.2,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.2,
-                        0.45,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.45,
-                        0.7,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.7,
-                        0.45,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.3,
-                        0.3,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.16,
-                        0.3,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.6,
-                        0.3,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.6,
-                        0.6,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.3,
-                        0.6,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.36,
-                        0.36,
-                      ],
-                    ],
-                  ],
-                  Array [
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    Array [
-                      Array [
-                        0.45,
-                        0.2,
-                      ],
-                    ],
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                  ],
-                  Array [
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    Array [
-                      Array [
-                        0.6,
-                        0.3,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.7,
-                        0.45,
-                      ],
-                    ],
-                    undefined,
-                    undefined,
-                    Array [
-                      Array [
-                        0.58,
-                        0.36,
-                      ],
-                    ],
-                  ],
-                  Array [
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    Array [
-                      Array [
-                        0.6,
-                        0.6,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.45,
-                        0.7,
-                      ],
-                    ],
-                    undefined,
-                    Array [
-                      Array [
-                        0.58,
-                        0.58,
-                      ],
-                    ],
-                  ],
-                  Array [
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    Array [
-                      Array [
-                        0.3,
-                        0.6,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.2,
-                        0.45,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.36,
-                        0.58,
-                      ],
-                    ],
-                  ],
-                  Array [
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    Array [
-                      Array [
-                        0.45,
-                        0.2,
-                      ],
-                    ],
-                    undefined,
-                    undefined,
-                    undefined,
-                    Array [
-                      Array [
-                        0.3,
-                        0.3,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.36,
-                        0.36,
-                      ],
-                    ],
-                  ],
-                ],
-                "texts": Array [
-                  "",
-                  "",
-                  "",
-                  "",
-                  "",
-                  "",
-                  "",
-                  "",
-                  "1",
-                  "2",
-                  "3",
-                  "4",
-                  "5",
-                  "",
-                ],
-              },
-              "illustrationType": "animation",
+              "id": 0,
+              "illustrationSource": "462695757",
+              "illustrationType": "vimeo",
             },
           ],
           "title": "Frisbee Drill Title",
@@ -631,6 +367,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           "seasonTiming": "",
           "steps": Array [
             Object {
+              "id": 0,
               "illustrationSource": Object {
                 "ids": Array [
                   "triangle",
@@ -921,274 +658,9 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           "seasonTiming": "",
           "steps": Array [
             Object {
-              "illustrationSource": Object {
-                "ids": Array [
-                  "triangle",
-                  "triangle",
-                  "triangle",
-                  "triangle",
-                  "triangle",
-                  "triangle",
-                  "triangle",
-                  "triangle",
-                  "offense",
-                  "offense",
-                  "offense",
-                  "offense",
-                  "offense",
-                  "disc",
-                ],
-                "positions": Array [
-                  Array [
-                    Array [
-                      Array [
-                        0.3,
-                        0.3,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.3,
-                        0.6,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.6,
-                        0.3,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.6,
-                        0.6,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.45,
-                        0.2,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.2,
-                        0.45,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.45,
-                        0.7,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.7,
-                        0.45,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.3,
-                        0.3,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.16,
-                        0.3,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.6,
-                        0.3,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.6,
-                        0.6,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.3,
-                        0.6,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.36,
-                        0.36,
-                      ],
-                    ],
-                  ],
-                  Array [
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    Array [
-                      Array [
-                        0.45,
-                        0.2,
-                      ],
-                    ],
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                  ],
-                  Array [
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    Array [
-                      Array [
-                        0.6,
-                        0.3,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.7,
-                        0.45,
-                      ],
-                    ],
-                    undefined,
-                    undefined,
-                    Array [
-                      Array [
-                        0.58,
-                        0.36,
-                      ],
-                    ],
-                  ],
-                  Array [
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    Array [
-                      Array [
-                        0.6,
-                        0.6,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.45,
-                        0.7,
-                      ],
-                    ],
-                    undefined,
-                    Array [
-                      Array [
-                        0.58,
-                        0.58,
-                      ],
-                    ],
-                  ],
-                  Array [
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    Array [
-                      Array [
-                        0.3,
-                        0.6,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.2,
-                        0.45,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.36,
-                        0.58,
-                      ],
-                    ],
-                  ],
-                  Array [
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    Array [
-                      Array [
-                        0.45,
-                        0.2,
-                      ],
-                    ],
-                    undefined,
-                    undefined,
-                    undefined,
-                    Array [
-                      Array [
-                        0.3,
-                        0.3,
-                      ],
-                    ],
-                    Array [
-                      Array [
-                        0.36,
-                        0.36,
-                      ],
-                    ],
-                  ],
-                ],
-                "texts": Array [
-                  "",
-                  "",
-                  "",
-                  "",
-                  "",
-                  "",
-                  "",
-                  "",
-                  "1",
-                  "2",
-                  "3",
-                  "4",
-                  "5",
-                  "",
-                ],
-              },
-              "illustrationType": "animation",
+              "id": 0,
+              "illustrationSource": "462695757",
+              "illustrationType": "vimeo",
             },
           ],
           "title": "Frisbee Drill Title",
@@ -1202,6 +674,26 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
     initialNumToRender={10}
     keyExtractor={[Function]}
     maxToRenderPerBatch={10}
+    navigation={
+      Object {
+        "navigate": [MockFunction],
+        "setOptions": [MockFunction] {
+          "calls": Array [
+            Array [
+              Object {
+                "headerRight": [Function],
+              },
+            ],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+          ],
+        },
+      }
+    }
     onContentSizeChange={[Function]}
     onEndReachedThreshold={2}
     onLayout={[Function]}
@@ -1488,51 +980,6 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
       </View>
     </View>
   </RCTScrollView>
-  <View
-    accessible={true}
-    focusable={true}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "#2a9e91",
-        "borderRadius": 50,
-        "bottom": "5%",
-        "elevation": 10,
-        "height": 60,
-        "justifyContent": "center",
-        "opacity": 1,
-        "position": "absolute",
-        "right": "5%",
-        "shadowOffset": Object {
-          "height": 10,
-          "width": 0,
-        },
-        "shadowOpacity": 0.3,
-        "shadowRadius": 10,
-        "width": 60,
-      }
-    }
-    testID="filterButton"
-  >
-    <Text
-      style={
-        Object {
-          "color": "#fff",
-          "fontSize": 13,
-          "fontWeight": "bold",
-        }
-      }
-    >
-      FILTER
-    </Text>
-  </View>
 </View>
 `;
 
@@ -1582,8 +1029,8 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           "seasonTiming": "Off-season",
           "steps": Array [
             Object {
-              "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
-              "illustrationType": "youtube",
+              "illustrationSource": "462695757",
+              "illustrationType": "vimeo",
               "subtitle": "This is a subtitle",
               "title": "Warmup",
             },
@@ -1608,8 +1055,8 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           "seasonTiming": "Off-season",
           "steps": Array [
             Object {
-              "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
-              "illustrationType": "youtube",
+              "illustrationSource": "462695757",
+              "illustrationType": "vimeo",
               "subtitle": "This is a subtitle",
               "title": "Warmup",
             },
@@ -1634,8 +1081,8 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           "seasonTiming": "Off-season",
           "steps": Array [
             Object {
-              "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
-              "illustrationType": "youtube",
+              "illustrationSource": "462695757",
+              "illustrationType": "vimeo",
               "subtitle": "This is a subtitle",
               "title": "Warmup",
             },
@@ -1665,8 +1112,8 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           "seasonTiming": "Off-season",
           "steps": Array [
             Object {
-              "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
-              "illustrationType": "youtube",
+              "illustrationSource": "462695757",
+              "illustrationType": "vimeo",
               "subtitle": "This is a subtitle",
               "title": "Warmup",
             },
@@ -1691,8 +1138,8 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           "seasonTiming": "Off-season",
           "steps": Array [
             Object {
-              "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
-              "illustrationType": "youtube",
+              "illustrationSource": "462695757",
+              "illustrationType": "vimeo",
               "subtitle": "This is a subtitle",
               "title": "Warmup",
             },
@@ -1717,8 +1164,8 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           "seasonTiming": "Off-season",
           "steps": Array [
             Object {
-              "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
-              "illustrationType": "youtube",
+              "illustrationSource": "462695757",
+              "illustrationType": "vimeo",
               "subtitle": "This is a subtitle",
               "title": "Warmup",
             },
@@ -1734,6 +1181,44 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
     initialNumToRender={10}
     keyExtractor={[Function]}
     maxToRenderPerBatch={10}
+    navigation={
+      Object {
+        "navigate": [MockFunction],
+        "setOptions": [MockFunction] {
+          "calls": Array [
+            Array [
+              Object {
+                "headerRight": [Function],
+              },
+            ],
+            Array [
+              Object {
+                "headerRight": [Function],
+              },
+            ],
+            Array [
+              Object {
+                "headerRight": [Function],
+              },
+            ],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+          ],
+        },
+      }
+    }
     onContentSizeChange={[Function]}
     onEndReachedThreshold={2}
     onLayout={[Function]}
@@ -2154,51 +1639,6 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
       </View>
     </View>
   </RCTScrollView>
-  <View
-    accessible={true}
-    focusable={true}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "#2a9e91",
-        "borderRadius": 50,
-        "bottom": "5%",
-        "elevation": 10,
-        "height": 60,
-        "justifyContent": "center",
-        "opacity": 1,
-        "position": "absolute",
-        "right": "5%",
-        "shadowOffset": Object {
-          "height": 10,
-          "width": 0,
-        },
-        "shadowOpacity": 0.3,
-        "shadowRadius": 10,
-        "width": 60,
-      }
-    }
-    testID="filterButton"
-  >
-    <Text
-      style={
-        Object {
-          "color": "#fff",
-          "fontSize": 13,
-          "fontWeight": "bold",
-        }
-      }
-    >
-      FILTER
-    </Text>
-  </View>
 </View>
 `;
 
@@ -2248,8 +1688,8 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           "seasonTiming": "Off-season",
           "steps": Array [
             Object {
-              "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
-              "illustrationType": "youtube",
+              "illustrationSource": "462695757",
+              "illustrationType": "vimeo",
               "subtitle": "This is a subtitle",
               "title": "Warmup",
             },
@@ -2274,8 +1714,8 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           "seasonTiming": "Off-season",
           "steps": Array [
             Object {
-              "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
-              "illustrationType": "youtube",
+              "illustrationSource": "462695757",
+              "illustrationType": "vimeo",
               "subtitle": "This is a subtitle",
               "title": "Warmup",
             },
@@ -2300,8 +1740,8 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           "seasonTiming": "Off-season",
           "steps": Array [
             Object {
-              "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
-              "illustrationType": "youtube",
+              "illustrationSource": "462695757",
+              "illustrationType": "vimeo",
               "subtitle": "This is a subtitle",
               "title": "Warmup",
             },
@@ -2331,8 +1771,8 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           "seasonTiming": "Off-season",
           "steps": Array [
             Object {
-              "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
-              "illustrationType": "youtube",
+              "illustrationSource": "462695757",
+              "illustrationType": "vimeo",
               "subtitle": "This is a subtitle",
               "title": "Warmup",
             },
@@ -2357,8 +1797,8 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           "seasonTiming": "Off-season",
           "steps": Array [
             Object {
-              "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
-              "illustrationType": "youtube",
+              "illustrationSource": "462695757",
+              "illustrationType": "vimeo",
               "subtitle": "This is a subtitle",
               "title": "Warmup",
             },
@@ -2383,8 +1823,8 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           "seasonTiming": "Off-season",
           "steps": Array [
             Object {
-              "illustrationSource": "https://www.youtube.com/embed/JkVHrA5o23o",
-              "illustrationType": "youtube",
+              "illustrationSource": "462695757",
+              "illustrationType": "vimeo",
               "subtitle": "This is a subtitle",
               "title": "Warmup",
             },
@@ -2400,6 +1840,35 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
     initialNumToRender={10}
     keyExtractor={[Function]}
     maxToRenderPerBatch={10}
+    navigation={
+      Object {
+        "navigate": [MockFunction],
+        "setOptions": [MockFunction] {
+          "calls": Array [
+            Array [
+              Object {
+                "headerRight": [Function],
+              },
+            ],
+            Array [
+              Object {
+                "headerRight": [Function],
+              },
+            ],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+          ],
+        },
+      }
+    }
     onContentSizeChange={[Function]}
     onEndReachedThreshold={2}
     onLayout={[Function]}
@@ -2820,50 +2289,5 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
       </View>
     </View>
   </RCTScrollView>
-  <View
-    accessible={true}
-    focusable={true}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "#2a9e91",
-        "borderRadius": 50,
-        "bottom": "5%",
-        "elevation": 10,
-        "height": 60,
-        "justifyContent": "center",
-        "opacity": 1,
-        "position": "absolute",
-        "right": "5%",
-        "shadowOffset": Object {
-          "height": 10,
-          "width": 0,
-        },
-        "shadowOpacity": 0.3,
-        "shadowRadius": 10,
-        "width": 60,
-      }
-    }
-    testID="filterButton"
-  >
-    <Text
-      style={
-        Object {
-          "color": "#fff",
-          "fontSize": 13,
-          "fontWeight": "bold",
-        }
-      }
-    >
-      FILTER
-    </Text>
-  </View>
 </View>
 `;

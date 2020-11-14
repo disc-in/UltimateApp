@@ -62,11 +62,7 @@ export const Navigation = () => (
         title: route.params.program?.title || route.params.training.title,
       })}
     />
-    <Stack.Screen
-      name="DrillPageMinimal"
-      component={DrillPageMinimal}
-      options={({ route }) => ({ title: route.params.training.title })}
-    />
+    <Stack.Screen name="DrillPageMinimal" component={DrillPageMinimal} />
     <Stack.Screen
       name="AnimationEditorPage"
       component={AnimationEditorPage}

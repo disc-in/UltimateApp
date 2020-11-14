@@ -12,4 +12,10 @@ describe('<Description />', () => {
     const tree = renderer.create(<Description drill={drill} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
+  it('renders correctly as minimal', () => {
+    const drill = createDrill();
+
+    const tree = renderer.create(<Description drill={drill} minimal />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });

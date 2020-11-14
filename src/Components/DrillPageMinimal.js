@@ -41,9 +41,7 @@ export const DrillPageMinimal = (props) => {
         <Text numberOfLines={1} style={styles.headerTitleText}>
           {drill.title}
         </Text>
-        <View>
-          <ProgressBar total={training.drills.length} current={currentDrillIndex + 1} onDotPress={onProgressDotPress} />
-        </View>
+        <ProgressBar total={training.drills.length} current={currentDrillIndex + 1} onDotPress={onProgressDotPress} />
       </View>
     );
 

@@ -10,15 +10,21 @@ const Description = ({ drill, minimal }) => {
   const minimalTweak = minimal ? styles.minimal : undefined;
   return (
     <View style={styles.description}>
-      <View style={styles.lines} />
-      <View style={itemStyle}>
-        <Text style={[styles.descriptionTitle, minimalTweak]}>{I18n.t('drills.description.goal')}</Text>
-        <Text style={[styles.descriptionText, minimalTweak]}>
-          {drill.goals
-            .map((goal) => I18n.t(`data.fitnessGoals.${goal}`, { defaults: [{ scope: `data.frisbeeGoals.${goal}` }] }))
-            .join(', ')}
-        </Text>
-      </View>
+      {!minimal && (
+        <>
+          <View style={styles.lines} />
+          <View style={itemStyle}>
+            <Text style={[styles.descriptionTitle, minimalTweak]}>{I18n.t('drills.description.goal')}</Text>
+            <Text style={[styles.descriptionText, minimalTweak]}>
+              {drill.goals
+                .map((goal) =>
+                  I18n.t(`data.fitnessGoals.${goal}`, { defaults: [{ scope: `data.frisbeeGoals.${goal}` }] }),
+                )
+                .join(', ')}
+            </Text>
+          </View>
+        </>
+      )}
       <View style={styles.lines} />
       <View style={itemStyle}>
         <Text style={[styles.descriptionTitle, minimalTweak]}>{I18n.t('drills.description.equipment')}</Text>

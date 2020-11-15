@@ -69,20 +69,19 @@ const ProgramList = (props) => {
   };
 
   return (
-    <View style={styles.programList}>
-      <ScrollView>
-        <Accordion
-          activeSections={activeSections}
-          sections={displayedPrograms}
-          touchableComponent={TouchableOpacity}
-          expandMultiple={false}
-          renderHeader={renderHeader}
-          renderContent={renderContent}
-          duration={400}
-          onChange={setSections}
-        />
-      </ScrollView>
-    </View>
+    <ScrollView style={styles.programList}>
+      <Accordion
+        activeSections={activeSections}
+        sections={displayedPrograms}
+        touchableComponent={TouchableOpacity}
+        expandMultiple={false}
+        renderHeader={renderHeader}
+        renderContent={renderContent}
+        duration={400}
+        onChange={setSections}
+        containerStyle={styles.accordionContainerStyle}
+      />
+    </ScrollView>
   );
 };
 
@@ -91,10 +90,9 @@ export default ProgramList;
 const styles = StyleSheet.create({
   programList: {
     height: '100%',
-    paddingVertical: 10,
   },
-  accordion: {
-    height: '100%',
+  accordionContainerStyle: {
+    marginBottom: 10,
   },
   trainingsList: {
     marginBottom: 10,

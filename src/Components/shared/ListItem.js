@@ -9,7 +9,7 @@ const ListItem = (props) => {
 
 const styles = StyleSheet.create({
   listItem: {
-    marginBottom: 10,
+    marginTop: 10,
     padding: 10,
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     shadowOffset: {

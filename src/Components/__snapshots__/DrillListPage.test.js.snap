@@ -803,6 +803,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
                 "flex": 1,
                 "padding": 5,
                 "paddingBottom": 10,
+                "paddingRight": 10,
               }
             }
           >
@@ -937,6 +938,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
                 "flex": 1,
                 "padding": 5,
                 "paddingBottom": 10,
+                "paddingRight": 10,
               }
             }
           >
@@ -1328,6 +1330,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
                 "flex": 1,
                 "padding": 5,
                 "paddingBottom": 10,
+                "paddingRight": 10,
               }
             }
           >
@@ -1462,6 +1465,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
                 "flex": 1,
                 "padding": 5,
                 "paddingBottom": 10,
+                "paddingRight": 10,
               }
             }
           >
@@ -1596,6 +1600,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
                 "flex": 1,
                 "padding": 5,
                 "paddingBottom": 10,
+                "paddingRight": 10,
               }
             }
           >
@@ -1978,6 +1983,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
                 "flex": 1,
                 "padding": 5,
                 "paddingBottom": 10,
+                "paddingRight": 10,
               }
             }
           >
@@ -2112,6 +2118,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
                 "flex": 1,
                 "padding": 5,
                 "paddingBottom": 10,
+                "paddingRight": 10,
               }
             }
           >
@@ -2246,6 +2253,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
                 "flex": 1,
                 "padding": 5,
                 "paddingBottom": 10,
+                "paddingRight": 10,
               }
             }
           >

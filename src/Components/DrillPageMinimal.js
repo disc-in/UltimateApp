@@ -1,10 +1,11 @@
 import React, { useLayoutEffect, useCallback } from 'react';
-import { Platform, StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import { Platform, StyleSheet, View, ScrollView, Text } from 'react-native';
 import { connect } from 'react-redux';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
+
+import Description from './drills/Description';
 import FitnessDrillIllustration from './drills/FitnessDrillIllustration';
 import FrisbeeDrillIllustration from './drills/FrisbeeDrillIllustration';
 import ButtonNext from './shared/Button';
@@ -19,10 +20,6 @@ export const DrillPageMinimal = (props) => {
   const currentDrillIndex = training.drills.findIndex(({ id }) => id === drill.id);
   if (currentDrillIndex === -1) navigation.navigate('TrainingPage', { training });
   const isLastTraining = currentDrillIndex === training.drills.length - 1;
-
-  const goToFullDrill = useCallback(() => {
-    navigation.navigate('DrillPage', { drill });
-  }, [navigation, drill]);
 
   const goToNextDrill = useCallback(() => {
     const nextDrill = training.drills[currentDrillIndex + 1];
@@ -42,11 +39,12 @@ export const DrillPageMinimal = (props) => {
     const headerTitle = () => (
       <View style={styles.headerTitle}>
         <Text numberOfLines={1} style={styles.headerTitleText}>
-          {I18n.t('drillPageMinimal.headerTitle', { trainingTitle: training.title })}
+          {drill.title}
         </Text>
         <ProgressBar total={training.drills.length} current={currentDrillIndex + 1} onDotPress={onProgressDotPress} />
       </View>
     );
+
     navigation.setOptions({
       headerTitleAlign: 'center',
       headerStyle: { height: 100 },
@@ -57,16 +55,11 @@ export const DrillPageMinimal = (props) => {
   return (
     <>
       <View style={styles.drillPage}>
-        <View style={styles.titleContainer}>
-          <Text style={styles.title}>{drill.title}</Text>
-          <TouchableOpacity style={styles.detailsButton} onPress={goToFullDrill} testID="detailsButton">
-            <MaterialCommunityIcons name="information-outline" color={theme.COLOR_PRIMARY} size={26} />
-          </TouchableOpacity>
-        </View>
-        <View style={styles.illustration}>
+        <ScrollView style={styles.illustration}>
           {drill.type === DrillTypes.FRISBEE && <FrisbeeDrillIllustration drill={drill} />}
           {drill.type === DrillTypes.FITNESS && <FitnessDrillIllustration drill={drill} />}
-        </View>
+          <Description drill={drill} minimal />
+        </ScrollView>
       </View>
       <View style={styles.footer}>
         {isLastTraining ? (
@@ -124,10 +117,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     marginRight: 46, // Matches the details icon width
-  },
-  detailsButton: {
-    position: 'absolute',
-    right: 20,
   },
   illustration: {
     flexGrow: 1,

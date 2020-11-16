@@ -553,159 +553,162 @@ exports[`<DrillPage /> renders correctly 1`] = `
                             </Text>
                           </View>
                         </View>
-                        <View
-                          style={
-                            Object {
-                              "borderRightColor": "#fff",
-                              "borderRightWidth": 0.5,
-                              "height": 15,
-                            }
-                          }
-                        />
-                        <View
-                          style={
-                            Object {
-                              "padding": 20,
-                            }
-                          }
-                        >
+                        <View>
                           <View
                             style={
                               Object {
-                                "marginBottom": 15,
+                                "paddingBottom": 10,
                               }
                             }
                           >
-                            <Text
+                            <View
                               style={
                                 Object {
-                                  "color": "#232b2b",
-                                  "fontSize": 20,
-                                  "fontWeight": "bold",
-                                  "marginBottom": 10,
-                                  "textAlign": "center",
+                                  "borderBottomColor": "#e5e5e5",
+                                  "borderBottomWidth": 1,
+                                }
+                              }
+                            />
+                            <View
+                              style={
+                                Object {
+                                  "padding": 20,
                                 }
                               }
                             >
-                              Good for
-                            </Text>
-                            <Text
+                              <Text
+                                style={
+                                  Array [
+                                    Object {
+                                      "color": "#232b2b",
+                                      "fontSize": 20,
+                                      "fontWeight": "bold",
+                                      "marginBottom": 5,
+                                      "textAlign": "center",
+                                    },
+                                    undefined,
+                                  ]
+                                }
+                              >
+                                Good for
+                              </Text>
+                              <Text
+                                style={
+                                  Array [
+                                    Object {
+                                      "color": "#A6A6A6",
+                                      "fontSize": 16,
+                                      "textAlign": "center",
+                                    },
+                                    undefined,
+                                  ]
+                                }
+                              >
+                                Full body
+                              </Text>
+                            </View>
+                            <View
                               style={
                                 Object {
-                                  "color": "#A6A6A6",
-                                  "fontSize": 16,
-                                  "textAlign": "center",
+                                  "borderBottomColor": "#e5e5e5",
+                                  "borderBottomWidth": 1,
+                                }
+                              }
+                            />
+                            <View
+                              style={
+                                Object {
+                                  "padding": 20,
                                 }
                               }
                             >
-                              Full body
-                            </Text>
+                              <Text
+                                style={
+                                  Array [
+                                    Object {
+                                      "color": "#232b2b",
+                                      "fontSize": 20,
+                                      "fontWeight": "bold",
+                                      "marginBottom": 5,
+                                      "textAlign": "center",
+                                    },
+                                    undefined,
+                                  ]
+                                }
+                              >
+                                Equipment
+                              </Text>
+                              <Text
+                                style={
+                                  Array [
+                                    Object {
+                                      "color": "#A6A6A6",
+                                      "fontSize": 16,
+                                      "textAlign": "center",
+                                    },
+                                    undefined,
+                                  ]
+                                }
+                              >
+                                Equipment needs for the drill
+                              </Text>
+                            </View>
+                            <View
+                              style={
+                                Object {
+                                  "borderBottomColor": "#e5e5e5",
+                                  "borderBottomWidth": 1,
+                                }
+                              }
+                            />
+                            <View
+                              style={
+                                Object {
+                                  "padding": 20,
+                                }
+                              }
+                            >
+                              <Text
+                                style={
+                                  Array [
+                                    Object {
+                                      "color": "#232b2b",
+                                      "fontSize": 20,
+                                      "fontWeight": "bold",
+                                      "marginBottom": 5,
+                                      "textAlign": "center",
+                                    },
+                                    undefined,
+                                  ]
+                                }
+                              >
+                                Description
+                              </Text>
+                              <Text
+                                style={
+                                  Array [
+                                    Object {
+                                      "color": "#A6A6A6",
+                                      "fontSize": 16,
+                                      "textAlign": "center",
+                                    },
+                                    undefined,
+                                  ]
+                                }
+                              >
+                                Description of the drill
+                              </Text>
+                            </View>
+                            <View
+                              style={
+                                Object {
+                                  "borderBottomColor": "#e5e5e5",
+                                  "borderBottomWidth": 1,
+                                }
+                              }
+                            />
                           </View>
                         </View>
-                        <View
-                          style={
-                            Object {
-                              "borderBottomColor": "#e5e5e5",
-                              "borderBottomWidth": 1,
-                            }
-                          }
-                        />
-                        <View
-                          style={
-                            Object {
-                              "padding": 20,
-                            }
-                          }
-                        >
-                          <View
-                            style={
-                              Object {
-                                "marginBottom": 15,
-                              }
-                            }
-                          >
-                            <Text
-                              style={
-                                Object {
-                                  "color": "#232b2b",
-                                  "fontSize": 20,
-                                  "fontWeight": "bold",
-                                  "marginBottom": 10,
-                                  "textAlign": "center",
-                                }
-                              }
-                            >
-                              Equipment
-                            </Text>
-                            <Text
-                              style={
-                                Object {
-                                  "color": "#A6A6A6",
-                                  "fontSize": 16,
-                                  "textAlign": "center",
-                                }
-                              }
-                            >
-                              Equipment needs for the drill
-                            </Text>
-                          </View>
-                        </View>
-                        <View
-                          style={
-                            Object {
-                              "borderBottomColor": "#e5e5e5",
-                              "borderBottomWidth": 1,
-                            }
-                          }
-                        />
-                        <View
-                          style={
-                            Object {
-                              "padding": 20,
-                            }
-                          }
-                        >
-                          <View
-                            style={
-                              Object {
-                                "marginBottom": 15,
-                              }
-                            }
-                          >
-                            <Text
-                              style={
-                                Object {
-                                  "color": "#232b2b",
-                                  "fontSize": 20,
-                                  "fontWeight": "bold",
-                                  "marginBottom": 10,
-                                  "textAlign": "center",
-                                }
-                              }
-                            >
-                              Description
-                            </Text>
-                            <Text
-                              style={
-                                Object {
-                                  "color": "#A6A6A6",
-                                  "fontSize": 16,
-                                  "textAlign": "center",
-                                }
-                              }
-                            >
-                              Description of the drill
-                            </Text>
-                          </View>
-                        </View>
-                        <View
-                          style={
-                            Object {
-                              "borderBottomColor": "#e5e5e5",
-                              "borderBottomWidth": 1,
-                            }
-                          }
-                        />
                         <View
                           style={
                             Object {

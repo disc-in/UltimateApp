@@ -909,6 +909,7 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
                 "flex": 1,
                 "padding": 5,
                 "paddingBottom": 10,
+                "paddingRight": 10,
               }
             }
           >
@@ -1044,6 +1045,7 @@ exports[`<TrainingPage /> renders correctly with a training outside any program 
                 "flex": 1,
                 "padding": 5,
                 "paddingBottom": 10,
+                "paddingRight": 10,
               }
             }
           >
@@ -2189,6 +2191,7 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
                 "flex": 1,
                 "padding": 5,
                 "paddingBottom": 10,
+                "paddingRight": 10,
               }
             }
           >
@@ -2324,6 +2327,7 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
                 "flex": 1,
                 "padding": 5,
                 "paddingBottom": 10,
+                "paddingRight": 10,
               }
             }
           >

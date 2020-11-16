@@ -47,7 +47,7 @@ const FitnessDrillIllustration = (props) => {
   const renderFinish = () => {
     return (
       <View style={styles.containerFinish}>
-        <Text style={styles.redoMessage}>{I18n.t('fitnessDrillIllustration.redoMessage')}</Text>
+        <Text style={styles.redoMessage}>{I18n.t('drills.fitnessDrillIllustration.redoMessage')}</Text>
         <TouchableOpacity style={styles.redoButton} onPress={() => setActiveIndex(0)}>
           <MaterialCommunityIcons name="redo-variant" color={theme.COLOR_PRIMARY} size={50} />
         </TouchableOpacity>

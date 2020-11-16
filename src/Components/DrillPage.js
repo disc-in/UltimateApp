@@ -58,17 +58,17 @@ export const DrillPage = (props) => {
         </View>
         <View style={styles.infoWrapper}>
           <View style={styles.infoSubWrapper}>
-            <Text style={styles.infoDrill}>{drill.durationInMinutes}</Text>
+            <Text style={styles.info}>{drill.durationInMinutes}</Text>
             <Text style={styles.info}>{I18n.t('drillPage.minutes')}</Text>
           </View>
           <View style={styles.separator} />
           <View style={styles.infoSubWrapper}>
-            <Text style={styles.infoDrill}>{drill.minimalPlayersNumber}+</Text>
+            <Text style={styles.info}>{drill.minimalPlayersNumber}+</Text>
             <Text style={styles.info}>{I18n.t('drillPage.players')}</Text>
           </View>
           <View style={styles.separator} />
           <View style={styles.infoSubWrapper}>
-            <Text style={styles.infoDrill}>{I18n.t(`data.levels.${drill.level}`)}</Text>
+            <Text style={styles.info}>{I18n.t(`data.levels.${drill.level}`)}</Text>
             <Text style={styles.info}>{I18n.t('drillPage.level')}</Text>
           </View>
         </View>
@@ -150,9 +150,14 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
     alignItems: 'center',
   },
+  infoSubWrapper: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: 10,
+    flexBasis: '33%',
+  },
   info: {
     color: theme.COLOR_PRIMARY_LIGHT,
-    paddingHorizontal: 30,
     fontSize: theme.FONT_SIZE_MEDIUM,
   },
   separator: {
@@ -188,15 +193,6 @@ const styles = StyleSheet.create({
     color: theme.COLOR_SECONDARY,
     textAlign: 'center',
     fontSize: theme.FONT_SIZE_MEDIUM,
-  },
-  infoDrill: {
-    color: theme.COLOR_PRIMARY_LIGHT,
-    paddingHorizontal: 30,
-    fontSize: theme.FONT_SIZE_LARGE,
-  },
-  infoSubWrapper: {
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   gradient: {
     flex: 1,

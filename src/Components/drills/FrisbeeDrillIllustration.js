@@ -98,12 +98,10 @@ const FrisbeeDrillIllustration = (props) => {
   const renderCounter = (index) => {
     if (props.drill.steps.length !== 1) {
       return (
-        <View style={styles.floating}>
-          <View style={styles.counter}>
-            <Text style={styles.textCounter}>
-              {index + 1}/{props.drill.steps.length}
-            </Text>
-          </View>
+        <View style={styles.counter}>
+          <Text style={styles.textCounter}>
+            {index + 1}/{props.drill.steps.length}
+          </Text>
         </View>
       );
     }
@@ -191,24 +189,16 @@ const styles = StyleSheet.create({
     backgroundColor: theme.COLOR_PRIMARY,
     justifyContent: 'center',
     alignItems: 'center',
+    position: 'absolute',
+    right: '6%',
   },
   textCounter: {
     color: theme.COLOR_PRIMARY_LIGHT,
     fontSize: 12,
   },
-  floating: {
-    position: 'absolute',
-    right: '6%',
-  },
   paginationFloat: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
     justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical: 10,
   },
   verticalSpace: {
     paddingVertical: 10,

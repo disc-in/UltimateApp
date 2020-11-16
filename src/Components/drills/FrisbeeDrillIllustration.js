@@ -2,10 +2,10 @@ import React, { useState, useRef } from 'react';
 import { View, ScrollView, StyleSheet, Text, Dimensions, TouchableOpacity, SafeAreaView } from 'react-native';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { ToggleButton } from 'react-native-paper';
 
 import Animation from '../animation/Animation';
 import VimeoVideo from '../shared/VimeoVideo';
+import ToggleButton from '../shared/ToggleButton';
 import theme from '../../styles/theme.style';
 import Drill from '../animation/Drill';
 
@@ -73,8 +73,6 @@ const FrisbeeDrillIllustration = (props) => {
     if (item.vimeoId && !item.animation) illustrationUniqueField = IllustrationField.VIMEO;
     if (!item.vimeoId && item.animation) illustrationUniqueField = IllustrationField.ANIMATION;
 
-    const animationPressed = illustrationPreference === IllustrationField.ANIMATION;
-    const vimeoPressed = illustrationPreference === IllustrationField.VIMEO;
     return (
       <View>
         {renderTitle(item.title, index)}
@@ -84,26 +82,12 @@ const FrisbeeDrillIllustration = (props) => {
             displayAnimation(item)}
           {(illustrationUniqueField || illustrationPreference) === IllustrationField.VIMEO && displayVimeo(item)}
           {!illustrationUniqueField && (
-            <ToggleButton.Row
-              style={{ justifyContent: 'center' }}
+            <ToggleButton
               value={illustrationPreference}
               onValueChange={(value) => setIllustrationPreference(value)}
-            >
-              <ToggleButton
-                color={animationPressed ? theme.MAIN_COLOR : undefined}
-                style={animationPressed ? styles.pressedToggleButton : undefined}
-                icon="clipboard-outline"
-                value={IllustrationField.ANIMATION}
-                disabled={animationPressed}
-              />
-              <ToggleButton
-                icon="video"
-                color={vimeoPressed ? theme.MAIN_COLOR : undefined}
-                style={vimeoPressed ? styles.pressedToggleButton : undefined}
-                value={IllustrationField.VIMEO}
-                disabled={vimeoPressed}
-              />
-            </ToggleButton.Row>
+              possibleValues={Object.values(IllustrationField)}
+              icons={['clipboard-outline', 'video']}
+            />
           )}
           <Text style={styles.instruction}>{item.instruction}</Text>
         </ScrollView>
@@ -177,10 +161,6 @@ const styles = StyleSheet.create({
   animation: {
     marginTop: 10,
     minHeight: 375,
-  },
-  pressedToggleButton: {
-    backgroundColor: theme.BACKGROUND_COLOR,
-    opacity: 0.8,
   },
   instruction: {
     margin: 10,

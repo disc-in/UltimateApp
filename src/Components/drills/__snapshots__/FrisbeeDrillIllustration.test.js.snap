@@ -72,6 +72,7 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
     onScroll={[Function]}
     onScrollBeginDrag={[Function]}
     onScrollEndDrag={[Function]}
+    onSnapToItem={[Function]}
     onStartShouldSetResponderCapture={[Function]}
     onTouchEnd={[Function]}
     onTouchStart={[Function]}

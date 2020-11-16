@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { View, ScrollView, StyleSheet, Text, Dimensions, TouchableOpacity, SafeAreaView } from 'react-native';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -18,7 +18,12 @@ export const IllustrationField = {
 
 const FrisbeeDrillIllustration = (props) => {
   const carouselRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
   const [illustrationPreference, setIllustrationPreference] = useState(IllustrationField.ANIMATION);
+
+  useEffect(() => {
+    setActiveIndex(0);
+  }, [props.drill]);
 
   const renderTitle = (title, index) => {
     const isFirstStep = index === 0;
@@ -76,7 +81,7 @@ const FrisbeeDrillIllustration = (props) => {
     return (
       <View>
         {renderTitle(item.title, index)}
-        <View style={styles.pagination}>{renderPagination(index)}</View>
+        <View style={styles.pagination}>{renderPagination()}</View>
         <ScrollView>
           {(illustrationUniqueField || illustrationPreference) === IllustrationField.ANIMATION &&
             displayAnimation(item)}
@@ -95,11 +100,11 @@ const FrisbeeDrillIllustration = (props) => {
     );
   };
 
-  const renderPagination = (index) => {
+  const renderPagination = () => {
     return (
       <Pagination
         dotsLength={props.drill.steps.length}
-        activeDotIndex={index}
+        activeDotIndex={activeIndex}
         containerStyle={{
           backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
           paddingVertical: 0,
@@ -114,7 +119,6 @@ const FrisbeeDrillIllustration = (props) => {
         inactiveDotStyle={{
           backgroundColor: theme.COLOR_SECONDARY,
         }}
-        inactiveDotOpacity={0.4}
         inactiveDotScale={0.6}
         tappableDots
         carouselRef={carouselRef}
@@ -125,6 +129,7 @@ const FrisbeeDrillIllustration = (props) => {
   return (
     <SafeAreaView style={styles.container}>
       <Carousel
+        onSnapToItem={(index) => setActiveIndex(index)}
         layout="default"
         ref={carouselRef}
         data={props.drill.steps}

@@ -5073,7 +5073,7 @@ const goToTenDrill = {
   author: "Jack'suns",
   title: 'Go to 10',
   image: 'https://zupimages.net/up/20/19/rcyt.jpg',
-  description: 'First team with 10 complete passes win',
+  description: 'First team with 10 complete passes wins.',
   minimalPlayersNumber: 12,
   inGame:
     'It is important to know how to keep the disk as long as possible. This knowledge is particularly useful against a zone defense or when approaching the endzone.',
@@ -5091,7 +5091,16 @@ const goToTenDrill = {
       animation: animationGoToTen,
       repetition: '',
       rest: '',
-      instruction: 'First team with 10 completes passes win. Stall to 6.',
+      instruction:
+        'Beginners could play to 5 passes instead of 10. The offense could also have more players than the defense.',
+    },
+    {
+      id: 2,
+      title: 'Make it difficult',
+      animation: animationGoToTen,
+      repetition: '',
+      rest: '',
+      instruction: 'Start the stall at 3 or 6 instead of 1. Reduce the field size.',
     },
   ],
 };

@@ -5187,7 +5187,15 @@ const goToTenDrill = {
       repetition: '',
       rest: '',
       instruction:
-        "Première équipe qui complète 10 passes gagne. Compte à 6. Pour un niveau débutant, l'équipe en attaque peut jouer en surnombre",
+        "Pour un niveau débutant, on peut fixer l'objectif à 5 passes, ou faire jouer l'attaque en surnombre",
+    },
+    {
+      id: 2,
+      title: 'Ajouter de la difficulté',
+      animation: animationGoToTen,
+      repetition: '',
+      rest: '',
+      instruction: "Le compte peut commencer à 6 au lieu de 1. Il est aussi possible de réduire l'espace de jeu",
     },
   ],
 };

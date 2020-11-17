@@ -163,10 +163,9 @@ exports[`<ProgramList /> renders correctly 1`] = `
                         "seasonTiming": "Off-season",
                         "steps": Array [
                           Object {
-                            "illustrationSource": "462695757",
-                            "illustrationType": "vimeo",
                             "subtitle": "This is a subtitle",
                             "title": "Warmup",
+                            "vimeoId": "462695757",
                           },
                         ],
                         "title": "Fitness Drill Title",
@@ -436,10 +435,9 @@ exports[`<ProgramList /> renders correctly 1`] = `
                         "seasonTiming": "Off-season",
                         "steps": Array [
                           Object {
-                            "illustrationSource": "462695757",
-                            "illustrationType": "vimeo",
                             "subtitle": "This is a subtitle",
                             "title": "Warmup",
+                            "vimeoId": "462695757",
                           },
                         ],
                         "title": "Fitness Drill Title",
@@ -471,10 +469,9 @@ exports[`<ProgramList /> renders correctly 1`] = `
                         "seasonTiming": "Off-season",
                         "steps": Array [
                           Object {
-                            "illustrationSource": "462695757",
-                            "illustrationType": "vimeo",
                             "subtitle": "This is a subtitle",
                             "title": "Warmup",
+                            "vimeoId": "462695757",
                           },
                         ],
                         "title": "Fitness Drill Title",

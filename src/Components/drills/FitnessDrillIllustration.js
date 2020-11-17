@@ -6,7 +6,6 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import I18n from '../../utils/i18n';
 import Animation from '../animation/Animation';
 import VimeoVideo from '../shared/VimeoVideo';
-import { IllustrationType } from '../../Fixtures/config';
 import theme from '../../styles/theme.style';
 import Drill from '../animation/Drill';
 
@@ -93,12 +92,12 @@ const FitnessDrillIllustration = (props) => {
     );
   };
 
-  const renderVimeo = ({ illustrationSource, repetition, title, sounds }) => {
+  const renderVimeo = ({ vimeoId, sounds }) => {
     const isUniqueStep = stepsCount === 1;
     return (
       <>
         <View style={[{ height: 250 }, isUniqueStep && styles.videoAlone]}>
-          <VimeoVideo vimeoId={illustrationSource} sounds={sounds} />
+          <VimeoVideo vimeoId={vimeoId} sounds={sounds} />
         </View>
         {!isUniqueStep && (
           <FlatList
@@ -113,7 +112,7 @@ const FitnessDrillIllustration = (props) => {
     );
   };
 
-  const renderAnimation = ({ illustrationSource, title, instruction }, index) => {
+  const renderAnimation = ({ animation, title, instruction }, index) => {
     const isFirstStep = index === 0;
     const isLastStep = index === stepsCount - 1;
     return (
@@ -144,7 +143,7 @@ const FitnessDrillIllustration = (props) => {
           </View>
         </View>
         <View style={styles.animation}>
-          <Animation widthRatio={1} heightRatio={1 / 2} animation={new Drill(illustrationSource)} />
+          <Animation widthRatio={1} heightRatio={1 / 2} animation={new Drill(animation)} />
         </View>
         <Text style={styles.instruction}>{instruction}</Text>
       </>
@@ -154,8 +153,8 @@ const FitnessDrillIllustration = (props) => {
   return (
     <View style={styles.container}>
       {activeIndex === props.drill.steps.length && renderFinish()}
-      {currentStep?.illustrationType === IllustrationType.ANIMATION && renderAnimation(currentStep)}
-      {currentStep?.illustrationType === IllustrationType.VIMEO && renderVimeo(currentStep)}
+      {currentStep?.animation && !currentStep?.vimeoId && renderAnimation(currentStep)}
+      {currentStep?.vimeoId && renderVimeo(currentStep)}
     </View>
   );
 };

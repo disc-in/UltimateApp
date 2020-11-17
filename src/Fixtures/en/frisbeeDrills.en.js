@@ -88,6 +88,9 @@ import adaptMark from '../Animation/AdaptMark';
 import ghost from '../Animation/Ghost';
 import ladderGhost from '../Animation/LadderGhost';
 import fishAnimation from '../Animation/Fish';
+import crossingTheFieldAnimation from '../Animation/CrossingTheField';
+import crossingTheFieldDefenseAnimation from '../Animation/CrossingTheFieldDefense';
+import crossingTheFieldManyAnimation from '../Animation/CrossingTheFieldMany';
 import reverseEightAnimation from '../Animation/ReverseEight';
 import reverseEightTargetAnimation from '../Animation/ReverseEightTarget';
 
@@ -6565,7 +6568,7 @@ const fish = {
   minimalPlayersNumber: 8,
   inGame: '-',
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 disque par paire',
+  equipment: '1 disc for 2 players',
   durationInMinutes: 10,
   intensity: Intensities.LOW,
   goals: [FrisbeeGoals.CATCH, FrisbeeGoals.THROWING],
@@ -6580,6 +6583,54 @@ const fish = {
       rest: '',
       instruction:
         'Players play in pairs. The objective is to collect as many blocks as possible. One player of the pair runs at the level of a block. His teammate sends him the disc in a way defined by the coach. If, and only if, the player catches the disc while remaining at the pivot of the block, he can pick it up and bring it back to his side. His teammate in turn runs, the roles are reversed. The team having picked up the most disc wins.',
+    },
+  ],
+};
+
+const crossingTheField = {
+  id: 1050,
+  type: DrillTypes.FRISBEE,
+  author: 'Gentle',
+  title: 'Crossing the field',
+  image: 'https://zupimages.net/up/20/47/63gr.jpg',
+  description:
+    'Players have to cross the field as fast as possible. If there is an incomplete pass, they have to start again.',
+  minimalPlayersNumber: 2,
+  inGame: '-',
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disc for 2 players',
+  durationInMinutes: 10,
+  intensity: Intensities.HIGH,
+  goals: [FrisbeeGoals.PLAY, FrisbeeGoals.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'Round Trip',
+      animation: crossingTheFieldAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Players play in pairs. You can have 2 or more pairs playing at the same time and the fastest pair wins.',
+    },
+    {
+      id: 2,
+      title: 'With defense',
+      animation: crossingTheFieldDefenseAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Same drill, adding one defender to make it closer slightly more difficult and closer to playing ultimate.',
+    },
+    {
+      id: 3,
+      title: 'More players',
+      animation: crossingTheFieldManyAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Same drill, introducing other players to play 3v3, 3v2, 3v1, etc. depending on the level of the players and what you want to achieve. With a lot of players it looks like a game, but each player cannot make as many plays on the disc.',
     },
   ],
 };
@@ -7650,6 +7701,7 @@ export const drills = [
   adaptToTheMark,
   ghostMark,
   fish,
+  crossingTheField,
 
   // Commenting game drills because we don't want them in the drill list, only part of programs
   // // Games

@@ -88,6 +88,9 @@ import adaptMark from '../Animation/AdaptMark';
 import ghost from '../Animation/Ghost';
 import ladderGhost from '../Animation/LadderGhost';
 import fishAnimation from '../Animation/Fish';
+import crossingTheFieldAnimation from '../Animation/CrossingTheField';
+import crossingTheFieldDefenseAnimation from '../Animation/CrossingTheFieldDefense';
+import crossingTheFieldManyAnimation from '../Animation/CrossingTheFieldMany';
 import reverseEightAnimation from '../Animation/ReverseEight';
 import reverseEightTargetAnimation from '../Animation/ReverseEightTarget';
 
@@ -6688,6 +6691,54 @@ const fish = {
   ],
 };
 
+const crossingTheField = {
+  id: 1050,
+  type: DrillTypes.FRISBEE,
+  author: 'Gentle',
+  title: 'La traversée',
+  image: 'https://zupimages.net/up/20/47/63gr.jpg',
+  description:
+    'Les joueurs doivent traverser le terrain le plus rapidement possible en se faisant des passes. Si une passe est ratée, ils doivent recommencer.',
+  minimalPlayersNumber: 2,
+  inGame: '-',
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disque pour 2 joueurs',
+  durationInMinutes: 10,
+  intensity: Intensities.HIGH,
+  goals: [FrisbeeGoals.PLAY, FrisbeeGoals.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'Aller-retour',
+      animation: crossingTheFieldAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Les joueurs travaillent en binôme. Il est possible de faire jouer deux paires en même temps, et la plus rapide gagne.',
+    },
+    {
+      id: 2,
+      title: 'Avec défense',
+      animation: crossingTheFieldDefenseAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        "Même exercice, en ajoutant un défenseur pour obliger les attaquants à adopter des déplacements plus proches de l'ultimate.",
+    },
+    {
+      id: 3,
+      title: 'Plus de joueurs',
+      animation: crossingTheFieldManyAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        "Même exercice, en ajoutant des joueurs pour jouer à 3 contre 2, 3 contre 3, etc. en fonction du niveau des joueurs et de ce qu'on veut leur faire travailler : avec beaucoup de joueurs, cela ressemble à de l'ultimate mais chaque joueur touchera moins de disque et le jeu sera plus haché.",
+    },
+  ],
+};
+
 const normalGame = {
   id: 2001,
   type: DrillTypes.FRISBEE,
@@ -7763,6 +7814,7 @@ export const drills = [
   adaptToTheMark,
   ghostMark,
   fish,
+  crossingTheField,
 
   // // Games
   // normalGame,

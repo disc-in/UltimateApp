@@ -59,6 +59,7 @@ import breakRace from '../Animation/BreakRace';
 import longCheck from '../Animation/LongCheck';
 import throwCatch from '../Animation/ThrowCatch';
 import threeGame from '../Animation/ThreeGame';
+import fiveGame from '../Animation/FiveGame';
 import singleBoxGame from '../Animation/SingleBoxGame';
 import twoBoxesGame from '../Animation/TwoBoxesGame';
 import normalGameAnimation from '../Animation/NormalGame';
@@ -6924,6 +6925,34 @@ const boxGame = {
   ],
 };
 
+const game5v5 = {
+  id: 2009,
+  type: DrillTypes.FRISBEE,
+  author: '',
+  title: '5v5 game',
+  image: 'https://zupimages.net/up/20/47/uxhr.jpg',
+  description:
+    'Classic indoor, beach or youth game. Also a good way to reduce the complexity of the game for beginners',
+  minimalPlayersNumber: 10,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '8 cones - 1 disc',
+  durationInMinutes: 20,
+  intensity: Intensities.HIGH,
+  goals: [FrisbeeGoals.PLAY],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: '5v5 games',
+      animation: fiveGame,
+      repetition: '1',
+      rest: '',
+      instruction: '',
+    },
+  ],
+};
+
 const initiationVerticalTraining = {
   id: 1,
   title: 'Stack vertical',
@@ -7728,6 +7757,7 @@ export const drills = [
   // // Games
   // normalGame,
   // game3v3,
+  // game5v5,
   // longShotGame,
   // lineGame,
   // longestGame,

@@ -59,6 +59,8 @@ import breakRace from '../Animation/BreakRace';
 import longCheck from '../Animation/LongCheck';
 import throwCatch from '../Animation/ThrowCatch';
 import threeGame from '../Animation/ThreeGame';
+import singleBoxGame from '../Animation/SingleBoxGame';
+import twoBoxesGame from '../Animation/TwoBoxesGame';
 import normalGameAnimation from '../Animation/NormalGame';
 import endzoneAnimation from '../Animation/Endzone';
 import endzoneFinition from '../Animation/EndzoneFinition';
@@ -6882,6 +6884,46 @@ const helpGame = {
   ],
 };
 
+const boxGame = {
+  id: 2008,
+  type: DrillTypes.FRISBEE,
+  author: '',
+  title: 'La Box',
+  image: 'https://zupimages.net/up/20/47/u0ny.jpg',
+  description:
+    'Au lieu de jouer sur un terrain classique, ce jeu utilise une petite endzone. Les deux équipes marquent dans la même endzone. Elle doit faire environ 2 mètres de côté, à adapter en fonction du niveau des joueurs.',
+  inGame:
+    'Les joueurs apprennent à se créer collectivement des espaces et à trouver le bon timing pour faire progresser le disque.',
+  minimalPlayersNumber: 4,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '4 plots - 1 disque',
+  durationInMinutes: 10,
+  intensity: Intensities.HIGH,
+  goals: [FrisbeeGoals.PLAY],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'La Box',
+      animation: singleBoxGame,
+      repetition: '1',
+      rest: '',
+      instruction:
+        "Il faudra peut-être aider les dédbutants à comprendre qu'ils ne doivent pas rester statiques dans la box.\n\nChanger la taille de la box et le début du compte pour ajuster la difficulté",
+    },
+    {
+      id: 2,
+      title: 'La Double Box',
+      animation: twoBoxesGame,
+      repetition: '1',
+      rest: '',
+      instruction:
+        "Avec la seconde endzone, les joueurs ont beaucoup plus d'information à prendre en jouant. Cela crée aussi de nouvelles opportunités pour l'attaque",
+    },
+  ],
+};
+
 const initiationVerticalTraining = {
   id: 1,
   title: 'Stack vertical',
@@ -7691,6 +7733,7 @@ export const drills = [
   // longestGame,
   // trainingGame,
   // helpGame,
+  boxGame,
 ];
 
 export const trainings = [

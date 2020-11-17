@@ -59,6 +59,8 @@ import breakRace from '../Animation/BreakRace';
 import longCheck from '../Animation/LongCheck';
 import throwCatch from '../Animation/ThrowCatch';
 import threeGame from '../Animation/ThreeGame';
+import singleBoxGame from '../Animation/SingleBoxGame';
+import twoBoxesGame from '../Animation/TwoBoxesGame';
 import normalGameAnimation from '../Animation/NormalGame';
 import endzoneAnimation from '../Animation/Endzone';
 import endzoneFinition from '../Animation/EndzoneFinition';
@@ -6614,7 +6616,7 @@ const game3v3 = {
   id: 2002,
   type: DrillTypes.FRISBEE,
   author: '',
-  title: '3v3 games',
+  title: '3v3 game',
   image: 'https://zupimages.net/up/20/28/p52r.jpg',
   description:
     "The perfect setup if you have a LOT of players or want your players to touch a lot of frisbees in a short time. This can be quite exhausting so don't forget to set breaks every 5 to 10 minutes.",
@@ -6775,6 +6777,46 @@ const helpGame = {
       repetition: '',
       rest: '',
       instruction: 'Classical game. The experience player are also playing to help to develop a better ultimate.',
+    },
+  ],
+};
+
+const boxGame = {
+  id: 2008,
+  type: DrillTypes.FRISBEE,
+  author: '',
+  title: 'Box game',
+  image: 'https://zupimages.net/up/20/47/u0ny.jpg',
+  description:
+    'Instead of playing on a regular field with endzone, this game is played with a little endzone. Both teams score in the same endzone. It should be around 2 x 2 meters but you should adapt this to your players level.',
+  inGame:
+    'Players learn how to create space for each other and find a good timing to create opportunities to score in the box.',
+  minimalPlayersNumber: 4,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '4 cones - 1 disc',
+  durationInMinutes: 10,
+  intensity: Intensities.HIGH,
+  goals: [FrisbeeGoals.PLAY],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'Single Box',
+      animation: singleBoxGame,
+      repetition: '1',
+      rest: '',
+      instruction:
+        'Help beginners understand that they should not stay in the endzone to score.\n\nYou can change the box size and the stall to make it easy or difficult',
+    },
+    {
+      id: 2,
+      title: 'Two Boxes',
+      animation: twoBoxesGame,
+      repetition: '1',
+      rest: '',
+      instruction:
+        'With the second endzone, players have much more information to process while playing. It creates a lot of opportunities for the offense.',
     },
   ],
 };
@@ -7580,6 +7622,7 @@ export const drills = [
   // longestGame,
   // trainingGame,
   // helpGame,
+  boxGame,
 ];
 
 export const trainings = [

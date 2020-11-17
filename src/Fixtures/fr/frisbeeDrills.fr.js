@@ -6861,10 +6861,10 @@ const helpGame = {
   id: 2007,
   type: DrillTypes.FRISBEE,
   author: '',
-  title: 'Match - mixte de niveau',
+  title: 'Match débutant avec aide',
   image: 'https://zupimages.net/up/20/28/up1j.jpg',
   description:
-    "Jouons à un match où un joueur expérimenté peut aider les débutants à développer un meilleur jeu. Le but du joueur expérimenté est de faire en sorte que tout le monde touche le disque. S'il n'y a qu'un seul joueur expérimenté, nous recommandons à ce joueur/entraîneur de jouer avec l'équipe qui a le plus de difficulté à jouer.",
+    'Un (ou plusieurs) joueur expérimenté peut aider les débutants à développer un meilleur jeu. Le but du joueur expérimenté est de faire en sorte que tout le monde touche le disque. Cette astuce fonctionne avec un match classique, mais aussi avec des exercices comme la Box ou la Passe à 10.',
   minimalPlayersNumber: 10,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '8 plots - 1 disque',
@@ -6876,11 +6876,21 @@ const helpGame = {
   steps: [
     {
       id: 1,
+      title: 'Le caméléon',
+      animation: normalGameAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        "Un coach ou joueur expériementé joue toujours avec l'attaque. Il doit faire en sorte que tous les joueurs, même les plus débutants, puissent toucher le disque. Le caméléon ne peut pas marquer.",
+    },
+    {
+      id: 2,
       title: 'Joueur expérimenté aidant',
       animation: normalGameAnimation,
       repetition: '',
       rest: '',
-      instruction: 'Jeu classique. Les joueurs expérimentés jouent également pour aider à progresser.',
+      instruction:
+        "Un match classique, avec des joueurs expérimentés dans chaque équipe. S'il n'y a qu'un seul joueur expérimenté, nous recommandons à ce joueur/entraîneur de jouer avec l'équipe qui a le plus de difficulté à jouer.",
     },
   ],
 };

@@ -6757,10 +6757,10 @@ const helpGame = {
   id: 2007,
   type: DrillTypes.FRISBEE,
   author: '',
-  title: 'Match with a mixed level',
+  title: 'Help game',
   image: 'https://zupimages.net/up/20/28/up1j.jpg',
   description:
-    "Let's play a game where an experienced player can help the beginners to develop a better game. The goal of the experienced player is to make everyone touching the disc. If there is only one experienced player, we recommend this player/coach to play with the team that's having the hardest time playing",
+    'One or a few experienced players can help having a game that looks like ultimate. The goal of the experienced player is to make everyone touching the disc. This drill works with normal games as well as many drills such as Go To 10 of the Box Game.',
   minimalPlayersNumber: 10,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '8 cones - 1 disc',
@@ -6772,11 +6772,21 @@ const helpGame = {
   steps: [
     {
       id: 1,
-      title: 'Experience player helping',
+      title: 'The Chameleon',
       animation: normalGameAnimation,
       repetition: '',
       rest: '',
-      instruction: 'Classical game. The experience player are also playing to help to develop a better ultimate.',
+      instruction:
+        'One coach or experienced player always plays with the offense. They should make sure every player, even the less experienced, receive the disc. The chameleon cannot score.',
+    },
+    {
+      id: 2,
+      title: 'Game with experienced players',
+      animation: normalGameAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'A normal game, with experienced players in both teams. If there is only one experienced player, we recommend this player/coach to play with the team having the hardest time playing',
     },
   ],
 };

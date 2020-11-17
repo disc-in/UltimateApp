@@ -6583,7 +6583,7 @@ const checkLongKid = {
       repetition: '',
       rest: '',
       instruction:
-        "Quand le lanceur(un joueur expériementé/entraineur) fait un check avec le cutter, ce dernier doit courir le plus rapidement possible en longue. L'objectif est de compléter la passe la plus longue. Rendez ça marrant en demandant au cutter d'annoncer le check qu'ils veulent faire (coude, double pieds…). Si un cutter attrape la longue, tout le monde doit célébrer.",
+        "Quand le lanceur (un joueur expériementé/entraîneur) fait un check avec le cutter, ce dernier doit courir le plus rapidement possible en longue. L'objectif est de compléter la passe la plus longue. Rendez ça marrant en demandant au cutter d'annoncer le check qu'ils veulent faire (coude, double pieds…). Si un cutter attrape la longue, tout le monde doit célébrer.",
     },
   ],
 };
@@ -6624,7 +6624,7 @@ const ghostMark = {
   author: 'Puc Ultimate',
   title: 'Le Fantôme',
   image: 'https://zupimages.net/up/20/41/447u.jpg',
-  description: "Les joueurs s'entrainent à réceptionner le disque dans des situations difficiles.",
+  description: "Les joueurs s'entraînent à réceptionner le disque dans des situations difficiles.",
   minimalPlayersNumber: 3,
   inGame: "Il est important d'être capable d'effectuer une réception sans un contact visuel continu.",
   equipmentLabel: EquipmentLabels.BASIC,
@@ -6654,7 +6654,7 @@ const fish = {
   author: 'Puc Ultimate',
   title: 'La Pêche',
   image: 'https://zupimages.net/up/20/41/n148.jpg',
-  description: "Les joueurs s'entrainent à lancer de manière précise le disque sur une cible statique.",
+  description: "Les joueurs s'entraînent à lancer de manière précise le disque sur une cible statique.",
   minimalPlayersNumber: 8,
   inGame: '-',
   equipmentLabel: EquipmentLabels.BASIC,

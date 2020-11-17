@@ -38,6 +38,7 @@ export const itemContentContainer = {
   flex: 1,
   padding: 5,
   paddingBottom: 10,
+  paddingRight: 10,
 };
 export const title = {
   flex: 3,

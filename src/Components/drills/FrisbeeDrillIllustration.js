@@ -79,14 +79,8 @@ const FrisbeeDrillIllustration = (props) => {
     return (
       <>
         {renderTitle(item.title, index)}
-        <View>
-          <View>{renderCounter(index)}</View>
-          <View style={styles.verticalSpace}>
-            <View style={styles.paginationFloat}>
-              <View style={styles.pagination}>{renderPagination(index)}</View>
-            </View>
-          </View>
-        </View>
+        {renderPagination(index)}
+        {renderCounter(index)}
         <ScrollView>
           {item.illustrationType === IllustrationType.ANIMATION && displayAnimation(item)}
           {item.illustrationType === IllustrationType.VIMEO && displayVimeo(item)}
@@ -113,8 +107,8 @@ const FrisbeeDrillIllustration = (props) => {
         dotsLength={props.drill.steps.length}
         activeDotIndex={index}
         containerStyle={{
-          backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
-          paddingVertical: 0,
+          paddingTop: 10,
+          paddingBottom: 20,
         }}
         dotStyle={{
           width: 10,
@@ -161,10 +155,6 @@ const styles = StyleSheet.create({
   videoAlone: {
     flex: 1,
   },
-  pagination: {
-    position: 'absolute',
-    paddingVertical: 10,
-  },
   line: {
     height: 40,
     flexDirection: 'row',
@@ -178,31 +168,20 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   contentWrapper: { minHeight: 375 },
-  centerContainer: {
-    flex: 1,
-    alignItems: 'center',
-  },
   counter: {
-    width: 32,
+    width: 35,
     height: 25,
     borderRadius: 50,
     backgroundColor: theme.COLOR_PRIMARY,
     justifyContent: 'center',
     alignItems: 'center',
     position: 'absolute',
+    top: 42,
     right: '6%',
   },
   textCounter: {
     color: theme.COLOR_PRIMARY_LIGHT,
     fontSize: 12,
-  },
-  paginationFloat: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  verticalSpace: {
-    paddingVertical: 10,
-    paddingBottom: 20,
   },
 });
 

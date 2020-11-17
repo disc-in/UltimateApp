@@ -35,8 +35,7 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
       Array [
         Object {
           "id": 0,
-          "illustrationSource": "462695757",
-          "illustrationType": "vimeo",
+          "vimeoId": "462695757",
         },
       ]
     }
@@ -130,48 +129,37 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
             }
           }
         >
-          <View
-            style={
-              Object {
-                "alignItems": "center",
-                "flexDirection": "row",
-                "height": 40,
-                "justifyContent": "space-between",
-                "marginHorizontal": 30,
-              }
-            }
-          >
-            <View />
-            <Text
+          <View>
+            <View
               style={
                 Object {
-                  "color": "#232b2b",
-                  "fontSize": 16,
-                  "textAlign": "center",
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "height": 40,
+                  "justifyContent": "space-between",
+                  "marginHorizontal": 30,
                 }
               }
-            />
-            <View />
-          </View>
-          <RCTScrollView>
-            <View>
-              <View
+            >
+              <View />
+              <Text
                 style={
                   Object {
-                    "minHeight": 375,
+                    "color": "#232b2b",
+                    "fontSize": 16,
+                    "textAlign": "center",
                   }
                 }
-              >
+              />
+              <View />
+            </View>
+            <RCTScrollView>
+              <View>
                 <View
                   style={
-                    Array [
-                      Object {
-                        "height": 250,
-                      },
-                      Object {
-                        "flex": 1,
-                      },
-                    ]
+                    Object {
+                      "height": 250,
+                    }
                   }
                 >
                   <View
@@ -239,9 +227,18 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
                     </View>
                   </View>
                 </View>
+                <Text
+                  style={
+                    Object {
+                      "color": "#232b2b",
+                      "fontSize": 16,
+                      "margin": 10,
+                    }
+                  }
+                />
               </View>
-            </View>
-          </RCTScrollView>
+            </RCTScrollView>
+          </View>
         </View>
       </View>
     </View>

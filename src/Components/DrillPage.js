@@ -104,6 +104,11 @@ const styles = StyleSheet.create({
     fontSize: 35,
     textAlign: 'center',
   },
+  author: {
+    color: theme.COLOR_PRIMARY_LIGHT,
+    paddingHorizontal: 30,
+    fontSize: theme.FONT_SIZE_SMALL,
+  },
   titleContainer: {
     height: (Dimensions.get('window').height * 2) / 5,
     flex: 1,
@@ -133,11 +138,6 @@ const styles = StyleSheet.create({
   },
   animation: {
     flex: 1,
-  },
-  author: {
-    color: theme.COLOR_PRIMARY_LIGHT,
-    paddingHorizontal: 30,
-    fontSize: theme.FONT_SIZE_SMALL,
   },
 });
 

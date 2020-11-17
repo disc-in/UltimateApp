@@ -4,7 +4,7 @@ import { render, fireEvent, waitFor } from '@testing-library/react-native';
 import { NavigationContext } from '@react-navigation/native';
 
 import { createDrill } from '../../Fixtures/TestFixtures';
-import { IllustrationType, DrillTypes } from '../../Fixtures/config';
+import { DrillTypes } from '../../Fixtures/config';
 
 import FitnessDrillIllustration from './FitnessDrillIllustration';
 
@@ -14,22 +14,19 @@ describe('<FitnessDrillIllustration />', () => {
       id: 1,
       repetition: 3,
       title: 'First Step',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406746924',
+      vimeoId: '406746924',
     },
     {
       id: 2,
       repetition: 3,
       title: 'Second Step',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747302',
+      vimeoId: '406747302',
     },
     {
       id: 3,
       repetition: 3,
       title: 'Third Step',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747476',
+      vimeoId: '406747476',
     },
   ];
   const drill = createDrill({ type: DrillTypes.FITNESS, title: 'Hot Box', steps });

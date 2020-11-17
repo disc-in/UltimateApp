@@ -107,8 +107,7 @@ const FrisbeeDrillIllustration = (props) => {
         dotsLength={props.drill.steps.length}
         activeDotIndex={index}
         containerStyle={{
-          paddingTop: 10,
-          paddingBottom: 20,
+          paddingVertical: 10,
         }}
         dotStyle={{
           width: 10,

@@ -18,11 +18,10 @@ export const IllustrationField = {
 
 const FrisbeeDrillIllustration = (props) => {
   const carouselRef = useRef(null);
-  const [activeIndex, setActiveIndex] = useState(0);
   const [illustrationPreference, setIllustrationPreference] = useState(IllustrationField.ANIMATION);
 
   useEffect(() => {
-    setActiveIndex(0);
+    carouselRef.current.snapToItem(0);
   }, [props.drill]);
 
   const renderTitle = (title, index) => {
@@ -81,7 +80,8 @@ const FrisbeeDrillIllustration = (props) => {
     return (
       <View>
         {renderTitle(item.title, index)}
-        <View style={styles.pagination}>{renderPagination()}</View>
+        {renderPagination(index)}
+        {renderCounter(index)}
         <View>
           {(illustrationUniqueField || illustrationPreference) === IllustrationField.ANIMATION &&
             displayAnimation(item)}
@@ -100,14 +100,25 @@ const FrisbeeDrillIllustration = (props) => {
     );
   };
 
-  const renderPagination = () => {
+  const renderCounter = (index) => {
+    if (props.drill.steps.length !== 1) {
+      return (
+        <View style={styles.counter}>
+          <Text style={styles.textCounter}>
+            {index + 1}/{props.drill.steps.length}
+          </Text>
+        </View>
+      );
+    }
+  };
+
+  const renderPagination = (index) => {
     return (
       <Pagination
         dotsLength={props.drill.steps.length}
-        activeDotIndex={activeIndex}
+        activeDotIndex={index}
         containerStyle={{
-          backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
-          paddingVertical: 0,
+          paddingVertical: 10,
         }}
         dotStyle={{
           width: 10,
@@ -129,7 +140,6 @@ const FrisbeeDrillIllustration = (props) => {
   return (
     <SafeAreaView style={styles.container}>
       <Carousel
-        onSnapToItem={(index) => setActiveIndex(index)}
         layout="default"
         ref={carouselRef}
         data={props.drill.steps}
@@ -157,8 +167,20 @@ const styles = StyleSheet.create({
     color: theme.COLOR_PRIMARY,
     textAlign: 'center',
   },
-  pagination: {
-    paddingVertical: 10,
+  counter: {
+    width: 35,
+    height: 25,
+    borderRadius: 50,
+    backgroundColor: theme.COLOR_PRIMARY,
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'absolute',
+    top: 42,
+    right: '6%',
+  },
+  textCounter: {
+    color: theme.COLOR_PRIMARY_LIGHT,
+    fontSize: 12,
   },
   video: {
     height: 250,

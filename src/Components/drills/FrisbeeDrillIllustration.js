@@ -18,11 +18,10 @@ export const IllustrationField = {
 
 const FrisbeeDrillIllustration = (props) => {
   const carouselRef = useRef(null);
-  const [activeIndex, setActiveIndex] = useState(0);
   const [illustrationPreference, setIllustrationPreference] = useState(IllustrationField.ANIMATION);
 
   useEffect(() => {
-    setActiveIndex(0);
+    carouselRef.current.snapToItem(0);
   }, [props.drill]);
 
   const renderTitle = (title, index) => {
@@ -81,7 +80,7 @@ const FrisbeeDrillIllustration = (props) => {
     return (
       <View>
         {renderTitle(item.title, index)}
-        {renderPagination()}
+        {renderPagination(index)}
         {renderCounter(index)}
         <View>
           {(illustrationUniqueField || illustrationPreference) === IllustrationField.ANIMATION &&
@@ -113,11 +112,11 @@ const FrisbeeDrillIllustration = (props) => {
     }
   };
 
-  const renderPagination = () => {
+  const renderPagination = (index) => {
     return (
       <Pagination
         dotsLength={props.drill.steps.length}
-        activeDotIndex={activeIndex}
+        activeDotIndex={index}
         containerStyle={{
           paddingVertical: 10,
         }}
@@ -141,7 +140,6 @@ const FrisbeeDrillIllustration = (props) => {
   return (
     <SafeAreaView style={styles.container}>
       <Carousel
-        onSnapToItem={(index) => setActiveIndex(index)}
         layout="default"
         ref={carouselRef}
         data={props.drill.steps}

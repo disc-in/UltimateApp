@@ -87,6 +87,10 @@ import ladderGhost from '../Animation/LadderGhost';
 import fishAnimation from '../Animation/Fish';
 import reverseEightAnimation from '../Animation/ReverseEight';
 import reverseEightTargetAnimation from '../Animation/ReverseEightTarget';
+import tridentAnimation from '../Animation/Trident';
+import firtWallAnimation from '../Animation/Wall';
+import bullAnimation from '../Animation/Bull';
+import bullSpeedAnimation from '../Animation/BullSpeed';
 
 const stabilityDrill = {
   id: 1,
@@ -6677,6 +6681,106 @@ const fish = {
   ],
 };
 
+const trident = {
+  id: 1050,
+  type: DrillTypes.FRISBEE,
+  author: 'Monkey',
+  title: 'Le Trident',
+  image: 'https://zupimages.net/up/20/47/6ksu.jpg',
+  description:
+    "Les joueurs s'entrainent à identifier rapidement une cible à qui effectuer la passe le plus rapidement possible.",
+  minimalPlayersNumber: 5,
+  inGame: 'Identifier la meilleure option de passe est primordiale',
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '2 disques pour 5 joueurs',
+  durationInMinutes: 10,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.MARK, FrisbeeGoals.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'Le Trident',
+      animation: tridentAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Le lanceur cherche à jouer avec de son équipe. Il est marqué (coup droit ou revers) par le défenseur. Il cherche à effectuer le plus de passes possibles en 1 minute.\nObjectif débutant : Jouer sur la personne sans disque qui est la plus simple à atteindre.\nObjectif expérimenté : Break systématique',
+    },
+  ],
+};
+
+const firstWall = {
+  id: 1051,
+  type: DrillTypes.FRISBEE,
+  author: 'Monkey',
+  title: 'Le Rideau',
+  image: 'https://zupimages.net/up/20/47/qhge.jpg',
+  description:
+    "Un exercice pour s'entrainer au premier rideau d'une zone. Le rideau d'une zone permet de ralentir les attaques adverses",
+  minimalPlayersNumber: 9,
+  inGame:
+    "Lorsqu'une zone est mise en place, la plupart des équipes mettent en place un premier rideau pour limiter les zones d'attaque des adversaires.",
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disque - 4 plots',
+  durationInMinutes: 15,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.HANDLING, FrisbeeGoals.DEFENSE],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'Le Rideau',
+      animation: firtWallAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        "L'objectif est de passer à travers le 1er rideau d'une zone. Le compte est à 10 par côté. Les lancers par dessus sont interdits.",
+    },
+  ],
+};
+
+const bull = {
+  id: 1052,
+  type: DrillTypes.FRISBEE,
+  author: 'Monkey',
+  title: 'Le Taureau',
+  image: 'https://zupimages.net/up/20/47/iq0p.jpg',
+  description:
+    "Un exercice classique dans le monde du sport. Il faut faire circuler rapidement le disque afin que la défense n'est pas le temps de se mettre en place. Si notre passe n'est pas réussi, on va au milieu.",
+  minimalPlayersNumber: 6,
+  inGame: '',
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disque ',
+  durationInMinutes: 12,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.HANDLING, FrisbeeGoals.DEFENSE],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'Le Taureau Classique',
+      animation: bullAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        "Les joueurs forment un cercle plus ou moins grand en fonction de leur niveau. Les passes à sont voisins directs ne sont pas autorisés. Si un joueurs doit effectuer plus d'un pas pour rattraper la passe est considérer comme loupée. Le responsable de la passe loupée remplace un des défenseurs. Le compte est à 5 secondes",
+    },
+    {
+      id: 2,
+      title: 'Le Taureau à 6',
+      animation: bullSpeedAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        "L'objectif des attaquants est de conserver le disque sans se déplacer. Ils ne peuvent pas jouer plus de 2 fois de suite avec le même joueur à la suite.",
+    },
+  ],
+};
+
 const normalGame = {
   id: 2001,
   type: DrillTypes.FRISBEE,
@@ -7674,6 +7778,9 @@ export const drills = [
   adaptToTheMark,
   ghostMark,
   fish,
+  trident,
+  firstWall,
+  bull,
 
   // // Games
   // normalGame,

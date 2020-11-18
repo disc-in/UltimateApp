@@ -87,6 +87,10 @@ import ladderGhost from '../Animation/LadderGhost';
 import fishAnimation from '../Animation/Fish';
 import reverseEightAnimation from '../Animation/ReverseEight';
 import reverseEightTargetAnimation from '../Animation/ReverseEightTarget';
+import tridentAnimation from '../Animation/Trident';
+import firtWallAnimation from '../Animation/Wall';
+import bullAnimation from '../Animation/Bull';
+import bullSpeedAnimation from '../Animation/BullSpeed';
 
 const stabilityDrill = {
   id: 1,
@@ -6554,7 +6558,7 @@ const fish = {
   minimalPlayersNumber: 8,
   inGame: '-',
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 disque par paire',
+  equipment: '1 disc per pair',
   durationInMinutes: 10,
   intensity: Intensities.LOW,
   goals: [FrisbeeGoals.CATCH, FrisbeeGoals.THROWING],
@@ -6569,6 +6573,104 @@ const fish = {
       rest: '',
       instruction:
         'Players play in pairs. The objective is to collect as many blocks as possible. One player of the pair runs at the level of a block. His teammate sends him the disc in a way defined by the coach. If, and only if, the player catches the disc while remaining at the pivot of the block, he can pick it up and bring it back to his side. His teammate in turn runs, the roles are reversed. The team having picked up the most disc wins.',
+    },
+  ],
+};
+
+const trident = {
+  id: 1050,
+  type: DrillTypes.FRISBEE,
+  author: 'Monkey',
+  title: 'The Trident',
+  image: 'https://zupimages.net/up/20/47/6ksu.jpg',
+  description: 'Players practice quickly identifying a target to pass to as quickly as possible.',
+  minimalPlayersNumber: 5,
+  inGame: 'Identifying the best passing option is paramount in a game.',
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '2 discs for 5 players',
+  durationInMinutes: 10,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.MARK, FrisbeeGoals.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'The Trident',
+      animation: tridentAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'The thrower is looking to play with his teammate. He is marked (forehand or backhand) by the defender. He tries to make as many passes as possible in 1 minute.\nGoal for beginner: To play on the easiest to reach.\nExperienced goal: Try to break systematically.',
+    },
+  ],
+};
+
+const firstWall = {
+  id: 1051,
+  type: DrillTypes.FRISBEE,
+  author: 'Monkey',
+  title: 'The Wall',
+  image: 'https://zupimages.net/up/20/47/qhge.jpg',
+  description:
+    "An exercise to train at the first wall of a zone defense. The wall of a zone allows to slow down the opponent's offense.",
+  minimalPlayersNumber: 9,
+  inGame: "When a zone is set up, most teams put up a first wall to limit the opponents' attack zones.",
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disc - 4 cones',
+  durationInMinutes: 15,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.HANDLING, FrisbeeGoals.DEFENSE],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'The Wall',
+      animation: firtWallAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'The objective is to pass through the 1st wall of zone. The count is 10 per side. Throws over are forbidden.',
+    },
+  ],
+};
+
+const bull = {
+  id: 1052,
+  type: DrillTypes.FRISBEE,
+  author: 'Monkey',
+  title: 'The Bull',
+  image: 'https://zupimages.net/up/20/47/iq0p.jpg',
+  description:
+    'A classic exercise in the world of sports. The disc must be circulated quickly so that the defense does not have time to set up. If our pass is not successful, we go to the middle',
+  minimalPlayersNumber: 6,
+  inGame: '',
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disc ',
+  durationInMinutes: 12,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.HANDLING, FrisbeeGoals.DEFENSE],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'The Classic Bull',
+      animation: bullAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'The players form a circle more or less large depending on their level. Passes to direct neighbors are not allowed. If a player has to take more than one step to catch the pass is considered a miss. The person responsible for the missed pass replaces one of the defenders. The count is 5 seconds',
+    },
+    {
+      id: 2,
+      title: 'The 6-Player Bull',
+      animation: bullSpeedAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'The objective of the attackers is to keep the disk without moving. They cannot play more than 2 times in a row with the same player. Same rule as in the previous variant',
     },
   ],
 };
@@ -7561,6 +7663,9 @@ export const drills = [
   adaptToTheMark,
   ghostMark,
   fish,
+  trident,
+  firstWall,
+  bull,
 
   // Commenting game drills because we don't want them in the drill list, only part of programs
   // // Games

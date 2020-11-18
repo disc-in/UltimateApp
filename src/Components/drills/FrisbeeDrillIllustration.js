@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { View, ScrollView, StyleSheet, Text, Dimensions, TouchableOpacity, SafeAreaView } from 'react-native';
+import { View, StyleSheet, Text, Dimensions, TouchableOpacity, SafeAreaView } from 'react-native';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
@@ -81,9 +81,9 @@ const FrisbeeDrillIllustration = (props) => {
     return (
       <View>
         {renderTitle(item.title, index)}
-        {renderPagination(index)}
+        {renderPagination()}
         {renderCounter(index)}
-        <ScrollView>
+        <View>
           {(illustrationUniqueField || illustrationPreference) === IllustrationField.ANIMATION &&
             displayAnimation(item)}
           {(illustrationUniqueField || illustrationPreference) === IllustrationField.VIMEO && displayVimeo(item)}
@@ -96,7 +96,7 @@ const FrisbeeDrillIllustration = (props) => {
             />
           )}
           <Text style={styles.instruction}>{item.instruction}</Text>
-        </ScrollView>
+        </View>
       </View>
     );
   };
@@ -113,11 +113,11 @@ const FrisbeeDrillIllustration = (props) => {
     }
   };
 
-  const renderPagination = (index) => {
+  const renderPagination = () => {
     return (
       <Pagination
         dotsLength={props.drill.steps.length}
-        activeDotIndex={index}
+        activeDotIndex={activeIndex}
         containerStyle={{
           paddingVertical: 10,
         }}

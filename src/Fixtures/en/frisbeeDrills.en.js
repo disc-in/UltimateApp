@@ -6876,7 +6876,7 @@ const initiationVerticalTraining = {
   id: 1,
   title: 'Vertical Stack',
   image: 'https://zupimages.net/up/20/19/frj2.jpg',
-  description: 'Learning the basic of a Vertical Stack',
+  description: 'Learning the basics of a Vertical Stack',
   drills: [warmupDrill, trainDrill, resetOpenDrill, resetBreakDrill, game3v3],
 };
 

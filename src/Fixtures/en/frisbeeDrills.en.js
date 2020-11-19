@@ -6583,9 +6583,9 @@ const trident = {
   author: 'Monkey',
   title: 'The Trident',
   image: 'https://zupimages.net/up/20/47/6ksu.jpg',
-  description: 'Players practice quickly identifying a target to pass to as quickly as possible.',
+  description: 'Players practice identifying a target to pass to as quickly as possible.',
   minimalPlayersNumber: 5,
-  inGame: 'Identifying the best passing option is paramount in a game.',
+  inGame: 'Processing information and take a quick decision is paramount on offense.',
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '2 discs for 5 players',
   durationInMinutes: 10,
@@ -6601,7 +6601,7 @@ const trident = {
       repetition: '',
       rest: '',
       instruction:
-        'The thrower is looking to play with his teammate. He is marked (forehand or backhand) by the defender. He tries to make as many passes as possible in 1 minute.\nGoal for beginner: To play on the easiest to reach.\nExperienced goal: Try to break systematically.',
+        'The thrower is marked (forehand or backhand) by the defender. He tries to complete as many passes as possible in 1 minute.\nBeginners: choose the easiest receiver.\nExperienced: Try to break.',
     },
   ],
 };
@@ -6643,7 +6643,7 @@ const bull = {
   title: 'The Bull',
   image: 'https://zupimages.net/up/20/47/iq0p.jpg',
   description:
-    'A classic exercise in the world of sports. The disc must be circulated quickly so that the defense does not have time to set up. If our pass is not successful, we go to the middle',
+    'A famous drill used in many team sports. The disc must be passed quickly so that the defense does not have time to set up. If a pass is not successful, the thrower goes replaces a defender',
   minimalPlayersNumber: 6,
   inGame: '',
   equipmentLabel: EquipmentLabels.BASIC,
@@ -6661,7 +6661,7 @@ const bull = {
       repetition: '',
       rest: '',
       instruction:
-        'The players form a circle more or less large depending on their level. Passes to direct neighbors are not allowed. If a player has to take more than one step to catch the pass is considered a miss. The person responsible for the missed pass replaces one of the defenders. The count is 5 seconds',
+        'The players form a circle more or less wide depending on their level. Passes to direct neighbors are not allowed. If a player has to take more than one step to catch the pass is considered incomplete. The thrower replaces one of the defenders. The stall starts at 5.',
     },
     {
       id: 2,

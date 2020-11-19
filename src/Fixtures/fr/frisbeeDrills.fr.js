@@ -6688,9 +6688,10 @@ const trident = {
   title: 'Le Trident',
   image: 'https://zupimages.net/up/20/47/6ksu.jpg',
   description:
-    "Les joueurs s'entrainent à identifier rapidement une cible à qui effectuer la passe le plus rapidement possible.",
+    "Les joueurs s'entraînent à identifier un receveur à qui effectuer la passe le plus rapidement possible.",
   minimalPlayersNumber: 5,
-  inGame: 'Identifier la meilleure option de passe est primordiale',
+  inGame:
+    "Être capable de prendre l'information et ses décisions rapidement, même fatigué, est un atout majeur en attaque",
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '2 disques pour 5 joueurs',
   durationInMinutes: 10,
@@ -6706,7 +6707,7 @@ const trident = {
       repetition: '',
       rest: '',
       instruction:
-        'Le lanceur cherche à jouer avec de son équipe. Il est marqué (coup droit ou revers) par le défenseur. Il cherche à effectuer le plus de passes possibles en 1 minute.\nObjectif débutant : Jouer sur la personne sans disque qui est la plus simple à atteindre.\nObjectif expérimenté : Break systématique',
+        'Le lanceur est marqué (coup droit ou revers) par le défenseur. Il cherche à effectuer le plus de passes possibles en 1 minute.\nObjectif débutant : Jouer sur le receveur le plus simple à atteindre.\nObjectif expérimenté : Break systématique',
     },
   ],
 };
@@ -6749,7 +6750,7 @@ const bull = {
   title: 'Le Taureau',
   image: 'https://zupimages.net/up/20/47/iq0p.jpg',
   description:
-    "Un exercice classique dans le monde du sport. Il faut faire circuler rapidement le disque afin que la défense n'est pas le temps de se mettre en place. Si notre passe n'est pas réussi, on va au milieu.",
+    "Un exercice classique dans le monde du sport collectif. Il faut faire circuler rapidement le disque afin que la défense n'ait pas le temps de se mettre en place. Si une passe n'est pas complétée, le lanceur va au milieu.",
   minimalPlayersNumber: 6,
   inGame: '',
   equipmentLabel: EquipmentLabels.BASIC,
@@ -6767,7 +6768,7 @@ const bull = {
       repetition: '',
       rest: '',
       instruction:
-        "Les joueurs forment un cercle plus ou moins grand en fonction de leur niveau. Les passes à sont voisins directs ne sont pas autorisés. Si un joueurs doit effectuer plus d'un pas pour rattraper la passe est considérer comme loupée. Le responsable de la passe loupée remplace un des défenseurs. Le compte est à 5 secondes",
+        "Les joueurs forment un cercle plus ou moins grand en fonction de leur niveau. Les passes à un voisin direct ne sont pas autorisées. Si un joueur doit effectuer plus d'un pas pour rattraper une passe, elle est considérée comme ratée. Le lanceur remplace un des défenseurs. Le compte est à 5 secondes",
     },
     {
       id: 2,

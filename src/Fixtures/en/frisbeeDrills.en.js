@@ -6934,28 +6934,36 @@ const dumpSwingTraining = {
   drills: [warmupDrill, trainOfFakeDrill, dishieChainDrill, endzoneGameDrill, longestGame],
 };
 
-const firstChildTraining = {
+const firstU13Training = {
   id: 4,
   title: 'First Time',
   image: 'https://zupimages.net/up/20/19/a7io.png',
-  description: 'Training will allow the players to learn the basics of ultimate while having fun',
-  drills: [warmupDrill, basicThrowsDrill, aussieDrill, dwarfDuelDrill, helpGame],
+  description: 'Explore the basics of ultimate while having fun',
+  drills: [bulldogDrill, basicThrowsDrill, checkLongKid, goToTenDrill],
 };
 
-const secondChildTraining = {
+const secondU13Training = {
   id: 5,
   title: 'Defense Basics',
   image: 'https://zupimages.net/up/20/19/dgwo.jpg',
   description: 'Training will allow the players to learn the basics of ultimate while having fun',
-  drills: [warmupDrill, aussieDrill, cardinal, checkLong, game3v3],
+  drills: [aussieDrill, fish, giveAndGoDrill, game3v3],
 };
 
-const thirdChildTraining = {
+const thirdU13Training = {
   id: 6,
   title: 'Treasure Hunt',
   image: 'https://zupimages.net/up/20/19/c9i6.jpg',
   description: 'Help players learn the basics of ultimate while having fun',
-  drills: [warmupDrill, menageATroisDrill, bulldogDrill, goToTenDrill, treasureHuntDrill, game3v3],
+  drills: [treasureHuntDrill, menageATroisDrill, goToTenDrill, helpGame],
+};
+
+const firstInitiationAdultTraining = {
+  id: 23,
+  title: 'First time',
+  image: 'https://zupimages.net/up/20/19/cd36.jpg',
+  description: 'Explore the basics of ultimate while having fun',
+  drills: [warmupDrill, basicThrowsDrill, goToTenDrill, game3v3],
 };
 
 const secondInintiationAdultTraining = {
@@ -6963,7 +6971,7 @@ const secondInintiationAdultTraining = {
   title: 'Defense & Longs',
   image: 'https://zupimages.net/up/20/19/cd36.jpg',
   description: 'Players will work on defense and long throws',
-  drills: [warmupDrill, menageATroisDrill, checkLong, trainDrill, normalGame],
+  drills: [warmupDrill, menageATroisDrill, checkLong, trainDrill, game5v5],
 };
 
 const thirdInintiationAdultTraining = {
@@ -6971,7 +6979,7 @@ const thirdInintiationAdultTraining = {
   title: 'Adapt to the Field',
   image: 'https://zupimages.net/up/20/19/hrqz.jpg',
   description: 'Players will learn to adapt to the size of the field',
-  drills: [warmupDrill, throwCatchThrow, goaltimateDrill, triangleOfDeathdrill, normalGame],
+  drills: [warmupDrill, throwCatchThrow, goaltimateDrill, triangleOfDeathdrill, helpGame],
 };
 
 const defenseBaseTraining = {
@@ -7076,12 +7084,12 @@ const diagonalStackTraining = {
   drills: [warmupGameDrill, horizontalTrapOutside, diagonalIso, diagonalToVertical, trainingGame],
 };
 
-const kidInitiation = {
+const u10Initiation = {
   id: 22,
   title: 'Initiation Children U10',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'First practice to learn to play with a disc',
-  drills: [warmupGameDrill, basicThrowsDrill, aussieDrill, checkLongKid],
+  drills: [bulldogDrill, basicThrowsDrill, checkLongKid, boxGame],
 };
 
 //Fitness Weeks
@@ -7792,9 +7800,9 @@ export const trainings = [
   // Frisbee
   dumpSwingTraining,
   coed2MarkTraining,
-  firstChildTraining,
-  secondChildTraining,
-  thirdChildTraining,
+  firstU13Training,
+  secondU13Training,
+  thirdU13Training,
   secondInintiationAdultTraining,
   thirdInintiationAdultTraining,
   initiationVerticalTraining,
@@ -7811,7 +7819,7 @@ export const trainings = [
   sideStackTraining,
   splitStackTraining,
   diagonalStackTraining,
-  kidInitiation,
+  u10Initiation,
 ];
 
 export const programs = [
@@ -7819,19 +7827,19 @@ export const programs = [
     id: 1,
     type: DrillTypes.FRISBEE,
     title: 'Initiation U10',
-    trainings: [kidInitiation],
+    trainings: [u10Initiation],
   },
   {
     id: 2,
     type: DrillTypes.FRISBEE,
     title: 'Initiation U13',
-    trainings: [firstChildTraining, secondChildTraining, thirdChildTraining],
+    trainings: [firstU13Training, secondU13Training, thirdU13Training],
   },
   {
     id: 3,
     type: DrillTypes.FRISBEE,
     title: 'Initiation Adult',
-    trainings: [firstChildTraining, secondInintiationAdultTraining, thirdInintiationAdultTraining],
+    trainings: [firstInitiationAdultTraining, secondInintiationAdultTraining, thirdInintiationAdultTraining],
   },
   {
     id: 4,

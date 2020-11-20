@@ -7038,28 +7038,36 @@ const dumpSwingTraining = {
   drills: [warmupDrill, trainOfFakeDrill, dishieChainDrill, endzoneGameDrill, longestGame],
 };
 
-const firstChildTraining = {
+const firstU13Training = {
   id: 4,
-  title: 'Première fois',
+  title: 'Premiers pas',
   image: 'https://zupimages.net/up/20/19/a7io.png',
   description: "Découvrir l'ultimate en s'amusant",
-  drills: [warmupDrill, basicThrowsDrill, aussieDrill, dwarfDuelDrill, helpGame],
+  drills: [bulldogDrill, basicThrowsDrill, checkLongKid, goToTenDrill],
 };
 
-const secondChildTraining = {
+const secondU13Training = {
   id: 5,
   title: 'Les bases de la défense',
   image: 'https://zupimages.net/up/20/19/dgwo.jpg',
   description: 'Mettre en place les bons réflexes défensifs tout en touchant beaucoup de disque',
-  drills: [warmupDrill, aussieDrill, cardinal, checkLong, game3v3],
+  drills: [aussieDrill, fish, giveAndGoDrill, game3v3],
 };
 
-const thirdChildTraining = {
+const thirdU13Training = {
   id: 6,
   title: 'Chasse aux trésors',
   image: 'https://zupimages.net/up/20/19/c9i6.jpg',
   description: "Idéal pour découvrir les bases de l'ultimate en s'amusant",
-  drills: [warmupDrill, menageATroisDrill, bulldogDrill, goToTenDrill, treasureHuntDrill, game3v3],
+  drills: [treasureHuntDrill, menageATroisDrill, goToTenDrill, helpGame],
+};
+
+const firstInitiationAdultTraining = {
+  id: 23,
+  title: 'Premiers pas',
+  image: 'https://zupimages.net/up/20/19/cd36.jpg',
+  description: "Découvrir l'ultimate en s'amusant",
+  drills: [warmupDrill, basicThrowsDrill, goToTenDrill, game3v3],
 };
 
 const secondInintiationAdultTraining = {
@@ -7067,7 +7075,7 @@ const secondInintiationAdultTraining = {
   title: 'Défense & Longues',
   image: 'https://zupimages.net/up/20/19/cd36.jpg',
   description: 'Apprendre les bases nécessaires pour faire de bonnes défenses',
-  drills: [warmupDrill, menageATroisDrill, checkLong, trainDrill, normalGame],
+  drills: [warmupDrill, menageATroisDrill, checkLong, trainDrill, game5v5],
 };
 
 const thirdInintiationAdultTraining = {
@@ -7075,7 +7083,7 @@ const thirdInintiationAdultTraining = {
   title: "S'adapter au terrain",
   image: 'https://zupimages.net/up/20/19/hrqz.jpg',
   description: "S'adapter à l'espace disponible sur le terrain tout en s'amusant",
-  drills: [warmupDrill, throwCatchThrow, goaltimateDrill, triangleOfDeathdrill, normalGame],
+  drills: [warmupDrill, throwCatchThrow, goaltimateDrill, triangleOfDeathdrill, helpGame],
 };
 
 const defenseBaseTraining = {
@@ -7182,12 +7190,12 @@ const diagonalStackTraining = {
   drills: [warmupGameDrill, horizontalTrapOutside, diagonalIso, diagonalToVertical, trainingGame],
 };
 
-const kidInitiation = {
+const u10Initiation = {
   id: 22,
   title: 'Initiation Enfant U10',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: "Découvrir l'ultimate en s'amusant",
-  drills: [warmupGameDrill, basicThrowsDrill, aussieDrill, checkLongKid],
+  drills: [bulldogDrill, basicThrowsDrill, checkLongKid, boxGame],
 };
 
 //Fitness Weeks
@@ -7904,9 +7912,9 @@ export const trainings = [
   // Frisbee
   dumpSwingTraining,
   coed2MarkTraining,
-  firstChildTraining,
-  secondChildTraining,
-  thirdChildTraining,
+  firstU13Training,
+  secondU13Training,
+  thirdU13Training,
   secondInintiationAdultTraining,
   thirdInintiationAdultTraining,
   initiationVerticalTraining,
@@ -7923,7 +7931,7 @@ export const trainings = [
   sideStackTraining,
   splitStackTraining,
   diagonalStackTraining,
-  kidInitiation,
+  u10Initiation,
 ];
 
 export const programs = [
@@ -7931,19 +7939,19 @@ export const programs = [
     id: 1,
     type: DrillTypes.FRISBEE,
     title: 'Initiation u10',
-    trainings: [kidInitiation],
+    trainings: [u10Initiation],
   },
   {
     id: 2,
     type: DrillTypes.FRISBEE,
     title: 'Initiation u13',
-    trainings: [firstChildTraining, secondChildTraining, thirdChildTraining],
+    trainings: [firstU13Training, secondU13Training, thirdU13Training],
   },
   {
     id: 3,
     type: DrillTypes.FRISBEE,
     title: 'Initiation adultes',
-    trainings: [firstChildTraining, secondInintiationAdultTraining, thirdInintiationAdultTraining],
+    trainings: [firstInitiationAdultTraining, secondInintiationAdultTraining, thirdInintiationAdultTraining],
   },
   {
     id: 4,

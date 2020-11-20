@@ -6640,14 +6640,14 @@ const bull = {
   id: 1052,
   type: DrillTypes.FRISBEE,
   author: 'Monkey',
-  title: 'The Bull',
+  title: 'Rondo',
   image: 'https://zupimages.net/up/20/47/iq0p.jpg',
   description:
     'A famous drill used in many team sports. The disc must be passed quickly so that the defense does not have time to set up. If a pass is not successful, the thrower goes replaces a defender',
   minimalPlayersNumber: 6,
-  inGame: '',
+  inGame: '-',
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 disc ',
+  equipment: '1 disc',
   durationInMinutes: 12,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.HANDLING, FrisbeeGoals.DEFENSE],
@@ -6656,7 +6656,7 @@ const bull = {
   steps: [
     {
       id: 1,
-      title: 'The Classic Bull',
+      title: 'The Classic Rondo',
       animation: bullAnimation,
       repetition: '',
       rest: '',
@@ -6665,7 +6665,7 @@ const bull = {
     },
     {
       id: 2,
-      title: 'The 6-Player Bull',
+      title: 'The 6-Player Rondo',
       animation: bullSpeedAnimation,
       repetition: '',
       rest: '',

@@ -6748,11 +6748,11 @@ const bull = {
   type: DrillTypes.FRISBEE,
   author: 'Monkey',
   title: 'Le Taureau',
-  image: 'https://zupimages.net/up/20/47/iq0p.jpg',
+  image: 'https://zupimages.net/up/20/47/4ypa.jpg',
   description:
     "Un exercice classique dans le monde du sport collectif. Il faut faire circuler rapidement le disque afin que la défense n'ait pas le temps de se mettre en place. Si une passe n'est pas complétée, le lanceur va au milieu.",
   minimalPlayersNumber: 6,
-  inGame: '',
+  inGame: '-',
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque ',
   durationInMinutes: 12,

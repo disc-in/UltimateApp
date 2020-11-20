@@ -6641,7 +6641,7 @@ const bull = {
   type: DrillTypes.FRISBEE,
   author: 'Monkey',
   title: 'Rondo',
-  image: 'https://zupimages.net/up/20/47/iq0p.jpg',
+  image: 'https://zupimages.net/up/20/47/4ypa.jpg',
   description:
     'A famous drill used in many team sports. The disc must be passed quickly so that the defense does not have time to set up. If a pass is not successful, the thrower goes replaces a defender',
   minimalPlayersNumber: 6,

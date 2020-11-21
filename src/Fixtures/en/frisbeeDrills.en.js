@@ -93,6 +93,10 @@ import crossingTheFieldDefenseAnimation from '../Animation/CrossingTheFieldDefen
 import crossingTheFieldManyAnimation from '../Animation/CrossingTheFieldMany';
 import reverseEightAnimation from '../Animation/ReverseEight';
 import reverseEightTargetAnimation from '../Animation/ReverseEightTarget';
+import tridentAnimation from '../Animation/Trident';
+import firtWallAnimation from '../Animation/Wall';
+import bullAnimation from '../Animation/Bull';
+import bullSpeedAnimation from '../Animation/BullSpeed';
 
 const stabilityDrill = {
   id: 1,
@@ -6160,7 +6164,7 @@ const cupSwinging = {
   inGame:
     'When a zone defense is set up, the players forming the first curtain must move uniformly without leaving enough space for a throw to be made between them.',
   equipmentLabel: EquipmentLabels.NONE,
-  equipment: '1 disc',
+  equipment: '1 disc - 4 cones',
   durationInMinutes: 10,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.COMMUNICATION],
@@ -6169,6 +6173,15 @@ const cupSwinging = {
   steps: [
     {
       id: 1,
+      title: 'The Wall',
+      animation: firtWallAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'The objective is to pass through the 1st wall of zone. The count is 10 per side. Throws over are forbidden.',
+    },
+    {
+      id: 2,
       title: 'Learning to swing',
       animation: cupSwingingAnimation,
       repetition: '',
@@ -6631,6 +6644,74 @@ const crossingTheField = {
       rest: '',
       instruction:
         'Same drill, introducing other players to play 3v3, 3v2, 3v1, etc. depending on the level of the players and what you want to achieve. With a lot of players it looks like a game, but each player cannot make as many plays on the disc.',
+    },
+  ],
+};
+
+const trident = {
+  id: 1051,
+  type: DrillTypes.FRISBEE,
+  author: 'Monkey',
+  title: 'The Trident',
+  image: 'https://zupimages.net/up/20/47/6ksu.jpg',
+  description: 'Players practice identifying a target to pass to as quickly as possible.',
+  minimalPlayersNumber: 5,
+  inGame: 'Processing information and take a quick decision is paramount on offense.',
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '2 discs for 5 players',
+  durationInMinutes: 10,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.MARK, FrisbeeGoals.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'The Trident',
+      animation: tridentAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'The thrower is marked (forehand or backhand) by the defender. He tries to complete as many passes as possible in 1 minute.\nBeginners: choose the easiest receiver.\nExperienced: Try to break.',
+    },
+  ],
+};
+
+const bull = {
+  id: 1052,
+  type: DrillTypes.FRISBEE,
+  author: 'Monkey',
+  title: 'Rondo',
+  image: 'https://zupimages.net/up/20/47/4ypa.jpg',
+  description:
+    'A famous drill used in many team sports. The disc must be passed quickly so that the defense does not have time to set up. If a pass is not successful, the thrower goes replaces a defender',
+  minimalPlayersNumber: 6,
+  inGame: '-',
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disc',
+  durationInMinutes: 12,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.HANDLING, FrisbeeGoals.DEFENSE],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'The Classic Rondo',
+      animation: bullAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'The players form a circle more or less wide depending on their level. Passes to direct neighbors are not allowed. If a player has to take more than one step to catch the pass is considered incomplete. The thrower replaces one of the defenders. The stall starts at 5.',
+    },
+    {
+      id: 2,
+      title: 'The 6-Player Rondo',
+      animation: bullSpeedAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'The objective of the attackers is to keep the disk without moving. They cannot play more than 2 times in a row with the same player. Same rule as in the previous variant',
     },
   ],
 };
@@ -7709,6 +7790,8 @@ export const drills = [
   adaptToTheMark,
   ghostMark,
   fish,
+  trident,
+  bull,
   crossingTheField,
 
   // Commenting game drills because we don't want them in the drill list, only part of programs

@@ -93,6 +93,10 @@ import crossingTheFieldDefenseAnimation from '../Animation/CrossingTheFieldDefen
 import crossingTheFieldManyAnimation from '../Animation/CrossingTheFieldMany';
 import reverseEightAnimation from '../Animation/ReverseEight';
 import reverseEightTargetAnimation from '../Animation/ReverseEightTarget';
+import tridentAnimation from '../Animation/Trident';
+import firtWallAnimation from '../Animation/Wall';
+import bullAnimation from '../Animation/Bull';
+import bullSpeedAnimation from '../Animation/BullSpeed';
 
 const stabilityDrill = {
   id: 1,
@@ -6259,7 +6263,7 @@ const cupSwinging = {
   inGame:
     "Lorsque une défense de zone est mise en place, les joueurs formant le premier rideau doivent se déplacer de manière uniforme sans laisser d'espace suffisant pour qu'un lancer puisse être effectué entre eux",
   equipmentLabel: EquipmentLabels.NONE,
-  equipment: '1 disque',
+  equipment: '1 disque - 4 plots',
   durationInMinutes: 10,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.COMMUNICATION],
@@ -6268,7 +6272,16 @@ const cupSwinging = {
   steps: [
     {
       id: 1,
-      title: 'Travail de swing',
+      title: 'Le Rideau',
+      animation: firtWallAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        "L'objectif est de passer à travers le 1er rideau d'une zone. Le compte est à 10 par côté. Les lancers par dessus sont interdits.",
+    },
+    {
+      id: 2,
+      title: 'Travail de Swing',
       animation: cupSwingingAnimation,
       repetition: '',
       rest: '',
@@ -6735,6 +6748,76 @@ const crossingTheField = {
       rest: '',
       instruction:
         "Même exercice, en ajoutant des joueurs pour jouer à 3 contre 2, 3 contre 3, etc. en fonction du niveau des joueurs et de ce qu'on veut leur faire travailler : avec beaucoup de joueurs, cela ressemble à de l'ultimate mais chaque joueur touchera moins de disque et le jeu sera plus haché.",
+    },
+  ],
+};
+
+const trident = {
+  id: 1051,
+  type: DrillTypes.FRISBEE,
+  author: 'Monkey',
+  title: 'Le Trident',
+  image: 'https://zupimages.net/up/20/47/6ksu.jpg',
+  description:
+    "Les joueurs s'entraînent à identifier un receveur à qui effectuer la passe le plus rapidement possible.",
+  minimalPlayersNumber: 5,
+  inGame:
+    "Être capable de prendre l'information et ses décisions rapidement, même fatigué, est un atout majeur en attaque",
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '2 disques pour 5 joueurs',
+  durationInMinutes: 10,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.MARK, FrisbeeGoals.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'Le Trident',
+      animation: tridentAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Le lanceur est marqué (coup droit ou revers) par le défenseur. Il cherche à effectuer le plus de passes possibles en 1 minute.\nObjectif débutant : Jouer sur le receveur le plus simple à atteindre.\nObjectif expérimenté : Break systématique',
+    },
+  ],
+};
+
+const bull = {
+  id: 1052,
+  type: DrillTypes.FRISBEE,
+  author: 'Monkey',
+  title: 'Le Taureau',
+  image: 'https://zupimages.net/up/20/47/4ypa.jpg',
+  description:
+    "Un exercice classique dans le monde du sport collectif. Il faut faire circuler rapidement le disque afin que la défense n'ait pas le temps de se mettre en place. Si une passe n'est pas complétée, le lanceur va au milieu.",
+  minimalPlayersNumber: 6,
+  inGame: '-',
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disque ',
+  durationInMinutes: 12,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.HANDLING, FrisbeeGoals.DEFENSE],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'Le Taureau Classique',
+      animation: bullAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        "Les joueurs forment un cercle plus ou moins grand en fonction de leur niveau. Les passes à un voisin direct ne sont pas autorisées. Si un joueur doit effectuer plus d'un pas pour rattraper une passe, elle est considérée comme ratée. Le lanceur remplace un des défenseurs. Le compte est à 5 secondes",
+    },
+    {
+      id: 2,
+      title: 'Le Taureau à 6',
+      animation: bullSpeedAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        "L'objectif des attaquants est de conserver le disque sans se déplacer. Ils ne peuvent pas jouer plus de 2 fois de suite avec le même joueur à la suite.",
     },
   ],
 };
@@ -7822,6 +7905,8 @@ export const drills = [
   adaptToTheMark,
   ghostMark,
   fish,
+  trident,
+  bull,
   crossingTheField,
 
   // // Games

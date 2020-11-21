@@ -59,6 +59,9 @@ import breakRace from '../Animation/BreakRace';
 import longCheck from '../Animation/LongCheck';
 import throwCatch from '../Animation/ThrowCatch';
 import threeGame from '../Animation/ThreeGame';
+import fiveGame from '../Animation/FiveGame';
+import singleBoxGame from '../Animation/SingleBoxGame';
+import twoBoxesGame from '../Animation/TwoBoxesGame';
 import normalGameAnimation from '../Animation/NormalGame';
 import endzoneAnimation from '../Animation/Endzone';
 import endzoneFinition from '../Animation/EndzoneFinition';
@@ -85,6 +88,9 @@ import adaptMark from '../Animation/AdaptMark';
 import ghost from '../Animation/Ghost';
 import ladderGhost from '../Animation/LadderGhost';
 import fishAnimation from '../Animation/Fish';
+import crossingTheFieldAnimation from '../Animation/CrossingTheField';
+import crossingTheFieldDefenseAnimation from '../Animation/CrossingTheFieldDefense';
+import crossingTheFieldManyAnimation from '../Animation/CrossingTheFieldMany';
 import reverseEightAnimation from '../Animation/ReverseEight';
 import reverseEightTargetAnimation from '../Animation/ReverseEightTarget';
 
@@ -5073,7 +5079,7 @@ const goToTenDrill = {
   author: "Jack'suns",
   title: 'Go to 10',
   image: 'https://zupimages.net/up/20/19/rcyt.jpg',
-  description: 'First team with 10 complete passes win',
+  description: 'First team with 10 complete passes wins.',
   minimalPlayersNumber: 12,
   inGame:
     'It is important to know how to keep the disk as long as possible. This knowledge is particularly useful against a zone defense or when approaching the endzone.',
@@ -5091,7 +5097,16 @@ const goToTenDrill = {
       animation: animationGoToTen,
       repetition: '',
       rest: '',
-      instruction: 'First team with 10 completes passes win. Stall to 6.',
+      instruction:
+        'Beginners could play to 5 passes instead of 10. The offense could also have more players than the defense.',
+    },
+    {
+      id: 2,
+      title: 'Make it difficult',
+      animation: animationGoToTen,
+      repetition: '',
+      rest: '',
+      instruction: 'Start the stall at 3 or 6 instead of 1. Reduce the field size.',
     },
   ],
 };
@@ -6484,7 +6499,6 @@ const checkLongKid = {
     },
   ],
 };
-
 const adaptToTheMark = {
   id: 1047,
   type: DrillTypes.FRISBEE,
@@ -6554,7 +6568,7 @@ const fish = {
   minimalPlayersNumber: 8,
   inGame: '-',
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 disque par paire',
+  equipment: '1 disc for 2 players',
   durationInMinutes: 10,
   intensity: Intensities.LOW,
   goals: [FrisbeeGoals.CATCH, FrisbeeGoals.THROWING],
@@ -6569,6 +6583,54 @@ const fish = {
       rest: '',
       instruction:
         'Players play in pairs. The objective is to collect as many blocks as possible. One player of the pair runs at the level of a block. His teammate sends him the disc in a way defined by the coach. If, and only if, the player catches the disc while remaining at the pivot of the block, he can pick it up and bring it back to his side. His teammate in turn runs, the roles are reversed. The team having picked up the most disc wins.',
+    },
+  ],
+};
+
+const crossingTheField = {
+  id: 1050,
+  type: DrillTypes.FRISBEE,
+  author: 'Gentle',
+  title: 'Crossing the field',
+  image: 'https://zupimages.net/up/20/47/63gr.jpg',
+  description:
+    'Players have to cross the field as fast as possible. If there is an incomplete pass, they have to start again.',
+  minimalPlayersNumber: 2,
+  inGame: '-',
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disc for 2 players',
+  durationInMinutes: 10,
+  intensity: Intensities.HIGH,
+  goals: [FrisbeeGoals.PLAY, FrisbeeGoals.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'Round Trip',
+      animation: crossingTheFieldAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Players play in pairs. You can have 2 or more pairs playing at the same time and the fastest pair wins.',
+    },
+    {
+      id: 2,
+      title: 'With defense',
+      animation: crossingTheFieldDefenseAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Same drill, adding one defender to make it closer slightly more difficult and closer to playing ultimate.',
+    },
+    {
+      id: 3,
+      title: 'More players',
+      animation: crossingTheFieldManyAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Same drill, introducing other players to play 3v3, 3v2, 3v1, etc. depending on the level of the players and what you want to achieve. With a lot of players it looks like a game, but each player cannot make as many plays on the disc.',
     },
   ],
 };
@@ -6605,7 +6667,7 @@ const game3v3 = {
   id: 2002,
   type: DrillTypes.FRISBEE,
   author: '',
-  title: '3v3 games',
+  title: '3v3 game',
   image: 'https://zupimages.net/up/20/28/p52r.jpg',
   description:
     "The perfect setup if you have a LOT of players or want your players to touch a lot of frisbees in a short time. This can be quite exhausting so don't forget to set breaks every 5 to 10 minutes.",
@@ -6746,10 +6808,10 @@ const helpGame = {
   id: 2007,
   type: DrillTypes.FRISBEE,
   author: '',
-  title: 'Match with a mixed level',
+  title: 'Help game',
   image: 'https://zupimages.net/up/20/28/up1j.jpg',
   description:
-    "Let's play a game where an experienced player can help the beginners to develop a better game. The goal of the experienced player is to make everyone touching the disc. If there is only one experienced player, we recommend this player/coach to play with the team that's having the hardest time playing",
+    'One or a few experienced players can help having a game that looks like ultimate. The goal of the experienced player is to make everyone touching the disc. This drill works with normal games as well as many drills such as Go To 10 of the Box Game.',
   minimalPlayersNumber: 10,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '8 cones - 1 disc',
@@ -6761,11 +6823,89 @@ const helpGame = {
   steps: [
     {
       id: 1,
-      title: 'Experience player helping',
+      title: 'The Chameleon',
       animation: normalGameAnimation,
       repetition: '',
       rest: '',
-      instruction: 'Classical game. The experience player are also playing to help to develop a better ultimate.',
+      instruction:
+        'One coach or experienced player always plays with the offense. They should make sure every player, even the less experienced, receive the disc. The chameleon cannot score.',
+    },
+    {
+      id: 2,
+      title: 'Game with experienced players',
+      animation: normalGameAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'A normal game, with experienced players in both teams. If there is only one experienced player, we recommend this player/coach to play with the team having the hardest time playing',
+    },
+  ],
+};
+
+const boxGame = {
+  id: 2008,
+  type: DrillTypes.FRISBEE,
+  author: '',
+  title: 'Box game',
+  image: 'https://zupimages.net/up/20/47/u0ny.jpg',
+  description:
+    'Instead of playing on a regular field with endzone, this game is played with a little endzone. Both teams score in the same endzone. It should be around 2 x 2 meters but you should adapt this to your players level.',
+  inGame:
+    'Players learn how to create space for each other and find a good timing to create opportunities to score in the box.',
+  minimalPlayersNumber: 4,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '4 cones - 1 disc',
+  durationInMinutes: 10,
+  intensity: Intensities.HIGH,
+  goals: [FrisbeeGoals.PLAY],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'Single Box',
+      animation: singleBoxGame,
+      repetition: '1',
+      rest: '',
+      instruction:
+        'Help beginners understand that they should not stay in the endzone to score.\n\nYou can change the box size and the stall to make it easy or difficult',
+    },
+    {
+      id: 2,
+      title: 'Two Boxes',
+      animation: twoBoxesGame,
+      repetition: '1',
+      rest: '',
+      instruction:
+        'With the second endzone, players have much more information to process while playing. It creates a lot of opportunities for the offense.',
+    },
+  ],
+};
+
+const game5v5 = {
+  id: 2009,
+  type: DrillTypes.FRISBEE,
+  author: '',
+  title: '5v5 game',
+  image: 'https://zupimages.net/up/20/47/uxhr.jpg',
+  description:
+    'Classic indoor, beach or youth game. Also a good way to reduce the complexity of the game for beginners',
+  minimalPlayersNumber: 10,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '8 cones - 1 disc',
+  durationInMinutes: 20,
+  intensity: Intensities.HIGH,
+  goals: [FrisbeeGoals.PLAY],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: '5v5 games',
+      animation: fiveGame,
+      repetition: '1',
+      rest: '',
+      instruction: '',
     },
   ],
 };
@@ -6794,28 +6934,36 @@ const dumpSwingTraining = {
   drills: [warmupDrill, trainOfFakeDrill, dishieChainDrill, endzoneGameDrill, longestGame],
 };
 
-const firstChildTraining = {
+const firstU13Training = {
   id: 4,
   title: 'First Time',
   image: 'https://zupimages.net/up/20/19/a7io.png',
-  description: 'Training will allow the players to learn the basics of ultimate while having fun',
-  drills: [warmupDrill, basicThrowsDrill, aussieDrill, dwarfDuelDrill, helpGame],
+  description: 'Explore the basics of ultimate while having fun',
+  drills: [bulldogDrill, basicThrowsDrill, checkLongKid, goToTenDrill],
 };
 
-const secondChildTraining = {
+const secondU13Training = {
   id: 5,
   title: 'Defense Basics',
   image: 'https://zupimages.net/up/20/19/dgwo.jpg',
   description: 'Training will allow the players to learn the basics of ultimate while having fun',
-  drills: [warmupDrill, aussieDrill, cardinal, checkLong, game3v3],
+  drills: [aussieDrill, fish, giveAndGoDrill, game3v3],
 };
 
-const thirdChildTraining = {
+const thirdU13Training = {
   id: 6,
   title: 'Treasure Hunt',
   image: 'https://zupimages.net/up/20/19/c9i6.jpg',
   description: 'Help players learn the basics of ultimate while having fun',
-  drills: [warmupDrill, menageATroisDrill, bulldogDrill, goToTenDrill, treasureHuntDrill, game3v3],
+  drills: [treasureHuntDrill, menageATroisDrill, goToTenDrill, helpGame],
+};
+
+const firstInitiationAdultTraining = {
+  id: 23,
+  title: 'First time',
+  image: 'https://zupimages.net/up/20/19/cd36.jpg',
+  description: 'Explore the basics of ultimate while having fun',
+  drills: [warmupDrill, basicThrowsDrill, goToTenDrill, game3v3],
 };
 
 const secondInintiationAdultTraining = {
@@ -6823,7 +6971,7 @@ const secondInintiationAdultTraining = {
   title: 'Defense & Longs',
   image: 'https://zupimages.net/up/20/19/cd36.jpg',
   description: 'Players will work on defense and long throws',
-  drills: [warmupDrill, menageATroisDrill, checkLong, trainDrill, normalGame],
+  drills: [warmupDrill, menageATroisDrill, checkLong, trainDrill, game5v5],
 };
 
 const thirdInintiationAdultTraining = {
@@ -6831,7 +6979,7 @@ const thirdInintiationAdultTraining = {
   title: 'Adapt to the Field',
   image: 'https://zupimages.net/up/20/19/hrqz.jpg',
   description: 'Players will learn to adapt to the size of the field',
-  drills: [warmupDrill, throwCatchThrow, goaltimateDrill, triangleOfDeathdrill, normalGame],
+  drills: [warmupDrill, throwCatchThrow, goaltimateDrill, triangleOfDeathdrill, helpGame],
 };
 
 const defenseBaseTraining = {
@@ -6936,12 +7084,12 @@ const diagonalStackTraining = {
   drills: [warmupGameDrill, horizontalTrapOutside, diagonalIso, diagonalToVertical, trainingGame],
 };
 
-const kidInitiation = {
+const u10Initiation = {
   id: 22,
   title: 'Initiation Children U10',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'First practice to learn to play with a disc',
-  drills: [warmupGameDrill, basicThrowsDrill, aussieDrill, checkLongKid],
+  drills: [bulldogDrill, basicThrowsDrill, checkLongKid, boxGame],
 };
 
 //Fitness Weeks
@@ -7561,16 +7709,19 @@ export const drills = [
   adaptToTheMark,
   ghostMark,
   fish,
+  crossingTheField,
 
   // Commenting game drills because we don't want them in the drill list, only part of programs
   // // Games
   // normalGame,
   // game3v3,
+  // game5v5,
   // longShotGame,
   // lineGame,
   // longestGame,
   // trainingGame,
   // helpGame,
+  boxGame,
 ];
 
 export const trainings = [
@@ -7649,9 +7800,9 @@ export const trainings = [
   // Frisbee
   dumpSwingTraining,
   coed2MarkTraining,
-  firstChildTraining,
-  secondChildTraining,
-  thirdChildTraining,
+  firstU13Training,
+  secondU13Training,
+  thirdU13Training,
   secondInintiationAdultTraining,
   thirdInintiationAdultTraining,
   initiationVerticalTraining,
@@ -7668,7 +7819,7 @@ export const trainings = [
   sideStackTraining,
   splitStackTraining,
   diagonalStackTraining,
-  kidInitiation,
+  u10Initiation,
 ];
 
 export const programs = [
@@ -7676,19 +7827,19 @@ export const programs = [
     id: 1,
     type: DrillTypes.FRISBEE,
     title: 'Initiation U10',
-    trainings: [kidInitiation],
+    trainings: [u10Initiation],
   },
   {
     id: 2,
     type: DrillTypes.FRISBEE,
     title: 'Initiation U13',
-    trainings: [firstChildTraining, secondChildTraining, thirdChildTraining],
+    trainings: [firstU13Training, secondU13Training, thirdU13Training],
   },
   {
     id: 3,
     type: DrillTypes.FRISBEE,
     title: 'Initiation Adult',
-    trainings: [firstChildTraining, secondInintiationAdultTraining, thirdInintiationAdultTraining],
+    trainings: [firstInitiationAdultTraining, secondInintiationAdultTraining, thirdInintiationAdultTraining],
   },
   {
     id: 4,

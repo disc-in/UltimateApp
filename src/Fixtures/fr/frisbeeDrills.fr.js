@@ -6263,7 +6263,7 @@ const cupSwinging = {
   inGame:
     "Lorsque une défense de zone est mise en place, les joueurs formant le premier rideau doivent se déplacer de manière uniforme sans laisser d'espace suffisant pour qu'un lancer puisse être effectué entre eux",
   equipmentLabel: EquipmentLabels.NONE,
-  equipment: '1 disque',
+  equipment: '1 disque - 4 plots',
   durationInMinutes: 10,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.COMMUNICATION],
@@ -6272,7 +6272,16 @@ const cupSwinging = {
   steps: [
     {
       id: 1,
-      title: 'Travail de swing',
+      title: 'Le Rideau',
+      animation: firtWallAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        "L'objectif est de passer à travers le 1er rideau d'une zone. Le compte est à 10 par côté. Les lancers par dessus sont interdits.",
+    },
+    {
+      id: 2,
+      title: 'Travail de Swing',
       animation: cupSwingingAnimation,
       repetition: '',
       rest: '',
@@ -6774,39 +6783,8 @@ const trident = {
   ],
 };
 
-const firstWall = {
-  id: 1052,
-  type: DrillTypes.FRISBEE,
-  author: 'Monkey',
-  title: 'Le Rideau',
-  image: 'https://zupimages.net/up/20/47/qhge.jpg',
-  description:
-    "Un exercice pour s'entrainer au premier rideau d'une zone. Le rideau d'une zone permet de ralentir les attaques adverses",
-  minimalPlayersNumber: 9,
-  inGame:
-    "Lorsqu'une zone est mise en place, la plupart des équipes mettent en place un premier rideau pour limiter les zones d'attaque des adversaires.",
-  equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 disque - 4 plots',
-  durationInMinutes: 15,
-  intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.HANDLING, FrisbeeGoals.DEFENSE],
-  seasonTiming: SeasonTimings.ANYTIME,
-  level: Levels.INTERMEDIATE,
-  steps: [
-    {
-      id: 1,
-      title: 'Le Rideau',
-      animation: firtWallAnimation,
-      repetition: '',
-      rest: '',
-      instruction:
-        "L'objectif est de passer à travers le 1er rideau d'une zone. Le compte est à 10 par côté. Les lancers par dessus sont interdits.",
-    },
-  ],
-};
-
 const bull = {
-  id: 1053,
+  id: 1052,
   type: DrillTypes.FRISBEE,
   author: 'Monkey',
   title: 'Le Taureau',
@@ -7928,7 +7906,6 @@ export const drills = [
   ghostMark,
   fish,
   trident,
-  firstWall,
   bull,
   crossingTheField,
 

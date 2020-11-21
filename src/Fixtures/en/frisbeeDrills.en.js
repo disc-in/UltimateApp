@@ -6164,7 +6164,7 @@ const cupSwinging = {
   inGame:
     'When a zone defense is set up, the players forming the first curtain must move uniformly without leaving enough space for a throw to be made between them.',
   equipmentLabel: EquipmentLabels.NONE,
-  equipment: '1 disc',
+  equipment: '1 disc - 4 cones',
   durationInMinutes: 10,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.COMMUNICATION],
@@ -6173,6 +6173,15 @@ const cupSwinging = {
   steps: [
     {
       id: 1,
+      title: 'The Wall',
+      animation: firtWallAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'The objective is to pass through the 1st wall of zone. The count is 10 per side. Throws over are forbidden.',
+    },
+    {
+      id: 2,
       title: 'Learning to swing',
       animation: cupSwingingAnimation,
       repetition: '',
@@ -6668,38 +6677,8 @@ const trident = {
   ],
 };
 
-const firstWall = {
-  id: 1052,
-  type: DrillTypes.FRISBEE,
-  author: 'Monkey',
-  title: 'The Wall',
-  image: 'https://zupimages.net/up/20/47/qhge.jpg',
-  description:
-    "An exercise to train at the first wall of a zone defense. The wall of a zone allows to slow down the opponent's offense.",
-  minimalPlayersNumber: 9,
-  inGame: "When a zone is set up, most teams put up a first wall to limit the opponents' attack zones.",
-  equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 disc - 4 cones',
-  durationInMinutes: 15,
-  intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.HANDLING, FrisbeeGoals.DEFENSE],
-  seasonTiming: SeasonTimings.ANYTIME,
-  level: Levels.INTERMEDIATE,
-  steps: [
-    {
-      id: 1,
-      title: 'The Wall',
-      animation: firtWallAnimation,
-      repetition: '',
-      rest: '',
-      instruction:
-        'The objective is to pass through the 1st wall of zone. The count is 10 per side. Throws over are forbidden.',
-    },
-  ],
-};
-
 const bull = {
-  id: 1053,
+  id: 1052,
   type: DrillTypes.FRISBEE,
   author: 'Monkey',
   title: 'Rondo',
@@ -7812,7 +7791,6 @@ export const drills = [
   ghostMark,
   fish,
   trident,
-  firstWall,
   bull,
   crossingTheField,
 

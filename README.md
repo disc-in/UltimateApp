@@ -56,6 +56,7 @@ Thanks a lot to everyone helping `Disc In` become an awesome app!
 * UX design: Martin VDD
 * Wording: Scott Graber, Anja Hopma
 * French dictionary: Cheikh F. Ndiaye
+* Youth drills: Ine Lanckriet
 * Visual contents (photos): [Focus Ultimate France](https://www.facebook.com/ultifocus/)
 * Alpha testing: Tiphaine Champetier, Ludovic Romano, Fred Risse, Edwin Grappin, Marie Collet, Hugues Andrieux, Vincent Peltre, Pablo, Lili Magerand, Quentin Siour, John Kofi, Guillaume Giroux, Théo Veaudor, Guillaume Tessier, Poupsy, Matt Hill, Quentin Walsh, Sarvani, Benjamin Bourdon, Elise Lefèbvre
 * Videos: Paulin Huger, the PUC players (Nalini, Mario, Mehdi, Seb, Puzzy, Luc, Quentin)

@@ -47,8 +47,8 @@ To release a new version of the app :
 
 1. Send a pull request updating the version in `app.json`, as well as buildNumber (ios) and versionCode (android)
 2. When it is merged, create a release on Github
-3. `expo publish --release-channel staging`
-4. If needed, republish to the stores
+3. `expo publish --release-channel production`
+4. If needed, republish to the stores using `expo build:X --release-channel production`
 
 ## 🙏 Thanks
 
@@ -58,7 +58,7 @@ Thanks a lot to everyone helping `Disc In` become an awesome app!
 - UX design: Martin VDD
 - Wording: Scott Graber, Anja Hopma
 - French dictionary: Cheikh F. Ndiaye
-- Youth drills: Ine Lanckriet
+- Drills: Ine Lanckriet, Pierre Gruau
 - Visual contents (photos): [Focus Ultimate France](https://www.facebook.com/ultifocus/)
 - Alpha testing: Tiphaine Champetier, Ludovic Romano, Fred Risse, Edwin Grappin, Marie Collet, Hugues Andrieux, Vincent Peltre, Pablo, Lili Magerand, Quentin Siour, John Kofi, Guillaume Giroux, Théo Veaudor, Guillaume Tessier, Poupsy, Matt Hill, Quentin Walsh, Sarvani, Benjamin Bourdon, Elise Lefèbvre
 - Videos: Paulin Huger, the PUC players (Nalini, Mario, Mehdi, Seb, Puzzy, Luc, Quentin)

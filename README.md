@@ -48,7 +48,7 @@ To release a new version of the app :
 1. Send a pull request updating the version in `app.json`, as well as buildNumber (ios) and versionCode (android)
 2. When it is merged, create a release on Github
 3. `expo publish --release-channel production`
-4. If needed, republish to the stores
+4. If needed, republish to the stores using `expo build:X --release-channel production`
 
 ## 🙏 Thanks
 

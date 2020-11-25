@@ -8,17 +8,17 @@ import FlashMessage, { showSuccess } from '../../utils/flashMessage';
 import HeaderButton from '../shared/HeaderButton';
 import Modal from '../shared/Modal';
 
-const SavedDrillsList = (props) => {
+const SavedPlaysList = (props) => {
   const [modalOpened, setModalOpened] = useState(false);
   const modalFlash = useRef(null);
 
-  const beforeOpening = (drill) => {
-    if (props.isDrillSaved) {
-      props.onOpen(drill);
+  const beforeOpening = (play) => {
+    if (props.isPlaySaved) {
+      props.onOpen(play);
     } else {
       Alert.alert(
         I18n.t('editor.saveModificationsTitle'),
-        I18n.t('editor.saveModificationsText', { title: props.drillTitle }),
+        I18n.t('editor.saveModificationsText', { title: props.playTitle }),
         [
           {
             text: I18n.t('shared.cancel'),
@@ -28,15 +28,15 @@ const SavedDrillsList = (props) => {
           {
             text: I18n.t('shared.yes'),
             onPress: () => {
-              props.saveCurrentDrill();
-              showSuccess(I18n.t('editor.currentDrillManager.saveSuccess', { title: props.drillTitle }));
-              props.onOpen(drill);
+              props.saveCurrentPlay();
+              showSuccess(I18n.t('editor.currentPlayManager.saveSuccess', { title: props.playTitle }));
+              props.onOpen(play);
             },
           },
           {
             text: I18n.t('shared.no'),
             onPress: () => {
-              props.onOpen(drill);
+              props.onOpen(play);
             },
           },
         ],
@@ -44,18 +44,18 @@ const SavedDrillsList = (props) => {
     }
   };
 
-  const deletionConfirmation = (drill) => {
-    Alert.alert(drill.title, I18n.t('editor.savedDrillsList.deleteConfirmation'), [
+  const deletionConfirmation = (play) => {
+    Alert.alert(play.title, I18n.t('editor.savedPlaysList.deleteConfirmation'), [
       {
         text: I18n.t('shared.cancel'),
         style: 'cancel',
       },
       {
-        text: I18n.t('editor.savedDrillsList.delete'),
+        text: I18n.t('editor.savedPlaysList.delete'),
         style: 'destructive',
         onPress: () => {
-          props.onDelete(drill);
-          showSuccess(I18n.t('editor.savedDrillsList.deleteSuccess', { title: props.drillTitle }), modalFlash.current);
+          props.onDelete(play);
+          showSuccess(I18n.t('editor.savedPlaysList.deleteSuccess', { title: props.playTitle }), modalFlash.current);
         },
       },
     ]);
@@ -64,14 +64,14 @@ const SavedDrillsList = (props) => {
   return (
     <View>
       <HeaderButton icon="clipboard-text-outline" onPress={() => setModalOpened(true)} />
-      <Modal title={I18n.t('editor.savedDrillsList.title')} visible={modalOpened} onClose={() => setModalOpened(false)}>
+      <Modal title={I18n.t('editor.savedPlaysList.title')} visible={modalOpened} onClose={() => setModalOpened(false)}>
         <FlatList
-          data={props.savedDrills}
+          data={props.savedPlays}
           keyExtractor={(item) => item.title}
           style={{ flexGrow: 0 }}
           ListEmptyComponent={() => (
             <View>
-              <Text>{I18n.t('editor.savedDrillsList.empty')}</Text>
+              <Text>{I18n.t('editor.savedPlaysList.empty')}</Text>
             </View>
           )}
           renderItem={({ item }) => (
@@ -120,4 +120,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SavedDrillsList;
+export default SavedPlaysList;

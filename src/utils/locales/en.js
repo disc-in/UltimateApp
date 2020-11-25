@@ -66,7 +66,7 @@ export default {
       noEquipment: 'Bodyweight programs',
       fullEquipment: 'Gym programs',
     },
-    animationEditorPage: 'New Drill',
+    playEditorPage: 'New Play',
     dictionaryPage: 'Dictionary',
     essentialPage: 'Basics',
     tacticsPage: 'Tactics',
@@ -100,33 +100,33 @@ export default {
     essential: 'Basics',
     tactics: 'Tactics',
   },
-  animationEditorPage: {
-    untitledDrill: 'Unnamed drill',
+  playEditorPage: {
+    untitledPlay: 'Unnamed play',
   },
   editor: {
-    saveModificationsTitle: 'Do you want to save the current drill?',
+    saveModificationsTitle: 'Do you want to save the current play?',
     saveModificationsText:
-      "The drill '{{title}}' has been modified.\n\nDo you want to save these modifications before closing it?",
-    savedDrillsList: {
-      title: 'Saved drills',
-      empty: "You haven't saved any drills yet",
+      "The play '{{title}}' has been modified.\n\nDo you want to save these modifications before closing it?",
+    savedPlaysList: {
+      title: 'Saved plays',
+      empty: "You haven't saved any plays yet",
       delete: 'Delete',
-      deleteConfirmation: 'Do you really want to delete this drill?',
-      deleteSuccess: "The drill '{{title}}' has been deleted.",
+      deleteConfirmation: 'Do you really want to delete this play?',
+      deleteSuccess: "The play '{{title}}' has been deleted.",
     },
-    currentDrillManager: {
+    currentPlayManager: {
       save: 'Save',
-      saveSuccess: "The drill has been saved as '{{title}}'",
+      saveSuccess: "The play has been saved as '{{title}}'",
       rename: 'Rename',
       new: 'New',
       share: 'Contribute',
-      sharePlaceholder: 'Please add this drill to Disc In',
+      sharePlaceholder: 'Please add this play to Disc In',
     },
-    renameDrillModal: {
+    renamePlayModal: {
       placeholder: 'Click here to enter the new name',
       alreadyExists: 'This name already exists',
       empty: 'You cannot set an empty name',
-      renameSuccess: 'The drill was successfully renamed!',
+      renameSuccess: 'The play was successfully renamed!',
       cta: 'Apply',
     },
   },

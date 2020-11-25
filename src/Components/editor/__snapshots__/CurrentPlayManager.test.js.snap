@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<CurrentDrillManager /> renders correctly 1`] = `
+exports[`<CurrentPlayManager /> renders correctly 1`] = `
 <View
   collapsable={false}
   pointerEvents="box-none"
@@ -58,7 +58,7 @@ exports[`<CurrentDrillManager /> renders correctly 1`] = `
 </View>
 `;
 
-exports[`<CurrentDrillManager /> renders correctly 2`] = `
+exports[`<CurrentPlayManager /> renders correctly 2`] = `
 Array [
   <View
     collapsable={false}

@@ -42,7 +42,7 @@ const HomeScreen = (props) => {
           </View>
         </ImageBackground>
       </TouchableHighlight>
-      <TouchableHighlight onPress={() => props.navigation.navigate('AnimationEditorPage')} style={styles.menuItem}>
+      <TouchableHighlight onPress={() => props.navigation.navigate('PlayEditorPage')} style={styles.menuItem}>
         <ImageBackground source={ourPlays} style={styles.image}>
           <View style={styles.wrapper}>
             <Text style={styles.title}>{I18n.t('homePage.editor')}</Text>

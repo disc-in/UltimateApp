@@ -66,7 +66,7 @@ export default {
       noEquipment: 'Entraînements poids du corps',
       fullEquipment: 'Entraînements en salle',
     },
-    animationEditorPage: 'Nouvel exercice',
+    playEditorPage: 'Nouvelle tactique',
     dictionaryPage: 'Lexique',
     essentialPage: 'Les bases du jeu',
     tacticsPage: 'Tactiques',
@@ -100,33 +100,33 @@ export default {
     essential: 'Les bases du jeu',
     tactics: 'Tactiques',
   },
-  animationEditorPage: {
-    untitledDrill: 'Exercice sans titre',
+  playEditorPage: {
+    untitledPlay: 'Tactique sans titre',
   },
   editor: {
     saveModificationsTitle: 'Voulez-vous sauvegarder les modifications ?',
     saveModificationsText:
       'L\'exercice "{{title}}" a été modifié.\n\nSouhaitez-vous conserver ces modifications avant de le fermer ?',
-    savedDrillsList: {
-      title: 'Exercices sauvegardés',
-      empty: "Vous n'avez pas encore sauvegardé d'exercices",
+    savedPlaysList: {
+      title: 'Tactiques sauvegardées',
+      empty: "Vous n'avez pas encore sauvegardé de tactiques",
       delete: 'Supprimer',
-      deleteConfirmation: 'Voulez-vous vraiment supprimer cet exercice ?',
-      deleteSuccess: 'L\'exo "{{title}}" a été supprimé.',
+      deleteConfirmation: 'Voulez-vous vraiment supprimer cette tactique ?',
+      deleteSuccess: 'La tactique "{{title}}" a été supprimée.',
     },
-    currentDrillManager: {
+    currentPlayManager: {
       save: 'Sauvegarder',
-      saveSuccess: 'L\'exo "{{title}}" a été sauvegardé',
+      saveSuccess: 'La tactique "{{title}}" a été sauvegardée',
       rename: 'Renommer',
       new: 'Nouveau',
       share: 'Contribuer',
-      sharePlaceholder: "Pouvez-vous ajouter cet exercice à l'application ?",
+      sharePlaceholder: "Pouvez-vous ajouter cette tactique à l'application ?",
     },
-    renameDrillModal: {
+    renamePlayModal: {
       placeholder: 'Appuyer ici pour renommer',
       alreadyExists: 'Ce nom existe déjà',
       empty: 'Le nom ne peut pas être vide',
-      renameSuccess: "L'exo a été renommé avec succès",
+      renameSuccess: 'La tactique a été renommée avec succès',
       cta: 'Valider',
     },
   },

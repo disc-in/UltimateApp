@@ -4,17 +4,17 @@ import { Provider } from 'react-redux';
 
 import store from '../Store/testStore';
 
-import AnimationEditorPage from './AnimationEditorPage';
+import PlayEditorPage from './PlayEditorPage';
 
 jest.mock('react-native-reanimated', () => require('react-native-reanimated/mock'));
 
-describe('<AnimationEditorPage />', () => {
+describe('<PlayEditorPage />', () => {
   it('renders correctly', async () => {
     const navigation = { navigate: jest.fn(), setOptions: jest.fn() };
 
     const tree = create(
       <Provider store={store}>
-        <AnimationEditorPage navigation={navigation} />
+        <PlayEditorPage navigation={navigation} />
       </Provider>,
     ).toJSON();
     await act(async () => expect(tree).toMatchSnapshot());

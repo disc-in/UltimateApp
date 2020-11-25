@@ -7,7 +7,7 @@ import I18n from '../../utils/i18n';
 import { showSuccess } from '../../utils/flashMessage';
 import HeaderButton from '../shared/HeaderButton';
 
-const CurrentDrillManager = (props) => {
+const CurrentPlayManager = (props) => {
   const [visible, setVisible] = useState(false);
 
   const openMenu = () => setVisible(true);
@@ -15,18 +15,18 @@ const CurrentDrillManager = (props) => {
 
   const contribute = () => {
     Share.share({
-      title: I18n.t('editor.currentDrillManager.sharePlaceholder'),
-      message: '----- ENCODED DRILL -------\n' + JSON.stringify(props.currentDrill) + '\n---------------------------',
+      title: I18n.t('editor.currentPlayManager.sharePlaceholder'),
+      message: '----- ENCODED PLAY -------\n' + JSON.stringify(props.currentPlay) + '\n---------------------------',
     }).catch((err) => console.log(err));
   };
 
-  const checkBeforeNewDrill = () => {
-    if (props.isDrillSaved) {
+  const checkBeforeNewPlay = () => {
+    if (props.isPlaySaved) {
       props.new();
     } else {
       Alert.alert(
         I18n.t('editor.saveModificationsTitle'),
-        I18n.t('editor.saveModificationsText', { title: props.currentDrill.title }),
+        I18n.t('editor.saveModificationsText', { title: props.currentPlay.title }),
         [
           {
             text: I18n.t('shared.cancel'),
@@ -37,7 +37,7 @@ const CurrentDrillManager = (props) => {
             text: I18n.t('shared.yes'),
             onPress: () => {
               props.save();
-              showSuccess(I18n.t('editor.currentDrillManager.saveSuccess', { title: props.currentDrill.title }));
+              showSuccess(I18n.t('editor.currentPlayManager.saveSuccess', { title: props.currentPlay.title }));
               props.new();
             },
           },
@@ -57,11 +57,11 @@ const CurrentDrillManager = (props) => {
       <Menu.Item
         onPress={() => {
           props.save();
-          showSuccess(I18n.t('editor.currentDrillManager.saveSuccess', { title: props.currentDrill.title }));
+          showSuccess(I18n.t('editor.currentPlayManager.saveSuccess', { title: props.currentPlay.title }));
           closeMenu();
         }}
         icon="content-save-outline"
-        title={I18n.t('editor.currentDrillManager.save')}
+        title={I18n.t('editor.currentPlayManager.save')}
       />
       <Menu.Item
         onPress={() => {
@@ -69,15 +69,15 @@ const CurrentDrillManager = (props) => {
           closeMenu();
         }}
         icon="pencil"
-        title={I18n.t('editor.currentDrillManager.rename')}
+        title={I18n.t('editor.currentPlayManager.rename')}
       />
       <Menu.Item
         onPress={() => {
-          checkBeforeNewDrill();
+          checkBeforeNewPlay();
           closeMenu();
         }}
         icon="plus"
-        title={I18n.t('editor.currentDrillManager.new')}
+        title={I18n.t('editor.currentPlayManager.new')}
       />
       <Divider />
       <Menu.Item
@@ -86,10 +86,10 @@ const CurrentDrillManager = (props) => {
           closeMenu();
         }}
         icon="share-outline"
-        title={I18n.t('editor.currentDrillManager.share')}
+        title={I18n.t('editor.currentPlayManager.share')}
       />
     </Menu>
   );
 };
 
-export default CurrentDrillManager;
+export default CurrentPlayManager;

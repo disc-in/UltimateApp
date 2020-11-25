@@ -4,26 +4,26 @@ import { Provider as PaperProvider } from 'react-native-paper';
 
 import animationSquare from '../../Fixtures/Animation/AnimationSquare';
 
-import { RenameDrillModal } from './RenameDrillModal';
+import { RenamePlayModal } from './RenamePlayModal';
 
-describe('<RenameDrillModal />', () => {
+describe('<RenamePlayModal />', () => {
   afterEach(() => jest.clearAllMocks());
 
   const onRename = jest.fn();
   const close = jest.fn();
-  const currentDrill = { drill: animationSquare, title: 'Square' };
-  const customDrills = [currentDrill];
-  const renameDrill = jest.fn();
+  const currentPlay = { animation: animationSquare, title: 'Square' };
+  const customPlays = [currentPlay];
+  const renamePlay = jest.fn();
 
   it('renders correctly', async () => {
     const { toJSON } = await waitFor(() =>
       render(
-        <RenameDrillModal
-          currentDrill={currentDrill}
+        <RenamePlayModal
+          currentPlay={currentPlay}
           onRename={onRename}
           close={close}
-          customDrills={customDrills}
-          renameDrill={renameDrill}
+          customPlays={customPlays}
+          renamePlay={renamePlay}
         />,
       ),
     );
@@ -33,15 +33,13 @@ describe('<RenameDrillModal />', () => {
   it('does nothing when using Back', async () => {
     const { getByPlaceholderText, getByText } = await waitFor(() =>
       render(
-        <PaperProvider>
-          <RenameDrillModal
-            currentDrill={currentDrill}
-            onRename={onRename}
-            close={close}
-            customDrills={customDrills}
-            renameDrill={renameDrill}
-          />
-        </PaperProvider>,
+        <RenamePlayModal
+          currentPlay={currentPlay}
+          onRename={onRename}
+          close={close}
+          customPlays={customPlays}
+          renamePlay={renamePlay}
+        />,
       ),
     );
 
@@ -51,22 +49,20 @@ describe('<RenameDrillModal />', () => {
     await act(async () => await fireEvent.press(getByText('Back')));
 
     expect(onRename).not.toBeCalled();
-    expect(renameDrill).not.toBeCalled();
-    expect(currentDrill.title).toEqual('Square');
+    expect(renamePlay).not.toBeCalled();
+    expect(currentPlay.title).toEqual('Square');
   });
 
-  it('renames the drill on validation', async () => {
+  it('renames the play on validation', async () => {
     const { getByPlaceholderText, getByText } = await waitFor(() =>
       render(
-        <PaperProvider>
-          <RenameDrillModal
-            currentDrill={currentDrill}
-            onRename={onRename}
-            close={close}
-            customDrills={customDrills}
-            renameDrill={renameDrill}
-          />
-        </PaperProvider>,
+        <RenamePlayModal
+          currentPlay={currentPlay}
+          onRename={onRename}
+          close={close}
+          customPlays={customPlays}
+          renamePlay={renamePlay}
+        />,
       ),
     );
 
@@ -76,7 +72,7 @@ describe('<RenameDrillModal />', () => {
     await act(async () => await fireEvent.press(getByText('Apply')));
 
     expect(onRename).toBeCalled();
-    expect(renameDrill).toBeCalled();
-    expect(currentDrill.title).toEqual('New Title');
+    expect(renamePlay).toBeCalled();
+    expect(currentPlay.title).toEqual('New Title');
   });
 });

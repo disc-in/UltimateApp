@@ -2,12 +2,12 @@ import { combineReducers } from 'redux';
 
 import favoriteReducer from './favoriteReducer';
 import programReducer from './programReducer';
-import drillReducer from './drillReducer';
+import playReducer from './playReducer';
 
 const rootReducer = combineReducers({
   favoriteDrills: favoriteReducer,
   completeTrainings: programReducer,
-  customDrills: drillReducer,
+  customPlays: playReducer,
   drills: (state = [], action) => state,
   trainings: (state = [], action) => state,
   programs: (state = [], action) => state,

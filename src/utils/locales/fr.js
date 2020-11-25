@@ -66,7 +66,6 @@ export default {
       noEquipment: 'Entraînements poids du corps',
       fullEquipment: 'Entraînements en salle',
     },
-    drillPageMinimal: '{{training}} - exercices',
     playEditorPage: 'Nouvelle tactique',
     dictionaryPage: 'Lexique',
     essentialPage: 'Les bases du jeu',
@@ -131,6 +130,17 @@ export default {
       cta: 'Valider',
     },
   },
+  drills: {
+    description: {
+      goal: 'Thèmes',
+      equipment: 'Matériel',
+      description: 'Description',
+      inGame: 'En Match',
+    },
+    fitnessDrillIllustration: {
+      redoMessage: "Tu as terminé l'exercice !",
+    },
+  },
   feedback: {
     alert: {
       title: 'Contactez-nous !',
@@ -140,9 +150,6 @@ export default {
       cta: 'Envoyer',
     },
     subject: "Retours sur l'app Disc In",
-  },
-  fitnessDrillIllustration: {
-    redoMessage: "Tu as terminé l'exercice !",
   },
   dictionaryPage: {
     translation: 'Traduction : ',
@@ -158,14 +165,8 @@ export default {
     players: 'joueurs',
     level: 'niveau',
     start: 'Start',
-    goal: 'Thèmes',
-    equipment: 'Matériel',
-    description: 'Description',
-    inGame: 'En Match',
   },
   drillPageMinimal: {
-    headerTitle: 'Exercices de {{trainingTitle}}',
-    details: 'DÉTAILS',
     finish: "Terminer l'entraînement !",
     next: 'Exercice suivant',
   },

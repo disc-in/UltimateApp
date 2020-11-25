@@ -50,11 +50,6 @@ export const EquipmentLabels = {
   FULL: 'Full',
 };
 
-export const IllustrationType = {
-  VIMEO: 'vimeo',
-  ANIMATION: 'animation',
-};
-
 export const AnimationBackgrounds = {
   RECTANGLE: 'rectangle',
   ENDZONE: 'endzone',

@@ -1,32 +1,34 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { View, ScrollView, StyleSheet, Text, Dimensions, TouchableOpacity, SafeAreaView } from 'react-native';
+import { View, StyleSheet, Text, Dimensions, TouchableOpacity, SafeAreaView } from 'react-native';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import Animation from '../animation/Animation';
 import VimeoVideo from '../shared/VimeoVideo';
-import { IllustrationType } from '../../Fixtures/config';
+import ToggleButton from '../shared/ToggleButton';
 import theme from '../../styles/theme.style';
 import Drill from '../animation/Drill';
 
 const screenDimension = Dimensions.get('window');
 
+export const IllustrationField = {
+  ANIMATION: 'animation',
+  VIMEO: 'vimeoId',
+};
+
 const FrisbeeDrillIllustration = (props) => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const currentStep = props.drill.steps[activeIndex];
-
   const carouselRef = useRef(null);
+  const [illustrationPreference, setIllustrationPreference] = useState(IllustrationField.ANIMATION);
 
-  // back to 0 when drill changes
   useEffect(() => {
-    setActiveIndex(0);
+    carouselRef.current.snapToItem(0);
   }, [props.drill]);
 
   const renderTitle = (title, index) => {
     const isFirstStep = index === 0;
     const isLastStep = index === props.drill.steps.length - 1;
     return (
-      <View style={styles.line}>
+      <View style={styles.titleContainer}>
         <View>
           {!isFirstStep && (
             <TouchableOpacity
@@ -54,48 +56,69 @@ const FrisbeeDrillIllustration = (props) => {
     );
   };
 
-  const displayVimeo = ({ illustrationSource, sounds }) => {
+  const displayVimeo = ({ vimeoId, sounds }) => {
     return (
-      <View style={styles.contentWrapper}>
-        <View style={[{ height: 250 }, styles.videoAlone]}>
-          <VimeoVideo vimeoId={illustrationSource} sounds={sounds} />
+      <View style={styles.video}>
+        <VimeoVideo vimeoId={vimeoId} sounds={sounds} />
+      </View>
+    );
+  };
+
+  const displayAnimation = ({ animation }) => {
+    return (
+      <View style={styles.animation}>
+        <Animation widthRatio={1} heightRatio={1 / 2} animation={new Drill(animation)} />
+      </View>
+    );
+  };
+
+  const renderStep = ({ item, index }) => {
+    let illustrationUniqueField;
+    if (item.vimeoId && !item.animation) illustrationUniqueField = IllustrationField.VIMEO;
+    if (!item.vimeoId && item.animation) illustrationUniqueField = IllustrationField.ANIMATION;
+
+    return (
+      <View>
+        {renderTitle(item.title, index)}
+        {renderPagination(index)}
+        {renderCounter(index)}
+        <View>
+          {(illustrationUniqueField || illustrationPreference) === IllustrationField.ANIMATION &&
+            displayAnimation(item)}
+          {(illustrationUniqueField || illustrationPreference) === IllustrationField.VIMEO && displayVimeo(item)}
+          {!illustrationUniqueField && (
+            <ToggleButton
+              value={illustrationPreference}
+              onValueChange={(value) => setIllustrationPreference(value)}
+              possibleValues={Object.values(IllustrationField)}
+              icons={['clipboard-outline', 'video']}
+            />
+          )}
+          <Text style={styles.instruction}>{item.instruction}</Text>
         </View>
       </View>
     );
   };
 
-  const displayAnimation = ({ illustrationSource, instruction }) => {
-    return (
-      <>
-        <View style={styles.contentWrapper}>
-          <Animation widthRatio={1} heightRatio={1 / 2} animation={new Drill(illustrationSource)} />
+  const renderCounter = (index) => {
+    if (props.drill.steps.length !== 1) {
+      return (
+        <View style={styles.counter}>
+          <Text style={styles.textCounter}>
+            {index + 1}/{props.drill.steps.length}
+          </Text>
         </View>
-        <Text style={styles.instruction}>{instruction}</Text>
-      </>
-    );
+      );
+    }
   };
 
-  const renderStep = ({ item, index }) => {
-    return (
-      <>
-        {renderTitle(item.title, index)}
-        <View style={styles.pagination}>{renderPagination()}</View>
-        <ScrollView>
-          {item.illustrationType === IllustrationType.ANIMATION && displayAnimation(item)}
-          {item.illustrationType === IllustrationType.VIMEO && displayVimeo(item)}
-        </ScrollView>
-      </>
-    );
-  };
-
-  const renderPagination = () => {
+  const renderPagination = (index) => {
     return (
       <Pagination
         dotsLength={props.drill.steps.length}
-        activeDotIndex={activeIndex}
+        activeDotIndex={index}
         containerStyle={{
-          backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
-          paddingVertical: 0,
+          paddingVertical: 10,
         }}
         dotStyle={{
           width: 10,
@@ -107,7 +130,6 @@ const FrisbeeDrillIllustration = (props) => {
         inactiveDotStyle={{
           backgroundColor: theme.COLOR_SECONDARY,
         }}
-        inactiveDotOpacity={0.4}
         inactiveDotScale={0.6}
         tappableDots
         carouselRef={carouselRef}
@@ -124,7 +146,6 @@ const FrisbeeDrillIllustration = (props) => {
         sliderWidth={screenDimension.width}
         itemWidth={screenDimension.width}
         renderItem={renderStep}
-        onSnapToItem={(index) => setActiveIndex(index)}
       />
     </SafeAreaView>
   );
@@ -134,18 +155,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  instruction: {
-    margin: 10,
-    fontSize: theme.FONT_SIZE_MEDIUM,
-    color: theme.COLOR_PRIMARY,
-  },
-  videoAlone: {
-    flex: 1,
-  },
-  pagination: {
-    paddingVertical: 10,
-  },
-  line: {
+  titleContainer: {
     height: 40,
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -157,7 +167,33 @@ const styles = StyleSheet.create({
     color: theme.COLOR_PRIMARY,
     textAlign: 'center',
   },
-  contentWrapper: { minHeight: 375 },
+  counter: {
+    width: 35,
+    height: 25,
+    borderRadius: 50,
+    backgroundColor: theme.COLOR_PRIMARY,
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'absolute',
+    top: 42,
+    right: '6%',
+  },
+  textCounter: {
+    color: theme.COLOR_PRIMARY_LIGHT,
+    fontSize: 12,
+  },
+  video: {
+    height: 250,
+  },
+  animation: {
+    marginTop: 10,
+    minHeight: 375,
+  },
+  instruction: {
+    margin: 10,
+    fontSize: theme.FONT_SIZE_MEDIUM,
+    color: theme.COLOR_PRIMARY,
+  },
 });
 
 export default FrisbeeDrillIllustration;

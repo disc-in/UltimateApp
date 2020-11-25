@@ -6,7 +6,7 @@ exports[`<Program /> renders correctly 1`] = `
     Object {
       "backgroundColor": "#fff",
       "elevation": 3,
-      "marginBottom": 10,
+      "marginTop": 10,
       "padding": 10,
       "shadowOffset": Object {
         "height": 1,
@@ -94,7 +94,7 @@ exports[`<Program /> renders correctly when finished 1`] = `
     Object {
       "backgroundColor": "#fff",
       "elevation": 3,
-      "marginBottom": 10,
+      "marginTop": 10,
       "padding": 10,
       "shadowOffset": Object {
         "height": 1,

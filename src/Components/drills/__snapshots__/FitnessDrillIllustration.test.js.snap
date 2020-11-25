@@ -88,24 +88,21 @@ exports[`<FitnessDrillIllustration /> links to any step and finishes at the end 
       Array [
         Object {
           "id": 1,
-          "illustrationSource": "406746924",
-          "illustrationType": "vimeo",
           "repetition": 3,
           "title": "First Step",
+          "vimeoId": "406746924",
         },
         Object {
           "id": 2,
-          "illustrationSource": "406747302",
-          "illustrationType": "vimeo",
           "repetition": 3,
           "title": "Second Step",
+          "vimeoId": "406747302",
         },
         Object {
           "id": 3,
-          "illustrationSource": "406747476",
-          "illustrationType": "vimeo",
           "repetition": 3,
           "title": "Third Step",
+          "vimeoId": "406747476",
         },
       ]
     }
@@ -538,24 +535,21 @@ exports[`<FitnessDrillIllustration /> renders correctly 1`] = `
       Array [
         Object {
           "id": 1,
-          "illustrationSource": "406746924",
-          "illustrationType": "vimeo",
           "repetition": 3,
           "title": "First Step",
+          "vimeoId": "406746924",
         },
         Object {
           "id": 2,
-          "illustrationSource": "406747302",
-          "illustrationType": "vimeo",
           "repetition": 3,
           "title": "Second Step",
+          "vimeoId": "406747302",
         },
         Object {
           "id": 3,
-          "illustrationSource": "406747476",
-          "illustrationType": "vimeo",
           "repetition": 3,
           "title": "Third Step",
+          "vimeoId": "406747476",
         },
       ]
     }

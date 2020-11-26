@@ -17,14 +17,13 @@ export default {
     },
     frisbeeGoals: {
       [FrisbeeGoals.DEFENSE]: 'Défense',
-      [FrisbeeGoals.MARK]: 'Marque',
+      [FrisbeeGoals.WARM_UP]: 'Échauffement',
       [FrisbeeGoals.HANDLING]: 'Handling',
       [FrisbeeGoals.CUTTING]: 'Cutting',
       [FrisbeeGoals.THROWING]: 'Lancers',
-      [FrisbeeGoals.BREAK]: 'Casser la marque',
-      [FrisbeeGoals.COMMUNICATION]: 'Communication',
       [FrisbeeGoals.CATCH]: 'Catch',
-      [FrisbeeGoals.PLAY]: 'Temps de jeu',
+      [FrisbeeGoals.GAMES]: 'Jeux',
+      [FrisbeeGoals.JUNIOR]: 'Junior',
     },
     fitnessGoals: {
       [FitnessGoals.LEGS]: 'Bas du corps',

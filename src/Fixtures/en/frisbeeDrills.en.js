@@ -4766,6 +4766,7 @@ const basicThrowsDrill = {
       id: 1,
       title: 'Throwing Machine',
       animation: throwingMachine,
+      vimeoId: '485392763',
       repetition: '',
       rest: '',
       instruction: 'With a partner, the players throw backhands and forehands for 5 minutes.',
@@ -4774,6 +4775,7 @@ const basicThrowsDrill = {
       id: 2,
       title: 'The Throwing Olympics Ladder',
       animation: ladder,
+      vimeoId: '485393003',
       repetition: '',
       rest: '',
       instruction:
@@ -4783,6 +4785,7 @@ const basicThrowsDrill = {
       id: 3,
       title: 'With Ghosts',
       animation: ladderGhost,
+      vimeoId: '485399479',
       repetition: '',
       rest: '',
       instruction:
@@ -4885,6 +4888,7 @@ const kyeDrill = {
       id: 1,
       title: '3 vs 2',
       animation: threeVersusTwo,
+      vimeoId: '485452835',
       repetition: '',
       rest: '',
       instruction:
@@ -5003,6 +5007,7 @@ const giveAndGoDrill = {
       id: 1,
       title: 'Give-N-Go',
       animation: giveAndGo,
+      vimeoId: '485473267',
       repetition: '',
       rest: '',
       instruction: 'Try to do this give and go drill as fast as possible. Make sure not to travel.',
@@ -5011,6 +5016,7 @@ const giveAndGoDrill = {
       id: 2,
       title: 'Make It Count',
       animation: giveAndGoRace,
+      vimeoId: '485473406',
       repetition: '',
       rest: '',
       instruction: 'A race between 2 teams. First team to 25 wins!',
@@ -5175,6 +5181,7 @@ const bulldogDrill = {
       id: 1,
       title: 'British Bulldog',
       animation: bulldogAnimation,
+      vimeoId: '485473214',
       repetition: '',
       rest: '',
       instruction:
@@ -5214,6 +5221,7 @@ const menageATroisDrill = {
       id: 2,
       title: 'Redemption',
       animation: redemption,
+      vimeoId: '485391944',
       repetition: '',
       rest: '',
       instruction:
@@ -5355,6 +5363,7 @@ const triangleOfDeathdrill = {
       id: 1,
       title: 'The Triangle of Death',
       animation: triangleDeath,
+      vimeoId: '485473100',
       repetition: '',
       rest: '',
       instruction:
@@ -6116,6 +6125,7 @@ const theTunnel = {
       id: 1,
       title: 'The Tunnel',
       animation: theTunnelAnimation,
+      vimeoId: '485472876',
       repetition: '',
       rest: '',
       instruction:
@@ -6145,6 +6155,7 @@ const sprintDefense = {
       id: 1,
       title: "The Leopard's Defense",
       animation: leopard,
+      vimeoId: '485471567',
       repetition: '',
       rest: '',
       instruction:
@@ -6175,6 +6186,7 @@ const cupSwinging = {
       id: 1,
       title: 'The Wall',
       animation: firtWallAnimation,
+      vimeoId: '485399518',
       repetition: '',
       rest: '',
       instruction:
@@ -6251,14 +6263,6 @@ const goaltimateDrill = {
       id: 1,
       title: 'Goaltimate rules',
       animation: goaltimate,
-      repetition: '',
-      rest: '',
-      instruction:
-        '4 vs 4 \nStall count of 5 \nWhenever a turnover happens, the new offensive team must ‘clear’ the disc by taking it into the clear box, and can then attack the goal.\nOne point for a completed pass that travels through the hoop and is caught in the end zone by your teammate',
-    },
-    {
-      id: 2,
-      title: 'Goaltimate video',
       vimeoId: '416849035',
       repetition: '',
       rest: '',
@@ -6505,6 +6509,7 @@ const checkLongKid = {
       id: 1,
       title: 'Check & Long',
       animation: checkLongKidAnimation,
+      vimeoId: '485473162',
       repetition: '',
       rest: '',
       instruction:
@@ -6669,6 +6674,7 @@ const trident = {
       id: 1,
       title: 'The Trident',
       animation: tridentAnimation,
+      vimeoId: '485392578',
       repetition: '',
       rest: '',
       instruction:

@@ -4857,6 +4857,7 @@ const basicThrowsDrill = {
       id: 1,
       title: 'La Machine à lancer',
       animation: throwingMachine,
+      vimeoId: '485392763',
       repetition: '',
       rest: '',
       instruction: 'En binôme, les joueurs lancent des revers et coup droits pendant 5 minutes.',
@@ -4865,6 +4866,7 @@ const basicThrowsDrill = {
       id: 2,
       title: 'Montante - descendante',
       animation: ladder,
+      vimeoId: '485393003',
       repetition: '',
       rest: '',
       instruction:
@@ -4874,6 +4876,7 @@ const basicThrowsDrill = {
       id: 3,
       title: 'Avec des fantômes',
       animation: ladderGhost,
+      vimeoId: '485399479',
       repetition: '',
       rest: '',
       instruction:
@@ -4977,6 +4980,7 @@ const kyeDrill = {
       id: 1,
       title: '3 versus 2',
       animation: threeVersusTwo,
+      vimeoId: '485452835',
       repetition: '',
       rest: '',
       instruction:
@@ -5096,6 +5100,7 @@ const giveAndGoDrill = {
       id: 1,
       title: 'Le Une-deux',
       animation: giveAndGo,
+      vimeoId: '485473267',
       repetition: '',
       rest: '',
       instruction: "Les joueurs doivent réaliser l'exercice aussi vite que possible. Attention à éviter les travels",
@@ -5104,6 +5109,7 @@ const giveAndGoDrill = {
       id: 2,
       title: 'Ça compte !',
       animation: giveAndGoRace,
+      vimeoId: '485473406',
       repetition: '',
       rest: '',
       instruction: 'Une course entre 2 équipes. La première à 25 passes gagne !',
@@ -5271,6 +5277,7 @@ const bulldogDrill = {
       id: 1,
       title: "L'épervier",
       animation: bulldogAnimation,
+      vimeoId: '485473214',
       repetition: '',
       rest: '',
       instruction:
@@ -5310,6 +5317,7 @@ const menageATroisDrill = {
       id: 2,
       title: 'Rédemption',
       animation: redemption,
+      vimeoId: '485391944',
       repetition: '',
       rest: '',
       instruction:
@@ -5452,6 +5460,7 @@ const triangleOfDeathdrill = {
       id: 1,
       title: 'La catapulte',
       animation: triangleDeath,
+      vimeoId: '485473100',
       repetition: '',
       rest: '',
       instruction:
@@ -5740,7 +5749,7 @@ const dDC = {
   description: 'Double disc court est un sport de frisbee qui combine rapidité, stratégie et capacité de lancer.',
   minimalPlayersNumber: 4,
   inGame:
-    "LE DDC permet de travailler la maîtrise des courbes de passes et la communication. La gain technique permet de s'adapter au situation de match",
+    "Le DDC permet de travailler la maîtrise des courbes de passes et la communication. La gain technique permet de s'adapter au situation de match",
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '2 disques - 8 plots',
   durationInMinutes: 15,
@@ -5757,7 +5766,7 @@ const dDC = {
       repetition: '',
       rest: '',
       instruction:
-        "2 équipes de 2 joueurs s'opposent. Les zones sont de 13 mètres carrés et espacés de 17 mètres. Vous obtenez un point pour un lancer qui atterrit et reste dans le terrain de l'adversaire, ou si un adversaire fait tomber votre lancer. Vos adversaires obtiennent un point si votre lancer touche l'extérieur de leur terrain. Si vous pouvez vous arranger pour que l'autre équipe touche les deux disques en même temps, vous obtenez deux points.",
+        "2 équipes de 2 joueurs s'opposent. Les zones sont des carrés de 13 mètres espacés de 17 mètres. Vous obtenez un point pour un lancer qui atterrit et reste dans le terrain de l'adversaire, ou si un adversaire fait tomber votre lancer. Vos adversaires obtiennent un point si votre lancer touche l'extérieur de leur terrain. Si vous pouvez vous arranger pour que l'autre équipe touche les deux disques en même temps, vous obtenez deux points.",
     },
   ],
 };
@@ -6215,6 +6224,7 @@ const theTunnel = {
       id: 1,
       title: 'Le Tunnel',
       animation: theTunnelAnimation,
+      vimeoId: '485472876',
       repetition: '',
       rest: '',
       instruction:
@@ -6244,6 +6254,7 @@ const sprintDefense = {
       id: 1,
       title: 'La défense léopard',
       animation: leopard,
+      vimeoId: '485471567',
       repetition: '',
       rest: '',
       instruction:
@@ -6274,6 +6285,7 @@ const cupSwinging = {
       id: 1,
       title: 'Le Rideau',
       animation: firtWallAnimation,
+      vimeoId: '485399518',
       repetition: '',
       rest: '',
       instruction:
@@ -6351,14 +6363,6 @@ const goaltimateDrill = {
       id: 1,
       title: 'Goaltimate rules',
       animation: goaltimate,
-      repetition: '',
-      rest: '',
-      instruction:
-        "4 contre 4. Compte de 5 \nÀ chaque fois qu'il y a un turnover, la nouvelle équipe offensive doit \"nettoyer\" le disque en l'ammenant dans la zone de dégagement, et peut alors attaquer le but. \nUn point est obtenu lorsqu'une passe traversant le cerceau est attrapée dans la zone d'en-but par votre coéquipier",
-    },
-    {
-      id: 2,
-      title: 'Goaltimate video',
       vimeoId: '416849035',
       repetition: '',
       rest: '',
@@ -6607,6 +6611,7 @@ const checkLongKid = {
       id: 1,
       title: 'Check & Longues',
       animation: checkLongKidAnimation,
+      vimeoId: '485473162',
       repetition: '',
       rest: '',
       instruction:
@@ -6775,6 +6780,7 @@ const trident = {
       id: 1,
       title: 'Le Trident',
       animation: tridentAnimation,
+      vimeoId: '485392578',
       repetition: '',
       rest: '',
       instruction:

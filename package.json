@@ -33,19 +33,18 @@
     "react-native-elements": "^2.3.2",
     "react-native-flash-message": "^0.1.17",
     "react-native-gesture-handler": "~1.7.0",
-    "react-native-kill-packager": "^1.0.0",
-    "react-native-paper": "^3.11.0",
+    "react-native-paper": "^4.4.1",
     "react-native-reanimated": "~1.13.0",
     "react-native-safe-area-context": "3.1.4",
     "react-native-screens": "~2.10.1",
     "react-native-snap-carousel": "^3.9.1",
     "react-native-swipe-gestures": "^1.0.5",
     "react-native-web": "~0.13.7",
-    "react-redux": "^7.2.1",
+    "react-redux": "^7.2.2",
     "redux": "^4.0.5",
     "redux-persist": "^5.10.0",
     "watchman": "^1.0.0",
-    "yup": "^0.29.3"
+    "yup": "^0.31.1"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",

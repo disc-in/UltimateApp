@@ -217,6 +217,12 @@ exports[`<FrisbeeFilters /> renders correctly 1`] = `
           }
         >
           <View
+            accessibilityRole="checkbox"
+            accessibilityState={
+              Object {
+                "checked": false,
+              }
+            }
             accessible={true}
             focusable={true}
             onClick={[Function]}
@@ -261,43 +267,6 @@ exports[`<FrisbeeFilters /> renders correctly 1`] = `
                   }
                 }
                 testID="checkboxTitle"
-                theme={
-                  Object {
-                    "colors": Object {
-                      "disabled": "hsl(208, 8%, 90%)",
-                      "divider": "#bcbbc1",
-                      "error": "#ff190c",
-                      "grey0": "#393e42",
-                      "grey1": "#43484d",
-                      "grey2": "#5e6977",
-                      "grey3": "#86939e",
-                      "grey4": "#bdc6cf",
-                      "grey5": "#e1e8ee",
-                      "greyOutline": "#bbb",
-                      "platform": Object {
-                        "android": Object {
-                          "error": "#f44336",
-                          "primary": "#2196f3",
-                          "secondary": "#9C27B0",
-                          "success": "#4caf50",
-                          "warning": "#ffeb3b",
-                        },
-                        "ios": Object {
-                          "error": "#ff3b30",
-                          "primary": "#007aff",
-                          "secondary": "#5856d6",
-                          "success": "#4cd964",
-                          "warning": "#ffcc00",
-                        },
-                      },
-                      "primary": "#2089dc",
-                      "searchBg": "#303337",
-                      "secondary": "#8F0CE8",
-                      "success": "#52c41a",
-                      "warning": "#faad14",
-                    },
-                  }
-                }
               >
                 Handling
               </Text>
@@ -336,6 +305,7 @@ exports[`<FrisbeeFilters /> renders correctly 1`] = `
           1
         </Text>
         <View
+          allowTouchTrack={false}
           animationType="timing"
           onLayout={[Function]}
           onValueChange={[Function]}
@@ -352,6 +322,7 @@ exports[`<FrisbeeFilters /> renders correctly 1`] = `
           theme={
             Object {
               "colors": Object {
+                "black": "#242424",
                 "disabled": "hsl(208, 8%, 90%)",
                 "divider": "#bcbbc1",
                 "error": "#ff190c",
@@ -365,6 +336,7 @@ exports[`<FrisbeeFilters /> renders correctly 1`] = `
                 "platform": Object {
                   "android": Object {
                     "error": "#f44336",
+                    "grey": "rgba(0, 0, 0, 0.54)",
                     "primary": "#2196f3",
                     "secondary": "#9C27B0",
                     "success": "#4caf50",
@@ -372,7 +344,9 @@ exports[`<FrisbeeFilters /> renders correctly 1`] = `
                   },
                   "ios": Object {
                     "error": "#ff3b30",
+                    "grey": "#7d7d7d",
                     "primary": "#007aff",
+                    "searchBg": "#dcdce1",
                     "secondary": "#5856d6",
                     "success": "#4cd964",
                     "warning": "#ffcc00",
@@ -380,9 +354,10 @@ exports[`<FrisbeeFilters /> renders correctly 1`] = `
                 },
                 "primary": "#2089dc",
                 "searchBg": "#303337",
-                "secondary": "#8F0CE8",
+                "secondary": "#ca71eb",
                 "success": "#52c41a",
                 "warning": "#faad14",
+                "white": "#ffffff",
               },
             }
           }
@@ -422,18 +397,14 @@ exports[`<FrisbeeFilters /> renders correctly 1`] = `
               Object {
                 "backgroundColor": "#2a9e91",
                 "borderRadius": 10,
-                "height": 0,
+                "height": 20,
                 "position": "absolute",
-                "top": 21,
                 "transform": Array [
                   Object {
                     "translateX": 0,
                   },
-                  Object {
-                    "translateY": -0,
-                  },
                 ],
-                "width": 0,
+                "width": 20,
               }
             }
             testID="sliderThumb"

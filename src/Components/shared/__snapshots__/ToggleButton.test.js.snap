@@ -15,6 +15,12 @@ exports[`<ToggleButton /> renders correctly 1`] = `
 >
   <View
     accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "disabled": true,
+        "selected": true,
+      }
+    }
     accessible={true}
     focusable={true}
     hitSlop={
@@ -86,6 +92,12 @@ exports[`<ToggleButton /> renders correctly 1`] = `
   </View>
   <View
     accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "disabled": false,
+        "selected": false,
+      }
+    }
     accessible={true}
     focusable={true}
     hitSlop={

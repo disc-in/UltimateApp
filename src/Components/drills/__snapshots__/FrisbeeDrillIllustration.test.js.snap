@@ -35,8 +35,7 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
       Array [
         Object {
           "id": 0,
-          "illustrationSource": "462695757",
-          "illustrationType": "vimeo",
+          "vimeoId": "462695757",
         },
       ]
     }
@@ -73,7 +72,6 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
     onScroll={[Function]}
     onScrollBeginDrag={[Function]}
     onScrollEndDrag={[Function]}
-    onSnapToItem={[Function]}
     onStartShouldSetResponderCapture={[Function]}
     onTouchEnd={[Function]}
     onTouchStart={[Function]}
@@ -130,125 +128,114 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
             }
           }
         >
-          <View
-            style={
-              Object {
-                "alignItems": "center",
-                "flexDirection": "row",
-                "height": 40,
-                "justifyContent": "space-between",
-                "marginHorizontal": 30,
-              }
-            }
-          >
-            <View />
-            <Text
+          <View>
+            <View
               style={
                 Object {
-                  "color": "#232b2b",
-                  "fontSize": 16,
-                  "textAlign": "center",
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "height": 40,
+                  "justifyContent": "space-between",
+                  "marginHorizontal": 30,
                 }
               }
-            />
-            <View />
-          </View>
-          <View
-            style={
-              Object {
-                "paddingVertical": 10,
-              }
-            }
-          />
-          <RCTScrollView>
+            >
+              <View />
+              <Text
+                style={
+                  Object {
+                    "color": "#232b2b",
+                    "fontSize": 16,
+                    "textAlign": "center",
+                  }
+                }
+              />
+              <View />
+            </View>
             <View>
               <View
                 style={
                   Object {
-                    "minHeight": 375,
+                    "height": 250,
                   }
                 }
               >
                 <View
                   style={
-                    Array [
-                      Object {
-                        "height": 250,
-                      },
-                      Object {
-                        "flex": 1,
-                      },
-                    ]
+                    Object {
+                      "alignItems": "center",
+                      "flex": 1,
+                      "height": 250,
+                      "justifyContent": "center",
+                    }
                   }
                 >
                   <View
                     style={
                       Object {
-                        "alignItems": "center",
-                        "flex": 1,
-                        "height": 250,
-                        "justifyContent": "center",
+                        "position": "absolute",
                       }
                     }
                   >
-                    <View
+                    <ActivityIndicator
+                      animating={true}
+                      color="#A6A6A6"
+                      hidesWhenStopped={true}
+                      size="large"
+                    />
+                    <Text>
+                      Loading…
+                    </Text>
+                  </View>
+                  <View
+                    pointerEvents="box-none"
+                    style={
+                      Object {
+                        "height": 250,
+                        "overflow": "hidden",
+                        "width": "100%",
+                      }
+                    }
+                  >
+                    <ViewManagerAdapter_ExpoVideoView
+                      proxiedProperties={
+                        Object {
+                          "onError": [Function],
+                          "onFullscreenUpdate": [Function],
+                          "onLoad": [Function],
+                          "onLoadStart": [Function],
+                          "onReadyForDisplay": [Function],
+                          "onStatusUpdate": [Function],
+                          "resizeMode": "mock",
+                          "source": undefined,
+                          "status": Object {},
+                          "useNativeControls": true,
+                        }
+                      }
                       style={
                         Object {
+                          "bottom": 0,
+                          "left": 0,
                           "position": "absolute",
+                          "right": 0,
+                          "top": 0,
                         }
                       }
-                    >
-                      <ActivityIndicator
-                        animating={true}
-                        color="#A6A6A6"
-                        hidesWhenStopped={true}
-                        size="large"
-                      />
-                      <Text>
-                        Loading…
-                      </Text>
-                    </View>
-                    <View
-                      pointerEvents="box-none"
-                      style={
-                        Object {
-                          "height": 250,
-                          "overflow": "hidden",
-                          "width": "100%",
-                        }
-                      }
-                    >
-                      <ViewManagerAdapter_ExpoVideoView
-                        proxiedProperties={
-                          Object {
-                            "onError": [Function],
-                            "onFullscreenUpdate": [Function],
-                            "onLoad": [Function],
-                            "onLoadStart": [Function],
-                            "onReadyForDisplay": [Function],
-                            "onStatusUpdate": [Function],
-                            "resizeMode": "mock",
-                            "source": undefined,
-                            "status": Object {},
-                            "useNativeControls": true,
-                          }
-                        }
-                        style={
-                          Object {
-                            "bottom": 0,
-                            "left": 0,
-                            "position": "absolute",
-                            "right": 0,
-                            "top": 0,
-                          }
-                        }
-                      />
-                    </View>
+                    />
                   </View>
                 </View>
               </View>
+              <Text
+                style={
+                  Object {
+                    "color": "#232b2b",
+                    "fontSize": 16,
+                    "margin": 10,
+                  }
+                }
+              />
             </View>
-          </RCTScrollView>
+          </View>
         </View>
       </View>
     </View>

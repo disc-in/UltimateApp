@@ -421,6 +421,11 @@ exports[`<HomePage /> renders correctly 1`] = `
       >
         <View
           accessibilityRole="button"
+          accessibilityState={
+            Object {
+              "selected": true,
+            }
+          }
           accessible={true}
           focusable={true}
           onClick={[Function]}
@@ -654,6 +659,11 @@ exports[`<HomePage /> renders correctly 1`] = `
         </View>
         <View
           accessibilityRole="button"
+          accessibilityState={
+            Object {
+              "selected": true,
+            }
+          }
           accessible={true}
           focusable={true}
           onClick={[Function]}
@@ -887,6 +897,11 @@ exports[`<HomePage /> renders correctly 1`] = `
         </View>
         <View
           accessibilityRole="button"
+          accessibilityState={
+            Object {
+              "selected": true,
+            }
+          }
           accessible={true}
           focusable={true}
           onClick={[Function]}

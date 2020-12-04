@@ -209,6 +209,12 @@ Array [
           }
         >
           <View
+            accessibilityRole="menuitem"
+            accessibilityState={
+              Object {
+                "disabled": undefined,
+              }
+            }
             accessible={true}
             focusable={true}
             onClick={[Function]}
@@ -267,6 +273,7 @@ Array [
                       },
                       Array [
                         Object {
+                          "lineHeight": 24,
                           "transform": Array [
                             Object {
                               "scaleX": 1,
@@ -304,6 +311,7 @@ Array [
                     Object {
                       "maxWidth": 192,
                     },
+                    undefined,
                   ]
                 }
               >
@@ -335,6 +343,12 @@ Array [
             </View>
           </View>
           <View
+            accessibilityRole="menuitem"
+            accessibilityState={
+              Object {
+                "disabled": undefined,
+              }
+            }
             accessible={true}
             focusable={true}
             onClick={[Function]}
@@ -393,6 +407,7 @@ Array [
                       },
                       Array [
                         Object {
+                          "lineHeight": 24,
                           "transform": Array [
                             Object {
                               "scaleX": 1,
@@ -430,6 +445,7 @@ Array [
                     Object {
                       "maxWidth": 192,
                     },
+                    undefined,
                   ]
                 }
               >
@@ -461,6 +477,12 @@ Array [
             </View>
           </View>
           <View
+            accessibilityRole="menuitem"
+            accessibilityState={
+              Object {
+                "disabled": undefined,
+              }
+            }
             accessible={true}
             focusable={true}
             onClick={[Function]}
@@ -519,6 +541,7 @@ Array [
                       },
                       Array [
                         Object {
+                          "lineHeight": 24,
                           "transform": Array [
                             Object {
                               "scaleX": 1,
@@ -556,6 +579,7 @@ Array [
                     Object {
                       "maxWidth": 192,
                     },
+                    undefined,
                   ]
                 }
               >
@@ -599,6 +623,12 @@ Array [
             }
           />
           <View
+            accessibilityRole="menuitem"
+            accessibilityState={
+              Object {
+                "disabled": undefined,
+              }
+            }
             accessible={true}
             focusable={true}
             onClick={[Function]}
@@ -657,6 +687,7 @@ Array [
                       },
                       Array [
                         Object {
+                          "lineHeight": 24,
                           "transform": Array [
                             Object {
                               "scaleX": 1,
@@ -694,6 +725,7 @@ Array [
                     Object {
                       "maxWidth": 192,
                     },
+                    undefined,
                   ]
                 }
               >

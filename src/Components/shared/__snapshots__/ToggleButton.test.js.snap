@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ToggleButton /> renders correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+      },
+      Object {
+        "justifyContent": "center",
+      },
+    ]
+  }
+>
+  <View
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "disabled": true,
+        "selected": true,
+      }
+    }
+    accessible={true}
+    focusable={true}
+    hitSlop={
+      Object {
+        "bottom": 6,
+        "left": 6,
+        "right": 6,
+        "top": 6,
+      }
+    }
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        false,
+        Array [
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+            "margin": 6,
+            "overflow": "hidden",
+          },
+          Object {
+            "borderRadius": 18,
+            "height": 36,
+            "width": 36,
+          },
+          Object {
+            "opacity": 0.32,
+          },
+          Array [
+            Object {
+              "height": 42,
+              "margin": 0,
+              "width": 42,
+            },
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, .08)",
+              "borderColor": "rgba(0, 0, 0, 0.29)",
+              "borderRadius": 4,
+            },
+            Array [
+              Object {
+                "borderWidth": 0.5,
+              },
+              Object {
+                "borderBottomRightRadius": 0,
+                "borderTopRightRadius": 0,
+              },
+              Object {
+                "backgroundColor": "#f1f1f1",
+                "opacity": 0.8,
+              },
+            ],
+          ],
+        ],
+      ]
+    }
+    testID="toggle-animation"
+  >
+    <View>
+      <Text />
+    </View>
+  </View>
+  <View
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "disabled": false,
+        "selected": false,
+      }
+    }
+    accessible={true}
+    focusable={true}
+    hitSlop={
+      Object {
+        "bottom": 6,
+        "left": 6,
+        "right": 6,
+        "top": 6,
+      }
+    }
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        false,
+        Array [
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+            "margin": 6,
+            "overflow": "hidden",
+          },
+          Object {
+            "borderRadius": 18,
+            "height": 36,
+            "width": 36,
+          },
+          false,
+          Array [
+            Object {
+              "height": 42,
+              "margin": 0,
+              "width": 42,
+            },
+            Object {
+              "backgroundColor": "transparent",
+              "borderColor": "rgba(0, 0, 0, 0.29)",
+              "borderRadius": 4,
+            },
+            Array [
+              Object {
+                "borderWidth": 0.5,
+              },
+              Object {
+                "borderBottomLeftRadius": 0,
+                "borderLeftWidth": 0,
+                "borderTopLeftRadius": 0,
+              },
+              undefined,
+            ],
+          ],
+        ],
+      ]
+    }
+    testID="toggle-video"
+  >
+    <View>
+      <Text />
+    </View>
+  </View>
+</View>
+`;

@@ -1,13 +1,4 @@
-import {
-  DrillTypes,
-  Intensities,
-  Levels,
-  FrisbeeGoals,
-  FitnessGoals,
-  SeasonTimings,
-  EquipmentLabels,
-  IllustrationType,
-} from '../config';
+import { DrillTypes, Intensities, Levels, FrisbeeGoals, FitnessGoals, SeasonTimings, EquipmentLabels } from '../config';
 
 import animationGoToTen from '../Animation/AnimationGoToTen';
 import throwingMachine from '../Animation/ThrowingMachine';
@@ -68,6 +59,9 @@ import breakRace from '../Animation/BreakRace';
 import longCheck from '../Animation/LongCheck';
 import throwCatch from '../Animation/ThrowCatch';
 import threeGame from '../Animation/ThreeGame';
+import fiveGame from '../Animation/FiveGame';
+import singleBoxGame from '../Animation/SingleBoxGame';
+import twoBoxesGame from '../Animation/TwoBoxesGame';
 import normalGameAnimation from '../Animation/NormalGame';
 import endzoneAnimation from '../Animation/Endzone';
 import endzoneFinition from '../Animation/EndzoneFinition';
@@ -94,8 +88,15 @@ import adaptMark from '../Animation/AdaptMark';
 import ghost from '../Animation/Ghost';
 import ladderGhost from '../Animation/LadderGhost';
 import fishAnimation from '../Animation/Fish';
+import crossingTheFieldAnimation from '../Animation/CrossingTheField';
+import crossingTheFieldDefenseAnimation from '../Animation/CrossingTheFieldDefense';
+import crossingTheFieldManyAnimation from '../Animation/CrossingTheFieldMany';
 import reverseEightAnimation from '../Animation/ReverseEight';
 import reverseEightTargetAnimation from '../Animation/ReverseEightTarget';
+import tridentAnimation from '../Animation/Trident';
+import firtWallAnimation from '../Animation/Wall';
+import bullAnimation from '../Animation/Bull';
+import bullSpeedAnimation from '../Animation/BullSpeed';
 
 const stabilityDrill = {
   id: 1,
@@ -117,8 +118,7 @@ const stabilityDrill = {
     {
       id: 1,
       title: 'Split Squats',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406746924',
+      vimeoId: '406746924',
       sounds: false,
       repetition: '12',
       rest: 'As required',
@@ -127,8 +127,7 @@ const stabilityDrill = {
     {
       id: 2,
       title: 'Dumbbell Hip Thrust',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747302',
+      vimeoId: '406747302',
       sounds: false,
       repetition: '12',
       rest: 'As required',
@@ -137,8 +136,7 @@ const stabilityDrill = {
     {
       id: 3,
       title: 'Goblet Squats Cosaques',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747476',
+      vimeoId: '406747476',
       sounds: false,
       repetition: '12',
       rest: 'As required',
@@ -147,8 +145,7 @@ const stabilityDrill = {
     {
       id: 4,
       title: 'Single Arm Dumbbell Bench Press (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747599',
+      vimeoId: '406747599',
       sounds: false,
       repetition: '12',
       rest: 'As required',
@@ -157,8 +154,7 @@ const stabilityDrill = {
     {
       id: 5,
       title: 'Dual Gorilla Kettlebell Rows',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747038',
+      vimeoId: '406747038',
       sounds: false,
       repetition: '12',
       rest: 'As required',
@@ -167,8 +163,7 @@ const stabilityDrill = {
     {
       id: 6,
       title: 'Single Leg Vertical Jump (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747769',
+      vimeoId: '406747769',
       sounds: false,
       repetition: '5',
       rest: 'As required',
@@ -177,8 +172,7 @@ const stabilityDrill = {
     {
       id: 7,
       title: 'Split Squats',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406746924',
+      vimeoId: '406746924',
       sounds: false,
       repetition: '12',
       rest: 'As required',
@@ -187,8 +181,7 @@ const stabilityDrill = {
     {
       id: 8,
       title: 'Dumbbell Hip Thrust',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747302',
+      vimeoId: '406747302',
       sounds: false,
       repetition: '12',
       rest: 'As required',
@@ -197,8 +190,7 @@ const stabilityDrill = {
     {
       id: 9,
       title: 'Goblet Squats Cosaques',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747476',
+      vimeoId: '406747476',
       sounds: false,
       repetition: '12',
       rest: 'As required',
@@ -207,8 +199,7 @@ const stabilityDrill = {
     {
       id: 10,
       title: 'Single Arm Dumbbell Bench Press (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747599',
+      vimeoId: '406747599',
       sounds: false,
       repetition: '12',
       rest: 'As required',
@@ -217,8 +208,7 @@ const stabilityDrill = {
     {
       id: 11,
       title: 'Dual Gorilla Kettlebell Rows',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747038',
+      vimeoId: '406747038',
       sounds: false,
       repetition: '12',
       rest: 'As required',
@@ -227,8 +217,7 @@ const stabilityDrill = {
     {
       id: 12,
       title: 'Single Leg Vertical Jump (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747769',
+      vimeoId: '406747769',
       sounds: false,
       repetition: '5',
       rest: 'As required',
@@ -237,8 +226,7 @@ const stabilityDrill = {
     {
       id: 13,
       title: 'Split Squats',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406746924',
+      vimeoId: '406746924',
       sounds: false,
       repetition: '12',
       rest: 'As required',
@@ -247,8 +235,7 @@ const stabilityDrill = {
     {
       id: 14,
       title: 'Dumbbell Hip Thrust',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747302',
+      vimeoId: '406747302',
       sounds: false,
       repetition: '12',
       rest: 'As required',
@@ -257,8 +244,7 @@ const stabilityDrill = {
     {
       id: 15,
       title: 'Goblet Squats Cosaques',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747476',
+      vimeoId: '406747476',
       sounds: false,
       repetition: '12',
       rest: 'As required',
@@ -267,8 +253,7 @@ const stabilityDrill = {
     {
       id: 16,
       title: 'Single Arm Dumbbell Bench Press (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747599',
+      vimeoId: '406747599',
       sounds: false,
       repetition: '12',
       rest: 'As required',
@@ -277,8 +262,7 @@ const stabilityDrill = {
     {
       id: 17,
       title: 'Dual Gorilla Kettlebell Rows',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747038',
+      vimeoId: '406747038',
       sounds: false,
       repetition: '12',
       rest: 'As required',
@@ -287,8 +271,7 @@ const stabilityDrill = {
     {
       id: 18,
       title: 'Single Leg Vertical Jump (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747769',
+      vimeoId: '406747769',
       sounds: false,
       repetition: '5',
       rest: 'As required',
@@ -297,8 +280,7 @@ const stabilityDrill = {
     {
       id: 19,
       title: 'Split Squats',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406746924',
+      vimeoId: '406746924',
       sounds: false,
       repetition: '12',
       rest: 'As required',
@@ -307,8 +289,7 @@ const stabilityDrill = {
     {
       id: 20,
       title: 'Dumbbell Hip Thrust',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747302',
+      vimeoId: '406747302',
       sounds: false,
       repetition: '12',
       rest: 'As required',
@@ -317,8 +298,7 @@ const stabilityDrill = {
     {
       id: 21,
       title: 'Goblet Squats Cosaques',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747476',
+      vimeoId: '406747476',
       sounds: false,
       repetition: '12',
       rest: 'As required',
@@ -327,8 +307,7 @@ const stabilityDrill = {
     {
       id: 22,
       title: 'Single Arm Dumbbell Bench Press (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747599',
+      vimeoId: '406747599',
       sounds: false,
       repetition: '12',
       rest: 'As required',
@@ -337,8 +316,7 @@ const stabilityDrill = {
     {
       id: 23,
       title: 'Dual Gorilla Kettlebell Rows',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747038',
+      vimeoId: '406747038',
       sounds: false,
       repetition: '12',
       rest: 'As required',
@@ -347,8 +325,7 @@ const stabilityDrill = {
     {
       id: 24,
       title: 'Single Leg Vertical Jump (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747769',
+      vimeoId: '406747769',
       sounds: false,
       repetition: '5',
       rest: 'As required',
@@ -376,8 +353,7 @@ const strengthDrill = {
     {
       id: 1,
       title: 'Goblet Squats Cosaques',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747476',
+      vimeoId: '406747476',
       sounds: false,
       repetition: '8',
       rest: '90 s',
@@ -386,8 +362,7 @@ const strengthDrill = {
     {
       id: 2,
       title: 'Single Leg Box Jump (Alternate)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747656',
+      vimeoId: '406747656',
       sounds: false,
       repetition: '6',
       rest: '90 s',
@@ -396,8 +371,7 @@ const strengthDrill = {
     {
       id: 3,
       title: 'Single Leg Dumbbell Romanian Deadlift (Alternate)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747707',
+      vimeoId: '406747707',
       sounds: false,
       repetition: '8',
       rest: '90 s',
@@ -406,8 +380,7 @@ const strengthDrill = {
     {
       id: 4,
       title: 'Pull Ups',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747791',
+      vimeoId: '406747791',
       sounds: false,
       repetition: '8',
       rest: '90 s',
@@ -416,8 +389,7 @@ const strengthDrill = {
     {
       id: 5,
       title: 'Goblet Squats Cosaques',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747476',
+      vimeoId: '406747476',
       sounds: false,
       repetition: '8',
       rest: '90 s',
@@ -426,8 +398,7 @@ const strengthDrill = {
     {
       id: 6,
       title: 'Single Leg Box Jump (Alternate)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747656',
+      vimeoId: '406747656',
       sounds: false,
       repetition: '6',
       rest: '90 s',
@@ -436,8 +407,7 @@ const strengthDrill = {
     {
       id: 7,
       title: 'Single Leg Dumbbell Romanian Deadlift (Alternate)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747707',
+      vimeoId: '406747707',
       sounds: false,
       repetition: '8',
       rest: '90 s',
@@ -446,8 +416,7 @@ const strengthDrill = {
     {
       id: 8,
       title: 'Pull Ups',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747791',
+      vimeoId: '406747791',
       sounds: false,
       repetition: '8',
       rest: '90 s',
@@ -456,8 +425,7 @@ const strengthDrill = {
     {
       id: 9,
       title: 'Goblet Squats Cosaques',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747476',
+      vimeoId: '406747476',
       sounds: false,
       repetition: '8',
       rest: '90 s',
@@ -466,8 +434,7 @@ const strengthDrill = {
     {
       id: 10,
       title: 'Single Leg Box Jump (Alternate)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747656',
+      vimeoId: '406747656',
       sounds: false,
       repetition: '6',
       rest: '90 s',
@@ -476,8 +443,7 @@ const strengthDrill = {
     {
       id: 11,
       title: 'Single Leg Dumbbell Romanian Deadlift (Alternate)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747707',
+      vimeoId: '406747707',
       sounds: false,
       repetition: '8',
       rest: '90 s',
@@ -486,8 +452,7 @@ const strengthDrill = {
     {
       id: 12,
       title: 'Pull Ups',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747791',
+      vimeoId: '406747791',
       sounds: false,
       repetition: '8',
       rest: '90 s',
@@ -515,8 +480,7 @@ const speedDrill = {
     {
       id: 1,
       title: 'Dynamic Marchs',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436266810',
+      vimeoId: '436266810',
       sounds: false,
       repetition: '2',
       rest: 'Walk back',
@@ -525,8 +489,7 @@ const speedDrill = {
     {
       id: 2,
       title: 'Wall Fire',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436266626',
+      vimeoId: '436266626',
       sounds: false,
       repetition: '3',
       rest: 'As required',
@@ -535,8 +498,7 @@ const speedDrill = {
     {
       id: 3,
       title: 'A Skips - 15 m',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436134073',
+      vimeoId: '436134073',
       sounds: false,
       repetition: '3',
       rest: 'Walk Back',
@@ -545,8 +507,7 @@ const speedDrill = {
     {
       id: 4,
       title: 'B Skips - 15 m',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436136321',
+      vimeoId: '436136321',
       sounds: false,
       repetition: '3',
       rest: 'Walk Back',
@@ -555,8 +516,7 @@ const speedDrill = {
     {
       id: 5,
       title: 'Bounding - 25 m',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436267838',
+      vimeoId: '436267838',
       sounds: false,
       repetition: '2',
       rest: 'Walk Back',
@@ -565,8 +525,7 @@ const speedDrill = {
     {
       id: 6,
       title: 'Sprint - 10 m',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436267090',
+      vimeoId: '436267090',
       sounds: false,
       repetition: '4',
       rest: '90 s',
@@ -575,8 +534,7 @@ const speedDrill = {
     {
       id: 7,
       title: 'Sprint - 30 m',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436267090',
+      vimeoId: '436267090',
       sounds: false,
       repetition: '4',
       rest: '90 s',
@@ -585,8 +543,7 @@ const speedDrill = {
     {
       id: 8,
       title: 'Sprint - 50 m',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436267090',
+      vimeoId: '436267090',
       sounds: false,
       repetition: '3',
       rest: '90 s',
@@ -614,8 +571,7 @@ const warmupGameDrill = {
     {
       id: 1,
       title: 'Suivez la vidéo',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '413628757',
+      vimeoId: '413628757',
       sounds: true,
       repetition: '',
       rest: '',
@@ -643,9 +599,8 @@ const warmupDrill = {
     {
       id: 1,
       title: 'Echauffement basique',
-      illustrationType: IllustrationType.VIMEO,
       sounds: true,
-      illustrationSource: '436481012',
+      vimeoId: '436481012',
       repetition: '',
       rest: '',
       instruction: '',
@@ -673,8 +628,7 @@ const mas30 = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -683,8 +637,7 @@ const mas30 = {
     {
       id: 2,
       title: 'VMA',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431531805',
+      vimeoId: '431531805',
       sounds: false,
       repetition: '8*(30/30)',
       rest: '',
@@ -693,8 +646,7 @@ const mas30 = {
     {
       id: 3,
       title: 'Repos',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431528434',
+      vimeoId: '431528434',
       sounds: false,
       repetition: '3 min',
       rest: '',
@@ -703,8 +655,7 @@ const mas30 = {
     {
       id: 4,
       title: 'VMA',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431531805',
+      vimeoId: '431531805',
       sounds: false,
       repetition: '8*(30/30)',
       rest: '',
@@ -713,8 +664,7 @@ const mas30 = {
     {
       id: 5,
       title: 'Repos',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431528434',
+      vimeoId: '431528434',
       sounds: false,
       repetition: '3"',
       rest: '',
@@ -723,8 +673,7 @@ const mas30 = {
     {
       id: 6,
       title: 'VMA',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431531805',
+      vimeoId: '431531805',
       sounds: false,
       repetition: '8*(30/30)',
       rest: '',
@@ -753,8 +702,7 @@ const fartlek = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -763,8 +711,7 @@ const fartlek = {
     {
       id: 2,
       title: 'Fartlek',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431521694',
+      vimeoId: '431521694',
       sounds: true,
       repetition: '25"',
       rest: '',
@@ -793,8 +740,7 @@ const suicide = {
     {
       id: 1,
       title: 'Marche dynamique',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436266810',
+      vimeoId: '436266810',
       sounds: false,
       repetition: '4',
       rest: '',
@@ -803,8 +749,7 @@ const suicide = {
     {
       id: 2,
       title: 'Wall Fire',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436266626',
+      vimeoId: '436266626',
       sounds: false,
       repetition: '9',
       rest: '',
@@ -813,8 +758,7 @@ const suicide = {
     {
       id: 3,
       title: 'Étirement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431866818',
+      vimeoId: '431866818',
       sounds: false,
       repetition: '1',
       rest: '',
@@ -823,8 +767,7 @@ const suicide = {
     {
       id: 4,
       title: 'Lunges Walk',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431868677',
+      vimeoId: '431868677',
       sounds: false,
       repetition: '1',
       rest: '',
@@ -833,8 +776,7 @@ const suicide = {
     {
       id: 5,
       title: 'A Skips',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436134073',
+      vimeoId: '436134073',
       sounds: false,
       repetition: '3',
       rest: '',
@@ -843,8 +785,7 @@ const suicide = {
     {
       id: 6,
       title: 'B Skips',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436136321',
+      vimeoId: '436136321',
       sounds: false,
       repetition: '3',
       rest: '',
@@ -853,8 +794,7 @@ const suicide = {
     {
       id: 7,
       title: 'Curtsy Walk',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431867802',
+      vimeoId: '431867802',
       sounds: false,
       repetition: '6',
       rest: '',
@@ -863,8 +803,7 @@ const suicide = {
     {
       id: 8,
       title: 'Boundings',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436267838',
+      vimeoId: '436267838',
       sounds: false,
       repetition: '2',
       rest: '',
@@ -873,8 +812,7 @@ const suicide = {
     {
       id: 9,
       title: 'Falling Start',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436266387',
+      vimeoId: '436266387',
       sounds: false,
       repetition: '2',
       rest: '',
@@ -883,8 +821,7 @@ const suicide = {
     {
       id: 10,
       title: 'Horizontal Crossover',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436267695',
+      vimeoId: '436267695',
       sounds: false,
       repetition: '2',
       rest: '',
@@ -893,8 +830,7 @@ const suicide = {
     {
       id: 11,
       title: 'Suicide',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436267370',
+      vimeoId: '436267370',
       sounds: false,
       repetition: '1',
       rest: '',
@@ -903,8 +839,7 @@ const suicide = {
     {
       id: 12,
       title: 'Repos',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431539031',
+      vimeoId: '431539031',
       sounds: false,
       repetition: '4',
       rest: '',
@@ -913,8 +848,7 @@ const suicide = {
     {
       id: 13,
       title: 'Suicide',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436267370',
+      vimeoId: '436267370',
       sounds: false,
       repetition: '1',
       rest: '',
@@ -923,8 +857,7 @@ const suicide = {
     {
       id: 14,
       title: 'Repos',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431539031',
+      vimeoId: '431539031',
       sounds: false,
       repetition: '4',
       rest: '',
@@ -933,8 +866,7 @@ const suicide = {
     {
       id: 15,
       title: 'Suicide',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436267370',
+      vimeoId: '436267370',
       sounds: false,
       repetition: '1',
       rest: '',
@@ -943,8 +875,7 @@ const suicide = {
     {
       id: 16,
       title: 'Repos',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431539031',
+      vimeoId: '431539031',
       sounds: false,
       repetition: '4',
       rest: '',
@@ -953,8 +884,7 @@ const suicide = {
     {
       id: 17,
       title: 'Suicide',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436267370',
+      vimeoId: '436267370',
       sounds: false,
       repetition: '1',
       rest: '',
@@ -963,8 +893,7 @@ const suicide = {
     {
       id: 18,
       title: 'Repos',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431539031',
+      vimeoId: '431539031',
       sounds: false,
       repetition: '4',
       rest: '',
@@ -973,8 +902,7 @@ const suicide = {
     {
       id: 19,
       title: 'Suicide',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436267370',
+      vimeoId: '436267370',
       sounds: false,
       repetition: '1',
       rest: '',
@@ -983,8 +911,7 @@ const suicide = {
     {
       id: 20,
       title: 'Repos',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431539031',
+      vimeoId: '431539031',
       sounds: false,
       repetition: '4',
       rest: '',
@@ -993,8 +920,7 @@ const suicide = {
     {
       id: 21,
       title: 'Suicide',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436267370',
+      vimeoId: '436267370',
       sounds: false,
       repetition: '1',
       rest: '',
@@ -1003,8 +929,7 @@ const suicide = {
     {
       id: 22,
       title: 'Repos',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431539031',
+      vimeoId: '431539031',
       sounds: false,
       repetition: '4',
       rest: '',
@@ -1013,8 +938,7 @@ const suicide = {
     {
       id: 23,
       title: 'Jogging',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431540566',
+      vimeoId: '431540566',
       sounds: false,
       repetition: '10"',
       rest: '',
@@ -1043,8 +967,7 @@ const lacticSprint = {
     {
       id: 1,
       title: 'Marche dynamique',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436266810',
+      vimeoId: '436266810',
       sounds: false,
       repetition: '4',
       rest: '',
@@ -1053,8 +976,7 @@ const lacticSprint = {
     {
       id: 2,
       title: 'Wall Fire',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436266626',
+      vimeoId: '436266626',
       sounds: false,
       repetition: '9',
       rest: '',
@@ -1063,8 +985,7 @@ const lacticSprint = {
     {
       id: 3,
       title: 'Perfect Stretch',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431866818',
+      vimeoId: '431866818',
       sounds: false,
       repetition: '1',
       rest: '',
@@ -1073,8 +994,7 @@ const lacticSprint = {
     {
       id: 4,
       title: 'Lunges Walk',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431868677',
+      vimeoId: '431868677',
       sounds: false,
       repetition: '1',
       rest: '',
@@ -1083,8 +1003,7 @@ const lacticSprint = {
     {
       id: 5,
       title: 'A Skips',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436134073',
+      vimeoId: '436134073',
       sounds: false,
       repetition: '3',
       rest: '',
@@ -1093,8 +1012,7 @@ const lacticSprint = {
     {
       id: 6,
       title: 'B Skips',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436136321',
+      vimeoId: '436136321',
       sounds: false,
       repetition: '3',
       rest: '',
@@ -1103,8 +1021,7 @@ const lacticSprint = {
     {
       id: 7,
       title: 'Curtsy Walk',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431867802',
+      vimeoId: '431867802',
       sounds: false,
       repetition: '6',
       rest: '',
@@ -1113,8 +1030,7 @@ const lacticSprint = {
     {
       id: 8,
       title: 'Boundings',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436267838',
+      vimeoId: '436267838',
       sounds: false,
       repetition: '2',
       rest: '',
@@ -1123,8 +1039,7 @@ const lacticSprint = {
     {
       id: 9,
       title: 'Falling Start',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436266387',
+      vimeoId: '436266387',
       sounds: false,
       repetition: '2',
       rest: '',
@@ -1133,8 +1048,7 @@ const lacticSprint = {
     {
       id: 10,
       title: 'Horizontal Crossover',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436267695',
+      vimeoId: '436267695',
       sounds: false,
       repetition: '2',
       rest: '',
@@ -1143,8 +1057,7 @@ const lacticSprint = {
     {
       id: 11,
       title: 'Sprints',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431531805',
+      vimeoId: '431531805',
       sounds: false,
       repetition: "4*(1'30/3'30)",
       rest: '',
@@ -1153,8 +1066,7 @@ const lacticSprint = {
     {
       id: 12,
       title: 'Repos',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431549240',
+      vimeoId: '431549240',
       sounds: true,
       repetition: "7'30",
       rest: '',
@@ -1163,8 +1075,7 @@ const lacticSprint = {
     {
       id: 13,
       title: 'Sprints',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431531805',
+      vimeoId: '431531805',
       sounds: false,
       repetition: "4*(1'30/3'30)",
       rest: '',
@@ -1173,8 +1084,7 @@ const lacticSprint = {
     {
       id: 14,
       title: 'Repos',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431549240',
+      vimeoId: '431549240',
       sounds: true,
       repetition: "7'30",
       rest: '',
@@ -1183,8 +1093,7 @@ const lacticSprint = {
     {
       id: 15,
       title: 'Sprints',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431531805',
+      vimeoId: '431531805',
       sounds: false,
       repetition: "4*(1'30/3'30)",
       rest: '',
@@ -1213,8 +1122,7 @@ const tDrill = {
     {
       id: 1,
       title: 'Marche dynamique',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436266810',
+      vimeoId: '436266810',
       sounds: false,
       repetition: '4',
       rest: '',
@@ -1223,8 +1131,7 @@ const tDrill = {
     {
       id: 2,
       title: 'Wall Fire',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436266626',
+      vimeoId: '436266626',
       sounds: false,
       repetition: '9',
       rest: '',
@@ -1233,8 +1140,7 @@ const tDrill = {
     {
       id: 3,
       title: 'Perfect Stretch',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431866818',
+      vimeoId: '431866818',
       sounds: false,
       repetition: '1',
       rest: '',
@@ -1243,8 +1149,7 @@ const tDrill = {
     {
       id: 4,
       title: 'Lunges Walk',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431868677',
+      vimeoId: '431868677',
       sounds: false,
       repetition: '1',
       rest: '',
@@ -1253,8 +1158,7 @@ const tDrill = {
     {
       id: 5,
       title: 'A Skips',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436134073',
+      vimeoId: '436134073',
       sounds: false,
       repetition: '3',
       rest: '',
@@ -1263,8 +1167,7 @@ const tDrill = {
     {
       id: 6,
       title: 'B Skips',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436136321',
+      vimeoId: '436136321',
       sounds: false,
       repetition: '3',
       rest: '',
@@ -1273,8 +1176,7 @@ const tDrill = {
     {
       id: 7,
       title: 'Curtsy Walk',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431867802',
+      vimeoId: '431867802',
       sounds: false,
       repetition: '6',
       rest: '',
@@ -1283,8 +1185,7 @@ const tDrill = {
     {
       id: 8,
       title: 'Boundings',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436267838',
+      vimeoId: '436267838',
       sounds: false,
       repetition: '2',
       rest: '',
@@ -1293,8 +1194,7 @@ const tDrill = {
     {
       id: 9,
       title: 'Falling Start',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436266387',
+      vimeoId: '436266387',
       sounds: false,
       repetition: '2',
       rest: '',
@@ -1303,8 +1203,7 @@ const tDrill = {
     {
       id: 10,
       title: 'Horizontal Crossover',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436267695',
+      vimeoId: '436267695',
       sounds: false,
       repetition: '2',
       rest: '',
@@ -1313,8 +1212,7 @@ const tDrill = {
     {
       id: 11,
       title: 'Shuttle 5-10-5',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431732936',
+      vimeoId: '431732936',
       sounds: false,
       repetition: '6',
       rest: '',
@@ -1323,8 +1221,7 @@ const tDrill = {
     {
       id: 12,
       title: 'Repos',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431528434',
+      vimeoId: '431528434',
       sounds: false,
       repetition: "3'",
       rest: '',
@@ -1333,8 +1230,7 @@ const tDrill = {
     {
       id: 13,
       title: 'T-drill',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431734014',
+      vimeoId: '431734014',
       sounds: true,
       repetition: '6',
       rest: '',
@@ -1343,8 +1239,7 @@ const tDrill = {
     {
       id: 14,
       title: 'Repos',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431528434',
+      vimeoId: '431528434',
       sounds: false,
       repetition: "3'",
       rest: '',
@@ -1353,8 +1248,7 @@ const tDrill = {
     {
       id: 15,
       title: 'Shuttle 5-10-5',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431732936',
+      vimeoId: '431732936',
       sounds: false,
       repetition: '6',
       rest: '',
@@ -1363,8 +1257,7 @@ const tDrill = {
     {
       id: 16,
       title: 'Repos',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431528434',
+      vimeoId: '431528434',
       sounds: false,
       repetition: "3'",
       rest: '',
@@ -1373,8 +1266,7 @@ const tDrill = {
     {
       id: 17,
       title: 'T-drill',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431734014',
+      vimeoId: '431734014',
       sounds: true,
       repetition: '6',
       rest: '',
@@ -1403,8 +1295,7 @@ const mas30Light = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -1413,8 +1304,7 @@ const mas30Light = {
     {
       id: 2,
       title: 'VMA',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431531805',
+      vimeoId: '431531805',
       sounds: false,
       repetition: '6*(30/30)',
       rest: '',
@@ -1423,8 +1313,7 @@ const mas30Light = {
     {
       id: 3,
       title: 'Repos',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431528434',
+      vimeoId: '431528434',
       sounds: false,
       repetition: '3 min',
       rest: '',
@@ -1433,8 +1322,7 @@ const mas30Light = {
     {
       id: 4,
       title: 'VMA',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431531805',
+      vimeoId: '431531805',
       sounds: false,
       repetition: '6*(30/30)',
       rest: '',
@@ -1443,8 +1331,7 @@ const mas30Light = {
     {
       id: 5,
       title: 'Repos',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431528434',
+      vimeoId: '431528434',
       sounds: false,
       repetition: '3 min',
       rest: '',
@@ -1453,8 +1340,7 @@ const mas30Light = {
     {
       id: 6,
       title: 'VMA',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431531805',
+      vimeoId: '431531805',
       sounds: false,
       repetition: '6*(30/30)',
       rest: '',
@@ -1482,8 +1368,7 @@ const circuit = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -1492,8 +1377,7 @@ const circuit = {
     {
       id: 2,
       title: 'Hindu Push Up',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406233220',
+      vimeoId: '406233220',
       sounds: false,
       repetition: '30 s',
       rest: '',
@@ -1502,8 +1386,7 @@ const circuit = {
     {
       id: 3,
       title: 'Plank',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406527719',
+      vimeoId: '406527719',
       sounds: false,
       repetition: '30 s',
       rest: '',
@@ -1512,8 +1395,7 @@ const circuit = {
     {
       id: 4,
       title: 'Russian Twist',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431744680',
+      vimeoId: '431744680',
       sounds: false,
       repetition: '30 s',
       rest: '',
@@ -1522,8 +1404,7 @@ const circuit = {
     {
       id: 5,
       title: 'Jump Lunge',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431751124',
+      vimeoId: '431751124',
       sounds: false,
       repetition: '30 s',
       rest: '',
@@ -1532,8 +1413,7 @@ const circuit = {
     {
       id: 6,
       title: 'Side Plank left',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431751410',
+      vimeoId: '431751410',
       sounds: false,
       repetition: '30 s',
       rest: '',
@@ -1542,8 +1422,7 @@ const circuit = {
     {
       id: 7,
       title: 'Reverse Crunch',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431751736',
+      vimeoId: '431751736',
       sounds: false,
       repetition: '30 s',
       rest: '',
@@ -1552,8 +1431,7 @@ const circuit = {
     {
       id: 8,
       title: 'Side Plank Right',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431751410',
+      vimeoId: '431751410',
       sounds: false,
       repetition: '30 s',
       rest: '',
@@ -1562,8 +1440,7 @@ const circuit = {
     {
       id: 9,
       title: 'Superman',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431752093',
+      vimeoId: '431752093',
       sounds: false,
       repetition: '30 s',
       rest: '',
@@ -1572,8 +1449,7 @@ const circuit = {
     {
       id: 10,
       title: 'Single Leg Bridge Left',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431759737',
+      vimeoId: '431759737',
       sounds: false,
       repetition: '30 s',
       rest: '',
@@ -1582,8 +1458,7 @@ const circuit = {
     {
       id: 11,
       title: 'Single Leg Bridge Right',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431759737',
+      vimeoId: '431759737',
       sounds: false,
       repetition: '30 s',
       rest: '',
@@ -1592,8 +1467,7 @@ const circuit = {
     {
       id: 12,
       title: 'Jump Squat',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '407999105',
+      vimeoId: '407999105',
       sounds: false,
       repetition: '30 s',
       rest: '',
@@ -1602,8 +1476,7 @@ const circuit = {
     {
       id: 13,
       title: 'Wall sit',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431760958',
+      vimeoId: '431760958',
       sounds: false,
       repetition: '30 s',
       rest: '',
@@ -1612,8 +1485,7 @@ const circuit = {
     {
       id: 14,
       title: 'Jump rope / High knees',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431761388',
+      vimeoId: '431761388',
       sounds: false,
       repetition: '30 s',
       rest: '',
@@ -1622,8 +1494,7 @@ const circuit = {
     {
       id: 15,
       title: 'Cossack Squat',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431760267',
+      vimeoId: '431760267',
       sounds: false,
       repetition: '1 min',
       rest: '',
@@ -1651,9 +1522,8 @@ const rest = {
     {
       id: 1,
       title: 'Time to rest',
-      illustrationType: IllustrationType.VIMEO,
       sounds: false,
-      illustrationSource: '431767386',
+      vimeoId: '431767386',
       repetition: '',
       rest: '',
       instruction: '',
@@ -1681,8 +1551,7 @@ const serpentine = {
     {
       id: 1,
       title: 'Marche dynamique',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436266810',
+      vimeoId: '436266810',
       sounds: false,
       repetition: '4',
       rest: '',
@@ -1691,8 +1560,7 @@ const serpentine = {
     {
       id: 2,
       title: 'Wall Fire',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436266626',
+      vimeoId: '436266626',
       sounds: false,
       repetition: '9',
       rest: '',
@@ -1701,8 +1569,7 @@ const serpentine = {
     {
       id: 3,
       title: 'Perfect Stretch',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431866818',
+      vimeoId: '431866818',
       sounds: false,
       repetition: '1',
       rest: '',
@@ -1711,8 +1578,7 @@ const serpentine = {
     {
       id: 4,
       title: 'Lunges Walk',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431868677',
+      vimeoId: '431868677',
       sounds: false,
       repetition: '1',
       rest: '',
@@ -1721,8 +1587,7 @@ const serpentine = {
     {
       id: 5,
       title: 'A Skips',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436134073',
+      vimeoId: '436134073',
       sounds: false,
       repetition: '3',
       rest: '',
@@ -1731,8 +1596,7 @@ const serpentine = {
     {
       id: 6,
       title: 'B Skips',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436136321',
+      vimeoId: '436136321',
       sounds: false,
       repetition: '3',
       rest: '',
@@ -1741,8 +1605,7 @@ const serpentine = {
     {
       id: 7,
       title: 'Curtsy Walk',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431867802',
+      vimeoId: '431867802',
       sounds: false,
       repetition: '6',
       rest: '',
@@ -1751,8 +1614,7 @@ const serpentine = {
     {
       id: 8,
       title: 'Boundings',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436267838',
+      vimeoId: '436267838',
       sounds: false,
       repetition: '2',
       rest: '',
@@ -1761,8 +1623,7 @@ const serpentine = {
     {
       id: 9,
       title: 'Falling Start',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436266387',
+      vimeoId: '436266387',
       sounds: false,
       repetition: '2',
       rest: '',
@@ -1771,8 +1632,7 @@ const serpentine = {
     {
       id: 10,
       title: 'Horizontal Crossover',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436267695',
+      vimeoId: '436267695',
       sounds: false,
       repetition: '2',
       rest: '',
@@ -1781,8 +1641,7 @@ const serpentine = {
     {
       id: 11,
       title: 'Serpentine',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434366737',
+      vimeoId: '434366737',
       sounds: false,
       repetition: '8',
       rest: '',
@@ -1811,8 +1670,7 @@ const mas15 = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -1821,8 +1679,7 @@ const mas15 = {
     {
       id: 2,
       title: 'VMA',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431531805',
+      vimeoId: '431531805',
       sounds: true,
       repetition: '10*(15/15)',
       rest: '',
@@ -1831,8 +1688,7 @@ const mas15 = {
     {
       id: 3,
       title: 'Repos',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431528434',
+      vimeoId: '431528434',
       sounds: true,
       repetition: '3 min',
       rest: '',
@@ -1841,8 +1697,7 @@ const mas15 = {
     {
       id: 4,
       title: 'VMA',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431531805',
+      vimeoId: '431531805',
       sounds: true,
       repetition: '10*(15/15)',
       rest: '',
@@ -1870,8 +1725,7 @@ const circuitLong = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: false,
       repetition: '',
       rest: '',
@@ -1880,8 +1734,7 @@ const circuitLong = {
     {
       id: 2,
       title: 'Hindu Push Up',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406233220',
+      vimeoId: '406233220',
       sounds: false,
       repetition: '30 s',
       rest: '',
@@ -1890,8 +1743,7 @@ const circuitLong = {
     {
       id: 3,
       title: 'Plank',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406527719',
+      vimeoId: '406527719',
       sounds: false,
       repetition: '30 s',
       rest: '',
@@ -1900,8 +1752,7 @@ const circuitLong = {
     {
       id: 4,
       title: 'Russian Twist',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431744680',
+      vimeoId: '431744680',
       sounds: false,
       repetition: '30 s',
       rest: '',
@@ -1910,8 +1761,7 @@ const circuitLong = {
     {
       id: 5,
       title: 'Jump Lunge',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431751124',
+      vimeoId: '431751124',
       sounds: false,
       repetition: '30 s',
       rest: '',
@@ -1920,8 +1770,7 @@ const circuitLong = {
     {
       id: 6,
       title: 'Side Plank left',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431751410',
+      vimeoId: '431751410',
       sounds: false,
       repetition: '30 s',
       rest: '',
@@ -1930,8 +1779,7 @@ const circuitLong = {
     {
       id: 7,
       title: 'Reverse Crunch',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431751736',
+      vimeoId: '431751736',
       sounds: false,
       repetition: '30 s',
       rest: '',
@@ -1940,8 +1788,7 @@ const circuitLong = {
     {
       id: 8,
       title: 'Side Plank Right',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431751410',
+      vimeoId: '431751410',
       sounds: false,
       repetition: '30 s',
       rest: '',
@@ -1950,8 +1797,7 @@ const circuitLong = {
     {
       id: 9,
       title: 'Superman',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431752093',
+      vimeoId: '431752093',
       sounds: false,
       repetition: '30 s',
       rest: '',
@@ -1960,8 +1806,7 @@ const circuitLong = {
     {
       id: 10,
       title: 'Single Leg Bridge Left',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431759737',
+      vimeoId: '431759737',
       sounds: false,
       repetition: '30 s',
       rest: '',
@@ -1970,8 +1815,7 @@ const circuitLong = {
     {
       id: 11,
       title: 'Single Leg Bridge Right',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431759737',
+      vimeoId: '431759737',
       sounds: false,
       repetition: '30 s',
       rest: '',
@@ -1980,8 +1824,7 @@ const circuitLong = {
     {
       id: 12,
       title: 'Jump Squat',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '407999105',
+      vimeoId: '407999105',
       sounds: false,
       repetition: '30 s',
       rest: '',
@@ -1990,8 +1833,7 @@ const circuitLong = {
     {
       id: 13,
       title: 'Wall sit',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431760958',
+      vimeoId: '431760958',
       sounds: false,
       repetition: '30 s',
       rest: '',
@@ -2000,8 +1842,7 @@ const circuitLong = {
     {
       id: 14,
       title: 'Jump rope / High knees',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431761388',
+      vimeoId: '431761388',
       sounds: false,
       repetition: '30 s',
       rest: '',
@@ -2010,8 +1851,7 @@ const circuitLong = {
     {
       id: 15,
       title: 'Elbow to Tall',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431783090',
+      vimeoId: '431783090',
       sounds: false,
       repetition: '1 min',
       rest: '',
@@ -2020,8 +1860,7 @@ const circuitLong = {
     {
       id: 16,
       title: 'High Plank',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431781738',
+      vimeoId: '431781738',
       sounds: false,
       repetition: '1 min',
       rest: '',
@@ -2030,8 +1869,7 @@ const circuitLong = {
     {
       id: 17,
       title: 'Side Plank (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431783621',
+      vimeoId: '431783621',
       sounds: false,
       repetition: '30 s',
       rest: '',
@@ -2040,8 +1878,7 @@ const circuitLong = {
     {
       id: 18,
       title: 'Side Plank (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431783621',
+      vimeoId: '431783621',
       sounds: false,
       repetition: '30 s',
       rest: '',
@@ -2050,8 +1887,7 @@ const circuitLong = {
     {
       id: 19,
       title: 'Side Plank Walks',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431784478',
+      vimeoId: '431784478',
       sounds: false,
       repetition: '1 min',
       rest: '',
@@ -2060,8 +1896,7 @@ const circuitLong = {
     {
       id: 20,
       title: 'Plank Army Crawlers',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431785259',
+      vimeoId: '431785259',
       sounds: false,
       repetition: '1 min',
       rest: '',
@@ -2070,8 +1905,7 @@ const circuitLong = {
     {
       id: 21,
       title: 'High Plank',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431781738',
+      vimeoId: '431781738',
       sounds: false,
       repetition: '30 s',
       rest: '',
@@ -2099,8 +1933,7 @@ const mas15Long = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -2109,8 +1942,7 @@ const mas15Long = {
     {
       id: 2,
       title: 'VMA',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431531805',
+      vimeoId: '431531805',
       sounds: false,
       repetition: '12*(15/15)',
       rest: '',
@@ -2119,8 +1951,7 @@ const mas15Long = {
     {
       id: 3,
       title: 'Repos',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431528434',
+      vimeoId: '431528434',
       sounds: false,
       repetition: '3 min',
       rest: '',
@@ -2129,8 +1960,7 @@ const mas15Long = {
     {
       id: 4,
       title: 'VMA',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431531805',
+      vimeoId: '431531805',
       sounds: false,
       repetition: '12*(15/15)',
       rest: '',
@@ -2158,8 +1988,7 @@ const sprintPractice = {
     {
       id: 1,
       title: 'Marche dynamique',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436266810',
+      vimeoId: '436266810',
       sounds: false,
       repetition: '4',
       rest: '',
@@ -2168,8 +1997,7 @@ const sprintPractice = {
     {
       id: 2,
       title: 'Wall Fire',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436266626',
+      vimeoId: '436266626',
       sounds: false,
       repetition: '9',
       rest: '',
@@ -2178,8 +2006,7 @@ const sprintPractice = {
     {
       id: 3,
       title: 'Perfect Stretch',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431866818',
+      vimeoId: '431866818',
       sounds: false,
       repetition: '1',
       rest: '',
@@ -2188,8 +2015,7 @@ const sprintPractice = {
     {
       id: 4,
       title: 'Lunges Walk',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431868677',
+      vimeoId: '431868677',
       sounds: false,
       repetition: '1',
       rest: '',
@@ -2198,8 +2024,7 @@ const sprintPractice = {
     {
       id: 5,
       title: 'A Skips',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436134073',
+      vimeoId: '436134073',
       sounds: false,
       repetition: '3',
       rest: '',
@@ -2208,8 +2033,7 @@ const sprintPractice = {
     {
       id: 6,
       title: 'B Skips',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436136321',
+      vimeoId: '436136321',
       sounds: false,
       repetition: '3',
       rest: '',
@@ -2218,8 +2042,7 @@ const sprintPractice = {
     {
       id: 7,
       title: 'Curtsy Walk',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431867802',
+      vimeoId: '431867802',
       sounds: false,
       repetition: '6',
       rest: '',
@@ -2228,8 +2051,7 @@ const sprintPractice = {
     {
       id: 8,
       title: 'Boundings',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436267838',
+      vimeoId: '436267838',
       sounds: false,
       repetition: '2',
       rest: '',
@@ -2238,8 +2060,7 @@ const sprintPractice = {
     {
       id: 9,
       title: 'Falling Start',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436266387',
+      vimeoId: '436266387',
       sounds: false,
       repetition: '2',
       rest: '',
@@ -2248,8 +2069,7 @@ const sprintPractice = {
     {
       id: 10,
       title: 'Horizontal Crossover',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436267695',
+      vimeoId: '436267695',
       sounds: false,
       repetition: '2',
       rest: '',
@@ -2258,8 +2078,7 @@ const sprintPractice = {
     {
       id: 11,
       title: 'Sprint 10 m',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436267090',
+      vimeoId: '436267090',
       sounds: false,
       repetition: '4',
       rest: '',
@@ -2268,8 +2087,7 @@ const sprintPractice = {
     {
       id: 12,
       title: 'Sprint 30 m',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436267090',
+      vimeoId: '436267090',
       sounds: false,
       repetition: '4',
       rest: '',
@@ -2278,8 +2096,7 @@ const sprintPractice = {
     {
       id: 13,
       title: 'Sprint 50 m',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436267090',
+      vimeoId: '436267090',
       sounds: false,
       repetition: '2',
       rest: '',
@@ -2307,8 +2124,7 @@ const ladderPractice = {
     {
       id: 1,
       title: 'Marche dynamique',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436266810',
+      vimeoId: '436266810',
       sounds: false,
       repetition: '4',
       rest: '',
@@ -2317,8 +2133,7 @@ const ladderPractice = {
     {
       id: 2,
       title: 'Wall Fire',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436266626',
+      vimeoId: '436266626',
       sounds: false,
       repetition: '9',
       rest: '',
@@ -2327,8 +2142,7 @@ const ladderPractice = {
     {
       id: 3,
       title: 'Perfect Stretch',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431866818',
+      vimeoId: '431866818',
       sounds: false,
       repetition: '1',
       rest: '',
@@ -2337,8 +2151,7 @@ const ladderPractice = {
     {
       id: 4,
       title: 'Lunges Walk',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431868677',
+      vimeoId: '431868677',
       sounds: false,
       repetition: '1',
       rest: '',
@@ -2347,8 +2160,7 @@ const ladderPractice = {
     {
       id: 5,
       title: 'A Skips',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436134073',
+      vimeoId: '436134073',
       sounds: false,
       repetition: '3',
       rest: '',
@@ -2357,8 +2169,7 @@ const ladderPractice = {
     {
       id: 6,
       title: 'B Skips',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436136321',
+      vimeoId: '436136321',
       sounds: false,
       repetition: '3',
       rest: '',
@@ -2367,8 +2178,7 @@ const ladderPractice = {
     {
       id: 7,
       title: 'Curtsy Walk',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431867802',
+      vimeoId: '431867802',
       sounds: false,
       repetition: '6',
       rest: '',
@@ -2377,8 +2187,7 @@ const ladderPractice = {
     {
       id: 8,
       title: 'Boundings',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436267838',
+      vimeoId: '436267838',
       sounds: false,
       repetition: '2',
       rest: '',
@@ -2387,8 +2196,7 @@ const ladderPractice = {
     {
       id: 9,
       title: 'Falling Start',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436266387',
+      vimeoId: '436266387',
       sounds: false,
       repetition: '2',
       rest: '',
@@ -2397,8 +2205,7 @@ const ladderPractice = {
     {
       id: 10,
       title: 'Horizontal Crossover',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436267695',
+      vimeoId: '436267695',
       sounds: false,
       repetition: '2',
       rest: '',
@@ -2407,8 +2214,7 @@ const ladderPractice = {
     {
       id: 11,
       title: 'Échelles',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431884149',
+      vimeoId: '431884149',
       sounds: false,
       repetition: '10 min',
       rest: '',
@@ -2436,8 +2242,7 @@ const agility1 = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -2446,8 +2251,7 @@ const agility1 = {
     {
       id: 2,
       title: 'Split Squats',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406746924',
+      vimeoId: '406746924',
       sounds: false,
       repetition: '3 * 12',
       rest: '',
@@ -2456,8 +2260,7 @@ const agility1 = {
     {
       id: 3,
       title: 'Dumbbell Hip Thrust',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747302',
+      vimeoId: '406747302',
       sounds: false,
       repetition: '3 * 12',
       rest: '',
@@ -2466,8 +2269,7 @@ const agility1 = {
     {
       id: 4,
       title: 'Goblet Cossack Squat',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747476',
+      vimeoId: '406747476',
       sounds: false,
       repetition: '3 * 12',
       rest: '',
@@ -2476,8 +2278,7 @@ const agility1 = {
     {
       id: 5,
       title: 'Dumbbell Bench Press (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747599',
+      vimeoId: '406747599',
       sounds: false,
       repetition: '3 * 12',
       rest: '',
@@ -2486,8 +2287,7 @@ const agility1 = {
     {
       id: 6,
       title: 'Dumbbell Bench Press (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747599',
+      vimeoId: '406747599',
       sounds: false,
       repetition: '3 * 12',
       rest: '',
@@ -2496,8 +2296,7 @@ const agility1 = {
     {
       id: 7,
       title: 'Gorilla Kettlebell Rows',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747038',
+      vimeoId: '406747038',
       sounds: false,
       repetition: '3 * 12',
       rest: '',
@@ -2506,8 +2305,7 @@ const agility1 = {
     {
       id: 8,
       title: 'Single leg Vertical Jump (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747769',
+      vimeoId: '406747769',
       sounds: false,
       repetition: '3 * 10',
       rest: '',
@@ -2516,8 +2314,7 @@ const agility1 = {
     {
       id: 9,
       title: 'Single leg Vertical Jump (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747769',
+      vimeoId: '406747769',
       sounds: false,
       repetition: '3 * 10',
       rest: '',
@@ -2545,8 +2342,7 @@ const strength1 = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -2555,8 +2351,7 @@ const strength1 = {
     {
       id: 2,
       title: 'Box Squats',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406230991',
+      vimeoId: '406230991',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -2565,8 +2360,7 @@ const strength1 = {
     {
       id: 3,
       title: 'Lunge Box Jumps',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406230305',
+      vimeoId: '406230305',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -2575,8 +2369,7 @@ const strength1 = {
     {
       id: 4,
       title: 'Goblet Cossack Squat',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747476',
+      vimeoId: '406747476',
       sounds: false,
       repetition: '3 * 12',
       rest: '',
@@ -2585,8 +2378,7 @@ const strength1 = {
     {
       id: 5,
       title: 'Banded Russian Kettlebell Swings',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406746857',
+      vimeoId: '406746857',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -2595,8 +2387,7 @@ const strength1 = {
     {
       id: 6,
       title: 'Close Grip Bench Press',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747599',
+      vimeoId: '406747599',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -2605,8 +2396,7 @@ const strength1 = {
     {
       id: 7,
       title: 'Close Grip Bench Press',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406746736',
+      vimeoId: '406746736',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -2615,8 +2405,7 @@ const strength1 = {
     {
       id: 8,
       title: 'Strict Pull Ups',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747791',
+      vimeoId: '406747791',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -2644,8 +2433,7 @@ const strength2 = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -2654,8 +2442,7 @@ const strength2 = {
     {
       id: 2,
       title: 'Back Squat',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406746832',
+      vimeoId: '406746832',
       sounds: false,
       repetition: '3 * 5',
       rest: '',
@@ -2664,8 +2451,7 @@ const strength2 = {
     {
       id: 3,
       title: 'Drop Jumps',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406232722',
+      vimeoId: '406232722',
       sounds: false,
       repetition: '3 * 6',
       rest: '',
@@ -2674,8 +2460,7 @@ const strength2 = {
     {
       id: 4,
       title: 'Banded Russian Kettlebell Swings',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406746857',
+      vimeoId: '406746857',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -2684,8 +2469,7 @@ const strength2 = {
     {
       id: 5,
       title: 'Filly Landmine Press (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435852364',
+      vimeoId: '435852364',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -2694,8 +2478,7 @@ const strength2 = {
     {
       id: 6,
       title: 'Filly Landmine Press (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435852364',
+      vimeoId: '435852364',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -2704,8 +2487,7 @@ const strength2 = {
     {
       id: 7,
       title: 'Strict Pull Ups',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747791',
+      vimeoId: '406747791',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -2733,8 +2515,7 @@ const agility2 = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -2743,8 +2524,7 @@ const agility2 = {
     {
       id: 2,
       title: 'DB Suitcase Reverse Lunge (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747636',
+      vimeoId: '406747636',
       sounds: false,
       repetition: '3 * 12',
       rest: '',
@@ -2753,8 +2533,7 @@ const agility2 = {
     {
       id: 3,
       title: 'DB Suitcase Reverse Lunge (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747636',
+      vimeoId: '406747636',
       sounds: false,
       repetition: '3 * 12',
       rest: '',
@@ -2763,8 +2542,7 @@ const agility2 = {
     {
       id: 4,
       title: 'DB Romanian Deadlift (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747707',
+      vimeoId: '406747707',
       sounds: false,
       repetition: '3 * 12',
       rest: '',
@@ -2773,8 +2551,7 @@ const agility2 = {
     {
       id: 5,
       title: 'DB Romanian Deadlift (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747707',
+      vimeoId: '406747707',
       sounds: false,
       repetition: '3 * 12',
       rest: '',
@@ -2783,8 +2560,7 @@ const agility2 = {
     {
       id: 6,
       title: 'Lateral Box Step Overs',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406472429',
+      vimeoId: '406472429',
       sounds: false,
       repetition: '3 * 12',
       rest: '',
@@ -2793,8 +2569,7 @@ const agility2 = {
     {
       id: 7,
       title: 'Alternating Dumbbell Bench Press',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406746769',
+      vimeoId: '406746769',
       sounds: false,
       repetition: '3 * 12',
       rest: '',
@@ -2803,8 +2578,7 @@ const agility2 = {
     {
       id: 8,
       title: 'Glute Bridge DB',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747428',
+      vimeoId: '406747428',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -2832,8 +2606,7 @@ const agility3 = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -2842,8 +2615,7 @@ const agility3 = {
     {
       id: 2,
       title: 'Single Arm Dumbbell Suitcase Reverse Lunge',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747636',
+      vimeoId: '406747636',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -2852,8 +2624,7 @@ const agility3 = {
     {
       id: 3,
       title: 'Dumbbell Hip Thrust',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747302',
+      vimeoId: '406747302',
       sounds: false,
       repetition: '3 * 12',
       rest: '',
@@ -2862,8 +2633,7 @@ const agility3 = {
     {
       id: 4,
       title: 'Foot Elevated Split Squat',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747809',
+      vimeoId: '406747809',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -2872,8 +2642,7 @@ const agility3 = {
     {
       id: 5,
       title: 'Banded Hamstring Curl',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434425174',
+      vimeoId: '434425174',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -2882,8 +2651,7 @@ const agility3 = {
     {
       id: 6,
       title: 'Prone Y on Bench',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747572',
+      vimeoId: '406747572',
       sounds: false,
       repetition: '3 * 12',
       rest: '',
@@ -2892,8 +2660,7 @@ const agility3 = {
     {
       id: 7,
       title: 'Single Leg Vertical Jump (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747769',
+      vimeoId: '406747769',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -2902,8 +2669,7 @@ const agility3 = {
     {
       id: 8,
       title: 'Single Leg Vertical Jump (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747769',
+      vimeoId: '406747769',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -2912,8 +2678,7 @@ const agility3 = {
     {
       id: 9,
       title: 'Trendelenburg',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747830',
+      vimeoId: '406747830',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -2941,8 +2706,7 @@ const strength3 = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -2951,8 +2715,7 @@ const strength3 = {
     {
       id: 2,
       title: 'Box Squats',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747636',
+      vimeoId: '406747636',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -2961,8 +2724,7 @@ const strength3 = {
     {
       id: 3,
       title: 'Vertical Jumps',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747302',
+      vimeoId: '406747302',
       sounds: false,
       repetition: '3 * 6',
       rest: '',
@@ -2971,8 +2733,7 @@ const strength3 = {
     {
       id: 4,
       title: 'DB Romanian Deadlift',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747809',
+      vimeoId: '406747809',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -2981,8 +2742,7 @@ const strength3 = {
     {
       id: 5,
       title: 'KB Glute Bridge Bench Press',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434425174',
+      vimeoId: '434425174',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -2991,8 +2751,7 @@ const strength3 = {
     {
       id: 6,
       title: 'Power Clean',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434428427',
+      vimeoId: '434428427',
       sounds: false,
       repetition: '3 * 3',
       rest: '',
@@ -3001,8 +2760,7 @@ const strength3 = {
     {
       id: 7,
       title: 'Pull Ups',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747769',
+      vimeoId: '406747769',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3030,8 +2788,7 @@ const strength16 = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -3040,8 +2797,7 @@ const strength16 = {
     {
       id: 2,
       title: 'Back Rack Jump Squats',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434432044',
+      vimeoId: '434432044',
       sounds: false,
       repetition: '3 * 4',
       rest: '',
@@ -3050,8 +2806,7 @@ const strength16 = {
     {
       id: 3,
       title: 'Seated Hurdle Box Jumps',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434436351',
+      vimeoId: '434436351',
       sounds: false,
       repetition: '3 * 6',
       rest: '',
@@ -3060,8 +2815,7 @@ const strength16 = {
     {
       id: 4,
       title: 'Prone Reverse Fly',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434438019',
+      vimeoId: '434438019',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3070,8 +2824,7 @@ const strength16 = {
     {
       id: 5,
       title: 'Hang Muscle Snatch (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434433584',
+      vimeoId: '434433584',
       sounds: false,
       repetition: '3 * 5',
       rest: '',
@@ -3080,8 +2833,7 @@ const strength16 = {
     {
       id: 6,
       title: 'Hang Muscle Snatch (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434433584',
+      vimeoId: '434433584',
       sounds: false,
       repetition: '3 * 5',
       rest: '',
@@ -3090,8 +2842,7 @@ const strength16 = {
     {
       id: 7,
       title: 'Banded Side Plank (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434439406',
+      vimeoId: '434439406',
       sounds: false,
       repetition: '2 * 1 min',
       rest: '',
@@ -3100,8 +2851,7 @@ const strength16 = {
     {
       id: 8,
       title: 'Banded Side Plank (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434439406',
+      vimeoId: '434439406',
       sounds: false,
       repetition: '2 * 1 min',
       rest: '',
@@ -3129,8 +2879,7 @@ const agility16 = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -3139,8 +2888,7 @@ const agility16 = {
     {
       id: 2,
       title: 'Back Squat',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434432044',
+      vimeoId: '434432044',
       sounds: false,
       repetition: '3 * 5',
       rest: '',
@@ -3149,8 +2897,7 @@ const agility16 = {
     {
       id: 3,
       title: 'DB Suitcase Russian Step Up',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406746993',
+      vimeoId: '406746993',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3159,8 +2906,7 @@ const agility16 = {
     {
       id: 4,
       title: 'Glute Bridge Hold',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747454',
+      vimeoId: '406747454',
       sounds: false,
       repetition: '3 * 1 min',
       rest: '',
@@ -3169,8 +2915,7 @@ const agility16 = {
     {
       id: 5,
       title: 'Box Jump with Rotation',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434433584',
+      vimeoId: '434433584',
       sounds: false,
       repetition: '3 * 6',
       rest: '',
@@ -3179,8 +2924,7 @@ const agility16 = {
     {
       id: 6,
       title: 'Hang Muscle Snatch (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434433584',
+      vimeoId: '434433584',
       sounds: false,
       repetition: '3 * 5',
       rest: '',
@@ -3189,8 +2933,7 @@ const agility16 = {
     {
       id: 7,
       title: 'Hang Muscle Snatch (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434433584',
+      vimeoId: '434433584',
       sounds: false,
       repetition: '3 * 5',
       rest: '',
@@ -3199,8 +2942,7 @@ const agility16 = {
     {
       id: 8,
       title: 'Pull Ups',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747769',
+      vimeoId: '406747769',
       sounds: false,
       repetition: '4 * 5',
       rest: '',
@@ -3228,8 +2970,7 @@ const agility15 = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -3238,8 +2979,7 @@ const agility15 = {
     {
       id: 2,
       title: 'Swiss Ball Pike',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436274539',
+      vimeoId: '436274539',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3248,8 +2988,7 @@ const agility15 = {
     {
       id: 3,
       title: 'Physio Ball Stir The Pot',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436273946',
+      vimeoId: '436273946',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3258,8 +2997,7 @@ const agility15 = {
     {
       id: 4,
       title: 'Hip Mobility 9090 Kettlebell',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436142352',
+      vimeoId: '436142352',
       sounds: false,
       repetition: '3 * 4',
       rest: '',
@@ -3268,8 +3006,7 @@ const agility15 = {
     {
       id: 5,
       title: 'Box Jump with Rotation',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434433584',
+      vimeoId: '434433584',
       sounds: false,
       repetition: '3 * 6',
       rest: '',
@@ -3278,8 +3015,7 @@ const agility15 = {
     {
       id: 6,
       title: 'Kettlebell Overhead Reverse Lunge (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436140507',
+      vimeoId: '436140507',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3288,8 +3024,7 @@ const agility15 = {
     {
       id: 7,
       title: 'Kettlebell Overhead Reverse Lunge (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436140507',
+      vimeoId: '436140507',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3298,8 +3033,7 @@ const agility15 = {
     {
       id: 8,
       title: 'KB Drop Lunge to High Knee (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436274351',
+      vimeoId: '436274351',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3308,8 +3042,7 @@ const agility15 = {
     {
       id: 9,
       title: 'KB Drop Lunge to High Knee (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436274351',
+      vimeoId: '436274351',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3337,8 +3070,7 @@ const strength15 = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -3347,8 +3079,7 @@ const strength15 = {
     {
       id: 2,
       title: 'Triple Broad Jumps',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747854',
+      vimeoId: '406747854',
       sounds: false,
       repetition: '3 * 5',
       rest: '',
@@ -3357,8 +3088,7 @@ const strength15 = {
     {
       id: 3,
       title: 'Band Pull Through',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436137230',
+      vimeoId: '436137230',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3367,8 +3097,7 @@ const strength15 = {
     {
       id: 4,
       title: 'DB Front Rack RNT Reverse Lunge (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436141448',
+      vimeoId: '436141448',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3377,8 +3106,7 @@ const strength15 = {
     {
       id: 5,
       title: 'DB Front Rack RNT Reverse Lunge (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436141448',
+      vimeoId: '436141448',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3387,8 +3115,7 @@ const strength15 = {
     {
       id: 6,
       title: 'Alternating Back Rack Curtsy Lunge',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436135025',
+      vimeoId: '436135025',
       sounds: false,
       repetition: '3 * 6',
       rest: '',
@@ -3397,8 +3124,7 @@ const strength15 = {
     {
       id: 7,
       title: 'Weight Plate Squats',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436274651',
+      vimeoId: '436274651',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3426,8 +3152,7 @@ const strength14 = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -3436,8 +3161,7 @@ const strength14 = {
     {
       id: 2,
       title: 'Seesaw Dumbbell Bench Press',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434502349',
+      vimeoId: '434502349',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3446,8 +3170,7 @@ const strength14 = {
     {
       id: 3,
       title: 'Band Pull Through',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436137230',
+      vimeoId: '436137230',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3456,8 +3179,7 @@ const strength14 = {
     {
       id: 4,
       title: 'Zottman Curls',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436141448',
+      vimeoId: '436141448',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3466,8 +3188,7 @@ const strength14 = {
     {
       id: 5,
       title: 'Filly Z Press Alternate',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434507943',
+      vimeoId: '434507943',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3476,8 +3197,7 @@ const strength14 = {
     {
       id: 6,
       title: 'Cuban Press',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434507347',
+      vimeoId: '434507347',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3486,8 +3206,7 @@ const strength14 = {
     {
       id: 7,
       title: 'Incline Close Grib Bench Press',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434508209',
+      vimeoId: '434508209',
       sounds: false,
       repetition: '3 * 5',
       rest: '',
@@ -3515,8 +3234,7 @@ const agility14 = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -3525,8 +3243,7 @@ const agility14 = {
     {
       id: 2,
       title: 'Filly Lunges',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434507791',
+      vimeoId: '434507791',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3535,8 +3252,7 @@ const agility14 = {
     {
       id: 3,
       title: 'Deficit Goblet Cossack (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434507574',
+      vimeoId: '434507574',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3545,8 +3261,7 @@ const agility14 = {
     {
       id: 4,
       title: 'Deficit Goblet Cossack (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434507574',
+      vimeoId: '434507574',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3555,8 +3270,7 @@ const agility14 = {
     {
       id: 5,
       title: 'Goblet Deficit RNT Lunges (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434508102',
+      vimeoId: '434508102',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3565,8 +3279,7 @@ const agility14 = {
     {
       id: 6,
       title: 'Goblet Deficit RNT Lunges (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434508102',
+      vimeoId: '434508102',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3575,8 +3288,7 @@ const agility14 = {
     {
       id: 7,
       title: 'Box Jump Over',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434507234',
+      vimeoId: '434507234',
       sounds: false,
       repetition: '3 * 6',
       rest: '',
@@ -3604,8 +3316,7 @@ const agility13 = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -3614,8 +3325,7 @@ const agility13 = {
     {
       id: 2,
       title: 'Burpee Broad Jump',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434507791',
+      vimeoId: '434507791',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3624,8 +3334,7 @@ const agility13 = {
     {
       id: 3,
       title: 'Box Jump With Single Foot Landing (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434507574',
+      vimeoId: '434507574',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3634,8 +3343,7 @@ const agility13 = {
     {
       id: 4,
       title: 'Banded Deadbug',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434507574',
+      vimeoId: '434507574',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3644,8 +3352,7 @@ const agility13 = {
     {
       id: 5,
       title: 'Banded Chop (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434508102',
+      vimeoId: '434508102',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3654,8 +3361,7 @@ const agility13 = {
     {
       id: 6,
       title: 'Banded Chop (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434508102',
+      vimeoId: '434508102',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3664,8 +3370,7 @@ const agility13 = {
     {
       id: 7,
       title: 'Glute Bridge DB Press',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434507234',
+      vimeoId: '434507234',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3693,8 +3398,7 @@ const strength13 = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -3703,8 +3407,7 @@ const strength13 = {
     {
       id: 2,
       title: 'Dual DB Front Rack Squats',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434502349',
+      vimeoId: '434502349',
       sounds: false,
       repetition: '3 * 6',
       rest: '',
@@ -3713,8 +3416,7 @@ const strength13 = {
     {
       id: 3,
       title: 'Slow Pull Power Clean',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436137230',
+      vimeoId: '436137230',
       sounds: false,
       repetition: '3 * 6',
       rest: '',
@@ -3723,8 +3425,7 @@ const strength13 = {
     {
       id: 4,
       title: 'Segment Clean Pull',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436141448',
+      vimeoId: '436141448',
       sounds: false,
       repetition: '3 * 6',
       rest: '',
@@ -3733,8 +3434,7 @@ const strength13 = {
     {
       id: 5,
       title: 'Filly Z Press Alternate',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434507943',
+      vimeoId: '434507943',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3743,8 +3443,7 @@ const strength13 = {
     {
       id: 6,
       title: 'Touch and Go Squat Clean',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434507347',
+      vimeoId: '434507347',
       sounds: false,
       repetition: '3 * 5',
       rest: '',
@@ -3772,8 +3471,7 @@ const agility12 = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -3782,8 +3480,7 @@ const agility12 = {
     {
       id: 2,
       title: 'DB Supinated Grip Deadlift',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434507791',
+      vimeoId: '434507791',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3792,8 +3489,7 @@ const agility12 = {
     {
       id: 3,
       title: 'Alternating DB Glute Bridge Bench Press',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434507574',
+      vimeoId: '434507574',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3802,8 +3498,7 @@ const agility12 = {
     {
       id: 4,
       title: 'Arm Landmine Push Jerk (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434507574',
+      vimeoId: '434507574',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3812,8 +3507,7 @@ const agility12 = {
     {
       id: 5,
       title: 'Arm Landmine Push Jerk (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434508102',
+      vimeoId: '434508102',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3822,8 +3516,7 @@ const agility12 = {
     {
       id: 6,
       title: 'Side Plank Rotations (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434508102',
+      vimeoId: '434508102',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3832,8 +3525,7 @@ const agility12 = {
     {
       id: 7,
       title: 'Side Plank Rotations (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434508102',
+      vimeoId: '434508102',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3842,8 +3534,7 @@ const agility12 = {
     {
       id: 8,
       title: 'American Kettlebell Swings',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434507234',
+      vimeoId: '434507234',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3871,8 +3562,7 @@ const strength12 = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -3881,8 +3571,7 @@ const strength12 = {
     {
       id: 2,
       title: 'Clean High Pull',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434502349',
+      vimeoId: '434502349',
       sounds: false,
       repetition: '3 * 6',
       rest: '',
@@ -3891,8 +3580,7 @@ const strength12 = {
     {
       id: 3,
       title: 'Prone Y on Bench',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436137230',
+      vimeoId: '436137230',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3901,8 +3589,7 @@ const strength12 = {
     {
       id: 4,
       title: 'Wide Grip Bench Press',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436141448',
+      vimeoId: '436141448',
       sounds: false,
       repetition: '3 * 6',
       rest: '',
@@ -3911,8 +3598,7 @@ const strength12 = {
     {
       id: 5,
       title: 'Filly Z Press Alternate',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434507943',
+      vimeoId: '434507943',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3921,8 +3607,7 @@ const strength12 = {
     {
       id: 6,
       title: 'Chin Over & Hold',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434507347',
+      vimeoId: '434507347',
       sounds: false,
       repetition: '3 * 5',
       rest: '',
@@ -3950,8 +3635,7 @@ const agility11 = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -3960,8 +3644,7 @@ const agility11 = {
     {
       id: 2,
       title: 'Physio Ball Stir The Pot',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436273946',
+      vimeoId: '436273946',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3970,8 +3653,7 @@ const agility11 = {
     {
       id: 3,
       title: 'Swiss Ball Pike',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436274539',
+      vimeoId: '436274539',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3980,8 +3662,7 @@ const agility11 = {
     {
       id: 4,
       title: 'Ball Alternating DB Chest Press',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434507574',
+      vimeoId: '434507574',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -3990,8 +3671,7 @@ const agility11 = {
     {
       id: 5,
       title: 'Banded Shoulder Rotation (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435773356',
+      vimeoId: '435773356',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4000,8 +3680,7 @@ const agility11 = {
     {
       id: 6,
       title: 'Banded Shoulder Rotation (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435773356',
+      vimeoId: '435773356',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4010,8 +3689,7 @@ const agility11 = {
     {
       id: 7,
       title: 'Banded Face Pulls',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435774082',
+      vimeoId: '435774082',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4020,8 +3698,7 @@ const agility11 = {
     {
       id: 8,
       title: 'Banded Side Bridges (Alternate)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434507234',
+      vimeoId: '434507234',
       sounds: false,
       repetition: '4 * 30',
       rest: '',
@@ -4049,8 +3726,7 @@ const strength11 = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -4059,8 +3735,7 @@ const strength11 = {
     {
       id: 2,
       title: 'Clean High Pull',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434502349',
+      vimeoId: '434502349',
       sounds: false,
       repetition: '3 * 6',
       rest: '',
@@ -4069,8 +3744,7 @@ const strength11 = {
     {
       id: 3,
       title: 'Foot Elevated Split Squat (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435769234',
+      vimeoId: '435769234',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4079,8 +3753,7 @@ const strength11 = {
     {
       id: 4,
       title: 'Foot Elevated Split Squat (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435769234',
+      vimeoId: '435769234',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4089,8 +3762,7 @@ const strength11 = {
     {
       id: 5,
       title: 'Barbell Hip Thrust',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435770028',
+      vimeoId: '435770028',
       sounds: false,
       repetition: '3 * 6',
       rest: '',
@@ -4099,8 +3771,7 @@ const strength11 = {
     {
       id: 6,
       title: 'Single Leg Cross Body RDL (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435771116',
+      vimeoId: '435771116',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4109,8 +3780,7 @@ const strength11 = {
     {
       id: 7,
       title: 'Single Leg Cross Body RDL (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435771116',
+      vimeoId: '435771116',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4138,8 +3808,7 @@ const agility10 = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -4148,8 +3817,7 @@ const agility10 = {
     {
       id: 2,
       title: 'Goblet Cossack Squat',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747476',
+      vimeoId: '406747476',
       sounds: false,
       repetition: '3 * 12',
       rest: '',
@@ -4158,8 +3826,7 @@ const agility10 = {
     {
       id: 3,
       title: 'Nordic Hamstring Curl',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435779596',
+      vimeoId: '435779596',
       sounds: false,
       repetition: '3 * 6',
       rest: '',
@@ -4168,8 +3835,7 @@ const agility10 = {
     {
       id: 4,
       title: 'Burpee Tall Box Jump',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436139332',
+      vimeoId: '436139332',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4178,8 +3844,7 @@ const agility10 = {
     {
       id: 5,
       title: 'Prone Reverse Fly',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434438019',
+      vimeoId: '434438019',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4188,8 +3853,7 @@ const agility10 = {
     {
       id: 6,
       title: 'Single Leg Cone Touch',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435780932',
+      vimeoId: '435780932',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4198,8 +3862,7 @@ const agility10 = {
     {
       id: 7,
       title: 'Kettlebell Cross Body Split Squat (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435781381',
+      vimeoId: '435781381',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4208,8 +3871,7 @@ const agility10 = {
     {
       id: 8,
       title: 'Kettlebell Cross Body Split Squat (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435781381',
+      vimeoId: '435781381',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4237,8 +3899,7 @@ const strength10 = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -4247,8 +3908,7 @@ const strength10 = {
     {
       id: 2,
       title: 'Back Rack Jump Squats',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434432044',
+      vimeoId: '434432044',
       sounds: false,
       repetition: '3 * 4',
       rest: '',
@@ -4257,8 +3917,7 @@ const strength10 = {
     {
       id: 3,
       title: 'Dumbbell Bench Press (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747599',
+      vimeoId: '406747599',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4267,8 +3926,7 @@ const strength10 = {
     {
       id: 4,
       title: 'Dumbbell Bench Press (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747599',
+      vimeoId: '406747599',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4277,8 +3935,7 @@ const strength10 = {
     {
       id: 5,
       title: 'Hang Muscle Snatch (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434433584',
+      vimeoId: '434433584',
       sounds: false,
       repetition: '3 * 5',
       rest: '',
@@ -4287,8 +3944,7 @@ const strength10 = {
     {
       id: 6,
       title: 'Hang Muscle Snatch (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434433584',
+      vimeoId: '434433584',
       sounds: false,
       repetition: '3 * 5',
       rest: '',
@@ -4297,8 +3953,7 @@ const strength10 = {
     {
       id: 7,
       title: 'Strict Pull Ups',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747791',
+      vimeoId: '406747791',
       sounds: false,
       repetition: '3 * 5',
       rest: '',
@@ -4326,8 +3981,7 @@ const agility9 = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -4336,8 +3990,7 @@ const agility9 = {
     {
       id: 2,
       title: 'Goblet Box Squat',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435840258',
+      vimeoId: '435840258',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4346,8 +3999,7 @@ const agility9 = {
     {
       id: 3,
       title: 'Fire Hydrant with Leg Extension',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435840857',
+      vimeoId: '435840857',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4356,8 +4008,7 @@ const agility9 = {
     {
       id: 4,
       title: 'RDL With Bent Over Row',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435841837',
+      vimeoId: '435841837',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4366,8 +4017,7 @@ const agility9 = {
     {
       id: 5,
       title: 'Band Pull Through',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436137230',
+      vimeoId: '436137230',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4376,8 +4026,7 @@ const agility9 = {
     {
       id: 6,
       title: 'Band Pull Apart',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435842749',
+      vimeoId: '435842749',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4386,8 +4035,7 @@ const agility9 = {
     {
       id: 7,
       title: 'Burpee Lateral Hop',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435843601',
+      vimeoId: '435843601',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4396,8 +4044,7 @@ const agility9 = {
     {
       id: 8,
       title: 'Kneeling Jump to Hurdle Hop',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435843790',
+      vimeoId: '435843790',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4425,8 +4072,7 @@ const strength9 = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -4435,8 +4081,7 @@ const strength9 = {
     {
       id: 2,
       title: 'Barbell Front Squat',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435845215',
+      vimeoId: '435845215',
       sounds: false,
       repetition: '3 * 4',
       rest: '',
@@ -4445,8 +4090,7 @@ const strength9 = {
     {
       id: 3,
       title: 'Pendlay Row',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435845991',
+      vimeoId: '435845991',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4455,8 +4099,7 @@ const strength9 = {
     {
       id: 4,
       title: 'Alternating Back Rack Curtsy Lunge',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436135025',
+      vimeoId: '436135025',
       sounds: false,
       repetition: '3 * 6',
       rest: '',
@@ -4465,8 +4108,7 @@ const strength9 = {
     {
       id: 5,
       title: 'Hang Muscle Snatch (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434433584',
+      vimeoId: '434433584',
       sounds: false,
       repetition: '3 * 5',
       rest: '',
@@ -4475,8 +4117,7 @@ const strength9 = {
     {
       id: 6,
       title: 'Hang Muscle Snatch (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434433584',
+      vimeoId: '434433584',
       sounds: false,
       repetition: '3 * 5',
       rest: '',
@@ -4485,8 +4126,7 @@ const strength9 = {
     {
       id: 7,
       title: 'Chin Over Bar Tuck L Hold',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435844606',
+      vimeoId: '435844606',
       sounds: false,
       repetition: '3 * 30 s',
       rest: '',
@@ -4514,8 +4154,7 @@ const agility8 = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -4524,8 +4163,7 @@ const agility8 = {
     {
       id: 2,
       title: 'Bird Dog Knee To Elbow (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435851024',
+      vimeoId: '435851024',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4534,8 +4172,7 @@ const agility8 = {
     {
       id: 3,
       title: 'Bird Dog Knee To Elbow (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435851024',
+      vimeoId: '435851024',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4544,8 +4181,7 @@ const agility8 = {
     {
       id: 4,
       title: 'Single Leg Drop Jumps (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435853230',
+      vimeoId: '435853230',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4554,8 +4190,7 @@ const agility8 = {
     {
       id: 5,
       title: 'Single Leg Drop Jumps (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435853230',
+      vimeoId: '435853230',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4564,8 +4199,7 @@ const agility8 = {
     {
       id: 6,
       title: 'Single Leg Banded Glute Bridge (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435842749',
+      vimeoId: '435842749',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4574,8 +4208,7 @@ const agility8 = {
     {
       id: 7,
       title: 'Single Leg Banded Glute Bridge (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435843601',
+      vimeoId: '435843601',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4584,8 +4217,7 @@ const agility8 = {
     {
       id: 8,
       title: 'Kneeling Jump to Hurdle Hop',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435843790',
+      vimeoId: '435843790',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4613,8 +4245,7 @@ const strength8 = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -4623,8 +4254,7 @@ const strength8 = {
     {
       id: 2,
       title: 'Jerk Balance',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435851700',
+      vimeoId: '435851700',
       sounds: false,
       repetition: '3 * 4',
       rest: '',
@@ -4633,8 +4263,7 @@ const strength8 = {
     {
       id: 3,
       title: 'Pendlay Row',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435845991',
+      vimeoId: '435845991',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4643,8 +4272,7 @@ const strength8 = {
     {
       id: 4,
       title: 'Dumbbell Bench Press (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747599',
+      vimeoId: '406747599',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4653,8 +4281,7 @@ const strength8 = {
     {
       id: 5,
       title: 'Dumbbell Bench Press (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747599',
+      vimeoId: '406747599',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4663,8 +4290,7 @@ const strength8 = {
     {
       id: 6,
       title: 'Barbell Hip Thrust',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435770028',
+      vimeoId: '435770028',
       sounds: false,
       repetition: '3 * 6',
       rest: '',
@@ -4673,8 +4299,7 @@ const strength8 = {
     {
       id: 7,
       title: 'Weight Plate Squats',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436274651',
+      vimeoId: '436274651',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4702,8 +4327,7 @@ const agility7 = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -4712,8 +4336,7 @@ const agility7 = {
     {
       id: 2,
       title: 'Russian Kettlebell Swing',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435858810',
+      vimeoId: '435858810',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4722,8 +4345,7 @@ const agility7 = {
     {
       id: 3,
       title: 'Banded Deadbug',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434507574',
+      vimeoId: '434507574',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4732,8 +4354,7 @@ const agility7 = {
     {
       id: 4,
       title: 'KB Suitcase Russian Step Up (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435859336',
+      vimeoId: '435859336',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4742,8 +4363,7 @@ const agility7 = {
     {
       id: 5,
       title: 'KB Suitcase Russian Step Up (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435859336',
+      vimeoId: '435859336',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4752,8 +4372,7 @@ const agility7 = {
     {
       id: 6,
       title: 'Banded Side Bridges (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434507234',
+      vimeoId: '434507234',
       sounds: false,
       repetition: '3 * 30',
       rest: '',
@@ -4762,8 +4381,7 @@ const agility7 = {
     {
       id: 7,
       title: 'Banded Side Bridges (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434507234',
+      vimeoId: '434507234',
       sounds: false,
       repetition: '3 * 30',
       rest: '',
@@ -4772,8 +4390,7 @@ const agility7 = {
     {
       id: 8,
       title: 'Box Jump With Single Foot Landing',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434507574',
+      vimeoId: '434507574',
       sounds: false,
       repetition: '3 * 10',
       rest: '',
@@ -4801,8 +4418,7 @@ const strength7 = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -4811,8 +4427,7 @@ const strength7 = {
     {
       id: 2,
       title: 'Glute Bridge DB',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747428',
+      vimeoId: '406747428',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4821,8 +4436,7 @@ const strength7 = {
     {
       id: 3,
       title: 'Nordic Hamstring Curl',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435779596',
+      vimeoId: '435779596',
       sounds: false,
       repetition: '3 * 6',
       rest: '',
@@ -4831,8 +4445,7 @@ const strength7 = {
     {
       id: 4,
       title: 'Prone Y on Bench',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747572',
+      vimeoId: '406747572',
       sounds: false,
       repetition: '3 * 12',
       rest: '',
@@ -4841,8 +4454,7 @@ const strength7 = {
     {
       id: 5,
       title: 'Bench Dips',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435862811',
+      vimeoId: '435862811',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4851,8 +4463,7 @@ const strength7 = {
     {
       id: 6,
       title: 'Filly Landmine Press (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435852364',
+      vimeoId: '435852364',
       sounds: false,
       repetition: '3 * 6',
       rest: '',
@@ -4861,8 +4472,7 @@ const strength7 = {
     {
       id: 7,
       title: 'Filly Landmine Press (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435852364',
+      vimeoId: '435852364',
       sounds: false,
       repetition: '3 * 6',
       rest: '',
@@ -4871,8 +4481,7 @@ const strength7 = {
     {
       id: 8,
       title: 'Strict Pull Ups',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747791',
+      vimeoId: '406747791',
       sounds: false,
       repetition: '3 * 5',
       rest: '',
@@ -4900,8 +4509,7 @@ const agility6 = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -4910,8 +4518,7 @@ const agility6 = {
     {
       id: 2,
       title: 'Russian Kettlebell Swing',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435858810',
+      vimeoId: '435858810',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4920,8 +4527,7 @@ const agility6 = {
     {
       id: 3,
       title: 'Burpee Lateral Hop',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435843601',
+      vimeoId: '435843601',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4930,8 +4536,7 @@ const agility6 = {
     {
       id: 4,
       title: 'Arm Landmine Push Jerk (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434507574',
+      vimeoId: '434507574',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4940,8 +4545,7 @@ const agility6 = {
     {
       id: 5,
       title: 'Arm Landmine Push Jerk (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434508102',
+      vimeoId: '434508102',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -4950,8 +4554,7 @@ const agility6 = {
     {
       id: 6,
       title: 'DB Suitcase Reverse Lunge (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747636',
+      vimeoId: '406747636',
       sounds: false,
       repetition: '3 * 12',
       rest: '',
@@ -4960,8 +4563,7 @@ const agility6 = {
     {
       id: 7,
       title: 'DB Suitcase Reverse Lunge (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747636',
+      vimeoId: '406747636',
       sounds: false,
       repetition: '3 * 12',
       rest: '',
@@ -4989,8 +4591,7 @@ const strength6 = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -4999,8 +4600,7 @@ const strength6 = {
     {
       id: 2,
       title: 'Glute Bridge DB',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747428',
+      vimeoId: '406747428',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -5009,8 +4609,7 @@ const strength6 = {
     {
       id: 3,
       title: 'Foot Elevated Split Squat (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435769234',
+      vimeoId: '435769234',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -5019,8 +4618,7 @@ const strength6 = {
     {
       id: 4,
       title: 'Foot Elevated Split Squat (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435769234',
+      vimeoId: '435769234',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -5029,8 +4627,7 @@ const strength6 = {
     {
       id: 5,
       title: 'Barbell Hip Thrust',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435770028',
+      vimeoId: '435770028',
       sounds: false,
       repetition: '3 * 6',
       rest: '',
@@ -5039,8 +4636,7 @@ const strength6 = {
     {
       id: 6,
       title: 'Hang Muscle Snatch (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434433584',
+      vimeoId: '434433584',
       sounds: false,
       repetition: '3 * 5',
       rest: '',
@@ -5049,8 +4645,7 @@ const strength6 = {
     {
       id: 7,
       title: 'Hang Muscle Snatch (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434433584',
+      vimeoId: '434433584',
       sounds: false,
       repetition: '3 * 5',
       rest: '',
@@ -5059,8 +4654,7 @@ const strength6 = {
     {
       id: 8,
       title: 'Strict Pull Ups',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747791',
+      vimeoId: '406747791',
       sounds: false,
       repetition: '3 * 5',
       rest: '',
@@ -5088,8 +4682,7 @@ const agility5 = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -5098,8 +4691,7 @@ const agility5 = {
     {
       id: 2,
       title: 'Russian Kettlebell Swing',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435858810',
+      vimeoId: '435858810',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -5108,8 +4700,7 @@ const agility5 = {
     {
       id: 3,
       title: 'Banded Deadbug',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434507574',
+      vimeoId: '434507574',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -5118,8 +4709,7 @@ const agility5 = {
     {
       id: 4,
       title: 'KB Suitcase Russian Step Up (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435859336',
+      vimeoId: '435859336',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -5128,8 +4718,7 @@ const agility5 = {
     {
       id: 5,
       title: 'KB Suitcase Russian Step Up (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435859336',
+      vimeoId: '435859336',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -5138,8 +4727,7 @@ const agility5 = {
     {
       id: 6,
       title: 'Single Leg Cone Touch',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435780932',
+      vimeoId: '435780932',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -5148,8 +4736,7 @@ const agility5 = {
     {
       id: 7,
       title: 'Banded Chop (Right)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434508102',
+      vimeoId: '434508102',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -5158,8 +4745,7 @@ const agility5 = {
     {
       id: 8,
       title: 'Glute Bridge DB Press',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434507234',
+      vimeoId: '434507234',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -5187,8 +4773,7 @@ const strength5 = {
     {
       id: 1,
       title: 'Échauffement',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '431876595',
+      vimeoId: '431876595',
       sounds: true,
       repetition: '',
       rest: '',
@@ -5197,8 +4782,7 @@ const strength5 = {
     {
       id: 2,
       title: 'Glute Bridge Hold',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '406747454',
+      vimeoId: '406747454',
       sounds: false,
       repetition: '3 * 45 s',
       rest: '',
@@ -5207,8 +4791,7 @@ const strength5 = {
     {
       id: 3,
       title: 'Foot Elevated Split Squat (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '435769234',
+      vimeoId: '435769234',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -5217,8 +4800,7 @@ const strength5 = {
     {
       id: 4,
       title: 'Segment Clean Pull',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436141448',
+      vimeoId: '436141448',
       sounds: false,
       repetition: '3 * 6',
       rest: '',
@@ -5227,8 +4809,7 @@ const strength5 = {
     {
       id: 5,
       title: 'Filly Z Press Alternate',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434507943',
+      vimeoId: '434507943',
       sounds: false,
       repetition: '3 * 8',
       rest: '',
@@ -5237,8 +4818,7 @@ const strength5 = {
     {
       id: 6,
       title: 'Hang Muscle Snatch (Left)',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434433584',
+      vimeoId: '434433584',
       sounds: false,
       repetition: '3 * 5',
       rest: '',
@@ -5247,8 +4827,7 @@ const strength5 = {
     {
       id: 7,
       title: 'Chin Over & Hold',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '434507347',
+      vimeoId: '434507347',
       sounds: false,
       repetition: '3 * 5',
       rest: '',
@@ -5270,15 +4849,15 @@ const basicThrowsDrill = {
   equipment: '1 disque',
   durationInMinutes: 20,
   intensity: Intensities.LOW,
-  goals: [FrisbeeGoals.THROWING],
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.WARM_UP],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
     {
       id: 1,
       title: 'La Machine à lancer',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: throwingMachine,
+      animation: throwingMachine,
+      vimeoId: '485392763',
       repetition: '',
       rest: '',
       instruction: 'En binôme, les joueurs lancent des revers et coup droits pendant 5 minutes.',
@@ -5286,8 +4865,8 @@ const basicThrowsDrill = {
     {
       id: 2,
       title: 'Montante - descendante',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: ladder,
+      animation: ladder,
+      vimeoId: '485393003',
       repetition: '',
       rest: '',
       instruction:
@@ -5296,8 +4875,8 @@ const basicThrowsDrill = {
     {
       id: 3,
       title: 'Avec des fantômes',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: ladderGhost,
+      animation: ladderGhost,
+      vimeoId: '485399479',
       repetition: '',
       rest: '',
       instruction:
@@ -5320,30 +4899,27 @@ const breakDrill = {
   equipment: '6 disques - 6 plots',
   durationInMinutes: 20,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.BREAK, FrisbeeGoals.MARK, FrisbeeGoals.CUTTING],
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
       title: 'Cut à 90°',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: breakSide,
+      animation: breakSide,
       instruction:
         "Deux lignes de joueurs se font face, à environ 20 mètres de distance. Une force est décidée pour l'exercice. Le premier joueur d'une ligne est le lanceur, il est défendu par une marque qui applique la force. Le premier joueur de l'autre ligne fait un cut vers le lanceur dans le côté ouvert, puis quand le lanceur fait une feinte, il réalise un contre-cut horizontal vers le côté fermé. Le lanceur doit alors casser sa marque pour réussir sa passe dans le côté fermé. Le lanceur devient ensuite le cutter suivant vers l'autre ligne. La marque devient le prochain lanceur et le joueur suivant devient la marque. Les joueurs en attente doivent avoir quelques disques.",
     },
     {
       id: 2,
       title: 'Sans le pied de pivot',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: breakSide,
+      animation: breakSide,
       instruction: 'Le lanceur doit essayer de breaker mais sans réaliser de pied de pivot',
     },
     {
       id: 3,
       title: 'La Grande Muraille de Chine',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: breakSide,
+      animation: breakSide,
       instruction:
         "Le lanceur peut de nouveau utiliser toutes les feintes possibles. Si l'on veut faire travailler la marque, on peut insister sur le fait de ne jamais se prendre 2 fois de suite le même break. Il s'agit d'observer quelle est la passe préférentielle de l'attaquant et de tout faire pour la bloquer. On peut compter les points en valorisant les marques qui ont provoqué une passe ratée ou hors-timing",
     },
@@ -5365,15 +4941,14 @@ const treasureHuntDrill = {
   equipment: '10 disques - 10 plots',
   durationInMinutes: 20,
   intensity: Intensities.LOW,
-  goals: [FrisbeeGoals.PLAY, FrisbeeGoals.COMMUNICATION],
+  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.GAMES],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
     {
       id: 1,
       title: 'Basic Version',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: treasureHunt,
+      animation: treasureHunt,
       repetition: '',
       rest: '',
       instruction:
@@ -5397,15 +4972,15 @@ const kyeDrill = {
   equipment: '1 disque - 2 plots',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.MARK],
+  goals: [FrisbeeGoals.DEFENSE],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
     {
       id: 1,
       title: '3 versus 2',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: threeVersusTwo,
+      animation: threeVersusTwo,
+      vimeoId: '485452835',
       repetition: '',
       rest: '',
       instruction:
@@ -5436,8 +5011,7 @@ const bigEightDrill = {
     {
       id: 1,
       title: 'Le Grand 8',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: bigEight,
+      animation: bigEight,
       repetition: '',
       rest: '',
       instruction:
@@ -5446,8 +5020,7 @@ const bigEightDrill = {
     {
       id: 2,
       title: 'Break & Continuité',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: reverseEightAnimation,
+      animation: reverseEightAnimation,
       repetition: '',
       rest: '',
       instruction:
@@ -5456,8 +5029,7 @@ const bigEightDrill = {
     {
       id: 3,
       title: 'Soyons Précis',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: reverseEightTargetAnimation,
+      animation: reverseEightTargetAnimation,
       repetition: '',
       rest: '',
       instruction:
@@ -5480,15 +5052,15 @@ const trainDrill = {
   equipment: '1 disque',
   durationInMinutes: 10,
   intensity: Intensities.LOW,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
+  goals: [FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
       title: 'Le Train Classique',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: train,
+      animation: train,
+      vimeoId: '462695757',
       repetition: '',
       rest: '',
       instruction:
@@ -5496,19 +5068,8 @@ const trainDrill = {
     },
     {
       id: 2,
-      title: 'Le Train Classique',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '462695757',
-      repetition: '',
-      rest: '',
-      instruction:
-        "Mettre en place un stack vertical de 5 attaquants, un lanceur et un handler de soutien. Choisir une force. Le dernier attaquant du stack déclenche un appel en longue tout en regardant le lanceur. Quand le lanceur fait une feinte, l'attaquant fait un contre-cut dans l'espace ouvert et reçoit le disque. L'attaquant suivant doit commencer son cut en longue pour être à pleine vitesse quand le précédent attrape le disque. Le reste du stack se replace à hauteur pour assurer la continuité, le lanceur devient handler de soutien et le soutien devient premier du stack. Répéter sur la longueur du terrain.",
-    },
-    {
-      id: 3,
       title: 'Les aventuriers du Rail',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: trainRace,
+      animation: trainRace,
       repetition: '',
       rest: '',
       instruction:
@@ -5531,15 +5092,15 @@ const giveAndGoDrill = {
   equipment: '1 disque - 12 plots',
   durationInMinutes: 10,
   intensity: Intensities.HIGH,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.HANDLING],
+  goals: [FrisbeeGoals.HANDLING, FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
       title: 'Le Une-deux',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: giveAndGo,
+      animation: giveAndGo,
+      vimeoId: '485473267',
       repetition: '',
       rest: '',
       instruction: "Les joueurs doivent réaliser l'exercice aussi vite que possible. Attention à éviter les travels",
@@ -5547,8 +5108,8 @@ const giveAndGoDrill = {
     {
       id: 2,
       title: 'Ça compte !',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: giveAndGoRace,
+      animation: giveAndGoRace,
+      vimeoId: '485473406',
       repetition: '',
       rest: '',
       instruction: 'Une course entre 2 équipes. La première à 25 passes gagne !',
@@ -5571,15 +5132,14 @@ const aussieDrill = {
   equipment: '4 disques - 20 plots',
   durationInMinutes: 20,
   intensity: Intensities.LOW,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.COMMUNICATION, FrisbeeGoals.PLAY],
+  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.GAMES],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
     {
       id: 1,
       title: "initiation ludique à l'Ultimate",
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: aussieRules,
+      animation: aussieRules,
       repetition: '',
       rest: '',
       instruction:
@@ -5602,15 +5162,14 @@ const bolognaMDrill = {
   equipment: '1 disque - 6 plots',
   durationInMinutes: 10,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.HANDLING],
+  goals: [FrisbeeGoals.HANDLING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.ADVANCED,
   steps: [
     {
       id: 1,
       title: 'Le grand M',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: theM,
+      animation: theM,
       repetition: '',
       rest: '',
       instruction:
@@ -5633,19 +5192,26 @@ const goToTenDrill = {
   equipment: '1 disque - 4 plots',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.PLAY, FrisbeeGoals.DEFENSE],
+  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.DEFENSE, FrisbeeGoals.GAMES],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
       title: 'Passe à 10',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationGoToTen,
+      animation: animationGoToTen,
       repetition: '',
       rest: '',
       instruction:
-        "Première équipe qui complète 10 passes gagne. Compte à 6. Pour un niveau débutant, l'équipe en attaque peut jouer en surnombre",
+        "Pour un niveau débutant, on peut fixer l'objectif à 5 passes, ou faire jouer l'attaque en surnombre",
+    },
+    {
+      id: 2,
+      title: 'Ajouter de la difficulté',
+      animation: animationGoToTen,
+      repetition: '',
+      rest: '',
+      instruction: "Le compte peut commencer à 6 au lieu de 1. Il est aussi possible de réduire l'espace de jeu",
     },
   ],
 };
@@ -5663,15 +5229,14 @@ const endzoneGameDrill = {
   equipment: '1 disque - 4 plots',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.PLAY, FrisbeeGoals.DEFENSE],
+  goals: [FrisbeeGoals.CUTTING, FrisbeeGoals.GAMES, FrisbeeGoals.DEFENSE],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
       title: 'Jeu du Endzone',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: endzoneAnimation,
+      animation: endzoneAnimation,
       repetition: '',
       rest: '',
       instruction:
@@ -5680,8 +5245,7 @@ const endzoneGameDrill = {
     {
       id: 2,
       title: 'Finition en Endzone',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: endzoneFinition,
+      animation: endzoneFinition,
       repetition: '',
       rest: '',
       instruction:
@@ -5705,15 +5269,15 @@ const bulldogDrill = {
   equipment: '4 plots',
   durationInMinutes: 10,
   intensity: Intensities.LOW,
-  goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.PLAY, FrisbeeGoals.COMMUNICATION],
+  goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.WARM_UP, FrisbeeGoals.JUNIOR],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
     {
       id: 1,
       title: "L'épervier",
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: bulldogAnimation,
+      animation: bulldogAnimation,
+      vimeoId: '485473214',
       repetition: '',
       rest: '',
       instruction:
@@ -5735,15 +5299,15 @@ const menageATroisDrill = {
   equipment: '1 disque',
   durationInMinutes: 10,
   intensity: Intensities.LOW,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.DEFENSE, FrisbeeGoals.BREAK],
+  goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.WARM_UP],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
     {
       id: 1,
       title: 'Marque Straight',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: threePerson,
+      animation: threePerson,
+      vimeoId: '462695161',
       repetition: '',
       rest: '',
       instruction:
@@ -5751,19 +5315,9 @@ const menageATroisDrill = {
     },
     {
       id: 2,
-      title: 'Marque straight',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '462695161',
-      repetition: '',
-      rest: '',
-      instruction:
-        "Le défenseur place une marque à plat (marque straight). Lorsque le lanceur lance le disque, il devient alors le défenseur. L'objectif de l'attaquant est de battre le défenseur avec des feintes réalistes",
-    },
-    {
-      id: 3,
       title: 'Rédemption',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: redemption,
+      animation: redemption,
+      vimeoId: '485391944',
       repetition: '',
       rest: '',
       instruction:
@@ -5786,25 +5340,15 @@ const dwarfDuelDrill = {
   equipment: '1 disque - 2 plots',
   durationInMinutes: 10,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.CUTTING],
+  goals: [FrisbeeGoals.CUTTING, FrisbeeGoals.CATCH],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
     {
       id: 1,
       title: 'Le duel',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: dwarDuel,
-      repetition: '',
-      rest: '',
-      instruction:
-        "Le coach ou un joueur expérimenté lance des longues.\nQuand l'attaquant commence à courir, le défenseur peur se déplacer. Aucun des deux joueurs n'a le droit de sauter pour attraper le frisbee.",
-    },
-    {
-      id: 2,
-      title: 'Dwarf Duel',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '462695083',
+      animation: dwarDuel,
+      vimeoId: '462695083',
       repetition: '',
       rest: '',
       instruction:
@@ -5835,8 +5379,8 @@ const dishieChainDrill = {
     {
       id: 1,
       title: 'La chaîne des catapultes',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: dishiesChain,
+      animation: dishiesChain,
+      vimeoId: '462694949',
       repetition: '',
       rest: '',
       instruction:
@@ -5844,29 +5388,9 @@ const dishieChainDrill = {
     },
     {
       id: 2,
-      title: 'Focus on Offense',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '462694949',
-      repetition: '',
-      rest: '',
-      instruction:
-        "2 joueurs d'une colonne vont en direction du lanceur. Quand l'un d'eux reçoit le disque. Le lanceur cherche à faire une dishie quand l'autre cutter part en longue. Le cutter qui attrape la longue devient le nouveau premier lanceur de l'autre colonne",
-    },
-    {
-      id: 3,
       title: 'Éclater un Poach',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: dishiesPoach,
-      repetition: '',
-      rest: '',
-      instruction:
-        "Ajouter un défenseur à l'exercice précédent pour simuler un poach sur un side stack.\nLe possesseur du disque doit chercher à faire une passe au joueur libre",
-    },
-    {
-      id: 4,
-      title: 'Adding a Poach',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '462697155',
+      animation: dishiesPoach,
+      vimeoId: '462697155',
       repetition: '',
       rest: '',
       instruction:
@@ -5889,15 +5413,14 @@ const breakDanceDrill = {
   equipment: '5 disques - 10 plots',
   durationInMinutes: 20,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING],
+  goals: [FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.ADVANCED,
   steps: [
     {
       id: 1,
       title: 'La continuité du fermé',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: breakDanceAnimation,
+      animation: breakDanceAnimation,
       repetition: '',
       rest: '',
       instruction:
@@ -5906,8 +5429,7 @@ const breakDanceDrill = {
     {
       id: 2,
       title: 'La course',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: breakRace,
+      animation: breakRace,
       repetition: '',
       rest: '',
       instruction:
@@ -5937,8 +5459,8 @@ const triangleOfDeathdrill = {
     {
       id: 1,
       title: 'La catapulte',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: triangleDeath,
+      animation: triangleDeath,
+      vimeoId: '485473100',
       repetition: '',
       rest: '',
       instruction:
@@ -5961,15 +5483,15 @@ const trainOfFakeDrill = {
   equipment: '1 disque',
   durationInMinutes: 10,
   intensity: Intensities.LOW,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING],
+  goals: [FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
       title: 'Le Train Classique',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: train,
+      animation: train,
+      vimeoId: '462695757',
       repetition: '',
       rest: '',
       instruction:
@@ -5977,49 +5499,19 @@ const trainOfFakeDrill = {
     },
     {
       id: 2,
-      title: 'Le Train Classique',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '462695757',
+      title: 'Avec 1 Feinte',
+      animation: oneFakeTrain,
+      vimeoId: '462695420',
       repetition: '',
       rest: '',
       instruction:
-        "Mettre en place un stack vertical de 5 attaquants, un lanceur et un handler de soutien. Choisir une force. Le dernier attaquant du stack déclenche un appel en longue tout en regardant le lanceur. Quand le lanceur fait une feinte, l'attaquant fait un contre-cut dans l'espace ouvert et reçoit le disque. L'attaquant suivant doit commencer son cut en longue pour être à pleine vitesse quand le précédent attrape le disque. Le reste du stack se replace à hauteur pour assurer la continuité, le lanceur devient handler de soutien et le soutien devient premier du stack. Répéter sur la longueur du terrain.",
+        "Mettre en place un train classique. Cette fois, le lanceur peut décider de faire une deuxième feinte quand le cutter fait son deuxième appel. Si c'est le cas, le cutter libère l'espace et retourne dans le stack en 2e position. Le lanceur regarde alors le handler de soutien qui fait un appel vers l'avant et reçoit la passe. L'exercice continue.",
     },
     {
       id: 3,
-      title: 'Avec 1 Feinte',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: oneFakeTrain,
-      repetition: '',
-      rest: '',
-      instruction:
-        "Mettre en place un train classique. Cette fois, le lanceur peut décider de faire une deuxième feinte quand le cutter fait son deuxième appel. Si c'est le cas, le cutter libère l'espace et retourne dans le stack en 2e position. Le lanceur regarde alors le handler de soutien qui fait un appel vers l'avant et reçoit la passe. L'exercice continue.",
-    },
-    {
-      id: 4,
-      title: 'Avec 1 Feinte',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '462695420',
-      repetition: '',
-      rest: '',
-      instruction:
-        "Mettre en place un train classique. Cette fois, le lanceur peut décider de faire une deuxième feinte quand le cutter fait son deuxième appel. Si c'est le cas, le cutter libère l'espace et retourne dans le stack en 2e position. Le lanceur regarde alors le handler de soutien qui fait un appel vers l'avant et reçoit la passe. L'exercice continue.",
-    },
-    {
-      id: 5,
       title: 'Avec 2 Feintes',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: twoFakeTrain,
-      repetition: '',
-      rest: '',
-      instruction:
-        "Mettre en place un train classique. Cette fois, quand le soutien fait son cut vers l'avant, le lanceur peut faire une deuxième feinte. Si c'est le cas, le premier joueur du stack fait un cut pour recevoir un dump. L'exercice continue.",
-    },
-    {
-      id: 6,
-      title: 'With Two Fakes',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '462696097',
+      animation: twoFakeTrain,
+      vimeoId: '462696097',
       repetition: '',
       rest: '',
       instruction:
@@ -6049,8 +5541,8 @@ const resetOpenDrill = {
     {
       id: 1,
       title: 'Par derrière',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: backdoor,
+      animation: backdoor,
+      vimeoId: '462694656',
       repetition: '',
       rest: '',
       instruction:
@@ -6058,49 +5550,19 @@ const resetOpenDrill = {
     },
     {
       id: 2,
-      title: 'Par derrière',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '462694656',
+      title: 'Power position',
+      animation: powerReset,
+      vimeoId: '462695562',
       repetition: '',
       rest: '',
       instruction:
-        "Le lanceur est défendu par une marque qui applique une force et son handler de soutien se place à 45° derrière lui, du côté ouvert.\nLe lanceur commence par regarder vers l'avant pour simuler une situation de jeu, avant de se tourner vers son soutien et d'établir un contact visuel avec lui. Ensuite, le soutien fait un cut derrière le lanceur et reçoit le disque.\nLe disque est alors renvoyé au lanceur pour refaire l'exercice de l'autre côté en inversant la force.",
+        "Le placement est le même que pour la première version. Cette fois, quand le contact visuel est établi, le soutien fait un cut vers l'avant et reçoit une passe devant lui.",
     },
     {
       id: 3,
-      title: 'Power position',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: powerReset,
-      repetition: '',
-      rest: '',
-      instruction:
-        "Le placement est le même que pour la première version. Cette fois, quand le contact visuel est établi, le soutien fait un cut vers l'avant et reçoit une passe devant lui.",
-    },
-    {
-      id: 4,
-      title: 'Power Reset',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '462695562',
-      repetition: '',
-      rest: '',
-      instruction:
-        "Le placement est le même que pour la première version. Cette fois, quand le contact visuel est établi, le soutien fait un cut vers l'avant et reçoit une passe devant lui.",
-    },
-    {
-      id: 5,
       title: 'Situation de Match',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: resetOpen,
-      repetition: '',
-      rest: '',
-      instruction:
-        "Le placement est le même. La défense sur le soutien est à 100%. L'attaquant doit choisir une des deux options de cut pour se démarquer. Il ne peut faire qu'une feinte. Chaque équipe de 2 fait le même nombre d'essais, et celle qui réussit le plus de passes gagne !",
-    },
-    {
-      id: 6,
-      title: 'Situation de Match',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '462696413',
+      animation: resetOpen,
+      vimeoId: '462696413',
       repetition: '',
       rest: '',
       instruction:
@@ -6130,8 +5592,8 @@ const resetBreakDrill = {
     {
       id: 1,
       title: 'Le Upline Cut à 45°',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: upline,
+      animation: upline,
+      vimeoId: '462696489',
       repetition: '',
       rest: '',
       instruction:
@@ -6139,49 +5601,19 @@ const resetBreakDrill = {
     },
     {
       id: 2,
-      title: 'Le Upline Cut à 45°',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '462696489',
+      title: 'Le Reset Facile',
+      animation: around,
+      vimeoId: '462694618',
       repetition: '',
       rest: '',
       instruction:
-        "Le lanceur est défendu par une marque qui applique une force et son handler de soutien se place à sa hauteur, du côté fermé.\n. Le soutien se déplace tranquillement vers l'avant jusqu'à se trouver à 45° par rapport au lanceur. Quand le lanceur établit le contact visuel, le soutien fait un cut incisif vers l'avant.\nUne fois la passe réalisée, le disque est renvoyé au lanceur et l'exercice est répété plusieurs fois, en changeant la force.",
+        "Le placement est le même. Quand le contact visuel est établi, le lanceur contourne sa marque par l'arrière pour faire sa passe au soutien. La passe doit arriver à peu près à hauteur du lanceur, là où le soutien se trouvait initialement. C'est la passe qui déclenche le cut du soutien.",
     },
     {
       id: 3,
-      title: 'Le Reset Facile',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: around,
-      repetition: '',
-      rest: '',
-      instruction:
-        "Le placement est le même. Quand le contact visuel est établi, le lanceur contourne sa marque par l'arrière pour faire sa passe au soutien. La passe doit arriver à peu près à hauteur du lanceur, là où le soutien se trouvait initialement. C'est la passe qui déclenche le cut du soutien.",
-    },
-    {
-      id: 4,
-      title: 'Le Reset Facile',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '462694618',
-      repetition: '',
-      rest: '',
-      instruction:
-        "Le placement est le même. Quand le contact visuel est établi, le lanceur contourne sa marque par l'arrière pour faire sa passe au soutien. La passe doit arriver à peu près à hauteur du lanceur, là où le soutien se trouvait initialement. C'est la passe qui déclenche le cut du soutien.",
-    },
-    {
-      id: 5,
       title: 'Situation de match',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: resetBreak,
-      repetition: '',
-      rest: '',
-      instruction:
-        "Le placement est le même. La défense est à 100%. Le soutien doit choisir une des deux solutions pour faire son cut et recevoir le disque. Le soutien ne peut changer de direction qu'une fois. Chaque équipe de 2 fait le même nombre d'essais, et celle qui réussit le plus de passes gagne !",
-    },
-    {
-      id: 6,
-      title: 'Situation de match',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '462696185',
+      animation: resetBreak,
+      vimeoId: '462696185',
       repetition: '',
       rest: '',
       instruction:
@@ -6211,8 +5643,8 @@ const youShallNotPassDrill = {
     {
       id: 1,
       title: 'Bloquer les passes courtes',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: blockTheUnder,
+      animation: blockTheUnder,
+      vimeoId: '462695379',
       repetition: '',
       rest: '',
       instruction:
@@ -6220,37 +5652,17 @@ const youShallNotPassDrill = {
     },
     {
       id: 2,
-      title: 'Blocking the Under',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '462695379',
+      title: 'Bloquez tout !',
+      animation: blockEverything,
+      vimeoId: '462695250',
       repetition: '',
       rest: '',
-      instruction:
-        "L'attaquant et le défenseur courent vers le carré central puis vers le fond du terrain. L'attaquant doit faire un contre-cut vers le disque pour recevoir une passe dans le carré. Il ne peut pas rechanger de direction. Le défenseur doit se positionner pour empêcher l'attaquant de le dépasser pour atteindre le carré. Le lanceur ne peut pas lancer sur le premier cut en longue",
+      instruction: "Même exercice, mais le lanceur a le droit de lancer la longue si c'est pertinent",
     },
     {
       id: 3,
-      title: 'Bloquez tout !',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: blockEverything,
-      repetition: '',
-      rest: '',
-      instruction: "Même exercice, mais le lanceur a le droit de lancer la longue si c'est pertinent",
-    },
-    {
-      id: 4,
-      title: 'Bloquez tout !',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '462695250',
-      repetition: '',
-      rest: '',
-      instruction: "Même exercice, mais le lanceur a le droit de lancer la longue si c'est pertinent",
-    },
-    {
-      id: 5,
       title: 'Comptez les points',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: blockEverything,
+      animation: blockEverything,
       repetition: '',
       rest: '',
       instruction:
@@ -6280,8 +5692,7 @@ const defensePositionDrill = {
     {
       id: 1,
       title: 'Bloquer les passes courtes',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: defensiveUnder,
+      animation: defensiveUnder,
       repetition: '',
       rest: '',
       instruction:
@@ -6290,8 +5701,7 @@ const defensePositionDrill = {
     {
       id: 2,
       title: 'Bloquer les passes longues',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: defenseDeep,
+      animation: defenseDeep,
       repetition: '',
       rest: '',
       instruction: 'Même exercice. Cette fois, le défenseur doit toujours se positionner à 45° derrière le receveur.',
@@ -6313,25 +5723,15 @@ const discGolf = {
   equipment: '1 disque',
   durationInMinutes: 10,
   intensity: Intensities.LOW,
-  goals: [FrisbeeGoals.THROWING],
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.JUNIOR],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
     {
       id: 1,
       title: 'Disc Golf',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: discGolfAnimation,
-      repetition: '',
-      rest: '',
-      instruction:
-        "Les règles: Le disc-golf se joue comme le golf traditionnel.\nUn lancer (stroke) est compté à chaque fois que le disque est lancé et lorsqu'une pénalité est encourue. L'objectif est de jouer chaque trou en un minimum de coups.",
-    },
-    {
-      id: 2,
-      title: 'Disc Golf',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '475059721',
+      animation: discGolfAnimation,
+      vimeoId: '475059721',
       repetition: '',
       rest: '',
       instruction:
@@ -6349,34 +5749,24 @@ const dDC = {
   description: 'Double disc court est un sport de frisbee qui combine rapidité, stratégie et capacité de lancer.',
   minimalPlayersNumber: 4,
   inGame:
-    "LE DDC permet de travailler la maîtrise des courbes de passes et la communication. La gain technique permet de s'adapter au situation de match",
+    "Le DDC permet de travailler la maîtrise des courbes de passes et la communication. La gain technique permet de s'adapter au situation de match",
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '2 disques - 8 plots',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.COMMUNICATION, FrisbeeGoals.CATCH],
+  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.CATCH, FrisbeeGoals.GAMES],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
     {
       id: 1,
       title: 'DDC',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: dDCAnimation,
+      animation: dDCAnimation,
+      vimeoId: '436158587',
       repetition: '',
       rest: '',
       instruction:
-        "2 équipes de 2 joueurs s'opposent. Les zones sont de 13 mètres carrés et espacés de 17 mètres. Vous obtenez un point pour un lancer qui atterrit et reste dans le terrain de l'adversaire, ou si un adversaire fait tomber votre lancer. Vos adversaires obtiennent un point si votre lancer touche l'extérieur de leur terrain. Si vous pouvez vous arranger pour que l'autre équipe touche les deux disques en même temps, vous obtenez deux points.",
-    },
-    {
-      id: 2,
-      title: 'DDC Video',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436158587',
-      repetition: '',
-      rest: '',
-      instruction:
-        "2 équipes de 2 joueurs s'opposent. Les zones sont de 13 mètres carrés et espacés de 17 mètres. Vous obtenez un point pour un lancer qui atterrit et reste dans le terrain de l'adversaire, ou si un adversaire fait tomber votre lancer. Vos adversaires obtiennent un point si votre lancer touche l'extérieur de leur terrain. Si vous pouvez vous arranger pour que l'autre équipe touche les deux disques en même temps, vous obtenez deux points.",
+        "2 équipes de 2 joueurs s'opposent. Les zones sont des carrés de 13 mètres espacés de 17 mètres. Vous obtenez un point pour un lancer qui atterrit et reste dans le terrain de l'adversaire, ou si un adversaire fait tomber votre lancer. Vos adversaires obtiennent un point si votre lancer touche l'extérieur de leur terrain. Si vous pouvez vous arranger pour que l'autre équipe touche les deux disques en même temps, vous obtenez deux points.",
     },
   ],
 };
@@ -6395,15 +5785,14 @@ const horizontalTiming = {
   equipment: '1 disque',
   durationInMinutes: 10,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING],
+  goals: [FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
     {
       id: 1,
       title: 'Le break est la clé',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: horizontalTimingAnimation,
+      animation: horizontalTimingAnimation,
       repetition: '',
       rest: '',
       instruction:
@@ -6412,8 +5801,7 @@ const horizontalTiming = {
     {
       id: 2,
       title: 'Jeu du coté ouvert',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: horizontalTimingOpenAnimation,
+      animation: horizontalTimingOpenAnimation,
       repetition: '',
       rest: '',
       instruction: '',
@@ -6435,15 +5823,14 @@ const game3v3Horizontal = {
   equipment: '1 disque - 8 plots',
   durationInMinutes: 15,
   intensity: Intensities.HIGH,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
+  goals: [FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
       title: 'Agressif en longue',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: threeHorizontal,
+      animation: threeHorizontal,
       repetition: '',
       rest: '',
       instruction:
@@ -6452,8 +5839,7 @@ const game3v3Horizontal = {
     {
       id: 2,
       title: 'Situation de match',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: threeHorizontalGame,
+      animation: threeHorizontalGame,
       repetition: '',
       rest: '',
       instruction:
@@ -6476,15 +5862,14 @@ const theDuel = {
   equipment: '1 disque',
   durationInMinutes: 10,
   intensity: Intensities.HIGH,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.CATCH],
+  goals: [FrisbeeGoals.CUTTING, FrisbeeGoals.CATCH, FrisbeeGoals.DEFENSE],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
       title: 'Une direction',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: theDual,
+      animation: theDual,
       repetition: '',
       rest: '',
       instruction:
@@ -6493,8 +5878,7 @@ const theDuel = {
     {
       id: 2,
       title: 'Avec une feinte',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: theDualFake,
+      animation: theDualFake,
       repetition: '',
       rest: '',
       instruction:
@@ -6517,25 +5901,15 @@ const cardinal = {
   equipment: '1 disque',
   durationInMinutes: 10,
   intensity: Intensities.LOW,
-  goals: [FrisbeeGoals.THROWING],
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.WARM_UP],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
       title: 'Les Points Cardinaux',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: cardinalAnimation,
-      repetition: '',
-      rest: '',
-      instruction:
-        'Imaginez un compas avec votre pied de pivot au centre. Pivot N et lancer. Pivot NE et lancer. Pivot E et lancer et ainsi de suite autour du compas. Faire quatre fois le tour, en lançant deux fois les coups droits et deux fois les revers.',
-    },
-    {
-      id: 2,
-      title: 'Les Points Cardinaux',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '462694734',
+      animation: cardinalAnimation,
+      vimeoId: '462694734',
       repetition: '',
       rest: '',
       instruction:
@@ -6558,15 +5932,14 @@ const horizontalToVertical = {
   equipment: '1 disque',
   durationInMinutes: 20,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
+  goals: [FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
       title: 'Renversement',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: horizontalToVerticalAnimation,
+      animation: horizontalToVerticalAnimation,
       repetition: '',
       rest: '',
       instruction:
@@ -6575,8 +5948,7 @@ const horizontalToVertical = {
     {
       id: 2,
       title: 'Diamant',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: horizontalDiamond,
+      animation: horizontalDiamond,
       repetition: '',
       rest: '',
       instruction:
@@ -6585,8 +5957,7 @@ const horizontalToVertical = {
     {
       id: 3,
       title: 'Iso',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: iso,
+      animation: iso,
       repetition: '',
       rest: '',
       instruction:
@@ -6609,15 +5980,14 @@ const horizontalTrap = {
   equipment: '1 disque',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
+  goals: [FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
       title: 'Diamant du coté ouvert',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: horizontalTrapOpen,
+      animation: horizontalTrapOpen,
       repetition: '',
       rest: '',
       instruction:
@@ -6626,8 +5996,7 @@ const horizontalTrap = {
     {
       id: 2,
       title: 'Le Break fonctionne',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: horizontalTrapBreak,
+      animation: horizontalTrapBreak,
       repetition: '',
       rest: '',
       instruction:
@@ -6636,8 +6005,7 @@ const horizontalTrap = {
     {
       id: 3,
       title: 'Situation de Match',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: horizontalTrapGame,
+      animation: horizontalTrapGame,
       repetition: '',
       rest: '',
       instruction:
@@ -6660,15 +6028,14 @@ const horizontalTrapOutside = {
   equipment: '1 disque',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
+  goals: [FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
       title: 'Aller en Longue',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: hoTrapFar,
+      animation: hoTrapFar,
       repetition: '',
       rest: '',
       instruction:
@@ -6677,8 +6044,7 @@ const horizontalTrapOutside = {
     {
       id: 2,
       title: 'Le Cut Horizontal',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: hoTrapDirect,
+      animation: hoTrapDirect,
       repetition: '',
       rest: '',
       instruction:
@@ -6687,8 +6053,7 @@ const horizontalTrapOutside = {
     {
       id: 3,
       title: 'Situation de Match',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: hoTrapGame,
+      animation: hoTrapGame,
       repetition: '',
       rest: '',
       instruction:
@@ -6711,15 +6076,14 @@ const horizontalHandler = {
   equipment: '1 disque',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
+  goals: [FrisbeeGoals.CUTTING, FrisbeeGoals.HANDLING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
       title: 'Le Cut Upline',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: hoHandler,
+      animation: hoHandler,
       repetition: '',
       rest: '',
       instruction:
@@ -6728,8 +6092,7 @@ const horizontalHandler = {
     {
       id: 2,
       title: 'Adaptation',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: hoHandlerBreak,
+      animation: hoHandlerBreak,
       repetition: '',
       rest: '',
       instruction:
@@ -6738,8 +6101,7 @@ const horizontalHandler = {
     {
       id: 3,
       title: 'Situation de Match',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: hoHandlerGame,
+      animation: hoHandlerGame,
       repetition: '',
       rest: '',
       instruction:
@@ -6762,15 +6124,14 @@ const checkLong = {
   equipment: '1 disque',
   durationInMinutes: 15,
   intensity: Intensities.HIGH,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
+  goals: [FrisbeeGoals.CUTTING, FrisbeeGoals.THROWING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
       title: "Il est temps d'aller en longue",
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: longCheck,
+      animation: longCheck,
       repetition: '',
       rest: '',
       instruction:
@@ -6793,25 +6154,15 @@ const throwCatchThrow = {
   equipment: '2 disques',
   durationInMinutes: 12,
   intensity: Intensities.LOW,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CATCH],
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CATCH, FrisbeeGoals.WARM_UP],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
     {
       id: 1,
       title: 'Double Disques',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: throwCatch,
-      repetition: '',
-      rest: '',
-      instruction:
-        "Le receveur a déjà un disque dans les mains. L'objectif est de ne jamais avoir les deux disques simultanément dans les mains. Quand le receveur est sur le point de recevoir le disque il lance son disque dans les airs, il attrape l'autre disque, il le lance, et rattrape son disque.",
-    },
-    {
-      id: 2,
-      title: 'Double Disques',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '462695929',
+      animation: throwCatch,
+      vimeoId: '462695929',
       repetition: '',
       rest: '',
       instruction:
@@ -6841,18 +6192,8 @@ const stopFlow = {
     {
       id: 1,
       title: 'Arrête le Flow',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: stopFlowAnimation,
-      repetition: '',
-      rest: '',
-      instruction:
-        'Le défenseur ne regarde pas le disque et ne bloque pas le premier lancer. Quand le lancer est rattrapé, le second cutter doit faire un cut en ligne droite. Le premier défenseur doit essayer de bloquer la continuité.',
-    },
-    {
-      id: 2,
-      title: 'Arrête le Flow',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '462695656',
+      animation: stopFlowAnimation,
+      vimeoId: '462695656',
       repetition: '',
       rest: '',
       instruction:
@@ -6882,8 +6223,8 @@ const theTunnel = {
     {
       id: 1,
       title: 'Le Tunnel',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: theTunnelAnimation,
+      animation: theTunnelAnimation,
+      vimeoId: '485472876',
       repetition: '',
       rest: '',
       instruction:
@@ -6905,15 +6246,15 @@ const sprintDefense = {
   equipment: '4 plots',
   durationInMinutes: 8,
   intensity: Intensities.HIGH,
-  goals: [FrisbeeGoals.DEFENSE],
+  goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.WARM_UP],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
     {
       id: 1,
       title: 'La défense léopard',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: leopard,
+      animation: leopard,
+      vimeoId: '485471567',
       repetition: '',
       rest: '',
       instruction:
@@ -6933,18 +6274,27 @@ const cupSwinging = {
   inGame:
     "Lorsque une défense de zone est mise en place, les joueurs formant le premier rideau doivent se déplacer de manière uniforme sans laisser d'espace suffisant pour qu'un lancer puisse être effectué entre eux",
   equipmentLabel: EquipmentLabels.NONE,
-  equipment: '1 disque',
+  equipment: '1 disque - 4 plots',
   durationInMinutes: 10,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.COMMUNICATION],
+  goals: [FrisbeeGoals.DEFENSE],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
-      title: 'Travail de swing',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: cupSwingingAnimation,
+      title: 'Le Rideau',
+      animation: firtWallAnimation,
+      vimeoId: '485399518',
+      repetition: '',
+      rest: '',
+      instruction:
+        "L'objectif est de passer à travers le 1er rideau d'une zone. Le compte est à 10 par côté. Les lancers par dessus sont interdits.",
+    },
+    {
+      id: 2,
+      title: 'Travail de Swing',
+      animation: cupSwingingAnimation,
       repetition: '',
       rest: '',
       instruction:
@@ -6965,15 +6315,14 @@ const zoneGame = {
   equipment: '1 disque - 8 plots',
   durationInMinutes: 25,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.COMMUNICATION, FrisbeeGoals.PLAY],
+  goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.GAMES],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
       title: 'Zone Game',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: zoneGameAnimation,
+      animation: zoneGameAnimation,
       repetition: '',
       rest: '',
       instruction:
@@ -6982,8 +6331,7 @@ const zoneGame = {
     {
       id: 2,
       title: 'Video expliquant la Zone',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '436156281',
+      vimeoId: '436156281',
       repetition: '',
       rest: '',
       instruction:
@@ -7007,25 +6355,15 @@ const goaltimateDrill = {
   equipment: '1 disque - 10 plots or 1 but',
   durationInMinutes: 20,
   intensity: Intensities.HIGH,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.DEFENSE, FrisbeeGoals.PLAY],
+  goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.GAMES],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
       title: 'Goaltimate rules',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: goaltimate,
-      repetition: '',
-      rest: '',
-      instruction:
-        "4 contre 4. Compte de 5 \nÀ chaque fois qu'il y a un turnover, la nouvelle équipe offensive doit \"nettoyer\" le disque en l'ammenant dans la zone de dégagement, et peut alors attaquer le but. \nUn point est obtenu lorsqu'une passe traversant le cerceau est attrapée dans la zone d'en-but par votre coéquipier",
-    },
-    {
-      id: 2,
-      title: 'Goaltimate video',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '416849035',
+      animation: goaltimate,
+      vimeoId: '416849035',
       repetition: '',
       rest: '',
       instruction:
@@ -7048,15 +6386,14 @@ const diagonalToVertical = {
   equipment: '1 disque',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
+  goals: [FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
       title: 'Force vers le coté proche',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: diagonalOpenAnimation,
+      animation: diagonalOpenAnimation,
       repetition: '',
       rest: '',
       instruction:
@@ -7065,8 +6402,7 @@ const diagonalToVertical = {
     {
       id: 2,
       title: 'Force vers le coté éloigné',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: diagonalPowerAnimation,
+      animation: diagonalPowerAnimation,
       repetition: '',
       rest: '',
       instruction:
@@ -7075,8 +6411,7 @@ const diagonalToVertical = {
     {
       id: 3,
       title: 'La solution du par-dessus',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: diagonalOverAnimation,
+      animation: diagonalOverAnimation,
       repetition: '',
       rest: '',
       instruction:
@@ -7085,8 +6420,7 @@ const diagonalToVertical = {
     {
       id: 4,
       title: 'Adaptation',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: diagonalGameAnimation,
+      animation: diagonalGameAnimation,
       repetition: '',
       rest: '',
       instruction: "Le défenseur choisit la force et les cutters doivent s'adapter le plus rapidement possible.",
@@ -7107,15 +6441,14 @@ const diagonalIso = {
   equipment: '1 disque',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
+  goals: [FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
       title: 'Diagonal Iso',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: diagonaldualOpen,
+      animation: diagonaldualOpen,
       repetition: '',
       rest: '',
       instruction:
@@ -7124,8 +6457,7 @@ const diagonalIso = {
     {
       id: 2,
       title: 'La Solution Par-Dessus',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: diagonaldualBreak,
+      animation: diagonaldualBreak,
       repetition: '',
       rest: '',
       instruction:
@@ -7134,8 +6466,7 @@ const diagonalIso = {
     {
       id: 3,
       title: 'Situation de Match',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: diagonalDualGame,
+      animation: diagonalDualGame,
       repetition: '',
       rest: '',
       instruction:
@@ -7157,15 +6488,14 @@ const splitIso = {
   equipment: '1 disque',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
+  goals: [FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
       title: 'Iso Coté ouvert avec un Split',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: splitIsoAnimation,
+      animation: splitIsoAnimation,
       repetition: '',
       rest: '',
       instruction:
@@ -7174,8 +6504,7 @@ const splitIso = {
     {
       id: 2,
       title: 'Situation de Match',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: splitGameDual,
+      animation: splitGameDual,
       repetition: '',
       rest: '',
       instruction:
@@ -7198,15 +6527,14 @@ const splitToVertical = {
   equipment: '1 disque',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
+  goals: [FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
       title: "Avec les Cutters dans l'Ouvert",
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: splitToVerticalAnimation,
+      animation: splitToVerticalAnimation,
       repetition: '',
       rest: '',
       instruction:
@@ -7215,8 +6543,7 @@ const splitToVertical = {
     {
       id: 2,
       title: 'Avec les Cutters dans le fermé',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: splitWindmill,
+      animation: splitWindmill,
       repetition: '',
       rest: '',
       instruction:
@@ -7238,15 +6565,14 @@ const sideToVertical = {
   equipment: '1 disque',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
+  goals: [FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
       title: 'Iso dans le coté libre',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: sideFlow,
+      animation: sideFlow,
       repetition: '',
       rest: '',
       instruction:
@@ -7255,8 +6581,7 @@ const sideToVertical = {
     {
       id: 2,
       title: 'Windmill',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: sideWindmill,
+      animation: sideWindmill,
       repetition: '',
       rest: '',
       instruction:
@@ -7278,19 +6603,19 @@ const checkLongKid = {
   equipment: '1 disque',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.CATCH, FrisbeeGoals.CUTTING],
+  goals: [FrisbeeGoals.CATCH, FrisbeeGoals.CUTTING, FrisbeeGoals.JUNIOR],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
     {
       id: 1,
       title: 'Check & Longues',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: checkLongKidAnimation,
+      animation: checkLongKidAnimation,
+      vimeoId: '485473162',
       repetition: '',
       rest: '',
       instruction:
-        "Quand le lanceur(un joueur expériementé/entraineur) fait un check avec le cutter, ce dernier doit courir le plus rapidement possible en longue. L'objectif est de compléter la passe la plus longue. Rendez ça marrant en demandant au cutter d'annoncer le check qu'ils veulent faire (coude, double pieds…). Si un cutter attrape la longue, tout le monde doit célébrer.",
+        "Quand le lanceur (un joueur expériementé/entraîneur) fait un check avec le cutter, ce dernier doit courir le plus rapidement possible en longue. L'objectif est de compléter la passe la plus longue. Rendez ça marrant en demandant au cutter d'annoncer le check qu'ils veulent faire (coude, double pieds…). Si un cutter attrape la longue, tout le monde doit célébrer.",
     },
   ],
 };
@@ -7309,15 +6634,14 @@ const adaptToTheMark = {
   equipment: '3 plots - 4 disques',
   durationInMinutes: 20,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.HANDLING, FrisbeeGoals.COMMUNICATION],
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.HANDLING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.ADVANCED,
   steps: [
     {
       id: 1,
       title: 'Adaptation à la marque',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: adaptMark,
+      animation: adaptMark,
       repetition: '',
       rest: '',
       instruction:
@@ -7332,32 +6656,22 @@ const ghostMark = {
   author: 'Puc Ultimate',
   title: 'Le Fantôme',
   image: 'https://zupimages.net/up/20/41/447u.jpg',
-  description: "Les joueurs s'entrainent à réceptionner le disque dans des situations difficiles.",
+  description: "Les joueurs s'entraînent à réceptionner le disque dans des situations difficiles.",
   minimalPlayersNumber: 3,
   inGame: "Il est important d'être capable d'effectuer une réception sans un contact visuel continu.",
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque',
   durationInMinutes: 10,
   intensity: Intensities.LOW,
-  goals: [FrisbeeGoals.CATCH],
+  goals: [FrisbeeGoals.CATCH, FrisbeeGoals.JUNIOR],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
     {
       id: 1,
       title: 'La Marque Fantôme',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: ghost,
-      repetition: '',
-      rest: '',
-      instruction:
-        "Deux joueurs lancent par paire. Les joueurs en défense, sans toucher le disque et les attaquants, doivent gêner la réception. Ils peuvent, par exemple, passer devant le disque au dernier moment. Si un turn-over est provoqué, sans que les défenseurs touchent le disque, les rôles s'inversent.",
-    },
-    {
-      id: 2,
-      title: 'La Marque Fantôme',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '475061553',
+      animation: ghost,
+      vimeoId: '475061553',
       repetition: '',
       rest: '',
       instruction:
@@ -7372,26 +6686,144 @@ const fish = {
   author: 'Puc Ultimate',
   title: 'La Pêche',
   image: 'https://zupimages.net/up/20/41/n148.jpg',
-  description: "Les joueurs s'entrainent à lancer de manière précise le disque sur une cible statique.",
+  description: "Les joueurs s'entraînent à lancer de manière précise le disque sur une cible statique.",
   minimalPlayersNumber: 8,
   inGame: '-',
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque par paire',
   durationInMinutes: 10,
   intensity: Intensities.LOW,
-  goals: [FrisbeeGoals.CATCH, FrisbeeGoals.THROWING],
+  goals: [FrisbeeGoals.CATCH, FrisbeeGoals.THROWING, FrisbeeGoals.JUNIOR],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
     {
       id: 1,
       title: 'La Pêche',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: fishAnimation,
+      animation: fishAnimation,
       repetition: '',
       rest: '',
       instruction:
         "Les joueurs jouent par paire. L'objectif est de récupérer le plus de plots possible. Un joueur de la paire court au niveau d'un plot. Son coéquipier lui envoie le disque d'une manière définie par le coach. Si, et seulement si, le joueur attrape le disque en restant à porter de pivot du plot, il peut le ramasser et le ramener dans son camp. Son coéquipier à son tour court, les rôles s'inversent. L'équipe ayant ramassé le plus de disque l'emporte",
+    },
+  ],
+};
+
+const crossingTheField = {
+  id: 1050,
+  type: DrillTypes.FRISBEE,
+  author: 'Gentle',
+  title: 'La traversée',
+  image: 'https://zupimages.net/up/20/47/63gr.jpg',
+  description:
+    'Les joueurs doivent traverser le terrain le plus rapidement possible en se faisant des passes. Si une passe est ratée, ils doivent recommencer.',
+  minimalPlayersNumber: 2,
+  inGame: '-',
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disque pour 2 joueurs',
+  durationInMinutes: 10,
+  intensity: Intensities.HIGH,
+  goals: [FrisbeeGoals.WARM_UP, FrisbeeGoals.THROWING, FrisbeeGoals.JUNIOR],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'Aller-retour',
+      animation: crossingTheFieldAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Les joueurs travaillent en binôme. Il est possible de faire jouer deux paires en même temps, et la plus rapide gagne.',
+    },
+    {
+      id: 2,
+      title: 'Avec défense',
+      animation: crossingTheFieldDefenseAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        "Même exercice, en ajoutant un défenseur pour obliger les attaquants à adopter des déplacements plus proches de l'ultimate.",
+    },
+    {
+      id: 3,
+      title: 'Plus de joueurs',
+      animation: crossingTheFieldManyAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        "Même exercice, en ajoutant des joueurs pour jouer à 3 contre 2, 3 contre 3, etc. en fonction du niveau des joueurs et de ce qu'on veut leur faire travailler : avec beaucoup de joueurs, cela ressemble à de l'ultimate mais chaque joueur touchera moins de disque et le jeu sera plus haché.",
+    },
+  ],
+};
+
+const trident = {
+  id: 1051,
+  type: DrillTypes.FRISBEE,
+  author: 'Monkey',
+  title: 'Le Trident',
+  image: 'https://zupimages.net/up/20/47/6ksu.jpg',
+  description:
+    "Les joueurs s'entraînent à identifier un receveur à qui effectuer la passe le plus rapidement possible.",
+  minimalPlayersNumber: 5,
+  inGame:
+    "Être capable de prendre l'information et ses décisions rapidement, même fatigué, est un atout majeur en attaque",
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '2 disques pour 5 joueurs',
+  durationInMinutes: 10,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'Le Trident',
+      animation: tridentAnimation,
+      vimeoId: '485392578',
+      repetition: '',
+      rest: '',
+      instruction:
+        'Le lanceur est marqué (coup droit ou revers) par le défenseur. Il cherche à effectuer le plus de passes possibles en 1 minute.\nObjectif débutant : Jouer sur le receveur le plus simple à atteindre.\nObjectif expérimenté : Break systématique',
+    },
+  ],
+};
+
+const bull = {
+  id: 1052,
+  type: DrillTypes.FRISBEE,
+  author: 'Monkey',
+  title: 'Le Taureau',
+  image: 'https://zupimages.net/up/20/47/4ypa.jpg',
+  description:
+    "Un exercice classique dans le monde du sport collectif. Il faut faire circuler rapidement le disque afin que la défense n'ait pas le temps de se mettre en place. Si une passe n'est pas complétée, le lanceur va au milieu.",
+  minimalPlayersNumber: 6,
+  inGame: '-',
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disque ',
+  durationInMinutes: 12,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.DEFENSE],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'Le Taureau Classique',
+      animation: bullAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        "Les joueurs forment un cercle plus ou moins grand en fonction de leur niveau. Les passes à un voisin direct ne sont pas autorisées. Si un joueur doit effectuer plus d'un pas pour rattraper une passe, elle est considérée comme ratée. Le lanceur remplace un des défenseurs. Le compte est à 5 secondes",
+    },
+    {
+      id: 2,
+      title: 'Le Taureau à 6',
+      animation: bullSpeedAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        "L'objectif des attaquants est de conserver le disque sans se déplacer. Ils ne peuvent pas jouer plus de 2 fois de suite avec le même joueur à la suite.",
     },
   ],
 };
@@ -7416,8 +6848,7 @@ const normalGame = {
     {
       id: 1,
       title: 'Match classique',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: normalGameAnimation,
+      animation: normalGameAnimation,
       repetition: '1',
       rest: '',
       instruction: '',
@@ -7445,8 +6876,7 @@ const game3v3 = {
     {
       id: 1,
       title: 'Match 3 vs 3',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: threeGame,
+      animation: threeGame,
       repetition: '1',
       rest: '',
       instruction: '',
@@ -7474,8 +6904,7 @@ const longShotGame = {
     {
       id: 1,
       title: 'Match spécial Longues',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: normalGameAnimation,
+      animation: normalGameAnimation,
       repetition: '1',
       rest: '',
       instruction: "Une équipe marque 2 points s'il y a eu une longue réussie sur l'attaque qui a mené au point !",
@@ -7503,8 +6932,7 @@ const lineGame = {
     {
       id: 1,
       title: 'Match des breaks',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: normalGameAnimation,
+      animation: normalGameAnimation,
       repetition: '1',
       rest: '',
       instruction: 'Après un turnover, le jeu reprend avec le disque sur la sideline.',
@@ -7532,8 +6960,7 @@ const longestGame = {
     {
       id: 1,
       title: 'Le plus long point',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: normalGameAnimation,
+      animation: normalGameAnimation,
       repetition: '',
       rest: '',
       instruction:
@@ -7561,8 +6988,7 @@ const trainingGame = {
     {
       id: 1,
       title: 'Pratiquer le nouveau stack',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: normalGameAnimation,
+      animation: normalGameAnimation,
       repetition: '',
       rest: '',
       instruction:
@@ -7575,10 +7001,10 @@ const helpGame = {
   id: 2007,
   type: DrillTypes.FRISBEE,
   author: '',
-  title: 'Match - mixte de niveau',
+  title: 'Match débutant avec aide',
   image: 'https://zupimages.net/up/20/28/up1j.jpg',
   description:
-    "Jouons à un match où un joueur expérimenté peut aider les débutants à développer un meilleur jeu. Le but du joueur expérimenté est de faire en sorte que tout le monde touche le disque. S'il n'y a qu'un seul joueur expérimenté, nous recommandons à ce joueur/entraîneur de jouer avec l'équipe qui a le plus de difficulté à jouer.",
+    'Un (ou plusieurs) joueur expérimenté peut aider les débutants à développer un meilleur jeu. Le but du joueur expérimenté est de faire en sorte que tout le monde touche le disque. Cette astuce fonctionne avec un match classique, mais aussi avec des exercices comme la Box ou la Passe à 10.',
   minimalPlayersNumber: 10,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '8 plots - 1 disque',
@@ -7590,12 +7016,89 @@ const helpGame = {
   steps: [
     {
       id: 1,
-      title: 'Joueur expérimenté aidant',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: normalGameAnimation,
+      title: 'Le caméléon',
+      animation: normalGameAnimation,
       repetition: '',
       rest: '',
-      instruction: 'Jeu classique. Les joueurs expérimentés jouent également pour aider à progresser.',
+      instruction:
+        "Un coach ou joueur expériementé joue toujours avec l'attaque. Il doit faire en sorte que tous les joueurs, même les plus débutants, puissent toucher le disque. Le caméléon ne peut pas marquer.",
+    },
+    {
+      id: 2,
+      title: 'Joueur expérimenté aidant',
+      animation: normalGameAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        "Un match classique, avec des joueurs expérimentés dans chaque équipe. S'il n'y a qu'un seul joueur expérimenté, nous recommandons à ce joueur/entraîneur de jouer avec l'équipe qui a le plus de difficulté à jouer.",
+    },
+  ],
+};
+
+const boxGame = {
+  id: 2008,
+  type: DrillTypes.FRISBEE,
+  author: '',
+  title: 'La Box',
+  image: 'https://zupimages.net/up/20/47/u0ny.jpg',
+  description:
+    'Au lieu de jouer sur un terrain classique, ce jeu utilise une petite endzone. Les deux équipes marquent dans la même endzone. Elle doit faire environ 2 mètres de côté, à adapter en fonction du niveau des joueurs.',
+  inGame:
+    'Les joueurs apprennent à se créer collectivement des espaces et à trouver le bon timing pour faire progresser le disque.',
+  minimalPlayersNumber: 4,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '4 plots - 1 disque',
+  durationInMinutes: 10,
+  intensity: Intensities.HIGH,
+  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.WARM_UP],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'La Box',
+      animation: singleBoxGame,
+      repetition: '1',
+      rest: '',
+      instruction:
+        "Il faudra peut-être aider les dédbutants à comprendre qu'ils ne doivent pas rester statiques dans la box.\n\nChanger la taille de la box et le début du compte pour ajuster la difficulté",
+    },
+    {
+      id: 2,
+      title: 'La Double Box',
+      animation: twoBoxesGame,
+      repetition: '1',
+      rest: '',
+      instruction:
+        "Avec la seconde endzone, les joueurs ont beaucoup plus d'information à prendre en jouant. Cela crée aussi de nouvelles opportunités pour l'attaque",
+    },
+  ],
+};
+
+const game5v5 = {
+  id: 2009,
+  type: DrillTypes.FRISBEE,
+  author: '',
+  title: '5v5 game',
+  image: 'https://zupimages.net/up/20/47/uxhr.jpg',
+  description:
+    'Classic indoor, beach or youth game. Also a good way to reduce the complexity of the game for beginners',
+  minimalPlayersNumber: 10,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '8 cones - 1 disc',
+  durationInMinutes: 20,
+  intensity: Intensities.HIGH,
+  goals: [FrisbeeGoals.PLAY],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: '5v5 games',
+      animation: fiveGame,
+      repetition: '1',
+      rest: '',
+      instruction: '',
     },
   ],
 };
@@ -7624,28 +7127,36 @@ const dumpSwingTraining = {
   drills: [warmupDrill, trainOfFakeDrill, dishieChainDrill, endzoneGameDrill, longestGame],
 };
 
-const firstChildTraining = {
+const firstU13Training = {
   id: 4,
-  title: 'Première fois',
+  title: 'Premiers pas',
   image: 'https://zupimages.net/up/20/19/a7io.png',
   description: "Découvrir l'ultimate en s'amusant",
-  drills: [warmupDrill, basicThrowsDrill, aussieDrill, dwarfDuelDrill, helpGame],
+  drills: [bulldogDrill, basicThrowsDrill, checkLongKid, goToTenDrill],
 };
 
-const secondChildTraining = {
+const secondU13Training = {
   id: 5,
   title: 'Les bases de la défense',
   image: 'https://zupimages.net/up/20/19/dgwo.jpg',
   description: 'Mettre en place les bons réflexes défensifs tout en touchant beaucoup de disque',
-  drills: [warmupDrill, aussieDrill, cardinal, checkLong, game3v3],
+  drills: [aussieDrill, fish, giveAndGoDrill, game3v3],
 };
 
-const thirdChildTraining = {
+const thirdU13Training = {
   id: 6,
   title: 'Chasse aux trésors',
   image: 'https://zupimages.net/up/20/19/c9i6.jpg',
   description: "Idéal pour découvrir les bases de l'ultimate en s'amusant",
-  drills: [warmupDrill, menageATroisDrill, bulldogDrill, goToTenDrill, treasureHuntDrill, game3v3],
+  drills: [treasureHuntDrill, menageATroisDrill, goToTenDrill, helpGame],
+};
+
+const firstInitiationAdultTraining = {
+  id: 23,
+  title: 'Premiers pas',
+  image: 'https://zupimages.net/up/20/19/cd36.jpg',
+  description: "Découvrir l'ultimate en s'amusant",
+  drills: [warmupDrill, basicThrowsDrill, goToTenDrill, game3v3],
 };
 
 const secondInintiationAdultTraining = {
@@ -7653,7 +7164,7 @@ const secondInintiationAdultTraining = {
   title: 'Défense & Longues',
   image: 'https://zupimages.net/up/20/19/cd36.jpg',
   description: 'Apprendre les bases nécessaires pour faire de bonnes défenses',
-  drills: [warmupDrill, menageATroisDrill, checkLong, trainDrill, normalGame],
+  drills: [warmupDrill, menageATroisDrill, checkLong, trainDrill, game5v5],
 };
 
 const thirdInintiationAdultTraining = {
@@ -7661,7 +7172,7 @@ const thirdInintiationAdultTraining = {
   title: "S'adapter au terrain",
   image: 'https://zupimages.net/up/20/19/hrqz.jpg',
   description: "S'adapter à l'espace disponible sur le terrain tout en s'amusant",
-  drills: [warmupDrill, throwCatchThrow, goaltimateDrill, triangleOfDeathdrill, normalGame],
+  drills: [warmupDrill, throwCatchThrow, goaltimateDrill, triangleOfDeathdrill, helpGame],
 };
 
 const defenseBaseTraining = {
@@ -7768,12 +7279,12 @@ const diagonalStackTraining = {
   drills: [warmupGameDrill, horizontalTrapOutside, diagonalIso, diagonalToVertical, trainingGame],
 };
 
-const kidInitiation = {
+const u10Initiation = {
   id: 22,
   title: 'Initiation Enfant U10',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: "Découvrir l'ultimate en s'amusant",
-  drills: [warmupGameDrill, basicThrowsDrill, aussieDrill, checkLongKid],
+  drills: [bulldogDrill, basicThrowsDrill, checkLongKid, boxGame],
 };
 
 //Fitness Weeks
@@ -8400,15 +7911,20 @@ export const drills = [
   adaptToTheMark,
   ghostMark,
   fish,
+  trident,
+  bull,
+  crossingTheField,
 
   // // Games
   // normalGame,
   // game3v3,
+  // game5v5,
   // longShotGame,
   // lineGame,
   // longestGame,
   // trainingGame,
   // helpGame,
+  boxGame,
 ];
 
 export const trainings = [
@@ -8487,9 +8003,9 @@ export const trainings = [
   // Frisbee
   dumpSwingTraining,
   coed2MarkTraining,
-  firstChildTraining,
-  secondChildTraining,
-  thirdChildTraining,
+  firstU13Training,
+  secondU13Training,
+  thirdU13Training,
   secondInintiationAdultTraining,
   thirdInintiationAdultTraining,
   initiationVerticalTraining,
@@ -8506,7 +8022,7 @@ export const trainings = [
   sideStackTraining,
   splitStackTraining,
   diagonalStackTraining,
-  kidInitiation,
+  u10Initiation,
 ];
 
 export const programs = [
@@ -8514,19 +8030,19 @@ export const programs = [
     id: 1,
     type: DrillTypes.FRISBEE,
     title: 'Initiation u10',
-    trainings: [kidInitiation],
+    trainings: [u10Initiation],
   },
   {
     id: 2,
     type: DrillTypes.FRISBEE,
     title: 'Initiation u13',
-    trainings: [firstChildTraining, secondChildTraining, thirdChildTraining],
+    trainings: [firstU13Training, secondU13Training, thirdU13Training],
   },
   {
     id: 3,
     type: DrillTypes.FRISBEE,
     title: 'Initiation adultes',
-    trainings: [firstChildTraining, secondInintiationAdultTraining, thirdInintiationAdultTraining],
+    trainings: [firstInitiationAdultTraining, secondInintiationAdultTraining, thirdInintiationAdultTraining],
   },
   {
     id: 4,

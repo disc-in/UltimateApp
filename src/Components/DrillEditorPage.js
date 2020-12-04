@@ -7,7 +7,7 @@ import * as Yup from 'yup';
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
 import { saveDrill } from '../Store/Actions/drillAction';
-import { DrillTypes, IllustrationType } from '../Fixtures/config';
+import { DrillTypes } from '../Fixtures/config';
 import AnimationEditor from './editor/AnimationEditor';
 import FormGroup from './shared/form/FormGroup';
 import Input from './shared/form/Input';
@@ -32,8 +32,7 @@ const newDrill = {
     {
       id: 1,
       title: '',
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: {
+      animation: {
         positions: [[], []],
         ids: [],
         texts: [],
@@ -49,14 +48,14 @@ export const DrillEditorPage = (props) => {
 
   const onAnimationChange = (animation) => {
     const newCurrentDrill = { ...currentDrill };
-    newCurrentDrill.steps[0].illustrationSource = animation;
+    newCurrentDrill.steps[0].animation = animation;
     setCurrentDrill(newCurrentDrill);
     props.saveDrill(newCurrentDrill);
   };
 
   return (
     <ScrollView>
-      <AnimationEditor onAnimationChange={onAnimationChange} animation={currentDrill.steps[0].illustrationSource} />
+      <AnimationEditor onAnimationChange={onAnimationChange} animation={currentDrill.steps[0].animation} />
       <Formik
         initialValues={currentDrill}
         validationSchema={Yup.object({

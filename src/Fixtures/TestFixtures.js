@@ -1,14 +1,5 @@
 import animationSquare from './Animation/AnimationSquare';
-import {
-  DrillTypes,
-  Intensities,
-  FrisbeeGoals,
-  FitnessGoals,
-  Levels,
-  SeasonTimings,
-  EquipmentLabels,
-  IllustrationType,
-} from './config';
+import { DrillTypes, Intensities, FrisbeeGoals, FitnessGoals, Levels, SeasonTimings, EquipmentLabels } from './config';
 
 export const createDrill = (override = {}) => {
   return {
@@ -30,8 +21,7 @@ export const createDrill = (override = {}) => {
       {
         title: 'Warmup',
         subtitle: 'This is a subtitle',
-        illustrationType: IllustrationType.VIMEO,
-        illustrationSource: '462695757',
+        vimeoId: '462695757',
       },
     ],
     ...override,
@@ -81,22 +71,19 @@ const fitnessDrill1 = {
       id: 0,
       title: 'Warmup',
       subtitle: 'This is a subtitle',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '462695757',
+      vimeoId: '462695757',
     },
     {
       id: 1,
       title: 'Do the drill',
       subtitle: 'This is a subtitle',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '462695757',
+      vimeoId: '462695757',
     },
     {
       id: 2,
       title: 'Last step',
       subtitle: 'This is a subtitle',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '462695757',
+      vimeoId: '462695757',
     },
   ],
 };
@@ -121,22 +108,19 @@ const fitnessDrill2 = {
       id: 0,
       title: 'Warmup',
       subtitle: 'This is a subtitle',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '462695757',
+      vimeoId: '462695757',
     },
     {
       id: 1,
       title: 'Do the drill',
       subtitle: 'This is a subtitle',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '462695757',
+      vimeoId: '462695757',
     },
     {
       id: 2,
       title: 'Last step',
       subtitle: 'This is a subtitle',
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '462695757',
+      vimeoId: '462695757',
     },
   ],
 };
@@ -160,8 +144,7 @@ const frisbeeDrill1 = {
   steps: [
     {
       id: 0,
-      illustrationType: IllustrationType.ANIMATION,
-      illustrationSource: animationSquare,
+      animation: animationSquare,
     },
   ],
 };
@@ -186,8 +169,7 @@ const frisbeeDrill2 = {
   steps: [
     {
       id: 0,
-      illustrationType: IllustrationType.VIMEO,
-      illustrationSource: '462695757',
+      vimeoId: '462695757',
     },
   ],
 };

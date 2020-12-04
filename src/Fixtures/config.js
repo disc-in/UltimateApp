@@ -12,14 +12,13 @@ export const Intensities = {
 
 export const FrisbeeGoals = {
   DEFENSE: 'Defense',
-  MARK: 'Mark',
+  WARM_UP: 'Warm Up',
   HANDLING: 'Handling',
   CUTTING: 'Cutting',
   THROWING: 'Throwing',
-  BREAK: 'Breaking the mark',
-  COMMUNICATION: 'Communication',
   CATCH: 'Catching',
-  PLAY: 'Playing time',
+  GAMES: 'Games',
+  JUNIOR: 'Junior',
 };
 
 export const FitnessGoals = {
@@ -48,11 +47,6 @@ export const EquipmentLabels = {
   NONE: 'None',
   BASIC: 'Basic',
   FULL: 'Full',
-};
-
-export const IllustrationType = {
-  VIMEO: 'vimeo',
-  ANIMATION: 'animation',
 };
 
 export const AnimationBackgrounds = {

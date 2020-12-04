@@ -4849,7 +4849,7 @@ const basicThrowsDrill = {
   equipment: '1 disque',
   durationInMinutes: 20,
   intensity: Intensities.LOW,
-  goals: [FrisbeeGoals.THROWING],
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.WARM_UP],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -4857,6 +4857,7 @@ const basicThrowsDrill = {
       id: 1,
       title: 'La Machine à lancer',
       animation: throwingMachine,
+      vimeoId: '485392763',
       repetition: '',
       rest: '',
       instruction: 'En binôme, les joueurs lancent des revers et coup droits pendant 5 minutes.',
@@ -4865,6 +4866,7 @@ const basicThrowsDrill = {
       id: 2,
       title: 'Montante - descendante',
       animation: ladder,
+      vimeoId: '485393003',
       repetition: '',
       rest: '',
       instruction:
@@ -4874,6 +4876,7 @@ const basicThrowsDrill = {
       id: 3,
       title: 'Avec des fantômes',
       animation: ladderGhost,
+      vimeoId: '485399479',
       repetition: '',
       rest: '',
       instruction:
@@ -4896,7 +4899,7 @@ const breakDrill = {
   equipment: '6 disques - 6 plots',
   durationInMinutes: 20,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.BREAK, FrisbeeGoals.MARK, FrisbeeGoals.CUTTING],
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -4938,7 +4941,7 @@ const treasureHuntDrill = {
   equipment: '10 disques - 10 plots',
   durationInMinutes: 20,
   intensity: Intensities.LOW,
-  goals: [FrisbeeGoals.PLAY, FrisbeeGoals.COMMUNICATION],
+  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.GAMES],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -4969,7 +4972,7 @@ const kyeDrill = {
   equipment: '1 disque - 2 plots',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.MARK],
+  goals: [FrisbeeGoals.DEFENSE],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -4977,6 +4980,7 @@ const kyeDrill = {
       id: 1,
       title: '3 versus 2',
       animation: threeVersusTwo,
+      vimeoId: '485452835',
       repetition: '',
       rest: '',
       instruction:
@@ -5048,7 +5052,7 @@ const trainDrill = {
   equipment: '1 disque',
   durationInMinutes: 10,
   intensity: Intensities.LOW,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
+  goals: [FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -5088,7 +5092,7 @@ const giveAndGoDrill = {
   equipment: '1 disque - 12 plots',
   durationInMinutes: 10,
   intensity: Intensities.HIGH,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.HANDLING],
+  goals: [FrisbeeGoals.HANDLING, FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -5096,6 +5100,7 @@ const giveAndGoDrill = {
       id: 1,
       title: 'Le Une-deux',
       animation: giveAndGo,
+      vimeoId: '485473267',
       repetition: '',
       rest: '',
       instruction: "Les joueurs doivent réaliser l'exercice aussi vite que possible. Attention à éviter les travels",
@@ -5104,6 +5109,7 @@ const giveAndGoDrill = {
       id: 2,
       title: 'Ça compte !',
       animation: giveAndGoRace,
+      vimeoId: '485473406',
       repetition: '',
       rest: '',
       instruction: 'Une course entre 2 équipes. La première à 25 passes gagne !',
@@ -5126,7 +5132,7 @@ const aussieDrill = {
   equipment: '4 disques - 20 plots',
   durationInMinutes: 20,
   intensity: Intensities.LOW,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.COMMUNICATION, FrisbeeGoals.PLAY],
+  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.GAMES],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -5156,7 +5162,7 @@ const bolognaMDrill = {
   equipment: '1 disque - 6 plots',
   durationInMinutes: 10,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.HANDLING],
+  goals: [FrisbeeGoals.HANDLING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.ADVANCED,
   steps: [
@@ -5186,7 +5192,7 @@ const goToTenDrill = {
   equipment: '1 disque - 4 plots',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.PLAY, FrisbeeGoals.DEFENSE],
+  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.DEFENSE, FrisbeeGoals.GAMES],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -5223,7 +5229,7 @@ const endzoneGameDrill = {
   equipment: '1 disque - 4 plots',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.PLAY, FrisbeeGoals.DEFENSE],
+  goals: [FrisbeeGoals.CUTTING, FrisbeeGoals.GAMES, FrisbeeGoals.DEFENSE],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -5263,7 +5269,7 @@ const bulldogDrill = {
   equipment: '4 plots',
   durationInMinutes: 10,
   intensity: Intensities.LOW,
-  goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.PLAY, FrisbeeGoals.COMMUNICATION],
+  goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.WARM_UP, FrisbeeGoals.JUNIOR],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -5271,6 +5277,7 @@ const bulldogDrill = {
       id: 1,
       title: "L'épervier",
       animation: bulldogAnimation,
+      vimeoId: '485473214',
       repetition: '',
       rest: '',
       instruction:
@@ -5292,7 +5299,7 @@ const menageATroisDrill = {
   equipment: '1 disque',
   durationInMinutes: 10,
   intensity: Intensities.LOW,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.DEFENSE, FrisbeeGoals.BREAK],
+  goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.WARM_UP],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -5310,6 +5317,7 @@ const menageATroisDrill = {
       id: 2,
       title: 'Rédemption',
       animation: redemption,
+      vimeoId: '485391944',
       repetition: '',
       rest: '',
       instruction:
@@ -5332,7 +5340,7 @@ const dwarfDuelDrill = {
   equipment: '1 disque - 2 plots',
   durationInMinutes: 10,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.CUTTING],
+  goals: [FrisbeeGoals.CUTTING, FrisbeeGoals.CATCH],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -5405,7 +5413,7 @@ const breakDanceDrill = {
   equipment: '5 disques - 10 plots',
   durationInMinutes: 20,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING],
+  goals: [FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.ADVANCED,
   steps: [
@@ -5452,6 +5460,7 @@ const triangleOfDeathdrill = {
       id: 1,
       title: 'La catapulte',
       animation: triangleDeath,
+      vimeoId: '485473100',
       repetition: '',
       rest: '',
       instruction:
@@ -5474,7 +5483,7 @@ const trainOfFakeDrill = {
   equipment: '1 disque',
   durationInMinutes: 10,
   intensity: Intensities.LOW,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING],
+  goals: [FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -5714,7 +5723,7 @@ const discGolf = {
   equipment: '1 disque',
   durationInMinutes: 10,
   intensity: Intensities.LOW,
-  goals: [FrisbeeGoals.THROWING],
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.JUNIOR],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -5740,12 +5749,12 @@ const dDC = {
   description: 'Double disc court est un sport de frisbee qui combine rapidité, stratégie et capacité de lancer.',
   minimalPlayersNumber: 4,
   inGame:
-    "LE DDC permet de travailler la maîtrise des courbes de passes et la communication. La gain technique permet de s'adapter au situation de match",
+    "Le DDC permet de travailler la maîtrise des courbes de passes et la communication. La gain technique permet de s'adapter au situation de match",
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '2 disques - 8 plots',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.COMMUNICATION, FrisbeeGoals.CATCH],
+  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.CATCH, FrisbeeGoals.GAMES],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -5757,7 +5766,7 @@ const dDC = {
       repetition: '',
       rest: '',
       instruction:
-        "2 équipes de 2 joueurs s'opposent. Les zones sont de 13 mètres carrés et espacés de 17 mètres. Vous obtenez un point pour un lancer qui atterrit et reste dans le terrain de l'adversaire, ou si un adversaire fait tomber votre lancer. Vos adversaires obtiennent un point si votre lancer touche l'extérieur de leur terrain. Si vous pouvez vous arranger pour que l'autre équipe touche les deux disques en même temps, vous obtenez deux points.",
+        "2 équipes de 2 joueurs s'opposent. Les zones sont des carrés de 13 mètres espacés de 17 mètres. Vous obtenez un point pour un lancer qui atterrit et reste dans le terrain de l'adversaire, ou si un adversaire fait tomber votre lancer. Vos adversaires obtiennent un point si votre lancer touche l'extérieur de leur terrain. Si vous pouvez vous arranger pour que l'autre équipe touche les deux disques en même temps, vous obtenez deux points.",
     },
   ],
 };
@@ -5776,7 +5785,7 @@ const horizontalTiming = {
   equipment: '1 disque',
   durationInMinutes: 10,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING],
+  goals: [FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -5814,7 +5823,7 @@ const game3v3Horizontal = {
   equipment: '1 disque - 8 plots',
   durationInMinutes: 15,
   intensity: Intensities.HIGH,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
+  goals: [FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -5853,7 +5862,7 @@ const theDuel = {
   equipment: '1 disque',
   durationInMinutes: 10,
   intensity: Intensities.HIGH,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.CATCH],
+  goals: [FrisbeeGoals.CUTTING, FrisbeeGoals.CATCH, FrisbeeGoals.DEFENSE],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -5892,7 +5901,7 @@ const cardinal = {
   equipment: '1 disque',
   durationInMinutes: 10,
   intensity: Intensities.LOW,
-  goals: [FrisbeeGoals.THROWING],
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.WARM_UP],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -5923,7 +5932,7 @@ const horizontalToVertical = {
   equipment: '1 disque',
   durationInMinutes: 20,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
+  goals: [FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -5971,7 +5980,7 @@ const horizontalTrap = {
   equipment: '1 disque',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
+  goals: [FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -6019,7 +6028,7 @@ const horizontalTrapOutside = {
   equipment: '1 disque',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
+  goals: [FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -6067,7 +6076,7 @@ const horizontalHandler = {
   equipment: '1 disque',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
+  goals: [FrisbeeGoals.CUTTING, FrisbeeGoals.HANDLING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -6115,7 +6124,7 @@ const checkLong = {
   equipment: '1 disque',
   durationInMinutes: 15,
   intensity: Intensities.HIGH,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
+  goals: [FrisbeeGoals.CUTTING, FrisbeeGoals.THROWING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -6145,7 +6154,7 @@ const throwCatchThrow = {
   equipment: '2 disques',
   durationInMinutes: 12,
   intensity: Intensities.LOW,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CATCH],
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CATCH, FrisbeeGoals.WARM_UP],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -6215,6 +6224,7 @@ const theTunnel = {
       id: 1,
       title: 'Le Tunnel',
       animation: theTunnelAnimation,
+      vimeoId: '485472876',
       repetition: '',
       rest: '',
       instruction:
@@ -6236,7 +6246,7 @@ const sprintDefense = {
   equipment: '4 plots',
   durationInMinutes: 8,
   intensity: Intensities.HIGH,
-  goals: [FrisbeeGoals.DEFENSE],
+  goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.WARM_UP],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -6244,6 +6254,7 @@ const sprintDefense = {
       id: 1,
       title: 'La défense léopard',
       animation: leopard,
+      vimeoId: '485471567',
       repetition: '',
       rest: '',
       instruction:
@@ -6266,7 +6277,7 @@ const cupSwinging = {
   equipment: '1 disque - 4 plots',
   durationInMinutes: 10,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.COMMUNICATION],
+  goals: [FrisbeeGoals.DEFENSE],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -6274,6 +6285,7 @@ const cupSwinging = {
       id: 1,
       title: 'Le Rideau',
       animation: firtWallAnimation,
+      vimeoId: '485399518',
       repetition: '',
       rest: '',
       instruction:
@@ -6303,7 +6315,7 @@ const zoneGame = {
   equipment: '1 disque - 8 plots',
   durationInMinutes: 25,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.COMMUNICATION, FrisbeeGoals.PLAY],
+  goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.GAMES],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -6343,7 +6355,7 @@ const goaltimateDrill = {
   equipment: '1 disque - 10 plots or 1 but',
   durationInMinutes: 20,
   intensity: Intensities.HIGH,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.DEFENSE, FrisbeeGoals.PLAY],
+  goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.GAMES],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -6351,14 +6363,6 @@ const goaltimateDrill = {
       id: 1,
       title: 'Goaltimate rules',
       animation: goaltimate,
-      repetition: '',
-      rest: '',
-      instruction:
-        "4 contre 4. Compte de 5 \nÀ chaque fois qu'il y a un turnover, la nouvelle équipe offensive doit \"nettoyer\" le disque en l'ammenant dans la zone de dégagement, et peut alors attaquer le but. \nUn point est obtenu lorsqu'une passe traversant le cerceau est attrapée dans la zone d'en-but par votre coéquipier",
-    },
-    {
-      id: 2,
-      title: 'Goaltimate video',
       vimeoId: '416849035',
       repetition: '',
       rest: '',
@@ -6382,7 +6386,7 @@ const diagonalToVertical = {
   equipment: '1 disque',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
+  goals: [FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -6437,7 +6441,7 @@ const diagonalIso = {
   equipment: '1 disque',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
+  goals: [FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -6484,7 +6488,7 @@ const splitIso = {
   equipment: '1 disque',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
+  goals: [FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -6523,7 +6527,7 @@ const splitToVertical = {
   equipment: '1 disque',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
+  goals: [FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -6561,7 +6565,7 @@ const sideToVertical = {
   equipment: '1 disque',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.COMMUNICATION],
+  goals: [FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -6599,7 +6603,7 @@ const checkLongKid = {
   equipment: '1 disque',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.CATCH, FrisbeeGoals.CUTTING],
+  goals: [FrisbeeGoals.CATCH, FrisbeeGoals.CUTTING, FrisbeeGoals.JUNIOR],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -6607,6 +6611,7 @@ const checkLongKid = {
       id: 1,
       title: 'Check & Longues',
       animation: checkLongKidAnimation,
+      vimeoId: '485473162',
       repetition: '',
       rest: '',
       instruction:
@@ -6629,7 +6634,7 @@ const adaptToTheMark = {
   equipment: '3 plots - 4 disques',
   durationInMinutes: 20,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.HANDLING, FrisbeeGoals.COMMUNICATION],
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING, FrisbeeGoals.HANDLING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.ADVANCED,
   steps: [
@@ -6658,7 +6663,7 @@ const ghostMark = {
   equipment: '1 disque',
   durationInMinutes: 10,
   intensity: Intensities.LOW,
-  goals: [FrisbeeGoals.CATCH],
+  goals: [FrisbeeGoals.CATCH, FrisbeeGoals.JUNIOR],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -6688,7 +6693,7 @@ const fish = {
   equipment: '1 disque par paire',
   durationInMinutes: 10,
   intensity: Intensities.LOW,
-  goals: [FrisbeeGoals.CATCH, FrisbeeGoals.THROWING],
+  goals: [FrisbeeGoals.CATCH, FrisbeeGoals.THROWING, FrisbeeGoals.JUNIOR],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -6718,7 +6723,7 @@ const crossingTheField = {
   equipment: '1 disque pour 2 joueurs',
   durationInMinutes: 10,
   intensity: Intensities.HIGH,
-  goals: [FrisbeeGoals.PLAY, FrisbeeGoals.THROWING],
+  goals: [FrisbeeGoals.WARM_UP, FrisbeeGoals.THROWING, FrisbeeGoals.JUNIOR],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -6767,7 +6772,7 @@ const trident = {
   equipment: '2 disques pour 5 joueurs',
   durationInMinutes: 10,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.MARK, FrisbeeGoals.THROWING],
+  goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.THROWING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -6775,6 +6780,7 @@ const trident = {
       id: 1,
       title: 'Le Trident',
       animation: tridentAnimation,
+      vimeoId: '485392578',
       repetition: '',
       rest: '',
       instruction:
@@ -6797,7 +6803,7 @@ const bull = {
   equipment: '1 disque ',
   durationInMinutes: 12,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.HANDLING, FrisbeeGoals.DEFENSE],
+  goals: [FrisbeeGoals.DEFENSE],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -7044,7 +7050,7 @@ const boxGame = {
   equipment: '4 plots - 1 disque',
   durationInMinutes: 10,
   intensity: Intensities.HIGH,
-  goals: [FrisbeeGoals.PLAY],
+  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.WARM_UP],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [

@@ -173,6 +173,8 @@ export default {
     players: 'players',
     level: 'level',
     start: 'Start',
+    shareTitle: 'Share {{drillTitle}}',
+    shareContent: 'Check this drill on Disc In: {{url}}',
   },
   drillPageMinimal: {
     finish: 'Finish Training!',

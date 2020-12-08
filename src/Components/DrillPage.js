@@ -1,7 +1,8 @@
 import React, { useRef, useLayoutEffect } from 'react';
-import { ScrollView, StyleSheet, View, Text, ImageBackground, Dimensions, findNodeHandle } from 'react-native';
+import { ScrollView, Share, StyleSheet, View, Text, ImageBackground, Dimensions, findNodeHandle } from 'react-native';
 import { connect } from 'react-redux';
 import { useHeaderHeight } from '@react-navigation/stack';
+import * as Linking from 'expo-linking';
 
 import I18n from '../utils/i18n';
 import { toggleFavorite } from '../Store/Actions/favoriteAction';
@@ -35,20 +36,32 @@ export const DrillPage = (props) => {
     });
   };
 
-  const displayFavoriteButton = () => {
-    let icon = 'heart-outline';
-    if (props.favoriteDrills.findIndex((item) => item.id === props.route.params.drill.id) !== -1) {
-      icon = 'heart';
-    }
+  const share = async (drill) => {
+    const url = Linking.makeUrl('frisbeeDrill', { drill: drill.id });
+    console.log('share ', url);
 
-    return <HeaderButton icon={icon} onPress={() => props.toggleFavorite(drill)} testID="favoriteButton" />;
+    Share.share({
+      title: I18n.t('drillPage.shareTitle', { drillTitle: drill.title }),
+      message: I18n.t('drillPage.shareContent', { url }),
+      url,
+    }).catch((e) => console.log(e));
   };
 
-  useLayoutEffect(() =>
+  useLayoutEffect(() => {
+    let favoriteIcon = 'heart-outline';
+    if (props.favoriteDrills.findIndex((item) => item.id === props.route.params.drill.id) !== -1) {
+      favoriteIcon = 'heart';
+    }
+
     navigation.setOptions({
-      headerRight: () => displayFavoriteButton(),
-    }),
-  );
+      headerRight: () => (
+        <View style={{ flexDirection: 'row' }}>
+          <HeaderButton icon={favoriteIcon} onPress={() => props.toggleFavorite(drill)} testID="favoriteButton" />
+          <HeaderButton icon="share-outline" onPress={() => share(drill)} testID="shareButton" />
+        </View>
+      ),
+    });
+  });
 
   return (
     <ScrollView ref={drillScrollView} style={styles.drillPage}>

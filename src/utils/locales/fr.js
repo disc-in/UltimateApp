@@ -172,6 +172,8 @@ export default {
     players: 'joueurs',
     level: 'niveau',
     start: 'Start',
+    shareTitle: 'Partager {{drillTitle}}',
+    shareContent: 'Regarde cet exo sur Disc In : {{url}}',
   },
   drillPageMinimal: {
     finish: "Terminer l'entraînement !",

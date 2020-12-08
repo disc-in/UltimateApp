@@ -4,6 +4,7 @@ import { connect, Provider } from 'react-redux';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { Share } from 'react-native';
 
 import store from '../Store/testStore';
 import { createDrill } from '../Fixtures/TestFixtures';
@@ -52,5 +53,25 @@ describe('<DrillPage />', () => {
     fireEvent.press(getByTestId('favoriteButton'));
 
     await waitFor(() => expect(toggleFavorite).toBeCalledWith(drill));
+  });
+
+  it('triggers share', async () => {
+    const share = jest.fn();
+    Share.share = () => new Promise((resolve, reject) => share());
+
+    const Stack = createStackNavigator();
+    const { getByTestId } = render(
+      <Provider store={store}>
+        <NavigationContainer>
+          <Stack.Navigator>
+            <Stack.Screen name="DrillPage" component={ConnectedDrillPage} initialParams={{ drill }} />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </Provider>,
+    );
+
+    await fireEvent.press(getByTestId('shareButton'));
+
+    expect(share).toHaveBeenCalled();
   });
 });

@@ -1,13 +1,12 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
-import GestureRecognizer from 'react-native-swipe-gestures';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import ViewPager from '@react-native-community/viewpager';
 
 import I18n from '../utils/i18n';
 import DrillList from './shared/DrillList';
 import Button from './shared/Button';
 import theme from '../styles/theme.style';
-import { swipeConfig } from '../styles/config';
 import { convertMinsToTime } from '../utils/time';
 
 export function getTrainingDuration(training) {
@@ -23,31 +22,28 @@ const TrainingPage = (props) => {
   const { navigation, route } = props;
   const { training, program } = route.params;
 
-  const onDrillPress = (drill) => navigation.navigate('DrillPageMinimal', { drill, training, program });
-  const goToFirstDrill = () =>
-    navigation.navigate('DrillPageMinimal', { drill: training.drills[0], training, program });
+  const pagerRef = useRef(null);
+  const initialIndex = program.trainings.findIndex((item) => item.id === training.id);
 
-  const currentTrainingIndex = program
-    ? program.trainings.findIndex((programTraining) => programTraining.id === training.id)
-    : null;
-  const isFirstTraining = program ? currentTrainingIndex === 0 : true;
-  const isLastTraining = program ? currentTrainingIndex === program.trainings.length - 1 : true;
+  const programNavigation = (training, index) => {
+    const isFirstTraining = program ? index === 0 : true;
+    const isLastTraining = program ? index === program.trainings.length - 1 : true;
 
-  const onNextPress = () => {
-    if (!isLastTraining) {
-      navigation.navigate('TrainingPage', { training: program.trainings[currentTrainingIndex + 1], program });
-    }
-  };
-  const onPrevPress = () => {
-    if (!isFirstTraining) {
-      navigation.navigate('TrainingPage', { training: program.trainings[currentTrainingIndex - 1], program });
-    }
-  };
-  const programNavigation = () => {
+    const onNextPress = () => {
+      if (!isLastTraining) {
+        pagerRef.current.setPage(index + 1);
+      }
+    };
+    const onPrevPress = () => {
+      if (!isFirstTraining) {
+        pagerRef.current.setPage(index - 1);
+      }
+    };
+
     return (
       <View style={styles.programNavigation}>
         {!isFirstTraining && (
-          <TouchableOpacity style={styles.btnPrevNext} onPress={onPrevPress} testID="goToPrev">
+          <TouchableOpacity style={styles.btnPrevNext} onPress={onPrevPress} testID={`goToPrev${index}`}>
             <MaterialCommunityIcons name="chevron-left" style={styles.navChevron} />
           </TouchableOpacity>
         )}
@@ -58,12 +54,16 @@ const TrainingPage = (props) => {
           {program.trainings.length > 1 && (
             <Text style={styles.subtitle}>
               {' '}
-              ({currentTrainingIndex + 1}/{program.trainings.length}){' '}
+              ({index + 1}/{program.trainings.length}){' '}
             </Text>
           )}
         </View>
         {!isLastTraining && (
-          <TouchableOpacity style={[styles.btnPrevNext, styles.btnNext]} onPress={onNextPress} testID="goToNext">
+          <TouchableOpacity
+            style={[styles.btnPrevNext, styles.btnNext]}
+            onPress={onNextPress}
+            testID={`goToNext${index}`}
+          >
             <MaterialCommunityIcons name="chevron-right" style={styles.navChevron} />
           </TouchableOpacity>
         )}
@@ -71,9 +71,9 @@ const TrainingPage = (props) => {
     );
   };
 
-  const header = () => (
-    <View style={styles.overview}>
-      {program && programNavigation()}
+  const renderHeader = (training, index) => (
+    <View style={styles.header}>
+      {program && programNavigation(training, index)}
       <View style={styles.infos}>
         <View style={styles.info}>
           <MaterialCommunityIcons name="account-multiple" color={theme.COLOR_PRIMARY} size={22} />
@@ -88,25 +88,31 @@ const TrainingPage = (props) => {
     </View>
   );
 
-  return (
-    <GestureRecognizer
-      style={styles.trainingPage}
-      onSwipeLeft={onNextPress}
-      onSwipeRight={onPrevPress}
-      config={swipeConfig}
-    >
-      <DrillList
-        ListHeaderComponent={header}
-        ListFooterComponent={<View style={{ paddingBottom: 30 }} />}
-        ItemComponentStyle={styles.list}
-        navigation={navigation}
-        drillsToDisplay={training.drills}
-        onDrillPress={onDrillPress}
-      />
-      <View style={styles.footer}>
-        <Button onPress={goToFirstDrill} text={I18n.t('trainingPage.start')} />
+  const renderTraining = (training, index) => {
+    const onDrillPress = (drill) => navigation.navigate('DrillPageMinimal', { drill, training, program });
+    const goToFirstDrill = () =>
+      navigation.navigate('DrillPageMinimal', { drill: training.drills[0], training, program });
+    return (
+      <View key={index}>
+        <DrillList
+          ListHeaderComponent={renderHeader(training, index)}
+          ListFooterComponent={<View style={{ paddingBottom: 30 }} />}
+          ItemComponentStyle={styles.list}
+          navigation={navigation}
+          drillsToDisplay={training.drills}
+          onDrillPress={onDrillPress}
+        />
+        <View style={styles.footer}>
+          <Button onPress={goToFirstDrill} text={I18n.t('trainingPage.start')} testID={`start${index}`} />
+        </View>
       </View>
-    </GestureRecognizer>
+    );
+  };
+
+  return (
+    <ViewPager style={styles.trainingPage} ref={pagerRef} initialPage={initialIndex}>
+      {program.trainings.map(renderTraining)}
+    </ViewPager>
   );
 };
 
@@ -118,11 +124,11 @@ const styles = StyleSheet.create({
     height: '100%',
     flex: 1,
   },
-  overview: {
+  header: {
     paddingHorizontal: 10,
     paddingBottom: 10,
     marginVertical: 10,
-    borderBottomWidth: 2,
+    borderBottomWidth: 1,
     borderBottomColor: theme.COLOR_SECONDARY_LIGHT,
   },
   programNavigation: {

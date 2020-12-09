@@ -6735,7 +6735,7 @@ const normalGame = {
   equipment: '8 cones - 1 disc',
   durationInMinutes: 20,
   intensity: Intensities.LOW,
-  goals: [FrisbeeGoals.PLAY],
+  goals: [FrisbeeGoals.GAMES],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -6763,7 +6763,7 @@ const game3v3 = {
   equipment: '8 cones - 1 disc',
   durationInMinutes: 20,
   intensity: Intensities.HIGH,
-  goals: [FrisbeeGoals.PLAY],
+  goals: [FrisbeeGoals.GAMES],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
@@ -6791,7 +6791,7 @@ const longShotGame = {
   equipment: '8 cones - 1 disc',
   durationInMinutes: 20,
   intensity: Intensities.HIGH,
-  goals: [FrisbeeGoals.PLAY, FrisbeeGoals.THROWING],
+  goals: [FrisbeeGoals.GAMES, FrisbeeGoals.THROWING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -6819,7 +6819,7 @@ const lineGame = {
   equipment: '8 cones - 1 disc',
   durationInMinutes: 20,
   intensity: Intensities.HIGH,
-  goals: [FrisbeeGoals.PLAY, FrisbeeGoals.THROWING],
+  goals: [FrisbeeGoals.GAMES, FrisbeeGoals.THROWING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -6847,7 +6847,7 @@ const longestGame = {
   equipment: '8 cones - 1 disc - 1 stopwatch',
   durationInMinutes: 15,
   intensity: Intensities.HIGH,
-  goals: [FrisbeeGoals.PLAY, FrisbeeGoals.THROWING],
+  goals: [FrisbeeGoals.GAMES, FrisbeeGoals.THROWING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -6875,7 +6875,7 @@ const trainingGame = {
   equipment: '8 cones - 1 disc',
   durationInMinutes: 15,
   intensity: Intensities.HIGH,
-  goals: [FrisbeeGoals.PLAY, FrisbeeGoals.CUTTING],
+  goals: [FrisbeeGoals.GAMES, FrisbeeGoals.CUTTING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -6904,7 +6904,7 @@ const helpGame = {
   equipment: '8 cones - 1 disc',
   durationInMinutes: 15,
   intensity: Intensities.HIGH,
-  goals: [FrisbeeGoals.PLAY],
+  goals: [FrisbeeGoals.GAMES],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -6982,7 +6982,7 @@ const game5v5 = {
   equipment: '8 cones - 1 disc',
   durationInMinutes: 20,
   intensity: Intensities.HIGH,
-  goals: [FrisbeeGoals.PLAY],
+  goals: [FrisbeeGoals.GAMES],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [

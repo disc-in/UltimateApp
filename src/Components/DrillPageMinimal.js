@@ -18,7 +18,7 @@ export const DrillPageMinimal = (props) => {
   const { drill, training, program } = route.params;
 
   const currentDrillIndex = training.drills.findIndex(({ id }) => id === drill.id);
-  if (currentDrillIndex === -1) navigation.navigate('TrainingPage', { training });
+  if (currentDrillIndex === -1) navigation.navigate('TrainingPage', { training, program });
   const isLastTraining = currentDrillIndex === training.drills.length - 1;
 
   const goToNextDrill = useCallback(() => {

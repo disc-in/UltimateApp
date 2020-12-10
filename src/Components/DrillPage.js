@@ -15,6 +15,9 @@ import StartButton from './drills/StartButton';
 import HeaderButton from './shared/HeaderButton';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
+import { utils } from '@react-native-firebase/app';
+import storage from '@react-native-firebase/storage';
+
 export const DrillPage = (props) => {
   const { route, navigation } = props;
 
@@ -35,6 +38,22 @@ export const DrillPage = (props) => {
       drillScrollView.current.scrollTo({ x: 0, y, animated: true });
     });
   };
+
+  const uploadAndShare = (drill) => {
+    const reference = storage().ref(`${drill['title']}-${drill['Author']}`);
+    const uploadTask = await reference.putFile(drill);
+    task.on('state_changed', taskSnapshot => {
+      console.log(`${taskSnapshot.bytesTransferred} transferred out of ${taskSnapshot.totalBytes}`);
+    });
+    task.then(() => {
+      console.log('Image uploaded to the bucket!');
+      const url = await storage()
+      .ref(`${drill['title']}-${drill['Author']}`)
+      .getDownloadURL();
+      console.log('Download URL is ' + url);
+    });
+
+  }
 
   const displayFavoriteButton = () => {
     let icon = 'heart-outline';
@@ -77,7 +96,10 @@ export const DrillPage = (props) => {
         <StartButton onPress={onPressStartButton} text={I18n.t('drillPage.start')} />
       </ImageBackground>
       <View style={styles.share}>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            uploadAndShare(drill);
+          }}>
           <Text> PARTAGE MOI !!! </Text>
         </TouchableOpacity>
       </View>

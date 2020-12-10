@@ -13,6 +13,7 @@ import FitnessDrillIllustration from './drills/FitnessDrillIllustration';
 import FrisbeeDrillIllustration from './drills/FrisbeeDrillIllustration';
 import StartButton from './drills/StartButton';
 import HeaderButton from './shared/HeaderButton';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export const DrillPage = (props) => {
   const { route, navigation } = props;
@@ -75,6 +76,11 @@ export const DrillPage = (props) => {
         </View>
         <StartButton onPress={onPressStartButton} text={I18n.t('drillPage.start')} />
       </ImageBackground>
+      <View style={styles.share}>
+        <TouchableOpacity>
+          <Text> PARTAGE MOI !!! </Text>
+        </TouchableOpacity>
+      </View>
       <View ref={firstDrill}>
         <Description drill={drill} />
       </View>
@@ -138,6 +144,13 @@ const styles = StyleSheet.create({
   },
   animation: {
     flex: 1,
+  },
+  share: {
+    height: 50,
+    width: 70,
+    backgroundColor: 'pink',
+    alignContent: 'center',
+    justifyContent: 'center',
   },
 });
 

@@ -46,7 +46,8 @@
     "redux": "^4.0.5",
     "redux-persist": "^5.10.0",
     "watchman": "^1.0.0",
-    "yup": "^0.31.1"
+    "yup": "^0.31.1",
+    "firebase": "7.9.0"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",

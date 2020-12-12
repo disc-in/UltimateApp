@@ -97,6 +97,7 @@ import tridentAnimation from '../Animation/Trident';
 import firtWallAnimation from '../Animation/Wall';
 import bullAnimation from '../Animation/Bull';
 import bullSpeedAnimation from '../Animation/BullSpeed';
+import StatuesAnimation from '../Animation/Statues';
 
 const stabilityDrill = {
   id: 1,
@@ -6722,6 +6723,54 @@ const bull = {
   ],
 };
 
+const statues = {
+  id: 1053,
+  type: DrillTypes.FRISBEE,
+  author: 'Gentle',
+  title: 'Statues',
+  image: 'https://zupimages.net/up/20/50/e7mk.jpeg',
+  description:
+    'Inspired by a famous children game, this drill aims at improving balance as well as information gathering while having fun. You can easily think of other variations of the drill to match your players age and level.',
+  minimalPlayersNumber: 2,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disc per player',
+  durationInMinutes: 10,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.WARM_UP],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'One foot stop',
+      animation: StatuesAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        "Each player holds a disc in his two hands. When the instructor says 'Go' the players move forward as fast as possible. When they say 'Stop', the players must stop and stay on one foot, still holding the disc in their hands. If a player moves, falls or fails to stop, they must go back to the starting line.",
+    },
+    {
+      id: 2,
+      title: 'Visual signal',
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Same exercise but the instructor raises or lowers his arm to indicate that players can move. They have to take different information. You may even mix visual and sound commands.',
+    },
+    {
+      id: 3,
+      title: 'The Waiter',
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction: 'Players must carry their disc in one hand, which requires much more concentration!',
+    },
+  ],
+};
+
 const normalGame = {
   id: 2001,
   type: DrillTypes.FRISBEE,
@@ -7177,6 +7226,14 @@ const u10Initiation = {
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'First practice to learn to play with a disc',
   drills: [bulldogDrill, basicThrowsDrill, checkLongKid, boxGame],
+};
+
+const secondU10training = {
+  id: 23,
+  title: "It's all about fun",
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'A second practice to discover funny games',
+  drills: [statues, crossingTheField, goToTenDrill],
 };
 
 //Fitness Weeks
@@ -7909,6 +7966,7 @@ export const trainings = [
   splitStackTraining,
   diagonalStackTraining,
   u10Initiation,
+  secondU10training,
 ];
 
 export const programs = [
@@ -7916,7 +7974,7 @@ export const programs = [
     id: 1,
     type: DrillTypes.FRISBEE,
     title: 'Initiation U10',
-    trainings: [u10Initiation],
+    trainings: [u10Initiation, secondU10training],
   },
   {
     id: 2,

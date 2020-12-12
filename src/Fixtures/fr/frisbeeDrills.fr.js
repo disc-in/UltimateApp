@@ -97,6 +97,7 @@ import tridentAnimation from '../Animation/Trident';
 import firtWallAnimation from '../Animation/Wall';
 import bullAnimation from '../Animation/Bull';
 import bullSpeedAnimation from '../Animation/BullSpeed';
+import StatuesAnimation from '../Animation/Statues';
 
 const stabilityDrill = {
   id: 1,
@@ -6828,6 +6829,55 @@ const bull = {
   ],
 };
 
+const statues = {
+  id: 1053,
+  type: DrillTypes.FRISBEE,
+  author: 'Gentle',
+  title: '1, 2, 3 Soleil',
+  image: 'https://zupimages.net/up/20/50/e7mk.jpeg',
+  description:
+    "Inspiré du célèbre jeu enfantin, cet exercice permet de travailler l'équilibre et la prise d'information, tout en s'amusant. Vous pouvez assez facilement imaginer d'autres variantes en fonction de l'âge et du niveau de vos joueurs.",
+  minimalPlayersNumber: 2,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disc per player',
+  durationInMinutes: 10,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.WARM_UP],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'Arrêt sur un pied',
+      animation: StatuesAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        "Chaque joueur tient un disc à deux mains. Quand l'entraîneur dit 'Partez', les joueurs avancent le plus vite possible. Quand il dit 'Stop', ils doivent s'arrêter sur un pied, toujours en tenant leur disque à deux mains. Si un joueur bouge, tombe, ou lâche son disque il doit revenir au départ.",
+    },
+    {
+      id: 2,
+      title: 'Signal visuel',
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        "Même exercice mais l'entraîneur lève ou baisse son bras pour indique aux joueurs s'ils peuvent bouger. Cela diversifie leur prise d'information. Il est aussi possible de mélanger les commandes visuaelles et sonores.",
+    },
+    {
+      id: 3,
+      title: 'Le serveur',
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Les joueurs doivent porter leur disque posé sur une main, ce qui leur demande beaucoup plus de concentration !',
+    },
+  ],
+};
+
 const normalGame = {
   id: 2001,
   type: DrillTypes.FRISBEE,
@@ -7285,6 +7335,14 @@ const u10Initiation = {
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: "Découvrir l'ultimate en s'amusant",
   drills: [bulldogDrill, basicThrowsDrill, checkLongKid, boxGame],
+};
+
+const secondU10training = {
+  id: 23,
+  title: "It's all about fun",
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'A second practice to discover funny games',
+  drills: [statues, crossingTheField, goToTenDrill],
 };
 
 //Fitness Weeks
@@ -8023,6 +8081,7 @@ export const trainings = [
   splitStackTraining,
   diagonalStackTraining,
   u10Initiation,
+  secondU10training,
 ];
 
 export const programs = [
@@ -8030,7 +8089,7 @@ export const programs = [
     id: 1,
     type: DrillTypes.FRISBEE,
     title: 'Initiation u10',
-    trainings: [u10Initiation],
+    trainings: [u10Initiation, secondU10training],
   },
   {
     id: 2,

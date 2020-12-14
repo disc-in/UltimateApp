@@ -1,5 +1,3 @@
-import * as firebase from 'firebase';
-
 const firebaseConfig = {
   apiKey: 'AIzaSyAwHIKceH-r5UpcpmgiD5PI6PEM3PMn_j0',
   authDomain: 'discinfirebase.firebaseapp.com',
@@ -10,4 +8,4 @@ const firebaseConfig = {
   appId: '1:706426447682:web:166bcbb53450542aff8adb',
 };
 
-firebase.initializeApp(firebaseConfig);
+export default firebaseConfig;

@@ -1,5 +1,15 @@
+//@refresh reset
 import React, { useRef, useLayoutEffect } from 'react';
-import { ScrollView, StyleSheet, View, Text, ImageBackground, Dimensions, findNodeHandle } from 'react-native';
+import {
+  ScrollView,
+  StyleSheet,
+  View,
+  Text,
+  ImageBackground,
+  Dimensions,
+  findNodeHandle,
+  YellowBox,
+} from 'react-native';
 import { connect } from 'react-redux';
 import { useHeaderHeight } from '@react-navigation/stack';
 
@@ -15,7 +25,8 @@ import StartButton from './drills/StartButton';
 import HeaderButton from './shared/HeaderButton';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-import { firebase, firestore, storage } from '../../firebase';
+import * as firebase from 'firebase';
+import firebaseConfig from '../../firebaseKeys';
 
 export const DrillPage = (props) => {
   const { route, navigation } = props;
@@ -31,6 +42,14 @@ export const DrillPage = (props) => {
   const imageStyles = { ...styles.image, height: sizeBackground };
 
   const drill = route.params.drill;
+  const drillID = drill.id;
+
+  //Initialize Firebase
+  if (firebase.apps.length === 0) {
+    firebase.initializeApp(firebaseConfig);
+  }
+
+  YellowBox.ignoreWarnings(['Setting a timer for a long period of time']);
 
   const onPressStartButton = () => {
     firstDrill.current.measureLayout(findNodeHandle(drillScrollView.current), (x, y) => {
@@ -38,12 +57,15 @@ export const DrillPage = (props) => {
     });
   };
 
-  const uploadAndShare = (drill) => {
-    firebase.database().ref(`${drill['title']}-${drill['Author']}`).set({
-      savedDrill: drill,
-    });
+  const uploadAndShare = (drill, drillID) => {
+    firebase
+      .database()
+      .ref('drill/' + drillID)
+      .set({
+        savedDrill: drill,
+      });
 
-    // const reference = storage().ref(`${drill['title']}-${drill['Author']}`);
+    // const reference = storage().ref(`${drill['title']}-${drill['author']}`);
     // const uploadTask = await reference.putFile(drill);
     // task.on('state_changed', taskSnapshot => {
     //   console.log(`${taskSnapshot.bytesTransferred} transferred out of ${taskSnapshot.totalBytes}`);
@@ -100,7 +122,7 @@ export const DrillPage = (props) => {
       <View style={styles.share}>
         <TouchableOpacity
           onPress={() => {
-            uploadAndShare(drill);
+            uploadAndShare(drill, drillID);
           }}
         >
           <Text> PARTAGE MOI !!! </Text>

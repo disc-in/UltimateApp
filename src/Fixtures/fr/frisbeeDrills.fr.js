@@ -8066,6 +8066,7 @@ export const drills = [
   circuitLong,
   sprintPractice,
   ladderPractice,
+  youthLadder,
   agility5,
   agility8,
   agility10,

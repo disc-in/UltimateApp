@@ -22,12 +22,26 @@
       "supportsTablet": true,
       "infoPlist": {
         "CFBundleAllowMixedLocalizations": true
-      }
+      },
+      "associatedDomains": ["applinks:<discin.net>"]
     },
     "android": {
       "package": "com.discin.discin",
       "versionCode": 3,
-      "permissions": []
+      "permissions": [],
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "data": [
+            {
+              "scheme": "https",
+              "host": "<discin.net>",
+              "pathPrefix": "/"
+            }
+          ],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ]
     }
   }
 }

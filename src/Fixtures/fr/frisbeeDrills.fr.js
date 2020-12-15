@@ -8028,13 +8028,13 @@ export const trainings = [
 export const programs = [
   {
     id: 1,
-    type: DrillTypes.FRISBEE,
+    type: DrillTypes.FRISBEEJUNIOR,
     title: 'Initiation u10',
     trainings: [u10Initiation],
   },
   {
     id: 2,
-    type: DrillTypes.FRISBEE,
+    type: DrillTypes.FRISBEEJUNIOR,
     title: 'Initiation u13',
     trainings: [firstU13Training, secondU13Training, thirdU13Training],
   },

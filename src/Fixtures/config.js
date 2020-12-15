@@ -1,6 +1,7 @@
 export const DrillTypes = {
   FITNESS: 'fitness',
   FRISBEE: 'frisbee',
+  FRISBEEJUNIOR: 'frisbeejunior',
   GAME: 'game',
 };
 

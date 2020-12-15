@@ -7914,13 +7914,13 @@ export const trainings = [
 export const programs = [
   {
     id: 1,
-    type: DrillTypes.FRISBEE,
+    type: DrillTypes.FRISBEEJUNIOR,
     title: 'Initiation U10',
     trainings: [u10Initiation],
   },
   {
     id: 2,
-    type: DrillTypes.FRISBEE,
+    type: DrillTypes.FRISBEEJUNIOR,
     title: 'Initiation U13',
     trainings: [firstU13Training, secondU13Training, thirdU13Training],
   },

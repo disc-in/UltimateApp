@@ -43,7 +43,7 @@ const HomeScreen = (props) => {
         </ImageBackground>
       </TouchableHighlight>
       <TouchableHighlight
-        onPress={() => props.navigation.navigate('ProgramListPage', { type: DrillTypes.FRISBEE })}
+        onPress={() => props.navigation.navigate('ProgramListPage', { type: DrillTypes.FRISBEEJUNIOR })}
         style={styles.menuItem}
       >
         <ImageBackground source={ourPlays} style={styles.image}>

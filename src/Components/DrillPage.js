@@ -1,17 +1,9 @@
 //@refresh reset
 import React, { useRef, useLayoutEffect } from 'react';
-import {
-  ScrollView,
-  StyleSheet,
-  View,
-  Text,
-  ImageBackground,
-  Dimensions,
-  findNodeHandle,
-  YellowBox,
-} from 'react-native';
+import { ScrollView, StyleSheet, View, Text, ImageBackground, Dimensions, findNodeHandle, LogBox } from 'react-native';
 import { connect } from 'react-redux';
 import { useHeaderHeight } from '@react-navigation/stack';
+import { Ionicons } from '@expo/vector-icons';
 
 import I18n from '../utils/i18n';
 import { toggleFavorite } from '../Store/Actions/favoriteAction';
@@ -49,7 +41,7 @@ export const DrillPage = (props) => {
     firebase.initializeApp(firebaseConfig);
   }
 
-  YellowBox.ignoreWarnings(['Setting a timer for a long period of time']);
+  LogBox.ignoreLogs(['Setting a timer']);
 
   const onPressStartButton = () => {
     firstDrill.current.measureLayout(findNodeHandle(drillScrollView.current), (x, y) => {
@@ -60,23 +52,18 @@ export const DrillPage = (props) => {
   const uploadAndShare = (drill, drillID) => {
     firebase
       .database()
-      .ref('drill/' + drillID)
+      .ref('drills/' + drillID)
       .set({
         savedDrill: drill,
       });
+  };
 
-    // const reference = storage().ref(`${drill['title']}-${drill['author']}`);
-    // const uploadTask = await reference.putFile(drill);
-    // task.on('state_changed', taskSnapshot => {
-    //   console.log(`${taskSnapshot.bytesTransferred} transferred out of ${taskSnapshot.totalBytes}`);
-    // });
-    // task.then(() => {
-    //   console.log('Image uploaded to the bucket!');
-    //   const url = await storage()
-    //   .ref(`${drill['title']}-${drill['Author']}`)
-    //   .getDownloadURL();
-    //   console.log('Download URL is ' + url);
-    // });
+  const inDB = () => {
+    var databaseRef = firebase.database().ref('drills/' + drillID);
+    databaseRef.on('value', (snapshot) => {
+      const data = snapshot.val();
+      console.log(data);
+    });
   };
 
   const displayFavoriteButton = () => {
@@ -117,15 +104,28 @@ export const DrillPage = (props) => {
             <Text style={styles.info}>{I18n.t('drillPage.level')}</Text>
           </View>
         </View>
-        <StartButton onPress={onPressStartButton} text={I18n.t('drillPage.start')} />
+        <View style={styles.pink}>
+          <View style={styles.startButton}>
+            <StartButton onPress={onPressStartButton} text={I18n.t('drillPage.start')} />
+            <View style={styles.share}>
+              <TouchableOpacity
+                onPress={() => {
+                  uploadAndShare(drill, drillID);
+                }}
+              >
+                <Ionicons name="md-share" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
+              </TouchableOpacity>
+            </View>
+          </View>
+        </View>
       </ImageBackground>
-      <View style={styles.share}>
+      <View style={styles.db}>
         <TouchableOpacity
           onPress={() => {
-            uploadAndShare(drill, drillID);
+            inDB();
           }}
         >
-          <Text> PARTAGE MOI !!! </Text>
+          <Text> What is in the DB !! </Text>
         </TouchableOpacity>
       </View>
       <View ref={firstDrill}>
@@ -192,12 +192,26 @@ const styles = StyleSheet.create({
   animation: {
     flex: 1,
   },
-  share: {
+  db: {
     height: 50,
-    width: 70,
-    backgroundColor: 'pink',
+    width: 200,
+    backgroundColor: 'gray',
     alignContent: 'center',
     justifyContent: 'center',
+  },
+  share: {
+    position: 'absolute',
+    right: '18%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    top: 0,
+    bottom: 0,
+  },
+  pink: {
+    width: Dimensions.get('window').width,
+  },
+  startButton: {
+    alignItems: 'center',
   },
 });
 

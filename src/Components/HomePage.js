@@ -42,10 +42,13 @@ const HomeScreen = (props) => {
           </View>
         </ImageBackground>
       </TouchableHighlight>
-      <TouchableHighlight onPress={() => props.navigation.navigate('PlayEditorPage')} style={styles.menuItem}>
+      <TouchableHighlight
+        onPress={() => props.navigation.navigate('ProgramListPage', { type: DrillTypes.FRISBEE })}
+        style={styles.menuItem}
+      >
         <ImageBackground source={ourPlays} style={styles.image}>
           <View style={styles.wrapper}>
-            <Text style={styles.title}>{I18n.t('homePage.editor')}</Text>
+            <Text style={styles.title}>{I18n.t('homePage.junior')}</Text>
           </View>
         </ImageBackground>
       </TouchableHighlight>
@@ -134,6 +137,21 @@ const Theory = (props) => {
   );
 };
 
+const myTeam = (props) => {
+  return (
+    <View style={styles.mainContainer}>
+      <View style={styles.editorContainer}>
+        <TouchableHighlight onPress={() => props.navigation.navigate('PlayEditorPage')}>
+          <View style={styles.center}>
+            <Ionicons name="md-clipboard" color={theme.COLOR_PRIMARY} size={50} />
+            <Text style={styles.titleEditor}>Playbook</Text>
+          </View>
+        </TouchableHighlight>
+      </View>
+    </View>
+  );
+};
+
 export default HomePage = (props) => {
   const { navigation } = props;
 
@@ -171,7 +189,15 @@ export default HomePage = (props) => {
         component={Theory}
         options={{
           tabBarLabel: I18n.t('homePage.theoryTab'),
-          tabBarIcon: ({ color }) => <Ionicons name="md-clipboard" color={color} size={26} />,
+          tabBarIcon: ({ color }) => <Ionicons name="md-school" color={color} size={26} />,
+        }}
+      />
+      <Tab.Screen
+        name="My Team"
+        component={myTeam}
+        options={{
+          tabBarLabel: I18n.t('homePage.teamTab'),
+          tabBarIcon: ({ color }) => <Ionicons name="md-people" color={color} size={26} />,
         }}
       />
     </Tab.Navigator>
@@ -214,5 +240,20 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'flex-start',
     padding: 20,
+  },
+  editorContainer: {
+    height: '33%',
+    alignItems: 'center',
+    alignContent: 'center',
+    justifyContent: 'center',
+  },
+  titleEditor: {
+    fontSize: 24,
+    fontWeight: 'bold',
+  },
+  center: {
+    alignItems: 'center',
+    alignContent: 'center',
+    justifyContent: 'center',
   },
 });

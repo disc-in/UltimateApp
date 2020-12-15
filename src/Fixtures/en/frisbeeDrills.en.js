@@ -5377,7 +5377,7 @@ const trainOfFakeDrill = {
   type: DrillTypes.FRISBEE,
   author: 'Iznogood',
   title: 'The Fake Train',
-  image: 'https://zupimages.net/up/20/19/ac8s.jpg',
+  image: 'https://zupimages.net/up/20/51/h1fh.jpg',
   description: 'This is a drill which works on the flow of a vertical stack.',
   minimalPlayersNumber: 6,
   inGame:
@@ -5617,7 +5617,7 @@ const defensePositionDrill = {
 const discGolf = {
   id: 1023,
   type: DrillTypes.FRISBEE,
-  author: 'Colony',
+  author: 'Sunder',
   title: 'Disc Golf',
   image: 'https://zupimages.net/up/20/25/f4bu.jpg',
   description:
@@ -6017,7 +6017,7 @@ const checkLong = {
   type: DrillTypes.FRISBEE,
   author: 'Disk Joker',
   title: 'Long is your new weapon',
-  image: 'https://zupimages.net/up/20/25/pzn1.jpg',
+  image: 'https://zupimages.net/up/20/51/t5fs.jpg',
   description: 'Learning to throw deep as a thrower and to get information as a cutter.',
   minimalPlayersNumber: 3,
   inGame:
@@ -6075,7 +6075,7 @@ const throwCatchThrow = {
 const stopFlow = {
   id: 1035,
   type: DrillTypes.FRISBEE,
-  author: 'Colony',
+  author: 'Sunder',
   title: 'Stopping the Flow',
   image: 'https://zupimages.net/up/20/28/2b8i.jpg',
   description: 'Learn to quickly identify dangerous option and deny it.',

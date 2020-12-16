@@ -11,7 +11,7 @@ import gymstrong from '../../assets/HomePage/gymstrong.jpg';
 import leanfit from '../../assets/HomePage/leanfit.jpg';
 import simulator from '../../assets/HomePage/simulator.jpg';
 import dictionary from '../../assets/HomePage/dictionary.jpg';
-import ourPlays from '../../assets/HomePage/ourplays.jpg';
+import junior from '../../assets/HomePage/junior.jpg';
 import essential from '../../assets/HomePage/essential.jpg';
 import huddle from '../../assets/HomePage/huddle.jpg';
 import FeedbackButton from './home/FeedbackButton';
@@ -53,7 +53,7 @@ const HomeScreen = (props) => {
         }
         style={styles.menuItem}
       >
-        <ImageBackground source={ourPlays} style={styles.image}>
+        <ImageBackground source={junior} style={styles.image}>
           <View style={styles.wrapper}>
             <Text style={styles.title}>{I18n.t('homePage.junior')}</Text>
           </View>

@@ -22,8 +22,8 @@ exports[`<Program /> renders correctly 1`] = `
       Object {
         "alignItems": "flex-start",
         "backgroundColor": "#fff",
+        "paddingBottom": 10,
         "paddingHorizontal": 20,
-        "paddingVertical": 10,
         "width": "100%",
       }
     }
@@ -121,8 +121,8 @@ exports[`<Program /> renders correctly when finished 1`] = `
       Object {
         "alignItems": "flex-start",
         "backgroundColor": "#fff",
+        "paddingBottom": 10,
         "paddingHorizontal": 20,
-        "paddingVertical": 10,
         "width": "100%",
       }
     }

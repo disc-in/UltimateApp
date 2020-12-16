@@ -56,8 +56,8 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
                 Object {
                   "alignItems": "flex-start",
                   "backgroundColor": "#fff",
+                  "paddingBottom": 10,
                   "paddingHorizontal": 20,
-                  "paddingVertical": 10,
                   "width": "100%",
                 }
               }
@@ -147,11 +147,6 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
             style={Object {}}
           >
             <RCTScrollView
-              contentContainerStyle={
-                Object {
-                  "marginBottom": 10,
-                }
-              }
               data={
                 Array [
                   Object {

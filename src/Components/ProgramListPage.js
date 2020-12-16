@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { LogBox } from 'react-native';
 
@@ -7,10 +7,6 @@ import ProgramList from './programs/ProgramList';
 
 export const ProgramListPage = (props) => {
   const { navigation, programs, activeProgram, completeTrainings, route } = props;
-
-  useEffect(() => {
-    LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
-  }, []);
 
   let displayedPrograms;
 

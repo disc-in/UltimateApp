@@ -17,11 +17,13 @@ export const Program = (props) => {
   return (
     <ListItem>
       <View style={styles.program}>
-        <Text style={styles.programTitle}>{title}</Text>
-        <Text style={styles.completion}>
-          {I18n.t('programs.program.completion', { done: completeTrainingsCount, total: trainings.length })}
-          {completeTrainingsCount === trainings.length && ' 👍🎉'}
-        </Text>
+        <View style={styles.titleLine}>
+          <Text style={styles.programTitle}>{title}</Text>
+          <Text style={styles.completion}>
+            {I18n.t('programs.program.completion', { done: completeTrainingsCount, total: trainings.length })}
+            {completeTrainingsCount === trainings.length && ' 👍🎉'}
+          </Text>
+        </View>
         <View style={styles.progressBar}>
           <View style={[StyleSheet.absoluteFill, styles.fillProgressBar, { width }]} />
         </View>
@@ -38,7 +40,7 @@ export default connect(mapStateToProps)(Program);
 
 const styles = StyleSheet.create({
   program: {
-    paddingVertical: 10,
+    paddingBottom: 10,
     paddingHorizontal: 20,
     alignItems: 'flex-start',
     backgroundColor: theme.COLOR_PRIMARY_LIGHT,
@@ -51,7 +53,6 @@ const styles = StyleSheet.create({
   },
   completion: {
     textAlign: 'right',
-    width: '100%',
     color: theme.COLOR_PRIMARY,
     fontSize: theme.FONT_SIZE_SMALL,
   },
@@ -66,5 +67,12 @@ const styles = StyleSheet.create({
     width: '50%',
     borderRadius: 5,
     backgroundColor: theme.MAIN_COLOR,
+  },
+  titleLine: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '100%',
+    alignItems: 'center',
   },
 });

@@ -5,6 +5,16 @@ import fixtures from '../Fixtures/TestFixtures';
 
 import TrainingPage from './TrainingPage';
 
+const mockedSetPage = jest.fn();
+jest.mock('@react-native-community/viewpager', () => {
+  const RealComponent = jest.requireActual('@react-native-community/viewpager');
+  const React = require('react');
+
+  return class ViewPager extends RealComponent {
+    setPage = mockedSetPage;
+  };
+});
+
 describe('<TrainingPage />', () => {
   const navigation = { navigate: jest.fn() };
   const program = fixtures.programs[0];
@@ -15,16 +25,6 @@ describe('<TrainingPage />', () => {
       program,
     },
   };
-
-  it('renders correctly with a training outside any program', () => {
-    const route = {
-      params: {
-        training,
-      },
-    };
-    const tree = renderer.create(<TrainingPage route={route} />).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
 
   it('renders correctly with a training within a program', () => {
     const tree = renderer.create(<TrainingPage route={route} />).toJSON();
@@ -41,12 +41,12 @@ describe('<TrainingPage />', () => {
 
     const { queryByTestId } = render(<TrainingPage navigation={navigation} route={route} />);
 
-    expect(queryByTestId('goToPrev')).toBeDefined();
-    expect(queryByTestId('goToNext')).toBeNull(); // Not displayed on last training
+    expect(queryByTestId('goToPrev1')).toBeDefined();
+    expect(queryByTestId('goToNext1')).toBeNull(); // Not displayed on last training
 
-    await fireEvent.press(queryByTestId('goToPrev'));
+    await fireEvent.press(queryByTestId('goToPrev1'));
 
-    expect(navigation.navigate).toBeCalledWith('TrainingPage', { training: program.trainings[0], program });
+    expect(mockedSetPage).toBeCalledWith(0);
   });
 
   it('links to next training within program', async () => {
@@ -59,12 +59,12 @@ describe('<TrainingPage />', () => {
 
     const { queryByTestId } = render(<TrainingPage navigation={navigation} route={route} />);
 
-    expect(queryByTestId('goToPrev')).toBeNull();
-    expect(queryByTestId('goToNext')).toBeDefined();
+    expect(queryByTestId('goToPrev0')).toBeNull();
+    expect(queryByTestId('goToNext0')).toBeDefined();
 
-    await fireEvent.press(queryByTestId('goToNext'));
+    await fireEvent.press(queryByTestId('goToNext0'));
 
-    expect(navigation.navigate).toBeCalledWith('TrainingPage', { training: program.trainings[1], program });
+    expect(mockedSetPage).toBeCalledWith(1);
   });
 
   it('links to drill page', async () => {
@@ -78,9 +78,9 @@ describe('<TrainingPage />', () => {
   });
 
   it('starts training links to first drill', async () => {
-    const { queryByText } = render(<TrainingPage navigation={navigation} route={route} />);
+    const { queryByTestId } = render(<TrainingPage navigation={navigation} route={route} />);
 
-    await fireEvent.press(queryByText('Start training'));
+    await fireEvent.press(queryByTestId('start0'));
 
     expect(navigation.navigate).toBeCalledWith('DrillPageMinimal', { drill: training.drills[0], training, program });
   });

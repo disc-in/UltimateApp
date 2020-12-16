@@ -207,7 +207,7 @@ export default {
   },
   programs: {
     program: {
-      completion: '{{done}}/{{total}} trainings',
+      completion: '{{done}}/{{total}}',
     },
   },
   tacticsPage: {

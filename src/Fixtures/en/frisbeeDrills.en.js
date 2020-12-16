@@ -98,6 +98,10 @@ import firtWallAnimation from '../Animation/Wall';
 import bullAnimation from '../Animation/Bull';
 import bullSpeedAnimation from '../Animation/BullSpeed';
 import StatuesAnimation from '../Animation/Statues';
+import ArrowAnimation from '../Animation/Arrow';
+import JapaneseAnimation from '../Animation/Japanese';
+import theZAnimation from '../Animation/TheZ';
+import dishieLineAnimation from '../Animation/DishieLine';
 
 const stabilityDrill = {
   id: 1,
@@ -6917,6 +6921,166 @@ const statues = {
   ],
 };
 
+const arrow = {
+  id: 1054,
+  type: DrillTypes.FRISBEE,
+  author: 'Buzz Bullet',
+  title: 'The Arrow',
+  image: 'https://zupimages.net/up/20/51/khgg.jpg',
+  description: 'The goal is to work on the execution of a cut in the endzone',
+  minimalPlayersNumber: 8,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disc',
+  durationInMinutes: 10,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.WARM_UP, FrisbeeGoals.CUTTING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'The Classic Arrow',
+      animation: ArrowAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        'The disc moves from one side to the other side of the endzone. The cutter, from the last of the stack, has to find the perfect timing to catch the disc without decelerating.',
+    },
+    {
+      id: 2,
+      title: 'The Japanese',
+      animation: JapaneseAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction: 'The same principle but in this variant the thrower follows his disc to do a give-n-go.',
+    },
+  ],
+};
+
+const guts = {
+  id: 1055,
+  type: DrillTypes.FRISBEE,
+  author: 'Jim Boggio Sr.',
+  title: 'Guts',
+  image: 'https://zupimages.net/up/20/51/f2ix.jpg',
+  description:
+    'The throwing team scores a point when the other team does not catch a correctly thrown disc. The receiving team scores a point when the disc is not thrown correctly. When a correctly thrown disc is caught by the other team, no points are scored. The team that first reaches 21 points, wins the game.',
+  minimalPlayersNumber: 6,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disc - 4 cones',
+  durationInMinutes: 15,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.GAMES],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'Guts',
+      animation: undefined,
+      vimeoId: '491667604',
+      repetition: '',
+      rest: '',
+      instruction:
+        'The playing field consists of two parallel goal-lines 15 m in length and 14 m apart. The teams stand in line opposite each other. Each team defends a goal- line. The disc is thrown back and forth between the teams. The object is to throw the disc through the line of defending players.',
+    },
+  ],
+};
+
+const flubber = {
+  id: 1056,
+  type: DrillTypes.FRISBEE,
+  author: 'Mooncatchers',
+  title: 'Flubber Guts',
+  image: 'https://zupimages.net/up/20/51/7bvr.jpg',
+  description:
+    'The throwing team scores a point when the other team does not catch a correctly thrown disc. When a correctly thrown disc is caught by the other team, no points are scored. The team that first reaches 21 points, wins the game.',
+  minimalPlayersNumber: 4,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disc - 2 cones',
+  durationInMinutes: 15,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.GAMES, FrisbeeGoals.JUNIOR, FrisbeeGoals.WARM_UP, FrisbeeGoals.CATCH],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'Flubber',
+      animation: undefined,
+      vimeoId: '486367662',
+      repetition: '',
+      rest: '',
+      instruction:
+        "The two teams are separated by a line. To catch the disc a player cannot have more than one point of contact with the disc simultaneously. If this is the case, the opposing team scores a point. A player of the opposite team may try to catch the disc without going over the line with his feet. If he catches the disc his team scores 2 points. If He touches the disc and the Frisbee falls, the other team scores a point.The disc must be thrown between the opponent's knees and head.",
+    },
+  ],
+};
+
+const theZ = {
+  id: 1057,
+  type: DrillTypes.FRISBEE,
+  author: 'Mooncatchers',
+  title: 'The Z',
+  image: 'https://zupimages.net/up/20/51/kh8z.jpg',
+  description: 'The ideal drill to work on curved passes as well as race timing.',
+  minimalPlayersNumber: 7,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disc',
+  durationInMinutes: 10,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.WARM_UP],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'The Z',
+      animation: theZAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        'A player goes, as fast as possible, long when the thrower catches the disc. When the thrower makes a realistic fake, the runner changes direction. The ideal is to work on all the different types of throwing possible',
+    },
+  ],
+};
+
+const dishieLine = {
+  id: 1058,
+  type: DrillTypes.FRISBEE,
+  author: 'Mooncatchers',
+  title: 'The Dishie Line',
+  image: 'https://zupimages.net/up/20/51/kh8z.jpg',
+  description: "Drill to learn how to attack one's disc and perform a small support pass",
+  minimalPlayersNumber: 8,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disc',
+  durationInMinutes: 10,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.WARM_UP],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'The Dishie Line',
+      animation: dishieLineAnimation,
+      vimeoId: '486367517',
+      repetition: '',
+      rest: '',
+      instruction: '',
+    },
+  ],
+};
+
 const normalGame = {
   id: 2001,
   type: DrillTypes.FRISBEE,
@@ -8012,6 +8176,12 @@ export const drills = [
   trident,
   bull,
   crossingTheField,
+  statues,
+  arrow,
+  guts,
+  flubber,
+  theZ,
+  dishieLine,
 
   // Commenting game drills because we don't want them in the drill list, only part of programs
   // // Games

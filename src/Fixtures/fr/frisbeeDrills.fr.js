@@ -8129,6 +8129,7 @@ export const drills = [
   trident,
   bull,
   crossingTheField,
+  statues,
 
   // // Games
   // normalGame,

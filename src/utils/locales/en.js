@@ -118,8 +118,8 @@ export default {
       saveSuccess: "The play has been saved as '{{title}}'",
       rename: 'Rename',
       new: 'New',
-      share: 'Contribute',
-      sharePlaceholder: 'Please add this play to Disc In',
+      share: 'Share',
+      sharePlaceholder: 'Use the following id to import my awesome play in Disc In: {{uuid}}',
     },
     renamePlayModal: {
       placeholder: 'Click here to enter the new name',

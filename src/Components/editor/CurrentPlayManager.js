@@ -4,6 +4,7 @@ import { Menu, Divider } from 'react-native-paper';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import I18n from '../../utils/i18n';
+import { upload } from '../../utils/firebase';
 import { showSuccess } from '../../utils/flashMessage';
 import HeaderButton from '../shared/HeaderButton';
 
@@ -14,9 +15,9 @@ const CurrentPlayManager = (props) => {
   const closeMenu = () => setVisible(false);
 
   const contribute = () => {
+    const result = upload(props.currentPlay);
     Share.share({
-      title: I18n.t('editor.currentPlayManager.sharePlaceholder'),
-      message: '----- ENCODED PLAY -------\n' + JSON.stringify(props.currentPlay) + '\n---------------------------',
+      title: I18n.t('editor.currentPlayManager.sharePlaceholder', { uuid: props.currentPlay.uuid }),
     }).catch((err) => console.log(err));
   };
 

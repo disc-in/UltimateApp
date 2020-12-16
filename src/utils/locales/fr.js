@@ -118,8 +118,8 @@ export default {
       saveSuccess: 'La tactique "{{title}}" a été sauvegardée',
       rename: 'Renommer',
       new: 'Nouveau',
-      share: 'Contribuer',
-      sharePlaceholder: "Pouvez-vous ajouter cette tactique à l'application ?",
+      share: 'Partager',
+      sharePlaceholder: 'Utilise cet identifiant pour télécharger ma super tactique dans Disc In : {{uuid}}',
     },
     renamePlayModal: {
       placeholder: 'Appuyer ici pour renommer',

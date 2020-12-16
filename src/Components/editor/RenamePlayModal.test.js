@@ -11,7 +11,7 @@ describe('<RenamePlayModal />', () => {
 
   const onRename = jest.fn();
   const close = jest.fn();
-  const currentPlay = { animation: animationSquare, title: 'Square' };
+  const currentPlay = { animation: animationSquare, title: 'Square', uuid: '123' };
   const customPlays = [currentPlay];
   const renamePlay = jest.fn();
 

@@ -103,7 +103,7 @@ export const PlayEditorPage = (props) => {
   };
 
   const onDelete = (play) => {
-    props.deletePlay(play.title);
+    props.deletePlay(play.uuid);
 
     if (play.title === currentPlay.title) createNewPlay();
   };

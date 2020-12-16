@@ -4,6 +4,7 @@ import { persistStore, persistReducer, createMigrate } from 'redux-persist';
 
 import rootReducer from './Reducers';
 import fixtures from '../Fixtures';
+import { generateUuid } from '../utils/uuid';
 
 const migrations = {
   1: (state) => {
@@ -18,6 +19,19 @@ const migrations = {
       ...state,
       customPlays,
       customDrills: undefined,
+    };
+  },
+  2: (state) => {
+    // migration to add a uuid to existing customPlays
+    const customPlays = state.customPlays?.map((play) => {
+      return {
+        ...play,
+        uuid: generateUuid(),
+      };
+    });
+    return {
+      ...state,
+      customPlays,
     };
   },
 };

@@ -199,7 +199,7 @@ export default {
   },
   programs: {
     program: {
-      completion: '{{done}}/{{total}} entraînements',
+      completion: '{{done}}/{{total}}',
     },
   },
   tacticsPage: {

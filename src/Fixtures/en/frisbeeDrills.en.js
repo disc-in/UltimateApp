@@ -1,4 +1,13 @@
-import { DrillTypes, Intensities, Levels, FrisbeeGoals, FitnessGoals, SeasonTimings, EquipmentLabels } from '../config';
+import {
+  DrillTypes,
+  Intensities,
+  Levels,
+  FrisbeeGoals,
+  FitnessGoals,
+  SeasonTimings,
+  EquipmentLabels,
+  AgeCategory,
+} from '../config';
 
 import animationGoToTen from '../Animation/AnimationGoToTen';
 import throwingMachine from '../Animation/ThrowingMachine';
@@ -7914,67 +7923,78 @@ export const trainings = [
 export const programs = [
   {
     id: 1,
-    type: DrillTypes.FRISBEEJUNIOR,
+    type: DrillTypes.FRISBEE,
+    age: AgeCategory.JUNIOR,
     title: 'Initiation U10',
     trainings: [u10Initiation],
   },
   {
     id: 2,
-    type: DrillTypes.FRISBEEJUNIOR,
+    type: DrillTypes.FRISBEE,
+    age: AgeCategory.JUNIOR,
     title: 'Initiation U13',
     trainings: [firstU13Training, secondU13Training, thirdU13Training],
   },
   {
     id: 3,
     type: DrillTypes.FRISBEE,
+    age: AgeCategory.SENIOR,
     title: 'Initiation Adult',
     trainings: [firstInitiationAdultTraining, secondInintiationAdultTraining, thirdInintiationAdultTraining],
   },
   {
     id: 4,
     type: DrillTypes.FRISBEE,
+    age: AgeCategory.SENIOR,
     title: 'Vertical Stack',
     trainings: [initiationVerticalTraining, secondVerticalTraining, dumpSwingTraining],
   },
   {
     id: 5,
     type: DrillTypes.FRISBEE,
+    age: AgeCategory.SENIOR,
     title: 'Horizontal Stack',
     trainings: [initiationHorizontal, horizontalFlow, horizontalLine],
   },
   {
     id: 6,
     type: DrillTypes.FRISBEE,
+    age: AgeCategory.SENIOR,
     title: 'Individual Defense',
     trainings: [defenseBaseTraining, defenseSecond, defenseThird],
   },
   {
     id: 7,
     type: DrillTypes.FRISBEE,
+    age: AgeCategory.SENIOR,
     title: 'Zone Defense',
     trainings: [zoneCup],
   },
   {
     id: 8,
     type: DrillTypes.FRISBEE,
+    age: AgeCategory.SENIOR,
     title: 'Side Stack',
     trainings: [sideStackTraining],
   },
   {
     id: 9,
     type: DrillTypes.FRISBEE,
+    age: AgeCategory.SENIOR,
     title: 'Split Stack',
     trainings: [splitStackTraining],
   },
   {
     id: 10,
     type: DrillTypes.FRISBEE,
+    age: AgeCategory.SENIOR,
     title: 'Diagonal Stack',
     trainings: [diagonalStackTraining],
   },
   {
     id: 11,
     type: DrillTypes.FITNESS,
+    age: AgeCategory.SENIOR,
     equipmentLabel: EquipmentLabels.NONE,
     title: 'Off-season - Part 1',
     trainings: [
@@ -7992,6 +8012,7 @@ export const programs = [
   {
     id: 12,
     type: DrillTypes.FITNESS,
+    age: AgeCategory.SENIOR,
     equipmentLabel: EquipmentLabels.NONE,
     title: 'Off-season - Part 2',
     trainings: [
@@ -8011,6 +8032,7 @@ export const programs = [
   {
     id: 13,
     type: DrillTypes.FITNESS,
+    age: AgeCategory.SENIOR,
     equipmentLabel: EquipmentLabels.NONE,
     title: 'Pre-season',
     trainings: [
@@ -8029,6 +8051,7 @@ export const programs = [
   {
     id: 14,
     type: DrillTypes.FITNESS,
+    age: AgeCategory.SENIOR,
     equipmentLabel: EquipmentLabels.NONE,
     title: 'In-season',
     trainings: [
@@ -8045,6 +8068,7 @@ export const programs = [
   {
     id: 15,
     type: DrillTypes.FITNESS,
+    age: AgeCategory.SENIOR,
     equipmentLabel: EquipmentLabels.NONE,
     title: 'Peak',
     trainings: [fitnessWeek39, fitnessWeek40, fitnessWeek41],
@@ -8052,6 +8076,7 @@ export const programs = [
   {
     id: 16,
     type: DrillTypes.FITNESS,
+    age: AgeCategory.SENIOR,
     equipmentLabel: EquipmentLabels.FULL,
     title: 'Off-season',
     trainings: [
@@ -8070,6 +8095,7 @@ export const programs = [
   {
     id: 17,
     type: DrillTypes.FITNESS,
+    age: AgeCategory.SENIOR,
     equipmentLabel: EquipmentLabels.FULL,
     title: 'Pre-season',
     trainings: [
@@ -8087,6 +8113,7 @@ export const programs = [
   {
     id: 18,
     type: DrillTypes.FITNESS,
+    age: AgeCategory.SENIOR,
     equipmentLabel: EquipmentLabels.FULL,
     title: 'In-season',
     trainings: [
@@ -8103,6 +8130,7 @@ export const programs = [
   {
     id: 19,
     type: DrillTypes.FITNESS,
+    age: AgeCategory.SENIOR,
     equipmentLabel: EquipmentLabels.FULL,
     title: 'Peak',
     trainings: [fitnessFull27, fitnessFull28, fitnessFull29],

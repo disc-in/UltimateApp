@@ -1,4 +1,13 @@
-import { DrillTypes, Intensities, Levels, FrisbeeGoals, FitnessGoals, SeasonTimings, EquipmentLabels } from '../config';
+import {
+  DrillTypes,
+  Intensities,
+  Levels,
+  FrisbeeGoals,
+  FitnessGoals,
+  SeasonTimings,
+  EquipmentLabels,
+  AgeCategory,
+} from '../config';
 
 import animationGoToTen from '../Animation/AnimationGoToTen';
 import throwingMachine from '../Animation/ThrowingMachine';
@@ -8028,61 +8037,71 @@ export const trainings = [
 export const programs = [
   {
     id: 1,
-    type: DrillTypes.FRISBEEJUNIOR,
+    type: DrillTypes.FRISBEE,
+    age: AgeCategory.JUNIOR,
     title: 'Initiation u10',
     trainings: [u10Initiation],
   },
   {
     id: 2,
-    type: DrillTypes.FRISBEEJUNIOR,
+    type: DrillTypes.FRISBEE,
+    age: AgeCategory.JUNIOR,
     title: 'Initiation u13',
     trainings: [firstU13Training, secondU13Training, thirdU13Training],
   },
   {
     id: 3,
     type: DrillTypes.FRISBEE,
+    age: AgeCategory.SENIOR,
     title: 'Initiation adultes',
     trainings: [firstInitiationAdultTraining, secondInintiationAdultTraining, thirdInintiationAdultTraining],
   },
   {
     id: 4,
     type: DrillTypes.FRISBEE,
+    age: AgeCategory.SENIOR,
     title: 'Stack Vertical',
     trainings: [initiationVerticalTraining, secondVerticalTraining, dumpSwingTraining],
   },
   {
     id: 5,
     type: DrillTypes.FRISBEE,
+    age: AgeCategory.SENIOR,
     title: 'Stack Horizontal',
     trainings: [initiationHorizontal, horizontalFlow, horizontalLine],
   },
   {
     id: 6,
     type: DrillTypes.FRISBEE,
+    age: AgeCategory.SENIOR,
     title: 'Défense individuelle',
     trainings: [defenseBaseTraining, defenseSecond, defenseThird],
   },
   {
     id: 7,
     type: DrillTypes.FRISBEE,
+    age: AgeCategory.SENIOR,
     title: 'Défense de Zone',
     trainings: [zoneCup],
   },
   {
     id: 8,
     type: DrillTypes.FRISBEE,
+    age: AgeCategory.SENIOR,
     title: 'Stack sur le côté',
     trainings: [sideStackTraining],
   },
   {
     id: 9,
     type: DrillTypes.FRISBEE,
+    age: AgeCategory.SENIOR,
     title: 'Stack en U',
     trainings: [splitStackTraining],
   },
   {
     id: 10,
     type: DrillTypes.FRISBEE,
+    age: AgeCategory.SENIOR,
     title: 'Stack diagonal',
     trainings: [diagonalStackTraining],
   },

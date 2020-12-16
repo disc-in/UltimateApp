@@ -15,7 +15,7 @@ import ourPlays from '../../assets/HomePage/ourplays.jpg';
 import essential from '../../assets/HomePage/essential.jpg';
 import huddle from '../../assets/HomePage/huddle.jpg';
 import FeedbackButton from './home/FeedbackButton';
-import { DrillTypes, EquipmentLabels } from '../Fixtures/config';
+import { AgeCategory, DrillTypes, EquipmentLabels } from '../Fixtures/config';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -33,7 +33,9 @@ const HomeScreen = (props) => {
         </ImageBackground>
       </TouchableHighlight>
       <TouchableHighlight
-        onPress={() => props.navigation.navigate('ProgramListPage', { type: DrillTypes.FRISBEE })}
+        onPress={() =>
+          props.navigation.navigate('ProgramListPage', { type: DrillTypes.FRISBEE, age: AgeCategory.SENIOR })
+        }
         style={styles.menuItem}
       >
         <ImageBackground source={huddle} style={styles.image}>
@@ -43,7 +45,12 @@ const HomeScreen = (props) => {
         </ImageBackground>
       </TouchableHighlight>
       <TouchableHighlight
-        onPress={() => props.navigation.navigate('ProgramListPage', { type: DrillTypes.FRISBEEJUNIOR })}
+        onPress={() =>
+          props.navigation.navigate('ProgramListPage', {
+            type: DrillTypes.FRISBEE,
+            age: AgeCategory.JUNIOR,
+          })
+        }
         style={styles.menuItem}
       >
         <ImageBackground source={ourPlays} style={styles.image}>
@@ -144,7 +151,7 @@ const myTeam = (props) => {
         <TouchableHighlight onPress={() => props.navigation.navigate('PlayEditorPage')}>
           <View style={styles.center}>
             <Ionicons name="md-clipboard" color={theme.COLOR_PRIMARY} size={50} />
-            <Text style={styles.titleEditor}>Playbook</Text>
+            <Text style={styles.titleEditor}> {I18n.t('homePage.playbook')}</Text>
           </View>
         </TouchableHighlight>
       </View>

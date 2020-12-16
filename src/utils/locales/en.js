@@ -100,6 +100,7 @@ export default {
     dictionary: 'Dictionary',
     essential: 'Basics',
     tactics: 'Tactics',
+    playbook: 'Playbook',
   },
   playEditorPage: {
     untitledPlay: 'Unnamed play',

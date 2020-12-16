@@ -100,6 +100,7 @@ export default {
     dictionary: 'Lexique',
     essential: 'Les bases du jeu',
     tactics: 'Tactiques',
+    playbook: 'Playbook',
   },
   playEditorPage: {
     untitledPlay: 'Tactique sans titre',

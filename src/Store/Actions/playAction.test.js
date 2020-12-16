@@ -3,6 +3,7 @@ import { createPlay } from '../../Fixtures/TestFixtures';
 
 describe('savePlay', () => {
   const play = {
+    uuid: '123',
     animation: {},
     title: 'Title',
   };
@@ -14,17 +15,17 @@ describe('savePlay', () => {
 
 describe('renamePlay', () => {
   it('renders correctly', () => {
-    expect(renamePlay('previous title', 'new title')).toEqual({
+    expect(renamePlay('123', 'new title')).toEqual({
       type: 'RENAME_PLAY',
-      value: { oldTitle: 'previous title', newTitle: 'new title' },
+      value: { uuid: '123', newTitle: 'new title' },
     });
   });
 });
 
 describe('deletePlay', () => {
-  const title = 'title';
+  const uuid = '123';
 
   it('renders correctly', () => {
-    expect(deletePlay(title)).toEqual({ type: 'DELETE_PLAY', value: title });
+    expect(deletePlay(uuid)).toEqual({ type: 'DELETE_PLAY', value: uuid });
   });
 });

@@ -38,7 +38,7 @@ const migrations = {
 
 const persistConfig = {
   key: 'root',
-  version: 1,
+  version: 2,
   storage: AsyncStorage,
   whitelist: ['completeTrainings', 'favoriteDrills', 'customPlays'],
   blacklist: ['drills', 'trainings', 'programs', 'theory'],

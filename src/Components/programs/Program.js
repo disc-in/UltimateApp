@@ -40,7 +40,7 @@ export default connect(mapStateToProps)(Program);
 
 const styles = StyleSheet.create({
   program: {
-    paddingVertical: 10,
+    paddingBottom: 10,
     paddingHorizontal: 20,
     alignItems: 'flex-start',
     backgroundColor: theme.COLOR_PRIMARY_LIGHT,

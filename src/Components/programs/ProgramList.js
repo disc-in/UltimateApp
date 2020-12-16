@@ -59,12 +59,7 @@ const ProgramList = (props) => {
 
   const renderContent = (section, _, isActive) => {
     return (
-      <FlatList
-        contentContainerStyle={styles.trainingsList}
-        data={section.trainings}
-        keyExtractor={(item) => item.id.toString()}
-        renderItem={renderTraining}
-      />
+      <FlatList data={section.trainings} keyExtractor={(item) => item.id.toString()} renderItem={renderTraining} />
     );
   };
 
@@ -92,9 +87,6 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   accordionContainerStyle: {
-    marginBottom: 10,
-  },
-  trainingsList: {
     marginBottom: 10,
   },
   training: {

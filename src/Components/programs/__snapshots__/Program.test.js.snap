@@ -28,29 +28,40 @@ exports[`<Program /> renders correctly 1`] = `
       }
     }
   >
-    <Text
+    <View
       style={
         Object {
-          "color": "#232b2b",
-          "fontSize": 20,
-          "fontWeight": "bold",
-        }
-      }
-    >
-      Beginner
-    </Text>
-    <Text
-      style={
-        Object {
-          "color": "#232b2b",
-          "fontSize": 14,
-          "textAlign": "right",
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
           "width": "100%",
         }
       }
     >
-      0/1 trainings
-    </Text>
+      <Text
+        style={
+          Object {
+            "color": "#232b2b",
+            "fontSize": 20,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Beginner
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#232b2b",
+            "fontSize": 14,
+            "textAlign": "right",
+          }
+        }
+      >
+        0/1
+      </Text>
+    </View>
     <View
       style={
         Object {
@@ -116,30 +127,41 @@ exports[`<Program /> renders correctly when finished 1`] = `
       }
     }
   >
-    <Text
+    <View
       style={
         Object {
-          "color": "#232b2b",
-          "fontSize": 20,
-          "fontWeight": "bold",
-        }
-      }
-    >
-      Beginner
-    </Text>
-    <Text
-      style={
-        Object {
-          "color": "#232b2b",
-          "fontSize": 14,
-          "textAlign": "right",
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
           "width": "100%",
         }
       }
     >
-      2/2 trainings
-       👍🎉
-    </Text>
+      <Text
+        style={
+          Object {
+            "color": "#232b2b",
+            "fontSize": 20,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Beginner
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#232b2b",
+            "fontSize": 14,
+            "textAlign": "right",
+          }
+        }
+      >
+        2/2
+         👍🎉
+      </Text>
+    </View>
     <View
       style={
         Object {

@@ -62,29 +62,40 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
                 }
               }
             >
-              <Text
+              <View
                 style={
                   Object {
-                    "color": "#232b2b",
-                    "fontSize": 20,
-                    "fontWeight": "bold",
-                  }
-                }
-              >
-                Beginner
-              </Text>
-              <Text
-                style={
-                  Object {
-                    "color": "#232b2b",
-                    "fontSize": 14,
-                    "textAlign": "right",
+                    "alignItems": "center",
+                    "flex": 1,
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
                     "width": "100%",
                   }
                 }
               >
-                0/2 trainings
-              </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#232b2b",
+                      "fontSize": 20,
+                      "fontWeight": "bold",
+                    }
+                  }
+                >
+                  Beginner
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#232b2b",
+                      "fontSize": 14,
+                      "textAlign": "right",
+                    }
+                  }
+                >
+                  0/2
+                </Text>
+              </View>
               <View
                 style={
                   Object {

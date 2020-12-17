@@ -98,6 +98,10 @@ import firtWallAnimation from '../Animation/Wall';
 import bullAnimation from '../Animation/Bull';
 import bullSpeedAnimation from '../Animation/BullSpeed';
 import StatuesAnimation from '../Animation/Statues';
+import ArrowAnimation from '../Animation/Arrow';
+import JapaneseAnimation from '../Animation/Japanese';
+import theZAnimation from '../Animation/TheZ';
+import dishieLineAnimation from '../Animation/DishieLine';
 
 const stabilityDrill = {
   id: 1,
@@ -6988,7 +6992,7 @@ const statues = {
   minimalPlayersNumber: 2,
   inGame: undefined,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 disc per player',
+  equipment: '1 disque par joueur',
   durationInMinutes: 10,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.WARM_UP],
@@ -7007,7 +7011,7 @@ const statues = {
     },
     {
       id: 2,
-      title: 'Signal visuel',
+      title: 'Signal Visuel',
       vimeoId: undefined,
       repetition: '',
       rest: '',
@@ -7016,12 +7020,282 @@ const statues = {
     },
     {
       id: 3,
-      title: 'Le serveur',
+      title: 'Le Serveur',
       vimeoId: undefined,
       repetition: '',
       rest: '',
       instruction:
         'Les joueurs doivent porter leur disque posé sur une main, ce qui leur demande beaucoup plus de concentration !',
+    },
+  ],
+};
+
+const arrow = {
+  id: 1054,
+  type: DrillTypes.FRISBEE,
+  author: 'Buzz Bullet',
+  title: 'La Flèche',
+  image: 'https://zupimages.net/up/20/51/khgg.jpg',
+  description: "L'objectif est de travailler à l'exécution d'un cut dans la endzone",
+  minimalPlayersNumber: 8,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disque',
+  durationInMinutes: 10,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.WARM_UP, FrisbeeGoals.CUTTING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'La Flèche',
+      animation: ArrowAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        "Le disque se déplace d'un côté à l'autre de la endzone. Le cutter, étant dernier du stack, doit trouver le moment idéal pour attraper le disque sans décélérer.",
+    },
+    {
+      id: 2,
+      title: 'La Japonaise',
+      animation: JapaneseAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction: 'Le même principe mais dans cette variante le lanceur suit son disque pour faire un une-deux',
+    },
+  ],
+};
+
+const guts = {
+  id: 1055,
+  type: DrillTypes.FRISBEE,
+  author: 'Jim Boggio Sr.',
+  title: 'Guts',
+  image: 'https://zupimages.net/up/20/51/f2ix.jpg',
+  description:
+    "L'équipe qui lance marque un point lorsque l'autre équipe n'attrape pas un disque correctement lancé. Lorsqu'un disque correctement lancé est attrapé par l'autre équipe, aucun point n'est marqué. L'équipe qui atteint la première marque de 21 points remporte le match.",
+  minimalPlayersNumber: 6,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disque - 4 plots',
+  durationInMinutes: 15,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.GAMES],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'Guts',
+      animation: undefined,
+      vimeoId: '491667604',
+      repetition: '',
+      rest: '',
+      instruction:
+        "Le terrain de jeu se compose de deux lignes de but parallèles de 15 m de long et distantes de 14 m. Les équipes sont alignées en face l'une de l'autre. Chaque équipe défend une ligne de but. Le disque est lancé en va-et-vient entre les équipes. Le but est de lancer le disque à travers la ligne des défenseurs.",
+    },
+  ],
+};
+
+const flubber = {
+  id: 1056,
+  type: DrillTypes.FRISBEE,
+  author: 'Mooncatchers',
+  title: 'Flubber Guts',
+  image: 'https://zupimages.net/up/20/51/7bvr.jpg',
+  description:
+    "L'équipe qui lance marque un point lorsque l'autre équipe n'attrape pas un disque correctement lancé. Lorsqu'un disque correctement lancé est attrapé par l'autre équipe, aucun point n'est marqué. L'équipe qui atteint la première marque de 21 points remporte le match.",
+  minimalPlayersNumber: 4,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disc - 2 cones',
+  durationInMinutes: 15,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.GAMES, FrisbeeGoals.JUNIOR, FrisbeeGoals.WARM_UP, FrisbeeGoals.CATCH],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'Flubber',
+      animation: undefined,
+      vimeoId: '486367662',
+      repetition: '',
+      rest: '',
+      instruction:
+        "Les deux équipes sont séparées par une ligne. Pour attraper le disque, un joueur ne peut pas avoir plus d'un point de contact avec le disque simultanément. Si c'est le cas, l'équipe adverse marque un point. Un joueur de l'équipe adverse peut essayer d'attraper le disque sans dépasser la ligne avec ses pieds. S'il attrape le disque, son équipe marque 2 points. S'il touche le disque et que le frisbee tombe, l'autre équipe marque un point. Le disque doit être lancé entre les genoux et la tête de l'adversaire.",
+    },
+  ],
+};
+
+const theZ = {
+  id: 1057,
+  type: DrillTypes.FRISBEE,
+  author: 'Mooncatchers',
+  title: 'Le Z',
+  image: 'https://zupimages.net/up/20/51/kh8z.jpg',
+  description: "L'exercice idéal pour travailler les passes en courbe et le timing des courses.",
+  minimalPlayersNumber: 7,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disc',
+  durationInMinutes: 10,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.WARM_UP],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'Le Z',
+      animation: theZAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        "Un joueur va, aussi vite que possible, en longue quand le lanceur attrape le disque. Lorsque le lanceur fait une feinte réaliste, le coureur change de direction. L'idéal est de travailler tous les types de lancer possibles",
+    },
+  ],
+};
+
+const dishieLine = {
+  id: 1058,
+  type: DrillTypes.FRISBEE,
+  author: 'Mooncatchers',
+  title: 'La ligne à Dishies',
+  image: 'https://zupimages.net/up/20/51/hc89.jpg',
+  description: 'Exerice pour apprendre à effectuer la petite passe de soutien',
+  minimalPlayersNumber: 8,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disque',
+  durationInMinutes: 10,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.WARM_UP],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'La Ligne à Dishies',
+      animation: dishieLineAnimation,
+      vimeoId: '486367517',
+      repetition: '',
+      rest: '',
+      instruction:
+        '2 Lignes se font face. Les premiers joueurs de chaques lignes courent en direction du porteur du disque pour récuperer une dishie. Si le lanceur effectue une feinte réaliste, le coureur doit changer la direction de sa course',
+    },
+  ],
+};
+
+const manipulation = {
+  id: 1059,
+  type: DrillTypes.FRISBEE,
+  author: 'Mooncatchers',
+  title: 'Dexterity Boost',
+  image: 'https://zupimages.net/up/20/51/ej3n.jpg',
+  description: 'Exercices pour apprendre à manipuler le disque dans des situations non conventionnelles',
+  minimalPlayersNumber: 2,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disque',
+  durationInMinutes: 10,
+  intensity: Intensities.LOW,
+  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.WARM_UP, FrisbeeGoals.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'Trois Disques',
+      animation: undefined,
+      vimeoId: '475053354',
+      repetition: '',
+      rest: '',
+      instruction:
+        "Un joueur ne doit jamais avoir en possession plus d'un disque. L'objectif est de réussir à former la chaine de lancers le plus logntemps possible.",
+    },
+    {
+      id: 2,
+      title: 'Greatest',
+      animation: undefined,
+      vimeoId: '475053092',
+      repetition: '',
+      rest: '',
+      instruction:
+        "Un des deux joueurs doit lancer exclusivement en Greatest. Pour qu'un greatest soit réglementaire le lancer doit être effectuer sans que le joueur touche le sol",
+    },
+    {
+      id: 3,
+      title: 'Le Double Catch',
+      animation: undefined,
+      vimeoId: '475055767',
+      repetition: '',
+      rest: '',
+      instruction: "L'objectif est de rattraper deux (ou trois) disques lancer par votre partenaire",
+    },
+    {
+      id: 4,
+      title: "A l'Aveugle",
+      animation: undefined,
+      vimeoId: '475055902',
+      repetition: '',
+      rest: '',
+      instruction:
+        'Quand un joueur lance le disque, il doit crier "up" afin que son partenaire se retourne pour attraper le disque. Pensez à faire varier les courbes',
+    },
+  ],
+};
+
+const racingWarmUP = {
+  id: 1060,
+  type: DrillTypes.FRISBEE,
+  author: 'Focus Ultimate',
+  title: "Courses d'Echauffement",
+  image: 'https://zupimages.net/up/20/51/ej3n.jpg',
+  description: "Exercices pour augmenter l'intensité avant un match avec des sprints",
+  minimalPlayersNumber: 10,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disque - 12 plots',
+  durationInMinutes: 10,
+  intensity: Intensities.HIGH,
+  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.WARM_UP],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'Touche ses mains',
+      animation: undefined,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        "Deux équipes s'affrontent. Un joueur ou un coach se place devant les 2 lignes. Il effectue des feintes et lorsque le frisbee touche le sol, les premiers joueurs de chaque ligne court le plus vite possible pour toucher ces mains. Une fois toucher, ils peuvent faire demi-tour et font gagner un point à leur équipe si il passe la ligne en premier. Le coach peut se déplacer à sa guise et faire varier la hauteur de ses mains.",
+    },
+    {
+      id: 2,
+      title: 'Morpion',
+      animation: undefined,
+      vimeoId: '486367246',
+      repetition: '',
+      rest: '',
+      instruction:
+        "Deux équipes s'affrontent. L'objectif est de réaliser une ligne de 3 t-shirts de la même couleur avant l'équipe adverse. Il y a seulement 3 t-shirt par équipe et lorsque le quatrième joueur prend le relai, il peut déplacer un t-shirt",
+    },
+    {
+      id: 3,
+      title: 'Le Relai',
+      animation: undefined,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        "C'est une course de relai. Un joueur doit effectuer un parcours le plus rapidement possible afin qu'un coéquipier puisse prendre le relai. Première équipe à finir le relai l'emporte.",
     },
   ],
 };
@@ -8130,6 +8404,13 @@ export const drills = [
   bull,
   crossingTheField,
   statues,
+  arrow,
+  guts,
+  flubber,
+  theZ,
+  dishieLine,
+  manipulation,
+  racingWarmUP,
 
   // // Games
   // normalGame,

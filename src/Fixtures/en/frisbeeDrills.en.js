@@ -7057,7 +7057,7 @@ const dishieLine = {
   type: DrillTypes.FRISBEE,
   author: 'Mooncatchers',
   title: 'The Dishie Line',
-  image: 'https://zupimages.net/up/20/51/kh8z.jpg',
+  image: 'https://zupimages.net/up/20/51/hc89.jpg',
   description: "Drill to learn how to attack one's disc and perform a small support pass",
   minimalPlayersNumber: 8,
   inGame: undefined,
@@ -7076,7 +7076,116 @@ const dishieLine = {
       vimeoId: '486367517',
       repetition: '',
       rest: '',
-      instruction: '',
+      instruction:
+        '2 Lines face each other. The first players of each line run towards the disc carrier to retrieve a dishie. If the thrower makes a realistic fake, the runner must change the direction of his cut.',
+    },
+  ],
+};
+
+const manipulation = {
+  id: 1059,
+  type: DrillTypes.FRISBEE,
+  author: 'Mooncatchers',
+  title: 'Dexterity Boost',
+  image: 'https://zupimages.net/up/20/51/ej3n.jpg',
+  description: 'Drills to learn how to manipulate the disc in unconventional situations',
+  minimalPlayersNumber: 2,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disc',
+  durationInMinutes: 10,
+  intensity: Intensities.LOW,
+  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.WARM_UP, FrisbeeGoals.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'Three Discs',
+      animation: undefined,
+      vimeoId: '475053354',
+      repetition: '',
+      rest: '',
+      instruction: 'One player could never hold more than one disc at any moment. Try to "survive" as long as possible',
+    },
+    {
+      id: 2,
+      title: 'Greatest',
+      animation: undefined,
+      vimeoId: '475053092',
+      repetition: '',
+      rest: '',
+      instruction:
+        'Grab a disc and your partner and try to throw as many greatest as you can. In order for a greatest to be legal, the throw must be thrown without the player touching the ground.',
+    },
+    {
+      id: 3,
+      title: 'Double Catch',
+      animation: undefined,
+      vimeoId: '475055767',
+      repetition: '',
+      rest: '',
+      instruction: "The goal it's catching 2 (or even 3) send by your partner",
+    },
+    {
+      id: 4,
+      title: 'No Look',
+      animation: undefined,
+      vimeoId: '475055902',
+      repetition: '',
+      rest: '',
+      instruction:
+        'Each player looks away from his or her partner.When a player throws the disc, he has to shout "up" so that his partner turns around to catch it.Remember to vary the throwing curves',
+    },
+  ],
+};
+
+const racingWarmUP = {
+  id: 1060,
+  type: DrillTypes.FRISBEE,
+  author: 'Focus Ultimate',
+  title: 'Racing Warm UP',
+  image: 'https://zupimages.net/up/20/51/ej3n.jpg',
+  description: 'Drills to increase the intensity before a game with sprints',
+  minimalPlayersNumber: 10,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disc - 12 cones',
+  durationInMinutes: 10,
+  intensity: Intensities.HIGH,
+  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.WARM_UP],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'Clap his Hand',
+      animation: undefined,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Two teams compete against each other. A player or a coach stands in front of the 2 lines. He makes feints and when the Frisbee touches the ground, the first players of each line run as fast as possible to touch those hands. Once touched, they can turn around and score a point for their team if they cross the line first. The coach can move around and vary the height of his hands as he sees fit.',
+    },
+    {
+      id: 2,
+      title: 'Noughts and Crosses',
+      animation: undefined,
+      vimeoId: '486367246',
+      repetition: '',
+      rest: '',
+      instruction:
+        'Two teams compete against each other. The objective is to make a line of 3 t-shirts of the same color before the opposing team. There are only 3 t-shirts per team and when the fourth player takes over, he can move a previously dropped t-shirt.',
+    },
+    {
+      id: 3,
+      title: 'The Relay',
+      animation: undefined,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        'It is a relay race. A player must complete a course as quickly as possible so that a teammate can take over. The first team to finish the relay wins.',
     },
   ],
 };
@@ -8182,6 +8291,8 @@ export const drills = [
   flubber,
   theZ,
   dishieLine,
+  manipulation,
+  racingWarmUP,
 
   // Commenting game drills because we don't want them in the drill list, only part of programs
   // // Games

@@ -44,7 +44,7 @@ export const RenamePlayModal = (props) => {
                 ),
             })}
             onSubmit={(values) => {
-              props.renamePlay(props.currentPlay.title, values.name);
+              props.renamePlay(props.currentPlay.uuid, values.name);
               props.currentPlay.title = values.name;
               props.onRename();
               showSuccess(I18n.t('editor.renamePlayModal.renameSuccess'));

@@ -102,6 +102,7 @@ import ArrowAnimation from '../Animation/Arrow';
 import JapaneseAnimation from '../Animation/Japanese';
 import theZAnimation from '../Animation/TheZ';
 import dishieLineAnimation from '../Animation/DishieLine';
+import doubleLinesAnimation from '../Animation/DoubleLines';
 
 const stabilityDrill = {
   id: 1,
@@ -4846,7 +4847,7 @@ const youthLadder = {
   type: DrillTypes.FITNESS,
   author: 'PUC',
   title: 'Échelles pour les jeunes',
-  image: undefined,
+  image: 'https://zupimages.net/up/20/51/k1kk.jpg',
   description:
     "Exercices d'échelles adaptés aux enfants et adolescents. Les pratiquants doivent se concentrer d'abord sur la réalisation du geste juste, puis ensuite sur la vitesse d'exécution. Il faut souvent leur rappeler d'utiliser leurs bras pour accompagner les mouvements du bas du corps. Chaque exercice peut être répété 2 ou 3 fois, mais les exercices asymétriques doivent impérativement être répétés avec les deux pieds.",
   minimalPlayersNumber: 1,
@@ -5034,6 +5035,16 @@ const basicThrowsDrill = {
       rest: '',
       instruction:
         "Même situation et objectif. Pour augmenter la difficulté, un ou plusieurs joueurs (les fantômes) vont circuler entre les lanceurs dans l'objectif de provoquer un turn-over. Les fantômes n'ont pas le droit de toucher les disques ou les attaquants.",
+    },
+    {
+      id: 4,
+      title: 'Les Points Cardinaux',
+      animation: cardinalAnimation,
+      vimeoId: '462694734',
+      repetition: '',
+      rest: '',
+      instruction:
+        'Variante de lancer: Imaginez un compas avec votre pied de pivot au centre. Pivot N et lancer. Pivot NE et lancer. Pivot E et lancer et ainsi de suite autour du compas. Faire quatre fois le tour, en lançant deux fois les coups droits et deux fois les revers.',
     },
   ],
 };
@@ -6040,33 +6051,42 @@ const theDuel = {
   ],
 };
 
-const cardinal = {
+const dishieLine = {
   id: 1028,
   type: DrillTypes.FRISBEE,
-  author: 'PUC',
-  title: 'Les Points Cardinaux',
-  image: 'https://zupimages.net/up/20/25/xtik.png',
-  description: 'Apprenez à lancer dans toutes les positions.',
-  minimalPlayersNumber: 2,
-  inGame:
-    "Il faut être capable de s'adapter à la marque mise en place. Être capable de lancer rapidement permet d'être plus efficace pour battre la marque",
-  equipmentLabel: EquipmentLabels.NONE,
+  author: 'Mooncatchers',
+  title: 'Double Lignes',
+  image: 'https://zupimages.net/up/20/51/hc89.jpg',
+  description: 'Exerice pour apprendre à effectuer la petite passe de soutien',
+  minimalPlayersNumber: 8,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque',
   durationInMinutes: 10,
-  intensity: Intensities.LOW,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.WARM_UP],
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.WARM_UP],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
-      title: 'Les Points Cardinaux',
-      animation: cardinalAnimation,
-      vimeoId: '462694734',
+      title: 'Attaque ton Disque',
+      animation: doubleLinesAnimation,
+      vimeoId: undefined,
       repetition: '',
       rest: '',
       instruction:
-        'Imaginez un compas avec votre pied de pivot au centre. Pivot N et lancer. Pivot NE et lancer. Pivot E et lancer et ainsi de suite autour du compas. Faire quatre fois le tour, en lançant deux fois les coups droits et deux fois les revers.',
+        "2 Lignes se font face. Les premiers joueurs de chaque lignes courent en direction du porteur du disque et essaye d'attraper le disque le plus rapidement possible. Une fois le disque attrapé, il pivote et transmet le disque au premier joueur de sa ligne.",
+    },
+    {
+      id: 2,
+      title: 'La Ligne à Dishies',
+      animation: dishieLineAnimation,
+      vimeoId: '486367517',
+      repetition: '',
+      rest: '',
+      instruction:
+        '2 Lignes se font face. Les premiers joueurs de chaque lignes courent en direction du porteur du disque pour récupérer une dishie. Si le lanceur effectue une feinte réaliste, le coureur doit changer la direction de sa course',
     },
   ],
 };
@@ -6293,26 +6313,64 @@ const checkLong = {
   ],
 };
 
-const throwCatchThrow = {
+const manipulation = {
   id: 1034,
   type: DrillTypes.FRISBEE,
-  author: 'PUC',
-  title: 'Double Disc',
-  image: 'https://zupimages.net/up/20/25/gf41.jpg',
-  description: "Travail par paire. L'objectif est d'améliorer vos lancers et la vitesse de rattrapage.",
+  author: 'Mooncatchers',
+  title: 'Dexterity Boost',
+  image: 'https://zupimages.net/up/20/51/ej3n.jpg',
+  description: 'Exercices pour apprendre à manipuler le disque dans des situations non conventionnelles',
   minimalPlayersNumber: 2,
-  inGame:
-    'Gagner en dextérité avec le disque permet de lancer plus rapidement. Cet atout permet de breaker la marque davantage',
-  equipmentLabel: EquipmentLabels.NONE,
-  equipment: '2 disques',
-  durationInMinutes: 12,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '3 disques par pair',
+  durationInMinutes: 10,
   intensity: Intensities.LOW,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CATCH, FrisbeeGoals.WARM_UP],
+  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.WARM_UP, FrisbeeGoals.THROWING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
     {
       id: 1,
+      title: 'Trois Disques',
+      animation: undefined,
+      vimeoId: '475053354',
+      repetition: '',
+      rest: '',
+      instruction:
+        "Un joueur ne doit jamais avoir en possession plus d'un disque. L'objectif est de réussir à former la chaine de lancers le plus logntemps possible.",
+    },
+    {
+      id: 2,
+      title: 'Greatest',
+      animation: undefined,
+      vimeoId: '475053092',
+      repetition: '',
+      rest: '',
+      instruction:
+        "Un des deux joueurs doit lancer exclusivement en Greatest. Pour qu'un greatest soit réglementaire le lancer doit être effectuer sans que le joueur touche le sol",
+    },
+    {
+      id: 3,
+      title: 'Le Double Catch',
+      animation: undefined,
+      vimeoId: '475055767',
+      repetition: '',
+      rest: '',
+      instruction: "L'objectif est de rattraper deux (ou trois) disques lancer par votre partenaire",
+    },
+    {
+      id: 4,
+      title: "A l'Aveugle",
+      animation: undefined,
+      vimeoId: '475055902',
+      repetition: '',
+      rest: '',
+      instruction:
+        'Quand un joueur lance le disque, il doit crier "up" afin que son partenaire se retourne pour attraper le disque. Pensez à faire varier les courbes',
+    },
+    {
+      id: 5,
       title: 'Double Disques',
       animation: throwCatch,
       vimeoId: '462695929',
@@ -6386,26 +6444,56 @@ const theTunnel = {
   ],
 };
 
-const sprintDefense = {
+const racingWarmUP = {
   id: 1037,
   type: DrillTypes.FRISBEE,
-  author: 'Lucky Grass',
-  title: 'Réactivité en Défense',
-  image: 'https://zupimages.net/up/20/25/5pqg.jpg',
-  description: "Exercice d'échauffement pour travailler la réactivité en défense.",
-  minimalPlayersNumber: 2,
-  inGame: "Un défenseur doit s'adapter le plus rapidement possible à la course du cutter",
-  equipmentLabel: EquipmentLabels.NONE,
-  equipment: '4 plots',
-  durationInMinutes: 8,
+  author: 'Focus Ultimate',
+  title: "Courses d'Echauffement",
+  image: 'https://zupimages.net/up/20/51/ej3n.jpg',
+  description: "Exercices pour augmenter l'intensité avant un match avec des sprints",
+  minimalPlayersNumber: 10,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disque - 12 plots',
+  durationInMinutes: 10,
   intensity: Intensities.HIGH,
-  goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.WARM_UP],
+  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.WARM_UP],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
     {
       id: 1,
-      title: 'La défense léopard',
+      title: 'Touche ses mains',
+      animation: undefined,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        "Deux équipes s'affrontent. Un joueur ou un coach se place devant les 2 lignes. Il effectue des feintes et lorsque le frisbee touche le sol, les premiers joueurs de chaque ligne court le plus vite possible pour toucher ces mains. Une fois toucher, ils peuvent faire demi-tour et font gagner un point à leur équipe si il passe la ligne en premier. Le coach peut se déplacer à sa guise et faire varier la hauteur de ses mains.",
+    },
+    {
+      id: 2,
+      title: 'Morpion',
+      animation: undefined,
+      vimeoId: '486367246',
+      repetition: '',
+      rest: '',
+      instruction:
+        "Deux équipes s'affrontent. L'objectif est de réaliser une ligne de 3 t-shirts de la même couleur avant l'équipe adverse. Il y a seulement 3 t-shirt par équipe et lorsque le quatrième joueur prend le relai, il peut déplacer un t-shirt",
+    },
+    {
+      id: 3,
+      title: 'Le Relai',
+      animation: undefined,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        "C'est une course de relai. Un joueur doit effectuer un parcours le plus rapidement possible afin qu'un coéquipier puisse prendre le relai. Première équipe à finir le relai l'emporte.",
+    },
+    {
+      id: 4,
+      title: 'La Défense léopard',
       animation: leopard,
       vimeoId: '485471567',
       repetition: '',
@@ -6867,7 +6955,7 @@ const crossingTheField = {
   type: DrillTypes.FRISBEE,
   author: 'Gentle',
   title: 'La traversée',
-  image: 'https://zupimages.net/up/20/47/63gr.jpg',
+  image: 'https://zupimages.net/up/20/51/x23u.jpg',
   description:
     'Les joueurs doivent traverser le terrain le plus rapidement possible en se faisant des passes. Si une passe est ratée, ils doivent recommencer.',
   minimalPlayersNumber: 2,
@@ -7157,145 +7245,6 @@ const theZ = {
       rest: '',
       instruction:
         "Un joueur va, aussi vite que possible, en longue quand le lanceur attrape le disque. Lorsque le lanceur fait une feinte réaliste, le coureur change de direction. L'idéal est de travailler tous les types de lancer possibles",
-    },
-  ],
-};
-
-const dishieLine = {
-  id: 1058,
-  type: DrillTypes.FRISBEE,
-  author: 'Mooncatchers',
-  title: 'La ligne à Dishies',
-  image: 'https://zupimages.net/up/20/51/hc89.jpg',
-  description: 'Exerice pour apprendre à effectuer la petite passe de soutien',
-  minimalPlayersNumber: 8,
-  inGame: undefined,
-  equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 disque',
-  durationInMinutes: 10,
-  intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.WARM_UP],
-  seasonTiming: SeasonTimings.ANYTIME,
-  level: Levels.INTERMEDIATE,
-  steps: [
-    {
-      id: 1,
-      title: 'La Ligne à Dishies',
-      animation: dishieLineAnimation,
-      vimeoId: '486367517',
-      repetition: '',
-      rest: '',
-      instruction:
-        '2 Lignes se font face. Les premiers joueurs de chaques lignes courent en direction du porteur du disque pour récuperer une dishie. Si le lanceur effectue une feinte réaliste, le coureur doit changer la direction de sa course',
-    },
-  ],
-};
-
-const manipulation = {
-  id: 1059,
-  type: DrillTypes.FRISBEE,
-  author: 'Mooncatchers',
-  title: 'Dexterity Boost',
-  image: 'https://zupimages.net/up/20/51/ej3n.jpg',
-  description: 'Exercices pour apprendre à manipuler le disque dans des situations non conventionnelles',
-  minimalPlayersNumber: 2,
-  inGame: undefined,
-  equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 disque',
-  durationInMinutes: 10,
-  intensity: Intensities.LOW,
-  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.WARM_UP, FrisbeeGoals.THROWING],
-  seasonTiming: SeasonTimings.ANYTIME,
-  level: Levels.BEGINNER,
-  steps: [
-    {
-      id: 1,
-      title: 'Trois Disques',
-      animation: undefined,
-      vimeoId: '475053354',
-      repetition: '',
-      rest: '',
-      instruction:
-        "Un joueur ne doit jamais avoir en possession plus d'un disque. L'objectif est de réussir à former la chaine de lancers le plus logntemps possible.",
-    },
-    {
-      id: 2,
-      title: 'Greatest',
-      animation: undefined,
-      vimeoId: '475053092',
-      repetition: '',
-      rest: '',
-      instruction:
-        "Un des deux joueurs doit lancer exclusivement en Greatest. Pour qu'un greatest soit réglementaire le lancer doit être effectuer sans que le joueur touche le sol",
-    },
-    {
-      id: 3,
-      title: 'Le Double Catch',
-      animation: undefined,
-      vimeoId: '475055767',
-      repetition: '',
-      rest: '',
-      instruction: "L'objectif est de rattraper deux (ou trois) disques lancer par votre partenaire",
-    },
-    {
-      id: 4,
-      title: "A l'Aveugle",
-      animation: undefined,
-      vimeoId: '475055902',
-      repetition: '',
-      rest: '',
-      instruction:
-        'Quand un joueur lance le disque, il doit crier "up" afin que son partenaire se retourne pour attraper le disque. Pensez à faire varier les courbes',
-    },
-  ],
-};
-
-const racingWarmUP = {
-  id: 1060,
-  type: DrillTypes.FRISBEE,
-  author: 'Focus Ultimate',
-  title: "Courses d'Echauffement",
-  image: 'https://zupimages.net/up/20/51/ej3n.jpg',
-  description: "Exercices pour augmenter l'intensité avant un match avec des sprints",
-  minimalPlayersNumber: 10,
-  inGame: undefined,
-  equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 disque - 12 plots',
-  durationInMinutes: 10,
-  intensity: Intensities.HIGH,
-  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.WARM_UP],
-  seasonTiming: SeasonTimings.ANYTIME,
-  level: Levels.BEGINNER,
-  steps: [
-    {
-      id: 1,
-      title: 'Touche ses mains',
-      animation: undefined,
-      vimeoId: undefined,
-      repetition: '',
-      rest: '',
-      instruction:
-        "Deux équipes s'affrontent. Un joueur ou un coach se place devant les 2 lignes. Il effectue des feintes et lorsque le frisbee touche le sol, les premiers joueurs de chaque ligne court le plus vite possible pour toucher ces mains. Une fois toucher, ils peuvent faire demi-tour et font gagner un point à leur équipe si il passe la ligne en premier. Le coach peut se déplacer à sa guise et faire varier la hauteur de ses mains.",
-    },
-    {
-      id: 2,
-      title: 'Morpion',
-      animation: undefined,
-      vimeoId: '486367246',
-      repetition: '',
-      rest: '',
-      instruction:
-        "Deux équipes s'affrontent. L'objectif est de réaliser une ligne de 3 t-shirts de la même couleur avant l'équipe adverse. Il y a seulement 3 t-shirt par équipe et lorsque le quatrième joueur prend le relai, il peut déplacer un t-shirt",
-    },
-    {
-      id: 3,
-      title: 'Le Relai',
-      animation: undefined,
-      vimeoId: undefined,
-      repetition: '',
-      rest: '',
-      instruction:
-        "C'est une course de relai. Un joueur doit effectuer un parcours le plus rapidement possible afin qu'un coéquipier puisse prendre le relai. Première équipe à finir le relai l'emporte.",
     },
   ],
 };
@@ -7652,7 +7601,7 @@ const thirdInintiationAdultTraining = {
   title: "S'adapter au terrain",
   image: 'https://zupimages.net/up/20/19/hrqz.jpg',
   description: "S'adapter à l'espace disponible sur le terrain tout en s'amusant",
-  drills: [warmupDrill, throwCatchThrow, goaltimateDrill, triangleOfDeathdrill, helpGame],
+  drills: [warmupDrill, manipulation, goaltimateDrill, triangleOfDeathdrill, helpGame],
 };
 
 const defenseBaseTraining = {
@@ -8379,16 +8328,13 @@ export const drills = [
   horizontalTiming,
   game3v3Horizontal,
   theDuel,
-  cardinal,
   horizontalToVertical,
   horizontalHandler,
   horizontalTrapOutside,
   horizontalTrap,
   checkLong,
-  throwCatchThrow,
   stopFlow,
   theTunnel,
-  sprintDefense,
   cupSwinging,
   zoneGame,
   diagonalToVertical,

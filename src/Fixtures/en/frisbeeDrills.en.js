@@ -102,6 +102,7 @@ import ArrowAnimation from '../Animation/Arrow';
 import JapaneseAnimation from '../Animation/Japanese';
 import theZAnimation from '../Animation/TheZ';
 import dishieLineAnimation from '../Animation/DishieLine';
+import doubleLinesAnimation from '../Animation/DoubleLines';
 
 const stabilityDrill = {
   id: 1,
@@ -4755,7 +4756,7 @@ const youthLadder = {
   type: DrillTypes.FITNESS,
   author: 'PUC',
   title: 'Ladder for youth',
-  image: undefined,
+  image: 'https://zupimages.net/up/20/51/k1kk.jpg',
   description:
     "Ladder drills adapted to youth players. Players must focus first on the movement and then on speed. It's important to remind them to move their arms all the time. Each drill can be repeated 2 or 3 times, but asymmetrical drills must be repeated starting with both feet.",
   minimalPlayersNumber: 1,
@@ -4941,6 +4942,16 @@ const basicThrowsDrill = {
       rest: '',
       instruction:
         'Same situation and objective. To increase the difficulty, one or more players (the ghosts) will circulate between the throwers with the objective of provoking a turn-over. The ghosts are not allowed to touch the discs or the offensive players.',
+    },
+    {
+      id: 4,
+      title: 'Cardinal Point',
+      animation: cardinalAnimation,
+      vimeoId: '462694734',
+      repetition: '',
+      rest: '',
+      instruction:
+        'For the last level, your player has to make a full rotation. Kung-fu throwing : imagine a compass with your pivot foot at the center. Pivot N and throw. Pivot NE and throw. Pivot E and throw and so on around the compass. Go four times around, twice throwing forehands and twice throwing backhands.',
     },
   ],
 };
@@ -5942,33 +5953,42 @@ const theDuel = {
   ],
 };
 
-const cardinal = {
+const dishieLine = {
   id: 1028,
   type: DrillTypes.FRISBEE,
-  author: 'PUC',
-  title: 'Cardinal Point',
-  image: 'https://zupimages.net/up/20/25/xtik.png',
-  description: 'Learning to throw in any position.',
-  minimalPlayersNumber: 2,
-  inGame:
-    'You have to be able to adapt to the mark you are setting up. Being able to throw allows you to launch more quickly.',
-  equipmentLabel: EquipmentLabels.NONE,
+  author: 'Mooncatchers',
+  title: 'Double Lines',
+  image: 'https://zupimages.net/up/20/51/hc89.jpg',
+  description: "Drill to learn how to attack one's disc and perform a small support pass",
+  minimalPlayersNumber: 8,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disc',
   durationInMinutes: 10,
-  intensity: Intensities.LOW,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.WARM_UP],
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.WARM_UP],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
     {
       id: 1,
-      title: 'Cardinal Point',
-      animation: cardinalAnimation,
-      vimeoId: '462694734',
+      title: 'The Dishie Line',
+      animation: doubleLinesAnimation,
+      vimeoId: '486367517',
       repetition: '',
       rest: '',
       instruction:
-        'Kung-fu throwing : imagine a compass with your pivot foot at the center. Pivot N and throw. Pivot NE and throw. Pivot E and throw and so on around the compass. Go four times around, twice throwing forehands and twice throwing backhands.',
+        '2 Lines face each other. The first players of each line run towards the disc carrier and try to grab the disc as quickly as possible. Once the disc is caught, he turns and passes the disc to the first player in his line.',
+    },
+    {
+      id: 2,
+      title: 'Attack your Disc',
+      animation: dishieLineAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        '2 Lines face each other. The first players of each line run towards the disc carrier to retrieve a dishie. If the thrower makes a realistic fake, the runner must change the direction of his cut.',
     },
   ],
 };
@@ -6193,26 +6213,64 @@ const checkLong = {
   ],
 };
 
-const throwCatchThrow = {
+const manipulation = {
   id: 1034,
   type: DrillTypes.FRISBEE,
-  author: 'PUC',
-  title: 'Double Disc',
-  image: 'https://zupimages.net/up/20/25/gf41.jpg',
-  description: 'Work by pair. The goal is to improve your throwing and catching speed.',
+  author: 'Mooncatchers',
+  title: 'Dexterity Boost',
+  image: 'https://zupimages.net/up/20/51/ej3n.jpg',
+  description: 'Drills to learn how to manipulate the disc in unconventional situations',
   minimalPlayersNumber: 2,
-  inGame: 'Gaining dexterity with the discus allows you to throw faster. This asset allows to break the mark more',
-  equipmentLabel: EquipmentLabels.NONE,
-  equipment: '2 discs',
-  durationInMinutes: 12,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '3 disc per pair',
+  durationInMinutes: 10,
   intensity: Intensities.LOW,
-  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CATCH, FrisbeeGoals.WARM_UP],
+  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.WARM_UP, FrisbeeGoals.THROWING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
     {
       id: 1,
-      title: 'Double Disc',
+      title: 'Three Discs',
+      animation: undefined,
+      vimeoId: '475053354',
+      repetition: '',
+      rest: '',
+      instruction: 'One player could never hold more than one disc at any moment. Try to "survive" as long as possible',
+    },
+    {
+      id: 2,
+      title: 'Greatest',
+      animation: undefined,
+      vimeoId: '475053092',
+      repetition: '',
+      rest: '',
+      instruction:
+        'Grab a disc and your partner and try to throw as many greatest as you can. In order for a greatest to be legal, the throw must be thrown without the player touching the ground.',
+    },
+    {
+      id: 3,
+      title: 'Double Catch',
+      animation: undefined,
+      vimeoId: '475055767',
+      repetition: '',
+      rest: '',
+      instruction: "The goal it's catching 2 (or even 3) send by your partner",
+    },
+    {
+      id: 4,
+      title: 'No Look',
+      animation: undefined,
+      vimeoId: '475055902',
+      repetition: '',
+      rest: '',
+      instruction:
+        'Each player looks away from his or her partner.When a player throws the disc, he has to shout "up" so that his partner turns around to catch it.Remember to vary the throwing curves',
+    },
+    {
+      id: 5,
+      title: 'Double Discs',
       animation: throwCatch,
       vimeoId: '462695929',
       repetition: '',
@@ -6285,25 +6343,55 @@ const theTunnel = {
   ],
 };
 
-const sprintDefense = {
+const racingWarmUP = {
   id: 1037,
   type: DrillTypes.FRISBEE,
-  author: 'Lucky Grass',
-  title: "The Leopard's Defense",
-  image: 'https://zupimages.net/up/20/25/5pqg.jpg',
-  description: 'Warm up drill to focus on the reactivity in defense.',
-  minimalPlayersNumber: 2,
-  inGame: 'A defender must adapt to the cutter stroke as quickly as possible.',
-  equipmentLabel: EquipmentLabels.NONE,
-  equipment: '4 cones',
-  durationInMinutes: 8,
+  author: 'Focus Ultimate',
+  title: 'Racing Warm UP',
+  image: 'https://zupimages.net/up/20/51/ej3n.jpg',
+  description: 'Drills to increase the intensity before a game with sprints',
+  minimalPlayersNumber: 10,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disc - 12 cones',
+  durationInMinutes: 10,
   intensity: Intensities.HIGH,
-  goals: [FrisbeeGoals.DEFENSE, FrisbeeGoals.WARM_UP],
+  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.WARM_UP],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.BEGINNER,
   steps: [
     {
       id: 1,
+      title: 'Clap his Hand',
+      animation: undefined,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Two teams compete against each other. A player or a coach stands in front of the 2 lines. He makes feints and when the Frisbee touches the ground, the first players of each line run as fast as possible to touch those hands. Once touched, they can turn around and score a point for their team if they cross the line first. The coach can move around and vary the height of his hands as he sees fit.',
+    },
+    {
+      id: 2,
+      title: 'Noughts and Crosses',
+      animation: undefined,
+      vimeoId: '486367246',
+      repetition: '',
+      rest: '',
+      instruction:
+        'Two teams compete against each other. The objective is to make a line of 3 t-shirts of the same color before the opposing team. There are only 3 t-shirts per team and when the fourth player takes over, he can move a previously dropped t-shirt.',
+    },
+    {
+      id: 3,
+      title: 'The Relay',
+      animation: undefined,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        'It is a relay race. A player must complete a course as quickly as possible so that a teammate can take over. The first team to finish the relay wins.',
+    },
+    {
+      id: 4,
       title: "The Leopard's Defense",
       animation: leopard,
       vimeoId: '485471567',
@@ -6722,7 +6810,7 @@ const ghostMark = {
       repetition: '',
       rest: '',
       instruction:
-        'Two players throw in pairs. The defending players, without touching the disc and the offensive players, try to interfere with the catch. They can, for example, pass in front of the disk at the last moment. If a turn-over is caused, without the defenders touching the disc, the roles are reversed.',
+        'Two players throw in pairs. The defending players, without touching the disc and the offensive players, try to interfere with the catch. They can, for example, pass in front of the disc at the last moment. If a turn-over is caused, without the defenders touching the disc, the roles are reversed.',
     },
   ],
 };
@@ -6761,7 +6849,7 @@ const crossingTheField = {
   type: DrillTypes.FRISBEE,
   author: 'Gentle',
   title: 'Crossing the field',
-  image: 'https://zupimages.net/up/20/47/63gr.jpg',
+  image: 'https://zupimages.net/up/20/51/x23u.jpg',
   description:
     'Players have to cross the field as fast as possible. If there is an incomplete pass, they have to start again.',
   minimalPlayersNumber: 2,
@@ -6868,7 +6956,7 @@ const bull = {
       repetition: '',
       rest: '',
       instruction:
-        'The objective of the attackers is to keep the disk without moving. They cannot play more than 2 times in a row with the same player. Same rule as in the previous variant',
+        'The objective of the attackers is to keep the disc without moving. They cannot play more than 2 times in a row with the same player. Same rule as in the previous variant',
     },
   ],
 };
@@ -7048,144 +7136,6 @@ const theZ = {
       rest: '',
       instruction:
         'A player goes, as fast as possible, long when the thrower catches the disc. When the thrower makes a realistic fake, the runner changes direction. The ideal is to work on all the different types of throwing possible',
-    },
-  ],
-};
-
-const dishieLine = {
-  id: 1058,
-  type: DrillTypes.FRISBEE,
-  author: 'Mooncatchers',
-  title: 'The Dishie Line',
-  image: 'https://zupimages.net/up/20/51/hc89.jpg',
-  description: "Drill to learn how to attack one's disc and perform a small support pass",
-  minimalPlayersNumber: 8,
-  inGame: undefined,
-  equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 disc',
-  durationInMinutes: 10,
-  intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.WARM_UP],
-  seasonTiming: SeasonTimings.ANYTIME,
-  level: Levels.INTERMEDIATE,
-  steps: [
-    {
-      id: 1,
-      title: 'The Dishie Line',
-      animation: dishieLineAnimation,
-      vimeoId: '486367517',
-      repetition: '',
-      rest: '',
-      instruction:
-        '2 Lines face each other. The first players of each line run towards the disc carrier to retrieve a dishie. If the thrower makes a realistic fake, the runner must change the direction of his cut.',
-    },
-  ],
-};
-
-const manipulation = {
-  id: 1059,
-  type: DrillTypes.FRISBEE,
-  author: 'Mooncatchers',
-  title: 'Dexterity Boost',
-  image: 'https://zupimages.net/up/20/51/ej3n.jpg',
-  description: 'Drills to learn how to manipulate the disc in unconventional situations',
-  minimalPlayersNumber: 2,
-  inGame: undefined,
-  equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 disc',
-  durationInMinutes: 10,
-  intensity: Intensities.LOW,
-  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.WARM_UP, FrisbeeGoals.THROWING],
-  seasonTiming: SeasonTimings.ANYTIME,
-  level: Levels.BEGINNER,
-  steps: [
-    {
-      id: 1,
-      title: 'Three Discs',
-      animation: undefined,
-      vimeoId: '475053354',
-      repetition: '',
-      rest: '',
-      instruction: 'One player could never hold more than one disc at any moment. Try to "survive" as long as possible',
-    },
-    {
-      id: 2,
-      title: 'Greatest',
-      animation: undefined,
-      vimeoId: '475053092',
-      repetition: '',
-      rest: '',
-      instruction:
-        'Grab a disc and your partner and try to throw as many greatest as you can. In order for a greatest to be legal, the throw must be thrown without the player touching the ground.',
-    },
-    {
-      id: 3,
-      title: 'Double Catch',
-      animation: undefined,
-      vimeoId: '475055767',
-      repetition: '',
-      rest: '',
-      instruction: "The goal it's catching 2 (or even 3) send by your partner",
-    },
-    {
-      id: 4,
-      title: 'No Look',
-      animation: undefined,
-      vimeoId: '475055902',
-      repetition: '',
-      rest: '',
-      instruction:
-        'Each player looks away from his or her partner.When a player throws the disc, he has to shout "up" so that his partner turns around to catch it.Remember to vary the throwing curves',
-    },
-  ],
-};
-
-const racingWarmUP = {
-  id: 1060,
-  type: DrillTypes.FRISBEE,
-  author: 'Focus Ultimate',
-  title: 'Racing Warm UP',
-  image: 'https://zupimages.net/up/20/51/ej3n.jpg',
-  description: 'Drills to increase the intensity before a game with sprints',
-  minimalPlayersNumber: 10,
-  inGame: undefined,
-  equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 disc - 12 cones',
-  durationInMinutes: 10,
-  intensity: Intensities.HIGH,
-  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.WARM_UP],
-  seasonTiming: SeasonTimings.ANYTIME,
-  level: Levels.BEGINNER,
-  steps: [
-    {
-      id: 1,
-      title: 'Clap his Hand',
-      animation: undefined,
-      vimeoId: undefined,
-      repetition: '',
-      rest: '',
-      instruction:
-        'Two teams compete against each other. A player or a coach stands in front of the 2 lines. He makes feints and when the Frisbee touches the ground, the first players of each line run as fast as possible to touch those hands. Once touched, they can turn around and score a point for their team if they cross the line first. The coach can move around and vary the height of his hands as he sees fit.',
-    },
-    {
-      id: 2,
-      title: 'Noughts and Crosses',
-      animation: undefined,
-      vimeoId: '486367246',
-      repetition: '',
-      rest: '',
-      instruction:
-        'Two teams compete against each other. The objective is to make a line of 3 t-shirts of the same color before the opposing team. There are only 3 t-shirts per team and when the fourth player takes over, he can move a previously dropped t-shirt.',
-    },
-    {
-      id: 3,
-      title: 'The Relay',
-      animation: undefined,
-      vimeoId: undefined,
-      repetition: '',
-      rest: '',
-      instruction:
-        'It is a relay race. A player must complete a course as quickly as possible so that a teammate can take over. The first team to finish the relay wins.',
     },
   ],
 };
@@ -7542,7 +7492,7 @@ const thirdInintiationAdultTraining = {
   title: 'Adapt to the Field',
   image: 'https://zupimages.net/up/20/19/hrqz.jpg',
   description: 'Players will learn to adapt to the size of the field',
-  drills: [warmupDrill, throwCatchThrow, goaltimateDrill, triangleOfDeathdrill, helpGame],
+  drills: [warmupDrill, manipulation, goaltimateDrill, triangleOfDeathdrill, helpGame],
 };
 
 const defenseBaseTraining = {
@@ -8261,16 +8211,13 @@ export const drills = [
   horizontalTiming,
   game3v3Horizontal,
   theDuel,
-  cardinal,
   horizontalToVertical,
   horizontalHandler,
   horizontalTrapOutside,
   horizontalTrap,
   checkLong,
-  throwCatchThrow,
   stopFlow,
   theTunnel,
-  sprintDefense,
   cupSwinging,
   zoneGame,
   diagonalToVertical,

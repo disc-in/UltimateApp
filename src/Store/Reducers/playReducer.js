@@ -5,7 +5,7 @@ function playReducer(state = initialState, action) {
   switch (action.type) {
     case 'SAVE_PLAY':
       // If the play is already saved, replace it; otherwise add it
-      const playIndex = state.findIndex((item) => item.title === action.value.title);
+      const playIndex = state.findIndex((item) => item.uuid === action.value.uuid);
 
       if (playIndex !== -1) {
         nextState = [...state];
@@ -19,14 +19,14 @@ function playReducer(state = initialState, action) {
     case 'RENAME_PLAY':
       nextState = [...state];
 
-      const index = state.findIndex((item) => item.title === action.value.oldTitle);
+      const index = state.findIndex((item) => item.uuid === action.value.uuid);
       if (index !== -1) {
         nextState[index].title = action.value.newTitle;
       }
       return nextState;
 
     case 'DELETE_PLAY':
-      return state.filter((item) => item.title !== action.value);
+      return state.filter((item) => item.uuid !== action.value);
 
     default:
       return state;

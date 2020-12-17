@@ -56,35 +56,46 @@ exports[`<ProgramList /> renders correctly 1`] = `
                 Object {
                   "alignItems": "flex-start",
                   "backgroundColor": "#fff",
+                  "paddingBottom": 10,
                   "paddingHorizontal": 20,
-                  "paddingVertical": 10,
                   "width": "100%",
                 }
               }
             >
-              <Text
+              <View
                 style={
                   Object {
-                    "color": "#232b2b",
-                    "fontSize": 20,
-                    "fontWeight": "bold",
-                  }
-                }
-              >
-                Program 1
-              </Text>
-              <Text
-                style={
-                  Object {
-                    "color": "#232b2b",
-                    "fontSize": 14,
-                    "textAlign": "right",
+                    "alignItems": "center",
+                    "flex": 1,
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
                     "width": "100%",
                   }
                 }
               >
-                0/1 trainings
-              </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#232b2b",
+                      "fontSize": 20,
+                      "fontWeight": "bold",
+                    }
+                  }
+                >
+                  Program 1
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#232b2b",
+                      "fontSize": 14,
+                      "textAlign": "right",
+                    }
+                  }
+                >
+                  0/1
+                </Text>
+              </View>
               <View
                 style={
                   Object {
@@ -136,11 +147,6 @@ exports[`<ProgramList /> renders correctly 1`] = `
             style={Object {}}
           >
             <RCTScrollView
-              contentContainerStyle={
-                Object {
-                  "marginBottom": 10,
-                }
-              }
               data={
                 Array [
                   Object {
@@ -328,35 +334,46 @@ exports[`<ProgramList /> renders correctly 1`] = `
                 Object {
                   "alignItems": "flex-start",
                   "backgroundColor": "#fff",
+                  "paddingBottom": 10,
                   "paddingHorizontal": 20,
-                  "paddingVertical": 10,
                   "width": "100%",
                 }
               }
             >
-              <Text
+              <View
                 style={
                   Object {
-                    "color": "#232b2b",
-                    "fontSize": 20,
-                    "fontWeight": "bold",
-                  }
-                }
-              >
-                Program 2
-              </Text>
-              <Text
-                style={
-                  Object {
-                    "color": "#232b2b",
-                    "fontSize": 14,
-                    "textAlign": "right",
+                    "alignItems": "center",
+                    "flex": 1,
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
                     "width": "100%",
                   }
                 }
               >
-                0/2 trainings
-              </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#232b2b",
+                      "fontSize": 20,
+                      "fontWeight": "bold",
+                    }
+                  }
+                >
+                  Program 2
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#232b2b",
+                      "fontSize": 14,
+                      "textAlign": "right",
+                    }
+                  }
+                >
+                  0/2
+                </Text>
+              </View>
               <View
                 style={
                   Object {
@@ -408,11 +425,6 @@ exports[`<ProgramList /> renders correctly 1`] = `
             style={Object {}}
           >
             <RCTScrollView
-              contentContainerStyle={
-                Object {
-                  "marginBottom": 10,
-                }
-              }
               data={
                 Array [
                   Object {

@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { LogBox } from 'react-native';
 
 import { DrillTypes } from '../Fixtures/config';
 import ProgramList from './programs/ProgramList';

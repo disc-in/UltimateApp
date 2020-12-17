@@ -1,6 +1,7 @@
 export const DrillTypes = {
   FITNESS: 'fitness',
   FRISBEE: 'frisbee',
+  JUNIOR: 'Junior',
   GAME: 'game',
 };
 
@@ -54,9 +55,4 @@ export const AnimationBackgrounds = {
   ENDZONE: 'endzone',
   THREE_QUARTERS_FIELD: 'three quarters field',
   EMPTY: 'empty',
-};
-
-export const AgeCategory = {
-  JUNIOR: 'Junior',
-  SENIOR: 'Senior',
 };

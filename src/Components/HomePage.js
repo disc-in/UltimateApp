@@ -15,7 +15,7 @@ import junior from '../../assets/HomePage/junior.jpg';
 import essential from '../../assets/HomePage/essential.jpg';
 import huddle from '../../assets/HomePage/huddle.jpg';
 import FeedbackButton from './home/FeedbackButton';
-import { AgeCategory, DrillTypes, EquipmentLabels } from '../Fixtures/config';
+import { DrillTypes, EquipmentLabels } from '../Fixtures/config';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -33,9 +33,7 @@ const HomeScreen = (props) => {
         </ImageBackground>
       </TouchableHighlight>
       <TouchableHighlight
-        onPress={() =>
-          props.navigation.navigate('ProgramListPage', { type: DrillTypes.FRISBEE, age: AgeCategory.SENIOR })
-        }
+        onPress={() => props.navigation.navigate('ProgramListPage', { type: DrillTypes.FRISBEE })}
         style={styles.menuItem}
       >
         <ImageBackground source={huddle} style={styles.image}>
@@ -47,8 +45,7 @@ const HomeScreen = (props) => {
       <TouchableHighlight
         onPress={() =>
           props.navigation.navigate('ProgramListPage', {
-            type: DrillTypes.FRISBEE,
-            age: AgeCategory.JUNIOR,
+            type: DrillTypes.JUNIOR,
           })
         }
         style={styles.menuItem}

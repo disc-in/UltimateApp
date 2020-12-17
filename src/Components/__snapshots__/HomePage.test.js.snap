@@ -199,7 +199,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                     }
                   }
                 >
-                  Adult Programs
+                  Adult Practices
                 </Text>
               </View>
             </View>
@@ -272,7 +272,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                     }
                   }
                 >
-                  Junior Programs
+                  Junior Practices
                 </Text>
               </View>
             </View>

@@ -66,6 +66,7 @@ export default {
       fullEquipment: 'Gym programs',
     },
     playEditorPage: 'New Play',
+    ImporterPage: 'Import a play',
     dictionaryPage: 'Dictionary',
     essentialPage: 'Basics',
     tacticsPage: 'Tactics',
@@ -101,6 +102,11 @@ export default {
   },
   playEditorPage: {
     untitledPlay: 'Unnamed play',
+  },
+  importerPage: {
+    loading: 'It looks like you want to import a play, I am going to fetch it... 🏃',
+    incentive: 'You are about to import and save the play {{title}}',
+    question: 'Are you sure?',
   },
   editor: {
     saveModificationsTitle: 'Do you want to save the current play?',

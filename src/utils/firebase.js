@@ -7,7 +7,7 @@ if (firebase.apps.length === 0) {
 }
 
 const reference = (uuid) => {
-  return firebase.database().ref(`plays/${uuid}`);
+  return firebase.database().ref(`customPlays/${uuid}`);
 };
 
 export const upload = (play) => {
@@ -15,8 +15,7 @@ export const upload = (play) => {
 };
 
 export const download = (uuid) => {
-  reference(uuid).once('value', (snapshot) => {
-    const data = snapshot.val();
-    console.log(data);
-  });
+  return reference(uuid)
+    .once('value')
+    .then((snapshot) => snapshot.val());
 };

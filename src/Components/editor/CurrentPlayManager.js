@@ -17,7 +17,7 @@ const CurrentPlayManager = (props) => {
 
   const contribute = () => {
     const result = upload(props.currentPlay);
-    const url = Linking.makeUrl('play', { uuid: props.currentPlay.uuid });
+    const url = Linking.makeUrl('customPlays/' + props.currentPlay.uuid);
 
     Share.share({
       title: I18n.t('editor.currentPlayManager.shareTitle', { title: props.currentPlay.title }),

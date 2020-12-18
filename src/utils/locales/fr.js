@@ -66,7 +66,7 @@ export default {
       fullEquipment: 'Entraînements en salle',
     },
     playEditorPage: 'Nouvelle tactique',
-    ImporterPage: 'Importer une tactique',
+    importerPage: 'Importer une tactique',
     dictionaryPage: 'Lexique',
     essentialPage: 'Les bases du jeu',
     tacticsPage: 'Tactiques',

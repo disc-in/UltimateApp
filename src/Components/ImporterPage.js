@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import { connect } from 'react-redux';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import theme from '../styles/theme.style';
 import I18n from '../utils/i18n';
 import { download } from '../utils/firebase';
 import { savePlay } from '../Store/Actions/playAction';
 import CtaButton from './shared/Button';
-
 export const ImporterPage = (props) => {
   const { navigation, route } = props;
 
@@ -36,13 +36,15 @@ export const ImporterPage = (props) => {
 
   return (
     <View style={styles.importerPage}>
+      <MaterialCommunityIcons name="download" size={72} />
       {importedPlay ? (
         <View>
-          <Text>{I18n.t('importerPage.incentive', { title: importedPlay.title })}</Text>
-          <Text>{I18n.t('importerPage.question')}</Text>
-          <Text>{importedPlay?.title}</Text>
-          <CtaButton text={I18n.t('shared.yes')} onPress={save} />
-          <CtaButton text={I18n.t('shared.cancel')} onPress={cancel} buttonLight />
+          <Text style={styles.text}>{I18n.t('importerPage.incentive', { title: importedPlay.title })}</Text>
+          <Text style={styles.text}>{I18n.t('importerPage.question')}</Text>
+          <View style={styles.ctaArea}>
+            <CtaButton style={styles.cta} text={I18n.t('shared.yes')} onPress={save} />
+            <CtaButton style={styles.cta} text={I18n.t('shared.cancel')} onPress={cancel} buttonLight />
+          </View>
         </View>
       ) : (
         <Text>{I18n.t('importerPage.loading')}</Text>
@@ -59,5 +61,20 @@ const styles = StyleSheet.create({
   importerPage: {
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     flex: 1,
+    alignItems: 'center',
+    justifyContent: 'space-around',
+    padding: 20,
+  },
+  text: {
+    fontSize: theme.FONT_SIZE_MEDIUM,
+    marginBottom: 5,
+  },
+  ctaArea: {
+    marginTop: 20,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+  },
+  cta: {
+    width: 120,
   },
 });

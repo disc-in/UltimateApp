@@ -66,7 +66,7 @@ export default {
       fullEquipment: 'Gym programs',
     },
     playEditorPage: 'New Play',
-    ImporterPage: 'Import a play',
+    importerPage: 'Import a play',
     dictionaryPage: 'Dictionary',
     essentialPage: 'Basics',
     tacticsPage: 'Tactics',

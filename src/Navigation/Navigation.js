@@ -81,7 +81,7 @@ export const Navigation = () => (
         },
       })}
     />
-    <Stack.Screen name="ImporterPage" component={ImporterPage} />
+    <Stack.Screen name="ImporterPage" component={ImporterPage} options={{ title: I18n.t('navigation.importerPage') }} />
     <Stack.Screen
       name="DictionaryPage"
       component={DictionaryPage}

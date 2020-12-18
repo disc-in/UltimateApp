@@ -6968,7 +6968,7 @@ const bull = {
 const statues = {
   id: 1053,
   type: DrillTypes.FRISBEE,
-  author: 'Gentle',
+  author: 'Gentle - Ine',
   title: 'Statues',
   image: 'https://zupimages.net/up/20/50/e7mk.jpeg',
   description:
@@ -6985,16 +6985,26 @@ const statues = {
   steps: [
     {
       id: 1,
-      title: 'One foot stop',
+      title: 'The Plank',
       animation: StatuesAnimation,
+      vimeoId: '492418258',
+      repetition: '',
+      rest: '',
+      instruction:
+        "When the instructor says 'Go' the players move forward as fast as possible. When they say 'Stop', the players must stop and hold the plank position without moving. If a player moves, falls or fails to stop, they must go back to the starting line.",
+    },
+    {
+      id: 2,
+      title: 'One foot stop',
+      animation: undefined,
       vimeoId: undefined,
       repetition: '',
       rest: '',
       instruction:
-        "Each player holds a disc in his two hands. When the instructor says 'Go' the players move forward as fast as possible. When they say 'Stop', the players must stop and stay on one foot, still holding the disc in their hands. If a player moves, falls or fails to stop, they must go back to the starting line.",
+        "Same exercise, but each player holds a disc in his two hands. When the instructor says 'Stop', the players must stop and stay on one foot, still holding the disc in their hands.",
     },
     {
-      id: 2,
+      id: 3,
       title: 'Visual signal',
       vimeoId: undefined,
       repetition: '',
@@ -7003,7 +7013,7 @@ const statues = {
         'Same exercise but the instructor raises or lowers his arm to indicate that players can move. They have to take different information. You may even mix visual and sound commands.',
     },
     {
-      id: 3,
+      id: 4,
       title: 'The Waiter',
       vimeoId: undefined,
       repetition: '',

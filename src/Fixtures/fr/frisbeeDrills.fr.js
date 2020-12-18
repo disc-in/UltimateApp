@@ -7076,7 +7076,7 @@ const bull = {
 const statues = {
   id: 1053,
   type: DrillTypes.FRISBEE,
-  author: 'Gentle',
+  author: 'Gentle - Ine',
   title: '1, 2, 3 Soleil',
   image: 'https://zupimages.net/up/20/50/e7mk.jpeg',
   description:
@@ -7093,16 +7093,26 @@ const statues = {
   steps: [
     {
       id: 1,
-      title: 'Arrêt sur un pied',
+      title: 'La Planche',
       animation: StatuesAnimation,
+      vimeoId: '492418258',
+      repetition: '',
+      rest: '',
+      instruction:
+        "Quand l'entraîneur dit 'Partez', les joueurs avancent le plus vite possible. Quand il dit 'Stop', ils doivent s'arrêter en position de planche. Si un joueur bouge, tombe,  ou ne parvient pas à s'arrêter, il doit revenir au départ.",
+    },
+    {
+      id: 2,
+      title: 'Arrêt sur un pied',
+      animation: undefined,
       vimeoId: undefined,
       repetition: '',
       rest: '',
       instruction:
-        "Chaque joueur tient un disque à deux mains. Quand l'entraîneur dit 'Partez', les joueurs avancent le plus vite possible. Quand il dit 'Stop', ils doivent s'arrêter sur un pied, toujours en tenant leur disque à deux mains. Si un joueur bouge, tombe, ou lâche son disque il doit revenir au départ.",
+        "Même exercice, mais chaque joueur tient un disque à deux mains. Quandl'entraîneur dit 'Stop', ils doivent s'arrêter sur un pied, toujours en tenant leur disque à deux mains.",
     },
     {
-      id: 2,
+      id: 3,
       title: 'Signal Visuel',
       vimeoId: undefined,
       repetition: '',
@@ -7111,7 +7121,7 @@ const statues = {
         "Même exercice mais l'entraîneur lève ou baisse son bras pour indique aux joueurs s'ils peuvent bouger. Cela diversifie leur prise d'information. Il est aussi possible de mélanger les commandes visuaelles et sonores.",
     },
     {
-      id: 3,
+      id: 4,
       title: 'Le Serveur',
       vimeoId: undefined,
       repetition: '',

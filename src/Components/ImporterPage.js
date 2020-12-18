@@ -27,7 +27,7 @@ export const ImporterPage = (props) => {
 
   const save = () => {
     props.savePlay(importedPlay);
-    navigation.navigate('PlayEditorPage');
+    navigation.navigate('PlayEditorPage', { currentPlay: importedPlay });
   };
 
   const cancel = () => {

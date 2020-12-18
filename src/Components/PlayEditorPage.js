@@ -23,7 +23,8 @@ const newPlay = {
 };
 
 export const PlayEditorPage = (props) => {
-  const [currentPlay, setCurrentPlay] = useState(newPlay);
+  const { navigation, route } = props;
+  const [currentPlay, setCurrentPlay] = useState(route.params ? route.params.currentPlay : newPlay);
 
   // modalRenameVisible is true if the modal which enables to rename the current play is displayed
   const [modalRenameVisible, setModalRenameVisible] = useState(false);
@@ -32,7 +33,7 @@ export const PlayEditorPage = (props) => {
   const [isPlaySaved, setIsPlaySaved] = useState(true);
 
   useLayoutEffect(() => {
-    props.navigation.setOptions({
+    navigation.setOptions({
       headerRight: () => (
         <View style={{ flexDirection: 'row' }}>
           <SavedPlaysList
@@ -65,7 +66,7 @@ export const PlayEditorPage = (props) => {
     const unsavedAsterisk = isPlaySaved ? '' : '* ';
     const displayedTitle = `${unsavedAsterisk}${playTitle}`;
 
-    props.navigation.setOptions({ headerTitle: displayedTitle });
+    navigation.setOptions({ headerTitle: displayedTitle });
   };
 
   const onAnimationChange = (animation) => {

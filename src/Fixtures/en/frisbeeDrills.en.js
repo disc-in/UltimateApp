@@ -103,6 +103,10 @@ import JapaneseAnimation from '../Animation/Japanese';
 import theZAnimation from '../Animation/TheZ';
 import dishieLineAnimation from '../Animation/DishieLine';
 import doubleLinesAnimation from '../Animation/DoubleLines';
+import runPassAnimation from '../Animation/RunPass';
+import unoAnimation from '../Animation/Uno';
+import unoDefenseAnimation from '../Animation/UnoDefense';
+import unoPivotAnimation from '../Animation/UnoPivot';
 
 const stabilityDrill = {
   id: 1,
@@ -7140,6 +7144,67 @@ const theZ = {
   ],
 };
 
+const passMouv = {
+  id: 1058,
+  type: DrillTypes.FRISBEE,
+  author: 'UPA - Pablo',
+  title: 'Pass to a moving player',
+  image: 'https://zupimages.net/up/20/51/kh8z.jpg',
+  description: 'Exercises to learn how to pass to moving players',
+  minimalPlayersNumber: 3,
+  inGame:
+    'I make a counter-cut after the cone, without making a curve and in the direction of a corner of the area. I only slow down when I have the disc in my hand. I succeed in my passes.',
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '3 discs - 1 cone per group',
+  durationInMinutes: 7,
+  intensity: Intensities.LOW,
+  goals: [FrisbeeGoals.WARM_UP, FrisbeeGoals.JUNIOR, FrisbeeGoals.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'Pass to a moving player',
+      animation: runPassAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        "The first player in the column moves to the cone by making 'scales'. Once at the block, he countercuts to his starting point to receive his partner's pass, which will have established his pivot foot",
+    },
+    {
+      id: 2,
+      title: 'Pass with an angle',
+      animation: unoAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        "The first player in the column moves to the cup in a sprint. Once at the block, he makes a counter-cut towards a corner of the area and receives his partner's pass, without slowing down. He then changes column. The thrower waits for eye contact to throw the disc.",
+    },
+    {
+      id: 3,
+      title: 'With a defender',
+      animation: unoDefenseAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Placing a defender after the cone that will react when the attacker makes his counter-cut. A marker can also be placed.',
+    },
+    {
+      id: 4,
+      title: 'Rotate and react',
+      animation: unoPivotAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        "The cutter verifies that the thrower is ready and that the player in the middle is looking towards him. He sprints and counter-cuts on the side he wants. In the middle of the race, the first throw is made after having previously called him by a 'top'. The player then pivots on the right foot, wrestles and pivots again to make the pass with the right throw.",
+    },
+  ],
+};
+
 const normalGame = {
   id: 2001,
   type: DrillTypes.FRISBEE,
@@ -8240,6 +8305,7 @@ export const drills = [
   dishieLine,
   manipulation,
   racingWarmUP,
+  passMouv,
 
   // Commenting game drills because we don't want them in the drill list, only part of programs
   // // Games

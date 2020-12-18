@@ -103,6 +103,10 @@ import JapaneseAnimation from '../Animation/Japanese';
 import theZAnimation from '../Animation/TheZ';
 import dishieLineAnimation from '../Animation/DishieLine';
 import doubleLinesAnimation from '../Animation/DoubleLines';
+import runPassAnimation from '../Animation/RunPass';
+import unoAnimation from '../Animation/Uno';
+import unoDefenseAnimation from '../Animation/UnoDefense';
+import unoPivotAnimation from '../Animation/UnoPivot';
 
 const stabilityDrill = {
   id: 1,
@@ -3858,7 +3862,7 @@ const agility10 = {
     },
     {
       id: 6,
-      title: 'Single Leg Cone Touch',
+      title: 'Single Leg plot Touch',
       vimeoId: '435780932',
       sounds: false,
       repetition: '3 * 8',
@@ -4732,7 +4736,7 @@ const agility5 = {
     },
     {
       id: 6,
-      title: 'Single Leg Cone Touch',
+      title: 'Single Leg plot Touch',
       vimeoId: '435780932',
       sounds: false,
       repetition: '3 * 8',
@@ -5566,7 +5570,7 @@ const dishieChainDrill = {
 const breakDanceDrill = {
   id: 1016,
   type: DrillTypes.FRISBEE,
-  author: 'Disc Joker',
+  author: 'disque Joker',
   title: 'Le Sapin de Noël',
   image: 'https://zupimages.net/up/20/19/agsd.jpg',
   description: 'Travailler la continuité dans le break.',
@@ -5877,10 +5881,10 @@ const discGolf = {
   id: 1023,
   type: DrillTypes.FRISBEE,
   author: 'Colony',
-  title: 'Disc-Golf',
+  title: 'disque-Golf',
   image: 'https://zupimages.net/up/20/25/f4bu.jpg',
   description:
-    'Les règles. Le disc-golf se joue comme le golf traditionnel, mais avec des disques de disc-golf au lieu de balles et de clubs.',
+    'Les règles. Le disque-golf se joue comme le golf traditionnel, mais avec des disques de disque-golf au lieu de balles et de clubs.',
   minimalPlayersNumber: 1,
   inGame: '-',
   equipmentLabel: EquipmentLabels.NONE,
@@ -5893,13 +5897,13 @@ const discGolf = {
   steps: [
     {
       id: 1,
-      title: 'Disc Golf',
+      title: 'disque Golf',
       animation: discGolfAnimation,
       vimeoId: '475059721',
       repetition: '',
       rest: '',
       instruction:
-        "Les règles: Le disc-golf se joue comme le golf traditionnel.\nUn lancer (stroke) est compté à chaque fois que le disque est lancé et lorsqu'une pénalité est encourue. L'objectif est de jouer chaque trou en un minimum de coups.",
+        "Les règles: Le disque-golf se joue comme le golf traditionnel.\nUn lancer (stroke) est compté à chaque fois que le disque est lancé et lorsqu'une pénalité est encourue. L'objectif est de jouer chaque trou en un minimum de coups.",
     },
   ],
 };
@@ -5910,7 +5914,7 @@ const dDC = {
   author: '',
   title: 'DDC',
   image: 'https://zupimages.net/up/20/25/t73e.jpg',
-  description: 'Double disc court est un sport de frisbee qui combine rapidité, stratégie et capacité de lancer.',
+  description: 'Double disque court est un sport de frisbee qui combine rapidité, stratégie et capacité de lancer.',
   minimalPlayersNumber: 4,
   inGame:
     "Le DDC permet de travailler la maîtrise des courbes de passes et la communication. La gain technique permet de s'adapter au situation de match",
@@ -7095,7 +7099,7 @@ const statues = {
       repetition: '',
       rest: '',
       instruction:
-        "Chaque joueur tient un disc à deux mains. Quand l'entraîneur dit 'Partez', les joueurs avancent le plus vite possible. Quand il dit 'Stop', ils doivent s'arrêter sur un pied, toujours en tenant leur disque à deux mains. Si un joueur bouge, tombe, ou lâche son disque il doit revenir au départ.",
+        "Chaque joueur tient un disque à deux mains. Quand l'entraîneur dit 'Partez', les joueurs avancent le plus vite possible. Quand il dit 'Stop', ils doivent s'arrêter sur un pied, toujours en tenant leur disque à deux mains. Si un joueur bouge, tombe, ou lâche son disque il doit revenir au départ.",
     },
     {
       id: 2,
@@ -7199,7 +7203,7 @@ const flubber = {
   minimalPlayersNumber: 4,
   inGame: undefined,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 disc - 2 cones',
+  equipment: '1 disque - 2 plots',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.WARM_UP, FrisbeeGoals.JUNIOR, FrisbeeGoals.GAMES, FrisbeeGoals.CATCH],
@@ -7229,7 +7233,7 @@ const theZ = {
   minimalPlayersNumber: 7,
   inGame: undefined,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 disc',
+  equipment: '1 disque',
   durationInMinutes: 10,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.WARM_UP, FrisbeeGoals.JUNIOR],
@@ -7245,6 +7249,67 @@ const theZ = {
       rest: '',
       instruction:
         "Un joueur va, aussi vite que possible, en longue quand le lanceur attrape le disque. Lorsque le lanceur fait une feinte réaliste, le coureur change de direction. L'idéal est de travailler tous les types de lancer possibles",
+    },
+  ],
+};
+
+const passMouv = {
+  id: 1058,
+  type: DrillTypes.FRISBEE,
+  author: 'UPA - Pablo',
+  title: 'Passer sur un joueur mobile',
+  image: 'https://zupimages.net/up/20/51/kh8z.jpg',
+  description: 'Des exercices pour apprendre à faire des passes à des joueurs en mouvement',
+  minimalPlayersNumber: 3,
+  inGame:
+    'Je fais un contre-appel après le plot, sans faire de courbe et en direction d’un angle de la zone. Je ne ralentis que lorsque j’ai le disque en main. Je réussis mes passes.',
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '3 disques - 1 plot par groupe',
+  durationInMinutes: 7,
+  intensity: Intensities.LOW,
+  goals: [FrisbeeGoals.WARM_UP, FrisbeeGoals.JUNIOR, FrisbeeGoals.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'Passer sur un joueur mobile',
+      animation: runPassAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Le premier joueur de la colonne se déplace jusqu’à le plot en faisant des « gammes ». Arrivé au plot, il contre-cut vers son point de départ pour réceptionner la passe de son partenaire, qui aura établis son pied pivot.',
+    },
+    {
+      id: 2,
+      title: 'Passe avec un angle',
+      animation: unoAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Le premier joueur de la colonne se déplace jusqu’à la coupelle en sprint. Arrivé au plot, il « met les freins » pour faire un contre-cut vers un angle de la zone. Il réceptionne la passe de son partenaire, sans ralentir. Il change ensuite de colonne. Le passeur attend le contact visuel pour lancer le disque.',
+    },
+    {
+      id: 3,
+      title: 'Avec un défenseur',
+      animation: unoDefenseAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        "Placer un défenseur après le plot qui réagira quand l'attaquant effectuera son contre-cut. Une marque peut aussi être mise en place.",
+    },
+    {
+      id: 4,
+      title: 'Pivoter et réagir',
+      animation: unoPivotAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Le coureur vérifie que lanceur est prêt et que le joueur au milieu regarde vers lui. Il sprint et contre-cut du côté qu’il veut. Au milieu de la course, la première est effectuée après l’avoir préalablement appelé par un « top ». Le joueur alors pivote sur le bon pied, catch et pivote à  nouveau pour faire la passe avec le bon lancer',
     },
   ],
 };
@@ -7506,7 +7571,7 @@ const game5v5 = {
     'Classic indoor, beach or youth game. Also a good way to reduce the complexity of the game for beginners',
   minimalPlayersNumber: 10,
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '8 cones - 1 disc',
+  equipment: '8 plots - 1 disque',
   durationInMinutes: 20,
   intensity: Intensities.HIGH,
   goals: [FrisbeeGoals.GAMES],
@@ -7720,7 +7785,7 @@ const secondU10training = {
   id: 23,
   title: "It's all about fun",
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'A second practice to discover funny games',
+  description: 'A second practice to disqueover funny games',
   drills: [statues, crossingTheField, goToTenDrill],
 };
 
@@ -8357,6 +8422,7 @@ export const drills = [
   dishieLine,
   manipulation,
   racingWarmUP,
+  passMouv,
 
   // // Games
   // normalGame,

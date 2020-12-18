@@ -3,6 +3,7 @@ import { StyleSheet, View } from 'react-native';
 import { connect } from 'react-redux';
 
 import I18n from '../utils/i18n';
+import { generateUuid } from '../utils/uuid';
 import theme from '../styles/theme.style';
 import { savePlay, deletePlay } from '../Store/Actions/playAction';
 import AnimationEditor from './editor/AnimationEditor';
@@ -11,6 +12,7 @@ import SavedPlaysList from './editor/SavedPlaysList';
 import RenamePlayModal from './editor/RenamePlayModal';
 
 const newPlay = {
+  uuid: undefined,
   animation: {
     positions: [[], []],
     ids: [],
@@ -67,7 +69,7 @@ export const PlayEditorPage = (props) => {
   };
 
   const onAnimationChange = (animation) => {
-    setCurrentPlay({ animation, title: currentPlay.title });
+    setCurrentPlay({ ...currentPlay, animation });
     setIsPlaySaved(false);
   };
 
@@ -82,6 +84,9 @@ export const PlayEditorPage = (props) => {
         counter += 1;
       }
       currentPlay.title = newTitle;
+    }
+    if (currentPlay.uuid === undefined) {
+      currentPlay.uuid = generateUuid();
     }
     props.savePlay(currentPlay);
     setIsPlaySaved(true);
@@ -98,7 +103,7 @@ export const PlayEditorPage = (props) => {
   };
 
   const onDelete = (play) => {
-    props.deletePlay(play.title);
+    props.deletePlay(play.uuid);
 
     if (play.title === currentPlay.title) createNewPlay();
   };

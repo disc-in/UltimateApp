@@ -2,6 +2,7 @@ import playReducer from './playReducer';
 
 describe('playReducer', () => {
   const play = {
+    uuid: '123',
     animation: {
       positions: [0],
     },
@@ -12,6 +13,7 @@ describe('playReducer', () => {
   describe('When handling SAVE_PLAY', () => {
     it('when saving an existing play', () => {
       const newPlay = {
+        uuid: '123',
         animation: {
           positions: [1],
         },
@@ -22,6 +24,7 @@ describe('playReducer', () => {
 
     it('when saving a new play', () => {
       const newPlay = {
+        uuid: '234',
         animation: {
           positions: [1],
         },
@@ -34,7 +37,7 @@ describe('playReducer', () => {
   describe('When handling RENAME_PLAY', () => {
     it('when renaming an existing play', () => {
       const value = {
-        oldTitle: 'Title',
+        uuid: '123',
         newTitle: 'New Title',
       };
       expect(playReducer(initialState, { type: 'RENAME_PLAY', value })).toEqual([{ ...play, title: 'New Title' }]);
@@ -42,20 +45,20 @@ describe('playReducer', () => {
 
     it('when renaming an unknown play', () => {
       const value = {
-        oldTitle: 'Unknown title',
+        uuid: '999',
         newTitle: 'New Title',
       };
-      expect(playReducer(initialState, { type: 'DELETE_PLAY', value: 'unknown play' })).toEqual([play]);
+      expect(playReducer(initialState, { type: 'RENAME_PLAY', value })).toEqual([play]);
     });
   });
 
   describe('When handling DELETE_PLAY', () => {
     it('when deleting an existing play', () => {
-      expect(playReducer(initialState, { type: 'DELETE_PLAY', value: play.title })).toEqual([]);
+      expect(playReducer(initialState, { type: 'DELETE_PLAY', value: play.uuid })).toEqual([]);
     });
 
     it('when deleting an unknown play', () => {
-      expect(playReducer(initialState, { type: 'DELETE_PLAY', value: 'unknown play' })).toEqual([play]);
+      expect(playReducer(initialState, { type: 'DELETE_PLAY', value: '999' })).toEqual([play]);
     });
   });
 

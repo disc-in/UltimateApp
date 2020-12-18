@@ -55,7 +55,7 @@ const SavedPlaysList = (props) => {
         style: 'destructive',
         onPress: () => {
           props.onDelete(play);
-          showSuccess(I18n.t('editor.savedPlaysList.deleteSuccess', { title: props.playTitle }), modalFlash.current);
+          showSuccess(I18n.t('editor.savedPlaysList.deleteSuccess', { title: play.title }), modalFlash.current);
         },
       },
     ]);

@@ -220,7 +220,6 @@ describe('<CurrentPlayManager />', () => {
   });
 
   it('triggers share action', async () => {
-    jest.spyOn(firebase, 'upload');
     jest.spyOn(firebase, 'upload').mockImplementation(() => {});
 
     const share = jest.fn();

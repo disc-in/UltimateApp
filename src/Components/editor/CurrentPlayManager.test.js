@@ -1,9 +1,10 @@
 import React from 'react';
 import { render, waitFor, fireEvent } from '@testing-library/react-native';
 import { Provider as PaperProvider } from 'react-native-paper';
-import { Alert } from 'react-native';
+import { Alert, Share } from 'react-native';
 
 import animationSquare from '../../Fixtures/Animation/AnimationSquare';
+import * as firebase from '../../utils/firebase';
 
 import CurrentPlayManager from './CurrentPlayManager';
 
@@ -216,5 +217,32 @@ describe('<CurrentPlayManager />', () => {
       expect(save).not.toBeCalled();
       expect(_new).toBeCalled();
     });
+  });
+
+  it('triggers share action', async () => {
+    jest.spyOn(firebase, 'upload');
+    jest.spyOn(firebase, 'upload').mockImplementation(() => {});
+
+    const share = jest.fn();
+    Share.share = () => new Promise((resolve, reject) => share());
+
+    const { getByTestId, getByText } = await waitFor(() =>
+      render(
+        <PaperProvider>
+          <CurrentPlayManager
+            currentPlay={currentPlay}
+            isPlaySaved={isPlaySaved}
+            save={save}
+            new={_new}
+            rename={rename}
+          />
+        </PaperProvider>,
+      ),
+    );
+    await fireEvent.press(getByTestId('headerButton'));
+    await fireEvent.press(getByText('Share'));
+
+    expect(firebase.upload).toHaveBeenCalled();
+    expect(share).toHaveBeenCalled();
   });
 });

@@ -7,7 +7,7 @@ if (firebase.apps.length === 0) {
 }
 
 const reference = (uuid) => {
-  return firebase.database().ref(`drills/${uuid}`);
+  return firebase.database().ref(`plays/${uuid}`);
 };
 
 export const upload = (play) => {

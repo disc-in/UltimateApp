@@ -119,7 +119,8 @@ export default {
       rename: 'Rename',
       new: 'New',
       share: 'Share',
-      sharePlaceholder: 'Use the following id to import my awesome play in Disc In: {{uuid}}',
+      shareTitle: 'Sharing {{title}}',
+      shareMessage: 'Use the following link to import my awesome play in Disc In: {{url}}',
     },
     renamePlayModal: {
       placeholder: 'Click here to enter the new name',

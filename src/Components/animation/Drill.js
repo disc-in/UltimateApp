@@ -44,8 +44,8 @@ class Drill {
   /** Add an element to the drill */
   addElement(type, initialX, initialY, text) {
     this.positions[0].push([[initialX, initialY]]);
-    // Add an undefined representing the fact that it does not currently move at the other steps
-    for (var i = 1; i < this.stepCount(); ++i) this.positions[i].push(undefined);
+    // Add an null representing the fact that it does not currently move at the other steps
+    for (var i = 1; i < this.stepCount(); ++i) this.positions[i].push(null);
 
     this.texts.push(text);
     this.ids.push(type);

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Alert, Share, Text } from 'react-native';
 import { Menu, Divider } from 'react-native-paper';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import * as Linking from 'expo-linking';
 
 import I18n from '../../utils/i18n';
 import { upload } from '../../utils/firebase';
@@ -16,8 +17,12 @@ const CurrentPlayManager = (props) => {
 
   const contribute = () => {
     const result = upload(props.currentPlay);
+    const url = Linking.makeUrl('play', { uuid: props.currentPlay.uuid });
+
     Share.share({
-      title: I18n.t('editor.currentPlayManager.sharePlaceholder', { uuid: props.currentPlay.uuid }),
+      title: I18n.t('editor.currentPlayManager.shareTitle', { title: props.currentPlay.title }),
+      message: I18n.t('editor.currentPlayManager.shareMessage', { url }),
+      url,
     }).catch((err) => console.log(err));
   };
 

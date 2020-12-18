@@ -119,7 +119,8 @@ export default {
       rename: 'Renommer',
       new: 'Nouveau',
       share: 'Partager',
-      sharePlaceholder: 'Utilise cet identifiant pour télécharger ma super tactique dans Disc In : {{uuid}}',
+      shareTitle: 'Partager {{title}}',
+      shareMessage: 'Utilise ce lien pour télécharger ma super tactique dans Disc In : {{url}}',
     },
     renamePlayModal: {
       placeholder: 'Appuyer ici pour renommer',

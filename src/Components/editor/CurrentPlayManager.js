@@ -15,8 +15,8 @@ const CurrentPlayManager = (props) => {
   const openMenu = () => setVisible(true);
   const closeMenu = () => setVisible(false);
 
-  const contribute = () => {
-    const result = upload(props.currentPlay);
+  const share = async () => {
+    const result = await upload(props.currentPlay);
     const url = Linking.makeUrl('customPlays/' + props.currentPlay.uuid);
 
     Share.share({
@@ -88,7 +88,7 @@ const CurrentPlayManager = (props) => {
       <Divider />
       <Menu.Item
         onPress={() => {
-          contribute();
+          share();
           closeMenu();
         }}
         icon="share-outline"

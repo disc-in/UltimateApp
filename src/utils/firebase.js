@@ -11,7 +11,7 @@ const reference = (uuid) => {
 };
 
 export const upload = (play) => {
-  reference(play.uuid).set(play);
+  return reference(play.uuid).set(play);
 };
 
 export const download = (uuid) => {

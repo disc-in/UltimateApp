@@ -2,13 +2,19 @@
 // - positions[stepId][elemId][subStepId][coordinateId]
 //
 // Remark1: positions[0][elemId] is the initial position which must be defined for each element
-// Remark2: positions[stepId][elemId] is undefined if  element i position does not change between steps stepId-1 and stepId
+// Remark2: positions[stepId][elemId] is undefined if element i position does not change between steps stepId-1 and stepId
 class Drill {
   constructor(animation) {
     this.positions = (animation && animation.positions) || [[], []];
     this.ids = (animation && animation.ids) || [];
     this.texts = (animation && animation.texts) || [];
     this.background = (animation && animation.background) || 'endzone';
+    if (this.positions.length === 1) {
+      // A serialized array containing only null or  being empty may be removed (eg. on Firebase)
+      // An animation must contain 2 steps to be displayed
+      // So we reconstruct a second step
+      this.addStep();
+    }
   }
 
   /** Get the position of an element at a given step.

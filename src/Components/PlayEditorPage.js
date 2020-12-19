@@ -10,15 +10,11 @@ import AnimationEditor from './editor/AnimationEditor';
 import CurrentPlayManager from './editor/CurrentPlayManager';
 import SavedPlaysList from './editor/SavedPlaysList';
 import RenamePlayModal from './editor/RenamePlayModal';
+import Drill from './animation/Drill';
 
 const newPlay = {
   uuid: undefined,
-  animation: {
-    positions: [[], []],
-    ids: [],
-    texts: [],
-    background: 'endzone',
-  },
+  animation: new Drill(),
   title: I18n.t('playEditorPage.untitledPlay'),
 };
 

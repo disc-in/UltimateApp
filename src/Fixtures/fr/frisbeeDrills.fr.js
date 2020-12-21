@@ -3862,7 +3862,7 @@ const agility10 = {
     },
     {
       id: 6,
-      title: 'Single Leg plot Touch',
+      title: 'Single Leg Cone Touch',
       vimeoId: '435780932',
       sounds: false,
       repetition: '3 * 8',
@@ -4736,7 +4736,7 @@ const agility5 = {
     },
     {
       id: 6,
-      title: 'Single Leg plot Touch',
+      title: 'Single Leg Cone Touch',
       vimeoId: '435780932',
       sounds: false,
       repetition: '3 * 8',
@@ -5881,7 +5881,7 @@ const discGolf = {
   id: 1023,
   type: DrillTypes.FRISBEE,
   author: 'Colony',
-  title: 'disque-Golf',
+  title: 'Disc-Golf',
   image: 'https://zupimages.net/up/20/25/f4bu.jpg',
   description:
     'Les règles. Le disque-golf se joue comme le golf traditionnel, mais avec des disques de disque-golf au lieu de balles et de clubs.',

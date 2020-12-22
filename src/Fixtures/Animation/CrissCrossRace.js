@@ -2,7 +2,6 @@ const crissCrossRace = {
   positions: [
     [
       [[0, 0.07781760907406506]],
-      [[0.9536639389995899, 0.09630714595118493]],
       [[0.8953448477915821, 0.08791899089963924]],
       [[0.18794736816360247, 0.919382874811623]],
       [[0, 0.8633322742366865]],
@@ -22,7 +21,6 @@ const crissCrossRace = {
       null,
       null,
       null,
-      null,
       [
         [0.37959776982606885, 0.8260744406141284],
         [0.26954340053367076, 0.7629473954720641],
@@ -33,7 +31,6 @@ const crissCrossRace = {
       ],
     ],
     [
-      null,
       null,
       null,
       [
@@ -58,7 +55,6 @@ const crissCrossRace = {
       ],
     ],
     [
-      null,
       null,
       null,
       [[0.3774184256147783, 0.7056698770997788]],
@@ -86,7 +82,6 @@ const crissCrossRace = {
       null,
       null,
       null,
-      null,
       [
         [0.3610840064499327, 0.7801908011061798],
         [0.42033388096493235, 0.7337512297970485],
@@ -108,7 +103,6 @@ const crissCrossRace = {
       ],
     ],
     [
-      null,
       null,
       null,
       [
@@ -133,7 +127,6 @@ const crissCrossRace = {
       ],
     ],
     [
-      null,
       null,
       null,
       [[0.0376356973205309, 0.28675542512090557]],
@@ -161,7 +154,6 @@ const crissCrossRace = {
       null,
       null,
       null,
-      null,
       [[0.026167655822997238, 0.3342269486561834]],
       [[0.38511361588323945, 0.06735197503645997]],
       null,
@@ -171,7 +163,6 @@ const crissCrossRace = {
       [[0.8395301552506198, 0.06383555844625399]],
     ],
     [
-      null,
       null,
       null,
       [[0.41074362198665776, 0.8940950634261609]],
@@ -192,25 +183,12 @@ const crissCrossRace = {
       null,
       null,
       null,
-      null,
       [[0.4056250315397515, 0.8842355930655161]],
       [[0.857108291405795, 0.8567203929944982]],
     ],
   ],
-  ids: [
-    'triangle',
-    'triangle',
-    'triangle',
-    'offense',
-    'offense',
-    'offense',
-    'defense',
-    'defense',
-    'defense',
-    'disc',
-    'disc',
-  ],
-  texts: [1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2],
+  ids: ['triangle', 'triangle', 'offense', 'offense', 'offense', 'defense', 'defense', 'defense', 'disc', 'disc'],
+  texts: [1, '2', 1, 2, 3, 1, 2, 3, 1, 2],
   background: 'empty',
 };
 

@@ -107,6 +107,9 @@ import runPassAnimation from '../Animation/RunPass';
 import unoAnimation from '../Animation/Uno';
 import unoDefenseAnimation from '../Animation/UnoDefense';
 import unoPivotAnimation from '../Animation/UnoPivot';
+import theRelayAnimation from '../Animation/TheRelay';
+import crissCrossAnimation from '../Animation/CrissCross';
+import crissCrossRaceAnimation from '../Animation/CrissCrossRace';
 
 const stabilityDrill = {
   id: 1,
@@ -5059,7 +5062,8 @@ const breakDrill = {
   author: 'Friselis',
   title: 'Cuts vers le côté fermé',
   image: 'https://zupimages.net/up/20/19/83fx.jpg',
-  description: "Pour apprendre à jouer dans le côté fermé, et empêcher l'adversaire de le faire !",
+  description:
+    "Pour apprendre à jouer dans le côté fermé, et empêcher l'adversaire de le faire ! Le lanceur peut de nouveau utiliser toutes les feintes possibles. Si l'on veut faire travailler la marque, on peut insister sur le fait de ne jamais se prendre 2 fois de suite le même break. Il s'agit d'observer quelle est la passe préférentielle de l'attaquant et de tout faire pour la bloquer. On peut compter les points en valorisant les marques qui ont provoqué une passe ratée ou hors-timing",
   minimalPlayersNumber: 6,
   inGame:
     'Les défenseurs cherchent à orienter le jeu en limitant les options de passes par une marque. Si les attaquants parviennent à breaker, ils augmentent drastiquement les possibilités de passes.',
@@ -5083,13 +5087,6 @@ const breakDrill = {
       title: 'Sans le pied de pivot',
       animation: breakSide,
       instruction: 'Le lanceur doit essayer de breaker mais sans réaliser de pied de pivot',
-    },
-    {
-      id: 3,
-      title: 'La Grande Muraille de Chine',
-      animation: breakSide,
-      instruction:
-        "Le lanceur peut de nouveau utiliser toutes les feintes possibles. Si l'on veut faire travailler la marque, on peut insister sur le fait de ne jamais se prendre 2 fois de suite le même break. Il s'agit d'observer quelle est la passe préférentielle de l'attaquant et de tout faire pour la bloquer. On peut compter les points en valorisant les marques qui ont provoqué une passe ratée ou hors-timing",
     },
   ],
 };
@@ -6488,7 +6485,7 @@ const racingWarmUP = {
     {
       id: 3,
       title: 'Le Relai',
-      animation: undefined,
+      animation: theRelayAnimation,
       vimeoId: undefined,
       repetition: '',
       rest: '',
@@ -7048,7 +7045,7 @@ const bull = {
   equipment: '1 disque ',
   durationInMinutes: 12,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.DEFENSE],
+  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.DEFENSE],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -7268,7 +7265,7 @@ const passMouv = {
   type: DrillTypes.FRISBEE,
   author: 'UPA - Pablo',
   title: 'Passer sur un joueur mobile',
-  image: 'https://zupimages.net/up/20/51/kh8z.jpg',
+  image: 'https://zupimages.net/up/20/52/5fsl.jpg',
   description: 'Des exercices pour apprendre à faire des passes à des joueurs en mouvement',
   minimalPlayersNumber: 3,
   inGame:
@@ -7320,6 +7317,46 @@ const passMouv = {
       rest: '',
       instruction:
         'Le coureur vérifie que lanceur est prêt et que le joueur au milieu regarde vers lui. Il sprint et contre-cut du côté qu’il veut. Au milieu de la course, la première est effectuée après l’avoir préalablement appelé par un « top ». Le joueur alors pivote sur le bon pied, catch et pivote à  nouveau pour faire la passe avec le bon lancer',
+    },
+  ],
+};
+
+const crissCross = {
+  id: 1059,
+  type: DrillTypes.FRISBEE,
+  author: "Jack'suns - Richt",
+  title: 'La Tresse',
+  image: 'https://zupimages.net/up/20/52/gi85.jpg',
+  description: 'Un exercice pour apprendre à faire des petites passes latérales rapides entre handlers.',
+  minimalPlayersNumber: 3,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disque par groupe de 3',
+  durationInMinutes: 7,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.WARM_UP, FrisbeeGoals.JUNIOR, FrisbeeGoals.HANDLING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'La Tresse',
+      animation: crissCrossAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        "Une équipe composée de 3 joueurs effectue des passes latérales pour avancer. Lorsqu'un joueur fait une passe au joueur opposé, il doit suivre le disque pour proposer le prochain cut.",
+    },
+    {
+      id: 2,
+      title: 'La Course',
+      animation: crissCrossRaceAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        "Deux équipes s'affrontent. L'objectif est de réussir à faire le plus de fois une distance définie dans un temps donné. Un nombre minimum de passe doit être défini. Si un turn-over a lieu, le groupe doit revenir le plus vite possible au point de départ.",
     },
   ],
 };
@@ -8433,6 +8470,7 @@ export const drills = [
   manipulation,
   racingWarmUP,
   passMouv,
+  crissCross,
 
   // // Games
   // normalGame,

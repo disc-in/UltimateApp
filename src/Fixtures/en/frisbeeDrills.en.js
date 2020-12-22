@@ -107,6 +107,9 @@ import runPassAnimation from '../Animation/RunPass';
 import unoAnimation from '../Animation/Uno';
 import unoDefenseAnimation from '../Animation/UnoDefense';
 import unoPivotAnimation from '../Animation/UnoPivot';
+import theRelayAnimation from '../Animation/TheRelay';
+import crissCrossAnimation from '../Animation/CrissCross';
+import crissCrossRaceAnimation from '../Animation/CrissCrossRace';
 
 const stabilityDrill = {
   id: 1,
@@ -4966,7 +4969,8 @@ const breakDrill = {
   author: 'Friselis',
   title: 'Cuts to the Break Side',
   image: 'https://zupimages.net/up/20/19/83fx.jpg',
-  description: 'Cutting from the open side to the break side. The drill is both for the thrower and the mark.',
+  description:
+    "Cutting from the open side to the break side. The drill is both for the thrower and the mark. If you want to work on improving the mark, you may insist so that the defender may not be broken twice in a row with the same pass. You want them to identify the thrower's favorite throw and block it",
   minimalPlayersNumber: 6,
   inGame:
     'Defenders seek to limit the options for passing through a mark. If the attackers manage to break, they drastically increase the passing options.',
@@ -4983,20 +4987,13 @@ const breakDrill = {
       title: 'Open to Break',
       animation: breakSide,
       instruction:
-        'Two lines of players face each other, about 30 meters apart. A force is decided for the exercise. At the front of one line is a player with a disc, and a mark maintaining the force. The front of the other line cuts towards the thrower on the open side, and when the thrower fakes, cuts horizontally from the open side towards the break side. The thrower then must break the mark to throw to the cutter. The thrower then makes the next cut, towards the other side. The mark becomes a thrower, and the next in line becomes the mark. Players in line should have discs.',
+        'Two lines of players face each other. At the front of one line is a player with a disc, and a mark maintaining the force. The front of the other line cuts towards the thrower on the open side, and when the thrower fakes, cuts horizontally from the open side towards the break side. The thrower then must break the mark to throw to the cutter.',
     },
     {
       id: 2,
       title: 'Without the pivot foot',
       animation: breakSide,
       instruction: 'The thrower has to try to break the mark without any pivot',
-    },
-    {
-      id: 3,
-      title: 'Great Wall of China',
-      animation: breakSide,
-      instruction:
-        "If you want to work on improving the mark, you may insist so that the defender may not be broken twice in a row with the same pass. You want them to identify the thrower's favorite throw and block it",
     },
   ],
 };
@@ -5976,9 +5973,9 @@ const dishieLine = {
   steps: [
     {
       id: 1,
-      title: 'The Dishie Line',
+      title: 'Attack your Disc',
       animation: doubleLinesAnimation,
-      vimeoId: '486367517',
+      vimeoId: undefined,
       repetition: '',
       rest: '',
       instruction:
@@ -5986,9 +5983,9 @@ const dishieLine = {
     },
     {
       id: 2,
-      title: 'Attack your Disc',
+      title: 'The Dishie Line',
       animation: dishieLineAnimation,
-      vimeoId: undefined,
+      vimeoId: '486367517',
       repetition: '',
       rest: '',
       instruction:
@@ -6387,7 +6384,7 @@ const racingWarmUP = {
     {
       id: 3,
       title: 'The Relay',
-      animation: undefined,
+      animation: theRelayAnimation,
       vimeoId: undefined,
       repetition: '',
       rest: '',
@@ -6940,7 +6937,7 @@ const bull = {
   equipment: '1 disc',
   durationInMinutes: 12,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.DEFENSE],
+  goals: [FrisbeeGoals.JUNIOR, FrisbeeGoals.DEFENSE],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -7096,7 +7093,7 @@ const guts = {
 const flubber = {
   id: 1056,
   type: DrillTypes.FRISBEE,
-  author: 'Mooncatchers',
+  author: 'Mooncatchers - Olivier',
   title: 'Flubber Guts',
   image: 'https://zupimages.net/up/20/51/7bvr.jpg',
   description:
@@ -7127,7 +7124,7 @@ const flubber = {
 const theZ = {
   id: 1057,
   type: DrillTypes.FRISBEE,
-  author: 'Mooncatchers',
+  author: 'Mooncatchers - Olivier',
   title: 'The Z',
   image: 'https://zupimages.net/up/20/51/kh8z.jpg',
   description: 'The ideal drill to work on curved passes as well as race timing.',
@@ -7159,7 +7156,7 @@ const passMouv = {
   type: DrillTypes.FRISBEE,
   author: 'UPA - Pablo',
   title: 'Pass to a moving player',
-  image: 'https://zupimages.net/up/20/51/kh8z.jpg',
+  image: 'https://zupimages.net/up/20/52/5fsl.jpg',
   description: 'Exercises to learn how to pass to moving players',
   minimalPlayersNumber: 3,
   inGame:
@@ -7211,6 +7208,46 @@ const passMouv = {
       rest: '',
       instruction:
         "The cutter verifies that the thrower is ready and that the player in the middle is looking towards him. He sprints and counter-cuts on the side he wants. In the middle of the race, the first throw is made after having previously called him by a 'top'. The player then pivots on the right foot, wrestles and pivots again to make the pass with the right throw.",
+    },
+  ],
+};
+
+const crissCross = {
+  id: 1059,
+  type: DrillTypes.FRISBEE,
+  author: "Jack'suns - Richt",
+  title: 'Criss Cross',
+  image: 'https://zupimages.net/up/20/52/gi85.jpg',
+  description: 'A Drill to learn how to make small fast side passes between handlers',
+  minimalPlayersNumber: 3,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '1 disc per group of 3',
+  durationInMinutes: 7,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.WARM_UP, FrisbeeGoals.JUNIOR, FrisbeeGoals.HANDLING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'Criss Cross',
+      animation: crissCrossAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        'A team composed of 3 players makes side passes to move forward. When a player makes a pass to the opposite player, he must then follow the disc to propose the next cut.',
+    },
+    {
+      id: 2,
+      title: 'The Race',
+      animation: crissCrossRaceAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Two teams compete against each other. The objective is to manage to do as many times as possible a defined distance in a given time. A minimum number of passes must be defined. If there is a turn-over, the group must return to the starting point as quickly as possible.',
     },
   ],
 };
@@ -8316,6 +8353,7 @@ export const drills = [
   manipulation,
   racingWarmUP,
   passMouv,
+  crissCross,
 
   // Commenting game drills because we don't want them in the drill list, only part of programs
   // // Games

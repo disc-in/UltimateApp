@@ -7764,7 +7764,7 @@ const secondU10training = {
   id: 23,
   title: "It's all about fun",
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'A second practice to discover funny games',
+  description: 'A second practice to disc over funny games',
   drills: [statues, crossingTheField, goToTenDrill],
 };
 

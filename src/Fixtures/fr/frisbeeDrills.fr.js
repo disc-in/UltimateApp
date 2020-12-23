@@ -7873,9 +7873,9 @@ const u10Initiation = {
 
 const secondU10training = {
   id: 23,
-  title: "It's all about fun",
+  title: 'Que du plaisir',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'A second practice to disqueover funny games',
+  description: 'Un deuxième entrainement pour découvrir le disque',
   drills: [statues, crossingTheField, goToTenDrill],
 };
 

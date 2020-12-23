@@ -6190,7 +6190,7 @@ const checkLong = {
   type: DrillTypes.FRISBEE,
   author: 'Disk Joker',
   title: 'Long is your new weapon',
-  image: 'https://zupimages.net/up/20/25/pzn1.jpg',
+  image: 'https://zupimages.net/up/20/51/t5fs.jpg',
   description: 'Learning to throw deep as a thrower and to get information as a cutter',
   minimalPlayersNumber: 3,
   inGame:

@@ -5879,7 +5879,7 @@ const defensePositionDrill = {
 const discGolf = {
   id: 1023,
   type: DrillTypes.FRISBEE,
-  author: 'Colony',
+  author: 'Sunder',
   title: 'Disc-Golf',
   image: 'https://zupimages.net/up/20/25/f4bu.jpg',
   description:
@@ -6291,7 +6291,7 @@ const checkLong = {
   type: DrillTypes.FRISBEE,
   author: 'Disk Joker',
   title: 'La longue est ta nouvelle arme',
-  image: 'https://zupimages.net/up/20/25/pzn1.jpg',
+  image: 'https://zupimages.net/up/20/51/t5fs.jpg',
   description: 'Apprendre à lancer des longues et à prendre des informations en tant que cutter',
   minimalPlayersNumber: 3,
   inGame:
@@ -6388,7 +6388,7 @@ const manipulation = {
 const stopFlow = {
   id: 1035,
   type: DrillTypes.FRISBEE,
-  author: 'Colony',
+  author: 'Sunder',
   title: 'Arrête le Flow',
   image: 'https://zupimages.net/up/20/28/2b8i.jpg',
   description: 'Apprendre à être rapide pour identifier les options dangereuses et les bloquer',

@@ -5542,7 +5542,7 @@ const trainOfFakeDrill = {
   type: DrillTypes.FRISBEE,
   author: 'Iznogood',
   title: 'The Fake Train',
-  image: 'https://zupimages.net/up/20/19/ac8s.jpg',
+  image: 'https://zupimages.net/up/20/51/h1fh.jpg',
   description: 'This is a drill which works on the flow of a vertical stack',
   minimalPlayersNumber: 6,
   inGame:
@@ -5845,7 +5845,7 @@ const horizontalTiming = {
   type: DrillTypes.FRISBEE,
   author: 'Wizard',
   title: 'Horizontal Timing',
-  image: 'https://zupimages.net/up/20/25/zn5l.jpg',
+  image: 'https://zupimages.net/up/20/52/mai9.jpg',
   description: 'Complete drill to work on the timing of the cutter and handler in a horizontal stack',
   minimalPlayersNumber: 5,
   inGame:
@@ -6095,7 +6095,7 @@ const horizontalTrapOutside = {
   type: DrillTypes.FRISBEE,
   author: 'Mubidisk',
   title: 'Trap with the Break',
-  image: 'https://zupimages.net/up/20/25/zkfl.jpg',
+  image: 'https://zupimages.net/up/20/52/l7a5.jpg',
   description: 'Learning to use the horizontal stack to get out of the line with the cutter in the break side',
   minimalPlayersNumber: 6,
   inGame: '-',
@@ -6142,7 +6142,7 @@ const horizontalHandler = {
   type: DrillTypes.FRISBEE,
   author: 'Euforia',
   title: 'Trap with the handlers',
-  image: 'https://zupimages.net/up/20/25/zkfl.jpg',
+  image: 'https://zupimages.net/up/20/52/arcv.jpg',
   description: 'Learning to use the horizontal stack to get out of the line with the handler',
   minimalPlayersNumber: 8,
   inGame:

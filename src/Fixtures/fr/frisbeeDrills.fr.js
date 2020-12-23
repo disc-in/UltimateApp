@@ -5641,7 +5641,7 @@ const trainOfFakeDrill = {
   type: DrillTypes.FRISBEE,
   author: 'Iznogood',
   title: 'Le Train des Feintes',
-  image: 'https://zupimages.net/up/20/19/ac8s.jpg',
+  image: 'https://zupimages.net/up/20/51/h1fh.jpg',
   description: 'Idéal pour travailler la continuité sur un stack vertical',
   minimalPlayersNumber: 6,
   inGame:
@@ -5943,7 +5943,7 @@ const horizontalTiming = {
   type: DrillTypes.FRISBEE,
   author: 'Wizard',
   title: "Le Timing de l'Horizontal",
-  image: 'https://zupimages.net/up/20/25/zn5l.jpg',
+  image: 'https://zupimages.net/up/20/52/mai9.jpg',
   description: 'Un exercice complet pour travailler le timing entre le cutter et le handler, dans un stack horizontal',
   minimalPlayersNumber: 5,
   inGame:
@@ -6195,7 +6195,7 @@ const horizontalTrapOutside = {
   type: DrillTypes.FRISBEE,
   author: 'Mubidisk',
   title: 'Débloqué avec le Fermé',
-  image: 'https://zupimages.net/up/20/25/zkfl.jpg',
+  image: 'https://zupimages.net/up/20/52/l7a5.jpg',
   description: 'Apprendre à utiliser le stack horizontal pour sortir de la ligne avec les cutter dans le coté fermé',
   minimalPlayersNumber: 6,
   inGame:
@@ -6243,7 +6243,7 @@ const horizontalHandler = {
   type: DrillTypes.FRISBEE,
   author: 'Euforia',
   title: 'Débloqué avec les Handlers',
-  image: 'https://zupimages.net/up/20/25/zkfl.jpg',
+  image: 'https://zupimages.net/up/20/52/arcv.jpg',
   description: 'Apprendre à utiliser le stack horizontal pour sortir de la ligne avec les handlers',
   minimalPlayersNumber: 8,
   inGame:

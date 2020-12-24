@@ -97,7 +97,7 @@ import tridentAnimation from '../Animation/Trident';
 import firtWallAnimation from '../Animation/Wall';
 import bullAnimation from '../Animation/Bull';
 import bullSpeedAnimation from '../Animation/BullSpeed';
-import StatuesAnimation from '../Animation/Statues';
+//import StatuesAnimation from '../Animation/Statues';
 import ArrowAnimation from '../Animation/Arrow';
 import JapaneseAnimation from '../Animation/Japanese';
 import theZAnimation from '../Animation/TheZ';
@@ -4851,153 +4851,153 @@ const strength5 = {
   ],
 };
 
-const youthLadder = {
-  id: 55,
-  type: DrillTypes.FITNESS,
-  author: 'PUC',
-  title: 'Échelles pour les jeunes',
-  image: 'https://zupimages.net/up/20/51/k1kk.jpg',
-  description:
-    "Exercices d'échelles adaptés aux enfants et adolescents. Les pratiquants doivent se concentrer d'abord sur la réalisation du geste juste, puis ensuite sur la vitesse d'exécution. Il faut souvent leur rappeler d'utiliser leurs bras pour accompagner les mouvements du bas du corps. Chaque exercice peut être répété 2 ou 3 fois, mais les exercices asymétriques doivent impérativement être répétés avec les deux pieds",
-  minimalPlayersNumber: 1,
-  equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 échelle pour 6 joueurs',
-  durationInMinutes: 20,
-  intensity: Intensities.MODERATE,
-  goals: [FitnessGoals.FULL_BODY],
-  seasonTiming: SeasonTimings.ANYTIME,
-  level: Levels.INTERMEDIATE,
-  steps: [
-    {
-      id: 1,
-      title: 'Course normale',
-      vimeoId: undefined,
-      sounds: false,
-      repetition: '',
-      rest: '',
-      instruction: 'Un pas par case',
-    },
-    {
-      id: 2,
-      title: 'Course allongée',
-      vimeoId: undefined,
-      sounds: false,
-      repetition: '',
-      rest: '',
-      instruction: 'Un pas toutes les deux cases',
-    },
-    {
-      id: 3,
-      title: 'Course 2 par case',
-      vimeoId: undefined,
-      sounds: false,
-      repetition: '',
-      rest: '',
-      instruction: 'Deux pas par case',
-    },
-    {
-      id: 4,
-      title: 'Sauts pieds joints',
-      vimeoId: undefined,
-      sounds: false,
-      repetition: '',
-      rest: '',
-      instruction: 'Rebondir sur la pointe des pieds une fois par case',
-    },
-    {
-      id: 5,
-      title: 'Sauts pieds joints allongés',
-      vimeoId: undefined,
-      sounds: false,
-      repetition: '',
-      rest: '',
-      instruction: 'Même exercice en sautant une case sur deux',
-    },
-    {
-      id: 6,
-      title: 'Pieds joints in-out',
-      vimeoId: undefined,
-      sounds: false,
-      repetition: '',
-      rest: '',
-      instruction: "Sauter dans une case, puis à l'extérieur de l'échelle, puis dans la case suivante",
-    },
-    {
-      id: 7,
-      title: '5 sauts puis course',
-      vimeoId: undefined,
-      sounds: false,
-      repetition: '',
-      rest: '',
-      instruction: 'Excellent pour travailler une transition rapide',
-    },
-    {
-      id: 8,
-      title: 'Saut jambes écartées',
-      vimeoId: undefined,
-      sounds: false,
-      repetition: '',
-      rest: '',
-      instruction:
-        "Sauter pieds joints dans une case, puis les deux pieds écartés à l'extérieur, puis pieds joints dans la case suivant",
-    },
-    {
-      id: 9,
-      title: 'Pas chassés',
-      vimeoId: undefined,
-      sounds: false,
-      repetition: '',
-      rest: '',
-      instruction: '',
-    },
-    {
-      id: 10,
-      title: '2 pas par case de côté',
-      vimeoId: undefined,
-      sounds: false,
-      repetition: '',
-      rest: '',
-      instruction: "Rentrer dans le carré avec un pied puis l'autre, puis ressortir avec les pieds dans le même ordre",
-    },
-    {
-      id: 11,
-      title: 'Fentes alternées',
-      vimeoId: undefined,
-      sounds: false,
-      repetition: '',
-      rest: '',
-      instruction: "Commencez avec un pied à l'intérieur et l'autre à l'extérieur, puis sautez pour inverser",
-    },
-    {
-      id: 12,
-      title: 'Alternance 1 pied',
-      vimeoId: undefined,
-      sounds: false,
-      repetition: '',
-      rest: '',
-      instruction:
-        "Un pied avance à l'intérieur et à l'extérieur du carré pendant que l'autre suit le long de l'échelle",
-    },
-    {
-      id: 13,
-      title: 'Double alternance',
-      vimeoId: undefined,
-      sounds: false,
-      repetition: '',
-      rest: '',
-      instruction: "Les deux pieds progressent successivement à l'intérieur et à l'extérieur de l'échelle",
-    },
-    {
-      id: 14,
-      title: 'Ickey Shuffle',
-      vimeoId: undefined,
-      sounds: false,
-      repetition: '',
-      rest: '',
-      instruction: '',
-    },
-  ],
-};
+// const youthLadder = {
+//   id: 55,
+//   type: DrillTypes.FITNESS,
+//   author: 'PUC',
+//   title: 'Échelles pour les jeunes',
+//   image: 'https://zupimages.net/up/20/51/k1kk.jpg',
+//   description:
+//     "Exercices d'échelles adaptés aux enfants et adolescents. Les pratiquants doivent se concentrer d'abord sur la réalisation du geste juste, puis ensuite sur la vitesse d'exécution. Il faut souvent leur rappeler d'utiliser leurs bras pour accompagner les mouvements du bas du corps. Chaque exercice peut être répété 2 ou 3 fois, mais les exercices asymétriques doivent impérativement être répétés avec les deux pieds",
+//   minimalPlayersNumber: 1,
+//   equipmentLabel: EquipmentLabels.BASIC,
+//   equipment: '1 échelle pour 6 joueurs',
+//   durationInMinutes: 20,
+//   intensity: Intensities.MODERATE,
+//   goals: [FitnessGoals.FULL_BODY],
+//   seasonTiming: SeasonTimings.ANYTIME,
+//   level: Levels.INTERMEDIATE,
+//   steps: [
+//     {
+//       id: 1,
+//       title: 'Course normale',
+//       vimeoId: undefined,
+//       sounds: false,
+//       repetition: '',
+//       rest: '',
+//       instruction: 'Un pas par case',
+//     },
+//     {
+//       id: 2,
+//       title: 'Course allongée',
+//       vimeoId: undefined,
+//       sounds: false,
+//       repetition: '',
+//       rest: '',
+//       instruction: 'Un pas toutes les deux cases',
+//     },
+//     {
+//       id: 3,
+//       title: 'Course 2 par case',
+//       vimeoId: undefined,
+//       sounds: false,
+//       repetition: '',
+//       rest: '',
+//       instruction: 'Deux pas par case',
+//     },
+//     {
+//       id: 4,
+//       title: 'Sauts pieds joints',
+//       vimeoId: undefined,
+//       sounds: false,
+//       repetition: '',
+//       rest: '',
+//       instruction: 'Rebondir sur la pointe des pieds une fois par case',
+//     },
+//     {
+//       id: 5,
+//       title: 'Sauts pieds joints allongés',
+//       vimeoId: undefined,
+//       sounds: false,
+//       repetition: '',
+//       rest: '',
+//       instruction: 'Même exercice en sautant une case sur deux',
+//     },
+//     {
+//       id: 6,
+//       title: 'Pieds joints in-out',
+//       vimeoId: undefined,
+//       sounds: false,
+//       repetition: '',
+//       rest: '',
+//       instruction: "Sauter dans une case, puis à l'extérieur de l'échelle, puis dans la case suivante",
+//     },
+//     {
+//       id: 7,
+//       title: '5 sauts puis course',
+//       vimeoId: undefined,
+//       sounds: false,
+//       repetition: '',
+//       rest: '',
+//       instruction: 'Excellent pour travailler une transition rapide',
+//     },
+//     {
+//       id: 8,
+//       title: 'Saut jambes écartées',
+//       vimeoId: undefined,
+//       sounds: false,
+//       repetition: '',
+//       rest: '',
+//       instruction:
+//         "Sauter pieds joints dans une case, puis les deux pieds écartés à l'extérieur, puis pieds joints dans la case suivant",
+//     },
+//     {
+//       id: 9,
+//       title: 'Pas chassés',
+//       vimeoId: undefined,
+//       sounds: false,
+//       repetition: '',
+//       rest: '',
+//       instruction: '',
+//     },
+//     {
+//       id: 10,
+//       title: '2 pas par case de côté',
+//       vimeoId: undefined,
+//       sounds: false,
+//       repetition: '',
+//       rest: '',
+//       instruction: "Rentrer dans le carré avec un pied puis l'autre, puis ressortir avec les pieds dans le même ordre",
+//     },
+//     {
+//       id: 11,
+//       title: 'Fentes alternées',
+//       vimeoId: undefined,
+//       sounds: false,
+//       repetition: '',
+//       rest: '',
+//       instruction: "Commencez avec un pied à l'intérieur et l'autre à l'extérieur, puis sautez pour inverser",
+//     },
+//     {
+//       id: 12,
+//       title: 'Alternance 1 pied',
+//       vimeoId: undefined,
+//       sounds: false,
+//       repetition: '',
+//       rest: '',
+//       instruction:
+//         "Un pied avance à l'intérieur et à l'extérieur du carré pendant que l'autre suit le long de l'échelle",
+//     },
+//     {
+//       id: 13,
+//       title: 'Double alternance',
+//       vimeoId: undefined,
+//       sounds: false,
+//       repetition: '',
+//       rest: '',
+//       instruction: "Les deux pieds progressent successivement à l'intérieur et à l'extérieur de l'échelle",
+//     },
+//     {
+//       id: 14,
+//       title: 'Ickey Shuffle',
+//       vimeoId: undefined,
+//       sounds: false,
+//       repetition: '',
+//       rest: '',
+//       instruction: '',
+//     },
+//   ],
+// };
 
 const basicThrowsDrill = {
   id: 1001,
@@ -7071,64 +7071,64 @@ const bull = {
   ],
 };
 
-const statues = {
-  id: 1053,
-  type: DrillTypes.FRISBEE,
-  author: 'Gentle - Ine',
-  title: '1, 2, 3 Soleil',
-  image: 'https://zupimages.net/up/20/50/e7mk.jpeg',
-  description:
-    "Inspiré du célèbre jeu enfantin, cet exercice permet de travailler l'équilibre et la prise d'information, tout en s'amusant. Vous pouvez assez facilement imaginer d'autres variantes en fonction de l'âge et du niveau de vos joueurs",
-  minimalPlayersNumber: 2,
-  inGame: undefined,
-  equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 disque par joueur',
-  durationInMinutes: 10,
-  intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.WARM_UP, FrisbeeGoals.JUNIOR],
-  seasonTiming: SeasonTimings.ANYTIME,
-  level: Levels.BEGINNER,
-  steps: [
-    {
-      id: 1,
-      title: 'La Planche',
-      animation: StatuesAnimation,
-      vimeoId: '492418258',
-      repetition: '',
-      rest: '',
-      instruction:
-        "Quand l'entraîneur dit 'Partez', les joueurs avancent le plus vite possible. Quand il dit 'Stop', ils doivent s'arrêter en position de planche. Si un joueur bouge, tombe,  ou ne parvient pas à s'arrêter, il doit revenir au départ",
-    },
-    {
-      id: 2,
-      title: 'Arrêt sur un pied',
-      animation: undefined,
-      vimeoId: undefined,
-      repetition: '',
-      rest: '',
-      instruction:
-        "Même exercice, mais chaque joueur tient un disque à deux mains. Quandl'entraîneur dit 'Stop', ils doivent s'arrêter sur un pied, toujours en tenant leur disque à deux mains",
-    },
-    {
-      id: 3,
-      title: 'Signal Visuel',
-      vimeoId: undefined,
-      repetition: '',
-      rest: '',
-      instruction:
-        "Même exercice mais l'entraîneur lève ou baisse son bras pour indique aux joueurs s'ils peuvent bouger. Cela diversifie leur prise d'information. Il est aussi possible de mélanger les commandes visuaelles et sonores",
-    },
-    {
-      id: 4,
-      title: 'Le Serveur',
-      vimeoId: undefined,
-      repetition: '',
-      rest: '',
-      instruction:
-        'Les joueurs doivent porter leur disque posé sur une main, ce qui leur demande beaucoup plus de concentration !',
-    },
-  ],
-};
+// const statues = {
+//   id: 1053,
+//   type: DrillTypes.FRISBEE,
+//   author: 'Gentle - Ine',
+//   title: '1, 2, 3 Soleil',
+//   image: 'https://zupimages.net/up/20/50/e7mk.jpeg',
+//   description:
+//     "Inspiré du célèbre jeu enfantin, cet exercice permet de travailler l'équilibre et la prise d'information, tout en s'amusant. Vous pouvez assez facilement imaginer d'autres variantes en fonction de l'âge et du niveau de vos joueurs",
+//   minimalPlayersNumber: 2,
+//   inGame: undefined,
+//   equipmentLabel: EquipmentLabels.BASIC,
+//   equipment: '1 disque par joueur',
+//   durationInMinutes: 10,
+//   intensity: Intensities.MODERATE,
+//   goals: [FrisbeeGoals.WARM_UP, FrisbeeGoals.JUNIOR],
+//   seasonTiming: SeasonTimings.ANYTIME,
+//   level: Levels.BEGINNER,
+//   steps: [
+//     {
+//       id: 1,
+//       title: 'La Planche',
+//       animation: StatuesAnimation,
+//       vimeoId: '492418258',
+//       repetition: '',
+//       rest: '',
+//       instruction:
+//         "Quand l'entraîneur dit 'Partez', les joueurs avancent le plus vite possible. Quand il dit 'Stop', ils doivent s'arrêter en position de planche. Si un joueur bouge, tombe,  ou ne parvient pas à s'arrêter, il doit revenir au départ",
+//     },
+//     {
+//       id: 2,
+//       title: 'Arrêt sur un pied',
+//       animation: undefined,
+//       vimeoId: undefined,
+//       repetition: '',
+//       rest: '',
+//       instruction:
+//         "Même exercice, mais chaque joueur tient un disque à deux mains. Quandl'entraîneur dit 'Stop', ils doivent s'arrêter sur un pied, toujours en tenant leur disque à deux mains",
+//     },
+//     {
+//       id: 3,
+//       title: 'Signal Visuel',
+//       vimeoId: undefined,
+//       repetition: '',
+//       rest: '',
+//       instruction:
+//         "Même exercice mais l'entraîneur lève ou baisse son bras pour indique aux joueurs s'ils peuvent bouger. Cela diversifie leur prise d'information. Il est aussi possible de mélanger les commandes visuaelles et sonores",
+//     },
+//     {
+//       id: 4,
+//       title: 'Le Serveur',
+//       vimeoId: undefined,
+//       repetition: '',
+//       rest: '',
+//       instruction:
+//         'Les joueurs doivent porter leur disque posé sur une main, ce qui leur demande beaucoup plus de concentration !',
+//     },
+//   ],
+// };
 
 const arrow = {
   id: 1054,
@@ -7732,7 +7732,7 @@ const fourthU13Training = {
   title: 'Déplacements et appels',
   image: 'https://zupimages.net/up/20/19/c9i6.jpg',
   description: "Travail sur l'agilité et la technique de cut",
-  drills: [statues, youthLadder, trainDrill, game3v3],
+  drills: [/*statues, youthLadder,*/ trainDrill, game3v3],
 };
 
 const firstInitiationAdultTraining = {
@@ -7876,7 +7876,7 @@ const secondU10training = {
   title: 'Que du plaisir',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Un deuxième entrainement pour découvrir le disque',
-  drills: [statues, crossingTheField, goToTenDrill],
+  drills: [/*statues,*/ crossingTheField, goToTenDrill],
 };
 
 //Fitness Weeks
@@ -8444,7 +8444,7 @@ export const drills = [
   circuitLong,
   sprintPractice,
   ladderPractice,
-  youthLadder,
+  //youthLadder,
   agility5,
   agility8,
   agility10,
@@ -8504,7 +8504,7 @@ export const drills = [
   trident,
   bull,
   crossingTheField,
-  statues,
+  //statues,
   arrow,
   guts,
   flubber,

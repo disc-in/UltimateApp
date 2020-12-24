@@ -112,6 +112,7 @@ import crissCrossAnimation from '../Animation/CrissCross';
 import crissCrossRaceAnimation from '../Animation/CrissCrossRace';
 import xLAnimation from '../Animation/XL';
 import xLUPAnimation from '../Animation/XLUp';
+import bottleAnimation from '../Animation/Bottle';
 
 const stabilityDrill = {
   id: 1,
@@ -6341,7 +6342,7 @@ const manipulation = {
       repetition: '',
       rest: '',
       instruction:
-        "Un joueur ne doit jamais avoir en possession plus d'un disque. L'objectif est de réussir à former la chaine de lancers le plus logntemps possible",
+        "Un joueur ne doit jamais avoir en possession plus d'un disque. L'objectif est de réussir à former la chaine de lancers le plus longue possible",
     },
     {
       id: 2,
@@ -6351,7 +6352,7 @@ const manipulation = {
       repetition: '',
       rest: '',
       instruction:
-        "Un des deux joueurs doit lancer exclusivement en Greatest. Pour qu'un greatest soit réglementaire le lancer doit être effectuer sans que le joueur touche le sol",
+        "Un des deux joueurs doit lancer exclusivement en Greatest. Pour qu'un greatest soit réglementaire, le lancer doit être effectuer sans que le joueur touche le sol",
     },
     {
       id: 3,
@@ -6467,12 +6468,12 @@ const racingWarmUP = {
     {
       id: 1,
       title: 'Touche ses mains',
-      animation: undefined,
+      animation: bottleAnimation,
       vimeoId: undefined,
       repetition: '',
       rest: '',
       instruction:
-        "Deux équipes s'affrontent. Un joueur ou un coach se place devant les 2 lignes. Il effectue des feintes et lorsque le frisbee touche le sol, les premiers joueurs de chaque ligne court le plus vite possible pour toucher ces mains. Une fois toucher, ils peuvent faire demi-tour et font gagner un point à leur équipe si il passe la ligne en premier. Le coach peut se déplacer à sa guise et faire varier la hauteur de ses mains",
+        "Deux équipes s'affrontent. Un joueur ou un coach se place devant les 2 lignes. Il effectue des feintes et lorsque le frisbee touche le sol, les premiers joueurs de chaque ligne court le plus vite possible pour toucher ses mains. Une fois touchée, ils peuvent faire demi-tour et font gagner un point à leur équipe si il passe la ligne en premier. Le coach peut se déplacer à sa guise et faire varier la hauteur de ses mains",
     },
     {
       id: 2,
@@ -6482,7 +6483,7 @@ const racingWarmUP = {
       repetition: '',
       rest: '',
       instruction:
-        "Deux équipes s'affrontent. L'objectif est de réaliser une ligne de 3 t-shirts de la même couleur avant l'équipe adverse. Il y a seulement 3 t-shirt par équipe et lorsque le quatrième joueur prend le relai, il peut déplacer un t-shirt",
+        "Deux équipes s'affrontent. L'objectif est de réaliser une ligne de 3 t-shirts de la même couleur avant l'équipe adverse. Il y a seulement 3 t-shirt par équipe et lorsque le quatrième joueur prend le relai, il peut déplacer un t-shirt précedemment posé",
     },
     {
       id: 3,
@@ -7176,7 +7177,7 @@ const guts = {
   title: 'Guts',
   image: 'https://zupimages.net/up/20/51/f2ix.jpg',
   description:
-    "L'équipe qui lance marque un point lorsque l'autre équipe n'attrape pas un disque correctement lancé. Lorsqu'un disque correctement lancé est attrapé par l'autre équipe, aucun point n'est marqué. L'équipe qui atteint la première marque de 21 points remporte le match",
+    "L'équipe qui lance marque un point lorsque l'autre équipe n'attrape pas un disque correctement lancé. Lorsqu'un disque correctement lancé est attrapé par l'autre équipe, aucun point n'est marqué. L'équipe qui atteint la première 21 points remporte le match",
   minimalPlayersNumber: 6,
   inGame: undefined,
   equipmentLabel: EquipmentLabels.BASIC,
@@ -7207,7 +7208,7 @@ const flubber = {
   title: 'Flubber Guts',
   image: 'https://zupimages.net/up/20/51/7bvr.jpg',
   description:
-    "L'équipe qui lance marque un point lorsque l'autre équipe n'attrape pas un disque correctement lancé. Lorsqu'un disque correctement lancé est attrapé par l'autre équipe, aucun point n'est marqué. L'équipe qui atteint la première marque de 21 points remporte le match",
+    "L'équipe qui lance marque un point lorsque l'autre équipe n'attrape pas un disque correctement lancé. Lorsqu'un disque correctement lancé est attrapé par l'autre équipe, aucun point n'est marqué. L'équipe qui atteint la première de 21 points remporte le match",
   minimalPlayersNumber: 4,
   inGame: undefined,
   equipmentLabel: EquipmentLabels.BASIC,
@@ -7270,7 +7271,7 @@ const passMouv = {
   description: 'Des exercices pour apprendre à faire des passes à des joueurs en mouvement',
   minimalPlayersNumber: 3,
   inGame:
-    'Je fais un contre-appel après le plot, sans faire de courbe et en direction d’un angle de la zone. Je ne ralentis que lorsque j’ai le disque en main. Je réussis mes passes',
+    'Faire un contre-appel après le plot, sans faire de courbe et en direction d’un angle de la zone. Ralentir que lorsque j’ai le disque en main',
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '3 disques - 1 plot par groupe',
   durationInMinutes: 7,
@@ -7357,7 +7358,7 @@ const crissCross = {
       repetition: '',
       rest: '',
       instruction:
-        "Deux équipes s'affrontent. L'objectif est de réussir à faire le plus de fois une distance définie dans un temps donné. Un nombre minimum de passe doit être défini. Si un turn-over a lieu, le groupe doit revenir le plus vite possible au point de départ",
+        "Deux équipes s'affrontent. L'objectif est de réussir à faire le plus de fois une distance définie dans un temps donné. Un nombre minimum de passe doit aussi être défini. Si un turn-over a lieu, le groupe doit revenir le plus vite possible au point de départ",
     },
   ],
 };

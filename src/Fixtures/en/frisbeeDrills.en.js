@@ -112,6 +112,7 @@ import crissCrossAnimation from '../Animation/CrissCross';
 import crissCrossRaceAnimation from '../Animation/CrissCrossRace';
 import xLAnimation from '../Animation/XL';
 import xLUPAnimation from '../Animation/XLUp';
+import bottleAnimation from '../Animation/Bottle';
 
 const stabilityDrill = {
   id: 1,
@@ -6268,7 +6269,7 @@ const manipulation = {
       repetition: '',
       rest: '',
       instruction:
-        'Each player looks away from his or her partner.When a player throws the disc, he has to shout "up" so that his partner turns around to catch it.Remember to vary the throwing curves',
+        'Each player looks away from his or her partner. When a player throws the disc, he has to shout "up" so that his partner turns around to catch it. Remember to vary the throwing curves',
     },
     {
       id: 5,
@@ -6365,12 +6366,12 @@ const racingWarmUP = {
     {
       id: 1,
       title: 'Clap his Hand',
-      animation: undefined,
+      animation: bottleAnimation,
       vimeoId: undefined,
       repetition: '',
       rest: '',
       instruction:
-        'Two teams compete against each other. A player or a coach stands in front of the 2 lines. He makes feints and when the Frisbee touches the ground, the first players of each line run as fast as possible to touch those hands. Once touched, they can turn around and score a point for their team if they cross the line first. The coach can move around and vary the height of his hands as he sees fit',
+        'Two teams compete against each other. A player or a coach stands in front of the 2 lines. He makes fakes and when the Frisbee touches the ground, the first players of each line run as fast as possible to touch those hands. Once touched, they can turn around and score a point for their team if they cross the line first. The coach can move around and vary the height of his hands as he sees fit',
     },
     {
       id: 2,
@@ -7147,7 +7148,7 @@ const theZ = {
       repetition: '',
       rest: '',
       instruction:
-        'A player goes, as fast as possible, long when the thrower catches the disc. When the thrower makes a realistic fake, the runner changes direction. The ideal is to work on all the different types of throwing possible',
+        'A player goes, as fast as possible, deep when the thrower catches the disc. When the thrower makes a realistic fake, the runner changes direction. The ideal is to work on all the different types of throwing possible',
     },
   ],
 };
@@ -7161,7 +7162,7 @@ const passMouv = {
   description: 'Exercises to learn how to pass to moving players',
   minimalPlayersNumber: 3,
   inGame:
-    'I make a counter-cut after the cone, without making a curve and in the direction of a corner of the area. I only slow down when I have the disc in my hand. I succeed in my passes',
+    'Making a counter-cut after the cone, without making a curve and in the direction of a corner of the area. I only slow down when I have the disc in my hand. I succeed in my passes',
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '3 discs - 1 cone per group',
   durationInMinutes: 7,
@@ -7188,7 +7189,7 @@ const passMouv = {
       repetition: '',
       rest: '',
       instruction:
-        "The first player in the column moves to the cup in a sprint. Once at the block, he makes a counter-cut towards a corner of the area and receives his partner's pass, without slowing down. He then changes column. The thrower waits for eye contact to throw the disc",
+        "The first player in the column moves to the cone sprinting. Once at the block, he makes a counter-cut towards a corner of the area and receives his partner's pass, without slowing down. He then changes column. The thrower waits for eye contact to throw the disc",
     },
     {
       id: 3,
@@ -7198,7 +7199,7 @@ const passMouv = {
       repetition: '',
       rest: '',
       instruction:
-        'Placing a defender after the cone that will react when the attacker makes his counter-cut. A marker can also be placed',
+        'Placing a defender after the cone that will react when the attacker makes his counter-cut. A mark can also be placed',
     },
     {
       id: 4,
@@ -7283,7 +7284,7 @@ const xL = {
     },
     {
       id: 2,
-      title: 'Avec une passe par dessus',
+      title: 'With an Overhead pass',
       animation: xLUPAnimation,
       vimeoId: undefined,
       repetition: '',

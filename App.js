@@ -1,7 +1,7 @@
-import 'react-native-gesture-handler';
 import React from 'react';
+import 'react-native-gesture-handler';
 import { PersistGate } from 'redux-persist/integration/react';
-import { Platform, AsyncStorage, Text } from 'react-native';
+import { Platform, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { enableScreens } from 'react-native-screens';
 import { Provider as ReduxProvider } from 'react-redux';
@@ -17,30 +17,6 @@ if (Platform.OS !== 'web') enableScreens();
 const PERSISTENCE_KEY = 'NAVIGATION_STATE';
 
 const App = (props) => {
-  const [isReady, setIsReady] = React.useState(false);
-  const [initialState, setInitialState] = React.useState();
-
-  React.useEffect(() => {
-    const restoreState = async () => {
-      try {
-        const savedStateString = await AsyncStorage.getItem(PERSISTENCE_KEY);
-        const state = JSON.parse(savedStateString);
-
-        setInitialState(state);
-      } finally {
-        setIsReady(true);
-      }
-    };
-
-    if (!isReady) {
-      restoreState();
-    }
-  }, [isReady]);
-
-  if (!isReady) {
-    return null;
-  }
-
   const linking = {
     prefixes: [Linking.makeUrl('/')],
     config: {
@@ -54,12 +30,7 @@ const App = (props) => {
     <ReduxProvider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <PaperProvider>
-          <NavigationContainer
-            initialState={initialState}
-            linking={linking}
-            fallback={<Text>Loading...</Text>}
-            onStateChange={(state) => AsyncStorage.setItem(PERSISTENCE_KEY, JSON.stringify(state))}
-          >
+          <NavigationContainer linking={linking} fallback={<Text>Loading...</Text>}>
             <Navigation />
           </NavigationContainer>
           <FlashMessage position="bottom" />

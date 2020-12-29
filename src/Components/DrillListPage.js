@@ -16,6 +16,11 @@ export const DrillListPage = (props) => {
   const storeDrillsForType = storeDrills.filter((drill) => drill.type === type);
   const displayedDrills = currentFilters?.displayedDrills || storeDrillsForType;
 
+  let selectedGoals = currentFilters?.selectedGoals.join(' - ').toUpperCase() || 'ALL';
+  if (currentFilters?.selectedGoals.length > 2) {
+    selectedGoals = 'CUSTOM';
+  }
+
   const sortingProperty = type === DrillTypes.FRISBEE ? 'minimalPlayersNumber' : 'durationInMinutes';
   const sortedDisplayedDrills = displayedDrills.sort((a, b) => a[sortingProperty] - b[sortingProperty]);
 
@@ -36,12 +41,44 @@ export const DrillListPage = (props) => {
   ),
     [navigation, route.params.type];
 
-  return (
-    <View style={styles.drillListPage}>
-      <Text style={list.counter}>{I18n.t('drillListPage.availableDrills', { count: displayedDrills.length })}</Text>
-      <DrillList navigation={navigation} drillsToDisplay={displayedDrills} />
-    </View>
-  );
+  if (type === DrillTypes.FRISBEE) {
+    return (
+      <View style={styles.drillListPage}>
+        <View style={styles.marginBottom}>
+          <View style={styles.flexContainer}>
+            <View style={styles.centerVertical}>
+              <Text style={list.counter}>
+                {I18n.t('drillListPage.availableDrills', { count: displayedDrills.length })}
+              </Text>
+            </View>
+            <View style={styles.container}>
+              <TouchableOpacity style={styles.button} onPress={openFilters}>
+                <View>
+                  <Text style={styles.text}>{I18n.t('drillListPage.theme', { theme: selectedGoals })}</Text>
+                </View>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </View>
+        <DrillList navigation={navigation} drillsToDisplay={displayedDrills} />
+      </View>
+    );
+  } else {
+    return (
+      <View style={styles.drillListPage}>
+        <View style={styles.marginBottom}>
+          <View style={styles.flexContainer}>
+            <View style={styles.centerVertical}>
+              <Text style={list.counter}>
+                {I18n.t('drillListPage.availableDrills', { count: displayedDrills.length })}
+              </Text>
+            </View>
+          </View>
+        </View>
+        <DrillList navigation={navigation} drillsToDisplay={displayedDrills} />
+      </View>
+    );
+  }
 };
 
 const mapStateToProps = (state) => {
@@ -58,5 +95,34 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     height: '100%',
+  },
+  button: {
+    width: '70%',
+    height: 30,
+    borderRadius: 5,
+    backgroundColor: theme.MAIN_COLOR,
+    justifyContent: 'center',
+    position: 'absolute',
+    right: 0,
+  },
+  text: {
+    textAlign: 'center',
+    color: theme.COLOR_PRIMARY_LIGHT,
+    fontSize: theme.FONT_SIZE_MEDIUM,
+    fontWeight: 'bold',
+  },
+  marginBottom: {
+    marginBottom: 20,
+  },
+  flexContainer: {
+    flexDirection: 'row',
+    paddingRight: 20,
+    height: 30,
+  },
+  container: {
+    flex: 1,
+  },
+  centerVertical: {
+    justifyContent: 'center',
   },
 });

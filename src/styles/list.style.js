@@ -5,7 +5,6 @@ export const contentContainer = {
 };
 export const counter = {
   color: theme.COLOR_SECONDARY,
-  marginBottom: 20,
 };
 export const item = {
   height: 80,

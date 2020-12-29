@@ -159,6 +159,7 @@ export default {
       one: '{{count}} drill available',
       other: '{{count}} drills available',
     },
+    theme: '{{theme}}',
   },
   drillPage: {
     minutes: 'minutes',

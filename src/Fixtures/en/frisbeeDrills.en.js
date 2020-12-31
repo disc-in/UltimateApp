@@ -7179,7 +7179,7 @@ const passMouv = {
       repetition: '',
       rest: '',
       instruction:
-        "The first player in the column moves to the cone by making 'scales'. Thne, he countercuts to his starting point to receive his partner's pass. The thrower will have established his pivot foot correctly",
+        "The first player in the column moves to the cone by making warm-up exercises. Thne, he countercuts to his starting point to receive his partner's pass. The thrower will have established his pivot foot correctly",
     },
     {
       id: 2,

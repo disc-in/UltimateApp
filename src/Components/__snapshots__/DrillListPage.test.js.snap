@@ -70,7 +70,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
               "opacity": 1,
               "position": "absolute",
               "right": 0,
-              "width": "70%",
+              "width": "85%",
             }
           }
         >
@@ -1803,7 +1803,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
               "opacity": 1,
               "position": "absolute",
               "right": 0,
-              "width": "70%",
+              "width": "85%",
             }
           }
         >

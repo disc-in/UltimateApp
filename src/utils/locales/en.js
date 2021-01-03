@@ -160,6 +160,8 @@ export default {
       other: '{{count}} drills available',
     },
     theme: '{{theme}}',
+    all: 'ALL',
+    custom: 'CUSTOM',
   },
   drillPage: {
     minutes: 'minutes',

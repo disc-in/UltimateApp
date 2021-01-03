@@ -159,6 +159,8 @@ export default {
       other: '{{count}} exercices disponibles',
     },
     theme: '{{theme}}',
+    all: 'TOUS LES SUJETS',
+    custom: 'PERSONNALISÉ',
   },
   drillPage: {
     minutes: 'minutes',
@@ -183,9 +185,9 @@ export default {
     duration: 'durée',
     durationLabel: 'Combien de temps as-tu ?   {{duration}} mins',
     cta: {
-      zero: 'Aucun exo correspondant',
-      one: 'Voir {{count}} exo',
-      other: 'Voir {{count}} exos',
+      zero: 'Aucun exercice correspondant',
+      one: 'Voir {{count}} exercice',
+      other: 'Voir {{count}} exercices',
     },
   },
   frisbeeFilters: {

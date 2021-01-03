@@ -16,9 +16,13 @@ export const DrillListPage = (props) => {
   const storeDrillsForType = storeDrills.filter((drill) => drill.type === type);
   const displayedDrills = currentFilters?.displayedDrills || storeDrillsForType;
 
-  let selectedGoals = currentFilters?.selectedGoals.join(' - ').toUpperCase() || 'ALL';
+  let selectedGoals = currentFilters?.selectedGoals.join(' - ').toUpperCase() || I18n.t('drillListPage.all');
   if (currentFilters?.selectedGoals.length > 2) {
-    selectedGoals = 'CUSTOM';
+    selectedGoals = I18n.t('drillListPage.custom');
+  }
+
+  if (I18n.locale === 'fr-FR' && currentFilters?.selectedGoals.length > 1) {
+    selectedGoals = I18n.t('drillListPage.custom');
   }
 
   const sortingProperty = type === DrillTypes.FRISBEE ? 'minimalPlayersNumber' : 'durationInMinutes';
@@ -97,7 +101,7 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   button: {
-    width: '70%',
+    width: '85%',
     height: 30,
     borderRadius: 5,
     backgroundColor: theme.MAIN_COLOR,

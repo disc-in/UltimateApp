@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { StyleSheet, Animated, Easing, View, Platform } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
@@ -7,6 +8,7 @@ import DraggableDisplayedElement from './DraggableDisplayedElement';
 import BackgroundPicker from './BackgroundPicker';
 import Drill from '../animation/Drill';
 import theme from '../../styles/theme.style';
+import AnimationHistory from './AnimationHistory';
 
 class AnimationEditor extends React.Component {
   constructor(props) {
@@ -100,6 +102,15 @@ class AnimationEditor extends React.Component {
     }
   };
 
+  updateAnimation = (animation) => {
+
+
+    this.saveAnimation(animation);
+
+    // this.setState({animation});
+    // console.log("updateAnimation");
+  }
+
   onBackgroundChange = (value) => {
     var newAnimation = this._copyAnimation();
     newAnimation.background = value;
@@ -117,13 +128,17 @@ class AnimationEditor extends React.Component {
     return [(x - this.state.dLeft) / this.state.animationWidth, (y - this.state.dTop) / this.state.animationHeight];
   };
 
-  _copyAnimation() {
+  _copyAnimation = () => {
+      return this.copyAnimation(this.state.animation);
+    }
+
+  copyAnimation = (animation) => {
     var newAnimation = new Drill();
 
-    newAnimation.positions = JSON.parse(JSON.stringify(this.state.animation.positions));
-    newAnimation.ids = JSON.parse(JSON.stringify(this.state.animation.ids));
-    newAnimation.texts = JSON.parse(JSON.stringify(this.state.animation.texts));
-    newAnimation.background = JSON.parse(JSON.stringify(this.state.animation.background));
+    newAnimation.positions = JSON.parse(JSON.stringify(animation.positions));
+    newAnimation.ids = JSON.parse(JSON.stringify(animation.ids));
+    newAnimation.texts = JSON.parse(JSON.stringify(animation.texts));
+    newAnimation.background = JSON.parse(JSON.stringify(animation.background));
 
     return newAnimation;
   }
@@ -282,7 +297,9 @@ class AnimationEditor extends React.Component {
     this.saveAnimation(newAnimation);
   };
 
+
   render() {
+    // console.log("Editor render,  elemCount: ", this.state.animation.positions[0].length);
     return (
       <View
         ref={(ref) => {
@@ -327,6 +344,8 @@ class AnimationEditor extends React.Component {
                 onBackgroundChange={this.onBackgroundChange}
                 selectedBackground={this.state.animation.background}
               />
+
+              <AnimationHistory animation={this.state.animation} updateAnimation={this.updateAnimation} copyAnimation={this.copyAnimation}/>
             </View>
           )}
         </View>

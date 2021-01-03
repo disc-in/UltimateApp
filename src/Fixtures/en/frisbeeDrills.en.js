@@ -7179,7 +7179,7 @@ const passMouv = {
       repetition: '',
       rest: '',
       instruction:
-        "The first player in the column moves to the cone by making 'scales'. Once at the block, he countercuts to his starting point to receive his partner's pass, which will have established his pivot foot",
+        "The first player in the column moves to the cone by making warm-up exercises. Thne, he countercuts to his starting point to receive his partner's pass. The thrower will have established his pivot foot correctly",
     },
     {
       id: 2,
@@ -7220,7 +7220,7 @@ const crissCross = {
   author: "Jack'suns - Richt",
   title: 'Criss Cross',
   image: 'https://zupimages.net/up/20/52/gi85.jpg',
-  description: 'A Drill to learn how to make small fast side passes between handlers',
+  description: 'A drill to learn how to make small fast side passes between handlers',
   minimalPlayersNumber: 3,
   inGame: undefined,
   equipmentLabel: EquipmentLabels.BASIC,
@@ -7239,7 +7239,7 @@ const crissCross = {
       repetition: '',
       rest: '',
       instruction:
-        'A team composed of 3 players makes side passes to move forward. When a player makes a pass to the opposite player, he must then follow the disc to propose the next cut',
+        'A group of 3 players makes side passes to move forward. After throwing a pass to the opposite player, each player follows the disc to make the next cut',
     },
     {
       id: 2,

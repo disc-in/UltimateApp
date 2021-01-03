@@ -5546,7 +5546,7 @@ const dishieChainDrill = {
   steps: [
     {
       id: 1,
-      title: 'La chaîne des Catapultes',
+      title: 'La Chaîne des Catapultes',
       animation: dishiesChain,
       vimeoId: '462694949',
       repetition: '',
@@ -5570,7 +5570,7 @@ const dishieChainDrill = {
 const breakDanceDrill = {
   id: 1016,
   type: DrillTypes.FRISBEE,
-  author: 'disque Joker',
+  author: 'Disc Joker',
   title: 'Le Sapin de Noël',
   image: 'https://zupimages.net/up/20/19/agsd.jpg',
   description: 'Travailler la continuité dans le break',
@@ -5884,7 +5884,7 @@ const discGolf = {
   title: 'Disc-Golf',
   image: 'https://zupimages.net/up/20/25/f4bu.jpg',
   description:
-    'Les règles. Le disque-golf se joue comme le golf traditionnel, mais avec des disques de disque-golf au lieu de balles et de clubs',
+    'Les règles. Le disc-golf se joue comme le golf traditionnel, mais avec des disques de disc-golf au lieu de balles et de clubs',
   minimalPlayersNumber: 1,
   inGame: '-',
   equipmentLabel: EquipmentLabels.NONE,
@@ -5903,7 +5903,7 @@ const discGolf = {
       repetition: '',
       rest: '',
       instruction:
-        "Les règles: Le disque-golf se joue comme le golf traditionnel.\nUn lancer (stroke) est compté à chaque fois que le disque est lancé et lorsqu'une pénalité est encourue. L'objectif est de jouer chaque trou en un minimum de coups",
+        "Les règles: Le disc-golf se joue comme le golf traditionnel.\nUn lancer (stroke) est compté à chaque fois que le disque est lancé et lorsqu'une pénalité est encourue. L'objectif est de jouer chaque trou en un minimum de coups",
     },
   ],
 };
@@ -5914,7 +5914,7 @@ const dDC = {
   author: '',
   title: 'DDC',
   image: 'https://zupimages.net/up/20/25/t73e.jpg',
-  description: 'Double disque court est un sport de frisbee qui combine rapidité, stratégie et capacité de lancer',
+  description: 'Double Disc Court est un sport de frisbee qui combine rapidité, stratégie et capacité de lancer',
   minimalPlayersNumber: 4,
   inGame:
     "Le DDC permet de travailler la maîtrise des courbes de passes et la communication. La gain technique permet de s'adapter au situation de match",
@@ -6061,7 +6061,7 @@ const dishieLine = {
   author: 'Mooncatchers',
   title: 'Double Lignes',
   image: 'https://zupimages.net/up/20/51/hc89.jpg',
-  description: 'Exerice pour apprendre à effectuer la petite passe de soutien',
+  description: 'Exerice pour apprendre à effectuer une petite passe de soutien',
   minimalPlayersNumber: 8,
   inGame: undefined,
   equipmentLabel: EquipmentLabels.BASIC,
@@ -6080,7 +6080,7 @@ const dishieLine = {
       repetition: '',
       rest: '',
       instruction:
-        "2 Lignes se font face. Les premiers joueurs de chaque lignes courent en direction du porteur du disque et essaye d'attraper le disque le plus rapidement possible. Une fois le disque attrapé, il pivote et transmet le disque au premier joueur de sa ligne",
+        "Deux lignes se font face. Les premiers joueurs de chaque ligne courent en direction du porteur du disque et essayent d'attraper le disque le plus rapidement possible. Une fois le disque attrapé, le joueur pivote et transmet le disque au premier joueur de sa ligne",
     },
     {
       id: 2,
@@ -6090,7 +6090,7 @@ const dishieLine = {
       repetition: '',
       rest: '',
       instruction:
-        '2 Lignes se font face. Les premiers joueurs de chaque lignes courent en direction du porteur du disque pour récupérer une dishie. Si le lanceur effectue une feinte réaliste, le coureur doit changer la direction de sa course',
+        'Deux lignes se font face. Les premiers joueurs de chaque lignes courent en direction du porteur du disque pour récupérer une dishie. Si le lanceur effectue une feinte réaliste, le coureur doit changer la direction de sa course',
     },
   ],
 };
@@ -6342,7 +6342,7 @@ const manipulation = {
       repetition: '',
       rest: '',
       instruction:
-        "Un joueur ne doit jamais avoir en possession plus d'un disque. L'objectif est de réussir à former la chaine de lancers le plus longue possible",
+        "Un joueur ne doit jamais avoir en possession plus d'un disque. L'objectif est de réussir à former la chaîne de lancers le plus longue possible",
     },
     {
       id: 2,
@@ -6352,7 +6352,7 @@ const manipulation = {
       repetition: '',
       rest: '',
       instruction:
-        "Un des deux joueurs doit lancer exclusivement en Greatest. Pour qu'un greatest soit réglementaire, le lancer doit être effectuer sans que le joueur touche le sol",
+        "Un des deux joueurs doit lancer exclusivement en Greatest. Pour qu'un greatest soit réglementaire, le lancer doit être effectué sans que le joueur ne touche le sol",
     },
     {
       id: 3,
@@ -6361,7 +6361,7 @@ const manipulation = {
       vimeoId: '475055767',
       repetition: '',
       rest: '',
-      instruction: "L'objectif est de rattraper deux (ou trois) disques lancer par votre partenaire",
+      instruction: "L'objectif est de rattraper deux (ou trois) disques lancés par votre partenaire",
     },
     {
       id: 4,
@@ -6452,7 +6452,7 @@ const racingWarmUP = {
   id: 1037,
   type: DrillTypes.FRISBEE,
   author: 'Focus Ultimate',
-  title: "Courses d'Echauffement",
+  title: "Courses d'échauffement",
   image: 'https://zupimages.net/up/20/51/ej3n.jpg',
   description: "Exercices pour augmenter l'intensité avant un match avec des sprints",
   minimalPlayersNumber: 10,
@@ -6473,7 +6473,7 @@ const racingWarmUP = {
       repetition: '',
       rest: '',
       instruction:
-        "Deux équipes s'affrontent. Un joueur ou un coach se place devant les 2 lignes. Il effectue des feintes et lorsque le frisbee touche le sol, les premiers joueurs de chaque ligne court le plus vite possible pour toucher ses mains. Une fois touchée, ils peuvent faire demi-tour et font gagner un point à leur équipe si il passe la ligne en premier. Le coach peut se déplacer à sa guise et faire varier la hauteur de ses mains",
+        "Deux équipes s'affrontent. Un joueur ou un coach se place devant les 2 lignes. Il effectue des feintes et lorsque le frisbee touche le sol, les premiers joueurs de chaque ligne courent le plus vite possible pour toucher une de ses mains. Une fois touchée, ils font demi-tour et le joueur qui passe la ligne en premier fait marquer 1 point à son équipe. Le coach peut se déplacer à sa guise et faire varier la hauteur de ses mains",
     },
     {
       id: 2,
@@ -6493,7 +6493,7 @@ const racingWarmUP = {
       repetition: '',
       rest: '',
       instruction:
-        "C'est une course de relai. Un joueur doit effectuer un parcours le plus rapidement possible afin qu'un coéquipier puisse prendre le relai. Première équipe à finir le relai l'emporte",
+        "C'est une course de relai. Un joueur doit effectuer un parcours le plus rapidement possible afin qu'un coéquipier puisse prendre le relai. La première équipe à finir le relai l'emporte",
     },
     {
       id: 4,
@@ -6503,7 +6503,7 @@ const racingWarmUP = {
       repetition: '',
       rest: '',
       instruction:
-        "1 vs 1. L'objectif de l'attaquant est de toucher le plot extérieur avant que le défenseur touche le plot intérieur.\nLes deux doivent toucher le plot intérieur opposé avant de changer de direction. Le défenseur peut commencer quand les deux pieds de l'attaquant ont décollé",
+        "1 vs 1. L'objectif de l'attaquant est de toucher le plot extérieur avant que le défenseur ne touche le plot intérieur.\nLes deux doivent toucher le plot intérieur opposé avant de changer de direction. Le défenseur peut commencer quand les deux pieds de l'attaquant ont décollé",
     },
   ],
 };
@@ -7266,12 +7266,12 @@ const passMouv = {
   id: 1058,
   type: DrillTypes.FRISBEE,
   author: 'UPA - Pablo',
-  title: 'Passer sur un joueur mobile',
+  title: 'Passe à un joueur mobile',
   image: 'https://zupimages.net/up/20/52/5fsl.jpg',
   description: 'Des exercices pour apprendre à faire des passes à des joueurs en mouvement',
   minimalPlayersNumber: 3,
   inGame:
-    'Faire un contre-appel après le plot, sans faire de courbe et en direction d’un angle de la zone. Ralentir que lorsque j’ai le disque en main',
+    "Faire un contre-appel après le plot, sans faire de courbe et en direction d’un angle de la zone. Ne ralentir qu'après avoir attrapé le disque",
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '3 disques - 1 plot par groupe',
   durationInMinutes: 7,
@@ -7288,7 +7288,7 @@ const passMouv = {
       repetition: '',
       rest: '',
       instruction:
-        'Le premier joueur de la colonne se déplace jusqu’à le plot en faisant des « gammes ». Arrivé au plot, il contre-cut vers son point de départ pour réceptionner la passe de son partenaire, qui aura établis son pied pivot',
+        'Le premier joueur de la colonne se déplace jusqu’au plot en faisant des « gammes ». Arrivé au plot, il contre-cut vers son point de départ pour réceptionner la passe de son partenaire, qui aura établi son pied de pivot',
     },
     {
       id: 2,
@@ -7298,7 +7298,7 @@ const passMouv = {
       repetition: '',
       rest: '',
       instruction:
-        'Le premier joueur de la colonne se déplace jusqu’à la coupelle en sprint. Arrivé au plot, il « met les freins » pour faire un contre-cut vers un angle de la zone. Il réceptionne la passe de son partenaire, sans ralentir. Il change ensuite de colonne. Le passeur attend le contact visuel pour lancer le disque',
+        'Le premier joueur de la colonne se déplace jusqu’au plot en sprint. Là, il « met les freins » pour faire un contre-cut vers un angle de la zone. Il réceptionne la passe de son partenaire sans ralentir. Il change ensuite de colonne. Le passeur attend le contact visuel pour lancer le disque',
     },
     {
       id: 3,
@@ -7318,7 +7318,7 @@ const passMouv = {
       repetition: '',
       rest: '',
       instruction:
-        'Le coureur vérifie que lanceur est prêt et que le joueur au milieu regarde vers lui. Il sprint et contre-cut du côté qu’il veut. Au milieu de la course, la première est effectuée après l’avoir préalablement appelé par un « top ». Le joueur alors pivote sur le bon pied, catch et pivote à  nouveau pour faire la passe avec le bon lancer',
+        'Le coureur vérifie que lanceur est prêt et que le joueur au milieu regarde vers lui. Il sprint et contre-cut du côté qu’il veut. Au milieu de la course, la première passe est effectuée après avoir préalablement appelé le lanceur par un « top ». Le joueur pivote sur le bon pied, catch et pivote à nouveau pour faire la passe avec le bon lancer',
     },
   ],
 };
@@ -7370,10 +7370,10 @@ const xL = {
   title: 'XL',
   image: 'https://zupimages.net/up/20/52/4jux.jpg',
   description:
-    'Exercice pour apprendre la notion à effectuer des passes dites en "fuyantes". Ces passes sont parallèles aux lignes de touches et sont essentiels pour avancer',
+    'Exercice pour apprendre à effectuer des passes dites en "fuyantes". Ces passes sont parallèles aux lignes de touches et sont essentielles pour avancer',
   minimalPlayersNumber: 8,
   inGame:
-    'Faire le bon lancer.\nFaire une passe sur un joueur en mouvement qui me fuit.\nSe déplacer dans dans le bon timing',
+    'Faire le bon lancer.\nFaire une passe sur un joueur en mouvement qui me fuit.\nSe déplacer dans le bon timing',
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque par joueur - 4 plots',
   durationInMinutes: 10,
@@ -7390,7 +7390,7 @@ const xL = {
       repetition: '',
       rest: '',
       instruction:
-        "Les joueurs forment 2 colonnes. Le premier joueur court en diagonal vers un plot et attrape le disque. Lorsqu'il recoit le disque, l'autre joueur doit être parti avec le bon timing pour recevoir une longue. Si le lanceur réalise une feinte, le coureur doit changer de direction pour recevoir une passe plus courte",
+        "Les joueurs forment 2 colonnes. Le premier joueur court en diagonale vers un plot et attrape le disque. Lorsqu'il recoit le disque, l'autre joueur doit être parti avec le bon timing pour recevoir une longue. Si le lanceur réalise une feinte, le coureur doit changer de direction pour recevoir une passe plus courte",
     },
     {
       id: 2,

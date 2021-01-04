@@ -113,6 +113,12 @@ import crissCrossRaceAnimation from '../Animation/CrissCrossRace';
 import xLAnimation from '../Animation/XL';
 import xLUPAnimation from '../Animation/XLUp';
 import bottleAnimation from '../Animation/Bottle';
+import squareAnimation from '../Animation/Square';
+import squareDishieAnimation from '../Animation/SquareDishie';
+import squareDoubleAnimation from '../Animation/SquareDouble';
+import squareFakeAnimation from '../Animation/SquareFake';
+import rondoThreeAnimation from '../Animation/RondoThree';
+import rondoFunAnimation from '../Animation/RondoFun';
 
 const stabilityDrill = {
   id: 1,
@@ -4764,7 +4770,7 @@ const strength5 = {
 // const youthLadder = {
 //   id: 55,
 //   type: DrillTypes.FITNESS,
-//   author: 'PUC',
+//   author: 'PUC Ultimate',
 //   title: 'Ladder for youth',
 //   image: 'https://zupimages.net/up/20/51/k1kk.jpg',
 //   description:
@@ -5399,7 +5405,7 @@ const menageATroisDrill = {
 const dwarfDuelDrill = {
   id: 1014,
   type: DrillTypes.FRISBEE,
-  author: 'PUC',
+  author: 'PUC Ultimate',
   title: 'Dwarf Duel',
   image: 'https://zupimages.net/up/20/19/3m3k.jpg',
   description: 'Duel without jumping, all about positioning',
@@ -6961,6 +6967,22 @@ const bull = {
       instruction:
         'The objective of the attackers is to keep the disc without moving. They cannot play more than 2 times in a row with the same player. Same rule as in the previous variant',
     },
+    {
+      id: 3,
+      title: 'With a Poopers',
+      animation: rondoFunAnimation,
+      repetition: '',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 3,
+      title: '11 players',
+      animation: rondoThreeAnimation,
+      repetition: '',
+      rest: '',
+      instruction: '',
+    },
   ],
 };
 
@@ -7265,7 +7287,7 @@ const xL = {
   minimalPlayersNumber: 8,
   inGame: 'Making the right throw. Passing on a moving player who is running away from me. Moving in the right timing',
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 dic per player - 4 cones',
+  equipment: '1 disc per player - 4 cones',
   durationInMinutes: 10,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.WARM_UP, FrisbeeGoals.JUNIOR, FrisbeeGoals.THROWING],
@@ -7291,6 +7313,62 @@ const xL = {
       rest: '',
       instruction:
         'Same situation as before. If the thrower makes a fake, the runner must now make a counter cut to go to the break side. The thrower must throw an overhead to reach the runner. For the first throw, a more or less aggressive mark can be put in place',
+    },
+  ],
+};
+
+const square = {
+  id: 1061,
+  type: DrillTypes.FRISBEE,
+  author: 'Paris Ultimate',
+  title: 'The Square',
+  image: 'https://zupimages.net/up/21/01/71d7.jpg',
+  description: 'Drill to learn how to throw to a moving target',
+  minimalPlayersNumber: 9,
+  inGame: 'Making the right throw. Passing on a moving player who is running away from me. Moving in the right timing',
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '8 cones - 1 disc',
+  durationInMinutes: 10,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.WARM_UP, FrisbeeGoals.JUNIOR, FrisbeeGoals.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'The Square',
+      animation: squareAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 2,
+      title: 'With a fake',
+      animation: squareFakeAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 3,
+      title: 'Dishie Square',
+      animation: squareDishieAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction: '',
+    },
+    {
+      id: 4,
+      title: 'Double Squares',
+      animation: squareDoubleAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction: '',
     },
   ],
 };
@@ -7354,7 +7432,7 @@ const game3v3 = {
 const longShotGame = {
   id: 2003,
   type: DrillTypes.FRISBEE,
-  author: 'PUC',
+  author: 'PUC Ultimate',
   title: 'Hucks oriented game',
   image: 'https://zupimages.net/up/20/28/c16q.jpg',
   description:
@@ -8398,6 +8476,7 @@ export const drills = [
   passMouv,
   crissCross,
   xL,
+  square,
 
   // Commenting game drills because we don't want them in the drill list, only part of programs
   // // Games

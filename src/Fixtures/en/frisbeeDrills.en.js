@@ -7374,7 +7374,7 @@ const square = {
       repetition: '',
       rest: '',
       instruction:
-        'The players are spread over 2 squares. The disc will rotate in a defined direction. After making a pass, a player must move to the other square in the defined direction of rotation.',
+        'The players are spread over 2 squares. The disc will rotate in a defined direction. After making a pass, a player must move to the other square in the defined direction of rotation',
     },
   ],
 };

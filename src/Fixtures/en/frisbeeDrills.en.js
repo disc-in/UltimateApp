@@ -6973,15 +6973,17 @@ const bull = {
       animation: rondoFunAnimation,
       repetition: '',
       rest: '',
-      instruction: '',
+      instruction:
+        '2 teams of 3 players compete against each other. One player plays the role of poppers during the drill. The objective of the attacking players is to succeed in making a pass to the popper. They can make up to 3 passes to their other partners before succeeding in reaching the popper. The other attackers can only run on straight lines delimiting the field. If there is a turn-over, the attackers pass to defence and vice versa.',
     },
     {
-      id: 3,
+      id: 4,
       title: '11 players',
       animation: rondoThreeAnimation,
       repetition: '',
       rest: '',
-      instruction: '',
+      instruction:
+        'Exercise similar to the previous variant. Two teams are of 4 players and one team of 3, with the two teams of 4 alternating defences and attacks. The team of 3 always remains in attack. One of its members takes the role of the popper.',
     },
   ],
 };
@@ -7341,7 +7343,8 @@ const square = {
       vimeoId: undefined,
       repetition: '',
       rest: '',
-      instruction: '',
+      instruction:
+        'The disc turns in one direction. The objective of the thrower is to throw to a player at the centre of the square edge. The coach can specify the type of throws to be used. (Inside, left hand, outside curve...)',
     },
     {
       id: 2,
@@ -7350,7 +7353,8 @@ const square = {
       vimeoId: undefined,
       repetition: '',
       rest: '',
-      instruction: '',
+      instruction:
+        'Same principle. From now on, the rider has to go in one direction. When the thrower makes a realistic feint, the attacker returns to the centre of the ridge',
     },
     {
       id: 3,
@@ -7359,7 +7363,8 @@ const square = {
       vimeoId: undefined,
       repetition: '',
       rest: '',
-      instruction: '',
+      instruction:
+        "In turn, a player must perform a give'n go with the previous player in order to continue. The cone in the center represents a defender. The give'n go must be played before and after this cone",
     },
     {
       id: 4,
@@ -7368,7 +7373,8 @@ const square = {
       vimeoId: undefined,
       repetition: '',
       rest: '',
-      instruction: '',
+      instruction:
+        'The players are spread over 2 squares. The disc will rotate in a defined direction. After making a pass, a player must move to the other square in the defined direction of rotation.',
     },
   ],
 };

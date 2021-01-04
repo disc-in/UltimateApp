@@ -6,11 +6,22 @@ Developing an app to enhance Ultimate coaching abilities
 
 You need a recent version of nodejs.
 
+Clone the project and install all its dependancies:
+
 ```
 git clone git@github.com:disc-in/UltimateApp.git
 cd UltimateApp
 npm install -g expo-cli
 npm install
+```
+
+Copy the environment file and fill the blanks in the `development` section:
+```
+$ cp env.js.sample env.js
+```
+
+And finally, start the project:
+```
 npm run start
 ```
 
@@ -47,8 +58,9 @@ To release a new version of the app :
 
 1. Send a pull request updating the version in `app.json`, as well as buildNumber (ios) and versionCode (android)
 2. When it is merged, create a release on Github
-3. `expo publish --release-channel production`
-4. If needed, republish to the stores using `expo build:X --release-channel production`
+3. Make sure your `env.js` file contains the production environment variables up-to-date
+4. `expo publish --release-channel production`
+5. If needed, republish to the stores using `expo build:X --release-channel production`
 
 ## 🙏 Thanks
 

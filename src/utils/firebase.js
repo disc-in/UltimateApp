@@ -2,6 +2,8 @@ import firebase from 'firebase/app';
 import 'firebase/database';
 import { Platform, InteractionManager } from 'react-native';
 
+import env from '../../env';
+
 // Work around issue `Setting a timer for long time`
 // see: https://github.com/firebase/firebase-js-sdk/issues/97
 const _setTimeout = global.setTimeout;
@@ -47,7 +49,16 @@ if (Platform.OS === 'android') {
 }
 // End of workaround
 
-//Initialize Firebase
+const firebaseConfig = {
+  apiKey: env.firebase.apiKey,
+  authDomain: env.firebase.authDomain,
+  databaseURL: env.firebase.databaseURL,
+  projectId: env.firebase.projectId,
+  storageBucket: env.firebase.storageBucket,
+  messagingSenderId: env.firebase.messagingSenderId,
+  appId: env.firebase.appId,
+};
+
 if (firebase.apps.length === 0) {
   firebase.initializeApp(firebaseConfig);
 }

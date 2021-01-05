@@ -1,6 +1,6 @@
 # Disc In Privacy Policy
 
-_Effective Date: October 1st, 2020; Last updated January 1st, 2021_
+_Effective Date: October 1st, 2020; Last updated January 5th, 2021_
 
 This Privacy Policy explains how the Disc In application uses and protects your information.
 

@@ -1,6 +1,6 @@
 # Règles de confidentialité pour l’application "Disc In"
 
-_Date de publication : 1er octobre 2020; Dernière modification le 1er janvier 2021._
+_Date de publication : 1er octobre 2020; Dernière modification le 5 janvier 2021._
 
 La présente politique de confidentialité s’applique aux utilisateurs des appareils Android et iOS.
 En utilisant l’application "Disc In" sous Android ou sous iOS, vous signifiez votre accord sur notre politique de confidentialité.

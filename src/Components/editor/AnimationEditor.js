@@ -324,20 +324,19 @@ class AnimationEditor extends React.Component {
             <MaterialCommunityIcons name="trash-can" color={theme.COLOR_PRIMARY} size={22} />
           </View>
           <View style={[styles.draggableArea, this.state.isElementMoving ? { transform: [{ scale: 0 }] } : null]}>
+            <BackgroundPicker
+              onBackgroundChange={this.onBackgroundChange}
+              selectedBackground={this.state.animation.background}
+            />
             {['offense', 'defense', 'disc', 'triangle'].map((type) => (
               <DraggableDisplayedElement
                 type={type}
-                playerRadius={this.state.playerRadius}
+                draggableBaseWidth={this.state.draggableBaseWidth}
                 onMoveEnd={this.addElementToAnimation}
                 animation={this.state.animation}
                 key={type}
               />
             ))}
-            <BackgroundPicker
-              onBackgroundChange={this.onBackgroundChange}
-              selectedBackground={this.state.animation.background}
-            />
-
             <AnimationHistory animation={this.state.animation} updateAnimation={this.updateAnimation} />
           </View>
         </View>

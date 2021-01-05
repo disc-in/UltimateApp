@@ -11,7 +11,7 @@ import Cone from '../animation/elements/Cone';
     - number: string defined if there is something written on the element
 */
 const DraggableDisplayedElement = (props) => {
-  const { draggableBaseWidth, type, number, animation } = props;
+  const { draggableBaseWidth, type, animation } = props;
 
   const [number, setNumber] = useState(1);
 

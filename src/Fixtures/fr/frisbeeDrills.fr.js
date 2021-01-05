@@ -7048,7 +7048,7 @@ const bull = {
   description:
     "Un exercice classique dans le monde du sport collectif. Il faut faire circuler rapidement le disque afin que la défense n'ait pas le temps de se mettre en place. Si une passe n'est pas complétée, le lanceur va au milieu",
   minimalPlayersNumber: 6,
-  inGame: '-',
+  inGame: undefined,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque ',
   durationInMinutes: 12,
@@ -7073,7 +7073,7 @@ const bull = {
       repetition: '',
       rest: '',
       instruction:
-        "L'objectif des attaquants est de conserver le disque sans se déplacer. Ils ne peuvent pas jouer plus de 2 fois de suite avec le même joueur à la suite",
+        "L'objectif des attaquants est de conserver le disque sans se déplacer. Ils ne peuvent pas jouer plus de 2 fois de suite avec le même joueur",
     },
     {
       id: 3,
@@ -7082,7 +7082,7 @@ const bull = {
       repetition: '',
       rest: '',
       instruction:
-        "2 équipes de 3 joueurs s'affrontent. Un joueur joue le rôle de poppers pendant l'exercice. L'objectif des joueurs en attaque est de réussir à faire une passe au popper. Ils peuvent effectuer jusqu'à 3 passes à leurs autres partenaires avant de réussir à atteindre le popper. Les autres attaquants peuvent seulement courir sur des lignes droites délimitant le terrain. S’il y a un turn-over, les attaquants passent en défense et vice-versa",
+        "2 équipes de 3 joueurs s'affrontent. Un joueur joue le rôle de popper pendant l'exercice. L'objectif des attaquants est de réussir à faire une passe au popper. Ils peuvent effectuer jusqu'à 3 passes à leurs autres partenaires avant de réussir à atteindre le popper. Les autres attaquants peuvent seulement courir sur des lignes droites délimitant le terrain. S’il y a un turn-over, les attaquants passent en défense et vice-versa",
     },
     {
       id: 4,
@@ -7091,7 +7091,7 @@ const bull = {
       repetition: '',
       rest: '',
       instruction:
-        "Exercice similaire à la variante précédente. Deux équipes sont de 4 joueurs et une équipe de 3. Les deux équipes de 4 alternent les défenses et les attaques. L'équipe de 3 reste toujours en attaque. L'un de ses membres prend le rôle du popper",
+        "Exercice similaire à la variante précédente. Deux équipes de 4 joueurs et une équipe de 3. Les deux équipes de 4 alternent les défenses et les attaques. L'équipe de 3 reste toujours en attaque. L'un de ses membres prend le rôle du popper",
     },
   ],
 };
@@ -7455,7 +7455,7 @@ const square = {
       repetition: '',
       rest: '',
       instruction:
-        "Le disque tourne dans un sens. L'objectif du lanceur est de lancer à un joueur au niveau de centre de l'arête du carré. L'entraîneur peut préciser le type de lancers qui doivent être utilisés. (Inside, main gauche, courbe extérieur...)",
+        "Le disque tourne dans un sens. L'objectif du lanceur est de lancer à un joueur au milieu de l'arrête du carré. L'entraîneur peut préciser le type de lancers qui doivent être utilisés. (Inside, main gauche, courbe extérieur...)",
     },
     {
       id: 2,
@@ -7465,7 +7465,7 @@ const square = {
       repetition: '',
       rest: '',
       instruction:
-        "Même principe. Dorénavant, le coureur doit partir dans une direction. Lorsque le lanceur réalise une feinte réaliste, l'attaquant revient vers le centre de l'arête",
+        "Même principe. Dorénavant, le coureur doit partir dans une direction. Lorsque le lanceur réalise une feinte réaliste, l'attaquant revient vers le centre de l'arrête",
     },
     {
       id: 3,
@@ -7475,7 +7475,7 @@ const square = {
       repetition: '',
       rest: '',
       instruction:
-        'À son tour, un joueur doit réaliser un une deux avec le joueur précédent afin de continuer à faire avancer un disque. Le plot au centre représente un défenseur. Le une deux doit être effectué avant et après ce plot',
+        'À son tour, un joueur doit réaliser un une-deux avec le joueur précédent afin de continuer à faire avancer le disque. Le plot au centre représente un défenseur. Le une-deux doit être effectué avant et après ce plot',
     },
     {
       id: 4,
@@ -7485,7 +7485,7 @@ const square = {
       repetition: '',
       rest: '',
       instruction:
-        "Les joueurs sont répartis sur 2 carrés. Le disque va effectuer une rotation dans un sens définir. Après avoir effectué une passe, un joueur doit se déplacer vers l'autre carré en respectant le sens de rotation défini",
+        "Les joueurs sont répartis sur 2 carrés. Le disque va effectuer une rotation dans un sens défini. Après avoir effectué une passe, un joueur doit se déplacer vers l'autre carré en respectant le sens de rotation",
     },
   ],
 };

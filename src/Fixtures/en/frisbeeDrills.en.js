@@ -6938,9 +6938,9 @@ const bull = {
   title: 'Rondo',
   image: 'https://zupimages.net/up/20/47/4ypa.jpg',
   description:
-    'A famous drill used in many team sports. The disc must be passed quickly so that the defense does not have time to set up. If a pass is not successful, the thrower goes replaces a defender',
+    'A famous drill used in many team sports. The disc must be passed quickly so that the defense does not have time to set up. If a pass is not successful, the thrower replaces a defender',
   minimalPlayersNumber: 6,
-  inGame: '-',
+  inGame: undefined,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disc',
   durationInMinutes: 12,
@@ -6956,7 +6956,7 @@ const bull = {
       repetition: '',
       rest: '',
       instruction:
-        'The players form a circle more or less wide depending on their level. Passes to direct neighbors are not allowed. If a player has to take more than one step to catch the pass is considered incomplete. The thrower replaces one of the defenders. The stall starts at 5',
+        'The players form a circle more or less wide depending on their level. Passes to direct neighbors are not allowed. If a player has to take more than one step to catch the pass, is considered incomplete. The thrower replaces one of the defenders. The stall starts at 5',
     },
     {
       id: 2,
@@ -6974,7 +6974,7 @@ const bull = {
       repetition: '',
       rest: '',
       instruction:
-        '2 teams of 3 players compete against each other. One player plays the role of poppers during the drill. The objective of the attacking players is to succeed in making a pass to the popper. They can make up to 3 passes to their other partners before succeeding in reaching the popper. The other attackers can only run on straight lines delimiting the field. If there is a turn-over, the attackers pass to defence and vice versa.',
+        '2 teams of 3 players compete against each other. One player plays the role of poppers during the drill. The objective of the attacking team is to succeed in making a pass to the popper. They can make up to 3 passes to their other partners before succeeding in reaching the popper. The other attackers can only run on straight lines delimiting the field. If there is a turn-over, the attackers pass to defence and vice versa.',
     },
     {
       id: 4,
@@ -6983,7 +6983,7 @@ const bull = {
       repetition: '',
       rest: '',
       instruction:
-        'Exercise similar to the previous variant. Two teams are of 4 players and one team of 3, with the two teams of 4 alternating defences and attacks. The team of 3 always remains in attack. One of its members takes the role of the popper.',
+        'Exercise similar to the previous variant. Two teams are of 4 players and one team of 3, with the two teams of 4 switching between offense and defence. The team of 3 always remains in attack. One of its members takes the role of the popper.',
     },
   ],
 };
@@ -7344,7 +7344,7 @@ const square = {
       repetition: '',
       rest: '',
       instruction:
-        'The disc turns in one direction. The objective of the thrower is to throw to a player at the centre of the square edge. The coach can specify the type of throws to be used. (Inside, left hand, outside curve...)',
+        'The disc moves around in one direction. The objective of the thrower is to throw to a player at the centre of the square edge. The coach can specify the type of throws to be used. (Inside, left hand, outside curve...)',
     },
     {
       id: 2,

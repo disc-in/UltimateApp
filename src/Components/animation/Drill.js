@@ -10,7 +10,7 @@ class Drill {
     this.texts = (animation && animation.texts) || [];
     this.background = (animation && animation.background) || 'endzone';
     if (this.positions.length === 1) {
-      // A serialized array containing only null or  being empty may be removed (eg. on Firebase)
+      // A serialized array containing only null or being empty may be removed (eg. on Firebase)
       // An animation must contain 2 steps to be displayed
       // So we reconstruct a second step
       this.addStep();

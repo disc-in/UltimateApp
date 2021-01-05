@@ -15,9 +15,9 @@ npm install -g expo-cli
 npm install
 ```
 
-Copy the environment file and fill the blanks in the `development` section:
+Copy the environment file and fill the blanks:
 ```
-$ cp env.js.sample env.js
+$ cp .env.example .env
 ```
 
 And finally, start the project:
@@ -58,7 +58,7 @@ To release a new version of the app :
 
 1. Send a pull request updating the version in `app.json`, as well as buildNumber (ios) and versionCode (android)
 2. When it is merged, create a release on Github
-3. Make sure your `env.js` file contains the production environment variables up-to-date
+3. Make sure your `.env` file contains the production environment variables up-to-date
 4. `expo publish --release-channel production`
 5. If needed, republish to the stores using `expo build:X --release-channel production`
 

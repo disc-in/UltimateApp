@@ -16,4 +16,6 @@ web-report/
 *.js#
 
 # Environment variable
-env.js
+.env
+.env.*
+!.env.example

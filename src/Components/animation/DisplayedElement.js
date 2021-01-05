@@ -68,19 +68,17 @@ class DisplayedElement extends React.Component {
     if (
       props.animationWidth !== state.stateFromProps.animationWidth ||
       props.animationHeight !== state.stateFromProps.animationHeight
-    ) {
+    )
       isEqual = false;
-    }
 
     if (isEqual) {
       /* If the animation is defined in the state */
-      if (state.stateFromProps.animation !== undefined && state.stateFromProps.animation !== null) {
+      if (state.stateFromProps.animation !== undefined && state.stateFromProps.animation !== null)
         /* Test if the element has the same position at each step in both animations */
         isEqual = props.animation.isElementEqualIn(props.eId, state.stateFromProps.animation);
-      } else if (props.animation !== undefined || props.animation !== null) {
+      else if (props.animation !== undefined || props.animation !== null)
         /* If the animation is not defined in the state but is defined in props */
         isEqual = false;
-      }
     }
 
     if (isEqual) return null;

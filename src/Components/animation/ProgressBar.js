@@ -118,9 +118,9 @@ class ProgressBar extends React.Component {
       props.animationWidth !== state.stateFromProps.animationWidth ||
       props.animationHeight !== state.stateFromProps.animationHeight ||
       props.stepCount !== state.stateFromProps.stepCount
-    ) {
+    )
       return { stateFromProps: _initializeStateFromProps(props) };
-    } else return null;
+    else return null;
   }
 }
 
@@ -143,10 +143,10 @@ const _initializeStateFromProps = (props) => {
     const left = i * stepWidth;
     let touchableLeft = left;
 
-    if (i === 0) {
+    if (i === 0)
       if (props.readonly) touchableWidth = 0;
       else touchableWidth = stepWidth / 2;
-    } else if (props.readonly) touchableLeft -= stepWidth;
+    else if (props.readonly) touchableLeft -= stepWidth;
     else touchableLeft -= stepWidth / 2;
 
     const frozenObj = Object.freeze({

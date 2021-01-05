@@ -292,8 +292,6 @@ class AnimationEditor extends React.Component {
   };
 
   render() {
-    // console.log('Editor render');
-    // this.state.animation.log();
     return (
       <View
         ref={(ref) => {

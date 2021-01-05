@@ -149,10 +149,9 @@ class Drill {
         (pSize > 0 &&
           (pPositions[stepId][elemId][cutId][0] !== sPositions[stepId][elemId][cutId][0] ||
             pPositions[stepId][elemId][cutId][1] !== sPositions[stepId][elemId][cutId][1]))
-      ) {
+      )
         // If the position is different
         isEqual = false;
-      }
 
       // Go to the next position
       if (pPositions[stepId][elemId] === undefined || pPositions[stepId][elemId] === null) {

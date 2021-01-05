@@ -102,13 +102,11 @@ class AnimationEditor extends React.Component {
     }
   };
 
+  // Function called when a button undo or redo is pressed
   updateAnimation = (animation) => {
     // Reduce the currentStep if it is greater than the number of steps in animation
     this.state.currentStepAV.setValue(Math.min(this.currentStep, animation.stepCount() - 1));
     this.saveAnimation(animation);
-
-    // this.setState({animation});
-    // console.log("updateAnimation");
   };
 
   onBackgroundChange = (value) => {
@@ -129,16 +127,12 @@ class AnimationEditor extends React.Component {
   };
 
   _copyAnimation = () => {
-    return this._copyAnimation(this.state.animation);
-  };
-
-  _copyAnimation = (animation) => {
     var newAnimation = new Drill();
 
-    newAnimation.positions = JSON.parse(JSON.stringify(animation.positions));
-    newAnimation.ids = JSON.parse(JSON.stringify(animation.ids));
-    newAnimation.texts = JSON.parse(JSON.stringify(animation.texts));
-    newAnimation.background = JSON.parse(JSON.stringify(animation.background));
+    newAnimation.positions = JSON.parse(JSON.stringify(this.state.animation.positions));
+    newAnimation.ids = JSON.parse(JSON.stringify(this.state.animation.ids));
+    newAnimation.texts = JSON.parse(JSON.stringify(this.state.animation.texts));
+    newAnimation.background = JSON.parse(JSON.stringify(this.state.animation.background));
 
     return newAnimation;
   };
@@ -298,6 +292,8 @@ class AnimationEditor extends React.Component {
   };
 
   render() {
+    // console.log('Editor render');
+    // this.state.animation.log();
     return (
       <View
         ref={(ref) => {
@@ -367,7 +363,6 @@ const styles = StyleSheet.create({
     top: 0,
     flex: 1,
     zIndex: 1,
-    elevation: 1,
   },
   deletionArea: {
     flexDirection: 'row',
@@ -379,7 +374,6 @@ const styles = StyleSheet.create({
     top: 0,
     right: 0,
     zIndex: 2,
-    elevation: 2,
     borderWidth: 2,
     justifyContent: 'center',
   },

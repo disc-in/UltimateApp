@@ -113,6 +113,12 @@ import crissCrossRaceAnimation from '../Animation/CrissCrossRace';
 import xLAnimation from '../Animation/XL';
 import xLUPAnimation from '../Animation/XLUp';
 import bottleAnimation from '../Animation/Bottle';
+import squareAnimation from '../Animation/Square';
+import squareDishieAnimation from '../Animation/SquareDishie';
+import squareDoubleAnimation from '../Animation/SquareDouble';
+import squareFakeAnimation from '../Animation/SquareFake';
+import rondoThreeAnimation from '../Animation/RondoThree';
+import rondoFunAnimation from '../Animation/RondoFun';
 
 const stabilityDrill = {
   id: 1,
@@ -6321,7 +6327,7 @@ const manipulation = {
   id: 1034,
   type: DrillTypes.FRISBEE,
   author: 'Mooncatchers',
-  title: 'Dexterity Boost',
+  title: 'Boost de Dextérité',
   image: 'https://zupimages.net/up/20/51/ej3n.jpg',
   description: 'Exercices pour apprendre à manipuler le disque dans des situations non conventionnelles',
   minimalPlayersNumber: 2,
@@ -7042,7 +7048,7 @@ const bull = {
   description:
     "Un exercice classique dans le monde du sport collectif. Il faut faire circuler rapidement le disque afin que la défense n'ait pas le temps de se mettre en place. Si une passe n'est pas complétée, le lanceur va au milieu",
   minimalPlayersNumber: 6,
-  inGame: '-',
+  inGame: undefined,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque ',
   durationInMinutes: 12,
@@ -7067,7 +7073,25 @@ const bull = {
       repetition: '',
       rest: '',
       instruction:
-        "L'objectif des attaquants est de conserver le disque sans se déplacer. Ils ne peuvent pas jouer plus de 2 fois de suite avec le même joueur à la suite",
+        "L'objectif des attaquants est de conserver le disque sans se déplacer. Ils ne peuvent pas jouer plus de 2 fois de suite avec le même joueur",
+    },
+    {
+      id: 3,
+      title: 'Avec des Poppers',
+      animation: rondoFunAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        "2 équipes de 3 joueurs s'affrontent. Un joueur joue le rôle de popper pendant l'exercice. L'objectif des attaquants est de réussir à faire une passe au popper. Ils peuvent effectuer jusqu'à 3 passes à leurs autres partenaires avant de réussir à atteindre le popper. Les autres attaquants peuvent seulement courir sur des lignes droites délimitant le terrain. S’il y a un turn-over, les attaquants passent en défense et vice-versa",
+    },
+    {
+      id: 4,
+      title: '11 Joueurs',
+      animation: rondoThreeAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        "Exercice similaire à la variante précédente. Deux équipes de 4 joueurs et une équipe de 3. Les deux équipes de 4 alternent les défenses et les attaques. L'équipe de 3 reste toujours en attaque. L'un de ses membres prend le rôle du popper",
     },
   ],
 };
@@ -7401,6 +7425,67 @@ const xL = {
       rest: '',
       instruction:
         'Même situation que précédemment. Si le lanceur réalise une feinte, le coureur doit dorénavant réaliser un contre cut pour aller du coté Break. Le lanceur doit réalisé un lancer par dessus pour atteindre le coureur. Pour la première place, une marque plus ou moins agressive peut être mise en place',
+    },
+  ],
+};
+
+const square = {
+  id: 1061,
+  type: DrillTypes.FRISBEE,
+  author: 'Paris Ultimate',
+  title: 'Le Carré',
+  image: 'https://zupimages.net/up/21/01/71d7.jpg',
+  description: 'Exerice pour apprendre à faire une passe à un joueur en mouvement',
+  minimalPlayersNumber: 9,
+  inGame:
+    'Faire le bon lancer.\nFaire une passe sur un joueur en mouvement qui me fuit.\nSe déplacer dans le bon timing',
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '8 plots - 1 disque',
+  durationInMinutes: 10,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.WARM_UP, FrisbeeGoals.JUNIOR, FrisbeeGoals.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'Le carré',
+      animation: squareAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        "Le disque tourne dans un sens. L'objectif du lanceur est de lancer à un joueur au milieu de l'arrête du carré. L'entraîneur peut préciser le type de lancers qui doivent être utilisés. (Inside, main gauche, courbe extérieur...)",
+    },
+    {
+      id: 2,
+      title: 'Avec une Feinte',
+      animation: squareFakeAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        "Même principe. Dorénavant, le coureur doit partir dans une direction. Lorsque le lanceur réalise une feinte réaliste, l'attaquant revient vers le centre de l'arrête",
+    },
+    {
+      id: 3,
+      title: 'Le Carré à Dishie',
+      animation: squareDishieAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        'À son tour, un joueur doit réaliser un une-deux avec le joueur précédent afin de continuer à faire avancer le disque. Le plot au centre représente un défenseur. Le une-deux doit être effectué avant et après ce plot',
+    },
+    {
+      id: 4,
+      title: 'Le Double Carré',
+      animation: squareDoubleAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        "Les joueurs sont répartis sur 2 carrés. Le disque va effectuer une rotation dans un sens défini. Après avoir effectué une passe, un joueur doit se déplacer vers l'autre carré en respectant le sens de rotation",
     },
   ],
 };
@@ -8516,6 +8601,7 @@ export const drills = [
   passMouv,
   crissCross,
   xL,
+  square,
 
   // // Games
   // normalGame,

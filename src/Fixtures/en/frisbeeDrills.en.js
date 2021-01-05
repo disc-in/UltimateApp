@@ -113,6 +113,12 @@ import crissCrossRaceAnimation from '../Animation/CrissCrossRace';
 import xLAnimation from '../Animation/XL';
 import xLUPAnimation from '../Animation/XLUp';
 import bottleAnimation from '../Animation/Bottle';
+import squareAnimation from '../Animation/Square';
+import squareDishieAnimation from '../Animation/SquareDishie';
+import squareDoubleAnimation from '../Animation/SquareDouble';
+import squareFakeAnimation from '../Animation/SquareFake';
+import rondoThreeAnimation from '../Animation/RondoThree';
+import rondoFunAnimation from '../Animation/RondoFun';
 
 const stabilityDrill = {
   id: 1,
@@ -4764,7 +4770,7 @@ const strength5 = {
 // const youthLadder = {
 //   id: 55,
 //   type: DrillTypes.FITNESS,
-//   author: 'PUC',
+//   author: 'PUC Ultimate',
 //   title: 'Ladder for youth',
 //   image: 'https://zupimages.net/up/20/51/k1kk.jpg',
 //   description:
@@ -5399,7 +5405,7 @@ const menageATroisDrill = {
 const dwarfDuelDrill = {
   id: 1014,
   type: DrillTypes.FRISBEE,
-  author: 'PUC',
+  author: 'PUC Ultimate',
   title: 'Dwarf Duel',
   image: 'https://zupimages.net/up/20/19/3m3k.jpg',
   description: 'Duel without jumping, all about positioning',
@@ -6932,9 +6938,9 @@ const bull = {
   title: 'Rondo',
   image: 'https://zupimages.net/up/20/47/4ypa.jpg',
   description:
-    'A famous drill used in many team sports. The disc must be passed quickly so that the defense does not have time to set up. If a pass is not successful, the thrower goes replaces a defender',
+    'A famous drill used in many team sports. The disc must be passed quickly so that the defense does not have time to set up. If a pass is not successful, the thrower replaces a defender',
   minimalPlayersNumber: 6,
-  inGame: '-',
+  inGame: undefined,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disc',
   durationInMinutes: 12,
@@ -6950,7 +6956,7 @@ const bull = {
       repetition: '',
       rest: '',
       instruction:
-        'The players form a circle more or less wide depending on their level. Passes to direct neighbors are not allowed. If a player has to take more than one step to catch the pass is considered incomplete. The thrower replaces one of the defenders. The stall starts at 5',
+        'The players form a circle more or less wide depending on their level. Passes to direct neighbors are not allowed. If a player has to take more than one step to catch the pass, is considered incomplete. The thrower replaces one of the defenders. The stall starts at 5',
     },
     {
       id: 2,
@@ -6960,6 +6966,24 @@ const bull = {
       rest: '',
       instruction:
         'The objective of the attackers is to keep the disc without moving. They cannot play more than 2 times in a row with the same player. Same rule as in the previous variant',
+    },
+    {
+      id: 3,
+      title: 'With a Poopers',
+      animation: rondoFunAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        '2 teams of 3 players compete against each other. One player plays the role of poppers during the drill. The objective of the attacking team is to succeed in making a pass to the popper. They can make up to 3 passes to their other partners before succeeding in reaching the popper. The other attackers can only run on straight lines delimiting the field. If there is a turn-over, the attackers pass to defence and vice versa.',
+    },
+    {
+      id: 4,
+      title: '11 players',
+      animation: rondoThreeAnimation,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Exercise similar to the previous variant. Two teams are of 4 players and one team of 3, with the two teams of 4 switching between offense and defence. The team of 3 always remains in attack. One of its members takes the role of the popper.',
     },
   ],
 };
@@ -7265,7 +7289,7 @@ const xL = {
   minimalPlayersNumber: 8,
   inGame: 'Making the right throw. Passing on a moving player who is running away from me. Moving in the right timing',
   equipmentLabel: EquipmentLabels.BASIC,
-  equipment: '1 dic per player - 4 cones',
+  equipment: '1 disc per player - 4 cones',
   durationInMinutes: 10,
   intensity: Intensities.MODERATE,
   goals: [FrisbeeGoals.WARM_UP, FrisbeeGoals.JUNIOR, FrisbeeGoals.THROWING],
@@ -7291,6 +7315,66 @@ const xL = {
       rest: '',
       instruction:
         'Same situation as before. If the thrower makes a fake, the runner must now make a counter cut to go to the break side. The thrower must throw an overhead to reach the runner. For the first throw, a more or less aggressive mark can be put in place',
+    },
+  ],
+};
+
+const square = {
+  id: 1061,
+  type: DrillTypes.FRISBEE,
+  author: 'Paris Ultimate',
+  title: 'The Square',
+  image: 'https://zupimages.net/up/21/01/71d7.jpg',
+  description: 'Drill to learn how to throw to a moving target',
+  minimalPlayersNumber: 9,
+  inGame: 'Making the right throw. Passing on a moving player who is running away from me. Moving in the right timing',
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '8 cones - 1 disc',
+  durationInMinutes: 10,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.WARM_UP, FrisbeeGoals.JUNIOR, FrisbeeGoals.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'The Square',
+      animation: squareAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        'The disc moves around in one direction. The objective of the thrower is to throw to a player at the centre of the square edge. The coach can specify the type of throws to be used. (Inside, left hand, outside curve...)',
+    },
+    {
+      id: 2,
+      title: 'With a fake',
+      animation: squareFakeAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Same principle. From now on, the rider has to go in one direction. When the thrower makes a realistic feint, the attacker returns to the centre of the ridge',
+    },
+    {
+      id: 3,
+      title: 'Dishie Square',
+      animation: squareDishieAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        "In turn, a player must perform a give'n go with the previous player in order to continue. The cone in the center represents a defender. The give'n go must be played before and after this cone",
+    },
+    {
+      id: 4,
+      title: 'Double Squares',
+      animation: squareDoubleAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        'The players are spread over 2 squares. The disc will rotate in a defined direction. After making a pass, a player must move to the other square in the defined direction of rotation',
     },
   ],
 };
@@ -7354,7 +7438,7 @@ const game3v3 = {
 const longShotGame = {
   id: 2003,
   type: DrillTypes.FRISBEE,
-  author: 'PUC',
+  author: 'PUC Ultimate',
   title: 'Hucks oriented game',
   image: 'https://zupimages.net/up/20/28/c16q.jpg',
   description:
@@ -8398,6 +8482,7 @@ export const drills = [
   passMouv,
   crissCross,
   xL,
+  square,
 
   // Commenting game drills because we don't want them in the drill list, only part of programs
   // // Games

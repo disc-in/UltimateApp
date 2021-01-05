@@ -12,13 +12,13 @@ import Drill from '../animation/Drill';
 const screenDimension = Dimensions.get('window');
 
 export const IllustrationField = {
-  ANIMATION: 'animation',
   VIMEO: 'vimeoId',
+  ANIMATION: 'animation',
 };
 
 const FrisbeeDrillIllustration = (props) => {
   const carouselRef = useRef(null);
-  const [illustrationPreference, setIllustrationPreference] = useState(IllustrationField.ANIMATION);
+  const [illustrationPreference, setIllustrationPreference] = useState(IllustrationField.VIMEO);
 
   useEffect(() => {
     carouselRef.current.snapToItem(0);
@@ -91,7 +91,7 @@ const FrisbeeDrillIllustration = (props) => {
               value={illustrationPreference}
               onValueChange={(value) => setIllustrationPreference(value)}
               possibleValues={Object.values(IllustrationField)}
-              icons={['clipboard-outline', 'video']}
+              icons={['video', 'clipboard-outline']}
             />
           )}
           <Text style={styles.instruction}>{item.instruction}</Text>

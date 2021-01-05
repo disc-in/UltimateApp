@@ -13,16 +13,18 @@ export const ProgramListPage = (props) => {
   // Try to find programs from activeProgram
   if (activeProgram) {
     displayedPrograms = programs.filter((program) => program.type === activeProgram.type);
-    if (activeProgram.type === DrillTypes.FITNESS)
+    if (activeProgram.type === DrillTypes.FITNESS) {
       displayedPrograms = displayedPrograms.filter(
         (program) => program.equipmentLabel === activeProgram.equipmentLabel,
       );
+    }
   }
   // Find programs from params
   if (!displayedPrograms) {
     displayedPrograms = programs.filter((program) => program.type === route.params.type);
-    if (route.params.type === DrillTypes.FITNESS)
+    if (route.params.type === DrillTypes.FITNESS) {
       displayedPrograms = displayedPrograms.filter((program) => program.equipmentLabel === route.params.equipmentLabel);
+    }
   }
 
   return (

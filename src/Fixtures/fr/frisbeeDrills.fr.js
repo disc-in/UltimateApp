@@ -7965,7 +7965,7 @@ const secondU10training = {
   drills: [/*statues,*/ crossingTheField, goToTenDrill],
 };
 
-//Fitness Weeks
+// Fitness Weeks
 const fitnessWeek1 = {
   id: 101,
   title: 'Retour aux affaires',

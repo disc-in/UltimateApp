@@ -11,7 +11,7 @@ class Animation extends React.Component {
     super(props);
 
     this.state = {
-      stepLength: 1000, // Duration of a step in milliseconds
+      stepLength: 1250, // Duration of a step in milliseconds
       currentStep: props.currentStep || 0, // Current step displayed on the phone
       animationPlaying: false,
     };

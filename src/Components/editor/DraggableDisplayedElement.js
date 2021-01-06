@@ -11,24 +11,10 @@ import Cone from '../animation/elements/Cone';
     - number: string defined if there is something written on the element
 */
 const DraggableDisplayedElement = (props) => {
-  const { draggableBaseWidth, type, animation } = props;
-
-  const [number, setNumber] = useState(1);
+  const { draggableBaseWidth, type, number } = props;
 
   /* Current position of the element in pixels */
   const currentPosition = new Animated.ValueXY({ x: 0, y: 0 });
-
-  useEffect(() => {
-    let counter = 1;
-
-    for (const eType of animation.ids) {
-      if (eType === type) {
-        counter += 1;
-      }
-    }
-
-    setNumber(counter);
-  }, [animation]);
 
   const panResponder = PanResponder.create({
     onStartShouldSetPanResponder: () => true,

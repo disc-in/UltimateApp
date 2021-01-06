@@ -137,10 +137,9 @@ class AnimationEditor extends React.Component {
     return newAnimation;
   };
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate(prevProps, prevState) {
     const animation = new Drill(this.props.animation);
-
-    if (!this.state.animation.isEqualTo(animation)) {
+    if (!prevState.animation.isEqualTo(animation)) {
       this.state.currentStepAV.setValue(0);
 
       const labels = {
@@ -333,8 +332,8 @@ class AnimationEditor extends React.Component {
                 type={type}
                 draggableBaseWidth={this.state.draggableBaseWidth}
                 onMoveEnd={this.addElementToAnimation}
-                animation={this.state.animation}
                 key={type}
+                number={this.state.labels[type]}
               />
             ))}
             <AnimationHistory

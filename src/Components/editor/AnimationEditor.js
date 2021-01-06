@@ -48,7 +48,7 @@ class AnimationEditor extends React.Component {
 
   saveAnimation = (newAnimation) => {
     this.props.onAnimationChange(newAnimation);
-    this.setState({ animation: newAnimation }, setLabels);
+    this.setState({ animation: newAnimation }, this.setLabels);
   };
 
   setLabels = () => {
@@ -58,7 +58,7 @@ class AnimationEditor extends React.Component {
       disc: 1,
       triangle: 1,
     };
-    for (const type of animation.ids) labels[type] += 1;
+    for (const type of this.state.animation.ids) labels[type] += 1;
     this.setState({ labels });
   };
 
@@ -149,7 +149,7 @@ class AnimationEditor extends React.Component {
     if (!prevState.animation.isEqualTo(animation)) {
       this.state.currentStepAV.setValue(0);
       this.setState({ animation });
-      setLabels();
+      this.setLabels();
     }
   }
 

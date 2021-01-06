@@ -46,9 +46,20 @@ class AnimationEditor extends React.Component {
     });
   }
 
-  saveAnimation = (newAnimation, cb) => {
+  saveAnimation = (newAnimation) => {
     this.props.onAnimationChange(newAnimation);
-    this.setState({ animation: newAnimation }, cb);
+    this.setState({ animation: newAnimation }, setLabels);
+  };
+
+  setLabels = () => {
+    const labels = {
+      offense: 1,
+      defense: 1,
+      disc: 1,
+      triangle: 1,
+    };
+    for (const type of animation.ids) labels[type] += 1;
+    this.setState({ labels });
   };
 
   onLayout = (e) => {
@@ -91,10 +102,6 @@ class AnimationEditor extends React.Component {
     // 0.90 more or less matches the position of the progress bar in Animation
     if (position[0] <= 1 && position[1] <= 0.9 && position[0] >= 0 && position[1] >= 0) {
       const text = this.state.labels[type];
-
-      const labels = { ...this.state.labels };
-      labels[type] = labels[type] + 1;
-      this.setState({ labels });
 
       var newAnimation = this._copyAnimation();
       newAnimation.addElement(type, position[0], position[1], text);
@@ -141,18 +148,8 @@ class AnimationEditor extends React.Component {
     const animation = new Drill(this.props.animation);
     if (!prevState.animation.isEqualTo(animation)) {
       this.state.currentStepAV.setValue(0);
-
-      const labels = {
-        offense: 1,
-        defense: 1,
-        disc: 1,
-        triangle: 1,
-      };
-      for (const type of animation.ids) labels[type] += 1;
-      this.setState({
-        animation,
-        labels,
-      });
+      this.setState({ animation });
+      setLabels();
     }
   }
 
@@ -239,10 +236,6 @@ class AnimationEditor extends React.Component {
     /* If the element is dropped on the trash area */
     if (newPosition[1] > 1) {
       newAnimation.removeElement(elementIndex);
-
-      const labels = { ...this.state.labels };
-      labels[type] = labels[type] - 1;
-      this.setState({ labels });
     } else {
       /* If the element is moved outside of the animation area, move it to the closest position inside the animation area */
       if (newPosition[0] < 0) newPosition[0] = 0;

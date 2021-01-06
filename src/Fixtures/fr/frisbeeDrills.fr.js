@@ -5912,7 +5912,7 @@ const discGolf = {
   steps: [
     {
       id: 1,
-      title: 'disque Golf',
+      title: 'Disc-Golf',
       animation: discGolfAnimation,
       vimeoId: '475059721',
       repetition: '',
@@ -7827,7 +7827,7 @@ const fourthU13Training = {
   title: 'Déplacements et appels',
   image: 'https://zupimages.net/up/20/19/c9i6.jpg',
   description: "Travail sur l'agilité et la technique de cut",
-  drills: [/*statues, youthLadder,*/ trainDrill, game3v3],
+  drills: [checkLong, xL, trainDrill, game3v3],
 };
 
 const firstInitiationAdultTraining = {
@@ -7838,7 +7838,7 @@ const firstInitiationAdultTraining = {
   drills: [warmupDrill, basicThrowsDrill, goToTenDrill, game3v3],
 };
 
-const secondInintiationAdultTraining = {
+const secondInitiationAdultTraining = {
   id: 7,
   title: 'Défense & Longues',
   image: 'https://zupimages.net/up/20/19/cd36.jpg',
@@ -7846,7 +7846,7 @@ const secondInintiationAdultTraining = {
   drills: [warmupDrill, menageATroisDrill, checkLong, trainDrill, game5v5],
 };
 
-const thirdInintiationAdultTraining = {
+const thirdInitiationAdultTraining = {
   id: 8,
   title: "S'adapter au terrain",
   image: 'https://zupimages.net/up/20/19/hrqz.jpg',
@@ -7923,7 +7923,7 @@ const playingToLearn = {
   title: 'Ultimate Games',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Jouer des matchs pour apprendre les bases',
-  drills: [warmupGameDrill, helpGame, normalGame],
+  drills: [warmupGameDrill, helpGame, dDC, flubber, guts],
 };
 
 const zoneCup = {
@@ -7931,7 +7931,7 @@ const zoneCup = {
   title: 'Initiation à la zone',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: "Premier entraînement pour découvrir la cup d'une défense de zone",
-  drills: [bulldogDrill, warmupGameDrill, cupSwinging, zoneGame],
+  drills: [bulldogDrill, bull, cupSwinging, zoneGame],
 };
 
 const sideStackTraining = {
@@ -7971,7 +7971,103 @@ const secondU10training = {
   title: 'Que du plaisir',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Un deuxième entrainement pour découvrir le disque',
-  drills: [/*statues,*/ crossingTheField, goToTenDrill],
+  drills: [fish, crossingTheField, goToTenDrill, aussieDrill],
+};
+
+const firstU16 = {
+  id: 24,
+  title: 'Découvrir le sport',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Initiation pour découvrir les fondamentaux du sport',
+  drills: [basicThrowsDrill, crossingTheField, boxGame, normalGame],
+};
+
+const secondU16 = {
+  id: 25,
+  title: 'Apprendre les fondamentaux',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: "Un deuxième entrainement pour apprendre à s'amuser avec un disque",
+  drills: [menageATroisDrill, racingWarmUP, dishieLine, treasureHunt, normalGame],
+};
+
+const thirdU16 = {
+  id: 26,
+  title: "Il est l'heure de jouer",
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Troisième entrainement pour développer un jeu plus structuré',
+  drills: [square, aussieDrill, game3v3, normalGame],
+};
+
+const thirdU10 = {
+  id: 27,
+  title: "Il est l'heure de jouer",
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Troisième entrainement pour lancer à un joueur en mouvement',
+  drills: [passMouv, crossingTheField, checkLong, aussieDrill],
+};
+
+const verticalJunior = {
+  id: 28,
+  title: 'Initiation au Stack Vertical',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Première séance pour découvrir le stack vertical',
+  drills: [xL, arrow, checkLong, game3v3],
+};
+
+const verticalJuniorSecond = {
+  id: 29,
+  title: 'Comment se démarquer dans un stack Vertical',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Deuxième entrainement pour apprendre à se déplacer dans un stack vertical',
+  drills: [warmupDrill, trainDrill, arrow, normalGame],
+};
+
+const defenseJunior = {
+  id: 30,
+  title: 'La défense individuelle',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Première séance se concentrant sur la défense',
+  drills: [menageATroisDrill, racingWarmUP, dwarDuel, aussieDrill],
+};
+
+const defenseJuniorSecond = {
+  id: 31,
+  title: 'La défense fait gagner des matchs',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Deuxième entrainement pour apprendre à diriger son attaquant',
+  drills: [theTunnel, youShallNotPassDrill, theDuel, game3v3],
+};
+
+const zoneJunior = {
+  id: 32,
+  title: 'Initiation à la défense de zone',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Découverte de la défense de zone',
+  drills: [bulldogDrill, bull, kyeDrill, zoneGame],
+};
+
+const zoneJuniorSecond = {
+  id: 33,
+  title: 'Construire une défense de zone solide',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Deuxième séance pour construire un mur imperméable',
+  drills: [bull, cupSwinging, zoneGame],
+};
+
+const thirdVertical = {
+  id: 34,
+  title: "Création d'un flow",
+  image: 'https://zupimages.net/up/20/19/frj2.jpg',
+  description: 'Comment créer et garder le flow dans un stack Vertical',
+  drills: [arrow, crissCross, dishieLine, bigEightDrill, normalGame],
+};
+
+const zoneCupSecond = {
+  id: 35,
+  title: 'Construire une zone solide',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Deuxième entrainement pour améliorer la zone',
+  drills: [bull, kyeDrill, stopFlow, zoneGame],
 };
 
 //Fitness Weeks
@@ -8704,8 +8800,9 @@ export const trainings = [
   secondU13Training,
   thirdU13Training,
   fourthU13Training,
-  secondInintiationAdultTraining,
-  thirdInintiationAdultTraining,
+  firstInitiationAdultTraining,
+  secondInitiationAdultTraining,
+  thirdInitiationAdultTraining,
   initiationVerticalTraining,
   secondVerticalTraining,
   defenseBaseTraining,
@@ -8722,6 +8819,18 @@ export const trainings = [
   diagonalStackTraining,
   u10Initiation,
   secondU10training,
+  firstU16,
+  secondU16,
+  thirdU16,
+  thirdU10,
+  verticalJunior,
+  verticalJuniorSecond,
+  defenseJunior,
+  defenseJuniorSecond,
+  zoneJunior,
+  zoneJuniorSecond,
+  thirdVertical,
+  zoneCupSecond,
 ];
 
 export const programs = [
@@ -8730,7 +8839,7 @@ export const programs = [
     type: DrillTypes.FRISBEE,
     ageCategory: AgeCategory.JUNIOR,
     title: 'Initiation u10',
-    trainings: [u10Initiation, secondU10training],
+    trainings: [u10Initiation, secondU10training, thirdU10],
   },
   {
     id: 2,
@@ -8744,14 +8853,14 @@ export const programs = [
     type: DrillTypes.FRISBEE,
     ageCategory: AgeCategory.SENIOR,
     title: 'Initiation adultes',
-    trainings: [firstInitiationAdultTraining, secondInintiationAdultTraining, thirdInintiationAdultTraining],
+    trainings: [firstInitiationAdultTraining, secondInitiationAdultTraining, thirdInitiationAdultTraining],
   },
   {
     id: 4,
     type: DrillTypes.FRISBEE,
     ageCategory: AgeCategory.SENIOR,
     title: 'Stack Vertical',
-    trainings: [initiationVerticalTraining, secondVerticalTraining, dumpSwingTraining],
+    trainings: [initiationVerticalTraining, secondVerticalTraining, thirdVertical, dumpSwingTraining],
   },
   {
     id: 5,
@@ -8772,7 +8881,7 @@ export const programs = [
     type: DrillTypes.FRISBEE,
     ageCategory: AgeCategory.SENIOR,
     title: 'Défense de Zone',
-    trainings: [zoneCup],
+    trainings: [zoneCup, zoneCupSecond],
   },
   {
     id: 8,
@@ -8797,6 +8906,34 @@ export const programs = [
   },
   {
     id: 11,
+    type: DrillTypes.FRISBEE,
+    ageCategory: AgeCategory.JUNIOR,
+    title: 'Initiation U16',
+    trainings: [firstU16, secondU16, thirdU16],
+  },
+  {
+    id: 12,
+    type: DrillTypes.FRISBEE,
+    ageCategory: AgeCategory.JUNIOR,
+    title: 'Stack Vertical',
+    trainings: [verticalJunior, verticalJuniorSecond],
+  },
+  {
+    id: 13,
+    type: DrillTypes.FRISBEE,
+    ageCategory: AgeCategory.JUNIOR,
+    title: 'Défense',
+    trainings: [defenseJunior, defenseJuniorSecond],
+  },
+  {
+    id: 14,
+    type: DrillTypes.FRISBEE,
+    ageCategory: AgeCategory.JUNIOR,
+    title: 'Défense de zone',
+    trainings: [zoneJunior, zoneJuniorSecond],
+  },
+  {
+    id: 101,
     type: DrillTypes.FITNESS,
     equipmentLabel: EquipmentLabels.NONE,
     title: 'Hors-saison - Partie 1',
@@ -8813,7 +8950,7 @@ export const programs = [
     ],
   },
   {
-    id: 12,
+    id: 102,
     type: DrillTypes.FITNESS,
     equipmentLabel: EquipmentLabels.NONE,
     title: 'Hors-saison - Partie 2',
@@ -8832,7 +8969,7 @@ export const programs = [
     ],
   },
   {
-    id: 13,
+    id: 103,
     type: DrillTypes.FITNESS,
     equipmentLabel: EquipmentLabels.NONE,
     title: 'Pré-saison',
@@ -8850,7 +8987,7 @@ export const programs = [
     ],
   },
   {
-    id: 14,
+    id: 104,
     type: DrillTypes.FITNESS,
     equipmentLabel: EquipmentLabels.NONE,
     title: 'En-saison',
@@ -8866,14 +9003,14 @@ export const programs = [
     ],
   },
   {
-    id: 15,
+    id: 105,
     type: DrillTypes.FITNESS,
     equipmentLabel: EquipmentLabels.NONE,
     title: 'Pic de forme',
     trainings: [fitnessWeek39, fitnessWeek40, fitnessWeek41],
   },
   {
-    id: 16,
+    id: 106,
     type: DrillTypes.FITNESS,
     equipmentLabel: EquipmentLabels.FULL,
     title: 'Hors saison',
@@ -8891,7 +9028,7 @@ export const programs = [
     ],
   },
   {
-    id: 17,
+    id: 107,
     type: DrillTypes.FITNESS,
     equipmentLabel: EquipmentLabels.FULL,
     title: 'Pré-saison',
@@ -8908,7 +9045,7 @@ export const programs = [
     ],
   },
   {
-    id: 18,
+    id: 108,
     type: DrillTypes.FITNESS,
     equipmentLabel: EquipmentLabels.FULL,
     title: 'En-saison',
@@ -8924,7 +9061,7 @@ export const programs = [
     ],
   },
   {
-    id: 19,
+    id: 109,
     type: DrillTypes.FITNESS,
     equipmentLabel: EquipmentLabels.FULL,
     title: 'Pic de forme',

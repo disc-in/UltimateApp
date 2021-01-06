@@ -16,19 +16,17 @@ const CurrentPlayManager = (props) => {
   const closeMenu = () => setVisible(false);
 
   const share = async () => {
-    upload(props.currentPlay)
-      .then((result) => {
-        const url = Linking.makeUrl('customPlays/' + props.currentPlay.uuid);
-        Share.share({
-          title: I18n.t('editor.currentPlayManager.shareTitle', { title: props.currentPlay.title }),
-          message: I18n.t('editor.currentPlayManager.shareMessage', { url }),
-          url,
-        }).catch((error) => showError(I18n.t('editor.currentPlayManager.shareError')));
-      })
-      .catch((error) => {
-        console.log({ error });
-        showError(I18n.t('editor.currentPlayManager.shareError'));
+    try {
+      await upload(props.currentPlay);
+      const url = Linking.makeUrl('customPlays/' + props.currentPlay.uuid);
+      await Share.share({
+        title: I18n.t('editor.currentPlayManager.shareTitle', { title: props.currentPlay.title }),
+        message: I18n.t('editor.currentPlayManager.shareMessage', { url }),
+        url,
       });
+    } catch (error) {
+      showError(I18n.t('editor.currentPlayManager.shareError'));
+    }
   };
 
   const checkBeforeNewPlay = () => {

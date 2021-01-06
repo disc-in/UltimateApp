@@ -48,10 +48,7 @@ if (Platform.OS === 'android') {
 // End of workaround
 
 const firebaseConfig = {
-  apiKey: process.env.EXPO_FIREBASE_API_KEY,
   databaseURL: process.env.EXPO_FIREBASE_DATABASE_URL,
-  projectId: process.env.EXPO_FIREBASE_PROJECT_ID,
-  appId: process.env.EXPO_FIREBASE_APP_ID,
 };
 
 if (firebase.apps.length === 0) {

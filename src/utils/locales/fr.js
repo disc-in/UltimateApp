@@ -127,6 +127,7 @@ export default {
       share: 'Partager',
       shareTitle: 'Partager {{title}}',
       shareMessage: 'Utilise ce lien pour télécharger ma super tactique dans Disc In : {{url}}',
+      shareError: 'Une erreur est survenue',
     },
     renamePlayModal: {
       placeholder: 'Appuyer ici pour renommer',

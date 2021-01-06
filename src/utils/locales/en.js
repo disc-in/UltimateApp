@@ -127,6 +127,7 @@ export default {
       share: 'Share',
       shareTitle: 'Sharing {{title}}',
       shareMessage: 'Use the following link to import my awesome play in Disc In: {{url}}',
+      shareError: 'It looks like there was an error sharing your play',
     },
     renamePlayModal: {
       placeholder: 'Click here to enter the new name',

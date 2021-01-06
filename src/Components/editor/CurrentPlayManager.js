@@ -6,7 +6,7 @@ import * as Linking from 'expo-linking';
 
 import I18n from '../../utils/i18n';
 import { upload } from '../../utils/firebase';
-import { showSuccess } from '../../utils/flashMessage';
+import { showSuccess, showError } from '../../utils/flashMessage';
 import HeaderButton from '../shared/HeaderButton';
 
 const CurrentPlayManager = (props) => {
@@ -16,14 +16,19 @@ const CurrentPlayManager = (props) => {
   const closeMenu = () => setVisible(false);
 
   const share = async () => {
-    const result = await upload(props.currentPlay);
-    const url = Linking.makeUrl('customPlays/' + props.currentPlay.uuid);
-
-    Share.share({
-      title: I18n.t('editor.currentPlayManager.shareTitle', { title: props.currentPlay.title }),
-      message: I18n.t('editor.currentPlayManager.shareMessage', { url }),
-      url,
-    }).catch((err) => console.log(err));
+    upload(props.currentPlay)
+      .then((result) => {
+        const url = Linking.makeUrl('customPlays/' + props.currentPlay.uuid);
+        Share.share({
+          title: I18n.t('editor.currentPlayManager.shareTitle', { title: props.currentPlay.title }),
+          message: I18n.t('editor.currentPlayManager.shareMessage', { url }),
+          url,
+        }).catch((error) => showError(I18n.t('editor.currentPlayManager.shareError')));
+      })
+      .catch((error) => {
+        console.log({ error });
+        showError(I18n.t('editor.currentPlayManager.shareError'));
+      });
   };
 
   const checkBeforeNewPlay = () => {

@@ -53,6 +53,7 @@ const firebaseConfig = {
 
 if (firebase.apps.length === 0) {
   firebase.initializeApp(firebaseConfig);
+  firebase.setLogLevel('silent');
 }
 
 const reference = (uuid) => {

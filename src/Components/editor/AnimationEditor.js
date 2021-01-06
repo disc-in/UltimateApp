@@ -13,7 +13,7 @@ import AnimationHistory from './AnimationHistory';
 class AnimationEditor extends React.Component {
   constructor(props) {
     super(props);
-
+    console.log('AE: constructor');
     this.state = {
       animation: new Drill(props.animation),
       dTop: 0, // Distance between the top of the window and the editor
@@ -111,6 +111,7 @@ class AnimationEditor extends React.Component {
 
   // Function called when a button undo or redo is pressed
   onAnimationHistoryChange = (animation) => {
+    console.log('AE: current step: ', this.currentStep, ' new anim step count: ', animation.stepCount());
     // Reduce the currentStep if it is greater than the number of steps in animation
     this.state.currentStepAV.setValue(Math.min(this.currentStep, animation.stepCount() - 1));
     this.saveAnimation(animation);
@@ -144,9 +145,10 @@ class AnimationEditor extends React.Component {
     return newAnimation;
   };
 
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(prevProps) {
     const animation = new Drill(this.props.animation);
-    if (!prevState.animation.isEqualTo(animation)) {
+    if (!this.state.animation.isEqualTo(animation)) {
+      console.log('AE componentDidUpdate');
       this.state.currentStepAV.setValue(0);
       this.setState({ animation });
       this.setLabels();

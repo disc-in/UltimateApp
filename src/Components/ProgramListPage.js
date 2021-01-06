@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { LogBox } from 'react-native';
 
 import { DrillTypes } from '../Fixtures/config';
 import ProgramList from './programs/ProgramList';
@@ -17,12 +16,16 @@ export const ProgramListPage = (props) => {
       displayedPrograms = displayedPrograms.filter(
         (program) => program.equipmentLabel === activeProgram.equipmentLabel,
       );
+    if (activeProgram.type === DrillTypes.FRISBEE)
+      displayedPrograms = displayedPrograms.filter((program) => program.ageCategory === activeProgram.ageCategory);
   }
   // Find programs from params
   if (!displayedPrograms) {
     displayedPrograms = programs.filter((program) => program.type === route.params.type);
     if (route.params.type === DrillTypes.FITNESS)
       displayedPrograms = displayedPrograms.filter((program) => program.equipmentLabel === route.params.equipmentLabel);
+    if (route.params.type === DrillTypes.FRISBEE)
+      displayedPrograms = displayedPrograms.filter((program) => program.ageCategory === route.params.ageCategory);
   }
 
   return (

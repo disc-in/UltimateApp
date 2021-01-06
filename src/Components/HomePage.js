@@ -13,11 +13,10 @@ import simulator from '../../assets/HomePage/simulator.jpg';
 import dictionary from '../../assets/HomePage/dictionary.jpg';
 import ourPlays from '../../assets/HomePage/ourplays.jpg';
 import essential from '../../assets/HomePage/essential.jpg';
-import huddle from '../../assets/HomePage/huddle.jpg';
-import FeedbackButton from './home/FeedbackButton';
-import { DrillTypes, EquipmentLabels } from '../Fixtures/config';
 import adultPrograms from '../../assets/HomePage/adultPrograms.png';
 import juniorPrograms from '../../assets/HomePage/juniorPrograms.png';
+import FeedbackButton from './home/FeedbackButton';
+import { AgeCategory, DrillTypes, EquipmentLabels } from '../Fixtures/config';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -37,22 +36,28 @@ const HomeScreen = (props) => {
 
       <View style={styles.containerGrow}>
         <TouchableHighlight
-          onPress={() => props.navigation.navigate('ProgramListPage', { type: DrillTypes.FRISBEE })}
+          onPress={() =>
+            props.navigation.navigate('ProgramListPage', { type: DrillTypes.FRISBEE, ageCategory: AgeCategory.JUNIOR })
+          }
           style={styles.menuItemSplitLeft}
         >
           <ImageBackground source={juniorPrograms} style={styles.image}>
             <View style={styles.wrapper}>
               <Text style={styles.title}>{I18n.t('homePage.junior')}</Text>
+              <Text style={styles.subtitle}>{I18n.t('homePage.programs')}</Text>
             </View>
           </ImageBackground>
         </TouchableHighlight>
         <TouchableHighlight
-          onPress={() => props.navigation.navigate('ProgramListPage', { type: DrillTypes.FRISBEE })}
+          onPress={() =>
+            props.navigation.navigate('ProgramListPage', { type: DrillTypes.FRISBEE, ageCategory: AgeCategory.SENIOR })
+          }
           style={styles.menuItemSplitRight}
         >
           <ImageBackground source={adultPrograms} style={styles.image}>
             <View style={styles.wrapperRight}>
               <Text style={styles.titleRight}>{I18n.t('homePage.adult')}</Text>
+              <Text style={styles.subtitleRight}>{I18n.t('homePage.programs')}</Text>
             </View>
           </ImageBackground>
         </TouchableHighlight>
@@ -257,13 +262,18 @@ const styles = StyleSheet.create({
     right: 0,
     bottom: 0,
     justifyContent: 'center',
-    alignItems: 'flex-start',
+    alignItems: 'flex-end',
     padding: 20,
   },
   titleRight: {
     color: theme.COLOR_PRIMARY_LIGHT,
     fontSize: 28,
     fontWeight: 'bold',
+    textAlign: 'right',
+  },
+  subtitleRight: {
+    color: theme.COLOR_PRIMARY_LIGHT,
+    fontSize: theme.FONT_SIZE_MEDIUM,
     textAlign: 'right',
   },
 });

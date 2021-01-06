@@ -103,7 +103,7 @@ class AnimationEditor extends React.Component {
   };
 
   // Function called when a button undo or redo is pressed
-  updateAnimation = (animation) => {
+  onAnimationHistoryChange = (animation) => {
     // Reduce the currentStep if it is greater than the number of steps in animation
     this.state.currentStepAV.setValue(Math.min(this.currentStep, animation.stepCount() - 1));
     this.saveAnimation(animation);
@@ -337,7 +337,10 @@ class AnimationEditor extends React.Component {
                 key={type}
               />
             ))}
-            <AnimationHistory animation={this.state.animation} updateAnimation={this.updateAnimation} />
+            <AnimationHistory
+              animation={this.state.animation}
+              onAnimationHistoryChange={this.onAnimationHistoryChange}
+            />
           </View>
         </View>
       </View>

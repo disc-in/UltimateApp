@@ -2,6 +2,8 @@ import firebase from 'firebase/app';
 import 'firebase/database';
 import { Platform, InteractionManager } from 'react-native';
 
+import { EXPO_FIREBASE_DATABASE_URL } from '@env';
+
 // Work around issue `Setting a timer for long time`
 // see: https://github.com/firebase/firebase-js-sdk/issues/97
 const _setTimeout = global.setTimeout;
@@ -48,7 +50,7 @@ if (Platform.OS === 'android') {
 // End of workaround
 
 const firebaseConfig = {
-  databaseURL: process.env.EXPO_FIREBASE_DATABASE_URL,
+  databaseURL: EXPO_FIREBASE_DATABASE_URL,
 };
 
 if (firebase.apps.length === 0) {

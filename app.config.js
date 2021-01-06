@@ -1,5 +1,3 @@
-import 'dotenv/config';
-
 export default {
   name: 'Disc In',
   description: 'Empowering Ultimate coaches to prepare appropriate trainings for their teams',

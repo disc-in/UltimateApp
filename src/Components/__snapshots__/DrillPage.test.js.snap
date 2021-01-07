@@ -136,50 +136,23 @@ exports[`<DrillPage /> renders correctly 1`] = `
               }
             >
               <View
+                accessible={true}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
                 style={
                   Object {
-                    "flexDirection": "row",
+                    "opacity": 1,
                   }
                 }
+                testID="favoriteButton"
               >
-                <View
-                  accessible={true}
-                  focusable={true}
-                  onClick={[Function]}
-                  onResponderGrant={[Function]}
-                  onResponderMove={[Function]}
-                  onResponderRelease={[Function]}
-                  onResponderTerminate={[Function]}
-                  onResponderTerminationRequest={[Function]}
-                  onStartShouldSetResponder={[Function]}
-                  style={
-                    Object {
-                      "opacity": 1,
-                    }
-                  }
-                  testID="favoriteButton"
-                >
-                  <Text />
-                </View>
-                <View
-                  accessible={true}
-                  focusable={true}
-                  onClick={[Function]}
-                  onResponderGrant={[Function]}
-                  onResponderMove={[Function]}
-                  onResponderRelease={[Function]}
-                  onResponderTerminate={[Function]}
-                  onResponderTerminationRequest={[Function]}
-                  onStartShouldSetResponder={[Function]}
-                  style={
-                    Object {
-                      "opacity": 1,
-                    }
-                  }
-                  testID="shareButton"
-                >
-                  <Text />
-                </View>
+                <Text />
               </View>
             </View>
           </View>
@@ -547,40 +520,80 @@ exports[`<DrillPage /> renders correctly 1`] = `
                             </View>
                           </View>
                           <View
-                            accessible={true}
-                            focusable={true}
-                            onClick={[Function]}
-                            onResponderGrant={[Function]}
-                            onResponderMove={[Function]}
-                            onResponderRelease={[Function]}
-                            onResponderTerminate={[Function]}
-                            onResponderTerminationRequest={[Function]}
-                            onStartShouldSetResponder={[Function]}
                             style={
                               Object {
                                 "alignItems": "center",
-                                "backgroundColor": "#2a9e91",
-                                "borderRadius": 50,
-                                "height": 100,
-                                "justifyContent": "center",
-                                "margin": 20,
-                                "opacity": 1,
-                                "width": 100,
+                                "width": "100%",
                               }
                             }
-                            testID="startButton"
                           >
-                            <Text
+                            <View
+                              accessible={true}
+                              focusable={true}
+                              onClick={[Function]}
+                              onResponderGrant={[Function]}
+                              onResponderMove={[Function]}
+                              onResponderRelease={[Function]}
+                              onResponderTerminate={[Function]}
+                              onResponderTerminationRequest={[Function]}
+                              onStartShouldSetResponder={[Function]}
                               style={
                                 Object {
-                                  "color": "#fff",
-                                  "fontSize": 16,
-                                  "fontWeight": "bold",
+                                  "alignItems": "center",
+                                  "backgroundColor": "#2a9e91",
+                                  "borderRadius": 50,
+                                  "height": 100,
+                                  "justifyContent": "center",
+                                  "margin": 20,
+                                  "opacity": 1,
+                                  "width": 100,
+                                }
+                              }
+                              testID="startButton"
+                            >
+                              <Text
+                                style={
+                                  Object {
+                                    "color": "#fff",
+                                    "fontSize": 16,
+                                    "fontWeight": "bold",
+                                  }
+                                }
+                              >
+                                Start
+                              </Text>
+                            </View>
+                            <View
+                              style={
+                                Object {
+                                  "bottom": 0,
+                                  "justifyContent": "center",
+                                  "position": "absolute",
+                                  "right": "15%",
+                                  "top": 0,
                                 }
                               }
                             >
-                              Start
-                            </Text>
+                              <View
+                                accessible={true}
+                                focusable={true}
+                                onClick={[Function]}
+                                onResponderGrant={[Function]}
+                                onResponderMove={[Function]}
+                                onResponderRelease={[Function]}
+                                onResponderTerminate={[Function]}
+                                onResponderTerminationRequest={[Function]}
+                                onStartShouldSetResponder={[Function]}
+                                style={
+                                  Object {
+                                    "opacity": 1,
+                                  }
+                                }
+                                testID="shareButton"
+                              >
+                                <Text />
+                              </View>
+                            </View>
                           </View>
                         </View>
                         <View>

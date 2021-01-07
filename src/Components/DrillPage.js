@@ -1,8 +1,19 @@
 import React, { useRef, useLayoutEffect } from 'react';
-import { ScrollView, Share, StyleSheet, View, Text, ImageBackground, Dimensions, findNodeHandle } from 'react-native';
+import {
+  ScrollView,
+  Share,
+  StyleSheet,
+  TouchableOpacity,
+  View,
+  Text,
+  ImageBackground,
+  Dimensions,
+  findNodeHandle,
+} from 'react-native';
 import { connect } from 'react-redux';
 import { useHeaderHeight } from '@react-navigation/stack';
 import * as Linking from 'expo-linking';
+import { Ionicons } from '@expo/vector-icons';
 
 import I18n from '../utils/i18n';
 import { toggleFavorite } from '../Store/Actions/favoriteAction';
@@ -39,7 +50,6 @@ export const DrillPage = (props) => {
 
   const share = async (drill) => {
     const url = Linking.makeUrl('drills/' + drill.id);
-    console.log('share ', url);
 
     Share.share({
       title: I18n.t('drillPage.shareTitle', { drillTitle: drill.title }),
@@ -57,10 +67,7 @@ export const DrillPage = (props) => {
     navigation.setOptions({
       title: drill.title,
       headerRight: () => (
-        <View style={{ flexDirection: 'row' }}>
-          <HeaderButton icon={favoriteIcon} onPress={() => props.toggleFavorite(drill)} testID="favoriteButton" />
-          <HeaderButton icon="share-outline" onPress={() => share(drill)} testID="shareButton" />
-        </View>
+        <HeaderButton icon={favoriteIcon} onPress={() => props.toggleFavorite(drill)} testID="favoriteButton" />
       ),
     });
   });
@@ -88,7 +95,14 @@ export const DrillPage = (props) => {
             <Text style={styles.info}>{I18n.t('drillPage.level')}</Text>
           </View>
         </View>
-        <StartButton onPress={onPressStartButton} text={I18n.t('drillPage.start')} />
+        <View style={styles.startButton}>
+          <StartButton onPress={onPressStartButton} text={I18n.t('drillPage.start')} />
+          <View style={styles.shareButton}>
+            <TouchableOpacity onPress={() => share(drill)} testID="shareButton">
+              <Ionicons name="md-share" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
+            </TouchableOpacity>
+          </View>
+        </View>
       </ImageBackground>
       <View ref={firstDrill}>
         <Description drill={drill} />
@@ -153,6 +167,17 @@ const styles = StyleSheet.create({
   },
   animation: {
     flex: 1,
+  },
+  startButton: {
+    width: '100%',
+    alignItems: 'center',
+  },
+  shareButton: {
+    position: 'absolute',
+    right: '15%',
+    justifyContent: 'center',
+    top: 0,
+    bottom: 0,
   },
 });
 

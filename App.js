@@ -22,6 +22,7 @@ const App = (props) => {
     config: {
       screens: {
         ImporterPage: 'customPlays/:uuid',
+        DrillPage: 'drills/:id',
       },
     },
   };

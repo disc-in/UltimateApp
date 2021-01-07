@@ -1,7 +1,19 @@
 import React, { useRef, useLayoutEffect } from 'react';
-import { ScrollView, StyleSheet, View, Text, ImageBackground, Dimensions, findNodeHandle } from 'react-native';
+import {
+  ScrollView,
+  Share,
+  StyleSheet,
+  TouchableOpacity,
+  View,
+  Text,
+  ImageBackground,
+  Dimensions,
+  findNodeHandle,
+} from 'react-native';
 import { connect } from 'react-redux';
 import { useHeaderHeight } from '@react-navigation/stack';
+import * as Linking from 'expo-linking';
+import { Ionicons } from '@expo/vector-icons';
 
 import I18n from '../utils/i18n';
 import { toggleFavorite } from '../Store/Actions/favoriteAction';
@@ -27,7 +39,8 @@ export const DrillPage = (props) => {
   const sizeBackground = screenDimension.height - headerHeight;
   const imageStyles = { ...styles.image, height: sizeBackground };
 
-  const drill = route.params.drill;
+  const drillId = route.params.id;
+  const drill = props.drills.find((drill) => drill.id == drillId);
 
   const onPressStartButton = () => {
     firstDrill.current.measureLayout(findNodeHandle(drillScrollView.current), (x, y) => {
@@ -35,20 +48,29 @@ export const DrillPage = (props) => {
     });
   };
 
-  const displayFavoriteButton = () => {
-    let icon = 'heart-outline';
-    if (props.favoriteDrills.findIndex((item) => item.id === props.route.params.drill.id) !== -1) {
-      icon = 'heart';
-    }
+  const share = async (drill) => {
+    const url = Linking.makeUrl('drills/' + drill.id);
 
-    return <HeaderButton icon={icon} onPress={() => props.toggleFavorite(drill)} testID="favoriteButton" />;
+    Share.share({
+      title: I18n.t('drillPage.shareTitle', { drillTitle: drill.title }),
+      message: I18n.t('drillPage.shareContent', { url }),
+      url,
+    }).catch((e) => console.log(e));
   };
 
-  useLayoutEffect(() =>
+  useLayoutEffect(() => {
+    let favoriteIcon = 'heart-outline';
+    if (props.favoriteDrills.findIndex((item) => item.id === props.route.params.drill.id) !== -1) {
+      favoriteIcon = 'heart';
+    }
+
     navigation.setOptions({
-      headerRight: () => displayFavoriteButton(),
-    }),
-  );
+      title: drill.title,
+      headerRight: () => (
+        <HeaderButton icon={favoriteIcon} onPress={() => props.toggleFavorite(drill)} testID="favoriteButton" />
+      ),
+    });
+  });
 
   return (
     <ScrollView ref={drillScrollView} style={styles.drillPage}>
@@ -73,7 +95,14 @@ export const DrillPage = (props) => {
             <Text style={styles.info}>{I18n.t('drillPage.level')}</Text>
           </View>
         </View>
-        <StartButton onPress={onPressStartButton} text={I18n.t('drillPage.start')} />
+        <View style={styles.startButton}>
+          <StartButton onPress={onPressStartButton} text={I18n.t('drillPage.start')} />
+          <View style={styles.shareButton}>
+            <TouchableOpacity onPress={() => share(drill)} testID="shareButton">
+              <Ionicons name="md-share" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
+            </TouchableOpacity>
+          </View>
+        </View>
       </ImageBackground>
       <View ref={firstDrill}>
         <Description drill={drill} />
@@ -139,11 +168,23 @@ const styles = StyleSheet.create({
   animation: {
     flex: 1,
   },
+  startButton: {
+    width: '100%',
+    alignItems: 'center',
+  },
+  shareButton: {
+    position: 'absolute',
+    right: '15%',
+    justifyContent: 'center',
+    top: 0,
+    bottom: 0,
+  },
 });
 
 const mapStateToProps = (state) => {
   return {
     favoriteDrills: state.favoriteDrills,
+    drills: state.drills,
   };
 };
 

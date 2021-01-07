@@ -66,6 +66,7 @@ export default {
       fullEquipment: 'Entraînements en salle',
     },
     playEditorPage: 'Nouvelle tactique',
+    importerPage: 'Importer une tactique',
     dictionaryPage: 'Lexique',
     essentialPage: 'Les bases du jeu',
     tacticsPage: 'Tactiques',
@@ -104,6 +105,11 @@ export default {
   playEditorPage: {
     untitledPlay: 'Tactique sans titre',
   },
+  importerPage: {
+    loading: 'On dirait que vous voulez importer une tactique, je vais la chercher... 🏃',
+    incentive: 'Vous allez enregistrer la tactique "{{title}}"',
+    question: 'Êtes-vous sûr(e) ?',
+  },
   editor: {
     saveModificationsTitle: 'Voulez-vous sauvegarder les modifications ?',
     saveModificationsText:
@@ -120,8 +126,10 @@ export default {
       saveSuccess: 'La tactique "{{title}}" a été sauvegardée',
       rename: 'Renommer',
       new: 'Nouveau',
-      share: 'Contribuer',
-      sharePlaceholder: "Pouvez-vous ajouter cette tactique à l'application ?",
+      share: 'Partager',
+      shareTitle: 'Partager {{title}}',
+      shareMessage: 'Utilise ce lien pour télécharger ma super tactique dans Disc In : {{url}}',
+      shareError: 'Une erreur est survenue',
     },
     renamePlayModal: {
       placeholder: 'Appuyer ici pour renommer',

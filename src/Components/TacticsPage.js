@@ -9,7 +9,7 @@ import theme from '../styles/theme.style';
 
 const TacticsPage = (props) => {
   // Default is second choice so that it is clear we use a picker on iOS
-  const [selectedIndex, setSelectedIndex] = useState(1);
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
   const onImagePress = (item) => props.navigation.navigate('VideoPage', { video: item });
 

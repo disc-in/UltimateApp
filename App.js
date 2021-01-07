@@ -20,6 +20,7 @@ const App = (props) => {
   const linking = {
     prefixes: [Linking.makeUrl('/')],
     config: {
+      initialRouteName: 'HomePage',
       screens: {
         ImporterPage: 'customPlays/:uuid',
         DrillPage: 'drills/:id',

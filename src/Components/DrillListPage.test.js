@@ -60,7 +60,7 @@ describe('<DrillListPage />', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('links to video view', async () => {
+  it('links to drill page', async () => {
     const route = {
       params: {
         type: DrillTypes.FRISBEE,
@@ -72,7 +72,7 @@ describe('<DrillListPage />', () => {
 
     await fireEvent.press(getByText('Hot Box'));
 
-    expect(navigation.navigate).toBeCalledWith('DrillPage', { drill });
+    expect(navigation.navigate).toBeCalledWith('DrillPage', { id: drill.id });
   });
 
   it('links to the right filters view on press on the button', async () => {

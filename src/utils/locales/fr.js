@@ -59,6 +59,7 @@ export default {
   navigation: {
     homePage: 'Disc In',
     drillListPage: 'Exercices de {{type}}',
+    drillPage: 'Exercice',
     filters: 'Filtres',
     programListPage: {
       frisbee: "Programmes d'entraînement",

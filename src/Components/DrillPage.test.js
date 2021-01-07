@@ -16,7 +16,7 @@ jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
 describe('<DrillPage />', () => {
   afterEach(() => jest.clearAllMocks());
 
-  const drill = createDrill();
+  const drill = store.getState().drills[0];
 
   it('renders correctly', async () => {
     const Stack = createStackNavigator();
@@ -24,7 +24,7 @@ describe('<DrillPage />', () => {
       <Provider store={store}>
         <NavigationContainer>
           <Stack.Navigator>
-            <Stack.Screen name="DrillPage" component={ConnectedDrillPage} initialParams={{ drill }} />
+            <Stack.Screen name="DrillPage" component={ConnectedDrillPage} initialParams={{ id: drill.id }} />
           </Stack.Navigator>
         </NavigationContainer>
       </Provider>,
@@ -36,7 +36,7 @@ describe('<DrillPage />', () => {
     const toggleFavorite = jest.fn();
 
     const MockedConnectedDrillPage = connect(
-      () => ({ favoriteDrills: [] }),
+      () => ({ favoriteDrills: [], drills: store.getState().drills }),
       () => ({ toggleFavorite }),
     )(DrillPage);
     const Stack = createStackNavigator();
@@ -44,7 +44,7 @@ describe('<DrillPage />', () => {
       <Provider store={store}>
         <NavigationContainer>
           <Stack.Navigator>
-            <Stack.Screen name="DrillPage" component={MockedConnectedDrillPage} initialParams={{ drill }} />
+            <Stack.Screen name="DrillPage" component={MockedConnectedDrillPage} initialParams={{ id: drill.id }} />
           </Stack.Navigator>
         </NavigationContainer>
       </Provider>,
@@ -64,7 +64,7 @@ describe('<DrillPage />', () => {
       <Provider store={store}>
         <NavigationContainer>
           <Stack.Navigator>
-            <Stack.Screen name="DrillPage" component={ConnectedDrillPage} initialParams={{ drill }} />
+            <Stack.Screen name="DrillPage" component={ConnectedDrillPage} initialParams={{ id: drill.id }} />
           </Stack.Navigator>
         </NavigationContainer>
       </Provider>,

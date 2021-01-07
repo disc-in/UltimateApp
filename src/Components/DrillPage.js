@@ -28,7 +28,8 @@ export const DrillPage = (props) => {
   const sizeBackground = screenDimension.height - headerHeight;
   const imageStyles = { ...styles.image, height: sizeBackground };
 
-  const drill = route.params.drill;
+  const drillId = route.params.id;
+  const drill = props.drills.find((drill) => drill.id == drillId);
 
   const onPressStartButton = () => {
     firstDrill.current.measureLayout(findNodeHandle(drillScrollView.current), (x, y) => {
@@ -37,7 +38,7 @@ export const DrillPage = (props) => {
   };
 
   const share = async (drill) => {
-    const url = Linking.makeUrl('frisbeeDrill', { drill: drill.id });
+    const url = Linking.makeUrl('drills/' + drill.id);
     console.log('share ', url);
 
     Share.share({
@@ -54,6 +55,7 @@ export const DrillPage = (props) => {
     }
 
     navigation.setOptions({
+      title: drill.title,
       headerRight: () => (
         <View style={{ flexDirection: 'row' }}>
           <HeaderButton icon={favoriteIcon} onPress={() => props.toggleFavorite(drill)} testID="favoriteButton" />
@@ -157,6 +159,7 @@ const styles = StyleSheet.create({
 const mapStateToProps = (state) => {
   return {
     favoriteDrills: state.favoriteDrills,
+    drills: state.drills,
   };
 };
 

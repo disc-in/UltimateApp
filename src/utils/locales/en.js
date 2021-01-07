@@ -59,6 +59,7 @@ export default {
   navigation: {
     homePage: 'Disc In',
     drillListPage: '{{type}} drills',
+    drillPage: 'Drill',
     filters: 'Filters',
     programListPage: {
       frisbee: 'Practice programs',
@@ -66,6 +67,7 @@ export default {
       fullEquipment: 'Gym programs',
     },
     playEditorPage: 'New Play',
+    importerPage: 'Import a play',
     dictionaryPage: 'Dictionary',
     essentialPage: 'Basics',
     tacticsPage: 'Tactics',
@@ -102,6 +104,11 @@ export default {
   playEditorPage: {
     untitledPlay: 'Unnamed play',
   },
+  importerPage: {
+    loading: 'It looks like you want to import a play, I am going to fetch it... 🏃',
+    incentive: 'You are about to import and save the play {{title}}',
+    question: 'Are you sure?',
+  },
   editor: {
     saveModificationsTitle: 'Do you want to save the current play?',
     saveModificationsText:
@@ -118,8 +125,10 @@ export default {
       saveSuccess: "The play has been saved as '{{title}}'",
       rename: 'Rename',
       new: 'New',
-      share: 'Contribute',
-      sharePlaceholder: 'Please add this play to Disc In',
+      share: 'Share',
+      shareTitle: 'Sharing {{title}}',
+      shareMessage: 'Use the following link to import my awesome play in Disc In: {{url}}',
+      shareError: 'It looks like there was an error sharing your play',
     },
     renamePlayModal: {
       placeholder: 'Click here to enter the new name',
@@ -165,6 +174,8 @@ export default {
     players: 'players',
     level: 'level',
     start: 'Start',
+    shareTitle: 'Share {{drillTitle}}',
+    shareContent: 'Check this drill on Disc In: {{url}}',
   },
   drillPageMinimal: {
     finish: 'Finish Training!',

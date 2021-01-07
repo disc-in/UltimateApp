@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { Alert, Share, Text } from 'react-native';
 import { Menu, Divider } from 'react-native-paper';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import * as Linking from 'expo-linking';
 
 import I18n from '../../utils/i18n';
-import { showSuccess } from '../../utils/flashMessage';
+import { upload } from '../../utils/firebase';
+import { showSuccess, showError } from '../../utils/flashMessage';
 import HeaderButton from '../shared/HeaderButton';
 
 const CurrentPlayManager = (props) => {
@@ -13,11 +15,18 @@ const CurrentPlayManager = (props) => {
   const openMenu = () => setVisible(true);
   const closeMenu = () => setVisible(false);
 
-  const contribute = () => {
-    Share.share({
-      title: I18n.t('editor.currentPlayManager.sharePlaceholder'),
-      message: '----- ENCODED PLAY -------\n' + JSON.stringify(props.currentPlay) + '\n---------------------------',
-    }).catch((err) => console.log(err));
+  const share = async () => {
+    try {
+      await upload(props.currentPlay);
+      const url = Linking.makeUrl('customPlays/' + props.currentPlay.uuid);
+      await Share.share({
+        title: I18n.t('editor.currentPlayManager.shareTitle', { title: props.currentPlay.title }),
+        message: I18n.t('editor.currentPlayManager.shareMessage', { url }),
+        url,
+      });
+    } catch (error) {
+      showError(I18n.t('editor.currentPlayManager.shareError'));
+    }
   };
 
   const checkBeforeNewPlay = () => {
@@ -82,7 +91,7 @@ const CurrentPlayManager = (props) => {
       <Divider />
       <Menu.Item
         onPress={() => {
-          contribute();
+          share();
           closeMenu();
         }}
         icon="share-outline"

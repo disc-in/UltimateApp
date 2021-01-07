@@ -10,20 +10,17 @@ import AnimationEditor from './editor/AnimationEditor';
 import CurrentPlayManager from './editor/CurrentPlayManager';
 import SavedPlaysList from './editor/SavedPlaysList';
 import RenamePlayModal from './editor/RenamePlayModal';
+import Drill from './animation/Drill';
 
 const newPlay = {
   uuid: undefined,
-  animation: {
-    positions: [[], []],
-    ids: [],
-    texts: [],
-    background: 'endzone',
-  },
+  animation: new Drill(),
   title: I18n.t('playEditorPage.untitledPlay'),
 };
 
 export const PlayEditorPage = (props) => {
-  const [currentPlay, setCurrentPlay] = useState(newPlay);
+  const { navigation, route } = props;
+  const [currentPlay, setCurrentPlay] = useState(route.params ? route.params.currentPlay : newPlay);
 
   // modalRenameVisible is true if the modal which enables to rename the current play is displayed
   const [modalRenameVisible, setModalRenameVisible] = useState(false);
@@ -32,7 +29,7 @@ export const PlayEditorPage = (props) => {
   const [isPlaySaved, setIsPlaySaved] = useState(true);
 
   useLayoutEffect(() => {
-    props.navigation.setOptions({
+    navigation.setOptions({
       headerRight: () => (
         <View style={{ flexDirection: 'row' }}>
           <SavedPlaysList
@@ -65,7 +62,7 @@ export const PlayEditorPage = (props) => {
     const unsavedAsterisk = isPlaySaved ? '' : '* ';
     const displayedTitle = `${unsavedAsterisk}${playTitle}`;
 
-    props.navigation.setOptions({ headerTitle: displayedTitle });
+    navigation.setOptions({ headerTitle: displayedTitle });
   };
 
   const onAnimationChange = (animation) => {

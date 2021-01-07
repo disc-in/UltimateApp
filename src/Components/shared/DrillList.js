@@ -7,7 +7,7 @@ import { DrillTypes } from '../../Fixtures/config';
 
 const DrillList = (props) => {
   const { navigation, drillsToDisplay } = props;
-  const onDrillPress = props.onDrillPress || ((item) => navigation.navigate('DrillPage', { drill: item }));
+  const onDrillPress = props.onDrillPress || ((item) => navigation.navigate('DrillPage', { id: item.id }));
 
   const renderDrill = ({ item }) => {
     const { title, type, image, goals, author } = item;

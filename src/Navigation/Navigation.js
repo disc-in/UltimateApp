@@ -41,7 +41,7 @@ export const Navigation = () => (
     <Stack.Screen
       name="DrillPage"
       component={DrillPage}
-      options={({ route }) => ({ title: route.params.drill.title })}
+      options={({ route }) => ({ title: I18n.t('navigation.drillPage') })}
     />
     <Stack.Screen
       name="ProgramListPage"

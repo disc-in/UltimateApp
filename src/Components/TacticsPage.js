@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, Text, TouchableOpacity, FlatList, ImageBackground } from 'react-native';
 import { Picker } from '@react-native-community/picker';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+
 import { connect } from 'react-redux';
 
 import I18n from '../utils/i18n';
@@ -9,7 +9,7 @@ import theme from '../styles/theme.style';
 
 const TacticsPage = (props) => {
   // Default is second choice so that it is clear we use a picker on iOS
-  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [selectedIndex, setSelectedIndex] = useState(1);
 
   const onImagePress = (item) => props.navigation.navigate('VideoPage', { video: item });
 

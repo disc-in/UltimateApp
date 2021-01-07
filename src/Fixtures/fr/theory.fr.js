@@ -1,5 +1,28 @@
 export const essentials = [
   {
+    title: 'Réception',
+    pages: [
+      {
+        id: 1,
+        title: "L'art du rattrapage",
+        text: 'Rise Up',
+        video: '424266555',
+        illustration: 'https://zupimages.net/up/20/30/dn48.jpg',
+        time: '14:32',
+        description: '',
+      },
+      {
+        id: 2,
+        title: 'Comment plonger',
+        text: 'Brodie Smith',
+        video: '424514902',
+        illustration: 'https://zupimages.net/up/20/30/040p.jpg',
+        time: '4:58',
+        description: '',
+      },
+    ],
+  },
+  {
     title: 'Lancers',
     pages: [
       {
@@ -68,29 +91,6 @@ export const essentials = [
     ],
   },
   {
-    title: 'Réception',
-    pages: [
-      {
-        id: 1,
-        title: "L'art du rattrapage",
-        text: 'Rise Up',
-        video: '424266555',
-        illustration: 'https://zupimages.net/up/20/30/dn48.jpg',
-        time: '14:32',
-        description: '',
-      },
-      {
-        id: 2,
-        title: 'Comment plonger',
-        text: 'Brodie Smith',
-        video: '424514902',
-        illustration: 'https://zupimages.net/up/20/30/040p.jpg',
-        time: '4:58',
-        description: '',
-      },
-    ],
-  },
-  {
     title: 'Appels',
     pages: [
       {
@@ -154,38 +154,6 @@ export const essentials = [
 
 export const tactics = [
   {
-    title: 'Stack Vertical',
-    pages: [
-      {
-        id: 1,
-        title: 'How does vertical stacks work?',
-        text: 'That Drone Guy Ty',
-        video: '436149607',
-        illustration: 'https://zupimages.net/up/20/28/up1j.jpg',
-        time: '2:23',
-        description: '',
-      },
-      {
-        id: 2,
-        title: 'Stack Vertical Endzone',
-        text: 'AUC Mayhem',
-        video: '439808313',
-        illustration: 'https://zupimages.net/up/20/30/s33y.jpg',
-        time: '4:54',
-        description: '',
-      },
-      {
-        id: 3,
-        title: 'La Tactique et le Jeu (En Français)',
-        text: 'FFFD',
-        video: '497923782',
-        illustration: 'https://zupimages.net/up/21/01/ux9v.jpg',
-        time: '6:24',
-        description: '',
-      },
-    ],
-  },
-  {
     title: 'Stack Horizontal',
     pages: [
       {
@@ -213,6 +181,38 @@ export const tactics = [
         video: '440019986',
         illustration: 'https://zupimages.net/up/20/30/8c6r.jpg',
         time: '0:24',
+        description: '',
+      },
+    ],
+  },
+  {
+    title: 'Stack Vertical',
+    pages: [
+      {
+        id: 1,
+        title: 'How does vertical stacks work?',
+        text: 'That Drone Guy Ty',
+        video: '436149607',
+        illustration: 'https://zupimages.net/up/20/28/up1j.jpg',
+        time: '2:23',
+        description: '',
+      },
+      {
+        id: 2,
+        title: 'Stack Vertical Endzone',
+        text: 'AUC Mayhem',
+        video: '439808313',
+        illustration: 'https://zupimages.net/up/20/30/s33y.jpg',
+        time: '4:54',
+        description: '',
+      },
+      {
+        id: 3,
+        title: 'La Tactique et le Jeu (En Français)',
+        text: 'FFFD',
+        video: '497923782',
+        illustration: 'https://zupimages.net/up/21/01/ux9v.jpg',
+        time: '6:24',
         description: '',
       },
     ],

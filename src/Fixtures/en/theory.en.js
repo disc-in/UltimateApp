@@ -1,5 +1,28 @@
 export const essentials = [
   {
+    title: 'Catching',
+    pages: [
+      {
+        id: 1,
+        title: 'The art of catching',
+        text: 'Rise Up',
+        video: '424266555',
+        illustration: 'https://zupimages.net/up/20/30/dn48.jpg',
+        time: '14:32',
+        description: '',
+      },
+      {
+        id: 2,
+        title: 'How to Layout',
+        text: 'Brodie Smith',
+        video: '424514902',
+        illustration: 'https://zupimages.net/up/20/30/040p.jpg',
+        time: '4:58',
+        description: '',
+      },
+    ],
+  },
+  {
     title: 'Throwing',
     pages: [
       {
@@ -54,29 +77,6 @@ export const essentials = [
         video: '497923175',
         illustration: 'https://zupimages.net/up/21/01/mgzq.jpg',
         time: '3:59',
-        description: '',
-      },
-    ],
-  },
-  {
-    title: 'Catching',
-    pages: [
-      {
-        id: 1,
-        title: 'The art of catching',
-        text: 'Rise Up',
-        video: '424266555',
-        illustration: 'https://zupimages.net/up/20/30/dn48.jpg',
-        time: '14:32',
-        description: '',
-      },
-      {
-        id: 2,
-        title: 'How to Layout',
-        text: 'Brodie Smith',
-        video: '424514902',
-        illustration: 'https://zupimages.net/up/20/30/040p.jpg',
-        time: '4:58',
         description: '',
       },
     ],
@@ -145,29 +145,6 @@ export const essentials = [
 
 export const tactics = [
   {
-    title: 'Vertical Stack',
-    pages: [
-      {
-        id: 1,
-        title: 'How does vertical stacks work?',
-        text: 'That Drone Guy Ty',
-        video: '436149607',
-        illustration: 'https://zupimages.net/up/20/28/up1j.jpg',
-        time: '2:23',
-        description: '',
-      },
-      {
-        id: 2,
-        title: 'Endzone Vertical Stack',
-        text: 'AUC Mayhem',
-        video: '439808313',
-        illustration: 'https://zupimages.net/up/20/30/s33y.jpg',
-        time: '4:54',
-        description: '',
-      },
-    ],
-  },
-  {
     title: 'Horizontal Stack',
     pages: [
       {
@@ -195,6 +172,29 @@ export const tactics = [
         video: '440019986',
         illustration: 'https://zupimages.net/up/20/30/8c6r.jpg',
         time: '0:24',
+        description: '',
+      },
+    ],
+  },
+  {
+    title: 'Vertical Stack',
+    pages: [
+      {
+        id: 1,
+        title: 'How does vertical stacks work?',
+        text: 'That Drone Guy Ty',
+        video: '436149607',
+        illustration: 'https://zupimages.net/up/20/28/up1j.jpg',
+        time: '2:23',
+        description: '',
+      },
+      {
+        id: 2,
+        title: 'Endzone Vertical Stack',
+        text: 'AUC Mayhem',
+        video: '439808313',
+        illustration: 'https://zupimages.net/up/20/30/s33y.jpg',
+        time: '4:54',
         description: '',
       },
     ],

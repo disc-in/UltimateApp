@@ -55,7 +55,7 @@ exports[`<TacticsPage /> renders correctly 1`] = `
           ]
         }
         onChange={[Function]}
-        selectedIndex={0}
+        selectedIndex={1}
         style={
           Array [
             Object {

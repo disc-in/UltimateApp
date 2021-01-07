@@ -55,7 +55,7 @@ exports[`<EssentialPage /> renders correctly 1`] = `
           ]
         }
         onChange={[Function]}
-        selectedIndex={0}
+        selectedIndex={1}
         style={
           Array [
             Object {
@@ -76,7 +76,7 @@ exports[`<EssentialPage /> renders correctly 1`] = `
           "animation": "",
           "id": 1,
           "text": "Rise Up Ultimate",
-          "title": "How to make a perfect cut?",
+          "title": "How to make a perfect throw?",
           "video": "424000350",
         },
       ]
@@ -147,7 +147,7 @@ exports[`<EssentialPage /> renders correctly 1`] = `
                 }
               }
             >
-              How to make a perfect cut?
+              How to make a perfect throw?
             </Text>
             <View
               accessibilityIgnoresInvertColors={true}

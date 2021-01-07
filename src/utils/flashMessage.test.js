@@ -1,5 +1,6 @@
 import React from 'react';
 import NativeFlashMessage, { showMessage } from 'react-native-flash-message';
+
 import FlashMessage, { showSuccess, showError } from './flashMessage';
 jest.mock('react-native-flash-message');
 

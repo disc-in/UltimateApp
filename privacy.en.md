@@ -1,6 +1,6 @@
 # Disc In Privacy Policy
 
-_Effective Date: October 1st, 2020; Last updated October 1st, 2020_
+_Effective Date: October 1st, 2020; Last updated January 5th, 2021_
 
 This Privacy Policy explains how the Disc In application uses and protects your information.
 
@@ -13,9 +13,13 @@ We will not use or share your information with anyone except as described in thi
 
 The Disc In application is an Android and iOS free application. It is built using the Expo software, which requires some permissions from your device. However, Disc In does not use these features.
 
-## Data sharing
+## Data storing and sharing
 
-No data or information are shared by the Disc In application to any third-party services. The information gathered by the application is stored only on the user's smartphone and is not shared. This is the case for the list of favorite drills and drills created by the user.
+The Disc In application stores certain data on the user's device: their list of favorite exercises, their progress in each training program and any content (playbooks, exercises) created by the user.
+
+Playbooks created by the user and shared with other users are stored by the application on a server using the Firebase service provided by Google. This is necessary to ensure anyone who has the direct link can access it.
+
+No other data or private information are communicated or shared by the Disc In application.
 
 ## Application of this Pricvacy Policy
 

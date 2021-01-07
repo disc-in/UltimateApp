@@ -1,6 +1,6 @@
 # Règles de confidentialité pour l’application "Disc In"
 
-_Date de publication : 1er octobre 2020; Dernière modification le 1er octobre 2020._
+_Date de publication : 1er octobre 2020; Dernière modification le 5 janvier 2021._
 
 La présente politique de confidentialité s’applique aux utilisateurs des appareils Android et iOS.
 En utilisant l’application "Disc In" sous Android ou sous iOS, vous signifiez votre accord sur notre politique de confidentialité.
@@ -11,9 +11,13 @@ Les informations que nous demandons nous permettent d’améliorer nos services,
 
 L'application Disc In est une application Android et iOS gratuite. Elle est construite à l'aide du logiciel Expo qui nécessite certaines autorisations sur votre appareil, bien que Disc In n'utilise en réalité pas ces fonctionalités.
 
-## Partage des données
+## Stockage et partage des données
 
-Aucune donnée ou information privée n’est communiquée ni partagée par l'application Disc In. Les seules informations récoltées par l'application ne sont stockées que sur le téléphone de l'utilisateur et ne sont pas partagées. Il s'agit de la liste des exercices favoris et des exercices créés par l'utilisateur.
+L'application Disc In enregistre sur le téléphone de l'utilisateur la liste des exercices favoris, la progression dans chaque programme d'entraînement et le contenu (plays, exercices) créés par l'utilisateur.
+
+Les tactiques (plays) créées par un utilisateur puis partagées avec d'autres utilisateurs sont stockées par l'application sur un serveur utilisant le service Firebase fourni par Google. Ceci est nécessaire pour que les destinataires puissent y accéder.
+
+Aucune autre donnée ou information privée n’est communiquée ni partagée par l'application Disc In.
 
 ## Champ d’application des présentes Règles de confidentialité
 

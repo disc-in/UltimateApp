@@ -12,6 +12,7 @@ import TrainingPage from '../Components/TrainingPage';
 import ProgramListPage from '../Components/ProgramListPage';
 
 import PlayEditorPage from '../Components/PlayEditorPage';
+import ImporterPage from '../Components/ImporterPage';
 
 import EssentialPage from '../Components/EssentialPage';
 import DictionaryPage from '../Components/DictionaryPage';
@@ -80,6 +81,7 @@ export const Navigation = () => (
         },
       })}
     />
+    <Stack.Screen name="ImporterPage" component={ImporterPage} options={{ title: I18n.t('navigation.importerPage') }} />
     <Stack.Screen
       name="DictionaryPage"
       component={DictionaryPage}

@@ -15,6 +15,7 @@ const SavedPlaysList = (props) => {
   const beforeOpening = (play) => {
     if (props.isPlaySaved) {
       props.onOpen(play);
+      setModalOpened(false);
     } else {
       Alert.alert(
         I18n.t('editor.saveModificationsTitle'),
@@ -31,12 +32,14 @@ const SavedPlaysList = (props) => {
               props.saveCurrentPlay();
               showSuccess(I18n.t('editor.currentPlayManager.saveSuccess', { title: props.playTitle }));
               props.onOpen(play);
+              setModalOpened(false);
             },
           },
           {
             text: I18n.t('shared.no'),
             onPress: () => {
               props.onOpen(play);
+              setModalOpened(false);
             },
           },
         ],
@@ -77,7 +80,6 @@ const SavedPlaysList = (props) => {
           renderItem={({ item }) => (
             <TouchableOpacity
               onPress={() => {
-                setModalOpened(false);
                 beforeOpening(item);
               }}
             >

@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
   text: {
     textAlign: 'center',
     color: theme.COLOR_PRIMARY_LIGHT,
-    fontSize: theme.FONT_SIZE_MEDIUM,
+    fontSize: theme.FONT_SIZE_SMALL,
     fontWeight: 'bold',
   },
   marginBottom: {

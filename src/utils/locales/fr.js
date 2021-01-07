@@ -59,6 +59,7 @@ export default {
   navigation: {
     homePage: 'Disc In',
     drillListPage: 'Exercices de {{type}}',
+    drillPage: 'Exercice',
     filters: 'Filtres',
     programListPage: {
       frisbee: "Programmes d'entraînement",
@@ -175,6 +176,8 @@ export default {
     players: 'joueurs',
     level: 'niveau',
     start: 'Start',
+    shareTitle: 'Partager {{drillTitle}}',
+    shareContent: 'Regarde cet exo sur Disc In : {{url}}',
   },
   drillPageMinimal: {
     finish: "Terminer l'entraînement !",

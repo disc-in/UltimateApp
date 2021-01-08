@@ -84,12 +84,8 @@ exports[`<VideoPage /> renders correctly 1`] = `
   <View
     style={
       Object {
-        "flexDirection": "row",
-        "justifyContent": "space-between",
         "paddingLeft": 5,
-        "paddingRight": 10,
         "paddingVertical": 10,
-        "textAlign": "center",
       }
     }
   >
@@ -102,17 +98,14 @@ exports[`<VideoPage /> renders correctly 1`] = `
         }
       }
     />
-    <View>
-      <Text
-        style={
-          Object {
-            "color": "#A6A6A6",
-            "flex": 1,
-            "fontSize": 14,
-          }
+    <Text
+      style={
+        Object {
+          "color": "#A6A6A6",
+          "fontSize": 14,
         }
-      />
-    </View>
+      }
+    />
   </View>
   <View>
     <Text

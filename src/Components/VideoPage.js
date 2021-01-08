@@ -14,9 +14,7 @@ const VideoPage = (props) => {
       </View>
       <View style={styles.title}>
         <Text style={styles.text}>{video.title}</Text>
-        <View style={styles.authorWrapper}>
-          <Text style={styles.textAuthor}>{video.text}</Text>
-        </View>
+        <Text style={styles.textAuthor}>{video.text}</Text>
       </View>
       <View>
         <Text style={styles.description}>{video.description}</Text>
@@ -31,17 +29,12 @@ const styles = StyleSheet.create({
   contentWrapper: { flex: 1, backgroundColor: theme.COLOR_PRIMARY_LIGHT },
   videoAlone: { height: 250 },
   textAuthor: {
-    flex: 1,
     color: theme.COLOR_SECONDARY,
     fontSize: theme.FONT_SIZE_SMALL,
   },
   title: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
     paddingVertical: 10,
-    textAlign: 'center',
     paddingLeft: 5,
-    paddingRight: 10,
   },
   text: {
     color: theme.COLOR_PRIMARY,

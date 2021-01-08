@@ -143,7 +143,7 @@ export const essentials = [
         id: 2,
         title: 'How to Play Ultimate Frisbee for Beginners',
         text: 'Excel Ultimate',
-        video: '497919667',
+        video: '497921343',
         illustration: 'https://zupimages.net/up/21/01/gwlw.jpg',
         time: '2:50',
         description: '',

@@ -49,10 +49,20 @@ function AnimationHistory({ animation, onAnimationHistoryChange }) {
   return (
     <View style={{ flexDirection: 'row' }}>
       <TouchableOpacity onPress={undo} style={{ marginRight: 10 }} disabled={!canUndo}>
-        <MaterialCommunityIcons name="undo" color={canUndo ? theme.COLOR_PRIMARY : theme.COLOR_SECONDARY} size={22} />
+        <MaterialCommunityIcons
+          name="undo"
+          color={canUndo ? theme.COLOR_PRIMARY : theme.COLOR_SECONDARY}
+          size={22}
+          testID="undoButton"
+        />
       </TouchableOpacity>
       <TouchableOpacity onPress={redo} disabled={!canRedo}>
-        <MaterialCommunityIcons name="redo" color={canRedo ? theme.COLOR_PRIMARY : theme.COLOR_SECONDARY} size={22} />
+        <MaterialCommunityIcons
+          name="redo"
+          color={canRedo ? theme.COLOR_PRIMARY : theme.COLOR_SECONDARY}
+          size={22}
+          testID="redoButton"
+        />
       </TouchableOpacity>
     </View>
   );

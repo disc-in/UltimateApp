@@ -1,5 +1,28 @@
 export const essentials = [
   {
+    title: 'Réception',
+    pages: [
+      {
+        id: 1,
+        title: "L'art du rattrapage",
+        text: 'Rise Up',
+        video: '424266555',
+        illustration: 'https://zupimages.net/up/20/30/dn48.jpg',
+        time: '14:32',
+        description: '',
+      },
+      {
+        id: 2,
+        title: 'Comment plonger',
+        text: 'Brodie Smith',
+        video: '424514902',
+        illustration: 'https://zupimages.net/up/20/30/040p.jpg',
+        time: '4:58',
+        description: '',
+      },
+    ],
+  },
+  {
     title: 'Lancers',
     pages: [
       {
@@ -47,27 +70,22 @@ export const essentials = [
         time: '20:12',
         description: '',
       },
-    ],
-  },
-  {
-    title: 'Réception',
-    pages: [
       {
-        id: 1,
-        title: "L'art du rattrapage",
-        text: 'Rise Up',
-        video: '424266555',
-        illustration: 'https://zupimages.net/up/20/30/dn48.jpg',
-        time: '14:32',
+        id: 6,
+        title: 'Toutes les manières de lancer un frisbee',
+        text: 'Rowan McDonnell',
+        video: '497923175',
+        illustration: 'https://zupimages.net/up/21/01/mgzq.jpg',
+        time: '3:59',
         description: '',
       },
       {
-        id: 2,
-        title: 'Comment plonger',
-        text: 'Brodie Smith',
-        video: '424514902',
-        illustration: 'https://zupimages.net/up/20/30/040p.jpg',
-        time: '4:58',
+        id: 7,
+        title: 'Les gestes techniques (En Français)',
+        text: 'FFFD',
+        video: '497923724',
+        illustration: 'https://zupimages.net/up/21/01/gzht.jpg',
+        time: '5:40',
         description: '',
       },
     ],
@@ -98,11 +116,75 @@ export const essentials = [
         time: '5:22',
         description: '',
       },
+      {
+        id: 2,
+        title: 'How To Mark in Ultimate Frisbee',
+        text: 'Brodie Smith',
+        video: '497921735',
+        illustration: 'https://zupimages.net/up/21/01/w2gl.jpg',
+        time: '8:22',
+        description: '',
+      },
+    ],
+  },
+  {
+    title: 'Règles',
+    pages: [
+      {
+        id: 1,
+        title: "Les règles de l'Ultimate Frisbee",
+        text: 'Ninh Ly',
+        video: '497919667',
+        illustration: 'https://zupimages.net/up/21/01/3ccr.jpg',
+        time: '4:10',
+        description: '',
+      },
+      {
+        id: 2,
+        title: 'How to Play Ultimate Frisbee for Beginners',
+        text: 'Excel Ultimate',
+        video: '497921343',
+        illustration: 'https://zupimages.net/up/21/01/gwlw.jpg',
+        time: '2:50',
+        description: '',
+      },
     ],
   },
 ];
 
 export const tactics = [
+  {
+    title: 'Stack Horizontal',
+    pages: [
+      {
+        id: 1,
+        title: 'How does horizontal stacks work?',
+        text: 'That Drone Guy Ty',
+        video: '436151076',
+        illustration: 'https://zupimages.net/up/20/30/95ye.jpg',
+        time: '2:38',
+        description: '',
+      },
+      {
+        id: 2,
+        title: 'Horizontal Stack (more detailed)',
+        text: 'colonelshaun',
+        video: '497911715',
+        illustration: 'https://zupimages.net/up/21/01/hywf.jpg',
+        time: '12:22',
+        description: '',
+      },
+      {
+        id: 3,
+        title: 'Exemple',
+        text: 'Keith Raynor',
+        video: '440019986',
+        illustration: 'https://zupimages.net/up/20/30/8c6r.jpg',
+        time: '0:24',
+        description: '',
+      },
+    ],
+  },
   {
     title: 'Stack Vertical',
     pages: [
@@ -124,27 +206,13 @@ export const tactics = [
         time: '4:54',
         description: '',
       },
-    ],
-  },
-  {
-    title: 'Stack Horizontal',
-    pages: [
       {
-        id: 1,
-        title: 'How does horizontal stacks work?',
-        text: 'That Drone Guy Ty',
-        video: '436151076',
-        illustration: 'https://zupimages.net/up/20/30/95ye.jpg',
-        time: '2:38',
-        description: '',
-      },
-      {
-        id: 2,
-        title: 'Exemple',
-        text: 'Keith Raynor',
-        video: '440019986',
-        illustration: 'https://zupimages.net/up/20/30/8c6r.jpg',
-        time: '0:24',
+        id: 3,
+        title: 'La Tactique et le Jeu (En Français)',
+        text: 'FFFD',
+        video: '497923782',
+        illustration: 'https://zupimages.net/up/21/01/ux9v.jpg',
+        time: '6:24',
         description: '',
       },
     ],

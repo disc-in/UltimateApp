@@ -7808,7 +7808,7 @@ const defenseThird = {
 
 const playingToLearn = {
   id: 17,
-  title: 'Ultimate Games',
+  title: 'Frisbee Games',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Playing games to learn the basics',
   drills: [warmupGameDrill, helpGame, dDC, flubber, guts],
@@ -7862,36 +7862,36 @@ const secondU10training = {
   drills: [fish, crossingTheField, goToTenDrill, aussieDrill],
 };
 
-const firstU16 = {
+const thirdU10 = {
   id: 24,
+  title: 'Time to play',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'A third practice to learn to throw the disc to a moving player',
+  drills: [passMouv, crossingTheField, checkLong, aussieDrill],
+};
+
+const firstU17 = {
+  id: 25,
   title: 'Discovery of the sport',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'First initiation to ultimate to discover the fundamentals of the sport',
   drills: [basicThrowsDrill, crossingTheField, boxGame, normalGame],
 };
 
-const secondU16 = {
-  id: 25,
+const secondU17 = {
+  id: 26,
   title: 'Learning the fundamentals',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'A second practice to learn the learn to enjoy to play with the disc',
+  description: 'A second practice to enjoy playing with the disc',
   drills: [menageATroisDrill, racingWarmUP, dishieLine, treasureHunt, normalGame],
 };
 
-const thirdU16 = {
-  id: 26,
-  title: 'Time to play',
-  image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'A third practice to develop a more structure game',
-  drills: [square, aussieDrill, game3v3, normalGame],
-};
-
-const thirdU10 = {
+const thirdU17 = {
   id: 27,
   title: 'Time to play',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'A third practice to learn to throw the disc to a moving player',
-  drills: [passMouv, crossingTheField, checkLong, aussieDrill],
+  description: 'A third practice to develop a more structured game',
+  drills: [square, trainDrill, game3v3, normalGame],
 };
 
 const verticalJunior = {
@@ -7922,7 +7922,7 @@ const defenseJuniorSecond = {
   id: 31,
   title: 'Initiation of Ultimate Basics',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'Second practice to learn how to direct an attacker',
+  description: 'Second practice to learn how to control your opponent',
   drills: [theTunnel, youShallNotPassDrill, theDuel, game3v3],
 };
 
@@ -8602,119 +8602,6 @@ export const drills = [
   boxGame,
 ];
 
-export const trainings = [
-  // Fitness
-  fitnessWeek1,
-  fitnessWeek2,
-  fitnessWeek3,
-  fitnessWeek4,
-  fitnessWeek5,
-  fitnessWeek6,
-  fitnessWeek7,
-  fitnessWeek8,
-  fitnessWeek9,
-  fitnessWeek10,
-  fitnessWeek11,
-  fitnessWeek12,
-  fitnessWeek13,
-  fitnessWeek14,
-  fitnessWeek15,
-  fitnessWeek16,
-  fitnessWeek17,
-  fitnessWeek18,
-  fitnessWeek19,
-  fitnessWeek20,
-  fitnessWeek21,
-  fitnessWeek22,
-  fitnessWeek23,
-  fitnessWeek24,
-  fitnessWeek25,
-  fitnessWeek26,
-  fitnessWeek27,
-  fitnessWeek28,
-  fitnessWeek29,
-  fitnessWeek30,
-  fitnessWeek31,
-  fitnessWeek32,
-  fitnessWeek33,
-  fitnessWeek34,
-  fitnessWeek35,
-  fitnessWeek36,
-  fitnessWeek37,
-  fitnessWeek38,
-  fitnessWeek39,
-  fitnessWeek40,
-  fitnessWeek41,
-  fitnessFull1,
-  fitnessFull2,
-  fitnessFull3,
-  fitnessFull4,
-  fitnessFull5,
-  fitnessFull6,
-  fitnessFull7,
-  fitnessFull8,
-  fitnessFull9,
-  fitnessFull10,
-  fitnessFull11,
-  fitnessFull12,
-  fitnessFull13,
-  fitnessFull14,
-  fitnessFull15,
-  fitnessFull16,
-  fitnessFull17,
-  fitnessFull18,
-  fitnessFull19,
-  fitnessFull20,
-  fitnessFull21,
-  fitnessFull22,
-  fitnessFull23,
-  fitnessFull24,
-  fitnessFull25,
-  fitnessFull26,
-  fitnessFull27,
-  fitnessFull28,
-  fitnessFull29,
-
-  // Frisbee
-  dumpSwingTraining,
-  coed2MarkTraining,
-  firstU13Training,
-  secondU13Training,
-  thirdU13Training,
-  fourthU13Training,
-  firstInitiationAdultTraining,
-  secondInitiationAdultTraining,
-  thirdInitiationAdultTraining,
-  initiationVerticalTraining,
-  secondVerticalTraining,
-  defenseBaseTraining,
-  horizontalFlow,
-  learningByPlaying,
-  initiationHorizontal,
-  horizontalLine,
-  defenseSecond,
-  defenseThird,
-  playingToLearn,
-  zoneCup,
-  sideStackTraining,
-  splitStackTraining,
-  diagonalStackTraining,
-  u10Initiation,
-  secondU10training,
-  firstU16,
-  secondU16,
-  thirdU16,
-  thirdU10,
-  verticalJunior,
-  verticalJuniorSecond,
-  defenseJunior,
-  defenseJuniorSecond,
-  zoneJunior,
-  zoneJuniorSecond,
-  thirdVertical,
-  zoneCupSecond,
-];
-
 export const programs = [
   {
     id: 1,
@@ -8790,8 +8677,8 @@ export const programs = [
     id: 11,
     type: DrillTypes.FRISBEE,
     ageCategory: AgeCategory.JUNIOR,
-    title: 'Initiation U16',
-    trainings: [firstU16, secondU16, thirdU16],
+    title: 'Initiation U17',
+    trainings: [firstU17, secondU17, thirdU17],
   },
   {
     id: 12,

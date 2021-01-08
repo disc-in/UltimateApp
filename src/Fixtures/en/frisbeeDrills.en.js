@@ -5014,7 +5014,7 @@ const treasureHuntDrill = {
   title: 'Treasure Hunt',
   image: 'https://zupimages.net/up/20/19/z7lq.jpg',
   description:
-    '2 teams are competing. The objective is to bring the 5 Frisbees into a square delimited by the cones.\nPlayers are not allowed to walk with the disc. When a disc falls or is intercepted, it must be brought back to the starting point by the attacking team. The first team that "saves" all its frisbees wins',
+    '2 teams are competing. The objective is to bring the 5 discs into a square defined using cones.\nPlayers are not allowed to walk with the disc. When a disc falls or is intercepted, it must be brought back to the starting point by the offensive team. The first team that "saves" all its frisbees wins',
   minimalPlayersNumber: 10,
   inGame:
     'In order to achieve collective defenses, it is important to work on communication between players. An efficient communication will allow to make judicious switches',
@@ -5033,7 +5033,7 @@ const treasureHuntDrill = {
       repetition: '',
       rest: '',
       instruction:
-        "In a basic version, players may only work on offense to move forward the discs of their team. You can also allow them to go and defend passes in the other team's area!",
+        "In a more basic version, players may only work on offense to move their discs forward. You can also allow them to go and defend passes in the other team's territory!",
     },
   ],
 };
@@ -5064,7 +5064,7 @@ const kyeDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'The defense can count without being close to the thrower.The stall is at 5 and the offensive player can’t make a long throw.\nIf there is a turn over the defensive players stay in defense',
+        'The defense can count without being close to the thrower. The stall is at 5 and the offensive player can’t make a long throw.\nIf there is a turn over, the defensive players stay in defense',
     },
   ],
 };
@@ -5103,7 +5103,7 @@ const bigEightDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'Rotation : \n1- Mark oriented line \n2-Trapped Thrower\n3-First of the Stack catching the swing\n4-Continuity of the second of the stack\n5- Long run in the break',
+        'Rotation : \n1- Marker facing the sideline \n2- Thrower trapped against the sideline\n3- First of the Stack catching the swing\n4- Continuity of the second player in the stack\n5- Deep cut in the break',
     },
     {
       id: 3,
@@ -5143,7 +5143,7 @@ const trainDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'Set up a vertical stack of 5 cutters with a thrower and a dump and decide on a force. The last cutter in the stack cuts deep while looking at the thrower. When the thrower fakes, the receiver cuts back in on the open side and receives the disc. The next player in the stack must begin their deep cut so as to be hitting full speed when the previous cutter catches the disc. The rest of the stack re-positions farther downfield, the thrower becomes the dump, the previous dump becomes the front of the stack. Repeat for the length of the field',
+        'Set up a vertical stack of 5 cutters with a thrower and a dump and decide on a force. The last cutter in the stack cuts deep while looking at the thrower. When the thrower fakes, the receiver cuts back in on the open side and receives the disc. The next player in the stack must begin their deep cut so as to be hitting full speed when the previous cutter catches the disc. The rest of the stack re-positions further downfield, the thrower becomes the dump, the previous dump becomes the front of the stack. Repeat for the length of the field',
     },
     {
       id: 2,
@@ -5221,7 +5221,7 @@ const aussieDrill = {
       repetition: '',
       rest: '',
       instruction:
-        '2 teams plays against each others.There are 2 territories for each team and they play with 4 discs.\nTo score a point, a player has to bring a disc in one of the endzone of the opponent team. A player can run with a disc. If a player, get touch in the territory of the other team or the disc is intercepted or touch the ground, he looses the possession. In his territory, he is invincible. First team to 5 wins!',
+        "2 teams play against each other. There are 2 endzones inside each team's territory and they play with 4 discs.\nTo score a point, a player has to bring a disc in one of the endzones of the other team. A player can run with a disc. If a player is touched in the territory of the other team or the disc is intercepted or touches the ground, he loses the possession. In his territory, he is invincible. The first team to 5 wins!",
     },
   ],
 };
@@ -5299,7 +5299,7 @@ const endzoneGameDrill = {
   author: 'Black Fish',
   title: 'Endzone Game',
   image: 'https://zupimages.net/up/20/25/71b2.jpg',
-  description: 'Game to 5. If you score, your team stay in offense',
+  description: 'Game to 5. If you score, your team stays on offense',
   minimalPlayersNumber: 12,
   inGame: '-',
   equipmentLabel: EquipmentLabels.BASIC,
@@ -5317,7 +5317,7 @@ const endzoneGameDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'Game to 5. If you score, your team stay in offense.\nThe player who caught the disc in the endzone has to keep the disc to start the next offense',
+        'Game to 5. If you score, your team stays on offense.\nThe player who caught the disc in the endzone has to keep the disc to start the next offense',
     },
     {
       id: 2,
@@ -5325,7 +5325,7 @@ const endzoneGameDrill = {
       animation: endzoneFinition,
       repetition: '',
       rest: '',
-      instruction: 'Same Rules as before. The difference is that everybody start behind the disc.\nGame to 5',
+      instruction: 'Same Rules as before. The difference is that everybody starts behind the disc.\nGame to 5',
     },
   ],
 };
@@ -5368,7 +5368,7 @@ const menageATroisDrill = {
   author: 'Tchac',
   title: 'Three-person Drill',
   image: 'https://zupimages.net/up/20/19/ai3z.jpg',
-  description: 'The thrower tries to reach the target by using any fake possible',
+  description: 'The thrower tries to reach the target after several fake throws',
   minimalPlayersNumber: 3,
   inGame: 'Important to be able to break to open the game',
   equipmentLabel: EquipmentLabels.NONE,
@@ -5397,7 +5397,7 @@ const menageATroisDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'The set-up is the same as three-person drill, but with lines behind the thrower and receiver. The order is receiving the disc, throwing, and then following the disc to mark. After marking, the player goes to the back of the line. The thrower must throw a pass that the receiver can catch within one pivot. If they do not, they must then force the next thrower to throw a bad pass, or else they are out of the game! The game continues until one player wins',
+        'The set-up is the same as three-person drill, but with lines behind the thrower and receiver. The order is receiving the disc, throwing the disc, and then following the disc to mark. After marking, the player goes to the back of the line. The thrower must throw a pass that the receiver can catch within one pivot. If they do not, they have a chance to "save" themselves by defending so well that they force the next thrower to throw a bad pass. If they don\'t, they are out of the game! The game continues until one player wins',
     },
   ],
 };
@@ -5631,7 +5631,7 @@ const resetOpenDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'The set-up is the same as in "The Backdoor" This time, when eye contact is made, the reset cuts up-field and receives a pass in front of them',
+        'The set-up is the same as in "The Backdoor". This time, when eye contact is made, the reset cuts up-field and receives a pass in front of them',
     },
     {
       id: 3,
@@ -5641,7 +5641,7 @@ const resetOpenDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'The set-up is the same as in "the Backdoor" The defense on the reset is real, and the reset must choose one of the two directions to cut to receive a pass. The reset is not allowed more than one juke. Each team does the same number of attempts, whichever team completes the most passes wins!',
+        'The set-up is the same as in "the Backdoor". The defense on the reset is real, and the reset must choose one of the two directions in which to cut to receive a pass. The reset is not allowed more than one juke. Each team does the same number of attempts, whichever team completes the most passes wins!',
     },
   ],
 };
@@ -5682,7 +5682,7 @@ const resetBreakDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'Same set-up as "The 45° Upline" When eye contact is made, the thrower throws around the mark with the goal that the reset catches about where they had started before moving up field. The reset only moves once the pass is thrown. Switch sides',
+        'Same set-up as "The 45° Upline". When eye contact is made, the thrower throws around the mark with the goal that the reset catches about where they had started before moving up field. The reset only moves once the pass is thrown. Switch sides',
     },
     {
       id: 3,
@@ -5692,7 +5692,7 @@ const resetBreakDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'Same set-up as "The 45° Upline" The defense on the reset is real, and the reset must choose one of the two directions to cut to receive a pass. The reset is not allowed more than one juke. Each team does the same number of attempts, whichever team completes the most passes wins!',
+        'Same set-up as "The 45° Upline". The defense on the reset is real, and the reset must choose one of the two directions in which to cut to receive a pass. The reset is not allowed more than one juke. Each team does the same number of attempts, whichever team completes the most passes wins!',
     },
   ],
 };
@@ -5703,7 +5703,7 @@ const youShallNotPassDrill = {
   author: 'Belgium Open',
   title: 'You Shall Not Pass',
   image: 'https://zupimages.net/up/20/19/90z6.jpg',
-  description: 'Using your body to prevent your opponent from getting to the disc',
+  description: 'Using your body to prevent your opponent from getting the disc',
   minimalPlayersNumber: 4,
   inGame:
     "Experienced defenders can use their bodies to block an opponent's run. In order not to make a fault, the defender must place himself in the trajectory of the attacker sufficiently in advance to allow the attacker to avoid him",
@@ -6515,7 +6515,7 @@ const goaltimateDrill = {
       repetition: '',
       rest: '',
       instruction:
-        '4 vs 4 \nStall count of 5 \nWhenever a turnover happens, the new offensive team must ‘clear’ the disc by taking it into the clear box, and can then attack the goal.\nOne point for a completed pass that travels through the hoop and is caught in the end zone by your teammate',
+        '4 vs 4 \nStall count of 5 \nWhenever a turnover happens, the new offensive team must ‘clear’ the disc by taking it into the clear box, and can then attack the goal.\nThe team scores one point for a completed pass that travels through the hoop and is caught in the end zone by a teammate',
     },
   ],
 };

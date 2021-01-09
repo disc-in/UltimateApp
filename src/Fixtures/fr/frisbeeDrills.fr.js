@@ -5347,7 +5347,7 @@ const bolognaMDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'Travaillez le soutien avec le premier du stack. Le but est de travailler votre timing sur le Dump&Swing',
+        'Travaillez le soutien avec le premier du stack. Le but est de travailler votre timing sur le Dump & Swing',
     },
   ],
 };
@@ -5535,7 +5535,7 @@ const dishieChainDrill = {
   id: 1015,
   type: DrillTypes.FRISBEE,
   author: 'Mooncatchers',
-  title: 'Chaîne du Dishie',
+  title: 'Chaîne du Dishy',
   image: 'https://zupimages.net/up/20/19/stdq.jpg',
   description:
     'Exercice de base de longues passes. Vous voulez que vos joueurs alternent entre lancer, courir et passer',
@@ -5558,7 +5558,7 @@ const dishieChainDrill = {
       repetition: '',
       rest: '',
       instruction:
-        "2 joueurs d'une colonne vont en direction du lanceur. Quand l'un d'eux reçoit le disque. Le lanceur cherche à faire une dishie quand l'autre cutter part en longue. Le cutter qui attrape la longue devient le nouveau premier lanceur de l'autre colonne",
+        "2 joueurs d'une colonne vont en direction du lanceur. Quand l'un d'eux reçoit le disque. Le lanceur cherche à faire une passe dishy quand l'autre cutter part en longue. Le cutter qui attrape la longue devient le nouveau premier lanceur de l'autre colonne",
     },
     {
       id: 2,
@@ -6096,7 +6096,7 @@ const dishieLine = {
       repetition: '',
       rest: '',
       instruction:
-        'Deux lignes se font face. Les premiers joueurs de chaque lignes courent en direction du porteur du disque pour récupérer une dishie. Si le lanceur effectue une feinte réaliste, le coureur doit changer la direction de sa course',
+        'Deux lignes se font face. Les premiers joueurs de chaque lignes courent en direction du porteur du disque pour récupérer une passe dishy. Si le lanceur effectue une feinte réaliste, le coureur doit changer la direction de sa course',
     },
   ],
 };
@@ -7469,7 +7469,7 @@ const square = {
     },
     {
       id: 3,
-      title: 'Le Carré à Dishie',
+      title: 'Le Carré à Dishy',
       animation: squareDishieAnimation,
       vimeoId: undefined,
       repetition: '',

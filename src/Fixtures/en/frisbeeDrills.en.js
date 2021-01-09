@@ -620,7 +620,7 @@ const fartlek = {
   title: 'Fartlek',
   image: 'https://zupimages.net/up/20/19/kj0f.jpg',
   description:
-    "Light warm-up \nFartlek 'adapted': 25' running at jogging speed with 10\"\" every minute make a slight acceleration of a few km/h more (For example, if you run at 10km/h, you can aim for 13 or 14km/h) (50 seconds jogging speed, 10 seconds slight acceleration). The goal is to go for the feeling and to concentrate on the feeling. At the end, you shouldn't be more exhausted than a big jog",
+    "Light warm-up\nFartlek 'adapted': 25' running at jogging speed with 10\" every minute make a slight acceleration of a few km/h more (For example, if you run at 10km/h, you can aim for 13 or 14km/h) (50 seconds jogging speed, 10 seconds slight acceleration). The goal is to go for the feeling and to concentrate on the feeling. At the end, you shouldn't be more exhausted than a big jog",
   minimalPlayersNumber: 1,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: 'None',
@@ -5094,7 +5094,7 @@ const bigEightDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'Rotation: \n1- Handler in the middle \n2- Reset going for the backdoor \n3- First of the stack following in the break \nLast of the stack going long \n4- Same but in opposite position',
+        'Rotation:\n1- Handler in the middle\n2- Reset going for the backdoor\n3- First of the stack following in the break\nLast of the stack going long\n4- Same but in opposite position',
     },
     {
       id: 2,
@@ -5103,7 +5103,7 @@ const bigEightDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'Rotation : \n1- Marker facing the sideline \n2- Thrower trapped against the sideline\n3- First of the Stack catching the swing\n4- Continuity of the second player in the stack\n5- Deep cut in the break',
+        'Rotation :\n1- Marker facing the sideline\n2- Thrower trapped against the sideline\n3- First of the Stack catching the swing\n4- Continuity of the second player in the stack\n5- Deep cut in the break',
     },
     {
       id: 3,
@@ -5459,7 +5459,7 @@ const dishieChainDrill = {
       repetition: '',
       rest: '',
       instruction:
-        '2 columns: \n2 cutters from the same column run in the direction of the thrower. The cutter closest to the thrower catches the disc and makes a dishy pass back to the thrower.\nIn the meantime, the other cutter goes long and catches a pass from the original thrower.\n The cutter catching the long throw becomes the new first thrower in the other column',
+        '2 columns:\n2 cutters from the same column run in the direction of the thrower. The cutter closest to the thrower catches the disc and makes a dishy pass back to the thrower.\nIn the meantime, the other cutter goes long and catches a pass from the original thrower.\n The cutter catching the long throw becomes the new first thrower in the other column',
     },
     {
       id: 2,
@@ -5508,7 +5508,7 @@ const breakDanceDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'The 2 teams are racing. \nWhen the disc reaches the last player, he has to run as fast as possible to start a new series. \nThe first team that makes a complete rotation wins!',
+        'The 2 teams are racing.\nWhen the disc reaches the last player, he has to run as fast as possible to start a new series.\nThe first team that makes a complete rotation wins!',
     },
   ],
 };
@@ -6516,7 +6516,7 @@ const goaltimateDrill = {
       repetition: '',
       rest: '',
       instruction:
-        '4 vs 4 \nStall count of 5 \nWhenever a turnover happens, the new offensive team must ‘clear’ the disc by taking it into the clear box, and can then attack the goal.\nThe team scores one point for a completed pass that travels through the hoop and is caught in the end zone by a teammate',
+        '4 vs 4\nStall count of 5\nWhenever a turnover happens, the new offensive team must ‘clear’ the disc by taking it into the clear box, and can then attack the goal.\nThe team scores one point for a completed pass that travels through the hoop and is caught in the end zone by a teammate',
     },
   ],
 };
@@ -8406,6 +8406,7 @@ export const drills = [
   stabilityDrill,
   strengthDrill,
   tDrill,
+  fartlek,
   lacticSprint,
   circuit,
   serpentine,

@@ -5189,7 +5189,7 @@ const bigEightDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'Rotation: \n1- Handler au centre du terrain \n2- Passe par derrière pour effectuer le reset \n3- Premier du stack fait la continuité dans le break \n4- Dernier du stack va en longue et se place comme handler central du coté opposé',
+        'Rotation:\n1- Handler au centre du terrain\n2- Passe par derrière pour effectuer le reset\n3- Premier du stack fait la continuité dans le break\n4- Dernier du stack va en longue et se place comme handler central du coté opposé',
     },
     {
       id: 2,
@@ -5198,7 +5198,7 @@ const bigEightDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'Rotation : \n1- Marque sur le lanceur orienté ligne\n2-Lanceur trappé\n3-Premier du Stack qui attrape le swing\n4-Continuité du deuxième du stack\n5-Courir en Longue dans le fermé',
+        'Rotation :\n1- Marque sur le lanceur orienté ligne\n2-Lanceur trappé\n3-Premier du Stack qui attrape le swing\n4-Continuité du deuxième du stack\n5-Courir en Longue dans le fermé',
     },
     {
       id: 3,
@@ -5607,7 +5607,7 @@ const breakDanceDrill = {
       repetition: '',
       rest: '',
       instruction:
-        "2 équipes s'opposent. \nQuand le disque arrive au dernier joueur, il doit courir le plus vite possible pour commencer une nouvelle série. \nPremière équipe qui réalise une rotation parfaite gagne !",
+        "2 équipes s'opposent.\nQuand le disque arrive au dernier joueur, il doit courir le plus vite possible pour commencer une nouvelle série.\nPremière équipe qui réalise une rotation parfaite gagne !",
     },
   ],
 };
@@ -6577,7 +6577,7 @@ const zoneGame = {
       repetition: '',
       rest: '',
       instruction:
-        "L'équipe offensive tente de marquer un point contre une défense de zone. S'il y a un turn-over, le disque revient à l'attaque lors de la dernière possession. \nL'équipe attaquante réessaye. Elle doit marquer avec le moins de tentatives possible",
+        "L'équipe offensive tente de marquer un point contre une défense de zone. S'il y a un turn-over, le disque revient à l'attaque lors de la dernière possession.\nL'équipe attaquante réessaye. Elle doit marquer avec le moins de tentatives possible",
     },
     {
       id: 2,
@@ -6586,7 +6586,7 @@ const zoneGame = {
       repetition: '',
       rest: '',
       instruction:
-        "L'équipe offensive tente de marquer un point contre une défense de zone. S'il y a un turn-over, le disque revient à l'attaque lors de la dernière possession. \nL'équipe attaquante réessaye. Elle doit marquer avec le moins de tentatives possible",
+        "L'équipe offensive tente de marquer un point contre une défense de zone. S'il y a un turn-over, le disque revient à l'attaque lors de la dernière possession.\nL'équipe attaquante réessaye. Elle doit marquer avec le moins de tentatives possible",
     },
   ],
 };
@@ -6618,7 +6618,7 @@ const goaltimateDrill = {
       repetition: '',
       rest: '',
       instruction:
-        "4 contre 4. Compte de 5 \nÀ chaque fois qu'il y a un turnover, la nouvelle équipe offensive doit \"nettoyer\" le disque en l'ammenant dans la zone de dégagement, et peut alors attaquer le but. \nUn point est obtenu lorsqu'une passe traversant le cerceau est attrapée dans la zone d'en-but par votre coéquipier",
+        "4 contre 4. Compte de 5\nÀ chaque fois qu'il y a un turnover, la nouvelle équipe offensive doit \"nettoyer\" le disque en l'ammenant dans la zone de dégagement, et peut alors attaquer le but.\nUn point est obtenu lorsqu'une passe traversant le cerceau est attrapée dans la zone d'en-but par votre coéquipier",
     },
   ],
 };
@@ -8524,6 +8524,7 @@ export const drills = [
   strengthDrill,
   speedDrill,
   tDrill,
+  fartlek,
   lacticSprint,
   circuit,
   serpentine,

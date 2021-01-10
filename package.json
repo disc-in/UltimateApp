@@ -26,7 +26,7 @@
     "expo-localization": "~9.1.0",
     "expo-mail-composer": "~9.0.0",
     "expo-screen-orientation": "~2.1.0",
-    "firebase": "7.9.0",
+    "firebase": "8.2.1",
     "formik": "^2.2.5",
     "i18n-js": "^3.8.0",
     "react": "16.13.1",

@@ -7807,13 +7807,14 @@ const defenseThird = {
   drills: [warmupGameDrill, kyeDrill, stopFlow, dwarfDuelDrill, normalGame],
 };
 
-const playingToLearn = {
-  id: 17,
-  title: 'Frisbee Games',
-  image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'Playing games to learn the basics',
-  drills: [warmupGameDrill, helpGame, dDC, flubber, guts],
-};
+// Part of no program, only gathers other frisbee sports
+// const playingToLearn = {
+//   id: 17,
+//   title: 'Frisbee Games',
+//   image: 'https://zupimages.net/up/20/19/su0s.jpg',
+//   description: 'Playing games to learn the basics',
+//   drills: [warmupGameDrill, helpGame, dDC, flubber, guts],
+// };
 
 const zoneCup = {
   id: 18,

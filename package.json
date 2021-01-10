@@ -46,7 +46,7 @@
     "react-native-web": "~0.13.12",
     "react-redux": "^7.2.2",
     "redux": "^4.0.5",
-    "redux-persist": "^5.10.0",
+    "redux-persist": "^6.0.0",
     "uuid": "^8.3.2",
     "watchman": "^1.0.0",
     "yup": "^0.31.1"

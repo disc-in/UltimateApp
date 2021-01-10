@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Alert, Share, Text } from 'react-native';
 import { Menu, Divider } from 'react-native-paper';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 import * as Linking from 'expo-linking';
 
 import I18n from '../../utils/i18n';

@@ -13,9 +13,10 @@ import simulator from '../../assets/HomePage/simulator.jpg';
 import dictionary from '../../assets/HomePage/dictionary.jpg';
 import ourPlays from '../../assets/HomePage/ourplays.jpg';
 import essential from '../../assets/HomePage/essential.jpg';
-import huddle from '../../assets/HomePage/huddle.jpg';
+import adultPrograms from '../../assets/HomePage/adultPrograms.png';
+import juniorPrograms from '../../assets/HomePage/juniorPrograms.png';
 import FeedbackButton from './home/FeedbackButton';
-import { DrillTypes, EquipmentLabels } from '../Fixtures/config';
+import { AgeCategory, DrillTypes, EquipmentLabels } from '../Fixtures/config';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -32,16 +33,36 @@ const HomeScreen = (props) => {
           </View>
         </ImageBackground>
       </TouchableHighlight>
-      <TouchableHighlight
-        onPress={() => props.navigation.navigate('ProgramListPage', { type: DrillTypes.FRISBEE })}
-        style={styles.menuItem}
-      >
-        <ImageBackground source={huddle} style={styles.image}>
-          <View style={styles.wrapper}>
-            <Text style={styles.title}>{I18n.t('homePage.programs')}</Text>
-          </View>
-        </ImageBackground>
-      </TouchableHighlight>
+
+      <View style={styles.containerGrow}>
+        <TouchableHighlight
+          onPress={() =>
+            props.navigation.navigate('ProgramListPage', { type: DrillTypes.FRISBEE, ageCategory: AgeCategory.JUNIOR })
+          }
+          style={styles.menuItemSplitLeft}
+        >
+          <ImageBackground source={juniorPrograms} style={styles.image}>
+            <View style={styles.wrapper}>
+              <Text style={styles.title}>{I18n.t('homePage.junior')}</Text>
+              <Text style={styles.subtitle}>{I18n.t('homePage.programs')}</Text>
+            </View>
+          </ImageBackground>
+        </TouchableHighlight>
+        <TouchableHighlight
+          onPress={() =>
+            props.navigation.navigate('ProgramListPage', { type: DrillTypes.FRISBEE, ageCategory: AgeCategory.SENIOR })
+          }
+          style={styles.menuItemSplitRight}
+        >
+          <ImageBackground source={adultPrograms} style={styles.image}>
+            <View style={styles.wrapperRight}>
+              <Text style={styles.titleRight}>{I18n.t('homePage.adult')}</Text>
+              <Text style={styles.subtitleRight}>{I18n.t('homePage.programs')}</Text>
+            </View>
+          </ImageBackground>
+        </TouchableHighlight>
+      </View>
+
       <TouchableHighlight onPress={() => props.navigation.navigate('PlayEditorPage')} style={styles.menuItem}>
         <ImageBackground source={ourPlays} style={styles.image}>
           <View style={styles.wrapper}>
@@ -193,6 +214,25 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     marginBottom: 5,
   },
+  menuItemSplitLeft: {
+    flexBasis: '25%',
+    flexGrow: 1,
+    marginBottom: 5,
+    marginRight: 5,
+    width: '50%',
+  },
+  menuItemSplitRight: {
+    flexBasis: '25%',
+    flexGrow: 1,
+    marginBottom: 5,
+    width: '50%',
+  },
+  containerGrow: {
+    flexBasis: '25%',
+    flexGrow: 1,
+    flex: 1,
+    flexDirection: 'row',
+  },
   image: {
     height: '100%',
   },
@@ -214,5 +254,26 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'flex-start',
     padding: 20,
+  },
+  wrapperRight: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    justifyContent: 'center',
+    alignItems: 'flex-end',
+    padding: 20,
+  },
+  titleRight: {
+    color: theme.COLOR_PRIMARY_LIGHT,
+    fontSize: 28,
+    fontWeight: 'bold',
+    textAlign: 'right',
+  },
+  subtitleRight: {
+    color: theme.COLOR_PRIMARY_LIGHT,
+    fontSize: theme.FONT_SIZE_MEDIUM,
+    textAlign: 'right',
   },
 });

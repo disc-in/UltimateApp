@@ -17,7 +17,7 @@ export default {
 
   // animations
   CONE_COLOR: '#feae19',
-  DEFENSE_COLOR: '#9d9d9d',
+  DEFENSE_COLOR: '#000000',
   PLAYER_TEXT_COLOR: '#fff',
   CUT_COLOR: 'green',
   DISC_COLOR: 'white',

@@ -55,3 +55,8 @@ export const AnimationBackgrounds = {
   THREE_QUARTERS_FIELD: 'three quarters field',
   EMPTY: 'empty',
 };
+
+export const AgeCategory = {
+  SENIOR: 'senior',
+  JUNIOR: 'junior',
+};

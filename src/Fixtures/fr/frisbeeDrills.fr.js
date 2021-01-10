@@ -5198,7 +5198,7 @@ const bigEightDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'Rotation: \n1- Handler au centre du terrain \n2- Passe par derrière pour effectuer le reset \n3- Premier du stack fait la continuité dans le break \n4- Dernier du stack va en longue et se place comme handler central du coté opposé',
+        'Rotation:\n1- Handler au centre du terrain\n2- Passe par derrière pour effectuer le reset\n3- Premier du stack fait la continuité dans le break\n4- Dernier du stack va en longue et se place comme handler central du coté opposé',
     },
     {
       id: 2,
@@ -5207,7 +5207,7 @@ const bigEightDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'Rotation : \n1- Marque sur le lanceur orienté ligne\n2-Lanceur trappé\n3-Premier du Stack qui attrape le swing\n4-Continuité du deuxième du stack\n5-Courir en Longue dans le fermé',
+        'Rotation :\n1- Marque sur le lanceur orienté ligne\n2-Lanceur trappé\n3-Premier du Stack qui attrape le swing\n4-Continuité du deuxième du stack\n5-Courir en Longue dans le fermé',
     },
     {
       id: 3,
@@ -5356,7 +5356,7 @@ const bolognaMDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'Travaillez le soutien avec le premier du stack. Le but est de travailler votre timing sur le Dump&Swing',
+        'Travaillez le soutien avec le premier du stack. Le but est de travailler votre timing sur le Dump & Swing',
     },
   ],
 };
@@ -5544,7 +5544,7 @@ const dishieChainDrill = {
   id: 1015,
   type: DrillTypes.FRISBEE,
   author: 'Mooncatchers',
-  title: 'Chaîne du Dishie',
+  title: 'Chaîne du Dishy',
   image: 'https://zupimages.net/up/20/19/stdq.jpg',
   description:
     'Exercice de base de longues passes. Vous voulez que vos joueurs alternent entre lancer, courir et passer',
@@ -5567,7 +5567,7 @@ const dishieChainDrill = {
       repetition: '',
       rest: '',
       instruction:
-        "2 joueurs d'une colonne vont en direction du lanceur. Quand l'un d'eux reçoit le disque. Le lanceur cherche à faire une dishie quand l'autre cutter part en longue. Le cutter qui attrape la longue devient le nouveau premier lanceur de l'autre colonne",
+        "2 joueurs d'une colonne vont en direction du lanceur. Quand l'un d'eux reçoit le disque. Le lanceur cherche à faire une passe dishy quand l'autre cutter part en longue. Le cutter qui attrape la longue devient le nouveau premier lanceur de l'autre colonne",
     },
     {
       id: 2,
@@ -5616,7 +5616,7 @@ const breakDanceDrill = {
       repetition: '',
       rest: '',
       instruction:
-        "2 équipes s'opposent. \nQuand le disque arrive au dernier joueur, il doit courir le plus vite possible pour commencer une nouvelle série. \nPremière équipe qui réalise une rotation parfaite gagne !",
+        "2 équipes s'opposent.\nQuand le disque arrive au dernier joueur, il doit courir le plus vite possible pour commencer une nouvelle série.\nPremière équipe qui réalise une rotation parfaite gagne !",
     },
   ],
 };
@@ -6105,7 +6105,7 @@ const dishieLine = {
       repetition: '',
       rest: '',
       instruction:
-        'Deux lignes se font face. Les premiers joueurs de chaque lignes courent en direction du porteur du disque pour récupérer une dishie. Si le lanceur effectue une feinte réaliste, le coureur doit changer la direction de sa course',
+        'Deux lignes se font face. Les premiers joueurs de chaque lignes courent en direction du porteur du disque pour récupérer une passe dishy. Si le lanceur effectue une feinte réaliste, le coureur doit changer la direction de sa course',
     },
   ],
 };
@@ -6586,7 +6586,7 @@ const zoneGame = {
       repetition: '',
       rest: '',
       instruction:
-        "L'équipe offensive tente de marquer un point contre une défense de zone. S'il y a un turn-over, le disque revient à l'attaque lors de la dernière possession. \nL'équipe attaquante réessaye. Elle doit marquer avec le moins de tentatives possible",
+        "L'équipe offensive tente de marquer un point contre une défense de zone. S'il y a un turn-over, le disque revient à l'attaque lors de la dernière possession.\nL'équipe attaquante réessaye. Elle doit marquer avec le moins de tentatives possible",
     },
     {
       id: 2,
@@ -6595,7 +6595,7 @@ const zoneGame = {
       repetition: '',
       rest: '',
       instruction:
-        "L'équipe offensive tente de marquer un point contre une défense de zone. S'il y a un turn-over, le disque revient à l'attaque lors de la dernière possession. \nL'équipe attaquante réessaye. Elle doit marquer avec le moins de tentatives possible",
+        "L'équipe offensive tente de marquer un point contre une défense de zone. S'il y a un turn-over, le disque revient à l'attaque lors de la dernière possession.\nL'équipe attaquante réessaye. Elle doit marquer avec le moins de tentatives possible",
     },
   ],
 };
@@ -6627,7 +6627,7 @@ const goaltimateDrill = {
       repetition: '',
       rest: '',
       instruction:
-        "4 contre 4. Compte de 5 \nÀ chaque fois qu'il y a un turnover, la nouvelle équipe offensive doit \"nettoyer\" le disque en l'ammenant dans la zone de dégagement, et peut alors attaquer le but. \nUn point est obtenu lorsqu'une passe traversant le cerceau est attrapée dans la zone d'en-but par votre coéquipier",
+        "4 contre 4. Compte de 5\nÀ chaque fois qu'il y a un turnover, la nouvelle équipe offensive doit \"nettoyer\" le disque en l'ammenant dans la zone de dégagement, et peut alors attaquer le but.\nUn point est obtenu lorsqu'une passe traversant le cerceau est attrapée dans la zone d'en-but par votre coéquipier",
     },
   ],
 };
@@ -7478,7 +7478,7 @@ const square = {
     },
     {
       id: 3,
-      title: 'Le Carré à Dishie',
+      title: 'Le Carré à Dishy',
       animation: squareDishieAnimation,
       vimeoId: undefined,
       repetition: '',
@@ -8629,6 +8629,7 @@ export const drills = [
   strengthDrill,
   speedDrill,
   tDrill,
+  fartlek,
   lacticSprint,
   circuit,
   serpentine,

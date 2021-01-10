@@ -629,7 +629,7 @@ const fartlek = {
   title: 'Fartlek',
   image: 'https://zupimages.net/up/20/19/kj0f.jpg',
   description:
-    "Light warm-up \nFartlek 'adapted': 25' running at jogging speed with 10\"\" every minute make a slight acceleration of a few km/h more (For example, if you run at 10km/h, you can aim for 13 or 14km/h) (50 seconds jogging speed, 10 seconds slight acceleration). The goal is to go for the feeling and to concentrate on the feeling. At the end, you shouldn't be more exhausted than a big jog",
+    "Light warm-up\nFartlek 'adapted': 25' running at jogging speed with 10\" every minute make a slight acceleration of a few km/h more (For example, if you run at 10km/h, you can aim for 13 or 14km/h) (50 seconds jogging speed, 10 seconds slight acceleration). The goal is to go for the feeling and to concentrate on the feeling. At the end, you shouldn't be more exhausted than a big jog",
   minimalPlayersNumber: 1,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: 'None',
@@ -4988,7 +4988,7 @@ const breakDrill = {
   title: 'Cuts to the Break Side',
   image: 'https://zupimages.net/up/20/19/83fx.jpg',
   description:
-    "Cutting from the open side to the break side. The drill is both for the thrower and the mark. If you want to work on improving the mark, you may insist so that the defender may not be broken twice in a row with the same pass. You want them to identify the thrower's favorite throw and block it",
+    "Cutting from the open side to the break side. The drill is both for the thrower and the player marking them. If you want to work on improving the defense, you could require that the defender not be broken twice in a row with the same pass. You want defenders to identify the thrower's favorite throw and block it",
   minimalPlayersNumber: 6,
   inGame:
     'Defenders seek to limit the options for passing through a mark. If the attackers manage to break, they drastically increase the passing options',
@@ -5011,7 +5011,7 @@ const breakDrill = {
       id: 2,
       title: 'Without the pivot foot',
       animation: breakSide,
-      instruction: 'The thrower has to try to break the mark without any pivot',
+      instruction: 'The thrower has to try to break the mark without their pivot',
     },
   ],
 };
@@ -5023,7 +5023,7 @@ const treasureHuntDrill = {
   title: 'Treasure Hunt',
   image: 'https://zupimages.net/up/20/19/z7lq.jpg',
   description:
-    '2 teams are competing. The objective is to bring the 5 discs into a square defined using cones.\nPlayers are not allowed to walk with the disc. When a disc falls or is intercepted, it must be brought back to the starting point by the offensive team. The first team that "saves" all its frisbees wins',
+    '2 teams are competing. The objective is to bring the 5 discs into a square marked out with cones.\nPlayers are not allowed to walk with the disc. When a disc falls or is intercepted, it must be brought back to the starting point by the offensive team. The first team that "saves" all its frisbees wins',
   minimalPlayersNumber: 10,
   inGame:
     'In order to achieve collective defenses, it is important to work on communication between players. An efficient communication will allow to make judicious switches',
@@ -5103,7 +5103,7 @@ const bigEightDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'Rotation: \n1- Handler in the middle \n2- Reset going for the backdoor \n3- First of the stack following in the break \nLast of the stack going long \n4- Same but in opposite position',
+        'Rotation:\n1- Handler in the middle\n2- Reset going for the backdoor\n3- First of the stack following in the break\nLast of the stack going long\n4- Same but in opposite position',
     },
     {
       id: 2,
@@ -5112,7 +5112,7 @@ const bigEightDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'Rotation : \n1- Marker facing the sideline \n2- Thrower trapped against the sideline\n3- First of the Stack catching the swing\n4- Continuity of the second player in the stack\n5- Deep cut in the break',
+        'Rotation :\n1- Marker facing the sideline\n2- Thrower trapped against the sideline\n3- First of the Stack catching the swing\n4- Continuity of the second player in the stack\n5- Deep cut in the break',
     },
     {
       id: 3,
@@ -5366,7 +5366,7 @@ const bulldogDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'The bulldogs try to catch the remaining players. The aim of the game is to run from one end of the field of play to the other, without being caught.\nWhen a player is caught, he must hold hands with one another and form a line of 3 bulldogs.\n If there is more than 3 bulldogs, they split in more than one line',
+        'The bulldogs try to catch the remaining players. The aim of the game is to run from one end of the field of play to the other, without being caught.\nWhen a player is caught, he must hold hands with one another and form a line of 3 bulldogs.\n If there are more than 3 bulldogs, they split into more than one line',
     },
   ],
 };
@@ -5446,7 +5446,7 @@ const dishieChainDrill = {
   id: 1015,
   type: DrillTypes.FRISBEE,
   author: 'Mooncatchers',
-  title: 'Dishie Chain',
+  title: 'Dishy Chain',
   image: 'https://zupimages.net/up/20/19/stdq.jpg',
   description: 'Basic long passes drill. You want your players to alternate between throwing, running and passing',
   minimalPlayersNumber: 12,
@@ -5468,7 +5468,7 @@ const dishieChainDrill = {
       repetition: '',
       rest: '',
       instruction:
-        '2 columns: \n2 players from the same column go in direction of the thrower. When of them receive the disc.\n The thrower is looking ot make a dishie when the other cutter is going long.\n The cutter catching the long throw becomes the new first thrower for the other column',
+        '2 columns:\n2 cutters from the same column run in the direction of the thrower. The cutter closest to the thrower catches the disc and makes a dishy pass back to the thrower.\nIn the meantime, the other cutter goes long and catches a pass from the original thrower.\n The cutter catching the long throw becomes the new first thrower in the other column',
     },
     {
       id: 2,
@@ -5478,7 +5478,7 @@ const dishieChainDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'Add a defensive player to work on the poach with a side stack. The thrower has to throw to the free player',
+        'Add a defensive player to work on the poach with a side stack. The thrower has to throw to a free player',
     },
   ],
 };
@@ -5517,7 +5517,7 @@ const breakDanceDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'The 2 teams are racing. \nWhen the disc reaches the last player, he has to run as fast as possible to start a new series. \nFirst team that makes the complete rotation wins!',
+        'The 2 teams are racing.\nWhen the disc reaches the last player, he has to run as fast as possible to start a new series.\nThe first team that makes a complete rotation wins!',
     },
   ],
 };
@@ -5548,7 +5548,7 @@ const triangleOfDeathdrill = {
       repetition: '',
       rest: '',
       instruction:
-        'Set up a small triangle of cones about 3 meters apart, pointing downfield. One thrower begins on one side. One player stands about 3 meters behind the triangle with a large pile of discs. The rest of the team sets up in a vertical stack (this can be more than 5 players).\n\nThe thrower cuts to the peak of the triangle and then to the other side, receives a dishy pass from player behind the triangle, and throws a huck to a cutter from the back of the stack. The thrower immediately remakes their cut in the opposite direction, receiving a dishy and throwing a huck. Repeat either 10 times, or until all cutters have received a pass',
+        'Set up a small triangle of cones about 3 meters apart, pointing downfield. One thrower begins on one side. One player stands about 3 meters behind the triangle with a large pile of discs. The rest of the team sets up in a vertical stack (this can be more than 5 players).\n\nThe thrower cuts to the peak of the triangle and then to the other side, receives a dishy pass from the player behind the triangle, and throws a huck to a cutter from the back of the stack. The thrower immediately remakes their cut in the opposite direction, receiving another dishy pass and throwing a huck. Repeat either 10 times, or until all cutters have received a pass',
     },
   ],
 };
@@ -5579,7 +5579,7 @@ const trainOfFakeDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'Set up a vertical stack of 5 cutters with a thrower and a dump and decide on a force. The last cutter in the stack cuts deep while looking at the thrower. When the thrower fakes, the receiver cuts back in on the open side and receives the disc. The next player in the stack must begin their deep cut so as to be hitting full speed when the previous cutter catches the disc. The rest of the stack re-positions farther downfield, the thrower becomes the dump, the previous dump becomes the front of the stack. Repeat for the length of the field',
+        'Set up a vertical stack of 5 cutters with a thrower and a dump and decide on a force. The last cutter in the stack cuts deep while looking at the thrower. When the thrower fakes a pass, the receiver cuts back in on the open side and receives the disc. The next player in the stack must begin their deep cut so as to be hitting full speed when the previous cutter catches the disc. The rest of the stack re-positions further downfield, the thrower becomes the dump, the previous dump becomes the front of the stack. Repeat for the length of the field',
     },
     {
       id: 2,
@@ -5589,7 +5589,7 @@ const trainOfFakeDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'Set up the normal train drill. This time, however, the thrower can choose to make a second fake while the cutters is cutting in. If they do, the cutters clears to the second position in the stack (from the front), the thrower looks at the dump, the dump cuts upline and receives a pass. The drill continues',
+        'Set up the normal train drill. This time, however, the thrower can choose to make a second fake while the cutter is cutting in. If they do, the cutter clears to the second position in the stack (from the front), the thrower looks at the dump, the dump cuts upline and receives a pass. The drill continues',
     },
     {
       id: 3,
@@ -5780,7 +5780,7 @@ const defensePositionDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'A thrower stands with a mark and a force. An offensive receiver begins at any cone, with a defensive player positioning at a 45° angle on the open side between the receiver and the thrower. The receiver runs between the cones in any order, and the defensive player must maintain their positioning relative to the receiver at all times',
+        'A thrower stands with a mark and a force. An offensive receiver begins at any cone, with a defensive player positioning at a 45° angle on the open side between the receiver and the thrower. The receiver runs towards and anyway they like within the area marked out with cones, and the defensive player must maintain their positioning relative to the receiver at all times',
     },
     {
       id: 2,
@@ -5820,7 +5820,7 @@ const discGolf = {
       repetition: '',
       rest: '',
       instruction:
-        'The rules. Disc Golf is played like traditional golf, but with disc golf discs instead of balls and clubs. One throw (stroke) is counted each time the disc is thrown and when a penalty is incurred. The goal is to play each hole in the fewest strokes possible',
+        'One throw (stroke) is counted each time the disc is thrown and when a penalty is incurred. The goal is to reach each hole in the fewest strokes possible',
     },
   ],
 };
@@ -5831,7 +5831,8 @@ const dDC = {
   author: '',
   title: 'DDC',
   image: 'https://zupimages.net/up/20/25/t73e.jpg',
-  description: 'Double disc court is a frisbee sport which combines quickness, strategy, and throwing ability',
+  description:
+    'Double disc court is a sport played with a frisbee which combines speed, strategy, and throwing ability',
   minimalPlayersNumber: 4,
   inGame:
     'The DDC allows you to work on the control of passing curves and communication. The technical gain allows you to adapt to the match situation',
@@ -5851,7 +5852,7 @@ const dDC = {
       repetition: '',
       rest: '',
       instruction:
-        "DDC is played by two teams of two players each. The courts are 13 meters square and 17 meters apart. You get one point for a throw that lands and stays in the opponents' court, or if an opponent drops your throw. Your opponents get one point if your throw touches outside their court. If you can arrange it so that the other team is touching both discs at the same time, you get two points. That is called 'doubling' your opponents",
+        "DDC is played by two teams of two players each. The courts are 13 meters square and 17 meters apart. You get one point for a throw that lands and stays in the opponents' court, or if an opponent drops your throw. Your opponents get one point if your throw touches outside their court. If the other team comes into contact with both discs at the same time, you get two points. That is called 'doubling' your opponents",
     },
   ],
 };
@@ -5876,12 +5877,12 @@ const horizontalTiming = {
   steps: [
     {
       id: 1,
-      title: 'Break is succeed',
+      title: 'Break wins',
       animation: horizontalTimingAnimation,
       repetition: '',
       rest: '',
       instruction:
-        'The cutter stands 10m downfield of the handler. The rotation  after 2 tries is Mark > Central handler > Reset > Cutter in the open side > Cutter in the break side',
+        'The cutter stands 10 meters downfield of the handler. The rotation after 2 tries is Mark > Central handler > Reset > Cutter in the open side > Cutter in the break side',
     },
     {
       id: 2,
@@ -6000,13 +6001,13 @@ const dishieLine = {
     },
     {
       id: 2,
-      title: 'The Dishie Line',
+      title: 'The Dishy Line',
       animation: dishieLineAnimation,
       vimeoId: '486367517',
       repetition: '',
       rest: '',
       instruction:
-        '2 Lines face each other. The first players of each line run towards the disc carrier to retrieve a dishie. If the thrower makes a realistic fake, the runner must change the direction of his cut',
+        '2 Lines face each other. The first players of each line run towards the disc carrier to retrieve a dishy. If the thrower makes a realistic fake, the runner must change the direction of his cut',
     },
   ],
 };
@@ -6524,7 +6525,7 @@ const goaltimateDrill = {
       repetition: '',
       rest: '',
       instruction:
-        '4 vs 4 \nStall count of 5 \nWhenever a turnover happens, the new offensive team must ‘clear’ the disc by taking it into the clear box, and can then attack the goal.\nThe team scores one point for a completed pass that travels through the hoop and is caught in the end zone by a teammate',
+        '4 vs 4\nStall count of 5\nWhenever a turnover happens, the new offensive team must ‘clear’ the disc by taking it into the clear box, and can then attack the goal.\nThe team scores one point for a completed pass that travels through the hoop and is caught in the end zone by a teammate',
     },
   ],
 };
@@ -7367,7 +7368,7 @@ const square = {
     },
     {
       id: 3,
-      title: 'Dishie Square',
+      title: 'Dishy Square',
       animation: squareDishieAnimation,
       vimeoId: undefined,
       repetition: '',
@@ -8510,6 +8511,7 @@ export const drills = [
   stabilityDrill,
   strengthDrill,
   tDrill,
+  fartlek,
   lacticSprint,
   circuit,
   serpentine,

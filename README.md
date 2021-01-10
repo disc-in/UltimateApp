@@ -68,7 +68,7 @@ Thanks a lot to everyone helping `Disc In` become an awesome app!
 
 - Every direct [contributor](https://github.com/disc-in/UltimateApp/graphs/contributors) to the code
 - UX design: Martin VDD
-- Wording: Scott Graber, Anja Hopma
+- English wording: Scott Graber, Anja Hopma
 - French dictionary: Cheikh F. Ndiaye
 - Drills: Ine Lanckriet, Pierre Gruau
 - Visual contents (photos): [Focus Ultimate France](https://www.facebook.com/ultifocus/)

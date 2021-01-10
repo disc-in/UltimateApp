@@ -1,4 +1,13 @@
-import { DrillTypes, Intensities, Levels, FrisbeeGoals, FitnessGoals, SeasonTimings, EquipmentLabels } from '../config';
+import {
+  DrillTypes,
+  Intensities,
+  Levels,
+  FrisbeeGoals,
+  FitnessGoals,
+  SeasonTimings,
+  EquipmentLabels,
+  AgeCategory,
+} from '../config';
 
 import animationGoToTen from '../Animation/AnimationGoToTen';
 import throwingMachine from '../Animation/ThrowingMachine';
@@ -5189,7 +5198,7 @@ const bigEightDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'Rotation: \n1- Handler au centre du terrain \n2- Passe par derrière pour effectuer le reset \n3- Premier du stack fait la continuité dans le break \n4- Dernier du stack va en longue et se place comme handler central du coté opposé',
+        'Rotation:\n1- Handler au centre du terrain\n2- Passe par derrière pour effectuer le reset\n3- Premier du stack fait la continuité dans le break\n4- Dernier du stack va en longue et se place comme handler central du coté opposé',
     },
     {
       id: 2,
@@ -5198,7 +5207,7 @@ const bigEightDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'Rotation : \n1- Marque sur le lanceur orienté ligne\n2-Lanceur trappé\n3-Premier du Stack qui attrape le swing\n4-Continuité du deuxième du stack\n5-Courir en Longue dans le fermé',
+        'Rotation :\n1- Marque sur le lanceur orienté ligne\n2-Lanceur trappé\n3-Premier du Stack qui attrape le swing\n4-Continuité du deuxième du stack\n5-Courir en Longue dans le fermé',
     },
     {
       id: 3,
@@ -5347,7 +5356,7 @@ const bolognaMDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'Travaillez le soutien avec le premier du stack. Le but est de travailler votre timing sur le Dump&Swing',
+        'Travaillez le soutien avec le premier du stack. Le but est de travailler votre timing sur le Dump & Swing',
     },
   ],
 };
@@ -5535,7 +5544,7 @@ const dishieChainDrill = {
   id: 1015,
   type: DrillTypes.FRISBEE,
   author: 'Mooncatchers',
-  title: 'Chaîne du Dishie',
+  title: 'Chaîne du Dishy',
   image: 'https://zupimages.net/up/20/19/stdq.jpg',
   description:
     'Exercice de base de longues passes. Vous voulez que vos joueurs alternent entre lancer, courir et passer',
@@ -5558,7 +5567,7 @@ const dishieChainDrill = {
       repetition: '',
       rest: '',
       instruction:
-        "2 joueurs d'une colonne vont en direction du lanceur. Quand l'un d'eux reçoit le disque. Le lanceur cherche à faire une dishie quand l'autre cutter part en longue. Le cutter qui attrape la longue devient le nouveau premier lanceur de l'autre colonne",
+        "2 joueurs d'une colonne vont en direction du lanceur. Quand l'un d'eux reçoit le disque. Le lanceur cherche à faire une passe dishy quand l'autre cutter part en longue. Le cutter qui attrape la longue devient le nouveau premier lanceur de l'autre colonne",
     },
     {
       id: 2,
@@ -5607,7 +5616,7 @@ const breakDanceDrill = {
       repetition: '',
       rest: '',
       instruction:
-        "2 équipes s'opposent. \nQuand le disque arrive au dernier joueur, il doit courir le plus vite possible pour commencer une nouvelle série. \nPremière équipe qui réalise une rotation parfaite gagne !",
+        "2 équipes s'opposent.\nQuand le disque arrive au dernier joueur, il doit courir le plus vite possible pour commencer une nouvelle série.\nPremière équipe qui réalise une rotation parfaite gagne !",
     },
   ],
 };
@@ -5903,7 +5912,7 @@ const discGolf = {
   steps: [
     {
       id: 1,
-      title: 'disque Golf',
+      title: 'Disc-Golf',
       animation: discGolfAnimation,
       vimeoId: '475059721',
       repetition: '',
@@ -6096,7 +6105,7 @@ const dishieLine = {
       repetition: '',
       rest: '',
       instruction:
-        'Deux lignes se font face. Les premiers joueurs de chaque lignes courent en direction du porteur du disque pour récupérer une dishie. Si le lanceur effectue une feinte réaliste, le coureur doit changer la direction de sa course',
+        'Deux lignes se font face. Les premiers joueurs de chaque lignes courent en direction du porteur du disque pour récupérer une passe dishy. Si le lanceur effectue une feinte réaliste, le coureur doit changer la direction de sa course',
     },
   ],
 };
@@ -6577,7 +6586,7 @@ const zoneGame = {
       repetition: '',
       rest: '',
       instruction:
-        "L'équipe offensive tente de marquer un point contre une défense de zone. S'il y a un turn-over, le disque revient à l'attaque lors de la dernière possession. \nL'équipe attaquante réessaye. Elle doit marquer avec le moins de tentatives possible",
+        "L'équipe offensive tente de marquer un point contre une défense de zone. S'il y a un turn-over, le disque revient à l'attaque lors de la dernière possession.\nL'équipe attaquante réessaye. Elle doit marquer avec le moins de tentatives possible",
     },
     {
       id: 2,
@@ -6586,7 +6595,7 @@ const zoneGame = {
       repetition: '',
       rest: '',
       instruction:
-        "L'équipe offensive tente de marquer un point contre une défense de zone. S'il y a un turn-over, le disque revient à l'attaque lors de la dernière possession. \nL'équipe attaquante réessaye. Elle doit marquer avec le moins de tentatives possible",
+        "L'équipe offensive tente de marquer un point contre une défense de zone. S'il y a un turn-over, le disque revient à l'attaque lors de la dernière possession.\nL'équipe attaquante réessaye. Elle doit marquer avec le moins de tentatives possible",
     },
   ],
 };
@@ -6618,7 +6627,7 @@ const goaltimateDrill = {
       repetition: '',
       rest: '',
       instruction:
-        "4 contre 4. Compte de 5 \nÀ chaque fois qu'il y a un turnover, la nouvelle équipe offensive doit \"nettoyer\" le disque en l'ammenant dans la zone de dégagement, et peut alors attaquer le but. \nUn point est obtenu lorsqu'une passe traversant le cerceau est attrapée dans la zone d'en-but par votre coéquipier",
+        "4 contre 4. Compte de 5\nÀ chaque fois qu'il y a un turnover, la nouvelle équipe offensive doit \"nettoyer\" le disque en l'ammenant dans la zone de dégagement, et peut alors attaquer le but.\nUn point est obtenu lorsqu'une passe traversant le cerceau est attrapée dans la zone d'en-but par votre coéquipier",
     },
   ],
 };
@@ -7469,7 +7478,7 @@ const square = {
     },
     {
       id: 3,
-      title: 'Le Carré à Dishie',
+      title: 'Le Carré à Dishy',
       animation: squareDishieAnimation,
       vimeoId: undefined,
       repetition: '',
@@ -7818,7 +7827,7 @@ const fourthU13Training = {
   title: 'Déplacements et appels',
   image: 'https://zupimages.net/up/20/19/c9i6.jpg',
   description: "Travail sur l'agilité et la technique de cut",
-  drills: [/*statues, youthLadder,*/ trainDrill, game3v3],
+  drills: [checkLong, xL, trainDrill, game3v3],
 };
 
 const firstInitiationAdultTraining = {
@@ -7829,7 +7838,7 @@ const firstInitiationAdultTraining = {
   drills: [warmupDrill, basicThrowsDrill, goToTenDrill, game3v3],
 };
 
-const secondInintiationAdultTraining = {
+const secondInitiationAdultTraining = {
   id: 7,
   title: 'Défense & Longues',
   image: 'https://zupimages.net/up/20/19/cd36.jpg',
@@ -7837,7 +7846,7 @@ const secondInintiationAdultTraining = {
   drills: [warmupDrill, menageATroisDrill, checkLong, trainDrill, game5v5],
 };
 
-const thirdInintiationAdultTraining = {
+const thirdInitiationAdultTraining = {
   id: 8,
   title: "S'adapter au terrain",
   image: 'https://zupimages.net/up/20/19/hrqz.jpg',
@@ -7909,20 +7918,21 @@ const defenseThird = {
   drills: [warmupGameDrill, kyeDrill, stopFlow, dwarfDuelDrill, normalGame],
 };
 
-const playingToLearn = {
-  id: 17,
-  title: 'Ultimate Games',
-  image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'Jouer des matchs pour apprendre les bases',
-  drills: [warmupGameDrill, helpGame, normalGame],
-};
+// Part of no program, only gathers other frisbee sports
+// const playingToLearn = {
+//   id: 17,
+//   title: 'Jeux avec des frisbees',
+//   image: 'https://zupimages.net/up/20/19/su0s.jpg',
+//   description: 'Jouer des matchs pour apprendre les bases',
+//   drills: [warmupGameDrill, helpGame, dDC, flubber, guts],
+// };
 
 const zoneCup = {
   id: 18,
   title: 'Initiation à la zone',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: "Premier entraînement pour découvrir la cup d'une défense de zone",
-  drills: [bulldogDrill, warmupGameDrill, cupSwinging, zoneGame],
+  drills: [bulldogDrill, bull, cupSwinging, zoneGame],
 };
 
 const sideStackTraining = {
@@ -7962,7 +7972,103 @@ const secondU10training = {
   title: 'Que du plaisir',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Un deuxième entrainement pour découvrir le disque',
-  drills: [/*statues,*/ crossingTheField, goToTenDrill],
+  drills: [fish, crossingTheField, goToTenDrill, aussieDrill],
+};
+
+const thirdU10 = {
+  id: 24,
+  title: "Il est l'heure de jouer",
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Troisième entrainement pour lancer à un joueur en mouvement',
+  drills: [passMouv, crossingTheField, checkLong, aussieDrill],
+};
+
+const firstU17 = {
+  id: 25,
+  title: 'Découvrir le sport',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Initiation pour découvrir les fondamentaux du sport',
+  drills: [basicThrowsDrill, crossingTheField, boxGame, normalGame],
+};
+
+const secondU17 = {
+  id: 26,
+  title: 'Apprendre les fondamentaux',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: "Un deuxième entrainement pour apprendre à s'amuser avec un disque",
+  drills: [menageATroisDrill, racingWarmUP, dishieLine, treasureHunt, normalGame],
+};
+
+const thirdU17 = {
+  id: 27,
+  title: "Il est l'heure de jouer",
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Troisième entrainement pour développer un jeu plus structuré',
+  drills: [square, trainDrill, game3v3, normalGame],
+};
+
+const verticalJunior = {
+  id: 28,
+  title: 'Initiation au Stack Vertical',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Première séance pour découvrir le stack vertical',
+  drills: [xL, arrow, checkLong, game3v3],
+};
+
+const verticalJuniorSecond = {
+  id: 29,
+  title: 'Comment se démarquer dans un stack Vertical',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Deuxième entrainement pour apprendre à se déplacer dans un stack vertical',
+  drills: [warmupDrill, trainDrill, arrow, normalGame],
+};
+
+const defenseJunior = {
+  id: 30,
+  title: 'La défense individuelle',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Première séance se concentrant sur la défense',
+  drills: [menageATroisDrill, racingWarmUP, dwarDuel, aussieDrill],
+};
+
+const defenseJuniorSecond = {
+  id: 31,
+  title: 'La défense fait gagner des matchs',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Deuxième entrainement pour apprendre à diriger son attaquant',
+  drills: [theTunnel, youShallNotPassDrill, theDuel, game3v3],
+};
+
+const zoneJunior = {
+  id: 32,
+  title: 'Initiation à la défense de zone',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Découverte de la défense de zone',
+  drills: [bulldogDrill, bull, kyeDrill, zoneGame],
+};
+
+const zoneJuniorSecond = {
+  id: 33,
+  title: 'Construire une défense de zone solide',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Deuxième séance pour construire un mur imperméable',
+  drills: [bull, cupSwinging, zoneGame],
+};
+
+const thirdVertical = {
+  id: 34,
+  title: "Création d'un flow",
+  image: 'https://zupimages.net/up/20/19/frj2.jpg',
+  description: 'Comment créer et garder le flow dans un stack Vertical',
+  drills: [arrow, crissCross, dishieLine, bigEightDrill, normalGame],
+};
+
+const zoneCupSecond = {
+  id: 35,
+  title: 'Construire une zone solide',
+  image: 'https://zupimages.net/up/20/19/su0s.jpg',
+  description: 'Deuxième entrainement pour améliorer la zone',
+  drills: [bull, kyeDrill, stopFlow, zoneGame],
 };
 
 //Fitness Weeks
@@ -8524,6 +8630,7 @@ export const drills = [
   strengthDrill,
   speedDrill,
   tDrill,
+  fartlek,
   lacticSprint,
   circuit,
   serpentine,
@@ -8615,166 +8722,104 @@ export const drills = [
   boxGame,
 ];
 
-export const trainings = [
-  // Fitness
-  fitnessWeek1,
-  fitnessWeek2,
-  fitnessWeek3,
-  fitnessWeek4,
-  fitnessWeek5,
-  fitnessWeek6,
-  fitnessWeek7,
-  fitnessWeek8,
-  fitnessWeek9,
-  fitnessWeek10,
-  fitnessWeek11,
-  fitnessWeek12,
-  fitnessWeek13,
-  fitnessWeek14,
-  fitnessWeek15,
-  fitnessWeek16,
-  fitnessWeek17,
-  fitnessWeek18,
-  fitnessWeek19,
-  fitnessWeek20,
-  fitnessWeek21,
-  fitnessWeek22,
-  fitnessWeek23,
-  fitnessWeek24,
-  fitnessWeek25,
-  fitnessWeek26,
-  fitnessWeek27,
-  fitnessWeek28,
-  fitnessWeek29,
-  fitnessWeek30,
-  fitnessWeek31,
-  fitnessWeek32,
-  fitnessWeek33,
-  fitnessWeek34,
-  fitnessWeek35,
-  fitnessWeek36,
-  fitnessWeek37,
-  fitnessWeek38,
-  fitnessWeek39,
-  fitnessWeek40,
-  fitnessWeek41,
-  fitnessFull1,
-  fitnessFull2,
-  fitnessFull3,
-  fitnessFull4,
-  fitnessFull5,
-  fitnessFull6,
-  fitnessFull7,
-  fitnessFull8,
-  fitnessFull9,
-  fitnessFull10,
-  fitnessFull11,
-  fitnessFull12,
-  fitnessFull13,
-  fitnessFull14,
-  fitnessFull15,
-  fitnessFull16,
-  fitnessFull17,
-  fitnessFull18,
-  fitnessFull19,
-  fitnessFull20,
-  fitnessFull21,
-  fitnessFull22,
-  fitnessFull23,
-  fitnessFull24,
-  fitnessFull25,
-  fitnessFull26,
-  fitnessFull27,
-  fitnessFull28,
-  fitnessFull29,
-
-  // Frisbee
-  dumpSwingTraining,
-  coed2MarkTraining,
-  firstU13Training,
-  secondU13Training,
-  thirdU13Training,
-  fourthU13Training,
-  secondInintiationAdultTraining,
-  thirdInintiationAdultTraining,
-  initiationVerticalTraining,
-  secondVerticalTraining,
-  defenseBaseTraining,
-  horizontalFlow,
-  learningByPlaying,
-  initiationHorizontal,
-  horizontalLine,
-  defenseSecond,
-  defenseThird,
-  playingToLearn,
-  zoneCup,
-  sideStackTraining,
-  splitStackTraining,
-  diagonalStackTraining,
-  u10Initiation,
-  secondU10training,
-];
-
 export const programs = [
   {
     id: 1,
     type: DrillTypes.FRISBEE,
+    ageCategory: AgeCategory.JUNIOR,
     title: 'Initiation u10',
-    trainings: [u10Initiation, secondU10training],
+    trainings: [u10Initiation, secondU10training, thirdU10],
   },
   {
     id: 2,
     type: DrillTypes.FRISBEE,
+    ageCategory: AgeCategory.JUNIOR,
     title: 'Initiation u13',
     trainings: [firstU13Training, secondU13Training, thirdU13Training, fourthU13Training],
   },
   {
     id: 3,
     type: DrillTypes.FRISBEE,
+    ageCategory: AgeCategory.SENIOR,
     title: 'Initiation adultes',
-    trainings: [firstInitiationAdultTraining, secondInintiationAdultTraining, thirdInintiationAdultTraining],
+    trainings: [firstInitiationAdultTraining, secondInitiationAdultTraining, thirdInitiationAdultTraining],
   },
   {
     id: 4,
     type: DrillTypes.FRISBEE,
+    ageCategory: AgeCategory.SENIOR,
     title: 'Stack Vertical',
-    trainings: [initiationVerticalTraining, secondVerticalTraining, dumpSwingTraining],
+    trainings: [initiationVerticalTraining, secondVerticalTraining, thirdVertical, dumpSwingTraining],
   },
   {
     id: 5,
     type: DrillTypes.FRISBEE,
+    ageCategory: AgeCategory.SENIOR,
     title: 'Stack Horizontal',
     trainings: [initiationHorizontal, horizontalFlow, horizontalLine],
   },
   {
     id: 6,
     type: DrillTypes.FRISBEE,
+    ageCategory: AgeCategory.SENIOR,
     title: 'Défense individuelle',
     trainings: [defenseBaseTraining, defenseSecond, defenseThird],
   },
   {
     id: 7,
     type: DrillTypes.FRISBEE,
+    ageCategory: AgeCategory.SENIOR,
     title: 'Défense de Zone',
-    trainings: [zoneCup],
+    trainings: [zoneCup, zoneCupSecond],
   },
   {
     id: 8,
     type: DrillTypes.FRISBEE,
+    ageCategory: AgeCategory.SENIOR,
     title: 'Stack sur le côté',
     trainings: [sideStackTraining],
   },
   {
     id: 9,
     type: DrillTypes.FRISBEE,
+    ageCategory: AgeCategory.SENIOR,
     title: 'Stack en U',
     trainings: [splitStackTraining],
   },
   {
     id: 10,
     type: DrillTypes.FRISBEE,
+    ageCategory: AgeCategory.SENIOR,
     title: 'Stack diagonal',
     trainings: [diagonalStackTraining],
+  },
+  {
+    id: 20,
+    type: DrillTypes.FRISBEE,
+    ageCategory: AgeCategory.JUNIOR,
+    title: 'Initiation U17',
+    trainings: [firstU17, secondU17, thirdU17],
+  },
+  {
+    id: 21,
+    type: DrillTypes.FRISBEE,
+    ageCategory: AgeCategory.JUNIOR,
+    title: 'Stack Vertical',
+    trainings: [verticalJunior, verticalJuniorSecond],
+  },
+  {
+    id: 22,
+    type: DrillTypes.FRISBEE,
+    ageCategory: AgeCategory.JUNIOR,
+    title: 'Défense',
+    trainings: [defenseJunior, defenseJuniorSecond],
+  },
+  {
+    id: 23,
+    type: DrillTypes.FRISBEE,
+    ageCategory: AgeCategory.JUNIOR,
+    title: 'Défense de zone',
+    trainings: [zoneJunior, zoneJuniorSecond],
   },
   {
     id: 11,

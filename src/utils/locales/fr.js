@@ -169,9 +169,7 @@ export default {
       one: '1 exercice disponible',
       other: '{{count}} exercices disponibles',
     },
-    theme: '{{theme}}',
-    all: 'TOUS LES SUJETS',
-    custom: 'PERSONNALISÉ',
+    filter: 'FILTRER',
   },
   drillPage: {
     minutes: 'minutes',

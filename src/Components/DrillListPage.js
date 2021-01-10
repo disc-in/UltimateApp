@@ -1,13 +1,13 @@
-import React, { useLayoutEffect } from 'react';
+import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 import DrillList from './shared/DrillList';
 import { DrillTypes } from '../Fixtures/config';
+import { Ionicons } from '@expo/vector-icons';
 
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
 import * as list from '../styles/list.style';
-import HeaderButton from './shared/HeaderButton';
 
 export const DrillListPage = (props) => {
   const { navigation, route, storeDrills } = props;
@@ -15,15 +15,6 @@ export const DrillListPage = (props) => {
 
   const storeDrillsForType = storeDrills.filter((drill) => drill.type === type);
   const displayedDrills = currentFilters?.displayedDrills || storeDrillsForType;
-
-  let selectedGoals = currentFilters?.selectedGoals.join(' - ').toUpperCase() || I18n.t('drillListPage.all');
-  if (currentFilters?.selectedGoals.length > 2) {
-    selectedGoals = I18n.t('drillListPage.custom');
-  }
-
-  if (I18n.locale === 'fr-FR' && currentFilters?.selectedGoals.length > 1) {
-    selectedGoals = I18n.t('drillListPage.custom');
-  }
 
   const sortingProperty = type === DrillTypes.FRISBEE ? 'minimalPlayersNumber' : 'durationInMinutes';
   const sortedDisplayedDrills = displayedDrills.sort((a, b) => a[sortingProperty] - b[sortingProperty]);
@@ -38,13 +29,6 @@ export const DrillListPage = (props) => {
     });
   };
 
-  useLayoutEffect(() =>
-    navigation.setOptions({
-      headerRight: () => <HeaderButton icon="filter-outline" onPress={openFilters} testID="filterButton" />,
-    }),
-  ),
-    [navigation, route.params.type];
-
   if (type === DrillTypes.FRISBEE) {
     return (
       <View style={styles.drillListPage}>
@@ -56,9 +40,12 @@ export const DrillListPage = (props) => {
               </Text>
             </View>
             <View style={styles.container}>
-              <TouchableOpacity style={styles.button} onPress={openFilters}>
-                <View>
-                  <Text style={styles.text}>{I18n.t('drillListPage.theme', { theme: selectedGoals })}</Text>
+              <TouchableOpacity style={styles.button} onPress={openFilters} testID="filterButton">
+                <View style={styles.filterButton}>
+                  <View style={styles.filterIcon}>
+                    <Ionicons name="md-funnel" color={theme.COLOR_PRIMARY_LIGHT} size={20} />
+                  </View>
+                  <Text style={styles.text}>{I18n.t('drillListPage.filter')}</Text>
                 </View>
               </TouchableOpacity>
             </View>
@@ -101,9 +88,9 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   button: {
-    width: '85%',
+    width: 100,
     height: 30,
-    borderRadius: 5,
+    borderRadius: 3,
     backgroundColor: theme.MAIN_COLOR,
     justifyContent: 'center',
     position: 'absolute',
@@ -112,15 +99,16 @@ const styles = StyleSheet.create({
   text: {
     textAlign: 'center',
     color: theme.COLOR_PRIMARY_LIGHT,
-    fontSize: theme.FONT_SIZE_SMALL,
+    fontSize: theme.FONT_SIZE_MEDIUM,
     fontWeight: 'bold',
+    marginHorizontal: 8,
   },
   marginBottom: {
     marginBottom: 20,
   },
   flexContainer: {
     flexDirection: 'row',
-    paddingRight: 20,
+    paddingRight: 25,
     height: 30,
   },
   container: {
@@ -128,5 +116,11 @@ const styles = StyleSheet.create({
   },
   centerVertical: {
     justifyContent: 'center',
+  },
+  filterButton: {
+    textAlign: 'center',
+    paddingLeft: 8,
+    alignItems: 'center',
+    flexDirection: 'row',
   },
 });

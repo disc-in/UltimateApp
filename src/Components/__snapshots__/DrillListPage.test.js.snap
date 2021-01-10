@@ -23,7 +23,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
         Object {
           "flexDirection": "row",
           "height": 30,
-          "paddingRight": 20,
+          "paddingRight": 25,
         }
       }
     >
@@ -64,28 +64,42 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           style={
             Object {
               "backgroundColor": "#2a9e91",
-              "borderRadius": 5,
+              "borderRadius": 3,
               "height": 30,
               "justifyContent": "center",
               "opacity": 1,
               "position": "absolute",
               "right": 0,
-              "width": "85%",
+              "width": 100,
             }
           }
+          testID="filterButton"
         >
-          <View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "paddingLeft": 8,
+                "textAlign": "center",
+              }
+            }
+          >
+            <View>
+              <Text />
+            </View>
             <Text
               style={
                 Object {
                   "color": "#fff",
                   "fontSize": 16,
                   "fontWeight": "bold",
+                  "marginHorizontal": 8,
                   "textAlign": "center",
                 }
               }
             >
-              ALL
+              FILTER
             </Text>
           </View>
         </View>
@@ -744,21 +758,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
     navigation={
       Object {
         "navigate": [MockFunction],
-        "setOptions": [MockFunction] {
-          "calls": Array [
-            Array [
-              Object {
-                "headerRight": [Function],
-              },
-            ],
-          ],
-          "results": Array [
-            Object {
-              "type": "return",
-              "value": undefined,
-            },
-          ],
-        },
+        "setOptions": [MockFunction],
       }
     }
     onContentSizeChange={[Function]}
@@ -1075,7 +1075,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
         Object {
           "flexDirection": "row",
           "height": 30,
-          "paddingRight": 20,
+          "paddingRight": 25,
         }
       }
     >
@@ -1272,39 +1272,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
     navigation={
       Object {
         "navigate": [MockFunction],
-        "setOptions": [MockFunction] {
-          "calls": Array [
-            Array [
-              Object {
-                "headerRight": [Function],
-              },
-            ],
-            Array [
-              Object {
-                "headerRight": [Function],
-              },
-            ],
-            Array [
-              Object {
-                "headerRight": [Function],
-              },
-            ],
-          ],
-          "results": Array [
-            Object {
-              "type": "return",
-              "value": undefined,
-            },
-            Object {
-              "type": "return",
-              "value": undefined,
-            },
-            Object {
-              "type": "return",
-              "value": undefined,
-            },
-          ],
-        },
+        "setOptions": [MockFunction],
       }
     }
     onContentSizeChange={[Function]}
@@ -1756,7 +1724,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
         Object {
           "flexDirection": "row",
           "height": 30,
-          "paddingRight": 20,
+          "paddingRight": 25,
         }
       }
     >
@@ -1797,28 +1765,61 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           style={
             Object {
               "backgroundColor": "#2a9e91",
-              "borderRadius": 5,
+              "borderRadius": 3,
               "height": 30,
               "justifyContent": "center",
               "opacity": 1,
               "position": "absolute",
               "right": 0,
-              "width": "85%",
+              "width": 100,
             }
           }
+          testID="filterButton"
         >
-          <View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "paddingLeft": 8,
+                "textAlign": "center",
+              }
+            }
+          >
+            <View>
+              <Text
+                allowFontScaling={false}
+                style={
+                  Array [
+                    Object {
+                      "color": "#fff",
+                      "fontSize": 20,
+                    },
+                    undefined,
+                    Object {
+                      "fontFamily": "ionicons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    Object {},
+                  ]
+                }
+              >
+                
+              </Text>
+            </View>
             <Text
               style={
                 Object {
                   "color": "#fff",
                   "fontSize": 16,
                   "fontWeight": "bold",
+                  "marginHorizontal": 8,
                   "textAlign": "center",
                 }
               }
             >
-              ALL
+              FILTER
             </Text>
           </View>
         </View>
@@ -1999,30 +2000,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
     navigation={
       Object {
         "navigate": [MockFunction],
-        "setOptions": [MockFunction] {
-          "calls": Array [
-            Array [
-              Object {
-                "headerRight": [Function],
-              },
-            ],
-            Array [
-              Object {
-                "headerRight": [Function],
-              },
-            ],
-          ],
-          "results": Array [
-            Object {
-              "type": "return",
-              "value": undefined,
-            },
-            Object {
-              "type": "return",
-              "value": undefined,
-            },
-          ],
-        },
+        "setOptions": [MockFunction],
       }
     }
     onContentSizeChange={[Function]}

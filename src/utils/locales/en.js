@@ -170,9 +170,7 @@ export default {
       one: '{{count}} drill available',
       other: '{{count}} drills available',
     },
-    theme: '{{theme}}',
-    all: 'ALL',
-    custom: 'CUSTOM',
+    filter: 'FILTER',
   },
   drillPage: {
     minutes: 'minutes',

@@ -16,6 +16,7 @@ const Slider = ({ minimumValue, maximumValue, step, value, onValueChange, testID
         style={styles.slider}
         trackStyle={styles.trackStyle}
         minimumTrackTintColor={theme.MAIN_COLOR}
+        thumbStyle={styles.thumb}
         thumbTintColor={theme.MAIN_COLOR}
         testID={testID}
       />
@@ -37,6 +38,10 @@ const styles = StyleSheet.create({
   slider: {
     flexGrow: 10,
     marginHorizontal: 10,
+  },
+  thumb: {
+    height: 20,
+    width: 20,
   },
   trackStyle: {
     height: 2,

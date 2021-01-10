@@ -5418,7 +5418,7 @@ const endzoneGameDrill = {
   steps: [
     {
       id: 1,
-      title: 'Endzone',
+      title: 'Finition en Endzone',
       animation: endzoneAnimation,
       repetition: '',
       rest: '',
@@ -5427,7 +5427,7 @@ const endzoneGameDrill = {
     },
     {
       id: 2,
-      title: 'Finition en Endzone',
+      title: 'La meute de loups',
       animation: endzoneFinition,
       repetition: '',
       rest: '',
@@ -6056,7 +6056,7 @@ const theDuel = {
       repetition: '',
       rest: '',
       instruction:
-        "Le premier cutter après initialiser ne peut plus faire d'autre feinte. Le lanceur doit réagir rapidement. Effectuer une rotation tous les 3 lancers",
+        'Le premier cutter après ne peut pas changer de direction après avoir démarré. Le lanceur doit réagir rapidement. Effectuer une rotation tous les 3 lancers',
     },
     {
       id: 2,
@@ -6806,8 +6806,7 @@ const splitToVertical = {
       animation: splitWindmill,
       repetition: '',
       rest: '',
-      instruction:
-        "Même situation, mais maintenant les cutters dans l'ouvert libèrent l'espace et les autres cutters prennent l'espace",
+      instruction: "Même situation, mais maintenant les cutters dans l'ouvert libèrent l'espace pour les autres.",
     },
   ],
 };

@@ -553,7 +553,7 @@ exports[`<PlayEditorPage /> renders correctly  with a currentPlay 1`] = `
                   "textAlignVertical": "center",
                 },
                 Object {
-                  "backgroundColor": "#9d9d9d",
+                  "backgroundColor": "#000000",
                 },
                 Object {
                   "borderRadius": 0,
@@ -1216,7 +1216,7 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
                   "textAlignVertical": "center",
                 },
                 Object {
-                  "backgroundColor": "#9d9d9d",
+                  "backgroundColor": "#000000",
                 },
                 Object {
                   "borderRadius": 0,

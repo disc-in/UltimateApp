@@ -4944,6 +4944,7 @@ const basicThrowsDrill = {
       title: 'Throwing Machine',
       animation: throwingMachine,
       vimeoId: '485392763',
+      youtube: 'https://youtu.be/1CrXDoZM6ns',
       repetition: '',
       rest: '',
       instruction: 'With a partner, players throw backhands and forehands for 5 minutes',
@@ -4953,6 +4954,7 @@ const basicThrowsDrill = {
       title: 'The Throwing Olympics Ladder',
       animation: ladder,
       vimeoId: '485393003',
+      youtube: 'https://youtu.be/yzRNrA_KFaE',
       repetition: '',
       rest: '',
       instruction:
@@ -4963,6 +4965,7 @@ const basicThrowsDrill = {
       title: 'With Ghosts',
       animation: ladderGhost,
       vimeoId: '485399479',
+      youtube: 'https://youtu.be/5c1Ky9MRUco',
       repetition: '',
       rest: '',
       instruction:
@@ -5070,6 +5073,7 @@ const kyeDrill = {
       title: '3 vs 2',
       animation: threeVersusTwo,
       vimeoId: '485452835',
+      youtube: 'https://youtu.be/yIrndVODBTk',
       repetition: '',
       rest: '',
       instruction:
@@ -5149,6 +5153,7 @@ const trainDrill = {
       title: 'Normal train',
       animation: train,
       vimeoId: '462695757',
+      youtube: 'https://youtu.be/nSQpw4oLP_E',
       repetition: '',
       rest: '',
       instruction:
@@ -5189,6 +5194,7 @@ const giveAndGoDrill = {
       title: 'Give-N-Go',
       animation: giveAndGo,
       vimeoId: '485473267',
+      youtube: 'https://youtu.be/6RaV7p-GbGk',
       repetition: '',
       rest: '',
       instruction: 'Try to do this give and go drill as fast as possible. Make sure not to travel',
@@ -5197,6 +5203,7 @@ const giveAndGoDrill = {
       id: 2,
       title: 'Make It Count',
       animation: giveAndGoRace,
+      youtube: 'https://youtu.be/Yt8CVpHs6y0',
       vimeoId: '485473406',
       repetition: '',
       rest: '',
@@ -5363,6 +5370,7 @@ const bulldogDrill = {
       title: 'British Bulldog',
       animation: bulldogAnimation,
       vimeoId: '485473214',
+      youtube: 'https://youtu.be/hth8QQ3lIPY',
       repetition: '',
       rest: '',
       instruction:
@@ -5393,6 +5401,7 @@ const menageATroisDrill = {
       title: 'Flat mark',
       animation: threePerson,
       vimeoId: '462695161',
+      youtube: 'https://youtu.be/z7IuuexL-dM',
       repetition: '',
       rest: '',
       instruction:
@@ -5403,6 +5412,7 @@ const menageATroisDrill = {
       title: 'Redemption',
       animation: redemption,
       vimeoId: '485391944',
+      youtube: 'https://youtu.be/37Wm_0ELd5Y',
       repetition: '',
       rest: '',
       instruction:
@@ -5434,6 +5444,7 @@ const dwarfDuelDrill = {
       title: 'Dwarf Duel',
       animation: dwarDuel,
       vimeoId: '462695083',
+      youtube: 'https://youtu.be/bpgVsv6fXBw',
       repetition: '',
       rest: '',
       instruction:
@@ -5465,6 +5476,7 @@ const dishieChainDrill = {
       title: 'Focus on Offense',
       animation: dishiesChain,
       vimeoId: '462694949',
+      youtube: 'https://youtu.be/a0CrT_EqkKI',
       repetition: '',
       rest: '',
       instruction:
@@ -5475,6 +5487,7 @@ const dishieChainDrill = {
       title: 'Adding a Poach',
       animation: dishiesPoach,
       vimeoId: '462697155',
+      youtube: 'https://youtu.be/BkZw53MHTyI',
       repetition: '',
       rest: '',
       instruction:
@@ -5545,6 +5558,7 @@ const triangleOfDeathdrill = {
       title: 'The Triangle of Death',
       animation: triangleDeath,
       vimeoId: '485473100',
+      youtube: 'https://youtu.be/m56FwcAYiMY',
       repetition: '',
       rest: '',
       instruction:
@@ -5576,6 +5590,7 @@ const trainOfFakeDrill = {
       title: 'Normal Train',
       animation: train,
       vimeoId: '462695757',
+      youtube: 'https://youtu.be/nSQpw4oLP_E',
       repetition: '',
       rest: '',
       instruction:
@@ -5586,6 +5601,7 @@ const trainOfFakeDrill = {
       title: 'With One Fake',
       animation: oneFakeTrain,
       vimeoId: '462695420',
+      youtube: 'https://youtu.be/V_IVyU67zIM',
       repetition: '',
       rest: '',
       instruction:
@@ -5596,6 +5612,7 @@ const trainOfFakeDrill = {
       title: 'With Two Fakes',
       animation: twoFakeTrain,
       vimeoId: '462696097',
+      youtube: 'https://youtu.be/H0TONgiBAMA',
       repetition: '',
       rest: '',
       instruction:
@@ -5627,6 +5644,7 @@ const resetOpenDrill = {
       title: 'The Backdoor',
       animation: backdoor,
       vimeoId: '462694656',
+      youtube: 'https://youtu.be/QeDQuLZyI-8',
       repetition: '',
       rest: '',
       instruction:
@@ -5637,6 +5655,7 @@ const resetOpenDrill = {
       title: 'Power Reset',
       animation: powerReset,
       vimeoId: '462695562',
+      youtube: 'https://youtu.be/FQySMIy8bE4',
       repetition: '',
       rest: '',
       instruction:
@@ -5647,6 +5666,7 @@ const resetOpenDrill = {
       title: 'Game Situation',
       animation: resetOpen,
       vimeoId: '462696413',
+      youtube: 'https://youtu.be/NBmv-QKOPrs',
       repetition: '',
       rest: '',
       instruction:
@@ -5678,6 +5698,7 @@ const resetBreakDrill = {
       title: 'The 45° Upline',
       animation: upline,
       vimeoId: '462696489',
+      youtube: 'https://youtu.be/F9FU4VCsajg',
       repetition: '',
       rest: '',
       instruction:
@@ -5688,6 +5709,7 @@ const resetBreakDrill = {
       title: 'The Easy Reset',
       animation: around,
       vimeoId: '462694618',
+      youtube: 'https://youtu.be/g42Tq76B750',
       repetition: '',
       rest: '',
       instruction:
@@ -5698,6 +5720,7 @@ const resetBreakDrill = {
       title: 'Game Situation',
       animation: resetBreak,
       vimeoId: '462696185',
+      youtube: 'https://youtu.be/7KDAlZYUHzc',
       repetition: '',
       rest: '',
       instruction:
@@ -5729,6 +5752,7 @@ const youShallNotPassDrill = {
       title: 'Blocking the Under',
       animation: blockTheUnder,
       vimeoId: '462695379',
+      youtube: 'https://youtu.be/VASLKvuucQI',
       repetition: '',
       rest: '',
       instruction:
@@ -5739,6 +5763,7 @@ const youShallNotPassDrill = {
       title: 'Blocking Everything',
       animation: blockEverything,
       vimeoId: '462695250',
+      youtube: 'https://youtu.be/Fl82SFsRtI4',
       repetition: '',
       rest: '',
       instruction: 'The same exercise as "Blocking the Under," but the thrower is allowed to throw both deep and under',
@@ -5817,6 +5842,7 @@ const discGolf = {
       title: 'Disc Golf',
       animation: discGolfAnimation,
       vimeoId: '475059721',
+      youtube: 'https://youtu.be/xWYlZWBDxjA',
       repetition: '',
       rest: '',
       instruction:
@@ -5849,6 +5875,7 @@ const dDC = {
       title: 'DDC',
       animation: dDCAnimation,
       vimeoId: '436158587',
+      youtube: 'https://www.youtube.com/watch?v=nszaRylOxus',
       repetition: '',
       rest: '',
       instruction:
@@ -6004,6 +6031,7 @@ const dishieLine = {
       title: 'The Dishy Line',
       animation: dishieLineAnimation,
       vimeoId: '486367517',
+      youtube: 'https://youtu.be/PsjbCPsv7ow',
       repetition: '',
       rest: '',
       instruction:
@@ -6224,6 +6252,8 @@ const checkLong = {
       id: 1,
       title: 'Time to go long',
       animation: longCheck,
+      vimeoId: '499213650',
+      youtube: 'https://youtu.be/m7ppiwERbKk',
       repetition: '',
       rest: '',
       instruction:
@@ -6254,6 +6284,7 @@ const manipulation = {
       title: 'Three Discs',
       animation: undefined,
       vimeoId: '475053354',
+      youtube: 'https://youtu.be/zr1FmIhd0T8',
       repetition: '',
       rest: '',
       instruction: 'One player could never hold more than one disc at any moment. Try to "survive" as long as possible',
@@ -6263,6 +6294,7 @@ const manipulation = {
       title: 'Greatest',
       animation: undefined,
       vimeoId: '475053092',
+      youtube: 'https://youtu.be/lBraFZYH9A4',
       repetition: '',
       rest: '',
       instruction:
@@ -6273,6 +6305,7 @@ const manipulation = {
       title: 'Double Catch',
       animation: undefined,
       vimeoId: '475055767',
+      youtube: 'https://youtu.be/Bb0ghWgixyI',
       repetition: '',
       rest: '',
       instruction: "The goal it's catching 2 (or even 3) send by your partner",
@@ -6282,6 +6315,7 @@ const manipulation = {
       title: 'No Look',
       animation: undefined,
       vimeoId: '475055902',
+      youtube: 'https://youtu.be/xxrOmQoJsv4',
       repetition: '',
       rest: '',
       instruction:
@@ -6292,6 +6326,7 @@ const manipulation = {
       title: 'Double Discs',
       animation: throwCatch,
       vimeoId: '462695929',
+      youtube: 'https://youtu.be/MUhwZC_eFno',
       repetition: '',
       rest: '',
       instruction:
@@ -6323,6 +6358,7 @@ const stopFlow = {
       title: 'Stop the Flow',
       animation: stopFlowAnimation,
       vimeoId: '462695656',
+      youtube: 'https://youtu.be/O969EIUiDoM',
       repetition: '',
       rest: '',
       instruction:
@@ -6354,6 +6390,7 @@ const theTunnel = {
       title: 'The Tunnel',
       animation: theTunnelAnimation,
       vimeoId: '485472876',
+      youtube: 'https://youtu.be/FR7pah77Y0s',
       repetition: '',
       rest: '',
       instruction:
@@ -6394,6 +6431,7 @@ const racingWarmUP = {
       title: 'Noughts and Crosses',
       animation: undefined,
       vimeoId: '486367246',
+      youtube: 'https://www.youtube.com/watch?v=b0Jp56zYoio',
       repetition: '',
       rest: '',
       instruction:
@@ -6414,6 +6452,7 @@ const racingWarmUP = {
       title: "The Leopard's Defense",
       animation: leopard,
       vimeoId: '485471567',
+      youtube: 'https://youtu.be/cEsLdPAP140',
       repetition: '',
       rest: '',
       instruction:
@@ -6445,6 +6484,7 @@ const cupSwinging = {
       title: 'The Wall',
       animation: firtWallAnimation,
       vimeoId: '485399518',
+      youtube: 'https://youtu.be/VKqID3_kWnI',
       repetition: '',
       rest: '',
       instruction:
@@ -6492,6 +6532,7 @@ const zoneGame = {
       id: 2,
       title: 'Zone Video',
       vimeoId: '436156281',
+      youtube: 'https://www.youtube.com/watch?v=6xsJuvlXC_g',
       repetition: '',
       rest: '',
       instruction: '',
@@ -6522,6 +6563,7 @@ const goaltimateDrill = {
       title: 'Goaltimate rules',
       animation: goaltimate,
       vimeoId: '416849035',
+      youtube: 'https://www.youtube.com/watch?v=C2h7TeLiDnA',
       repetition: '',
       rest: '',
       instruction:
@@ -6769,6 +6811,7 @@ const checkLongKid = {
       title: 'High five & Long',
       animation: checkLongKidAnimation,
       vimeoId: '485473162',
+      youtube: 'https://youtu.be/ULYHlOEjJTY',
       repetition: '',
       rest: '',
       instruction:
@@ -6934,6 +6977,7 @@ const trident = {
       title: 'The Trident',
       animation: tridentAnimation,
       vimeoId: '485392578',
+      youtube: 'https://youtu.be/4_yLG_-5YQs',
       repetition: '',
       rest: '',
       instruction:
@@ -7150,10 +7194,11 @@ const flubber = {
       title: 'Flubber',
       animation: undefined,
       vimeoId: '486367662',
+      youtube: 'https://youtu.be/CHUUUnvNvfQ',
       repetition: '',
       rest: '',
       instruction:
-        "The two teams are separated by a line. To catch the disc a player cannot have more than one point of contact with the disc simultaneously. If this is the case, the opposing team scores a point. A player of the opposite team may try to catch the disc without going over the line with his feet. If he catches the disc his team scores 2 points. If He touches the disc and the Frisbee falls, the other team scores a point.The disc must be thrown between the opponent's knees and head",
+        "The two teams are separated by a line. To catch the disc a player cannot have more than one point of contact with the disc simultaneously. If this is the case, the opposing team scores a point. A player of the opposite team may try to catch the disc without going over the line with his feet. If he catches the disc his team scores 2 points. If He touches the disc and the Frisbee falls, the other team scores a point. The disc must be thrown between the opponent's knees and head",
     },
   ],
 };

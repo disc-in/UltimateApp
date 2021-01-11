@@ -13,7 +13,7 @@ const Modal = ({ title, visible, onClose, children }) => {
         <View style={styles.modalView}>
           <Text style={styles.titleText}>{title}</Text>
           {children}
-          <Button buttonLight onPress={onClose} text={I18n.t('shared.back')} style={styles.backButton} />
+          <Button light onPress={onClose} text={I18n.t('shared.back')} style={styles.backButton} />
         </View>
       </View>
     </NativeModal>

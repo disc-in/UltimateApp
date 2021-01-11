@@ -1,15 +1,23 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import theme from '../../styles/theme.style';
 
-const Button = (props) => {
-  const buttonLight = props.buttonLight ? styles.buttonLight : styles.button;
-  const textLight = props.buttonLight ? styles.textLight : styles.text;
+const Button = ({ onPress, icon, text, light, small, style, testID }) => {
+  const buttonLight = light ? styles.buttonLight : undefined;
+  const smallButton = small ? styles.smallButton : undefined;
+  const smallIcon = small ? styles.smallIcon : undefined;
+  const textLight = light ? styles.textLight : styles.text;
 
   return (
-    <TouchableOpacity style={[buttonLight, props.style]} onPress={props.onPress} testID={props.testID || 'button'}>
-      <Text style={textLight}>{props.text}</Text>
+    <TouchableOpacity
+      style={[styles.button, buttonLight, smallButton, style]}
+      onPress={onPress}
+      testID={testID || 'button'}
+    >
+      {icon && <MaterialCommunityIcons name={icon} style={[styles.icon, textLight, smallIcon]} />}
+      {text && <Text style={textLight}>{text}</Text>}
     </TouchableOpacity>
   );
 };
@@ -24,26 +32,32 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     justifyContent: 'center',
     alignItems: 'center',
+    flexDirection: 'row',
+  },
+  buttonLight: {
+    backgroundColor: theme.COLOR_PRIMARY_LIGHT,
+    borderColor: theme.MAIN_COLOR,
+    borderWidth: 1,
+  },
+  smallButton: {
+    width: 'auto',
+    alignSelf: 'center',
+    height: 30,
+    paddingVertical: 0,
+    paddingHorizontal: 10,
+  },
+  icon: {
+    marginRight: 20,
+  },
+  smallIcon: {
+    marginRight: 5,
   },
   text: {
     textAlign: 'center',
     color: theme.COLOR_PRIMARY_LIGHT,
     fontSize: theme.FONT_SIZE_MEDIUM,
   },
-  buttonLight: {
-    width: '80%',
-    height: 40,
-    borderRadius: 5,
-    backgroundColor: theme.COLOR_PRIMARY_LIGHT,
-    borderColor: theme.MAIN_COLOR,
-    borderWidth: 1,
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
   textLight: {
-    textAlign: 'center',
     color: theme.MAIN_COLOR,
     fontSize: theme.FONT_SIZE_MEDIUM,
     fontWeight: 'bold',

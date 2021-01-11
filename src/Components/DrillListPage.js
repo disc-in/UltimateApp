@@ -1,7 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
-import { Ionicons } from '@expo/vector-icons';
 
 import { DrillTypes } from '../Fixtures/config';
 import I18n from '../utils/i18n';
@@ -67,6 +66,7 @@ const styles = StyleSheet.create({
   drillListPage: {
     paddingTop: 10,
     paddingLeft: 20,
+    paddingRight: 10,
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     height: '100%',
   },
@@ -74,8 +74,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingRight: 25,
-    height: 30,
     marginBottom: 5,
   },
   counter: {

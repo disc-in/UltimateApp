@@ -7,6 +7,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
       "backgroundColor": "#fff",
       "height": "100%",
       "paddingLeft": 20,
+      "paddingRight": 10,
       "paddingTop": 10,
     }
   }
@@ -16,10 +17,8 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
       Object {
         "alignItems": "center",
         "flexDirection": "row",
-        "height": 30,
         "justifyContent": "space-between",
         "marginBottom": 5,
-        "paddingRight": 25,
       }
     }
   >
@@ -1028,6 +1027,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
       "backgroundColor": "#fff",
       "height": "100%",
       "paddingLeft": 20,
+      "paddingRight": 10,
       "paddingTop": 10,
     }
   }
@@ -1037,10 +1037,8 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
       Object {
         "alignItems": "center",
         "flexDirection": "row",
-        "height": 30,
         "justifyContent": "space-between",
         "marginBottom": 5,
-        "paddingRight": 25,
       }
     }
   >
@@ -1664,6 +1662,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
       "backgroundColor": "#fff",
       "height": "100%",
       "paddingLeft": 20,
+      "paddingRight": 10,
       "paddingTop": 10,
     }
   }
@@ -1673,10 +1672,8 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
       Object {
         "alignItems": "center",
         "flexDirection": "row",
-        "height": 30,
         "justifyContent": "space-between",
         "marginBottom": 5,
-        "paddingRight": 25,
       }
     }
   >

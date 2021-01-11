@@ -170,7 +170,7 @@ export default {
       one: '{{count}} drill available',
       other: '{{count}} drills available',
     },
-    filter: 'FILTER',
+    filter: 'Filter',
   },
   drillPage: {
     minutes: 'minutes',

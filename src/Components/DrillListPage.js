@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 import DrillList from './shared/DrillList';
@@ -7,7 +7,6 @@ import { Ionicons } from '@expo/vector-icons';
 
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
-import * as list from '../styles/list.style';
 
 export const DrillListPage = (props) => {
   const { navigation, route, storeDrills } = props;
@@ -16,6 +15,19 @@ export const DrillListPage = (props) => {
   const storeDrillsForType = storeDrills.filter((drill) => drill.type === type);
   const displayedDrills = currentFilters?.displayedDrills || storeDrillsForType;
 
+  let filterIsOn = false;
+  if (
+    currentFilters?.selectedGoals.length > 0 ||
+    currentFilters?.selectedLevels.length > 0 ||
+    currentFilters?.selectedFavorites ||
+    currentFilters?.numberOfPlayers
+  ) {
+    filterIsOn = true;
+  } else {
+    filterIsOn = false;
+  }
+
+  const filterIsActivate = filterIsOn ? styles.colorLight : undefined;
   const sortingProperty = type === DrillTypes.FRISBEE ? 'minimalPlayersNumber' : 'durationInMinutes';
   const sortedDisplayedDrills = displayedDrills.sort((a, b) => a[sortingProperty] - b[sortingProperty]);
 
@@ -29,47 +41,36 @@ export const DrillListPage = (props) => {
     });
   };
 
-  if (type === DrillTypes.FRISBEE) {
-    return (
-      <View style={styles.drillListPage}>
-        <View style={styles.marginBottom}>
-          <View style={styles.flexContainer}>
-            <View style={styles.centerVertical}>
-              <Text style={list.counter}>
-                {I18n.t('drillListPage.availableDrills', { count: displayedDrills.length })}
-              </Text>
-            </View>
-            <View style={styles.container}>
-              <TouchableOpacity style={styles.button} onPress={openFilters} testID="filterButton">
-                <View style={styles.filterButton}>
-                  <View style={styles.filterIcon}>
-                    <Ionicons name="md-funnel" color={theme.COLOR_PRIMARY_LIGHT} size={20} />
-                  </View>
-                  <Text style={styles.text}>{I18n.t('drillListPage.filter')}</Text>
-                </View>
-              </TouchableOpacity>
-            </View>
-          </View>
+  return (
+    <View style={styles.drillListPage}>
+      <View style={styles.flexContainer}>
+        <View style={styles.centerVertical}>
+          <Text style={styles.counter}>
+            {I18n.t('drillListPage.availableDrills', { count: displayedDrills.length })}
+          </Text>
         </View>
-        <DrillList navigation={navigation} drillsToDisplay={displayedDrills} />
-      </View>
-    );
-  } else {
-    return (
-      <View style={styles.drillListPage}>
-        <View style={styles.marginBottom}>
-          <View style={styles.flexContainer}>
-            <View style={styles.centerVertical}>
-              <Text style={list.counter}>
-                {I18n.t('drillListPage.availableDrills', { count: displayedDrills.length })}
-              </Text>
-            </View>
+        {type === DrillTypes.FRISBEE && (
+          <View style={styles.container}>
+            <TouchableOpacity
+              style={filterIsOn ? styles.buttonActivate : styles.button}
+              onPress={openFilters}
+              testID="filterButton"
+            >
+              <View style={styles.filterButton}>
+                <Ionicons
+                  name="md-funnel"
+                  color={filterIsOn ? theme.COLOR_PRIMARY_LIGHT : theme.MAIN_COLOR}
+                  size={16}
+                />
+                <Text style={[styles.text, filterIsActivate]}>{I18n.t('drillListPage.filter')}</Text>
+              </View>
+            </TouchableOpacity>
           </View>
-        </View>
-        <DrillList navigation={navigation} drillsToDisplay={displayedDrills} />
+        )}
       </View>
-    );
-  }
+      <DrillList navigation={navigation} drillsToDisplay={displayedDrills} />
+    </View>
+  );
 };
 
 const mapStateToProps = (state) => {
@@ -88,9 +89,20 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   button: {
-    width: 100,
+    width: 85,
     height: 30,
-    borderRadius: 3,
+    borderRadius: 2,
+    backgroundColor: theme.COLOR_PRIMARY_LIGHT,
+    borderColor: theme.MAIN_COLOR,
+    borderWidth: 1,
+    justifyContent: 'center',
+    position: 'absolute',
+    right: 0,
+  },
+  buttonActivate: {
+    width: 85,
+    height: 30,
+    borderRadius: 2,
     backgroundColor: theme.MAIN_COLOR,
     justifyContent: 'center',
     position: 'absolute',
@@ -98,18 +110,23 @@ const styles = StyleSheet.create({
   },
   text: {
     textAlign: 'center',
+    color: theme.MAIN_COLOR,
+    fontSize: theme.FONT_SIZE_MEDIUM,
+    fontWeight: 'bold',
+    marginHorizontal: 8,
+  },
+  textActivate: {
+    textAlign: 'center',
     color: theme.COLOR_PRIMARY_LIGHT,
     fontSize: theme.FONT_SIZE_MEDIUM,
     fontWeight: 'bold',
     marginHorizontal: 8,
   },
-  marginBottom: {
-    marginBottom: 20,
-  },
   flexContainer: {
     flexDirection: 'row',
     paddingRight: 25,
     height: 30,
+    marginBottom: 20,
   },
   container: {
     flex: 1,
@@ -118,9 +135,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   filterButton: {
-    textAlign: 'center',
-    paddingLeft: 8,
+    justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row',
+  },
+  counter: {
+    color: theme.COLOR_SECONDARY,
+    justifyContent: 'center',
+  },
+  colorLight: {
+    color: theme.COLOR_PRIMARY_LIGHT,
   },
 });

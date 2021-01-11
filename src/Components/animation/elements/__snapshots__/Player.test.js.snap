@@ -11,7 +11,7 @@ exports[`<Player /> renders defense correctly 1`] = `
         "textAlignVertical": "center",
       },
       Object {
-        "backgroundColor": "#9d9d9d",
+        "backgroundColor": "#000000",
       },
       Object {
         "borderRadius": 10,

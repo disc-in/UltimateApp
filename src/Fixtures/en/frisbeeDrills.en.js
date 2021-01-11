@@ -5244,7 +5244,7 @@ const bolognaMDrill = {
   description: 'Follow the M',
   minimalPlayersNumber: 10,
   inGame:
-    'This drill allows you to work on the timing needed to get out of the line. The first cut corresponds to the stroke made by the first in the stack when you want to re-center the disc',
+    'This drill allows you to work on the timing needed to get a disc away from the sideline, back to the middle of the field. The first cut is equivalent to the one which the first person in the stack would make when getting the disc back to the middle',
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '5 disc - 6 cones',
   durationInMinutes: 20,
@@ -5330,7 +5330,7 @@ const endzoneGameDrill = {
     },
     {
       id: 2,
-      title: 'Endzone finition',
+      title: 'The Wolves Pack',
       animation: endzoneFinition,
       repetition: '',
       rest: '',
@@ -5650,7 +5650,7 @@ const resetOpenDrill = {
       repetition: '',
       rest: '',
       instruction:
-        'The set-up is the same as in "the Backdoor". The defense on the reset is real, and the reset must choose one of the two directions in which to cut to receive a pass. The reset is not allowed more than one juke. Each team does the same number of attempts, whichever team completes the most passes wins!',
+        'The set-up is the same as in "the Backdoor". The defense on the reset is real, and the reset must choose one of the two directions in which to cut to receive a pass. The reset is not allowed more than one fake throw. Each team does the same number of attempts, whichever team completes the most passes wins!',
     },
   ],
 };
@@ -5852,7 +5852,7 @@ const dDC = {
       repetition: '',
       rest: '',
       instruction:
-        "DDC is played by two teams of two players each. The courts are 13 meters square and 17 meters apart. You get one point for a throw that lands and stays in the opponents' court, or if an opponent drops your throw. Your opponents get one point if your throw touches outside their court. If the other team comes into contact with both discs at the same time, you get two points. That is called 'doubling' your opponents",
+        "DDC is played by two teams of two players each. The courts are 13x13 meter squares and 17 meters apart. You get one point for a throw that lands and stays in the opponents' court, or if an opponent drops your throw. Your opponents get one point if your throw touches outside their court. If the other team comes into contact with both discs at the same time, you get two points. That is called 'doubling' your opponents",
     },
   ],
 };
@@ -5901,7 +5901,7 @@ const game3v3Horizontal = {
   author: 'Mooncatchers',
   title: 'Diamond Cut',
   image: 'https://zupimages.net/up/20/25/2vga.jpg',
-  description: 'Work of freeing up spaces in a horizontal stack',
+  description: 'Practice freeing up space in a horizontal stack',
   minimalPlayersNumber: 6,
   inGame:
     'On a horizontal stack, the objective is to isolate a group a pair of cutters and to gain as much ground as possible with the minimum number of throws',
@@ -5920,7 +5920,7 @@ const game3v3Horizontal = {
       repetition: '',
       rest: '',
       instruction:
-        'Two teams compete against each other. They alternate positions every 2 throws. The goal is to score a point with a maximum of 2 passes. The cutter in the open side starts to move and the cutter has to adapt by making a opposite cut',
+        'Two teams compete against each other. They alternate positions every 2 throws. The goal is to score a point in a maximum of 2 passes. The cutter in the open side starts to move and the cutter has to adapt by making an opposite cut',
     },
     {
       id: 2,
@@ -5928,7 +5928,7 @@ const game3v3Horizontal = {
       animation: threeHorizontalGame,
       repetition: '',
       rest: '',
-      instruction: 'Same drill. When a team manages to score, they stay in offense. First team to 10 wins',
+      instruction: 'Same drill. When a team manages to score, they stay on offense. The first team to 10 wins',
     },
   ],
 };
@@ -5939,7 +5939,7 @@ const theDuel = {
   author: 'Furious George',
   title: 'Nothing like a duel',
   image: 'https://zupimages.net/up/20/28/ncjr.jpg',
-  description: 'Nothing better than a duel to work on the different aspects of the game',
+  description: 'There is nothing better than a duel to work on the different aspects of the game',
   minimalPlayersNumber: 4,
   inGame:
     'The vast majority of tactics aim to isolate one or more players in order to limit collective defenses. In this exercise, the objective is to work on the duel that results from a well-performed tactic',
@@ -5958,7 +5958,7 @@ const theDuel = {
       repetition: '',
       rest: '',
       instruction:
-        "The cutter can't make any fake after initiating. The thrower has to react quickly. Rotate every 3 throws",
+        "The cutter can't change direction after starting to make a move in one direction. The thrower has to react quickly. Rotate every 3 throws",
     },
     {
       id: 2,
@@ -5967,7 +5967,7 @@ const theDuel = {
       repetition: '',
       rest: '',
       instruction:
-        'Same situation as the precedent drill but if the thrower makes a fake, the cutter has to change his direction',
+        'Same situation as the previous drill but if the thrower makes a fake, the cutter has to change their direction',
     },
   ],
 };
@@ -6007,7 +6007,7 @@ const dishieLine = {
       repetition: '',
       rest: '',
       instruction:
-        '2 Lines face each other. The first players of each line run towards the disc carrier to retrieve a dishy. If the thrower makes a realistic fake, the runner must change the direction of his cut',
+        '2 Lines face each other. The first players of each line run towards the disc carrier to retrieve a dishy pass. If the thrower makes a realistic fake, the runner must change the direction of his cut',
     },
   ],
 };
@@ -6037,7 +6037,7 @@ const horizontalToVertical = {
       repetition: '',
       rest: '',
       instruction:
-        "Starting at the brick mark, the goal is to make a quick transition from a 4 middles and 3 handlers position to a 'Classic ' 5 middles and 2 handler position. The first plays can be called a Windmill.  When the flow is create start again by switching the position",
+        "Starting at the brick mark, the goal is to make a quick transition from a 4 middles and 3 handlers position to a 'Classic ' 5 middles and 2 handler position. The first plays can be called a Windmill. Once the flow is smooth, start again by switching the position",
     },
     {
       id: 2,
@@ -6046,7 +6046,7 @@ const horizontalToVertical = {
       repetition: '',
       rest: '',
       instruction:
-        'Same Goal but this time, the play starts with a diamond in the middle. The player in the open side initiates',
+        'Same goal but this time, the play starts with a diamond in the middle. The player in the open side moves first',
     },
     {
       id: 3,
@@ -6055,7 +6055,7 @@ const horizontalToVertical = {
       repetition: '',
       rest: '',
       instruction:
-        "Same Goal but this time, the play starts with 'Iso' on a designed player (Number 3 in the animation). The goal of the Iso is to use the fear of a deep throw to gain a lot of field on the first pass",
+        'Same goal but this time, all players clear from the open side and leave a designated player to make cuts and get the disc (number 3 in the animation). The goal is to use the fear of a deep throw to gain a lot of field from the first pass',
     },
   ],
 };
@@ -6066,7 +6066,7 @@ const horizontalTrap = {
   author: 'Mubidisk',
   title: 'Trap with the Open',
   image: 'https://zupimages.net/up/20/41/y1ki.jpg',
-  description: 'Learning to use the horizontal stack to get out of the line with the cutter in the open side',
+  description: 'Learning to use the horizontal stack to get away from the sideline with the cutter in the open side',
   minimalPlayersNumber: 6,
   inGame:
     'The owner of the disc is stuck near the sideline and tries to center the disc or gain a lot of ground. One of the tactics used may be a horizontal stack. In this exercise, the cut work is done by the middles in front of the thrower',
@@ -6085,7 +6085,7 @@ const horizontalTrap = {
       repetition: '',
       rest: '',
       instruction:
-        'Situation to play with a horizontal stack when the player are trap on the line. The 2 players can only cut between the 4 cones. The closest player from the line initiates and the other player do the opposite. The goal of the offensive player is to gain as many meters as possible in 2 throws',
+        'This is a situation to play with a horizontal stack when the players are trapped on the sideline. The 2 players can only cut between the 4 cones. The closest player to the line initiates the first movement and the other player does the opposite. The goal of the offense is to gain as many meters as possible in 2 throws',
     },
     {
       id: 2,
@@ -6093,7 +6093,7 @@ const horizontalTrap = {
       animation: horizontalTrapBreak,
       repetition: '',
       rest: '',
-      instruction: "Same situation but now we allow the break on the mark. It's still the same player that initiate",
+      instruction: "Same situation but now we allow the break on the mark. It's still the same player that starts",
     },
     {
       id: 3,
@@ -6102,7 +6102,7 @@ const horizontalTrap = {
       repetition: '',
       rest: '',
       instruction:
-        '3 players play against each others. The goal of the offense is to score a goal in maximum 2 passes. If the team succeed, they stay in offense',
+        '3 players play against each other. The goal of the offense is to score a goal in maximum 2 passes. If the team succeeds, they stay on offense',
     },
   ],
 };
@@ -6113,7 +6113,7 @@ const horizontalTrapOutside = {
   author: 'Mubidisk',
   title: 'Trap with the Break',
   image: 'https://zupimages.net/up/20/52/l7a5.jpg',
-  description: 'Learning to use the horizontal stack to get out of the line with the cutter in the break side',
+  description: 'Learning to use the horizontal stack to get away from the sideline with the cutter in the break side',
   minimalPlayersNumber: 6,
   inGame: '-',
   equipmentLabel: EquipmentLabels.NONE,
@@ -6131,7 +6131,7 @@ const horizontalTrapOutside = {
       repetition: '',
       rest: '',
       instruction:
-        'In this situation, the 2 offensive players are the 2 players in the break side of a stack (any kind). They can only touch the frisbee inside the 4 cones and they are trying to gain as many meters as they can in 2 passes. In this drill, the first player go deep and come back at the fake of the thrower. The second player do the continuity',
+        'In this situation, the 2 offensive players are the 2 players in the break side of a stack (of any kind). They can only touch the frisbee inside the 4 cones and they are trying to gain as many meters as they can in 2 passes. In this drill, the first player goes deep and comes back when the handler fakes a throw. The second player cuts in time to catch the next throw and keep the momentum going',
     },
     {
       id: 2,
@@ -6140,7 +6140,7 @@ const horizontalTrapOutside = {
       repetition: '',
       rest: '',
       instruction:
-        'Same situation but now the first player fake going deep for few steps and go directly in the open side. The second player do the continuity deep',
+        'Same situation but now the first player fakes going deep for a few steps and then cuts directly in the open side. The second player cuts deep to catch the next throw',
     },
     {
       id: 3,
@@ -6149,7 +6149,7 @@ const horizontalTrapOutside = {
       repetition: '',
       rest: '',
       instruction:
-        '3 players play against each others. The goal of the offense is to score a goal in maximum 2 passes. If the team succeed, they stay in offense',
+        '3 players play against each other. The goal of the offense is to score a goal in a maximum of 2 passes. If the team succeeds, they stay on offense',
     },
   ],
 };
@@ -6160,7 +6160,7 @@ const horizontalHandler = {
   author: 'Euforia',
   title: 'Trap with the handlers',
   image: 'https://zupimages.net/up/20/52/arcv.jpg',
-  description: 'Learning to use the horizontal stack to get out of the line with the handler',
+  description: 'Learning to use the horizontal stack to get away from the sideline and pass to the reset handler',
   minimalPlayersNumber: 8,
   inGame:
     'The owner of the disc is stuck near the sideline and tries to center the disc or gain a lot of ground. One of the tactics used may be a horizontal stack. In this exercise, the cut work is done by the handlers',
@@ -6179,7 +6179,7 @@ const horizontalHandler = {
       repetition: '',
       rest: '',
       instruction:
-        'The stall is raising. The reset handler advances to form an angle then initiate upline to get the disc. The player number 4 always do the continuity. The second option is to play with the second handler with an around break then to play immediately in the break side. Rotate every 3 throws',
+        'The stall is rising. The reset handler advances to form an angle then initiates a cut upline to get the disc. The player number 4 starts cutting in order to catch the next throw The second option is to throw an around break to the second handler, then to play immediately in the break side. Rotate every 3 throws',
     },
     {
       id: 2,
@@ -6188,7 +6188,7 @@ const horizontalHandler = {
       repetition: '',
       rest: '',
       instruction:
-        'Same situation but now the reset handler is making a cut in the break side. The other handler do the opposite move. The player number 4 always do the continuity',
+        'Same situation but now the reset handler makes cuts in the break side. The other handler moves in the opposite direction. The player number 4 always cuts in time to catch the next throw and keep the momentum going',
     },
     {
       id: 3,
@@ -6197,7 +6197,7 @@ const horizontalHandler = {
       repetition: '',
       rest: '',
       instruction:
-        '4 players play against each others. The goal of the offense is to succeed  2 complete passes. If the team succeed, they stay in offense',
+        '4 players play against each other. The goal of the offense is to complete 2 successful passes. If the team succeeds, they stay on offense',
     },
   ],
 };
@@ -6227,7 +6227,7 @@ const checkLong = {
       repetition: '',
       rest: '',
       instruction:
-        'When the long thrower is changing direction the cutter go long as fast as possible. The goal is to make the longest complete pass',
+        'When the long thrower is changing direction the cutter goes long as fast as possible. The goal is to make the longest complete pass',
     },
   ],
 };
@@ -6306,7 +6306,7 @@ const stopFlow = {
   author: 'Sunder',
   title: 'Stopping the Flow',
   image: 'https://zupimages.net/up/20/28/2b8i.jpg',
-  description: 'Learn to quickly identify dangerous option and deny it',
+  description: 'Learn to quickly identify a dangerous option and block it',
   minimalPlayersNumber: 5,
   inGame:
     'The attackers took the defenders by storm with the first pass. The objective of the defender is to slow down the attack by blocking the most dangerous option with his mark',
@@ -6326,7 +6326,7 @@ const stopFlow = {
       repetition: '',
       rest: '',
       instruction:
-        "The defenders of the first throw are not looking at the disc and they can't make a defense this throw. When the throw is made, the second cutter has to make a straight cut. The first defender tries to block the continuity",
+        "The defenders of the first throw are not looking at the disc and they can't defend this throw. When the throw is made, the second cutter has to make a straight cut. The first defender tries to block the next throw",
     },
   ],
 };
@@ -6337,10 +6337,10 @@ const theTunnel = {
   author: 'CUSB',
   title: 'The Tunnel',
   image: 'https://zupimages.net/up/20/25/742g.jpeg',
-  description: 'Warm up drill to focus on the reactivity in defense',
+  description: 'Warm up drill to focus on reactivity in defense',
   minimalPlayersNumber: 2,
   inGame:
-    'The defenders try to block a direction of the cutter (the under cut in the animation) by always placing themselves between the thrower and the cutter. The defender must also try to stay close to the attacker on the opposite (long) cut option',
+    'The defender tries to block a direction of the cutter (the under cut in the animation) by always placing themselves between the thrower and the cutter. The defender must also try to stay close to the attacker on the opposite (long) cut option',
   equipmentLabel: EquipmentLabels.NONE,
   equipment: '4 cones',
   durationInMinutes: 12,
@@ -6357,7 +6357,7 @@ const theTunnel = {
       repetition: '',
       rest: '',
       instruction:
-        '1 vs 1. The goal of the offensive player is to cross the bottom line first before the defender or to touch the farthest cones before the defender reaches the cone innermost',
+        '1 vs 1. The goal of the offensive player is to cross the bottom line first before the defender or to touch the farthest cone before the defender reaches the first cone',
     },
   ],
 };
@@ -6428,7 +6428,7 @@ const cupSwinging = {
   author: 'Black Fish',
   title: 'Swinging with the cup',
   image: 'https://zupimages.net/up/20/25/019o.jpg',
-  description: 'Practicing the defense against the swing as a 3 players cup',
+  description: 'Practicing the defense against the swing with a cup of 3 players',
   minimalPlayersNumber: 7,
   inGame:
     'When a zone defense is set up, the players forming the first curtain must move uniformly without leaving enough space for a throw to be made between them',
@@ -6448,7 +6448,7 @@ const cupSwinging = {
       repetition: '',
       rest: '',
       instruction:
-        'The objective is to pass through the 1st wall of zone. The count is 10 per side. Throws over are forbidden',
+        'The objective is to get through the 1st wall of a zone. The count is 10 per side. Throws over are forbidden',
     },
     {
       id: 2,
@@ -6457,7 +6457,7 @@ const cupSwinging = {
       repetition: '',
       rest: '',
       instruction:
-        'The 3 players cup as to move together to deny the throw to the cutter. The handlers can only make a flat throw to the cutter. Their goal is to swing quickly to get around the cup',
+        'The 3 players cup has to move together to deny the throw to the cutter. The handlers can only make a flat throw to the cutter. Their goal is to swing quickly to get around the cup',
     },
   ],
 };
@@ -6486,7 +6486,7 @@ const zoneGame = {
       repetition: '',
       rest: '',
       instruction:
-        'The offense team tries to score a point against a zone defense. If there is a turnover, the disc goes back to the offense at the last complete catch and the offense team tries again. They have to score with as few attempts as possible',
+        'The offense tries to score a point against a zone defense. If there is a turnover, the disc goes back to the offense at the last complete catch and the offense team tries again. They have to score in as few attempts as possible',
     },
     {
       id: 2,
@@ -6555,7 +6555,7 @@ const diagonalToVertical = {
       repetition: '',
       rest: '',
       instruction:
-        'Working on making a quick transition from diagonal to Vertical Flow. The 2 players in the open side has to clear, in the break side, to free the space for the others. The cutter goes deep and come back if there is a fake. The handler in the break side become a cutter',
+        'Working on making a quick transition from diagonal to Vertical Flow. The 2 players in the open side have to clear, in the break side, to free the space for the others. The cutter goes deep and comes back if there is a fake. The handler in the break side becomes a cutter',
     },
     {
       id: 2,
@@ -6564,7 +6564,7 @@ const diagonalToVertical = {
       repetition: '',
       rest: '',
       instruction:
-        'Same start but the force is different. The two deepest player go in the break side. The first cutter has to cut to gain a power position. The following cutter go deep and then it become a classic train situation',
+        'Same start but the force is different. The two deepest players cut in the break side. The first cutter has to cut to gain a power position. The following cutter goes deep and then it becomes a classic train situation',
     },
     {
       id: 3,
@@ -6610,7 +6610,7 @@ const diagonalIso = {
       repetition: '',
       rest: '',
       instruction:
-        'The two cutters can only run between the cones and the line. The player more in the middle has initiate and the other one adapts. Try to find the perfect angle to have a good timing',
+        'The two cutters can only run between the cones and the line. The player closest to the middle has to make to first movement and the other one adapts. Try to find the perfect angle to get the timing right',
     },
     {
       id: 2,
@@ -6619,7 +6619,7 @@ const diagonalIso = {
       repetition: '',
       rest: '',
       instruction:
-        'Same start but now the thrower is making an overhead in the break side. The throw has to be further than the first cone. The second cutter try to make the perfect continuity',
+        'Same start but now the thrower is making an overhead throw in the break side. The throw has to be further than the first cone. The second cutter tries to make the perfect continuity',
     },
     {
       id: 3,
@@ -6628,7 +6628,7 @@ const diagonalIso = {
       repetition: '',
       rest: '',
       instruction:
-        'Game situation. The cutter can only run in the open side and in the far break side. To succeed, the offensive team has to score a point in maximum 2 passes.If they score, they stay in offense',
+        'The cutter can only run in the open side and in the far break side. To succeed, the offense has to score a point in maximum 2 passes. If they score, they stay on offense',
     },
   ],
 };
@@ -6657,7 +6657,7 @@ const splitIso = {
       repetition: '',
       rest: '',
       instruction:
-        'The two cutters can only run between the cones and the line. The closest cutter from the handler initiates. Try to find the perfect angle to have a good timing',
+        'The two cutters can only run between the cones and the line. The closest cutter from the handler starts. Try to find the perfect angle to get the timing right',
     },
     {
       id: 2,
@@ -6666,7 +6666,7 @@ const splitIso = {
       repetition: '',
       rest: '',
       instruction:
-        'Game situation. The offensive players can only run between the cones. To succeed, the offensive team has to score a point in maximum 2 passes.If they score, they stay in offense',
+        'The offense can only run between the cones. To succeed, the offense has to score a point in maximum 2 passes. If they score, they stay on offense',
     },
   ],
 };
@@ -6695,7 +6695,7 @@ const splitToVertical = {
       repetition: '',
       rest: '',
       instruction:
-        'Working on a quick transition from a split stack to a vertical flow. Here the plays made with the cutter in the open side',
+        'Working on a quick transition from a split stack to a vertical flow. Here the disc is passed to a cutter in the open side',
     },
     {
       id: 2,
@@ -6703,7 +6703,8 @@ const splitToVertical = {
       animation: splitWindmill,
       repetition: '',
       rest: '',
-      instruction: 'Same situation, but now the cutters in the open side clear and the other cutter get involve',
+      instruction:
+        'Same situation, but now the cutters in the open side clear and leave the other cutters to get the disc',
     },
   ],
 };
@@ -6727,12 +6728,12 @@ const sideToVertical = {
   steps: [
     {
       id: 1,
-      title: 'Iso on the free Side',
+      title: 'Iso on the open side',
       animation: sideFlow,
       repetition: '',
       rest: '',
       instruction:
-        'Working on a quick transition from a side stack to a vertical flow. Here the plays made with the cutter creating a double iso on the free side',
+        'Working on a quick transition from a side stack to a vertical flow. Here the disc is passed to one of two cutters working in the open side',
     },
     {
       id: 2,
@@ -6741,7 +6742,7 @@ const sideToVertical = {
       repetition: '',
       rest: '',
       instruction:
-        'Everybody from the side stack float to the other side, a designated  player stay and get the disc. This position should open a deep throw continuity',
+        'Everybody from the side stack moves to the other side, a designated player stays and gets the disc. This position should open up an opportunity to throw deep',
     },
   ],
 };
@@ -6750,7 +6751,7 @@ const checkLongKid = {
   id: 1046,
   type: DrillTypes.FRISBEE,
   author: 'Puc Ultimate',
-  title: 'Check & Run',
+  title: 'High five & Run',
   image: 'https://zupimages.net/up/20/29/hhdl.jpg',
   description: 'A little game to learn to read a disc when the player is running as fast as possible',
   minimalPlayersNumber: 8,
@@ -6765,13 +6766,13 @@ const checkLongKid = {
   steps: [
     {
       id: 1,
-      title: 'Check & Long',
+      title: 'High five & Long',
       animation: checkLongKidAnimation,
       vimeoId: '485473162',
       repetition: '',
       rest: '',
       instruction:
-        'When the long thrower (an experience player/coach/teacher) is checking with the cutter, the cutter go long as fast as possible. The goal is to make the longest complete pass. Making it fun by asking the cutter to call the check he wants to do (elbow, double foot…). When a cutter catch the long, everyone celebrate',
+        'When the long thrower (an experienced player/coach/trainer) high fives with the cutter, the cutter goes long as fast as possible. The goal is to make the longest complete pass. You can make it fun by asking the cutter to shout out alternatives to high fives (elbow contact, foot contact…). When a cutter catches the deep pass, everyone should celebrate',
     },
   ],
 };
@@ -6975,7 +6976,7 @@ const bull = {
       repetition: '',
       rest: '',
       instruction:
-        'The objective of the attackers is to keep the disc without moving. They cannot play more than 2 times in a row with the same player. Same rule as in the previous variant',
+        'The objective of the offense is to keep the disc without moving. They cannot play more than 2 times in a row with the same player. Same rule as in the previous variant',
     },
     {
       id: 3,
@@ -7233,7 +7234,7 @@ const passMouv = {
       repetition: '',
       rest: '',
       instruction:
-        'Placing a defender after the cone that will react when the attacker makes his counter-cut. A mark can also be placed',
+        'Placing a defender after the cone that will react when the offensive player makes his counter-cut. A mark can also be placed',
     },
     {
       id: 4,

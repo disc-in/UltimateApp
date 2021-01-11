@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
-import DrillList from './shared/DrillList';
-import { DrillTypes } from '../Fixtures/config';
 import { Ionicons } from '@expo/vector-icons';
 
+import { DrillTypes } from '../Fixtures/config';
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
+import DrillList from './shared/DrillList';
 
 export const DrillListPage = (props) => {
   const { navigation, route, storeDrills } = props;
@@ -15,19 +15,12 @@ export const DrillListPage = (props) => {
   const storeDrillsForType = storeDrills.filter((drill) => drill.type === type);
   const displayedDrills = currentFilters?.displayedDrills || storeDrillsForType;
 
-  let filterIsOn = false;
-  if (
+  const filterIsOn =
     currentFilters?.selectedGoals.length > 0 ||
     currentFilters?.selectedLevels.length > 0 ||
     currentFilters?.selectedFavorites ||
-    currentFilters?.numberOfPlayers
-  ) {
-    filterIsOn = true;
-  } else {
-    filterIsOn = false;
-  }
+    currentFilters?.numberOfPlayers;
 
-  const filterIsActivate = filterIsOn ? styles.colorLight : undefined;
   const sortingProperty = type === DrillTypes.FRISBEE ? 'minimalPlayersNumber' : 'durationInMinutes';
   const sortedDisplayedDrills = displayedDrills.sort((a, b) => a[sortingProperty] - b[sortingProperty]);
 
@@ -43,29 +36,19 @@ export const DrillListPage = (props) => {
 
   return (
     <View style={styles.drillListPage}>
-      <View style={styles.flexContainer}>
-        <View style={styles.centerVertical}>
-          <Text style={styles.counter}>
-            {I18n.t('drillListPage.availableDrills', { count: displayedDrills.length })}
-          </Text>
-        </View>
+      <View style={styles.filtersArea}>
+        <Text style={styles.counter}>{I18n.t('drillListPage.availableDrills', { count: displayedDrills.length })}</Text>
         {type === DrillTypes.FRISBEE && (
-          <View style={styles.container}>
-            <TouchableOpacity
-              style={filterIsOn ? styles.buttonActivate : styles.button}
-              onPress={openFilters}
-              testID="filterButton"
-            >
-              <View style={styles.filterButton}>
-                <Ionicons
-                  name="md-funnel"
-                  color={filterIsOn ? theme.COLOR_PRIMARY_LIGHT : theme.MAIN_COLOR}
-                  size={16}
-                />
-                <Text style={[styles.text, filterIsActivate]}>{I18n.t('drillListPage.filter')}</Text>
-              </View>
-            </TouchableOpacity>
-          </View>
+          <TouchableOpacity
+            style={[styles.filterButton, filterIsOn ? styles.filterButtonActivated : '']}
+            onPress={openFilters}
+            testID="filterButton"
+          >
+            <Ionicons name="md-funnel" color={filterIsOn ? theme.COLOR_PRIMARY_LIGHT : theme.MAIN_COLOR} size={16} />
+            <Text style={[styles.filterText, filterIsOn ? styles.filterTextActivated : '']}>
+              {I18n.t('drillListPage.filter')}
+            </Text>
+          </TouchableOpacity>
         )}
       </View>
       <DrillList navigation={navigation} drillsToDisplay={displayedDrills} />
@@ -88,62 +71,39 @@ const styles = StyleSheet.create({
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     height: '100%',
   },
-  button: {
+  filtersArea: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingRight: 25,
+    height: 30,
+    marginBottom: 5,
+  },
+  counter: {
+    color: theme.COLOR_SECONDARY,
+  },
+  filterButton: {
     width: 85,
     height: 30,
-    borderRadius: 2,
+    borderRadius: 5,
     backgroundColor: theme.COLOR_PRIMARY_LIGHT,
     borderColor: theme.MAIN_COLOR,
     borderWidth: 1,
     justifyContent: 'center',
-    position: 'absolute',
-    right: 0,
+    alignItems: 'center',
+    flexDirection: 'row',
   },
-  buttonActivate: {
-    width: 85,
-    height: 30,
-    borderRadius: 2,
+  filterButtonActivated: {
     backgroundColor: theme.MAIN_COLOR,
-    justifyContent: 'center',
-    position: 'absolute',
-    right: 0,
   },
-  text: {
+  filterText: {
     textAlign: 'center',
     color: theme.MAIN_COLOR,
     fontSize: theme.FONT_SIZE_MEDIUM,
     fontWeight: 'bold',
     marginHorizontal: 8,
   },
-  textActivate: {
-    textAlign: 'center',
-    color: theme.COLOR_PRIMARY_LIGHT,
-    fontSize: theme.FONT_SIZE_MEDIUM,
-    fontWeight: 'bold',
-    marginHorizontal: 8,
-  },
-  flexContainer: {
-    flexDirection: 'row',
-    paddingRight: 25,
-    height: 30,
-    marginBottom: 5,
-  },
-  container: {
-    flex: 1,
-  },
-  centerVertical: {
-    justifyContent: 'center',
-  },
-  filterButton: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'row',
-  },
-  counter: {
-    color: theme.COLOR_SECONDARY,
-    justifyContent: 'center',
-  },
-  colorLight: {
+  filterTextActivated: {
     color: theme.COLOR_PRIMARY_LIGHT,
   },
 });

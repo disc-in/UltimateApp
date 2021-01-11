@@ -14,92 +14,67 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
   <View
     style={
       Object {
+        "alignItems": "center",
         "flexDirection": "row",
         "height": 30,
+        "justifyContent": "space-between",
         "marginBottom": 5,
         "paddingRight": 25,
       }
     }
   >
-    <View
+    <Text
       style={
         Object {
-          "justifyContent": "center",
+          "color": "#A6A6A6",
         }
       }
     >
+      2 drills available
+    </Text>
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#fff",
+          "borderColor": "#2a9e91",
+          "borderRadius": 5,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "height": 30,
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": 85,
+        }
+      }
+      testID="filterButton"
+    >
+      <Text />
       <Text
         style={
-          Object {
-            "color": "#A6A6A6",
-            "justifyContent": "center",
-          }
-        }
-      >
-        2 drills available
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "flex": 1,
-        }
-      }
-    >
-      <View
-        accessible={true}
-        focusable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "backgroundColor": "#fff",
-            "borderColor": "#2a9e91",
-            "borderRadius": 2,
-            "borderWidth": 1,
-            "height": 30,
-            "justifyContent": "center",
-            "opacity": 1,
-            "position": "absolute",
-            "right": 0,
-            "width": 85,
-          }
-        }
-        testID="filterButton"
-      >
-        <View
-          style={
+          Array [
             Object {
-              "alignItems": "center",
-              "flexDirection": "row",
-              "justifyContent": "center",
-            }
-          }
-        >
-          <Text />
-          <Text
-            style={
-              Array [
-                Object {
-                  "color": "#2a9e91",
-                  "fontSize": 16,
-                  "fontWeight": "bold",
-                  "marginHorizontal": 8,
-                  "textAlign": "center",
-                },
-                undefined,
-              ]
-            }
-          >
-            Filter
-          </Text>
-        </View>
-      </View>
+              "color": "#2a9e91",
+              "fontSize": 16,
+              "fontWeight": "bold",
+              "marginHorizontal": 8,
+              "textAlign": "center",
+            },
+            "",
+          ]
+        }
+      >
+        Filter
+      </Text>
     </View>
   </View>
   <RCTScrollView
@@ -1062,31 +1037,24 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
   <View
     style={
       Object {
+        "alignItems": "center",
         "flexDirection": "row",
         "height": 30,
+        "justifyContent": "space-between",
         "marginBottom": 5,
         "paddingRight": 25,
       }
     }
   >
-    <View
+    <Text
       style={
         Object {
-          "justifyContent": "center",
+          "color": "#A6A6A6",
         }
       }
     >
-      <Text
-        style={
-          Object {
-            "color": "#A6A6A6",
-            "justifyContent": "center",
-          }
-        }
-      >
-        3 drills available
-      </Text>
-    </View>
+      3 drills available
+    </Text>
   </View>
   <RCTScrollView
     contentContainerStyle={
@@ -1705,111 +1673,86 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
   <View
     style={
       Object {
+        "alignItems": "center",
         "flexDirection": "row",
         "height": 30,
+        "justifyContent": "space-between",
         "marginBottom": 5,
         "paddingRight": 25,
       }
     }
   >
-    <View
+    <Text
       style={
         Object {
-          "justifyContent": "center",
+          "color": "#A6A6A6",
         }
       }
+    >
+      3 drills available
+    </Text>
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#fff",
+          "borderColor": "#2a9e91",
+          "borderRadius": 5,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "height": 30,
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": 85,
+        }
+      }
+      testID="filterButton"
     >
       <Text
+        allowFontScaling={false}
         style={
-          Object {
-            "color": "#A6A6A6",
-            "justifyContent": "center",
-          }
-        }
-      >
-        3 drills available
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "flex": 1,
-        }
-      }
-    >
-      <View
-        accessible={true}
-        focusable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "backgroundColor": "#fff",
-            "borderColor": "#2a9e91",
-            "borderRadius": 2,
-            "borderWidth": 1,
-            "height": 30,
-            "justifyContent": "center",
-            "opacity": 1,
-            "position": "absolute",
-            "right": 0,
-            "width": 85,
-          }
-        }
-        testID="filterButton"
-      >
-        <View
-          style={
+          Array [
             Object {
-              "alignItems": "center",
-              "flexDirection": "row",
-              "justifyContent": "center",
-            }
-          }
-        >
-          <Text
-            allowFontScaling={false}
-            style={
-              Array [
-                Object {
-                  "color": "#2a9e91",
-                  "fontSize": 16,
-                },
-                undefined,
-                Object {
-                  "fontFamily": "ionicons",
-                  "fontStyle": "normal",
-                  "fontWeight": "normal",
-                },
-                Object {},
-              ]
-            }
-          >
-            
-          </Text>
-          <Text
-            style={
-              Array [
-                Object {
-                  "color": "#2a9e91",
-                  "fontSize": 16,
-                  "fontWeight": "bold",
-                  "marginHorizontal": 8,
-                  "textAlign": "center",
-                },
-                undefined,
-              ]
-            }
-          >
-            Filter
-          </Text>
-        </View>
-      </View>
+              "color": "#2a9e91",
+              "fontSize": 16,
+            },
+            undefined,
+            Object {
+              "fontFamily": "ionicons",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#2a9e91",
+              "fontSize": 16,
+              "fontWeight": "bold",
+              "marginHorizontal": 8,
+              "textAlign": "center",
+            },
+            "",
+          ]
+        }
+      >
+        Filter
+      </Text>
     </View>
   </View>
   <RCTScrollView

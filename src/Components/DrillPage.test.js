@@ -17,6 +17,7 @@ describe('<DrillPage />', () => {
   afterEach(() => jest.clearAllMocks());
 
   const drill = store.getState().drills[0];
+  const toggleFavorite = jest.fn();
 
   it('renders correctly', async () => {
     const Stack = createStackNavigator();
@@ -32,9 +33,25 @@ describe('<DrillPage />', () => {
     await act(async () => expect(tree).toMatchSnapshot());
   });
 
-  it('toggles favorite drill', async () => {
-    const toggleFavorite = jest.fn();
+  it('renders correctly a favorite drill', async () => {
+    const MockedConnectedDrillPage = connect(
+      () => ({ favoriteDrills: [drill.id], drills: [drill] }),
+      () => ({ toggleFavorite }),
+    )(DrillPage);
+    const Stack = createStackNavigator();
+    const tree = create(
+      <Provider store={store}>
+        <NavigationContainer>
+          <Stack.Navigator>
+            <Stack.Screen name="DrillPage" component={MockedConnectedDrillPage} initialParams={{ id: drill.id }} />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </Provider>,
+    );
+    await act(async () => expect(tree).toMatchSnapshot());
+  });
 
+  it('toggles favorite drill', async () => {
     const MockedConnectedDrillPage = connect(
       () => ({ favoriteDrills: [], drills: store.getState().drills }),
       () => ({ toggleFavorite }),

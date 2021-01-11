@@ -7,6 +7,7 @@ import { DrillTypes } from '../Fixtures/config';
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
 import DrillList from './shared/DrillList';
+import Button from './shared/Button';
 
 export const DrillListPage = (props) => {
   const { navigation, route, storeDrills } = props;
@@ -39,16 +40,14 @@ export const DrillListPage = (props) => {
       <View style={styles.filtersArea}>
         <Text style={styles.counter}>{I18n.t('drillListPage.availableDrills', { count: displayedDrills.length })}</Text>
         {type === DrillTypes.FRISBEE && (
-          <TouchableOpacity
-            style={[styles.filterButton, filterIsOn ? styles.filterButtonActivated : '']}
+          <Button
             onPress={openFilters}
+            icon="filter-variant"
+            text={I18n.t('drillListPage.filter')}
             testID="filterButton"
-          >
-            <Ionicons name="md-funnel" color={filterIsOn ? theme.COLOR_PRIMARY_LIGHT : theme.MAIN_COLOR} size={16} />
-            <Text style={[styles.filterText, filterIsOn ? styles.filterTextActivated : '']}>
-              {I18n.t('drillListPage.filter')}
-            </Text>
-          </TouchableOpacity>
+            small
+            light={!filterIsOn}
+          />
         )}
       </View>
       <DrillList navigation={navigation} drillsToDisplay={displayedDrills} />
@@ -81,29 +80,5 @@ const styles = StyleSheet.create({
   },
   counter: {
     color: theme.COLOR_SECONDARY,
-  },
-  filterButton: {
-    width: 85,
-    height: 30,
-    borderRadius: 5,
-    backgroundColor: theme.COLOR_PRIMARY_LIGHT,
-    borderColor: theme.MAIN_COLOR,
-    borderWidth: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'row',
-  },
-  filterButtonActivated: {
-    backgroundColor: theme.MAIN_COLOR,
-  },
-  filterText: {
-    textAlign: 'center',
-    color: theme.MAIN_COLOR,
-    fontSize: theme.FONT_SIZE_MEDIUM,
-    fontWeight: 'bold',
-    marginHorizontal: 8,
-  },
-  filterTextActivated: {
-    color: theme.COLOR_PRIMARY_LIGHT,
   },
 });

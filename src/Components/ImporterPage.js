@@ -44,7 +44,7 @@ export const ImporterPage = (props) => {
           <Text style={styles.text}>{I18n.t('importerPage.question')}</Text>
           <View style={styles.ctaArea}>
             <CtaButton style={styles.cta} text={I18n.t('shared.yes')} onPress={save} />
-            <CtaButton style={styles.cta} text={I18n.t('shared.cancel')} onPress={cancel} buttonLight />
+            <CtaButton style={styles.cta} text={I18n.t('shared.cancel')} onPress={cancel} light />
           </View>
         </View>
       ) : (

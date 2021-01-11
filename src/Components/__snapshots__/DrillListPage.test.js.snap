@@ -45,6 +45,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
       style={
         Object {
           "alignItems": "center",
+          "alignSelf": "center",
           "backgroundColor": "#fff",
           "borderColor": "#2a9e91",
           "borderRadius": 5,
@@ -53,7 +54,9 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           "height": 30,
           "justifyContent": "center",
           "opacity": 1,
-          "width": 85,
+          "paddingHorizontal": 10,
+          "paddingVertical": 0,
+          "width": "auto",
         }
       }
       testID="filterButton"
@@ -61,16 +64,11 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
       <Text />
       <Text
         style={
-          Array [
-            Object {
-              "color": "#2a9e91",
-              "fontSize": 16,
-              "fontWeight": "bold",
-              "marginHorizontal": 8,
-              "textAlign": "center",
-            },
-            "",
-          ]
+          Object {
+            "color": "#2a9e91",
+            "fontSize": 16,
+            "fontWeight": "bold",
+          }
         }
       >
         Filter
@@ -1704,6 +1702,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
       style={
         Object {
           "alignItems": "center",
+          "alignSelf": "center",
           "backgroundColor": "#fff",
           "borderColor": "#2a9e91",
           "borderRadius": 5,
@@ -1712,7 +1711,9 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           "height": 30,
           "justifyContent": "center",
           "opacity": 1,
-          "width": 85,
+          "paddingHorizontal": 10,
+          "paddingVertical": 0,
+          "width": "auto",
         }
       }
       testID="filterButton"
@@ -1722,12 +1723,24 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
         style={
           Array [
             Object {
-              "color": "#2a9e91",
-              "fontSize": 16,
+              "color": undefined,
+              "fontSize": 12,
             },
-            undefined,
+            Array [
+              Object {
+                "marginRight": 20,
+              },
+              Object {
+                "color": "#2a9e91",
+                "fontSize": 16,
+                "fontWeight": "bold",
+              },
+              Object {
+                "marginRight": 5,
+              },
+            ],
             Object {
-              "fontFamily": "ionicons",
+              "fontFamily": "material-community",
               "fontStyle": "normal",
               "fontWeight": "normal",
             },
@@ -1735,20 +1748,15 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           ]
         }
       >
-        
+        
       </Text>
       <Text
         style={
-          Array [
-            Object {
-              "color": "#2a9e91",
-              "fontSize": 16,
-              "fontWeight": "bold",
-              "marginHorizontal": 8,
-              "textAlign": "center",
-            },
-            "",
-          ]
+          Object {
+            "color": "#2a9e91",
+            "fontSize": 16,
+            "fontWeight": "bold",
+          }
         }
       >
         Filter

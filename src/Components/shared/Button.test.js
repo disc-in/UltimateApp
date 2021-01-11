@@ -10,6 +10,21 @@ describe('<Button />', () => {
     expect(tree).toMatchSnapshot();
   });
 
+  it('renders correctly when small', () => {
+    const tree = renderer.create(<Button text="OK" small />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders correctly with an icon', () => {
+    const tree = renderer.create(<Button text="OK" icon="share" small />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders correctly when light', () => {
+    const tree = renderer.create(<Button text="OK" light />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
   it('calls delegates onPress prop', async () => {
     const onPress = jest.fn();
 

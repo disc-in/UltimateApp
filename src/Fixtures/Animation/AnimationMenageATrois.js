@@ -5,17 +5,17 @@
 // Remark2: positions[stepId][elemId] is undefined if  element i position does not change between steps stepId-1 and stepId
 
 // Define the shape/type of the elements displayed in this drill
-var p1Id = 'offense';
-var p2Id = 'defense';
-var p3Id = 'offense';
-var discId = 'disc';
+const p1Id = 'offense';
+const p2Id = 'defense';
+const p3Id = 'offense';
+const discId = 'disc';
 
-var ids = [p1Id, p2Id, p3Id, discId];
-var texts = ['1', '2', '3', ''];
+const ids = [p1Id, p2Id, p3Id, discId];
+const texts = ['1', '2', '3', ''];
 
-var stepCount = 3;
+const stepCount = 3;
 
-var positions = new Array(stepCount);
+const positions = new Array(stepCount);
 
 // Initial position (in percentage of the available space for the animation)
 // e.g.: [[.45, .03]] means

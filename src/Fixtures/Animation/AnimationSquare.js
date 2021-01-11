@@ -5,7 +5,7 @@
 // Remark2: positions[stepId][elemId] is undefined if  element i position does not change between steps stepId-1 and stepId
 
 /* Type of the element displayed */
-var ids = [
+const ids = [
   'triangle',
   'triangle',
   'triangle',
@@ -23,15 +23,15 @@ var ids = [
 ];
 
 /* Text displayed on each element */
-var texts = ['', '', '', '', '', '', '', '', '1', '2', '3', '4', '5', ''];
+const texts = ['', '', '', '', '', '', '', '', '1', '2', '3', '4', '5', ''];
 
 /* Definition of the position of each element at each step */
-var stepCount = 6;
+const stepCount = 6;
 
-var discDeltaP = 0.06;
-var discDeltaN = -0.02;
+const discDeltaP = 0.06;
+const discDeltaN = -0.02;
 
-var positions = new Array(stepCount);
+const positions = new Array(stepCount);
 
 // Initial positions
 positions[0] = new Array(texts.length);

@@ -66,6 +66,7 @@ export class FitnessFilters extends React.Component {
       this.applyFilters,
     );
   }
+
   onSliderChange(target, value) {
     this.setState({ [target]: value }, this.applyFilters);
   }
@@ -88,14 +89,18 @@ export class FitnessFilters extends React.Component {
       newData = newData.filter((drill) => favoriteIds.includes(drill.id));
     }
     if (selectedLevels.length > 0) newData = newData.filter((drill) => selectedLevels.includes(drill.level));
-    if (selectedIntensities.length > 0)
+    if (selectedIntensities.length > 0) {
       newData = newData.filter((drill) => selectedIntensities.includes(drill.intensity));
-    if (selectedEquipmentLabels.length > 0)
+    }
+    if (selectedEquipmentLabels.length > 0) {
       newData = newData.filter((drill) => selectedEquipmentLabels.includes(drill.equipmentLabel));
-    if (selectedSeasonTimings.length > 0)
+    }
+    if (selectedSeasonTimings.length > 0) {
       newData = newData.filter((drill) => selectedSeasonTimings.includes(drill.seasonTiming));
-    if (selectedGoals.length > 0)
+    }
+    if (selectedGoals.length > 0) {
       newData = newData.filter((drill) => drill.goals.filter((goal) => selectedGoals.includes(goal)).length > 0);
+    }
     if (durationInMinutes) newData = newData.filter((drill) => drill.durationInMinutes <= durationInMinutes);
 
     this.setState({ displayedDrills: newData }, callback);

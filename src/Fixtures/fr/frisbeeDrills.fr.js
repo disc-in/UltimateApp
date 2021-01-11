@@ -8070,7 +8070,7 @@ const zoneCupSecond = {
   drills: [bull, kyeDrill, stopFlow, zoneGame],
 };
 
-//Fitness Weeks
+// Fitness Weeks
 const fitnessWeek1 = {
   id: 101,
   title: 'Retour aux affaires',

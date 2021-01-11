@@ -16,7 +16,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
       Object {
         "flexDirection": "row",
         "height": 30,
-        "marginBottom": 20,
+        "marginBottom": 5,
         "paddingRight": 25,
       }
     }
@@ -1064,7 +1064,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
       Object {
         "flexDirection": "row",
         "height": 30,
-        "marginBottom": 20,
+        "marginBottom": 5,
         "paddingRight": 25,
       }
     }
@@ -1707,7 +1707,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
       Object {
         "flexDirection": "row",
         "height": 30,
-        "marginBottom": 20,
+        "marginBottom": 5,
         "paddingRight": 25,
       }
     }

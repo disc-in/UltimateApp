@@ -85,7 +85,10 @@
     "preset": "jest-expo",
     "setupFiles": [
       "./setupJest.js"
-    ]
+    ],
+      "transformIgnorePatterns": [
+        "node_modules/(?!(jest-)?react-native|@react-native-picker/picker|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|)"
+      ]
   },
   "engines": {
     "node": ">=0.12"

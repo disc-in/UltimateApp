@@ -11,7 +11,6 @@ import HeaderButton from '../shared/HeaderButton';
 
 const CurrentPlayManager = (props) => {
   const [visible, setVisible] = useState(false);
-
   const openMenu = () => setVisible(true);
   const closeMenu = () => setVisible(false);
 

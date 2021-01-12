@@ -14,7 +14,6 @@ import Drill from './animation/Drill';
 import { upload } from '../utils/firebase';
 import { showSuccess, showError } from '../utils/flashMessage';
 import * as Linking from 'expo-linking';
-import AnimationHistory from '../Components/editor/AnimationHistory';
 
 const newPlay = {
   uuid: undefined,
@@ -33,6 +32,7 @@ export const PlayEditorPage = (props) => {
   const [isPlaySaved, setIsPlaySaved] = useState(true);
 
   useLayoutEffect(() => {
+    console.log('BRAVOOOOO LE CODE N A PAS BUGGE JUSQUA LA', props.customPlays);
     navigation.setOptions({
       headerRight: () => (
         <View>
@@ -142,17 +142,23 @@ export const PlayEditorPage = (props) => {
 
     if (play.title === currentPlay.title) createNewPlay();
   };
-
   return (
     <View style={styles.allPage}>
       <View style={styles.centeredView}>
         {modalRenameVisible ? (
           <RenamePlayModal currentPlay={currentPlay} onRename={setTitle} close={() => setModalRenameVisible(false)} />
         ) : null}
-
-        <AnimationEditor onAnimationChange={onAnimationChange} animation={currentPlay.animation} />
+        <AnimationEditor
+          onAnimationChange={onAnimationChange}
+          animation={currentPlay.animation}
+          currentPlay={currentPlay}
+          isPlaySaved={isPlaySaved}
+          save={saveCurrentPlay}
+          new={createNewPlay}
+          rename={() => setModalRenameVisible(true)}
+        />
       </View>
-      <View style={styles.toolBar}>
+      {/* <View style={styles.toolBar}>
         <SavedPlaysList
           savedPlays={props.customPlays}
           isPlaySaved={isPlaySaved}
@@ -186,7 +192,7 @@ export const PlayEditorPage = (props) => {
         <TouchableOpacity onPress={() => share(currentPlay)} testID="shareButton">
           <Ionicons name="ios-share" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
         </TouchableOpacity>
-      </View>
+      </View> */}
     </View>
   );
 };

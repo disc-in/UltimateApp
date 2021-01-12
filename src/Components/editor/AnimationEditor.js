@@ -1,14 +1,22 @@
 import React from 'react';
 
-import { StyleSheet, Animated, Easing, View, Platform } from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { StyleSheet, Animated, Easing, View, Platform, TouchableOpacity, Alert, Share } from 'react-native';
+import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
+import { connect } from 'react-redux';
 
 import Animation from '../animation/Animation';
 import DraggableDisplayedElement from './DraggableDisplayedElement';
 import BackgroundPicker from './BackgroundPicker';
 import Drill from '../animation/Drill';
 import theme from '../../styles/theme.style';
+import I18n from '../../utils/i18n';
+import { generateUuid } from '../../utils/uuid';
+import { savePlay, deletePlay, renamePlay } from '../../Store/Actions/playAction';
+import { upload } from '../../utils/firebase';
+import { showSuccess, showError } from '../../utils/flashMessage';
+import * as Linking from 'expo-linking';
 import AnimationHistory from './AnimationHistory';
+import SavedPlaysList from '../editor/SavedPlaysList';
 
 class AnimationEditor extends React.Component {
   constructor(props) {
@@ -30,6 +38,8 @@ class AnimationEditor extends React.Component {
       animationWidth: 100,
       isElementMoving: false,
       currentStepAV: new Animated.Value(0), // Enables to update the current step inside an animation
+      modalRenameVisible: false,
+      isPlaySaved: true,
     };
 
     /** Vertical ratio of the space of the editor in which the animation is displayed */
@@ -45,12 +55,92 @@ class AnimationEditor extends React.Component {
     });
   }
 
-  saveAnimation = (newAnimation) => {
-    this.props.onAnimationChange(newAnimation);
-    this.setState({ animation: newAnimation }, this.setLabels);
+  share = async () => {
+    try {
+      await upload(this.props.currentPlay);
+      const url = Linking.makeUrl('customPlays/' + this.props.currentPlay.uuid);
+      await Share.share({
+        title: I18n.t('editor.currentPlayManager.shareTitle', { title: this.props.currentPlay.title }),
+        message: I18n.t('editor.currentPlayManager.shareMessage', { url }),
+        url,
+      });
+    } catch (error) {
+      showError(I18n.t('editor.currentPlayManager.shareError'));
+    }
   };
 
-  setLabels = () => {
+  checkBeforeNewPlay() {
+    if (this.props.isPlaySaved) {
+      this.props.new();
+    } else {
+      Alert.alert(
+        I18n.t('editor.saveModificationsTitle'),
+        I18n.t('editor.saveModificationsText', { title: this.props.currentPlay.title }),
+        [
+          {
+            text: I18n.t('shared.cancel'),
+            style: 'cancel',
+            onPress: () => {},
+          },
+          {
+            text: I18n.t('shared.yes'),
+            onPress: () => {
+              this.props.save();
+              showSuccess(I18n.t('editor.currentPlayManager.saveSuccess', { title: this.props.currentPlay.title }));
+              this.props.new();
+            },
+          },
+          {
+            text: I18n.t('shared.no'),
+            onPress: () => {
+              this.props.new();
+            },
+          },
+        ],
+      );
+    }
+  }
+
+  saveCurrentPlay() {
+    const defaultTitle = I18n.t('playEditorPage.untitledPlay');
+    if (this.props.currentPlay.title == I18n.t('playEditorPage.untitledPlay')) {
+      let newTitle = defaultTitle;
+      let counter = 1;
+      while (this.props.customPlays.findIndex((item) => item.title === newTitle) !== -1) {
+        newTitle = defaultTitle + ' (' + counter + ')';
+        counter += 1;
+      }
+      this.props.currentPlay.title = newTitle;
+    }
+    if (this.props.currentPlay.uuid === undefined) {
+      this.props.currentPlay.uuid = generateUuid();
+    }
+    savePlay(this.props.currentPlay);
+    this.setState({ isPlaySaved: true });
+  }
+
+  openPlay(play) {
+    setCurrentPlay(play);
+    this.setState({ isPlaySaved: true });
+  }
+
+  createNewPlay() {
+    setCurrentPlay(newPlay);
+    this.setState({ isPlaySaved: true });
+  }
+
+  onDelete(play) {
+    props.deletePlay(play.uuid);
+
+    if (play.title === currentPlay.title) createNewPlay();
+  }
+
+  saveAnimation(newAnimation) {
+    this.props.onAnimationChange(newAnimation);
+    this.setState({ animation: newAnimation }, this.setLabels);
+  }
+
+  setLabels() {
     const labels = {
       offense: 1,
       defense: 1,
@@ -59,7 +149,7 @@ class AnimationEditor extends React.Component {
     };
     for (const type of this.state.animation.ids) labels[type] += 1;
     this.setState({ labels });
-  };
+  }
 
   onLayout = (e) => {
     if (this.marker) {
@@ -284,56 +374,84 @@ class AnimationEditor extends React.Component {
 
   render() {
     return (
-      <View
-        ref={(ref) => {
-          this.marker = ref;
-        }}
-        onLayout={this.onLayout}
-      >
-        <Animation
-          editable
-          animation={this.state.animation}
-          currentStep={this.currentStep}
-          onMoveStart={this.onMoveStart}
-          onElementMoveEnd={this.onElementMoveEnd}
-          onDimensionSet={this.setAnimationDimension}
-          onCutMove={this.cutMove}
-          widthRatio={this.wRatio}
-          heightRatio={this.hRatio}
-          dTop={this.state.dTop}
-          dLeft={this.state.dLeft}
-          onStepAdded={this.addStep}
-          onStepRemoved={this.removeStep}
-          currentStepAV={this.state.currentStepAV}
-        />
+      <View style={styles.allPage}>
+        <View
+          ref={(ref) => {
+            this.marker = ref;
+          }}
+          onLayout={this.onLayout}
+        >
+          <Animation
+            editable
+            animation={this.state.animation}
+            currentStep={this.currentStep}
+            onMoveStart={this.onMoveStart}
+            onElementMoveEnd={this.onElementMoveEnd}
+            onDimensionSet={this.setAnimationDimension}
+            onCutMove={this.cutMove}
+            widthRatio={this.wRatio}
+            heightRatio={this.hRatio}
+            dTop={this.state.dTop}
+            dLeft={this.state.dLeft}
+            onStepAdded={this.addStep}
+            onStepRemoved={this.removeStep}
+            currentStepAV={this.state.currentStepAV}
+          />
 
-        <View style={styles.actionsArea}>
-          {this.state.isElementMoving ? (
-            <View style={styles.deletionArea}>
-              <MaterialCommunityIcons name="trash-can" color={theme.COLOR_PRIMARY} size={22} />
-            </View>
-          ) : (
-            <View style={styles.draggableArea}>
-              <View style={styles.draggableElement}>
-                {['offense', 'defense', 'disc', 'triangle'].map((type) => (
-                  <DraggableDisplayedElement
-                    type={type}
-                    draggableBaseWidth={this.state.draggableBaseWidth}
-                    onMoveEnd={this.addElementToAnimation}
-                    number={this.state.labels[type]}
-                    key={type}
-                  />
-                ))}
+          <View style={styles.actionsArea}>
+            {this.state.isElementMoving ? (
+              <View style={styles.deletionArea}>
+                <MaterialCommunityIcons name="trash-can" color={theme.COLOR_PRIMARY} size={22} />
               </View>
-              <BackgroundPicker
-                onBackgroundChange={this.onBackgroundChange}
-                selectedBackground={this.state.animation.background}
-              />
-            </View>
-          )}
+            ) : (
+              <View style={styles.draggableArea}>
+                <View style={styles.draggableElement}>
+                  {['offense', 'defense', 'disc', 'triangle'].map((type) => (
+                    <DraggableDisplayedElement
+                      type={type}
+                      draggableBaseWidth={this.state.draggableBaseWidth}
+                      onMoveEnd={this.addElementToAnimation}
+                      number={this.state.labels[type]}
+                      key={type}
+                    />
+                  ))}
+                </View>
+                <BackgroundPicker
+                  onBackgroundChange={this.onBackgroundChange}
+                  selectedBackground={this.state.animation.background}
+                />
+              </View>
+            )}
+          </View>
+          {/* <AnimationHistory animation={this.state.animation} onAnimationHistoryChange={this.onAnimationHistoryChange} /> */}
         </View>
+        <View style={styles.toolBar}>
+          {/* <SavedPlaysList
+            savedPlays={this.props.customPlays}
+            isPlaySaved={this.isPlaySaved}
+            playTitle={this.currentPlay.title}
+            onDelete={this.onDelete}
+            onOpen={this.openPlay}
+            saveCurrentPlay={this.saveCurrentPlay}
+          /> */}
+          <TouchableOpacity onPress={() => this.checkBeforeNewPlay()} testID="plusButton">
+            <MaterialCommunityIcons name="plus" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              this.saveCurrentPlay();
+              showSuccess(I18n.t('editor.currentPlayManager.saveSuccess', { title: this.props.currentPlay.title }));
+            }}
+            testID="saveButton"
+          >
+            <MaterialCommunityIcons name="content-save" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
+          </TouchableOpacity>
 
-        <AnimationHistory animation={this.state.animation} onAnimationHistoryChange={this.onAnimationHistoryChange} />
+          <AnimationHistory animation={this.state.animation} onAnimationHistoryChange={this.onAnimationHistoryChange} />
+          <TouchableOpacity onPress={() => this.share()} testID="shareButton">
+            <Ionicons name="ios-share" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
+          </TouchableOpacity>
+        </View>
       </View>
     );
   }
@@ -376,6 +494,29 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-around',
     marginLeft: 20,
+  },
+  toolBar: {
+    height: '8%',
+    width: '100%',
+    backgroundColor: theme.COLOR_PRIMARY,
+    position: 'absolute',
+    bottom: 0,
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+  },
+  allPage: {
+    height: '100%',
+  },
+  undo: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  separator: {
+    height: 35,
+    borderRightWidth: 2,
+    borderRightColor: theme.COLOR_SECONDARY,
+    marginHorizontal: 15,
   },
 });
 export default AnimationEditor;

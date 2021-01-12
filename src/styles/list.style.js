@@ -3,10 +3,7 @@ import theme from '../styles/theme.style';
 export const contentContainer = {
   paddingBottom: 40,
 };
-export const counter = {
-  color: theme.COLOR_SECONDARY,
-  marginBottom: 20,
-};
+
 export const item = {
   height: 80,
   flexDirection: 'row',

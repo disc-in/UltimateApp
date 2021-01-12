@@ -16,6 +16,7 @@ exports[`<Button /> renders correctly 1`] = `
       "alignItems": "center",
       "backgroundColor": "#2a9e91",
       "borderRadius": 5,
+      "flexDirection": "row",
       "height": 40,
       "justifyContent": "center",
       "opacity": 1,
@@ -26,6 +27,134 @@ exports[`<Button /> renders correctly 1`] = `
   }
   testID="button"
 >
+  <Text
+    style={
+      Object {
+        "color": "#fff",
+        "fontSize": 16,
+        "textAlign": "center",
+      }
+    }
+  >
+    OK
+  </Text>
+</View>
+`;
+
+exports[`<Button /> renders correctly when light 1`] = `
+<View
+  accessible={true}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#fff",
+      "borderColor": "#2a9e91",
+      "borderRadius": 5,
+      "borderWidth": 1,
+      "flexDirection": "row",
+      "height": 40,
+      "justifyContent": "center",
+      "opacity": 1,
+      "paddingHorizontal": 20,
+      "paddingVertical": 10,
+      "width": "80%",
+    }
+  }
+  testID="button"
+>
+  <Text
+    style={
+      Object {
+        "color": "#2a9e91",
+        "fontSize": 16,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    OK
+  </Text>
+</View>
+`;
+
+exports[`<Button /> renders correctly when small 1`] = `
+<View
+  accessible={true}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "alignSelf": "center",
+      "backgroundColor": "#2a9e91",
+      "borderRadius": 5,
+      "flexDirection": "row",
+      "height": 30,
+      "justifyContent": "center",
+      "opacity": 1,
+      "paddingHorizontal": 10,
+      "paddingVertical": 0,
+      "width": "auto",
+    }
+  }
+  testID="button"
+>
+  <Text
+    style={
+      Object {
+        "color": "#fff",
+        "fontSize": 16,
+        "textAlign": "center",
+      }
+    }
+  >
+    OK
+  </Text>
+</View>
+`;
+
+exports[`<Button /> renders correctly with an icon 1`] = `
+<View
+  accessible={true}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "alignSelf": "center",
+      "backgroundColor": "#2a9e91",
+      "borderRadius": 5,
+      "flexDirection": "row",
+      "height": 30,
+      "justifyContent": "center",
+      "opacity": 1,
+      "paddingHorizontal": 10,
+      "paddingVertical": 0,
+      "width": "auto",
+    }
+  }
+  testID="button"
+>
+  <Text />
   <Text
     style={
       Object {

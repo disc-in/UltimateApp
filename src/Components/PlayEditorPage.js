@@ -14,6 +14,7 @@ import Drill from './animation/Drill';
 import { upload } from '../utils/firebase';
 import { showSuccess, showError } from '../utils/flashMessage';
 import * as Linking from 'expo-linking';
+import AnimationHistory from '../Components/editor/AnimationHistory';
 
 const newPlay = {
   uuid: undefined,
@@ -35,22 +36,7 @@ export const PlayEditorPage = (props) => {
     navigation.setOptions({
       headerRight: () => (
         <View>
-          {/* <SavedPlaysList
-            savedPlays={props.customPlays}
-            isPlaySaved={isPlaySaved}
-            playTitle={currentPlay.title}
-            onDelete={onDelete}
-            onOpen={openPlay}
-            saveCurrentPlay={saveCurrentPlay}
-          /> */}
-          {/* <CurrentPlayManager
-            currentPlay={currentPlay}
-            isPlaySaved={isPlaySaved}
-            save={saveCurrentPlay}
-            new={createNewPlay}
-            rename={() => setModalRenameVisible(true)}
-          /> */}
-          <TouchableOpacity onPress={() => renamePlay()} testID="shareButton">
+          <TouchableOpacity onPress={() => setModalRenameVisible(true)} testID="shareButton">
             <MaterialCommunityIcons name="pencil" color={theme.COLOR_PRIMARY} size={28} style={{ marginRight: 20 }} />
           </TouchableOpacity>
         </View>
@@ -66,9 +52,9 @@ export const PlayEditorPage = (props) => {
   const share = async () => {
     try {
       await upload(props.currentPlay);
-      const url = Linking.makeUrl('customPlays/' + props.currentPlay.uuid);
+      const url = Linking.makeUrl('customPlays/' + currentPlay.uuid);
       await Share.share({
-        title: I18n.t('editor.currentPlayManager.shareTitle', { title: props.currentPlay.title }),
+        title: I18n.t('editor.currentPlayManager.shareTitle', { title: currentPlay.title }),
         message: I18n.t('editor.currentPlayManager.shareMessage', { url }),
         url,
       });
@@ -78,12 +64,12 @@ export const PlayEditorPage = (props) => {
   };
 
   const checkBeforeNewPlay = () => {
-    if (props.isPlaySaved) {
-      props.new();
+    if (isPlaySaved) {
+      createNewPlay();
     } else {
       Alert.alert(
         I18n.t('editor.saveModificationsTitle'),
-        I18n.t('editor.saveModificationsText', { title: props.currentPlay.title }),
+        I18n.t('editor.saveModificationsText', { title: currentPlay.title }),
         [
           {
             text: I18n.t('shared.cancel'),
@@ -93,15 +79,15 @@ export const PlayEditorPage = (props) => {
           {
             text: I18n.t('shared.yes'),
             onPress: () => {
-              props.save();
-              showSuccess(I18n.t('editor.currentPlayManager.saveSuccess', { title: props.currentPlay.title }));
-              props.new();
+              saveCurrentPlay();
+              showSuccess(I18n.t('editor.currentPlayManager.saveSuccess', { title: currentPlay.title }));
+              createNewPlay();
             },
           },
           {
             text: I18n.t('shared.no'),
             onPress: () => {
-              props.new();
+              createNewPlay();
             },
           },
         ],
@@ -178,19 +164,26 @@ export const PlayEditorPage = (props) => {
         <TouchableOpacity onPress={() => checkBeforeNewPlay()} testID="plusButton">
           <MaterialCommunityIcons name="plus" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => share(drill)} testID="shareButton">
+        <TouchableOpacity
+          onPress={() => {
+            saveCurrentPlay();
+            showSuccess(I18n.t('editor.currentPlayManager.saveSuccess', { title: currentPlay.title }));
+          }}
+          testID="saveButton"
+        >
           <MaterialCommunityIcons name="content-save" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
         </TouchableOpacity>
+
         <View style={styles.undo}>
-          <TouchableOpacity onPress={() => share(drill)} testID="shareButton">
+          <TouchableOpacity onPress={() => saveCurrentPlay()} testID="shareButton">
             <MaterialCommunityIcons name="undo-variant" color={theme.COLOR_SECONDARY} size={30} />
           </TouchableOpacity>
           <View style={styles.separator} />
-          <TouchableOpacity onPress={() => share(drill)} testID="shareButton">
+          <TouchableOpacity onPress={() => saveCurrentPlay()} testID="shareButton">
             <MaterialCommunityIcons name="redo-variant" color={theme.COLOR_SECONDARY} size={30} />
           </TouchableOpacity>
         </View>
-        <TouchableOpacity onPress={() => share()} testID="shareButton">
+        <TouchableOpacity onPress={() => share(currentPlay)} testID="shareButton">
           <Ionicons name="ios-share" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
         </TouchableOpacity>
       </View>

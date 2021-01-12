@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { View, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, TouchableOpacity } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import theme from '../../styles/theme.style';
@@ -50,22 +50,32 @@ function AnimationHistory({ animation, onAnimationHistoryChange }) {
     <View style={{ flexDirection: 'row' }}>
       <TouchableOpacity onPress={undo} style={{ marginRight: 10 }} disabled={!canUndo}>
         <MaterialCommunityIcons
-          name="undo"
-          color={canUndo ? theme.COLOR_PRIMARY : theme.COLOR_SECONDARY}
-          size={22}
+          name="undo-variant"
+          color={canUndo ? theme.COLOR_PRIMARY_LIGHT : theme.COLOR_SECONDARY}
+          size={30}
           testID="undoButton"
         />
       </TouchableOpacity>
+      <View style={styles.separator} />
       <TouchableOpacity onPress={redo} disabled={!canRedo}>
         <MaterialCommunityIcons
-          name="redo"
-          color={canRedo ? theme.COLOR_PRIMARY : theme.COLOR_SECONDARY}
-          size={22}
+          name="redo-variant"
+          color={canRedo ? theme.COLOR_PRIMARY_LIGHT : theme.COLOR_SECONDARY}
+          size={30}
           testID="redoButton"
         />
       </TouchableOpacity>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  separator: {
+    height: 35,
+    borderRightWidth: 2,
+    borderRightColor: theme.COLOR_SECONDARY,
+    marginHorizontal: 15,
+  },
+});
 
 export default AnimationHistory;

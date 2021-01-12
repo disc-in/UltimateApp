@@ -66,7 +66,9 @@ const SavedPlaysList = (props) => {
 
   return (
     <View>
-      <HeaderButton icon="clipboard-text-outline" onPress={() => setModalOpened(true)} />
+      <TouchableOpacity onPress={() => setModalOpened(true)} testID={props.testID || 'headerButton'}>
+        <MaterialCommunityIcons name="clipboard-text-outline" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
+      </TouchableOpacity>
       <Modal title={I18n.t('editor.savedPlaysList.title')} visible={modalOpened} onClose={() => setModalOpened(false)}>
         <FlatList
           data={props.savedPlays}

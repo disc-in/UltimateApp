@@ -1,16 +1,19 @@
 import React, { useState, useEffect, useLayoutEffect } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, TouchableOpacity, Alert, Share } from 'react-native';
+import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
 import { connect } from 'react-redux';
 
 import I18n from '../utils/i18n';
 import { generateUuid } from '../utils/uuid';
 import theme from '../styles/theme.style';
-import { savePlay, deletePlay } from '../Store/Actions/playAction';
+import { savePlay, deletePlay, renamePlay } from '../Store/Actions/playAction';
 import AnimationEditor from './editor/AnimationEditor';
-import CurrentPlayManager from './editor/CurrentPlayManager';
 import SavedPlaysList from './editor/SavedPlaysList';
 import RenamePlayModal from './editor/RenamePlayModal';
 import Drill from './animation/Drill';
+import { upload } from '../utils/firebase';
+import { showSuccess, showError } from '../utils/flashMessage';
+import * as Linking from 'expo-linking';
 
 const newPlay = {
   uuid: undefined,
@@ -31,22 +34,25 @@ export const PlayEditorPage = (props) => {
   useLayoutEffect(() => {
     navigation.setOptions({
       headerRight: () => (
-        <View style={{ flexDirection: 'row' }}>
-          <SavedPlaysList
+        <View>
+          {/* <SavedPlaysList
             savedPlays={props.customPlays}
             isPlaySaved={isPlaySaved}
             playTitle={currentPlay.title}
             onDelete={onDelete}
             onOpen={openPlay}
             saveCurrentPlay={saveCurrentPlay}
-          />
-          <CurrentPlayManager
+          /> */}
+          {/* <CurrentPlayManager
             currentPlay={currentPlay}
             isPlaySaved={isPlaySaved}
             save={saveCurrentPlay}
             new={createNewPlay}
             rename={() => setModalRenameVisible(true)}
-          />
+          /> */}
+          <TouchableOpacity onPress={() => renamePlay()} testID="shareButton">
+            <MaterialCommunityIcons name="pencil" color={theme.COLOR_PRIMARY} size={28} style={{ marginRight: 20 }} />
+          </TouchableOpacity>
         </View>
       ),
     }),
@@ -56,6 +62,52 @@ export const PlayEditorPage = (props) => {
   useEffect(() => {
     setTitle();
   }, [currentPlay, isPlaySaved]);
+
+  const share = async () => {
+    try {
+      await upload(props.currentPlay);
+      const url = Linking.makeUrl('customPlays/' + props.currentPlay.uuid);
+      await Share.share({
+        title: I18n.t('editor.currentPlayManager.shareTitle', { title: props.currentPlay.title }),
+        message: I18n.t('editor.currentPlayManager.shareMessage', { url }),
+        url,
+      });
+    } catch (error) {
+      showError(I18n.t('editor.currentPlayManager.shareError'));
+    }
+  };
+
+  const checkBeforeNewPlay = () => {
+    if (props.isPlaySaved) {
+      props.new();
+    } else {
+      Alert.alert(
+        I18n.t('editor.saveModificationsTitle'),
+        I18n.t('editor.saveModificationsText', { title: props.currentPlay.title }),
+        [
+          {
+            text: I18n.t('shared.cancel'),
+            style: 'cancel',
+            onPress: () => {},
+          },
+          {
+            text: I18n.t('shared.yes'),
+            onPress: () => {
+              props.save();
+              showSuccess(I18n.t('editor.currentPlayManager.saveSuccess', { title: props.currentPlay.title }));
+              props.new();
+            },
+          },
+          {
+            text: I18n.t('shared.no'),
+            onPress: () => {
+              props.new();
+            },
+          },
+        ],
+      );
+    }
+  };
 
   const setTitle = () => {
     const playTitle = currentPlay.title || I18n.t('playEditorPage.untitledPlay');
@@ -106,12 +158,42 @@ export const PlayEditorPage = (props) => {
   };
 
   return (
-    <View style={styles.centeredView}>
-      {modalRenameVisible ? (
-        <RenamePlayModal currentPlay={currentPlay} onRename={setTitle} close={() => setModalRenameVisible(false)} />
-      ) : null}
+    <View style={styles.allPage}>
+      <View style={styles.centeredView}>
+        {modalRenameVisible ? (
+          <RenamePlayModal currentPlay={currentPlay} onRename={setTitle} close={() => setModalRenameVisible(false)} />
+        ) : null}
 
-      <AnimationEditor onAnimationChange={onAnimationChange} animation={currentPlay.animation} />
+        <AnimationEditor onAnimationChange={onAnimationChange} animation={currentPlay.animation} />
+      </View>
+      <View style={styles.toolBar}>
+        <SavedPlaysList
+          savedPlays={props.customPlays}
+          isPlaySaved={isPlaySaved}
+          playTitle={currentPlay.title}
+          onDelete={onDelete}
+          onOpen={openPlay}
+          saveCurrentPlay={saveCurrentPlay}
+        />
+        <TouchableOpacity onPress={() => checkBeforeNewPlay()} testID="plusButton">
+          <MaterialCommunityIcons name="plus" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => share(drill)} testID="shareButton">
+          <MaterialCommunityIcons name="content-save" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
+        </TouchableOpacity>
+        <View style={styles.undo}>
+          <TouchableOpacity onPress={() => share(drill)} testID="shareButton">
+            <MaterialCommunityIcons name="undo-variant" color={theme.COLOR_SECONDARY} size={30} />
+          </TouchableOpacity>
+          <View style={styles.separator} />
+          <TouchableOpacity onPress={() => share(drill)} testID="shareButton">
+            <MaterialCommunityIcons name="redo-variant" color={theme.COLOR_SECONDARY} size={30} />
+          </TouchableOpacity>
+        </View>
+        <TouchableOpacity onPress={() => share()} testID="shareButton">
+          <Ionicons name="ios-share" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
@@ -130,5 +212,28 @@ const styles = StyleSheet.create({
   centeredView: {
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     flex: 1,
+  },
+  toolBar: {
+    height: '8%',
+    width: '100%',
+    backgroundColor: theme.COLOR_PRIMARY,
+    position: 'absolute',
+    bottom: 0,
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+  },
+  allPage: {
+    height: '100%',
+  },
+  undo: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  separator: {
+    height: 35,
+    borderRightWidth: 2,
+    borderRightColor: theme.COLOR_SECONDARY,
+    marginHorizontal: 15,
   },
 });

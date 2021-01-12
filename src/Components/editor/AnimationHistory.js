@@ -47,11 +47,11 @@ function AnimationHistory({ animation, onAnimationHistoryChange }) {
   const canUndo = currentId !== 0;
   const canRedo = currentId !== stack.length - 1;
   return (
-    <View style={{ flexDirection: 'row' }}>
+    <View style={styles.history}>
       <TouchableOpacity onPress={undo} style={{ marginRight: 10 }} disabled={!canUndo}>
         <MaterialCommunityIcons
           name="undo-variant"
-          color={canUndo ? theme.COLOR_PRIMARY_LIGHT : theme.COLOR_SECONDARY}
+          color={canUndo ? theme.COLOR_PRIMARY : theme.COLOR_SECONDARY}
           size={30}
           testID="undoButton"
         />
@@ -60,7 +60,7 @@ function AnimationHistory({ animation, onAnimationHistoryChange }) {
       <TouchableOpacity onPress={redo} disabled={!canRedo}>
         <MaterialCommunityIcons
           name="redo-variant"
-          color={canRedo ? theme.COLOR_PRIMARY_LIGHT : theme.COLOR_SECONDARY}
+          color={canRedo ? theme.COLOR_PRIMARY : theme.COLOR_SECONDARY}
           size={30}
           testID="redoButton"
         />
@@ -75,6 +75,10 @@ const styles = StyleSheet.create({
     borderRightWidth: 2,
     borderRightColor: theme.COLOR_SECONDARY,
     marginHorizontal: 15,
+  },
+  history: {
+    flexDirection: 'row',
+    alignSelf: 'center',
   },
 });
 

@@ -28,7 +28,7 @@ export default BackgroundPicker;
 const styles = StyleSheet.create({
   picker: {
     height: 80,
-    width: 120,
+    width: '45%',
   },
   itemStyle: {
     fontSize: theme.FONT_SIZE_SMALL,

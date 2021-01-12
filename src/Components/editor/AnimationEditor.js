@@ -308,32 +308,32 @@ class AnimationEditor extends React.Component {
         />
 
         <View style={styles.actionsArea}>
-          <View
-            style={[styles.deletionArea, this.state.isElementMoving ? null : { transform: [{ scale: 0 }] }]}
-            pointerEvents="none"
-          >
-            <MaterialCommunityIcons name="trash-can" color={theme.COLOR_PRIMARY} size={22} />
-          </View>
-          <View style={[styles.draggableArea, this.state.isElementMoving ? { transform: [{ scale: 0 }] } : null]}>
-            <BackgroundPicker
-              onBackgroundChange={this.onBackgroundChange}
-              selectedBackground={this.state.animation.background}
-            />
-            {['offense', 'defense', 'disc', 'triangle'].map((type) => (
-              <DraggableDisplayedElement
-                type={type}
-                draggableBaseWidth={this.state.draggableBaseWidth}
-                onMoveEnd={this.addElementToAnimation}
-                key={type}
-                number={this.state.labels[type]}
+          {this.state.isElementMoving ? (
+            <View style={styles.deletionArea}>
+              <MaterialCommunityIcons name="trash-can" color={theme.COLOR_PRIMARY} size={22} />
+            </View>
+          ) : (
+            <View style={styles.draggableArea}>
+              <View style={styles.draggableElement}>
+                {['offense', 'defense', 'disc', 'triangle'].map((type) => (
+                  <DraggableDisplayedElement
+                    type={type}
+                    draggableBaseWidth={this.state.draggableBaseWidth}
+                    onMoveEnd={this.addElementToAnimation}
+                    number={this.state.labels[type]}
+                    key={type}
+                  />
+                ))}
+              </View>
+              <BackgroundPicker
+                onBackgroundChange={this.onBackgroundChange}
+                selectedBackground={this.state.animation.background}
               />
-            ))}
-            <AnimationHistory
-              animation={this.state.animation}
-              onAnimationHistoryChange={this.onAnimationHistoryChange}
-            />
-          </View>
+            </View>
+          )}
         </View>
+
+        <AnimationHistory animation={this.state.animation} onAnimationHistoryChange={this.onAnimationHistoryChange} />
       </View>
     );
   }
@@ -354,6 +354,8 @@ const styles = StyleSheet.create({
     top: 0,
     flex: 1,
     zIndex: 1,
+    width: '100%',
+    justifyContent: 'space-around',
   },
   deletionArea: {
     flexDirection: 'row',
@@ -367,6 +369,13 @@ const styles = StyleSheet.create({
     zIndex: 2,
     borderWidth: 2,
     justifyContent: 'center',
+  },
+  draggableElement: {
+    flexDirection: 'row',
+    width: '45%',
+    alignItems: 'center',
+    justifyContent: 'space-around',
+    marginLeft: 20,
   },
 });
 export default AnimationEditor;

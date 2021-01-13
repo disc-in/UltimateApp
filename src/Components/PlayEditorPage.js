@@ -150,7 +150,11 @@ export const PlayEditorPage = (props) => {
           <RenamePlayModal currentPlay={currentPlay} onRename={setTitle} close={() => setModalRenameVisible(false)} />
         ) : null}
 
-        <AnimationEditor onAnimationChange={onAnimationChange} animation={currentPlay.animation} />
+        <AnimationEditor
+          onAnimationChange={onAnimationChange}
+          animation={currentPlay.animation}
+          uuid={currentPlay.uuid}
+        />
       </View>
       <View style={styles.toolBar}>
         <SavedPlaysList

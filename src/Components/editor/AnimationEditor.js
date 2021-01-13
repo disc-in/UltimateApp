@@ -147,7 +147,11 @@ class AnimationEditor extends React.Component {
   componentDidUpdate(prevProps) {
     const animation = new Drill(this.props.animation);
     if (!this.state.animation.isEqualTo(animation)) {
-      this.state.currentStepAV.setValue(0);
+      if (this.props.uuid !== prevProps.uuid) {
+        this.state.currentStepAV.setValue(0);
+      }
+      // } else {this.state.currentStepAV.setValue(Math.min(this.currentStep, this.props.animation.stepCount() - 1)}
+
       this.setState({ animation }, () => {
         this.setLabels();
       });

@@ -493,7 +493,7 @@ exports[`<PlayEditorPage /> renders correctly  with a currentPlay 1`] = `
             ]
           }
         >
-          喝
+          󰩹
         </Text>
       </View>
       <View
@@ -841,7 +841,7 @@ exports[`<PlayEditorPage /> renders correctly  with a currentPlay 1`] = `
               }
               testID="undoButton"
             >
-              
+              󰕌
             </Text>
           </View>
           <View
@@ -879,7 +879,7 @@ exports[`<PlayEditorPage /> renders correctly  with a currentPlay 1`] = `
               }
               testID="redoButton"
             >
-              
+              󰑎
             </Text>
           </View>
         </View>

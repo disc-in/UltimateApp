@@ -58,6 +58,7 @@ export default {
   },
   navigation: {
     homePage: 'Disc In',
+    aboutPage: 'À propos de Disc In',
     drillListPage: 'Exercices de {{type}}',
     drillPage: 'Exercice',
     filters: 'Filtres',
@@ -151,15 +152,32 @@ export default {
       redoMessage: "Tu as terminé l'exercice !",
     },
   },
-  feedback: {
-    alert: {
-      title: 'Contactez-nous !',
-      content:
-        'Nous serions ravis de connaitre vos opinions pour améliorer notre application.\n\nVoulez-vous nous envoyer un message ?',
-      cancel: 'Annuler',
-      cta: 'Envoyer',
+  aboutPage: {
+    copyright: '2020 - {{endYear}}',
+    version: 'version {{version}}',
+    about: {
+      header: 'À propos',
+      text:
+        "'Disc In' est une application conçue par des entraîneurs d'ultimate et pour des entraîneurs d'ultimate. Elle est et restera gratuite.",
     },
-    subject: "Retours sur l'app Disc In",
+    acknowledgements: {
+      header: 'Remerciements',
+      text: 'Un grand merci à tous ceux qui ont aidé à faire de Disc In une super appplication !',
+      linkText: 'Contributeurs',
+      linkUrl: 'https://github.com/disc-in/UltimateApp#-thanks',
+    },
+    contributing: {
+      header: 'Contribuer',
+      text:
+        "Ajouts d'exercices et de programmes, nouvelles vidéos, traductions, etc. Il y a des dizaines de manières d'améliorer Disc In. Contactez-nous !",
+    },
+    feedback: {
+      header: 'Feedback',
+      text:
+        "Nous serions ravis de connaitre vos idées pour améliorer l'application.\n\nVoulez-vous nous envoyer un message ?",
+      cta: 'Nous contacter',
+      subject: 'A propos de Disc In',
+    },
   },
   dictionaryPage: {
     translation: 'Traduction : ',

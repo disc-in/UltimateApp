@@ -1,0 +1,216 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AboutPage /> renders correctly 1`] = `
+<RCTScrollView
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "height": "100%",
+      "padding": 20,
+    }
+  }
+>
+  <View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+          "marginBottom": 10,
+        }
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Object {
+            "borderRadius": 5,
+            "height": 50,
+            "width": 50,
+          }
+        }
+      />
+      <View>
+        <Text
+          style={
+            Object {
+              "color": "#A6A6A6",
+              "marginLeft": 10,
+            }
+          }
+        >
+          2020 - 2021
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#A6A6A6",
+              "marginLeft": 10,
+            }
+          }
+        >
+          v. [missing {{version}} value]
+        </Text>
+      </View>
+    </View>
+    <Text
+      style={
+        Object {
+          "color": "#232b2b",
+          "fontSize": 20,
+          "marginTop": 10,
+        }
+      }
+    >
+      About
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#A6A6A6",
+          "fontSize": 16,
+          "marginTop": 5,
+        }
+      }
+    >
+      'Disc In' is an application made by ultimate coaches for ultimate coaches. It is free and shall remain this way.
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#232b2b",
+          "fontSize": 20,
+          "marginTop": 10,
+        }
+      }
+    >
+      Acknowledgements
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#A6A6A6",
+          "fontSize": 16,
+          "marginTop": 5,
+        }
+      }
+    >
+      A big thanks to everybody helping make 'Disc In' a nice app!
+    </Text>
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#2a9e91",
+            "fontSize": 16,
+          }
+        }
+      >
+        Contributors
+      </Text>
+    </View>
+    <Text
+      style={
+        Object {
+          "color": "#232b2b",
+          "fontSize": 20,
+          "marginTop": 10,
+        }
+      }
+    >
+      Contributing
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#A6A6A6",
+          "fontSize": 16,
+          "marginTop": 5,
+        }
+      }
+    >
+      Adding drills and programs, new videos, translating to other languages, etc. There are dozens of ways to improve the app. Feel free to contact us!
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#232b2b",
+          "fontSize": 20,
+          "marginTop": 10,
+        }
+      }
+    >
+      Feedback
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#A6A6A6",
+          "fontSize": 16,
+          "marginTop": 5,
+        }
+      }
+    >
+      We are always looking for ideas and feedback to improve the app.
+Would you like to send us a message?
+    </Text>
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "#2a9e91",
+          "borderRadius": 5,
+          "flexDirection": "row",
+          "height": 30,
+          "justifyContent": "center",
+          "marginTop": 5,
+          "opacity": 1,
+          "paddingHorizontal": 10,
+          "paddingVertical": 0,
+          "width": "auto",
+        }
+      }
+      testID="feedbackButton"
+    >
+      <Text />
+      <Text
+        style={
+          Object {
+            "color": "#fff",
+            "fontSize": 16,
+            "textAlign": "center",
+          }
+        }
+      >
+        Send feedback
+      </Text>
+    </View>
+  </View>
+</RCTScrollView>
+`;

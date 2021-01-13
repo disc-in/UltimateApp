@@ -143,6 +143,12 @@ export const PlayEditorPage = (props) => {
     if (play.title === currentPlay.title) createNewPlay();
   };
 
+  // const onAnimationHistoryChange = (animation) => {
+  //   // Reduce the currentStep if it is greater than the number of steps in animation
+  //   this.state.currentStepAV.setValue(Math.min(this.currentStep, animation.stepCount() - 1));
+  //   this.saveAnimation(animation);
+  // };
+
   return (
     <View style={styles.allPage}>
       <View style={styles.centeredView}>
@@ -162,7 +168,7 @@ export const PlayEditorPage = (props) => {
           saveCurrentPlay={saveCurrentPlay}
         />
         <TouchableOpacity onPress={() => checkBeforeNewPlay()} testID="plusButton">
-          <MaterialCommunityIcons name="plus" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
+          <MaterialCommunityIcons name="plus" color={theme.COLOR_PRIMARY_LIGHT} size={35} />
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => {
@@ -171,20 +177,11 @@ export const PlayEditorPage = (props) => {
           }}
           testID="saveButton"
         >
-          <MaterialCommunityIcons name="content-save" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
+          <MaterialCommunityIcons name="content-save" color={theme.COLOR_PRIMARY_LIGHT} size={35} />
         </TouchableOpacity>
-
-        {/* <View style={styles.undo}>
-          <TouchableOpacity onPress={() => saveCurrentPlay()} testID="shareButton">
-            <MaterialCommunityIcons name="undo-variant" color={theme.COLOR_SECONDARY} size={30} />
-          </TouchableOpacity>
-          <View style={styles.separator} />
-          <TouchableOpacity onPress={() => saveCurrentPlay()} testID="shareButton">
-            <MaterialCommunityIcons name="redo-variant" color={theme.COLOR_SECONDARY} size={30} />
-          </TouchableOpacity>
-        </View> */}
+        {/* <AnimationHistory animation={newPlay.animation} onAnimationHistoryChange={onAnimationHistoryChange()} /> */}
         <TouchableOpacity onPress={() => share(currentPlay)} testID="shareButton">
-          <Ionicons name="ios-share" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
+          <Ionicons name="ios-share" color={theme.COLOR_PRIMARY_LIGHT} size={35} />
         </TouchableOpacity>
       </View>
     </View>
@@ -218,15 +215,5 @@ const styles = StyleSheet.create({
   },
   allPage: {
     flex: 1,
-  },
-  undo: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  separator: {
-    height: 35,
-    borderRightWidth: 2,
-    borderRightColor: theme.COLOR_SECONDARY,
-    marginHorizontal: 15,
   },
 });

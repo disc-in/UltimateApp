@@ -52,7 +52,7 @@ function AnimationHistory({ animation, onAnimationHistoryChange }) {
         <MaterialCommunityIcons
           name="undo-variant"
           color={canUndo ? theme.COLOR_PRIMARY : theme.COLOR_SECONDARY}
-          size={30}
+          size={35}
           testID="undoButton"
         />
       </TouchableOpacity>
@@ -61,7 +61,7 @@ function AnimationHistory({ animation, onAnimationHistoryChange }) {
         <MaterialCommunityIcons
           name="redo-variant"
           color={canRedo ? theme.COLOR_PRIMARY : theme.COLOR_SECONDARY}
-          size={30}
+          size={35}
           testID="redoButton"
         />
       </TouchableOpacity>

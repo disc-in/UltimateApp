@@ -5371,7 +5371,7 @@ const bulldogDrill = {
   ],
 };
 
-const menageATroisDrill = {
+const threePersonDrill = {
   id: 1013,
   type: DrillTypes.FRISBEE,
   author: 'Tchac',
@@ -7709,7 +7709,7 @@ const thirdU13Training = {
   title: 'Treasure Hunt',
   image: 'https://zupimages.net/up/20/19/c9i6.jpg',
   description: 'Help players learn the basics of ultimate while having fun',
-  drills: [treasureHuntDrill, menageATroisDrill, goToTenDrill, helpGame],
+  drills: [treasureHuntDrill, threePersonDrill, goToTenDrill, helpGame],
 };
 
 const fourthU13Training = {
@@ -7733,7 +7733,7 @@ const secondInitiationAdultTraining = {
   title: 'Defense & Longs',
   image: 'https://zupimages.net/up/20/19/cd36.jpg',
   description: 'Players will work on defense and long throws',
-  drills: [warmupDrill, menageATroisDrill, checkLong, trainDrill, game5v5],
+  drills: [warmupDrill, threePersonDrill, checkLong, trainDrill, game5v5],
 };
 
 const thirdInitiationAdultTraining = {
@@ -7752,13 +7752,6 @@ const defenseBaseTraining = {
   drills: [warmupGameDrill, defensePositionDrill, youShallNotPassDrill, breakDrill, normalGame],
 };
 
-const learningByPlaying = {
-  id: 10,
-  title: 'Learning to throw',
-  image: 'https://zupimages.net/up/20/19/skjl.jpg',
-  description: 'Practice your throw by playing game',
-  drills: [warmupGameDrill, discGolf, dDC, theTunnel],
-};
 const initiationHorizontal = {
   id: 11,
   title: 'Horizontal Cut',
@@ -7766,6 +7759,7 @@ const initiationHorizontal = {
   description: 'Practice how to cut in a horizontal stack',
   drills: [warmupGameDrill, theDuel, game3v3Horizontal, normalGame],
 };
+
 const horizontalFlow = {
   id: 12,
   title: 'Horizontal Flow',
@@ -7782,13 +7776,12 @@ const horizontalLine = {
   drills: [warmupGameDrill, horizontalTrap, horizontalTrapOutside, horizontalHandler, lineGame],
 };
 
-const coed2MarkTraining = {
+const markTraining = {
   id: 14,
-  title: 'Build your Defense',
+  title: 'Build your Mark',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description:
-    "This training session aims at practicing your mark skills. Don't be broken to easily, generate dangerous passes",
-  drills: [warmupGameDrill, kyeDrill, breakDrill, normalGame],
+  description: "Practice your mark skills. Don't be broken too easily, generate dangerous passes",
+  drills: [warmupGameDrill, threePersonDrill, breakDrill, normalGame],
 };
 
 const defenseSecond = {
@@ -7885,7 +7878,7 @@ const secondU17 = {
   title: 'Learning the fundamentals',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'A second practice to enjoy playing with the disc',
-  drills: [menageATroisDrill, racingWarmUP, dishieLine, treasureHunt, normalGame],
+  drills: [threePersonDrill, racingWarmUP, dishieLine, treasureHunt, normalGame],
 };
 
 const thirdU17 = {
@@ -7917,7 +7910,7 @@ const defenseJunior = {
   title: 'Initiation of Ultimate Basics',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'First practice to focus on defense',
-  drills: [menageATroisDrill, racingWarmUP, dwarDuel, aussieDrill],
+  drills: [threePersonDrill, racingWarmUP, dwarDuel, aussieDrill],
 };
 
 const defenseJuniorSecond = {
@@ -8532,7 +8525,7 @@ export const drills = [
   // Frisbee
   basicThrowsDrill,
   trainDrill,
-  menageATroisDrill,
+  threePersonDrill,
   goaltimateDrill,
   resetOpenDrill,
   resetBreakDrill,
@@ -8646,7 +8639,7 @@ export const programs = [
     type: DrillTypes.FRISBEE,
     ageCategory: AgeCategory.SENIOR,
     title: 'Individual Defense',
-    trainings: [defenseBaseTraining, defenseSecond, defenseThird],
+    trainings: [defenseBaseTraining, defenseSecond, defenseThird, markTraining],
   },
   {
     id: 7,

@@ -7,7 +7,6 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { Share } from 'react-native';
 
 import store from '../Store/testStore';
-import { createDrill } from '../Fixtures/TestFixtures';
 
 import ConnectedDrillPage, { DrillPage } from './DrillPage';
 

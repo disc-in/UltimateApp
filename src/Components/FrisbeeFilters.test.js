@@ -55,7 +55,7 @@ describe('<FrisbeeFilters />', () => {
       const DummyScreen = (props) => null;
       const Stack = createStackNavigator();
 
-      const { getByText, getByTestId } = await waitFor(() =>
+      const { getByText } = await waitFor(() =>
         render(
           <Provider store={mockStore}>
             <NavigationContainer>
@@ -127,7 +127,7 @@ describe('<FrisbeeFilters />', () => {
       const DummyScreen = (props) => null;
       const Stack = createStackNavigator();
 
-      const { getByText, getByTestId } = await waitFor(() =>
+      const { getByText } = await waitFor(() =>
         render(
           <Provider store={mockStore}>
             <NavigationContainer>
@@ -260,7 +260,7 @@ describe('<FrisbeeFilters />', () => {
         favoriteDrills: [intermediateDrill],
       });
 
-      const { getByText, getByTestId } = await waitFor(() =>
+      const { getByText } = await waitFor(() =>
         render(
           <Provider store={mockstore}>
             <NavigationContainer>

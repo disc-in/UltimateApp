@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 import { connect } from 'react-redux';
 
 import { DrillTypes } from '../Fixtures/config';
@@ -22,7 +22,7 @@ export const DrillListPage = (props) => {
     currentFilters?.numberOfPlayers;
 
   const sortingProperty = type === DrillTypes.FRISBEE ? 'minimalPlayersNumber' : 'durationInMinutes';
-  const sortedDisplayedDrills = displayedDrills.sort((a, b) => a[sortingProperty] - b[sortingProperty]);
+  displayedDrills.sort((a, b) => a[sortingProperty] - b[sortingProperty]);
 
   const openFilters = () => {
     const filtersPage = route.params.type === DrillTypes.FRISBEE ? 'FrisbeeFilters' : 'FitnessFilters';

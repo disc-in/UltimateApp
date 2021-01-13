@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { StyleSheet, View, Text, TextInput, InteractionManager, ScrollView } from 'react-native';
 import { connect } from 'react-redux';
 import { Formik } from 'formik';

@@ -1,9 +1,6 @@
 import React from 'react';
-import { create, act } from 'react-test-renderer';
-import { Provider } from 'react-redux';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
 
-import store from '../Store/testStore';
 import * as firebase from '../utils/firebase';
 
 import { ImporterPage } from './ImporterPage';
@@ -46,7 +43,7 @@ describe('<ImporterPage />', () => {
   it('goes back to home on cancel', async () => {
     jest.spyOn(firebase, 'download').mockImplementation(() => new Promise((resolve) => resolve(play)));
 
-    const { getByText, toJSON } = await waitFor(() =>
+    const { getByText } = await waitFor(() =>
       render(<ImporterPage navigation={navigation} route={route} savePlay={savePlay} />),
     );
     await fireEvent.press(getByText('Cancel'));
@@ -57,7 +54,7 @@ describe('<ImporterPage />', () => {
   it('saves play and opens editor on confirmation', async () => {
     jest.spyOn(firebase, 'download').mockImplementation(() => new Promise((resolve) => resolve(play)));
 
-    const { getByText, toJSON } = await waitFor(() =>
+    const { getByText } = await waitFor(() =>
       render(<ImporterPage navigation={navigation} route={route} savePlay={savePlay} />),
     );
     await fireEvent.press(getByText('Yes'));

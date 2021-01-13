@@ -16,17 +16,17 @@ const AboutPage = (props) => {
       subject: I18n.t('aboutPage.feedback.subject'),
       body: '',
     });
-
     alert(result.status);
   };
-
+  const { releaseChannel, version } = Constants.manifest;
+  const channel = releaseChannel === undefined ? 'DEV' : releaseChannel;
   return (
-    <ScrollView style={styles.aboutPage}>
+    <ScrollView style={styles.aboutPage} contentContainerStyle={styles.aboutPageContainer}>
       <View style={styles.iconArea}>
         <Image source={icon} style={styles.icon} />
         <View>
           <Text style={styles.info}>{I18n.t('aboutPage.copyright', { endYear: new Date().getFullYear() })}</Text>
-          <Text style={styles.info}>{I18n.t('aboutPage.version', { version: Constants.manifest.version })}</Text>
+          <Text style={styles.info}>{I18n.t('aboutPage.version', { version, channel })}</Text>
         </View>
       </View>
       <Text style={styles.header}>{I18n.t('aboutPage.about.header')}</Text>
@@ -46,7 +46,7 @@ const AboutPage = (props) => {
         icon="email-outline"
         text={I18n.t('aboutPage.feedback.cta')}
         testID="feedbackButton"
-        style={{ marginTop: 5 }}
+        style={styles.button}
       />
     </ScrollView>
   );
@@ -58,7 +58,10 @@ const styles = StyleSheet.create({
   aboutPage: {
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     flex: 1,
+  },
+  aboutPageContainer: {
     padding: 20,
+    paddingBottom: 50,
   },
   iconArea: {
     flexDirection: 'row',
@@ -88,5 +91,8 @@ const styles = StyleSheet.create({
   linkText: {
     color: theme.MAIN_COLOR,
     fontSize: theme.FONT_SIZE_MEDIUM,
+  },
+  button: {
+    marginTop: 20,
   },
 });

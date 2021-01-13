@@ -2,11 +2,16 @@
 
 exports[`<AboutPage /> renders correctly 1`] = `
 <RCTScrollView
+  contentContainerStyle={
+    Object {
+      "padding": 20,
+      "paddingBottom": 50,
+    }
+  }
   style={
     Object {
       "backgroundColor": "#fff",
-      "height": "100%",
-      "padding": 20,
+      "flex": 1,
     }
   }
 >
@@ -50,7 +55,7 @@ exports[`<AboutPage /> renders correctly 1`] = `
             }
           }
         >
-          v. [missing {{version}} value]
+          version [missing {{version}} value], release-channel DEV
         </Text>
       </View>
     </View>
@@ -189,7 +194,7 @@ Would you like to send us a message?
           "flexDirection": "row",
           "height": 30,
           "justifyContent": "center",
-          "marginTop": 5,
+          "marginTop": 20,
           "opacity": 1,
           "paddingHorizontal": 10,
           "paddingVertical": 0,

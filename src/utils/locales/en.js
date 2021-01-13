@@ -154,7 +154,7 @@ export default {
   },
   aboutPage: {
     copyright: '2020 - {{endYear}}',
-    version: 'version {{version}}',
+    version: 'version {{version}}, release-channel {{channel}}',
     about: {
       header: 'About',
       text:

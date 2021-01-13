@@ -48,11 +48,11 @@ function AnimationHistory({ animation, onAnimationHistoryChange }) {
   const canRedo = currentId !== stack.length - 1;
   return (
     <View style={styles.history}>
-      <TouchableOpacity onPress={undo} style={{ marginRight: 10 }} disabled={!canUndo}>
+      <TouchableOpacity onPress={undo} disabled={!canUndo}>
         <MaterialCommunityIcons
           name="undo-variant"
-          color={canUndo ? theme.COLOR_PRIMARY : theme.COLOR_SECONDARY}
-          size={35}
+          color={canUndo ? theme.COLOR_PRIMARY_LIGHT : theme.COLOR_SECONDARY}
+          size={30}
           testID="undoButton"
         />
       </TouchableOpacity>
@@ -60,8 +60,8 @@ function AnimationHistory({ animation, onAnimationHistoryChange }) {
       <TouchableOpacity onPress={redo} disabled={!canRedo}>
         <MaterialCommunityIcons
           name="redo-variant"
-          color={canRedo ? theme.COLOR_PRIMARY : theme.COLOR_SECONDARY}
-          size={35}
+          color={canRedo ? theme.COLOR_PRIMARY_LIGHT : theme.COLOR_SECONDARY}
+          size={30}
           testID="redoButton"
         />
       </TouchableOpacity>
@@ -71,7 +71,7 @@ function AnimationHistory({ animation, onAnimationHistoryChange }) {
 
 const styles = StyleSheet.create({
   separator: {
-    height: 35,
+    height: 30,
     borderRightWidth: 2,
     borderRightColor: theme.COLOR_SECONDARY,
     marginHorizontal: 15,

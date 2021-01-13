@@ -8,7 +8,6 @@ import DraggableDisplayedElement from './DraggableDisplayedElement';
 import BackgroundPicker from './BackgroundPicker';
 import Drill from '../animation/Drill';
 import theme from '../../styles/theme.style';
-import AnimationHistory from './AnimationHistory';
 
 const bigScreen = Dimensions.get('window').height > 600 ? { alignItems: 'center' } : undefined;
 
@@ -149,8 +148,9 @@ class AnimationEditor extends React.Component {
     const animation = new Drill(this.props.animation);
     if (!this.state.animation.isEqualTo(animation)) {
       this.state.currentStepAV.setValue(0);
-      this.setState({ animation });
-      this.setLabels();
+      this.setState({ animation }, () => {
+        this.setLabels();
+      });
     }
   }
 
@@ -336,8 +336,6 @@ class AnimationEditor extends React.Component {
             )}
           </View>
         </View>
-
-        {/* <AnimationHistory animation={this.state.animation} onAnimationHistoryChange={this.onAnimationHistoryChange} /> */}
       </View>
     );
   }

@@ -143,12 +143,6 @@ export const PlayEditorPage = (props) => {
     if (play.title === currentPlay.title) createNewPlay();
   };
 
-  // const onAnimationHistoryChange = (animation) => {
-  //   // Reduce the currentStep if it is greater than the number of steps in animation
-  //   this.state.currentStepAV.setValue(Math.min(this.currentStep, animation.stepCount() - 1));
-  //   this.saveAnimation(animation);
-  // };
-
   return (
     <View style={styles.allPage}>
       <View style={styles.centeredView}>
@@ -168,7 +162,7 @@ export const PlayEditorPage = (props) => {
           saveCurrentPlay={saveCurrentPlay}
         />
         <TouchableOpacity onPress={() => checkBeforeNewPlay()} testID="plusButton">
-          <MaterialCommunityIcons name="plus" color={theme.COLOR_PRIMARY_LIGHT} size={35} />
+          <MaterialCommunityIcons name="plus" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => {
@@ -177,11 +171,13 @@ export const PlayEditorPage = (props) => {
           }}
           testID="saveButton"
         >
-          <MaterialCommunityIcons name="content-save" color={theme.COLOR_PRIMARY_LIGHT} size={35} />
+          <MaterialCommunityIcons name="content-save" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
         </TouchableOpacity>
-        {/* <AnimationHistory animation={newPlay.animation} onAnimationHistoryChange={onAnimationHistoryChange()} /> */}
+
+        <AnimationHistory animation={currentPlay.animation} onAnimationHistoryChange={onAnimationChange} />
+
         <TouchableOpacity onPress={() => share(currentPlay)} testID="shareButton">
-          <Ionicons name="ios-share" color={theme.COLOR_PRIMARY_LIGHT} size={35} />
+          <Ionicons name="ios-share" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
         </TouchableOpacity>
       </View>
     </View>

@@ -6,6 +6,8 @@ import DisplayedCuts from './DisplayedCuts';
 import ProgressBar from './ProgressBar';
 import AnimationBackground from './AnimationBackground';
 
+const bigScreen = Dimensions.get('window').height > 600 ? 0 : 10;
+
 class Animation extends React.Component {
   constructor(props) {
     super(props);
@@ -165,7 +167,7 @@ class Animation extends React.Component {
               });
             }
           }}
-          style={{ height: this.animationHeight - 10, width: this.animationWidth }}
+          style={{ height: this.animationHeight - bigScreen, width: this.animationWidth }}
         >
           {this.animationWidth && (
             <AnimationBackground

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StyleSheet, Animated, Easing, View, Platform } from 'react-native';
+import { StyleSheet, Animated, Easing, View, Platform, Dimensions } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import Animation from '../animation/Animation';
@@ -9,6 +9,8 @@ import BackgroundPicker from './BackgroundPicker';
 import Drill from '../animation/Drill';
 import theme from '../../styles/theme.style';
 import AnimationHistory from './AnimationHistory';
+
+const bigScreen = Dimensions.get('window').height > 600 ? { alignItems: 'center' } : undefined;
 
 class AnimationEditor extends React.Component {
   constructor(props) {
@@ -308,13 +310,17 @@ class AnimationEditor extends React.Component {
         />
 
         <View style={styles.actionsArea}>
-          <View style={styles.container}>
+          <View style={[styles.container, bigScreen]}>
             {this.state.isElementMoving ? (
               <View style={styles.deletionArea}>
                 <MaterialCommunityIcons name="trash-can" color={theme.COLOR_PRIMARY} size={22} />
               </View>
             ) : (
               <View style={styles.draggableArea}>
+                <BackgroundPicker
+                  onBackgroundChange={this.onBackgroundChange}
+                  selectedBackground={this.state.animation.background}
+                />
                 <View style={styles.draggableElement}>
                   {['offense', 'defense', 'disc', 'triangle'].map((type) => (
                     <DraggableDisplayedElement
@@ -326,10 +332,6 @@ class AnimationEditor extends React.Component {
                     />
                   ))}
                 </View>
-                <BackgroundPicker
-                  onBackgroundChange={this.onBackgroundChange}
-                  selectedBackground={this.state.animation.background}
-                />
               </View>
             )}
           </View>
@@ -344,22 +346,17 @@ class AnimationEditor extends React.Component {
 const styles = StyleSheet.create({
   actionsArea: {
     marginHorizontal: 10,
-    height: '100%',
-    backgroundColor: 'green',
+    height: '12%',
   },
   draggableArea: {
     flexDirection: 'row',
     alignItems: 'center',
     position: 'absolute',
-    marginLeft: 0,
-    left: 0,
-    top: 0,
-    flex: 1,
+
     zIndex: 1,
     width: '100%',
     height: 30,
     justifyContent: 'space-around',
-    backgroundColor: 'pink',
   },
   deletionArea: {
     flexDirection: 'row',
@@ -384,9 +381,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'row',
-    flexWrap: 'wrap',
-    backgroundColor: 'blue',
-    justifyContent: 'center',
   },
 });
 export default AnimationEditor;

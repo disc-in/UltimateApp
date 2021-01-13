@@ -217,7 +217,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
   },
   allPage: {
-    height: '100%',
+    flex: 1,
   },
   undo: {
     flexDirection: 'row',

@@ -71,7 +71,7 @@ class Drill {
       const vElement = parseInt(elementText, 10);
 
       /* For each element which has a number and which is of the same type than the element removed */
-      for (var i = 0; i < this.texts.length; i++)
+      for (i = 0; i < this.texts.length; i++) {
         if (this.texts[i] !== '' && this.ids[i] === elementId) {
           const vi = parseInt(this.texts[i], 10);
 
@@ -80,6 +80,7 @@ class Drill {
             this.texts[i] = (vi - 1).toString();
           }
         }
+      }
     }
   }
 
@@ -105,6 +106,8 @@ class Drill {
     if (isEqual && this.elemCount() !== otherDrill.elemCount()) isEqual = false;
 
     if (isEqual && this.background !== otherDrill.background) isEqual = false;
+
+    if (isEqual && this.positions.length !== otherDrill.positions.length) isEqual = false;
 
     let elemId = 0;
 

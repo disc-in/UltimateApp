@@ -119,6 +119,7 @@ exports[`<RenamePlayModal /> renders correctly 1`] = `
                     "alignItems": "center",
                     "backgroundColor": "#2a9e91",
                     "borderRadius": 5,
+                    "flexDirection": "row",
                     "height": 40,
                     "justifyContent": "center",
                     "marginTop": 10,
@@ -162,6 +163,7 @@ exports[`<RenamePlayModal /> renders correctly 1`] = `
               "borderColor": "#2a9e91",
               "borderRadius": 5,
               "borderWidth": 1,
+              "flexDirection": "row",
               "height": 40,
               "justifyContent": "center",
               "marginTop": 20,
@@ -179,7 +181,6 @@ exports[`<RenamePlayModal /> renders correctly 1`] = `
                 "color": "#2a9e91",
                 "fontSize": 16,
                 "fontWeight": "bold",
-                "textAlign": "center",
               }
             }
           >

@@ -49,6 +49,7 @@ export class FrisbeeFilters extends React.Component {
       this.applyFilters,
     );
   }
+
   onPressedChange(target, value) {
     this.setState((prevState) => {
       const newValue = prevState[target].includes(value)
@@ -74,8 +75,9 @@ export class FrisbeeFilters extends React.Component {
       newData = newData.filter((drill) => favoriteIds.includes(drill.id));
     }
     if (selectedLevels.length > 0) newData = newData.filter((drill) => selectedLevels.includes(drill.level));
-    if (selectedGoals.length > 0)
+    if (selectedGoals.length > 0) {
       newData = newData.filter((drill) => drill.goals.filter((goal) => selectedGoals.includes(goal)).length > 0);
+    }
     if (numberOfPlayers) newData = newData.filter((drill) => drill.minimalPlayersNumber <= numberOfPlayers);
 
     this.setState({ displayedDrills: newData }, callback);

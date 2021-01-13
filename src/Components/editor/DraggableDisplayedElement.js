@@ -12,6 +12,7 @@ import Cone from '../animation/elements/Cone';
 */
 const DraggableDisplayedElement = (props) => {
   const { draggableBaseWidth, type, number } = props;
+
   /* Current position of the element in pixels */
   const currentPosition = new Animated.ValueXY({ x: 0, y: 0 });
 

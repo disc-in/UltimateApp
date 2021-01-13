@@ -868,6 +868,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           "alignItems": "center",
           "backgroundColor": "#2a9e91",
           "borderRadius": 5,
+          "flexDirection": "row",
           "height": 40,
           "justifyContent": "center",
           "opacity": 1,

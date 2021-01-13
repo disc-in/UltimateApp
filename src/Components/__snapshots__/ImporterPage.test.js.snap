@@ -77,6 +77,7 @@ exports[`<ImporterPage /> renders correctly after download 1`] = `
             "alignItems": "center",
             "backgroundColor": "#2a9e91",
             "borderRadius": 5,
+            "flexDirection": "row",
             "height": 40,
             "justifyContent": "center",
             "opacity": 1,
@@ -116,6 +117,7 @@ exports[`<ImporterPage /> renders correctly after download 1`] = `
             "borderColor": "#2a9e91",
             "borderRadius": 5,
             "borderWidth": 1,
+            "flexDirection": "row",
             "height": 40,
             "justifyContent": "center",
             "opacity": 1,
@@ -132,7 +134,6 @@ exports[`<ImporterPage /> renders correctly after download 1`] = `
               "color": "#2a9e91",
               "fontSize": 16,
               "fontWeight": "bold",
-              "textAlign": "center",
             }
           }
         >

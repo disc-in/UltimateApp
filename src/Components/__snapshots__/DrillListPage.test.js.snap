@@ -7,20 +7,73 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
       "backgroundColor": "#fff",
       "height": "100%",
       "paddingLeft": 20,
+      "paddingRight": 10,
       "paddingTop": 10,
     }
   }
 >
-  <Text
+  <View
     style={
       Object {
-        "color": "#A6A6A6",
-        "marginBottom": 20,
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "marginBottom": 5,
       }
     }
   >
-    2 drills available
-  </Text>
+    <Text
+      style={
+        Object {
+          "color": "#A6A6A6",
+        }
+      }
+    >
+      2 drills available
+    </Text>
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "#fff",
+          "borderColor": "#2a9e91",
+          "borderRadius": 5,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "height": 30,
+          "justifyContent": "center",
+          "opacity": 1,
+          "paddingHorizontal": 10,
+          "paddingVertical": 0,
+          "width": "auto",
+        }
+      }
+      testID="filterButton"
+    >
+      <Text />
+      <Text
+        style={
+          Object {
+            "color": "#2a9e91",
+            "fontSize": 16,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Filter
+      </Text>
+    </View>
+  </View>
   <RCTScrollView
     contentContainerStyle={
       Object {
@@ -673,21 +726,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
     navigation={
       Object {
         "navigate": [MockFunction],
-        "setOptions": [MockFunction] {
-          "calls": Array [
-            Array [
-              Object {
-                "headerRight": [Function],
-              },
-            ],
-          ],
-          "results": Array [
-            Object {
-              "type": "return",
-              "value": undefined,
-            },
-          ],
-        },
+        "setOptions": [MockFunction],
       }
     }
     onContentSizeChange={[Function]}
@@ -988,20 +1027,31 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
       "backgroundColor": "#fff",
       "height": "100%",
       "paddingLeft": 20,
+      "paddingRight": 10,
       "paddingTop": 10,
     }
   }
 >
-  <Text
+  <View
     style={
       Object {
-        "color": "#A6A6A6",
-        "marginBottom": 20,
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "marginBottom": 5,
       }
     }
   >
-    3 drills available
-  </Text>
+    <Text
+      style={
+        Object {
+          "color": "#A6A6A6",
+        }
+      }
+    >
+      3 drills available
+    </Text>
+  </View>
   <RCTScrollView
     contentContainerStyle={
       Object {
@@ -1176,39 +1226,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
     navigation={
       Object {
         "navigate": [MockFunction],
-        "setOptions": [MockFunction] {
-          "calls": Array [
-            Array [
-              Object {
-                "headerRight": [Function],
-              },
-            ],
-            Array [
-              Object {
-                "headerRight": [Function],
-              },
-            ],
-            Array [
-              Object {
-                "headerRight": [Function],
-              },
-            ],
-          ],
-          "results": Array [
-            Object {
-              "type": "return",
-              "value": undefined,
-            },
-            Object {
-              "type": "return",
-              "value": undefined,
-            },
-            Object {
-              "type": "return",
-              "value": undefined,
-            },
-          ],
-        },
+        "setOptions": [MockFunction],
       }
     }
     onContentSizeChange={[Function]}
@@ -1644,20 +1662,104 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
       "backgroundColor": "#fff",
       "height": "100%",
       "paddingLeft": 20,
+      "paddingRight": 10,
       "paddingTop": 10,
     }
   }
 >
-  <Text
+  <View
     style={
       Object {
-        "color": "#A6A6A6",
-        "marginBottom": 20,
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "marginBottom": 5,
       }
     }
   >
-    3 drills available
-  </Text>
+    <Text
+      style={
+        Object {
+          "color": "#A6A6A6",
+        }
+      }
+    >
+      3 drills available
+    </Text>
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "#fff",
+          "borderColor": "#2a9e91",
+          "borderRadius": 5,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "height": 30,
+          "justifyContent": "center",
+          "opacity": 1,
+          "paddingHorizontal": 10,
+          "paddingVertical": 0,
+          "width": "auto",
+        }
+      }
+      testID="filterButton"
+    >
+      <Text
+        allowFontScaling={false}
+        style={
+          Array [
+            Object {
+              "color": undefined,
+              "fontSize": 12,
+            },
+            Array [
+              Object {
+                "marginRight": 20,
+              },
+              Object {
+                "color": "#2a9e91",
+                "fontSize": 16,
+                "fontWeight": "bold",
+              },
+              Object {
+                "marginRight": 5,
+              },
+            ],
+            Object {
+              "fontFamily": "material-community",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#2a9e91",
+            "fontSize": 16,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Filter
+      </Text>
+    </View>
+  </View>
   <RCTScrollView
     contentContainerStyle={
       Object {
@@ -1832,30 +1934,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
     navigation={
       Object {
         "navigate": [MockFunction],
-        "setOptions": [MockFunction] {
-          "calls": Array [
-            Array [
-              Object {
-                "headerRight": [Function],
-              },
-            ],
-            Array [
-              Object {
-                "headerRight": [Function],
-              },
-            ],
-          ],
-          "results": Array [
-            Object {
-              "type": "return",
-              "value": undefined,
-            },
-            Object {
-              "type": "return",
-              "value": undefined,
-            },
-          ],
-        },
+        "setOptions": [MockFunction],
       }
     }
     onContentSizeChange={[Function]}

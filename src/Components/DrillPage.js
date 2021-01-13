@@ -60,7 +60,7 @@ export const DrillPage = (props) => {
 
   useLayoutEffect(() => {
     let favoriteIcon = 'heart-outline';
-    if (props.favoriteDrills.findIndex((item) => item.id === props.route.params.drill.id) !== -1) {
+    if (props.favoriteDrills.findIndex((item) => item.id === props.route.params.id) !== -1) {
       favoriteIcon = 'heart';
     }
 

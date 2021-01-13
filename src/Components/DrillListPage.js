@@ -1,13 +1,12 @@
-import React, { useLayoutEffect } from 'react';
+import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
-import DrillList from './shared/DrillList';
-import { DrillTypes } from '../Fixtures/config';
 
+import { DrillTypes } from '../Fixtures/config';
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
-import * as list from '../styles/list.style';
-import HeaderButton from './shared/HeaderButton';
+import DrillList from './shared/DrillList';
+import Button from './shared/Button';
 
 export const DrillListPage = (props) => {
   const { navigation, route, storeDrills } = props;
@@ -15,6 +14,12 @@ export const DrillListPage = (props) => {
 
   const storeDrillsForType = storeDrills.filter((drill) => drill.type === type);
   const displayedDrills = currentFilters?.displayedDrills || storeDrillsForType;
+
+  const filterIsOn =
+    currentFilters?.selectedGoals.length > 0 ||
+    currentFilters?.selectedLevels.length > 0 ||
+    currentFilters?.selectedFavorites ||
+    currentFilters?.numberOfPlayers;
 
   const sortingProperty = type === DrillTypes.FRISBEE ? 'minimalPlayersNumber' : 'durationInMinutes';
   const sortedDisplayedDrills = displayedDrills.sort((a, b) => a[sortingProperty] - b[sortingProperty]);
@@ -29,16 +34,21 @@ export const DrillListPage = (props) => {
     });
   };
 
-  useLayoutEffect(() =>
-    navigation.setOptions({
-      headerRight: () => <HeaderButton icon="filter-outline" onPress={openFilters} testID="filterButton" />,
-    }),
-  ),
-    [navigation, route.params.type];
-
   return (
     <View style={styles.drillListPage}>
-      <Text style={list.counter}>{I18n.t('drillListPage.availableDrills', { count: displayedDrills.length })}</Text>
+      <View style={styles.filtersArea}>
+        <Text style={styles.counter}>{I18n.t('drillListPage.availableDrills', { count: displayedDrills.length })}</Text>
+        {type === DrillTypes.FRISBEE && (
+          <Button
+            onPress={openFilters}
+            icon="filter-variant"
+            text={I18n.t('drillListPage.filter')}
+            testID="filterButton"
+            small
+            light={!filterIsOn}
+          />
+        )}
+      </View>
       <DrillList navigation={navigation} drillsToDisplay={displayedDrills} />
     </View>
   );
@@ -56,7 +66,17 @@ const styles = StyleSheet.create({
   drillListPage: {
     paddingTop: 10,
     paddingLeft: 20,
+    paddingRight: 10,
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     height: '100%',
+  },
+  filtersArea: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 5,
+  },
+  counter: {
+    color: theme.COLOR_SECONDARY,
   },
 });

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { StyleSheet, Animated, Easing, View, Platform } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
@@ -7,11 +8,11 @@ import DraggableDisplayedElement from './DraggableDisplayedElement';
 import BackgroundPicker from './BackgroundPicker';
 import Drill from '../animation/Drill';
 import theme from '../../styles/theme.style';
+import AnimationHistory from './AnimationHistory';
 
 class AnimationEditor extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       animation: new Drill(props.animation),
       dTop: 0, // Distance between the top of the window and the editor
@@ -44,9 +45,20 @@ class AnimationEditor extends React.Component {
     });
   }
 
-  saveAnimation = (newAnimation, cb) => {
+  saveAnimation = (newAnimation) => {
     this.props.onAnimationChange(newAnimation);
-    this.setState({ animation: newAnimation }, cb);
+    this.setState({ animation: newAnimation }, this.setLabels);
+  };
+
+  setLabels = () => {
+    const labels = {
+      offense: 1,
+      defense: 1,
+      disc: 1,
+      triangle: 1,
+    };
+    for (const type of this.state.animation.ids) labels[type] += 1;
+    this.setState({ labels });
   };
 
   onLayout = (e) => {
@@ -90,14 +102,17 @@ class AnimationEditor extends React.Component {
     if (position[0] <= 1 && position[1] <= 0.9 && position[0] >= 0 && position[1] >= 0) {
       const text = this.state.labels[type];
 
-      const labels = { ...this.state.labels };
-      labels[type] = labels[type] + 1;
-      this.setState({ labels });
-
       const newAnimation = this._copyAnimation();
       newAnimation.addElement(type, position[0], position[1], text);
       this.saveAnimation(newAnimation);
     }
+  };
+
+  // Function called when a button undo or redo is pressed
+  onAnimationHistoryChange = (animation) => {
+    // Reduce the currentStep if it is greater than the number of steps in animation
+    this.state.currentStepAV.setValue(Math.min(this.currentStep, animation.stepCount() - 1));
+    this.saveAnimation(animation);
   };
 
   onBackgroundChange = (value) => {
@@ -117,7 +132,7 @@ class AnimationEditor extends React.Component {
     return [(x - this.state.dLeft) / this.state.animationWidth, (y - this.state.dTop) / this.state.animationHeight];
   };
 
-  _copyAnimation() {
+  _copyAnimation = () => {
     const newAnimation = new Drill();
 
     newAnimation.positions = JSON.parse(JSON.stringify(this.state.animation.positions));
@@ -126,25 +141,14 @@ class AnimationEditor extends React.Component {
     newAnimation.background = JSON.parse(JSON.stringify(this.state.animation.background));
 
     return newAnimation;
-  }
+  };
 
   componentDidUpdate(prevProps) {
     const animation = new Drill(this.props.animation);
-
     if (!this.state.animation.isEqualTo(animation)) {
       this.state.currentStepAV.setValue(0);
-
-      const labels = {
-        offense: 1,
-        defense: 1,
-        disc: 1,
-        triangle: 1,
-      };
-      for (const type of animation.ids) labels[type] += 1;
-      this.setState({
-        animation,
-        labels,
-      });
+      this.setState({ animation });
+      this.setLabels();
     }
   }
 
@@ -231,10 +235,6 @@ class AnimationEditor extends React.Component {
     /* If the element is dropped on the trash area */
     if (newPosition[1] > 1) {
       newAnimation.removeElement(elementIndex);
-
-      const labels = { ...this.state.labels };
-      labels[type] = labels[type] - 1;
-      this.setState({ labels });
     } else {
       /* If the element is moved outside of the animation area, move it to the closest position inside the animation area */
       if (newPosition[0] < 0) newPosition[0] = 0;
@@ -308,27 +308,31 @@ class AnimationEditor extends React.Component {
         />
 
         <View style={styles.actionsArea}>
-          {this.state.isElementMoving ? (
-            <View style={styles.deletionArea}>
-              <MaterialCommunityIcons name="trash-can" color={theme.COLOR_PRIMARY} size={22} />
-            </View>
-          ) : (
-            <View style={styles.draggableArea}>
-              {['offense', 'defense', 'disc', 'triangle'].map((type) => (
-                <DraggableDisplayedElement
-                  type={type}
-                  draggableBaseWidth={this.state.draggableBaseWidth}
-                  onMoveEnd={this.addElementToAnimation}
-                  number={this.state.labels[type]}
-                  key={type}
-                />
-              ))}
-              <BackgroundPicker
-                onBackgroundChange={this.onBackgroundChange}
-                selectedBackground={this.state.animation.background}
+          <View
+            style={[styles.deletionArea, this.state.isElementMoving ? null : { transform: [{ scale: 0 }] }]}
+            pointerEvents="none"
+          >
+            <MaterialCommunityIcons name="trash-can" color={theme.COLOR_PRIMARY} size={22} />
+          </View>
+          <View style={[styles.draggableArea, this.state.isElementMoving ? { transform: [{ scale: 0 }] } : null]}>
+            <BackgroundPicker
+              onBackgroundChange={this.onBackgroundChange}
+              selectedBackground={this.state.animation.background}
+            />
+            {['offense', 'defense', 'disc', 'triangle'].map((type) => (
+              <DraggableDisplayedElement
+                type={type}
+                draggableBaseWidth={this.state.draggableBaseWidth}
+                onMoveEnd={this.addElementToAnimation}
+                key={type}
+                number={this.state.labels[type]}
               />
-            </View>
-          )}
+            ))}
+            <AnimationHistory
+              animation={this.state.animation}
+              onAnimationHistoryChange={this.onAnimationHistoryChange}
+            />
+          </View>
         </View>
       </View>
     );
@@ -337,20 +341,31 @@ class AnimationEditor extends React.Component {
 
 const styles = StyleSheet.create({
   actionsArea: {
-    marginHorizontal: 30,
+    marginHorizontal: 10,
     marginTop: 10,
     height: 80,
   },
   draggableArea: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-around',
+    position: 'absolute',
+    marginLeft: 0,
+    left: 0,
+    top: 0,
+    flex: 1,
+    zIndex: 1,
   },
   deletionArea: {
-    flex: 1,
-    borderColor: 'grey',
-    borderWidth: 2,
+    flexDirection: 'row',
     alignItems: 'center',
+    borderColor: 'grey',
+    height: 80,
+    position: 'absolute',
+    left: 0,
+    top: 0,
+    right: 0,
+    zIndex: 2,
+    borderWidth: 2,
     justifyContent: 'center',
   },
 });

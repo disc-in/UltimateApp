@@ -1265,7 +1265,7 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                     ]
                   }
                 >
-                  
+                  󰋕
                 </Text>
               </View>
             </View>
@@ -1715,7 +1715,7 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                       },
                                       undefined,
                                       Object {
-                                        "fontFamily": "ionicons",
+                                        "fontFamily": "material-community",
                                         "fontStyle": "normal",
                                         "fontWeight": "normal",
                                       },
@@ -1723,7 +1723,7 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                     ]
                                   }
                                 >
-                                  
+                                  󰒗
                                 </Text>
                               </View>
                             </View>
@@ -2117,7 +2117,7 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                             ]
                                           }
                                         >
-                                          
+                                          󰗡
                                         </Text>
                                       </View>
                                       <View
@@ -2149,7 +2149,7 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                             ]
                                           }
                                         >
-                                          
+                                          󰗠
                                         </Text>
                                       </View>
                                     </View>

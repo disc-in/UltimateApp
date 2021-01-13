@@ -51,7 +51,7 @@ exports[`<CurrentPlayManager /> renders correctly 1`] = `
           ]
         }
       >
-        
+        󰇙
       </Text>
     </View>
   </View>
@@ -110,7 +110,7 @@ Array [
             ]
           }
         >
-          
+          󰇙
         </Text>
       </View>
     </View>
@@ -265,6 +265,7 @@ Array [
                   allowFontScaling={false}
                   importantForAccessibility="no-hide-descendants"
                   pointerEvents="none"
+                  selectable={false}
                   style={
                     Array [
                       Object {
@@ -293,7 +294,7 @@ Array [
                     ]
                   }
                 >
-                  
+                  󰠘
                 </Text>
               </View>
               <View
@@ -317,6 +318,7 @@ Array [
               >
                 <Text
                   numberOfLines={1}
+                  selectable={false}
                   style={
                     Array [
                       Object {
@@ -399,6 +401,7 @@ Array [
                   allowFontScaling={false}
                   importantForAccessibility="no-hide-descendants"
                   pointerEvents="none"
+                  selectable={false}
                   style={
                     Array [
                       Object {
@@ -427,7 +430,7 @@ Array [
                     ]
                   }
                 >
-                  
+                  󰏫
                 </Text>
               </View>
               <View
@@ -451,6 +454,7 @@ Array [
               >
                 <Text
                   numberOfLines={1}
+                  selectable={false}
                   style={
                     Array [
                       Object {
@@ -533,6 +537,7 @@ Array [
                   allowFontScaling={false}
                   importantForAccessibility="no-hide-descendants"
                   pointerEvents="none"
+                  selectable={false}
                   style={
                     Array [
                       Object {
@@ -561,7 +566,7 @@ Array [
                     ]
                   }
                 >
-                  
+                  󰐕
                 </Text>
               </View>
               <View
@@ -585,6 +590,7 @@ Array [
               >
                 <Text
                   numberOfLines={1}
+                  selectable={false}
                   style={
                     Array [
                       Object {
@@ -679,6 +685,7 @@ Array [
                   allowFontScaling={false}
                   importantForAccessibility="no-hide-descendants"
                   pointerEvents="none"
+                  selectable={false}
                   style={
                     Array [
                       Object {
@@ -707,7 +714,7 @@ Array [
                     ]
                   }
                 >
-                  櫓
+                  󰤲
                 </Text>
               </View>
               <View
@@ -731,6 +738,7 @@ Array [
               >
                 <Text
                   numberOfLines={1}
+                  selectable={false}
                   style={
                     Array [
                       Object {

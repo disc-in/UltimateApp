@@ -13,7 +13,7 @@ import {
 import { connect } from 'react-redux';
 import { useHeaderHeight } from '@react-navigation/stack';
 import * as Linking from 'expo-linking';
-import { Ionicons } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import I18n from '../utils/i18n';
 import { toggleFavorite } from '../Store/Actions/favoriteAction';
@@ -99,7 +99,7 @@ export const DrillPage = (props) => {
           <StartButton onPress={onPressStartButton} text={I18n.t('drillPage.start')} />
           <View style={styles.shareButton}>
             <TouchableOpacity onPress={() => share(drill)} testID="shareButton">
-              <Ionicons name="md-share" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
+              <MaterialCommunityIcons name="share-variant" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
             </TouchableOpacity>
           </View>
         </View>

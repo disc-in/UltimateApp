@@ -40,7 +40,7 @@ exports[`<SavedPlaysList /> renders an empty state with no plays 1`] = `
         ]
       }
     >
-      嘆
+      󰨸
     </Text>
   </View>
   <Modal

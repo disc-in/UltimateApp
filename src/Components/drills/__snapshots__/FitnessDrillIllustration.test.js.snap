@@ -331,7 +331,7 @@ exports[`<FitnessDrillIllustration /> links to any step and finishes at the end 
                   ]
                 }
               >
-                
+                󰗡
               </Text>
             </View>
             <View
@@ -363,7 +363,7 @@ exports[`<FitnessDrillIllustration /> links to any step and finishes at the end 
                   ]
                 }
               >
-                
+                󰗠
               </Text>
             </View>
           </View>
@@ -440,7 +440,7 @@ exports[`<FitnessDrillIllustration /> links to any step and finishes at the end 
           ]
         }
       >
-        
+        󰑏
       </Text>
     </View>
   </View>

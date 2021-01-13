@@ -56,7 +56,7 @@ class Animation extends React.Component {
   };
 
   componentDidMount() {
-    var { height, width } = Dimensions.get('window');
+    const { height, width } = Dimensions.get('window');
 
     this.animationWidth = width * this.props.widthRatio;
 
@@ -76,7 +76,7 @@ class Animation extends React.Component {
         animationPlaying: true,
       },
       () => {
-        var sequence = [];
+        const sequence = [];
 
         /* Move instantly to the initial position */
         sequence.push(
@@ -114,7 +114,7 @@ class Animation extends React.Component {
       () => {
         stepId = Math.max(0, Math.round(stepId));
 
-        var sequence = [];
+        const sequence = [];
 
         /* Move instantly to the previous step */
         sequence.push(

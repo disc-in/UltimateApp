@@ -1745,7 +1745,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           ]
         }
       >
-        
+        󰈶
       </Text>
       <Text
         style={

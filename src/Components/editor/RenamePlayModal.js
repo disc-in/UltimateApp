@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { StyleSheet, View, Text, TextInput, InteractionManager, ScrollView } from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { connect } from 'react-redux';
 import { Formik } from 'formik';
 import * as Yup from 'yup';

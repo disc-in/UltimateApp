@@ -44,7 +44,7 @@ exports[`<AnimationHistory /> renders correctly 1`] = `
       }
       testID="undoButton"
     >
-      
+      󰕌
     </Text>
   </View>
   <View
@@ -82,7 +82,7 @@ exports[`<AnimationHistory /> renders correctly 1`] = `
       }
       testID="redoButton"
     >
-      
+      󰑎
     </Text>
   </View>
 </View>

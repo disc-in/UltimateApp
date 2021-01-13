@@ -426,19 +426,17 @@ exports[`<HomePage /> renders correctly 1`] = `
       }
     >
       <View
-        forwardedRef={[Function]}
-        onLayout={[Function]}
-        pointerEvents="box-none"
         style={
-          Object {
-            "flexDirection": "row",
-            "maxWidth": 504,
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 0,
-            "width": "100%",
-          }
+          Array [
+            Object {
+              "flexDirection": "row",
+              "width": "100%",
+            },
+            Object {
+              "marginBottom": 0,
+              "maxWidth": 504,
+            },
+          ]
         }
       >
         <View
@@ -502,7 +500,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                     Array [
                       Object {
                         "color": "#fff",
-                        "fontSize": 26,
+                        "fontSize": 22,
                       },
                       undefined,
                       Object {
@@ -514,7 +512,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                     ]
                   }
                 >
-                  
+                  
                 </Text>
               </View>
               <View
@@ -536,7 +534,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                     Array [
                       Object {
                         "color": "#A6A6A6",
-                        "fontSize": 26,
+                        "fontSize": 22,
                       },
                       undefined,
                       Object {
@@ -548,7 +546,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                     ]
                   }
                 >
-                  
+                  
                 </Text>
               </View>
               <View
@@ -652,6 +650,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                 }
               >
                 <Text
+                  selectable={false}
                   style={
                     Array [
                       Object {
@@ -740,7 +739,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                     Array [
                       Object {
                         "color": "#fff",
-                        "fontSize": 26,
+                        "fontSize": 22,
                       },
                       undefined,
                       Object {
@@ -752,7 +751,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                     ]
                   }
                 >
-                  
+                  
                 </Text>
               </View>
               <View
@@ -774,7 +773,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                     Array [
                       Object {
                         "color": "#A6A6A6",
-                        "fontSize": 26,
+                        "fontSize": 22,
                       },
                       undefined,
                       Object {
@@ -786,7 +785,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                     ]
                   }
                 >
-                  
+                  
                 </Text>
               </View>
               <View
@@ -890,6 +889,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                 }
               >
                 <Text
+                  selectable={false}
                   style={
                     Array [
                       Object {
@@ -978,11 +978,11 @@ exports[`<HomePage /> renders correctly 1`] = `
                     Array [
                       Object {
                         "color": "#fff",
-                        "fontSize": 26,
+                        "fontSize": 22,
                       },
                       undefined,
                       Object {
-                        "fontFamily": "ionicons",
+                        "fontFamily": "material-community",
                         "fontStyle": "normal",
                         "fontWeight": "normal",
                       },
@@ -990,7 +990,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                     ]
                   }
                 >
-                  
+                  󱉟
                 </Text>
               </View>
               <View
@@ -1012,11 +1012,11 @@ exports[`<HomePage /> renders correctly 1`] = `
                     Array [
                       Object {
                         "color": "#A6A6A6",
-                        "fontSize": 26,
+                        "fontSize": 22,
                       },
                       undefined,
                       Object {
-                        "fontFamily": "ionicons",
+                        "fontFamily": "material-community",
                         "fontStyle": "normal",
                         "fontWeight": "normal",
                       },
@@ -1024,7 +1024,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                     ]
                   }
                 >
-                  
+                  󱉟
                 </Text>
               </View>
               <View
@@ -1128,6 +1128,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                 }
               >
                 <Text
+                  selectable={false}
                   style={
                     Array [
                       Object {

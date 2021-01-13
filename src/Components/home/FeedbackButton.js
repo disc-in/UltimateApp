@@ -1,7 +1,6 @@
 import React from 'react';
 import { Alert } from 'react-native';
 import * as MailComposer from 'expo-mail-composer';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import I18n from '../../utils/i18n';
 import theme from '../../styles/theme.style';

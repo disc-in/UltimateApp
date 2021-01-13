@@ -1,7 +1,7 @@
 import React, { useLayoutEffect } from 'react';
 import { StyleSheet, View, Text, ImageBackground, TouchableHighlight } from 'react-native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
@@ -176,7 +176,7 @@ export default HomePage = (props) => {
         component={HomeScreen}
         options={{
           tabBarLabel: I18n.t('homePage.frisbeeTab'),
-          tabBarIcon: ({ color }) => <Ionicons name="ios-disc" color={color} size={26} />,
+          tabBarIcon: ({ color }) => <Ionicons name="ios-disc" color={color} size={22} />,
         }}
       />
       <Tab.Screen
@@ -184,7 +184,7 @@ export default HomePage = (props) => {
         component={Fitness}
         options={{
           tabBarLabel: I18n.t('homePage.fitnessTab'),
-          tabBarIcon: ({ color }) => <Ionicons name="ios-fitness" color={color} size={26} />,
+          tabBarIcon: ({ color }) => <Ionicons name="ios-fitness" color={color} size={22} />,
         }}
       />
       <Tab.Screen
@@ -192,7 +192,7 @@ export default HomePage = (props) => {
         component={Theory}
         options={{
           tabBarLabel: I18n.t('homePage.theoryTab'),
-          tabBarIcon: ({ color }) => <Ionicons name="md-clipboard" color={color} size={26} />,
+          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="bookshelf" color={color} size={22} />,
         }}
       />
     </Tab.Navigator>

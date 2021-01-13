@@ -102,7 +102,7 @@ class AnimationEditor extends React.Component {
     if (position[0] <= 1 && position[1] <= 0.9 && position[0] >= 0 && position[1] >= 0) {
       const text = this.state.labels[type];
 
-      var newAnimation = this._copyAnimation();
+      const newAnimation = this._copyAnimation();
       newAnimation.addElement(type, position[0], position[1], text);
       this.saveAnimation(newAnimation);
     }
@@ -116,7 +116,7 @@ class AnimationEditor extends React.Component {
   };
 
   onBackgroundChange = (value) => {
-    var newAnimation = this._copyAnimation();
+    const newAnimation = this._copyAnimation();
     newAnimation.background = value;
     this.saveAnimation(newAnimation);
   };
@@ -133,7 +133,7 @@ class AnimationEditor extends React.Component {
   };
 
   _copyAnimation = () => {
-    var newAnimation = new Drill();
+    const newAnimation = new Drill();
 
     newAnimation.positions = JSON.parse(JSON.stringify(this.state.animation.positions));
     newAnimation.ids = JSON.parse(JSON.stringify(this.state.animation.ids));
@@ -153,19 +153,19 @@ class AnimationEditor extends React.Component {
   }
 
   cutMove = (elemId, xDelta, yDelta, isCounterCut) => {
-    var previousStepId = Math.ceil(this.currentStep) - 1;
+    const previousStepId = Math.ceil(this.currentStep) - 1;
 
-    var previousPositions = this.state.animation.getPositionsAtStep(elemId, previousStepId);
+    const previousPositions = this.state.animation.getPositionsAtStep(elemId, previousStepId);
 
-    var xDeltaPercent = xDelta / (this.state.width * this.wRatio);
-    var yDeltaPercent = yDelta / (this.state.height * this.hRatio);
+    const xDeltaPercent = xDelta / (this.state.width * this.wRatio);
+    const yDeltaPercent = yDelta / (this.state.height * this.hRatio);
 
-    var newAnimation = this._copyAnimation();
+    const newAnimation = this._copyAnimation();
 
-    var xCutDelta = xDeltaPercent;
-    var yCutDelta = yDeltaPercent;
-    var xCCutDelta = xDeltaPercent;
-    var yCCutDelta = yDeltaPercent;
+    let xCutDelta = xDeltaPercent;
+    let yCutDelta = yDeltaPercent;
+    let xCCutDelta = xDeltaPercent;
+    let yCCutDelta = yDeltaPercent;
 
     if (isCounterCut) {
       xCutDelta = 0;
@@ -175,7 +175,7 @@ class AnimationEditor extends React.Component {
       yCCutDelta = 0;
     }
 
-    var newCutPosition = [previousPositions[0][0] + xCutDelta, previousPositions[0][1] + yCutDelta];
+    const newCutPosition = [previousPositions[0][0] + xCutDelta, previousPositions[0][1] + yCutDelta];
 
     /* If the cut goes outside of the animation area, put it at the border of the animation */
     if (newCutPosition[0] < 0) newCutPosition[0] = 0;
@@ -198,9 +198,9 @@ class AnimationEditor extends React.Component {
       /* Get the new position of the counter-cut */
 
       /* 1 - If there was no counter-cut, the move is from (previousPosition + currentPosition) / 2 */
-      var currentPositions = this.state.animation.getPositionsAtStep(elemId, previousStepId + 1);
-      var newPositionX = (currentPositions[0][0] + previousPositions[0][0]) / 2 + xCCutDelta;
-      var newPositionY = (currentPositions[0][1] + previousPositions[0][1]) / 2 + yCCutDelta;
+      const currentPositions = this.state.animation.getPositionsAtStep(elemId, previousStepId + 1);
+      let newPositionX = (currentPositions[0][0] + previousPositions[0][0]) / 2 + xCCutDelta;
+      let newPositionY = (currentPositions[0][1] + previousPositions[0][1]) / 2 + yCCutDelta;
 
       /* 2 - If there was a counter cut, the move is from this counter-cut position */
       if (previousPositions.length > 1) {
@@ -223,14 +223,14 @@ class AnimationEditor extends React.Component {
   };
 
   onElementMoveEnd = (elementIndex, type, xDelta, yDelta) => {
-    var currentPositions = this.state.animation.getPositionsAtStep(elementIndex, Math.ceil(this.currentStep));
+    const currentPositions = this.state.animation.getPositionsAtStep(elementIndex, Math.ceil(this.currentStep));
     const currentPosition = currentPositions[0];
-    var xDeltaPercent = xDelta / (this.state.width * this.wRatio);
-    var yDeltaPercent = yDelta / (this.state.height * this.hRatio);
+    const xDeltaPercent = xDelta / (this.state.width * this.wRatio);
+    const yDeltaPercent = yDelta / (this.state.height * this.hRatio);
 
-    var newPosition = [currentPosition[0] + xDeltaPercent, currentPosition[1] + yDeltaPercent];
+    const newPosition = [currentPosition[0] + xDeltaPercent, currentPosition[1] + yDeltaPercent];
 
-    var newAnimation = this._copyAnimation();
+    const newAnimation = this._copyAnimation();
 
     /* If the element is dropped on the trash area */
     if (newPosition[1] > 1) {
@@ -258,14 +258,14 @@ class AnimationEditor extends React.Component {
   };
 
   addStep = () => {
-    var newAnimation = this._copyAnimation();
+    const newAnimation = this._copyAnimation();
     newAnimation.addStep();
     this.saveAnimation(newAnimation);
   };
 
   removeStep = () => {
     // Add the element with its initial position
-    var newAnimation = this._copyAnimation();
+    const newAnimation = this._copyAnimation();
 
     /* If the last step is currently displayed */
     if (this.currentStep === this.state.animation.stepCount() - 1)

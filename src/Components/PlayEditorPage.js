@@ -174,7 +174,7 @@ export const PlayEditorPage = (props) => {
           <MaterialCommunityIcons name="content-save" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
         </TouchableOpacity>
 
-        <View style={styles.undo}>
+        {/* <View style={styles.undo}>
           <TouchableOpacity onPress={() => saveCurrentPlay()} testID="shareButton">
             <MaterialCommunityIcons name="undo-variant" color={theme.COLOR_SECONDARY} size={30} />
           </TouchableOpacity>
@@ -182,7 +182,7 @@ export const PlayEditorPage = (props) => {
           <TouchableOpacity onPress={() => saveCurrentPlay()} testID="shareButton">
             <MaterialCommunityIcons name="redo-variant" color={theme.COLOR_SECONDARY} size={30} />
           </TouchableOpacity>
-        </View>
+        </View> */}
         <TouchableOpacity onPress={() => share(currentPlay)} testID="shareButton">
           <Ionicons name="ios-share" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
         </TouchableOpacity>

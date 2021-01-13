@@ -308,32 +308,34 @@ class AnimationEditor extends React.Component {
         />
 
         <View style={styles.actionsArea}>
-          {this.state.isElementMoving ? (
-            <View style={styles.deletionArea}>
-              <MaterialCommunityIcons name="trash-can" color={theme.COLOR_PRIMARY} size={22} />
-            </View>
-          ) : (
-            <View style={styles.draggableArea}>
-              <View style={styles.draggableElement}>
-                {['offense', 'defense', 'disc', 'triangle'].map((type) => (
-                  <DraggableDisplayedElement
-                    type={type}
-                    draggableBaseWidth={this.state.draggableBaseWidth}
-                    onMoveEnd={this.addElementToAnimation}
-                    number={this.state.labels[type]}
-                    key={type}
-                  />
-                ))}
+          <View style={styles.container}>
+            {this.state.isElementMoving ? (
+              <View style={styles.deletionArea}>
+                <MaterialCommunityIcons name="trash-can" color={theme.COLOR_PRIMARY} size={22} />
               </View>
-              <BackgroundPicker
-                onBackgroundChange={this.onBackgroundChange}
-                selectedBackground={this.state.animation.background}
-              />
-            </View>
-          )}
+            ) : (
+              <View style={styles.draggableArea}>
+                <View style={styles.draggableElement}>
+                  {['offense', 'defense', 'disc', 'triangle'].map((type) => (
+                    <DraggableDisplayedElement
+                      type={type}
+                      draggableBaseWidth={this.state.draggableBaseWidth}
+                      onMoveEnd={this.addElementToAnimation}
+                      number={this.state.labels[type]}
+                      key={type}
+                    />
+                  ))}
+                </View>
+                <BackgroundPicker
+                  onBackgroundChange={this.onBackgroundChange}
+                  selectedBackground={this.state.animation.background}
+                />
+              </View>
+            )}
+          </View>
         </View>
 
-        <AnimationHistory animation={this.state.animation} onAnimationHistoryChange={this.onAnimationHistoryChange} />
+        {/* <AnimationHistory animation={this.state.animation} onAnimationHistoryChange={this.onAnimationHistoryChange} /> */}
       </View>
     );
   }
@@ -342,8 +344,8 @@ class AnimationEditor extends React.Component {
 const styles = StyleSheet.create({
   actionsArea: {
     marginHorizontal: 10,
-    marginTop: 10,
-    height: 80,
+    height: '100%',
+    backgroundColor: 'green',
   },
   draggableArea: {
     flexDirection: 'row',
@@ -355,7 +357,9 @@ const styles = StyleSheet.create({
     flex: 1,
     zIndex: 1,
     width: '100%',
+    height: 30,
     justifyContent: 'space-around',
+    backgroundColor: 'pink',
   },
   deletionArea: {
     flexDirection: 'row',
@@ -376,6 +380,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-around',
     marginLeft: 20,
+  },
+  container: {
+    flex: 1,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    backgroundColor: 'blue',
+    justifyContent: 'center',
   },
 });
 export default AnimationEditor;

@@ -165,7 +165,7 @@ class Animation extends React.Component {
               });
             }
           }}
-          style={{ height: this.animationHeight, width: this.animationWidth }}
+          style={{ height: this.animationHeight - 10, width: this.animationWidth }}
         >
           {this.animationWidth && (
             <AnimationBackground

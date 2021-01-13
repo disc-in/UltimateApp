@@ -165,7 +165,7 @@ class Animation extends React.Component {
               });
             }
           }}
-          style={{ height: this.animationHeight, width: this.animationWidth }}
+          style={{ height: this.animationHeight - 30, width: this.animationWidth }}
         >
           {this.animationWidth && (
             <AnimationBackground
@@ -203,6 +203,7 @@ class Animation extends React.Component {
           ))}
         </View>
         <View>
+          {/* {!this.props.editable && ( */}
           <ProgressBar
             readonly={!this.props.editable}
             animationWidth={this.animationWidth}
@@ -214,6 +215,7 @@ class Animation extends React.Component {
             onStepAdded={this.props.onStepAdded}
             onStepRemoved={this.props.onStepRemoved}
           />
+          {/* )} */}
         </View>
       </View>
     );

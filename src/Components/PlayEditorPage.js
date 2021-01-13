@@ -32,7 +32,6 @@ export const PlayEditorPage = (props) => {
   const [isPlaySaved, setIsPlaySaved] = useState(true);
 
   useLayoutEffect(() => {
-    console.log('BRAVOOOOO LE CODE N A PAS BUGGE JUSQUA LA', props.customPlays);
     navigation.setOptions({
       headerRight: () => (
         <View>
@@ -48,52 +47,6 @@ export const PlayEditorPage = (props) => {
   useEffect(() => {
     setTitle();
   }, [currentPlay, isPlaySaved]);
-
-  const share = async () => {
-    try {
-      await upload(props.currentPlay);
-      const url = Linking.makeUrl('customPlays/' + currentPlay.uuid);
-      await Share.share({
-        title: I18n.t('editor.currentPlayManager.shareTitle', { title: currentPlay.title }),
-        message: I18n.t('editor.currentPlayManager.shareMessage', { url }),
-        url,
-      });
-    } catch (error) {
-      showError(I18n.t('editor.currentPlayManager.shareError'));
-    }
-  };
-
-  const checkBeforeNewPlay = () => {
-    if (isPlaySaved) {
-      createNewPlay();
-    } else {
-      Alert.alert(
-        I18n.t('editor.saveModificationsTitle'),
-        I18n.t('editor.saveModificationsText', { title: currentPlay.title }),
-        [
-          {
-            text: I18n.t('shared.cancel'),
-            style: 'cancel',
-            onPress: () => {},
-          },
-          {
-            text: I18n.t('shared.yes'),
-            onPress: () => {
-              saveCurrentPlay();
-              showSuccess(I18n.t('editor.currentPlayManager.saveSuccess', { title: currentPlay.title }));
-              createNewPlay();
-            },
-          },
-          {
-            text: I18n.t('shared.no'),
-            onPress: () => {
-              createNewPlay();
-            },
-          },
-        ],
-      );
-    }
-  };
 
   const setTitle = () => {
     const playTitle = currentPlay.title || I18n.t('playEditorPage.untitledPlay');
@@ -158,41 +111,6 @@ export const PlayEditorPage = (props) => {
           rename={() => setModalRenameVisible(true)}
         />
       </View>
-      {/* <View style={styles.toolBar}>
-        <SavedPlaysList
-          savedPlays={props.customPlays}
-          isPlaySaved={isPlaySaved}
-          playTitle={currentPlay.title}
-          onDelete={onDelete}
-          onOpen={openPlay}
-          saveCurrentPlay={saveCurrentPlay}
-        />
-        <TouchableOpacity onPress={() => checkBeforeNewPlay()} testID="plusButton">
-          <MaterialCommunityIcons name="plus" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => {
-            saveCurrentPlay();
-            showSuccess(I18n.t('editor.currentPlayManager.saveSuccess', { title: currentPlay.title }));
-          }}
-          testID="saveButton"
-        >
-          <MaterialCommunityIcons name="content-save" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
-        </TouchableOpacity>
-
-        <View style={styles.undo}>
-          <TouchableOpacity onPress={() => saveCurrentPlay()} testID="shareButton">
-            <MaterialCommunityIcons name="undo-variant" color={theme.COLOR_SECONDARY} size={30} />
-          </TouchableOpacity>
-          <View style={styles.separator} />
-          <TouchableOpacity onPress={() => saveCurrentPlay()} testID="shareButton">
-            <MaterialCommunityIcons name="redo-variant" color={theme.COLOR_SECONDARY} size={30} />
-          </TouchableOpacity>
-        </View>
-        <TouchableOpacity onPress={() => share(currentPlay)} testID="shareButton">
-          <Ionicons name="ios-share" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
-        </TouchableOpacity>
-      </View> */}
     </View>
   );
 };

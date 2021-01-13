@@ -52,7 +52,7 @@ function AnimationHistory({ animation, onAnimationHistoryChange }) {
         <MaterialCommunityIcons
           name="undo-variant"
           color={canUndo ? theme.COLOR_PRIMARY_LIGHT : theme.COLOR_SECONDARY}
-          size={30}
+          size={28}
           testID="undoButton"
         />
       </TouchableOpacity>
@@ -61,7 +61,7 @@ function AnimationHistory({ animation, onAnimationHistoryChange }) {
         <MaterialCommunityIcons
           name="redo-variant"
           color={canRedo ? theme.COLOR_PRIMARY_LIGHT : theme.COLOR_SECONDARY}
-          size={30}
+          size={28}
           testID="redoButton"
         />
       </TouchableOpacity>
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
   },
   history: {
     flexDirection: 'row',
-    alignSelf: 'center',
+    alignItems: 'center',
   },
 });
 

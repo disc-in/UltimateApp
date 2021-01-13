@@ -106,10 +106,12 @@ class AnimationEditor extends React.Component {
     if (this.props.currentPlay.title == I18n.t('playEditorPage.untitledPlay')) {
       let newTitle = defaultTitle;
       let counter = 1;
-      while (this.props.customPlays.findIndex((item) => item.title === newTitle) !== -1) {
-        newTitle = defaultTitle + ' (' + counter + ')';
-        counter += 1;
-      }
+
+      // CHANGER CAAAAAAAAAAAAAAAAAAAA
+      // while (this.props.customPlays.findIndex((item) => item.title === newTitle) !== -1) {
+      //   newTitle = defaultTitle + ' (' + counter + ')';
+      //   counter += 1;
+      // }
       this.props.currentPlay.title = newTitle;
     }
     if (this.props.currentPlay.uuid === undefined) {
@@ -398,44 +400,45 @@ class AnimationEditor extends React.Component {
             currentStepAV={this.state.currentStepAV}
           />
 
-          <View style={styles.actionsArea}>
-            {this.state.isElementMoving ? (
-              <View style={styles.deletionArea}>
-                <MaterialCommunityIcons name="trash-can" color={theme.COLOR_PRIMARY} size={22} />
-              </View>
-            ) : (
-              <View style={styles.draggableArea}>
-                <View style={styles.draggableElement}>
-                  {['offense', 'defense', 'disc', 'triangle'].map((type) => (
-                    <DraggableDisplayedElement
-                      type={type}
-                      draggableBaseWidth={this.state.draggableBaseWidth}
-                      onMoveEnd={this.addElementToAnimation}
-                      number={this.state.labels[type]}
-                      key={type}
-                    />
-                  ))}
+          <View style={styles.pink}>
+            <View style={styles.actionsArea}>
+              {this.state.isElementMoving ? (
+                <View style={styles.deletionArea}>
+                  <MaterialCommunityIcons name="trash-can" color={theme.COLOR_PRIMARY} size={22} />
                 </View>
-                <BackgroundPicker
-                  onBackgroundChange={this.onBackgroundChange}
-                  selectedBackground={this.state.animation.background}
-                />
-              </View>
-            )}
+              ) : (
+                <View style={styles.draggableArea}>
+                  <View style={styles.draggableElement}>
+                    {['offense', 'defense', 'disc', 'triangle'].map((type) => (
+                      <DraggableDisplayedElement
+                        type={type}
+                        draggableBaseWidth={this.state.draggableBaseWidth}
+                        onMoveEnd={this.addElementToAnimation}
+                        number={this.state.labels[type]}
+                        key={type}
+                      />
+                    ))}
+                  </View>
+                  <BackgroundPicker
+                    onBackgroundChange={this.onBackgroundChange}
+                    selectedBackground={this.state.animation.background}
+                  />
+                </View>
+              )}
+            </View>
           </View>
-          {/* <AnimationHistory animation={this.state.animation} onAnimationHistoryChange={this.onAnimationHistoryChange} /> */}
         </View>
         <View style={styles.toolBar}>
-          {/* <SavedPlaysList
+          <SavedPlaysList
             savedPlays={this.props.customPlays}
-            isPlaySaved={this.isPlaySaved}
-            playTitle={this.currentPlay.title}
+            isPlaySaved={this.props.isPlaySaved}
+            playTitle={this.props.currentPlay.title}
             onDelete={this.onDelete}
             onOpen={this.openPlay}
             saveCurrentPlay={this.saveCurrentPlay}
-          /> */}
+          />
           <TouchableOpacity onPress={() => this.checkBeforeNewPlay()} testID="plusButton">
-            <MaterialCommunityIcons name="plus" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
+            <MaterialCommunityIcons name="plus" color={theme.COLOR_PRIMARY_LIGHT} size={28} />
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => {
@@ -444,12 +447,12 @@ class AnimationEditor extends React.Component {
             }}
             testID="saveButton"
           >
-            <MaterialCommunityIcons name="content-save" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
+            <MaterialCommunityIcons name="content-save" color={theme.COLOR_PRIMARY_LIGHT} size={28} />
           </TouchableOpacity>
 
           <AnimationHistory animation={this.state.animation} onAnimationHistoryChange={this.onAnimationHistoryChange} />
           <TouchableOpacity onPress={() => this.share()} testID="shareButton">
-            <Ionicons name="ios-share" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
+            <Ionicons name="ios-share" color={theme.COLOR_PRIMARY_LIGHT} size={28} />
           </TouchableOpacity>
         </View>
       </View>
@@ -473,6 +476,7 @@ const styles = StyleSheet.create({
     flex: 1,
     zIndex: 1,
     width: '100%',
+    height: 40,
     justifyContent: 'space-around',
   },
   deletionArea: {
@@ -510,13 +514,16 @@ const styles = StyleSheet.create({
   },
   undo: {
     flexDirection: 'row',
-    alignItems: 'center',
   },
   separator: {
-    height: 35,
+    height: '6%',
     borderRightWidth: 2,
     borderRightColor: theme.COLOR_SECONDARY,
     marginHorizontal: 15,
+  },
+  pink: {
+    backgroundColor: 'pink',
+    height: '92%',
   },
 });
 export default AnimationEditor;

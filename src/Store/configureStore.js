@@ -37,8 +37,6 @@ const migrations = {
   3: (state) => {
     // migration to remove trainings
     delete state['trainings'];
-    console.log('\n\nSTORE\n\n');
-    console.log(Object.keys(state));
     return state;
   },
 };

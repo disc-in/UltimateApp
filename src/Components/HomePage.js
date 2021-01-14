@@ -15,7 +15,7 @@ import ourPlays from '../../assets/HomePage/ourplays.jpg';
 import essential from '../../assets/HomePage/essential.jpg';
 import adultPrograms from '../../assets/HomePage/adultPrograms.png';
 import juniorPrograms from '../../assets/HomePage/juniorPrograms.png';
-import FeedbackButton from './home/FeedbackButton';
+import HeaderButton from './shared/HeaderButton';
 import { AgeCategory, DrillTypes, EquipmentLabels } from '../Fixtures/config';
 
 const Tab = createMaterialBottomTabNavigator();
@@ -160,7 +160,13 @@ export default HomePage = (props) => {
 
   useLayoutEffect(() =>
     navigation.setOptions({
-      headerRight: () => <FeedbackButton />,
+      headerRight: () => (
+        <HeaderButton
+          icon="information-outline"
+          onPress={() => props.navigation.navigate('AboutPage')}
+          testID="aboutButton"
+        />
+      ),
     }),
   );
 

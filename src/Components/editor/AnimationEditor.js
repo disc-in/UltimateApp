@@ -10,6 +10,7 @@ import Drill from '../animation/Drill';
 import theme from '../../styles/theme.style';
 
 const bigScreen = Dimensions.get('window').height > 600 ? { alignItems: 'center' } : undefined;
+const smallTrash = Dimensions.get('window').height > 600 ? { height: 80 } : { height: 30 };
 
 class AnimationEditor extends React.Component {
   constructor(props) {
@@ -316,7 +317,7 @@ class AnimationEditor extends React.Component {
         <View style={styles.actionsArea}>
           <View style={[styles.container, bigScreen]}>
             {this.state.isElementMoving ? (
-              <View style={styles.deletionArea}>
+              <View style={[styles.deletionArea, smallTrash]}>
                 <MaterialCommunityIcons name="trash-can" color={theme.COLOR_PRIMARY} size={22} />
               </View>
             ) : (
@@ -364,7 +365,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     borderColor: 'grey',
-    height: 80,
+
     position: 'absolute',
     left: 0,
     top: 0,

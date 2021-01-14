@@ -241,5 +241,6 @@ export default {
   videoPage: {
     share: 'Share',
     shareContent: "Here's a great video found on Disc in :\n{{url}} ",
+    error: "Oh no… 😥 - Sharing does'nt work",
   },
 };

@@ -9,6 +9,9 @@ import * as firebase from '../../utils/firebase';
 import CurrentPlayManager from './CurrentPlayManager';
 
 jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
+jest.mock('react-native-get-random-values', () => ({
+  getRandomBase64: jest.fn(),
+}));
 
 describe('<CurrentPlayManager />', () => {
   afterEach(() => jest.clearAllMocks());
@@ -105,7 +108,7 @@ describe('<CurrentPlayManager />', () => {
       isPlaySaved = false;
       jest.spyOn(Alert, 'alert');
 
-      const { getByTestId, getByText, debug } = await waitFor(() =>
+      const { getByTestId, getByText } = await waitFor(() =>
         render(
           <PaperProvider>
             <CurrentPlayManager
@@ -129,7 +132,7 @@ describe('<CurrentPlayManager />', () => {
       isPlaySaved = false;
       jest.spyOn(Alert, 'alert');
 
-      const { getByTestId, getByText, debug } = await waitFor(() =>
+      const { getByTestId, getByText } = await waitFor(() =>
         render(
           <PaperProvider>
             <CurrentPlayManager
@@ -160,7 +163,7 @@ describe('<CurrentPlayManager />', () => {
       isPlaySaved = false;
       jest.spyOn(Alert, 'alert');
 
-      const { getByTestId, getByText, debug } = await waitFor(() =>
+      const { getByTestId, getByText } = await waitFor(() =>
         render(
           <PaperProvider>
             <CurrentPlayManager

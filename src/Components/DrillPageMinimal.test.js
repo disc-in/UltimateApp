@@ -4,9 +4,9 @@ import { render, fireEvent } from '@testing-library/react-native';
 import { NavigationContext } from '@react-navigation/native';
 
 import fixtures from '../Fixtures/TestFixtures';
-import store from '../Store/testStore';
 
-import ConnectedDrillPageMinimal, { DrillPageMinimal } from './DrillPageMinimal';
+import { DrillPageMinimal } from './DrillPageMinimal';
+
 beforeEach(() => jest.useFakeTimers()); // for Animated
 jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
 

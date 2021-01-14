@@ -5469,7 +5469,7 @@ const bulldogDrill = {
   ],
 };
 
-const menageATroisDrill = {
+const threePersonDrill = {
   id: 1013,
   type: DrillTypes.FRISBEE,
   author: 'Tchac',
@@ -7818,7 +7818,7 @@ const thirdU13Training = {
   title: 'Chasse aux trésors',
   image: 'https://zupimages.net/up/20/19/c9i6.jpg',
   description: "Idéal pour découvrir les bases de l'ultimate en s'amusant",
-  drills: [treasureHuntDrill, menageATroisDrill, goToTenDrill, helpGame],
+  drills: [treasureHuntDrill, threePersonDrill, goToTenDrill, helpGame],
 };
 
 const fourthU13Training = {
@@ -7842,7 +7842,7 @@ const secondInitiationAdultTraining = {
   title: 'Défense & Longues',
   image: 'https://zupimages.net/up/20/19/cd36.jpg',
   description: 'Apprendre les bases nécessaires pour faire de bonnes défenses',
-  drills: [warmupDrill, menageATroisDrill, checkLong, trainDrill, game5v5],
+  drills: [warmupDrill, threePersonDrill, checkLong, trainDrill, game5v5],
 };
 
 const thirdInitiationAdultTraining = {
@@ -7859,14 +7859,6 @@ const defenseBaseTraining = {
   image: 'https://zupimages.net/up/20/19/skjl.jpg',
   description: 'Entraîner votre défense',
   drills: [warmupGameDrill, defensePositionDrill, youShallNotPassDrill, breakDrill, normalGame],
-};
-
-const learningByPlaying = {
-  id: 10,
-  title: 'Apprendre à lancer',
-  image: 'https://zupimages.net/up/20/19/skjl.jpg',
-  description: 'Améliorer vos lancers longs',
-  drills: [warmupGameDrill, discGolf, dDC, theTunnel],
 };
 
 const initiationHorizontal = {
@@ -7893,12 +7885,12 @@ const horizontalLine = {
   drills: [warmupGameDrill, horizontalTrap, horizontalTrapOutside, horizontalHandler, lineGame],
 };
 
-const coed2MarkTraining = {
+const markTraining = {
   id: 14,
-  title: 'Construire la défense',
+  title: 'Construire la marque',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: "S'entraîner à la marque et à breaker vos adversaires",
-  drills: [warmupGameDrill, kyeDrill, breakDrill, normalGame],
+  description: "S'entraîner à la marque pour forcer l'adversaire à des passes risquées",
+  drills: [warmupGameDrill, threePersonDrill, breakDrill, normalGame],
 };
 
 const defenseSecond = {
@@ -7995,7 +7987,7 @@ const secondU17 = {
   title: 'Apprendre les fondamentaux',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: "Un deuxième entrainement pour apprendre à s'amuser avec un disque",
-  drills: [menageATroisDrill, racingWarmUP, dishieLine, treasureHunt, normalGame],
+  drills: [threePersonDrill, racingWarmUP, dishieLine, treasureHunt, normalGame],
 };
 
 const thirdU17 = {
@@ -8027,7 +8019,7 @@ const defenseJunior = {
   title: 'La défense individuelle',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Première séance se concentrant sur la défense',
-  drills: [menageATroisDrill, racingWarmUP, dwarDuel, aussieDrill],
+  drills: [threePersonDrill, racingWarmUP, dwarDuel, aussieDrill],
 };
 
 const defenseJuniorSecond = {
@@ -8649,7 +8641,7 @@ export const drills = [
   // Frisbee
   basicThrowsDrill,
   trainDrill,
-  menageATroisDrill,
+  threePersonDrill,
   goaltimateDrill,
   resetOpenDrill,
   resetBreakDrill,
@@ -8762,7 +8754,7 @@ export const programs = [
     type: DrillTypes.FRISBEE,
     ageCategory: AgeCategory.SENIOR,
     title: 'Défense individuelle',
-    trainings: [defenseBaseTraining, defenseSecond, defenseThird],
+    trainings: [defenseBaseTraining, defenseSecond, defenseThird, markTraining],
   },
   {
     id: 7,

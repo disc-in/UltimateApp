@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { StyleSheet, Modal as NativeModal, View, Text, TouchableOpacity } from 'react-native';
 
-import theme from '../../styles/theme.style';
 import I18n from '../../utils/i18n';
 import Button from './Button';
 

@@ -1,7 +1,6 @@
 import React from 'react';
 import { StyleSheet, Animated, PanResponder } from 'react-native';
 
-import theme from '../../styles/theme.style';
 import Disc from './elements/Disc';
 import Player from './elements/Player';
 import Cone from './elements/Cone';

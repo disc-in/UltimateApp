@@ -1,5 +1,4 @@
 import { savePlay, renamePlay, deletePlay } from './playAction';
-import { createPlay } from '../../Fixtures/TestFixtures';
 
 describe('savePlay', () => {
   const play = {

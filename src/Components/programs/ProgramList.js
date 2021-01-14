@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { ScrollView, StyleSheet, Text, View, TouchableOpacity, FlatList, Image } from 'react-native';
+import { ScrollView, StyleSheet, Text, View, TouchableOpacity, FlatList } from 'react-native';
 import Accordion from 'react-native-collapsible/Accordion';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-import I18n from '../../utils/i18n';
 import theme from '../../styles/theme.style';
 import Program from './Program';
 

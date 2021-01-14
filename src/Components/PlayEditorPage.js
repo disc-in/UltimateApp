@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useLayoutEffect } from 'react';
 import { StyleSheet, View, TouchableOpacity, Alert, Share } from 'react-native';
-import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { connect } from 'react-redux';
 
 import I18n from '../utils/i18n';
 import { generateUuid } from '../utils/uuid';
 import theme from '../styles/theme.style';
-import { savePlay, deletePlay, renamePlay } from '../Store/Actions/playAction';
+import { savePlay, deletePlay } from '../Store/Actions/playAction';
 import AnimationEditor from './editor/AnimationEditor';
 import SavedPlaysList from './editor/SavedPlaysList';
 import RenamePlayModal from './editor/RenamePlayModal';
@@ -181,7 +181,7 @@ export const PlayEditorPage = (props) => {
         <AnimationHistory animation={currentPlay.animation} onAnimationHistoryChange={onAnimationChange} />
 
         <TouchableOpacity onPress={() => share(currentPlay)} testID="shareButton">
-          <Ionicons name="ios-share" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
+          <MaterialCommunityIcons name="share" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
         </TouchableOpacity>
       </View>
     </View>

@@ -16,8 +16,8 @@ const CurrentPlayManager = (props) => {
 
   const share = async () => {
     try {
-      await upload(props.currentPlay);
-      const url = Linking.makeUrl('customPlays/' + props.currentPlay.uuid);
+      const shareUuid = await upload(props.currentPlay);
+      const url = Linking.makeUrl('customPlays/' + shareUuid);
       await Share.share({
         title: I18n.t('editor.currentPlayManager.shareTitle', { title: props.currentPlay.title }),
         message: I18n.t('editor.currentPlayManager.shareMessage', { url }),

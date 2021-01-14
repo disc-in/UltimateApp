@@ -4976,6 +4976,7 @@ const basicThrowsDrill = {
       title: 'Cardinal Point',
       animation: cardinalAnimation,
       vimeoId: '462694734',
+      youtube: 'https://youtu.be/56QMTXdSkAQ',
       repetition: '',
       rest: '',
       instruction:
@@ -7163,6 +7164,7 @@ const guts = {
       title: 'Guts',
       animation: undefined,
       vimeoId: '491667604',
+      youtube: 'https://www.youtube.com/watch?v=MFQhjPZidPw',
       repetition: '',
       rest: '',
       instruction:

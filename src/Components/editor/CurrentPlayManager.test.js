@@ -9,6 +9,9 @@ import * as firebase from '../../utils/firebase';
 import CurrentPlayManager from './CurrentPlayManager';
 
 jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
+jest.mock('react-native-get-random-values', () => ({
+  getRandomBase64: jest.fn(),
+}));
 
 describe('<CurrentPlayManager />', () => {
   afterEach(() => jest.clearAllMocks());

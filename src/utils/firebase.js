@@ -3,6 +3,7 @@ import 'firebase/database';
 import { Platform, InteractionManager } from 'react-native';
 
 import { EXPO_FIREBASE_DATABASE_URL } from '@env';
+import { generateUuid } from './uuid';
 
 // Work around issue `Setting a timer for long time`
 // see: https://github.com/firebase/firebase-js-sdk/issues/97
@@ -62,8 +63,10 @@ const reference = (uuid) => {
   return firebase.database().ref(`customPlays/${uuid}`);
 };
 
-export const upload = (play) => {
-  return reference(play.uuid).set(play);
+export const upload = async (play) => {
+  const shareUuid = generateUuid();
+  await reference(shareUuid).set(play);
+  return shareUuid;
 };
 
 export const download = (uuid) => {

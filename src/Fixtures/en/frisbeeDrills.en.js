@@ -5204,8 +5204,8 @@ const giveAndGoDrill = {
       id: 2,
       title: 'Make It Count',
       animation: giveAndGoRace,
-      youtube: 'https://youtu.be/Yt8CVpHs6y0',
       vimeoId: '485473406',
+      youtube: 'https://youtu.be/Yt8CVpHs6y0',
       repetition: '',
       rest: '',
       instruction: 'A race between 2 teams. First team to 25 wins!',
@@ -5380,7 +5380,7 @@ const bulldogDrill = {
   ],
 };
 
-const menageATroisDrill = {
+const threePersonDrill = {
   id: 1013,
   type: DrillTypes.FRISBEE,
   author: 'Tchac',
@@ -5402,7 +5402,7 @@ const menageATroisDrill = {
       title: 'Flat mark',
       animation: threePerson,
       vimeoId: '462695161',
-      youtube: 'https://youtu.be/z7IuuexL-dM',
+      youtube: 'https://youtu.be/37Wm_0ELd5Y',
       repetition: '',
       rest: '',
       instruction:
@@ -5413,7 +5413,7 @@ const menageATroisDrill = {
       title: 'Redemption',
       animation: redemption,
       vimeoId: '485391944',
-      youtube: 'https://youtu.be/37Wm_0ELd5Y',
+      youtube: 'https://youtu.be/bpgVsv6fXBw',
       repetition: '',
       rest: '',
       instruction:
@@ -5876,7 +5876,7 @@ const dDC = {
       title: 'DDC',
       animation: dDCAnimation,
       vimeoId: '436158587',
-      youtube: 'https://www.youtube.com/watch?v=nszaRylOxus',
+      youtube: 'https://youtu.be/nszaRylOxus',
       repetition: '',
       rest: '',
       instruction:
@@ -6025,7 +6025,7 @@ const dishieLine = {
       repetition: '',
       rest: '',
       instruction:
-        '2 Lines face each other. The first players of each line run towards the disc carrier and try to grab the disc as quickly as possible. Once the disc is caught, he turns and passes the disc to the first player in his line',
+        '2 lines face each other. The first players of each line run towards the disc carrier and try to grab the disc as quickly as possible. Once the disc is caught, he turns and passes the disc to the first player in his line',
     },
     {
       id: 2,
@@ -6036,7 +6036,7 @@ const dishieLine = {
       repetition: '',
       rest: '',
       instruction:
-        '2 Lines face each other. The first players of each line run towards the disc carrier to retrieve a dishy pass. If the thrower makes a realistic fake, the runner must change the direction of his cut',
+        '2 lines face each other. The first players of each line run towards the disc carrier to retrieve a dishy pass. If the thrower makes a realistic fake, the cutter must change the direction of his cut',
     },
   ],
 };
@@ -6269,7 +6269,7 @@ const manipulation = {
   author: 'Mooncatchers',
   title: 'Dexterity Boost',
   image: 'https://zupimages.net/up/20/51/ej3n.jpg',
-  description: 'Drills to learn how to manipulate the disc in unconventional situations',
+  description: 'Drills to learn how to keep hold of the disc in unconventional situations',
   minimalPlayersNumber: 2,
   inGame: undefined,
   equipmentLabel: EquipmentLabels.BASIC,
@@ -6309,7 +6309,7 @@ const manipulation = {
       youtube: 'https://youtu.be/Bb0ghWgixyI',
       repetition: '',
       rest: '',
-      instruction: "The goal it's catching 2 (or even 3) send by your partner",
+      instruction: "The goal it's catching 2 (or even 3) sent by your partner",
     },
     {
       id: 4,
@@ -6331,7 +6331,7 @@ const manipulation = {
       repetition: '',
       rest: '',
       instruction:
-        'The receiver already has a disc in its hands. The goal is to never have two discs simultaneously in your hands. When the receiver is about to receive the other disc he throws in the air (to himself) his disc, he catches the other disc, throws it, catch his disc. If this is succeeded, then he throws his disc to the other player that already has his one disc in its hands',
+        'The receiver already has a disc in their hands. The goal is to never have two discs simultaneously in your hands. When the receiver is about to receive the other disc, they throw their disc in the air (to themself), they catch the other disc, throw it, and then catch their own disc. If this is successful, then they throw their disc to the other player who should already have a disc in their hands and start repeating the sequence (throwing their own disc up in the air etc.)',
     },
   ],
 };
@@ -6419,20 +6419,20 @@ const racingWarmUP = {
   steps: [
     {
       id: 1,
-      title: 'Clap his Hand',
+      title: 'Clap their hand',
       animation: bottleAnimation,
       vimeoId: undefined,
       repetition: '',
       rest: '',
       instruction:
-        'Two teams compete against each other. A player or a coach stands in front of the 2 lines. He makes fakes and when the Frisbee touches the ground, the first players of each line run as fast as possible to touch those hands. Once touched, they can turn around and score a point for their team if they cross the line first. The coach can move around and vary the height of his hands as he sees fit',
+        'Two teams compete against each other. A player or a coach stands in front of the 2 lines. They make fakes and when the Frisbee touches the ground, the first players of each line run as fast as possible to touch the hands of the coach. Once touched, they can turn around and score a point for their team if they cross the line first. The coach can move around and vary the height of his hands as he sees fit',
     },
     {
       id: 2,
       title: 'Noughts and Crosses',
       animation: undefined,
       vimeoId: '486367246',
-      youtube: 'https://www.youtube.com/watch?v=b0Jp56zYoio',
+      youtube: 'https://youtu.be/b0Jp56zYoio',
       repetition: '',
       rest: '',
       instruction:
@@ -6457,7 +6457,7 @@ const racingWarmUP = {
       repetition: '',
       rest: '',
       instruction:
-        'One offensive player against a defender. The goal of the offensive player is touch the outside cone before that the defender touch the inside one. They both have to touch the inside cone before switching their direction. The defensive player can start running when the both feet of the offensive player left the ground',
+        'One offensive player against a defender. The goal of the offensive player is to touch the outside cone before the defender touches the inside one. They both have to touch the inside cone before switching their direction. The defensive player can start running when both feet of the offensive player have left the ground',
     },
   ],
 };
@@ -6564,7 +6564,7 @@ const goaltimateDrill = {
       title: 'Goaltimate rules',
       animation: goaltimate,
       vimeoId: '416849035',
-      youtube: 'https://www.youtube.com/watch?v=C2h7TeLiDnA',
+      youtube: 'https://youtu.be/C2h7TeLiDnA',
       repetition: '',
       rest: '',
       instruction:
@@ -6903,7 +6903,7 @@ const fish = {
       repetition: '',
       rest: '',
       instruction:
-        'Players play in pairs. The objective is to collect as many blocks as possible. One player of the pair runs at the level of a block. His teammate sends him the disc in a way defined by the coach. If, and only if, the player catches the disc while remaining at the pivot of the block, he can pick it up and bring it back to his side. His teammate in turn runs, the roles are reversed. The team having picked up the most disc wins',
+        'Players play in pairs. The objective is to collect as many cones as possible. One player of the pair runs to a cone. His teammate makes a particular type of pass defined by the coach (flick, back etc.). If, and only if, the player catches the disc while remaining at the pivot of the cone, he can pick it up and bring it back to his teammate. His teammate in turn runs, the roles are reversed. The team having picked up the most cones wins',
     },
   ],
 };
@@ -6941,8 +6941,7 @@ const crossingTheField = {
       animation: crossingTheFieldDefenseAnimation,
       repetition: '',
       rest: '',
-      instruction:
-        'Same drill, adding one defender to make it closer slightly more difficult and closer to playing ultimate',
+      instruction: 'Same drill, adding one defender to make it slightly more difficult and closer to playing ultimate',
     },
     {
       id: 3,
@@ -7012,7 +7011,7 @@ const bull = {
       repetition: '',
       rest: '',
       instruction:
-        'The players form a circle more or less wide depending on their level. Passes to direct neighbors are not allowed. If a player has to take more than one step to catch the pass, is considered incomplete. The thrower replaces one of the defenders. The stall starts at 5',
+        'The players form a circle more or less wide depending on their level. Passes to direct neighbors are not allowed. If a player has to take more than one step to catch, the pass is considered incomplete. The thrower replaces one of the defenders. The stall starts at 5',
     },
     {
       id: 2,
@@ -7051,7 +7050,7 @@ const bull = {
 //   title: 'Statues',
 //   image: 'https://zupimages.net/up/20/50/e7mk.jpeg',
 //   description:
-//     'Inspired by a famous children game, this drill aims at improving balance as well as information gathering while having fun. You can easily think of other variations of the drill to match your players age and level',
+//     'Inspired by a famous children game, this drill aims to improve balance as well as information gathering while having fun. You can easily think of other variations of the drill to match your players age and level',
 //   minimalPlayersNumber: 2,
 //   inGame: undefined,
 //   equipmentLabel: EquipmentLabels.BASIC,
@@ -7164,7 +7163,7 @@ const guts = {
       title: 'Guts',
       animation: undefined,
       vimeoId: '491667604',
-      youtube: 'https://www.youtube.com/watch?v=MFQhjPZidPw',
+      youtube: 'https://youtu.be/MFQhjPZidPw',
       repetition: '',
       rest: '',
       instruction:
@@ -7200,7 +7199,7 @@ const flubber = {
       repetition: '',
       rest: '',
       instruction:
-        "The two teams are separated by a line. To catch the disc a player cannot have more than one point of contact with the disc simultaneously. If this is the case, the opposing team scores a point. A player of the opposite team may try to catch the disc without going over the line with his feet. If he catches the disc his team scores 2 points. If He touches the disc and the Frisbee falls, the other team scores a point. The disc must be thrown between the opponent's knees and head",
+        "The two teams are separated by a line. To catch the disc a player cannot have more than one point of contact with the disc simultaneously. If this is the case, the opposing team scores a point. A player of the opposite team may try to catch the disc without going over the line with their feet. If they catch the disc, their team scores 2 points. If they touch the disc and the frisbee falls, the other team scores a point. The disc must be thrown between the opponent's knees and head",
     },
   ],
 };
@@ -7211,7 +7210,7 @@ const theZ = {
   author: 'Mooncatchers - Olivier',
   title: 'The Z',
   image: 'https://zupimages.net/up/20/51/kh8z.jpg',
-  description: 'The ideal drill to work on curved passes as well as race timing',
+  description: 'The ideal drill to work on curved passes as well as the timing of cuts',
   minimalPlayersNumber: 7,
   inGame: undefined,
   equipmentLabel: EquipmentLabels.BASIC,
@@ -7230,7 +7229,7 @@ const theZ = {
       repetition: '',
       rest: '',
       instruction:
-        'A player goes, as fast as possible, deep when the thrower catches the disc. When the thrower makes a realistic fake, the runner changes direction. The ideal is to work on all the different types of throwing possible',
+        'A player starts to run deep, as fast as possible, as soon as the thrower catches the disc. When the thrower makes a realistic fake, the cutter changes direction. Ideally, you should alternate types of throws to work on all the different throws',
     },
   ],
 };
@@ -7261,7 +7260,7 @@ const passMouv = {
       repetition: '',
       rest: '',
       instruction:
-        "The first player in the column moves to the cone by making warm-up exercises. Thne, he countercuts to his starting point to receive his partner's pass. The thrower will have established his pivot foot correctly",
+        "The first player in the column moves to the cone by making warm-up exercises. Then, they countercut to their starting point to receive their partner's pass. The thrower will have established his pivot foot correctly",
     },
     {
       id: 2,
@@ -7271,7 +7270,7 @@ const passMouv = {
       repetition: '',
       rest: '',
       instruction:
-        "The first player in the column moves to the cone sprinting. Once at the block, he makes a counter-cut towards a corner of the area and receives his partner's pass, without slowing down. He then changes column. The thrower waits for eye contact to throw the disc",
+        "The first player in the column moves to the cone sprinting. Once at the cone, they make a counter-cut towards a corner of the area and receive their partner's pass, without slowing down. They then change column. The thrower waits for eye contact to throw the disc",
     },
     {
       id: 3,
@@ -7281,7 +7280,7 @@ const passMouv = {
       repetition: '',
       rest: '',
       instruction:
-        'Placing a defender after the cone that will react when the offensive player makes his counter-cut. A mark can also be placed',
+        'Placing a defender after the cone who will react when the offensive player makes their counter-cut. A mark can also be placed',
     },
     {
       id: 4,
@@ -7291,7 +7290,7 @@ const passMouv = {
       repetition: '',
       rest: '',
       instruction:
-        "The cutter verifies that the thrower is ready and that the player in the middle is looking towards him. He sprints and counter-cuts on the side he wants. In the middle of the race, the first throw is made after having previously called him by a 'top'. The player then pivots on the right foot, wrestles and pivots again to make the pass with the right throw",
+        'The cutter verifies that the thrower is ready and that the player in the middle is looking towards them. They sprint and counter-cut on the side they want. In the middle of the race, the first throw is made after having said “now” out loud. The player then pivots on the right foot, wrestles and pivots again to make the pass with the right throw',
     },
   ],
 };
@@ -7302,7 +7301,7 @@ const crissCross = {
   author: "Jack'suns - Richt",
   title: 'Criss Cross',
   image: 'https://zupimages.net/up/20/52/gi85.jpg',
-  description: 'A drill to learn how to make small fast side passes between handlers',
+  description: 'A drill to learn how to make short fast side passes between handlers',
   minimalPlayersNumber: 3,
   inGame: undefined,
   equipmentLabel: EquipmentLabels.BASIC,
@@ -7321,7 +7320,7 @@ const crissCross = {
       repetition: '',
       rest: '',
       instruction:
-        'A group of 3 players makes side passes to move forward. After throwing a pass to the opposite player, each player follows the disc to make the next cut',
+        'A team composed of 3 players makes side passes to move forward. When a player makes a pass to the opposite player, they must then follow the disc to offer the next cut',
     },
     {
       id: 2,
@@ -7331,7 +7330,7 @@ const crissCross = {
       repetition: '',
       rest: '',
       instruction:
-        'Two teams compete against each other. The objective is to manage to do as many times as possible a defined distance in a given time. A minimum number of passes must be defined. If there is a turn-over, the group must return to the starting point as quickly as possible',
+        'Two teams compete against each other. The objective is to manage to cover as many times as possible a defined distance in a given time. A minimum number of passes must be defined. If there is a turn-over, the group must return to the starting point as quickly as possible',
     },
   ],
 };
@@ -7343,7 +7342,7 @@ const xL = {
   title: 'XL',
   image: 'https://zupimages.net/up/20/52/4jux.jpg',
   description:
-    'Drill to learn the notion of making "upline" passes. These passes are parallel to the field lines and are essential for moving forward',
+    'Learn how to make "upline" passes. These passes are parallel to the field lines and are essential for moving forward',
   minimalPlayersNumber: 8,
   inGame: 'Making the right throw. Passing on a moving player who is running away from me. Moving in the right timing',
   equipmentLabel: EquipmentLabels.BASIC,
@@ -7362,7 +7361,7 @@ const xL = {
       repetition: '',
       rest: '',
       instruction:
-        'Players form 2 columns. The first player runs diagonally towards a cone and catches the disc. When he receives the disc, the other player must have left with the right timing to receive a long pass. If the thrower makes a fake, the runner must change direction to receive a shorter pass',
+        'Players form 2 columns. The first player runs diagonally towards a cone and catches the disc. When they receive the disc, the other player must have left with the right timing to receive a long pass. If the thrower makes a fake, the cutter must change direction to receive a shorter pass',
     },
     {
       id: 2,
@@ -7372,7 +7371,7 @@ const xL = {
       repetition: '',
       rest: '',
       instruction:
-        'Same situation as before. If the thrower makes a fake, the runner must now make a counter cut to go to the break side. The thrower must throw an overhead to reach the runner. For the first throw, a more or less aggressive mark can be put in place',
+        'Same situation as before. If the thrower makes a fake, the cutter must now make a counter cut to go to the break side. The thrower must throw an overhead to reach the cutter. For the first throw, a more or less aggressive mark can be put in place',
     },
   ],
 };
@@ -7444,7 +7443,7 @@ const normalGame = {
   title: '7v7 game',
   image: 'https://zupimages.net/up/20/28/ee6z.jpg',
   description:
-    "It's always interesting to have a time to play in game conditions towards the end of a training. That's the perfect moment to use what players have learnt during the training. Keep in mind that players always FORGET everything when they start playing, so remind them what we're to concentrate on",
+    "It's always interesting to leave aside time to play in game conditions towards the end of a training session. It's the perfect moment to use what players have learnt during the training. Keep in mind that players always FORGET everything when they start playing, so remind them what you want them to concentrate on",
   minimalPlayersNumber: 14,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '8 cones - 1 disc',
@@ -7500,7 +7499,7 @@ const longShotGame = {
   title: 'Hucks oriented game',
   image: 'https://zupimages.net/up/20/28/c16q.jpg',
   description:
-    'Just a classical game on the whole field. Only exception: a team scores 2 points if there was a successful long shot on the offense that lead to scoring!',
+    'Just a normal game on the whole field. Only exception: a team scores 2 points if there was a successful long pass by the offense that led to scoring a point!',
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '8 cones - 1 disc',
@@ -7516,7 +7515,7 @@ const longShotGame = {
       animation: normalGameAnimation,
       repetition: '1',
       rest: '',
-      instruction: '2 points if there was a successful long shot on the offense that lead to scoring!',
+      instruction: '2 points if there was a successful long pass on the offense that led to scoring a point!',
     },
   ],
 };
@@ -7528,7 +7527,7 @@ const lineGame = {
   title: 'Breaking the mark - game',
   image: 'https://zupimages.net/up/20/28/rxqd.jpg',
   description:
-    'Just a classical game on the whole field. Only exception: After a turn-over, the offensive player has to start from the closest sideline',
+    'Just a normal game on the whole field. Only exception: after a turn-over, the offensive player has to start from the closest sideline',
   minimalPlayersNumber: 8,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '8 cones - 1 disc',
@@ -7553,10 +7552,10 @@ const longestGame = {
   id: 2005,
   type: DrillTypes.FRISBEE,
   author: 'KYE',
-  title: 'Disc is Gold',
+  title: 'The Disc is Gold',
   image: 'https://zupimages.net/up/20/28/g0fq.jpg',
   description:
-    'Just a classical game on the whole field. Uses a stopwatch to calculate the time spent for a team to score a point. The team that took the longest time to score a point without a turnover gains 3 more points at the end of the game',
+    'Just a normal game on the whole field. Use a stopwatch to calculate the time spent by a team to score a point. The team that took the longest time to score a point without a turnover gains 3 more points at the end of the game',
   minimalPlayersNumber: 12,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '8 cones - 1 disc - 1 stopwatch',
@@ -7573,7 +7572,7 @@ const longestGame = {
       repetition: '1',
       rest: '',
       instruction:
-        'Classical game. The team that took the longest time to score a point without a turnover gains 3 more points at the end of the game',
+        'Normal game. The team that took the longest time to score a point without a turnover gains 3 more points at the end of the game',
     },
   ],
 };
@@ -7584,7 +7583,7 @@ const trainingGame = {
   author: '',
   title: 'Practice the new Stack',
   image: 'https://zupimages.net/up/20/28/up1j.jpg',
-  description: 'Just a classical game on the whole field',
+  description: 'Just a normal game on the whole field',
   minimalPlayersNumber: 14,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '8 cones - 1 disc',
@@ -7601,7 +7600,7 @@ const trainingGame = {
       repetition: '1',
       rest: '',
       instruction:
-        'Classical game. After a turn-over, the offensive team has to start from a stack practice in the training',
+        'Normal game. After a turn-over, the offensive team has to start from a stack practiced in the training',
     },
   ],
 };
@@ -7613,7 +7612,7 @@ const helpGame = {
   title: 'Help game',
   image: 'https://zupimages.net/up/20/28/up1j.jpg',
   description:
-    'One or a few experienced players can help having a game that looks like ultimate. The goal of the experienced player is to make everyone touching the disc. This drill works with normal games as well as many drills such as Go To 10 of the Box Game',
+    'One or more experienced players can help play a game that looks like ultimate. The goal of the experienced player is to make sure everyone touches the disc. This drill works with normal games as well as many drills such as Go To 10 of the Box Game',
   minimalPlayersNumber: 10,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '8 cones - 1 disc',
@@ -7630,7 +7629,7 @@ const helpGame = {
       repetition: '',
       rest: '',
       instruction:
-        'One coach or experienced player always plays with the offense. They should make sure every player, even the less experienced, receive the disc. The chameleon cannot score',
+        'One coach or experienced player always plays with the offense. They should make sure every player, even the less experienced, touches the disc. The chameleon cannot score',
     },
     {
       id: 2,
@@ -7651,7 +7650,7 @@ const boxGame = {
   title: 'Box game',
   image: 'https://zupimages.net/up/20/47/u0ny.jpg',
   description:
-    'Instead of playing on a regular field with endzone, this game is played with a little endzone. Both teams score in the same endzone. It should be around 2 x 2 meters but you should adapt this to your players level',
+    "Instead of playing on a regular field with an endzone, this game is played with a small endzone. Both teams score in the same endzone. It should be around 2 x 2 meters but you should adapt this to your players' level",
   inGame:
     'Players learn how to create space for each other and find a good timing to create opportunities to score in the box',
   minimalPlayersNumber: 4,
@@ -7670,7 +7669,7 @@ const boxGame = {
       repetition: '1',
       rest: '',
       instruction:
-        'Help beginners understand that they should not stay in the endzone to score.\n\nYou can change the box size and the stall to make it easy or difficult',
+        'Help beginners understand that they should not stay in the endzone to score.\n\nYou can change the box size and the stall to make it easier or more difficult',
     },
     {
       id: 2,
@@ -7757,7 +7756,7 @@ const thirdU13Training = {
   title: 'Treasure Hunt',
   image: 'https://zupimages.net/up/20/19/c9i6.jpg',
   description: 'Help players learn the basics of ultimate while having fun',
-  drills: [treasureHuntDrill, menageATroisDrill, goToTenDrill, helpGame],
+  drills: [treasureHuntDrill, threePersonDrill, goToTenDrill, helpGame],
 };
 
 const fourthU13Training = {
@@ -7781,7 +7780,7 @@ const secondInitiationAdultTraining = {
   title: 'Defense & Longs',
   image: 'https://zupimages.net/up/20/19/cd36.jpg',
   description: 'Players will work on defense and long throws',
-  drills: [warmupDrill, menageATroisDrill, checkLong, trainDrill, game5v5],
+  drills: [warmupDrill, threePersonDrill, checkLong, trainDrill, game5v5],
 };
 
 const thirdInitiationAdultTraining = {
@@ -7800,13 +7799,6 @@ const defenseBaseTraining = {
   drills: [warmupGameDrill, defensePositionDrill, youShallNotPassDrill, breakDrill, normalGame],
 };
 
-const learningByPlaying = {
-  id: 10,
-  title: 'Learning to throw',
-  image: 'https://zupimages.net/up/20/19/skjl.jpg',
-  description: 'Practice your throw by playing game',
-  drills: [warmupGameDrill, discGolf, dDC, theTunnel],
-};
 const initiationHorizontal = {
   id: 11,
   title: 'Horizontal Cut',
@@ -7814,6 +7806,7 @@ const initiationHorizontal = {
   description: 'Practice how to cut in a horizontal stack',
   drills: [warmupGameDrill, theDuel, game3v3Horizontal, normalGame],
 };
+
 const horizontalFlow = {
   id: 12,
   title: 'Horizontal Flow',
@@ -7830,13 +7823,12 @@ const horizontalLine = {
   drills: [warmupGameDrill, horizontalTrap, horizontalTrapOutside, horizontalHandler, lineGame],
 };
 
-const coed2MarkTraining = {
+const markTraining = {
   id: 14,
-  title: 'Build your Defense',
+  title: 'Build your Mark',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description:
-    "This training session aims at practicing your mark skills. Don't be broken to easily, generate dangerous passes",
-  drills: [warmupGameDrill, kyeDrill, breakDrill, normalGame],
+  description: "Practice your mark skills. Don't be broken too easily, generate dangerous passes",
+  drills: [warmupGameDrill, threePersonDrill, breakDrill, normalGame],
 };
 
 const defenseSecond = {
@@ -7933,7 +7925,7 @@ const secondU17 = {
   title: 'Learning the fundamentals',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'A second practice to enjoy playing with the disc',
-  drills: [menageATroisDrill, racingWarmUP, dishieLine, treasureHunt, normalGame],
+  drills: [threePersonDrill, racingWarmUP, dishieLine, treasureHunt, normalGame],
 };
 
 const thirdU17 = {
@@ -7965,7 +7957,7 @@ const defenseJunior = {
   title: 'Initiation of Ultimate Basics',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'First practice to focus on defense',
-  drills: [menageATroisDrill, racingWarmUP, dwarDuel, aussieDrill],
+  drills: [threePersonDrill, racingWarmUP, dwarDuel, aussieDrill],
 };
 
 const defenseJuniorSecond = {
@@ -8008,7 +8000,7 @@ const zoneCupSecond = {
   drills: [bull, kyeDrill, stopFlow, zoneGame],
 };
 
-//Fitness Weeks
+// Fitness Weeks
 const fitnessWeek1 = {
   id: 101,
   title: 'Time to come back',
@@ -8580,7 +8572,7 @@ export const drills = [
   // Frisbee
   basicThrowsDrill,
   trainDrill,
-  menageATroisDrill,
+  threePersonDrill,
   goaltimateDrill,
   resetOpenDrill,
   resetBreakDrill,
@@ -8694,7 +8686,7 @@ export const programs = [
     type: DrillTypes.FRISBEE,
     ageCategory: AgeCategory.SENIOR,
     title: 'Individual Defense',
-    trainings: [defenseBaseTraining, defenseSecond, defenseThird],
+    trainings: [defenseBaseTraining, defenseSecond, defenseThird, markTraining],
   },
   {
     id: 7,

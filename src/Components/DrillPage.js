@@ -69,8 +69,6 @@ export const DrillPage = (props) => {
       stringYoutube += youtubeLinks[i].title + ' : ' + youtubeLinks[i].youtubeUrl + '\n';
     }
 
-    console.log(stringYoutube);
-
     Share.share({
       title: I18n.t('drillPage.shareTitle', { drillTitle: drill.title }),
       message: I18n.t('drillPage.shareContent', { url, stringYoutube }),

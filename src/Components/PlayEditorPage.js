@@ -54,12 +54,12 @@ export const PlayEditorPage = (props) => {
       await upload(props.currentPlay);
       const url = Linking.makeUrl('customPlays/' + currentPlay.uuid);
       await Share.share({
-        title: I18n.t('editor.currentPlayManager.shareTitle', { title: currentPlay.title }),
-        message: I18n.t('editor.currentPlayManager.shareMessage', { url }),
+        title: I18n.t('editor.shareTitle', { title: currentPlay.title }),
+        message: I18n.t('editor.shareMessage', { url }),
         url,
       });
     } catch (error) {
-      showError(I18n.t('editor.currentPlayManager.shareError'));
+      showError(I18n.t('editor.shareError'));
     }
   };
 
@@ -80,7 +80,7 @@ export const PlayEditorPage = (props) => {
             text: I18n.t('shared.yes'),
             onPress: () => {
               saveCurrentPlay();
-              showSuccess(I18n.t('editor.currentPlayManager.saveSuccess', { title: currentPlay.title }));
+              showSuccess(I18n.t('editor.saveSuccess', { title: currentPlay.title }));
               createNewPlay();
             },
           },
@@ -171,7 +171,7 @@ export const PlayEditorPage = (props) => {
         <TouchableOpacity
           onPress={() => {
             saveCurrentPlay();
-            showSuccess(I18n.t('editor.currentPlayManager.saveSuccess', { title: currentPlay.title }));
+            showSuccess(I18n.t('editor.saveSuccess', { title: currentPlay.title }));
           }}
           testID="saveButton"
         >

@@ -56,10 +56,10 @@ export const DrillPage = (props) => {
 
     for (let i = 0; i < drill.steps.length; i++) {
       if (drill.steps[i].youtube) {
-        let dict = new Object();
-        dict['title'] = drill.steps[i].title;
-        dict['youtubeUrl'] = drill.steps[i].youtube;
-        youtubeLinks.push(dict);
+        youtubeLinks.push({
+          title: drill.steps[i].title,
+          youtubeUrl: drill.steps[i].youtube,
+        });
       }
     }
 

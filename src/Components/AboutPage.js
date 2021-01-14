@@ -18,6 +18,7 @@ const AboutPage = (props) => {
     });
     alert(result.status);
   };
+
   const { releaseChannel, version } = Constants.manifest;
   const channel = releaseChannel === undefined ? 'DEV' : releaseChannel;
   return (

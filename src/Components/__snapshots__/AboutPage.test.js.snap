@@ -101,7 +101,7 @@ exports[`<AboutPage /> renders correctly 1`] = `
         }
       }
     >
-      A big thanks to everybody helping make 'Disc In' a nice app!
+      A big thanks to everybody who helps make 'Disc In' great!
     </Text>
     <View
       accessible={true}
@@ -139,7 +139,7 @@ exports[`<AboutPage /> renders correctly 1`] = `
         }
       }
     >
-      Contributing
+      Contributions
     </Text>
     <Text
       style={
@@ -150,7 +150,7 @@ exports[`<AboutPage /> renders correctly 1`] = `
         }
       }
     >
-      Adding drills and programs, new videos, translating to other languages, etc. There are dozens of ways to improve the app. Feel free to contact us!
+      You can contribute by adding drills and programs, new videos, translating to other languages, etc. There are dozens of ways to improve the app. Feel free to contact us!
     </Text>
     <Text
       style={
@@ -172,8 +172,7 @@ exports[`<AboutPage /> renders correctly 1`] = `
         }
       }
     >
-      We are always looking for ideas and feedback to improve the app.
-Would you like to send us a message?
+      If you perhaps don't have time to contribute, but you have ideas or feedback to improve the app, please send us a message!
     </Text>
     <View
       accessible={true}

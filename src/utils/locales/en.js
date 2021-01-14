@@ -162,18 +162,19 @@ export default {
     },
     acknowledgements: {
       header: 'Acknowledgements',
-      text: "A big thanks to everybody helping make 'Disc In' a nice app!",
+      text: "A big thanks to everybody who helps make 'Disc In' great!",
       linkText: 'Contributors',
       linkUrl: 'https://github.com/disc-in/UltimateApp#-thanks',
     },
     contributing: {
-      header: 'Contributing',
+      header: 'Contributions',
       text:
-        'Adding drills and programs, new videos, translating to other languages, etc. There are dozens of ways to improve the app. Feel free to contact us!',
+        'You can contribute by adding drills and programs, new videos, translating to other languages, etc. There are dozens of ways to improve the app. Feel free to contact us!',
     },
     feedback: {
       header: 'Feedback',
-      text: 'We are always looking for ideas and feedback to improve the app.\nWould you like to send us a message?',
+      text:
+        "If you perhaps don't have time to contribute, but you have ideas or feedback to improve the app, please send us a message!",
       cta: 'Send feedback',
       subject: 'Feedback concerning Disc In',
     },

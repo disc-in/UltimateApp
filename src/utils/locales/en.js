@@ -220,4 +220,8 @@ export default {
   tacticsPage: {
     chooseTopic: 'Choose a topic:',
   },
+  videoPage: {
+    share: 'Share',
+    shareContent: "Here's a great video found on Disc in :\n{{url}} ",
+  },
 };

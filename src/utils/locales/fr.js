@@ -219,4 +219,8 @@ export default {
   tacticsPage: {
     chooseTopic: 'Choisis un sujet :',
   },
+  videoPage: {
+    share: 'Partager',
+    shareContent: 'Voici une superbe vidéo trouvée sur Disc in :\n{{url}} ',
+  },
 };

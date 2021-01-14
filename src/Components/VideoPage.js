@@ -1,11 +1,25 @@
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, Share } from 'react-native';
 
 import theme from '../styles/theme.style';
 import VimeoVideo from './shared/VimeoVideo';
+import I18n from '../utils/i18n';
+import Button from './shared/Button';
 
 const VideoPage = (props) => {
   const video = props.route.params.video;
+
+  const share = async (video) => {
+    let url = '';
+    if (video.youtube) {
+      url = video.youtube;
+    }
+
+    Share.share({
+      message: I18n.t('videoPage.shareContent', { url }),
+      url,
+    }).catch((e) => console.log(e));
+  };
 
   return (
     <View style={styles.contentWrapper}>
@@ -19,6 +33,11 @@ const VideoPage = (props) => {
       <View>
         <Text style={styles.description}>{video.description}</Text>
       </View>
+      {video.youtube && (
+        <View style={styles.footer}>
+          <Button onPress={() => share(video)} testID="shareButton" text={I18n.t('videoPage.share')} dark />
+        </View>
+      )}
     </View>
   );
 };
@@ -45,5 +64,21 @@ const styles = StyleSheet.create({
     color: theme.COLOR_PRIMARY,
     fontSize: theme.FONT_SIZE_MEDIUM,
     paddingHorizontal: 10,
+  },
+  shareButton: {
+    position: 'absolute',
+    right: '15%',
+    justifyContent: 'center',
+    top: 0,
+    bottom: 0,
+  },
+  footer: {
+    position: 'absolute',
+    paddingBottom: 20,
+    paddingTop: 5,
+    bottom: 0,
+    backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
+    width: '100%',
+    alignItems: 'center',
   },
 });

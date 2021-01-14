@@ -4,15 +4,16 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import theme from '../../styles/theme.style';
 
-const Button = ({ onPress, icon, text, light, small, style, testID }) => {
+const Button = ({ onPress, icon, text, light, small, style, testID, dark }) => {
   const buttonLight = light ? styles.buttonLight : undefined;
   const smallButton = small ? styles.smallButton : undefined;
   const smallIcon = small ? styles.smallIcon : undefined;
   const textLight = light ? styles.textLight : styles.text;
+  const buttonDark = dark ? styles.buttonDark : undefined;
 
   return (
     <TouchableOpacity
-      style={[styles.button, buttonLight, smallButton, style]}
+      style={[styles.button, buttonLight, smallButton, buttonDark, style]}
       onPress={onPress}
       testID={testID || 'button'}
     >
@@ -61,6 +62,11 @@ const styles = StyleSheet.create({
     color: theme.MAIN_COLOR,
     fontSize: theme.FONT_SIZE_MEDIUM,
     fontWeight: 'bold',
+  },
+  buttonDark: {
+    backgroundColor: theme.COLOR_PRIMARY,
+    borderColor: theme.COLOR_PRIMARY,
+    borderWidth: 1,
   },
 });
 

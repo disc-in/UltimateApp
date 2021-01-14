@@ -3,7 +3,6 @@ import { Alert } from 'react-native';
 import * as MailComposer from 'expo-mail-composer';
 
 import I18n from '../../utils/i18n';
-import theme from '../../styles/theme.style';
 import HeaderButton from '../shared/HeaderButton';
 
 export const FeedbackButton = (props) => {

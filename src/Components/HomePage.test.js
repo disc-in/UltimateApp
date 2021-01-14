@@ -2,8 +2,6 @@ import React from 'react';
 import { render, waitFor } from '@testing-library/react-native';
 import { NavigationContainer } from '@react-navigation/native';
 
-import { DrillTypes } from '../Fixtures/config';
-
 import HomePage from './HomePage';
 jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
 

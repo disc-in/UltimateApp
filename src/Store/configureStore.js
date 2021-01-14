@@ -34,15 +34,22 @@ const migrations = {
       customPlays,
     };
   },
+  3: (state) => {
+    // migration to remove trainings
+    delete state['trainings'];
+    console.log('\n\nSTORE\n\n');
+    console.log(Object.keys(state));
+    return state;
+  },
 };
 
 const persistConfig = {
   key: 'root',
-  version: 2,
+  version: 3,
   storage: AsyncStorage,
   whitelist: ['completeTrainings', 'favoriteDrills', 'customPlays'],
-  blacklist: ['drills', 'trainings', 'programs', 'theory'],
-  migrate: createMigrate(migrations, { debug: false }),
+  blacklist: ['drills', 'programs', 'theory'],
+  migrate: createMigrate(migrations, { debug: true }),
 };
 // Middleware: Redux Persist Persisted Reducer
 const persistedReducer = persistReducer(persistConfig, rootReducer);

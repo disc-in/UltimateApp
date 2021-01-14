@@ -16,7 +16,7 @@ describe('<VimeoVideo />', () => {
   };
 
   it('loads the video', async () => {
-    const scope = nock('https://player.vimeo.com:443', { encodedQueryParams: true })
+    nock('https://player.vimeo.com:443', { encodedQueryParams: true })
       .get('/video/407999139/config')
       .delay(500)
       .reply(
@@ -92,7 +92,7 @@ describe('<VimeoVideo />', () => {
   });
 
   it('displays a message on error', async () => {
-    const scope = nock('https://player.vimeo.com').get(`/video/${VIMEO_VIDEO_ID}/config`).reply(404, {});
+    nock('https://player.vimeo.com').get(`/video/${VIMEO_VIDEO_ID}/config`).reply(404, {});
 
     const { getByText, toJSON } = render(
       <NavigationContext.Provider value={navContext}>

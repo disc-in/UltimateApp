@@ -105,7 +105,7 @@ describe('<CurrentPlayManager />', () => {
       isPlaySaved = false;
       jest.spyOn(Alert, 'alert');
 
-      const { getByTestId, getByText, debug } = await waitFor(() =>
+      const { getByTestId, getByText } = await waitFor(() =>
         render(
           <PaperProvider>
             <CurrentPlayManager
@@ -129,7 +129,7 @@ describe('<CurrentPlayManager />', () => {
       isPlaySaved = false;
       jest.spyOn(Alert, 'alert');
 
-      const { getByTestId, getByText, debug } = await waitFor(() =>
+      const { getByTestId, getByText } = await waitFor(() =>
         render(
           <PaperProvider>
             <CurrentPlayManager
@@ -160,7 +160,7 @@ describe('<CurrentPlayManager />', () => {
       isPlaySaved = false;
       jest.spyOn(Alert, 'alert');
 
-      const { getByTestId, getByText, debug } = await waitFor(() =>
+      const { getByTestId, getByText } = await waitFor(() =>
         render(
           <PaperProvider>
             <CurrentPlayManager

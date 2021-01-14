@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Animated, View, StyleSheet, Text, Dimensions, TouchableOpacity, FlatList } from 'react-native';
+import { Animated, View, StyleSheet, Text, TouchableOpacity, FlatList } from 'react-native';
 import { Easing } from 'react-native-reanimated';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 

@@ -1,6 +1,6 @@
 import { dictionary } from './dictionary.fr';
 import { essentials, tactics } from './theory.fr';
-import { drills, trainings, programs } from './frisbeeDrills.fr';
+import { drills, programs } from './frisbeeDrills.fr';
 
 export default {
   theory: {
@@ -11,6 +11,5 @@ export default {
   favoriteDrills: [],
   completeTrainings: [],
   drills,
-  trainings,
   programs,
 };

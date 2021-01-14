@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Alert, Share, Text } from 'react-native';
+import { Alert, Share } from 'react-native';
 import { Menu, Divider } from 'react-native-paper';
 import * as Linking from 'expo-linking';
 

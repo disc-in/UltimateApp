@@ -1,6 +1,5 @@
 import React from 'react';
 import { render, waitFor, fireEvent, act } from '@testing-library/react-native';
-import { Provider as PaperProvider } from 'react-native-paper';
 
 import animationSquare from '../../Fixtures/Animation/AnimationSquare';
 

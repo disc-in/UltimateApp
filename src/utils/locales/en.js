@@ -178,7 +178,7 @@ export default {
     level: 'level',
     start: 'Start',
     shareTitle: 'Share {{drillTitle}}',
-    shareContent: 'Check this drill on Disc In: {{url}}',
+    shareContent: 'Check this drill on Disc In: {{url}}\n{{stringYoutube}}',
   },
   drillPageMinimal: {
     finish: 'Finish Training!',

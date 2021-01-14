@@ -177,7 +177,7 @@ export default {
     level: 'niveau',
     start: 'Start',
     shareTitle: 'Partager {{drillTitle}}',
-    shareContent: 'Regarde cet exo sur Disc In : {{url}}',
+    shareContent: 'Regarde cet exo sur Disc In : {{url}}\n{{stringYoutube}}',
   },
   drillPageMinimal: {
     finish: "Terminer l'entraînement !",

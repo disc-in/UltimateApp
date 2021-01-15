@@ -5,7 +5,6 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import theme from '../../../styles/theme.style';
 import I18n from '../../../utils/i18n';
 import FlashMessage, { showSuccess } from '../../../utils/flashMessage';
-
 import Modal from '../../shared/Modal';
 
 const SavedPlaysList = (props) => {
@@ -66,7 +65,7 @@ const SavedPlaysList = (props) => {
 
   return (
     <View>
-      <TouchableOpacity onPress={() => setModalOpened(true)} testID={props.testID || 'headerButton'}>
+      <TouchableOpacity onPress={() => setModalOpened(true)}>
         <MaterialCommunityIcons name="clipboard-text-outline" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
       </TouchableOpacity>
       <Modal title={I18n.t('editor.savedPlaysList.title')} visible={modalOpened} onClose={() => setModalOpened(false)}>

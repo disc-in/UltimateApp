@@ -8,12 +8,13 @@ import I18n from '../utils/i18n';
 import { generateUuid } from '../utils/uuid';
 import theme from '../styles/theme.style';
 import { savePlay, deletePlay } from '../Store/Actions/playAction';
+import HeaderButton from './shared/HeaderButton';
 import AnimationEditor from './editor/AnimationEditor';
 import RenamePlayModal from './editor/RenamePlayModal';
 import SavedPlaysList from './editor/toolbar/SavedPlaysList';
 import NewPlay from './editor/toolbar/NewPlay';
 import SavePlay from './editor/toolbar/SavePlay';
-import AnimationHistory from '../Components/editor/toolbar/AnimationHistory';
+import AnimationHistory from './editor/toolbar/AnimationHistory';
 import SharePlay from './editor/toolbar/SharePlay';
 
 const newPlay = {
@@ -35,11 +36,7 @@ export const PlayEditorPage = (props) => {
   useLayoutEffect(() => {
     navigation.setOptions({
       headerRight: () => (
-        <View>
-          <TouchableOpacity onPress={() => setModalRenameVisible(true)} testID="shareButton">
-            <MaterialCommunityIcons name="pencil" color={theme.COLOR_PRIMARY} size={28} style={{ marginRight: 20 }} />
-          </TouchableOpacity>
-        </View>
+        <HeaderButton icon="pencil" onPress={() => setModalRenameVisible(true)} testID="renameButton" />
       ),
     }),
       [];
@@ -153,12 +150,13 @@ const styles = StyleSheet.create({
   },
   toolBar: {
     height: '8%',
+    minHeight: 40,
     width: '100%',
     backgroundColor: theme.COLOR_PRIMARY,
     position: 'absolute',
     bottom: 0,
     alignItems: 'center',
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    justifyContent: 'space-evenly',
   },
 });

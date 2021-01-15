@@ -356,7 +356,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     position: 'absolute',
-
     zIndex: 1,
     width: '100%',
     height: 30,

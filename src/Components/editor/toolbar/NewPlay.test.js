@@ -6,8 +6,6 @@ import animationSquare from '../../../Fixtures/Animation/AnimationSquare';
 
 import NewPlay from './NewPlay';
 
-jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
-
 describe('<NewPlay />', () => {
   afterEach(() => jest.clearAllMocks());
 

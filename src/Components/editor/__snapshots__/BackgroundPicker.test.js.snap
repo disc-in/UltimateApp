@@ -5,7 +5,7 @@ exports[`<BackgroundPicker /> renders correctly 1`] = `
   style={
     Object {
       "height": 80,
-      "width": 120,
+      "width": "45%",
     }
   }
 >

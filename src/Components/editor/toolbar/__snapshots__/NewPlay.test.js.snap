@@ -40,3 +40,44 @@ exports[`<NewPlay /> renders correctly 1`] = `
   </Text>
 </View>
 `;
+
+exports[`<NewPlay /> triggers new action when current play is saved 1`] = `
+<View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "opacity": 1,
+    }
+  }
+  testID="newButton"
+>
+  <Text
+    allowFontScaling={false}
+    style={
+      Array [
+        Object {
+          "color": "#fff",
+          "fontSize": 30,
+        },
+        undefined,
+        Object {
+          "fontFamily": "material-community",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Object {},
+      ]
+    }
+  >
+    󰐕
+  </Text>
+</View>
+`;

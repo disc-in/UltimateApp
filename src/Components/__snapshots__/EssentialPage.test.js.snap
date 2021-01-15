@@ -73,11 +73,11 @@ exports[`<EssentialPage /> renders correctly 1`] = `
     data={
       Array [
         Object {
-          "animation": "",
           "id": 1,
           "text": "Rise Up Ultimate",
           "title": "How to make a perfect throw?",
           "video": "424000350",
+          "youtube": "https://youtu.be/CqpPfVZ1HeI",
         },
       ]
     }

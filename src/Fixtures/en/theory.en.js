@@ -10,7 +10,6 @@ export const essentials = [
         youtube: 'https://youtu.be/bB-zFGj3XGM',
         illustration: 'https://zupimages.net/up/20/30/dn48.jpg',
         time: '14:32',
-        description: '',
       },
       {
         id: 2,
@@ -20,7 +19,6 @@ export const essentials = [
         youtube: 'https://youtu.be/DSbU38d6wnE',
         illustration: 'https://zupimages.net/up/20/30/040p.jpg',
         time: '4:58',
-        description: '',
       },
     ],
   },
@@ -35,7 +33,6 @@ export const essentials = [
         youtube: 'https://youtu.be/As1X0JNWiLY',
         illustration: 'https://zupimages.net/up/20/30/w1nm.jpg',
         time: '5:04',
-        description: '',
       },
       {
         id: 2,
@@ -45,7 +42,6 @@ export const essentials = [
         youtube: 'https://youtu.be/AiU5518a1q0',
         illustration: 'https://zupimages.net/up/20/30/d3xu.jpg',
         time: '5:59',
-        description: '',
       },
       {
         id: 3,
@@ -55,7 +51,6 @@ export const essentials = [
         youtube: 'https://youtu.be/NbwitQD0ATQ',
         illustration: 'https://zupimages.net/up/20/30/2p2t.jpg',
         time: '4:22',
-        description: '',
       },
       {
         id: 4,
@@ -65,7 +60,6 @@ export const essentials = [
         youtube: 'https://youtu.be/NE7-Kohz3jI',
         illustration: 'https://zupimages.net/up/20/30/uvr0.jpg',
         time: '3:58',
-        description: '',
       },
       {
         id: 5,
@@ -75,7 +69,6 @@ export const essentials = [
         youtube: 'https://youtu.be/CDGubTf3EWU',
         illustration: 'https://zupimages.net/up/20/30/zib6.jpg',
         time: '20:12',
-        description: '',
       },
       {
         id: 6,
@@ -85,7 +78,6 @@ export const essentials = [
         youtube: 'https://youtu.be/hJK1xUeFtig',
         illustration: 'https://zupimages.net/up/21/01/mgzq.jpg',
         time: '3:59',
-        description: '',
       },
     ],
   },
@@ -100,7 +92,6 @@ export const essentials = [
         youtube: 'https://youtu.be/CqpPfVZ1HeI',
         illustration: 'https://zupimages.net/up/20/30/ry9o.jpg',
         time: '16:04',
-        description: '',
       },
     ],
   },
@@ -115,7 +106,6 @@ export const essentials = [
         youtube: 'https://youtu.be/s_WlCiYU3As',
         illustration: 'https://zupimages.net/up/20/30/kb3b.jpg',
         time: '5:22',
-        description: '',
       },
       {
         id: 2,
@@ -125,7 +115,6 @@ export const essentials = [
         youtube: 'https://youtu.be/9rDJ8vLjtk0',
         illustration: 'https://zupimages.net/up/21/01/w2gl.jpg',
         time: '8:22',
-        description: '',
       },
     ],
   },
@@ -140,7 +129,6 @@ export const essentials = [
         youtube: 'https://youtu.be/UnNUEvs2Ev0',
         illustration: 'https://zupimages.net/up/21/01/3ccr.jpg',
         time: '4:10',
-        description: '',
       },
       {
         id: 2,
@@ -150,7 +138,6 @@ export const essentials = [
         youtube: 'https://youtu.be/YkMMqOUNyKk',
         illustration: 'https://zupimages.net/up/21/01/gwlw.jpg',
         time: '2:50',
-        description: '',
       },
     ],
   },
@@ -168,7 +155,6 @@ export const tactics = [
         youtube: 'https://youtu.be/FTZdFGvHuXs',
         illustration: 'https://zupimages.net/up/20/30/95ye.jpg',
         time: '2:38',
-        description: '',
       },
       {
         id: 2,
@@ -178,7 +164,6 @@ export const tactics = [
         youtube: 'https://youtu.be/WXX38xZvZRs',
         illustration: 'https://zupimages.net/up/21/01/hywf.jpg',
         time: '12:22',
-        description: '',
       },
       {
         id: 3,
@@ -188,7 +173,6 @@ export const tactics = [
         youtube: undefined,
         illustration: 'https://zupimages.net/up/20/30/8c6r.jpg',
         time: '0:24',
-        description: '',
       },
     ],
   },
@@ -203,7 +187,6 @@ export const tactics = [
         youtube: 'https://youtu.be/eQdYZCHuIcI',
         illustration: 'https://zupimages.net/up/20/28/up1j.jpg',
         time: '2:23',
-        description: '',
       },
       {
         id: 2,
@@ -213,7 +196,6 @@ export const tactics = [
         youtube: 'https://youtu.be/CwXH-e84g4I',
         illustration: 'https://zupimages.net/up/20/30/s33y.jpg',
         time: '4:54',
-        description: '',
       },
     ],
   },
@@ -228,7 +210,6 @@ export const tactics = [
         youtube: 'https://youtu.be/OUg1O5XNVmQ',
         illustration: 'https://zupimages.net/up/20/30/gbjz.jpg',
         time: '15:42',
-        description: '',
       },
     ],
   },
@@ -243,7 +224,6 @@ export const tactics = [
         youtube: 'https://youtu.be/6O0vo93tQkQ',
         illustration: 'https://zupimages.net/up/20/30/zmag.jpg',
         time: '19:43',
-        description: '',
       },
       {
         id: 2,
@@ -253,7 +233,6 @@ export const tactics = [
         youtube: 'https://youtu.be/CqTCgoC5bws',
         illustration: 'https://zupimages.net/up/20/30/lbl7.jpg',
         time: '0:40',
-        description: '',
       },
     ],
   },

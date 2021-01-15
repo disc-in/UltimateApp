@@ -33,9 +33,6 @@ const VideoPage = (props) => {
             <Text style={styles.text}>{video.title}</Text>
             <Text style={styles.textAuthor}>{video.text}</Text>
           </View>
-          <View>
-            <Text style={styles.description}>{video.description}</Text>
-          </View>
         </View>
       </View>
       {video.youtube && (
@@ -67,11 +64,6 @@ const styles = StyleSheet.create({
     color: theme.COLOR_PRIMARY,
     fontSize: theme.FONT_SIZE_MEDIUM,
     fontWeight: 'bold',
-  },
-  description: {
-    color: theme.COLOR_PRIMARY,
-    fontSize: theme.FONT_SIZE_MEDIUM,
-    paddingHorizontal: 10,
   },
   shareButton: {
     position: 'absolute',

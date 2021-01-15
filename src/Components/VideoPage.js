@@ -1,12 +1,11 @@
 import React from 'react';
-import { StyleSheet, View, Text, Share, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Text, Share } from 'react-native';
 
 import theme from '../styles/theme.style';
 import VimeoVideo from './shared/VimeoVideo';
 import I18n from '../utils/i18n';
 import Button from './shared/Button';
 import { showError } from '../utils/flashMessage';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 const VideoPage = (props) => {
   const video = props.route.params.video;

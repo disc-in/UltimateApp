@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useLayoutEffect } from 'react';
-import { StyleSheet, View, TouchableOpacity, Alert, Share } from 'react-native';
+import { StyleSheet, View, TouchableOpacity, Share } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { connect } from 'react-redux';
 
@@ -9,6 +9,7 @@ import theme from '../styles/theme.style';
 import { savePlay, deletePlay } from '../Store/Actions/playAction';
 import AnimationEditor from './editor/AnimationEditor';
 import SavedPlaysList from './editor/SavedPlaysList';
+import NewPlay from './editor/NewPlay';
 import RenamePlayModal from './editor/RenamePlayModal';
 import Drill from './animation/Drill';
 import { upload } from '../utils/firebase';
@@ -60,38 +61,6 @@ export const PlayEditorPage = (props) => {
       });
     } catch (error) {
       showError(I18n.t('editor.shareError'));
-    }
-  };
-
-  const checkBeforeNewPlay = () => {
-    if (isPlaySaved) {
-      createNewPlay();
-    } else {
-      Alert.alert(
-        I18n.t('editor.saveModificationsTitle'),
-        I18n.t('editor.saveModificationsText', { title: currentPlay.title }),
-        [
-          {
-            text: I18n.t('shared.cancel'),
-            style: 'cancel',
-            onPress: () => {},
-          },
-          {
-            text: I18n.t('shared.yes'),
-            onPress: () => {
-              saveCurrentPlay();
-              showSuccess(I18n.t('editor.saveSuccess', { title: currentPlay.title }));
-              createNewPlay();
-            },
-          },
-          {
-            text: I18n.t('shared.no'),
-            onPress: () => {
-              createNewPlay();
-            },
-          },
-        ],
-      );
     }
   };
 
@@ -165,9 +134,12 @@ export const PlayEditorPage = (props) => {
           onOpen={openPlay}
           saveCurrentPlay={saveCurrentPlay}
         />
-        <TouchableOpacity onPress={() => checkBeforeNewPlay()} testID="plusButton">
-          <MaterialCommunityIcons name="plus" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
-        </TouchableOpacity>
+        <NewPlay
+          currentPlay={currentPlay}
+          isPlaySaved={isPlaySaved}
+          createNewPlay={createNewPlay}
+          saveCurrentPlay={saveCurrentPlay}
+        />
         <TouchableOpacity
           onPress={() => {
             saveCurrentPlay();

@@ -237,4 +237,9 @@ export default {
   tacticsPage: {
     chooseTopic: 'Choisis un sujet :',
   },
+  videoPage: {
+    share: 'Partager',
+    shareContent: 'Voici une superbe vidéo trouvée sur Disc In :\n{{url}} ',
+    error: 'Le partage de cette vidéo a échoué',
+  },
 };

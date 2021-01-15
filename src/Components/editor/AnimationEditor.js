@@ -10,7 +10,6 @@ import Drill from '../animation/Drill';
 import theme from '../../styles/theme.style';
 
 const bigScreen = Dimensions.get('window').height > 600 ? { alignItems: 'center' } : undefined;
-const smallTrash = Dimensions.get('window').height > 600 ? { height: 80 } : { height: 30 };
 
 class AnimationEditor extends React.Component {
   constructor(props) {
@@ -318,7 +317,7 @@ class AnimationEditor extends React.Component {
         <View style={styles.actionsArea}>
           <View style={[styles.container, bigScreen]}>
             {this.state.isElementMoving ? (
-              <View style={[styles.deletionArea, smallTrash]}>
+              <View style={[styles.deletionArea]}>
                 <MaterialCommunityIcons name="trash-can" color={theme.COLOR_PRIMARY} size={22} />
               </View>
             ) : (
@@ -355,30 +354,31 @@ const styles = StyleSheet.create({
   draggableArea: {
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'space-around',
     position: 'absolute',
+    height: 40,
     zIndex: 1,
     width: '100%',
-    height: 30,
-    justifyContent: 'space-around',
   },
   deletionArea: {
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'center',
     borderColor: 'grey',
-
     position: 'absolute',
     left: 0,
     top: 0,
+    bottom: 0,
     right: 0,
     zIndex: 2,
-    borderWidth: 2,
-    justifyContent: 'center',
+    borderWidth: 1,
+    marginBottom: 10,
   },
   draggableElement: {
     flexDirection: 'row',
     width: '45%',
     alignItems: 'center',
-    justifyContent: 'space-around',
+    justifyContent: 'space-evenly',
     marginLeft: 20,
   },
   container: {

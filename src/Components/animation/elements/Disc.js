@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 import theme from '../../../styles/theme.style';
 
@@ -15,11 +15,8 @@ const Disc = ({ baseWidth, number }) => {
     },
   ];
 
-  return (
-    <View style={itemStyle}>
-      <Text style={styles.discText}>{number}</Text>
-    </View>
-  );
+  // Number is not displayed
+  return <View style={itemStyle} />;
 };
 
 export default Disc;
@@ -32,9 +29,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderColor: theme.DISC_BORDER,
     backgroundColor: theme.DISC_COLOR,
-  },
-  discText: {
-    fontWeight: 'bold',
-    color: theme.DISC_COLOR, //Make the number in the disc invisible,
   },
 });

@@ -30,7 +30,11 @@ const DraggableDisplayedElement = (props) => {
 
   const panStyle = {
     transform: currentPosition.getTranslateTransform(),
-    marginRight: 10,
+    padding: 5,
+    minWidth: draggableBaseWidth,
+    minHeight: draggableBaseWidth,
+    alignItems: 'center',
+    justifyContent: 'center',
   };
 
   return (

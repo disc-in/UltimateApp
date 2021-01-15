@@ -938,18 +938,7 @@ exports[`<Animation /> renders correctly 1`] = `
             },
           ]
         }
-      >
-        <Text
-          style={
-            Object {
-              "color": "white",
-              "fontWeight": "bold",
-            }
-          }
-        >
-          
-        </Text>
-      </View>
+      />
     </View>
   </View>
   <View>

@@ -9,6 +9,7 @@ exports[`<ToggleButton /> renders correctly 1`] = `
       },
       Object {
         "justifyContent": "center",
+        "marginTop": 5,
       },
     ]
   }
@@ -67,10 +68,20 @@ exports[`<ToggleButton /> renders correctly 1`] = `
               "borderColor": "rgba(0, 0, 0, 0.29)",
               "borderRadius": 4,
             },
-            Object {
-              "backgroundColor": "#f1f1f1",
-              "opacity": 0.8,
-            },
+            Array [
+              Object {
+                "borderColor": "#A6A6A6",
+                "borderWidth": 0.5,
+              },
+              Object {
+                "borderBottomRightRadius": 0,
+                "borderTopRightRadius": 0,
+              },
+              Object {
+                "backgroundColor": "#e5e5e5",
+                "opacity": 0.8,
+              },
+            ],
           ],
         ],
       ]
@@ -133,7 +144,18 @@ exports[`<ToggleButton /> renders correctly 1`] = `
               "borderColor": "rgba(0, 0, 0, 0.29)",
               "borderRadius": 4,
             },
-            undefined,
+            Array [
+              Object {
+                "borderColor": "#A6A6A6",
+                "borderWidth": 0.5,
+              },
+              Object {
+                "borderBottomLeftRadius": 0,
+                "borderLeftWidth": 0,
+                "borderTopLeftRadius": 0,
+              },
+              undefined,
+            ],
           ],
         ],
       ]

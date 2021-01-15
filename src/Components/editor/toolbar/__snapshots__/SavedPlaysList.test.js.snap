@@ -109,7 +109,7 @@ exports[`<SavedPlaysList /> renders an empty state with no plays 1`] = `
             }
           }
         >
-          Saved plays
+          My Playbook
         </Text>
         <RCTScrollView
           ListEmptyComponent={[Function]}
@@ -303,7 +303,7 @@ exports[`<SavedPlaysList /> renders correctly with plays 1`] = `
             }
           }
         >
-          Saved plays
+          My Playbook
         </Text>
         <RCTScrollView
           ListEmptyComponent={[Function]}

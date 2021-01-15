@@ -39,7 +39,7 @@ const NewPlay = ({ currentPlay, isPlaySaved, createNewPlay, saveCurrentPlay }) =
     }
   };
   return (
-    <TouchableOpacity onPress={() => checkBeforeNewPlay()} testID="plusButton">
+    <TouchableOpacity onPress={() => checkBeforeNewPlay()} testID="newButton">
       <MaterialCommunityIcons name="plus" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
     </TouchableOpacity>
   );

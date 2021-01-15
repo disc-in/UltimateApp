@@ -240,7 +240,7 @@ export default {
   },
   videoPage: {
     share: 'Share',
-    shareContent: "Here's a great video found on Disc in :\n{{url}} ",
+    shareContent: "Here's a great video found on Disc In :\n{{url}} ",
     error: 'There was a problem while sharing the link',
   },
 };

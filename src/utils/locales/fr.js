@@ -239,7 +239,7 @@ export default {
   },
   videoPage: {
     share: 'Partager',
-    shareContent: 'Voici une superbe vidéo trouvée sur Disc in :\n{{url}} ',
+    shareContent: 'Voici une superbe vidéo trouvée sur Disc In :\n{{url}} ',
     error: 'Le partage de cette vidéo a échoué',
   },
 };

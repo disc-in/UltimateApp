@@ -10,11 +10,11 @@ import theme from '../styles/theme.style';
 import { savePlay, deletePlay } from '../Store/Actions/playAction';
 import AnimationEditor from './editor/AnimationEditor';
 import RenamePlayModal from './editor/RenamePlayModal';
-import SavedPlaysList from './editor/SavedPlaysList';
-import NewPlay from './editor/NewPlay';
-import SavePlay from './editor/SavePlay';
-import AnimationHistory from '../Components/editor/AnimationHistory';
-import SharePlay from './editor/SharePlay';
+import SavedPlaysList from './editor/toolbar/SavedPlaysList';
+import NewPlay from './editor/toolbar/NewPlay';
+import SavePlay from './editor/toolbar/SavePlay';
+import AnimationHistory from '../Components/editor/toolbar/AnimationHistory';
+import SharePlay from './editor/toolbar/SharePlay';
 
 const newPlay = {
   uuid: undefined,

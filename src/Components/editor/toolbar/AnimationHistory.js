@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { StyleSheet, View, TouchableOpacity } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-import theme from '../../styles/theme.style';
+import theme from '../../../styles/theme.style';
 
 // Stack of the values taken by a drill in the editor. Each time the drill is modified, a copy of the drill is added to the stack.
 // Used to enable undo/redo actions

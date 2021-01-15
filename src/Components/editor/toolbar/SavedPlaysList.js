@@ -2,11 +2,11 @@ import React, { useState, useRef } from 'react';
 import { StyleSheet, View, Alert, Text, FlatList, TouchableOpacity } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-import theme from '../../styles/theme.style';
-import I18n from '../../utils/i18n';
-import FlashMessage, { showSuccess } from '../../utils/flashMessage';
+import theme from '../../../styles/theme.style';
+import I18n from '../../../utils/i18n';
+import FlashMessage, { showSuccess } from '../../../utils/flashMessage';
 
-import Modal from '../shared/Modal';
+import Modal from '../../shared/Modal';
 
 const SavedPlaysList = (props) => {
   const [modalOpened, setModalOpened] = useState(false);

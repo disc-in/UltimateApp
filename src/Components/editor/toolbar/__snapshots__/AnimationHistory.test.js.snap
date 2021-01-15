@@ -4,6 +4,7 @@ exports[`<AnimationHistory /> renders correctly 1`] = `
 <View
   style={
     Object {
+      "alignSelf": "center",
       "flexDirection": "row",
     }
   }
@@ -20,7 +21,6 @@ exports[`<AnimationHistory /> renders correctly 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "marginRight": 10,
         "opacity": 1,
       }
     }
@@ -31,7 +31,7 @@ exports[`<AnimationHistory /> renders correctly 1`] = `
         Array [
           Object {
             "color": "#A6A6A6",
-            "fontSize": 22,
+            "fontSize": 30,
           },
           undefined,
           Object {
@@ -44,9 +44,19 @@ exports[`<AnimationHistory /> renders correctly 1`] = `
       }
       testID="undoButton"
     >
-      󰕌
+      󰕍
     </Text>
   </View>
+  <View
+    style={
+      Object {
+        "borderRightColor": "#A6A6A6",
+        "borderRightWidth": 2,
+        "height": 30,
+        "marginHorizontal": 15,
+      }
+    }
+  />
   <View
     accessible={true}
     focusable={true}
@@ -69,7 +79,7 @@ exports[`<AnimationHistory /> renders correctly 1`] = `
         Array [
           Object {
             "color": "#A6A6A6",
-            "fontSize": 22,
+            "fontSize": 30,
           },
           undefined,
           Object {
@@ -82,7 +92,7 @@ exports[`<AnimationHistory /> renders correctly 1`] = `
       }
       testID="redoButton"
     >
-      󰑎
+      󰑏
     </Text>
   </View>
 </View>

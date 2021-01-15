@@ -2,9 +2,9 @@ import React, { useState, useRef } from 'react';
 import { TouchableOpacity } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-import theme from '../../styles/theme.style';
-import I18n from '../../utils/i18n';
-import { showSuccess } from '../../utils/flashMessage';
+import theme from '../../../styles/theme.style';
+import I18n from '../../../utils/i18n';
+import { showSuccess } from '../../../utils/flashMessage';
 
 const SavePlay = ({ currentPlay, saveCurrentPlay }) => {
   return (

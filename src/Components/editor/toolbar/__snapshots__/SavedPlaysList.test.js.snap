@@ -24,13 +24,10 @@ exports[`<SavedPlaysList /> renders an empty state with no plays 1`] = `
       style={
         Array [
           Object {
-            "color": undefined,
-            "fontSize": 12,
+            "color": "#fff",
+            "fontSize": 30,
           },
-          Object {
-            "fontSize": 28,
-            "marginRight": 20,
-          },
+          undefined,
           Object {
             "fontFamily": "material-community",
             "fontStyle": "normal",

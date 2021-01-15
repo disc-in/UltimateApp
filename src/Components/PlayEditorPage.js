@@ -1,21 +1,20 @@
 import React, { useState, useEffect, useLayoutEffect } from 'react';
-import { StyleSheet, View, TouchableOpacity, Share } from 'react-native';
+import { StyleSheet, View, TouchableOpacity } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { connect } from 'react-redux';
 
+import Drill from './animation/Drill';
 import I18n from '../utils/i18n';
 import { generateUuid } from '../utils/uuid';
 import theme from '../styles/theme.style';
 import { savePlay, deletePlay } from '../Store/Actions/playAction';
 import AnimationEditor from './editor/AnimationEditor';
+import RenamePlayModal from './editor/RenamePlayModal';
 import SavedPlaysList from './editor/SavedPlaysList';
 import NewPlay from './editor/NewPlay';
-import RenamePlayModal from './editor/RenamePlayModal';
-import Drill from './animation/Drill';
-import { upload } from '../utils/firebase';
-import { showSuccess, showError } from '../utils/flashMessage';
-import * as Linking from 'expo-linking';
+import SavePlay from './editor/SavePlay';
 import AnimationHistory from '../Components/editor/AnimationHistory';
+import SharePlay from './editor/SharePlay';
 
 const newPlay = {
   uuid: undefined,
@@ -50,20 +49,6 @@ export const PlayEditorPage = (props) => {
     setTitle();
   }, [currentPlay, isPlaySaved]);
 
-  const share = async () => {
-    try {
-      await upload(props.currentPlay);
-      const url = Linking.makeUrl('customPlays/' + currentPlay.uuid);
-      await Share.share({
-        title: I18n.t('editor.shareTitle', { title: currentPlay.title }),
-        message: I18n.t('editor.shareMessage', { url }),
-        url,
-      });
-    } catch (error) {
-      showError(I18n.t('editor.shareError'));
-    }
-  };
-
   const setTitle = () => {
     const playTitle = currentPlay.title || I18n.t('playEditorPage.untitledPlay');
     const unsavedAsterisk = isPlaySaved ? '' : '* ';
@@ -97,7 +82,7 @@ export const PlayEditorPage = (props) => {
   };
 
   const openPlay = (play) => {
-    setCurrentPlay(play);
+    setCurrentPlay({ ...play, animation: new Drill(play.animation) });
     setIsPlaySaved(true);
   };
 
@@ -113,7 +98,7 @@ export const PlayEditorPage = (props) => {
   };
 
   return (
-    <View style={styles.allPage}>
+    <View style={styles.playEditorPage}>
       <View style={styles.centeredView}>
         {modalRenameVisible ? (
           <RenamePlayModal currentPlay={currentPlay} onRename={setTitle} close={() => setModalRenameVisible(false)} />
@@ -140,21 +125,9 @@ export const PlayEditorPage = (props) => {
           createNewPlay={createNewPlay}
           saveCurrentPlay={saveCurrentPlay}
         />
-        <TouchableOpacity
-          onPress={() => {
-            saveCurrentPlay();
-            showSuccess(I18n.t('editor.saveSuccess', { title: currentPlay.title }));
-          }}
-          testID="saveButton"
-        >
-          <MaterialCommunityIcons name="content-save" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
-        </TouchableOpacity>
-
+        <SavePlay currentPlay={currentPlay} saveCurrentPlay={saveCurrentPlay} />
         <AnimationHistory animation={currentPlay.animation} onAnimationHistoryChange={onAnimationChange} />
-
-        <TouchableOpacity onPress={() => share(currentPlay)} testID="shareButton">
-          <MaterialCommunityIcons name="share" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
-        </TouchableOpacity>
+        <SharePlay currentPlay={currentPlay} />
       </View>
     </View>
   );
@@ -171,6 +144,9 @@ const mapDispatchToProps = { savePlay, deletePlay };
 export default connect(mapStateToProps, mapDispatchToProps)(PlayEditorPage);
 
 const styles = StyleSheet.create({
+  playEditorPage: {
+    flex: 1,
+  },
   centeredView: {
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     flex: 1,
@@ -184,8 +160,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-around',
-  },
-  allPage: {
-    flex: 1,
   },
 });

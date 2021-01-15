@@ -115,6 +115,7 @@ export default {
     saveModificationsTitle: 'Voulez-vous sauvegarder les modifications ?',
     saveModificationsText:
       'L\'exercice "{{title}}" a été modifié.\n\nSouhaitez-vous conserver ces modifications avant de le fermer ?',
+    saveSuccess: 'La tactique "{{title}}" a été sauvegardée',
     savedPlaysList: {
       title: 'Tactiques sauvegardées',
       empty: "Vous n'avez pas encore sauvegardé de tactiques",
@@ -122,20 +123,17 @@ export default {
       deleteConfirmation: 'Voulez-vous vraiment supprimer cette tactique ?',
       deleteSuccess: 'La tactique "{{title}}" a été supprimée.',
     },
-    save: 'Sauvegarder',
-    saveSuccess: 'La tactique "{{title}}" a été sauvegardée',
-    rename: 'Renommer',
-    new: 'Nouveau',
-    share: 'Partager',
-    shareTitle: 'Partager {{title}}',
-    shareMessage: 'Utilise ce lien pour télécharger ma super tactique dans Disc In : {{url}}',
-    shareError: 'Une erreur est survenue',
     renamePlayModal: {
       placeholder: 'Appuyer ici pour renommer',
       alreadyExists: 'Ce nom existe déjà',
       empty: 'Le nom ne peut pas être vide',
       renameSuccess: 'La tactique a été renommée avec succès',
       cta: 'Valider',
+    },
+    sharePlay: {
+      shareTitle: 'Partager {{title}}',
+      shareMessage: 'Utilise ce lien pour télécharger ma super tactique dans Disc In : {{url}}',
+      shareError: 'Une erreur est survenue',
     },
   },
   drills: {

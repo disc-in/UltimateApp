@@ -12,8 +12,7 @@ const VideoPage = (props) => {
   const video = props.route.params.video;
 
   const share = async (video) => {
-    let url = '';
-    url = video.youtube;
+    const url = video.youtube;
 
     Share.share({
       message: I18n.t('videoPage.shareContent', { url }),
@@ -42,7 +41,7 @@ const VideoPage = (props) => {
       {video.youtube && (
         <View style={styles.footer}>
           <TouchableOpacity style={styles.button} onPress={() => share(video)} testID="shareButton">
-            <MaterialCommunityIcons name={'share'} color={theme.COLOR_SECONDARY} size={27} />
+            <MaterialCommunityIcons name="share" color={theme.COLOR_SECONDARY} size={27} />
             <Text style={styles.textButton}>{I18n.t('videoPage.share')}</Text>
           </TouchableOpacity>
         </View>

@@ -47,7 +47,7 @@ const persistConfig = {
   storage: AsyncStorage,
   whitelist: ['completeTrainings', 'favoriteDrills', 'customPlays'],
   blacklist: ['drills', 'programs', 'theory'],
-  migrate: createMigrate(migrations, { debug: true }),
+  migrate: createMigrate(migrations, { debug: false }),
 };
 // Middleware: Redux Persist Persisted Reducer
 const persistedReducer = persistReducer(persistConfig, rootReducer);

@@ -4,7 +4,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import theme from '../../styles/theme.style';
 
-const Button = ({ onPress, icon, text, light, small, style, testID, dark }) => {
+const Button = ({ onPress, icon, text, light, small, style, testID }) => {
   const buttonLight = light ? styles.buttonLight : undefined;
   const smallButton = small ? styles.smallButton : undefined;
   const smallIcon = small ? styles.smallIcon : undefined;

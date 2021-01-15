@@ -88,7 +88,7 @@ export default {
     frisbeeTab: 'Frisbee',
     fitnessTab: 'Fitness',
     theoryTab: 'Theory',
-    editor: 'Editor',
+    editor: 'My Playbook',
     drills: 'Drills',
     adult: 'Senior',
     junior: 'Junior',
@@ -117,7 +117,7 @@ export default {
       "The play '{{title}}' has been modified.\n\nDo you want to save these modifications before closing it?",
     saveSuccess: "The play has been saved as '{{title}}'",
     savedPlaysList: {
-      title: 'Saved plays',
+      title: 'My Playbook',
       empty: "You haven't saved any plays yet",
       delete: 'Delete',
       deleteConfirmation: 'Do you really want to delete this play?',

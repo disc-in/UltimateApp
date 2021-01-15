@@ -56,13 +56,13 @@ function AnimationHistory({ animation, onAnimationHistoryChange }) {
           testID="undoButton"
         />
       </TouchableOpacity>
-      <View style={styles.separator} />
       <TouchableOpacity onPress={redo} disabled={!canRedo}>
         <MaterialCommunityIcons
           name="redo-variant"
           color={canRedo ? theme.COLOR_PRIMARY_LIGHT : theme.COLOR_SECONDARY}
           size={30}
           testID="redoButton"
+          style={styles.rightIcon}
         />
       </TouchableOpacity>
     </View>
@@ -70,15 +70,11 @@ function AnimationHistory({ animation, onAnimationHistoryChange }) {
 }
 
 const styles = StyleSheet.create({
-  separator: {
-    height: 30,
-    borderRightWidth: 2,
-    borderRightColor: theme.COLOR_SECONDARY,
-    marginHorizontal: 15,
-  },
   history: {
     flexDirection: 'row',
-    alignSelf: 'center',
+  },
+  rightIcon: {
+    marginLeft: 20,
   },
 });
 

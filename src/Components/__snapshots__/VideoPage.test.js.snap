@@ -84,8 +84,8 @@ exports[`<VideoPage /> renders correctly 1`] = `
   <View
     style={
       Object {
-        "paddingLeft": 5,
-        "paddingVertical": 10,
+        "marginLeft": 10,
+        "marginVertical": 20,
       }
     }
   >
@@ -97,7 +97,9 @@ exports[`<VideoPage /> renders correctly 1`] = `
           "fontWeight": "bold",
         }
       }
-    />
+    >
+      How to make a perfect cut?
+    </Text>
     <Text
       style={
         Object {
@@ -105,18 +107,64 @@ exports[`<VideoPage /> renders correctly 1`] = `
           "fontSize": 14,
         }
       }
-    />
+    >
+      Rise Up Ultimate
+    </Text>
   </View>
-  <View>
-    <Text
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "bottom": 0,
+        "paddingBottom": 20,
+        "paddingTop": 5,
+        "position": "absolute",
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "color": "#232b2b",
-          "fontSize": 16,
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "#fff",
+          "borderColor": "#2a9e91",
+          "borderRadius": 5,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "height": 30,
+          "justifyContent": "center",
+          "opacity": 1,
           "paddingHorizontal": 10,
+          "paddingVertical": 0,
+          "width": "auto",
         }
       }
-    />
+      testID="shareButton"
+    >
+      <Text />
+      <Text
+        style={
+          Object {
+            "color": "#2a9e91",
+            "fontSize": 16,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Share
+      </Text>
+    </View>
   </View>
 </View>
 `;

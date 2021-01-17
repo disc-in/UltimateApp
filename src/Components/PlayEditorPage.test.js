@@ -3,6 +3,7 @@ import { create, act } from 'react-test-renderer';
 import { Provider } from 'react-redux';
 
 import store from '../Store/testStore';
+import Drill from './animation/Drill';
 
 import PlayEditorPage from './PlayEditorPage';
 
@@ -28,12 +29,7 @@ describe('<PlayEditorPage />', () => {
     const navigation = { navigate: jest.fn(), setOptions: jest.fn() };
     const play = {
       uuid: undefined,
-      animation: {
-        positions: [[], []],
-        ids: [],
-        texts: [],
-        background: 'endzone',
-      },
+      animation: new Drill(),
       title: 'title',
     };
     const route = {

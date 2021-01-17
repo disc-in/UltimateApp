@@ -58,6 +58,7 @@ export default {
   },
   navigation: {
     homePage: 'Disc In',
+    aboutPage: 'À propos de Disc In',
     drillListPage: 'Exercices de {{type}}',
     drillPage: 'Exercice',
     filters: 'Filtres',
@@ -88,7 +89,7 @@ export default {
     frisbeeTab: 'Frisbee',
     fitnessTab: 'Fitness',
     theoryTab: 'Théorie',
-    editor: 'Éditeur',
+    editor: 'Mon Playbook',
     drills: 'Exercices',
     adult: 'Adultes',
     junior: 'Juniors',
@@ -104,40 +105,36 @@ export default {
     tactics: 'Tactiques',
   },
   playEditorPage: {
-    untitledPlay: 'Tactique sans titre',
+    untitledPlay: 'Play sans titre',
   },
   importerPage: {
-    loading: 'On dirait que vous voulez importer une tactique, je vais la chercher... 🏃',
-    incentive: 'Vous allez enregistrer la tactique "{{title}}"',
-    question: 'Êtes-vous sûr(e) ?',
+    loading: 'On dirait que vous voulez importer un play, je vais le chercher... 🏃',
+    incentive: 'Vous allez enregistrer le play "{{title}}"',
+    question: 'Êtes-vous sûr.e ?',
   },
   editor: {
     saveModificationsTitle: 'Voulez-vous sauvegarder les modifications ?',
     saveModificationsText:
-      'L\'exercice "{{title}}" a été modifié.\n\nSouhaitez-vous conserver ces modifications avant de le fermer ?',
+      'Le play "{{title}}" a été modifié.\n\nSouhaitez-vous conserver ces modifications avant de le fermer ?',
+    saveSuccess: 'Le play "{{title}}" a été sauvegardé',
     savedPlaysList: {
-      title: 'Tactiques sauvegardées',
-      empty: "Vous n'avez pas encore sauvegardé de tactiques",
+      title: 'Mon Playbook',
+      empty: "Vous n'avez pas encore sauvegardé de play",
       delete: 'Supprimer',
-      deleteConfirmation: 'Voulez-vous vraiment supprimer cette tactique ?',
-      deleteSuccess: 'La tactique "{{title}}" a été supprimée.',
-    },
-    currentPlayManager: {
-      save: 'Sauvegarder',
-      saveSuccess: 'La tactique "{{title}}" a été sauvegardée',
-      rename: 'Renommer',
-      new: 'Nouveau',
-      share: 'Partager',
-      shareTitle: 'Partager {{title}}',
-      shareMessage: 'Utilise ce lien pour télécharger ma super tactique dans Disc In : {{url}}',
-      shareError: 'Une erreur est survenue',
+      deleteConfirmation: 'Voulez-vous vraiment supprimer ce play ?',
+      deleteSuccess: 'Le play "{{title}}" a été supprimé.',
     },
     renamePlayModal: {
       placeholder: 'Appuyer ici pour renommer',
       alreadyExists: 'Ce nom existe déjà',
       empty: 'Le nom ne peut pas être vide',
-      renameSuccess: 'La tactique a été renommée avec succès',
+      renameSuccess: 'Le play a été renommée avec succès',
       cta: 'Valider',
+    },
+    sharePlay: {
+      shareTitle: 'Partager {{title}}',
+      shareMessage: 'Utilise ce lien pour télécharger mon super play dans Disc In : {{url}}',
+      shareError: 'Une erreur est survenue',
     },
   },
   drills: {
@@ -151,15 +148,32 @@ export default {
       redoMessage: "Tu as terminé l'exercice !",
     },
   },
-  feedback: {
-    alert: {
-      title: 'Contactez-nous !',
-      content:
-        'Nous serions ravis de connaitre vos opinions pour améliorer notre application.\n\nVoulez-vous nous envoyer un message ?',
-      cancel: 'Annuler',
-      cta: 'Envoyer',
+  aboutPage: {
+    copyright: '2020 - {{endYear}}',
+    version: 'version {{version}}, release-channel {{channel}}',
+    about: {
+      header: 'À propos',
+      text:
+        "'Disc In' est une application conçue par des entraîneurs d'ultimate et pour des entraîneurs d'ultimate. Elle est et restera gratuite.",
     },
-    subject: "Retours sur l'app Disc In",
+    acknowledgements: {
+      header: 'Remerciements',
+      text: 'Un grand merci à tous ceux qui ont aidé à faire de Disc In une super appplication !',
+      linkText: 'Contributeurs',
+      linkUrl: 'https://github.com/disc-in/UltimateApp#-thanks',
+    },
+    contributing: {
+      header: 'Contribuer',
+      text:
+        "Ajouts d'exercices et de programmes, nouvelles vidéos, traductions, etc. Il y a des dizaines de manières d'améliorer Disc In. Contactez-nous !",
+    },
+    feedback: {
+      header: 'Feedback',
+      text:
+        "Nous serions ravis de connaitre vos idées pour améliorer l'application.\n\nVoulez-vous nous envoyer un message ?",
+      cta: 'Nous contacter',
+      subject: 'A propos de Disc In',
+    },
   },
   dictionaryPage: {
     translation: 'Traduction : ',
@@ -218,5 +232,10 @@ export default {
   },
   tacticsPage: {
     chooseTopic: 'Choisis un sujet :',
+  },
+  videoPage: {
+    share: 'Partager',
+    shareContent: 'Voici une superbe vidéo trouvée sur Disc In :\n{{url}} ',
+    error: 'Le partage de cette vidéo a échoué',
   },
 };

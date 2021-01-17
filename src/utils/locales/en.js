@@ -58,6 +58,7 @@ export default {
   },
   navigation: {
     homePage: 'Disc In',
+    aboutPage: 'About Disc In',
     drillListPage: '{{type}} drills',
     drillPage: 'Drill',
     filters: 'Filters',
@@ -88,7 +89,7 @@ export default {
     frisbeeTab: 'Frisbee',
     fitnessTab: 'Fitness',
     theoryTab: 'Theory',
-    editor: 'Editor',
+    editor: 'My Playbook',
     drills: 'Drills',
     adult: 'Senior',
     junior: 'Junior',
@@ -115,22 +116,13 @@ export default {
     saveModificationsTitle: 'Do you want to save the current play?',
     saveModificationsText:
       "The play '{{title}}' has been modified.\n\nDo you want to save these modifications before closing it?",
+    saveSuccess: "The play has been saved as '{{title}}'",
     savedPlaysList: {
-      title: 'Saved plays',
+      title: 'My Playbook',
       empty: "You haven't saved any plays yet",
       delete: 'Delete',
       deleteConfirmation: 'Do you really want to delete this play?',
       deleteSuccess: "The play '{{title}}' has been deleted.",
-    },
-    currentPlayManager: {
-      save: 'Save',
-      saveSuccess: "The play has been saved as '{{title}}'",
-      rename: 'Rename',
-      new: 'New',
-      share: 'Share',
-      shareTitle: 'Sharing {{title}}',
-      shareMessage: 'Use the following link to import my awesome play in Disc In: {{url}}',
-      shareError: 'It looks like there was an error sharing your play',
     },
     renamePlayModal: {
       placeholder: 'Click here to enter the new name',
@@ -138,6 +130,11 @@ export default {
       empty: 'You cannot set an empty name',
       renameSuccess: 'The play was successfully renamed!',
       cta: 'Apply',
+    },
+    sharePlay: {
+      shareTitle: 'Sharing {{title}}',
+      shareMessage: 'Use the following link to import my awesome play in Disc In: {{url}}',
+      shareError: 'It looks like there was an error sharing your play',
     },
   },
   drills: {
@@ -151,15 +148,32 @@ export default {
       redoMessage: 'You have completed the drill!',
     },
   },
-  feedback: {
-    alert: {
-      title: 'Get in touch!',
-      content:
-        'We are always looking for ideas and feedback to improve the app.\n\nWould you like to send us a message?',
-      cancel: 'Cancel',
-      cta: 'Send',
+  aboutPage: {
+    copyright: '2020 - {{endYear}}',
+    version: 'version {{version}}, release-channel {{channel}}',
+    about: {
+      header: 'About',
+      text:
+        "'Disc In' is an application made by ultimate coaches for ultimate coaches. It is free and shall remain this way.",
     },
-    subject: 'Feedback concerning Disc In',
+    acknowledgements: {
+      header: 'Acknowledgements',
+      text: "A big thanks to everybody who helps make 'Disc In' great!",
+      linkText: 'Contributors',
+      linkUrl: 'https://github.com/disc-in/UltimateApp#-thanks',
+    },
+    contributing: {
+      header: 'Contributions',
+      text:
+        'You can contribute by adding drills and programs, new videos, translating to other languages, etc. There are dozens of ways to improve the app. Feel free to contact us!',
+    },
+    feedback: {
+      header: 'Feedback',
+      text:
+        "If you perhaps don't have time to contribute, but you have ideas or feedback to improve the app, please send us a message!",
+      cta: 'Send feedback',
+      subject: 'Feedback concerning Disc In',
+    },
   },
   dictionaryPage: {
     translation: 'Translation: ',
@@ -219,5 +233,10 @@ export default {
   },
   tacticsPage: {
     chooseTopic: 'Choose a topic:',
+  },
+  videoPage: {
+    share: 'Share',
+    shareContent: "Here's a great video found on Disc In :\n{{url}} ",
+    error: 'There was a problem while sharing the link',
   },
 };

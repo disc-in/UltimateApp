@@ -381,7 +381,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                     }
                   }
                 >
-                  Editor
+                  My Playbook
                 </Text>
               </View>
             </View>

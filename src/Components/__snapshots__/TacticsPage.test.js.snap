@@ -73,11 +73,11 @@ exports[`<TacticsPage /> renders correctly 1`] = `
     data={
       Array [
         Object {
-          "animation": "",
           "id": 1,
           "text": "That Drone Guy Ty",
           "title": "How does vertical stacks work?",
           "video": "424002454",
+          "youtube": "https://youtu.be/CqpPfVZ1HeI",
         },
       ]
     }

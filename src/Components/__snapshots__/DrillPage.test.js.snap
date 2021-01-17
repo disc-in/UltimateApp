@@ -412,7 +412,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                   "alignItems": "center",
                                   "flexBasis": "33%",
                                   "justifyContent": "center",
-                                  "paddingHorizontal": 10,
+                                  "paddingHorizontal": 5,
                                 }
                               }
                             >
@@ -420,7 +420,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                 style={
                                   Object {
                                     "color": "#fff",
-                                    "fontSize": 16,
+                                    "fontSize": 14,
                                   }
                                 }
                               >
@@ -430,7 +430,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                 style={
                                   Object {
                                     "color": "#fff",
-                                    "fontSize": 16,
+                                    "fontSize": 14,
                                   }
                                 }
                               >
@@ -452,7 +452,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                   "alignItems": "center",
                                   "flexBasis": "33%",
                                   "justifyContent": "center",
-                                  "paddingHorizontal": 10,
+                                  "paddingHorizontal": 5,
                                 }
                               }
                             >
@@ -460,7 +460,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                 style={
                                   Object {
                                     "color": "#fff",
-                                    "fontSize": 16,
+                                    "fontSize": 14,
                                   }
                                 }
                               >
@@ -471,7 +471,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                 style={
                                   Object {
                                     "color": "#fff",
-                                    "fontSize": 16,
+                                    "fontSize": 14,
                                   }
                                 }
                               >
@@ -493,7 +493,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                   "alignItems": "center",
                                   "flexBasis": "33%",
                                   "justifyContent": "center",
-                                  "paddingHorizontal": 10,
+                                  "paddingHorizontal": 5,
                                 }
                               }
                             >
@@ -501,7 +501,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                 style={
                                   Object {
                                     "color": "#fff",
-                                    "fontSize": 16,
+                                    "fontSize": 14,
                                   }
                                 }
                               >
@@ -511,7 +511,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                 style={
                                   Object {
                                     "color": "#fff",
-                                    "fontSize": 16,
+                                    "fontSize": 14,
                                   }
                                 }
                               >
@@ -1526,7 +1526,7 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                   "alignItems": "center",
                                   "flexBasis": "33%",
                                   "justifyContent": "center",
-                                  "paddingHorizontal": 10,
+                                  "paddingHorizontal": 5,
                                 }
                               }
                             >
@@ -1534,7 +1534,7 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                 style={
                                   Object {
                                     "color": "#fff",
-                                    "fontSize": 16,
+                                    "fontSize": 14,
                                   }
                                 }
                               >
@@ -1544,7 +1544,7 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                 style={
                                   Object {
                                     "color": "#fff",
-                                    "fontSize": 16,
+                                    "fontSize": 14,
                                   }
                                 }
                               >
@@ -1566,7 +1566,7 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                   "alignItems": "center",
                                   "flexBasis": "33%",
                                   "justifyContent": "center",
-                                  "paddingHorizontal": 10,
+                                  "paddingHorizontal": 5,
                                 }
                               }
                             >
@@ -1574,7 +1574,7 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                 style={
                                   Object {
                                     "color": "#fff",
-                                    "fontSize": 16,
+                                    "fontSize": 14,
                                   }
                                 }
                               >
@@ -1585,7 +1585,7 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                 style={
                                   Object {
                                     "color": "#fff",
-                                    "fontSize": 16,
+                                    "fontSize": 14,
                                   }
                                 }
                               >
@@ -1607,7 +1607,7 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                   "alignItems": "center",
                                   "flexBasis": "33%",
                                   "justifyContent": "center",
-                                  "paddingHorizontal": 10,
+                                  "paddingHorizontal": 5,
                                 }
                               }
                             >
@@ -1615,7 +1615,7 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                 style={
                                   Object {
                                     "color": "#fff",
-                                    "fontSize": 16,
+                                    "fontSize": 14,
                                   }
                                 }
                               >
@@ -1625,7 +1625,7 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                 style={
                                   Object {
                                     "color": "#fff",
-                                    "fontSize": 16,
+                                    "fontSize": 14,
                                   }
                                 }
                               >

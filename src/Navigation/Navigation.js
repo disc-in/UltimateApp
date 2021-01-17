@@ -3,6 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { Platform } from 'react-native';
 
 import HomePage from '../Components/HomePage';
+import AboutPage from '../Components/AboutPage';
 import DrillListPage from '../Components/DrillListPage';
 import DrillPage from '../Components/DrillPage';
 import DrillPageMinimal from '../Components/DrillPageMinimal';
@@ -27,6 +28,7 @@ const Stack = createStackNavigator();
 export const Navigation = () => (
   <Stack.Navigator screenOptions={{ headerBackTitleVisible: false, gestureEnabled: false }}>
     <Stack.Screen name="HomePage" component={HomePage} options={{ title: I18n.t('navigation.homePage') }} />
+    <Stack.Screen name="AboutPage" component={AboutPage} options={{ title: I18n.t('navigation.aboutPage') }} />
     <Stack.Screen
       name="DrillListPage"
       component={DrillListPage}

@@ -11,15 +11,14 @@ import { upload } from '../../../utils/firebase';
 const SharePlay = ({ currentPlay }) => {
   const share = async () => {
     try {
-      await upload(currentPlay);
-      const url = Linking.makeUrl('customPlays/' + currentPlay.uuid);
+      const shareUuid = await upload(currentPlay);
+      const url = Linking.makeUrl('customPlays/' + shareUuid);
       await Share.share({
         title: I18n.t('editor.sharePlay.shareTitle', { title: currentPlay.title }),
         message: I18n.t('editor.sharePlay.shareMessage', { url }),
         url,
       });
     } catch (error) {
-      console.log(error);
       showError(I18n.t('editor.sharePlay.shareError'));
     }
   };

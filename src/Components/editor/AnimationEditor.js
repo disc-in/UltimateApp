@@ -9,8 +9,6 @@ import BackgroundPicker from './BackgroundPicker';
 import Drill from '../animation/Drill';
 import theme from '../../styles/theme.style';
 
-const bigScreen = Dimensions.get('window').height > 600 ? { alignItems: 'center' } : undefined;
-
 class AnimationEditor extends React.Component {
   constructor(props) {
     super(props);
@@ -290,6 +288,8 @@ class AnimationEditor extends React.Component {
   };
 
   render() {
+    const bigScreen = Dimensions.get('window').height > 600 ? { alignItems: 'center' } : undefined;
+
     return (
       <View
         ref={(ref) => {
@@ -326,7 +326,7 @@ class AnimationEditor extends React.Component {
                   onBackgroundChange={this.onBackgroundChange}
                   selectedBackground={this.state.animation.background}
                 />
-                <View style={styles.draggableElement}>
+                <View style={styles.draggableElements}>
                   {['offense', 'defense', 'disc', 'triangle'].map((type) => (
                     <DraggableDisplayedElement
                       type={type}
@@ -356,7 +356,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-around',
     position: 'absolute',
-    height: 40,
+    height: 30,
     zIndex: 1,
     width: '100%',
   },
@@ -374,7 +374,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     marginBottom: 10,
   },
-  draggableElement: {
+  draggableElements: {
     flexDirection: 'row',
     width: '45%',
     alignItems: 'center',

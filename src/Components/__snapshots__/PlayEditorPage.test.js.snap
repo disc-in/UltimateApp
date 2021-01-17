@@ -472,7 +472,7 @@ exports[`<PlayEditorPage /> renders correctly  with a currentPlay 1`] = `
               Object {
                 "alignItems": "center",
                 "flexDirection": "row",
-                "height": 40,
+                "height": 30,
                 "justifyContent": "space-around",
                 "position": "absolute",
                 "width": "100%",
@@ -555,6 +555,8 @@ exports[`<PlayEditorPage /> renders correctly  with a currentPlay 1`] = `
                 style={
                   Object {
                     "alignItems": "center",
+                    "flexBasis": "25%",
+                    "height": "100%",
                     "justifyContent": "center",
                     "minHeight": 0,
                     "minWidth": 0,
@@ -618,6 +620,8 @@ exports[`<PlayEditorPage /> renders correctly  with a currentPlay 1`] = `
                 style={
                   Object {
                     "alignItems": "center",
+                    "flexBasis": "25%",
+                    "height": "100%",
                     "justifyContent": "center",
                     "minHeight": 0,
                     "minWidth": 0,
@@ -681,6 +685,8 @@ exports[`<PlayEditorPage /> renders correctly  with a currentPlay 1`] = `
                 style={
                   Object {
                     "alignItems": "center",
+                    "flexBasis": "25%",
+                    "height": "100%",
                     "justifyContent": "center",
                     "minHeight": 0,
                     "minWidth": 0,
@@ -733,6 +739,8 @@ exports[`<PlayEditorPage /> renders correctly  with a currentPlay 1`] = `
                 style={
                   Object {
                     "alignItems": "center",
+                    "flexBasis": "25%",
+                    "height": "100%",
                     "justifyContent": "center",
                     "minHeight": 0,
                     "minWidth": 0,
@@ -1602,7 +1610,7 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
               Object {
                 "alignItems": "center",
                 "flexDirection": "row",
-                "height": 40,
+                "height": 30,
                 "justifyContent": "space-around",
                 "position": "absolute",
                 "width": "100%",
@@ -1685,6 +1693,8 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
                 style={
                   Object {
                     "alignItems": "center",
+                    "flexBasis": "25%",
+                    "height": "100%",
                     "justifyContent": "center",
                     "minHeight": 0,
                     "minWidth": 0,
@@ -1748,6 +1758,8 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
                 style={
                   Object {
                     "alignItems": "center",
+                    "flexBasis": "25%",
+                    "height": "100%",
                     "justifyContent": "center",
                     "minHeight": 0,
                     "minWidth": 0,
@@ -1811,6 +1823,8 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
                 style={
                   Object {
                     "alignItems": "center",
+                    "flexBasis": "25%",
+                    "height": "100%",
                     "justifyContent": "center",
                     "minHeight": 0,
                     "minWidth": 0,
@@ -1863,6 +1877,8 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
                 style={
                   Object {
                     "alignItems": "center",
+                    "flexBasis": "25%",
+                    "height": "100%",
                     "justifyContent": "center",
                     "minHeight": 0,
                     "minWidth": 0,

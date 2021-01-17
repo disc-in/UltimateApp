@@ -31,6 +31,8 @@ const DraggableDisplayedElement = (props) => {
   const panStyle = {
     transform: currentPosition.getTranslateTransform(),
     padding: 5,
+    height: '100%',
+    flexBasis: '25%',
     minWidth: draggableBaseWidth,
     minHeight: draggableBaseWidth,
     alignItems: 'center',

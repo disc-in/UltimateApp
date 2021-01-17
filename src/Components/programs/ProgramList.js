@@ -40,17 +40,8 @@ const ProgramList = (props) => {
           <Text style={styles.trainingDescription}>{training.description}</Text>
         </View>
         <View style={styles.arrowDoneContainer}>
-          <View style={styles.flexRow}>
-            {isDone && (
-              <MaterialCommunityIcons
-                style={styles.todoState}
-                name="check-circle"
-                color={theme.COLOR_PRIMARY}
-                size={26}
-              />
-            )}
-            <MaterialCommunityIcons name="chevron-right" color={theme.COLOR_PRIMARY} size={26} />
-          </View>
+          {isDone && <MaterialCommunityIcons name="check-circle" color={theme.COLOR_PRIMARY} size={26} />}
+          <MaterialCommunityIcons name="chevron-right" color={theme.COLOR_PRIMARY} size={26} />
         </View>
       </TouchableOpacity>
     );
@@ -101,11 +92,8 @@ const styles = StyleSheet.create({
   trainingDone: {
     backgroundColor: '#f5fbfc',
   },
-  todoState: {
-    marginHorizontal: 20,
-  },
   descriptionContainer: {
-    flexBasis: '75%',
+    flexBasis: '80%',
   },
   trainingTitle: {
     fontSize: theme.FONT_SIZE_MEDIUM,
@@ -117,12 +105,9 @@ const styles = StyleSheet.create({
     color: theme.COLOR_PRIMARY,
   },
   arrowDoneContainer: {
-    position: 'absolute',
-    right: 30,
-  },
-  flexRow: {
+    flexBasis: '20%',
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-end',
   },
 });

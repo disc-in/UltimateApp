@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, waitFor, fireEvent } from '@testing-library/react-native';
 
-import Drill from '../animation/Drill';
+import Drill from '../../animation/Drill';
 
 import AnimationHistory from './AnimationHistory';
 

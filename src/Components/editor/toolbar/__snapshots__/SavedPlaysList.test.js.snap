@@ -17,20 +17,16 @@ exports[`<SavedPlaysList /> renders an empty state with no plays 1`] = `
         "opacity": 1,
       }
     }
-    testID="headerButton"
   >
     <Text
       allowFontScaling={false}
       style={
         Array [
           Object {
-            "color": undefined,
-            "fontSize": 12,
+            "color": "#fff",
+            "fontSize": 30,
           },
-          Object {
-            "fontSize": 28,
-            "marginRight": 20,
-          },
+          undefined,
           Object {
             "fontFamily": "material-community",
             "fontStyle": "normal",
@@ -112,7 +108,7 @@ exports[`<SavedPlaysList /> renders an empty state with no plays 1`] = `
             }
           }
         >
-          Saved plays
+          My Playbook
         </Text>
         <RCTScrollView
           ListEmptyComponent={[Function]}
@@ -233,7 +229,6 @@ exports[`<SavedPlaysList /> renders correctly with plays 1`] = `
         "opacity": 1,
       }
     }
-    testID="headerButton"
   >
     <Text />
   </View>
@@ -306,7 +301,7 @@ exports[`<SavedPlaysList /> renders correctly with plays 1`] = `
             }
           }
         >
-          Saved plays
+          My Playbook
         </Text>
         <RCTScrollView
           ListEmptyComponent={[Function]}

@@ -49,7 +49,7 @@ const FitnessDrillIllustration = (props) => {
       <View style={styles.containerFinish}>
         <Text style={styles.redoMessage}>{I18n.t('drills.fitnessDrillIllustration.redoMessage')}</Text>
         <TouchableOpacity style={styles.redoButton} onPress={() => setActiveIndex(0)}>
-          <MaterialCommunityIcons name="redo-variant" color={theme.COLOR_PRIMARY} size={50} />
+          <MaterialCommunityIcons name="restart" color={theme.COLOR_PRIMARY} size={50} />
         </TouchableOpacity>
       </View>
     );

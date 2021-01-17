@@ -20,16 +20,5 @@ exports[`<Disc /> renders correctly 1`] = `
       },
     ]
   }
->
-  <Text
-    style={
-      Object {
-        "color": "white",
-        "fontWeight": "bold",
-      }
-    }
-  >
-    1
-  </Text>
-</View>
+/>
 `;

@@ -2,11 +2,10 @@ import React, { useState, useRef } from 'react';
 import { StyleSheet, View, Alert, Text, FlatList, TouchableOpacity } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-import theme from '../../styles/theme.style';
-import I18n from '../../utils/i18n';
-import FlashMessage, { showSuccess } from '../../utils/flashMessage';
-import HeaderButton from '../shared/HeaderButton';
-import Modal from '../shared/Modal';
+import theme from '../../../styles/theme.style';
+import I18n from '../../../utils/i18n';
+import FlashMessage, { showSuccess } from '../../../utils/flashMessage';
+import Modal from '../../shared/Modal';
 
 const SavedPlaysList = (props) => {
   const [modalOpened, setModalOpened] = useState(false);
@@ -66,7 +65,9 @@ const SavedPlaysList = (props) => {
 
   return (
     <View>
-      <HeaderButton icon="clipboard-text-outline" onPress={() => setModalOpened(true)} />
+      <TouchableOpacity onPress={() => setModalOpened(true)}>
+        <MaterialCommunityIcons name="clipboard-text-outline" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
+      </TouchableOpacity>
       <Modal title={I18n.t('editor.savedPlaysList.title')} visible={modalOpened} onClose={() => setModalOpened(false)}>
         <FlatList
           data={props.savedPlays}

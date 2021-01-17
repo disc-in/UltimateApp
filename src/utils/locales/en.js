@@ -89,7 +89,7 @@ export default {
     frisbeeTab: 'Frisbee',
     fitnessTab: 'Fitness',
     theoryTab: 'Theory',
-    editor: 'Editor',
+    editor: 'My Playbook',
     drills: 'Drills',
     adult: 'Senior',
     junior: 'Junior',
@@ -116,22 +116,13 @@ export default {
     saveModificationsTitle: 'Do you want to save the current play?',
     saveModificationsText:
       "The play '{{title}}' has been modified.\n\nDo you want to save these modifications before closing it?",
+    saveSuccess: "The play has been saved as '{{title}}'",
     savedPlaysList: {
-      title: 'Saved plays',
+      title: 'My Playbook',
       empty: "You haven't saved any plays yet",
       delete: 'Delete',
       deleteConfirmation: 'Do you really want to delete this play?',
       deleteSuccess: "The play '{{title}}' has been deleted.",
-    },
-    currentPlayManager: {
-      save: 'Save',
-      saveSuccess: "The play has been saved as '{{title}}'",
-      rename: 'Rename',
-      new: 'New',
-      share: 'Share',
-      shareTitle: 'Sharing {{title}}',
-      shareMessage: 'Use the following link to import my awesome play in Disc In: {{url}}',
-      shareError: 'It looks like there was an error sharing your play',
     },
     renamePlayModal: {
       placeholder: 'Click here to enter the new name',
@@ -139,6 +130,11 @@ export default {
       empty: 'You cannot set an empty name',
       renameSuccess: 'The play was successfully renamed!',
       cta: 'Apply',
+    },
+    sharePlay: {
+      shareTitle: 'Sharing {{title}}',
+      shareMessage: 'Use the following link to import my awesome play in Disc In: {{url}}',
+      shareError: 'It looks like there was an error sharing your play',
     },
   },
   drills: {

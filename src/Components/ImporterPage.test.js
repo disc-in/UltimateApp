@@ -2,6 +2,7 @@ import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
 
 import * as firebase from '../utils/firebase';
+import * as flashMessage from '../utils/flashMessage';
 
 import { ImporterPage } from './ImporterPage';
 
@@ -31,6 +32,17 @@ describe('<ImporterPage />', () => {
   it('renders correctly before download', async () => {
     jest.spyOn(firebase, 'download').mockImplementation(() => new Promise((resolve) => resolve(undefined)));
     const { toJSON } = render(<ImporterPage navigation={navigation} route={route} savePlay={savePlay} />);
+    expect(toJSON()).toMatchSnapshot();
+  });
+
+  it('renders an error message if the play could not be found', async () => {
+    jest.spyOn(firebase, 'download').mockImplementation(() => new Promise((resolve) => resolve(null)));
+    jest.spyOn(flashMessage, 'showError');
+
+    const { getByText, toJSON } = await waitFor(() =>
+      render(<ImporterPage navigation={navigation} route={route} savePlay={savePlay} />),
+    );
+    expect(flashMessage.showError).toHaveBeenCalled();
     expect(toJSON()).toMatchSnapshot();
   });
 

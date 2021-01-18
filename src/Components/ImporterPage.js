@@ -6,6 +6,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import theme from '../styles/theme.style';
 import I18n from '../utils/i18n';
 import { download } from '../utils/firebase';
+import { showError } from '../utils/flashMessage';
 import { savePlay } from '../Store/Actions/playAction';
 import CtaButton from './shared/Button';
 
@@ -18,9 +19,13 @@ export const ImporterPage = (props) => {
     async function fetchData() {
       try {
         const play = await download(route.params.uuid);
-        setImportedPlay(play);
+        if (play === null) {
+          showError(I18n.t('importerPage.downloadError'));
+        } else {
+          setImportedPlay(play);
+        }
       } catch (error) {
-        console.log(error);
+        showError(I18n.t('importerPage.downloadError'));
       }
     }
     fetchData();

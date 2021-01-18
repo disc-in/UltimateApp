@@ -61,7 +61,7 @@ exports[`<DictionaryPage /> renders correctly 1`] = `
         <Text
           style={
             Object {
-              "backgroundColor": "#A6A6A6",
+              "backgroundColor": "#2a9e91",
               "color": "white",
               "fontWeight": "bold",
               "marginBottom": 5,

@@ -111,6 +111,7 @@ export default {
     loading: 'On dirait que vous voulez importer un play, je vais le chercher... 🏃',
     incentive: 'Vous allez enregistrer le play "{{title}}"',
     question: 'Êtes-vous sûr.e ?',
+    downloadError: "Je n'ai pas pu retrouver ce play...",
   },
   editor: {
     saveModificationsTitle: 'Voulez-vous sauvegarder les modifications ?',

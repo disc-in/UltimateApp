@@ -14,7 +14,7 @@ import throwingMachine from '../Animation/ThrowingMachine';
 import giveAndGo from '../Animation/GiveAndGo';
 import threePerson from '../Animation/ThreePerson';
 import redemption from '../Animation/Redemption';
-import dwarDuel from '../Animation/DwarfDuel';
+import dwarfDuel from '../Animation/DwarfDuel';
 import backdoor from '../Animation/Backdoor';
 import powerReset from '../Animation/PowerReset';
 import resetOpen from '../Animation/ResetOpen';
@@ -5541,7 +5541,7 @@ const dwarfDuelDrill = {
     {
       id: 1,
       title: 'Le Duel',
-      animation: dwarDuel,
+      animation: dwarfDuel,
       vimeoId: '462695083',
       youtube: 'https://youtu.be/bpgVsv6fXBw',
       repetition: '',
@@ -8034,7 +8034,7 @@ const secondU17 = {
   title: 'Apprendre les fondamentaux',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: "Un deuxième entrainement pour apprendre à s'amuser avec un disque",
-  drills: [threePersonDrill, racingWarmUP, dishieLine, treasureHunt, normalGame],
+  drills: [threePersonDrill, racingWarmUP, dishieLine, treasureHuntDrill, normalGame],
 };
 
 const thirdU17 = {
@@ -8066,7 +8066,7 @@ const defenseJunior = {
   title: 'La défense individuelle',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'Première séance se concentrant sur la défense',
-  drills: [threePersonDrill, racingWarmUP, dwarDuel, aussieDrill],
+  drills: [threePersonDrill, racingWarmUP, dwarfDuelDrill, aussieDrill],
 };
 
 const defenseJuniorSecond = {

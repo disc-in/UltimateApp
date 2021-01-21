@@ -865,7 +865,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
                     <View
                       style={
                         Object {
-                          "flexBasis": "75%",
+                          "flexBasis": "80%",
                         }
                       }
                     >
@@ -896,22 +896,14 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
                     <View
                       style={
                         Object {
-                          "position": "absolute",
-                          "right": 30,
+                          "alignItems": "center",
+                          "flexBasis": "20%",
+                          "flexDirection": "row",
+                          "justifyContent": "flex-end",
                         }
                       }
                     >
-                      <View
-                        style={
-                          Object {
-                            "alignItems": "center",
-                            "flexDirection": "row",
-                            "justifyContent": "space-between",
-                          }
-                        }
-                      >
-                        <Text />
-                      </View>
+                      <Text />
                     </View>
                   </View>
                 </View>
@@ -946,7 +938,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
                     <View
                       style={
                         Object {
-                          "flexBasis": "75%",
+                          "flexBasis": "80%",
                         }
                       }
                     >
@@ -977,22 +969,14 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
                     <View
                       style={
                         Object {
-                          "position": "absolute",
-                          "right": 30,
+                          "alignItems": "center",
+                          "flexBasis": "20%",
+                          "flexDirection": "row",
+                          "justifyContent": "flex-end",
                         }
                       }
                     >
-                      <View
-                        style={
-                          Object {
-                            "alignItems": "center",
-                            "flexDirection": "row",
-                            "justifyContent": "space-between",
-                          }
-                        }
-                      >
-                        <Text />
-                      </View>
+                      <Text />
                     </View>
                   </View>
                 </View>

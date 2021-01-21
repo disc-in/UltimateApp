@@ -111,6 +111,7 @@ export default {
     loading: 'It looks like you want to import a play, I am going to fetch it... 🏃',
     incentive: 'You are about to import and save the play {{title}}',
     question: 'Are you sure?',
+    downloadError: 'I could not find the play you are looking for',
   },
   editor: {
     saveModificationsTitle: 'Do you want to save the current play?',

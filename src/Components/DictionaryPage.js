@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
   header: {
     padding: 15,
     marginBottom: 5,
-    backgroundColor: theme.COLOR_SECONDARY,
+    backgroundColor: theme.MAIN_COLOR,
     color: 'white',
     fontWeight: 'bold',
   },

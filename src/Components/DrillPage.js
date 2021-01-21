@@ -158,12 +158,12 @@ const styles = StyleSheet.create({
   infoSubWrapper: {
     justifyContent: 'center',
     alignItems: 'center',
-    paddingHorizontal: 10,
+    paddingHorizontal: 5,
     flexBasis: '33%',
   },
   info: {
     color: theme.COLOR_PRIMARY_LIGHT,
-    fontSize: theme.FONT_SIZE_MEDIUM,
+    fontSize: theme.FONT_SIZE_SMALL,
   },
   separator: {
     height: 15,

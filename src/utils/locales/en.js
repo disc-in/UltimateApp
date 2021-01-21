@@ -192,7 +192,11 @@ export default {
     level: 'level',
     start: 'Start',
     shareTitle: 'Share {{drillTitle}}',
-    shareContent: 'Check this drill on Disc In: {{url}}\n{{stringYoutube}}',
+    shareContent: {
+      zero: 'Check this drill on Disc In: {{url}}',
+      other:
+        'Check this drill on Disc In: {{url}}\nAnd in case you cannot install the app, here are some videos of the drill:\n{{youtubeVideos}}',
+    },
   },
   drillPageMinimal: {
     finish: 'Finish Training!',

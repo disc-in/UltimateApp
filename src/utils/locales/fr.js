@@ -191,7 +191,11 @@ export default {
     level: 'niveau',
     start: 'Start',
     shareTitle: 'Partager {{drillTitle}}',
-    shareContent: 'Regarde cet exo sur Disc In : {{url}}\n{{stringYoutube}}',
+    shareContent: {
+      zero: 'Regarde cet exo sur Disc In : {{url}}',
+      other:
+        "Regarde cet exo sur Disc In : {{url}}\nEt si tu ne peux pas installer l'appli, voici quelques vidéos de l'exercice :\n{{youtubeVideos}}",
+    },
   },
   drillPageMinimal: {
     finish: "Terminer l'entraînement !",

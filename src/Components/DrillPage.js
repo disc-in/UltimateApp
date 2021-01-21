@@ -51,29 +51,15 @@ export const DrillPage = (props) => {
   const share = async (drill) => {
     const url = Linking.makeUrl('drills/' + drill.id);
 
-    //liens Youtube
-    let youtubeLinks = [];
-
-    for (let i = 0; i < drill.steps.length; i++) {
-      if (drill.steps[i].youtube) {
-        youtubeLinks.push({
-          title: drill.steps[i].title,
-          youtubeUrl: drill.steps[i].youtube,
-        });
-      }
-    }
-
-    let stringYoutube = '';
-    if (youtubeLinks.length > 0) stringYoutube = 'Youtube:\n';
-    for (let i = 0; i < youtubeLinks.length; i++) {
-      stringYoutube += youtubeLinks[i].title + ' : ' + youtubeLinks[i].youtubeUrl + '\n';
-    }
+    const youtubeVideos = drill.steps.reduce((total, step) => {
+      const stepvideo = step.youtube ? `${step.title} - ${step.youtube}\n` : '';
+      return total + stepvideo;
+    }, '');
 
     Share.share({
       title: I18n.t('drillPage.shareTitle', { drillTitle: drill.title }),
-      message: I18n.t('drillPage.shareContent', { url, stringYoutube }),
+      message: I18n.t('drillPage.shareContent', { url, youtubeVideos, count: youtubeVideos.length }),
       url,
-      stringYoutube,
     }).catch((e) => console.log(e));
   };
 

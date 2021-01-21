@@ -51,9 +51,14 @@ export const DrillPage = (props) => {
   const share = async (drill) => {
     const url = Linking.makeUrl('drills/' + drill.id);
 
+    const youtubeVideos = drill.steps.reduce((total, step) => {
+      const stepvideo = step.youtube ? `${step.title} - ${step.youtube}\n` : '';
+      return total + stepvideo;
+    }, '');
+
     Share.share({
       title: I18n.t('drillPage.shareTitle', { drillTitle: drill.title }),
-      message: I18n.t('drillPage.shareContent', { url }),
+      message: I18n.t('drillPage.shareContent', { url, youtubeVideos, count: youtubeVideos.length }),
       url,
     }).catch((e) => console.log(e));
   };

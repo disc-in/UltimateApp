@@ -4,7 +4,7 @@ export default {
   slug: 'ultimate-app',
   privacy: 'public',
   platforms: ['ios', 'android', 'web'],
-  version: '0.4.0',
+  version: '1.0.0',
   githubUrl: 'https://github.com/disc-in/UltimateApp',
   orientation: 'portrait',
   scheme: 'discin',
@@ -18,7 +18,7 @@ export default {
   assetBundlePatterns: ['assets/**/*'],
   ios: {
     bundleIdentifier: 'com.discin.discin',
-    buildNumber: '0.4.0',
+    buildNumber: '1.0.0',
     supportsTablet: true,
     infoPlist: {
       CFBundleAllowMixedLocalizations: true,
@@ -26,7 +26,7 @@ export default {
   },
   android: {
     package: 'com.discin.discin',
-    versionCode: 3,
+    versionCode: 4,
     permissions: [],
   },
 };

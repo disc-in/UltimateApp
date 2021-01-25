@@ -25,7 +25,9 @@ const newPlay = {
 
 export const PlayEditorPage = (props) => {
   const { navigation, route } = props;
-  const [currentPlay, setCurrentPlay] = useState(route.params ? route.params.currentPlay : newPlay);
+  const [currentPlay, setCurrentPlay] = useState(
+    route.params ? { ...route.params.currentPlay, animation: new Drill(route.params.currentPlay.animation) } : newPlay,
+  );
 
   // modalRenameVisible is true if the modal which enables to rename the current play is displayed
   const [modalRenameVisible, setModalRenameVisible] = useState(false);

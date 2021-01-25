@@ -208,7 +208,6 @@ export default HomePage = (props) => {
 const styles = StyleSheet.create({
   mainContainer: {
     height: '100%',
-    paddingTop: 7,
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
   },
   imageContainer: {

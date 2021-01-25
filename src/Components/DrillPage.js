@@ -49,7 +49,7 @@ export const DrillPage = (props) => {
   };
 
   const share = async (drill) => {
-    const url = createLink('drills/' + drill.id);
+    const url = await createLink('drills/' + drill.id);
 
     const youtubeVideos = drill.steps.reduce((total, step) => {
       const stepvideo = step.youtube ? `${step.title} - ${step.youtube}\n` : '';

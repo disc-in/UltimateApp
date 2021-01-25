@@ -11,7 +11,7 @@ const SharePlay = ({ currentPlay }) => {
   const share = async () => {
     try {
       const shareUuid = await upload(currentPlay);
-      const url = createLink('customPlays/' + shareUuid);
+      const url = await createLink('customPlays/' + shareUuid);
       await Share.share({
         title: I18n.t('editor.sharePlay.shareTitle', { title: currentPlay.title }),
         message: I18n.t('editor.sharePlay.shareMessage', { url }),

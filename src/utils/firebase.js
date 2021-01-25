@@ -3,7 +3,7 @@ import 'firebase/database';
 import { Platform, InteractionManager } from 'react-native';
 import * as Linking from 'expo-linking';
 
-import { EXPO_FIREBASE_DATABASE_URL } from '@env';
+import { EXPO_FIREBASE_DATABASE_URL, EXPO_FIREBASE_API_KEY, EXPO_FIREBASE_URL_PREFIX } from '@env';
 import { generateUuid } from './uuid';
 
 // Work around issue `Setting a timer for long time`
@@ -80,11 +80,35 @@ export const createLink = (path) => {
   if (__DEV__) {
     return Linking.makeUrl(path);
   } else {
-    return (url =
-      'https://discinultimate.page.link/?' +
-      `link=http://ultimatediscin.com/${path}&` +
-      'apn=com.discin.discin&amv=4&' +
-      'ibi=com.discin.discin&imv=1.1.0&ius=discin&isi=1537387830&' +
-      'ofl=https://play.google.com/store/apps/details?id=com.discin.discin');
+    return fetch(`https://firebasedynamiclinks.googleapis.com/v1/shortLinks?key=${EXPO_FIREBASE_API_KEY}`, {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        dynamicLinkInfo: {
+          domainUriPrefix: 'https://ultimatediscin.page.link',
+          link: `${EXPO_FIREBASE_URL_PREFIX}/${path}`,
+          androidInfo: {
+            androidPackageName: 'com.discin.discin',
+            androidMinPackageVersionCode: '4',
+          },
+          iosInfo: {
+            iosBundleId: 'com.discin.discin',
+            iosCustomScheme: 'discin',
+            iosAppStoreId: '1537387830',
+          },
+          desktopInfo: {
+            desktopFallbackLink: 'https://play.google.com/store/apps/details?id=com.discin.discin',
+          },
+        },
+      }),
+    })
+      .then((response) => response.json())
+      .then((responseJson) => responseJson.shortLink)
+      .catch((error) => {
+        console.error(error);
+      });
   }
 };

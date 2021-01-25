@@ -1,6 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/database';
 import { Platform, InteractionManager } from 'react-native';
+import * as Linking from 'expo-linking';
 
 import { EXPO_FIREBASE_DATABASE_URL } from '@env';
 import { generateUuid } from './uuid';
@@ -73,4 +74,17 @@ export const download = (uuid) => {
   return reference(uuid)
     .once('value')
     .then((snapshot) => snapshot.val());
+};
+
+export const createLink = (path) => {
+  if (__DEV__) {
+    return Linking.makeUrl(path);
+  } else {
+    return (url =
+      'https://discinultimate.page.link/?' +
+      `link=https://discin.ultimate.com//${path}&` +
+      'apn=com.discin.discin&amv=5&' +
+      'ibi=com.discin.discin&imv=1.1.0&ius=discin&isi=1537387830&' +
+      'ofl=https://play.google.com/store/apps/details?id=com.discin.discin');
+  }
 };

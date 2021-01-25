@@ -12,10 +12,10 @@ import {
 } from 'react-native';
 import { connect } from 'react-redux';
 import { useHeaderHeight } from '@react-navigation/stack';
-import * as Linking from 'expo-linking';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import I18n from '../utils/i18n';
+import { createLink } from '../utils/firebase';
 import { toggleFavorite } from '../Store/Actions/favoriteAction';
 import { DrillTypes } from '../Fixtures/config';
 import theme from '../styles/theme.style';
@@ -49,7 +49,7 @@ export const DrillPage = (props) => {
   };
 
   const share = async (drill) => {
-    const url = Linking.makeUrl('drills/' + drill.id);
+    const url = createLink('drills/' + drill.id);
 
     const youtubeVideos = drill.steps.reduce((total, step) => {
       const stepvideo = step.youtube ? `${step.title} - ${step.youtube}\n` : '';

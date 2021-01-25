@@ -1,18 +1,17 @@
 import React, { useState, useRef } from 'react';
 import { TouchableOpacity, Share } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import * as Linking from 'expo-linking';
 
 import theme from '../../../styles/theme.style';
 import I18n from '../../../utils/i18n';
 import { showError } from '../../../utils/flashMessage';
-import { upload } from '../../../utils/firebase';
+import { upload, createLink } from '../../../utils/firebase';
 
 const SharePlay = ({ currentPlay }) => {
   const share = async () => {
     try {
       const shareUuid = await upload(currentPlay);
-      const url = Linking.makeUrl('customPlays/' + shareUuid);
+      const url = createLink('customPlays/' + shareUuid);
       await Share.share({
         title: I18n.t('editor.sharePlay.shareTitle', { title: currentPlay.title }),
         message: I18n.t('editor.sharePlay.shareMessage', { url }),

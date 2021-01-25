@@ -82,8 +82,8 @@ export const createLink = (path) => {
   } else {
     return (url =
       'https://discinultimate.page.link/?' +
-      `link=https://discin.ultimate.com//${path}&` +
-      'apn=com.discin.discin&amv=5&' +
+      `link=http://ultimatediscin.com/${path}&` +
+      'apn=com.discin.discin&amv=4&' +
       'ibi=com.discin.discin&imv=1.1.0&ius=discin&isi=1537387830&' +
       'ofl=https://play.google.com/store/apps/details?id=com.discin.discin');
   }

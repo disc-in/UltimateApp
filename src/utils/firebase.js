@@ -3,7 +3,12 @@ import 'firebase/database';
 import { Platform, InteractionManager } from 'react-native';
 import * as Linking from 'expo-linking';
 
-import { EXPO_FIREBASE_DATABASE_URL, EXPO_FIREBASE_API_KEY, EXPO_FIREBASE_URL_PREFIX } from '@env';
+import {
+  EXPO_FIREBASE_DATABASE_URL,
+  EXPO_FIREBASE_API_KEY,
+  EXPO_FIREBASE_DOMAIN_URI,
+  EXPO_FIREBASE_URL_PREFIX,
+} from '@env';
 import { generateUuid } from './uuid';
 
 // Work around issue `Setting a timer for long time`
@@ -88,7 +93,7 @@ export const createLink = (path) => {
       },
       body: JSON.stringify({
         dynamicLinkInfo: {
-          domainUriPrefix: 'https://ultimatediscin.page.link',
+          domainUriPrefix: EXPO_FIREBASE_DOMAIN_URI,
           link: `${EXPO_FIREBASE_URL_PREFIX}/${path}`,
           androidInfo: {
             androidPackageName: 'com.discin.discin',

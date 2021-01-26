@@ -54,7 +54,6 @@ exports[`<HomePage /> renders correctly 1`] = `
             Object {
               "backgroundColor": "#fff",
               "height": "100%",
-              "paddingTop": 7,
             }
           }
         >

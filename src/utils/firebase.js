@@ -81,7 +81,7 @@ export const download = (uuid) => {
     .then((snapshot) => snapshot.val());
 };
 
-export const createLink = (path) => {
+export const createLink = (path, title, description) => {
   if (__DEV__) {
     return Linking.makeUrl(path);
   } else {
@@ -106,6 +106,11 @@ export const createLink = (path) => {
           },
           desktopInfo: {
             desktopFallbackLink: 'https://play.google.com/store/apps/details?id=com.discin.discin',
+          },
+          socialMetaTagInfo: {
+            socialTitle: `Disc In - ${title}`,
+            socialDescription: description,
+            socialImageLink: 'https://raw.githubusercontent.com/disc-in/UltimateApp/master/assets/icon.png',
           },
         },
       }),

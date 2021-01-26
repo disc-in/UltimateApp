@@ -94,7 +94,7 @@ export const createLink = (path) => {
       body: JSON.stringify({
         dynamicLinkInfo: {
           domainUriPrefix: EXPO_FIREBASE_DOMAIN_URI,
-          link: `${EXPO_FIREBASE_URL_PREFIX}/${path}`,
+          link: `${EXPO_FIREBASE_URL_PREFIX}${path}`,
           androidInfo: {
             androidPackageName: 'com.discin.discin',
             androidMinPackageVersionCode: '4',

@@ -11,14 +11,13 @@ import * as Linking from 'expo-linking';
 import { Navigation } from './src/Navigation';
 import { store, persistor } from './src/Store/configureStore';
 import FlashMessage from './src/utils/flashMessage';
+import { EXPO_FIREBASE_URL_PREFIX } from '@env';
 
 if (Platform.OS !== 'web') enableScreens();
 
-const PERSISTENCE_KEY = 'NAVIGATION_STATE';
-
 const App = (props) => {
   const linking = {
-    prefixes: [Linking.makeUrl('/')],
+    prefixes: [Linking.makeUrl('/'), EXPO_FIREBASE_URL_PREFIX],
     config: {
       initialRouteName: 'HomePage',
       screens: {

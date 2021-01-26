@@ -197,6 +197,7 @@ export default {
       other:
         "Regarde cet exo sur Disc In : {{url}}\nEt si tu ne peux pas installer l'appli, voici quelques vidéos de l'exercice :\n{{youtubeVideos}}",
     },
+    description: 'Exercice : {{description}}…',
   },
   drillPageMinimal: {
     finish: "Terminer l'entraînement !",

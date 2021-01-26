@@ -111,9 +111,6 @@ export const createLink = (path) => {
       }),
     })
       .then((response) => response.json())
-      .then((responseJson) => responseJson.shortLink)
-      .catch((error) => {
-        console.error(error);
-      });
+      .then((responseJson) => responseJson.shortLink);
   }
 };

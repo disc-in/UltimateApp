@@ -97,7 +97,7 @@ export const createLink = (path, title, description) => {
           link: `${EXPO_FIREBASE_URL_PREFIX}${path}`,
           androidInfo: {
             androidPackageName: 'com.discin.discin',
-            androidMinPackageVersionCode: '4',
+            androidMinPackageVersionCode: '5',
           },
           iosInfo: {
             iosBundleId: 'com.discin.discin',

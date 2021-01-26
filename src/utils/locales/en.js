@@ -198,6 +198,7 @@ export default {
       other:
         'Check this drill on Disc In: {{url}}\nAnd in case you cannot install the app, here are some videos of the drill:\n{{youtubeVideos}}',
     },
+    description: 'Drill: {{description}}…',
   },
   drillPageMinimal: {
     finish: 'Finish Training!',

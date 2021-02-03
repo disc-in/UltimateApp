@@ -1,158 +1,209 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<DrillPageMinimal /> renders correctly with a training and a drill 1`] = `
-Array [
-  <View
+<RNCSafeAreaView
+  edges={
+    Array [
+      "left",
+      "bottom",
+      "right",
+    ]
+  }
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "flex": 1,
+      "marginBottom": 60,
+    }
+  }
+>
+  <RCTScrollView
     style={
       Object {
-        "backgroundColor": "#fff",
-        "flex": 1,
-        "marginBottom": 50,
+        "flexGrow": 1,
+        "flexShrink": 0,
       }
     }
   >
-    <RCTScrollView
-      style={
-        Object {
-          "flexGrow": 1,
-          "flexShrink": 0,
+    <View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
         }
-      }
-    >
-      <View>
+      >
         <View
           style={
-            Object {
-              "flex": 1,
-            }
+            Array [
+              Object {
+                "height": 250,
+              },
+              false,
+            ]
           }
         >
           <View
             style={
-              Array [
-                Object {
-                  "height": 250,
-                },
-                false,
-              ]
+              Object {
+                "alignItems": "center",
+                "flex": 1,
+                "height": 250,
+                "justifyContent": "center",
+              }
             }
           >
             <View
               style={
                 Object {
-                  "alignItems": "center",
-                  "flex": 1,
-                  "height": 250,
-                  "justifyContent": "center",
+                  "position": "absolute",
                 }
               }
             >
-              <View
+              <ActivityIndicator
+                animating={true}
+                color="#A6A6A6"
+                hidesWhenStopped={true}
+                size="large"
+              />
+              <Text>
+                Loading…
+              </Text>
+            </View>
+            <View
+              pointerEvents="box-none"
+              style={
+                Object {
+                  "height": 250,
+                  "overflow": "hidden",
+                  "width": "100%",
+                }
+              }
+            >
+              <ViewManagerAdapter_ExpoVideoView
+                proxiedProperties={
+                  Object {
+                    "onError": [Function],
+                    "onFullscreenUpdate": [Function],
+                    "onLoad": [Function],
+                    "onLoadStart": [Function],
+                    "onReadyForDisplay": [Function],
+                    "onStatusUpdate": [Function],
+                    "resizeMode": "mock",
+                    "source": undefined,
+                    "status": Object {},
+                    "useNativeControls": true,
+                  }
+                }
                 style={
                   Object {
+                    "bottom": 0,
+                    "left": 0,
                     "position": "absolute",
+                    "right": 0,
+                    "top": 0,
                   }
                 }
-              >
-                <ActivityIndicator
-                  animating={true}
-                  color="#A6A6A6"
-                  hidesWhenStopped={true}
-                  size="large"
-                />
-                <Text>
-                  Loading…
-                </Text>
-              </View>
-              <View
-                pointerEvents="box-none"
-                style={
-                  Object {
-                    "height": 250,
-                    "overflow": "hidden",
-                    "width": "100%",
-                  }
-                }
-              >
-                <ViewManagerAdapter_ExpoVideoView
-                  proxiedProperties={
-                    Object {
-                      "onError": [Function],
-                      "onFullscreenUpdate": [Function],
-                      "onLoad": [Function],
-                      "onLoadStart": [Function],
-                      "onReadyForDisplay": [Function],
-                      "onStatusUpdate": [Function],
-                      "resizeMode": "mock",
-                      "source": undefined,
-                      "status": Object {},
-                      "useNativeControls": true,
-                    }
-                  }
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "left": 0,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                    }
-                  }
-                />
-              </View>
+              />
             </View>
           </View>
-          <RCTScrollView
-            data={
-              Array [
-                Object {
-                  "id": 0,
-                  "subtitle": "This is a subtitle",
-                  "title": "Warmup",
-                  "vimeoId": "462695757",
-                },
-                Object {
-                  "id": 1,
-                  "subtitle": "This is a subtitle",
-                  "title": "Do the drill",
-                  "vimeoId": "462695757",
-                },
-                Object {
-                  "id": 2,
-                  "subtitle": "This is a subtitle",
-                  "title": "Last step",
-                  "vimeoId": "462695757",
-                },
-              ]
-            }
-            disableVirtualization={false}
-            getItem={[Function]}
-            getItemCount={[Function]}
-            horizontal={false}
-            initialNumToRender={10}
-            keyExtractor={[Function]}
-            maxToRenderPerBatch={10}
-            nestedScrollEnabled={true}
-            onContentSizeChange={[Function]}
-            onEndReachedThreshold={2}
-            onLayout={[Function]}
-            onMomentumScrollEnd={[Function]}
-            onScroll={[Function]}
-            onScrollBeginDrag={[Function]}
-            onScrollEndDrag={[Function]}
-            removeClippedSubviews={false}
-            renderItem={[Function]}
-            scrollEventThrottle={50}
-            stickyHeaderIndices={Array []}
-            updateCellsBatchingPeriod={50}
-            viewabilityConfigCallbackPairs={Array []}
-            windowSize={21}
-          >
-            <View>
+        </View>
+        <RCTScrollView
+          data={
+            Array [
+              Object {
+                "id": 0,
+                "subtitle": "This is a subtitle",
+                "title": "Warmup",
+                "vimeoId": "462695757",
+              },
+              Object {
+                "id": 1,
+                "subtitle": "This is a subtitle",
+                "title": "Do the drill",
+                "vimeoId": "462695757",
+              },
+              Object {
+                "id": 2,
+                "subtitle": "This is a subtitle",
+                "title": "Last step",
+                "vimeoId": "462695757",
+              },
+            ]
+          }
+          disableVirtualization={false}
+          getItem={[Function]}
+          getItemCount={[Function]}
+          horizontal={false}
+          initialNumToRender={10}
+          keyExtractor={[Function]}
+          maxToRenderPerBatch={10}
+          nestedScrollEnabled={true}
+          onContentSizeChange={[Function]}
+          onEndReachedThreshold={2}
+          onLayout={[Function]}
+          onMomentumScrollEnd={[Function]}
+          onScroll={[Function]}
+          onScrollBeginDrag={[Function]}
+          onScrollEndDrag={[Function]}
+          removeClippedSubviews={false}
+          renderItem={[Function]}
+          scrollEventThrottle={50}
+          stickyHeaderIndices={Array []}
+          updateCellsBatchingPeriod={50}
+          viewabilityConfigCallbackPairs={Array []}
+          windowSize={21}
+        >
+          <View>
+            <View
+              onLayout={[Function]}
+              style={null}
+            >
               <View
-                onLayout={[Function]}
-                style={null}
+                accessible={true}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "opacity": 1,
+                    "padding": 20,
+                  }
+                }
               >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "flexGrow": 0,
+                      "flexShrink": 0,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#232b2b",
+                          "fontSize": 20,
+                        },
+                        Object {},
+                        Object {
+                          "fontWeight": "bold",
+                        },
+                      ]
+                    }
+                  >
+                     
+                    Warmup
+                  </Text>
+                </View>
                 <View
                   accessible={true}
                   focusable={true}
@@ -165,307 +216,259 @@ Array [
                   onStartShouldSetResponder={[Function]}
                   style={
                     Object {
-                      "flexDirection": "row",
+                      "flex": 1,
                       "opacity": 1,
-                      "padding": 20,
                     }
                   }
+                  testID="doneIcon"
                 >
                   <View
                     style={
                       Object {
-                        "alignItems": "center",
-                        "flexGrow": 0,
-                        "flexShrink": 0,
-                      }
-                    }
-                  >
-                    <Text
-                      style={
-                        Array [
-                          Object {
-                            "color": "#232b2b",
-                            "fontSize": 20,
-                          },
-                          Object {},
-                          Object {
-                            "fontWeight": "bold",
-                          },
-                        ]
-                      }
-                    >
-                       
-                      Warmup
-                    </Text>
-                  </View>
-                  <View
-                    accessible={true}
-                    focusable={true}
-                    onClick={[Function]}
-                    onResponderGrant={[Function]}
-                    onResponderMove={[Function]}
-                    onResponderRelease={[Function]}
-                    onResponderTerminate={[Function]}
-                    onResponderTerminationRequest={[Function]}
-                    onStartShouldSetResponder={[Function]}
-                    style={
-                      Object {
-                        "flex": 1,
                         "opacity": 1,
                       }
                     }
-                    testID="doneIcon"
                   >
-                    <View
-                      style={
-                        Object {
-                          "opacity": 1,
-                        }
-                      }
-                    >
-                      <Text />
-                    </View>
-                    <View
-                      style={
-                        Object {
-                          "opacity": 0,
-                        }
-                      }
-                    >
-                      <Text />
-                    </View>
+                    <Text />
                   </View>
-                </View>
-              </View>
-              <View
-                onLayout={[Function]}
-                style={null}
-              >
-                <View
-                  accessible={true}
-                  focusable={true}
-                  onClick={[Function]}
-                  onResponderGrant={[Function]}
-                  onResponderMove={[Function]}
-                  onResponderRelease={[Function]}
-                  onResponderTerminate={[Function]}
-                  onResponderTerminationRequest={[Function]}
-                  onStartShouldSetResponder={[Function]}
-                  style={
-                    Object {
-                      "flexDirection": "row",
-                      "opacity": 1,
-                      "padding": 20,
-                    }
-                  }
-                >
                   <View
                     style={
                       Object {
-                        "alignItems": "center",
-                        "flexGrow": 0,
-                        "flexShrink": 0,
+                        "opacity": 0,
                       }
                     }
                   >
-                    <Text
-                      style={
-                        Array [
-                          Object {
-                            "color": "#232b2b",
-                            "fontSize": 20,
-                          },
-                          Object {},
-                          Object {},
-                        ]
-                      }
-                    >
-                       
-                      Do the drill
-                    </Text>
-                  </View>
-                </View>
-              </View>
-              <View
-                onLayout={[Function]}
-                style={null}
-              >
-                <View
-                  accessible={true}
-                  focusable={true}
-                  onClick={[Function]}
-                  onResponderGrant={[Function]}
-                  onResponderMove={[Function]}
-                  onResponderRelease={[Function]}
-                  onResponderTerminate={[Function]}
-                  onResponderTerminationRequest={[Function]}
-                  onStartShouldSetResponder={[Function]}
-                  style={
-                    Object {
-                      "flexDirection": "row",
-                      "opacity": 1,
-                      "padding": 20,
-                    }
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "flexGrow": 0,
-                        "flexShrink": 0,
-                      }
-                    }
-                  >
-                    <Text
-                      style={
-                        Array [
-                          Object {
-                            "color": "#232b2b",
-                            "fontSize": 20,
-                          },
-                          Object {},
-                          Object {},
-                        ]
-                      }
-                    >
-                       
-                      Last step
-                    </Text>
+                    <Text />
                   </View>
                 </View>
               </View>
             </View>
-          </RCTScrollView>
+            <View
+              onLayout={[Function]}
+              style={null}
+            >
+              <View
+                accessible={true}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "opacity": 1,
+                    "padding": 20,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "flexGrow": 0,
+                      "flexShrink": 0,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#232b2b",
+                          "fontSize": 20,
+                        },
+                        Object {},
+                        Object {},
+                      ]
+                    }
+                  >
+                     
+                    Do the drill
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <View
+              onLayout={[Function]}
+              style={null}
+            >
+              <View
+                accessible={true}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "opacity": 1,
+                    "padding": 20,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "flexGrow": 0,
+                      "flexShrink": 0,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#232b2b",
+                          "fontSize": 20,
+                        },
+                        Object {},
+                        Object {},
+                      ]
+                    }
+                  >
+                     
+                    Last step
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </RCTScrollView>
+      </View>
+      <View
+        style={
+          Object {
+            "paddingBottom": 10,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "borderBottomColor": "#e5e5e5",
+              "borderBottomWidth": 1,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "padding": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#232b2b",
+                  "fontSize": 20,
+                  "fontWeight": "bold",
+                  "marginBottom": 5,
+                  "textAlign": "center",
+                },
+                Object {
+                  "textAlign": "left",
+                },
+              ]
+            }
+          >
+            Equipment
+          </Text>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#A6A6A6",
+                  "fontSize": 16,
+                  "textAlign": "center",
+                },
+                Object {
+                  "textAlign": "left",
+                },
+              ]
+            }
+          >
+            Equipment needs for the drill
+          </Text>
         </View>
         <View
           style={
             Object {
-              "paddingBottom": 10,
+              "borderBottomColor": "#e5e5e5",
+              "borderBottomWidth": 1,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "padding": 10,
             }
           }
         >
-          <View
+          <Text
             style={
-              Object {
-                "borderBottomColor": "#e5e5e5",
-                "borderBottomWidth": 1,
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "padding": 10,
-              }
-            }
-          >
-            <Text
-              style={
-                Array [
-                  Object {
-                    "color": "#232b2b",
-                    "fontSize": 20,
-                    "fontWeight": "bold",
-                    "marginBottom": 5,
-                    "textAlign": "center",
-                  },
-                  Object {
-                    "textAlign": "left",
-                  },
-                ]
-              }
-            >
-              Equipment
-            </Text>
-            <Text
-              style={
-                Array [
-                  Object {
-                    "color": "#A6A6A6",
-                    "fontSize": 16,
-                    "textAlign": "center",
-                  },
-                  Object {
-                    "textAlign": "left",
-                  },
-                ]
-              }
-            >
-              Equipment needs for the drill
-            </Text>
-          </View>
-          <View
-            style={
-              Object {
-                "borderBottomColor": "#e5e5e5",
-                "borderBottomWidth": 1,
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "padding": 10,
-              }
+              Array [
+                Object {
+                  "color": "#232b2b",
+                  "fontSize": 20,
+                  "fontWeight": "bold",
+                  "marginBottom": 5,
+                  "textAlign": "center",
+                },
+                Object {
+                  "textAlign": "left",
+                },
+              ]
             }
           >
-            <Text
-              style={
-                Array [
-                  Object {
-                    "color": "#232b2b",
-                    "fontSize": 20,
-                    "fontWeight": "bold",
-                    "marginBottom": 5,
-                    "textAlign": "center",
-                  },
-                  Object {
-                    "textAlign": "left",
-                  },
-                ]
-              }
-            >
-              Description
-            </Text>
-            <Text
-              style={
-                Array [
-                  Object {
-                    "color": "#A6A6A6",
-                    "fontSize": 16,
-                    "textAlign": "center",
-                  },
-                  Object {
-                    "textAlign": "left",
-                  },
-                ]
-              }
-            >
-              Description of the drill
-            </Text>
-          </View>
-          <View
+            Description
+          </Text>
+          <Text
             style={
-              Object {
-                "borderBottomColor": "#e5e5e5",
-                "borderBottomWidth": 1,
-              }
+              Array [
+                Object {
+                  "color": "#A6A6A6",
+                  "fontSize": 16,
+                  "textAlign": "center",
+                },
+                Object {
+                  "textAlign": "left",
+                },
+              ]
             }
-          />
+          >
+            Description of the drill
+          </Text>
         </View>
+        <View
+          style={
+            Object {
+              "borderBottomColor": "#e5e5e5",
+              "borderBottomWidth": 1,
+            }
+          }
+        />
       </View>
-    </RCTScrollView>
-  </View>,
+    </View>
+  </RCTScrollView>
   <View
     style={
       Object {
         "alignItems": "center",
         "backgroundColor": "#fff",
-        "bottom": 0,
         "paddingBottom": 10,
         "paddingTop": 5,
-        "position": "absolute",
         "width": "100%",
       }
     }
@@ -486,7 +489,7 @@ Array [
           "backgroundColor": "#2a9e91",
           "borderRadius": 5,
           "flexDirection": "row",
-          "height": 40,
+          "height": 50,
           "justifyContent": "center",
           "opacity": 1,
           "paddingHorizontal": 20,
@@ -508,6 +511,6 @@ Array [
         Next drill
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</RNCSafeAreaView>
 `;

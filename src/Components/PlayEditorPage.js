@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useLayoutEffect } from 'react';
-import { StyleSheet, View, TouchableOpacity } from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { StyleSheet, View } from 'react-native';
 import { connect } from 'react-redux';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import Drill from './animation/Drill';
 import I18n from '../utils/i18n';
@@ -63,7 +63,7 @@ export const PlayEditorPage = (props) => {
 
   const saveCurrentPlay = () => {
     const defaultTitle = I18n.t('playEditorPage.untitledPlay');
-    if (currentPlay.title == I18n.t('playEditorPage.untitledPlay')) {
+    if (currentPlay.title === I18n.t('playEditorPage.untitledPlay')) {
       let newTitle = defaultTitle;
 
       let counter = 1;
@@ -97,7 +97,7 @@ export const PlayEditorPage = (props) => {
   };
 
   return (
-    <View style={styles.playEditorPage}>
+    <SafeAreaView style={styles.playEditorPage} edges={['right', 'bottom', 'right']}>
       <View style={styles.centeredView}>
         {modalRenameVisible ? (
           <RenamePlayModal currentPlay={currentPlay} onRename={setTitle} close={() => setModalRenameVisible(false)} />
@@ -128,7 +128,7 @@ export const PlayEditorPage = (props) => {
         <AnimationHistory animation={currentPlay.animation} onAnimationHistoryChange={onAnimationChange} />
         <SharePlay currentPlay={currentPlay} />
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -145,6 +145,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(PlayEditorPage);
 const styles = StyleSheet.create({
   playEditorPage: {
     flex: 1,
+    backgroundColor: theme.COLOR_PRIMARY,
   },
   centeredView: {
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
@@ -155,8 +156,6 @@ const styles = StyleSheet.create({
     minHeight: 40,
     width: '100%',
     backgroundColor: theme.COLOR_PRIMARY,
-    position: 'absolute',
-    bottom: 0,
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-evenly',

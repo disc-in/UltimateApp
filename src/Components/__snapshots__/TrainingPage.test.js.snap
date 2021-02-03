@@ -15,8 +15,15 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
     }
   }
 >
-  <View
+  <RNCSafeAreaView
     collapsable={false}
+    edges={
+      Array [
+        "left",
+        "bottom",
+        "right",
+      ]
+    }
     style={
       Array [
         undefined,
@@ -1330,10 +1337,8 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
         Object {
           "alignItems": "center",
           "backgroundColor": "#fff",
-          "bottom": 0,
-          "paddingBottom": 20,
+          "paddingBottom": 10,
           "paddingTop": 5,
-          "position": "absolute",
           "width": "100%",
         }
       }
@@ -1354,7 +1359,7 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
             "backgroundColor": "#2a9e91",
             "borderRadius": 5,
             "flexDirection": "row",
-            "height": 40,
+            "height": 50,
             "justifyContent": "center",
             "opacity": 1,
             "paddingHorizontal": 20,
@@ -1377,9 +1382,16 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
         </Text>
       </View>
     </View>
-  </View>
-  <View
+  </RNCSafeAreaView>
+  <RNCSafeAreaView
     collapsable={false}
+    edges={
+      Array [
+        "left",
+        "bottom",
+        "right",
+      ]
+    }
     style={
       Array [
         undefined,
@@ -2658,10 +2670,8 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
         Object {
           "alignItems": "center",
           "backgroundColor": "#fff",
-          "bottom": 0,
-          "paddingBottom": 20,
+          "paddingBottom": 10,
           "paddingTop": 5,
-          "position": "absolute",
           "width": "100%",
         }
       }
@@ -2682,7 +2692,7 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
             "backgroundColor": "#2a9e91",
             "borderRadius": 5,
             "flexDirection": "row",
-            "height": 40,
+            "height": 50,
             "justifyContent": "center",
             "opacity": 1,
             "paddingHorizontal": 20,
@@ -2705,6 +2715,6 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
         </Text>
       </View>
     </View>
-  </View>
+  </RNCSafeAreaView>
 </RNCViewPager>
 `;

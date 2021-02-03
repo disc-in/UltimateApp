@@ -1,9 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<PlayEditorPage /> renders correctly  with a currentPlay 1`] = `
-<View
+<RNCSafeAreaView
+  edges={
+    Array [
+      "right",
+      "bottom",
+      "right",
+    ]
+  }
   style={
     Object {
+      "backgroundColor": "#232b2b",
       "flex": 1,
     }
   }
@@ -800,12 +808,10 @@ exports[`<PlayEditorPage /> renders correctly  with a currentPlay 1`] = `
       Object {
         "alignItems": "center",
         "backgroundColor": "#232b2b",
-        "bottom": 0,
         "flexDirection": "row",
         "height": "8%",
         "justifyContent": "space-evenly",
         "minHeight": 40,
-        "position": "absolute",
         "width": "100%",
       }
     }
@@ -992,7 +998,7 @@ exports[`<PlayEditorPage /> renders correctly  with a currentPlay 1`] = `
                   "borderRadius": 5,
                   "borderWidth": 1,
                   "flexDirection": "row",
-                  "height": 40,
+                  "height": 50,
                   "justifyContent": "center",
                   "marginTop": 20,
                   "opacity": 1,
@@ -1220,13 +1226,21 @@ exports[`<PlayEditorPage /> renders correctly  with a currentPlay 1`] = `
       </Text>
     </View>
   </View>
-</View>
+</RNCSafeAreaView>
 `;
 
 exports[`<PlayEditorPage /> renders correctly 1`] = `
-<View
+<RNCSafeAreaView
+  edges={
+    Array [
+      "right",
+      "bottom",
+      "right",
+    ]
+  }
   style={
     Object {
+      "backgroundColor": "#232b2b",
       "flex": 1,
     }
   }
@@ -1938,12 +1952,10 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
       Object {
         "alignItems": "center",
         "backgroundColor": "#232b2b",
-        "bottom": 0,
         "flexDirection": "row",
         "height": "8%",
         "justifyContent": "space-evenly",
         "minHeight": 40,
-        "position": "absolute",
         "width": "100%",
       }
     }
@@ -2111,7 +2123,7 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
                   "borderRadius": 5,
                   "borderWidth": 1,
                   "flexDirection": "row",
-                  "height": 40,
+                  "height": 50,
                   "justifyContent": "center",
                   "marginTop": 20,
                   "opacity": 1,
@@ -2240,5 +2252,5 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
       <Text />
     </View>
   </View>
-</View>
+</RNCSafeAreaView>
 `;

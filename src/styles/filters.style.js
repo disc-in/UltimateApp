@@ -2,7 +2,7 @@ import theme from '../styles/theme.style';
 
 export default {
   wrapper: {
-    paddingTop: 20,
+    flex: 1,
     height: '100%',
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
   },
@@ -22,11 +22,9 @@ export default {
     justifyContent: 'space-between',
   },
   footer: {
-    position: 'absolute',
-    paddingBottom: 10,
-    paddingTop: 5,
-    bottom: 0,
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
+    paddingTop: 5,
+    paddingBottom: 10,
     width: '100%',
     alignItems: 'center',
   },

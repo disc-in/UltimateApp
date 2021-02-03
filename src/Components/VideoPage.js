@@ -1,5 +1,6 @@
 import React from 'react';
 import { Platform, StyleSheet, View, Text, Share } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import theme from '../styles/theme.style';
 import VimeoVideo from './shared/VimeoVideo';
@@ -22,16 +23,14 @@ const VideoPage = (props) => {
   };
 
   return (
-    <View style={styles.videoPage}>
+    <SafeAreaView style={styles.videoPage} edges={['left', 'right', 'bottom']}>
       <View style={styles.video}>
         <VimeoVideo vimeoId={video.video} sounds shouldPlay />
       </View>
       <View style={styles.title}>
         <Text style={styles.text}>{video.title}</Text>
         <Text style={styles.textAuthor}>{video.text}</Text>
-      </View>
-      {video.youtube && (
-        <View style={styles.footer}>
+        {video.youtube && (
           <Button
             onPress={share}
             icon={Platform.select({
@@ -40,12 +39,13 @@ const VideoPage = (props) => {
             })}
             text={I18n.t('videoPage.share')}
             testID="shareButton"
+            style={styles.share}
             small
             light
           />
-        </View>
-      )}
-    </View>
+        )}
+      </View>
+    </SafeAreaView>
   );
 };
 
@@ -65,19 +65,15 @@ const styles = StyleSheet.create({
   },
   text: {
     color: theme.COLOR_PRIMARY,
-    fontSize: theme.FONT_SIZE_MEDIUM,
+    fontSize: theme.FONT_SIZE_LARGE,
     fontWeight: 'bold',
   },
   textAuthor: {
     color: theme.COLOR_SECONDARY,
-    fontSize: theme.FONT_SIZE_SMALL,
+    fontSize: theme.FONT_SIZE_MEDIUM,
   },
-  footer: {
-    position: 'absolute',
-    paddingBottom: 20,
-    paddingTop: 5,
-    bottom: 0,
-    width: '100%',
-    alignItems: 'center',
+  share: {
+    marginTop: 10,
+    alignSelf: 'flex-start',
   },
 });

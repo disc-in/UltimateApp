@@ -1,12 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<FitnessFilters /> renders correctly 1`] = `
-<View
+<RNCSafeAreaView
+  edges={
+    Array [
+      "left",
+      "bottom",
+      "right",
+    ]
+  }
   style={
     Object {
       "backgroundColor": "#fff",
+      "flex": 1,
       "height": "100%",
-      "paddingTop": 20,
     }
   }
 >
@@ -845,10 +852,8 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
       Object {
         "alignItems": "center",
         "backgroundColor": "#fff",
-        "bottom": 0,
         "paddingBottom": 10,
         "paddingTop": 5,
-        "position": "absolute",
         "width": "100%",
       }
     }
@@ -869,7 +874,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           "backgroundColor": "#2a9e91",
           "borderRadius": 5,
           "flexDirection": "row",
-          "height": 40,
+          "height": 50,
           "justifyContent": "center",
           "opacity": 1,
           "paddingHorizontal": 20,
@@ -892,5 +897,5 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
       </Text>
     </View>
   </View>
-</View>
+</RNCSafeAreaView>
 `;

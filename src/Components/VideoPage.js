@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text, Share } from 'react-native';
+import { Platform, StyleSheet, View, Text, Share } from 'react-native';
 
 import theme from '../styles/theme.style';
 import VimeoVideo from './shared/VimeoVideo';
@@ -32,7 +32,17 @@ const VideoPage = (props) => {
       </View>
       {video.youtube && (
         <View style={styles.footer}>
-          <Button onPress={share} icon="share" text={I18n.t('videoPage.share')} testID="shareButton" small light />
+          <Button
+            onPress={share}
+            icon={Platform.select({
+              ios: 'ios-share-outline',
+              default: 'share-social',
+            })}
+            text={I18n.t('videoPage.share')}
+            testID="shareButton"
+            small
+            light
+          />
         </View>
       )}
     </View>

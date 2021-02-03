@@ -41,7 +41,7 @@ export const DrillListPage = (props) => {
         {type === DrillTypes.FRISBEE && (
           <Button
             onPress={openFilters}
-            icon="filter-variant"
+            icon="filter"
             text={I18n.t('drillListPage.filter')}
             testID="filterButton"
             small

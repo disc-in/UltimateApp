@@ -44,7 +44,7 @@ const AboutPage = (props) => {
       <Button
         onPress={sendEmailAsync}
         small
-        icon="email-outline"
+        icon="mail-outline"
         text={I18n.t('aboutPage.feedback.cta')}
         testID="feedbackButton"
         style={styles.button}

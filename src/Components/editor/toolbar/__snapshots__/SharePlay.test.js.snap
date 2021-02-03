@@ -28,7 +28,7 @@ exports[`<SharePlay /> renders correctly 1`] = `
         },
         undefined,
         Object {
-          "fontFamily": "material-community",
+          "fontFamily": "ionicons",
           "fontStyle": "normal",
           "fontWeight": "normal",
         },
@@ -36,7 +36,7 @@ exports[`<SharePlay /> renders correctly 1`] = `
       ]
     }
   >
-    󰒖
+    
   </Text>
 </View>
 `;

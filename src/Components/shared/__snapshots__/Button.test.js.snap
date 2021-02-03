@@ -140,16 +140,15 @@ exports[`<Button /> renders correctly with an icon 1`] = `
   style={
     Object {
       "alignItems": "center",
-      "alignSelf": "center",
       "backgroundColor": "#2a9e91",
       "borderRadius": 5,
       "flexDirection": "row",
-      "height": 30,
+      "height": 40,
       "justifyContent": "center",
       "opacity": 1,
-      "paddingHorizontal": 10,
-      "paddingVertical": 0,
-      "width": "auto",
+      "paddingHorizontal": 20,
+      "paddingVertical": 10,
+      "width": "80%",
     }
   }
   testID="button"

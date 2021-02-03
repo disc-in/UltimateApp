@@ -1338,6 +1338,7 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
           "alignItems": "center",
           "backgroundColor": "#fff",
           "paddingBottom": 10,
+          "paddingTop": 5,
           "width": "100%",
         }
       }
@@ -2670,6 +2671,7 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
           "alignItems": "center",
           "backgroundColor": "#fff",
           "paddingBottom": 10,
+          "paddingTop": 5,
           "width": "100%",
         }
       }

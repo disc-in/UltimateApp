@@ -853,6 +853,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
         "alignItems": "center",
         "backgroundColor": "#fff",
         "paddingBottom": 10,
+        "paddingTop": 5,
         "width": "100%",
       }
     }

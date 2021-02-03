@@ -1,7 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<DrillPageMinimal /> renders correctly with a training and a drill 1`] = `
-Array [
+<RNCSafeAreaView
+  edges={
+    Array [
+      "left",
+      "bottom",
+      "right",
+    ]
+  }
+>
   <View
     style={
       Object {
@@ -456,7 +464,7 @@ Array [
         </View>
       </View>
     </RCTScrollView>
-  </View>,
+  </View>
   <View
     style={
       Object {
@@ -486,7 +494,7 @@ Array [
           "backgroundColor": "#2a9e91",
           "borderRadius": 5,
           "flexDirection": "row",
-          "height": 40,
+          "height": 50,
           "justifyContent": "center",
           "opacity": 1,
           "paddingHorizontal": 20,
@@ -508,6 +516,6 @@ Array [
         Next drill
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</RNCSafeAreaView>
 `;

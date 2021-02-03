@@ -1,6 +1,7 @@
 import React, { useLayoutEffect, useCallback } from 'react';
 import { Platform, StyleSheet, View, ScrollView, Text } from 'react-native';
 import { connect } from 'react-redux';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
@@ -53,7 +54,7 @@ export const DrillPageMinimal = (props) => {
   }, [navigation, currentDrillIndex, training]);
 
   return (
-    <>
+    <SafeAreaView edges={['left', 'bottom', 'right']}>
       <View style={styles.drillPage}>
         <ScrollView style={styles.illustration}>
           {drill.type === DrillTypes.FRISBEE && <FrisbeeDrillIllustration drill={drill} />}
@@ -68,7 +69,7 @@ export const DrillPageMinimal = (props) => {
           <ButtonNext onPress={goToNextDrill} text={I18n.t('drillPageMinimal.next')} />
         )}
       </View>
-    </>
+    </SafeAreaView>
   );
 };
 

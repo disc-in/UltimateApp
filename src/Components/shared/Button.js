@@ -25,7 +25,7 @@ const Button = ({ onPress, icon, text, light, small, style, testID }) => {
 const styles = StyleSheet.create({
   button: {
     width: '80%',
-    height: 40,
+    height: 50,
     borderRadius: 5,
     backgroundColor: theme.MAIN_COLOR,
     paddingVertical: 10,

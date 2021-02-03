@@ -1,6 +1,7 @@
 import React from 'react';
 import { ScrollView, View, Text } from 'react-native';
 import { connect } from 'react-redux';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import I18n from '../utils/i18n';
 import filterStyle from '../styles/filters.style';
@@ -131,7 +132,7 @@ export class FitnessFilters extends React.Component {
     } = this.state;
 
     return (
-      <View style={filterStyle.wrapper}>
+      <SafeAreaView style={filterStyle.wrapper} edges={['left', 'bottom', 'right']}>
         <ScrollView contentContainerStyle={filterStyle.filters}>
           <View style={filterStyle.filter}>
             <Button
@@ -218,7 +219,7 @@ export class FitnessFilters extends React.Component {
             text={I18n.t('fitnessFilters.cta', { count: this.state.displayedDrills.length })}
           />
         </View>
-      </View>
+      </SafeAreaView>
     );
   }
 }

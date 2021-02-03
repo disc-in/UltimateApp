@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import ViewPager from '@react-native-community/viewpager';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import I18n from '../utils/i18n';
 import DrillList from './shared/DrillList';
@@ -93,7 +94,7 @@ const TrainingPage = (props) => {
     const goToFirstDrill = () =>
       navigation.navigate('DrillPageMinimal', { drill: training.drills[0], training, program });
     return (
-      <View key={index}>
+      <SafeAreaView key={index} edges={['left', 'bottom', 'right']}>
         <DrillList
           ListHeaderComponent={renderHeader(training, index)}
           ListFooterComponent={<View style={{ paddingBottom: 30 }} />}
@@ -105,7 +106,7 @@ const TrainingPage = (props) => {
         <View style={styles.footer}>
           <Button onPress={goToFirstDrill} text={I18n.t('trainingPage.start')} testID={`start${index}`} />
         </View>
-      </View>
+      </SafeAreaView>
     );
   };
 
@@ -180,10 +181,6 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
   },
   footer: {
-    position: 'absolute',
-    paddingBottom: 20,
-    paddingTop: 5,
-    bottom: 0,
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     width: '100%',
     alignItems: 'center',

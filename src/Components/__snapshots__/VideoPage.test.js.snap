@@ -1,7 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<VideoPage /> renders correctly 1`] = `
-<View
+<RNCSafeAreaView
+  edges={
+    Array [
+      "left",
+      "right",
+      "bottom",
+    ]
+  }
   style={
     Object {
       "backgroundColor": "#fff",
@@ -115,10 +122,6 @@ exports[`<VideoPage /> renders correctly 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "bottom": 0,
-        "paddingBottom": 20,
-        "paddingTop": 5,
-        "position": "absolute",
         "width": "100%",
       }
     }
@@ -166,5 +169,5 @@ exports[`<VideoPage /> renders correctly 1`] = `
       </Text>
     </View>
   </View>
-</View>
+</RNCSafeAreaView>
 `;

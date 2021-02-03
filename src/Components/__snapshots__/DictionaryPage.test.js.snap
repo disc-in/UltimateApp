@@ -245,7 +245,7 @@ exports[`<DictionaryPage /> renders correctly 1`] = `
               "borderRadius": 5,
               "borderWidth": 1,
               "flexDirection": "row",
-              "height": 40,
+              "height": 50,
               "justifyContent": "center",
               "marginTop": 20,
               "opacity": 1,

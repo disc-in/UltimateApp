@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Text, Share } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import theme from '../styles/theme.style';
 import VimeoVideo from './shared/VimeoVideo';
@@ -22,7 +23,7 @@ const VideoPage = (props) => {
   };
 
   return (
-    <View style={styles.videoPage}>
+    <SafeAreaView style={styles.videoPage} edges={['left', 'right', 'bottom']}>
       <View style={styles.video}>
         <VimeoVideo vimeoId={video.video} sounds shouldPlay />
       </View>
@@ -35,7 +36,7 @@ const VideoPage = (props) => {
           <Button onPress={share} icon="share" text={I18n.t('videoPage.share')} testID="shareButton" small light />
         </View>
       )}
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -63,10 +64,6 @@ const styles = StyleSheet.create({
     fontSize: theme.FONT_SIZE_SMALL,
   },
   footer: {
-    position: 'absolute',
-    paddingBottom: 20,
-    paddingTop: 5,
-    bottom: 0,
     width: '100%',
     alignItems: 'center',
   },

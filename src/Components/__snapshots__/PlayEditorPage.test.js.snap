@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<PlayEditorPage /> renders correctly  with a currentPlay 1`] = `
-<View
+<RNCSafeAreaView
   style={
     Object {
       "flex": 1,
@@ -1220,11 +1220,11 @@ exports[`<PlayEditorPage /> renders correctly  with a currentPlay 1`] = `
       </Text>
     </View>
   </View>
-</View>
+</RNCSafeAreaView>
 `;
 
 exports[`<PlayEditorPage /> renders correctly 1`] = `
-<View
+<RNCSafeAreaView
   style={
     Object {
       "flex": 1,
@@ -2240,5 +2240,5 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
       <Text />
     </View>
   </View>
-</View>
+</RNCSafeAreaView>
 `;

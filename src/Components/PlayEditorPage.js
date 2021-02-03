@@ -2,6 +2,7 @@ import React, { useState, useEffect, useLayoutEffect } from 'react';
 import { StyleSheet, View, TouchableOpacity } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { connect } from 'react-redux';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import Drill from './animation/Drill';
 import I18n from '../utils/i18n';
@@ -97,7 +98,7 @@ export const PlayEditorPage = (props) => {
   };
 
   return (
-    <View style={styles.playEditorPage}>
+    <SafeAreaView style={styles.playEditorPage}>
       <View style={styles.centeredView}>
         {modalRenameVisible ? (
           <RenamePlayModal currentPlay={currentPlay} onRename={setTitle} close={() => setModalRenameVisible(false)} />
@@ -128,7 +129,7 @@ export const PlayEditorPage = (props) => {
         <AnimationHistory animation={currentPlay.animation} onAnimationHistoryChange={onAnimationChange} />
         <SharePlay currentPlay={currentPlay} />
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 

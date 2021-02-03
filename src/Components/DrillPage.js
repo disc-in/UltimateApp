@@ -1,5 +1,6 @@
 import React, { useRef, useLayoutEffect } from 'react';
 import {
+  Platform,
   ScrollView,
   Share,
   StyleSheet,
@@ -12,7 +13,7 @@ import {
 } from 'react-native';
 import { connect } from 'react-redux';
 import { useHeaderHeight } from '@react-navigation/stack';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
 
 import I18n from '../utils/i18n';
 import { createLink } from '../utils/firebase';
@@ -108,7 +109,14 @@ export const DrillPage = (props) => {
           <StartButton onPress={onPressStartButton} text={I18n.t('drillPage.start')} />
           <View style={styles.shareButton}>
             <TouchableOpacity onPress={() => share(drill)} testID="shareButton">
-              <MaterialCommunityIcons name="share-variant" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
+              <Ionicons
+                name={Platform.select({
+                  ios: 'ios-share-outline',
+                  default: 'share-social',
+                })}
+                color={theme.COLOR_PRIMARY_LIGHT}
+                size={30}
+              />
             </TouchableOpacity>
           </View>
         </View>

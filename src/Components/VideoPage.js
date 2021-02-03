@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text, Share } from 'react-native';
+import { Platform, StyleSheet, View, Text, Share } from 'react-native';
 
 import theme from '../styles/theme.style';
 import VimeoVideo from './shared/VimeoVideo';

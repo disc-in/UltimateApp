@@ -30,12 +30,18 @@ const VideoPage = (props) => {
       <View style={styles.title}>
         <Text style={styles.text}>{video.title}</Text>
         <Text style={styles.textAuthor}>{video.text}</Text>
+        {video.youtube && (
+          <Button
+            onPress={share}
+            icon="share"
+            text={I18n.t('videoPage.share')}
+            testID="shareButton"
+            style={styles.share}
+            small
+            light
+          />
+        )}
       </View>
-      {video.youtube && (
-        <View style={styles.footer}>
-          <Button onPress={share} icon="share" text={I18n.t('videoPage.share')} testID="shareButton" small light />
-        </View>
-      )}
     </SafeAreaView>
   );
 };
@@ -56,15 +62,15 @@ const styles = StyleSheet.create({
   },
   text: {
     color: theme.COLOR_PRIMARY,
-    fontSize: theme.FONT_SIZE_MEDIUM,
+    fontSize: theme.FONT_SIZE_LARGE,
     fontWeight: 'bold',
   },
   textAuthor: {
     color: theme.COLOR_SECONDARY,
-    fontSize: theme.FONT_SIZE_SMALL,
+    fontSize: theme.FONT_SIZE_MEDIUM,
   },
-  footer: {
-    width: '100%',
-    alignItems: 'center',
+  share: {
+    marginTop: 10,
+    alignSelf: 'flex-start',
   },
 });

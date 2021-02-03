@@ -54,14 +54,12 @@ export const DrillPageMinimal = (props) => {
   }, [navigation, currentDrillIndex, training]);
 
   return (
-    <SafeAreaView edges={['left', 'bottom', 'right']}>
-      <View style={styles.drillPage}>
-        <ScrollView style={styles.illustration}>
-          {drill.type === DrillTypes.FRISBEE && <FrisbeeDrillIllustration drill={drill} />}
-          {drill.type === DrillTypes.FITNESS && <FitnessDrillIllustration drill={drill} />}
-          <Description drill={drill} minimal />
-        </ScrollView>
-      </View>
+    <SafeAreaView edges={['left', 'bottom', 'right']} style={styles.drillPage}>
+      <ScrollView style={styles.illustration}>
+        {drill.type === DrillTypes.FRISBEE && <FrisbeeDrillIllustration drill={drill} />}
+        {drill.type === DrillTypes.FITNESS && <FitnessDrillIllustration drill={drill} />}
+        <Description drill={drill} minimal />
+      </ScrollView>
       <View style={styles.footer}>
         {isLastTraining ? (
           <ButtonNext onPress={finishTraining} text={I18n.t('drillPageMinimal.finish')} />
@@ -81,7 +79,7 @@ const styles = StyleSheet.create({
   drillPage: {
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     flex: 1,
-    marginBottom: 50,
+    marginBottom: 60,
   },
   headerTitle: {
     flexDirection: 'column',
@@ -117,17 +115,14 @@ const styles = StyleSheet.create({
     fontSize: theme.FONT_SIZE_LARGE,
     fontWeight: 'bold',
     textAlign: 'center',
-    marginRight: 46, // Matches the details icon width
   },
   illustration: {
     flexGrow: 1,
     flexShrink: 0,
   },
   footer: {
-    position: 'absolute',
     paddingBottom: 10,
     paddingTop: 5,
-    bottom: 0,
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     width: '100%',
     alignItems: 'center',

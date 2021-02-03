@@ -100,7 +100,7 @@ exports[`<VideoPage /> renders correctly 1`] = `
       style={
         Object {
           "color": "#232b2b",
-          "fontSize": 16,
+          "fontSize": 20,
           "fontWeight": "bold",
         }
       }
@@ -111,21 +111,12 @@ exports[`<VideoPage /> renders correctly 1`] = `
       style={
         Object {
           "color": "#A6A6A6",
-          "fontSize": 14,
+          "fontSize": 16,
         }
       }
     >
       Rise Up Ultimate
     </Text>
-  </View>
-  <View
-    style={
-      Object {
-        "alignItems": "center",
-        "width": "100%",
-      }
-    }
-  >
     <View
       accessible={true}
       focusable={true}
@@ -139,7 +130,7 @@ exports[`<VideoPage /> renders correctly 1`] = `
       style={
         Object {
           "alignItems": "center",
-          "alignSelf": "center",
+          "alignSelf": "flex-start",
           "backgroundColor": "#fff",
           "borderColor": "#2a9e91",
           "borderRadius": 5,
@@ -147,6 +138,7 @@ exports[`<VideoPage /> renders correctly 1`] = `
           "flexDirection": "row",
           "height": 30,
           "justifyContent": "center",
+          "marginTop": 10,
           "opacity": 1,
           "paddingHorizontal": 10,
           "paddingVertical": 0,

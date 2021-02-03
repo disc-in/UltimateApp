@@ -182,6 +182,7 @@ const styles = StyleSheet.create({
   },
   footer: {
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
+    paddingBottom: 10,
     width: '100%',
     alignItems: 'center',
   },

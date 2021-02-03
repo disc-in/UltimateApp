@@ -1337,6 +1337,7 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
         Object {
           "alignItems": "center",
           "backgroundColor": "#fff",
+          "paddingBottom": 10,
           "width": "100%",
         }
       }
@@ -2668,6 +2669,7 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
         Object {
           "alignItems": "center",
           "backgroundColor": "#fff",
+          "paddingBottom": 10,
           "width": "100%",
         }
       }

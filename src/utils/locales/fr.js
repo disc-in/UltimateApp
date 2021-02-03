@@ -95,7 +95,7 @@ export default {
     junior: 'Juniors',
     programs: 'Programmes',
     leanTitle: 'Exercices',
-    leanSubtitle: 'Tous nos exercises pour garder la forme !',
+    leanSubtitle: 'Tous nos exercices pour garder la forme !',
     bodyweightTitle: 'Sans matériel',
     bodyweightSubtitle: 'Des programmes conçus pour plusieurs semaines',
     gymTitle: 'En salle',

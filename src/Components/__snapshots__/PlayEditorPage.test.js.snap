@@ -1214,7 +1214,7 @@ exports[`<PlayEditorPage /> renders correctly  with a currentPlay 1`] = `
             },
             undefined,
             Object {
-              "fontFamily": "material-community",
+              "fontFamily": "ionicons",
               "fontStyle": "normal",
               "fontWeight": "normal",
             },
@@ -1222,7 +1222,7 @@ exports[`<PlayEditorPage /> renders correctly  with a currentPlay 1`] = `
           ]
         }
       >
-        󰒖
+        
       </Text>
     </View>
   </View>

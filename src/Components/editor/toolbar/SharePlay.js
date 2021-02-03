@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
-import { TouchableOpacity, Share } from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Platform, TouchableOpacity, Share } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 
 import theme from '../../../styles/theme.style';
 import I18n from '../../../utils/i18n';
@@ -24,7 +24,14 @@ const SharePlay = ({ currentPlay }) => {
 
   return (
     <TouchableOpacity onPress={share} testID="shareButton">
-      <MaterialCommunityIcons name="share" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
+      <Ionicons
+        name={Platform.select({
+          ios: 'ios-share-outline',
+          default: 'share-social-outline',
+        })}
+        color={theme.COLOR_PRIMARY_LIGHT}
+        size={30}
+      />
     </TouchableOpacity>
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text, Share } from 'react-native';
+import { Platform, StyleSheet, View, Text, Share } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import theme from '../styles/theme.style';
@@ -33,7 +33,10 @@ const VideoPage = (props) => {
         {video.youtube && (
           <Button
             onPress={share}
-            icon="share"
+            icon={Platform.select({
+              ios: 'ios-share-outline',
+              default: 'share-social',
+            })}
             text={I18n.t('videoPage.share')}
             testID="shareButton"
             style={styles.share}

@@ -1715,7 +1715,7 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                       },
                                       undefined,
                                       Object {
-                                        "fontFamily": "material-community",
+                                        "fontFamily": "ionicons",
                                         "fontStyle": "normal",
                                         "fontWeight": "normal",
                                       },
@@ -1723,7 +1723,7 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                     ]
                                   }
                                 >
-                                  󰒗
+                                  
                                 </Text>
                               </View>
                             </View>

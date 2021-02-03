@@ -1102,7 +1102,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
               },
             ],
             Object {
-              "fontFamily": "material-community",
+              "fontFamily": "ionicons",
               "fontStyle": "normal",
               "fontWeight": "normal",
             },
@@ -1110,7 +1110,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           ]
         }
       >
-        󰈶
+        
       </Text>
       <Text
         style={
@@ -1810,7 +1810,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
               },
             ],
             Object {
-              "fontFamily": "material-community",
+              "fontFamily": "ionicons",
               "fontStyle": "normal",
               "fontWeight": "normal",
             },
@@ -1818,7 +1818,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           ]
         }
       >
-        󰈶
+        
       </Text>
       <Text
         style={

@@ -40,7 +40,7 @@ export const DrillListPage = (props) => {
         <Text style={styles.counter}>{I18n.t('drillListPage.availableDrills', { count: displayedDrills.length })}</Text>
         <Button
           onPress={openFilters}
-          icon="filter-variant"
+          icon="filter"
           text={I18n.t('drillListPage.filter')}
           testID="filterButton"
           small

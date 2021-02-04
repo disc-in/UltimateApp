@@ -904,7 +904,10 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                     onStartShouldSetResponder={[Function]}
                                     style={
                                       Object {
+                                        "alignItems": "center",
+                                        "flex": 1,
                                         "flexDirection": "row",
+                                        "justifyContent": "space-between",
                                         "opacity": 1,
                                         "padding": 20,
                                       }
@@ -913,9 +916,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                     <View
                                       style={
                                         Object {
-                                          "alignItems": "center",
-                                          "flexGrow": 0,
-                                          "flexShrink": 0,
+                                          "flexShrink": 1,
                                         }
                                       }
                                     >
@@ -949,28 +950,15 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                       onStartShouldSetResponder={[Function]}
                                       style={
                                         Object {
-                                          "flex": 1,
+                                          "height": "100%",
+                                          "justifyContent": "center",
                                           "opacity": 1,
+                                          "padding": 10,
                                         }
                                       }
                                       testID="doneIcon"
                                     >
-                                      <View
-                                        style={
-                                          Object {
-                                            "opacity": 1,
-                                          }
-                                        }
-                                      >
-                                        <Text />
-                                      </View>
-                                      <View
-                                        style={
-                                          Object {
-                                            "opacity": 0,
-                                          }
-                                        }
-                                      >
+                                      <View>
                                         <Text />
                                       </View>
                                     </View>
@@ -992,7 +980,10 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                     onStartShouldSetResponder={[Function]}
                                     style={
                                       Object {
+                                        "alignItems": "center",
+                                        "flex": 1,
                                         "flexDirection": "row",
+                                        "justifyContent": "space-between",
                                         "opacity": 1,
                                         "padding": 20,
                                       }
@@ -1001,9 +992,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                     <View
                                       style={
                                         Object {
-                                          "alignItems": "center",
-                                          "flexGrow": 0,
-                                          "flexShrink": 0,
+                                          "flexShrink": 1,
                                         }
                                       }
                                     >
@@ -1041,7 +1030,10 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                     onStartShouldSetResponder={[Function]}
                                     style={
                                       Object {
+                                        "alignItems": "center",
+                                        "flex": 1,
                                         "flexDirection": "row",
+                                        "justifyContent": "space-between",
                                         "opacity": 1,
                                         "padding": 20,
                                       }
@@ -1050,9 +1042,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                     <View
                                       style={
                                         Object {
-                                          "alignItems": "center",
-                                          "flexGrow": 0,
-                                          "flexShrink": 0,
+                                          "flexShrink": 1,
                                         }
                                       }
                                     >
@@ -2037,7 +2027,10 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                     onStartShouldSetResponder={[Function]}
                                     style={
                                       Object {
+                                        "alignItems": "center",
+                                        "flex": 1,
                                         "flexDirection": "row",
+                                        "justifyContent": "space-between",
                                         "opacity": 1,
                                         "padding": 20,
                                       }
@@ -2046,9 +2039,7 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                     <View
                                       style={
                                         Object {
-                                          "alignItems": "center",
-                                          "flexGrow": 0,
-                                          "flexShrink": 0,
+                                          "flexShrink": 1,
                                         }
                                       }
                                     >
@@ -2082,63 +2073,25 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                       onStartShouldSetResponder={[Function]}
                                       style={
                                         Object {
-                                          "flex": 1,
+                                          "height": "100%",
+                                          "justifyContent": "center",
                                           "opacity": 1,
+                                          "padding": 10,
                                         }
                                       }
                                       testID="doneIcon"
                                     >
-                                      <View
-                                        style={
-                                          Object {
-                                            "opacity": 1,
-                                          }
-                                        }
-                                      >
+                                      <View>
                                         <Text
                                           allowFontScaling={false}
                                           style={
                                             Array [
                                               Object {
-                                                "color": "#A6A6A6",
+                                                "color": undefined,
                                                 "fontSize": 26,
                                               },
                                               Object {
-                                                "marginLeft": 20,
-                                                "position": "absolute",
-                                                "right": 0,
-                                              },
-                                              Object {
-                                                "fontFamily": "material-community",
-                                                "fontStyle": "normal",
-                                                "fontWeight": "normal",
-                                              },
-                                              Object {},
-                                            ]
-                                          }
-                                        >
-                                          󰗡
-                                        </Text>
-                                      </View>
-                                      <View
-                                        style={
-                                          Object {
-                                            "opacity": 0,
-                                          }
-                                        }
-                                      >
-                                        <Text
-                                          allowFontScaling={false}
-                                          style={
-                                            Array [
-                                              Object {
-                                                "color": "#2a9e91",
-                                                "fontSize": 26,
-                                              },
-                                              Object {
-                                                "marginLeft": 20,
-                                                "position": "absolute",
-                                                "right": 0,
+                                                "color": "rgba(166, 166, 166, 1)",
                                               },
                                               Object {
                                                 "fontFamily": "material-community",
@@ -2171,7 +2124,10 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                     onStartShouldSetResponder={[Function]}
                                     style={
                                       Object {
+                                        "alignItems": "center",
+                                        "flex": 1,
                                         "flexDirection": "row",
+                                        "justifyContent": "space-between",
                                         "opacity": 1,
                                         "padding": 20,
                                       }
@@ -2180,9 +2136,7 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                     <View
                                       style={
                                         Object {
-                                          "alignItems": "center",
-                                          "flexGrow": 0,
-                                          "flexShrink": 0,
+                                          "flexShrink": 1,
                                         }
                                       }
                                     >
@@ -2220,7 +2174,10 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                     onStartShouldSetResponder={[Function]}
                                     style={
                                       Object {
+                                        "alignItems": "center",
+                                        "flex": 1,
                                         "flexDirection": "row",
+                                        "justifyContent": "space-between",
                                         "opacity": 1,
                                         "padding": 20,
                                       }
@@ -2229,9 +2186,7 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                     <View
                                       style={
                                         Object {
-                                          "alignItems": "center",
-                                          "flexGrow": 0,
-                                          "flexShrink": 0,
+                                          "flexShrink": 1,
                                         }
                                       }
                                     >

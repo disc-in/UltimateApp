@@ -307,30 +307,28 @@ exports[`<FitnessDrillIllustration /> links to any step and finishes at the end 
             }
             testID="doneIcon"
           >
-            <View>
-              <Text
-                allowFontScaling={false}
-                style={
-                  Array [
-                    Object {
-                      "color": undefined,
-                      "fontSize": 26,
-                    },
-                    Object {
-                      "color": "rgba(166, 166, 166, 1)",
-                    },
-                    Object {
-                      "fontFamily": "material-community",
-                      "fontStyle": "normal",
-                      "fontWeight": "normal",
-                    },
-                    Object {},
-                  ]
-                }
-              >
-                󰗠
-              </Text>
-            </View>
+            <Text
+              allowFontScaling={false}
+              style={
+                Array [
+                  Object {
+                    "color": undefined,
+                    "fontSize": 26,
+                  },
+                  Object {
+                    "color": "rgba(166, 166, 166, 1)",
+                  },
+                  Object {
+                    "fontFamily": "material-community",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              󰗠
+            </Text>
           </View>
         </View>
       </View>
@@ -613,9 +611,7 @@ exports[`<FitnessDrillIllustration /> renders correctly 1`] = `
             }
             testID="doneIcon"
           >
-            <View>
-              <Text />
-            </View>
+            <Text />
           </View>
         </View>
       </View>

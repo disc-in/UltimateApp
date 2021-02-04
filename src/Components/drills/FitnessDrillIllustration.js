@@ -26,7 +26,7 @@ const FitnessDrillIllustration = (props) => {
       Animated.timing(checkAnimation, {
         toValue: 1,
         duration: 1000,
-        easing: Easing.easeInOutQuint,
+        easing: Easing.easeOutQuint,
         useNativeDriver: false,
       }),
       Animated.timing(checkAnimation, {
@@ -76,9 +76,7 @@ const FitnessDrillIllustration = (props) => {
         </View>
         {isCurrent && (
           <TouchableOpacity style={styles.doneAnimation} onPress={() => handleAnimation()} testID="doneIcon">
-            <Animated.View>
-              <AnimatedIcon name="check-circle" size={26} style={{ color: checkColorInterpolation }} />
-            </Animated.View>
+            <AnimatedIcon name="check-circle" size={26} style={{ color: checkColorInterpolation }} />
           </TouchableOpacity>
         )}
       </TouchableOpacity>

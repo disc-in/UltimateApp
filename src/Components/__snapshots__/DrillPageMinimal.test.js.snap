@@ -219,9 +219,7 @@ Array [
                     }
                     testID="doneIcon"
                   >
-                    <View>
-                      <Text />
-                    </View>
+                    <Text />
                   </View>
                 </View>
               </View>

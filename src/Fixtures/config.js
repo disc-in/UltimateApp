@@ -2,6 +2,7 @@ export const DrillTypes = {
   FITNESS: 'fitness',
   FRISBEE: 'frisbee',
   GAME: 'game',
+  OTHER: 'other',
 };
 
 export const Intensities = {

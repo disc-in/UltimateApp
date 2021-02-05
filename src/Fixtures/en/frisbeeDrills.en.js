@@ -552,7 +552,7 @@ const mas30 = {
   id: 8,
   type: DrillTypes.FITNESS,
   author: '',
-  title: 'MAS : 30/30',
+  title: 'MAS 30',
   image: 'https://zupimages.net/up/20/28/fo2i.jpg',
   description:
     'At the end of a contest, at the end of a game or after five turnovers, you want to dominate the field. This program is based on a mix between (lactic) resistance, MAS and still a lot of speed and explosiveness',
@@ -1217,7 +1217,7 @@ const tDrill = {
 
 const mas30Light = {
   id: 13,
-  type: DrillTypes.FITNESS,
+  type: DrillTypes.OTHER,
   author: '',
   title: "MAS 30'",
   image: 'https://zupimages.net/up/20/28/fo2i.jpg',
@@ -1445,7 +1445,7 @@ const circuit = {
 
 const rest = {
   id: 15,
-  type: DrillTypes.FITNESS,
+  type: DrillTypes.OTHER,
   author: '',
   title: 'Recovery Week',
   image: 'https://zupimages.net/up/20/18/hwnh.jpg',
@@ -1594,7 +1594,7 @@ const mas15 = {
   id: 20,
   type: DrillTypes.FITNESS,
   author: '',
-  title: " MAS' 15",
+  title: " MAS 15'",
   image: 'https://zupimages.net/up/20/28/fo2i.jpg',
   description:
     'This workout is designed to increase your quickness, improve your footwork, and generally make you more explosive and agile.\nAfter your warmup, set up your cones to make use of the full space available to you by dropping the first at one end of your available space and another about 20 yards away. Then, fill in the space between with your remaining cones in a serpentine pattern, walking each cone about five yards away in a diagonal opposite direction from the last one. As easy as that, you have created a small agility course',
@@ -2165,7 +2165,7 @@ const ladderPractice = {
 
 const agility1 = {
   id: 25,
-  type: DrillTypes.FITNESS,
+  type: DrillTypes.OTHER,
   author: '',
   title: 'Explosivity and Stability',
   image: 'https://zupimages.net/up/20/28/cf47.jpg',
@@ -2265,7 +2265,7 @@ const agility1 = {
 
 const strength1 = {
   id: 26,
-  type: DrillTypes.FITNESS,
+  type: DrillTypes.OTHER,
   author: '',
   title: 'Gain Power',
   image: 'https://zupimages.net/up/20/28/8808.jpg',
@@ -2356,7 +2356,7 @@ const strength1 = {
 
 const strength2 = {
   id: 27,
-  type: DrillTypes.FITNESS,
+  type: DrillTypes.OTHER,
   author: '',
   title: 'Gain Power',
   image: 'https://zupimages.net/up/20/28/8808.jpg',
@@ -2438,7 +2438,7 @@ const strength2 = {
 
 const agility2 = {
   id: 28,
-  type: DrillTypes.FITNESS,
+  type: DrillTypes.OTHER,
   author: '',
   title: 'Explosivity and Stability',
   image: 'https://zupimages.net/up/20/28/cf47.jpg',
@@ -2711,7 +2711,7 @@ const strength3 = {
 
 const strength16 = {
   id: 31,
-  type: DrillTypes.FITNESS,
+  type: DrillTypes.OTHER,
   author: '',
   title: 'Gain Power',
   image: 'https://zupimages.net/up/20/28/8808.jpg',
@@ -2802,7 +2802,7 @@ const strength16 = {
 
 const agility16 = {
   id: 32,
-  type: DrillTypes.FITNESS,
+  type: DrillTypes.OTHER,
   author: '',
   title: 'Explosivity and Stability',
   image: 'https://zupimages.net/up/20/28/cf47.jpg',
@@ -3075,7 +3075,7 @@ const strength15 = {
 
 const strength14 = {
   id: 35,
-  type: DrillTypes.FITNESS,
+  type: DrillTypes.OTHER,
   author: '',
   title: 'Gain Power',
   image: 'https://zupimages.net/up/20/28/8808.jpg',
@@ -3157,7 +3157,7 @@ const strength14 = {
 
 const agility14 = {
   id: 36,
-  type: DrillTypes.FITNESS,
+  type: DrillTypes.OTHER,
   author: '',
   title: 'In-Season',
   image: 'https://zupimages.net/up/20/19/kj0f.jpg',
@@ -3239,7 +3239,7 @@ const agility14 = {
 
 const agility13 = {
   id: 37,
-  type: DrillTypes.FITNESS,
+  type: DrillTypes.OTHER,
   author: '',
   title: 'In-Season',
   image: 'https://zupimages.net/up/20/19/kj0f.jpg',
@@ -3321,7 +3321,7 @@ const agility13 = {
 
 const strength13 = {
   id: 38,
-  type: DrillTypes.FITNESS,
+  type: DrillTypes.OTHER,
   author: '',
   title: 'Gain Power',
   image: 'https://zupimages.net/up/20/28/8808.jpg',
@@ -3394,7 +3394,7 @@ const strength13 = {
 
 const agility12 = {
   id: 39,
-  type: DrillTypes.FITNESS,
+  type: DrillTypes.OTHER,
   author: '',
   title: 'Explosivity and Stability',
   image: 'https://zupimages.net/up/20/28/cf47.jpg',
@@ -3485,7 +3485,7 @@ const agility12 = {
 
 const strength12 = {
   id: 40,
-  type: DrillTypes.FITNESS,
+  type: DrillTypes.OTHER,
   author: '',
   title: 'Gain Power',
   image: 'https://zupimages.net/up/20/28/8808.jpg',
@@ -3558,7 +3558,7 @@ const strength12 = {
 
 const agility11 = {
   id: 41,
-  type: DrillTypes.FITNESS,
+  type: DrillTypes.OTHER,
   author: '',
   title: 'Explosivity and Stability',
   image: 'https://zupimages.net/up/20/28/cf47.jpg',
@@ -3649,7 +3649,7 @@ const agility11 = {
 
 const strength11 = {
   id: 42,
-  type: DrillTypes.FITNESS,
+  type: DrillTypes.OTHER,
   author: '',
   title: 'Gain Power',
   image: 'https://zupimages.net/up/20/28/8808.jpg',
@@ -3731,7 +3731,7 @@ const strength11 = {
 
 const agility10 = {
   id: 43,
-  type: DrillTypes.FITNESS,
+  type: DrillTypes.OTHER,
   author: '',
   title: 'Explosivity - In-Season',
   image: 'https://zupimages.net/up/20/28/ojz4.jpg',
@@ -3822,7 +3822,7 @@ const agility10 = {
 
 const strength10 = {
   id: 44,
-  type: DrillTypes.FITNESS,
+  type: DrillTypes.OTHER,
   author: '',
   title: 'Power - In-Season',
   image: 'https://zupimages.net/up/20/28/eml2.jpg',
@@ -3904,7 +3904,7 @@ const strength10 = {
 
 const agility9 = {
   id: 45,
-  type: DrillTypes.FITNESS,
+  type: DrillTypes.OTHER,
   author: '',
   title: 'Explosivity and Stability',
   image: 'https://zupimages.net/up/20/28/cf47.jpg',
@@ -3995,7 +3995,7 @@ const agility9 = {
 
 const strength9 = {
   id: 46,
-  type: DrillTypes.FITNESS,
+  type: DrillTypes.OTHER,
   author: '',
   title: 'Gain Power',
   image: 'https://zupimages.net/up/20/28/8808.jpg',
@@ -4250,7 +4250,7 @@ const strength8 = {
 
 const agility7 = {
   id: 49,
-  type: DrillTypes.FITNESS,
+  type: DrillTypes.OTHER,
   author: '',
   title: 'Explosivity and Stability',
   image: 'https://zupimages.net/up/20/28/cf47.jpg',
@@ -4341,7 +4341,7 @@ const agility7 = {
 
 const strength7 = {
   id: 50,
-  type: DrillTypes.FITNESS,
+  type: DrillTypes.OTHER,
   author: '',
   title: 'Gain Power',
   image: 'https://zupimages.net/up/20/28/8808.jpg',
@@ -4432,7 +4432,7 @@ const strength7 = {
 
 const agility6 = {
   id: 51,
-  type: DrillTypes.FITNESS,
+  type: DrillTypes.OTHER,
   author: '',
   title: 'Explosivity and Stability',
   image: 'https://zupimages.net/up/20/28/cf47.jpg',
@@ -4514,7 +4514,7 @@ const agility6 = {
 
 const strength6 = {
   id: 52,
-  type: DrillTypes.FITNESS,
+  type: DrillTypes.OTHER,
   author: '',
   title: 'Gain Power',
   image: 'https://zupimages.net/up/20/28/8808.jpg',
@@ -8568,6 +8568,10 @@ export const drills = [
   strength8,
   strength10,
   strength15,
+  mas30,
+  suicide,
+  mas15,
+  mas15Long,
 
   // Frisbee
   basicThrowsDrill,
@@ -8633,16 +8637,31 @@ export const drills = [
   square,
 
   // Commenting game drills because we don't want them in the drill list, only part of programs
-  // // Games
-  // normalGame,
-  // game3v3,
-  // game5v5,
-  // longShotGame,
-  // lineGame,
-  // longestGame,
-  // trainingGame,
-  // helpGame,
   boxGame,
+  rest,
+  agility1,
+  strength1,
+  agility2,
+  strength2,
+  agility6,
+  strength6,
+  agility7,
+  strength7,
+  agility9,
+  strength9,
+  agility10,
+  strength10,
+  agility11,
+  strength11,
+  agility12,
+  strength12,
+  agility13,
+  strength13,
+  agility14,
+  strength14,
+  agility16,
+  strength16,
+  mas30Light,
 ];
 
 export const programs = [

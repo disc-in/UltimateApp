@@ -141,57 +141,7 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
                 "padding": 5,
               }
             }
-          >
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                }
-              }
-            >
-              <Icon
-                allowFontScaling={false}
-                color="#232b2b"
-                name="account-multiple"
-                size={22}
-              />
-              <Text
-                style={
-                  Object {
-                    "color": "#A6A6A6",
-                    "fontSize": 16,
-                  }
-                }
-              >
-                2
-                +
-              </Text>
-            </View>
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                }
-              }
-            >
-              <Icon
-                allowFontScaling={false}
-                color="#232b2b"
-                name="clock-outline"
-                size={22}
-              />
-              <Text
-                style={
-                  Object {
-                    "color": "#A6A6A6",
-                    "fontSize": 16,
-                  }
-                }
-              >
-                0 h 40
-              </Text>
-            </View>
-          </View>
+          />
           <Text
             style={
               Object {
@@ -987,47 +937,7 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
                   "padding": 5,
                 }
               }
-            >
-              <View
-                style={
-                  Object {
-                    "alignItems": "center",
-                  }
-                }
-              >
-                <Text />
-                <Text
-                  style={
-                    Object {
-                      "color": "#A6A6A6",
-                      "fontSize": 16,
-                    }
-                  }
-                >
-                  2
-                  +
-                </Text>
-              </View>
-              <View
-                style={
-                  Object {
-                    "alignItems": "center",
-                  }
-                }
-              >
-                <Text />
-                <Text
-                  style={
-                    Object {
-                      "color": "#A6A6A6",
-                      "fontSize": 16,
-                    }
-                  }
-                >
-                  0 h 40
-                </Text>
-              </View>
-            </View>
+            />
             <Text
               style={
                 Object {
@@ -1337,46 +1247,7 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
           "width": "100%",
         }
       }
-    >
-      <View
-        accessible={true}
-        focusable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#2a9e91",
-            "borderRadius": 5,
-            "flexDirection": "row",
-            "height": 40,
-            "justifyContent": "center",
-            "opacity": 1,
-            "paddingHorizontal": 20,
-            "paddingVertical": 10,
-            "width": "80%",
-          }
-        }
-        testID="start0"
-      >
-        <Text
-          style={
-            Object {
-              "color": "#fff",
-              "fontSize": 16,
-              "textAlign": "center",
-            }
-          }
-        >
-          Start training
-        </Text>
-      </View>
-    </View>
+    />
   </View>
   <View
     collapsable={false}
@@ -1498,57 +1369,7 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
                 "padding": 5,
               }
             }
-          >
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                }
-              }
-            >
-              <Icon
-                allowFontScaling={false}
-                color="#232b2b"
-                name="account-multiple"
-                size={22}
-              />
-              <Text
-                style={
-                  Object {
-                    "color": "#A6A6A6",
-                    "fontSize": 16,
-                  }
-                }
-              >
-                2
-                +
-              </Text>
-            </View>
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                }
-              }
-            >
-              <Icon
-                allowFontScaling={false}
-                color="#232b2b"
-                name="clock-outline"
-                size={22}
-              />
-              <Text
-                style={
-                  Object {
-                    "color": "#A6A6A6",
-                    "fontSize": 16,
-                  }
-                }
-              >
-                1 h
-              </Text>
-            </View>
-          </View>
+          />
           <Text
             style={
               Object {
@@ -2315,47 +2136,7 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
                   "padding": 5,
                 }
               }
-            >
-              <View
-                style={
-                  Object {
-                    "alignItems": "center",
-                  }
-                }
-              >
-                <Text />
-                <Text
-                  style={
-                    Object {
-                      "color": "#A6A6A6",
-                      "fontSize": 16,
-                    }
-                  }
-                >
-                  2
-                  +
-                </Text>
-              </View>
-              <View
-                style={
-                  Object {
-                    "alignItems": "center",
-                  }
-                }
-              >
-                <Text />
-                <Text
-                  style={
-                    Object {
-                      "color": "#A6A6A6",
-                      "fontSize": 16,
-                    }
-                  }
-                >
-                  1 h
-                </Text>
-              </View>
-            </View>
+            />
             <Text
               style={
                 Object {
@@ -2665,46 +2446,7 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
           "width": "100%",
         }
       }
-    >
-      <View
-        accessible={true}
-        focusable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#2a9e91",
-            "borderRadius": 5,
-            "flexDirection": "row",
-            "height": 40,
-            "justifyContent": "center",
-            "opacity": 1,
-            "paddingHorizontal": 20,
-            "paddingVertical": 10,
-            "width": "80%",
-          }
-        }
-        testID="start1"
-      >
-        <Text
-          style={
-            Object {
-              "color": "#fff",
-              "fontSize": 16,
-              "textAlign": "center",
-            }
-          }
-        >
-          Start training
-        </Text>
-      </View>
-    </View>
+    />
   </View>
 </RNCViewPager>
 `;

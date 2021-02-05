@@ -67,21 +67,33 @@ describe('<TrainingPage />', () => {
     expect(mockedSetPage).toBeCalledWith(1);
   });
 
-  it('links to drill page', async () => {
-    const trainingFirstDrill = training.drills[0];
+  if (program.type !== 'fitness') {
+    it('links to drill page', async () => {
+      const trainingFirstDrill = training.drills[0];
 
-    const { queryByText } = render(<TrainingPage navigation={navigation} route={route} />);
+      const { queryByText } = render(<TrainingPage navigation={navigation} route={route} />);
 
-    await fireEvent.press(queryByText(trainingFirstDrill.title));
+      await fireEvent.press(queryByText(trainingFirstDrill.title));
 
-    expect(navigation.navigate).toBeCalledWith('DrillPageMinimal', { drill: trainingFirstDrill, training, program });
-  });
+      expect(navigation.navigate).toBeCalledWith('DrillPageMinimal', { drill: trainingFirstDrill, training, program });
+    });
 
-  it('starts training links to first drill', async () => {
-    const { queryByTestId } = render(<TrainingPage navigation={navigation} route={route} />);
+    it('starts training links to first drill', async () => {
+      const { queryByTestId } = render(<TrainingPage navigation={navigation} route={route} />);
 
-    await fireEvent.press(queryByTestId('start0'));
+      await fireEvent.press(queryByTestId('start0'));
 
-    expect(navigation.navigate).toBeCalledWith('DrillPageMinimal', { drill: training.drills[0], training, program });
-  });
+      expect(navigation.navigate).toBeCalledWith('DrillPageMinimal', { drill: training.drills[0], training, program });
+    });
+  } else {
+    it('links to drill page', async () => {
+      const trainingFirstDrill = training.drills[0];
+
+      const { queryByText } = render(<TrainingPage navigation={navigation} route={route} />);
+
+      await fireEvent.press(queryByText(trainingFirstDrill.title));
+
+      expect(navigation.navigate).toBeCalledWith('DrillPage', { id: trainingFirstDrill.id });
+    });
+  }
 });

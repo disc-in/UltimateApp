@@ -89,9 +89,21 @@ const TrainingPage = (props) => {
   );
 
   const renderTraining = (training, index) => {
-    const onDrillPress = (drill) => navigation.navigate('DrillPageMinimal', { drill, training, program });
-    const goToFirstDrill = () =>
-      navigation.navigate('DrillPageMinimal', { drill: training.drills[0], training, program });
+    const onDrillPress = (drill) => {
+      if (program.type === 'fitness') {
+        navigation.navigate('DrillPage', { id: drill.id });
+      } else {
+        navigation.navigate('DrillPageMinimal', { drill, training, program });
+      }
+    };
+
+    const goToFirstDrill = () => {
+      if (program.type === 'fitness') {
+        navigation.navigate('DrillPage', { id: training.drills[0].id });
+      } else {
+        navigation.navigate('DrillPageMinimal', { drill: training.drills[0], training, program });
+      }
+    };
     return (
       <View key={index}>
         <DrillList

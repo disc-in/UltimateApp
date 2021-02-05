@@ -150,7 +150,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                     "opacity": 1,
                   }
                 }
-                testID="favoriteButton"
+                testID="shareButton"
               >
                 <Text />
               </View>
@@ -589,7 +589,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                     "opacity": 1,
                                   }
                                 }
-                                testID="shareButton"
+                                testID="favoriteButton"
                               >
                                 <Text />
                               </View>
@@ -1242,7 +1242,7 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                     "opacity": 1,
                   }
                 }
-                testID="favoriteButton"
+                testID="shareButton"
               >
                 <Text
                   allowFontScaling={false}
@@ -1257,7 +1257,7 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                         "marginRight": 20,
                       },
                       Object {
-                        "fontFamily": "material-community",
+                        "fontFamily": "ionicons",
                         "fontStyle": "normal",
                         "fontWeight": "normal",
                       },
@@ -1265,7 +1265,7 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                     ]
                   }
                 >
-                  󰋕
+                  
                 </Text>
               </View>
             </View>
@@ -1703,7 +1703,7 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                     "opacity": 1,
                                   }
                                 }
-                                testID="shareButton"
+                                testID="favoriteButton"
                               >
                                 <Text
                                   allowFontScaling={false}
@@ -1715,7 +1715,7 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                       },
                                       undefined,
                                       Object {
-                                        "fontFamily": "ionicons",
+                                        "fontFamily": "material-community",
                                         "fontStyle": "normal",
                                         "fontWeight": "normal",
                                       },
@@ -1723,7 +1723,7 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                     ]
                                   }
                                 >
-                                  
+                                  󰋕
                                 </Text>
                               </View>
                             </View>

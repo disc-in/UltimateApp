@@ -69,18 +69,26 @@ export const DrillPage = (props) => {
   };
 
   useLayoutEffect(() => {
-    let favoriteIcon = 'heart-outline';
-    if (props.favoriteDrills.findIndex((item) => item.id === props.route.params.id) !== -1) {
-      favoriteIcon = 'heart';
-    }
-
     navigation.setOptions({
       title: drill.title,
       headerRight: () => (
-        <HeaderButton icon={favoriteIcon} onPress={() => props.toggleFavorite(drill)} testID="favoriteButton" />
+        <TouchableOpacity onPress={() => share(drill)} testID="shareButton">
+          <Ionicons
+            name={Platform.select({
+              ios: 'ios-share-outline',
+              default: 'share-social',
+            })}
+            style={styles.iconShare}
+          />
+        </TouchableOpacity>
       ),
     });
   });
+
+  let favoriteIcon = 'heart-outline';
+  if (props.favoriteDrills.findIndex((item) => item.id === props.route.params.id) !== -1) {
+    favoriteIcon = 'heart';
+  }
 
   return (
     <ScrollView ref={drillScrollView} style={styles.drillPage}>
@@ -107,16 +115,9 @@ export const DrillPage = (props) => {
         </View>
         <View style={styles.startButton}>
           <StartButton onPress={onPressStartButton} text={I18n.t('drillPage.start')} />
-          <View style={styles.shareButton}>
-            <TouchableOpacity onPress={() => share(drill)} testID="shareButton">
-              <Ionicons
-                name={Platform.select({
-                  ios: 'ios-share-outline',
-                  default: 'share-social',
-                })}
-                color={theme.COLOR_PRIMARY_LIGHT}
-                size={30}
-              />
+          <View style={styles.favoriteButton}>
+            <TouchableOpacity onPress={() => props.toggleFavorite(drill)} testID="favoriteButton">
+              <Ionicons name={favoriteIcon} color={theme.COLOR_PRIMARY_LIGHT} size={30} />
             </TouchableOpacity>
           </View>
         </View>
@@ -189,12 +190,16 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
   },
-  shareButton: {
+  favoriteButton: {
     position: 'absolute',
     right: '15%',
     justifyContent: 'center',
     top: 0,
     bottom: 0,
+  },
+  iconShare: {
+    fontSize: 28,
+    marginRight: 20,
   },
 });
 

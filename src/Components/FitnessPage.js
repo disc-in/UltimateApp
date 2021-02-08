@@ -151,7 +151,7 @@ const FitnessPage = (props) => {
       <>
         <View style={styles.allPage}>
           <View style={[styles.videoMultiple, isUniqueStep && styles.videoAlone]}>
-            <VimeoVideo vimeoId={vimeoId} sounds={sounds} />
+            <VimeoVideo vimeoId={vimeoId} sounds={sounds} shouldPlay />
           </View>
           <ScrollView style={styles.scrollList}>
             {!isUniqueStep && (
@@ -262,13 +262,13 @@ const styles = StyleSheet.create({
   buttonNext: {
     position: 'absolute',
     right: 0,
-    marginLeft: 20,
   },
   subWrapper: {
     flexGrow: 0,
-    flexShrink: 0,
+    flexShrink: 0.7,
     alignItems: 'center',
     flexDirection: 'row',
+    marginRight: '20%',
   },
   instruction: {
     marginTop: 20,

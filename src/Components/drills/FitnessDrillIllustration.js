@@ -208,13 +208,13 @@ const styles = StyleSheet.create({
   buttonNext: {
     position: 'absolute',
     right: 0,
-    marginLeft: 20,
   },
   subWrapper: {
     flexGrow: 0,
-    flexShrink: 0,
+    flexShrink: 0.7,
     alignItems: 'center',
     flexDirection: 'row',
+    marginRight: '20%',
   },
   instruction: {
     marginTop: 20,

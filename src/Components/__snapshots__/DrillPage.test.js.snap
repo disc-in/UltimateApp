@@ -930,8 +930,10 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                             style={
                                               Object {
                                                 "alignItems": "center",
+                                                "flexDirection": "row",
                                                 "flexGrow": 0,
-                                                "flexShrink": 0,
+                                                "flexShrink": 0.7,
+                                                "marginRight": "20%",
                                               }
                                             }
                                           >
@@ -950,6 +952,21 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                               }
                                             >
                                                
+                                            </Text>
+                                            <Text
+                                              style={
+                                                Array [
+                                                  Object {
+                                                    "color": "#232b2b",
+                                                    "fontSize": 20,
+                                                  },
+                                                  Object {},
+                                                  Object {
+                                                    "fontWeight": "bold",
+                                                  },
+                                                ]
+                                              }
+                                            >
                                               Warmup
                                             </Text>
                                           </View>
@@ -1008,7 +1025,6 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                           onStartShouldSetResponder={[Function]}
                                           style={
                                             Object {
-                                              "backgroundColor": "#f8f8f8",
                                               "flexDirection": "row",
                                               "opacity": 1,
                                               "padding": 20,
@@ -1019,8 +1035,10 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                             style={
                                               Object {
                                                 "alignItems": "center",
+                                                "flexDirection": "row",
                                                 "flexGrow": 0,
-                                                "flexShrink": 0,
+                                                "flexShrink": 0.7,
+                                                "marginRight": "20%",
                                               }
                                             }
                                           >
@@ -1037,6 +1055,19 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                               }
                                             >
                                                
+                                            </Text>
+                                            <Text
+                                              style={
+                                                Array [
+                                                  Object {
+                                                    "color": "#232b2b",
+                                                    "fontSize": 20,
+                                                  },
+                                                  Object {},
+                                                  Object {},
+                                                ]
+                                              }
+                                            >
                                               Do the drill
                                             </Text>
                                           </View>
@@ -1058,7 +1089,6 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                           onStartShouldSetResponder={[Function]}
                                           style={
                                             Object {
-                                              "backgroundColor": "#f8f8f8",
                                               "flexDirection": "row",
                                               "opacity": 1,
                                               "padding": 20,
@@ -1069,8 +1099,10 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                             style={
                                               Object {
                                                 "alignItems": "center",
+                                                "flexDirection": "row",
                                                 "flexGrow": 0,
-                                                "flexShrink": 0,
+                                                "flexShrink": 0.7,
+                                                "marginRight": "20%",
                                               }
                                             }
                                           >
@@ -1087,6 +1119,19 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                               }
                                             >
                                                
+                                            </Text>
+                                            <Text
+                                              style={
+                                                Array [
+                                                  Object {
+                                                    "color": "#232b2b",
+                                                    "fontSize": 20,
+                                                  },
+                                                  Object {},
+                                                  Object {},
+                                                ]
+                                              }
+                                            >
                                               Last step
                                             </Text>
                                           </View>
@@ -2084,8 +2129,10 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                             style={
                                               Object {
                                                 "alignItems": "center",
+                                                "flexDirection": "row",
                                                 "flexGrow": 0,
-                                                "flexShrink": 0,
+                                                "flexShrink": 0.7,
+                                                "marginRight": "20%",
                                               }
                                             }
                                           >
@@ -2104,6 +2151,21 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                               }
                                             >
                                                
+                                            </Text>
+                                            <Text
+                                              style={
+                                                Array [
+                                                  Object {
+                                                    "color": "#232b2b",
+                                                    "fontSize": 20,
+                                                  },
+                                                  Object {},
+                                                  Object {
+                                                    "fontWeight": "bold",
+                                                  },
+                                                ]
+                                              }
+                                            >
                                               Warmup
                                             </Text>
                                           </View>
@@ -2141,7 +2203,6 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                                       "fontSize": 26,
                                                     },
                                                     Object {
-                                                      "marginLeft": 20,
                                                       "position": "absolute",
                                                       "right": 0,
                                                     },
@@ -2173,7 +2234,6 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                                       "fontSize": 26,
                                                     },
                                                     Object {
-                                                      "marginLeft": 20,
                                                       "position": "absolute",
                                                       "right": 0,
                                                     },
@@ -2208,7 +2268,6 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                           onStartShouldSetResponder={[Function]}
                                           style={
                                             Object {
-                                              "backgroundColor": "#f8f8f8",
                                               "flexDirection": "row",
                                               "opacity": 1,
                                               "padding": 20,
@@ -2219,8 +2278,10 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                             style={
                                               Object {
                                                 "alignItems": "center",
+                                                "flexDirection": "row",
                                                 "flexGrow": 0,
-                                                "flexShrink": 0,
+                                                "flexShrink": 0.7,
+                                                "marginRight": "20%",
                                               }
                                             }
                                           >
@@ -2237,6 +2298,19 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                               }
                                             >
                                                
+                                            </Text>
+                                            <Text
+                                              style={
+                                                Array [
+                                                  Object {
+                                                    "color": "#232b2b",
+                                                    "fontSize": 20,
+                                                  },
+                                                  Object {},
+                                                  Object {},
+                                                ]
+                                              }
+                                            >
                                               Do the drill
                                             </Text>
                                           </View>
@@ -2258,7 +2332,6 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                           onStartShouldSetResponder={[Function]}
                                           style={
                                             Object {
-                                              "backgroundColor": "#f8f8f8",
                                               "flexDirection": "row",
                                               "opacity": 1,
                                               "padding": 20,
@@ -2269,8 +2342,10 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                             style={
                                               Object {
                                                 "alignItems": "center",
+                                                "flexDirection": "row",
                                                 "flexGrow": 0,
-                                                "flexShrink": 0,
+                                                "flexShrink": 0.7,
+                                                "marginRight": "20%",
                                               }
                                             }
                                           >
@@ -2287,6 +2362,19 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                               }
                                             >
                                                
+                                            </Text>
+                                            <Text
+                                              style={
+                                                Array [
+                                                  Object {
+                                                    "color": "#232b2b",
+                                                    "fontSize": 20,
+                                                  },
+                                                  Object {},
+                                                  Object {},
+                                                ]
+                                              }
+                                            >
                                               Last step
                                             </Text>
                                           </View>

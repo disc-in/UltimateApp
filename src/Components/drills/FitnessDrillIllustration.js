@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Animated, View, StyleSheet, Text, TouchableOpacity, FlatList } from 'react-native';
+import { Animated, View, StyleSheet, Text, TouchableOpacity, FlatList, ScrollView } from 'react-native';
 import { Easing } from 'react-native-reanimated';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
@@ -60,9 +60,10 @@ const FitnessDrillIllustration = (props) => {
 
     const doneStyle = index < activeIndex ? styles.stepTitleDone : {};
     const currentStyle = isCurrent ? styles.stepTitleCurrent : {};
+    const currentStep = isCurrent ? styles.stepCurrent : {};
 
     return (
-      <TouchableOpacity style={styles.step} onPress={() => setActiveIndex(index)}>
+      <TouchableOpacity style={[styles.step, currentStep]} onPress={() => setActiveIndex(index)}>
         <View style={styles.subWrapper}>
           <Text style={[styles.stepTitle, doneStyle, currentStyle]}>
             {item.repetition} {item.title}
@@ -96,18 +97,22 @@ const FitnessDrillIllustration = (props) => {
     const isUniqueStep = stepsCount === 1;
     return (
       <>
-        <View style={[{ height: 250 }, isUniqueStep && styles.videoAlone]}>
-          <VimeoVideo vimeoId={vimeoId} sounds={sounds} />
+        <View style={styles.allPage}>
+          <View style={[styles.videoMultiple, isUniqueStep && styles.videoAlone]}>
+            <VimeoVideo vimeoId={vimeoId} sounds={sounds} />
+          </View>
+          <ScrollView style={styles.scrollList}>
+            {!isUniqueStep && (
+              <FlatList
+                nestedScrollEnabled
+                ref={flatListRef}
+                data={props.drill.steps}
+                keyExtractor={(item) => item.id.toString()}
+                renderItem={renderStep}
+              />
+            )}
+          </ScrollView>
         </View>
-        {!isUniqueStep && (
-          <FlatList
-            nestedScrollEnabled
-            ref={flatListRef}
-            data={props.drill.steps}
-            keyExtractor={(item) => item.id.toString()}
-            renderItem={renderStep}
-          />
-        )}
       </>
     );
   };
@@ -182,6 +187,7 @@ const styles = StyleSheet.create({
   step: {
     flexDirection: 'row',
     padding: 20,
+    backgroundColor: '#f8f8f8',
   },
   doneAnimation: {
     flex: 1,
@@ -238,6 +244,18 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   animation: { flex: 9 },
+  videoMultiple: {
+    height: 250,
+  },
+  scrollList: {
+    height: '100%',
+  },
+  allPage: {
+    height: '100%',
+  },
+  stepCurrent: {
+    backgroundColor: theme.COLOR_PRIMARY_LIGHT,
+  },
 });
 
 export default FitnessDrillIllustration;

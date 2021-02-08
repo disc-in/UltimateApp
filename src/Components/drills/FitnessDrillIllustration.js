@@ -65,9 +65,8 @@ const FitnessDrillIllustration = (props) => {
     return (
       <TouchableOpacity style={[styles.step, currentStep]} onPress={() => setActiveIndex(index)}>
         <View style={styles.subWrapper}>
-          <Text style={[styles.stepTitle, doneStyle, currentStyle]}>
-            {item.repetition} {item.title}
-          </Text>
+          <Text style={[styles.stepTitle, doneStyle, currentStyle]}>{item.repetition} </Text>
+          <Text style={[styles.stepTitle, doneStyle, currentStyle]}>{item.title}</Text>
         </View>
         {isCurrent && (
           <TouchableOpacity style={styles.doneAnimation} onPress={() => checkAnimation()} testID="doneIcon">
@@ -187,7 +186,6 @@ const styles = StyleSheet.create({
   step: {
     flexDirection: 'row',
     padding: 20,
-    backgroundColor: '#f8f8f8',
   },
   doneAnimation: {
     flex: 1,
@@ -216,6 +214,7 @@ const styles = StyleSheet.create({
     flexGrow: 0,
     flexShrink: 0,
     alignItems: 'center',
+    flexDirection: 'row',
   },
   instruction: {
     marginTop: 20,

@@ -118,9 +118,8 @@ const FitnessPage = (props) => {
     return (
       <TouchableOpacity style={[styles.step, currentStep]} onPress={() => setActiveIndex(index)}>
         <View style={styles.subWrapper}>
-          <Text style={[styles.stepTitle, doneStyle, currentStyle]}>
-            {item.repetition} {item.title}
-          </Text>
+          <Text style={[styles.stepTitle, doneStyle, currentStyle]}>{item.repetition} </Text>
+          <Text style={[styles.stepTitle, doneStyle, currentStyle]}>{item.title}</Text>
         </View>
         {isCurrent && (
           <TouchableOpacity style={styles.doneAnimation} onPress={() => checkAnimation()} testID="doneIcon">
@@ -269,6 +268,7 @@ const styles = StyleSheet.create({
     flexGrow: 0,
     flexShrink: 0,
     alignItems: 'center',
+    flexDirection: 'row',
   },
   instruction: {
     marginTop: 20,
@@ -305,6 +305,7 @@ const styles = StyleSheet.create({
   },
   allPage: {
     height: '100%',
+    backgroundColor: '#f8f8f8',
   },
   stepCurrent: {
     backgroundColor: theme.COLOR_PRIMARY_LIGHT,

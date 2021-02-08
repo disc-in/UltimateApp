@@ -25,7 +25,6 @@ import Description from './drills/Description';
 import FitnessDrillIllustration from './drills/FitnessDrillIllustration';
 import FrisbeeDrillIllustration from './drills/FrisbeeDrillIllustration';
 import StartButton from './drills/StartButton';
-import HeaderButton from './shared/HeaderButton';
 
 export const DrillPage = (props) => {
   const { route, navigation } = props;
@@ -45,7 +44,11 @@ export const DrillPage = (props) => {
 
   const onPressStartButton = () => {
     firstDrill.current.measureLayout(findNodeHandle(drillScrollView.current), (x, y) => {
-      drillScrollView.current.scrollTo({ x: 0, y, animated: true });
+      if (drill.type === DrillTypes.FITNESS) {
+        navigation.navigate('FitnessPage', { drill });
+      } else {
+        drillScrollView.current.scrollTo({ x: 0, y, animated: true });
+      }
     });
   };
 

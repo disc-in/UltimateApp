@@ -22,6 +22,7 @@ import VideoPage from '../Components/VideoPage';
 
 import I18n from '../utils/i18n';
 import { DrillTypes, EquipmentLabels } from '../Fixtures/config';
+import FitnessPage from '../Components/FitnessPage';
 
 const Stack = createStackNavigator();
 
@@ -100,5 +101,6 @@ export const Navigation = () => (
       component={VideoPage}
       options={({ route }) => ({ title: route.params.video.title })}
     />
+    <Stack.Screen name="FitnessPage" component={FitnessPage} options={({ route }) => ({ title: 'title fitness' })} />
   </Stack.Navigator>
 );

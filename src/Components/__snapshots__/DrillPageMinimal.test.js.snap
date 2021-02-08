@@ -165,7 +165,10 @@ Array [
                   onStartShouldSetResponder={[Function]}
                   style={
                     Object {
+                      "alignItems": "center",
+                      "flex": 1,
                       "flexDirection": "row",
+                      "justifyContent": "space-between",
                       "opacity": 1,
                       "padding": 20,
                     }
@@ -174,9 +177,7 @@ Array [
                   <View
                     style={
                       Object {
-                        "alignItems": "center",
-                        "flexGrow": 0,
-                        "flexShrink": 0,
+                        "flexShrink": 1,
                       }
                     }
                   >
@@ -210,30 +211,15 @@ Array [
                     onStartShouldSetResponder={[Function]}
                     style={
                       Object {
-                        "flex": 1,
+                        "height": "100%",
+                        "justifyContent": "center",
                         "opacity": 1,
+                        "padding": 10,
                       }
                     }
                     testID="doneIcon"
                   >
-                    <View
-                      style={
-                        Object {
-                          "opacity": 1,
-                        }
-                      }
-                    >
-                      <Text />
-                    </View>
-                    <View
-                      style={
-                        Object {
-                          "opacity": 0,
-                        }
-                      }
-                    >
-                      <Text />
-                    </View>
+                    <Text />
                   </View>
                 </View>
               </View>
@@ -253,7 +239,10 @@ Array [
                   onStartShouldSetResponder={[Function]}
                   style={
                     Object {
+                      "alignItems": "center",
+                      "flex": 1,
                       "flexDirection": "row",
+                      "justifyContent": "space-between",
                       "opacity": 1,
                       "padding": 20,
                     }
@@ -262,9 +251,7 @@ Array [
                   <View
                     style={
                       Object {
-                        "alignItems": "center",
-                        "flexGrow": 0,
-                        "flexShrink": 0,
+                        "flexShrink": 1,
                       }
                     }
                   >
@@ -302,7 +289,10 @@ Array [
                   onStartShouldSetResponder={[Function]}
                   style={
                     Object {
+                      "alignItems": "center",
+                      "flex": 1,
                       "flexDirection": "row",
+                      "justifyContent": "space-between",
                       "opacity": 1,
                       "padding": 20,
                     }
@@ -311,9 +301,7 @@ Array [
                   <View
                     style={
                       Object {
-                        "alignItems": "center",
-                        "flexGrow": 0,
-                        "flexShrink": 0,
+                        "flexShrink": 1,
                       }
                     }
                   >

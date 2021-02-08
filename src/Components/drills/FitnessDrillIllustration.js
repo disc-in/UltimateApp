@@ -88,7 +88,7 @@ const FitnessDrillIllustration = (props) => {
     return (
       <>
         <View style={[{ height: 250 }, isUniqueStep && styles.videoAlone]}>
-          <VimeoVideo vimeoId={vimeoId} sounds={sounds} shouldPlay />
+          <VimeoVideo vimeoId={vimeoId} sounds={sounds} />
         </View>
         {!isUniqueStep && (
           <FlatList

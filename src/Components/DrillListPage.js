@@ -12,7 +12,7 @@ export const DrillListPage = (props) => {
   const { navigation, route, storeDrills } = props;
   const { type, currentFilters } = route.params;
 
-  const storeDrillsForType = storeDrills.filter((drill) => drill.type === type);
+  const storeDrillsForType = storeDrills.filter((drill) => drill.type === type && drill.visibleInList);
   const displayedDrills = currentFilters?.displayedDrills || storeDrillsForType;
 
   const filterIsOn =

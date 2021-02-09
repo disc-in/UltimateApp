@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TrainingPage /> renders correctly with a training within a program 1`] = `
+exports[`<TrainingPage /> When fitness program renders correctly a fitness training 1`] = `
 <RNCViewPager
   initialPage={0}
   onMoveShouldSetResponderCapture={[Function]}
@@ -133,15 +133,6 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
               />
             </ForwardRef>
           </View>
-          <View
-            style={
-              Object {
-                "flexDirection": "row",
-                "justifyContent": "space-evenly",
-                "padding": 5,
-              }
-            }
-          />
           <Text
             style={
               Object {
@@ -929,15 +920,6 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
                 <Text />
               </View>
             </View>
-            <View
-              style={
-                Object {
-                  "flexDirection": "row",
-                  "justifyContent": "space-evenly",
-                  "padding": 5,
-                }
-              }
-            />
             <Text
               style={
                 Object {
@@ -1361,15 +1343,6 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
               </Text>
             </View>
           </View>
-          <View
-            style={
-              Object {
-                "flexDirection": "row",
-                "justifyContent": "space-evenly",
-                "padding": 5,
-              }
-            }
-          />
           <Text
             style={
               Object {
@@ -2128,15 +2101,6 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
                 </Text>
               </View>
             </View>
-            <View
-              style={
-                Object {
-                  "flexDirection": "row",
-                  "justifyContent": "space-evenly",
-                  "padding": 5,
-                }
-              }
-            />
             <Text
               style={
                 Object {
@@ -2447,6 +2411,2835 @@ exports[`<TrainingPage /> renders correctly with a training within a program 1`]
         }
       }
     />
+  </View>
+</RNCViewPager>
+`;
+
+exports[`<TrainingPage /> When frisbee program renders correctly a frisbee training 1`] = `
+<RNCViewPager
+  initialPage={0}
+  onMoveShouldSetResponderCapture={[Function]}
+  onPageScroll={[Function]}
+  onPageScrollStateChanged={[Function]}
+  onPageSelected={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "flex": 1,
+      "height": "100%",
+    }
+  }
+>
+  <View
+    collapsable={false}
+    style={
+      Array [
+        undefined,
+        Object {
+          "bottom": 0,
+          "height": undefined,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": undefined,
+        },
+      ]
+    }
+  >
+    <RCTScrollView
+      ItemComponentStyle={
+        Object {
+          "paddingLeft": 20,
+        }
+      }
+      ListFooterComponent={
+        <View
+          style={
+            Object {
+              "paddingBottom": 30,
+            }
+          }
+        />
+      }
+      ListHeaderComponent={
+        <View
+          style={
+            Object {
+              "borderBottomColor": "#e5e5e5",
+              "borderBottomWidth": 1,
+              "marginVertical": 10,
+              "paddingBottom": 10,
+              "paddingHorizontal": 10,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "center",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "justifyContent": "center",
+                  "marginHorizontal": 40,
+                }
+              }
+            >
+              <Text
+                numberOfLines={1}
+                style={
+                  Object {
+                    "fontSize": 20,
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                Dump & Swing
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "fontSize": 20,
+                  }
+                }
+              >
+                 
+                (
+                1
+                /
+                2
+                )
+                 
+              </Text>
+            </View>
+            <ForwardRef
+              onPress={[Function]}
+              style={
+                Array [
+                  Object {
+                    "left": 0,
+                    "position": "absolute",
+                  },
+                  Object {
+                    "left": "auto",
+                    "right": 0,
+                  },
+                ]
+              }
+              testID="goToNext0"
+            >
+              <Icon
+                allowFontScaling={false}
+                name="chevron-right"
+                size={12}
+                style={
+                  Object {
+                    "color": "#232b2b",
+                    "fontSize": 42,
+                  }
+                }
+              />
+            </ForwardRef>
+          </View>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "space-evenly",
+                "padding": 5,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                }
+              }
+            >
+              <Icon
+                allowFontScaling={false}
+                color="#232b2b"
+                name="account-multiple"
+                size={22}
+              />
+              <Text
+                style={
+                  Object {
+                    "color": "#A6A6A6",
+                    "fontSize": 16,
+                  }
+                }
+              >
+                2
+                +
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                }
+              }
+            >
+              <Icon
+                allowFontScaling={false}
+                color="#232b2b"
+                name="clock-outline"
+                size={22}
+              />
+              <Text
+                style={
+                  Object {
+                    "color": "#A6A6A6",
+                    "fontSize": 16,
+                  }
+                }
+              >
+                0 h 40
+              </Text>
+            </View>
+          </View>
+          <Text
+            style={
+              Object {
+                "color": "#A6A6A6",
+                "fontSize": 16,
+              }
+            }
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget
+          </Text>
+        </View>
+      }
+      contentContainerStyle={
+        Object {
+          "paddingBottom": 40,
+        }
+      }
+      data={
+        Array [
+          Object {
+            "author": "Author",
+            "description": "Description of the drill",
+            "durationInMinutes": 10,
+            "equipment": "Equipment needs for the drill",
+            "equipmentLabel": "Full",
+            "goals": Array [
+              "Legs",
+            ],
+            "id": 2,
+            "image": "http://www.liberte-fitness.fr/sites/default/files/styles/slider/public/news/tone.jpg?itok=505bme2a",
+            "intensity": "High",
+            "level": "Intermediate",
+            "minimalPlayersNumber": 1,
+            "seasonTiming": "In-season",
+            "steps": Array [
+              Object {
+                "id": 0,
+                "subtitle": "This is a subtitle",
+                "title": "Warmup",
+                "vimeoId": "462695757",
+              },
+              Object {
+                "id": 1,
+                "subtitle": "This is a subtitle",
+                "title": "Do the drill",
+                "vimeoId": "462695757",
+              },
+              Object {
+                "id": 2,
+                "subtitle": "This is a subtitle",
+                "title": "Last step",
+                "vimeoId": "462695757",
+              },
+            ],
+            "title": "Fitness Drill Title",
+            "type": "fitness",
+          },
+          Object {
+            "author": "Author",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
+            "durationInMinutes": 30,
+            "equipment": "Equipment needs for the drill",
+            "equipmentLabel": "",
+            "goals": Array [
+              "Defense",
+            ],
+            "id": 3,
+            "image": "https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1",
+            "intensity": "Low",
+            "level": "Beginner",
+            "minimalPlayersNumber": 2,
+            "seasonTiming": "",
+            "steps": Array [
+              Object {
+                "animation": Object {
+                  "ids": Array [
+                    "triangle",
+                    "triangle",
+                    "triangle",
+                    "triangle",
+                    "triangle",
+                    "triangle",
+                    "triangle",
+                    "triangle",
+                    "offense",
+                    "offense",
+                    "offense",
+                    "offense",
+                    "offense",
+                    "disc",
+                  ],
+                  "positions": Array [
+                    Array [
+                      Array [
+                        Array [
+                          0.3,
+                          0.3,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.3,
+                          0.6,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.6,
+                          0.3,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.6,
+                          0.6,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.45,
+                          0.2,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.2,
+                          0.45,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.45,
+                          0.7,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.7,
+                          0.45,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.3,
+                          0.3,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.16,
+                          0.3,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.6,
+                          0.3,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.6,
+                          0.6,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.3,
+                          0.6,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.36,
+                          0.36,
+                        ],
+                      ],
+                    ],
+                    Array [
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      Array [
+                        Array [
+                          0.45,
+                          0.2,
+                        ],
+                      ],
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                    ],
+                    Array [
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      Array [
+                        Array [
+                          0.6,
+                          0.3,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.7,
+                          0.45,
+                        ],
+                      ],
+                      undefined,
+                      undefined,
+                      Array [
+                        Array [
+                          0.58,
+                          0.36,
+                        ],
+                      ],
+                    ],
+                    Array [
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      Array [
+                        Array [
+                          0.6,
+                          0.6,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.45,
+                          0.7,
+                        ],
+                      ],
+                      undefined,
+                      Array [
+                        Array [
+                          0.58,
+                          0.58,
+                        ],
+                      ],
+                    ],
+                    Array [
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      Array [
+                        Array [
+                          0.3,
+                          0.6,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.2,
+                          0.45,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.36,
+                          0.58,
+                        ],
+                      ],
+                    ],
+                    Array [
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      Array [
+                        Array [
+                          0.45,
+                          0.2,
+                        ],
+                      ],
+                      undefined,
+                      undefined,
+                      undefined,
+                      Array [
+                        Array [
+                          0.3,
+                          0.3,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.36,
+                          0.36,
+                        ],
+                      ],
+                    ],
+                  ],
+                  "texts": Array [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "",
+                  ],
+                },
+                "id": 0,
+              },
+            ],
+            "title": "Frisbee Drill Title",
+            "type": "frisbee",
+          },
+        ]
+      }
+      disableVirtualization={false}
+      drillsToDisplay={
+        Array [
+          Object {
+            "author": "Author",
+            "description": "Description of the drill",
+            "durationInMinutes": 10,
+            "equipment": "Equipment needs for the drill",
+            "equipmentLabel": "Full",
+            "goals": Array [
+              "Legs",
+            ],
+            "id": 2,
+            "image": "http://www.liberte-fitness.fr/sites/default/files/styles/slider/public/news/tone.jpg?itok=505bme2a",
+            "intensity": "High",
+            "level": "Intermediate",
+            "minimalPlayersNumber": 1,
+            "seasonTiming": "In-season",
+            "steps": Array [
+              Object {
+                "id": 0,
+                "subtitle": "This is a subtitle",
+                "title": "Warmup",
+                "vimeoId": "462695757",
+              },
+              Object {
+                "id": 1,
+                "subtitle": "This is a subtitle",
+                "title": "Do the drill",
+                "vimeoId": "462695757",
+              },
+              Object {
+                "id": 2,
+                "subtitle": "This is a subtitle",
+                "title": "Last step",
+                "vimeoId": "462695757",
+              },
+            ],
+            "title": "Fitness Drill Title",
+            "type": "fitness",
+          },
+          Object {
+            "author": "Author",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
+            "durationInMinutes": 30,
+            "equipment": "Equipment needs for the drill",
+            "equipmentLabel": "",
+            "goals": Array [
+              "Defense",
+            ],
+            "id": 3,
+            "image": "https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1",
+            "intensity": "Low",
+            "level": "Beginner",
+            "minimalPlayersNumber": 2,
+            "seasonTiming": "",
+            "steps": Array [
+              Object {
+                "animation": Object {
+                  "ids": Array [
+                    "triangle",
+                    "triangle",
+                    "triangle",
+                    "triangle",
+                    "triangle",
+                    "triangle",
+                    "triangle",
+                    "triangle",
+                    "offense",
+                    "offense",
+                    "offense",
+                    "offense",
+                    "offense",
+                    "disc",
+                  ],
+                  "positions": Array [
+                    Array [
+                      Array [
+                        Array [
+                          0.3,
+                          0.3,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.3,
+                          0.6,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.6,
+                          0.3,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.6,
+                          0.6,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.45,
+                          0.2,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.2,
+                          0.45,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.45,
+                          0.7,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.7,
+                          0.45,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.3,
+                          0.3,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.16,
+                          0.3,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.6,
+                          0.3,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.6,
+                          0.6,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.3,
+                          0.6,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.36,
+                          0.36,
+                        ],
+                      ],
+                    ],
+                    Array [
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      Array [
+                        Array [
+                          0.45,
+                          0.2,
+                        ],
+                      ],
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                    ],
+                    Array [
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      Array [
+                        Array [
+                          0.6,
+                          0.3,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.7,
+                          0.45,
+                        ],
+                      ],
+                      undefined,
+                      undefined,
+                      Array [
+                        Array [
+                          0.58,
+                          0.36,
+                        ],
+                      ],
+                    ],
+                    Array [
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      Array [
+                        Array [
+                          0.6,
+                          0.6,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.45,
+                          0.7,
+                        ],
+                      ],
+                      undefined,
+                      Array [
+                        Array [
+                          0.58,
+                          0.58,
+                        ],
+                      ],
+                    ],
+                    Array [
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      Array [
+                        Array [
+                          0.3,
+                          0.6,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.2,
+                          0.45,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.36,
+                          0.58,
+                        ],
+                      ],
+                    ],
+                    Array [
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      Array [
+                        Array [
+                          0.45,
+                          0.2,
+                        ],
+                      ],
+                      undefined,
+                      undefined,
+                      undefined,
+                      Array [
+                        Array [
+                          0.3,
+                          0.3,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.36,
+                          0.36,
+                        ],
+                      ],
+                    ],
+                  ],
+                  "texts": Array [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "",
+                  ],
+                },
+                "id": 0,
+              },
+            ],
+            "title": "Frisbee Drill Title",
+            "type": "frisbee",
+          },
+        ]
+      }
+      getItem={[Function]}
+      getItemCount={[Function]}
+      horizontal={false}
+      initialNumToRender={10}
+      keyExtractor={[Function]}
+      maxToRenderPerBatch={10}
+      onContentSizeChange={[Function]}
+      onDrillPress={[Function]}
+      onEndReachedThreshold={2}
+      onLayout={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      removeClippedSubviews={false}
+      renderItem={[Function]}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={Array []}
+      updateCellsBatchingPeriod={50}
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={21}
+    >
+      <View>
+        <View
+          onLayout={[Function]}
+        >
+          <View
+            style={
+              Object {
+                "borderBottomColor": "#e5e5e5",
+                "borderBottomWidth": 1,
+                "marginVertical": 10,
+                "paddingBottom": 10,
+                "paddingHorizontal": 10,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "justifyContent": "center",
+                    "marginHorizontal": 40,
+                  }
+                }
+              >
+                <Text
+                  numberOfLines={1}
+                  style={
+                    Object {
+                      "fontSize": 20,
+                      "fontWeight": "bold",
+                    }
+                  }
+                >
+                  Dump & Swing
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "fontSize": 20,
+                    }
+                  }
+                >
+                   
+                  (
+                  1
+                  /
+                  2
+                  )
+                   
+                </Text>
+              </View>
+              <View
+                accessible={true}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "left": "auto",
+                    "opacity": 1,
+                    "position": "absolute",
+                    "right": 0,
+                  }
+                }
+                testID="goToNext0"
+              >
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": undefined,
+                        "fontSize": 12,
+                      },
+                      Object {
+                        "color": "#232b2b",
+                        "fontSize": 42,
+                      },
+                      Object {
+                        "fontFamily": "material-community",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  󰅂
+                </Text>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "flexDirection": "row",
+                  "justifyContent": "space-evenly",
+                  "padding": 5,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                  }
+                }
+              >
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#232b2b",
+                        "fontSize": 22,
+                      },
+                      undefined,
+                      Object {
+                        "fontFamily": "material-community",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  󰀎
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#A6A6A6",
+                      "fontSize": 16,
+                    }
+                  }
+                >
+                  2
+                  +
+                </Text>
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                  }
+                }
+              >
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#232b2b",
+                        "fontSize": 22,
+                      },
+                      undefined,
+                      Object {
+                        "fontFamily": "material-community",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  󰅐
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#A6A6A6",
+                      "fontSize": 16,
+                    }
+                  }
+                >
+                  0 h 40
+                </Text>
+              </View>
+            </View>
+            <Text
+              style={
+                Object {
+                  "color": "#A6A6A6",
+                  "fontSize": 16,
+                }
+              }
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget
+            </Text>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "flexDirection": "row",
+                "height": 80,
+                "marginBottom": 20,
+                "opacity": 1,
+                "paddingLeft": 20,
+              }
+            }
+          >
+            <View
+              accessibilityIgnoresInvertColors={true}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "rgb(0,0,0)",
+                  "borderRadius": 5,
+                  "height": 80,
+                  "justifyContent": "center",
+                  "marginRight": 10,
+                  "padding": 10,
+                  "width": 80,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "uri": "http://www.liberte-fitness.fr/sites/default/files/styles/slider/public/news/tone.jpg?itok=505bme2a",
+                  }
+                }
+                style={
+                  Array [
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                    Object {
+                      "height": 80,
+                      "width": 80,
+                    },
+                    Object {
+                      "borderRadius": 5,
+                      "opacity": 0.5,
+                    },
+                  ]
+                }
+              />
+              <Text
+                style={
+                  Object {
+                    "color": "#e5e5e5",
+                    "fontSize": 16,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                10
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#e5e5e5",
+                    "fontSize": 14,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                min
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "padding": 5,
+                  "paddingBottom": 10,
+                  "paddingRight": 10,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#A6A6A6",
+                    "flex": 2,
+                    "fontSize": 14,
+                  }
+                }
+              >
+                Author
+              </Text>
+              <Text
+                numberOfLines={1}
+                style={
+                  Object {
+                    "flex": 3,
+                    "flexWrap": "wrap",
+                    "fontSize": 20,
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                Fitness Drill Title
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#A6A6A6",
+                    "flex": 2,
+                    "fontSize": 14,
+                  }
+                }
+              >
+                Legs
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "flexDirection": "row",
+                "height": 80,
+                "marginBottom": 20,
+                "opacity": 1,
+                "paddingLeft": 20,
+              }
+            }
+          >
+            <View
+              accessibilityIgnoresInvertColors={true}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "rgb(0,0,0)",
+                  "borderRadius": 5,
+                  "height": 80,
+                  "justifyContent": "center",
+                  "marginRight": 10,
+                  "padding": 10,
+                  "width": 80,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "uri": "https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1",
+                  }
+                }
+                style={
+                  Array [
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                    Object {
+                      "height": 80,
+                      "width": 80,
+                    },
+                    Object {
+                      "borderRadius": 5,
+                      "opacity": 0.5,
+                    },
+                  ]
+                }
+              />
+              <Text
+                style={
+                  Object {
+                    "color": "#e5e5e5",
+                    "fontSize": 16,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                2
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#e5e5e5",
+                    "fontSize": 14,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                players
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "padding": 5,
+                  "paddingBottom": 10,
+                  "paddingRight": 10,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#A6A6A6",
+                    "flex": 2,
+                    "fontSize": 14,
+                  }
+                }
+              >
+                Author
+              </Text>
+              <Text
+                numberOfLines={1}
+                style={
+                  Object {
+                    "flex": 3,
+                    "flexWrap": "wrap",
+                    "fontSize": 20,
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                Frisbee Drill Title
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#A6A6A6",
+                    "flex": 2,
+                    "fontSize": 14,
+                  }
+                }
+              >
+                Defense
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+        >
+          <View
+            style={
+              Object {
+                "paddingBottom": 30,
+              }
+            }
+          />
+        </View>
+      </View>
+    </RCTScrollView>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#fff",
+          "bottom": 0,
+          "paddingBottom": 20,
+          "paddingTop": 5,
+          "position": "absolute",
+          "width": "100%",
+        }
+      }
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#2a9e91",
+            "borderRadius": 5,
+            "flexDirection": "row",
+            "height": 40,
+            "justifyContent": "center",
+            "opacity": 1,
+            "paddingHorizontal": 20,
+            "paddingVertical": 10,
+            "width": "80%",
+          }
+        }
+        testID="start0"
+      >
+        <Text
+          style={
+            Object {
+              "color": "#fff",
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
+        >
+          Start training
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    collapsable={false}
+    style={
+      Array [
+        undefined,
+        Object {
+          "bottom": 0,
+          "height": undefined,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": undefined,
+        },
+      ]
+    }
+  >
+    <RCTScrollView
+      ItemComponentStyle={
+        Object {
+          "paddingLeft": 20,
+        }
+      }
+      ListFooterComponent={
+        <View
+          style={
+            Object {
+              "paddingBottom": 30,
+            }
+          }
+        />
+      }
+      ListHeaderComponent={
+        <View
+          style={
+            Object {
+              "borderBottomColor": "#e5e5e5",
+              "borderBottomWidth": 1,
+              "marginVertical": 10,
+              "paddingBottom": 10,
+              "paddingHorizontal": 10,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "center",
+              }
+            }
+          >
+            <ForwardRef
+              onPress={[Function]}
+              style={
+                Object {
+                  "left": 0,
+                  "position": "absolute",
+                }
+              }
+              testID="goToPrev1"
+            >
+              <Icon
+                allowFontScaling={false}
+                name="chevron-left"
+                size={12}
+                style={
+                  Object {
+                    "color": "#232b2b",
+                    "fontSize": 42,
+                  }
+                }
+              />
+            </ForwardRef>
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "justifyContent": "center",
+                  "marginHorizontal": 40,
+                }
+              }
+            >
+              <Text
+                numberOfLines={1}
+                style={
+                  Object {
+                    "fontSize": 20,
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                Training 2
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "fontSize": 20,
+                  }
+                }
+              >
+                 
+                (
+                2
+                /
+                2
+                )
+                 
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "space-evenly",
+                "padding": 5,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                }
+              }
+            >
+              <Icon
+                allowFontScaling={false}
+                color="#232b2b"
+                name="account-multiple"
+                size={22}
+              />
+              <Text
+                style={
+                  Object {
+                    "color": "#A6A6A6",
+                    "fontSize": 16,
+                  }
+                }
+              >
+                2
+                +
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                }
+              }
+            >
+              <Icon
+                allowFontScaling={false}
+                color="#232b2b"
+                name="clock-outline"
+                size={22}
+              />
+              <Text
+                style={
+                  Object {
+                    "color": "#A6A6A6",
+                    "fontSize": 16,
+                  }
+                }
+              >
+                1 h
+              </Text>
+            </View>
+          </View>
+          <Text
+            style={
+              Object {
+                "color": "#A6A6A6",
+                "fontSize": 16,
+              }
+            }
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget
+          </Text>
+        </View>
+      }
+      contentContainerStyle={
+        Object {
+          "paddingBottom": 40,
+        }
+      }
+      data={
+        Array [
+          Object {
+            "author": "Author",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
+            "durationInMinutes": 30,
+            "equipment": "Equipment needs for the drill",
+            "equipmentLabel": "",
+            "goals": Array [
+              "Defense",
+            ],
+            "id": 3,
+            "image": "https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1",
+            "intensity": "Low",
+            "level": "Beginner",
+            "minimalPlayersNumber": 2,
+            "seasonTiming": "",
+            "steps": Array [
+              Object {
+                "animation": Object {
+                  "ids": Array [
+                    "triangle",
+                    "triangle",
+                    "triangle",
+                    "triangle",
+                    "triangle",
+                    "triangle",
+                    "triangle",
+                    "triangle",
+                    "offense",
+                    "offense",
+                    "offense",
+                    "offense",
+                    "offense",
+                    "disc",
+                  ],
+                  "positions": Array [
+                    Array [
+                      Array [
+                        Array [
+                          0.3,
+                          0.3,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.3,
+                          0.6,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.6,
+                          0.3,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.6,
+                          0.6,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.45,
+                          0.2,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.2,
+                          0.45,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.45,
+                          0.7,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.7,
+                          0.45,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.3,
+                          0.3,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.16,
+                          0.3,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.6,
+                          0.3,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.6,
+                          0.6,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.3,
+                          0.6,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.36,
+                          0.36,
+                        ],
+                      ],
+                    ],
+                    Array [
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      Array [
+                        Array [
+                          0.45,
+                          0.2,
+                        ],
+                      ],
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                    ],
+                    Array [
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      Array [
+                        Array [
+                          0.6,
+                          0.3,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.7,
+                          0.45,
+                        ],
+                      ],
+                      undefined,
+                      undefined,
+                      Array [
+                        Array [
+                          0.58,
+                          0.36,
+                        ],
+                      ],
+                    ],
+                    Array [
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      Array [
+                        Array [
+                          0.6,
+                          0.6,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.45,
+                          0.7,
+                        ],
+                      ],
+                      undefined,
+                      Array [
+                        Array [
+                          0.58,
+                          0.58,
+                        ],
+                      ],
+                    ],
+                    Array [
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      Array [
+                        Array [
+                          0.3,
+                          0.6,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.2,
+                          0.45,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.36,
+                          0.58,
+                        ],
+                      ],
+                    ],
+                    Array [
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      Array [
+                        Array [
+                          0.45,
+                          0.2,
+                        ],
+                      ],
+                      undefined,
+                      undefined,
+                      undefined,
+                      Array [
+                        Array [
+                          0.3,
+                          0.3,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.36,
+                          0.36,
+                        ],
+                      ],
+                    ],
+                  ],
+                  "texts": Array [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "",
+                  ],
+                },
+                "id": 0,
+              },
+            ],
+            "title": "Frisbee Drill Title",
+            "type": "frisbee",
+          },
+          Object {
+            "author": "Author",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
+            "durationInMinutes": 30,
+            "equipment": "Equipment needs for the drill",
+            "equipmentLabel": "",
+            "goals": Array [
+              "Defense",
+            ],
+            "id": 4,
+            "image": "https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg",
+            "intensity": "Low",
+            "level": "Beginner",
+            "minimalPlayersNumber": 2,
+            "seasonTiming": "",
+            "steps": Array [
+              Object {
+                "id": 0,
+                "vimeoId": "462695757",
+              },
+            ],
+            "title": "Frisbee Drill Title",
+            "type": "frisbee",
+          },
+        ]
+      }
+      disableVirtualization={false}
+      drillsToDisplay={
+        Array [
+          Object {
+            "author": "Author",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
+            "durationInMinutes": 30,
+            "equipment": "Equipment needs for the drill",
+            "equipmentLabel": "",
+            "goals": Array [
+              "Defense",
+            ],
+            "id": 3,
+            "image": "https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1",
+            "intensity": "Low",
+            "level": "Beginner",
+            "minimalPlayersNumber": 2,
+            "seasonTiming": "",
+            "steps": Array [
+              Object {
+                "animation": Object {
+                  "ids": Array [
+                    "triangle",
+                    "triangle",
+                    "triangle",
+                    "triangle",
+                    "triangle",
+                    "triangle",
+                    "triangle",
+                    "triangle",
+                    "offense",
+                    "offense",
+                    "offense",
+                    "offense",
+                    "offense",
+                    "disc",
+                  ],
+                  "positions": Array [
+                    Array [
+                      Array [
+                        Array [
+                          0.3,
+                          0.3,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.3,
+                          0.6,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.6,
+                          0.3,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.6,
+                          0.6,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.45,
+                          0.2,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.2,
+                          0.45,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.45,
+                          0.7,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.7,
+                          0.45,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.3,
+                          0.3,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.16,
+                          0.3,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.6,
+                          0.3,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.6,
+                          0.6,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.3,
+                          0.6,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.36,
+                          0.36,
+                        ],
+                      ],
+                    ],
+                    Array [
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      Array [
+                        Array [
+                          0.45,
+                          0.2,
+                        ],
+                      ],
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                    ],
+                    Array [
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      Array [
+                        Array [
+                          0.6,
+                          0.3,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.7,
+                          0.45,
+                        ],
+                      ],
+                      undefined,
+                      undefined,
+                      Array [
+                        Array [
+                          0.58,
+                          0.36,
+                        ],
+                      ],
+                    ],
+                    Array [
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      Array [
+                        Array [
+                          0.6,
+                          0.6,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.45,
+                          0.7,
+                        ],
+                      ],
+                      undefined,
+                      Array [
+                        Array [
+                          0.58,
+                          0.58,
+                        ],
+                      ],
+                    ],
+                    Array [
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      Array [
+                        Array [
+                          0.3,
+                          0.6,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.2,
+                          0.45,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.36,
+                          0.58,
+                        ],
+                      ],
+                    ],
+                    Array [
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      Array [
+                        Array [
+                          0.45,
+                          0.2,
+                        ],
+                      ],
+                      undefined,
+                      undefined,
+                      undefined,
+                      Array [
+                        Array [
+                          0.3,
+                          0.3,
+                        ],
+                      ],
+                      Array [
+                        Array [
+                          0.36,
+                          0.36,
+                        ],
+                      ],
+                    ],
+                  ],
+                  "texts": Array [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "",
+                  ],
+                },
+                "id": 0,
+              },
+            ],
+            "title": "Frisbee Drill Title",
+            "type": "frisbee",
+          },
+          Object {
+            "author": "Author",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
+            "durationInMinutes": 30,
+            "equipment": "Equipment needs for the drill",
+            "equipmentLabel": "",
+            "goals": Array [
+              "Defense",
+            ],
+            "id": 4,
+            "image": "https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg",
+            "intensity": "Low",
+            "level": "Beginner",
+            "minimalPlayersNumber": 2,
+            "seasonTiming": "",
+            "steps": Array [
+              Object {
+                "id": 0,
+                "vimeoId": "462695757",
+              },
+            ],
+            "title": "Frisbee Drill Title",
+            "type": "frisbee",
+          },
+        ]
+      }
+      getItem={[Function]}
+      getItemCount={[Function]}
+      horizontal={false}
+      initialNumToRender={10}
+      keyExtractor={[Function]}
+      maxToRenderPerBatch={10}
+      onContentSizeChange={[Function]}
+      onDrillPress={[Function]}
+      onEndReachedThreshold={2}
+      onLayout={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      removeClippedSubviews={false}
+      renderItem={[Function]}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={Array []}
+      updateCellsBatchingPeriod={50}
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={21}
+    >
+      <View>
+        <View
+          onLayout={[Function]}
+        >
+          <View
+            style={
+              Object {
+                "borderBottomColor": "#e5e5e5",
+                "borderBottomWidth": 1,
+                "marginVertical": 10,
+                "paddingBottom": 10,
+                "paddingHorizontal": 10,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <View
+                accessible={true}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "left": 0,
+                    "opacity": 1,
+                    "position": "absolute",
+                  }
+                }
+                testID="goToPrev1"
+              >
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": undefined,
+                        "fontSize": 12,
+                      },
+                      Object {
+                        "color": "#232b2b",
+                        "fontSize": 42,
+                      },
+                      Object {
+                        "fontFamily": "material-community",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  󰅁
+                </Text>
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "justifyContent": "center",
+                    "marginHorizontal": 40,
+                  }
+                }
+              >
+                <Text
+                  numberOfLines={1}
+                  style={
+                    Object {
+                      "fontSize": 20,
+                      "fontWeight": "bold",
+                    }
+                  }
+                >
+                  Training 2
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "fontSize": 20,
+                    }
+                  }
+                >
+                   
+                  (
+                  2
+                  /
+                  2
+                  )
+                   
+                </Text>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "flexDirection": "row",
+                  "justifyContent": "space-evenly",
+                  "padding": 5,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                  }
+                }
+              >
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#232b2b",
+                        "fontSize": 22,
+                      },
+                      undefined,
+                      Object {
+                        "fontFamily": "material-community",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  󰀎
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#A6A6A6",
+                      "fontSize": 16,
+                    }
+                  }
+                >
+                  2
+                  +
+                </Text>
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                  }
+                }
+              >
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#232b2b",
+                        "fontSize": 22,
+                      },
+                      undefined,
+                      Object {
+                        "fontFamily": "material-community",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  󰅐
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#A6A6A6",
+                      "fontSize": 16,
+                    }
+                  }
+                >
+                  1 h
+                </Text>
+              </View>
+            </View>
+            <Text
+              style={
+                Object {
+                  "color": "#A6A6A6",
+                  "fontSize": 16,
+                }
+              }
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget
+            </Text>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "flexDirection": "row",
+                "height": 80,
+                "marginBottom": 20,
+                "opacity": 1,
+                "paddingLeft": 20,
+              }
+            }
+          >
+            <View
+              accessibilityIgnoresInvertColors={true}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "rgb(0,0,0)",
+                  "borderRadius": 5,
+                  "height": 80,
+                  "justifyContent": "center",
+                  "marginRight": 10,
+                  "padding": 10,
+                  "width": 80,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "uri": "https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1",
+                  }
+                }
+                style={
+                  Array [
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                    Object {
+                      "height": 80,
+                      "width": 80,
+                    },
+                    Object {
+                      "borderRadius": 5,
+                      "opacity": 0.5,
+                    },
+                  ]
+                }
+              />
+              <Text
+                style={
+                  Object {
+                    "color": "#e5e5e5",
+                    "fontSize": 16,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                2
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#e5e5e5",
+                    "fontSize": 14,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                players
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "padding": 5,
+                  "paddingBottom": 10,
+                  "paddingRight": 10,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#A6A6A6",
+                    "flex": 2,
+                    "fontSize": 14,
+                  }
+                }
+              >
+                Author
+              </Text>
+              <Text
+                numberOfLines={1}
+                style={
+                  Object {
+                    "flex": 3,
+                    "flexWrap": "wrap",
+                    "fontSize": 20,
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                Frisbee Drill Title
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#A6A6A6",
+                    "flex": 2,
+                    "fontSize": 14,
+                  }
+                }
+              >
+                Defense
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "flexDirection": "row",
+                "height": 80,
+                "marginBottom": 20,
+                "opacity": 1,
+                "paddingLeft": 20,
+              }
+            }
+          >
+            <View
+              accessibilityIgnoresInvertColors={true}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "rgb(0,0,0)",
+                  "borderRadius": 5,
+                  "height": 80,
+                  "justifyContent": "center",
+                  "marginRight": 10,
+                  "padding": 10,
+                  "width": 80,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "uri": "https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg",
+                  }
+                }
+                style={
+                  Array [
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                    Object {
+                      "height": 80,
+                      "width": 80,
+                    },
+                    Object {
+                      "borderRadius": 5,
+                      "opacity": 0.5,
+                    },
+                  ]
+                }
+              />
+              <Text
+                style={
+                  Object {
+                    "color": "#e5e5e5",
+                    "fontSize": 16,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                2
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#e5e5e5",
+                    "fontSize": 14,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                players
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "padding": 5,
+                  "paddingBottom": 10,
+                  "paddingRight": 10,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#A6A6A6",
+                    "flex": 2,
+                    "fontSize": 14,
+                  }
+                }
+              >
+                Author
+              </Text>
+              <Text
+                numberOfLines={1}
+                style={
+                  Object {
+                    "flex": 3,
+                    "flexWrap": "wrap",
+                    "fontSize": 20,
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                Frisbee Drill Title
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#A6A6A6",
+                    "flex": 2,
+                    "fontSize": 14,
+                  }
+                }
+              >
+                Defense
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+        >
+          <View
+            style={
+              Object {
+                "paddingBottom": 30,
+              }
+            }
+          />
+        </View>
+      </View>
+    </RCTScrollView>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#fff",
+          "bottom": 0,
+          "paddingBottom": 20,
+          "paddingTop": 5,
+          "position": "absolute",
+          "width": "100%",
+        }
+      }
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#2a9e91",
+            "borderRadius": 5,
+            "flexDirection": "row",
+            "height": 40,
+            "justifyContent": "center",
+            "opacity": 1,
+            "paddingHorizontal": 20,
+            "paddingVertical": 10,
+            "width": "80%",
+          }
+        }
+        testID="start1"
+      >
+        <Text
+          style={
+            Object {
+              "color": "#fff",
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
+        >
+          Start training
+        </Text>
+      </View>
+    </View>
   </View>
 </RNCViewPager>
 `;

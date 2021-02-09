@@ -280,5 +280,12 @@ export default {
       title: 'Beginner',
       trainings: [training, training2],
     },
+    {
+      id: 1,
+      type: DrillTypes.FRISBEE,
+      equipmentLabel: EquipmentLabels.NONE,
+      title: 'Beginner',
+      trainings: [training, training2],
+    },
   ],
 };

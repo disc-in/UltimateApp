@@ -4,6 +4,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import ViewPager from '@react-native-community/viewpager';
 
 import I18n from '../utils/i18n';
+import { DrillTypes } from '../Fixtures/config';
 import DrillList from './shared/DrillList';
 import Button from './shared/Button';
 import theme from '../styles/theme.style';
@@ -21,7 +22,7 @@ export function getTrainingMinimalPlayersNumber(training) {
 const TrainingPage = (props) => {
   const { navigation, route } = props;
   const { training, program } = route.params;
-  const isProgramFitness = program.type === 'fitness';
+  const isProgramFrisbee = program.type === DrillTypes.FRISBEE;
 
   const pagerRef = useRef(null);
   const initialIndex = program.trainings.findIndex((item) => item.id === training.id);
@@ -74,31 +75,29 @@ const TrainingPage = (props) => {
 
   const renderHeader = (training, index) => (
     <View style={styles.header}>
-      {program && programNavigation(training, index)}
-      <View style={styles.infos}>
-        {!isProgramFitness && (
-          <>
-            <View style={styles.info}>
-              <MaterialCommunityIcons name="account-multiple" color={theme.COLOR_PRIMARY} size={22} />
-              <Text style={styles.infoValue}>{getTrainingMinimalPlayersNumber(training)}+</Text>
-            </View>
-            <View style={styles.info}>
-              <MaterialCommunityIcons name="clock-outline" color={theme.COLOR_PRIMARY} size={22} />
-              <Text style={styles.infoValue}>{convertMinsToTime(getTrainingDuration(training))}</Text>
-            </View>
-          </>
-        )}
-      </View>
+      {programNavigation(training, index)}
+      {isProgramFrisbee && (
+        <View style={styles.infos}>
+          <View style={styles.info}>
+            <MaterialCommunityIcons name="account-multiple" color={theme.COLOR_PRIMARY} size={22} />
+            <Text style={styles.infoValue}>{getTrainingMinimalPlayersNumber(training)}+</Text>
+          </View>
+          <View style={styles.info}>
+            <MaterialCommunityIcons name="clock-outline" color={theme.COLOR_PRIMARY} size={22} />
+            <Text style={styles.infoValue}>{convertMinsToTime(getTrainingDuration(training))}</Text>
+          </View>
+        </View>
+      )}
       <Text style={styles.descriptionText}>{training.description}</Text>
     </View>
   );
 
   const renderTraining = (training, index) => {
     const onDrillPress = (drill) => {
-      if (isProgramFitness) {
-        navigation.navigate('DrillPage', { id: drill.id });
-      } else {
+      if (isProgramFrisbee) {
         navigation.navigate('DrillPageMinimal', { drill, training, program });
+      } else {
+        navigation.navigate('DrillPage', { id: drill.id });
       }
     };
 
@@ -116,7 +115,7 @@ const TrainingPage = (props) => {
           onDrillPress={onDrillPress}
         />
         <View style={styles.footer}>
-          {!isProgramFitness && (
+          {isProgramFrisbee && (
             <Button onPress={goToFirstDrill} text={I18n.t('trainingPage.start')} testID={`start${index}`} />
           )}
         </View>

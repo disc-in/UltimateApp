@@ -8085,7 +8085,7 @@ const fitnessWeek11 = {
   id: 111,
   title: 'Sprint drill',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'Elevenh week of the program',
+  description: 'Eleventh week of the program',
   drills: [suicide, suicide, mas15],
 };
 const fitnessWeek12 = {
@@ -8406,7 +8406,7 @@ const fitnessFull11 = {
   id: 211,
   title: 'Pre-Season',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
-  description: 'Elevenh week of the program',
+  description: 'Eleventh week of the program',
   drills: [agility7, strength7, mas15],
 };
 const fitnessFull12 = {

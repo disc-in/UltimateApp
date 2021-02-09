@@ -87,6 +87,7 @@ const FitnessDrillIllustration = (props) => {
     const isUniqueStep = stepsCount === 1;
     return (
       <>
+
         <View style={styles.allPage}>
           <View style={[styles.videoMultiple, isUniqueStep && styles.videoAlone]}>
             <VimeoVideo vimeoId={vimeoId} sounds={sounds} />
@@ -102,6 +103,7 @@ const FitnessDrillIllustration = (props) => {
               />
             )}
           </ScrollView>
+
         </View>
       </>
     );
@@ -174,10 +176,8 @@ const styles = StyleSheet.create({
     width: 80,
     height: 80,
   },
-  videoAlone: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    flex: 1,
+  video: {
+    height: 250,
   },
   step: {
     flex: 1,

@@ -105,18 +105,6 @@ const styles = StyleSheet.create({
     marginLeft: '10%',
     marginTop: 15,
     marginBottom: 5,
-    width: '80%',
-  },
-  titleContainer: {
-    flexShrink: 1,
-    flexGrow: 0,
-    marginVertical: 10,
-  },
-  title: {
-    fontSize: theme.FONT_SIZE_LARGE,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    marginRight: 46, // Matches the details icon width
   },
   illustration: {
     flexGrow: 1,

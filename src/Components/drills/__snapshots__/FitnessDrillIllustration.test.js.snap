@@ -10,12 +10,9 @@ exports[`<FitnessDrillIllustration /> links to any step and finishes at the end 
 >
   <View
     style={
-      Array [
-        Object {
-          "height": 250,
-        },
-        false,
-      ]
+      Object {
+        "height": 250,
+      }
     }
   >
     <View
@@ -420,12 +417,9 @@ exports[`<FitnessDrillIllustration /> renders correctly 1`] = `
 >
   <View
     style={
-      Array [
-        Object {
-          "height": 250,
-        },
-        false,
-      ]
+      Object {
+        "height": 250,
+      }
     }
   >
     <View

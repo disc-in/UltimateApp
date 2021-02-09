@@ -89,7 +89,7 @@ export default {
     frisbeeTab: 'Frisbee',
     fitnessTab: 'Fitness',
     theoryTab: 'Theory',
-    editor: 'Editor',
+    editor: 'My Playbook',
     drills: 'Drills',
     adult: 'Senior',
     junior: 'Junior',
@@ -111,27 +111,19 @@ export default {
     loading: 'It looks like you want to import a play, I am going to fetch it... 🏃',
     incentive: 'You are about to import and save the play {{title}}',
     question: 'Are you sure?',
+    downloadError: 'I could not find the play you are looking for',
   },
   editor: {
     saveModificationsTitle: 'Do you want to save the current play?',
     saveModificationsText:
       "The play '{{title}}' has been modified.\n\nDo you want to save these modifications before closing it?",
+    saveSuccess: "The play has been saved as '{{title}}'",
     savedPlaysList: {
-      title: 'Saved plays',
+      title: 'My Playbook',
       empty: "You haven't saved any plays yet",
       delete: 'Delete',
       deleteConfirmation: 'Do you really want to delete this play?',
       deleteSuccess: "The play '{{title}}' has been deleted.",
-    },
-    currentPlayManager: {
-      save: 'Save',
-      saveSuccess: "The play has been saved as '{{title}}'",
-      rename: 'Rename',
-      new: 'New',
-      share: 'Share',
-      shareTitle: 'Sharing {{title}}',
-      shareMessage: 'Use the following link to import my awesome play in Disc In: {{url}}',
-      shareError: 'It looks like there was an error sharing your play',
     },
     renamePlayModal: {
       placeholder: 'Click here to enter the new name',
@@ -139,6 +131,11 @@ export default {
       empty: 'You cannot set an empty name',
       renameSuccess: 'The play was successfully renamed!',
       cta: 'Apply',
+    },
+    sharePlay: {
+      shareTitle: 'Sharing {{title}}',
+      shareMessage: 'Use the following link to import my awesome play in Disc In: {{url}}',
+      shareError: 'It looks like there was an error sharing your play',
     },
   },
   drills: {
@@ -196,7 +193,12 @@ export default {
     level: 'level',
     start: 'Start',
     shareTitle: 'Share {{drillTitle}}',
-    shareContent: 'Check this drill on Disc In: {{url}}',
+    shareContent: {
+      zero: 'Check this drill on Disc In: {{url}}',
+      other:
+        'Check this drill on Disc In: {{url}}\nAnd in case you cannot install the app, here are some videos of the drill:\n{{youtubeVideos}}',
+    },
+    description: 'Drill: {{description}}…',
   },
   drillPageMinimal: {
     finish: 'Finish Training!',
@@ -237,5 +239,10 @@ export default {
   },
   tacticsPage: {
     chooseTopic: 'Choose a topic:',
+  },
+  videoPage: {
+    share: 'Share',
+    shareContent: "Here's a great video found on Disc In :\n{{url}} ",
+    error: 'There was a problem while sharing the link',
   },
 };

@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { View, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, TouchableOpacity } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-import theme from '../../styles/theme.style';
+import theme from '../../../styles/theme.style';
 
 // Stack of the values taken by a drill in the editor. Each time the drill is modified, a copy of the drill is added to the stack.
 // Used to enable undo/redo actions
@@ -47,25 +47,35 @@ function AnimationHistory({ animation, onAnimationHistoryChange }) {
   const canUndo = currentId !== 0;
   const canRedo = currentId !== stack.length - 1;
   return (
-    <View style={{ flexDirection: 'row' }}>
-      <TouchableOpacity onPress={undo} style={{ marginRight: 10 }} disabled={!canUndo}>
+    <View style={styles.history}>
+      <TouchableOpacity onPress={undo} disabled={!canUndo}>
         <MaterialCommunityIcons
-          name="undo"
-          color={canUndo ? theme.COLOR_PRIMARY : theme.COLOR_SECONDARY}
-          size={22}
+          name="undo-variant"
+          color={canUndo ? theme.COLOR_PRIMARY_LIGHT : theme.COLOR_SECONDARY}
+          size={30}
           testID="undoButton"
         />
       </TouchableOpacity>
       <TouchableOpacity onPress={redo} disabled={!canRedo}>
         <MaterialCommunityIcons
-          name="redo"
-          color={canRedo ? theme.COLOR_PRIMARY : theme.COLOR_SECONDARY}
-          size={22}
+          name="redo-variant"
+          color={canRedo ? theme.COLOR_PRIMARY_LIGHT : theme.COLOR_SECONDARY}
+          size={30}
           testID="redoButton"
+          style={styles.rightIcon}
         />
       </TouchableOpacity>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  history: {
+    flexDirection: 'row',
+  },
+  rightIcon: {
+    marginLeft: 20,
+  },
+});
 
 export default AnimationHistory;

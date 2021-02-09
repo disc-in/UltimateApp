@@ -5,6 +5,7 @@ export const createDrill = (override = {}) => {
   return {
     id: 1,
     type: DrillTypes.FITNESS,
+    visibleInList: true,
     author: 'Author',
     title: 'Fitness Drill Title',
     image: 'https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg',
@@ -54,6 +55,7 @@ export const createProgram = (override = {}) => {
 const fitnessDrill1 = {
   id: 1,
   type: DrillTypes.FITNESS,
+  visibleInList: true,
   author: 'Author',
   title: 'Fitness Drill Title',
   image: 'https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg',
@@ -91,6 +93,7 @@ const fitnessDrill1 = {
 const fitnessDrill2 = {
   id: 2,
   type: DrillTypes.FITNESS,
+  visibleInList: true,
   author: 'Author',
   title: 'Fitness Drill Title',
   image: 'http://www.liberte-fitness.fr/sites/default/files/styles/slider/public/news/tone.jpg?itok=505bme2a',
@@ -128,6 +131,7 @@ const fitnessDrill2 = {
 const frisbeeDrill1 = {
   id: 3,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Author',
   title: 'Frisbee Drill Title',
   image: 'https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1',
@@ -152,6 +156,33 @@ const frisbeeDrill1 = {
 const frisbeeDrill2 = {
   id: 4,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
+  author: 'Author',
+  title: 'Frisbee Drill Title',
+  image:
+    'https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg',
+  description:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget',
+  minimalPlayersNumber: 2,
+  equipmentLabel: '',
+  equipment: 'Equipment needs for the drill',
+  durationInMinutes: 30,
+  intensity: Intensities.LOW,
+  goals: [FrisbeeGoals.DEFENSE],
+  seasonTiming: '',
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 0,
+      vimeoId: '462695757',
+    },
+  ],
+};
+
+const hiddenFrisbeeDrill = {
+  id: 4,
+  type: DrillTypes.FRISBEE,
+  visibleInList: false,
   author: 'Author',
   title: 'Frisbee Drill Title',
   image:
@@ -225,7 +256,7 @@ export default {
             title: 'How to make a perfect cut?',
             text: 'Rise Up Ultimate',
             video: '424000350',
-            animation: '',
+            youtube: 'https://youtu.be/CqpPfVZ1HeI',
           },
         ],
       },
@@ -237,7 +268,7 @@ export default {
             title: 'How to make a perfect throw?',
             text: 'Rise Up Ultimate',
             video: '424000350',
-            animation: '',
+            youtube: 'https://youtu.be/CqpPfVZ1HeI',
           },
         ],
       },
@@ -251,7 +282,7 @@ export default {
             title: 'How does vertical stacks work?',
             text: 'That Drone Guy Ty',
             video: '424002454',
-            animation: '',
+            youtube: 'https://youtu.be/CqpPfVZ1HeI',
           },
         ],
       },
@@ -263,7 +294,7 @@ export default {
             title: 'How does vertical stacks work?',
             text: 'That Drone Guy Ty',
             video: '424002454',
-            animation: '',
+            youtube: 'https://youtu.be/CqpPfVZ1HeI',
           },
         ],
       },
@@ -276,6 +307,13 @@ export default {
     {
       id: 1,
       type: DrillTypes.FITNESS,
+      equipmentLabel: EquipmentLabels.NONE,
+      title: 'Beginner',
+      trainings: [training, training2],
+    },
+    {
+      id: 1,
+      type: DrillTypes.FRISBEE,
       equipmentLabel: EquipmentLabels.NONE,
       title: 'Beginner',
       trainings: [training, training2],

@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
 
 import theme from '../../styles/theme.style';
 
@@ -16,7 +16,7 @@ const Button = ({ onPress, icon, text, light, small, style, testID }) => {
       onPress={onPress}
       testID={testID || 'button'}
     >
-      {icon && <MaterialCommunityIcons name={icon} style={[styles.icon, textLight, smallIcon]} />}
+      {icon && <Ionicons name={icon} style={[styles.icon, textLight, smallIcon]} />}
       {text && <Text style={textLight}>{text}</Text>}
     </TouchableOpacity>
   );

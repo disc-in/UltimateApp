@@ -1,5 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<ImporterPage /> renders an error message if the play could not be found 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#fff",
+      "flex": 1,
+      "justifyContent": "space-around",
+      "padding": 20,
+    }
+  }
+>
+  <Text
+    allowFontScaling={false}
+    style={
+      Array [
+        Object {
+          "color": undefined,
+          "fontSize": 72,
+        },
+        undefined,
+        Object {
+          "fontFamily": "material-community",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Object {},
+      ]
+    }
+  >
+    󰇚
+  </Text>
+  <Text>
+    It looks like you want to import a play, I am going to fetch it... 🏃
+  </Text>
+</View>
+`;
+
 exports[`<ImporterPage /> renders correctly after download 1`] = `
 <View
   style={

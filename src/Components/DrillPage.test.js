@@ -7,10 +7,14 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { Share } from 'react-native';
 
 import store from '../Store/testStore';
+import * as firebase from '../utils/firebase';
 
 import ConnectedDrillPage, { DrillPage } from './DrillPage';
 
 jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
+jest.mock('react-native-get-random-values', () => ({
+  getRandomBase64: jest.fn(),
+}));
 
 describe('<DrillPage />', () => {
   afterEach(() => jest.clearAllMocks());
@@ -72,6 +76,7 @@ describe('<DrillPage />', () => {
   });
 
   it('triggers share', async () => {
+    jest.spyOn(firebase, 'createLink').mockImplementation(() => '');
     const share = jest.fn();
     Share.share = () => new Promise((resolve, reject) => share());
 
@@ -86,8 +91,9 @@ describe('<DrillPage />', () => {
       </Provider>,
     );
 
-    await fireEvent.press(getByTestId('shareButton'));
+    fireEvent.press(getByTestId('shareButton'));
 
+    await expect(firebase.createLink).toHaveBeenCalled();
     expect(share).toHaveBeenCalled();
   });
 });

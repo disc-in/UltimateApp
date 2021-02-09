@@ -1,16 +1,21 @@
 import React, { useState, useEffect, useLayoutEffect } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, TouchableOpacity } from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { connect } from 'react-redux';
 
+import Drill from './animation/Drill';
 import I18n from '../utils/i18n';
 import { generateUuid } from '../utils/uuid';
 import theme from '../styles/theme.style';
 import { savePlay, deletePlay } from '../Store/Actions/playAction';
+import HeaderButton from './shared/HeaderButton';
 import AnimationEditor from './editor/AnimationEditor';
-import CurrentPlayManager from './editor/CurrentPlayManager';
-import SavedPlaysList from './editor/SavedPlaysList';
 import RenamePlayModal from './editor/RenamePlayModal';
-import Drill from './animation/Drill';
+import SavedPlaysList from './editor/toolbar/SavedPlaysList';
+import NewPlay from './editor/toolbar/NewPlay';
+import SavePlay from './editor/toolbar/SavePlay';
+import AnimationHistory from './editor/toolbar/AnimationHistory';
+import SharePlay from './editor/toolbar/SharePlay';
 
 const newPlay = {
   uuid: undefined,
@@ -20,7 +25,9 @@ const newPlay = {
 
 export const PlayEditorPage = (props) => {
   const { navigation, route } = props;
-  const [currentPlay, setCurrentPlay] = useState(route.params ? route.params.currentPlay : newPlay);
+  const [currentPlay, setCurrentPlay] = useState(
+    route.params ? { ...route.params.currentPlay, animation: new Drill(route.params.currentPlay.animation) } : newPlay,
+  );
 
   // modalRenameVisible is true if the modal which enables to rename the current play is displayed
   const [modalRenameVisible, setModalRenameVisible] = useState(false);
@@ -31,23 +38,7 @@ export const PlayEditorPage = (props) => {
   useLayoutEffect(() => {
     navigation.setOptions({
       headerRight: () => (
-        <View style={{ flexDirection: 'row' }}>
-          <SavedPlaysList
-            savedPlays={props.customPlays}
-            isPlaySaved={isPlaySaved}
-            playTitle={currentPlay.title}
-            onDelete={onDelete}
-            onOpen={openPlay}
-            saveCurrentPlay={saveCurrentPlay}
-          />
-          <CurrentPlayManager
-            currentPlay={currentPlay}
-            isPlaySaved={isPlaySaved}
-            save={saveCurrentPlay}
-            new={createNewPlay}
-            rename={() => setModalRenameVisible(true)}
-          />
-        </View>
+        <HeaderButton icon="pencil" onPress={() => setModalRenameVisible(true)} testID="renameButton" />
       ),
     }),
       [];
@@ -90,7 +81,7 @@ export const PlayEditorPage = (props) => {
   };
 
   const openPlay = (play) => {
-    setCurrentPlay(play);
+    setCurrentPlay({ ...play, animation: new Drill(play.animation) });
     setIsPlaySaved(true);
   };
 
@@ -106,12 +97,37 @@ export const PlayEditorPage = (props) => {
   };
 
   return (
-    <View style={styles.centeredView}>
-      {modalRenameVisible ? (
-        <RenamePlayModal currentPlay={currentPlay} onRename={setTitle} close={() => setModalRenameVisible(false)} />
-      ) : null}
+    <View style={styles.playEditorPage}>
+      <View style={styles.centeredView}>
+        {modalRenameVisible ? (
+          <RenamePlayModal currentPlay={currentPlay} onRename={setTitle} close={() => setModalRenameVisible(false)} />
+        ) : null}
 
-      <AnimationEditor onAnimationChange={onAnimationChange} animation={currentPlay.animation} />
+        <AnimationEditor
+          onAnimationChange={onAnimationChange}
+          animation={currentPlay.animation}
+          uuid={currentPlay.uuid}
+        />
+      </View>
+      <View style={styles.toolBar}>
+        <SavedPlaysList
+          savedPlays={props.customPlays}
+          isPlaySaved={isPlaySaved}
+          playTitle={currentPlay.title}
+          onDelete={onDelete}
+          onOpen={openPlay}
+          saveCurrentPlay={saveCurrentPlay}
+        />
+        <NewPlay
+          currentPlay={currentPlay}
+          isPlaySaved={isPlaySaved}
+          createNewPlay={createNewPlay}
+          saveCurrentPlay={saveCurrentPlay}
+        />
+        <SavePlay currentPlay={currentPlay} saveCurrentPlay={saveCurrentPlay} />
+        <AnimationHistory animation={currentPlay.animation} onAnimationHistoryChange={onAnimationChange} />
+        <SharePlay currentPlay={currentPlay} />
+      </View>
     </View>
   );
 };
@@ -127,8 +143,22 @@ const mapDispatchToProps = { savePlay, deletePlay };
 export default connect(mapStateToProps, mapDispatchToProps)(PlayEditorPage);
 
 const styles = StyleSheet.create({
+  playEditorPage: {
+    flex: 1,
+  },
   centeredView: {
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     flex: 1,
+  },
+  toolBar: {
+    height: '8%',
+    minHeight: 40,
+    width: '100%',
+    backgroundColor: theme.COLOR_PRIMARY,
+    position: 'absolute',
+    bottom: 0,
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
   },
 });

@@ -1,8 +1,14 @@
 import firebase from 'firebase/app';
 import 'firebase/database';
 import { Platform, InteractionManager } from 'react-native';
+import * as Linking from 'expo-linking';
 
-import { EXPO_FIREBASE_DATABASE_URL } from '@env';
+import {
+  EXPO_FIREBASE_DATABASE_URL,
+  EXPO_FIREBASE_API_KEY,
+  EXPO_FIREBASE_DOMAIN_URI,
+  EXPO_FIREBASE_URL_PREFIX,
+} from '@env';
 import { generateUuid } from './uuid';
 
 // Work around issue `Setting a timer for long time`
@@ -73,4 +79,43 @@ export const download = (uuid) => {
   return reference(uuid)
     .once('value')
     .then((snapshot) => snapshot.val());
+};
+
+export const createLink = (path, title, description) => {
+  if (__DEV__) {
+    return Linking.makeUrl(path);
+  } else {
+    return fetch(`https://firebasedynamiclinks.googleapis.com/v1/shortLinks?key=${EXPO_FIREBASE_API_KEY}`, {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        dynamicLinkInfo: {
+          domainUriPrefix: EXPO_FIREBASE_DOMAIN_URI,
+          link: `${EXPO_FIREBASE_URL_PREFIX}${path}`,
+          androidInfo: {
+            androidPackageName: 'com.discin.discin',
+            androidMinPackageVersionCode: '5',
+          },
+          iosInfo: {
+            iosBundleId: 'com.discin.discin',
+            iosCustomScheme: 'discin',
+            iosAppStoreId: '1537387830',
+          },
+          desktopInfo: {
+            desktopFallbackLink: 'https://play.google.com/store/apps/details?id=com.discin.discin',
+          },
+          socialMetaTagInfo: {
+            socialTitle: `Disc In - ${title}`,
+            socialDescription: description,
+            socialImageLink: 'https://raw.githubusercontent.com/disc-in/UltimateApp/master/assets/icon.png',
+          },
+        },
+      }),
+    })
+      .then((response) => response.json())
+      .then((responseJson) => responseJson.shortLink);
+  }
 };

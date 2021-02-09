@@ -1,5 +1,6 @@
 import React, { useRef, useLayoutEffect } from 'react';
 import {
+  Platform,
   ScrollView,
   Share,
   StyleSheet,
@@ -12,10 +13,10 @@ import {
 } from 'react-native';
 import { connect } from 'react-redux';
 import { useHeaderHeight } from '@react-navigation/stack';
-import * as Linking from 'expo-linking';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
 
 import I18n from '../utils/i18n';
+import { createLink } from '../utils/firebase';
 import { toggleFavorite } from '../Store/Actions/favoriteAction';
 import { DrillTypes } from '../Fixtures/config';
 import theme from '../styles/theme.style';
@@ -49,28 +50,45 @@ export const DrillPage = (props) => {
   };
 
   const share = async (drill) => {
-    const url = Linking.makeUrl('drills/' + drill.id);
+    const url = await createLink(
+      'drills/' + drill.id,
+      drill.title,
+      I18n.t('drillPage.description', { description: drill.description.slice(0, 70) }),
+    );
+
+    const youtubeVideos = drill.steps.reduce((total, step) => {
+      const stepvideo = step.youtube ? `${step.title} - ${step.youtube}\n` : '';
+      return total + stepvideo;
+    }, '');
 
     Share.share({
       title: I18n.t('drillPage.shareTitle', { drillTitle: drill.title }),
-      message: I18n.t('drillPage.shareContent', { url }),
+      message: I18n.t('drillPage.shareContent', { url, youtubeVideos, count: youtubeVideos.length }),
       url,
     }).catch((e) => console.log(e));
   };
 
   useLayoutEffect(() => {
-    let favoriteIcon = 'heart-outline';
-    if (props.favoriteDrills.findIndex((item) => item.id === props.route.params.id) !== -1) {
-      favoriteIcon = 'heart';
-    }
-
     navigation.setOptions({
       title: drill.title,
       headerRight: () => (
-        <HeaderButton icon={favoriteIcon} onPress={() => props.toggleFavorite(drill)} testID="favoriteButton" />
+        <TouchableOpacity onPress={() => share(drill)} testID="shareButton">
+          <Ionicons
+            name={Platform.select({
+              ios: 'ios-share-outline',
+              default: 'share-social',
+            })}
+            style={styles.iconShare}
+          />
+        </TouchableOpacity>
       ),
     });
   });
+
+  let favoriteIcon = 'heart-outline';
+  if (props.favoriteDrills.findIndex((item) => item.id === props.route.params.id) !== -1) {
+    favoriteIcon = 'heart';
+  }
 
   return (
     <ScrollView ref={drillScrollView} style={styles.drillPage}>
@@ -97,9 +115,9 @@ export const DrillPage = (props) => {
         </View>
         <View style={styles.startButton}>
           <StartButton onPress={onPressStartButton} text={I18n.t('drillPage.start')} />
-          <View style={styles.shareButton}>
-            <TouchableOpacity onPress={() => share(drill)} testID="shareButton">
-              <MaterialCommunityIcons name="share-variant" color={theme.COLOR_PRIMARY_LIGHT} size={30} />
+          <View style={styles.favoriteButton}>
+            <TouchableOpacity onPress={() => props.toggleFavorite(drill)} testID="favoriteButton">
+              <Ionicons name={favoriteIcon} color={theme.COLOR_PRIMARY_LIGHT} size={30} />
             </TouchableOpacity>
           </View>
         </View>
@@ -153,12 +171,12 @@ const styles = StyleSheet.create({
   infoSubWrapper: {
     justifyContent: 'center',
     alignItems: 'center',
-    paddingHorizontal: 10,
+    paddingHorizontal: 5,
     flexBasis: '33%',
   },
   info: {
     color: theme.COLOR_PRIMARY_LIGHT,
-    fontSize: theme.FONT_SIZE_MEDIUM,
+    fontSize: theme.FONT_SIZE_SMALL,
   },
   separator: {
     height: 15,
@@ -172,12 +190,16 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
   },
-  shareButton: {
+  favoriteButton: {
     position: 'absolute',
     right: '15%',
     justifyContent: 'center',
     top: 0,
     bottom: 0,
+  },
+  iconShare: {
+    fontSize: 28,
+    marginRight: 20,
   },
 });
 

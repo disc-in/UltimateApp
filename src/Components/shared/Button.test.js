@@ -16,7 +16,7 @@ describe('<Button />', () => {
   });
 
   it('renders correctly with an icon', () => {
-    const tree = renderer.create(<Button text="OK" icon="share" small />).toJSON();
+    const tree = renderer.create(<Button text="OK" icon="share" />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 

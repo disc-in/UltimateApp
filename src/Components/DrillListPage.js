@@ -12,7 +12,7 @@ export const DrillListPage = (props) => {
   const { navigation, route, storeDrills } = props;
   const { type, currentFilters } = route.params;
 
-  const storeDrillsForType = storeDrills.filter((drill) => drill.type === type);
+  const storeDrillsForType = storeDrills.filter((drill) => drill.type === type && drill.visibleInList);
   const displayedDrills = currentFilters?.displayedDrills || storeDrillsForType;
 
   const filterIsOn =
@@ -41,7 +41,7 @@ export const DrillListPage = (props) => {
         {type === DrillTypes.FRISBEE && (
           <Button
             onPress={openFilters}
-            icon="filter-variant"
+            icon="filter"
             text={I18n.t('drillListPage.filter')}
             testID="filterButton"
             small

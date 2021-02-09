@@ -1,7 +1,7 @@
 import React from 'react';
 import { create, act } from 'react-test-renderer';
 
-import animationSquare from '../../Fixtures/Animation/AnimationSquare';
+import animationSquare from '../../../Fixtures/Animation/AnimationSquare';
 
 import SavedPlaysList from './SavedPlaysList';
 

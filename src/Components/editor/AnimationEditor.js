@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StyleSheet, Animated, Easing, View, Platform } from 'react-native';
+import { StyleSheet, Animated, Easing, View, Platform, Dimensions } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import Animation from '../animation/Animation';
@@ -8,7 +8,6 @@ import DraggableDisplayedElement from './DraggableDisplayedElement';
 import BackgroundPicker from './BackgroundPicker';
 import Drill from '../animation/Drill';
 import theme from '../../styles/theme.style';
-import AnimationHistory from './AnimationHistory';
 
 class AnimationEditor extends React.Component {
   constructor(props) {
@@ -146,9 +145,15 @@ class AnimationEditor extends React.Component {
   componentDidUpdate(prevProps) {
     const animation = new Drill(this.props.animation);
     if (!this.state.animation.isEqualTo(animation)) {
-      this.state.currentStepAV.setValue(0);
-      this.setState({ animation });
-      this.setLabels();
+      if (this.props.uuid !== prevProps.uuid) {
+        this.state.currentStepAV.setValue(0);
+      } else {
+        this.state.currentStepAV.setValue(Math.min(this.currentStep, this.props.animation.stepCount() - 1));
+      }
+
+      this.setState({ animation }, () => {
+        this.setLabels();
+      });
     }
   }
 
@@ -283,6 +288,8 @@ class AnimationEditor extends React.Component {
   };
 
   render() {
+    const bigScreen = Dimensions.get('window').height > 600 ? { alignItems: 'center' } : undefined;
+
     return (
       <View
         ref={(ref) => {
@@ -308,30 +315,30 @@ class AnimationEditor extends React.Component {
         />
 
         <View style={styles.actionsArea}>
-          <View
-            style={[styles.deletionArea, this.state.isElementMoving ? null : { transform: [{ scale: 0 }] }]}
-            pointerEvents="none"
-          >
-            <MaterialCommunityIcons name="trash-can" color={theme.COLOR_PRIMARY} size={22} />
-          </View>
-          <View style={[styles.draggableArea, this.state.isElementMoving ? { transform: [{ scale: 0 }] } : null]}>
-            <BackgroundPicker
-              onBackgroundChange={this.onBackgroundChange}
-              selectedBackground={this.state.animation.background}
-            />
-            {['offense', 'defense', 'disc', 'triangle'].map((type) => (
-              <DraggableDisplayedElement
-                type={type}
-                draggableBaseWidth={this.state.draggableBaseWidth}
-                onMoveEnd={this.addElementToAnimation}
-                key={type}
-                number={this.state.labels[type]}
-              />
-            ))}
-            <AnimationHistory
-              animation={this.state.animation}
-              onAnimationHistoryChange={this.onAnimationHistoryChange}
-            />
+          <View style={[styles.container, bigScreen]}>
+            {this.state.isElementMoving ? (
+              <View style={[styles.deletionArea]}>
+                <MaterialCommunityIcons name="trash-can" color={theme.COLOR_PRIMARY} size={22} />
+              </View>
+            ) : (
+              <View style={styles.draggableArea}>
+                <BackgroundPicker
+                  onBackgroundChange={this.onBackgroundChange}
+                  selectedBackground={this.state.animation.background}
+                />
+                <View style={styles.draggableElements}>
+                  {['offense', 'defense', 'disc', 'triangle'].map((type) => (
+                    <DraggableDisplayedElement
+                      type={type}
+                      draggableBaseWidth={this.state.draggableBaseWidth}
+                      onMoveEnd={this.addElementToAnimation}
+                      number={this.state.labels[type]}
+                      key={type}
+                    />
+                  ))}
+                </View>
+              </View>
+            )}
           </View>
         </View>
       </View>
@@ -342,31 +349,41 @@ class AnimationEditor extends React.Component {
 const styles = StyleSheet.create({
   actionsArea: {
     marginHorizontal: 10,
-    marginTop: 10,
-    height: 80,
+    height: '12%',
   },
   draggableArea: {
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'space-around',
     position: 'absolute',
-    marginLeft: 0,
-    left: 0,
-    top: 0,
-    flex: 1,
+    height: 30,
     zIndex: 1,
+    width: '100%',
   },
   deletionArea: {
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'center',
     borderColor: 'grey',
-    height: 80,
     position: 'absolute',
     left: 0,
     top: 0,
+    bottom: 0,
     right: 0,
     zIndex: 2,
-    borderWidth: 2,
-    justifyContent: 'center',
+    borderWidth: 1,
+    marginBottom: 10,
+  },
+  draggableElements: {
+    flexDirection: 'row',
+    width: '45%',
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
+    marginLeft: 20,
+  },
+  container: {
+    flex: 1,
+    flexDirection: 'row',
   },
 });
 export default AnimationEditor;

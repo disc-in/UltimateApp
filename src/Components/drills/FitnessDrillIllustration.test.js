@@ -49,28 +49,28 @@ describe('<FitnessDrillIllustration />', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  // it('links to any step and finishes at the end', async () => {
-  //   const { getByText, getByTestId, toJSON } = render(
-  //     <NavigationContext.Provider value={navContext}>
-  //       <FitnessDrillIllustration drill={drill} />
-  //     </NavigationContext.Provider>,
-  //   );
+  it('links to any step and finishes at the end', async () => {
+    const { getByText, getByTestId, toJSON } = render(
+      <NavigationContext.Provider value={navContext}>
+        <FitnessDrillIllustration drill={drill} />
+      </NavigationContext.Provider>,
+    );
 
-  //   // All steps rendered
-  //   expect(getByText('3 First Step')).toBeDefined();
-  //   expect(getByText('3 Second Step')).toBeDefined();
-  //   expect(getByText('3 Third Step')).toBeDefined();
+    // All steps rendered
+    expect(getByText('3 First Step')).toBeDefined();
+    expect(getByText('3 Second Step')).toBeDefined();
+    expect(getByText('3 Third Step')).toBeDefined();
 
-  //   fireEvent.press(getByText('3 Third Step'));
+    fireEvent.press(getByText('3 Third Step'));
 
-  //   // Third step is current
-  //   expect(toJSON()).toMatchSnapshot();
+    // Third step is current
+    expect(toJSON()).toMatchSnapshot();
 
-  //   fireEvent.press(getByTestId('doneIcon'));
+    fireEvent.press(getByTestId('doneIcon'));
 
-  //   await waitFor(() => expect(getByText('You have completed the drill!')).toBeDefined());
+    await waitFor(() => expect(getByText('You have completed the drill!')).toBeDefined());
 
-  //   // Finished state displayed
-  //   expect(toJSON()).toMatchSnapshot();
-  // });
+    // Finished state displayed
+    expect(toJSON()).toMatchSnapshot();
+  });
 });

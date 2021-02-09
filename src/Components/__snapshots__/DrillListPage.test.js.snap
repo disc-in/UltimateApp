@@ -371,6 +371,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           ],
           "title": "Frisbee Drill Title",
           "type": "frisbee",
+          "visibleInList": true,
         },
         Object {
           "author": "Author",
@@ -395,6 +396,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           ],
           "title": "Frisbee Drill Title",
           "type": "frisbee",
+          "visibleInList": true,
         },
       ]
     }
@@ -690,6 +692,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           ],
           "title": "Frisbee Drill Title",
           "type": "frisbee",
+          "visibleInList": true,
         },
         Object {
           "author": "Author",
@@ -714,6 +717,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           ],
           "title": "Frisbee Drill Title",
           "type": "frisbee",
+          "visibleInList": true,
         },
       ]
     }
@@ -1157,6 +1161,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           ],
           "title": "Fitness Drill Title",
           "type": "fitness",
+          "visibleInList": true,
         },
         Object {
           "author": "Author",
@@ -1182,6 +1187,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           ],
           "title": "Fitness Drill Title",
           "type": "fitness",
+          "visibleInList": true,
         },
         Object {
           "author": "Author",
@@ -1207,6 +1213,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           ],
           "title": "Fitness Drill Title",
           "type": "fitness",
+          "visibleInList": true,
         },
       ]
     }
@@ -1237,6 +1244,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           ],
           "title": "Fitness Drill Title",
           "type": "fitness",
+          "visibleInList": true,
         },
         Object {
           "author": "Author",
@@ -1262,6 +1270,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           ],
           "title": "Fitness Drill Title",
           "type": "fitness",
+          "visibleInList": true,
         },
         Object {
           "author": "Author",
@@ -1287,6 +1296,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           ],
           "title": "Fitness Drill Title",
           "type": "fitness",
+          "visibleInList": true,
         },
       ]
     }
@@ -1865,6 +1875,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           ],
           "title": "Fitness Drill Title",
           "type": "frisbee",
+          "visibleInList": true,
         },
         Object {
           "author": "Author",
@@ -1890,6 +1901,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           ],
           "title": "Fitness Drill Title",
           "type": "frisbee",
+          "visibleInList": true,
         },
         Object {
           "author": "Author",
@@ -1915,6 +1927,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           ],
           "title": "Fitness Drill Title",
           "type": "frisbee",
+          "visibleInList": true,
         },
       ]
     }
@@ -1945,6 +1958,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           ],
           "title": "Fitness Drill Title",
           "type": "frisbee",
+          "visibleInList": true,
         },
         Object {
           "author": "Author",
@@ -1970,6 +1984,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           ],
           "title": "Fitness Drill Title",
           "type": "frisbee",
+          "visibleInList": true,
         },
         Object {
           "author": "Author",
@@ -1995,6 +2010,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           ],
           "title": "Fitness Drill Title",
           "type": "frisbee",
+          "visibleInList": true,
         },
       ]
     }

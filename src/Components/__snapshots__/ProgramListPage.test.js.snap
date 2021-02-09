@@ -189,6 +189,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
                         ],
                         "title": "Fitness Drill Title",
                         "type": "fitness",
+                        "visibleInList": true,
                       },
                       Object {
                         "author": "Author",
@@ -479,6 +480,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
                         ],
                         "title": "Frisbee Drill Title",
                         "type": "frisbee",
+                        "visibleInList": true,
                       },
                     ],
                     "id": 1,
@@ -778,6 +780,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
                         ],
                         "title": "Frisbee Drill Title",
                         "type": "frisbee",
+                        "visibleInList": true,
                       },
                       Object {
                         "author": "Author",
@@ -802,6 +805,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
                         ],
                         "title": "Frisbee Drill Title",
                         "type": "frisbee",
+                        "visibleInList": true,
                       },
                     ],
                     "id": 2,

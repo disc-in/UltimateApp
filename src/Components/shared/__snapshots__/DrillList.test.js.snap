@@ -33,6 +33,7 @@ exports[`<DrillList /> renders correctly 1`] = `
         ],
         "title": "Fitness Drill Title",
         "type": "fitness",
+        "visibleInList": true,
       },
     ]
   }
@@ -63,6 +64,7 @@ exports[`<DrillList /> renders correctly 1`] = `
         ],
         "title": "Fitness Drill Title",
         "type": "fitness",
+        "visibleInList": true,
       },
     ]
   }

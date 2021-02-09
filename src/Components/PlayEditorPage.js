@@ -63,7 +63,7 @@ export const PlayEditorPage = (props) => {
 
   const saveCurrentPlay = () => {
     const defaultTitle = I18n.t('playEditorPage.untitledPlay');
-    if (currentPlay.title == I18n.t('playEditorPage.untitledPlay')) {
+    if (currentPlay.title === I18n.t('playEditorPage.untitledPlay')) {
       let newTitle = defaultTitle;
 
       let counter = 1;

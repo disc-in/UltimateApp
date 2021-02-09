@@ -194,7 +194,7 @@ Array [
                               "flexDirection": "row",
                               "flexGrow": 0,
                               "flexShrink": 0.7,
-                              "marginRight": "20%",
+                              "marginRight": "10%",
                             }
                           }
                         >
@@ -299,7 +299,7 @@ Array [
                               "flexDirection": "row",
                               "flexGrow": 0,
                               "flexShrink": 0.7,
-                              "marginRight": "20%",
+                              "marginRight": "10%",
                             }
                           }
                         >
@@ -363,7 +363,7 @@ Array [
                               "flexDirection": "row",
                               "flexGrow": 0,
                               "flexShrink": 0.7,
-                              "marginRight": "20%",
+                              "marginRight": "10%",
                             }
                           }
                         >

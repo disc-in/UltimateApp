@@ -1,16 +1,6 @@
 import React, { useState, useEffect, useRef, useLayoutEffect } from 'react';
-import {
-  Platform,
-  Animated,
-  View,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  FlatList,
-  ScrollView,
-  Share,
-} from 'react-native';
-import { Easing } from 'react-native-reanimated';
+import { Platform, View, StyleSheet, Text, TouchableOpacity, FlatList, ScrollView, Share } from 'react-native';
+
 import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
 
 import I18n from '../utils/i18n';
@@ -49,6 +39,8 @@ const FitnessPage = (props) => {
   useLayoutEffect(() => {
     navigation.setOptions({
       title: drill.title,
+      headerTintColor: theme.COLOR_PRIMARY_LIGHT,
+      headerStyle: { backgroundColor: theme.COLOR_PRIMARY },
       headerRight: () => (
         <TouchableOpacity onPress={() => share(drill)} testID="shareButton">
           <Ionicons
@@ -64,33 +56,11 @@ const FitnessPage = (props) => {
   });
 
   const [activeIndex, setActiveIndex] = useState(0);
-  const opacityUnchecked = useRef(new Animated.Value(1)).current;
-  const opacityChecked = opacityUnchecked.interpolate({ inputRange: [0, 1], outputRange: [1, 0] });
   const currentStep = drill.steps[activeIndex];
   const stepsCount = drill.steps.length;
 
   const carouselRef = useRef(null);
   const flatListRef = useRef(null);
-
-  const checkAnimation = () => {
-    Animated.sequence([
-      Animated.timing(opacityUnchecked, {
-        toValue: 0,
-        duration: 800,
-        easing: Easing.easeOutQuint,
-        useNativeDriver: false,
-      }),
-      Animated.timing(opacityUnchecked, {
-        toValue: 1,
-        duration: 10,
-        useNativeDriver: false,
-      }),
-    ]).start(() => {
-      const newIndex = (activeIndex + 1) % (stepsCount + 1);
-      setActiveIndex(newIndex);
-      flatListRef.current?.scrollToIndex({ animated: true, index: newIndex, viewPosition: 0.5 });
-    });
-  };
 
   // back to 0 when drill changes
   useEffect(() => {
@@ -108,6 +78,10 @@ const FitnessPage = (props) => {
     );
   };
 
+  const setIndex = (index) => {
+    setActiveIndex(index);
+  };
+
   const renderStep = ({ index, item }) => {
     const isCurrent = index == activeIndex;
 
@@ -116,32 +90,14 @@ const FitnessPage = (props) => {
     const currentStep = isCurrent ? styles.stepCurrent : {};
 
     return (
-      <TouchableOpacity style={[styles.step, currentStep]} onPress={() => setActiveIndex(index)}>
-        <View style={styles.subWrapper}>
-          <Text style={[styles.stepTitle, doneStyle, currentStyle]}>{item.repetition} </Text>
-          <Text style={[styles.stepTitle, doneStyle, currentStyle]}>{item.title}</Text>
-        </View>
-        {isCurrent && (
-          <TouchableOpacity style={styles.doneAnimation} onPress={() => checkAnimation()} testID="doneIcon">
-            <Animated.View style={{ opacity: opacityUnchecked }}>
-              <MaterialCommunityIcons
-                style={styles.buttonNext}
-                name="check-circle-outline"
-                color={theme.COLOR_SECONDARY}
-                size={26}
-              />
-            </Animated.View>
-            <Animated.View style={{ opacity: opacityChecked }}>
-              <MaterialCommunityIcons
-                style={styles.buttonNext}
-                name="check-circle"
-                color={theme.MAIN_COLOR}
-                size={26}
-              />
-            </Animated.View>
-          </TouchableOpacity>
-        )}
-      </TouchableOpacity>
+      <View style={styles.page}>
+        <TouchableOpacity style={[styles.step, currentStep]} onPress={() => setIndex(index)}>
+          <View style={styles.subWrapper}>
+            <Text style={[styles.stepTitle, doneStyle, currentStyle]}>{item.repetition} </Text>
+            <Text style={[styles.stepTitle, doneStyle, currentStyle]}>{item.title}</Text>
+          </View>
+        </TouchableOpacity>
+      </View>
     );
   };
 
@@ -239,17 +195,18 @@ const styles = StyleSheet.create({
   step: {
     flexDirection: 'row',
     padding: 20,
-    backgroundColor: '#f8f8f8',
+    backgroundColor: theme.COLOR_PRIMARY,
   },
   doneAnimation: {
     flex: 1,
   },
   stepTitle: {
     fontSize: theme.FONT_SIZE_LARGE,
-    color: theme.COLOR_PRIMARY,
+    color: theme.COLOR_PRIMARY_LIGHT,
   },
   stepTitleCurrent: {
     fontWeight: 'bold',
+    color: theme.COLOR_PRIMARY,
   },
   stepTitleDone: {
     color: theme.COLOR_SECONDARY,
@@ -268,7 +225,7 @@ const styles = StyleSheet.create({
     flexShrink: 0.7,
     alignItems: 'center',
     flexDirection: 'row',
-    marginRight: '20%',
+    marginRight: '10%',
   },
   instruction: {
     marginTop: 20,
@@ -305,7 +262,7 @@ const styles = StyleSheet.create({
   },
   allPage: {
     height: '100%',
-    backgroundColor: '#f8f8f8',
+    backgroundColor: theme.COLOR_PRIMARY,
   },
   stepCurrent: {
     backgroundColor: theme.COLOR_PRIMARY_LIGHT,
@@ -313,6 +270,10 @@ const styles = StyleSheet.create({
   iconShare: {
     fontSize: 28,
     marginRight: 20,
+    color: theme.COLOR_PRIMARY_LIGHT,
+  },
+  page: {
+    flex: 1,
   },
 });
 

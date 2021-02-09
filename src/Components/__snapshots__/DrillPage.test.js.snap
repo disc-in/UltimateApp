@@ -933,7 +933,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                                 "flexDirection": "row",
                                                 "flexGrow": 0,
                                                 "flexShrink": 0.7,
-                                                "marginRight": "20%",
+                                                "marginRight": "10%",
                                               }
                                             }
                                           >
@@ -1038,7 +1038,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                                 "flexDirection": "row",
                                                 "flexGrow": 0,
                                                 "flexShrink": 0.7,
-                                                "marginRight": "20%",
+                                                "marginRight": "10%",
                                               }
                                             }
                                           >
@@ -1102,7 +1102,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                                                 "flexDirection": "row",
                                                 "flexGrow": 0,
                                                 "flexShrink": 0.7,
-                                                "marginRight": "20%",
+                                                "marginRight": "10%",
                                               }
                                             }
                                           >
@@ -2132,7 +2132,7 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                                 "flexDirection": "row",
                                                 "flexGrow": 0,
                                                 "flexShrink": 0.7,
-                                                "marginRight": "20%",
+                                                "marginRight": "10%",
                                               }
                                             }
                                           >
@@ -2281,7 +2281,7 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                                 "flexDirection": "row",
                                                 "flexGrow": 0,
                                                 "flexShrink": 0.7,
-                                                "marginRight": "20%",
+                                                "marginRight": "10%",
                                               }
                                             }
                                           >
@@ -2345,7 +2345,7 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                                 "flexDirection": "row",
                                                 "flexGrow": 0,
                                                 "flexShrink": 0.7,
-                                                "marginRight": "20%",
+                                                "marginRight": "10%",
                                               }
                                             }
                                           >

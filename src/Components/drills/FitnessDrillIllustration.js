@@ -214,7 +214,7 @@ const styles = StyleSheet.create({
     flexShrink: 0.7,
     alignItems: 'center',
     flexDirection: 'row',
-    marginRight: '20%',
+    marginRight: '10%',
   },
   instruction: {
     marginTop: 20,

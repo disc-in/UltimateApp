@@ -9,27 +9,29 @@ import VimeoVideo from '../shared/VimeoVideo';
 import theme from '../../styles/theme.style';
 import Drill from '../animation/Drill';
 
+const AnimatedIcon = Animated.createAnimatedComponent(MaterialCommunityIcons);
+
 const FitnessDrillIllustration = (props) => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const opacityUnchecked = useRef(new Animated.Value(1)).current;
-  const opacityChecked = opacityUnchecked.interpolate({ inputRange: [0, 1], outputRange: [1, 0] });
   const currentStep = props.drill.steps[activeIndex];
   const stepsCount = props.drill.steps.length;
 
   const carouselRef = useRef(null);
   const flatListRef = useRef(null);
 
-  const checkAnimation = () => {
+  const [checkAnimation, setCheckAnimation] = useState(new Animated.Value(0));
+
+  const handleAnimation = () => {
     Animated.sequence([
-      Animated.timing(opacityUnchecked, {
-        toValue: 0,
-        duration: 800,
+      Animated.timing(checkAnimation, {
+        toValue: 1,
+        duration: 1000,
         easing: Easing.easeOutQuint,
         useNativeDriver: false,
       }),
-      Animated.timing(opacityUnchecked, {
-        toValue: 1,
-        duration: 10,
+      Animated.timing(checkAnimation, {
+        toValue: 0,
+        duration: 1,
         useNativeDriver: false,
       }),
     ]).start(() => {
@@ -38,6 +40,10 @@ const FitnessDrillIllustration = (props) => {
       flatListRef.current?.scrollToIndex({ animated: true, index: newIndex, viewPosition: 0.5 });
     });
   };
+  const checkColorInterpolation = checkAnimation.interpolate({
+    inputRange: [0, 1],
+    outputRange: [theme.COLOR_SECONDARY, theme.MAIN_COLOR],
+  });
 
   // back to 0 when drill changes
   useEffect(() => {
@@ -69,23 +75,8 @@ const FitnessDrillIllustration = (props) => {
           <Text style={[styles.stepTitle, doneStyle, currentStyle]}>{item.title}</Text>
         </View>
         {isCurrent && (
-          <TouchableOpacity style={styles.doneAnimation} onPress={() => checkAnimation()} testID="doneIcon">
-            <Animated.View style={{ opacity: opacityUnchecked }}>
-              <MaterialCommunityIcons
-                style={styles.buttonNext}
-                name="check-circle-outline"
-                color={theme.COLOR_SECONDARY}
-                size={26}
-              />
-            </Animated.View>
-            <Animated.View style={{ opacity: opacityChecked }}>
-              <MaterialCommunityIcons
-                style={styles.buttonNext}
-                name="check-circle"
-                color={theme.MAIN_COLOR}
-                size={26}
-              />
-            </Animated.View>
+          <TouchableOpacity style={styles.doneAnimation} onPress={() => handleAnimation()} testID="doneIcon">
+            <AnimatedIcon name="check-circle" size={26} style={{ color: checkColorInterpolation }} />
           </TouchableOpacity>
         )}
       </TouchableOpacity>
@@ -183,12 +174,20 @@ const styles = StyleSheet.create({
     width: 80,
     height: 80,
   },
+  videoAlone: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex: 1,
+  },
   step: {
+    flex: 1,
     flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
     padding: 20,
   },
-  doneAnimation: {
-    flex: 1,
+  titleWrapper: {
+    flexShrink: 1,
   },
   stepTitle: {
     fontSize: theme.FONT_SIZE_LARGE,
@@ -224,11 +223,6 @@ const styles = StyleSheet.create({
     color: theme.COLOR_PRIMARY,
     justifyContent: 'center',
     alignItems: 'center',
-  },
-  videoAlone: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    flex: 1,
   },
   line: {
     flex: 1,

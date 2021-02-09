@@ -161,8 +161,11 @@ exports[`<FitnessDrillIllustration /> renders correctly 1`] = `
                 onStartShouldSetResponder={[Function]}
                 style={
                   Object {
+                    "alignItems": "center",
                     "backgroundColor": "#fff",
+                    "flex": 1,
                     "flexDirection": "row",
+                    "justifyContent": "space-between",
                     "opacity": 1,
                     "padding": 20,
                   }
@@ -225,30 +228,12 @@ exports[`<FitnessDrillIllustration /> renders correctly 1`] = `
                   onStartShouldSetResponder={[Function]}
                   style={
                     Object {
-                      "flex": 1,
                       "opacity": 1,
                     }
                   }
                   testID="doneIcon"
                 >
-                  <View
-                    style={
-                      Object {
-                        "opacity": 1,
-                      }
-                    }
-                  >
-                    <Text />
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "opacity": 0,
-                      }
-                    }
-                  >
-                    <Text />
-                  </View>
+                  <Text />
                 </View>
               </View>
             </View>
@@ -268,7 +253,10 @@ exports[`<FitnessDrillIllustration /> renders correctly 1`] = `
                 onStartShouldSetResponder={[Function]}
                 style={
                   Object {
+                    "alignItems": "center",
+                    "flex": 1,
                     "flexDirection": "row",
+                    "justifyContent": "space-between",
                     "opacity": 1,
                     "padding": 20,
                   }
@@ -333,7 +321,10 @@ exports[`<FitnessDrillIllustration /> renders correctly 1`] = `
                 onStartShouldSetResponder={[Function]}
                 style={
                   Object {
+                    "alignItems": "center",
+                    "flex": 1,
                     "flexDirection": "row",
+                    "justifyContent": "space-between",
                     "opacity": 1,
                     "padding": 20,
                   }

@@ -5294,7 +5294,7 @@ const aussieDrill = {
       repetition: '',
       rest: '',
       instruction:
-        "2 teams play against each other. There are 2 endzones inside each team's territory and they play with 4 discs.\nTo score a point, a player has to bring a disc in one of the endzones of the other team. A player can run with a disc. If a player is touched in the territory of the other team or the disc is intercepted or touches the ground, he loses the possession. In his territory, he is invincible. The first team to 5 wins!",
+        "2 teams play against each other. The playing field is divided in two: one territory for each team. There are 2 endzones inside each team's territory and they play with 4 discs.\nTo score a point, a player has to bring a disc in one of the endzones of the other team. A player can run with a disc. If a player is touched in the territory of the other team or the disc is intercepted or touches the ground, they lose the possession. In their own territory, they are invincible. The first team to 5 wins!",
     },
   ],
 };
@@ -5397,7 +5397,7 @@ const endzoneGameDrill = {
     },
     {
       id: 2,
-      title: 'The Wolves Pack',
+      title: 'The Wolf Pack',
       animation: endzoneFinition,
       repetition: '',
       rest: '',
@@ -5952,7 +5952,7 @@ const dDC = {
       repetition: '',
       rest: '',
       instruction:
-        "DDC is played by two teams of two players each. The courts are 13x13 meter squares and 17 meters apart. You get one point for a throw that lands and stays in the opponents' court, or if an opponent drops your throw. Your opponents get one point if your throw touches outside their court. If the other team comes into contact with both discs at the same time, you get two points. That is called 'doubling' your opponents",
+        "DDC is played by two teams of two players each. The courts are 13 x 13 meter squares and 17 meters apart. You get one point for a throw that lands and stays in the opponents' court, or if an opponent drops your throw. Your opponents get one point if your throw touches outside their court. If the other team comes into contact with both discs at the same time, you get two points. That is called 'doubling' your opponents",
     },
   ],
 };
@@ -7188,7 +7188,7 @@ const bull = {
 //       repetition: '',
 //       rest: '',
 //       instruction:
-//         'Same exercise but the instructor raises or lowers his arm to indicate that players can move. They have to take different information. You may even mix visual and sound commands',
+//         'Same exercise but the instructor raises or lowers his arm to indicate that players can move. They have to take in different information. You may even mix visual and sound commands',
 //     },
 //     {
 //       id: 4,

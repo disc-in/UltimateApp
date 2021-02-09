@@ -772,7 +772,7 @@ const suicide = {
   equipment: 'Aucun',
   durationInMinutes: 45,
   intensity: Intensities.HIGH,
-  goals: [FitnessGoals.WARM_UP],
+  goals: [FitnessGoals.CONDITIONING],
   seasonTiming: SeasonTimings.OFF_SEASON,
   level: Levels.BEGINNER,
   steps: [

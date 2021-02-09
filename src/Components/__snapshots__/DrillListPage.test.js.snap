@@ -1055,6 +1055,79 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
     >
       3 drills available
     </Text>
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "#fff",
+          "borderColor": "#2a9e91",
+          "borderRadius": 5,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "height": 30,
+          "justifyContent": "center",
+          "opacity": 1,
+          "paddingHorizontal": 10,
+          "paddingVertical": 0,
+          "width": "auto",
+        }
+      }
+      testID="filterButton"
+    >
+      <Text
+        allowFontScaling={false}
+        style={
+          Array [
+            Object {
+              "color": undefined,
+              "fontSize": 12,
+            },
+            Array [
+              Object {
+                "marginRight": 20,
+              },
+              Object {
+                "color": "#2a9e91",
+                "fontSize": 16,
+                "fontWeight": "bold",
+              },
+              Object {
+                "marginRight": 5,
+              },
+            ],
+            Object {
+              "fontFamily": "ionicons",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#2a9e91",
+            "fontSize": 16,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Filter
+      </Text>
+    </View>
   </View>
   <RCTScrollView
     contentContainerStyle={

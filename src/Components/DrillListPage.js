@@ -19,6 +19,10 @@ export const DrillListPage = (props) => {
     currentFilters?.selectedGoals.length > 0 ||
     currentFilters?.selectedLevels.length > 0 ||
     currentFilters?.selectedFavorites ||
+    currentFilters?.selectedIntensities ||
+    currentFilters?.selectedEquipmentLabels ||
+    currentFilters?.selectedSeasonTimings ||
+    currentFilters?.durationInMinutes ||
     currentFilters?.numberOfPlayers;
 
   const sortingProperty = type === DrillTypes.FRISBEE ? 'minimalPlayersNumber' : 'durationInMinutes';
@@ -38,16 +42,14 @@ export const DrillListPage = (props) => {
     <View style={styles.drillListPage}>
       <View style={styles.filtersArea}>
         <Text style={styles.counter}>{I18n.t('drillListPage.availableDrills', { count: displayedDrills.length })}</Text>
-        {type === DrillTypes.FRISBEE && (
-          <Button
-            onPress={openFilters}
-            icon="filter"
-            text={I18n.t('drillListPage.filter')}
-            testID="filterButton"
-            small
-            light={!filterIsOn}
-          />
-        )}
+        <Button
+          onPress={openFilters}
+          icon="filter"
+          text={I18n.t('drillListPage.filter')}
+          testID="filterButton"
+          small
+          light={!filterIsOn}
+        />
       </View>
       <DrillList navigation={navigation} drillsToDisplay={displayedDrills} />
     </View>

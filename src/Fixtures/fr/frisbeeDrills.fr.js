@@ -5391,7 +5391,7 @@ const aussieDrill = {
       repetition: '',
       rest: '',
       instruction:
-        "2 équipes s'opposent, chacune a son territoire. Le jeu a lieu avec 4 disques. Pour marquer un point, un joueur doit apporter un disque dans l'une des zones du territoire adverse. Un joueur peut courir avec un disque. Si un joueur se fait toucher dans le territoire adverse ou si le disque est intercepté ou touche le sol, il perd la possession du disque. Dans son territoire, il est invincible. La première équipe à 5 points gagne !",
+        "2 équipes s'opposent, chacune a une moitié de terrain pour territoire. Le jeu a lieu avec 4 disques. Pour marquer un point, un joueur doit apporter un disque dans l'une des zones du territoire adverse. Un joueur peut courir avec un disque. Si un joueur se fait toucher dans le territoire adverse ou si le disque est intercepté ou touche le sol, il perd la possession du disque. Dans son territoire, il est invincible. La première équipe à 5 points gagne !",
     },
   ],
 };

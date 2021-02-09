@@ -189,6 +189,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
             ],
             "title": "Fitness Drill Title",
             "type": "fitness",
+            "visibleInList": true,
           },
           Object {
             "author": "Author",
@@ -479,6 +480,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
             ],
             "title": "Frisbee Drill Title",
             "type": "frisbee",
+            "visibleInList": true,
           },
         ]
       }
@@ -522,6 +524,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
             ],
             "title": "Fitness Drill Title",
             "type": "fitness",
+            "visibleInList": true,
           },
           Object {
             "author": "Author",
@@ -812,6 +815,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
             ],
             "title": "Frisbee Drill Title",
             "type": "frisbee",
+            "visibleInList": true,
           },
         ]
       }
@@ -1651,6 +1655,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
             ],
             "title": "Frisbee Drill Title",
             "type": "frisbee",
+            "visibleInList": true,
           },
           Object {
             "author": "Author",
@@ -1675,6 +1680,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
             ],
             "title": "Frisbee Drill Title",
             "type": "frisbee",
+            "visibleInList": true,
           },
         ]
       }
@@ -1970,6 +1976,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
             ],
             "title": "Frisbee Drill Title",
             "type": "frisbee",
+            "visibleInList": true,
           },
           Object {
             "author": "Author",
@@ -1994,6 +2001,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
             ],
             "title": "Frisbee Drill Title",
             "type": "frisbee",
+            "visibleInList": true,
           },
         ]
       }
@@ -2663,6 +2671,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
             ],
             "title": "Fitness Drill Title",
             "type": "fitness",
+            "visibleInList": true,
           },
           Object {
             "author": "Author",
@@ -2953,6 +2962,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
             ],
             "title": "Frisbee Drill Title",
             "type": "frisbee",
+            "visibleInList": true,
           },
         ]
       }
@@ -2996,6 +3006,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
             ],
             "title": "Fitness Drill Title",
             "type": "fitness",
+            "visibleInList": true,
           },
           Object {
             "author": "Author",
@@ -3286,6 +3297,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
             ],
             "title": "Frisbee Drill Title",
             "type": "frisbee",
+            "visibleInList": true,
           },
         ]
       }
@@ -4332,6 +4344,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
             ],
             "title": "Frisbee Drill Title",
             "type": "frisbee",
+            "visibleInList": true,
           },
           Object {
             "author": "Author",
@@ -4356,6 +4369,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
             ],
             "title": "Frisbee Drill Title",
             "type": "frisbee",
+            "visibleInList": true,
           },
         ]
       }
@@ -4651,6 +4665,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
             ],
             "title": "Frisbee Drill Title",
             "type": "frisbee",
+            "visibleInList": true,
           },
           Object {
             "author": "Author",
@@ -4675,6 +4690,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
             ],
             "title": "Frisbee Drill Title",
             "type": "frisbee",
+            "visibleInList": true,
           },
         ]
       }

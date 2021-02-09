@@ -132,6 +132,7 @@ import rondoFunAnimation from '../Animation/RondoFun';
 const stabilityDrill = {
   id: 1,
   type: DrillTypes.FITNESS,
+  visibleInList: true,
   author: '',
   title: 'The Fast 20',
   image: 'https://zupimages.net/up/20/19/75s2.jpg',
@@ -368,6 +369,7 @@ const stabilityDrill = {
 const strengthDrill = {
   id: 2,
   type: DrillTypes.FITNESS,
+  visibleInList: true,
   author: '',
   title: 'Strength Legs',
   image: 'https://zupimages.net/up/20/28/s5vc.jpg',
@@ -495,6 +497,7 @@ const strengthDrill = {
 const warmupGameDrill = {
   id: 5,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: '',
   title: 'Warm-up Game ready',
   image: 'https://zupimages.net/up/20/19/f2bd.jpg',
@@ -523,6 +526,7 @@ const warmupGameDrill = {
 const warmupDrill = {
   id: 6,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: '',
   title: 'Warm-up Ultimate',
   image: 'https://zupimages.net/up/20/19/va5f.jpg',
@@ -551,6 +555,7 @@ const warmupDrill = {
 const mas30 = {
   id: 8,
   type: DrillTypes.FITNESS,
+  visibleInList: true,
   author: '',
   title: 'MAS 30',
   image: 'https://zupimages.net/up/20/28/fo2i.jpg',
@@ -625,6 +630,7 @@ const mas30 = {
 const fartlek = {
   id: 9,
   type: DrillTypes.FITNESS,
+  visibleInList: true,
   author: '',
   title: 'Fartlek',
   image: 'https://zupimages.net/up/20/19/kj0f.jpg',
@@ -663,6 +669,7 @@ const fartlek = {
 const suicide = {
   id: 10,
   type: DrillTypes.FITNESS,
+  visibleInList: true,
   author: '',
   title: 'Suicide drill',
   image: 'https://zupimages.net/up/20/19/va5f.jpg',
@@ -890,6 +897,7 @@ const suicide = {
 const lacticSprint = {
   id: 11,
   type: DrillTypes.FITNESS,
+  visibleInList: true,
   author: '',
   title: 'Lactic Sprint',
   image: 'https://zupimages.net/up/20/28/mfbj.jpg',
@@ -1045,6 +1053,7 @@ const lacticSprint = {
 const tDrill = {
   id: 12,
   type: DrillTypes.FITNESS,
+  visibleInList: true,
   author: '',
   title: 'T-Drill',
   image: 'https://zupimages.net/up/20/28/7q43.jpg',
@@ -1217,7 +1226,8 @@ const tDrill = {
 
 const mas30Light = {
   id: 13,
-  type: DrillTypes.OTHER,
+  type: DrillTypes.FITNESS,
+  visibleInList: false,
   author: '',
   title: "MAS 30'",
   image: 'https://zupimages.net/up/20/28/fo2i.jpg',
@@ -1292,6 +1302,7 @@ const mas30Light = {
 const circuit = {
   id: 14,
   type: DrillTypes.FITNESS,
+  visibleInList: true,
   author: '',
   title: 'Core Strength',
   image: 'https://zupimages.net/up/20/19/kj0f.jpg',
@@ -1445,7 +1456,8 @@ const circuit = {
 
 const rest = {
   id: 15,
-  type: DrillTypes.OTHER,
+  type: DrillTypes.FITNESS,
+  visibleInList: false,
   author: '',
   title: 'Recovery Week',
   image: 'https://zupimages.net/up/20/18/hwnh.jpg',
@@ -1474,6 +1486,7 @@ const rest = {
 const serpentine = {
   id: 16,
   type: DrillTypes.FITNESS,
+  visibleInList: true,
   author: '',
   title: 'Serpentine',
   image: 'https://zupimages.net/up/20/28/ictg.jpeg',
@@ -1593,8 +1606,9 @@ const serpentine = {
 const mas15 = {
   id: 20,
   type: DrillTypes.FITNESS,
+  visibleInList: true,
   author: '',
-  title: " MAS 15'",
+  title: "MAS 15'",
   image: 'https://zupimages.net/up/20/28/fo2i.jpg',
   description:
     'This workout is designed to increase your quickness, improve your footwork, and generally make you more explosive and agile.\nAfter your warmup, set up your cones to make use of the full space available to you by dropping the first at one end of your available space and another about 20 yards away. Then, fill in the space between with your remaining cones in a serpentine pattern, walking each cone about five yards away in a diagonal opposite direction from the last one. As easy as that, you have created a small agility course',
@@ -1649,6 +1663,7 @@ const mas15 = {
 const circuitLong = {
   id: 21,
   type: DrillTypes.FITNESS,
+  visibleInList: true,
   author: '',
   title: 'Full-Body Circuit',
   image: 'https://zupimages.net/up/20/28/3ty2.jpeg',
@@ -1857,6 +1872,7 @@ const circuitLong = {
 const mas15Long = {
   id: 22,
   type: DrillTypes.FITNESS,
+  visibleInList: true,
   author: '',
   title: "MAS 15'",
   image: 'https://zupimages.net/up/20/28/fo2i.jpg',
@@ -1912,6 +1928,7 @@ const mas15Long = {
 const sprintPractice = {
   id: 23,
   type: DrillTypes.FITNESS,
+  visibleInList: true,
   author: '',
   title: 'Sprint Workout',
   image: 'https://zupimages.net/up/20/28/dtn4.jpg',
@@ -2048,6 +2065,7 @@ const sprintPractice = {
 const ladderPractice = {
   id: 24,
   type: DrillTypes.FITNESS,
+  visibleInList: true,
   author: '',
   title: 'Ladder Practice',
   image: 'https://zupimages.net/up/20/28/imxg.png',
@@ -2165,7 +2183,8 @@ const ladderPractice = {
 
 const agility1 = {
   id: 25,
-  type: DrillTypes.OTHER,
+  type: DrillTypes.FITNESS,
+  visibleInList: false,
   author: '',
   title: 'Explosivity and Stability',
   image: 'https://zupimages.net/up/20/28/cf47.jpg',
@@ -2265,7 +2284,8 @@ const agility1 = {
 
 const strength1 = {
   id: 26,
-  type: DrillTypes.OTHER,
+  type: DrillTypes.FITNESS,
+  visibleInList: false,
   author: '',
   title: 'Gain Power',
   image: 'https://zupimages.net/up/20/28/8808.jpg',
@@ -2356,7 +2376,8 @@ const strength1 = {
 
 const strength2 = {
   id: 27,
-  type: DrillTypes.OTHER,
+  type: DrillTypes.FITNESS,
+  visibleInList: false,
   author: '',
   title: 'Gain Power',
   image: 'https://zupimages.net/up/20/28/8808.jpg',
@@ -2438,7 +2459,8 @@ const strength2 = {
 
 const agility2 = {
   id: 28,
-  type: DrillTypes.OTHER,
+  type: DrillTypes.FITNESS,
+  visibleInList: false,
   author: '',
   title: 'Explosivity and Stability',
   image: 'https://zupimages.net/up/20/28/cf47.jpg',
@@ -2530,6 +2552,7 @@ const agility2 = {
 const agility3 = {
   id: 29,
   type: DrillTypes.FITNESS,
+  visibleInList: true,
   author: '',
   title: 'Explosivity and Stability',
   image: 'https://zupimages.net/up/20/28/cf47.jpg',
@@ -2630,6 +2653,7 @@ const agility3 = {
 const strength3 = {
   id: 30,
   type: DrillTypes.FITNESS,
+  visibleInList: true,
   author: '',
   title: 'Gain Power',
   image: 'https://zupimages.net/up/20/28/8808.jpg',
@@ -2711,7 +2735,8 @@ const strength3 = {
 
 const strength16 = {
   id: 31,
-  type: DrillTypes.OTHER,
+  type: DrillTypes.FITNESS,
+  visibleInList: false,
   author: '',
   title: 'Gain Power',
   image: 'https://zupimages.net/up/20/28/8808.jpg',
@@ -2802,7 +2827,8 @@ const strength16 = {
 
 const agility16 = {
   id: 32,
-  type: DrillTypes.OTHER,
+  type: DrillTypes.FITNESS,
+  visibleInList: false,
   author: '',
   title: 'Explosivity and Stability',
   image: 'https://zupimages.net/up/20/28/cf47.jpg',
@@ -2894,6 +2920,7 @@ const agility16 = {
 const agility15 = {
   id: 33,
   type: DrillTypes.FITNESS,
+  visibleInList: true,
   author: '',
   title: 'Explosivity - Peak',
   image: 'https://zupimages.net/up/20/28/cf47.jpg',
@@ -2994,6 +3021,7 @@ const agility15 = {
 const strength15 = {
   id: 34,
   type: DrillTypes.FITNESS,
+  visibleInList: true,
   author: '',
   title: 'Power - Peak',
   image: 'https://zupimages.net/up/20/28/8808.jpg',
@@ -3075,7 +3103,8 @@ const strength15 = {
 
 const strength14 = {
   id: 35,
-  type: DrillTypes.OTHER,
+  type: DrillTypes.FITNESS,
+  visibleInList: false,
   author: '',
   title: 'Gain Power',
   image: 'https://zupimages.net/up/20/28/8808.jpg',
@@ -3157,7 +3186,8 @@ const strength14 = {
 
 const agility14 = {
   id: 36,
-  type: DrillTypes.OTHER,
+  type: DrillTypes.FITNESS,
+  visibleInList: false,
   author: '',
   title: 'In-Season',
   image: 'https://zupimages.net/up/20/19/kj0f.jpg',
@@ -3239,7 +3269,8 @@ const agility14 = {
 
 const agility13 = {
   id: 37,
-  type: DrillTypes.OTHER,
+  type: DrillTypes.FITNESS,
+  visibleInList: false,
   author: '',
   title: 'In-Season',
   image: 'https://zupimages.net/up/20/19/kj0f.jpg',
@@ -3321,7 +3352,8 @@ const agility13 = {
 
 const strength13 = {
   id: 38,
-  type: DrillTypes.OTHER,
+  type: DrillTypes.FITNESS,
+  visibleInList: false,
   author: '',
   title: 'Gain Power',
   image: 'https://zupimages.net/up/20/28/8808.jpg',
@@ -3394,7 +3426,8 @@ const strength13 = {
 
 const agility12 = {
   id: 39,
-  type: DrillTypes.OTHER,
+  type: DrillTypes.FITNESS,
+  visibleInList: false,
   author: '',
   title: 'Explosivity and Stability',
   image: 'https://zupimages.net/up/20/28/cf47.jpg',
@@ -3485,7 +3518,8 @@ const agility12 = {
 
 const strength12 = {
   id: 40,
-  type: DrillTypes.OTHER,
+  type: DrillTypes.FITNESS,
+  visibleInList: false,
   author: '',
   title: 'Gain Power',
   image: 'https://zupimages.net/up/20/28/8808.jpg',
@@ -3558,7 +3592,8 @@ const strength12 = {
 
 const agility11 = {
   id: 41,
-  type: DrillTypes.OTHER,
+  type: DrillTypes.FITNESS,
+  visibleInList: false,
   author: '',
   title: 'Explosivity and Stability',
   image: 'https://zupimages.net/up/20/28/cf47.jpg',
@@ -3649,7 +3684,8 @@ const agility11 = {
 
 const strength11 = {
   id: 42,
-  type: DrillTypes.OTHER,
+  type: DrillTypes.FITNESS,
+  visibleInList: false,
   author: '',
   title: 'Gain Power',
   image: 'https://zupimages.net/up/20/28/8808.jpg',
@@ -3731,7 +3767,8 @@ const strength11 = {
 
 const agility10 = {
   id: 43,
-  type: DrillTypes.OTHER,
+  type: DrillTypes.FITNESS,
+  visibleInList: false,
   author: '',
   title: 'Explosivity - In-Season',
   image: 'https://zupimages.net/up/20/28/ojz4.jpg',
@@ -3822,7 +3859,8 @@ const agility10 = {
 
 const strength10 = {
   id: 44,
-  type: DrillTypes.OTHER,
+  type: DrillTypes.FITNESS,
+  visibleInList: false,
   author: '',
   title: 'Power - In-Season',
   image: 'https://zupimages.net/up/20/28/eml2.jpg',
@@ -3904,7 +3942,8 @@ const strength10 = {
 
 const agility9 = {
   id: 45,
-  type: DrillTypes.OTHER,
+  type: DrillTypes.FITNESS,
+  visibleInList: false,
   author: '',
   title: 'Explosivity and Stability',
   image: 'https://zupimages.net/up/20/28/cf47.jpg',
@@ -3995,7 +4034,8 @@ const agility9 = {
 
 const strength9 = {
   id: 46,
-  type: DrillTypes.OTHER,
+  type: DrillTypes.FITNESS,
+  visibleInList: false,
   author: '',
   title: 'Gain Power',
   image: 'https://zupimages.net/up/20/28/8808.jpg',
@@ -4078,6 +4118,7 @@ const strength9 = {
 const agility8 = {
   id: 47,
   type: DrillTypes.FITNESS,
+  visibleInList: true,
   author: '',
   title: 'Explosivity - Pre-Season',
   image: 'https://zupimages.net/up/20/28/ezu6.jpg',
@@ -4169,6 +4210,7 @@ const agility8 = {
 const strength8 = {
   id: 48,
   type: DrillTypes.FITNESS,
+  visibleInList: true,
   author: '',
   title: 'Power - Pre-Season',
   image: 'https://zupimages.net/up/20/28/500h.jpg',
@@ -4250,7 +4292,8 @@ const strength8 = {
 
 const agility7 = {
   id: 49,
-  type: DrillTypes.OTHER,
+  type: DrillTypes.FITNESS,
+  visibleInList: false,
   author: '',
   title: 'Explosivity and Stability',
   image: 'https://zupimages.net/up/20/28/cf47.jpg',
@@ -4341,7 +4384,8 @@ const agility7 = {
 
 const strength7 = {
   id: 50,
-  type: DrillTypes.OTHER,
+  type: DrillTypes.FITNESS,
+  visibleInList: false,
   author: '',
   title: 'Gain Power',
   image: 'https://zupimages.net/up/20/28/8808.jpg',
@@ -4432,7 +4476,8 @@ const strength7 = {
 
 const agility6 = {
   id: 51,
-  type: DrillTypes.OTHER,
+  type: DrillTypes.FITNESS,
+  visibleInList: true,
   author: '',
   title: 'Explosivity and Stability',
   image: 'https://zupimages.net/up/20/28/cf47.jpg',
@@ -4514,7 +4559,8 @@ const agility6 = {
 
 const strength6 = {
   id: 52,
-  type: DrillTypes.OTHER,
+  type: DrillTypes.FITNESS,
+  visibleInList: true,
   author: '',
   title: 'Gain Power',
   image: 'https://zupimages.net/up/20/28/8808.jpg',
@@ -4606,6 +4652,7 @@ const strength6 = {
 const agility5 = {
   id: 53,
   type: DrillTypes.FITNESS,
+  visibleInList: true,
   author: '',
   title: 'Explosivity - Off-Season',
   image: 'https://zupimages.net/up/20/28/l4mf.jpg',
@@ -4697,6 +4744,7 @@ const agility5 = {
 const strength5 = {
   id: 54,
   type: DrillTypes.FITNESS,
+  visibleInList: true,
   author: '',
   title: 'Power - Off-Season',
   image: 'https://zupimages.net/up/20/28/4ja4.jpg',
@@ -4925,6 +4973,7 @@ const strength5 = {
 const basicThrowsDrill = {
   id: 1001,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Mooncatchers',
   title: 'Throwing Routine',
   image: 'https://zupimages.net/up/20/19/zgxt.jpg',
@@ -4988,6 +5037,7 @@ const basicThrowsDrill = {
 const breakDrill = {
   id: 1002,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Friselis',
   title: 'Cuts to the Break Side',
   image: 'https://zupimages.net/up/20/19/83fx.jpg',
@@ -5023,6 +5073,7 @@ const breakDrill = {
 const treasureHuntDrill = {
   id: 1003,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'PUC Ultimate',
   title: 'Treasure Hunt',
   image: 'https://zupimages.net/up/20/19/z7lq.jpg',
@@ -5054,6 +5105,7 @@ const treasureHuntDrill = {
 const kyeDrill = {
   id: 1004,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Kye',
   title: '3 vs 2',
   image: 'https://zupimages.net/up/20/19/zgxt.jpg',
@@ -5086,6 +5138,7 @@ const kyeDrill = {
 const bigEightDrill = {
   id: 1005,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Mooncatchers',
   title: 'The Big 8',
   image: 'https://zupimages.net/up/20/19/5209.jpg',
@@ -5134,6 +5187,7 @@ const bigEightDrill = {
 const trainDrill = {
   id: 1006,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Iznogood',
   title: 'The Train',
   image: 'https://zupimages.net/up/20/19/ac8s.jpg',
@@ -5175,6 +5229,7 @@ const trainDrill = {
 const giveAndGoDrill = {
   id: 1007,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Freezzz beezzz',
   title: 'Give-N-Go',
   image: 'https://zupimages.net/up/20/19/s9fe.jpg',
@@ -5216,6 +5271,7 @@ const giveAndGoDrill = {
 const aussieDrill = {
   id: 1008,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Head of States',
   title: 'Aussie games',
   image: 'https://zupimages.net/up/20/19/78g2.png',
@@ -5246,6 +5302,7 @@ const aussieDrill = {
 const bolognaMDrill = {
   id: 1009,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'CUSB',
   title: 'The M',
   image: 'https://zupimages.net/up/20/19/akuy.jpg',
@@ -5275,6 +5332,7 @@ const bolognaMDrill = {
 const goToTenDrill = {
   id: 1010,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: "Jack'suns",
   title: 'Go to 10',
   image: 'https://zupimages.net/up/20/19/rcyt.jpg',
@@ -5313,6 +5371,7 @@ const goToTenDrill = {
 const endzoneGameDrill = {
   id: 1011,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Black Fish',
   title: 'Endzone Game',
   image: 'https://zupimages.net/up/20/25/71b2.jpg',
@@ -5350,6 +5409,7 @@ const endzoneGameDrill = {
 const bulldogDrill = {
   id: 1012,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Kaal Soup',
   title: 'British Bulldog',
   image: 'https://zupimages.net/up/20/19/tf79.jpg',
@@ -5383,6 +5443,7 @@ const bulldogDrill = {
 const threePersonDrill = {
   id: 1013,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Tchac',
   title: 'Three-person Drill',
   image: 'https://zupimages.net/up/20/19/ai3z.jpg',
@@ -5425,6 +5486,7 @@ const threePersonDrill = {
 const dwarfDuelDrill = {
   id: 1014,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'PUC Ultimate',
   title: 'Dwarf Duel',
   image: 'https://zupimages.net/up/20/19/3m3k.jpg',
@@ -5457,6 +5519,7 @@ const dwarfDuelDrill = {
 const dishieChainDrill = {
   id: 1015,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Mooncatchers',
   title: 'Dishy Chain',
   image: 'https://zupimages.net/up/20/19/stdq.jpg',
@@ -5500,6 +5563,7 @@ const dishieChainDrill = {
 const breakDanceDrill = {
   id: 1016,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Disc Joker',
   title: 'Break Dance',
   image: 'https://zupimages.net/up/20/19/agsd.jpg',
@@ -5539,6 +5603,7 @@ const breakDanceDrill = {
 const triangleOfDeathdrill = {
   id: 1017,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Forward',
   title: 'The Triangle of Death',
   image: 'https://zupimages.net/up/20/19/kmlc.jpg',
@@ -5571,6 +5636,7 @@ const triangleOfDeathdrill = {
 const trainOfFakeDrill = {
   id: 1018,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Iznogood',
   title: 'The Fake Train',
   image: 'https://zupimages.net/up/20/51/h1fh.jpg',
@@ -5625,6 +5691,7 @@ const trainOfFakeDrill = {
 const resetOpenDrill = {
   id: 1019,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Tchac',
   title: 'Reset Open',
   image: 'https://zupimages.net/up/20/19/tzk3.jpg',
@@ -5679,6 +5746,7 @@ const resetOpenDrill = {
 const resetBreakDrill = {
   id: 1020,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Tchac',
   title: 'Reset Break',
   image: 'https://zupimages.net/up/20/19/w90f.jpg',
@@ -5733,6 +5801,7 @@ const resetBreakDrill = {
 const youShallNotPassDrill = {
   id: 1021,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Belgium Open',
   title: 'You Shall Not Pass',
   image: 'https://zupimages.net/up/20/19/90z6.jpg',
@@ -5784,6 +5853,7 @@ const youShallNotPassDrill = {
 const defensePositionDrill = {
   id: 1022,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Sockeye',
   title: 'Defense Positioning',
   image: 'https://zupimages.net/up/20/19/zigu.jpg',
@@ -5823,6 +5893,7 @@ const defensePositionDrill = {
 const discGolf = {
   id: 1023,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Sunder',
   title: 'Disc Golf',
   image: 'https://zupimages.net/up/20/25/f4bu.jpg',
@@ -5855,6 +5926,7 @@ const discGolf = {
 const dDC = {
   id: 1024,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: '',
   title: 'DDC',
   image: 'https://zupimages.net/up/20/25/t73e.jpg',
@@ -5888,6 +5960,7 @@ const dDC = {
 const horizontalTiming = {
   id: 1025,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Wizard',
   title: 'Horizontal Timing',
   image: 'https://zupimages.net/up/20/52/mai9.jpg',
@@ -5926,6 +5999,7 @@ const horizontalTiming = {
 const game3v3Horizontal = {
   id: 1026,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Mooncatchers',
   title: 'Diamond Cut',
   image: 'https://zupimages.net/up/20/25/2vga.jpg',
@@ -5964,6 +6038,7 @@ const game3v3Horizontal = {
 const theDuel = {
   id: 1027,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Furious George',
   title: 'Nothing like a duel',
   image: 'https://zupimages.net/up/20/28/ncjr.jpg',
@@ -6003,6 +6078,7 @@ const theDuel = {
 const dishieLine = {
   id: 1028,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Mooncatchers',
   title: 'Double Lines',
   image: 'https://zupimages.net/up/20/51/hc89.jpg',
@@ -6044,6 +6120,7 @@ const dishieLine = {
 const horizontalToVertical = {
   id: 1029,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Mubidisk',
   title: 'Horizontal Flow',
   image: 'https://zupimages.net/up/20/25/kecr.jpg',
@@ -6092,6 +6169,7 @@ const horizontalToVertical = {
 const horizontalTrap = {
   id: 1030,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Mubidisk',
   title: 'Trap with the Open',
   image: 'https://zupimages.net/up/20/41/y1ki.jpg',
@@ -6139,6 +6217,7 @@ const horizontalTrap = {
 const horizontalTrapOutside = {
   id: 1031,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Mubidisk',
   title: 'Trap with the Break',
   image: 'https://zupimages.net/up/20/52/l7a5.jpg',
@@ -6186,6 +6265,7 @@ const horizontalTrapOutside = {
 const horizontalHandler = {
   id: 1032,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Euforia',
   title: 'Trap with the handlers',
   image: 'https://zupimages.net/up/20/52/arcv.jpg',
@@ -6234,6 +6314,7 @@ const horizontalHandler = {
 const checkLong = {
   id: 1033,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Disk Joker',
   title: 'Long is your new weapon',
   image: 'https://zupimages.net/up/20/51/t5fs.jpg',
@@ -6266,6 +6347,7 @@ const checkLong = {
 const manipulation = {
   id: 1034,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Mooncatchers',
   title: 'Dexterity Boost',
   image: 'https://zupimages.net/up/20/51/ej3n.jpg',
@@ -6339,6 +6421,7 @@ const manipulation = {
 const stopFlow = {
   id: 1035,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Sunder',
   title: 'Stopping the Flow',
   image: 'https://zupimages.net/up/20/28/2b8i.jpg',
@@ -6371,6 +6454,7 @@ const stopFlow = {
 const theTunnel = {
   id: 1036,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'CUSB',
   title: 'The Tunnel',
   image: 'https://zupimages.net/up/20/25/742g.jpeg',
@@ -6403,6 +6487,7 @@ const theTunnel = {
 const racingWarmUP = {
   id: 1037,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Focus Ultimate',
   title: 'Racing Warm UP',
   image: 'https://zupimages.net/up/20/51/ej3n.jpg',
@@ -6465,6 +6550,7 @@ const racingWarmUP = {
 const cupSwinging = {
   id: 1038,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Black Fish',
   title: 'Swinging with the cup',
   image: 'https://zupimages.net/up/20/25/019o.jpg',
@@ -6506,6 +6592,7 @@ const cupSwinging = {
 const zoneGame = {
   id: 1039,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Mooncathers',
   title: 'Try to beat our zone',
   image: 'https://zupimages.net/up/20/25/fnkl.jpg',
@@ -6544,6 +6631,7 @@ const zoneGame = {
 const goaltimateDrill = {
   id: 1040,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: '',
   title: 'Goaltimate',
   image: 'https://zupimages.net/up/20/19/gce7.jpg',
@@ -6576,6 +6664,7 @@ const goaltimateDrill = {
 const diagonalToVertical = {
   id: 1041,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Belgium Open',
   title: 'Diagonal to Vertical',
   image: 'https://zupimages.net/up/20/25/iqn0.jpg',
@@ -6632,6 +6721,7 @@ const diagonalToVertical = {
 const diagonalIso = {
   id: 1042,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Mooncatchers',
   title: 'Diagonal Iso',
   image: 'https://zupimages.net/up/20/25/vozh.jpg',
@@ -6679,6 +6769,7 @@ const diagonalIso = {
 const splitIso = {
   id: 1043,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Iznogood',
   title: 'Split Iso',
   image: 'https://zupimages.net/up/20/25/k6hi.jpg',
@@ -6717,6 +6808,7 @@ const splitIso = {
 const splitToVertical = {
   id: 1044,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Iznogood',
   title: 'Split to Vertical',
   image: 'https://zupimages.net/up/20/25/uqd5.jpg',
@@ -6755,6 +6847,7 @@ const splitToVertical = {
 const sideToVertical = {
   id: 1045,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Iznogood',
   title: 'Side to Vertical',
   image: 'https://zupimages.net/up/20/25/zpuq.jpg',
@@ -6793,6 +6886,7 @@ const sideToVertical = {
 const checkLongKid = {
   id: 1046,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Puc Ultimate',
   title: 'High five & Run',
   image: 'https://zupimages.net/up/20/29/hhdl.jpg',
@@ -6823,6 +6917,7 @@ const checkLongKid = {
 const adaptToTheMark = {
   id: 1047,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Puc Ultimate',
   title: 'Adapt to the Mark',
   image: 'https://zupimages.net/up/20/29/7a6g.jpg',
@@ -6852,6 +6947,7 @@ const adaptToTheMark = {
 const ghostMark = {
   id: 1048,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Puc Ultimate',
   title: 'The Ghost',
   image: 'https://zupimages.net/up/20/41/447u.jpg',
@@ -6882,6 +6978,7 @@ const ghostMark = {
 const fish = {
   id: 1049,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Puc Ultimate',
   title: 'Fishing',
   image: 'https://zupimages.net/up/20/41/n148.jpg',
@@ -6911,6 +7008,7 @@ const fish = {
 const crossingTheField = {
   id: 1050,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Gentle',
   title: 'Crossing the field',
   image: 'https://zupimages.net/up/20/51/x23u.jpg',
@@ -6958,6 +7056,7 @@ const crossingTheField = {
 const trident = {
   id: 1051,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Monkey',
   title: 'The Trident',
   image: 'https://zupimages.net/up/20/47/6ksu.jpg',
@@ -6989,6 +7088,7 @@ const trident = {
 const bull = {
   id: 1052,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Monkey',
   title: 'Rondo',
   image: 'https://zupimages.net/up/20/47/4ypa.jpg',
@@ -7104,6 +7204,7 @@ const bull = {
 const arrow = {
   id: 1054,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Buzz Bullet',
   title: 'The Arrow',
   image: 'https://zupimages.net/up/20/51/khgg.jpg',
@@ -7143,6 +7244,7 @@ const arrow = {
 const guts = {
   id: 1055,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Jim Boggio Sr',
   title: 'Guts',
   image: 'https://zupimages.net/up/20/51/f2ix.jpg',
@@ -7175,6 +7277,7 @@ const guts = {
 const flubber = {
   id: 1056,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Mooncatchers - Olivier',
   title: 'Flubber Guts',
   image: 'https://zupimages.net/up/20/51/7bvr.jpg',
@@ -7207,6 +7310,7 @@ const flubber = {
 const theZ = {
   id: 1057,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Mooncatchers - Olivier',
   title: 'The Z',
   image: 'https://zupimages.net/up/20/51/kh8z.jpg',
@@ -7237,6 +7341,7 @@ const theZ = {
 const passMouv = {
   id: 1058,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'UPA - Pablo',
   title: 'Pass to a moving player',
   image: 'https://zupimages.net/up/20/52/5fsl.jpg',
@@ -7298,6 +7403,7 @@ const passMouv = {
 const crissCross = {
   id: 1059,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: "Jack'suns - Richt",
   title: 'Criss Cross',
   image: 'https://zupimages.net/up/20/52/gi85.jpg',
@@ -7338,6 +7444,7 @@ const crissCross = {
 const xL = {
   id: 1060,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'UPA - PABLO',
   title: 'XL',
   image: 'https://zupimages.net/up/20/52/4jux.jpg',
@@ -7379,6 +7486,7 @@ const xL = {
 const square = {
   id: 1061,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: 'Paris Ultimate',
   title: 'The Square',
   image: 'https://zupimages.net/up/21/01/71d7.jpg',
@@ -7439,6 +7547,7 @@ const square = {
 const normalGame = {
   id: 2001,
   type: DrillTypes.FRISBEE,
+  visibleInList: false,
   author: '',
   title: '7v7 game',
   image: 'https://zupimages.net/up/20/28/ee6z.jpg',
@@ -7467,6 +7576,7 @@ const normalGame = {
 const game3v3 = {
   id: 2002,
   type: DrillTypes.FRISBEE,
+  visibleInList: false,
   author: '',
   title: '3v3 game',
   image: 'https://zupimages.net/up/20/28/p52r.jpg',
@@ -7495,6 +7605,7 @@ const game3v3 = {
 const longShotGame = {
   id: 2003,
   type: DrillTypes.FRISBEE,
+  visibleInList: false,
   author: 'PUC Ultimate',
   title: 'Hucks oriented game',
   image: 'https://zupimages.net/up/20/28/c16q.jpg',
@@ -7523,6 +7634,7 @@ const longShotGame = {
 const lineGame = {
   id: 2004,
   type: DrillTypes.FRISBEE,
+  visibleInList: false,
   author: '',
   title: 'Breaking the mark - game',
   image: 'https://zupimages.net/up/20/28/rxqd.jpg',
@@ -7551,6 +7663,7 @@ const lineGame = {
 const longestGame = {
   id: 2005,
   type: DrillTypes.FRISBEE,
+  visibleInList: false,
   author: 'KYE',
   title: 'The Disc is Gold',
   image: 'https://zupimages.net/up/20/28/g0fq.jpg',
@@ -7580,6 +7693,7 @@ const longestGame = {
 const trainingGame = {
   id: 2006,
   type: DrillTypes.FRISBEE,
+  visibleInList: false,
   author: '',
   title: 'Practice the new Stack',
   image: 'https://zupimages.net/up/20/28/up1j.jpg',
@@ -7608,6 +7722,7 @@ const trainingGame = {
 const helpGame = {
   id: 2007,
   type: DrillTypes.FRISBEE,
+  visibleInList: false,
   author: '',
   title: 'Help game',
   image: 'https://zupimages.net/up/20/28/up1j.jpg',
@@ -7646,6 +7761,7 @@ const helpGame = {
 const boxGame = {
   id: 2008,
   type: DrillTypes.FRISBEE,
+  visibleInList: true,
   author: '',
   title: 'Box game',
   image: 'https://zupimages.net/up/20/47/u0ny.jpg',
@@ -7686,6 +7802,7 @@ const boxGame = {
 const game5v5 = {
   id: 2009,
   type: DrillTypes.FRISBEE,
+  visibleInList: false,
   author: '',
   title: '5v5 game',
   image: 'https://zupimages.net/up/20/47/uxhr.jpg',
@@ -8549,29 +8666,53 @@ const fitnessFull29 = {
 
 export const drills = [
   // Fitness
-  stabilityDrill,
-  strengthDrill,
-  tDrill,
+  agility1,
+  agility10,
+  agility10,
+  agility11,
+  agility12,
+  agility13,
+  agility14,
+  agility15,
+  agility16,
+  agility2,
+  agility5,
+  agility6,
+  agility7,
+  agility8,
+  agility9,
+  circuit,
+  circuitLong,
   fartlek,
   lacticSprint,
-  circuit,
-  serpentine,
-  circuitLong,
-  sprintPractice,
   ladderPractice,
-  //youthLadder,
-  agility5,
-  agility8,
-  agility10,
-  agility15,
-  strength5,
-  strength8,
-  strength10,
-  strength15,
-  mas30,
-  suicide,
   mas15,
   mas15Long,
+  mas30,
+  mas30Light,
+  rest,
+  serpentine,
+  sprintPractice,
+  stabilityDrill,
+  strength1,
+  strength10,
+  strength10,
+  strength11,
+  strength12,
+  strength13,
+  strength14,
+  strength15,
+  strength16,
+  strength2,
+  strength5,
+  strength6,
+  strength7,
+  strength8,
+  strength9,
+  strengthDrill,
+  suicide,
+  tDrill,
+  // youthLadder,
 
   // Frisbee
   basicThrowsDrill,
@@ -8636,32 +8777,16 @@ export const drills = [
   xL,
   square,
 
-  // Commenting game drills because we don't want them in the drill list, only part of programs
+  // Game
   boxGame,
-  rest,
-  agility1,
-  strength1,
-  agility2,
-  strength2,
-  agility6,
-  strength6,
-  agility7,
-  strength7,
-  agility9,
-  strength9,
-  agility10,
-  strength10,
-  agility11,
-  strength11,
-  agility12,
-  strength12,
-  agility13,
-  strength13,
-  agility14,
-  strength14,
-  agility16,
-  strength16,
-  mas30Light,
+  normalGame,
+  game3v3,
+  game5v5,
+  longShotGame,
+  lineGame,
+  longestGame,
+  trainingGame,
+  helpGame,
 ];
 
 export const programs = [

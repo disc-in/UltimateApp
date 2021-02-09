@@ -768,12 +768,9 @@ exports[`<DrillPage /> renders correctly 1`] = `
                           >
                             <View
                               style={
-                                Array [
-                                  Object {
-                                    "height": 250,
-                                  },
-                                  false,
-                                ]
+                                Object {
+                                  "height": 250,
+                                }
                               }
                             >
                               <View
@@ -1889,12 +1886,9 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                           >
                             <View
                               style={
-                                Array [
-                                  Object {
-                                    "height": 250,
-                                  },
-                                  false,
-                                ]
+                                Object {
+                                  "height": 250,
+                                }
                               }
                             >
                               <View

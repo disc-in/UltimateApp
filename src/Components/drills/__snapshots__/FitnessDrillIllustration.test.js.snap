@@ -11,9 +11,7 @@ exports[`<FitnessDrillIllustration /> renders correctly 1`] = `
   <View
     style={
       Object {
-
         "height": "100%",
-
       }
     }
   >
@@ -99,12 +97,10 @@ exports[`<FitnessDrillIllustration /> renders correctly 1`] = `
         }
       }
     >
-
       <View>
         <RCTScrollView
           data={
             Array [
-
               Object {
                 "id": 1,
                 "repetition": 3,

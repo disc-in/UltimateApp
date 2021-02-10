@@ -30,9 +30,7 @@ Array [
           <View
             style={
               Object {
-
                 "height": "100%",
-
               }
             }
           >

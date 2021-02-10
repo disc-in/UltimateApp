@@ -769,9 +769,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                             <View
                               style={
                                 Object {
-
                                   "height": "100%",
-
                                 }
                               }
                             >
@@ -1961,9 +1959,7 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                             <View
                               style={
                                 Object {
-
                                   "height": "100%",
-
                                 }
                               }
                             >

@@ -128,6 +128,7 @@ import squareDoubleAnimation from '../Animation/SquareDouble';
 import squareFakeAnimation from '../Animation/SquareFake';
 import rondoThreeAnimation from '../Animation/RondoThree';
 import rondoFunAnimation from '../Animation/RondoFun';
+import triangleWarmUpAnimation from '../Animation/TriangleWarmUp';
 
 const stabilityDrill = {
   id: 1,
@@ -7544,6 +7545,37 @@ const square = {
   ],
 };
 
+const triangleWarmUp = {
+  id: 1062,
+  type: DrillTypes.FRISBEE,
+  visibleInList: true,
+  author: 'Paris Ultimate',
+  title: 'Hunting',
+  image: 'https://zupimages.net/up/21/06/059l.jpg',
+  description: 'Drill to learn how to throw to a moving target and learn how to speed up to catch the frisbee',
+  minimalPlayersNumber: 5,
+  inGame: 'Making the right throw. Passing on a moving player who is running away from me',
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '3 cones - 1 disc',
+  durationInMinutes: 10,
+  intensity: Intensities.HIGH,
+  goals: [FrisbeeGoals.WARM_UP, FrisbeeGoals.DEFENSE, FrisbeeGoals.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'Triangle Warm-up',
+      animation: triangleWarmUpAnimation,
+      vimeoId: '511520824',
+      repetition: '',
+      rest: '',
+      instruction:
+        'The goal of the defender is to touch the disc before the attacker. They can’t start running before the offensive player claps their hands.',
+    },
+  ],
+};
+
 const normalGame = {
   id: 2001,
   type: DrillTypes.FRISBEE,
@@ -8776,6 +8808,7 @@ export const drills = [
   crissCross,
   xL,
   square,
+  triangleWarmUp,
 
   // Game
   boxGame,

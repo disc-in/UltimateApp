@@ -128,6 +128,7 @@ import squareDoubleAnimation from '../Animation/SquareDouble';
 import squareFakeAnimation from '../Animation/SquareFake';
 import rondoThreeAnimation from '../Animation/RondoThree';
 import rondoFunAnimation from '../Animation/RondoFun';
+import triangleWarmUpAnimation from '../Animation/TriangleWarmUp';
 
 const stabilityDrill = {
   id: 1,
@@ -7654,6 +7655,38 @@ const square = {
   ],
 };
 
+const triangleWarmUp = {
+  id: 1062,
+  type: DrillTypes.FRISBEE,
+  visibleInList: true,
+  author: 'Paris Ultimate',
+  title: 'La Chasse',
+  image: 'https://zupimages.net/up/21/06/059l.jpg',
+  description:
+    'Exercice pour apprendre à lancer sur une cible mobile et apprendre à accélérer pour attraper le frisbee',
+  minimalPlayersNumber: 5,
+  inGame: 'Faire le bon lancer.\nFaire une passe sur un joueur en mouvement qui me fuit.',
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '3 plots - 1 disque',
+  durationInMinutes: 10,
+  intensity: Intensities.HIGH,
+  goals: [FrisbeeGoals.WARM_UP, FrisbeeGoals.DEFENSE, FrisbeeGoals.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'Triangle Echauffement',
+      animation: triangleWarmUpAnimation,
+      vimeoId: '511520824',
+      repetition: '',
+      rest: '',
+      instruction:
+        "Le but du défenseur est de toucher le disque avant l'attaquant. Il ne peut pas commencer à courir avant que l'attaquant ne tape dans ses mains.",
+    },
+  ],
+};
+
 const normalGame = {
   id: 2001,
   type: DrillTypes.FRISBEE,
@@ -8892,6 +8925,7 @@ export const drills = [
   crissCross,
   xL,
   square,
+  triangleWarmUp,
 
   // Game
   boxGame,

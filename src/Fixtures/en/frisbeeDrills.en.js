@@ -129,6 +129,8 @@ import squareFakeAnimation from '../Animation/SquareFake';
 import rondoThreeAnimation from '../Animation/RondoThree';
 import rondoFunAnimation from '../Animation/RondoFun';
 import triangleWarmUpAnimation from '../Animation/TriangleWarmUp';
+import breakContinuationAnimation from '../Animation/BreakContinuation';
+import crocodileAnimation from '../Animation/Crocodile';
 
 const stabilityDrill = {
   id: 1,
@@ -7571,7 +7573,49 @@ const triangleWarmUp = {
       repetition: '',
       rest: '',
       instruction:
-        'The goal of the defender is to touch the disc before the attacker. They can’t start running before the offensive player claps their hands.',
+        'The goal of the defender is to touch the disc before the attacker. They can’t start running before the offensive player claps their hands',
+    },
+  ],
+};
+
+const breakLong = {
+  id: 1063,
+  type: DrillTypes.FRISBEE,
+  visibleInList: true,
+  author: 'Monkey',
+  title: 'Breaking long',
+  image: 'hhttps://zupimages.net/up/21/06/y8a0.jpg',
+  description:
+    "Drill to learn how to throw long in the break. This space being generally less well defended is the weak point of the opponent's defense",
+  minimalPlayersNumber: 10,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '10 cones - 8 discs',
+  durationInMinutes: 15,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.ADVANCED,
+  steps: [
+    {
+      id: 1,
+      title: 'Break Continuation',
+      animation: breakContinuationAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        'The first thrower makes a break. The receiver must then make a long throw, as fast as possible, which must remain on the break side. the second receiver tries to find the best timing for his run',
+    },
+    {
+      id: 2,
+      title: 'Long Curved',
+      animation: crocodileAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        "A first pass is made in the receiver's run. The receiver will try to make a long pass that ends in the opposite column. In the middle column there is a defender who must stay exclusively in this column. If he intercepts the Frisbee, the thrower will have to take his place",
     },
   ],
 };
@@ -8809,6 +8853,7 @@ export const drills = [
   xL,
   square,
   triangleWarmUp,
+  breakLong,
 
   // Game
   boxGame,

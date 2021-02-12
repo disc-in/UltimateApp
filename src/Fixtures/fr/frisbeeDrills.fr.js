@@ -129,6 +129,8 @@ import squareFakeAnimation from '../Animation/SquareFake';
 import rondoThreeAnimation from '../Animation/RondoThree';
 import rondoFunAnimation from '../Animation/RondoFun';
 import triangleWarmUpAnimation from '../Animation/TriangleWarmUp';
+import breakContinuationAnimation from '../Animation/BreakContinuation';
+import crocodileAnimation from '../Animation/Crocodile';
 
 const stabilityDrill = {
   id: 1,
@@ -7682,7 +7684,49 @@ const triangleWarmUp = {
       repetition: '',
       rest: '',
       instruction:
-        "Le but du défenseur est de toucher le disque avant l'attaquant. Il ne peut pas commencer à courir avant que l'attaquant ne tape dans ses mains.",
+        "Le but du défenseur est de toucher le disque avant l'attaquant. Il ne peut pas commencer à courir avant que l'attaquant ne tape dans ses mains",
+    },
+  ],
+};
+
+const breakLong = {
+  id: 1063,
+  type: DrillTypes.FRISBEE,
+  visibleInList: true,
+  author: 'Monkey',
+  title: 'Longues dans le Break',
+  image: 'hhttps://zupimages.net/up/21/06/y8a0.jpg',
+  description:
+    'Exercice pour apprendre à faire des longues dans le côté fermé. Cet espace étant générallement moins bien défendu est le point faible de la défense',
+  minimalPlayersNumber: 10,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '10 plots - 8 disques',
+  durationInMinutes: 15,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.ADVANCED,
+  steps: [
+    {
+      id: 1,
+      title: 'Continuation dans le Break',
+      animation: breakContinuationAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Le premier lanceur effectue un break. Le réceptionneur doit alors effectué une longue rapidement qui doit rester du côté fermé',
+    },
+    {
+      id: 2,
+      title: 'Longues Courbées',
+      animation: crocodileAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        "Une première passe est effectuée dans la course du receveur. Celui-ci va chercher à faire une passe en longue qui finit dans la colonne opposée. Dans la colonne du milieu se trouve un défenseur doit rester exclusivement dans cette colonne. S'il intercepte le frisbee, le lanceur devra prendre sa place. ",
     },
   ],
 };
@@ -8926,6 +8970,7 @@ export const drills = [
   xL,
   square,
   triangleWarmUp,
+  breakLong,
 
   // Game
   boxGame,

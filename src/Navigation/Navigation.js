@@ -101,6 +101,6 @@ export const Navigation = () => (
       component={VideoPage}
       options={({ route }) => ({ title: route.params.video.title })}
     />
-    <Stack.Screen name="FitnessPage" component={FitnessPage} options={({ route }) => ({ title: 'title fitness' })} />
+    <Stack.Screen name="FitnessPage" component={FitnessPage} options={({ route }) => ({ title: 'Fitness' })} />
   </Stack.Navigator>
 );

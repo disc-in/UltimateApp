@@ -7726,7 +7726,7 @@ const breakLong = {
       repetition: '',
       rest: '',
       instruction:
-        "Une première passe est effectuée dans la course du receveur. Celui-ci va chercher à faire une passe en longue qui finit dans la colonne opposée. Dans la colonne du milieu se trouve un défenseur doit rester exclusivement dans cette colonne. S'il intercepte le frisbee, le lanceur devra prendre sa place. ",
+        "Une première passe est effectuée dans la course du receveur. Celui-ci va chercher à faire une passe en longue qui finit dans la colonne opposée. Dans la colonne du milieu se trouve un défenseur qui doit se déplacer exclusivement dans la colonne centrale. S'il intercepte le frisbee, le lanceur devra prendre sa place. ",
     },
   ],
 };

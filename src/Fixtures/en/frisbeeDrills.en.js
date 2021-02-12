@@ -7584,7 +7584,7 @@ const breakLong = {
   visibleInList: true,
   author: 'Monkey',
   title: 'Breaking long',
-  image: 'hhttps://zupimages.net/up/21/06/y8a0.jpg',
+  image: 'https://zupimages.net/up/21/06/y8a0.jpg',
   description:
     "Drill to learn how to throw long in the break. This space being generally less well defended is the weak point of the opponent's defense",
   minimalPlayersNumber: 10,

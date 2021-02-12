@@ -7695,9 +7695,9 @@ const breakLong = {
   visibleInList: true,
   author: 'Monkey',
   title: 'Longues dans le Break',
-  image: 'hhttps://zupimages.net/up/21/06/y8a0.jpg',
+  image: 'https://zupimages.net/up/21/06/y8a0.jpg',
   description:
-    'Exercice pour apprendre à faire des longues dans le côté fermé. Cet espace étant générallement moins bien défendu est le point faible de la défense',
+    'Exercice pour apprendre à faire des longues dans le côté fermé. Cet espace étant généralement moins bien défendu est le point faible de la défense',
   minimalPlayersNumber: 10,
   inGame: undefined,
   equipmentLabel: EquipmentLabels.BASIC,
@@ -7710,7 +7710,7 @@ const breakLong = {
   steps: [
     {
       id: 1,
-      title: 'Continuation dans le Break',
+      title: 'Continuité dans le Break',
       animation: breakContinuationAnimation,
       vimeoId: undefined,
       repetition: '',

@@ -128,6 +128,9 @@ import squareDoubleAnimation from '../Animation/SquareDouble';
 import squareFakeAnimation from '../Animation/SquareFake';
 import rondoThreeAnimation from '../Animation/RondoThree';
 import rondoFunAnimation from '../Animation/RondoFun';
+import triangleWarmUpAnimation from '../Animation/TriangleWarmUp';
+import breakContinuationAnimation from '../Animation/BreakContinuation';
+import crocodileAnimation from '../Animation/Crocodile';
 
 const stabilityDrill = {
   id: 1,
@@ -7544,6 +7547,79 @@ const square = {
   ],
 };
 
+const triangleWarmUp = {
+  id: 1062,
+  type: DrillTypes.FRISBEE,
+  visibleInList: true,
+  author: 'Paris Ultimate',
+  title: 'Hunting',
+  image: 'https://zupimages.net/up/21/06/059l.jpg',
+  description: 'Drill to learn how to throw to a moving target and learn how to speed up to catch the frisbee',
+  minimalPlayersNumber: 5,
+  inGame: 'Making the right throw. Passing on a moving player who is running away from me',
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '3 cones - 1 disc',
+  durationInMinutes: 10,
+  intensity: Intensities.HIGH,
+  goals: [FrisbeeGoals.WARM_UP, FrisbeeGoals.DEFENSE, FrisbeeGoals.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'Triangle Warm-up',
+      animation: triangleWarmUpAnimation,
+      vimeoId: '511520824',
+      repetition: '',
+      rest: '',
+      instruction:
+        'The goal of the defender is to touch the disc before the attacker. They can’t start running before the offensive player passes by the central cone',
+    },
+  ],
+};
+
+const breakLong = {
+  id: 1063,
+  type: DrillTypes.FRISBEE,
+  visibleInList: true,
+  author: 'Monkey',
+  title: 'Breaking long',
+  image: 'https://zupimages.net/up/21/06/y8a0.jpg',
+  description:
+    "Drill to learn how to make long passes in the break side. This space being generally less defended, it is a weak point of the opponent's defense",
+  minimalPlayersNumber: 10,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '10 cones - 8 discs',
+  durationInMinutes: 15,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.ADVANCED,
+  steps: [
+    {
+      id: 1,
+      title: 'Break Continuation',
+      animation: breakContinuationAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        'The first thrower makes a break. The receiver must then make a long throw, as fast as possible, which must remain on the break side. the second receiver tries to find the best timing for his run',
+    },
+    {
+      id: 2,
+      title: 'Long Curved',
+      animation: crocodileAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        'A first pass is made in to the attacker. They try to make a long pass that ends on the opposite side of the field. In the middle column, there is a defender who must stay in this column. If they intercept the disc, the thrower will have to take his role',
+    },
+  ],
+};
+
 const normalGame = {
   id: 2001,
   type: DrillTypes.FRISBEE,
@@ -8776,6 +8852,8 @@ export const drills = [
   crissCross,
   xL,
   square,
+  triangleWarmUp,
+  breakLong,
 
   // Game
   boxGame,

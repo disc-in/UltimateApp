@@ -128,6 +128,9 @@ import squareDoubleAnimation from '../Animation/SquareDouble';
 import squareFakeAnimation from '../Animation/SquareFake';
 import rondoThreeAnimation from '../Animation/RondoThree';
 import rondoFunAnimation from '../Animation/RondoFun';
+import triangleWarmUpAnimation from '../Animation/TriangleWarmUp';
+import breakContinuationAnimation from '../Animation/BreakContinuation';
+import crocodileAnimation from '../Animation/Crocodile';
 
 const stabilityDrill = {
   id: 1,
@@ -7654,6 +7657,80 @@ const square = {
   ],
 };
 
+const triangleWarmUp = {
+  id: 1062,
+  type: DrillTypes.FRISBEE,
+  visibleInList: true,
+  author: 'Paris Ultimate',
+  title: 'La Chasse',
+  image: 'https://zupimages.net/up/21/06/059l.jpg',
+  description:
+    'Exercice pour apprendre à lancer sur une cible mobile et apprendre à accélérer pour attraper le frisbee',
+  minimalPlayersNumber: 5,
+  inGame: 'Faire le bon lancer.\nFaire une passe sur un joueur en mouvement qui me fuit.',
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '3 plots - 1 disque',
+  durationInMinutes: 10,
+  intensity: Intensities.HIGH,
+  goals: [FrisbeeGoals.WARM_UP, FrisbeeGoals.DEFENSE, FrisbeeGoals.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.BEGINNER,
+  steps: [
+    {
+      id: 1,
+      title: 'Triangle Echauffement',
+      animation: triangleWarmUpAnimation,
+      vimeoId: '511520824',
+      repetition: '',
+      rest: '',
+      instruction:
+        "Le but du défenseur est de toucher le disque avant l'attaquant. Il ne peut pas commencer à courir avant que l'attaquant ne passe le plot central",
+    },
+  ],
+};
+
+const breakLong = {
+  id: 1063,
+  type: DrillTypes.FRISBEE,
+  visibleInList: true,
+  author: 'Monkey',
+  title: 'Longues dans le Break',
+  image: 'https://zupimages.net/up/21/06/y8a0.jpg',
+  description:
+    'Exercice pour apprendre à lancer des longues dans le côté fermé. Cet espace étant généralement moins bien défendu, il est un point faible de la défense',
+  minimalPlayersNumber: 10,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '10 plots - 8 disques',
+  durationInMinutes: 15,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.THROWING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.ADVANCED,
+  steps: [
+    {
+      id: 1,
+      title: 'Continuité dans le Break',
+      animation: breakContinuationAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        'Le premier lanceur effectue un break. Le réceptionneur doit alors effectuer une longue passe rapidement qui doit rester du côté fermé',
+    },
+    {
+      id: 2,
+      title: 'Longues Courbées',
+      animation: crocodileAnimation,
+      vimeoId: undefined,
+      repetition: '',
+      rest: '',
+      instruction:
+        "Une première passe est effectuée dans la course du receveur. Celui-ci va chercher à faire une passe en longue qui finit dans la colonne opposée. Dans la colonne du milieu se trouve un défenseur qui doit se déplacer exclusivement dans la colonne centrale. S'il intercepte le frisbee, le lanceur devra prendre sa place",
+    },
+  ],
+};
+
 const normalGame = {
   id: 2001,
   type: DrillTypes.FRISBEE,
@@ -8892,6 +8969,8 @@ export const drills = [
   crissCross,
   xL,
   square,
+  triangleWarmUp,
+  breakLong,
 
   // Game
   boxGame,

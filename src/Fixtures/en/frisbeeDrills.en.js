@@ -7573,7 +7573,7 @@ const triangleWarmUp = {
       repetition: '',
       rest: '',
       instruction:
-        'The goal of the defender is to touch the disc before the attacker. They can’t start running before the offensive player claps their hands',
+        'The goal of the defender is to touch the disc before the attacker. They can’t start running before the offensive player passes by the central cone',
     },
   ],
 };
@@ -7586,7 +7586,7 @@ const breakLong = {
   title: 'Breaking long',
   image: 'https://zupimages.net/up/21/06/y8a0.jpg',
   description:
-    "Drill to learn how to throw long in the break. This space being generally less well defended is the weak point of the opponent's defense",
+    "Drill to learn how to make long passes in the break side. This space being generally less defended, it is a weak point of the opponent's defense",
   minimalPlayersNumber: 10,
   inGame: undefined,
   equipmentLabel: EquipmentLabels.BASIC,
@@ -7615,7 +7615,7 @@ const breakLong = {
       repetition: '',
       rest: '',
       instruction:
-        "A first pass is made in the receiver's run. The receiver will try to make a long pass that ends in the opposite column. In the middle column there is a defender who must stay exclusively in this column. If he intercepts the Frisbee, the thrower will have to take his place",
+        'A first pass is made in to the attacker. They try to make a long pass that ends on the opposite side of the field. In the middle column, there is a defender who must stay in this column. If they intercept the disc, the thrower will have to take his role',
     },
   ],
 };

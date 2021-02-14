@@ -7684,7 +7684,7 @@ const triangleWarmUp = {
       repetition: '',
       rest: '',
       instruction:
-        "Le but du défenseur est de toucher le disque avant l'attaquant. Il ne peut pas commencer à courir avant que l'attaquant ne tape dans ses mains",
+        "Le but du défenseur est de toucher le disque avant l'attaquant. Il ne peut pas commencer à courir avant que l'attaquant ne passe le plot central",
     },
   ],
 };
@@ -7697,7 +7697,7 @@ const breakLong = {
   title: 'Longues dans le Break',
   image: 'https://zupimages.net/up/21/06/y8a0.jpg',
   description:
-    'Exercice pour apprendre à faire des longues dans le côté fermé. Cet espace étant généralement moins bien défendu est le point faible de la défense',
+    'Exercice pour apprendre à lancer des longues dans le côté fermé. Cet espace étant généralement moins bien défendu, il est un point faible de la défense',
   minimalPlayersNumber: 10,
   inGame: undefined,
   equipmentLabel: EquipmentLabels.BASIC,
@@ -7716,7 +7716,7 @@ const breakLong = {
       repetition: '',
       rest: '',
       instruction:
-        'Le premier lanceur effectue un break. Le réceptionneur doit alors effectué une longue rapidement qui doit rester du côté fermé',
+        'Le premier lanceur effectue un break. Le réceptionneur doit alors effectuer une longue passe rapidement qui doit rester du côté fermé',
     },
     {
       id: 2,
@@ -7726,7 +7726,7 @@ const breakLong = {
       repetition: '',
       rest: '',
       instruction:
-        "Une première passe est effectuée dans la course du receveur. Celui-ci va chercher à faire une passe en longue qui finit dans la colonne opposée. Dans la colonne du milieu se trouve un défenseur qui doit se déplacer exclusivement dans la colonne centrale. S'il intercepte le frisbee, le lanceur devra prendre sa place. ",
+        "Une première passe est effectuée dans la course du receveur. Celui-ci va chercher à faire une passe en longue qui finit dans la colonne opposée. Dans la colonne du milieu se trouve un défenseur qui doit se déplacer exclusivement dans la colonne centrale. S'il intercepte le frisbee, le lanceur devra prendre sa place",
     },
   ],
 };

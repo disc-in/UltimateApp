@@ -96,4 +96,30 @@ describe('<DrillPage />', () => {
     await expect(firebase.createLink).toHaveBeenCalled();
     expect(share).toHaveBeenCalled();
   });
+
+  it('links to fitness page for fitness', async () => {
+    const navigate = jest.fn();
+    const Stack = createStackNavigator();
+    const { getByTestId } = render(
+      <Provider store={store}>
+        <NavigationContainer>
+          <Stack.Navigator>
+            <Stack.Screen
+              name="DrillPage"
+              component={ConnectedDrillPage}
+              initialParams={{ id: drill.id }}
+              listeners={({ navigation }) => ({
+                transitionStart: (e) => {
+                  navigation.navigate = navigate;
+                },
+              })}
+            />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </Provider>,
+    );
+    await fireEvent.press(getByTestId('startButton'));
+
+    expect(navigate).toBeCalledWith('FitnessPage', { drill });
+  });
 });

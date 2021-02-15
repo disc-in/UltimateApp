@@ -67,6 +67,7 @@ export const Navigation = () => (
       })}
     />
     <Stack.Screen name="DrillPageMinimal" component={DrillPageMinimal} />
+    <Stack.Screen name="FitnessPage" component={FitnessPage} options={({ route }) => ({ title: 'Fitness' })} />
     <Stack.Screen
       name="PlayEditorPage"
       component={PlayEditorPage}
@@ -101,6 +102,5 @@ export const Navigation = () => (
       component={VideoPage}
       options={({ route }) => ({ title: route.params.video.title })}
     />
-    <Stack.Screen name="FitnessPage" component={FitnessPage} options={({ route }) => ({ title: 'Fitness' })} />
   </Stack.Navigator>
 );

@@ -31,7 +31,7 @@ export const DrillPage = (props) => {
 
   // Create Component refs
   const drillScrollView = useRef(null);
-  const firstDrill = useRef(null);
+  const descriptionRef = useRef(null);
 
   // Get Header Height
   const headerHeight = useHeaderHeight();
@@ -43,13 +43,13 @@ export const DrillPage = (props) => {
   const drill = props.drills.find((drill) => drill.id == drillId);
 
   const onPressStartButton = () => {
-    firstDrill.current.measureLayout(findNodeHandle(drillScrollView.current), (x, y) => {
-      if (drill.type === DrillTypes.FITNESS) {
-        navigation.navigate('FitnessPage', { drill });
-      } else {
+    if (drill.type === DrillTypes.FITNESS) {
+      navigation.navigate('FitnessPage', { drill });
+    } else {
+      descriptionRef.current.measureLayout(findNodeHandle(drillScrollView.current), (x, y) => {
         drillScrollView.current.scrollTo({ x: 0, y, animated: true });
-      }
-    });
+      });
+    }
   };
 
   const share = async (drill) => {
@@ -125,7 +125,7 @@ export const DrillPage = (props) => {
           </View>
         </View>
       </ImageBackground>
-      <View ref={firstDrill}>
+      <View ref={descriptionRef}>
         <Description drill={drill} />
       </View>
       <View style={styles.animation}>

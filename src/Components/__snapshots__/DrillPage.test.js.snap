@@ -1056,10 +1056,13 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                         "color": undefined,
                         "fontSize": 12,
                       },
-                      Object {
-                        "fontSize": 28,
-                        "marginRight": 20,
-                      },
+                      Array [
+                        Object {
+                          "fontSize": 28,
+                          "marginRight": 20,
+                        },
+                        undefined,
+                      ],
                       Object {
                         "fontFamily": "ionicons",
                         "fontStyle": "normal",

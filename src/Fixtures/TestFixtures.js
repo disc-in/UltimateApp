@@ -24,6 +24,11 @@ export const createDrill = (override = {}) => {
         subtitle: 'This is a subtitle',
         vimeoId: '462695757',
       },
+      {
+        title: 'Run !',
+        subtitle: 'This is a subtitle',
+        vimeoId: '462695757',
+      },
     ],
     ...override,
   };
@@ -312,7 +317,7 @@ export default {
       trainings: [training, training2],
     },
     {
-      id: 1,
+      id: 2,
       type: DrillTypes.FRISBEE,
       equipmentLabel: EquipmentLabels.NONE,
       title: 'Beginner',

@@ -19,6 +19,10 @@ export const DrillListPage = (props) => {
     currentFilters?.selectedGoals.length > 0 ||
     currentFilters?.selectedLevels.length > 0 ||
     currentFilters?.selectedFavorites ||
+    currentFilters?.selectedIntensities ||
+    currentFilters?.selectedEquipmentLabels ||
+    currentFilters?.selectedSeasonTimings ||
+    currentFilters?.durationInMinutes ||
     currentFilters?.numberOfPlayers;
 
   const sortingProperty = type === DrillTypes.FRISBEE ? 'minimalPlayersNumber' : 'durationInMinutes';

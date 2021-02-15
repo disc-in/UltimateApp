@@ -10,10 +10,12 @@ import { DrillPageMinimal } from './DrillPageMinimal';
 beforeEach(() => jest.useFakeTimers()); // for Animated
 jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
 
+jest.mock('./shared/VimeoVideo');
+
 describe('<DrillPageMinimal />', () => {
   const navigation = { navigate: jest.fn(), setOptions: jest.fn() };
-  const program = fixtures.programs[0];
-  const training = program.trainings[0];
+  const program = fixtures.programs[1];
+  const training = program.trainings[1];
   const drill = training.drills[0];
   let route = {
     params: {
@@ -30,20 +32,12 @@ describe('<DrillPageMinimal />', () => {
   };
 
   it('renders correctly with a training and a drill', () => {
-    const tree = renderer.create(
-      <NavigationContext.Provider value={navContext}>
-        <DrillPageMinimal navigation={navigation} route={route} />
-      </NavigationContext.Provider>,
-    );
+    const tree = renderer.create(<DrillPageMinimal navigation={navigation} route={route} />);
     expect(tree).toMatchSnapshot();
   });
 
   it('links to next drill within training when finished', async () => {
-    const { getByText } = render(
-      <NavigationContext.Provider value={navContext}>
-        <DrillPageMinimal navigation={navigation} route={route} />
-      </NavigationContext.Provider>,
-    );
+    const { getByText } = render(<DrillPageMinimal navigation={navigation} route={route} />);
 
     await fireEvent.press(getByText('Next drill'));
 

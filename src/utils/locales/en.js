@@ -146,7 +146,17 @@ export default {
       inGame: 'In Game',
     },
     fitnessDrillIllustration: {
-      redoMessage: 'You have completed the drill!',
+      start: 'Start',
+    },
+    shareDrill: {
+      title: 'Share {{drillTitle}}',
+      content: {
+        zero: 'Check this drill on Disc In: {{url}}',
+        other:
+          'Check this drill on Disc In: {{url}}\nAnd in case you cannot install the app, here are some videos of the drill:\n{{youtubeVideos}}',
+      },
+      description: 'Drill: {{description}}…',
+      error: 'It looks like there was an error sharing this drill',
     },
   },
   aboutPage: {
@@ -192,13 +202,6 @@ export default {
     players: 'players',
     level: 'level',
     start: 'Start',
-    shareTitle: 'Share {{drillTitle}}',
-    shareContent: {
-      zero: 'Check this drill on Disc In: {{url}}',
-      other:
-        'Check this drill on Disc In: {{url}}\nAnd in case you cannot install the app, here are some videos of the drill:\n{{youtubeVideos}}',
-    },
-    description: 'Drill: {{description}}…',
   },
   drillPageMinimal: {
     finish: 'Finish Training!',

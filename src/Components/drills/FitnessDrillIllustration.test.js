@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { render, fireEvent, waitFor } from '@testing-library/react-native';
+import { render, fireEvent } from '@testing-library/react-native';
 import { NavigationContext } from '@react-navigation/native';
 
 import { createDrill } from '../../Fixtures/TestFixtures';
@@ -8,7 +8,10 @@ import { DrillTypes } from '../../Fixtures/config';
 
 import FitnessDrillIllustration from './FitnessDrillIllustration';
 
+jest.mock('../shared/VimeoVideo');
+
 describe('<FitnessDrillIllustration />', () => {
+  const startFitness = jest.fn();
   const steps = [
     {
       id: 1,
@@ -31,46 +34,44 @@ describe('<FitnessDrillIllustration />', () => {
   ];
   const drill = createDrill({ type: DrillTypes.FITNESS, title: 'Hot Box', steps });
 
-  // fake NavigationContext value data
-  const navContext = {
-    isFocused: () => true,
-    // addListener returns an unscubscribe function.
-    addListener: jest.fn(() => jest.fn()),
-  };
+  it('renders correctly with several steps', () => {
+    const tree = renderer.create(<FitnessDrillIllustration drill={drill} startFitness={startFitness} />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 
-  it('renders correctly', () => {
+  it('renders correctly with one step', () => {
+    const steps = [
+      {
+        id: 1,
+        repetition: 3,
+        title: 'First Step',
+        vimeoId: '406746924',
+      },
+    ];
+    const drill = createDrill({ type: DrillTypes.FITNESS, title: 'Hot Box', steps });
+
+    // fake NavigationContext value data
+    const navContext = {
+      isFocused: () => true,
+      // addListener returns an unscubscribe function.
+      addListener: jest.fn(() => jest.fn()),
+    };
+
     const tree = renderer
       .create(
         <NavigationContext.Provider value={navContext}>
-          <FitnessDrillIllustration drill={drill} />
+          <FitnessDrillIllustration drill={drill} startFitness={startFitness} />
         </NavigationContext.Provider>,
       )
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('links to any step and finishes at the end', async () => {
-    const { getByText, getByTestId, toJSON } = render(
-      <NavigationContext.Provider value={navContext}>
-        <FitnessDrillIllustration drill={drill} />
-      </NavigationContext.Provider>,
-    );
+  it('triggers startFitness', async () => {
+    const { getByTestId } = render(<FitnessDrillIllustration drill={drill} startFitness={startFitness} />);
 
-    // All steps rendered
-    expect(getByText('3 First Step')).toBeDefined();
-    expect(getByText('3 Second Step')).toBeDefined();
-    expect(getByText('3 Third Step')).toBeDefined();
+    fireEvent.press(getByTestId('startFitness'));
 
-    fireEvent.press(getByText('3 Third Step'));
-
-    // Third step is current
-    expect(toJSON()).toMatchSnapshot();
-
-    fireEvent.press(getByTestId('doneIcon'));
-
-    await waitFor(() => expect(getByText('You have completed the drill!')).toBeDefined());
-
-    // Finished state displayed
-    expect(toJSON()).toMatchSnapshot();
+    expect(startFitness).toHaveBeenCalled();
   });
 });

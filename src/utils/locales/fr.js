@@ -146,7 +146,17 @@ export default {
       inGame: 'En Match',
     },
     fitnessDrillIllustration: {
-      redoMessage: "Tu as terminé l'exercice !",
+      start: 'Start',
+    },
+    shareDrill: {
+      title: 'Partager {{drillTitle}}',
+      content: {
+        zero: 'Regarde cet exo sur Disc In : {{url}}',
+        other:
+          "Regarde cet exo sur Disc In : {{url}}\nEt si tu ne peux pas installer l'appli, voici quelques vidéos de l'exercice :\n{{youtubeVideos}}",
+      },
+      description: 'Exercice : {{description}}…',
+      error: 'Une erreur est survenue',
     },
   },
   aboutPage: {
@@ -191,13 +201,6 @@ export default {
     players: 'joueurs',
     level: 'niveau',
     start: 'Start',
-    shareTitle: 'Partager {{drillTitle}}',
-    shareContent: {
-      zero: 'Regarde cet exo sur Disc In : {{url}}',
-      other:
-        "Regarde cet exo sur Disc In : {{url}}\nEt si tu ne peux pas installer l'appli, voici quelques vidéos de l'exercice :\n{{youtubeVideos}}",
-    },
-    description: 'Exercice : {{description}}…',
   },
   drillPageMinimal: {
     finish: "Terminer l'entraînement !",

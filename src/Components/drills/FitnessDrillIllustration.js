@@ -1,225 +1,61 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Animated, View, StyleSheet, Text, TouchableOpacity, FlatList } from 'react-native';
-import { Easing } from 'react-native-reanimated';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import React from 'react';
+import { View, StyleSheet, Text } from 'react-native';
 
 import I18n from '../../utils/i18n';
-import Animation from '../animation/Animation';
 import VimeoVideo from '../shared/VimeoVideo';
 import theme from '../../styles/theme.style';
-import Drill from '../animation/Drill';
+import Button from '../shared/Button';
 
-const AnimatedIcon = Animated.createAnimatedComponent(MaterialCommunityIcons);
+const FitnessDrillIllustration = ({ drill, startFitness }) => {
+  const isUniqueStep = drill.steps.length === 1;
 
-const FitnessDrillIllustration = (props) => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const currentStep = props.drill.steps[activeIndex];
-  const stepsCount = props.drill.steps.length;
-
-  const carouselRef = useRef(null);
-  const flatListRef = useRef(null);
-
-  const [checkAnimation, setCheckAnimation] = useState(new Animated.Value(0));
-
-  const handleAnimation = () => {
-    Animated.sequence([
-      Animated.timing(checkAnimation, {
-        toValue: 1,
-        duration: 1000,
-        easing: Easing.easeOutQuint,
-        useNativeDriver: false,
-      }),
-      Animated.timing(checkAnimation, {
-        toValue: 0,
-        duration: 1,
-        useNativeDriver: false,
-      }),
-    ]).start(() => {
-      const newIndex = (activeIndex + 1) % (stepsCount + 1);
-      setActiveIndex(newIndex);
-      flatListRef.current?.scrollToIndex({ animated: true, index: newIndex, viewPosition: 0.5 });
-    });
-  };
-  const checkColorInterpolation = checkAnimation.interpolate({
-    inputRange: [0, 1],
-    outputRange: [theme.COLOR_SECONDARY, theme.MAIN_COLOR],
-  });
-
-  // back to 0 when drill changes
-  useEffect(() => {
-    setActiveIndex(0);
-  }, [props.drill]);
-
-  const renderFinish = () => {
+  if (isUniqueStep) {
+    const step = drill.steps[0];
     return (
-      <View style={styles.containerFinish}>
-        <Text style={styles.redoMessage}>{I18n.t('drills.fitnessDrillIllustration.redoMessage')}</Text>
-        <TouchableOpacity style={styles.redoButton} onPress={() => setActiveIndex(0)}>
-          <MaterialCommunityIcons name="restart" color={theme.COLOR_PRIMARY} size={50} />
-        </TouchableOpacity>
+      <View style={styles.video}>
+        <VimeoVideo vimeoId={step.vimeoId} sounds={step.sounds} />
       </View>
     );
-  };
-
-  const renderStep = ({ index, item }) => {
-    const isCurrent = index == activeIndex;
-
-    const doneStyle = index < activeIndex ? styles.stepTitleDone : {};
-    const currentStyle = isCurrent ? styles.stepTitleCurrent : {};
-
+  } else {
     return (
-      <TouchableOpacity style={styles.step} onPress={() => setActiveIndex(index)}>
-        <View style={styles.titleWrapper}>
-          <Text style={[styles.stepTitle, doneStyle, currentStyle]}>
-            {item.repetition} {item.title}
-          </Text>
-        </View>
-        {isCurrent && (
-          <TouchableOpacity style={styles.doneAnimation} onPress={() => handleAnimation()} testID="doneIcon">
-            <AnimatedIcon name="check-circle" size={26} style={{ color: checkColorInterpolation }} />
-          </TouchableOpacity>
-        )}
-      </TouchableOpacity>
-    );
-  };
-
-  const renderVimeo = ({ vimeoId, sounds }) => {
-    const isUniqueStep = stepsCount === 1;
-    return (
-      <>
-        <View style={styles.video}>
-          <VimeoVideo vimeoId={vimeoId} sounds={sounds} />
-        </View>
-        {!isUniqueStep && (
-          <FlatList
-            nestedScrollEnabled
-            ref={flatListRef}
-            data={props.drill.steps}
-            keyExtractor={(item) => item.id.toString()}
-            renderItem={renderStep}
-          />
-        )}
-      </>
-    );
-  };
-
-  const renderAnimation = ({ animation, title, instruction }, index) => {
-    const isFirstStep = index === 0;
-    const isLastStep = index === stepsCount - 1;
-    return (
-      <>
-        <View style={styles.line}>
-          <View>
-            {!isFirstStep && (
-              <TouchableOpacity
-                onPress={() => {
-                  carouselRef.current.snapToPrev();
-                }}
-              >
-                <MaterialCommunityIcons name="chevron-double-left" color={theme.COLOR_PRIMARY} size={26} />
-              </TouchableOpacity>
-            )}
+      <View style={styles.fitnessDrillIllustration}>
+        {drill.steps.map((step) => (
+          <View style={styles.step} key={step.id.toString()}>
+            <Text style={styles.stepTitle}>
+              • {step.repetition} {step.title}
+            </Text>
           </View>
-          <Text style={styles.title}>{title}</Text>
-          <View>
-            {!isLastStep && (
-              <TouchableOpacity
-                onPress={() => {
-                  carouselRef.current.snapToNext();
-                }}
-              >
-                <MaterialCommunityIcons name="chevron-double-right" color={theme.COLOR_PRIMARY} size={26} />
-              </TouchableOpacity>
-            )}
-          </View>
+        ))}
+        <View style={styles.startButtonWrapper}>
+          <Button onPress={startFitness} text={I18n.t('drills.fitnessDrillIllustration.start')} testID="startFitness" />
         </View>
-        <View style={styles.animation}>
-          <Animation widthRatio={1} heightRatio={1 / 2} animation={new Drill(animation)} />
-        </View>
-        <Text style={styles.instruction}>{instruction}</Text>
-      </>
+      </View>
     );
-  };
-
-  return (
-    <View style={styles.container}>
-      {activeIndex === props.drill.steps.length && renderFinish()}
-      {currentStep?.animation && !currentStep?.vimeoId && renderAnimation(currentStep)}
-      {currentStep?.vimeoId && renderVimeo(currentStep)}
-    </View>
-  );
+  }
 };
 
 const styles = StyleSheet.create({
-  container: {
+  fitnessDrillIllustration: {
     flex: 1,
-  },
-  containerFinish: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 20,
-  },
-  redoMessage: {
-    fontSize: theme.FONT_SIZE_MEDIUM,
-    color: theme.COLOR_PRIMARY,
-    fontWeight: 'bold',
-    marginVertical: 50,
-  },
-  redoButton: {
-    width: 80,
-    height: 80,
-  },
-  video: {
-    height: 250,
+    paddingLeft: 10,
   },
   step: {
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: 20,
-  },
-  titleWrapper: {
-    flexShrink: 1,
+    padding: 10,
   },
   stepTitle: {
-    fontSize: theme.FONT_SIZE_LARGE,
-    color: theme.COLOR_PRIMARY,
-  },
-  stepTitleCurrent: {
-    fontWeight: 'bold',
-  },
-  stepTitleDone: {
-    color: theme.COLOR_SECONDARY,
-  },
-  doneAnimation: {
-    padding: 10,
-    height: '100%',
-    justifyContent: 'center',
-  },
-  instruction: {
-    marginTop: 20,
-    marginBottom: 20,
-    marginLeft: 20,
     fontSize: theme.FONT_SIZE_MEDIUM,
     color: theme.COLOR_PRIMARY,
-    justifyContent: 'center',
+  },
+  startButtonWrapper: {
+    marginVertical: 10,
     alignItems: 'center',
   },
-  line: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    marginTop: 15,
+  video: {
+    height: 250,
+    marginBottom: 20,
   },
-  title: {
-    fontSize: theme.FONT_SIZE_LARGE,
-    color: theme.COLOR_PRIMARY,
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-  animation: { flex: 9 },
 });
 
 export default FitnessDrillIllustration;

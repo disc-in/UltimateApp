@@ -1,8 +1,6 @@
 import React, { useRef, useLayoutEffect } from 'react';
 import {
-  Platform,
   ScrollView,
-  Share,
   StyleSheet,
   TouchableOpacity,
   View,
@@ -21,18 +19,18 @@ import { toggleFavorite } from '../Store/Actions/favoriteAction';
 import { DrillTypes } from '../Fixtures/config';
 import theme from '../styles/theme.style';
 
+import ShareDrill from './drills/ShareDrill';
 import Description from './drills/Description';
 import FitnessDrillIllustration from './drills/FitnessDrillIllustration';
 import FrisbeeDrillIllustration from './drills/FrisbeeDrillIllustration';
 import StartButton from './drills/StartButton';
-import HeaderButton from './shared/HeaderButton';
 
 export const DrillPage = (props) => {
   const { route, navigation } = props;
 
   // Create Component refs
   const drillScrollView = useRef(null);
-  const firstDrill = useRef(null);
+  const descriptionRef = useRef(null);
 
   // Get Header Height
   const headerHeight = useHeaderHeight();
@@ -43,45 +41,24 @@ export const DrillPage = (props) => {
   const drillId = route.params.id;
   const drill = props.drills.find((drill) => drill.id == drillId);
 
-  const onPressStartButton = () => {
-    firstDrill.current.measureLayout(findNodeHandle(drillScrollView.current), (x, y) => {
-      drillScrollView.current.scrollTo({ x: 0, y, animated: true });
-    });
+  const startFitness = () => {
+    navigation.navigate('FitnessPage', { drill });
   };
 
-  const share = async (drill) => {
-    const url = await createLink(
-      'drills/' + drill.id,
-      drill.title,
-      I18n.t('drillPage.description', { description: drill.description.slice(0, 70) }),
-    );
-
-    const youtubeVideos = drill.steps.reduce((total, step) => {
-      const stepvideo = step.youtube ? `${step.title} - ${step.youtube}\n` : '';
-      return total + stepvideo;
-    }, '');
-
-    Share.share({
-      title: I18n.t('drillPage.shareTitle', { drillTitle: drill.title }),
-      message: I18n.t('drillPage.shareContent', { url, youtubeVideos, count: youtubeVideos.length }),
-      url,
-    }).catch((e) => console.log(e));
+  const onPressStartButton = () => {
+    if (drill.type === DrillTypes.FITNESS) {
+      startFitness();
+    } else {
+      descriptionRef.current.measureLayout(findNodeHandle(drillScrollView.current), (x, y) => {
+        drillScrollView.current.scrollTo({ x: 0, y, animated: true });
+      });
+    }
   };
 
   useLayoutEffect(() => {
     navigation.setOptions({
       title: drill.title,
-      headerRight: () => (
-        <TouchableOpacity onPress={() => share(drill)} testID="shareButton">
-          <Ionicons
-            name={Platform.select({
-              ios: 'ios-share-outline',
-              default: 'share-social',
-            })}
-            style={styles.iconShare}
-          />
-        </TouchableOpacity>
-      ),
+      headerRight: () => <ShareDrill drill={drill} />,
     });
   });
 
@@ -122,12 +99,12 @@ export const DrillPage = (props) => {
           </View>
         </View>
       </ImageBackground>
-      <View ref={firstDrill}>
+      <View ref={descriptionRef}>
         <Description drill={drill} />
       </View>
       <View style={styles.animation}>
         {drill.type === DrillTypes.FRISBEE && <FrisbeeDrillIllustration drill={drill} />}
-        {drill.type === DrillTypes.FITNESS && <FitnessDrillIllustration drill={drill} />}
+        {drill.type === DrillTypes.FITNESS && <FitnessDrillIllustration drill={drill} startFitness={startFitness} />}
       </View>
     </ScrollView>
   );
@@ -196,10 +173,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     top: 0,
     bottom: 0,
-  },
-  iconShare: {
-    fontSize: 28,
-    marginRight: 20,
   },
 });
 

@@ -7,6 +7,7 @@ import AboutPage from '../Components/AboutPage';
 import DrillListPage from '../Components/DrillListPage';
 import DrillPage from '../Components/DrillPage';
 import DrillPageMinimal from '../Components/DrillPageMinimal';
+import FitnessPage from '../Components/FitnessPage';
 import FrisbeeFilters from '../Components/FrisbeeFilters';
 import FitnessFilters from '../Components/FitnessFilters';
 import TrainingPage from '../Components/TrainingPage';
@@ -66,6 +67,7 @@ export const Navigation = () => (
       })}
     />
     <Stack.Screen name="DrillPageMinimal" component={DrillPageMinimal} />
+    <Stack.Screen name="FitnessPage" component={FitnessPage} options={({ route }) => ({ title: 'Fitness' })} />
     <Stack.Screen
       name="PlayEditorPage"
       component={PlayEditorPage}

@@ -42,9 +42,13 @@ export const DrillPage = (props) => {
   const drillId = route.params.id;
   const drill = props.drills.find((drill) => drill.id == drillId);
 
+  const startFitness = () => {
+    navigation.navigate('FitnessPage', { drill });
+  };
+
   const onPressStartButton = () => {
     if (drill.type === DrillTypes.FITNESS) {
-      navigation.navigate('FitnessPage', { drill });
+      startFitness();
     } else {
       descriptionRef.current.measureLayout(findNodeHandle(drillScrollView.current), (x, y) => {
         drillScrollView.current.scrollTo({ x: 0, y, animated: true });
@@ -130,7 +134,7 @@ export const DrillPage = (props) => {
       </View>
       <View style={styles.animation}>
         {drill.type === DrillTypes.FRISBEE && <FrisbeeDrillIllustration drill={drill} />}
-        {drill.type === DrillTypes.FITNESS && <FitnessDrillIllustration drill={drill} />}
+        {drill.type === DrillTypes.FITNESS && <FitnessDrillIllustration drill={drill} startFitness={startFitness} />}
       </View>
     </ScrollView>
   );

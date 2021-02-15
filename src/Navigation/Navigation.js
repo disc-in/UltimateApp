@@ -7,6 +7,7 @@ import AboutPage from '../Components/AboutPage';
 import DrillListPage from '../Components/DrillListPage';
 import DrillPage from '../Components/DrillPage';
 import DrillPageMinimal from '../Components/DrillPageMinimal';
+import FitnessPage from '../Components/FitnessPage';
 import FrisbeeFilters from '../Components/FrisbeeFilters';
 import FitnessFilters from '../Components/FitnessFilters';
 import TrainingPage from '../Components/TrainingPage';
@@ -22,7 +23,6 @@ import VideoPage from '../Components/VideoPage';
 
 import I18n from '../utils/i18n';
 import { DrillTypes, EquipmentLabels } from '../Fixtures/config';
-import FitnessPage from '../Components/FitnessPage';
 
 const Stack = createStackNavigator();
 

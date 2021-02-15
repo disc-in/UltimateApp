@@ -146,7 +146,7 @@ export default {
       inGame: 'En Match',
     },
     fitnessDrillIllustration: {
-      redoMessage: "Tu as terminé l'exercice !",
+      start: 'Start',
     },
   },
   aboutPage: {

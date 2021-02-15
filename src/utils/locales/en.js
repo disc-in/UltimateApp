@@ -146,7 +146,7 @@ export default {
       inGame: 'In Game',
     },
     fitnessDrillIllustration: {
-      redoMessage: 'You have completed the drill!',
+      start: 'Start',
     },
   },
   aboutPage: {

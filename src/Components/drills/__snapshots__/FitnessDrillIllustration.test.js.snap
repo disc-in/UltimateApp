@@ -77,218 +77,156 @@ exports[`<FitnessDrillIllustration /> renders correctly with one step 1`] = `
 `;
 
 exports[`<FitnessDrillIllustration /> renders correctly with several steps 1`] = `
-<RCTScrollView
-  ListFooterComponent={[Function]}
-  data={
-    Array [
-      Object {
-        "id": 1,
-        "repetition": 3,
-        "title": "First Step",
-        "vimeoId": "406746924",
-      },
-      Object {
-        "id": 2,
-        "repetition": 3,
-        "title": "Second Step",
-        "vimeoId": "406747302",
-      },
-      Object {
-        "id": 3,
-        "repetition": 3,
-        "title": "Third Step",
-        "vimeoId": "406747476",
-      },
-    ]
+<View
+  style={
+    Object {
+      "flex": 1,
+      "paddingLeft": 10,
+    }
   }
-  disableVirtualization={false}
-  getItem={[Function]}
-  getItemCount={[Function]}
-  horizontal={false}
-  initialNumToRender={10}
-  keyExtractor={[Function]}
-  maxToRenderPerBatch={10}
-  onContentSizeChange={[Function]}
-  onEndReachedThreshold={2}
-  onLayout={[Function]}
-  onMomentumScrollEnd={[Function]}
-  onScroll={[Function]}
-  onScrollBeginDrag={[Function]}
-  onScrollEndDrag={[Function]}
-  removeClippedSubviews={false}
-  renderItem={[Function]}
-  scrollEventThrottle={50}
-  stickyHeaderIndices={Array []}
-  updateCellsBatchingPeriod={50}
-  viewabilityConfigCallbackPairs={Array []}
-  windowSize={21}
 >
-  <View>
-    <View
-      onLayout={[Function]}
-      style={null}
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+        "padding": 10,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#232b2b",
+          "fontSize": 16,
+        }
+      }
     >
-      <View
+      • 
+      3
+       
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#232b2b",
+          "fontSize": 16,
+        }
+      }
+    >
+      First Step
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+        "padding": 10,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#232b2b",
+          "fontSize": 16,
+        }
+      }
+    >
+      • 
+      3
+       
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#232b2b",
+          "fontSize": 16,
+        }
+      }
+    >
+      Second Step
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+        "padding": 10,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#232b2b",
+          "fontSize": 16,
+        }
+      }
+    >
+      • 
+      3
+       
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#232b2b",
+          "fontSize": 16,
+        }
+      }
+    >
+      Third Step
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "marginVertical": 10,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#2a9e91",
+          "borderRadius": 5,
+          "flexDirection": "row",
+          "height": 40,
+          "justifyContent": "center",
+          "opacity": 1,
+          "paddingHorizontal": 20,
+          "paddingVertical": 10,
+          "width": "80%",
+        }
+      }
+      testID="startFitness"
+    >
+      <Text
         style={
           Object {
-            "flex": 1,
-            "flexDirection": "row",
-            "marginLeft": 10,
-            "padding": 10,
+            "color": "#fff",
+            "fontSize": 16,
+            "textAlign": "center",
           }
         }
       >
-        <Text
-          style={
-            Object {
-              "color": "#232b2b",
-              "fontSize": 16,
-            }
-          }
-        >
-          • 
-          3
-           
-        </Text>
-        <Text
-          style={
-            Object {
-              "color": "#232b2b",
-              "fontSize": 16,
-            }
-          }
-        >
-          First Step
-        </Text>
-      </View>
-    </View>
-    <View
-      onLayout={[Function]}
-      style={null}
-    >
-      <View
-        style={
-          Object {
-            "flex": 1,
-            "flexDirection": "row",
-            "marginLeft": 10,
-            "padding": 10,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#232b2b",
-              "fontSize": 16,
-            }
-          }
-        >
-          • 
-          3
-           
-        </Text>
-        <Text
-          style={
-            Object {
-              "color": "#232b2b",
-              "fontSize": 16,
-            }
-          }
-        >
-          Second Step
-        </Text>
-      </View>
-    </View>
-    <View
-      onLayout={[Function]}
-      style={null}
-    >
-      <View
-        style={
-          Object {
-            "flex": 1,
-            "flexDirection": "row",
-            "marginLeft": 10,
-            "padding": 10,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#232b2b",
-              "fontSize": 16,
-            }
-          }
-        >
-          • 
-          3
-           
-        </Text>
-        <Text
-          style={
-            Object {
-              "color": "#232b2b",
-              "fontSize": 16,
-            }
-          }
-        >
-          Third Step
-        </Text>
-      </View>
-    </View>
-    <View
-      onLayout={[Function]}
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "marginVertical": 10,
-          }
-        }
-      >
-        <View
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "#2a9e91",
-              "borderRadius": 5,
-              "flexDirection": "row",
-              "height": 40,
-              "justifyContent": "center",
-              "opacity": 1,
-              "paddingHorizontal": 20,
-              "paddingVertical": 10,
-              "width": "80%",
-            }
-          }
-          testID="startFitness"
-        >
-          <Text
-            style={
-              Object {
-                "color": "#fff",
-                "fontSize": 16,
-                "textAlign": "center",
-              }
-            }
-          >
-            Start
-          </Text>
-        </View>
-      </View>
+        Start
+      </Text>
     </View>
   </View>
-</RCTScrollView>
+</View>
 `;

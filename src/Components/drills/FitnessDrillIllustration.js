@@ -7,26 +7,6 @@ import theme from '../../styles/theme.style';
 import Button from '../shared/Button';
 
 const FitnessDrillIllustration = ({ drill, startFitness }) => {
-  const renderStep = ({ index, item }) => {
-    return (
-      <View style={styles.step}>
-        <Text style={styles.stepTitle}>• {item.repetition} </Text>
-        <Text style={styles.stepTitle}>{item.title}</Text>
-      </View>
-    );
-  };
-
-  const startButton = () => (
-    <View style={styles.startButtonWrapper}>
-      <Button
-        style={styles.startButton}
-        onPress={startFitness}
-        text={I18n.t('drills.fitnessDrillIllustration.start')}
-        testID="startFitness"
-      />
-    </View>
-  );
-
   const isUniqueStep = drill.steps.length === 1;
 
   if (isUniqueStep) {
@@ -38,28 +18,29 @@ const FitnessDrillIllustration = ({ drill, startFitness }) => {
     );
   } else {
     return (
-      <FlatList
-        data={drill.steps}
-        keyExtractor={(item) => item.id.toString()}
-        renderItem={renderStep}
-        ListFooterComponent={startButton}
-      />
+      <View style={styles.fitnessDrillIllustration}>
+        {drill.steps.map((step) => (
+          <View style={styles.step} key={step.id.toString()}>
+            <Text style={styles.stepTitle}>• {step.repetition} </Text>
+            <Text style={styles.stepTitle}>{step.title}</Text>
+          </View>
+        ))}
+        <View style={styles.startButtonWrapper}>
+          <Button onPress={startFitness} text={I18n.t('drills.fitnessDrillIllustration.start')} testID="startFitness" />
+        </View>
+      </View>
     );
   }
 };
 
 const styles = StyleSheet.create({
-  container: {
+  fitnessDrillIllustration: {
     flex: 1,
-  },
-  video: {
-    height: 250,
-    marginBottom: 20,
+    paddingLeft: 10,
   },
   step: {
     flex: 1,
     flexDirection: 'row',
-    marginLeft: 10,
     padding: 10,
   },
   stepTitle: {
@@ -69,6 +50,10 @@ const styles = StyleSheet.create({
   startButtonWrapper: {
     marginVertical: 10,
     alignItems: 'center',
+  },
+  video: {
+    height: 250,
+    marginBottom: 20,
   },
 });
 

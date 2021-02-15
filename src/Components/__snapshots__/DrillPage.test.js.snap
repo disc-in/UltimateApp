@@ -786,15 +786,6 @@ exports[`<DrillPage /> renders correctly 1`] = `
                               >
                                 • 
                                  
-                              </Text>
-                              <Text
-                                style={
-                                  Object {
-                                    "color": "#232b2b",
-                                    "fontSize": 16,
-                                  }
-                                }
-                              >
                                 Warmup
                               </Text>
                             </View>
@@ -817,15 +808,6 @@ exports[`<DrillPage /> renders correctly 1`] = `
                               >
                                 • 
                                  
-                              </Text>
-                              <Text
-                                style={
-                                  Object {
-                                    "color": "#232b2b",
-                                    "fontSize": 16,
-                                  }
-                                }
-                              >
                                 Do the drill
                               </Text>
                             </View>
@@ -848,15 +830,6 @@ exports[`<DrillPage /> renders correctly 1`] = `
                               >
                                 • 
                                  
-                              </Text>
-                              <Text
-                                style={
-                                  Object {
-                                    "color": "#232b2b",
-                                    "fontSize": 16,
-                                  }
-                                }
-                              >
                                 Last step
                               </Text>
                             </View>
@@ -1750,15 +1723,6 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                               >
                                 • 
                                  
-                              </Text>
-                              <Text
-                                style={
-                                  Object {
-                                    "color": "#232b2b",
-                                    "fontSize": 16,
-                                  }
-                                }
-                              >
                                 Warmup
                               </Text>
                             </View>
@@ -1781,15 +1745,6 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                               >
                                 • 
                                  
-                              </Text>
-                              <Text
-                                style={
-                                  Object {
-                                    "color": "#232b2b",
-                                    "fontSize": 16,
-                                  }
-                                }
-                              >
                                 Do the drill
                               </Text>
                             </View>
@@ -1812,15 +1767,6 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                               >
                                 • 
                                  
-                              </Text>
-                              <Text
-                                style={
-                                  Object {
-                                    "color": "#232b2b",
-                                    "fontSize": 16,
-                                  }
-                                }
-                              >
                                 Last step
                               </Text>
                             </View>

@@ -21,8 +21,9 @@ const FitnessDrillIllustration = ({ drill, startFitness }) => {
       <View style={styles.fitnessDrillIllustration}>
         {drill.steps.map((step) => (
           <View style={styles.step} key={step.id.toString()}>
-            <Text style={styles.stepTitle}>• {step.repetition} </Text>
-            <Text style={styles.stepTitle}>{step.title}</Text>
+            <Text style={styles.stepTitle}>
+              • {step.repetition} {step.title}
+            </Text>
           </View>
         ))}
         <View style={styles.startButtonWrapper}>

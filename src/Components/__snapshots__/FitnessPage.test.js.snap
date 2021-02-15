@@ -484,22 +484,6 @@ exports[`<FitnessPage /> renders correctly 1`] = `
                                 }
                               >
                                  
-                              </Text>
-                              <Text
-                                style={
-                                  Array [
-                                    Object {
-                                      "color": "#fff",
-                                      "fontSize": 20,
-                                    },
-                                    Object {},
-                                    Object {
-                                      "color": "#232b2b",
-                                      "fontWeight": "bold",
-                                    },
-                                  ]
-                                }
-                              >
                                 Warmup
                               </Text>
                             </View>
@@ -540,19 +524,6 @@ exports[`<FitnessPage /> renders correctly 1`] = `
                                 }
                               >
                                  
-                              </Text>
-                              <Text
-                                style={
-                                  Array [
-                                    Object {
-                                      "color": "#fff",
-                                      "fontSize": 20,
-                                    },
-                                    Object {},
-                                    Object {},
-                                  ]
-                                }
-                              >
                                 Do the drill
                               </Text>
                             </View>
@@ -593,19 +564,6 @@ exports[`<FitnessPage /> renders correctly 1`] = `
                                 }
                               >
                                  
-                              </Text>
-                              <Text
-                                style={
-                                  Array [
-                                    Object {
-                                      "color": "#fff",
-                                      "fontSize": 20,
-                                    },
-                                    Object {},
-                                    Object {},
-                                  ]
-                                }
-                              >
                                 Last step
                               </Text>
                             </View>

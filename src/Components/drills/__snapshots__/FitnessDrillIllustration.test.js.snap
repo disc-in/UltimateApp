@@ -105,15 +105,6 @@ exports[`<FitnessDrillIllustration /> renders correctly with several steps 1`] =
       • 
       3
        
-    </Text>
-    <Text
-      style={
-        Object {
-          "color": "#232b2b",
-          "fontSize": 16,
-        }
-      }
-    >
       First Step
     </Text>
   </View>
@@ -137,15 +128,6 @@ exports[`<FitnessDrillIllustration /> renders correctly with several steps 1`] =
       • 
       3
        
-    </Text>
-    <Text
-      style={
-        Object {
-          "color": "#232b2b",
-          "fontSize": 16,
-        }
-      }
-    >
       Second Step
     </Text>
   </View>
@@ -169,15 +151,6 @@ exports[`<FitnessDrillIllustration /> renders correctly with several steps 1`] =
       • 
       3
        
-    </Text>
-    <Text
-      style={
-        Object {
-          "color": "#232b2b",
-          "fontSize": 16,
-        }
-      }
-    >
       Third Step
     </Text>
   </View>

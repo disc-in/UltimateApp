@@ -68,8 +68,9 @@ const FitnessPage = (props) => {
 
     return (
       <TouchableOpacity style={[styles.step, currentStep]} onPress={() => setIndex(index)}>
-        <Text style={[styles.stepTitle, doneStyle, currentStyle]}>{item.repetition} </Text>
-        <Text style={[styles.stepTitle, doneStyle, currentStyle]}>{item.title}</Text>
+        <Text style={[styles.stepTitle, doneStyle, currentStyle]}>
+          {item.repetition} {item.title}
+        </Text>
       </TouchableOpacity>
     );
   };

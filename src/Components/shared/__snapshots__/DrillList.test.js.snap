@@ -30,6 +30,11 @@ exports[`<DrillList /> renders correctly 1`] = `
             "title": "Warmup",
             "vimeoId": "462695757",
           },
+          Object {
+            "subtitle": "This is a subtitle",
+            "title": "Run !",
+            "vimeoId": "462695757",
+          },
         ],
         "title": "Fitness Drill Title",
         "type": "fitness",
@@ -59,6 +64,11 @@ exports[`<DrillList /> renders correctly 1`] = `
           Object {
             "subtitle": "This is a subtitle",
             "title": "Warmup",
+            "vimeoId": "462695757",
+          },
+          Object {
+            "subtitle": "This is a subtitle",
+            "title": "Run !",
             "vimeoId": "462695757",
           },
         ],

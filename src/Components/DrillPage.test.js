@@ -81,14 +81,16 @@ describe('<DrillPage />', () => {
     Share.share = () => new Promise((resolve, reject) => share());
 
     const Stack = createStackNavigator();
-    const { getByTestId } = render(
-      <Provider store={store}>
-        <NavigationContainer>
-          <Stack.Navigator>
-            <Stack.Screen name="DrillPage" component={ConnectedDrillPage} initialParams={{ id: drill.id }} />
-          </Stack.Navigator>
-        </NavigationContainer>
-      </Provider>,
+    const { getByTestId } = await waitFor(() =>
+      render(
+        <Provider store={store}>
+          <NavigationContainer>
+            <Stack.Navigator>
+              <Stack.Screen name="DrillPage" component={ConnectedDrillPage} initialParams={{ id: drill.id }} />
+            </Stack.Navigator>
+          </NavigationContainer>
+        </Provider>,
+      ),
     );
 
     fireEvent.press(getByTestId('shareButton'));
@@ -100,25 +102,27 @@ describe('<DrillPage />', () => {
   it('links to fitness page for fitness', async () => {
     const navigate = jest.fn();
     const Stack = createStackNavigator();
-    const { getByTestId } = render(
-      <Provider store={store}>
-        <NavigationContainer>
-          <Stack.Navigator>
-            <Stack.Screen
-              name="DrillPage"
-              component={ConnectedDrillPage}
-              initialParams={{ id: drill.id }}
-              listeners={({ navigation }) => ({
-                transitionStart: (e) => {
-                  navigation.navigate = navigate;
-                },
-              })}
-            />
-          </Stack.Navigator>
-        </NavigationContainer>
-      </Provider>,
+    const { getByTestId } = await waitFor(() =>
+      render(
+        <Provider store={store}>
+          <NavigationContainer>
+            <Stack.Navigator>
+              <Stack.Screen
+                name="DrillPage"
+                component={ConnectedDrillPage}
+                initialParams={{ id: drill.id }}
+                listeners={({ navigation }) => ({
+                  transitionStart: (e) => {
+                    navigation.navigate = navigate;
+                  },
+                })}
+              />
+            </Stack.Navigator>
+          </NavigationContainer>
+        </Provider>,
+      ),
     );
-    await fireEvent.press(getByTestId('startButton'));
+    fireEvent.press(getByTestId('startButton'));
 
     expect(navigate).toBeCalledWith('FitnessPage', { drill });
   });

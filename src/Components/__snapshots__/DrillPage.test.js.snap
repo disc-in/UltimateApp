@@ -759,381 +759,217 @@ exports[`<DrillPage /> renders correctly 1`] = `
                             }
                           }
                         >
-                          <View
-                            style={
-                              Object {
-                                "flex": 1,
-                              }
-                            }
-                          >
-                            <View
-                              style={
+                          <RCTScrollView
+                            ListFooterComponent={[Function]}
+                            data={
+                              Array [
                                 Object {
-                                  "height": "100%",
-                                }
-                              }
-                            >
+                                  "id": 0,
+                                  "subtitle": "This is a subtitle",
+                                  "title": "Warmup",
+                                  "vimeoId": "462695757",
+                                },
+                                Object {
+                                  "id": 1,
+                                  "subtitle": "This is a subtitle",
+                                  "title": "Do the drill",
+                                  "vimeoId": "462695757",
+                                },
+                                Object {
+                                  "id": 2,
+                                  "subtitle": "This is a subtitle",
+                                  "title": "Last step",
+                                  "vimeoId": "462695757",
+                                },
+                              ]
+                            }
+                            disableVirtualization={false}
+                            getItem={[Function]}
+                            getItemCount={[Function]}
+                            horizontal={false}
+                            initialNumToRender={10}
+                            keyExtractor={[Function]}
+                            maxToRenderPerBatch={10}
+                            onContentSizeChange={[Function]}
+                            onEndReachedThreshold={2}
+                            onLayout={[Function]}
+                            onMomentumScrollEnd={[Function]}
+                            onScroll={[Function]}
+                            onScrollBeginDrag={[Function]}
+                            onScrollEndDrag={[Function]}
+                            removeClippedSubviews={false}
+                            renderItem={[Function]}
+                            scrollEventThrottle={50}
+                            stickyHeaderIndices={Array []}
+                            updateCellsBatchingPeriod={50}
+                            viewabilityConfigCallbackPairs={Array []}
+                            windowSize={21}
+                          >
+                            <View>
                               <View
-                                style={
-                                  Array [
+                                onLayout={[Function]}
+                                style={null}
+                              >
+                                <View
+                                  style={
                                     Object {
-                                      "height": 250,
-                                    },
-                                    false,
-                                  ]
-                                }
+                                      "flex": 1,
+                                      "flexDirection": "row",
+                                      "marginLeft": 10,
+                                      "padding": 10,
+                                    }
+                                  }
+                                >
+                                  <Text
+                                    style={
+                                      Object {
+                                        "color": "#232b2b",
+                                        "fontSize": 16,
+                                      }
+                                    }
+                                  >
+                                    • 
+                                     
+                                  </Text>
+                                  <Text
+                                    style={
+                                      Object {
+                                        "color": "#232b2b",
+                                        "fontSize": 16,
+                                      }
+                                    }
+                                  >
+                                    Warmup
+                                  </Text>
+                                </View>
+                              </View>
+                              <View
+                                onLayout={[Function]}
+                                style={null}
+                              >
+                                <View
+                                  style={
+                                    Object {
+                                      "flex": 1,
+                                      "flexDirection": "row",
+                                      "marginLeft": 10,
+                                      "padding": 10,
+                                    }
+                                  }
+                                >
+                                  <Text
+                                    style={
+                                      Object {
+                                        "color": "#232b2b",
+                                        "fontSize": 16,
+                                      }
+                                    }
+                                  >
+                                    • 
+                                     
+                                  </Text>
+                                  <Text
+                                    style={
+                                      Object {
+                                        "color": "#232b2b",
+                                        "fontSize": 16,
+                                      }
+                                    }
+                                  >
+                                    Do the drill
+                                  </Text>
+                                </View>
+                              </View>
+                              <View
+                                onLayout={[Function]}
+                                style={null}
+                              >
+                                <View
+                                  style={
+                                    Object {
+                                      "flex": 1,
+                                      "flexDirection": "row",
+                                      "marginLeft": 10,
+                                      "padding": 10,
+                                    }
+                                  }
+                                >
+                                  <Text
+                                    style={
+                                      Object {
+                                        "color": "#232b2b",
+                                        "fontSize": 16,
+                                      }
+                                    }
+                                  >
+                                    • 
+                                     
+                                  </Text>
+                                  <Text
+                                    style={
+                                      Object {
+                                        "color": "#232b2b",
+                                        "fontSize": 16,
+                                      }
+                                    }
+                                  >
+                                    Last step
+                                  </Text>
+                                </View>
+                              </View>
+                              <View
+                                onLayout={[Function]}
                               >
                                 <View
                                   style={
                                     Object {
                                       "alignItems": "center",
-                                      "flex": 1,
-                                      "height": 250,
-                                      "justifyContent": "center",
+                                      "marginVertical": 10,
                                     }
                                   }
                                 >
                                   <View
+                                    accessible={true}
+                                    focusable={true}
+                                    onClick={[Function]}
+                                    onResponderGrant={[Function]}
+                                    onResponderMove={[Function]}
+                                    onResponderRelease={[Function]}
+                                    onResponderTerminate={[Function]}
+                                    onResponderTerminationRequest={[Function]}
+                                    onStartShouldSetResponder={[Function]}
                                     style={
                                       Object {
-                                        "position": "absolute",
+                                        "alignItems": "center",
+                                        "backgroundColor": "#2a9e91",
+                                        "borderRadius": 5,
+                                        "flexDirection": "row",
+                                        "height": 40,
+                                        "justifyContent": "center",
+                                        "opacity": 1,
+                                        "paddingHorizontal": 20,
+                                        "paddingVertical": 10,
+                                        "width": "80%",
                                       }
                                     }
+                                    testID="startFitness"
                                   >
-                                    <ActivityIndicator
-                                      animating={true}
-                                      color="#A6A6A6"
-                                      hidesWhenStopped={true}
-                                      size="large"
-                                    />
-                                    <Text>
-                                      Loading…
-                                    </Text>
-                                  </View>
-                                  <View
-                                    pointerEvents="box-none"
-                                    style={
-                                      Object {
-                                        "height": 250,
-                                        "overflow": "hidden",
-                                        "width": "100%",
-                                      }
-                                    }
-                                  >
-                                    <ViewManagerAdapter_ExpoVideoView
-                                      proxiedProperties={
-                                        Object {
-                                          "onError": [Function],
-                                          "onFullscreenUpdate": [Function],
-                                          "onLoad": [Function],
-                                          "onLoadStart": [Function],
-                                          "onReadyForDisplay": [Function],
-                                          "onStatusUpdate": [Function],
-                                          "resizeMode": "mock",
-                                          "source": undefined,
-                                          "status": Object {},
-                                          "useNativeControls": true,
-                                        }
-                                      }
+                                    <Text
                                       style={
                                         Object {
-                                          "bottom": 0,
-                                          "left": 0,
-                                          "position": "absolute",
-                                          "right": 0,
-                                          "top": 0,
+                                          "color": "#fff",
+                                          "fontSize": 16,
+                                          "textAlign": "center",
                                         }
                                       }
-                                    />
+                                    >
+                                      Start
+                                    </Text>
                                   </View>
                                 </View>
                               </View>
-                              <RCTScrollView
-                                style={
-                                  Object {
-                                    "height": "100%",
-                                  }
-                                }
-                              >
-                                <View>
-                                  <RCTScrollView
-                                    data={
-                                      Array [
-                                        Object {
-                                          "id": 0,
-                                          "subtitle": "This is a subtitle",
-                                          "title": "Warmup",
-                                          "vimeoId": "462695757",
-                                        },
-                                        Object {
-                                          "id": 1,
-                                          "subtitle": "This is a subtitle",
-                                          "title": "Do the drill",
-                                          "vimeoId": "462695757",
-                                        },
-                                        Object {
-                                          "id": 2,
-                                          "subtitle": "This is a subtitle",
-                                          "title": "Last step",
-                                          "vimeoId": "462695757",
-                                        },
-                                      ]
-                                    }
-                                    disableVirtualization={false}
-                                    getItem={[Function]}
-                                    getItemCount={[Function]}
-                                    horizontal={false}
-                                    initialNumToRender={10}
-                                    keyExtractor={[Function]}
-                                    maxToRenderPerBatch={10}
-                                    nestedScrollEnabled={true}
-                                    onContentSizeChange={[Function]}
-                                    onEndReachedThreshold={2}
-                                    onLayout={[Function]}
-                                    onMomentumScrollEnd={[Function]}
-                                    onScroll={[Function]}
-                                    onScrollBeginDrag={[Function]}
-                                    onScrollEndDrag={[Function]}
-                                    removeClippedSubviews={false}
-                                    renderItem={[Function]}
-                                    scrollEventThrottle={50}
-                                    stickyHeaderIndices={Array []}
-                                    updateCellsBatchingPeriod={50}
-                                    viewabilityConfigCallbackPairs={Array []}
-                                    windowSize={21}
-                                  >
-                                    <View>
-                                      <View
-                                        onLayout={[Function]}
-                                        style={null}
-                                      >
-                                        <View
-                                          accessible={true}
-                                          focusable={true}
-                                          onClick={[Function]}
-                                          onResponderGrant={[Function]}
-                                          onResponderMove={[Function]}
-                                          onResponderRelease={[Function]}
-                                          onResponderTerminate={[Function]}
-                                          onResponderTerminationRequest={[Function]}
-                                          onStartShouldSetResponder={[Function]}
-                                          style={
-                                            Object {
-                                              "alignItems": "center",
-                                              "backgroundColor": "#fff",
-                                              "flex": 1,
-                                              "flexDirection": "row",
-                                              "justifyContent": "space-between",
-                                              "opacity": 1,
-                                              "padding": 20,
-                                            }
-                                          }
-                                        >
-                                          <View
-                                            style={
-                                              Object {
-                                                "alignItems": "center",
-                                                "flexDirection": "row",
-                                                "flexGrow": 0,
-                                                "flexShrink": 0.7,
-                                                "marginRight": "10%",
-                                              }
-                                            }
-                                          >
-                                            <Text
-                                              style={
-                                                Array [
-                                                  Object {
-                                                    "color": "#232b2b",
-                                                    "fontSize": 20,
-                                                  },
-                                                  Object {},
-                                                  Object {
-                                                    "fontWeight": "bold",
-                                                  },
-                                                ]
-                                              }
-                                            >
-                                               
-                                            </Text>
-                                            <Text
-                                              style={
-                                                Array [
-                                                  Object {
-                                                    "color": "#232b2b",
-                                                    "fontSize": 20,
-                                                  },
-                                                  Object {},
-                                                  Object {
-                                                    "fontWeight": "bold",
-                                                  },
-                                                ]
-                                              }
-                                            >
-                                              Warmup
-                                            </Text>
-                                          </View>
-                                          <View
-                                            accessible={true}
-                                            focusable={true}
-                                            onClick={[Function]}
-                                            onResponderGrant={[Function]}
-                                            onResponderMove={[Function]}
-                                            onResponderRelease={[Function]}
-                                            onResponderTerminate={[Function]}
-                                            onResponderTerminationRequest={[Function]}
-                                            onStartShouldSetResponder={[Function]}
-                                            style={
-                                              Object {
-                                                "opacity": 1,
-                                              }
-                                            }
-                                            testID="doneIcon"
-                                          >
-                                            <Text />
-                                          </View>
-                                        </View>
-                                      </View>
-                                      <View
-                                        onLayout={[Function]}
-                                        style={null}
-                                      >
-                                        <View
-                                          accessible={true}
-                                          focusable={true}
-                                          onClick={[Function]}
-                                          onResponderGrant={[Function]}
-                                          onResponderMove={[Function]}
-                                          onResponderRelease={[Function]}
-                                          onResponderTerminate={[Function]}
-                                          onResponderTerminationRequest={[Function]}
-                                          onStartShouldSetResponder={[Function]}
-                                          style={
-                                            Object {
-                                              "alignItems": "center",
-                                              "flex": 1,
-                                              "flexDirection": "row",
-                                              "justifyContent": "space-between",
-                                              "opacity": 1,
-                                              "padding": 20,
-                                            }
-                                          }
-                                        >
-                                          <View
-                                            style={
-                                              Object {
-                                                "alignItems": "center",
-                                                "flexDirection": "row",
-                                                "flexGrow": 0,
-                                                "flexShrink": 0.7,
-                                                "marginRight": "10%",
-                                              }
-                                            }
-                                          >
-                                            <Text
-                                              style={
-                                                Array [
-                                                  Object {
-                                                    "color": "#232b2b",
-                                                    "fontSize": 20,
-                                                  },
-                                                  Object {},
-                                                  Object {},
-                                                ]
-                                              }
-                                            >
-                                               
-                                            </Text>
-                                            <Text
-                                              style={
-                                                Array [
-                                                  Object {
-                                                    "color": "#232b2b",
-                                                    "fontSize": 20,
-                                                  },
-                                                  Object {},
-                                                  Object {},
-                                                ]
-                                              }
-                                            >
-                                              Do the drill
-                                            </Text>
-                                          </View>
-                                        </View>
-                                      </View>
-                                      <View
-                                        onLayout={[Function]}
-                                        style={null}
-                                      >
-                                        <View
-                                          accessible={true}
-                                          focusable={true}
-                                          onClick={[Function]}
-                                          onResponderGrant={[Function]}
-                                          onResponderMove={[Function]}
-                                          onResponderRelease={[Function]}
-                                          onResponderTerminate={[Function]}
-                                          onResponderTerminationRequest={[Function]}
-                                          onStartShouldSetResponder={[Function]}
-                                          style={
-                                            Object {
-                                              "alignItems": "center",
-                                              "flex": 1,
-                                              "flexDirection": "row",
-                                              "justifyContent": "space-between",
-                                              "opacity": 1,
-                                              "padding": 20,
-                                            }
-                                          }
-                                        >
-                                          <View
-                                            style={
-                                              Object {
-                                                "alignItems": "center",
-                                                "flexDirection": "row",
-                                                "flexGrow": 0,
-                                                "flexShrink": 0.7,
-                                                "marginRight": "10%",
-                                              }
-                                            }
-                                          >
-                                            <Text
-                                              style={
-                                                Array [
-                                                  Object {
-                                                    "color": "#232b2b",
-                                                    "fontSize": 20,
-                                                  },
-                                                  Object {},
-                                                  Object {},
-                                                ]
-                                              }
-                                            >
-                                               
-                                            </Text>
-                                            <Text
-                                              style={
-                                                Array [
-                                                  Object {
-                                                    "color": "#232b2b",
-                                                    "fontSize": 20,
-                                                  },
-                                                  Object {},
-                                                  Object {},
-                                                ]
-                                              }
-                                            >
-                                              Last step
-                                            </Text>
-                                          </View>
-                                        </View>
-                                      </View>
-                                    </View>
-                                  </RCTScrollView>
-                                </View>
-                              </RCTScrollView>
                             </View>
-                          </View>
+                          </RCTScrollView>
                         </View>
                       </View>
                     </RCTScrollView>
@@ -1949,402 +1785,217 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                             }
                           }
                         >
-                          <View
-                            style={
-                              Object {
-                                "flex": 1,
-                              }
-                            }
-                          >
-                            <View
-                              style={
+                          <RCTScrollView
+                            ListFooterComponent={[Function]}
+                            data={
+                              Array [
                                 Object {
-                                  "height": "100%",
-                                }
-                              }
-                            >
+                                  "id": 0,
+                                  "subtitle": "This is a subtitle",
+                                  "title": "Warmup",
+                                  "vimeoId": "462695757",
+                                },
+                                Object {
+                                  "id": 1,
+                                  "subtitle": "This is a subtitle",
+                                  "title": "Do the drill",
+                                  "vimeoId": "462695757",
+                                },
+                                Object {
+                                  "id": 2,
+                                  "subtitle": "This is a subtitle",
+                                  "title": "Last step",
+                                  "vimeoId": "462695757",
+                                },
+                              ]
+                            }
+                            disableVirtualization={false}
+                            getItem={[Function]}
+                            getItemCount={[Function]}
+                            horizontal={false}
+                            initialNumToRender={10}
+                            keyExtractor={[Function]}
+                            maxToRenderPerBatch={10}
+                            onContentSizeChange={[Function]}
+                            onEndReachedThreshold={2}
+                            onLayout={[Function]}
+                            onMomentumScrollEnd={[Function]}
+                            onScroll={[Function]}
+                            onScrollBeginDrag={[Function]}
+                            onScrollEndDrag={[Function]}
+                            removeClippedSubviews={false}
+                            renderItem={[Function]}
+                            scrollEventThrottle={50}
+                            stickyHeaderIndices={Array []}
+                            updateCellsBatchingPeriod={50}
+                            viewabilityConfigCallbackPairs={Array []}
+                            windowSize={21}
+                          >
+                            <View>
                               <View
-                                style={
-                                  Array [
+                                onLayout={[Function]}
+                                style={null}
+                              >
+                                <View
+                                  style={
                                     Object {
-                                      "height": 250,
-                                    },
-                                    false,
-                                  ]
-                                }
+                                      "flex": 1,
+                                      "flexDirection": "row",
+                                      "marginLeft": 10,
+                                      "padding": 10,
+                                    }
+                                  }
+                                >
+                                  <Text
+                                    style={
+                                      Object {
+                                        "color": "#232b2b",
+                                        "fontSize": 16,
+                                      }
+                                    }
+                                  >
+                                    • 
+                                     
+                                  </Text>
+                                  <Text
+                                    style={
+                                      Object {
+                                        "color": "#232b2b",
+                                        "fontSize": 16,
+                                      }
+                                    }
+                                  >
+                                    Warmup
+                                  </Text>
+                                </View>
+                              </View>
+                              <View
+                                onLayout={[Function]}
+                                style={null}
+                              >
+                                <View
+                                  style={
+                                    Object {
+                                      "flex": 1,
+                                      "flexDirection": "row",
+                                      "marginLeft": 10,
+                                      "padding": 10,
+                                    }
+                                  }
+                                >
+                                  <Text
+                                    style={
+                                      Object {
+                                        "color": "#232b2b",
+                                        "fontSize": 16,
+                                      }
+                                    }
+                                  >
+                                    • 
+                                     
+                                  </Text>
+                                  <Text
+                                    style={
+                                      Object {
+                                        "color": "#232b2b",
+                                        "fontSize": 16,
+                                      }
+                                    }
+                                  >
+                                    Do the drill
+                                  </Text>
+                                </View>
+                              </View>
+                              <View
+                                onLayout={[Function]}
+                                style={null}
+                              >
+                                <View
+                                  style={
+                                    Object {
+                                      "flex": 1,
+                                      "flexDirection": "row",
+                                      "marginLeft": 10,
+                                      "padding": 10,
+                                    }
+                                  }
+                                >
+                                  <Text
+                                    style={
+                                      Object {
+                                        "color": "#232b2b",
+                                        "fontSize": 16,
+                                      }
+                                    }
+                                  >
+                                    • 
+                                     
+                                  </Text>
+                                  <Text
+                                    style={
+                                      Object {
+                                        "color": "#232b2b",
+                                        "fontSize": 16,
+                                      }
+                                    }
+                                  >
+                                    Last step
+                                  </Text>
+                                </View>
+                              </View>
+                              <View
+                                onLayout={[Function]}
                               >
                                 <View
                                   style={
                                     Object {
                                       "alignItems": "center",
-                                      "flex": 1,
-                                      "height": 250,
-                                      "justifyContent": "center",
+                                      "marginVertical": 10,
                                     }
                                   }
                                 >
                                   <View
+                                    accessible={true}
+                                    focusable={true}
+                                    onClick={[Function]}
+                                    onResponderGrant={[Function]}
+                                    onResponderMove={[Function]}
+                                    onResponderRelease={[Function]}
+                                    onResponderTerminate={[Function]}
+                                    onResponderTerminationRequest={[Function]}
+                                    onStartShouldSetResponder={[Function]}
                                     style={
                                       Object {
-                                        "position": "absolute",
+                                        "alignItems": "center",
+                                        "backgroundColor": "#2a9e91",
+                                        "borderRadius": 5,
+                                        "flexDirection": "row",
+                                        "height": 40,
+                                        "justifyContent": "center",
+                                        "opacity": 1,
+                                        "paddingHorizontal": 20,
+                                        "paddingVertical": 10,
+                                        "width": "80%",
                                       }
                                     }
+                                    testID="startFitness"
                                   >
-                                    <ActivityIndicator
-                                      animating={true}
-                                      color="#A6A6A6"
-                                      hidesWhenStopped={true}
-                                      size="large"
-                                    />
-                                    <Text>
-                                      Loading…
-                                    </Text>
-                                  </View>
-                                  <View
-                                    pointerEvents="box-none"
-                                    style={
-                                      Object {
-                                        "height": 250,
-                                        "overflow": "hidden",
-                                        "width": "100%",
-                                      }
-                                    }
-                                  >
-                                    <ViewManagerAdapter_ExpoVideoView
-                                      proxiedProperties={
-                                        Object {
-                                          "onError": [Function],
-                                          "onFullscreenUpdate": [Function],
-                                          "onLoad": [Function],
-                                          "onLoadStart": [Function],
-                                          "onReadyForDisplay": [Function],
-                                          "onStatusUpdate": [Function],
-                                          "resizeMode": "mock",
-                                          "source": undefined,
-                                          "status": Object {},
-                                          "useNativeControls": true,
-                                        }
-                                      }
+                                    <Text
                                       style={
                                         Object {
-                                          "bottom": 0,
-                                          "left": 0,
-                                          "position": "absolute",
-                                          "right": 0,
-                                          "top": 0,
+                                          "color": "#fff",
+                                          "fontSize": 16,
+                                          "textAlign": "center",
                                         }
                                       }
-                                    />
+                                    >
+                                      Start
+                                    </Text>
                                   </View>
                                 </View>
                               </View>
-                              <RCTScrollView
-                                style={
-                                  Object {
-                                    "height": "100%",
-                                  }
-                                }
-                              >
-                                <View>
-                                  <RCTScrollView
-                                    data={
-                                      Array [
-                                        Object {
-                                          "id": 0,
-                                          "subtitle": "This is a subtitle",
-                                          "title": "Warmup",
-                                          "vimeoId": "462695757",
-                                        },
-                                        Object {
-                                          "id": 1,
-                                          "subtitle": "This is a subtitle",
-                                          "title": "Do the drill",
-                                          "vimeoId": "462695757",
-                                        },
-                                        Object {
-                                          "id": 2,
-                                          "subtitle": "This is a subtitle",
-                                          "title": "Last step",
-                                          "vimeoId": "462695757",
-                                        },
-                                      ]
-                                    }
-                                    disableVirtualization={false}
-                                    getItem={[Function]}
-                                    getItemCount={[Function]}
-                                    horizontal={false}
-                                    initialNumToRender={10}
-                                    keyExtractor={[Function]}
-                                    maxToRenderPerBatch={10}
-                                    nestedScrollEnabled={true}
-                                    onContentSizeChange={[Function]}
-                                    onEndReachedThreshold={2}
-                                    onLayout={[Function]}
-                                    onMomentumScrollEnd={[Function]}
-                                    onScroll={[Function]}
-                                    onScrollBeginDrag={[Function]}
-                                    onScrollEndDrag={[Function]}
-                                    removeClippedSubviews={false}
-                                    renderItem={[Function]}
-                                    scrollEventThrottle={50}
-                                    stickyHeaderIndices={Array []}
-                                    updateCellsBatchingPeriod={50}
-                                    viewabilityConfigCallbackPairs={Array []}
-                                    windowSize={21}
-                                  >
-                                    <View>
-                                      <View
-                                        onLayout={[Function]}
-                                        style={null}
-                                      >
-                                        <View
-                                          accessible={true}
-                                          focusable={true}
-                                          onClick={[Function]}
-                                          onResponderGrant={[Function]}
-                                          onResponderMove={[Function]}
-                                          onResponderRelease={[Function]}
-                                          onResponderTerminate={[Function]}
-                                          onResponderTerminationRequest={[Function]}
-                                          onStartShouldSetResponder={[Function]}
-                                          style={
-                                            Object {
-                                              "alignItems": "center",
-                                              "backgroundColor": "#fff",
-                                              "flex": 1,
-                                              "flexDirection": "row",
-                                              "justifyContent": "space-between",
-                                              "opacity": 1,
-                                              "padding": 20,
-                                            }
-                                          }
-                                        >
-                                          <View
-                                            style={
-                                              Object {
-                                                "alignItems": "center",
-                                                "flexDirection": "row",
-                                                "flexGrow": 0,
-                                                "flexShrink": 0.7,
-                                                "marginRight": "10%",
-                                              }
-                                            }
-                                          >
-                                            <Text
-                                              style={
-                                                Array [
-                                                  Object {
-                                                    "color": "#232b2b",
-                                                    "fontSize": 20,
-                                                  },
-                                                  Object {},
-                                                  Object {
-                                                    "fontWeight": "bold",
-                                                  },
-                                                ]
-                                              }
-                                            >
-                                               
-                                            </Text>
-                                            <Text
-                                              style={
-                                                Array [
-                                                  Object {
-                                                    "color": "#232b2b",
-                                                    "fontSize": 20,
-                                                  },
-                                                  Object {},
-                                                  Object {
-                                                    "fontWeight": "bold",
-                                                  },
-                                                ]
-                                              }
-                                            >
-                                              Warmup
-                                            </Text>
-                                          </View>
-                                          <View
-                                            accessible={true}
-                                            focusable={true}
-                                            onClick={[Function]}
-                                            onResponderGrant={[Function]}
-                                            onResponderMove={[Function]}
-                                            onResponderRelease={[Function]}
-                                            onResponderTerminate={[Function]}
-                                            onResponderTerminationRequest={[Function]}
-                                            onStartShouldSetResponder={[Function]}
-                                            style={
-                                              Object {
-                                                "opacity": 1,
-                                              }
-                                            }
-                                            testID="doneIcon"
-                                          >
-                                            <Text
-                                              allowFontScaling={false}
-                                              style={
-                                                Array [
-                                                  Object {
-                                                    "color": undefined,
-                                                    "fontSize": 26,
-                                                  },
-                                                  Object {
-                                                    "color": "rgba(166, 166, 166, 1)",
-                                                  },
-                                                  Object {
-                                                    "fontFamily": "material-community",
-                                                    "fontStyle": "normal",
-                                                    "fontWeight": "normal",
-                                                  },
-                                                  Object {},
-                                                ]
-                                              }
-                                            >
-                                              󰗠
-                                            </Text>
-                                          </View>
-                                        </View>
-                                      </View>
-                                      <View
-                                        onLayout={[Function]}
-                                        style={null}
-                                      >
-                                        <View
-                                          accessible={true}
-                                          focusable={true}
-                                          onClick={[Function]}
-                                          onResponderGrant={[Function]}
-                                          onResponderMove={[Function]}
-                                          onResponderRelease={[Function]}
-                                          onResponderTerminate={[Function]}
-                                          onResponderTerminationRequest={[Function]}
-                                          onStartShouldSetResponder={[Function]}
-                                          style={
-                                            Object {
-                                              "alignItems": "center",
-                                              "flex": 1,
-                                              "flexDirection": "row",
-                                              "justifyContent": "space-between",
-                                              "opacity": 1,
-                                              "padding": 20,
-                                            }
-                                          }
-                                        >
-                                          <View
-                                            style={
-                                              Object {
-                                                "alignItems": "center",
-                                                "flexDirection": "row",
-                                                "flexGrow": 0,
-                                                "flexShrink": 0.7,
-                                                "marginRight": "10%",
-                                              }
-                                            }
-                                          >
-                                            <Text
-                                              style={
-                                                Array [
-                                                  Object {
-                                                    "color": "#232b2b",
-                                                    "fontSize": 20,
-                                                  },
-                                                  Object {},
-                                                  Object {},
-                                                ]
-                                              }
-                                            >
-                                               
-                                            </Text>
-                                            <Text
-                                              style={
-                                                Array [
-                                                  Object {
-                                                    "color": "#232b2b",
-                                                    "fontSize": 20,
-                                                  },
-                                                  Object {},
-                                                  Object {},
-                                                ]
-                                              }
-                                            >
-                                              Do the drill
-                                            </Text>
-                                          </View>
-                                        </View>
-                                      </View>
-                                      <View
-                                        onLayout={[Function]}
-                                        style={null}
-                                      >
-                                        <View
-                                          accessible={true}
-                                          focusable={true}
-                                          onClick={[Function]}
-                                          onResponderGrant={[Function]}
-                                          onResponderMove={[Function]}
-                                          onResponderRelease={[Function]}
-                                          onResponderTerminate={[Function]}
-                                          onResponderTerminationRequest={[Function]}
-                                          onStartShouldSetResponder={[Function]}
-                                          style={
-                                            Object {
-                                              "alignItems": "center",
-                                              "flex": 1,
-                                              "flexDirection": "row",
-                                              "justifyContent": "space-between",
-                                              "opacity": 1,
-                                              "padding": 20,
-                                            }
-                                          }
-                                        >
-                                          <View
-                                            style={
-                                              Object {
-                                                "alignItems": "center",
-                                                "flexDirection": "row",
-                                                "flexGrow": 0,
-                                                "flexShrink": 0.7,
-                                                "marginRight": "10%",
-                                              }
-                                            }
-                                          >
-                                            <Text
-                                              style={
-                                                Array [
-                                                  Object {
-                                                    "color": "#232b2b",
-                                                    "fontSize": 20,
-                                                  },
-                                                  Object {},
-                                                  Object {},
-                                                ]
-                                              }
-                                            >
-                                               
-                                            </Text>
-                                            <Text
-                                              style={
-                                                Array [
-                                                  Object {
-                                                    "color": "#232b2b",
-                                                    "fontSize": 20,
-                                                  },
-                                                  Object {},
-                                                  Object {},
-                                                ]
-                                              }
-                                            >
-                                              Last step
-                                            </Text>
-                                          </View>
-                                        </View>
-                                      </View>
-                                    </View>
-                                  </RCTScrollView>
-                                </View>
-                              </RCTScrollView>
                             </View>
-                          </View>
+                          </RCTScrollView>
                         </View>
                       </View>
                     </RCTScrollView>

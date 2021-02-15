@@ -1158,6 +1158,11 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
               "title": "Warmup",
               "vimeoId": "462695757",
             },
+            Object {
+              "subtitle": "This is a subtitle",
+              "title": "Run !",
+              "vimeoId": "462695757",
+            },
           ],
           "title": "Fitness Drill Title",
           "type": "fitness",
@@ -1184,6 +1189,11 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
               "title": "Warmup",
               "vimeoId": "462695757",
             },
+            Object {
+              "subtitle": "This is a subtitle",
+              "title": "Run !",
+              "vimeoId": "462695757",
+            },
           ],
           "title": "Fitness Drill Title",
           "type": "fitness",
@@ -1208,6 +1218,11 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
             Object {
               "subtitle": "This is a subtitle",
               "title": "Warmup",
+              "vimeoId": "462695757",
+            },
+            Object {
+              "subtitle": "This is a subtitle",
+              "title": "Run !",
               "vimeoId": "462695757",
             },
           ],
@@ -1241,6 +1256,11 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
               "title": "Warmup",
               "vimeoId": "462695757",
             },
+            Object {
+              "subtitle": "This is a subtitle",
+              "title": "Run !",
+              "vimeoId": "462695757",
+            },
           ],
           "title": "Fitness Drill Title",
           "type": "fitness",
@@ -1267,6 +1287,11 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
               "title": "Warmup",
               "vimeoId": "462695757",
             },
+            Object {
+              "subtitle": "This is a subtitle",
+              "title": "Run !",
+              "vimeoId": "462695757",
+            },
           ],
           "title": "Fitness Drill Title",
           "type": "fitness",
@@ -1291,6 +1316,11 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
             Object {
               "subtitle": "This is a subtitle",
               "title": "Warmup",
+              "vimeoId": "462695757",
+            },
+            Object {
+              "subtitle": "This is a subtitle",
+              "title": "Run !",
               "vimeoId": "462695757",
             },
           ],
@@ -1872,6 +1902,11 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
               "title": "Warmup",
               "vimeoId": "462695757",
             },
+            Object {
+              "subtitle": "This is a subtitle",
+              "title": "Run !",
+              "vimeoId": "462695757",
+            },
           ],
           "title": "Fitness Drill Title",
           "type": "frisbee",
@@ -1898,6 +1933,11 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
               "title": "Warmup",
               "vimeoId": "462695757",
             },
+            Object {
+              "subtitle": "This is a subtitle",
+              "title": "Run !",
+              "vimeoId": "462695757",
+            },
           ],
           "title": "Fitness Drill Title",
           "type": "frisbee",
@@ -1922,6 +1962,11 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
             Object {
               "subtitle": "This is a subtitle",
               "title": "Warmup",
+              "vimeoId": "462695757",
+            },
+            Object {
+              "subtitle": "This is a subtitle",
+              "title": "Run !",
               "vimeoId": "462695757",
             },
           ],
@@ -1955,6 +2000,11 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
               "title": "Warmup",
               "vimeoId": "462695757",
             },
+            Object {
+              "subtitle": "This is a subtitle",
+              "title": "Run !",
+              "vimeoId": "462695757",
+            },
           ],
           "title": "Fitness Drill Title",
           "type": "frisbee",
@@ -1981,6 +2031,11 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
               "title": "Warmup",
               "vimeoId": "462695757",
             },
+            Object {
+              "subtitle": "This is a subtitle",
+              "title": "Run !",
+              "vimeoId": "462695757",
+            },
           ],
           "title": "Fitness Drill Title",
           "type": "frisbee",
@@ -2005,6 +2060,11 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
             Object {
               "subtitle": "This is a subtitle",
               "title": "Warmup",
+              "vimeoId": "462695757",
+            },
+            Object {
+              "subtitle": "This is a subtitle",
+              "title": "Run !",
               "vimeoId": "462695757",
             },
           ],

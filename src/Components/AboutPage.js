@@ -3,6 +3,7 @@ import { StyleSheet, ScrollView, View, Text, Image, TouchableOpacity } from 'rea
 import Constants from 'expo-constants';
 import * as MailComposer from 'expo-mail-composer';
 import * as Linking from 'expo-linking';
+import { EXPO_ENV_FLAG } from '@env';
 
 import theme from '../styles/theme.style';
 import I18n from '../utils/i18n';
@@ -28,6 +29,7 @@ const AboutPage = (props) => {
         <View>
           <Text style={styles.info}>{I18n.t('aboutPage.copyright', { endYear: new Date().getFullYear() })}</Text>
           <Text style={styles.info}>{I18n.t('aboutPage.version', { version, channel })}</Text>
+          <Text style={styles.info}>{EXPO_ENV_FLAG}</Text>
         </View>
       </View>
       <Text style={styles.header}>{I18n.t('aboutPage.about.header')}</Text>
@@ -78,6 +80,7 @@ const styles = StyleSheet.create({
   info: {
     marginLeft: 10,
     color: theme.COLOR_SECONDARY,
+    fontSize: theme.FONT_SIZE_SMALL,
   },
   header: {
     marginTop: 10,

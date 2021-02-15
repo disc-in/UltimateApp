@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { View, StyleSheet, Text, FlatList } from 'react-native';
+import React from 'react';
+import { View, StyleSheet, Text } from 'react-native';
 
 import I18n from '../../utils/i18n';
 import VimeoVideo from '../shared/VimeoVideo';

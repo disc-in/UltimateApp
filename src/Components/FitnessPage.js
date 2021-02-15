@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useLayoutEffect } from 'react';
 import { Platform, View, StyleSheet, Text, TouchableOpacity, FlatList, Share } from 'react-native';
-import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
 
 import VimeoVideo from '../Components/shared/VimeoVideo';
 import I18n from '../utils/i18n';
@@ -58,6 +58,10 @@ const FitnessPage = (props) => {
   const setIndex = (index) => {
     setActiveIndex(index);
   };
+
+  useEffect(() => {
+    flatListRef.current?.scrollToIndex({ animated: true, index: activeIndex, viewPosition: 0.5 });
+  }, [activeIndex]);
 
   const renderStep = ({ index, item }) => {
     const isCurrent = index == activeIndex;

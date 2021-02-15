@@ -30,9 +30,10 @@ const FitnessDrillIllustration = ({ drill, startFitness }) => {
   const isUniqueStep = drill.steps.length === 1;
 
   if (isUniqueStep) {
+    const step = drill.steps[0];
     return (
       <View style={styles.video}>
-        <VimeoVideo vimeoId={vimeoId} sounds={sounds} />
+        <VimeoVideo vimeoId={step.vimeoId} sounds={step.sounds} />
       </View>
     );
   } else {
@@ -53,6 +54,7 @@ const styles = StyleSheet.create({
   },
   video: {
     height: 250,
+    marginBottom: 20,
   },
   step: {
     flex: 1,

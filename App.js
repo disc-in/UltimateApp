@@ -11,14 +11,14 @@ import * as Linking from 'expo-linking';
 import { Navigation } from './src/Navigation';
 import { store, persistor } from './src/Store/configureStore';
 import FlashMessage from './src/utils/flashMessage';
-import { EXPO_FIREBASE_URL_PREFIX } from '@env';
+import { EXPO_FIREBASE_URL_PREFIX, EXPO_FIREBASE_DOMAIN_URI } from '@env';
 import theme from './src/styles/theme.style';
 
 if (Platform.OS !== 'web') enableScreens();
 
 const App = (props) => {
   const linking = {
-    prefixes: [Linking.makeUrl('/'), EXPO_FIREBASE_URL_PREFIX],
+    prefixes: [Linking.makeUrl('/'), EXPO_FIREBASE_URL_PREFIX, EXPO_FIREBASE_DOMAIN_URI],
     config: {
       initialRouteName: 'HomePage',
       screens: {

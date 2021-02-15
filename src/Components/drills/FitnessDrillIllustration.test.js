@@ -8,6 +8,8 @@ import { DrillTypes } from '../../Fixtures/config';
 
 import FitnessDrillIllustration from './FitnessDrillIllustration';
 
+jest.mock('../shared/VimeoVideo');
+
 describe('<FitnessDrillIllustration />', () => {
   const startFitness = jest.fn();
   const steps = [

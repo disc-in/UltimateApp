@@ -26,7 +26,7 @@ const FitnessPage = (props) => {
   });
 
   useEffect(() => {
-    flatListRef.current?.scrollToIndex({ animated: true, index: activeIndex, viewPosition: 0.5 });
+    flatListRef.current?.scrollToIndex({ index: activeIndex, viewPosition: 0.5 });
   }, [activeIndex]);
 
   const renderStep = ({ index, item }) => {

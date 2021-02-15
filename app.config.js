@@ -1,4 +1,4 @@
-import { EXPO_FIREBASE_URL_PREFIX, EXPO_FIREBASE_DOMAIN_URI } from '@env';
+import 'dotenv/config';
 
 export default {
   name: 'Disc In',
@@ -26,8 +26,8 @@ export default {
       CFBundleAllowMixedLocalizations: true,
     },
     associatedDomains: [
-      `applinks:${EXPO_FIREBASE_DOMAIN_URI.replace('https://', '')}`,
-      `applinks:${EXPO_FIREBASE_URL_PREFIX.replace('https://', '')}`,
+      `applinks:${process.env.EXPO_FIREBASE_DOMAIN_URI.replace('https://', '')}`,
+      `applinks:${process.env.EXPO_FIREBASE_URL_PREFIX.replace('https://', '')}`,
     ],
   },
   android: {
@@ -41,12 +41,12 @@ export default {
         data: [
           {
             scheme: 'https',
-            host: EXPO_FIREBASE_DOMAIN_URI.replace('https://', ''),
+            host: process.env.EXPO_FIREBASE_DOMAIN_URI.replace('https://', ''),
             pathPrefix: '/',
           },
           {
             scheme: 'https',
-            host: EXPO_FIREBASE_URL_PREFIX.replace('https://', ''),
+            host: process.env.EXPO_FIREBASE_URL_PREFIX.replace('https://', ''),
             pathPrefix: '/',
           },
         ],

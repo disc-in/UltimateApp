@@ -1,8 +1,6 @@
 import React, { useRef, useLayoutEffect } from 'react';
 import {
-  Platform,
   ScrollView,
-  Share,
   StyleSheet,
   TouchableOpacity,
   View,
@@ -21,6 +19,7 @@ import { toggleFavorite } from '../Store/Actions/favoriteAction';
 import { DrillTypes } from '../Fixtures/config';
 import theme from '../styles/theme.style';
 
+import ShareDrill from './drills/ShareDrill';
 import Description from './drills/Description';
 import FitnessDrillIllustration from './drills/FitnessDrillIllustration';
 import FrisbeeDrillIllustration from './drills/FrisbeeDrillIllustration';
@@ -56,39 +55,10 @@ export const DrillPage = (props) => {
     }
   };
 
-  const share = async (drill) => {
-    const url = await createLink(
-      'drills/' + drill.id,
-      drill.title,
-      I18n.t('drillPage.description', { description: drill.description.slice(0, 70) }),
-    );
-
-    const youtubeVideos = drill.steps.reduce((total, step) => {
-      const stepvideo = step.youtube ? `${step.title} - ${step.youtube}\n` : '';
-      return total + stepvideo;
-    }, '');
-
-    Share.share({
-      title: I18n.t('drillPage.shareTitle', { drillTitle: drill.title }),
-      message: I18n.t('drillPage.shareContent', { url, youtubeVideos, count: youtubeVideos.length }),
-      url,
-    }).catch((e) => console.log(e));
-  };
-
   useLayoutEffect(() => {
     navigation.setOptions({
       title: drill.title,
-      headerRight: () => (
-        <TouchableOpacity onPress={() => share(drill)} testID="shareButton">
-          <Ionicons
-            name={Platform.select({
-              ios: 'ios-share-outline',
-              default: 'share-social',
-            })}
-            style={styles.iconShare}
-          />
-        </TouchableOpacity>
-      ),
+      headerRight: () => <ShareDrill drill={drill} />,
     });
   });
 
@@ -203,10 +173,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     top: 0,
     bottom: 0,
-  },
-  iconShare: {
-    fontSize: 28,
-    marginRight: 20,
   },
 });
 

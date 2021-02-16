@@ -18,7 +18,7 @@ if (Platform.OS !== 'web') enableScreens();
 
 const App = (props) => {
   const linking = {
-    prefixes: [Linking.makeUrl('/'), EXPO_FIREBASE_URL_PREFIX, EXPO_FIREBASE_DOMAIN_URI],
+    prefixes: [Linking.makeUrl('/'), EXPO_FIREBASE_URL_PREFIX],
     config: {
       initialRouteName: 'HomePage',
       screens: {

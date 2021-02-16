@@ -25,10 +25,7 @@ export default {
     infoPlist: {
       CFBundleAllowMixedLocalizations: true,
     },
-    associatedDomains: [
-      `applinks:${process.env.EXPO_FIREBASE_DOMAIN_URI.replace('https://', '')}`,
-      `applinks:${process.env.EXPO_FIREBASE_URL_PREFIX.replace('https://', '')}`,
-    ],
+    associatedDomains: [`applinks:${process.env.EXPO_FIREBASE_URL_PREFIX.replace('https://', '').replace(/\/$/, '')}`],
   },
   android: {
     package: 'com.discin.discin',
@@ -41,12 +38,7 @@ export default {
         data: [
           {
             scheme: 'https',
-            host: process.env.EXPO_FIREBASE_DOMAIN_URI.replace('https://', ''),
-            pathPrefix: '/',
-          },
-          {
-            scheme: 'https',
-            host: process.env.EXPO_FIREBASE_URL_PREFIX.replace('https://', ''),
+            host: process.env.EXPO_FIREBASE_URL_PREFIX.replace('https://', '').replace(/\/$/, ''),
             pathPrefix: '/',
           },
         ],

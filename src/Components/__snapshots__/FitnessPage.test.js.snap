@@ -101,6 +101,7 @@ exports[`<FitnessPage /> renders correctly 1`] = `
               style={
                 Object {
                   "marginHorizontal": 16,
+                  "marginRight": 50,
                   "opacity": 1,
                 }
               }

@@ -101,6 +101,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
               style={
                 Object {
                   "marginHorizontal": 16,
+                  "marginRight": 50,
                   "opacity": 1,
                 }
               }
@@ -997,6 +998,7 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
               style={
                 Object {
                   "marginHorizontal": 16,
+                  "marginRight": 50,
                   "opacity": 1,
                 }
               }

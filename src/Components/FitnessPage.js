@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useLayoutEffect } from 'react';
-import { View, StyleSheet, Text, TouchableOpacity, FlatList } from 'react-native';
+import { View, StyleSheet, Platform, Text, TouchableOpacity, FlatList } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
 import VimeoVideo from './shared/VimeoVideo';
@@ -19,9 +19,16 @@ const FitnessPage = (props) => {
   useLayoutEffect(() => {
     navigation.setOptions({
       title: drill.title,
+      headerRight: () => <ShareDrill drill={drill} light />,
       headerTintColor: theme.COLOR_PRIMARY_LIGHT,
       headerStyle: { backgroundColor: theme.COLOR_PRIMARY },
-      headerRight: () => <ShareDrill drill={drill} light />,
+      headerTitleContainerStyle: {
+        ...Platform.select({
+          ios: {
+            marginRight: 50,
+          },
+        }),
+      },
     });
   });
 

@@ -61,6 +61,7 @@ export default {
     aboutPage: 'À propos de Disc In',
     drillListPage: 'Exercices de {{type}}',
     drillPage: 'Exercice',
+    fitnessPage: 'Fitness',
     filters: 'Filtres',
     programListPage: {
       frisbee: "Programmes d'entraînement",

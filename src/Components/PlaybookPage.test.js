@@ -1,20 +1,51 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
-import { Provider } from 'react-redux';
+import { connect, Provider } from 'react-redux';
+import { render, fireEven } from '@testing-library/react-native';
 
 import store from '../Store/testStore';
+import Drill from './animation/Drill';
 
-import PlaybookPage from './PlaybookPage';
+import ConnectedPlaybookPage, { PlaybookPage } from './PlaybookPage';
 
 describe('<PlaybookPage />', () => {
-  it('renders correctly', () => {
+  const play = {
+    uuid: undefined,
+    animation: new Drill(),
+    title: 'title',
+  };
+
+  it('renders correctly when empty', () => {
     const tree = create(
       <Provider store={store}>
-        <PlaybookPage />
+        <ConnectedPlaybookPage />
       </Provider>,
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it('renders correctly with plays', () => {
+    const MockedConnectedPlaybookPage = connect(() => ({ customPlays: [play] }))(PlaybookPage);
+
+    const tree = create(
+      <Provider store={store}>
+        <MockedConnectedPlaybookPage />
+      </Provider>,
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('links to drill page', async () => {
+    const navigation = { navigate: jest.fn() };
+
+    const MockedConnectedPlaybookPage = connect(() => ({ customPlays: [play] }))(PlaybookPage);
+    const { getByText } = render(
+      <Provider store={store}>
+        <MockedConnectedPlaybookPage navigation={navigation} />
+      </Provider>,
+    );
+    await fireEvent.press(getByText(play.title));
+
+    expect(navigation.navigate).toBeCalledWith('PlayEditorPage', { currentPlay: play });
+  });
 });
-// TODO: Add test case with empty state
-// TODO: Add test case with navigation to play editor

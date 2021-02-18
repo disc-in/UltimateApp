@@ -106,7 +106,7 @@ export default {
     tactics: 'Tactics',
   },
   playbookPage: {
-    empty: "You haven't saved any plays yet",
+    empty: 'Your playbook is empty!',
     delete: 'Delete',
     deleteConfirmation: 'Do you really want to delete this play?',
     deleteSuccess: "The play '{{title}}' has been deleted.",

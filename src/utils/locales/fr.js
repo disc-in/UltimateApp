@@ -106,7 +106,7 @@ export default {
     tactics: 'Tactiques',
   },
   playbookPage: {
-    empty: "Vous n'avez pas encore sauvegardé de play",
+    empty: 'Votre playbook est vide !',
     delete: 'Supprimer',
     deleteConfirmation: 'Voulez-vous vraiment supprimer ce play ?',
     deleteSuccess: 'Le play "{{title}}" a été supprimé.',

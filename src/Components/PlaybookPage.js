@@ -39,8 +39,8 @@ export const PlaybookPage = (props) => {
         data={props.customPlays}
         keyExtractor={(item) => item.title}
         ListEmptyComponent={() => (
-          <View>
-            <Text>{I18n.t('playbookPage.empty')}</Text>
+          <View style={styles.empty}>
+            <Text style={styles.emptyText}>{I18n.t('playbookPage.empty')}</Text>
           </View>
         )}
         ListFooterComponent={() => (
@@ -50,7 +50,7 @@ export const PlaybookPage = (props) => {
               props.navigation.navigate('PlayEditorPage', { currentPlay: newPlay });
             }}
           >
-            <View style={styles.create}>
+            <View style={styles.createContainer}>
               <MaterialCommunityIcons style={styles.createIcon} name="plus" />
             </View>
           </TouchableOpacity>
@@ -98,6 +98,13 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
   },
+  empty: {
+    marginTop: '30%',
+    padding: 30,
+  },
+  emptyText: {
+    textAlign: 'center',
+  },
   play: {
     flex: 1,
     flexDirection: 'row',
@@ -131,7 +138,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  create: {
+  createContainer: {
     width: 40,
     height: 40,
     borderRadius: 20,

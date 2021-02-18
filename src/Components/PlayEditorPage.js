@@ -11,22 +11,16 @@ import { savePlay, deletePlay } from '../Store/Actions/playAction';
 import HeaderButton from './shared/HeaderButton';
 import AnimationEditor from './editor/AnimationEditor';
 import RenamePlayModal from './editor/RenamePlayModal';
-import NewPlay from './editor/toolbar/NewPlay';
 import SavePlay from './editor/toolbar/SavePlay';
 import AnimationHistory from './editor/toolbar/AnimationHistory';
 import SharePlay from './editor/toolbar/SharePlay';
 
-const newPlay = {
-  uuid: undefined,
-  animation: new Drill(),
-  title: I18n.t('playEditorPage.untitledPlay'),
-};
-
 export const PlayEditorPage = (props) => {
   const { navigation, route } = props;
-  const [currentPlay, setCurrentPlay] = useState(
-    route.params ? { ...route.params.currentPlay, animation: new Drill(route.params.currentPlay.animation) } : newPlay,
-  );
+  const [currentPlay, setCurrentPlay] = useState({
+    ...route.params.currentPlay,
+    animation: new Drill(route.params.currentPlay.animation),
+  });
 
   // modalRenameVisible is true if the modal which enables to rename the current play is displayed
   const [modalRenameVisible, setModalRenameVisible] = useState(false);
@@ -79,18 +73,12 @@ export const PlayEditorPage = (props) => {
     setIsPlaySaved(true);
   };
 
-  const createNewPlay = () => {
-    setCurrentPlay(newPlay);
-    setIsPlaySaved(true);
-  };
-
   return (
     <View style={styles.playEditorPage}>
       <View style={styles.centeredView}>
         {modalRenameVisible ? (
           <RenamePlayModal currentPlay={currentPlay} onRename={setTitle} close={() => setModalRenameVisible(false)} />
         ) : null}
-
         <AnimationEditor
           onAnimationChange={onAnimationChange}
           animation={currentPlay.animation}
@@ -98,12 +86,6 @@ export const PlayEditorPage = (props) => {
         />
       </View>
       <View style={styles.toolBar}>
-        <NewPlay
-          currentPlay={currentPlay}
-          isPlaySaved={isPlaySaved}
-          createNewPlay={createNewPlay}
-          saveCurrentPlay={saveCurrentPlay}
-        />
         <SavePlay currentPlay={currentPlay} saveCurrentPlay={saveCurrentPlay} />
         <AnimationHistory animation={currentPlay.animation} onAnimationHistoryChange={onAnimationChange} />
         <SharePlay currentPlay={currentPlay} />

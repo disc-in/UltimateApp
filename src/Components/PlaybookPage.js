@@ -7,9 +7,13 @@ import theme from '../styles/theme.style';
 import { deletePlay } from '../Store/Actions/playAction';
 import I18n from '../utils/i18n';
 import { showSuccess } from '../utils/flashMessage';
+import Drill from './animation/Drill';
 
-// TODO: Footer de la flatlist pour créer un nouveau
-// TODO: Grid components
+const newPlay = {
+  uuid: undefined,
+  animation: new Drill(),
+  title: I18n.t('playEditorPage.untitledPlay'),
+};
 
 export const PlaybookPage = (props) => {
   const deletionConfirmation = (play) => {
@@ -38,6 +42,18 @@ export const PlaybookPage = (props) => {
           <View>
             <Text>{I18n.t('playbookPage.empty')}</Text>
           </View>
+        )}
+        ListFooterComponent={() => (
+          <TouchableOpacity
+            style={styles.footer}
+            onPress={() => {
+              props.navigation.navigate('PlayEditorPage', { currentPlay: newPlay });
+            }}
+          >
+            <View style={styles.create}>
+              <MaterialCommunityIcons style={styles.createIcon} name="plus" />
+            </View>
+          </TouchableOpacity>
         )}
         renderItem={({ item }) => (
           <View style={styles.play}>
@@ -107,5 +123,24 @@ const styles = StyleSheet.create({
   icon: {
     color: theme.COLOR_PRIMARY,
     fontSize: theme.FONT_SIZE_LARGE,
+  },
+  footer: {
+    height: 50,
+    marginTop: 10,
+    marginBottom: 30,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  create: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    borderColor: theme.MAIN_COLOR,
+    borderWidth: StyleSheet.hairlineWidth,
+  },
+  createIcon: {
+    fontSize: 40,
+    fontWeight: 'bold',
+    color: theme.MAIN_COLOR,
   },
 });

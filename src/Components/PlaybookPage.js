@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { StyleSheet, FlatList, View, Text, TouchableOpacity, Alert } from 'react-native';
+import { StyleSheet, FlatList, View, Text, TouchableOpacity, Alert, TextInput } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import theme from '../styles/theme.style';
-import { deletePlay } from '../Store/Actions/playAction';
+import { renamePlay, deletePlay } from '../Store/Actions/playAction';
 import I18n from '../utils/i18n';
 import { showSuccess } from '../utils/flashMessage';
 import Drill from './animation/Drill';
@@ -16,23 +16,65 @@ const newPlay = {
 };
 
 export const PlaybookPage = (props) => {
-  const deletionConfirmation = (play) => {
-    Alert.alert(play.title, I18n.t('playbookPage.deleteConfirmation'), [
-      {
-        text: I18n.t('shared.cancel'),
-        style: 'cancel',
-      },
-      {
-        text: I18n.t('playbookPage.delete'),
-        style: 'destructive',
-        onPress: () => {
-          props.deletePlay(play.uuid);
-          showSuccess(I18n.t('playbookPage.deleteSuccess', { title: play.title }));
-        },
-      },
-    ]);
-  };
+  const Play = ({ play, editHandler }) => {
+    const [title, setTitle] = useState(play.title);
+    const [isEditing, setEdit] = useState(false);
 
+    const handleEdit = () => {
+      props.renamePlay(play.uuid, title);
+      setEdit(false);
+    };
+
+    const deletionConfirmation = (play) => {
+      Alert.alert(play.title, I18n.t('playbookPage.deleteConfirmation'), [
+        {
+          text: I18n.t('shared.cancel'),
+          style: 'cancel',
+        },
+        {
+          text: I18n.t('playbookPage.delete'),
+          style: 'destructive',
+          onPress: () => {
+            props.deletePlay(play.uuid);
+            showSuccess(I18n.t('playbookPage.deleteSuccess', { title: play.title }));
+          },
+        },
+      ]);
+    };
+    return (
+      <View style={styles.play}>
+        <TouchableOpacity
+          style={styles.titleContainer}
+          onPress={() => {
+            props.navigation.navigate('PlayEditorPage', { currentPlay: play });
+          }}
+        >
+          {isEditing ? (
+            <TextInput autoFocus value={title} onChangeText={setTitle} onSubmitEditing={handleEdit} />
+          ) : (
+            <Text style={styles.title}>{title}</Text>
+          )}
+        </TouchableOpacity>
+        {isEditing ? (
+          <TouchableOpacity onPress={handleEdit} style={styles.iconsContainer}>
+            <MaterialCommunityIcons style={styles.icon} name="check" />
+          </TouchableOpacity>
+        ) : (
+          <TouchableOpacity onPress={() => setEdit(true)} style={styles.iconsContainer}>
+            <MaterialCommunityIcons style={styles.icon} name="pencil" />
+          </TouchableOpacity>
+        )}
+        <TouchableOpacity
+          style={styles.iconsContainer}
+          onPress={() => {
+            deletionConfirmation(play);
+          }}
+        >
+          <MaterialCommunityIcons style={styles.icon} name="trash-can" />
+        </TouchableOpacity>
+      </View>
+    );
+  };
   return (
     <View style={styles.playbookPage}>
       <FlatList
@@ -55,29 +97,7 @@ export const PlaybookPage = (props) => {
             </View>
           </TouchableOpacity>
         )}
-        renderItem={({ item }) => (
-          <View style={styles.play}>
-            <TouchableOpacity
-              style={styles.titleContainer}
-              onPress={() => {
-                props.navigation.navigate('PlayEditorPage', { currentPlay: item });
-              }}
-            >
-              <Text style={styles.title}>{item.title}</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.iconsContainer}>
-              <MaterialCommunityIcons style={styles.icon} name="pencil" />
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.iconsContainer}
-              onPress={() => {
-                deletionConfirmation(item);
-              }}
-            >
-              <MaterialCommunityIcons style={styles.icon} name="trash-can" />
-            </TouchableOpacity>
-          </View>
-        )}
+        renderItem={({ item }) => <Play play={item} />}
       />
     </View>
   );
@@ -89,7 +109,7 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = { deletePlay };
+const mapDispatchToProps = { renamePlay, deletePlay };
 
 export default connect(mapStateToProps, mapDispatchToProps)(PlaybookPage);
 

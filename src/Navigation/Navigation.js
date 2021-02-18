@@ -1,6 +1,5 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import { Platform } from 'react-native';
 
 import HomePage from '../Components/HomePage';
 import AboutPage from '../Components/AboutPage';
@@ -41,11 +40,7 @@ export const Navigation = () => (
     />
     <Stack.Screen name="FrisbeeFilters" component={FrisbeeFilters} options={{ title: I18n.t('navigation.filters') }} />
     <Stack.Screen name="FitnessFilters" component={FitnessFilters} options={{ title: I18n.t('navigation.filters') }} />
-    <Stack.Screen
-      name="DrillPage"
-      component={DrillPage}
-      options={({ route }) => ({ title: I18n.t('navigation.drillPage') })}
-    />
+    <Stack.Screen name="DrillPage" component={DrillPage} options={{ title: I18n.t('navigation.drillPage') }} />
     <Stack.Screen
       name="ProgramListPage"
       component={ProgramListPage}
@@ -67,23 +62,11 @@ export const Navigation = () => (
       })}
     />
     <Stack.Screen name="DrillPageMinimal" component={DrillPageMinimal} />
-    <Stack.Screen name="FitnessPage" component={FitnessPage} options={({ route }) => ({ title: 'Fitness' })} />
+    <Stack.Screen name="FitnessPage" component={FitnessPage} options={{ title: I18n.t('navigation.fitnessPage') }} />
     <Stack.Screen
       name="PlayEditorPage"
       component={PlayEditorPage}
-      options={() => ({
-        title: I18n.t('navigation.playEditorPage'),
-        headerTitleContainerStyle: {
-          ...Platform.select({
-            ios: {
-              left: -45,
-            },
-            default: {
-              right: 100, // Matches the 2 icons width, and margin
-            },
-          }),
-        },
-      })}
+      options={{ title: I18n.t('navigation.playEditorPage') }}
     />
     <Stack.Screen name="ImporterPage" component={ImporterPage} options={{ title: I18n.t('navigation.importerPage') }} />
     <Stack.Screen

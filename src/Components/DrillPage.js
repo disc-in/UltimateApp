@@ -8,6 +8,7 @@ import {
   ImageBackground,
   Dimensions,
   findNodeHandle,
+  Platform,
 } from 'react-native';
 import { connect } from 'react-redux';
 import { useHeaderHeight } from '@react-navigation/stack';
@@ -59,6 +60,13 @@ export const DrillPage = (props) => {
     navigation.setOptions({
       title: drill.title,
       headerRight: () => <ShareDrill drill={drill} />,
+      headerTitleContainerStyle: {
+        ...Platform.select({
+          ios: {
+            marginRight: 50,
+          },
+        }),
+      },
     });
   });
 

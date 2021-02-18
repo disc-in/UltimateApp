@@ -41,7 +41,13 @@ export const PlayTitle = ({ play, onPress, renamePlay, deletePlay, safe, unsaved
     <View style={[styles.play, style]}>
       <TouchableOpacity style={styles.titleContainer} onPress={onPress}>
         {isEditing ? (
-          <TextInput autoFocus value={title} onChangeText={setTitle} onSubmitEditing={handleEdit} />
+          <TextInput
+            autoFocus
+            style={styles.titleInput}
+            value={title}
+            onChangeText={setTitle}
+            onSubmitEditing={handleEdit}
+          />
         ) : (
           <Text numberOfLines={1} style={styles.title}>
             {unsavedAsterisk}
@@ -51,7 +57,7 @@ export const PlayTitle = ({ play, onPress, renamePlay, deletePlay, safe, unsaved
       </TouchableOpacity>
       {isEditing ? (
         <TouchableOpacity onPress={handleEdit} style={styles.iconsContainer} testID="update">
-          <MaterialCommunityIcons style={styles.icon} name="check" />
+          <MaterialCommunityIcons style={styles.icon} name="check-bold" />
         </TouchableOpacity>
       ) : (
         <TouchableOpacity onPress={() => setEdit(true)} style={styles.iconsContainer} testID="edit">
@@ -91,7 +97,14 @@ const styles = StyleSheet.create({
   },
   title: {
     fontWeight: 'bold',
-    fontSize: theme.FONT_SIZE_LARGE,
+    fontSize: theme.FONT_SIZE_MEDIUM,
+  },
+  titleInput: {
+    borderRadius: 5,
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: theme.COLOR_SECONDARY,
+    fontSize: theme.FONT_SIZE_MEDIUM,
+    padding: 5,
   },
   iconsContainer: {
     padding: 10,

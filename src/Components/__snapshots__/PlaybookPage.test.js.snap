@@ -192,7 +192,7 @@ exports[`<PlaybookPage /> renders correctly with plays 1`] = `
               numberOfLines={1}
               style={
                 Object {
-                  "fontSize": 20,
+                  "fontSize": 16,
                   "fontWeight": "bold",
                 }
               }

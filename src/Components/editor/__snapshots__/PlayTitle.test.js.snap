@@ -37,7 +37,7 @@ exports[`<PlayTitle /> renders correctly 1`] = `
       numberOfLines={1}
       style={
         Object {
-          "fontSize": 20,
+          "fontSize": 16,
           "fontWeight": "bold",
         }
       }
@@ -130,7 +130,7 @@ exports[`<PlayTitle /> renders correctly when safe mode 1`] = `
       numberOfLines={1}
       style={
         Object {
-          "fontSize": 20,
+          "fontSize": 16,
           "fontWeight": "bold",
         }
       }
@@ -223,7 +223,7 @@ exports[`<PlayTitle /> renders correctly when unsaved 1`] = `
       numberOfLines={1}
       style={
         Object {
-          "fontSize": 20,
+          "fontSize": 16,
           "fontWeight": "bold",
         }
       }
@@ -362,7 +362,7 @@ exports[`<PlayTitle /> renders correctly with custom style 1`] = `
       numberOfLines={1}
       style={
         Object {
-          "fontSize": 20,
+          "fontSize": 16,
           "fontWeight": "bold",
         }
       }

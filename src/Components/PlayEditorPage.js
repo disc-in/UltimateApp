@@ -8,12 +8,11 @@ import I18n from '../utils/i18n';
 import { generateUuid } from '../utils/uuid';
 import theme from '../styles/theme.style';
 import { savePlay, deletePlay } from '../Store/Actions/playAction';
-import HeaderButton from './shared/HeaderButton';
 import AnimationEditor from './editor/AnimationEditor';
-import RenamePlayModal from './editor/RenamePlayModal';
 import SavePlay from './editor/toolbar/SavePlay';
 import AnimationHistory from './editor/toolbar/AnimationHistory';
 import SharePlay from './editor/toolbar/SharePlay';
+import PlayTitle from './editor/PlayTitle';
 
 export const PlayEditorPage = (props) => {
   const { navigation, route } = props;
@@ -22,39 +21,24 @@ export const PlayEditorPage = (props) => {
     animation: new Drill(route.params.currentPlay.animation),
   });
 
-  // modalRenameVisible is true if the modal which enables to rename the current play is displayed
-  const [modalRenameVisible, setModalRenameVisible] = useState(false);
-
   // isPlaySaved is true unless there are unsaved changes on the current play
   const [isPlaySaved, setIsPlaySaved] = useState(true);
 
   useLayoutEffect(() => {
     navigation.setOptions({
-      headerRight: () => (
-        <HeaderButton icon="pencil" onPress={() => setModalRenameVisible(true)} testID="renameButton" />
-      ),
       headerTitleContainerStyle: {
         ...Platform.select({
           ios: {
-            marginRight: 50,
+            marginLeft: 40,
+            marginRight: 0,
+            flexGrow: 1,
           },
         }),
       },
+      headerTitle: () => <PlayTitle play={currentPlay} safe unsavedPlay={!isPlaySaved} onPress={() => {}} />,
     }),
       [];
   });
-
-  useEffect(() => {
-    setTitle();
-  }, [currentPlay, isPlaySaved]);
-
-  const setTitle = () => {
-    const playTitle = currentPlay.title || I18n.t('playEditorPage.untitledPlay');
-    const unsavedAsterisk = isPlaySaved ? '' : '* ';
-    const displayedTitle = `${unsavedAsterisk}${playTitle}`;
-
-    navigation.setOptions({ headerTitle: displayedTitle });
-  };
 
   const onAnimationChange = (animation) => {
     setCurrentPlay({ ...currentPlay, animation });
@@ -83,9 +67,6 @@ export const PlayEditorPage = (props) => {
   return (
     <View style={styles.playEditorPage}>
       <View style={styles.centeredView}>
-        {modalRenameVisible ? (
-          <RenamePlayModal currentPlay={currentPlay} onRename={setTitle} close={() => setModalRenameVisible(false)} />
-        ) : null}
         <AnimationEditor
           onAnimationChange={onAnimationChange}
           animation={currentPlay.animation}

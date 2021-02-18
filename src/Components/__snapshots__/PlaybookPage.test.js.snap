@@ -156,10 +156,15 @@ exports[`<PlaybookPage /> renders correctly with plays 1`] = `
       >
         <View
           style={
-            Object {
-              "flex": 1,
-              "flexDirection": "row",
-            }
+            Array [
+              Object {
+                "flex": 1,
+                "flexDirection": "row",
+              },
+              Object {
+                "height": 60,
+              },
+            ]
           }
         >
           <View
@@ -174,24 +179,25 @@ exports[`<PlaybookPage /> renders correctly with plays 1`] = `
             onStartShouldSetResponder={[Function]}
             style={
               Object {
+                "flex": 1,
                 "flexGrow": 1,
                 "flexShrink": 1,
-                "height": 60,
                 "justifyContent": "center",
                 "opacity": 1,
-                "padding": 10,
                 "paddingLeft": 20,
               }
             }
           >
             <Text
+              numberOfLines={1}
               style={
                 Object {
-                  "fontSize": 16,
+                  "fontSize": 20,
                   "fontWeight": "bold",
                 }
               }
             >
+              
               title
             </Text>
           </View>
@@ -208,7 +214,6 @@ exports[`<PlaybookPage /> renders correctly with plays 1`] = `
             style={
               Object {
                 "alignItems": "center",
-                "height": "100%",
                 "justifyContent": "center",
                 "opacity": 1,
                 "padding": 10,
@@ -253,7 +258,6 @@ exports[`<PlaybookPage /> renders correctly with plays 1`] = `
             style={
               Object {
                 "alignItems": "center",
-                "height": "100%",
                 "justifyContent": "center",
                 "opacity": 1,
                 "padding": 10,

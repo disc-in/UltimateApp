@@ -8,7 +8,7 @@ import { renamePlay, deletePlay } from '../../Store/Actions/playAction';
 import { showSuccess } from '../../utils/flashMessage';
 import I18n from '../../utils/i18n';
 
-export const PlayTitle = ({ play, onPress, renamePlay, deletePlay }) => {
+export const PlayTitle = ({ play, onPress, renamePlay, deletePlay, safe, unsavedPlay, style }) => {
   const [title, setTitle] = useState(play.title);
   const [isEditing, setEdit] = useState(false);
 
@@ -34,13 +34,19 @@ export const PlayTitle = ({ play, onPress, renamePlay, deletePlay }) => {
       },
     ]);
   };
+
+  const unsavedAsterisk = unsavedPlay ? '* ' : '';
+
   return (
-    <View style={styles.play}>
+    <View style={[styles.play, style]}>
       <TouchableOpacity style={styles.titleContainer} onPress={onPress}>
         {isEditing ? (
           <TextInput autoFocus value={title} onChangeText={setTitle} onSubmitEditing={handleEdit} />
         ) : (
-          <Text style={styles.title}>{title}</Text>
+          <Text numberOfLines={1} style={styles.title}>
+            {unsavedAsterisk}
+            {title}
+          </Text>
         )}
       </TouchableOpacity>
       {isEditing ? (
@@ -52,15 +58,17 @@ export const PlayTitle = ({ play, onPress, renamePlay, deletePlay }) => {
           <MaterialCommunityIcons style={styles.icon} name="pencil" />
         </TouchableOpacity>
       )}
-      <TouchableOpacity
-        style={styles.iconsContainer}
-        testID="delete"
-        onPress={() => {
-          deletionConfirmation(play);
-        }}
-      >
-        <MaterialCommunityIcons style={styles.icon} name="trash-can" />
-      </TouchableOpacity>
+      {!safe && (
+        <TouchableOpacity
+          style={styles.iconsContainer}
+          testID="delete"
+          onPress={() => {
+            deletionConfirmation(play);
+          }}
+        >
+          <MaterialCommunityIcons style={styles.icon} name="trash-can" />
+        </TouchableOpacity>
+      )}
     </View>
   );
 };
@@ -75,19 +83,17 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   titleContainer: {
-    height: 60,
-    padding: 10,
-    paddingLeft: 20,
+    flex: 1,
     flexShrink: 1,
     flexGrow: 1,
+    paddingLeft: 20,
     justifyContent: 'center',
   },
   title: {
     fontWeight: 'bold',
-    fontSize: theme.FONT_SIZE_MEDIUM,
+    fontSize: theme.FONT_SIZE_LARGE,
   },
   iconsContainer: {
-    height: '100%',
     padding: 10,
     alignItems: 'center',
     justifyContent: 'center',

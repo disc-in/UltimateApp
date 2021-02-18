@@ -3,10 +3,13 @@
 exports[`<PlayTitle /> renders correctly 1`] = `
 <View
   style={
-    Object {
-      "flex": 1,
-      "flexDirection": "row",
-    }
+    Array [
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+      },
+      undefined,
+    ]
   }
 >
   <View
@@ -21,24 +24,25 @@ exports[`<PlayTitle /> renders correctly 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
+        "flex": 1,
         "flexGrow": 1,
         "flexShrink": 1,
-        "height": 60,
         "justifyContent": "center",
         "opacity": 1,
-        "padding": 10,
         "paddingLeft": 20,
       }
     }
   >
     <Text
+      numberOfLines={1}
       style={
         Object {
-          "fontSize": 16,
+          "fontSize": 20,
           "fontWeight": "bold",
         }
       }
     >
+      
       Square
     </Text>
   </View>
@@ -55,7 +59,6 @@ exports[`<PlayTitle /> renders correctly 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "height": "100%",
         "justifyContent": "center",
         "opacity": 1,
         "padding": 10,
@@ -78,7 +81,6 @@ exports[`<PlayTitle /> renders correctly 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "height": "100%",
         "justifyContent": "center",
         "opacity": 1,
         "padding": 10,
@@ -87,6 +89,375 @@ exports[`<PlayTitle /> renders correctly 1`] = `
     testID="delete"
   >
     <Text />
+  </View>
+</View>
+`;
+
+exports[`<PlayTitle /> renders correctly when safe mode 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    accessible={true}
+    focusable={false}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "flex": 1,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "justifyContent": "center",
+        "opacity": 1,
+        "paddingLeft": 20,
+      }
+    }
+  >
+    <Text
+      numberOfLines={1}
+      style={
+        Object {
+          "fontSize": 20,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      
+      Square
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+        "opacity": 1,
+        "padding": 10,
+      }
+    }
+    testID="edit"
+  >
+    <Text
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "color": undefined,
+            "fontSize": 12,
+          },
+          Object {
+            "color": "#232b2b",
+            "fontSize": 20,
+          },
+          Object {
+            "fontFamily": "material-community",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      󰏫
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`<PlayTitle /> renders correctly when unsaved 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    accessible={true}
+    focusable={false}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "flex": 1,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "justifyContent": "center",
+        "opacity": 1,
+        "paddingLeft": 20,
+      }
+    }
+  >
+    <Text
+      numberOfLines={1}
+      style={
+        Object {
+          "fontSize": 20,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      * 
+      Square
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+        "opacity": 1,
+        "padding": 10,
+      }
+    }
+    testID="edit"
+  >
+    <Text
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "color": undefined,
+            "fontSize": 12,
+          },
+          Object {
+            "color": "#232b2b",
+            "fontSize": 20,
+          },
+          Object {
+            "fontFamily": "material-community",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      󰏫
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+        "opacity": 1,
+        "padding": 10,
+      }
+    }
+    testID="delete"
+  >
+    <Text
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "color": undefined,
+            "fontSize": 12,
+          },
+          Object {
+            "color": "#232b2b",
+            "fontSize": 20,
+          },
+          Object {
+            "fontFamily": "material-community",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      󰩹
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`<PlayTitle /> renders correctly with custom style 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+      },
+      Object {
+        "backgroundColor": "cyan",
+      },
+    ]
+  }
+>
+  <View
+    accessible={true}
+    focusable={false}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "flex": 1,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "justifyContent": "center",
+        "opacity": 1,
+        "paddingLeft": 20,
+      }
+    }
+  >
+    <Text
+      numberOfLines={1}
+      style={
+        Object {
+          "fontSize": 20,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      
+      Square
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+        "opacity": 1,
+        "padding": 10,
+      }
+    }
+    testID="edit"
+  >
+    <Text
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "color": undefined,
+            "fontSize": 12,
+          },
+          Object {
+            "color": "#232b2b",
+            "fontSize": 20,
+          },
+          Object {
+            "fontFamily": "material-community",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      󰏫
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+        "opacity": 1,
+        "padding": 10,
+      }
+    }
+    testID="delete"
+  >
+    <Text
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "color": undefined,
+            "fontSize": 12,
+          },
+          Object {
+            "color": "#232b2b",
+            "fontSize": 20,
+          },
+          Object {
+            "fontFamily": "material-community",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      󰩹
+    </Text>
   </View>
 </View>
 `;

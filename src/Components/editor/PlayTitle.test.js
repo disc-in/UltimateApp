@@ -25,6 +25,33 @@ describe('<PlayTitle />', () => {
     expect(toJSON()).toMatchSnapshot();
   });
 
+  it('renders correctly when safe mode', async () => {
+    const { toJSON } = render(
+      <Provider store={store}>
+        <ConnectedPlayTitle play={play} safe />
+      </Provider>,
+    );
+    expect(toJSON()).toMatchSnapshot();
+  });
+
+  it('renders correctly when unsaved', async () => {
+    const { toJSON } = render(
+      <Provider store={store}>
+        <ConnectedPlayTitle play={play} unsavedPlay />
+      </Provider>,
+    );
+    expect(toJSON()).toMatchSnapshot();
+  });
+
+  it('renders correctly with custom style', async () => {
+    const { toJSON } = render(
+      <Provider store={store}>
+        <ConnectedPlayTitle play={play} style={{ backgroundColor: 'cyan' }} />
+      </Provider>,
+    );
+    expect(toJSON()).toMatchSnapshot();
+  });
+
   it('triggers onPress action', async () => {
     const { getByText } = render(
       <PlayTitle play={play} onPress={onPress} deletePlay={deletePlay} renamePlay={renamePlay} />,

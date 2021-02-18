@@ -40,6 +40,7 @@ export const PlaybookPage = (props) => {
         renderItem={({ item }) => (
           <PlayTitle
             play={item}
+            style={styles.customPlay}
             onPress={() => {
               props.navigation.navigate('PlayEditorPage', { currentPlay: item });
             }}
@@ -69,6 +70,9 @@ const styles = StyleSheet.create({
   },
   emptyText: {
     textAlign: 'center',
+  },
+  customPlay: {
+    height: 60,
   },
   footer: {
     height: 50,

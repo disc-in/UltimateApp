@@ -61,6 +61,7 @@ export default {
     aboutPage: 'À propos de Disc In',
     drillListPage: 'Exercices de {{type}}',
     drillPage: 'Exercice',
+    fitnessPage: 'Fitness',
     filters: 'Filtres',
     programListPage: {
       frisbee: "Programmes d'entraînement",
@@ -126,7 +127,7 @@ export default {
       'Le play "{{title}}" a été modifié.\n\nSouhaitez-vous conserver ces modifications avant de le fermer ?',
     saveSuccess: 'Le play "{{title}}" a été sauvegardé',
     renamePlayModal: {
-      placeholder: 'Appuyer ici pour renommer',
+      placeholder: 'Entrez un nom',
       alreadyExists: 'Ce nom existe déjà',
       empty: 'Le nom ne peut pas être vide',
       renameSuccess: 'Le play a été renommée avec succès',

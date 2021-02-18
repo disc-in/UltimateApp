@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useLayoutEffect } from 'react';
-import { StyleSheet, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Platform } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { connect } from 'react-redux';
 
@@ -33,6 +33,13 @@ export const PlayEditorPage = (props) => {
       headerRight: () => (
         <HeaderButton icon="pencil" onPress={() => setModalRenameVisible(true)} testID="renameButton" />
       ),
+      headerTitleContainerStyle: {
+        ...Platform.select({
+          ios: {
+            marginRight: 50,
+          },
+        }),
+      },
     }),
       [];
   });

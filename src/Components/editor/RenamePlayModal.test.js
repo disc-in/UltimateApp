@@ -43,7 +43,7 @@ describe('<RenamePlayModal />', () => {
     );
 
     // Fill input
-    fireEvent(getByPlaceholderText('Click here to enter the new name'), 'onChangeText', 'New Title');
+    fireEvent(getByPlaceholderText('Enter new name'), 'onChangeText', 'New Title');
 
     await act(async () => await fireEvent.press(getByText('Back')));
 
@@ -66,7 +66,7 @@ describe('<RenamePlayModal />', () => {
     );
 
     // Fill input
-    fireEvent(getByPlaceholderText('Click here to enter the new name'), 'onChangeText', 'New Title');
+    fireEvent(getByPlaceholderText('Enter new name'), 'onChangeText', 'New Title');
 
     await act(async () => await fireEvent.press(getByText('Apply')));
 

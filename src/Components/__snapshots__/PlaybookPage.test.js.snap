@@ -214,6 +214,7 @@ exports[`<PlaybookPage /> renders correctly with plays 1`] = `
                 "padding": 10,
               }
             }
+            testID="edit"
           >
             <Text
               allowFontScaling={false}
@@ -258,6 +259,7 @@ exports[`<PlaybookPage /> renders correctly with plays 1`] = `
                 "padding": 10,
               }
             }
+            testID="delete"
           >
             <Text
               allowFontScaling={false}

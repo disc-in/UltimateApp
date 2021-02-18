@@ -61,6 +61,7 @@ export default {
     aboutPage: 'About Disc In',
     drillListPage: '{{type}} drills',
     drillPage: 'Drill',
+    fitnessPage: 'Fitness',
     filters: 'Filters',
     programListPage: {
       frisbee: 'Practice programs',
@@ -126,7 +127,7 @@ export default {
       "The play '{{title}}' has been modified.\n\nDo you want to save these modifications before closing it?",
     saveSuccess: "The play has been saved as '{{title}}'",
     renamePlayModal: {
-      placeholder: 'Click here to enter the new name',
+      placeholder: 'Enter new name',
       alreadyExists: 'This name already exists',
       empty: 'You cannot set an empty name',
       renameSuccess: 'The play was successfully renamed!',

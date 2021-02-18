@@ -46,23 +46,6 @@ const SavedPlaysList = (props) => {
     }
   };
 
-  const deletionConfirmation = (play) => {
-    Alert.alert(play.title, I18n.t('editor.savedPlaysList.deleteConfirmation'), [
-      {
-        text: I18n.t('shared.cancel'),
-        style: 'cancel',
-      },
-      {
-        text: I18n.t('editor.savedPlaysList.delete'),
-        style: 'destructive',
-        onPress: () => {
-          props.onDelete(play);
-          showSuccess(I18n.t('editor.savedPlaysList.deleteSuccess', { title: play.title }), modalFlash.current);
-        },
-      },
-    ]);
-  };
-
   return (
     <View>
       <TouchableOpacity onPress={() => setModalOpened(true)}>

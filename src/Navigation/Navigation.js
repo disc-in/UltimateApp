@@ -13,6 +13,7 @@ import FitnessFilters from '../Components/FitnessFilters';
 import TrainingPage from '../Components/TrainingPage';
 import ProgramListPage from '../Components/ProgramListPage';
 
+import PlaybookPage from '../Components/PlaybookPage';
 import PlayEditorPage from '../Components/PlayEditorPage';
 import ImporterPage from '../Components/ImporterPage';
 
@@ -68,6 +69,7 @@ export const Navigation = () => (
     />
     <Stack.Screen name="DrillPageMinimal" component={DrillPageMinimal} />
     <Stack.Screen name="FitnessPage" component={FitnessPage} options={({ route }) => ({ title: 'Fitness' })} />
+    <Stack.Screen name="PlaybookPage" component={PlaybookPage} options={{ title: I18n.t('navigation.playbookPage') }} />
     <Stack.Screen
       name="PlayEditorPage"
       component={PlayEditorPage}

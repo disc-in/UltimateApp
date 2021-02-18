@@ -67,6 +67,7 @@ export default {
       noEquipment: 'Bodyweight programs',
       fullEquipment: 'Gym programs',
     },
+    playbookPage: 'My Playbook',
     playEditorPage: 'New Play',
     importerPage: 'Import a play',
     dictionaryPage: 'Dictionary',
@@ -89,7 +90,7 @@ export default {
     frisbeeTab: 'Frisbee',
     fitnessTab: 'Fitness',
     theoryTab: 'Theory',
-    editor: 'My Playbook',
+    playbook: 'My Playbook',
     drills: 'Drills',
     adult: 'Senior',
     junior: 'Junior',
@@ -103,6 +104,12 @@ export default {
     dictionary: 'Dictionary',
     essential: 'Basics',
     tactics: 'Tactics',
+  },
+  playbookPage: {
+    empty: "You haven't saved any plays yet",
+    delete: 'Delete',
+    deleteConfirmation: 'Do you really want to delete this play?',
+    deleteSuccess: "The play '{{title}}' has been deleted.",
   },
   playEditorPage: {
     untitledPlay: 'Unnamed play',
@@ -120,10 +127,6 @@ export default {
     saveSuccess: "The play has been saved as '{{title}}'",
     savedPlaysList: {
       title: 'My Playbook',
-      empty: "You haven't saved any plays yet",
-      delete: 'Delete',
-      deleteConfirmation: 'Do you really want to delete this play?',
-      deleteSuccess: "The play '{{title}}' has been deleted.",
     },
     renamePlayModal: {
       placeholder: 'Click here to enter the new name',

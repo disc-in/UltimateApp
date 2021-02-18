@@ -67,6 +67,7 @@ export default {
       noEquipment: 'Entraînements poids du corps',
       fullEquipment: 'Entraînements en salle',
     },
+    playbookPage: 'Mon Playbook',
     playEditorPage: 'Nouvelle tactique',
     importerPage: 'Importer une tactique',
     dictionaryPage: 'Lexique',
@@ -89,7 +90,7 @@ export default {
     frisbeeTab: 'Frisbee',
     fitnessTab: 'Fitness',
     theoryTab: 'Théorie',
-    editor: 'Mon Playbook',
+    playbook: 'Mon Playbook',
     drills: 'Exercices',
     adult: 'Adultes',
     junior: 'Juniors',
@@ -103,6 +104,12 @@ export default {
     dictionary: 'Lexique',
     essential: 'Les bases du jeu',
     tactics: 'Tactiques',
+  },
+  playbookPage: {
+    empty: "Vous n'avez pas encore sauvegardé de play",
+    delete: 'Supprimer',
+    deleteConfirmation: 'Voulez-vous vraiment supprimer ce play ?',
+    deleteSuccess: 'Le play "{{title}}" a été supprimé.',
   },
   playEditorPage: {
     untitledPlay: 'Play sans titre',
@@ -120,10 +127,6 @@ export default {
     saveSuccess: 'Le play "{{title}}" a été sauvegardé',
     savedPlaysList: {
       title: 'Mon Playbook',
-      empty: "Vous n'avez pas encore sauvegardé de play",
-      delete: 'Supprimer',
-      deleteConfirmation: 'Voulez-vous vraiment supprimer ce play ?',
-      deleteSuccess: 'Le play "{{title}}" a été supprimé.',
     },
     renamePlayModal: {
       placeholder: 'Appuyer ici pour renommer',

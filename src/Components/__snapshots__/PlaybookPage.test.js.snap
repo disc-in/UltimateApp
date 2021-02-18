@@ -6,6 +6,7 @@ exports[`<PlaybookPage /> renders correctly when empty 1`] = `
     Object {
       "backgroundColor": "#fff",
       "flex": 1,
+      "paddingLeft": 20,
     }
   }
 >
@@ -104,6 +105,7 @@ exports[`<PlaybookPage /> renders correctly with plays 1`] = `
     Object {
       "backgroundColor": "#fff",
       "flex": 1,
+      "paddingLeft": 20,
     }
   }
 >
@@ -184,7 +186,6 @@ exports[`<PlaybookPage /> renders correctly with plays 1`] = `
                 "flexShrink": 1,
                 "justifyContent": "center",
                 "opacity": 1,
-                "paddingLeft": 20,
               }
             }
           >

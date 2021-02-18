@@ -29,7 +29,6 @@ exports[`<PlayTitle /> renders correctly 1`] = `
         "flexShrink": 1,
         "justifyContent": "center",
         "opacity": 1,
-        "paddingLeft": 20,
       }
     }
   >
@@ -122,7 +121,6 @@ exports[`<PlayTitle /> renders correctly when safe mode 1`] = `
         "flexShrink": 1,
         "justifyContent": "center",
         "opacity": 1,
-        "paddingLeft": 20,
       }
     }
   >
@@ -215,7 +213,6 @@ exports[`<PlayTitle /> renders correctly when unsaved 1`] = `
         "flexShrink": 1,
         "justifyContent": "center",
         "opacity": 1,
-        "paddingLeft": 20,
       }
     }
   >
@@ -354,7 +351,6 @@ exports[`<PlayTitle /> renders correctly with custom style 1`] = `
         "flexShrink": 1,
         "justifyContent": "center",
         "opacity": 1,
-        "paddingLeft": 20,
       }
     }
   >

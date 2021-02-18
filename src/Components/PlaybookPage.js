@@ -63,6 +63,7 @@ const styles = StyleSheet.create({
   playbookPage: {
     flex: 1,
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
+    paddingLeft: 20,
   },
   empty: {
     marginTop: '30%',

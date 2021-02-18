@@ -122,9 +122,6 @@ export default {
     downloadError: 'I could not find the play you are looking for',
   },
   editor: {
-    saveModificationsTitle: 'Do you want to save the current play?',
-    saveModificationsText:
-      "The play '{{title}}' has been modified.\n\nDo you want to save these modifications before closing it?",
     saveSuccess: "The play has been saved as '{{title}}'",
     renamePlayModal: {
       placeholder: 'Enter new name',

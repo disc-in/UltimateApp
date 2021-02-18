@@ -122,9 +122,6 @@ export default {
     downloadError: "Je n'ai pas pu retrouver ce play...",
   },
   editor: {
-    saveModificationsTitle: 'Voulez-vous sauvegarder les modifications ?',
-    saveModificationsText:
-      'Le play "{{title}}" a été modifié.\n\nSouhaitez-vous conserver ces modifications avant de le fermer ?',
     saveSuccess: 'Le play "{{title}}" a été sauvegardé',
     renamePlayModal: {
       placeholder: 'Entrez un nom',

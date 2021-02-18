@@ -92,7 +92,6 @@ const styles = StyleSheet.create({
     flex: 1,
     flexShrink: 1,
     flexGrow: 1,
-    paddingLeft: 20,
     justifyContent: 'center',
   },
   title: {

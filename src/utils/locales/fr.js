@@ -127,7 +127,7 @@ export default {
       deleteSuccess: 'Le play "{{title}}" a été supprimé.',
     },
     renamePlayModal: {
-      placeholder: 'Appuyer ici pour renommer',
+      placeholder: 'Entrez un nom',
       alreadyExists: 'Ce nom existe déjà',
       empty: 'Le nom ne peut pas être vide',
       renameSuccess: 'Le play a été renommée avec succès',

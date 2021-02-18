@@ -883,7 +883,8 @@ exports[`<PlayEditorPage /> renders correctly  with a currentPlay 1`] = `
             Object {
               "alignItems": "center",
               "flex": 1,
-              "justifyContent": "center",
+              "justifyContent": "flex-start",
+              "marginTop": "10%",
             }
           }
         >
@@ -896,6 +897,7 @@ exports[`<PlayEditorPage /> renders correctly  with a currentPlay 1`] = `
                 "elevation": 10,
                 "maxHeight": "80%",
                 "maxWidth": "80%",
+                "minWidth": "60%",
                 "padding": 20,
                 "shadowColor": "#000",
                 "shadowOffset": Object {
@@ -2002,7 +2004,8 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
             Object {
               "alignItems": "center",
               "flex": 1,
-              "justifyContent": "center",
+              "justifyContent": "flex-start",
+              "marginTop": "10%",
             }
           }
         >
@@ -2015,6 +2018,7 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
                 "elevation": 10,
                 "maxHeight": "80%",
                 "maxWidth": "80%",
+                "minWidth": "60%",
                 "padding": 20,
                 "shadowColor": "#000",
                 "shadowOffset": Object {

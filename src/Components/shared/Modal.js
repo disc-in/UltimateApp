@@ -30,12 +30,14 @@ const styles = StyleSheet.create({
   },
   centeredView: {
     flex: 1,
-    justifyContent: 'center',
+    marginTop: '10%',
+    justifyContent: 'flex-start',
     alignItems: 'center',
   },
   modalView: {
     maxHeight: '80%',
     maxWidth: '80%',
+    minWidth: '60%',
     backgroundColor: 'white',
     borderRadius: 10,
     padding: 20,

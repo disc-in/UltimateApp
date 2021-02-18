@@ -74,7 +74,8 @@ exports[`<SavedPlaysList /> renders an empty state with no plays 1`] = `
         Object {
           "alignItems": "center",
           "flex": 1,
-          "justifyContent": "center",
+          "justifyContent": "flex-start",
+          "marginTop": "10%",
         }
       }
     >
@@ -87,6 +88,7 @@ exports[`<SavedPlaysList /> renders an empty state with no plays 1`] = `
             "elevation": 10,
             "maxHeight": "80%",
             "maxWidth": "80%",
+            "minWidth": "60%",
             "padding": 20,
             "shadowColor": "#000",
             "shadowOffset": Object {
@@ -267,7 +269,8 @@ exports[`<SavedPlaysList /> renders correctly with plays 1`] = `
         Object {
           "alignItems": "center",
           "flex": 1,
-          "justifyContent": "center",
+          "justifyContent": "flex-start",
+          "marginTop": "10%",
         }
       }
     >
@@ -280,6 +283,7 @@ exports[`<SavedPlaysList /> renders correctly with plays 1`] = `
             "elevation": 10,
             "maxHeight": "80%",
             "maxWidth": "80%",
+            "minWidth": "60%",
             "padding": 20,
             "shadowColor": "#000",
             "shadowOffset": Object {

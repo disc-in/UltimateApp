@@ -3,12 +3,13 @@ import { connect } from 'react-redux';
 import { StyleSheet, FlatList, View, Text, TouchableOpacity, Alert } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
+import theme from '../styles/theme.style';
 import { deletePlay } from '../Store/Actions/playAction';
 import I18n from '../utils/i18n';
-import theme from '../styles/theme.style';
+import { showSuccess } from '../utils/flashMessage';
 
-// Footer de la flatlist pour créer un nouveau
-// Grid components
+// TODO: Footer de la flatlist pour créer un nouveau
+// TODO: Grid components
 
 export const PlaybookPage = (props) => {
   const deletionConfirmation = (play) => {
@@ -22,7 +23,7 @@ export const PlaybookPage = (props) => {
         style: 'destructive',
         onPress: () => {
           props.deletePlay(play.uuid);
-          showSuccess(I18n.t('playbookPage.deleteSuccess', { title: play.title }), modalFlash.current);
+          showSuccess(I18n.t('playbookPage.deleteSuccess', { title: play.title }));
         },
       },
     ]);

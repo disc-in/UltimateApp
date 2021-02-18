@@ -11,7 +11,6 @@ import { savePlay, deletePlay } from '../Store/Actions/playAction';
 import HeaderButton from './shared/HeaderButton';
 import AnimationEditor from './editor/AnimationEditor';
 import RenamePlayModal from './editor/RenamePlayModal';
-import SavedPlaysList from './editor/toolbar/SavedPlaysList';
 import NewPlay from './editor/toolbar/NewPlay';
 import SavePlay from './editor/toolbar/SavePlay';
 import AnimationHistory from './editor/toolbar/AnimationHistory';
@@ -80,20 +79,9 @@ export const PlayEditorPage = (props) => {
     setIsPlaySaved(true);
   };
 
-  const openPlay = (play) => {
-    setCurrentPlay({ ...play, animation: new Drill(play.animation) });
-    setIsPlaySaved(true);
-  };
-
   const createNewPlay = () => {
     setCurrentPlay(newPlay);
     setIsPlaySaved(true);
-  };
-
-  const onDelete = (play) => {
-    props.deletePlay(play.uuid);
-
-    if (play.title === currentPlay.title) createNewPlay();
   };
 
   return (
@@ -110,14 +98,6 @@ export const PlayEditorPage = (props) => {
         />
       </View>
       <View style={styles.toolBar}>
-        <SavedPlaysList
-          savedPlays={props.customPlays}
-          isPlaySaved={isPlaySaved}
-          playTitle={currentPlay.title}
-          onDelete={onDelete}
-          onOpen={openPlay}
-          saveCurrentPlay={saveCurrentPlay}
-        />
         <NewPlay
           currentPlay={currentPlay}
           isPlaySaved={isPlaySaved}

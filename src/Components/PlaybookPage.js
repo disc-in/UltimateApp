@@ -21,7 +21,7 @@ export const PlaybookPage = (props) => {
         text: I18n.t('playbookPage.delete'),
         style: 'destructive',
         onPress: () => {
-          props.onDelete(play);
+          props.deletePlay(play.uuid);
           showSuccess(I18n.t('playbookPage.deleteSuccess', { title: play.title }), modalFlash.current);
         },
       },

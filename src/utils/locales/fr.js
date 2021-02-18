@@ -125,9 +125,6 @@ export default {
     saveModificationsText:
       'Le play "{{title}}" a été modifié.\n\nSouhaitez-vous conserver ces modifications avant de le fermer ?',
     saveSuccess: 'Le play "{{title}}" a été sauvegardé',
-    savedPlaysList: {
-      title: 'Mon Playbook',
-    },
     renamePlayModal: {
       placeholder: 'Appuyer ici pour renommer',
       alreadyExists: 'Ce nom existe déjà',

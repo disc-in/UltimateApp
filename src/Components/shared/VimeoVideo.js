@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { View, ActivityIndicator, StyleSheet, Text } from 'react-native';
-import { Video } from 'expo-av';
+import { Video, Audio } from 'expo-av';
 import * as ScreenOrientation from 'expo-screen-orientation';
 import { useFocusEffect } from '@react-navigation/native';
 
@@ -52,6 +52,9 @@ const VimeoVideo = ({ vimeoId, sounds, shouldPlay }) => {
   );
 
   const playVideoLoaded = () => {
+    Audio.setAudioModeAsync({
+      playsInSilentModeIOS: true,
+    });
     videoElem.current.setStatusAsync({
       rate: 1.0,
       isMuted: !sounds,

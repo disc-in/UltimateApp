@@ -13,7 +13,8 @@ export const PlaybookPage = (props) => {
   const isEmpty = props.customPlays.length === 0;
 
   const newPlay = () => {
-    let newTitle = I18n.t('playbookPage.untitledPlay');
+    const defaultTitle = I18n.t('playbookPage.untitledPlay');
+    let newTitle = defaultTitle;
     let counter = 1;
     while (props.customPlays.findIndex((item) => item.title === newTitle) !== -1) {
       newTitle = defaultTitle + ' (' + counter + ')';

@@ -7,11 +7,10 @@ import Drill from './animation/Drill';
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
 import { savePlay, deletePlay } from '../Store/Actions/playAction';
+import PlayTitle from './editor/PlayTitle';
 import AnimationEditor from './editor/AnimationEditor';
-import SavePlay from './editor/toolbar/SavePlay';
 import AnimationHistory from './editor/toolbar/AnimationHistory';
 import SharePlay from './editor/toolbar/SharePlay';
-import PlayTitle from './editor/PlayTitle';
 
 export const PlayEditorPage = (props) => {
   const { navigation, route } = props;
@@ -57,8 +56,13 @@ export const PlayEditorPage = (props) => {
         />
       </View>
       <View style={styles.toolBar}>
-        <AnimationHistory animation={currentPlay.animation} onAnimationHistoryChange={onAnimationChange} />
-        <SharePlay currentPlay={currentPlay} />
+        <View style={styles.toolBarItem}>
+          <AnimationHistory animation={currentPlay.animation} onAnimationHistoryChange={onAnimationChange} />
+        </View>
+        <View style={styles.separator} />
+        <View style={styles.toolBarItem}>
+          <SharePlay currentPlay={currentPlay} />
+        </View>
       </View>
     </View>
   );
@@ -92,5 +96,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-evenly',
+  },
+  toolBarItem: {
+    flex: 1,
+    alignItems: 'center',
+    paddingHorizontal: 10,
+  },
+  separator: {
+    height: '70%',
+    borderRightWidth: 0.5,
+    borderRightColor: theme.COLOR_SECONDARY,
   },
 });

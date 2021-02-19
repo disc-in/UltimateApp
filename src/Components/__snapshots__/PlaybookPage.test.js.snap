@@ -285,6 +285,7 @@ exports[`<PlaybookPage /> renders correctly with plays 1`] = `
             Object {},
           ]
         }
+        testID="createPlay"
       >
         󰐕
       </Text>

@@ -5,17 +5,30 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import theme from '../styles/theme.style';
 import I18n from '../utils/i18n';
+import { generateUuid } from '../utils/uuid';
+import { savePlay } from '../Store/Actions/playAction';
 import Drill from './animation/Drill';
 import PlayTitle from './editor/PlayTitle';
 
-const newPlay = {
-  uuid: undefined,
-  animation: new Drill(),
-  title: I18n.t('playEditorPage.untitledPlay'),
-};
-
 export const PlaybookPage = (props) => {
   const isEmpty = props.customPlays.length === 0;
+
+  const newPlay = () => {
+    const defaultTitle = I18n.t('playbookPage.untitledPlay');
+    let newTitle = defaultTitle;
+    let counter = 1;
+    while (props.customPlays.findIndex((item) => item.title === newTitle) !== -1) {
+      newTitle = defaultTitle + ' (' + counter + ')';
+      counter += 1;
+    }
+    const play = {
+      uuid: generateUuid(),
+      animation: new Drill(),
+      title: newTitle,
+    };
+    props.savePlay(play);
+    return play;
+  };
 
   const behavior = Platform.select({
     ios: 'padding',
@@ -44,11 +57,11 @@ export const PlaybookPage = (props) => {
       <TouchableOpacity
         style={styles.footer}
         onPress={() => {
-          props.navigation.navigate('PlayEditorPage', { currentPlay: newPlay });
+          props.navigation.navigate('PlayEditorPage', { currentPlay: newPlay() });
         }}
       >
         <View style={styles.createContainer}>
-          <MaterialCommunityIcons style={styles.createIcon} name="plus" />
+          <MaterialCommunityIcons style={styles.createIcon} name="plus" testID="createPlay" />
         </View>
       </TouchableOpacity>
     </KeyboardAvoidingView>
@@ -61,7 +74,9 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(PlaybookPage);
+const mapDispatchToProps = { savePlay };
+
+export default connect(mapStateToProps, mapDispatchToProps)(PlaybookPage);
 
 const styles = StyleSheet.create({
   playbookPage: {

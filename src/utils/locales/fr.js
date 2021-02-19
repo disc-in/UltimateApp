@@ -108,8 +108,6 @@ export default {
   },
   playbookPage: {
     empty: 'Votre playbook est vide !',
-  },
-  playEditorPage: {
     untitledPlay: 'Play sans titre',
   },
   importerPage: {
@@ -119,7 +117,6 @@ export default {
     downloadError: "Je n'ai pas pu retrouver ce play...",
   },
   editor: {
-    saveSuccess: 'Le play "{{title}}" a été sauvegardé',
     playTitle: {
       placeholder: 'Entrez un nom',
       alreadyExists: 'Ce nom existe déjà',

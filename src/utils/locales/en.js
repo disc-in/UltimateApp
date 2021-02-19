@@ -108,8 +108,6 @@ export default {
   },
   playbookPage: {
     empty: 'Your playbook is empty!',
-  },
-  playEditorPage: {
     untitledPlay: 'Unnamed play',
   },
   importerPage: {
@@ -119,7 +117,6 @@ export default {
     downloadError: 'I could not find the play you are looking for',
   },
   editor: {
-    saveSuccess: "The play has been saved as '{{title}}'",
     playTitle: {
       placeholder: 'Enter new name',
       alreadyExists: 'This name already exists',

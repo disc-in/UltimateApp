@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { StyleSheet, ScrollView, View, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, KeyboardAvoidingView, Platform, ScrollView, View, Text, TouchableOpacity } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import theme from '../styles/theme.style';
@@ -17,8 +17,12 @@ const newPlay = {
 export const PlaybookPage = (props) => {
   const isEmpty = props.customPlays.length === 0;
 
+  const behavior = Platform.select({
+    ios: 'padding',
+    android: 'height',
+  });
   return (
-    <View style={styles.playbookPage}>
+    <KeyboardAvoidingView style={styles.playbookPage} behavior={behavior}>
       {isEmpty ? (
         <View style={styles.empty}>
           <Text style={styles.emptyText}>{I18n.t('playbookPage.empty')}</Text>
@@ -47,7 +51,7 @@ export const PlaybookPage = (props) => {
           <MaterialCommunityIcons style={styles.createIcon} name="plus" />
         </View>
       </TouchableOpacity>
-    </View>
+    </KeyboardAvoidingView>
   );
 };
 
@@ -79,9 +83,9 @@ const styles = StyleSheet.create({
   },
   footer: {
     paddingTop: 10,
+    paddingBottom: 20,
     borderTopColor: theme.COLOR_SECONDARY_LIGHT,
     borderTopWidth: 1,
-    marginBottom: 20,
     alignItems: 'center',
   },
   createContainer: {

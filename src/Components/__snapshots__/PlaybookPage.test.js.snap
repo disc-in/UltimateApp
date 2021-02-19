@@ -2,11 +2,17 @@
 
 exports[`<PlaybookPage /> renders correctly when empty 1`] = `
 <View
+  onLayout={[Function]}
   style={
-    Object {
-      "backgroundColor": "#fff",
-      "flex": 1,
-    }
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1,
+      },
+      Object {
+        "paddingBottom": 0,
+      },
+    ]
   }
 >
   <View
@@ -44,8 +50,8 @@ exports[`<PlaybookPage /> renders correctly when empty 1`] = `
         "alignItems": "center",
         "borderTopColor": "#e5e5e5",
         "borderTopWidth": 1,
-        "marginBottom": 20,
         "opacity": 1,
+        "paddingBottom": 20,
         "paddingTop": 10,
       }
     }
@@ -71,11 +77,17 @@ exports[`<PlaybookPage /> renders correctly when empty 1`] = `
 
 exports[`<PlaybookPage /> renders correctly with plays 1`] = `
 <View
+  onLayout={[Function]}
   style={
-    Object {
-      "backgroundColor": "#fff",
-      "flex": 1,
-    }
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1,
+      },
+      Object {
+        "paddingBottom": 0,
+      },
+    ]
   }
 >
   <RCTScrollView>
@@ -233,8 +245,8 @@ exports[`<PlaybookPage /> renders correctly with plays 1`] = `
         "alignItems": "center",
         "borderTopColor": "#e5e5e5",
         "borderTopWidth": 1,
-        "marginBottom": 20,
         "opacity": 1,
+        "paddingBottom": 20,
         "paddingTop": 10,
       }
     }

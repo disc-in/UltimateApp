@@ -64,7 +64,7 @@ describe('<PlayTitle />', () => {
 
   it('triggers rename action on blur', async () => {
     const { getByTestId, getByDisplayValue } = render(
-      <PlayTitle play={play} onPress={onPress} deletePlay={deletePlay} renamePlay={renamePlay} />,
+      <PlayTitle play={play} onPress={onPress} customPlays={[]} deletePlay={deletePlay} renamePlay={renamePlay} />,
     );
 
     fireEvent.press(getByTestId('edit'));
@@ -76,7 +76,7 @@ describe('<PlayTitle />', () => {
 
   it('triggers rename action on validate', async () => {
     const { getByTestId, getByDisplayValue } = render(
-      <PlayTitle play={play} onPress={onPress} deletePlay={deletePlay} renamePlay={renamePlay} />,
+      <PlayTitle play={play} onPress={onPress} customPlays={[]} deletePlay={deletePlay} renamePlay={renamePlay} />,
     );
 
     fireEvent.press(getByTestId('edit'));
@@ -84,6 +84,39 @@ describe('<PlayTitle />', () => {
     await fireEvent.press(getByTestId('update'));
 
     await expect(renamePlay).toHaveBeenCalledWith(play.uuid, 'New Title');
+  });
+
+  it('displays errors and does not rename if new title is empty', async () => {
+    const { getByTestId, getByDisplayValue, getByText } = render(
+      <PlayTitle play={play} onPress={onPress} customPlays={[]} deletePlay={deletePlay} renamePlay={renamePlay} />,
+    );
+
+    fireEvent.press(getByTestId('edit'));
+    fireEvent(getByDisplayValue(play.title), 'onChangeText', '');
+    await fireEvent.press(getByTestId('update'));
+
+    expect(getByText('You cannot set an empty name')).toBeDefined();
+    await expect(renamePlay).not.toHaveBeenCalled();
+  });
+
+  it('displays errors and does not rename if new title is already taken', async () => {
+    const existingPlay = { animation: animationSquare, title: 'Existing', uuid: '999' };
+    const { getByTestId, getByDisplayValue, getByText } = render(
+      <PlayTitle
+        play={play}
+        onPress={onPress}
+        customPlays={[existingPlay]}
+        deletePlay={deletePlay}
+        renamePlay={renamePlay}
+      />,
+    );
+
+    fireEvent.press(getByTestId('edit'));
+    fireEvent(getByDisplayValue(play.title), 'onChangeText', 'Existing');
+    await fireEvent.press(getByTestId('update'));
+
+    expect(getByText('This name already exists')).toBeDefined();
+    await expect(renamePlay).not.toHaveBeenCalled();
   });
 
   it('does not trigger delete on cancel', async () => {

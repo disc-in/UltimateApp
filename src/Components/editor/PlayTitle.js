@@ -8,28 +8,44 @@ import { renamePlay, deletePlay } from '../../Store/Actions/playAction';
 import { showSuccess } from '../../utils/flashMessage';
 import I18n from '../../utils/i18n';
 
-export const PlayTitle = ({ play, onPress, renamePlay, deletePlay, safe, unsavedPlay, style }) => {
+export const PlayTitle = ({ play, onPress, customPlays, renamePlay, deletePlay, safe, unsavedPlay, style }) => {
   const [title, setTitle] = useState(play.title);
+  const [error, setError] = useState();
   const [isEditing, setEdit] = useState(false);
 
   const handleEdit = () => {
-    renamePlay(play.uuid, title);
-    setEdit(false);
+    if (!error) {
+      renamePlay(play.uuid, title);
+      setEdit(false);
+    }
+  };
+
+  const handleChange = (value) => {
+    setTitle(value);
+    if (value.length === 0) {
+      setError(I18n.t('editor.playTitle.empty'));
+    } else if (
+      customPlays.filter((existingPlay) => existingPlay.uuid != play.uuid && existingPlay.title === value).length > 0
+    ) {
+      setError(I18n.t('editor.playTitle.alreadyExists'));
+    } else {
+      setError();
+    }
   };
 
   const deletionConfirmation = (play) => {
-    Alert.alert(play.title, I18n.t('playbookPage.deleteConfirmation'), [
+    Alert.alert(play.title, I18n.t('editor.playTitle.deleteConfirmation'), [
       {
         text: I18n.t('shared.cancel'),
         style: 'cancel',
         onPress: () => {},
       },
       {
-        text: I18n.t('playbookPage.delete'),
+        text: I18n.t('editor.playTitle.delete'),
         style: 'destructive',
         onPress: () => {
           deletePlay(play.uuid);
-          showSuccess(I18n.t('playbookPage.deleteSuccess', { title: play.title }));
+          showSuccess(I18n.t('editor.playTitle.deleteSuccess', { title: play.title }));
         },
       },
     ]);
@@ -41,14 +57,18 @@ export const PlayTitle = ({ play, onPress, renamePlay, deletePlay, safe, unsaved
     <View style={[styles.play, style]}>
       <TouchableOpacity style={styles.titleContainer} onPress={onPress}>
         {isEditing ? (
-          <TextInput
-            autoFocus
-            style={styles.titleInput}
-            value={title}
-            onChangeText={setTitle}
-            onSubmitEditing={handleEdit}
-            onBlur={handleEdit}
-          />
+          <>
+            <TextInput
+              autoFocus
+              style={styles.titleInput}
+              placeholder={I18n.t('editor.playTitle.placeholder')}
+              value={title}
+              onChangeText={handleChange}
+              onSubmitEditing={handleEdit}
+              onBlur={handleEdit}
+            />
+            {error && <Text style={styles.error}>{error}</Text>}
+          </>
         ) : (
           <Text numberOfLines={1} style={styles.title}>
             {unsavedAsterisk}
@@ -80,9 +100,15 @@ export const PlayTitle = ({ play, onPress, renamePlay, deletePlay, safe, unsaved
   );
 };
 
+const mapStateToProps = (state) => {
+  return {
+    customPlays: state.customPlays,
+  };
+};
+
 const mapDispatchToProps = { renamePlay, deletePlay };
 
-export default connect(null, mapDispatchToProps)(PlayTitle);
+export default connect(mapStateToProps, mapDispatchToProps)(PlayTitle);
 
 const styles = StyleSheet.create({
   play: {
@@ -114,5 +140,9 @@ const styles = StyleSheet.create({
   icon: {
     color: theme.COLOR_PRIMARY,
     fontSize: theme.FONT_SIZE_LARGE,
+  },
+  error: {
+    fontStyle: 'italic',
+    color: 'red',
   },
 });

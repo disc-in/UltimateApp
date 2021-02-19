@@ -108,9 +108,6 @@ export default {
   },
   playbookPage: {
     empty: 'Votre playbook est vide !',
-    delete: 'Supprimer',
-    deleteConfirmation: 'Voulez-vous vraiment supprimer ce play ?',
-    deleteSuccess: 'Le play "{{title}}" a été supprimé.',
   },
   playEditorPage: {
     untitledPlay: 'Play sans titre',
@@ -123,12 +120,13 @@ export default {
   },
   editor: {
     saveSuccess: 'Le play "{{title}}" a été sauvegardé',
-    renamePlayModal: {
+    playTitle: {
       placeholder: 'Entrez un nom',
       alreadyExists: 'Ce nom existe déjà',
       empty: 'Le nom ne peut pas être vide',
-      renameSuccess: 'Le play a été renommée avec succès',
-      cta: 'Valider',
+      delete: 'Supprimer',
+      deleteConfirmation: 'Voulez-vous vraiment supprimer ce play ?',
+      deleteSuccess: 'Le play "{{title}}" a été supprimé.',
     },
     sharePlay: {
       shareTitle: 'Partager {{title}}',

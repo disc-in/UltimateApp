@@ -108,9 +108,6 @@ export default {
   },
   playbookPage: {
     empty: 'Your playbook is empty!',
-    delete: 'Delete',
-    deleteConfirmation: 'Do you really want to delete this play?',
-    deleteSuccess: "The play '{{title}}' has been deleted.",
   },
   playEditorPage: {
     untitledPlay: 'Unnamed play',
@@ -123,12 +120,13 @@ export default {
   },
   editor: {
     saveSuccess: "The play has been saved as '{{title}}'",
-    renamePlayModal: {
+    playTitle: {
       placeholder: 'Enter new name',
       alreadyExists: 'This name already exists',
       empty: 'You cannot set an empty name',
-      renameSuccess: 'The play was successfully renamed!',
-      cta: 'Apply',
+      delete: 'Delete',
+      deleteConfirmation: 'Do you really want to delete this play?',
+      deleteSuccess: "The play '{{title}}' has been deleted.",
     },
     sharePlay: {
       shareTitle: 'Sharing {{title}}',

@@ -47,6 +47,7 @@ export const PlayTitle = ({ play, onPress, renamePlay, deletePlay, safe, unsaved
             value={title}
             onChangeText={setTitle}
             onSubmitEditing={handleEdit}
+            onBlur={handleEdit}
           />
         ) : (
           <Text numberOfLines={1} style={styles.title}>

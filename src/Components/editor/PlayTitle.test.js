@@ -62,7 +62,19 @@ describe('<PlayTitle />', () => {
     expect(onPress).toHaveBeenCalled();
   });
 
-  it('triggers rename action', async () => {
+  it('triggers rename action on blur', async () => {
+    const { getByTestId, getByDisplayValue } = render(
+      <PlayTitle play={play} onPress={onPress} deletePlay={deletePlay} renamePlay={renamePlay} />,
+    );
+
+    fireEvent.press(getByTestId('edit'));
+    fireEvent(getByDisplayValue(play.title), 'onChangeText', 'New Title');
+    fireEvent(getByDisplayValue('New Title'), 'onBlur');
+
+    await expect(renamePlay).toHaveBeenCalledWith(play.uuid, 'New Title');
+  });
+
+  it('triggers rename action on validate', async () => {
     const { getByTestId, getByDisplayValue } = render(
       <PlayTitle play={play} onPress={onPress} deletePlay={deletePlay} renamePlay={renamePlay} />,
     );

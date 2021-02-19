@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { StyleSheet, FlatList, View, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, ScrollView, View, Text, TouchableOpacity } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import theme from '../styles/theme.style';
@@ -17,41 +17,36 @@ const newPlay = {
 export const PlaybookPage = (props) => {
   const isEmpty = props.customPlays.length === 0;
 
-  const createPlay = () => (
-    <TouchableOpacity
-      style={styles.footer}
-      onPress={() => {
-        props.navigation.navigate('PlayEditorPage', { currentPlay: newPlay });
-      }}
-    >
-      <View style={styles.createContainer}>
-        <MaterialCommunityIcons style={styles.createIcon} name="plus" />
-      </View>
-    </TouchableOpacity>
-  );
-
   return (
     <View style={styles.playbookPage}>
-      <FlatList
-        data={props.customPlays}
-        keyExtractor={(item) => item.title}
-        ListEmptyComponent={() => (
-          <View style={styles.empty}>
-            <Text style={styles.emptyText}>{I18n.t('playbookPage.empty')}</Text>
-            {isEmpty && createPlay()}
-          </View>
-        )}
-        renderItem={({ item }) => (
-          <PlayTitle
-            play={item}
-            style={styles.customPlay}
-            onPress={() => {
-              props.navigation.navigate('PlayEditorPage', { currentPlay: item });
-            }}
-          />
-        )}
-      />
-      {!isEmpty && createPlay()}
+      {isEmpty ? (
+        <View style={styles.empty}>
+          <Text style={styles.emptyText}>{I18n.t('playbookPage.empty')}</Text>
+        </View>
+      ) : (
+        <ScrollView>
+          {props.customPlays.map((play) => (
+            <PlayTitle
+              play={play}
+              key={play.title}
+              style={styles.customPlay}
+              onPress={() => {
+                props.navigation.navigate('PlayEditorPage', { currentPlay: play });
+              }}
+            />
+          ))}
+        </ScrollView>
+      )}
+      <TouchableOpacity
+        style={styles.footer}
+        onPress={() => {
+          props.navigation.navigate('PlayEditorPage', { currentPlay: newPlay });
+        }}
+      >
+        <View style={styles.createContainer}>
+          <MaterialCommunityIcons style={styles.createIcon} name="plus" />
+        </View>
+      </TouchableOpacity>
     </View>
   );
 };

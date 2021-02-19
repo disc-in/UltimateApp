@@ -6,6 +6,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import theme from '../styles/theme.style';
 import I18n from '../utils/i18n';
 import { generateUuid } from '../utils/uuid';
+import { savePlay } from '../Store/Actions/playAction';
 import Drill from './animation/Drill';
 import PlayTitle from './editor/PlayTitle';
 
@@ -20,11 +21,13 @@ export const PlaybookPage = (props) => {
       newTitle = defaultTitle + ' (' + counter + ')';
       counter += 1;
     }
-    return {
+    const play = {
       uuid: generateUuid(),
       animation: new Drill(),
       title: newTitle,
     };
+    props.savePlay(play);
+    return play;
   };
 
   const behavior = Platform.select({
@@ -58,7 +61,7 @@ export const PlaybookPage = (props) => {
         }}
       >
         <View style={styles.createContainer}>
-          <MaterialCommunityIcons style={styles.createIcon} name="plus" />
+          <MaterialCommunityIcons style={styles.createIcon} name="plus" testID="createPlay" />
         </View>
       </TouchableOpacity>
     </KeyboardAvoidingView>
@@ -71,7 +74,9 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(PlaybookPage);
+const mapDispatchToProps = { savePlay };
+
+export default connect(mapStateToProps, mapDispatchToProps)(PlaybookPage);
 
 const styles = StyleSheet.create({
   playbookPage: {

@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import Drill from './animation/Drill';
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
-import { savePlay, deletePlay } from '../Store/Actions/playAction';
+import { savePlay } from '../Store/Actions/playAction';
 import PlayTitle from './editor/PlayTitle';
 import AnimationEditor from './editor/AnimationEditor';
 import AnimationHistory from './editor/toolbar/AnimationHistory';
@@ -74,7 +74,7 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = { savePlay, deletePlay };
+const mapDispatchToProps = { savePlay };
 
 export default connect(mapStateToProps, mapDispatchToProps)(PlayEditorPage);
 

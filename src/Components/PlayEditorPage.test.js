@@ -15,18 +15,6 @@ jest.mock('react-native-get-random-values', () => ({
 describe('<PlayEditorPage />', () => {
   it('renders correctly', async () => {
     const navigation = { navigate: jest.fn(), setOptions: jest.fn() };
-    const route = {};
-
-    const tree = create(
-      <Provider store={store}>
-        <PlayEditorPage navigation={navigation} route={route} />
-      </Provider>,
-    ).toJSON();
-    await act(async () => expect(tree).toMatchSnapshot());
-  });
-
-  it('renders correctly  with a currentPlay', async () => {
-    const navigation = { navigate: jest.fn(), setOptions: jest.fn() };
     const play = {
       uuid: undefined,
       animation: new Drill(),

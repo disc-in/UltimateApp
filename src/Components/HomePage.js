@@ -63,10 +63,10 @@ const HomeScreen = (props) => {
         </TouchableHighlight>
       </View>
 
-      <TouchableHighlight onPress={() => props.navigation.navigate('PlayEditorPage')} style={styles.menuItem}>
+      <TouchableHighlight onPress={() => props.navigation.navigate('PlaybookPage')} style={styles.menuItem}>
         <ImageBackground source={ourPlays} style={styles.image}>
           <View style={styles.wrapper}>
-            <Text style={styles.title}>{I18n.t('homePage.editor')}</Text>
+            <Text style={styles.title}>{I18n.t('homePage.playbook')}</Text>
           </View>
         </ImageBackground>
       </TouchableHighlight>

@@ -68,6 +68,7 @@ export default {
       noEquipment: 'Entraînements poids du corps',
       fullEquipment: 'Entraînements en salle',
     },
+    playbookPage: 'Mon Playbook',
     playEditorPage: 'Nouvelle tactique',
     importerPage: 'Importer une tactique',
     dictionaryPage: 'Lexique',
@@ -90,7 +91,7 @@ export default {
     frisbeeTab: 'Frisbee',
     fitnessTab: 'Fitness',
     theoryTab: 'Théorie',
-    editor: 'Mon Playbook',
+    playbook: 'Mon Playbook',
     drills: 'Exercices',
     adult: 'Adultes',
     junior: 'Juniors',
@@ -105,6 +106,9 @@ export default {
     essential: 'Les bases du jeu',
     tactics: 'Tactiques',
   },
+  playbookPage: {
+    empty: 'Votre playbook est vide !',
+  },
   playEditorPage: {
     untitledPlay: 'Play sans titre',
   },
@@ -115,23 +119,14 @@ export default {
     downloadError: "Je n'ai pas pu retrouver ce play...",
   },
   editor: {
-    saveModificationsTitle: 'Voulez-vous sauvegarder les modifications ?',
-    saveModificationsText:
-      'Le play "{{title}}" a été modifié.\n\nSouhaitez-vous conserver ces modifications avant de le fermer ?',
     saveSuccess: 'Le play "{{title}}" a été sauvegardé',
-    savedPlaysList: {
-      title: 'Mon Playbook',
-      empty: "Vous n'avez pas encore sauvegardé de play",
-      delete: 'Supprimer',
-      deleteConfirmation: 'Voulez-vous vraiment supprimer ce play ?',
-      deleteSuccess: 'Le play "{{title}}" a été supprimé.',
-    },
-    renamePlayModal: {
+    playTitle: {
       placeholder: 'Entrez un nom',
       alreadyExists: 'Ce nom existe déjà',
       empty: 'Le nom ne peut pas être vide',
-      renameSuccess: 'Le play a été renommée avec succès',
-      cta: 'Valider',
+      delete: 'Supprimer',
+      deleteConfirmation: 'Voulez-vous vraiment supprimer ce play ?',
+      deleteSuccess: 'Le play "{{title}}" a été supprimé.',
     },
     sharePlay: {
       shareTitle: 'Partager {{title}}',

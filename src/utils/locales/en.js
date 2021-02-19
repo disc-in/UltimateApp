@@ -68,6 +68,7 @@ export default {
       noEquipment: 'Bodyweight programs',
       fullEquipment: 'Gym programs',
     },
+    playbookPage: 'My Playbook',
     playEditorPage: 'New Play',
     importerPage: 'Import a play',
     dictionaryPage: 'Dictionary',
@@ -90,7 +91,7 @@ export default {
     frisbeeTab: 'Frisbee',
     fitnessTab: 'Fitness',
     theoryTab: 'Theory',
-    editor: 'My Playbook',
+    playbook: 'My Playbook',
     drills: 'Drills',
     adult: 'Senior',
     junior: 'Junior',
@@ -105,6 +106,9 @@ export default {
     essential: 'Basics',
     tactics: 'Tactics',
   },
+  playbookPage: {
+    empty: 'Your playbook is empty!',
+  },
   playEditorPage: {
     untitledPlay: 'Unnamed play',
   },
@@ -115,23 +119,14 @@ export default {
     downloadError: 'I could not find the play you are looking for',
   },
   editor: {
-    saveModificationsTitle: 'Do you want to save the current play?',
-    saveModificationsText:
-      "The play '{{title}}' has been modified.\n\nDo you want to save these modifications before closing it?",
     saveSuccess: "The play has been saved as '{{title}}'",
-    savedPlaysList: {
-      title: 'My Playbook',
-      empty: "You haven't saved any plays yet",
-      delete: 'Delete',
-      deleteConfirmation: 'Do you really want to delete this play?',
-      deleteSuccess: "The play '{{title}}' has been deleted.",
-    },
-    renamePlayModal: {
+    playTitle: {
       placeholder: 'Enter new name',
       alreadyExists: 'This name already exists',
       empty: 'You cannot set an empty name',
-      renameSuccess: 'The play was successfully renamed!',
-      cta: 'Apply',
+      delete: 'Delete',
+      deleteConfirmation: 'Do you really want to delete this play?',
+      deleteSuccess: "The play '{{title}}' has been deleted.",
     },
     sharePlay: {
       shareTitle: 'Sharing {{title}}',

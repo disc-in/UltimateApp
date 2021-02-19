@@ -15,6 +15,21 @@ const newPlay = {
 };
 
 export const PlaybookPage = (props) => {
+  const isEmpty = props.customPlays.length === 0;
+
+  const createPlay = () => (
+    <TouchableOpacity
+      style={styles.footer}
+      onPress={() => {
+        props.navigation.navigate('PlayEditorPage', { currentPlay: newPlay });
+      }}
+    >
+      <View style={styles.createContainer}>
+        <MaterialCommunityIcons style={styles.createIcon} name="plus" />
+      </View>
+    </TouchableOpacity>
+  );
+
   return (
     <View style={styles.playbookPage}>
       <FlatList
@@ -23,19 +38,8 @@ export const PlaybookPage = (props) => {
         ListEmptyComponent={() => (
           <View style={styles.empty}>
             <Text style={styles.emptyText}>{I18n.t('playbookPage.empty')}</Text>
+            {isEmpty && createPlay()}
           </View>
-        )}
-        ListFooterComponent={() => (
-          <TouchableOpacity
-            style={styles.footer}
-            onPress={() => {
-              props.navigation.navigate('PlayEditorPage', { currentPlay: newPlay });
-            }}
-          >
-            <View style={styles.createContainer}>
-              <MaterialCommunityIcons style={styles.createIcon} name="plus" />
-            </View>
-          </TouchableOpacity>
         )}
         renderItem={({ item }) => (
           <PlayTitle
@@ -47,6 +51,7 @@ export const PlaybookPage = (props) => {
           />
         )}
       />
+      {!isEmpty && createPlay()}
     </View>
   );
 };
@@ -63,7 +68,6 @@ const styles = StyleSheet.create({
   playbookPage: {
     flex: 1,
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
-    paddingLeft: 20,
   },
   empty: {
     marginTop: '30%',
@@ -71,23 +75,28 @@ const styles = StyleSheet.create({
   },
   emptyText: {
     textAlign: 'center',
+    fontSize: theme.FONT_SIZE_MEDIUM,
+    marginBottom: 50,
   },
   customPlay: {
+    paddingLeft: 20,
     height: 60,
   },
   footer: {
-    height: 50,
-    marginTop: 10,
-    marginBottom: 30,
+    paddingTop: 10,
+    borderTopColor: theme.COLOR_SECONDARY_LIGHT,
+    borderTopWidth: 1,
+    marginBottom: 20,
     alignItems: 'center',
-    justifyContent: 'center',
   },
   createContainer: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
+    width: 50,
+    height: 50,
+    borderRadius: 25,
     borderColor: theme.MAIN_COLOR,
-    borderWidth: StyleSheet.hairlineWidth,
+    borderWidth: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   createIcon: {
     fontSize: 40,

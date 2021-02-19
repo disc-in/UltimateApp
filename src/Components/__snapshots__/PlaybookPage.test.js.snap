@@ -6,13 +6,11 @@ exports[`<PlaybookPage /> renders correctly when empty 1`] = `
     Object {
       "backgroundColor": "#fff",
       "flex": 1,
-      "paddingLeft": 20,
     }
   }
 >
   <RCTScrollView
     ListEmptyComponent={[Function]}
-    ListFooterComponent={[Function]}
     data={Array []}
     disableVirtualization={false}
     getItem={[Function]}
@@ -48,16 +46,14 @@ exports[`<PlaybookPage /> renders correctly when empty 1`] = `
         <Text
           style={
             Object {
+              "fontSize": 16,
+              "marginBottom": 50,
               "textAlign": "center",
             }
           }
         >
           Your playbook is empty!
         </Text>
-      </View>
-      <View
-        onLayout={[Function]}
-      >
         <View
           accessible={true}
           focusable={true}
@@ -71,22 +67,24 @@ exports[`<PlaybookPage /> renders correctly when empty 1`] = `
           style={
             Object {
               "alignItems": "center",
-              "height": 50,
-              "justifyContent": "center",
-              "marginBottom": 30,
-              "marginTop": 10,
+              "borderTopColor": "#e5e5e5",
+              "borderTopWidth": 1,
+              "marginBottom": 20,
               "opacity": 1,
+              "paddingTop": 10,
             }
           }
         >
           <View
             style={
               Object {
+                "alignItems": "center",
                 "borderColor": "#2a9e91",
-                "borderRadius": 20,
-                "borderWidth": 0.5,
-                "height": 40,
-                "width": 40,
+                "borderRadius": 25,
+                "borderWidth": 1,
+                "height": 50,
+                "justifyContent": "center",
+                "width": 50,
               }
             }
           >
@@ -105,13 +103,11 @@ exports[`<PlaybookPage /> renders correctly with plays 1`] = `
     Object {
       "backgroundColor": "#fff",
       "flex": 1,
-      "paddingLeft": 20,
     }
   }
 >
   <RCTScrollView
     ListEmptyComponent={[Function]}
-    ListFooterComponent={[Function]}
     data={
       Array [
         Object {
@@ -165,6 +161,7 @@ exports[`<PlaybookPage /> renders correctly with plays 1`] = `
               },
               Object {
                 "height": 60,
+                "paddingLeft": 20,
               },
             ]
           }
@@ -292,69 +289,67 @@ exports[`<PlaybookPage /> renders correctly with plays 1`] = `
           </View>
         </View>
       </View>
-      <View
-        onLayout={[Function]}
-      >
-        <View
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "height": 50,
-              "justifyContent": "center",
-              "marginBottom": 30,
-              "marginTop": 10,
-              "opacity": 1,
-            }
-          }
-        >
-          <View
-            style={
-              Object {
-                "borderColor": "#2a9e91",
-                "borderRadius": 20,
-                "borderWidth": 0.5,
-                "height": 40,
-                "width": 40,
-              }
-            }
-          >
-            <Text
-              allowFontScaling={false}
-              style={
-                Array [
-                  Object {
-                    "color": undefined,
-                    "fontSize": 12,
-                  },
-                  Object {
-                    "color": "#2a9e91",
-                    "fontSize": 40,
-                    "fontWeight": "bold",
-                  },
-                  Object {
-                    "fontFamily": "material-community",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                  Object {},
-                ]
-              }
-            >
-              󰐕
-            </Text>
-          </View>
-        </View>
-      </View>
     </View>
   </RCTScrollView>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "borderTopColor": "#e5e5e5",
+        "borderTopWidth": 1,
+        "marginBottom": 20,
+        "opacity": 1,
+        "paddingTop": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "borderColor": "#2a9e91",
+          "borderRadius": 25,
+          "borderWidth": 1,
+          "height": 50,
+          "justifyContent": "center",
+          "width": 50,
+        }
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        style={
+          Array [
+            Object {
+              "color": undefined,
+              "fontSize": 12,
+            },
+            Object {
+              "color": "#2a9e91",
+              "fontSize": 40,
+              "fontWeight": "bold",
+            },
+            Object {
+              "fontFamily": "material-community",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        󰐕
+      </Text>
+    </View>
+  </View>
 </View>
 `;

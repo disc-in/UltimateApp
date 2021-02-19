@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 
 import Drill from './animation/Drill';
 import I18n from '../utils/i18n';
-import { generateUuid } from '../utils/uuid';
 import theme from '../styles/theme.style';
 import { savePlay, deletePlay } from '../Store/Actions/playAction';
 import AnimationEditor from './editor/AnimationEditor';
@@ -41,27 +40,11 @@ export const PlayEditorPage = (props) => {
   });
 
   const onAnimationChange = (animation) => {
-    setCurrentPlay({ ...currentPlay, animation });
     setIsPlaySaved(false);
-  };
-
-  const saveCurrentPlay = () => {
-    const defaultTitle = I18n.t('playEditorPage.untitledPlay');
-    if (currentPlay.title === I18n.t('playEditorPage.untitledPlay')) {
-      let newTitle = defaultTitle;
-
-      let counter = 1;
-      while (props.customPlays.findIndex((item) => item.title === newTitle) !== -1) {
-        newTitle = defaultTitle + ' (' + counter + ')';
-        counter += 1;
-      }
-      currentPlay.title = newTitle;
-    }
-    if (currentPlay.uuid === undefined) {
-      currentPlay.uuid = generateUuid();
-    }
-    props.savePlay(currentPlay);
-    setIsPlaySaved(true);
+    const newPlay = { ...currentPlay, animation };
+    setCurrentPlay(newPlay);
+    props.savePlay(newPlay);
+    setTimeout(() => setIsPlaySaved(true), 1000);
   };
 
   return (
@@ -74,7 +57,6 @@ export const PlayEditorPage = (props) => {
         />
       </View>
       <View style={styles.toolBar}>
-        <SavePlay currentPlay={currentPlay} saveCurrentPlay={saveCurrentPlay} />
         <AnimationHistory animation={currentPlay.animation} onAnimationHistoryChange={onAnimationChange} />
         <SharePlay currentPlay={currentPlay} />
       </View>

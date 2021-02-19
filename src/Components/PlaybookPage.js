@@ -5,17 +5,26 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import theme from '../styles/theme.style';
 import I18n from '../utils/i18n';
+import { generateUuid } from '../utils/uuid';
 import Drill from './animation/Drill';
 import PlayTitle from './editor/PlayTitle';
 
-const newPlay = {
-  uuid: undefined,
-  animation: new Drill(),
-  title: I18n.t('playEditorPage.untitledPlay'),
-};
-
 export const PlaybookPage = (props) => {
   const isEmpty = props.customPlays.length === 0;
+
+  const newPlay = () => {
+    let newTitle = I18n.t('playbookPage.untitledPlay');
+    let counter = 1;
+    while (props.customPlays.findIndex((item) => item.title === newTitle) !== -1) {
+      newTitle = defaultTitle + ' (' + counter + ')';
+      counter += 1;
+    }
+    return {
+      uuid: generateUuid(),
+      animation: new Drill(),
+      title: newTitle,
+    };
+  };
 
   const behavior = Platform.select({
     ios: 'padding',
@@ -44,7 +53,7 @@ export const PlaybookPage = (props) => {
       <TouchableOpacity
         style={styles.footer}
         onPress={() => {
-          props.navigation.navigate('PlayEditorPage', { currentPlay: newPlay });
+          props.navigation.navigate('PlayEditorPage', { currentPlay: newPlay() });
         }}
       >
         <View style={styles.createContainer}>

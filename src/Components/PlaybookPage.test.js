@@ -8,6 +8,10 @@ import Drill from './animation/Drill';
 
 import ConnectedPlaybookPage, { PlaybookPage } from './PlaybookPage';
 
+jest.mock('react-native-get-random-values', () => ({
+  getRandomBase64: jest.fn(),
+}));
+
 describe('<PlaybookPage />', () => {
   const play = {
     uuid: undefined,

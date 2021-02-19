@@ -108,8 +108,6 @@ export default {
   },
   playbookPage: {
     empty: 'Votre playbook est vide !',
-  },
-  playEditorPage: {
     untitledPlay: 'Play sans titre',
   },
   importerPage: {

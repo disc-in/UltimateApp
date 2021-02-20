@@ -592,7 +592,7 @@ const speedDrill = {
 const warmupGameDrill = {
   id: 5,
   type: DrillTypes.FRISBEE,
-  visibleInList: true,
+  visibleInList: false,
   author: '',
   title: 'Échauffement pour un match',
   image: 'https://zupimages.net/up/20/19/f2bd.jpg',
@@ -621,7 +621,7 @@ const warmupGameDrill = {
 const warmupDrill = {
   id: 6,
   type: DrillTypes.FRISBEE,
-  visibleInList: true,
+  visibleInList: false,
   author: '',
   title: 'Échauffement basique',
   image: 'https://zupimages.net/up/20/19/va5f.jpg',
@@ -8861,7 +8861,6 @@ export const drills = [
   // Fitness
   agility1,
   agility10,
-  agility10,
   agility11,
   agility12,
   agility13,
@@ -8869,6 +8868,7 @@ export const drills = [
   agility15,
   agility16,
   agility2,
+  agility3,
   agility5,
   agility6,
   agility7,
@@ -8889,7 +8889,6 @@ export const drills = [
   stabilityDrill,
   strength1,
   strength10,
-  strength10,
   strength11,
   strength12,
   strength13,
@@ -8897,6 +8896,7 @@ export const drills = [
   strength15,
   strength16,
   strength2,
+  strength3,
   strength5,
   strength6,
   strength7,
@@ -8971,6 +8971,10 @@ export const drills = [
   square,
   triangleWarmUp,
   breakLong,
+
+  // warmup
+  warmupDrill,
+  warmupGameDrill,
 
   // Game
   boxGame,

@@ -56,7 +56,7 @@ To get the expected return from Nock, you can run your tests without mocking and
 
 To release a new version of the app :
 
-1. Send a pull request updating the version in `app.json`, as well as buildNumber (ios) and versionCode (android)
+1. Send a pull request updating the version in `app.json`, as well as buildNumber (ios) and versionCode (android) if you need to build new binaries
 2. When it is merged, create a release on Github
 3. Make sure your `.env` file contains the production environment variables up-to-date
 4. `expo publish --release-channel production`

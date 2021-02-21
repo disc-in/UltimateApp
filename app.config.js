@@ -6,7 +6,7 @@ export default {
   slug: 'ultimate-app',
   privacy: 'public',
   platforms: ['ios', 'android', 'web'],
-  version: '1.2.1',
+  version: '1.3.0',
   githubUrl: 'https://github.com/disc-in/UltimateApp',
   orientation: 'portrait',
   scheme: 'discin',

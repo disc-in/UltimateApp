@@ -37,7 +37,7 @@ export const createDrill = (override = {}) => {
 export const createTraining = (override = {}) => {
   return {
     id: 1,
-    source: '** Ultimate App **',
+    source: '** Disc In **',
     title: 'First practice',
     image: 'https://cdn3.sportngin.com/attachments/photo/be7e-106813275/Screen_Shot_2018-07-19_at_3.53.39_PM_large.png',
     description: 'This training session aims at..',

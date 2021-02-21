@@ -186,7 +186,7 @@ exports[`<ProgramList /> renders correctly 1`] = `
                     ],
                     "id": 1,
                     "image": "https://cdn3.sportngin.com/attachments/photo/be7e-106813275/Screen_Shot_2018-07-19_at_3.53.39_PM_large.png",
-                    "source": "** Ultimate App **",
+                    "source": "** Disc In **",
                     "title": "First practice",
                   },
                 ]
@@ -462,7 +462,7 @@ exports[`<ProgramList /> renders correctly 1`] = `
                     ],
                     "id": 1,
                     "image": "https://cdn3.sportngin.com/attachments/photo/be7e-106813275/Screen_Shot_2018-07-19_at_3.53.39_PM_large.png",
-                    "source": "** Ultimate App **",
+                    "source": "** Disc In **",
                     "title": "First Training",
                   },
                   Object {
@@ -502,7 +502,7 @@ exports[`<ProgramList /> renders correctly 1`] = `
                     ],
                     "id": 2,
                     "image": "https://cdn3.sportngin.com/attachments/photo/be7e-106813275/Screen_Shot_2018-07-19_at_3.53.39_PM_large.png",
-                    "source": "** Ultimate App **",
+                    "source": "** Disc In **",
                     "title": "Second Training",
                   },
                 ]

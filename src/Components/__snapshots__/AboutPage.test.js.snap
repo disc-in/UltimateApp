@@ -67,9 +67,7 @@ exports[`<AboutPage /> renders correctly 1`] = `
               "marginLeft": 10,
             }
           }
-        >
-          development
-        </Text>
+        />
       </View>
     </View>
     <Text

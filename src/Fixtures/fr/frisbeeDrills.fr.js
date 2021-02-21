@@ -5389,8 +5389,10 @@ const aussieDrill = {
   steps: [
     {
       id: 1,
-      title: "initiation ludique à l'Ultimate",
+      title: "Initiation ludique à l'Ultimate",
       animation: aussieRules,
+      youtube: 'https://youtu.be/HzhrlRZSt4g',
+      vimeoId: '514792268',
       repetition: '',
       rest: '',
       instruction:
@@ -7218,6 +7220,8 @@ const bull = {
       id: 1,
       title: 'Le Taureau Classique',
       animation: bullAnimation,
+      vimeoId: '514792030',
+      youtube: 'https://youtu.be/YV93_rFrlDk',
       repetition: '',
       rest: '',
       instruction:
@@ -7236,6 +7240,8 @@ const bull = {
       id: 3,
       title: 'Avec des Poppers',
       animation: rondoFunAnimation,
+      vimeoId: '514792081',
+      youtube: 'https://youtu.be/4qXZnRHznus',
       repetition: '',
       rest: '',
       instruction:
@@ -7320,7 +7326,7 @@ const arrow = {
   title: 'La Flèche',
   image: 'https://zupimages.net/up/20/51/khgg.jpg',
   description: "L'objectif est de travailler à l'exécution d'un cut dans la endzone",
-  minimalPlayersNumber: 8,
+  minimalPlayersNumber: 6,
   inGame: undefined,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque',
@@ -7334,7 +7340,8 @@ const arrow = {
       id: 1,
       title: 'La Flèche',
       animation: ArrowAnimation,
-      vimeoId: undefined,
+      vimeoId: '514792375',
+      youtube: 'https://youtu.be/UY-B2LqBAWM',
       repetition: '',
       rest: '',
       instruction:
@@ -7344,7 +7351,8 @@ const arrow = {
       id: 2,
       title: 'La Japonaise',
       animation: JapaneseAnimation,
-      vimeoId: undefined,
+      vimeoId: '514791921',
+      youtube: 'https://youtu.be/kNoF7qfLg6Q',
       repetition: '',
       rest: '',
       instruction: 'Le même principe mais dans cette variante le lanceur suit son disque pour faire un une-deux',
@@ -7440,7 +7448,8 @@ const theZ = {
       id: 1,
       title: 'Le Z',
       animation: theZAnimation,
-      vimeoId: undefined,
+      vimeoId: '514792219',
+      youtube: 'https://youtu.be/Ey-xqsqWlpA',
       repetition: '',
       rest: '',
       instruction:
@@ -7533,7 +7542,8 @@ const crissCross = {
       id: 1,
       title: 'La Tresse',
       animation: crissCrossAnimation,
-      vimeoId: undefined,
+      vimeoId: '514792312',
+      youtube: 'https://youtu.be/fITz5mio52g',
       repetition: '',
       rest: '',
       instruction:
@@ -7543,7 +7553,8 @@ const crissCross = {
       id: 2,
       title: 'La Course',
       animation: crissCrossRaceAnimation,
-      vimeoId: undefined,
+      vimeoId: '514792338',
+      youtube: 'https://youtu.be/tIkVKUcw5P8',
       repetition: '',
       rest: '',
       instruction:
@@ -7576,7 +7587,8 @@ const xL = {
       id: 1,
       title: 'XL',
       animation: xLAnimation,
-      vimeoId: undefined,
+      vimeoId: '514792118',
+      youtube: 'https://youtu.be/1m080Omx2bU',
       repetition: '',
       rest: '',
       instruction:
@@ -7586,7 +7598,8 @@ const xL = {
       id: 2,
       title: 'Avec une passe par dessus',
       animation: xLUPAnimation,
-      vimeoId: undefined,
+      vimeoId: '514792161',
+      youtube: 'https://youtu.be/T5CGX-ZM0Do',
       repetition: '',
       rest: '',
       instruction:
@@ -7712,7 +7725,8 @@ const breakLong = {
       id: 1,
       title: 'Continuité dans le Break',
       animation: breakContinuationAnimation,
-      vimeoId: undefined,
+      vimeoId: '514791956',
+      youtube: 'https://youtu.be/CBA3O8v3XVk',
       repetition: '',
       rest: '',
       instruction:
@@ -7722,7 +7736,8 @@ const breakLong = {
       id: 2,
       title: 'Longues Courbées',
       animation: crocodileAnimation,
-      vimeoId: undefined,
+      vimeoId: '514791989',
+      youtube: 'https://youtu.be/sKu13sXrT5o',
       repetition: '',
       rest: '',
       instruction:

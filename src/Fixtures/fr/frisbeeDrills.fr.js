@@ -5389,7 +5389,7 @@ const aussieDrill = {
   steps: [
     {
       id: 1,
-      title: "initiation ludique à l'Ultimate",
+      title: "Initiation ludique à l'Ultimate",
       animation: aussieRules,
       youtube: 'https://youtu.be/HzhrlRZSt4g',
       vimeoId: '514792268',
@@ -7326,7 +7326,7 @@ const arrow = {
   title: 'La Flèche',
   image: 'https://zupimages.net/up/20/51/khgg.jpg',
   description: "L'objectif est de travailler à l'exécution d'un cut dans la endzone",
-  minimalPlayersNumber: 8,
+  minimalPlayersNumber: 6,
   inGame: undefined,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disque',

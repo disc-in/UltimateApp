@@ -7218,7 +7218,7 @@ const arrow = {
   title: 'The Arrow',
   image: 'https://zupimages.net/up/20/51/khgg.jpg',
   description: 'The goal is to work on the execution of a cut in the endzone',
-  minimalPlayersNumber: 8,
+  minimalPlayersNumber: 6,
   inGame: undefined,
   equipmentLabel: EquipmentLabels.BASIC,
   equipment: '1 disc',

@@ -229,6 +229,15 @@ export const tactics = [
         illustration: 'https://zupimages.net/up/20/30/gbjz.jpg',
         time: '15:42',
       },
+      {
+        id: 2,
+        title: 'Prise de Décision',
+        text: 'Disc In',
+        video: '514895844',
+        youtube: 'https://youtu.be/PyTaVjAP378',
+        illustration: 'https://zupimages.net/up/21/07/0ehw.jpg',
+        time: '1:18',
+      },
     ],
   },
   {

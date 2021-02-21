@@ -211,6 +211,15 @@ export const tactics = [
         illustration: 'https://zupimages.net/up/20/30/gbjz.jpg',
         time: '15:42',
       },
+      {
+        id: 2,
+        title: 'Decision Making',
+        text: 'Disc In',
+        video: '514895844',
+        youtube: 'https://zupimages.net/up/21/07/0ehw.jpg',
+        illustration: 'https://zupimages.net/up/21/07/0ehw.jpg',
+        time: '1:18',
+      },
     ],
   },
   {

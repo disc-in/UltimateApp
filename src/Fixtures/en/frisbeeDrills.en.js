@@ -5028,7 +5028,7 @@ const basicThrowsDrill = {
       title: 'Cardinal Point',
       animation: cardinalAnimation,
       vimeoId: '518050633',
-      youtube: 'https://youtu.be/56QMTXdSkAQ',
+      youtube: 'https://youtu.be/_W8LUykFCHA',
       repetition: '',
       rest: '',
       instruction:
@@ -7645,6 +7645,39 @@ const breakLong = {
   ],
 };
 
+const longShotAnalyse = {
+  id: 1064,
+  type: DrillTypes.FRISBEE,
+  visibleInList: true,
+  author: '',
+  title: 'Analysis & Long',
+  image: 'https://zupimages.net/up/21/09/5kq6.png',
+  description:
+    "Exercise to learn how to quickly identify a situation when you want to throw a long pass. It is necessary to know as quickly as possible where by the cutter and what the marker offers",
+  minimalPlayersNumber: 4,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '10 cones - 4 discs',
+  durationInMinutes: 15,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.HANDLING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.ADVANCED,
+  steps: [
+    {
+      id: 1,
+      title: 'Analysis & Long',
+      animation: breakContinuationAnimation,
+      vimeoId: '518051834',
+      youtube: 'https://youtu.be/mQnMEAlyWBA',
+      repetition: '',
+      rest: '',
+      instruction:
+        'The first thrower makes a break. The receiver must then make a long throw, as fast as possible, which must remain on the break side. the second receiver tries to find the best timing for his run',
+    },
+  ],
+};
+
 const normalGame = {
   id: 2001,
   type: DrillTypes.FRISBEE,
@@ -8879,6 +8912,7 @@ export const drills = [
   square,
   triangleWarmUp,
   breakLong,
+  longShotAnalyse,
 
   // warmup
   warmupDrill,

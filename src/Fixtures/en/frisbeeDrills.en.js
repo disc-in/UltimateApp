@@ -131,6 +131,7 @@ import rondoFunAnimation from '../Animation/RondoFun';
 import triangleWarmUpAnimation from '../Animation/TriangleWarmUp';
 import breakContinuationAnimation from '../Animation/BreakContinuation';
 import crocodileAnimation from '../Animation/Crocodile';
+import longShotAnalyseAnimation from '../Animation/LongShot';
 
 const stabilityDrill = {
   id: 1,
@@ -7667,13 +7668,13 @@ const longShotAnalyse = {
     {
       id: 1,
       title: 'Analysis & Long',
-      animation: breakContinuationAnimation,
+      animation: longShotAnalyseAnimation,
       vimeoId: '518051834',
       youtube: 'https://youtu.be/mQnMEAlyWBA',
       repetition: '',
       rest: '',
       instruction:
-        'The first thrower makes a break. The receiver must then make a long throw, as fast as possible, which must remain on the break side. the second receiver tries to find the best timing for his run',
+        'A thrower will make 4 up-line cuts to throw longs. The last of the stack will go long in one of the two zones trying to have the best possible timing. If the defender making the mark jumps to prevent the long, the thrower must make a fake before throwing',
     },
   ],
 };

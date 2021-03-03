@@ -7765,7 +7765,7 @@ const longShotAnalyse = {
   title: 'Analyse & Longue',
   image: 'https://zupimages.net/up/21/09/5kq6.png',
   description:
-    "Exercice pour apprendre à identifier rapidement une situation dans lorsque l'on souhaite lancer une passe longue. Il faut savoir le plus rapidement possible où par le cutteur et que me propose la marque",
+    "Apprendre à analyser rapidement les options de passe lorsqu'on souhaite lancer une passe longue. Le lanceur doit observer le plus rapidement possible la course du cutter et ce que la marque lui permet",
   minimalPlayersNumber: 4,
   inGame: undefined,
   equipmentLabel: EquipmentLabels.BASIC,
@@ -7785,7 +7785,7 @@ const longShotAnalyse = {
       repetition: '',
       rest: '',
       instruction:
-        "Un lanceur va effectuer 4 cuts up-line pour lancer une longue. Le dernier du stack va partir en longue dans l'une des deux zones en essayant d'avoir le meilleur timing possible. Si le défenseur faisant la marque se jette pour empêcher la longue, le lanceur doit effectuer une feinte avant de lancer",
+        "Un lanceur va effectuer 4 cuts up-line pour lancer des longues. Le dernier cutter du stack démarre sa course en longue dans l'une des deux zones en essayant d'avoir le meilleur timing possible. Si le marqueur se jette pour empêcher la longue, le lanceur doit effectuer une feinte avant de lancer",
     },
   ],
 };

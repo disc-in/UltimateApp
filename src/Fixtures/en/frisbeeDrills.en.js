@@ -7654,7 +7654,7 @@ const longShotAnalyse = {
   title: 'Analysis & Long',
   image: 'https://zupimages.net/up/21/09/5kq6.png',
   description:
-    'Exercise to learn how to quickly identify a situation when you want to throw a long pass. It is necessary to know as quickly as possible where by the cutter and what the marker offers',
+    'Quickly analyse the situation when you want to throw a long pass. It is necessary to know as quickly as possible where the cutter is heading to and what possibilities the marker offers',
   minimalPlayersNumber: 4,
   inGame: undefined,
   equipmentLabel: EquipmentLabels.BASIC,
@@ -7674,7 +7674,7 @@ const longShotAnalyse = {
       repetition: '',
       rest: '',
       instruction:
-        'A thrower will make 4 up-line cuts to throw longs. The last of the stack will go long in one of the two zones trying to have the best possible timing. If the defender making the mark jumps to prevent the long, the thrower must make a fake before throwing',
+        'A thrower makes 4 up-line cuts to throw long passes. The last cutter of the stack goes long towards one of the two zones with the best possible timing. If the marker jumps to prevent the long throw, the thrower must make a fake before throwing',
     },
   ],
 };

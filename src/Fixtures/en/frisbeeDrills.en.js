@@ -7654,7 +7654,7 @@ const longShotAnalyse = {
   title: 'Analysis & Long',
   image: 'https://zupimages.net/up/21/09/5kq6.png',
   description:
-    "Exercise to learn how to quickly identify a situation when you want to throw a long pass. It is necessary to know as quickly as possible where by the cutter and what the marker offers",
+    'Exercise to learn how to quickly identify a situation when you want to throw a long pass. It is necessary to know as quickly as possible where by the cutter and what the marker offers',
   minimalPlayersNumber: 4,
   inGame: undefined,
   equipmentLabel: EquipmentLabels.BASIC,

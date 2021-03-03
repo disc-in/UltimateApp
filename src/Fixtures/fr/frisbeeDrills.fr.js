@@ -7785,7 +7785,7 @@ const longShotAnalyse = {
       repetition: '',
       rest: '',
       instruction:
-        'Un lanceur va effectuer 4 cuts up-line pour lancer une longue. Le dernier du stack va partir en longue dans l\'une des deux zones en essayant d\'avoir le meilleur timing possible. Si le défenseur faisant la marque se jette pour empêcher la longue, le lanceur doit effectuer une feinte avant de lancer',
+        "Un lanceur va effectuer 4 cuts up-line pour lancer une longue. Le dernier du stack va partir en longue dans l'une des deux zones en essayant d'avoir le meilleur timing possible. Si le défenseur faisant la marque se jette pour empêcher la longue, le lanceur doit effectuer une feinte avant de lancer",
     },
   ],
 };

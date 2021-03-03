@@ -314,7 +314,7 @@ const longShot = {
                 null,
             ],
        ],
-    ids: [ "triangle", "triangle", "triangle", "triangle", "triangle", "triangle", "triangle", "triangle", "triangle", "triangle", "triangle", "triangle", "triangle", "triangle", "triangle", "triangle", "offense", "offense", "offense", "offense", "defense", "offense", "disc", "disc", "disc" ],
+    ids: [ 'triangle', 'triangle', 'triangle', 'triangle', 'triangle', 'triangle', 'triangle', 'triangle', 'triangle', 'triangle', 'triangle', 'triangle', 'triangle', 'triangle', 'triangle', 'triangle', 'offense', 'offense', 'offense', 'offense', 'defense', 'offense', 'disc', 'disc', 'disc' ],
     texts: [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 1, 2, 3, 4, 1, 5, 1, 2, 3],
     background: 'endzone',
     };

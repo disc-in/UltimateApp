@@ -863,7 +863,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
                 Object {
                   "flex": 3,
                   "flexWrap": "wrap",
-                  "fontSize": 20,
+                  "fontSize": 16,
                   "fontWeight": "bold",
                 }
               }
@@ -998,7 +998,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
                 Object {
                   "flex": 3,
                   "flexWrap": "wrap",
-                  "fontSize": 20,
+                  "fontSize": 16,
                   "fontWeight": "bold",
                 }
               }
@@ -1472,7 +1472,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
                 Object {
                   "flex": 3,
                   "flexWrap": "wrap",
-                  "fontSize": 20,
+                  "fontSize": 16,
                   "fontWeight": "bold",
                 }
               }
@@ -1607,7 +1607,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
                 Object {
                   "flex": 3,
                   "flexWrap": "wrap",
-                  "fontSize": 20,
+                  "fontSize": 16,
                   "fontWeight": "bold",
                 }
               }
@@ -1742,7 +1742,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
                 Object {
                   "flex": 3,
                   "flexWrap": "wrap",
-                  "fontSize": 20,
+                  "fontSize": 16,
                   "fontWeight": "bold",
                 }
               }
@@ -2216,7 +2216,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
                 Object {
                   "flex": 3,
                   "flexWrap": "wrap",
-                  "fontSize": 20,
+                  "fontSize": 16,
                   "fontWeight": "bold",
                 }
               }
@@ -2351,7 +2351,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
                 Object {
                   "flex": 3,
                   "flexWrap": "wrap",
-                  "fontSize": 20,
+                  "fontSize": 16,
                   "fontWeight": "bold",
                 }
               }
@@ -2486,7 +2486,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
                 Object {
                   "flex": 3,
                   "flexWrap": "wrap",
-                  "fontSize": 20,
+                  "fontSize": 16,
                   "fontWeight": "bold",
                 }
               }

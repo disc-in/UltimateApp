@@ -131,7 +131,7 @@ import rondoFunAnimation from '../Animation/RondoFun';
 import triangleWarmUpAnimation from '../Animation/TriangleWarmUp';
 import breakContinuationAnimation from '../Animation/BreakContinuation';
 import crocodileAnimation from '../Animation/Crocodile';
-import longShotAnalyseAnimation from '../Animation/LongShot';
+// import longShotAnalyseAnimation from '../Animation/LongShot';
 
 const stabilityDrill = {
   id: 1,
@@ -7668,7 +7668,7 @@ const longShotAnalyse = {
     {
       id: 1,
       title: 'Analysis & Long',
-      animation: longShotAnalyseAnimation,
+      animation: undefined,
       vimeoId: '518051834',
       youtube: 'https://youtu.be/mQnMEAlyWBA',
       repetition: '',

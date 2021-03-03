@@ -1051,7 +1051,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                   Object {
                     "flex": 3,
                     "flexWrap": "wrap",
-                    "fontSize": 20,
+                    "fontSize": 16,
                     "fontWeight": "bold",
                   }
                 }
@@ -1187,7 +1187,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                   Object {
                     "flex": 3,
                     "flexWrap": "wrap",
-                    "fontSize": 20,
+                    "fontSize": 16,
                     "fontWeight": "bold",
                   }
                 }
@@ -2236,7 +2236,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                   Object {
                     "flex": 3,
                     "flexWrap": "wrap",
-                    "fontSize": 20,
+                    "fontSize": 16,
                     "fontWeight": "bold",
                   }
                 }
@@ -2372,7 +2372,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                   Object {
                     "flex": 3,
                     "flexWrap": "wrap",
-                    "fontSize": 20,
+                    "fontSize": 16,
                     "fontWeight": "bold",
                   }
                 }
@@ -3642,7 +3642,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                   Object {
                     "flex": 3,
                     "flexWrap": "wrap",
-                    "fontSize": 20,
+                    "fontSize": 16,
                     "fontWeight": "bold",
                   }
                 }
@@ -3778,7 +3778,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                   Object {
                     "flex": 3,
                     "flexWrap": "wrap",
-                    "fontSize": 20,
+                    "fontSize": 16,
                     "fontWeight": "bold",
                   }
                 }
@@ -5034,7 +5034,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                   Object {
                     "flex": 3,
                     "flexWrap": "wrap",
-                    "fontSize": 20,
+                    "fontSize": 16,
                     "fontWeight": "bold",
                   }
                 }
@@ -5170,7 +5170,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                   Object {
                     "flex": 3,
                     "flexWrap": "wrap",
-                    "fontSize": 20,
+                    "fontSize": 16,
                     "fontWeight": "bold",
                   }
                 }

@@ -214,7 +214,7 @@ exports[`<DrillList /> renders correctly 1`] = `
               Object {
                 "flex": 3,
                 "flexWrap": "wrap",
-                "fontSize": 20,
+                "fontSize": 16,
                 "fontWeight": "bold",
               }
             }

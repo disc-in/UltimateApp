@@ -40,7 +40,7 @@ export const itemContentContainer = {
 export const title = {
   flex: 3,
   fontWeight: 'bold',
-  fontSize: theme.FONT_SIZE_LARGE,
+  fontSize: theme.FONT_SIZE_MEDIUM,
   flexWrap: 'wrap',
 };
 export const source = {

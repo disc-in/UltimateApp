@@ -8288,7 +8288,7 @@ const secondU17 = {
   title: 'Apprendre les fondamentaux',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: "Un deuxième entrainement pour apprendre à s'amuser avec un disque",
-  drills: [threePersonDrill, racingWarmUP, dishieLine, treasureHuntDrill, normalGame],
+  drills: [racingWarmUP, threePersonDrill, dishieLine, treasureHuntDrill, normalGame],
 };
 
 const thirdU17 = {

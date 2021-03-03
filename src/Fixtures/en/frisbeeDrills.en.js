@@ -8177,7 +8177,7 @@ const secondU17 = {
   title: 'Learning the fundamentals',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'A second practice to enjoy playing with the disc',
-  drills: [threePersonDrill, racingWarmUP, dishieLine, treasureHuntDrill, normalGame],
+  drills: [racingWarmUP, threePersonDrill, dishieLine, treasureHuntDrill, normalGame],
 };
 
 const thirdU17 = {

@@ -131,6 +131,7 @@ import rondoFunAnimation from '../Animation/RondoFun';
 import triangleWarmUpAnimation from '../Animation/TriangleWarmUp';
 import breakContinuationAnimation from '../Animation/BreakContinuation';
 import crocodileAnimation from '../Animation/Crocodile';
+import longShotAnalyseAnimation from '../Animation/LongShot';
 
 const stabilityDrill = {
   id: 1,
@@ -5027,8 +5028,8 @@ const basicThrowsDrill = {
       id: 4,
       title: 'Cardinal Point',
       animation: cardinalAnimation,
-      vimeoId: '462694734',
-      youtube: 'https://youtu.be/56QMTXdSkAQ',
+      vimeoId: '518050633',
+      youtube: 'https://youtu.be/_W8LUykFCHA',
       repetition: '',
       rest: '',
       instruction:
@@ -5544,8 +5545,8 @@ const dishieChainDrill = {
       id: 1,
       title: 'Focus on Offense',
       animation: dishiesChain,
-      vimeoId: '462694949',
-      youtube: 'https://youtu.be/a0CrT_EqkKI',
+      vimeoId: '518050870',
+      youtube: 'https://youtu.be/jIcpB_k4kGA',
       repetition: '',
       rest: '',
       instruction:
@@ -5555,8 +5556,8 @@ const dishieChainDrill = {
       id: 2,
       title: 'Adding a Poach',
       animation: dishiesPoach,
-      vimeoId: '462697155',
-      youtube: 'https://youtu.be/BkZw53MHTyI',
+      vimeoId: '518050989',
+      youtube: 'https://youtu.be/0GxcyT6yKo0',
       repetition: '',
       rest: '',
       instruction:
@@ -6511,7 +6512,8 @@ const racingWarmUP = {
       id: 1,
       title: 'Clap their hand',
       animation: bottleAnimation,
-      vimeoId: undefined,
+      youtube: 'https://youtu.be/mHru7fVbX2I',
+      vimeoId: '518050743',
       repetition: '',
       rest: '',
       instruction:
@@ -6941,6 +6943,8 @@ const adaptToTheMark = {
       id: 1,
       title: 'Adaptation to the Mark',
       animation: adaptMark,
+      youtube: 'https://youtu.be/1TplIcoBgPI',
+      vimeoId: '518050480',
       repetition: '',
       rest: '',
       instruction:
@@ -7002,6 +7006,8 @@ const fish = {
       id: 1,
       title: 'Fishing',
       animation: fishAnimation,
+      youtube: 'https://youtu.be/3fipuDl29tM',
+      vimeoId: '518051119',
       repetition: '',
       rest: '',
       instruction:
@@ -7383,7 +7389,8 @@ const passMouv = {
       id: 2,
       title: 'Pass with an angle',
       animation: unoAnimation,
-      vimeoId: undefined,
+      youtube: 'https://youtu.be/8zvW5QrYrLQ',
+      vimeoId: '518051222',
       repetition: '',
       rest: '',
       instruction:
@@ -7393,7 +7400,8 @@ const passMouv = {
       id: 3,
       title: 'With a defender',
       animation: unoDefenseAnimation,
-      vimeoId: undefined,
+      youtube: 'https://youtu.be/zrwKprk1qFc',
+      vimeoId: '518051314',
       repetition: '',
       rest: '',
       instruction:
@@ -7521,7 +7529,8 @@ const square = {
       id: 1,
       title: 'The Square',
       animation: squareAnimation,
-      vimeoId: undefined,
+      youtube: 'https://youtu.be/t5_vkJxhLxM',
+      vimeoId: '518051744',
       repetition: '',
       rest: '',
       instruction:
@@ -7531,17 +7540,19 @@ const square = {
       id: 2,
       title: 'With a fake',
       animation: squareFakeAnimation,
-      vimeoId: undefined,
+      youtube: 'https://youtu.be/UQ9wwzvG9mU',
+      vimeoId: '518051532',
       repetition: '',
       rest: '',
       instruction:
-        'Same principle. From now on, the rider has to go in one direction. When the thrower makes a realistic feint, the attacker returns to the centre of the ridge',
+        'Same principle. From now on, the rider has to go in one direction. When the thrower makes a realistic fake, the attacker returns to the centre of the ridge',
     },
     {
       id: 3,
       title: 'Dishy Square',
       animation: squareDishieAnimation,
-      vimeoId: undefined,
+      youtube: 'https://youtu.be/LTbrubk-mJ0',
+      vimeoId: '518051422',
       repetition: '',
       rest: '',
       instruction:
@@ -7631,6 +7642,39 @@ const breakLong = {
       rest: '',
       instruction:
         'A first pass is made in to the attacker. They try to make a long pass that ends on the opposite side of the field. In the middle column, there is a defender who must stay in this column. If they intercept the disc, the thrower will have to take his role',
+    },
+  ],
+};
+
+const longShotAnalyse = {
+  id: 1064,
+  type: DrillTypes.FRISBEE,
+  visibleInList: true,
+  author: '',
+  title: 'Analysis & Long',
+  image: 'https://zupimages.net/up/21/09/5kq6.png',
+  description:
+    'Quickly analyse the situation when you want to throw a long pass. It is necessary to know as quickly as possible where the cutter is heading to and what possibilities the marker offers',
+  minimalPlayersNumber: 4,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '10 cones - 4 discs',
+  durationInMinutes: 15,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.HANDLING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.ADVANCED,
+  steps: [
+    {
+      id: 1,
+      title: 'Analysis & Long',
+      animation: longShotAnalyseAnimation,
+      vimeoId: '518051834',
+      youtube: 'https://youtu.be/mQnMEAlyWBA',
+      repetition: '',
+      rest: '',
+      instruction:
+        'A thrower makes 4 up-line cuts to throw long passes. The last cutter of the stack goes long towards one of the two zones with the best possible timing. If the marker jumps to prevent the long throw, the thrower must make a fake before throwing',
     },
   ],
 };
@@ -8133,7 +8177,7 @@ const secondU17 = {
   title: 'Learning the fundamentals',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: 'A second practice to enjoy playing with the disc',
-  drills: [threePersonDrill, racingWarmUP, dishieLine, treasureHuntDrill, normalGame],
+  drills: [racingWarmUP, threePersonDrill, dishieLine, treasureHuntDrill, normalGame],
 };
 
 const thirdU17 = {
@@ -8869,6 +8913,7 @@ export const drills = [
   square,
   triangleWarmUp,
   breakLong,
+  longShotAnalyse,
 
   // warmup
   warmupDrill,

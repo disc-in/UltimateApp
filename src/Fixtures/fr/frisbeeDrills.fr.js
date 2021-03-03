@@ -131,6 +131,7 @@ import rondoFunAnimation from '../Animation/RondoFun';
 import triangleWarmUpAnimation from '../Animation/TriangleWarmUp';
 import breakContinuationAnimation from '../Animation/BreakContinuation';
 import crocodileAnimation from '../Animation/Crocodile';
+import longShotAnalyseAnimation from '../Animation/LongShot';
 
 const stabilityDrill = {
   id: 1,
@@ -5121,8 +5122,8 @@ const basicThrowsDrill = {
       id: 4,
       title: 'Les Points Cardinaux',
       animation: cardinalAnimation,
-      vimeoId: '462694734',
-      youtube: 'https://youtu.be/56QMTXdSkAQ',
+      vimeoId: '518050633',
+      youtube: 'https://youtu.be/_W8LUykFCHA',
       repetition: '',
       rest: '',
       instruction:
@@ -5644,8 +5645,8 @@ const dishieChainDrill = {
       id: 1,
       title: 'La Chaîne des Catapultes',
       animation: dishiesChain,
-      vimeoId: '462694949',
-      youtube: 'https://youtu.be/a0CrT_EqkKI',
+      vimeoId: '518050870',
+      youtube: 'https://youtu.be/jIcpB_k4kGA',
       repetition: '',
       rest: '',
       instruction:
@@ -5655,8 +5656,8 @@ const dishieChainDrill = {
       id: 2,
       title: 'Éclater un Poach',
       animation: dishiesPoach,
-      vimeoId: '462697155',
-      youtube: 'https://youtu.be/BkZw53MHTyI',
+      vimeoId: '518050989',
+      youtube: 'https://youtu.be/0GxcyT6yKo0',
       repetition: '',
       rest: '',
       instruction:
@@ -6613,7 +6614,8 @@ const racingWarmUP = {
       id: 1,
       title: 'Touche ses mains',
       animation: bottleAnimation,
-      vimeoId: undefined,
+      youtube: 'https://youtu.be/mHru7fVbX2I',
+      vimeoId: '518050743',
       repetition: '',
       rest: '',
       instruction:
@@ -7046,6 +7048,8 @@ const adaptToTheMark = {
       id: 1,
       title: 'Adaptation à la marque',
       animation: adaptMark,
+      youtube: 'https://youtu.be/1TplIcoBgPI',
+      vimeoId: '518050480',
       repetition: '',
       rest: '',
       instruction:
@@ -7107,6 +7111,8 @@ const fish = {
       id: 1,
       title: 'La Pêche',
       animation: fishAnimation,
+      youtube: 'https://youtu.be/3fipuDl29tM',
+      vimeoId: '518051119',
       repetition: '',
       rest: '',
       instruction:
@@ -7491,7 +7497,8 @@ const passMouv = {
       id: 2,
       title: 'Passe avec un angle',
       animation: unoAnimation,
-      vimeoId: undefined,
+      youtube: 'https://youtu.be/8zvW5QrYrLQ',
+      vimeoId: '518051222',
       repetition: '',
       rest: '',
       instruction:
@@ -7501,7 +7508,8 @@ const passMouv = {
       id: 3,
       title: 'Avec un défenseur',
       animation: unoDefenseAnimation,
-      vimeoId: undefined,
+      youtube: 'https://youtu.be/zrwKprk1qFc',
+      vimeoId: '518051314',
       repetition: '',
       rest: '',
       instruction:
@@ -7629,9 +7637,10 @@ const square = {
   steps: [
     {
       id: 1,
-      title: 'Le carré',
+      title: 'Le Carré',
       animation: squareAnimation,
-      vimeoId: undefined,
+      youtube: 'https://youtu.be/t5_vkJxhLxM',
+      vimeoId: '518051744',
       repetition: '',
       rest: '',
       instruction:
@@ -7641,7 +7650,8 @@ const square = {
       id: 2,
       title: 'Avec une Feinte',
       animation: squareFakeAnimation,
-      vimeoId: undefined,
+      youtube: 'https://youtu.be/UQ9wwzvG9mU',
+      vimeoId: '518051532',
       repetition: '',
       rest: '',
       instruction:
@@ -7651,7 +7661,8 @@ const square = {
       id: 3,
       title: 'Le Carré à Dishy',
       animation: squareDishieAnimation,
-      vimeoId: undefined,
+      youtube: 'https://youtu.be/LTbrubk-mJ0',
+      vimeoId: '518051422',
       repetition: '',
       rest: '',
       instruction:
@@ -7742,6 +7753,39 @@ const breakLong = {
       rest: '',
       instruction:
         "Une première passe est effectuée dans la course du receveur. Celui-ci va chercher à faire une passe en longue qui finit dans la colonne opposée. Dans la colonne du milieu se trouve un défenseur qui doit se déplacer exclusivement dans la colonne centrale. S'il intercepte le frisbee, le lanceur devra prendre sa place",
+    },
+  ],
+};
+
+const longShotAnalyse = {
+  id: 1064,
+  type: DrillTypes.FRISBEE,
+  visibleInList: true,
+  author: '',
+  title: 'Analyse & Longue',
+  image: 'https://zupimages.net/up/21/09/5kq6.png',
+  description:
+    "Apprendre à analyser rapidement les options de passe lorsqu'on souhaite lancer une passe longue. Le lanceur doit observer le plus rapidement possible la course du cutter et ce que la marque lui permet",
+  minimalPlayersNumber: 4,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '10 plots - 4 disques',
+  durationInMinutes: 15,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.HANDLING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.ADVANCED,
+  steps: [
+    {
+      id: 1,
+      title: 'Analyse & Longue',
+      animation: longShotAnalyseAnimation,
+      vimeoId: '518051834',
+      youtube: 'https://youtu.be/mQnMEAlyWBA',
+      repetition: '',
+      rest: '',
+      instruction:
+        "Un lanceur va effectuer 4 cuts up-line pour lancer des longues. Le dernier cutter du stack démarre sa course en longue dans l'une des deux zones en essayant d'avoir le meilleur timing possible. Si le marqueur se jette pour empêcher la longue, le lanceur doit effectuer une feinte avant de lancer",
     },
   ],
 };
@@ -8244,7 +8288,7 @@ const secondU17 = {
   title: 'Apprendre les fondamentaux',
   image: 'https://zupimages.net/up/20/19/su0s.jpg',
   description: "Un deuxième entrainement pour apprendre à s'amuser avec un disque",
-  drills: [threePersonDrill, racingWarmUP, dishieLine, treasureHuntDrill, normalGame],
+  drills: [racingWarmUP, threePersonDrill, dishieLine, treasureHuntDrill, normalGame],
 };
 
 const thirdU17 = {
@@ -8986,6 +9030,7 @@ export const drills = [
   square,
   triangleWarmUp,
   breakLong,
+  longShotAnalyse,
 
   // warmup
   warmupDrill,

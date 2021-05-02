@@ -14,21 +14,25 @@ exports[`<BackgroundPicker /> renders correctly 1`] = `
       Array [
         Object {
           "label": "Rectangle",
+          "testID": undefined,
           "textColor": undefined,
           "value": "rectangle",
         },
         Object {
           "label": "Endzone",
+          "testID": undefined,
           "textColor": undefined,
           "value": "endzone",
         },
         Object {
           "label": "3/4 field",
+          "testID": undefined,
           "textColor": undefined,
           "value": "three quarters field",
         },
         Object {
           "label": "Empty",
+          "testID": undefined,
           "textColor": undefined,
           "value": "empty",
         },

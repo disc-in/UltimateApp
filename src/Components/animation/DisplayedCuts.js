@@ -29,7 +29,7 @@ class DisplayedCuts extends React.Component {
               width: cut.d1,
               top: cut.top1,
               left: cut.left1,
-              transform: [{ rotate: cut.angle1.__getValue() }],
+              transform: [{ rotate: `${cut.angle1.__getValue()}rad` }],
             },
           ]}
         />
@@ -40,7 +40,7 @@ class DisplayedCuts extends React.Component {
               width: cut.d2,
               top: cut.top2,
               left: cut.left2,
-              transform: [{ rotate: cut.angle2.__getValue() }],
+              transform: [{ rotate: `${cut.angle2.__getValue()}rad` }],
             },
           ]}
         />

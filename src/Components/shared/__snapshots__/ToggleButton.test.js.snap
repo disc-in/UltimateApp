@@ -70,17 +70,26 @@ exports[`<ToggleButton /> renders correctly 1`] = `
             },
             Array [
               Object {
-                "borderColor": "#A6A6A6",
                 "borderWidth": 0.5,
               },
               Object {
                 "borderBottomRightRadius": 0,
                 "borderTopRightRadius": 0,
               },
-              Object {
-                "backgroundColor": "#e5e5e5",
-                "opacity": 0.8,
-              },
+              Array [
+                Object {
+                  "borderColor": "#A6A6A6",
+                  "borderWidth": 0.5,
+                },
+                Object {
+                  "borderBottomRightRadius": 0,
+                  "borderTopRightRadius": 0,
+                },
+                Object {
+                  "backgroundColor": "#e5e5e5",
+                  "opacity": 0.8,
+                },
+              ],
             ],
           ],
         ],
@@ -146,7 +155,6 @@ exports[`<ToggleButton /> renders correctly 1`] = `
             },
             Array [
               Object {
-                "borderColor": "#A6A6A6",
                 "borderWidth": 0.5,
               },
               Object {
@@ -154,7 +162,18 @@ exports[`<ToggleButton /> renders correctly 1`] = `
                 "borderLeftWidth": 0,
                 "borderTopLeftRadius": 0,
               },
-              undefined,
+              Array [
+                Object {
+                  "borderColor": "#A6A6A6",
+                  "borderWidth": 0.5,
+                },
+                Object {
+                  "borderBottomLeftRadius": 0,
+                  "borderLeftWidth": 0,
+                  "borderTopLeftRadius": 0,
+                },
+                undefined,
+              ],
             ],
           ],
         ],

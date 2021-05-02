@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ScrollView, StyleSheet, Text, View, TouchableOpacity, FlatList } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, FlatList } from 'react-native';
 import Accordion from 'react-native-collapsible/Accordion';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
@@ -54,7 +54,7 @@ const ProgramList = (props) => {
   };
 
   return (
-    <ScrollView style={styles.programList}>
+    <View style={styles.programList}>
       <Accordion
         activeSections={activeSections}
         sections={displayedPrograms}
@@ -66,7 +66,7 @@ const ProgramList = (props) => {
         onChange={setSections}
         containerStyle={styles.accordionContainerStyle}
       />
-    </ScrollView>
+    </View>
   );
 };
 

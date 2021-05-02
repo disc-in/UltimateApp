@@ -618,6 +618,8 @@ exports[`<HomePage /> renders correctly 1`] = `
                         "color": "#000000",
                         "fontFamily": "System",
                         "fontWeight": "400",
+                      },
+                      Object {
                         "textAlign": "left",
                       },
                       Array [
@@ -656,6 +658,8 @@ exports[`<HomePage /> renders correctly 1`] = `
                         "color": "#000000",
                         "fontFamily": "System",
                         "fontWeight": "400",
+                      },
+                      Object {
                         "textAlign": "left",
                       },
                       Array [
@@ -681,7 +685,7 @@ exports[`<HomePage /> renders correctly 1`] = `
           accessibilityRole="button"
           accessibilityState={
             Object {
-              "selected": true,
+              "selected": false,
             }
           }
           accessible={true}
@@ -857,6 +861,8 @@ exports[`<HomePage /> renders correctly 1`] = `
                         "color": "#000000",
                         "fontFamily": "System",
                         "fontWeight": "400",
+                      },
+                      Object {
                         "textAlign": "left",
                       },
                       Array [
@@ -895,6 +901,8 @@ exports[`<HomePage /> renders correctly 1`] = `
                         "color": "#000000",
                         "fontFamily": "System",
                         "fontWeight": "400",
+                      },
+                      Object {
                         "textAlign": "left",
                       },
                       Array [
@@ -920,7 +928,7 @@ exports[`<HomePage /> renders correctly 1`] = `
           accessibilityRole="button"
           accessibilityState={
             Object {
-              "selected": true,
+              "selected": false,
             }
           }
           accessible={true}
@@ -1096,6 +1104,8 @@ exports[`<HomePage /> renders correctly 1`] = `
                         "color": "#000000",
                         "fontFamily": "System",
                         "fontWeight": "400",
+                      },
+                      Object {
                         "textAlign": "left",
                       },
                       Array [
@@ -1134,6 +1144,8 @@ exports[`<HomePage /> renders correctly 1`] = `
                         "color": "#000000",
                         "fontFamily": "System",
                         "fontWeight": "400",
+                      },
+                      Object {
                         "textAlign": "left",
                       },
                       Array [

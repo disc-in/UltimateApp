@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     backgroundColor: theme.COLOR_PRIMARY_LIGHT,
     width: '100%',
+    minHeight: 40,
   },
   programTitle: {
     fontSize: theme.FONT_SIZE_LARGE,

@@ -2,7 +2,10 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "jsx": "react",
-    "lib": ["dom", "esnext"],
+    "lib": [
+      "dom",
+      "esnext"
+    ],
     "moduleResolution": "node",
     "noEmit": true,
     "skipLibCheck": true,
@@ -16,5 +19,10 @@
     "alwaysStrict": true,
     "baseUrl": "./"
   },
-  "exclude": ["node_modules", "babel.config.js", "**/__mocks__/*"]
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "**/__mocks__/*"
+  ],
+  "extends": "expo/tsconfig.base"
 }

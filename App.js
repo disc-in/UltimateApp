@@ -3,7 +3,6 @@ import 'react-native-gesture-handler';
 import { PersistGate } from 'redux-persist/integration/react';
 import { Platform, ActivityIndicator } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { enableScreens } from 'react-native-screens';
 import { Provider as ReduxProvider } from 'react-redux';
 import { Provider as PaperProvider } from 'react-native-paper';
 import * as Linking from 'expo-linking';
@@ -13,8 +12,6 @@ import { store, persistor } from './src/Store/configureStore';
 import FlashMessage from './src/utils/flashMessage';
 import { EXPO_FIREBASE_URL_PREFIX, EXPO_FIREBASE_DOMAIN_URI } from '@env';
 import theme from './src/styles/theme.style';
-
-if (Platform.OS !== 'web') enableScreens();
 
 const App = (props) => {
   const linking = {

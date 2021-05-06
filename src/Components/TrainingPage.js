@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import ViewPager from '@react-native-community/viewpager';
+import PagerView from '@react-native-community/viewpager';
 
 import I18n from '../utils/i18n';
 import { DrillTypes } from '../Fixtures/config';
@@ -124,9 +124,9 @@ const TrainingPage = (props) => {
   };
 
   return (
-    <ViewPager style={styles.trainingPage} ref={pagerRef} initialPage={initialIndex}>
+    <PagerView style={styles.trainingPage} ref={pagerRef} initialPage={initialIndex}>
       {program.trainings.map(renderTraining)}
-    </ViewPager>
+    </PagerView>
   );
 };
 

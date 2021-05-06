@@ -44,11 +44,13 @@ exports[`<TacticsPage /> renders correctly 1`] = `
           Array [
             Object {
               "label": "Vertical Stack",
+              "testID": undefined,
               "textColor": undefined,
               "value": 0,
             },
             Object {
               "label": "Horizontal Stack",
+              "testID": undefined,
               "textColor": undefined,
               "value": 1,
             },

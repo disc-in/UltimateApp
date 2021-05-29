@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 10,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "marginBottom": 5,
+      }
+    }
+  >
+    Title
+  </Text>
+  <View
+    style={
+      Array [
+        Object {
+          "borderColor": "#e5e5e5",
+          "borderRadius": 5,
+          "borderWidth": 0.5,
+          "padding": 5,
+        },
+        undefined,
+      ]
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      rejectResponderTermination={true}
+      underlineColorAndroid="transparent"
+      value="Muy title"
+    />
+  </View>
+</View>
+`;

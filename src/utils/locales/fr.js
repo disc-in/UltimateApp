@@ -191,6 +191,10 @@ export default {
     filter: 'Filtrer',
   },
   drillEditorPage: {
+    validations: {
+      alreadyExists: 'Existe déjà',
+      empty: 'Ne peut pas être vide',
+    },
     cta: 'Enregistrer',
   },
   drillPage: {

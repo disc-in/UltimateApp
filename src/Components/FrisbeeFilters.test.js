@@ -108,6 +108,7 @@ describe('<FrisbeeFilters />', () => {
         type: DrillTypes.FRISBEE,
         currentFilters: {
           selectedFavorites: false,
+          selectedCustomDrills: false,
           selectedLevels: [Levels.ADVANCED],
           selectedGoals: [],
           numberOfPlayers: undefined,
@@ -182,6 +183,7 @@ describe('<FrisbeeFilters />', () => {
         type: DrillTypes.FRISBEE,
         currentFilters: {
           selectedFavorites: false,
+          selectedCustomDrills: false,
           selectedLevels: [],
           selectedGoals: [FrisbeeGoals.HANDLING],
           numberOfPlayers: undefined,
@@ -241,6 +243,7 @@ describe('<FrisbeeFilters />', () => {
         type: DrillTypes.FRISBEE,
         currentFilters: {
           selectedFavorites: false,
+          selectedCustomDrills: false,
           selectedLevels: [],
           selectedGoals: [],
           numberOfPlayers: 5,
@@ -299,6 +302,7 @@ describe('<FrisbeeFilters />', () => {
         type: DrillTypes.FRISBEE,
         currentFilters: {
           selectedFavorites: true,
+          selectedCustomDrills: false,
           selectedLevels: [],
           selectedGoals: [],
           numberOfPlayers: undefined,
@@ -365,6 +369,7 @@ describe('<FrisbeeFilters />', () => {
         type: DrillTypes.FRISBEE,
         currentFilters: {
           selectedFavorites: false,
+          selectedCustomDrills: false,
           selectedLevels: [],
           selectedGoals: [],
           numberOfPlayers: undefined,

@@ -730,7 +730,21 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
     navigation={
       Object {
         "navigate": [MockFunction],
-        "setOptions": [MockFunction],
+        "setOptions": [MockFunction] {
+          "calls": Array [
+            Array [
+              Object {
+                "headerRight": [Function],
+              },
+            ],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+          ],
+        },
       }
     }
     onContentSizeChange={[Function]}
@@ -1339,7 +1353,30 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
     navigation={
       Object {
         "navigate": [MockFunction],
-        "setOptions": [MockFunction],
+        "setOptions": [MockFunction] {
+          "calls": Array [
+            Array [
+              Object {
+                "headerRight": [Function],
+              },
+            ],
+            Array [
+              Object {
+                "headerRight": [Function],
+              },
+            ],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+          ],
+        },
       }
     }
     onContentSizeChange={[Function]}
@@ -2083,7 +2120,30 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
     navigation={
       Object {
         "navigate": [MockFunction],
-        "setOptions": [MockFunction],
+        "setOptions": [MockFunction] {
+          "calls": Array [
+            Array [
+              Object {
+                "headerRight": [Function],
+              },
+            ],
+            Array [
+              Object {
+                "headerRight": [Function],
+              },
+            ],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+          ],
+        },
       }
     }
     onContentSizeChange={[Function]}

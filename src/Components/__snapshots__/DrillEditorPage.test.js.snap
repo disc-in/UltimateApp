@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DrillEditorPage /> renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <Text>
+    Editor
+  </Text>
+  <Text>
+    Mon drill
+  </Text>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#2a9e91",
+        "borderRadius": 5,
+        "flexDirection": "row",
+        "height": 40,
+        "justifyContent": "center",
+        "opacity": 1,
+        "paddingHorizontal": 20,
+        "paddingVertical": 10,
+        "width": "80%",
+      }
+    }
+    testID="button"
+  >
+    <Text
+      style={
+        Object {
+          "color": "#fff",
+          "fontSize": 16,
+          "textAlign": "center",
+        }
+      }
+    >
+      Save
+    </Text>
+  </View>
+</View>
+`;

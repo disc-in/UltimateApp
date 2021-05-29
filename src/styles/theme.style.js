@@ -14,6 +14,7 @@ export default {
   BACKGROUND_COLOR_BUTTON: '#fff',
   BACKGROUND_COLOR_BUTTON_ACTIVE: '#eee',
   MAIN_COLOR: '#2a9e91',
+  MAIN_COLOR_TRANSPARENT: '#2a9e9133',
 
   // animations
   CONE_COLOR: '#feae19',

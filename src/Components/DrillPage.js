@@ -25,6 +25,7 @@ import Description from './drills/Description';
 import FitnessDrillIllustration from './drills/FitnessDrillIllustration';
 import FrisbeeDrillIllustration from './drills/FrisbeeDrillIllustration';
 import StartButton from './drills/StartButton';
+import customDrillsImage from '../../assets/customDrills.jpg';
 
 export const DrillPage = (props) => {
   const { route, navigation } = props;
@@ -74,10 +75,11 @@ export const DrillPage = (props) => {
   if (props.favoriteDrills.findIndex((item) => item.id === props.route.params.id) !== -1) {
     favoriteIcon = 'heart';
   }
+  const imageSource = drill.custom && drill.image === undefined ? customDrillsImage : { uri: drill.image };
 
   return (
     <ScrollView ref={drillScrollView} style={styles.drillPage}>
-      <ImageBackground source={{ uri: drill.image }} style={imageStyles} imageStyle={styles.imageOpacity}>
+      <ImageBackground source={imageSource} style={imageStyles} imageStyle={styles.imageOpacity}>
         <View style={styles.titleContainer}>
           <Text style={styles.title}>{drill.title}</Text>
           <Text style={styles.author}>{drill.author}</Text>
@@ -187,7 +189,7 @@ const styles = StyleSheet.create({
 const mapStateToProps = (state) => {
   return {
     favoriteDrills: state.favoriteDrills,
-    drills: state.drills,
+    drills: [...state.drills, ...state.customDrills],
   };
 };
 

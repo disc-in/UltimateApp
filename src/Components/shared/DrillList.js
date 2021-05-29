@@ -4,19 +4,22 @@ import { View, Text, ImageBackground, TouchableOpacity, FlatList } from 'react-n
 import I18n from '../../utils/i18n';
 import * as list from '../../styles/list.style';
 import { DrillTypes } from '../../Fixtures/config';
+import customDrillsImage from '../../../assets/customDrills.jpg';
 
 const DrillList = (props) => {
   const { navigation, drillsToDisplay } = props;
   const onDrillPress = props.onDrillPress || ((item) => navigation.navigate('DrillPage', { id: item.id }));
 
   const renderDrill = ({ item }) => {
-    const { title, type, image, goals, author } = item;
+    const { title, type, custom, image, goals, author } = item;
 
     const imageMainData = type === DrillTypes.FRISBEE ? 'minimalPlayersNumber' : 'durationInMinutes';
     const imageMainDataLegend = type === DrillTypes.FRISBEE ? 'players' : 'min';
+    const customStyle = custom ? list.custom : undefined;
+    const imageSource = custom && image === undefined ? customDrillsImage : { uri: image };
     return (
-      <TouchableOpacity style={[list.item, props.ItemComponentStyle]} onPress={() => onDrillPress(item)}>
-        <ImageBackground source={{ uri: image }} style={list.image} imageStyle={list.imageOpacity}>
+      <TouchableOpacity style={[list.item, customStyle, props.ItemComponentStyle]} onPress={() => onDrillPress(item)}>
+        <ImageBackground source={imageSource} style={list.image} imageStyle={list.imageOpacity}>
           <Text style={{ ...list.imageText, ...list.imageTextMain }}>{item[imageMainData]}</Text>
           <Text style={list.imageText}>{imageMainDataLegend}</Text>
         </ImageBackground>

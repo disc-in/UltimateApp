@@ -12,6 +12,7 @@ import FitnessFilters from '../Components/FitnessFilters';
 import TrainingPage from '../Components/TrainingPage';
 import ProgramListPage from '../Components/ProgramListPage';
 
+import DrillEditorPage from '../Components/DrillEditorPage';
 import PlaybookPage from '../Components/PlaybookPage';
 import PlayEditorPage from '../Components/PlayEditorPage';
 import ImporterPage from '../Components/ImporterPage';
@@ -38,6 +39,11 @@ export const Navigation = () => (
           type: route.params.type.substr(0, 1).toUpperCase() + route.params.type.substr(1),
         }),
       })}
+    />
+    <Stack.Screen
+      name="DrillEditorPage"
+      component={DrillEditorPage}
+      options={{ title: I18n.t('navigation.drillEditorPage') }}
     />
     <Stack.Screen name="FrisbeeFilters" component={FrisbeeFilters} options={{ title: I18n.t('navigation.filters') }} />
     <Stack.Screen name="FitnessFilters" component={FitnessFilters} options={{ title: I18n.t('navigation.filters') }} />

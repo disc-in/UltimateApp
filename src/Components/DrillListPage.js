@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import { connect } from 'react-redux';
 
@@ -7,6 +7,7 @@ import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
 import DrillList from './shared/DrillList';
 import Button from './shared/Button';
+import HeaderButton from './shared/HeaderButton';
 
 export const DrillListPage = (props) => {
   const { navigation, route, storeDrills } = props;
@@ -38,6 +39,16 @@ export const DrillListPage = (props) => {
     });
   };
 
+  useLayoutEffect(() => {
+    if (route.params.type === DrillTypes.FRISBEE) {
+      navigation.setOptions({
+        headerRight: () => (
+          <HeaderButton icon="plus" onPress={() => props.navigation.navigate('DrillEditorPage')} testID="plusButton" />
+        ),
+      });
+    }
+  });
+
   return (
     <View style={styles.drillListPage}>
       <View style={styles.filtersArea}>
@@ -58,7 +69,7 @@ export const DrillListPage = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    storeDrills: state.drills,
+    storeDrills: [...state.drills, ...state.customDrills],
   };
 };
 

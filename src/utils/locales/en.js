@@ -61,6 +61,7 @@ export default {
     aboutPage: 'About Disc In',
     drillListPage: '{{type}} drills',
     drillPage: 'Drill',
+    drillEditorPage: 'New Drill',
     fitnessPage: 'Fitness',
     filters: 'Filters',
     programListPage: {
@@ -190,6 +191,9 @@ export default {
     },
     filter: 'Filter',
   },
+  drillEditorPage: {
+    cta: 'Save',
+  },
   drillPage: {
     minutes: 'minutes',
     players: 'players',
@@ -205,6 +209,7 @@ export default {
   },
   fitnessFilters: {
     favorites: 'Favorites only',
+    custom: 'My drills only',
     level: 'Level',
     intensity: 'Intensity',
     equipment: 'Equipment',

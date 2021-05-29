@@ -60,6 +60,7 @@ export default {
     homePage: 'Disc In',
     aboutPage: 'À propos de Disc In',
     drillListPage: 'Exercices de {{type}}',
+    drillEditorPage: 'Nouvel Exercice',
     drillPage: 'Exercice',
     fitnessPage: 'Fitness',
     filters: 'Filtres',
@@ -189,6 +190,9 @@ export default {
     },
     filter: 'Filtrer',
   },
+  drillEditorPage: {
+    cta: 'Enregistrer',
+  },
   drillPage: {
     minutes: 'minutes',
     players: 'joueurs',
@@ -204,6 +208,7 @@ export default {
   },
   fitnessFilters: {
     favorites: 'Seulement mes favoris',
+    custom: 'Seulement mes exos',
     level: 'Niveau',
     intensity: 'Intensité',
     equipment: 'Matériel',

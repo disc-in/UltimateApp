@@ -9,6 +9,10 @@ export const item = {
   flexDirection: 'row',
   marginBottom: 20,
 };
+export const custom = {
+  backgroundColor: theme.MAIN_COLOR_TRANSPARENT,
+  borderRadius: 5,
+};
 export const image = {
   width: 80,
   height: 80,

@@ -14,6 +14,7 @@ export default {
       [Levels.BEGINNER]: 'Beginner',
       [Levels.INTERMEDIATE]: 'Intermediate',
       [Levels.ADVANCED]: 'Advanced',
+      undefined: 'Unkown',
     },
     frisbeeGoals: {
       [FrisbeeGoals.DEFENSE]: 'Defense',
@@ -208,7 +209,10 @@ export default {
       minimalPlayersNumber: 'Minimal number of players',
       inGame: 'In game',
       equipement: 'Equipment',
-      duration: 'Duration',
+      durationInMinutes: 'Duration (min.)',
+      intensity: 'Intensity',
+      goals: 'Goals',
+      level: 'Level',
       steps: {
         header: 'Variants',
         title: 'Title',

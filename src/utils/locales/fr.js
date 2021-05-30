@@ -14,6 +14,7 @@ export default {
       [Levels.BEGINNER]: 'Débutant',
       [Levels.INTERMEDIATE]: 'Intermédiaire',
       [Levels.ADVANCED]: 'Avancé',
+      undefined: 'Inconnu',
     },
     frisbeeGoals: {
       [FrisbeeGoals.DEFENSE]: 'Défense',
@@ -37,7 +38,7 @@ export default {
       [SeasonTimings.OFF_SEASON]: 'Hors saison',
       [SeasonTimings.PRE_SEASON]: 'Pré saison',
       [SeasonTimings.IN_SEASON]: 'En saison',
-      [SeasonTimings.ANYTIME]: "N'importe",
+      [SeasonTimings.ANYTIME]: 'Peu importe',
     },
     equipmentLabels: {
       [EquipmentLabels.NONE]: 'Aucun',
@@ -207,7 +208,10 @@ export default {
       minimalPlayersNumber: 'Nombre minimal de joueurs',
       inGame: 'Utilité en match',
       equipement: 'Équipement',
-      duration: 'Durée',
+      durationInMinutes: 'Durée (min.)',
+      intensity: 'Intensité',
+      goals: 'Thèmes',
+      level: 'Niveau',
       steps: {
         header: 'Variantes',
         title: 'Titre',

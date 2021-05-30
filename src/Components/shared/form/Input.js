@@ -16,7 +16,7 @@ const Input = ({ fieldName, label, ...props }) => {
         {meta.error && meta.touched && <Text style={styles.error}>{meta.error}</Text>}
         <TextInput
           onChangeText={field.onChange(fieldName)}
-          value={field.value}
+          value={field.value?.toString()}
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
           {...props}

@@ -11,6 +11,8 @@ import HeaderButton from './shared/HeaderButton';
 export const PlayEditorPage = ({ navigation, route }) => {
   const [currentAnimation, setCurrentAnimation] = useState(new Drill(route.params.animation));
 
+  // TODO: It looks like this is broken because it saves the animation on several steps
+  // At least when adding a step it gets the previous step animation
   const onAnimationChange = (animation) => {
     setCurrentAnimation(animation);
     route.params.onAnimationChange(animation);

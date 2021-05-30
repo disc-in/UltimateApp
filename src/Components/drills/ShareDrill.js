@@ -5,7 +5,7 @@ import { Ionicons } from '@expo/vector-icons';
 import theme from '../../styles/theme.style';
 import I18n from '../../utils/i18n';
 import { showError } from '../../utils/flashMessage';
-import { createLink } from '../../utils/firebase';
+import { upload, createLink } from '../../utils/firebase';
 
 const ShareDrill = ({ drill, light }) => {
   const share = async () => {
@@ -27,9 +27,23 @@ const ShareDrill = ({ drill, light }) => {
     }).catch((error) => showError(I18n.t('drills.shareDrill.error')));
   };
 
+  const shareCustom = async () => {
+    try {
+      const shareUuid = await upload('customDrills', drill);
+      const url = await createLink('custom/drills/' + shareUuid, drill.title);
+      await Share.share({
+        title: I18n.t('drills.shareDrill.title', { title: drill.title }),
+        message: I18n.t('drills.shareDrill.content', { url, count: 0 }),
+        url,
+      });
+    } catch (error) {
+      showError(I18n.t('drills.shareDrill.error'));
+    }
+  };
+
   const lightColor = light ? styles.lightColor : undefined;
   return (
-    <TouchableOpacity onPress={share} testID="shareButton">
+    <TouchableOpacity onPress={drill.custom ? shareCustom : share} testID="shareButton">
       <Ionicons
         name={Platform.select({
           ios: 'ios-share-outline',

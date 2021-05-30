@@ -65,18 +65,19 @@ if (firebase.apps.length === 0) {
   firebase.setLogLevel('silent');
 }
 
-const reference = (uuid) => {
-  return firebase.database().ref(`customPlays/${uuid}`);
+const reference = (namespace, uuid) => {
+  return firebase.database().ref(`${namespace}/${uuid}`);
 };
 
-export const upload = async (play) => {
+export const upload = async (namespace, record) => {
+  const withoutUndefineds = JSON.parse(JSON.stringify(record));
   const shareUuid = generateUuid();
-  await reference(shareUuid).set(play);
+  await reference(namespace, shareUuid).set(withoutUndefineds);
   return shareUuid;
 };
 
-export const download = (uuid) => {
-  return reference(uuid)
+export const download = (namespace, uuid) => {
+  return reference(namespace, uuid)
     .once('value')
     .then((snapshot) => snapshot.val());
 };

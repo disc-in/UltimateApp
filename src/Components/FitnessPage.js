@@ -5,7 +5,6 @@ import VimeoVideo from './shared/VimeoVideo';
 import ShareDrill from './drills/ShareDrill';
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
-import { createLink } from '../utils/firebase';
 
 const FitnessPage = (props) => {
   const { route, navigation } = props;

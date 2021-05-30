@@ -73,7 +73,8 @@ export default {
     },
     playbookPage: 'Mon Playbook',
     playEditorPage: 'Nouvelle tactique',
-    importerPage: 'Importer une tactique',
+    drillImporterPage: 'Importer un exercice',
+    playImporterPage: 'Importer une tactique',
     dictionaryPage: 'Lexique',
     essentialPage: 'Les bases du jeu',
     tacticsPage: 'Tactiques',
@@ -121,10 +122,18 @@ export default {
     untitledPlay: 'Play sans titre',
   },
   importerPage: {
-    loading: 'On dirait que vous voulez importer un play, je vais le chercher... 🏃',
-    incentive: 'Vous allez enregistrer le play "{{title}}"',
-    question: 'Êtes-vous sûr.e ?',
-    downloadError: "Je n'ai pas pu retrouver ce play...",
+    customPlays: {
+      loading: 'On dirait que vous voulez importer un play, je vais le chercher... 🏃',
+      incentive: 'Vous allez enregistrer le play "{{title}}"',
+      question: 'Êtes-vous sûr.e ?',
+      downloadError: "Je n'ai pas pu retrouver ce play...",
+    },
+    customDrills: {
+      loading: 'On dirait que vous voulez importer un exercice, je vais le chercher... 🏃',
+      incentive: 'Vous allez enregistrer l\'exercice "{{title}}"',
+      question: 'Êtes-vous sûr.e ?',
+      downloadError: "Je n'ai pas pu retrouver cet exercice...",
+    },
   },
   editor: {
     playTitle: {
@@ -256,7 +265,7 @@ export default {
     duration: 'durée',
     durationLabel: 'Combien de temps as-tu ?   {{duration}} mins',
     cta: {
-      zero: 'Aucun exercice correspondant',
+      zero: 'Aucun exercice',
       one: 'Voir {{count}} exercice',
       other: 'Voir {{count}} exercices',
     },

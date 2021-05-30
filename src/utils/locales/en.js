@@ -73,7 +73,8 @@ export default {
     },
     playbookPage: 'My Playbook',
     playEditorPage: 'New Play',
-    importerPage: 'Import a play',
+    drillImporterPage: 'Import a drill',
+    playImporterPage: 'Import a play',
     dictionaryPage: 'Dictionary',
     essentialPage: 'Basics',
     tacticsPage: 'Tactics',
@@ -121,10 +122,18 @@ export default {
     untitledPlay: 'Unnamed play',
   },
   importerPage: {
-    loading: 'It looks like you want to import a play, I am going to fetch it... 🏃',
-    incentive: 'You are about to import and save the play {{title}}',
-    question: 'Are you sure?',
-    downloadError: 'I could not find the play you are looking for',
+    customPlays: {
+      loading: 'It looks like you want to import a play, I am going to fetch it... 🏃',
+      incentive: 'You are about to import and save the play {{title}}',
+      question: 'Are you sure?',
+      downloadError: 'I could not find the play you are looking for',
+    },
+    customDrills: {
+      loading: 'It looks like you want to import a drill, I am going to fetch it... 🏃',
+      incentive: 'You are about to import and save the drill {{title}}',
+      question: 'Are you sure?',
+      downloadError: 'I could not find the drill you are looking for',
+    },
   },
   editor: {
     playTitle: {

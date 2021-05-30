@@ -10,8 +10,8 @@ import { upload, createLink } from '../../../utils/firebase';
 const SharePlay = ({ currentPlay }) => {
   const share = async () => {
     try {
-      const shareUuid = await upload(currentPlay);
-      const url = await createLink('customPlays/' + shareUuid, currentPlay.title);
+      const shareUuid = await upload('customPlays', currentPlay);
+      const url = await createLink('custom/plays/' + shareUuid, currentPlay.title);
       await Share.share({
         title: I18n.t('editor.sharePlay.shareTitle', { title: currentPlay.title }),
         message: I18n.t('editor.sharePlay.shareMessage', { url }),

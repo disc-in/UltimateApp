@@ -15,7 +15,6 @@ import { useHeaderHeight } from '@react-navigation/stack';
 import { Ionicons } from '@expo/vector-icons';
 
 import I18n from '../utils/i18n';
-import { createLink } from '../utils/firebase';
 import { toggleFavorite } from '../Store/Actions/favoriteAction';
 import { DrillTypes } from '../Fixtures/config';
 import theme from '../styles/theme.style';

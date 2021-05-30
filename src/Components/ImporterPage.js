@@ -8,32 +8,39 @@ import I18n from '../utils/i18n';
 import { download } from '../utils/firebase';
 import { showError } from '../utils/flashMessage';
 import { savePlay } from '../Store/Actions/playAction';
-import CtaButton from './shared/Button';
+import { saveDrill } from '../Store/Actions/drillAction';
+import Button from './shared/Button';
 
 export const ImporterPage = (props) => {
   const { navigation, route } = props;
+  const namespace = route.params.source === 'drills' ? 'customDrills' : 'customPlays';
 
-  const [importedPlay, setImportedPlay] = useState(undefined);
+  const [importedRecord, setImportedRecord] = useState();
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const play = await download(route.params.uuid);
-        if (play === null) {
-          showError(I18n.t('importerPage.downloadError'));
+        const record = await download(namespace, route.params.uuid);
+        if (record === null) {
+          showError(I18n.t(`importerPage.${namespace}.downloadError`));
         } else {
-          setImportedPlay(play);
+          setImportedRecord(record);
         }
       } catch (error) {
-        showError(I18n.t('importerPage.downloadError'));
+        showError(I18n.t(`importerPage.${namespace}.downloadError`));
       }
     }
     fetchData();
   }, []);
 
   const save = () => {
-    props.savePlay(importedPlay);
-    navigation.navigate('PlayEditorPage', { currentPlay: importedPlay });
+    if (namespace === 'customPlays') {
+      props.savePlay(importedRecord);
+      navigation.navigate('PlayEditorPage', { currentPlay: importedRecord });
+    } else if (namespace === 'customDrills') {
+      props.saveDrill(importedRecord);
+      navigation.navigate('DrillPage', { id: importedRecord.id });
+    }
   };
 
   const cancel = () => {
@@ -43,23 +50,25 @@ export const ImporterPage = (props) => {
   return (
     <View style={styles.importerPage}>
       <MaterialCommunityIcons name="download" size={72} />
-      {importedPlay ? (
+      {importedRecord ? (
         <View>
-          <Text style={styles.text}>{I18n.t('importerPage.incentive', { title: importedPlay.title })}</Text>
-          <Text style={styles.text}>{I18n.t('importerPage.question')}</Text>
+          <Text style={styles.text}>
+            {I18n.t(`importerPage.${namespace}.incentive`, { title: importedRecord.title })}
+          </Text>
+          <Text style={styles.text}>{I18n.t(`importerPage.${namespace}.question`)}</Text>
           <View style={styles.ctaArea}>
-            <CtaButton style={styles.cta} text={I18n.t('shared.yes')} onPress={save} />
-            <CtaButton style={styles.cta} text={I18n.t('shared.cancel')} onPress={cancel} light />
+            <Button style={styles.cta} text={I18n.t('shared.yes')} onPress={save} />
+            <Button style={styles.cta} text={I18n.t('shared.cancel')} onPress={cancel} light />
           </View>
         </View>
       ) : (
-        <Text>{I18n.t('importerPage.loading')}</Text>
+        <Text>{I18n.t(`importerPage.${namespace}.loading`)}</Text>
       )}
     </View>
   );
 };
 
-const mapDispatchToProps = { savePlay };
+const mapDispatchToProps = { savePlay, saveDrill };
 
 export default connect(null, mapDispatchToProps)(ImporterPage);
 
@@ -78,9 +87,9 @@ const styles = StyleSheet.create({
   ctaArea: {
     marginTop: 20,
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    justifyContent: 'space-evenly',
   },
   cta: {
-    width: 120,
+    width: 100,
   },
 });

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<DrillEditorPage /> renders correctly 1`] = `
+exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
 <View
   onLayout={[Function]}
   style={
@@ -9,6 +9,7 @@ exports[`<DrillEditorPage /> renders correctly 1`] = `
         "backgroundColor": "#fff",
         "flex": 1,
         "padding": 10,
+        "paddingRight": 20,
       },
       Object {
         "paddingBottom": 0,
@@ -113,7 +114,7 @@ exports[`<DrillEditorPage /> renders correctly 1`] = `
               }
             }
           >
-            URL de l'image
+            Image URL
           </Text>
           <View
             style={
@@ -233,7 +234,7 @@ exports[`<DrillEditorPage /> renders correctly 1`] = `
               }
             }
           >
-            Utilité en jeu
+            In game
           </Text>
           <View
             style={
@@ -354,7 +355,7 @@ exports[`<DrillEditorPage /> renders correctly 1`] = `
                 }
               }
             >
-              Steps
+              Variants
             </Text>
             <View
               accessible={true}
@@ -409,7 +410,14 @@ exports[`<DrillEditorPage /> renders correctly 1`] = `
               }
             }
           >
-            <Text>
+            <Text
+              style={
+                Object {
+                  "fontSize": 20,
+                  "marginRight": 10,
+                }
+              }
+            >
               Step 
               1
             </Text>
@@ -557,49 +565,7 @@ exports[`<DrillEditorPage /> renders correctly 1`] = `
                       }
                     }
                   >
-                    Edit
-                  </Text>
-                </View>
-                <View
-                  accessible={true}
-                  focusable={true}
-                  onClick={[Function]}
-                  onResponderGrant={[Function]}
-                  onResponderMove={[Function]}
-                  onResponderRelease={[Function]}
-                  onResponderTerminate={[Function]}
-                  onResponderTerminationRequest={[Function]}
-                  onStartShouldSetResponder={[Function]}
-                  style={
-                    Object {
-                      "alignItems": "center",
-                      "alignSelf": "flex-start",
-                      "backgroundColor": "#fff",
-                      "borderColor": "#2a9e91",
-                      "borderRadius": 5,
-                      "borderWidth": 1,
-                      "flexDirection": "row",
-                      "height": 30,
-                      "justifyContent": "center",
-                      "marginRight": 10,
-                      "opacity": 1,
-                      "paddingHorizontal": 10,
-                      "paddingVertical": 0,
-                      "width": "auto",
-                    }
-                  }
-                  testID="button"
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#2a9e91",
-                        "fontSize": 16,
-                        "fontWeight": "bold",
-                      }
-                    }
-                  >
-                    Clear
+                    Add
                   </Text>
                 </View>
               </View>
@@ -618,7 +584,7 @@ exports[`<DrillEditorPage /> renders correctly 1`] = `
                   }
                 }
               >
-                Identifiant Vimeo
+                Vimeo Identifier
               </Text>
               <View
                 style={
@@ -657,7 +623,7 @@ exports[`<DrillEditorPage /> renders correctly 1`] = `
                   }
                 }
               >
-                URL Youtube
+                Youtube link
               </Text>
               <View
                 style={
@@ -744,10 +710,1040 @@ exports[`<DrillEditorPage /> renders correctly 1`] = `
               "flexDirection": "row",
               "height": 40,
               "justifyContent": "center",
+              "marginVertical": 20,
               "opacity": 1,
               "paddingHorizontal": 20,
               "paddingVertical": 10,
-              "width": "80%",
+              "width": "auto",
+            }
+          }
+          testID="button"
+        >
+          <Text
+            style={
+              Object {
+                "color": "#fff",
+                "fontSize": 16,
+                "textAlign": "center",
+              }
+            }
+          >
+            Save
+          </Text>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
+
+exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1,
+        "padding": 10,
+        "paddingRight": 20,
+      },
+      Object {
+        "paddingBottom": 0,
+      },
+    ]
+  }
+>
+  <RCTScrollView>
+    <View>
+      <View>
+        <View
+          style={
+            Object {
+              "marginBottom": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "marginBottom": 5,
+              }
+            }
+          >
+            Author
+          </Text>
+          <View
+            style={
+              Array [
+                Object {
+                  "borderColor": "#e5e5e5",
+                  "borderRadius": 5,
+                  "borderWidth": 0.5,
+                  "padding": 5,
+                },
+                undefined,
+              ]
+            }
+          >
+            <TextInput
+              allowFontScaling={true}
+              onBlur={[Function]}
+              onChangeText={[Function]}
+              onFocus={[Function]}
+              rejectResponderTermination={true}
+              underlineColorAndroid="transparent"
+              value="Author"
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "marginBottom": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "marginBottom": 5,
+              }
+            }
+          >
+            Title
+          </Text>
+          <View
+            style={
+              Array [
+                Object {
+                  "borderColor": "#e5e5e5",
+                  "borderRadius": 5,
+                  "borderWidth": 0.5,
+                  "padding": 5,
+                },
+                undefined,
+              ]
+            }
+          >
+            <TextInput
+              allowFontScaling={true}
+              onBlur={[Function]}
+              onChangeText={[Function]}
+              onFocus={[Function]}
+              rejectResponderTermination={true}
+              underlineColorAndroid="transparent"
+              value="Fitness Drill Title"
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "marginBottom": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "marginBottom": 5,
+              }
+            }
+          >
+            Image URL
+          </Text>
+          <View
+            style={
+              Array [
+                Object {
+                  "borderColor": "#e5e5e5",
+                  "borderRadius": 5,
+                  "borderWidth": 0.5,
+                  "padding": 5,
+                },
+                undefined,
+              ]
+            }
+          >
+            <TextInput
+              allowFontScaling={true}
+              onBlur={[Function]}
+              onChangeText={[Function]}
+              onFocus={[Function]}
+              rejectResponderTermination={true}
+              underlineColorAndroid="transparent"
+              value="https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg"
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "marginBottom": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "marginBottom": 5,
+              }
+            }
+          >
+            Description
+          </Text>
+          <View
+            style={
+              Array [
+                Object {
+                  "borderColor": "#e5e5e5",
+                  "borderRadius": 5,
+                  "borderWidth": 0.5,
+                  "padding": 5,
+                },
+                undefined,
+              ]
+            }
+          >
+            <TextInput
+              allowFontScaling={true}
+              onBlur={[Function]}
+              onChangeText={[Function]}
+              onFocus={[Function]}
+              rejectResponderTermination={true}
+              underlineColorAndroid="transparent"
+              value="Description of the drill"
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "marginBottom": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "marginBottom": 5,
+              }
+            }
+          >
+            Minimal number of players
+          </Text>
+          <View
+            style={
+              Array [
+                Object {
+                  "borderColor": "#e5e5e5",
+                  "borderRadius": 5,
+                  "borderWidth": 0.5,
+                  "padding": 5,
+                },
+                undefined,
+              ]
+            }
+          >
+            <TextInput
+              allowFontScaling={true}
+              keyboardType="number-pad"
+              onBlur={[Function]}
+              onChangeText={[Function]}
+              onFocus={[Function]}
+              rejectResponderTermination={true}
+              underlineColorAndroid="transparent"
+              value={1}
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "marginBottom": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "marginBottom": 5,
+              }
+            }
+          >
+            In game
+          </Text>
+          <View
+            style={
+              Array [
+                Object {
+                  "borderColor": "#e5e5e5",
+                  "borderRadius": 5,
+                  "borderWidth": 0.5,
+                  "padding": 5,
+                },
+                undefined,
+              ]
+            }
+          >
+            <TextInput
+              allowFontScaling={true}
+              onBlur={[Function]}
+              onChangeText={[Function]}
+              onFocus={[Function]}
+              rejectResponderTermination={true}
+              underlineColorAndroid="transparent"
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "marginBottom": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "marginBottom": 5,
+              }
+            }
+          >
+            Equipment
+          </Text>
+          <View
+            style={
+              Array [
+                Object {
+                  "borderColor": "#e5e5e5",
+                  "borderRadius": 5,
+                  "borderWidth": 0.5,
+                  "padding": 5,
+                },
+                undefined,
+              ]
+            }
+          >
+            <TextInput
+              allowFontScaling={true}
+              onBlur={[Function]}
+              onChangeText={[Function]}
+              onFocus={[Function]}
+              rejectResponderTermination={true}
+              underlineColorAndroid="transparent"
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "marginBottom": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "marginBottom": 5,
+              }
+            }
+          >
+            Duration
+          </Text>
+          <View
+            style={
+              Array [
+                Object {
+                  "borderColor": "#e5e5e5",
+                  "borderRadius": 5,
+                  "borderWidth": 0.5,
+                  "padding": 5,
+                },
+                undefined,
+              ]
+            }
+          >
+            <TextInput
+              allowFontScaling={true}
+              keyboardType="number-pad"
+              onBlur={[Function]}
+              onChangeText={[Function]}
+              onFocus={[Function]}
+              rejectResponderTermination={true}
+              underlineColorAndroid="transparent"
+            />
+          </View>
+        </View>
+        <View>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "fontSize": 20,
+                  "marginRight": 10,
+                }
+              }
+            >
+              Variants
+            </Text>
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "#fff",
+                  "borderColor": "#2a9e91",
+                  "borderRadius": 5,
+                  "borderWidth": 1,
+                  "flexDirection": "row",
+                  "height": 30,
+                  "justifyContent": "center",
+                  "opacity": 1,
+                  "paddingHorizontal": 10,
+                  "paddingVertical": 0,
+                  "width": "auto",
+                }
+              }
+              testID="button"
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#2a9e91",
+                    "fontSize": 16,
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                +
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "borderBottomColor": "#e5e5e5",
+                "borderBottomWidth": 0.5,
+                "marginBottom": 10,
+                "marginLeft": 10,
+                "paddingBottom": 10,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "fontSize": 20,
+                  "marginRight": 10,
+                }
+              }
+            >
+              Step 
+              1
+            </Text>
+            <View
+              style={
+                Object {
+                  "marginBottom": 10,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "marginBottom": 5,
+                  }
+                }
+              >
+                Title
+              </Text>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "borderColor": "#e5e5e5",
+                      "borderRadius": 5,
+                      "borderWidth": 0.5,
+                      "padding": 5,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                <TextInput
+                  allowFontScaling={true}
+                  onBlur={[Function]}
+                  onChangeText={[Function]}
+                  onFocus={[Function]}
+                  rejectResponderTermination={true}
+                  underlineColorAndroid="transparent"
+                  value="Warmup"
+                />
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "marginBottom": 10,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "marginBottom": 5,
+                  }
+                }
+              >
+                Instructions
+              </Text>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "borderColor": "#e5e5e5",
+                      "borderRadius": 5,
+                      "borderWidth": 0.5,
+                      "padding": 5,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                <TextInput
+                  allowFontScaling={true}
+                  onBlur={[Function]}
+                  onChangeText={[Function]}
+                  onFocus={[Function]}
+                  rejectResponderTermination={true}
+                  underlineColorAndroid="transparent"
+                />
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "marginBottom": 10,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "marginBottom": 5,
+                  }
+                }
+              >
+                Animation
+              </Text>
+              <View
+                style={
+                  Object {
+                    "borderRadius": 5,
+                    "flexDirection": "row",
+                    "padding": 5,
+                  }
+                }
+              >
+                <View
+                  accessible={true}
+                  focusable={true}
+                  onClick={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "alignSelf": "flex-start",
+                      "backgroundColor": "#fff",
+                      "borderColor": "#2a9e91",
+                      "borderRadius": 5,
+                      "borderWidth": 1,
+                      "flexDirection": "row",
+                      "height": 30,
+                      "justifyContent": "center",
+                      "marginRight": 10,
+                      "opacity": 1,
+                      "paddingHorizontal": 10,
+                      "paddingVertical": 0,
+                      "width": "auto",
+                    }
+                  }
+                  testID="button"
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#2a9e91",
+                        "fontSize": 16,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    Add
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "marginBottom": 10,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "marginBottom": 5,
+                  }
+                }
+              >
+                Vimeo Identifier
+              </Text>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "borderColor": "#e5e5e5",
+                      "borderRadius": 5,
+                      "borderWidth": 0.5,
+                      "padding": 5,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                <TextInput
+                  allowFontScaling={true}
+                  onBlur={[Function]}
+                  onChangeText={[Function]}
+                  onFocus={[Function]}
+                  rejectResponderTermination={true}
+                  underlineColorAndroid="transparent"
+                  value="462695757"
+                />
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "marginBottom": 10,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "marginBottom": 5,
+                  }
+                }
+              >
+                Youtube link
+              </Text>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "borderColor": "#e5e5e5",
+                      "borderRadius": 5,
+                      "borderWidth": 0.5,
+                      "padding": 5,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                <TextInput
+                  allowFontScaling={true}
+                  onBlur={[Function]}
+                  onChangeText={[Function]}
+                  onFocus={[Function]}
+                  rejectResponderTermination={true}
+                  underlineColorAndroid="transparent"
+                />
+              </View>
+            </View>
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "alignSelf": "flex-start",
+                  "backgroundColor": "#fff",
+                  "borderColor": "#2a9e91",
+                  "borderRadius": 5,
+                  "borderWidth": 1,
+                  "flexDirection": "row",
+                  "height": 30,
+                  "justifyContent": "center",
+                  "marginRight": 10,
+                  "opacity": 1,
+                  "paddingHorizontal": 10,
+                  "paddingVertical": 0,
+                  "width": "auto",
+                }
+              }
+              testID="button"
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#2a9e91",
+                    "fontSize": 16,
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                -
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "borderBottomColor": "#e5e5e5",
+                "borderBottomWidth": 0.5,
+                "marginBottom": 10,
+                "marginLeft": 10,
+                "paddingBottom": 10,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "fontSize": 20,
+                  "marginRight": 10,
+                }
+              }
+            >
+              Step 
+              2
+            </Text>
+            <View
+              style={
+                Object {
+                  "marginBottom": 10,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "marginBottom": 5,
+                  }
+                }
+              >
+                Title
+              </Text>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "borderColor": "#e5e5e5",
+                      "borderRadius": 5,
+                      "borderWidth": 0.5,
+                      "padding": 5,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                <TextInput
+                  allowFontScaling={true}
+                  onBlur={[Function]}
+                  onChangeText={[Function]}
+                  onFocus={[Function]}
+                  rejectResponderTermination={true}
+                  underlineColorAndroid="transparent"
+                  value="Run !"
+                />
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "marginBottom": 10,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "marginBottom": 5,
+                  }
+                }
+              >
+                Instructions
+              </Text>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "borderColor": "#e5e5e5",
+                      "borderRadius": 5,
+                      "borderWidth": 0.5,
+                      "padding": 5,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                <TextInput
+                  allowFontScaling={true}
+                  onBlur={[Function]}
+                  onChangeText={[Function]}
+                  onFocus={[Function]}
+                  rejectResponderTermination={true}
+                  underlineColorAndroid="transparent"
+                />
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "marginBottom": 10,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "marginBottom": 5,
+                  }
+                }
+              >
+                Animation
+              </Text>
+              <View
+                style={
+                  Object {
+                    "borderRadius": 5,
+                    "flexDirection": "row",
+                    "padding": 5,
+                  }
+                }
+              >
+                <View
+                  accessible={true}
+                  focusable={true}
+                  onClick={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "alignSelf": "flex-start",
+                      "backgroundColor": "#fff",
+                      "borderColor": "#2a9e91",
+                      "borderRadius": 5,
+                      "borderWidth": 1,
+                      "flexDirection": "row",
+                      "height": 30,
+                      "justifyContent": "center",
+                      "marginRight": 10,
+                      "opacity": 1,
+                      "paddingHorizontal": 10,
+                      "paddingVertical": 0,
+                      "width": "auto",
+                    }
+                  }
+                  testID="button"
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#2a9e91",
+                        "fontSize": 16,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    Add
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "marginBottom": 10,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "marginBottom": 5,
+                  }
+                }
+              >
+                Vimeo Identifier
+              </Text>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "borderColor": "#e5e5e5",
+                      "borderRadius": 5,
+                      "borderWidth": 0.5,
+                      "padding": 5,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                <TextInput
+                  allowFontScaling={true}
+                  onBlur={[Function]}
+                  onChangeText={[Function]}
+                  onFocus={[Function]}
+                  rejectResponderTermination={true}
+                  underlineColorAndroid="transparent"
+                  value="462695757"
+                />
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "marginBottom": 10,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "marginBottom": 5,
+                  }
+                }
+              >
+                Youtube link
+              </Text>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "borderColor": "#e5e5e5",
+                      "borderRadius": 5,
+                      "borderWidth": 0.5,
+                      "padding": 5,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                <TextInput
+                  allowFontScaling={true}
+                  onBlur={[Function]}
+                  onChangeText={[Function]}
+                  onFocus={[Function]}
+                  rejectResponderTermination={true}
+                  underlineColorAndroid="transparent"
+                />
+              </View>
+            </View>
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "alignSelf": "flex-start",
+                  "backgroundColor": "#fff",
+                  "borderColor": "#2a9e91",
+                  "borderRadius": 5,
+                  "borderWidth": 1,
+                  "flexDirection": "row",
+                  "height": 30,
+                  "justifyContent": "center",
+                  "marginRight": 10,
+                  "opacity": 1,
+                  "paddingHorizontal": 10,
+                  "paddingVertical": 0,
+                  "width": "auto",
+                }
+              }
+              testID="button"
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#2a9e91",
+                    "fontSize": 16,
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                -
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#2a9e91",
+              "borderRadius": 5,
+              "flexDirection": "row",
+              "height": 40,
+              "justifyContent": "center",
+              "marginVertical": 20,
+              "opacity": 1,
+              "paddingHorizontal": 20,
+              "paddingVertical": 10,
+              "width": "auto",
             }
           }
           testID="button"

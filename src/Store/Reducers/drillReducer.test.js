@@ -27,6 +27,16 @@ describe('drillReducer', () => {
     });
   });
 
+  describe('When handling DELETE_DRILL', () => {
+    it('when deleting an existing drill', () => {
+      expect(drillReducer(initialState, { type: 'DELETE_DRILL', value: drill.id })).toEqual([]);
+    });
+
+    it('when deleting an unknown drill', () => {
+      expect(drillReducer(initialState, { type: 'DELETE_DRILL', value: '999' })).toEqual([drill]);
+    });
+  });
+
   it('when handling a unknown action type it does not change the state', () => {
     expect(drillReducer(initialState, { type: 'UKNOWN', value: drill })).toEqual([drill]);
   });

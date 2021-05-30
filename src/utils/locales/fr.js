@@ -140,6 +140,9 @@ export default {
       description: 'Description',
       inGame: 'En Match',
     },
+    drillList: {
+      deleteSuccess: 'L\'exercice "{{title}}" a été supprimé.',
+    },
     fitnessDrillIllustration: {
       start: 'Start',
     },
@@ -195,6 +198,29 @@ export default {
     validations: {
       alreadyExists: 'Existe déjà',
       empty: 'Ne peut pas être vide',
+    },
+    labels: {
+      author: 'Auteur',
+      title: 'Titre',
+      image: "URL de l'image",
+      description: 'Description',
+      minimalPlayersNumber: 'Nombre minimal de joueurs',
+      inGame: 'Utilité en match',
+      equipement: 'Équipement',
+      duration: 'Durée',
+      steps: {
+        header: 'Variantes',
+        title: 'Titre',
+        instruction: 'Instructions',
+        vimeoId: 'Identifiant Vimeo',
+        youtube: 'Lien vidéo Youtube',
+        animation: {
+          label: 'Animation',
+          add: 'Ajouter',
+          edit: 'Modifier',
+          clear: 'Supprimer',
+        },
+      },
     },
     cta: 'Enregistrer',
     saveSuccess: 'L\'exercice "{{title}}" a été enregistré.',

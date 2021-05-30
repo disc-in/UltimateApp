@@ -400,6 +400,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
         },
       ]
     }
+    deleteDrill={[Function]}
     disableVirtualization={false}
     drillsToDisplay={
       Array [
@@ -1246,6 +1247,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
         },
       ]
     }
+    deleteDrill={[Function]}
     disableVirtualization={false}
     drillsToDisplay={
       Array [
@@ -2013,6 +2015,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
         },
       ]
     }
+    deleteDrill={[Function]}
     disableVirtualization={false}
     drillsToDisplay={
       Array [

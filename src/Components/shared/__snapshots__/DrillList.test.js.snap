@@ -42,6 +42,7 @@ exports[`<DrillList /> renders correctly 1`] = `
       },
     ]
   }
+  deleteDrill={[Function]}
   disableVirtualization={false}
   drillsToDisplay={
     Array [

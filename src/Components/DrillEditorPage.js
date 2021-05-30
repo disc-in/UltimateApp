@@ -17,12 +17,7 @@ import Label from './shared/form/Label';
 const newStep = {
   id: 0,
   title: '',
-  animation: {
-    positions: [[], []],
-    ids: [],
-    texts: [],
-    background: 'endzone',
-  },
+  animation: undefined,
   vimeoId: undefined,
   youtube: undefined,
   instruction: '',
@@ -50,14 +45,14 @@ const newDrill = {
 };
 
 export const DrillEditorPage = (props) => {
-  const [currentDrill, setCurrentDrill] = useState(newDrill);
+  const [currentDrill, setCurrentDrill] = useState(props.route.params?.currentDrill || newDrill);
 
   const validationSchema = Yup.object({
     title: Yup.string()
       .trim()
       .required(I18n.t('editor.playTitle.empty'))
       .notOneOf(
-        props.customDrills.map((drill) => drill.title),
+        props.customDrills.filter((existingDrill) => existingDrill.id !== currentDrill.id).map((drill) => drill.title),
         I18n.t('editor.playTitle.alreadyExists'),
       ),
     description: Yup.string().trim(),
@@ -101,31 +96,48 @@ export const DrillEditorPage = (props) => {
         >
           {({ handleSubmit, handleChange, errors, values, touched, isValid }) => (
             <View>
-              <Input fieldName="author" label="Author" />
-              <Input fieldName="title" label="Title" />
-              <Input fieldName="image" label="URL de l'image" />
-              <Input fieldName="description" label="Description" />
-              <Input fieldName="minimalPlayersNumber" keyboardType="number-pad" label="Minimal number of players" />
-              <Input fieldName="inGame" label="Utilité en jeu" />
-              <Input fieldName="equipement" label="Equipment" />
-              <Input fieldName="duration" keyboardType="number-pad" label="Duration" />
+              <Input fieldName="author" label={I18n.t('drillEditorPage.labels.author')} />
+              <Input fieldName="title" label={I18n.t('drillEditorPage.labels.title')} />
+              <Input fieldName="image" label={I18n.t('drillEditorPage.labels.image')} />
+              <Input fieldName="description" label={I18n.t('drillEditorPage.labels.description')} />
+              <Input
+                fieldName="minimalPlayersNumber"
+                keyboardType="number-pad"
+                label={I18n.t('drillEditorPage.labels.minimalPlayersNumber')}
+              />
+              <Input fieldName="inGame" label={I18n.t('drillEditorPage.labels.inGame')} />
+              <Input fieldName="equipement" label={I18n.t('drillEditorPage.labels.equipement')} />
+              <Input fieldName="duration" keyboardType="number-pad" label={I18n.t('drillEditorPage.labels.duration')} />
               <FieldArray
                 name="steps"
                 render={({ push, remove }) => (
                   <View>
                     <View style={styles.stepHeader}>
-                      <Text style={styles.stepHeadertext}>Steps</Text>
+                      <Text style={styles.stepHeadertext}>{I18n.t('drillEditorPage.labels.steps.header')}</Text>
                       <Button onPress={() => push({ ...newStep, id: values.steps.length })} text="+" small light />
                     </View>
                     {values.steps.map((step, index) => (
                       <View style={styles.step}>
-                        <Text>Step {index + 1}</Text>
-                        <Input fieldName={`steps[${index}].title`} label="Title" />
-                        <Input fieldName={`steps[${index}].instruction`} label="Instructions" />
-                        <Label fieldName={`steps[${index}].animation`} label="Animation">
+                        <Text style={styles.stepHeadertext}>Step {index + 1}</Text>
+                        <Input
+                          fieldName={`steps[${index}].title`}
+                          label={I18n.t('drillEditorPage.labels.steps.title')}
+                        />
+                        <Input
+                          fieldName={`steps[${index}].instruction`}
+                          label={I18n.t('drillEditorPage.labels.steps.instruction')}
+                        />
+                        <Label
+                          fieldName={`steps[${index}].animation`}
+                          label={I18n.t('drillEditorPage.labels.steps.animation.label')}
+                        >
                           <Button
                             onPress={() => goToEditAnimation(step, index)}
-                            text="Edit"
+                            text={
+                              step.animation
+                                ? I18n.t('drillEditorPage.labels.steps.animation.edit')
+                                : I18n.t('drillEditorPage.labels.steps.animation.add')
+                            }
                             small
                             light
                             style={styles.button}
@@ -133,15 +145,21 @@ export const DrillEditorPage = (props) => {
                           {step.animation && (
                             <Button
                               onPress={() => onAnimationChange(index)(undefined)}
-                              text="Clear"
+                              text={I18n.t('drillEditorPage.labels.steps.animation.clear')}
                               small
                               light
                               style={styles.button}
                             />
                           )}
                         </Label>
-                        <Input fieldName={`steps[${index}].vimeoId`} label="Identifiant Vimeo" />
-                        <Input fieldName={`steps[${index}].youtube`} label="URL Youtube" />
+                        <Input
+                          fieldName={`steps[${index}].vimeoId`}
+                          label={I18n.t('drillEditorPage.labels.steps.vimeoId')}
+                        />
+                        <Input
+                          fieldName={`steps[${index}].youtube`}
+                          label={I18n.t('drillEditorPage.labels.steps.youtube')}
+                        />
                         <Button onPress={() => remove(index)} text="-" small light style={styles.button} />
                       </View>
                     ))}
@@ -172,6 +190,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     padding: 10,
+    paddingRight: 20,
   },
   step: {
     paddingBottom: 10,
@@ -190,5 +209,9 @@ const styles = StyleSheet.create({
   button: {
     alignSelf: 'flex-start',
     marginRight: 10,
+  },
+  cta: {
+    width: 'auto',
+    marginVertical: 20,
   },
 });

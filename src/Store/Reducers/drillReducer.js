@@ -15,6 +15,10 @@ function drillReducer(state = initialState, action) {
       }
 
       return nextState;
+
+    case 'DELETE_DRILL':
+      return state.filter((item) => item.id !== action.value);
+
     default:
       return state;
   }

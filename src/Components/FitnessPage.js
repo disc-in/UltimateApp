@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef, useLayoutEffect } from 'react';
 import { View, StyleSheet, Platform, Text, TouchableOpacity, FlatList } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
 
 import VimeoVideo from './shared/VimeoVideo';
 import ShareDrill from './drills/ShareDrill';

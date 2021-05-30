@@ -42,7 +42,13 @@ describe('<DrillListPage />', () => {
     const lessPlayersDrill = createDrill({ id: 2, type: DrillTypes.FRISBEE, minimalPlayersNumber: 6 });
     const evenMorePlayersDrill = createDrill({ id: 3, type: DrillTypes.FRISBEE, minimalPlayersNumber: 20 });
     const drills = [morePlayersDrill, evenMorePlayersDrill, lessPlayersDrill];
-    const tree = renderer.create(<DrillListPage route={route} navigation={navigation} storeDrills={drills} />).toJSON();
+    const tree = renderer
+      .create(
+        <Provider store={store}>
+          <DrillListPage route={route} navigation={navigation} storeDrills={drills} />
+        </Provider>,
+      )
+      .toJSON();
     expect(tree).toMatchSnapshot();
   });
 
@@ -56,7 +62,13 @@ describe('<DrillListPage />', () => {
     const longDrill = createDrill({ id: 2, type: DrillTypes.FITNESS, durationInMinutes: 20 });
     const evenLongerDrill = createDrill({ id: 3, type: DrillTypes.FITNESS, durationInMinutes: 30 });
     const drills = [longDrill, evenLongerDrill, shortDrill];
-    const tree = renderer.create(<DrillListPage route={route} navigation={navigation} storeDrills={drills} />).toJSON();
+    const tree = renderer
+      .create(
+        <Provider store={store}>
+          <DrillListPage route={route} navigation={navigation} storeDrills={drills} />
+        </Provider>,
+      )
+      .toJSON();
     expect(tree).toMatchSnapshot();
   });
 
@@ -68,7 +80,11 @@ describe('<DrillListPage />', () => {
     };
     const drill = createDrill({ type: DrillTypes.FRISBEE, title: 'Hot Box' });
     const drills = [drill];
-    const { getByText } = render(<DrillListPage route={route} navigation={navigation} storeDrills={drills} />);
+    const { getByText } = render(
+      <Provider store={store}>
+        <DrillListPage route={route} navigation={navigation} storeDrills={drills} />
+      </Provider>,
+    );
 
     await fireEvent.press(getByText('Hot Box'));
 

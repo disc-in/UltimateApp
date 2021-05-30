@@ -484,6 +484,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
           },
         ]
       }
+      deleteDrill={[Function]}
       disableVirtualization={false}
       drillsToDisplay={
         Array [
@@ -1684,6 +1685,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
           },
         ]
       }
+      deleteDrill={[Function]}
       disableVirtualization={false}
       drillsToDisplay={
         Array [
@@ -2966,6 +2968,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
           },
         ]
       }
+      deleteDrill={[Function]}
       disableVirtualization={false}
       drillsToDisplay={
         Array [
@@ -4373,6 +4376,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
           },
         ]
       }
+      deleteDrill={[Function]}
       disableVirtualization={false}
       drillsToDisplay={
         Array [

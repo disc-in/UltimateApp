@@ -140,6 +140,9 @@ export default {
       description: 'Description',
       inGame: 'In Game',
     },
+    drillList: {
+      deleteSuccess: 'The drill "{{title}}" has been deleted.',
+    },
     fitnessDrillIllustration: {
       start: 'Start',
     },
@@ -197,8 +200,31 @@ export default {
       alreadyExists: 'Already exists',
       empty: 'Cannot be empty',
     },
+    labels: {
+      author: 'Author',
+      title: 'Title',
+      image: 'Image URL',
+      description: 'Description',
+      minimalPlayersNumber: 'Minimal number of players',
+      inGame: 'In game',
+      equipement: 'Equipment',
+      duration: 'Duration',
+      steps: {
+        header: 'Variants',
+        title: 'Title',
+        instruction: 'Instructions',
+        vimeoId: 'Vimeo Identifier',
+        youtube: 'Youtube link',
+        animation: {
+          label: 'Animation',
+          add: 'Add',
+          edit: 'Edit',
+          clear: 'Remove',
+        },
+      },
+    },
     cta: 'Save',
-    saveSuccess: 'The drill "{{title}}" has been deleted.',
+    saveSuccess: 'The drill "{{title}}" has been saved.',
   },
   drillPage: {
     minutes: 'minutes',

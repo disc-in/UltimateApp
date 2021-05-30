@@ -83,6 +83,13 @@ export default {
     cancel: 'Cancel',
     yes: 'Yes',
     no: 'No',
+    form: {
+      animationInput: {
+        add: 'Add',
+        edit: 'Edit',
+        clear: 'Remove',
+      },
+    },
   },
   utils: {
     snackbar: {
@@ -209,22 +216,18 @@ export default {
       minimalPlayersNumber: 'Minimal number of players',
       inGame: 'In game',
       equipement: 'Equipment',
-      durationInMinutes: 'Duration (min.)',
+      durationInMinutes: 'Duration (minutes)',
       intensity: 'Intensity',
       goals: 'Goals',
       level: 'Level',
+      stepsHeader: 'Variants',
       steps: {
-        header: 'Variants',
+        header: 'Variant {{count}}',
         title: 'Title',
         instruction: 'Instructions',
+        animation: 'Animation',
         vimeoId: 'Vimeo Identifier',
         youtube: 'Youtube link',
-        animation: {
-          label: 'Animation',
-          add: 'Add',
-          edit: 'Edit',
-          clear: 'Remove',
-        },
       },
     },
     cta: 'Save',

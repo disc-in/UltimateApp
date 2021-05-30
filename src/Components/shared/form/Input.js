@@ -4,14 +4,19 @@ import { useField } from 'formik';
 
 import theme from '../../../styles/theme.style';
 
-const Input = ({ fieldName, label, ...props }) => {
+const Input = ({ fieldName, label, required, multiline, ...props }) => {
   const [isFocused, setIsFocused] = useState(false);
   const [field, meta] = useField(fieldName);
 
-  const borderColor = isFocused ? styles.focusedInput : meta.error ? styles.errorInput : undefined;
+  const borderColor = isFocused ? styles.focusedInput : meta.error && meta.touched ? styles.errorInput : undefined;
+  const multilineProps = multiline ? { multiline: true, numberOfLines: 3, textAlignVertical: 'top' } : undefined;
+
   return (
     <View style={styles.group}>
-      <Text style={styles.label}>{label}</Text>
+      <View style={styles.label}>
+        {required && <Text style={styles.error}>* </Text>}
+        <Text>{label}</Text>
+      </View>
       <View style={[styles.input, borderColor]}>
         {meta.error && meta.touched && <Text style={styles.error}>{meta.error}</Text>}
         <TextInput
@@ -19,6 +24,7 @@ const Input = ({ fieldName, label, ...props }) => {
           value={field.value?.toString()}
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
+          {...multilineProps}
           {...props}
         />
       </View>
@@ -33,6 +39,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   label: {
+    flexDirection: 'row',
     marginBottom: 5,
   },
   input: {

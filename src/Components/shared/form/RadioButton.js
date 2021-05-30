@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { StyleSheet, TouchableOpacity, View, Text } from 'react-native';
 import { useField } from 'formik';
 
-import I18n from '../../../utils/i18n';
 import theme from '../../../styles/theme.style';
 
 const RadioButton = ({ fieldName, label, values, labels, ...props }) => {

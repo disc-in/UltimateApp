@@ -83,6 +83,13 @@ export default {
     cancel: 'Annuler',
     yes: 'Oui',
     no: 'Non',
+    form: {
+      animationInput: {
+        add: 'Ajouter',
+        edit: 'Modifier',
+        clear: 'Supprimer',
+      },
+    },
   },
   utils: {
     snackbar: {
@@ -208,22 +215,18 @@ export default {
       minimalPlayersNumber: 'Nombre minimal de joueurs',
       inGame: 'Utilité en match',
       equipement: 'Équipement',
-      durationInMinutes: 'Durée (min.)',
+      durationInMinutes: 'Durée (minutes)',
       intensity: 'Intensité',
       goals: 'Thèmes',
       level: 'Niveau',
+      stepsHeader: 'Variantes',
       steps: {
-        header: 'Variantes',
+        header: 'Variante {{count}}',
         title: 'Titre',
         instruction: 'Instructions',
+        animation: 'Animation',
         vimeoId: 'Identifiant Vimeo',
         youtube: 'Lien vidéo Youtube',
-        animation: {
-          label: 'Animation',
-          add: 'Ajouter',
-          edit: 'Modifier',
-          clear: 'Supprimer',
-        },
       },
     },
     cta: 'Enregistrer',

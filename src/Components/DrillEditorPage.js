@@ -12,9 +12,9 @@ import { generateUuid } from '../utils/uuid';
 import { saveDrill } from '../Store/Actions/drillAction';
 import Button from './shared/Button';
 import Input from './shared/form/Input';
-import Label from './shared/form/Label';
 import RadioButton from './shared/form/RadioButton';
 import Checkbox from './shared/form/Checkbox';
+import AnimationInput from './shared/form/AnimationInput';
 
 const newStep = {
   id: 0,
@@ -36,12 +36,10 @@ const newDrill = {
   description: undefined,
   minimalPlayersNumber: 2,
   inGame: undefined,
-  equipmentLabel: undefined, // Cannot be updated because not used in Frisbee drills
   equipment: undefined,
   durationInMinutes: undefined,
   intensity: undefined,
   goals: [],
-  seasonTiming: undefined, // Cannot be updated because not used in Frisbee drills
   level: undefined,
   steps: [newStep],
 };
@@ -67,31 +65,17 @@ export const DrillEditorPage = (props) => {
     intensity: Yup.string().trim().oneOf(Object.values(Intensities)),
     goals: Yup.array(Yup.string().oneOf(Object.values(FrisbeeGoals))),
     level: Yup.string().trim().oneOf(Object.values(Levels)),
-    // TODO: Steps validation seems to break saving of several steps
-    // steps: Yup.array(Yup.object({
-    //   id: Yup.number(),
-    //   title: Yup.string().trim(),
-    //   animation: Yup.object(),
-    //   vimeoId: Yup.string().trim().min(1),
-    //   youtube: Yup.string().trim().min(1),
-    //   instruction: Yup.string().trim(),
-    // })),
+    steps: Yup.array(
+      Yup.object({
+        id: Yup.number(),
+        title: Yup.string().trim(),
+        animation: Yup.object(),
+        vimeoId: Yup.string().trim().min(1),
+        youtube: Yup.string().trim().min(1),
+        instruction: Yup.string().trim(),
+      }),
+    ).required(),
   });
-
-  const onAnimationChange = (stepIndex) => {
-    return (animation) => {
-      const newCurrentDrill = { ...currentDrill };
-      newCurrentDrill.steps[stepIndex].animation = animation;
-      setCurrentDrill(newCurrentDrill);
-    };
-  };
-
-  const goToEditAnimation = (step, stepIndex) => {
-    props.navigation.navigate('DrillEditorAnimationPage', {
-      animation: step.animation,
-      onAnimationChange: onAnimationChange(stepIndex),
-    });
-  };
 
   const behavior = Platform.select({
     ios: 'padding',
@@ -99,30 +83,29 @@ export const DrillEditorPage = (props) => {
   });
 
   return (
-    <KeyboardAvoidingView style={styles.drillEditorPage} behavior={behavior}>
-      <ScrollView>
+    <KeyboardAvoidingView style={{ flex: 1 }} behavior={behavior}>
+      <ScrollView style={styles.drillEditorPage}>
         <Formik
           initialValues={currentDrill}
           validationSchema={validationSchema}
           onSubmit={(values) => {
-            const newCurrentDrill = { ...currentDrill, ...values };
-            props.saveDrill(newCurrentDrill);
-            showSuccess(I18n.t('drillEditorPage.saveSuccess', { title: newCurrentDrill.title }));
-            props.navigation.navigate('DrillListPage', { type: DrillTypes.FRISBEE });
+            props.saveDrill(values);
+            showSuccess(I18n.t('drillEditorPage.saveSuccess', { title: values.title }));
+            props.navigation.navigate('DrillPage', { id: values.id });
           }}
         >
           {({ handleSubmit, handleChange, errors, values, touched, isValid }) => (
             <View>
               <Input fieldName="author" label={I18n.t('drillEditorPage.labels.author')} />
-              <Input fieldName="title" label={I18n.t('drillEditorPage.labels.title')} />
+              <Input fieldName="title" label={I18n.t('drillEditorPage.labels.title')} required />
               <Input fieldName="image" label={I18n.t('drillEditorPage.labels.image')} />
-              <Input fieldName="description" label={I18n.t('drillEditorPage.labels.description')} />
+              <Input fieldName="description" label={I18n.t('drillEditorPage.labels.description')} multiline />
               <Input
                 fieldName="minimalPlayersNumber"
                 keyboardType="number-pad"
                 label={I18n.t('drillEditorPage.labels.minimalPlayersNumber')}
               />
-              <Input fieldName="inGame" label={I18n.t('drillEditorPage.labels.inGame')} />
+              <Input fieldName="inGame" label={I18n.t('drillEditorPage.labels.inGame')} multiline />
               <Input fieldName="equipement" label={I18n.t('drillEditorPage.labels.equipement')} />
               <Input
                 fieldName="durationInMinutes"
@@ -152,14 +135,16 @@ export const DrillEditorPage = (props) => {
                 render={({ push, remove }) => (
                   <View>
                     <View style={styles.stepHeader}>
-                      <Text style={styles.stepHeadertext}>{I18n.t('drillEditorPage.labels.steps.header')}</Text>
+                      <Text style={styles.stepHeadertext}>{I18n.t('drillEditorPage.labels.stepsHeader')}</Text>
                       <Button onPress={() => push({ ...newStep, id: values.steps.length })} text="+" small light />
                     </View>
                     {values.steps.map((step, index) => (
                       <View key={index} style={styles.step}>
                         <View style={styles.stepHeader}>
                           <Button onPress={() => remove(index)} text="-" small light style={styles.button} />
-                          <Text style={styles.stepHeadertext}>Step {index + 1}</Text>
+                          <Text style={styles.stepHeadertext}>
+                            {I18n.t('drillEditorPage.labels.steps.header', { count: index + 1 })}
+                          </Text>
                         </View>
                         <Input
                           fieldName={`steps[${index}].title`}
@@ -168,32 +153,12 @@ export const DrillEditorPage = (props) => {
                         <Input
                           fieldName={`steps[${index}].instruction`}
                           label={I18n.t('drillEditorPage.labels.steps.instruction')}
+                          multiline
                         />
-                        <Label
+                        <AnimationInput
                           fieldName={`steps[${index}].animation`}
-                          label={I18n.t('drillEditorPage.labels.steps.animation.label')}
-                        >
-                          <Button
-                            onPress={() => goToEditAnimation(step, index)}
-                            text={
-                              step.animation
-                                ? I18n.t('drillEditorPage.labels.steps.animation.edit')
-                                : I18n.t('drillEditorPage.labels.steps.animation.add')
-                            }
-                            small
-                            light
-                            style={styles.button}
-                          />
-                          {step.animation && (
-                            <Button
-                              onPress={() => onAnimationChange(index)(undefined)}
-                              text={I18n.t('drillEditorPage.labels.steps.animation.clear')}
-                              small
-                              light
-                              style={styles.button}
-                            />
-                          )}
-                        </Label>
+                          label={I18n.t('drillEditorPage.labels.steps.animation')}
+                        />
                         <Input
                           fieldName={`steps[${index}].vimeoId`}
                           label={I18n.t('drillEditorPage.labels.steps.vimeoId')}
@@ -228,7 +193,6 @@ export default connect(mapStateToProps, mapDispatchToProps)(DrillEditorPage);
 
 const styles = StyleSheet.create({
   drillEditorPage: {
-    flex: 1,
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     padding: 10,
     paddingRight: 20,

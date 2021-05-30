@@ -62,6 +62,7 @@ export default {
     drillListPage: '{{type}} drills',
     drillPage: 'Drill',
     drillEditorPage: 'New Drill',
+    drillEditorAnimationPage: 'Animation',
     fitnessPage: 'Fitness',
     filters: 'Filters',
     programListPage: {
@@ -197,6 +198,7 @@ export default {
       empty: 'Cannot be empty',
     },
     cta: 'Save',
+    saveSuccess: 'The drill "{{title}}" has been deleted.',
   },
   drillPage: {
     minutes: 'minutes',

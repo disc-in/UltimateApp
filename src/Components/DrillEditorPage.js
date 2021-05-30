@@ -7,16 +7,12 @@ import * as Yup from 'yup';
 import { DrillTypes, FrisbeeGoals } from '../Fixtures/config';
 import theme from '../styles/theme.style';
 import I18n from '../utils/i18n';
+import { showSuccess } from '../utils/flashMessage';
 import { generateUuid } from '../utils/uuid';
 import { saveDrill } from '../Store/Actions/drillAction';
 import Button from './shared/Button';
 import Input from './shared/form/Input';
-
-// TODO: Stocker correctement les champs number
-// TODO: Gérer différemment le partage de drill de l'app et de drill custom (pour l'instant empêcher ?)
-// TODO: Pouvoir créer une animation
-// TODO: Écrire des tests plus précis du formulaire
-// TODO: Meilleures validations (notamment sur steps)
+import Label from './shared/form/Label';
 
 const newStep = {
   id: 0,
@@ -70,6 +66,21 @@ export const DrillEditorPage = (props) => {
     equipment: Yup.string().trim(),
   });
 
+  const onAnimationChange = (stepIndex) => {
+    return (animation) => {
+      const newCurrentDrill = { ...currentDrill };
+      newCurrentDrill.steps[stepIndex].animation = animation;
+      setCurrentDrill(newCurrentDrill);
+    };
+  };
+
+  const goToEditAnimation = (step, stepIndex) => {
+    props.navigation.navigate('DrillEditorAnimationPage', {
+      animation: step.animation,
+      onAnimationChange: onAnimationChange(stepIndex),
+    });
+  };
+
   const behavior = Platform.select({
     ios: 'padding',
     android: 'height',
@@ -84,6 +95,7 @@ export const DrillEditorPage = (props) => {
           onSubmit={(values) => {
             const newCurrentDrill = { ...currentDrill, ...values };
             props.saveDrill(newCurrentDrill);
+            showSuccess(I18n.t('drillEditorPage.saveSuccess', { title: newCurrentDrill.title }));
             props.navigation.navigate('DrillListPage', { type: DrillTypes.FRISBEE });
           }}
         >
@@ -110,6 +122,24 @@ export const DrillEditorPage = (props) => {
                         <Text>Step {index + 1}</Text>
                         <Input fieldName={`steps[${index}].title`} label="Title" />
                         <Input fieldName={`steps[${index}].instruction`} label="Instructions" />
+                        <Label fieldName={`steps[${index}].animation`} label="Animation">
+                          <Button
+                            onPress={() => goToEditAnimation(step, index)}
+                            text="Edit"
+                            small
+                            light
+                            style={styles.button}
+                          />
+                          {step.animation && (
+                            <Button
+                              onPress={() => onAnimationChange(index)(undefined)}
+                              text="Clear"
+                              small
+                              light
+                              style={styles.button}
+                            />
+                          )}
+                        </Label>
                         <Input fieldName={`steps[${index}].vimeoId`} label="Identifiant Vimeo" />
                         <Input fieldName={`steps[${index}].youtube`} label="URL Youtube" />
                         <Button onPress={() => remove(index)} text="-" small light style={styles.button} />
@@ -159,5 +189,6 @@ const styles = StyleSheet.create({
   },
   button: {
     alignSelf: 'flex-start',
+    marginRight: 10,
   },
 });

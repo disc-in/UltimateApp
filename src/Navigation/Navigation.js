@@ -13,6 +13,7 @@ import TrainingPage from '../Components/TrainingPage';
 import ProgramListPage from '../Components/ProgramListPage';
 
 import DrillEditorPage from '../Components/DrillEditorPage';
+import DrillEditorAnimationPage from '../Components/DrillEditorAnimationPage';
 import PlaybookPage from '../Components/PlaybookPage';
 import PlayEditorPage from '../Components/PlayEditorPage';
 import ImporterPage from '../Components/ImporterPage';
@@ -44,6 +45,11 @@ export const Navigation = () => (
       name="DrillEditorPage"
       component={DrillEditorPage}
       options={{ title: I18n.t('navigation.drillEditorPage') }}
+    />
+    <Stack.Screen
+      name="DrillEditorAnimationPage"
+      component={DrillEditorAnimationPage}
+      options={{ title: I18n.t('navigation.drillEditorAnimationPage') }}
     />
     <Stack.Screen name="FrisbeeFilters" component={FrisbeeFilters} options={{ title: I18n.t('navigation.filters') }} />
     <Stack.Screen name="FitnessFilters" component={FitnessFilters} options={{ title: I18n.t('navigation.filters') }} />

@@ -61,6 +61,7 @@ export default {
     aboutPage: 'À propos de Disc In',
     drillListPage: 'Exercices de {{type}}',
     drillEditorPage: 'Nouvel Exercice',
+    drillEditorAnimationPage: 'Animation',
     drillPage: 'Exercice',
     fitnessPage: 'Fitness',
     filters: 'Filtres',
@@ -196,6 +197,7 @@ export default {
       empty: 'Ne peut pas être vide',
     },
     cta: 'Enregistrer',
+    saveSuccess: 'L\'exercice "{{title}}" a été enregistré.',
   },
   drillPage: {
     minutes: 'minutes',

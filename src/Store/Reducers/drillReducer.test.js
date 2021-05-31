@@ -7,22 +7,22 @@ describe('drillReducer', () => {
 
   describe('When handling SAVE_DRILL', () => {
     it('when saving an existing drill', () => {
-      const newDrill = {
+      const newDrill = createDrill({
         animation: {
           positions: [1],
         },
-        title: 'Title',
-      };
+        id: drill.id,
+      });
       expect(drillReducer(initialState, { type: 'SAVE_DRILL', value: newDrill })).toEqual([newDrill]);
     });
 
     it('when saving a new drill', () => {
-      const newDrill = {
+      const newDrill = createDrill({
         animation: {
           positions: [1],
         },
-        title: 'New Title',
-      };
+        id: '999',
+      });
       expect(drillReducer(initialState, { type: 'SAVE_DRILL', value: newDrill })).toEqual([drill, newDrill]);
     });
   });

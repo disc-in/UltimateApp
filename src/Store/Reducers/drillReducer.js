@@ -5,7 +5,7 @@ function drillReducer(state = initialState, action) {
   switch (action.type) {
     case 'SAVE_DRILL':
       // If the drill is already saved, replace it; otherwise add it
-      const drillIndex = state.findIndex((item) => item.title === action.value.title);
+      const drillIndex = state.findIndex((item) => item.id === action.value.id);
 
       if (drillIndex !== -1) {
         nextState = [...state];

@@ -32,6 +32,13 @@ describe('<FrisbeeFilters />', () => {
     goals: [FrisbeeGoals.HANDLING],
     level: Levels.ADVANCED,
   });
+  const customDrill = createDrill({
+    id: 4,
+    custom: true,
+    type: DrillTypes.FRISBEE,
+    goals: [FrisbeeGoals.HANDLING],
+    level: Levels.ADVANCED,
+  });
   const mockStore = configureMockStore()({
     favoriteDrills: [],
   });
@@ -307,6 +314,61 @@ describe('<FrisbeeFilters />', () => {
           selectedGoals: [],
           numberOfPlayers: undefined,
           displayedDrills: [intermediateDrill],
+        },
+      });
+    });
+
+    it('filters custom drills', async () => {
+      const drills = [beginnerDrill, customDrill];
+      const navigate = jest.fn();
+
+      const DummyScreen = (props) => null;
+      const Stack = createStackNavigator();
+
+      const { getByText } = await waitFor(() =>
+        render(
+          <Provider store={mockStore}>
+            <NavigationContainer>
+              <Stack.Navigator>
+                <Stack.Screen
+                  name="FrisbeeFilters"
+                  component={ConnectedFrisbeeFilters}
+                  initialParams={{
+                    initialData: drills,
+                    previousScreen: 'DrillListPage',
+                    previousType: DrillTypes.FRISBEE,
+                  }}
+                  listeners={({ navigation }) => ({
+                    transitionStart: (e) => {
+                      navigation.navigate = navigate;
+                    },
+                  })}
+                />
+                <Stack.Screen name="DrillListPage" component={DummyScreen} />
+              </Stack.Navigator>
+            </NavigationContainer>
+            ,
+          </Provider>,
+        ),
+      );
+
+      expect(getByText('See 2 drills')).toBeDefined();
+
+      await fireEvent.press(getByText('My drills only'));
+
+      expect(getByText('See 1 drill')).toBeDefined();
+
+      await fireEvent.press(getByText('See 1 drill'));
+
+      expect(navigate).toBeCalledWith('DrillListPage', {
+        type: DrillTypes.FRISBEE,
+        currentFilters: {
+          selectedFavorites: false,
+          selectedCustomDrills: true,
+          selectedLevels: [],
+          selectedGoals: [],
+          numberOfPlayers: undefined,
+          displayedDrills: [customDrill],
         },
       });
     });

@@ -1,6 +1,227 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ImporterPage /> renders an error message if the play could not be found 1`] = `
+exports[`<ImporterPage /> when routing on drills renders an error message if the play could not be found 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#fff",
+      "flex": 1,
+      "justifyContent": "space-around",
+      "padding": 20,
+    }
+  }
+>
+  <Text
+    allowFontScaling={false}
+    style={
+      Array [
+        Object {
+          "color": undefined,
+          "fontSize": 72,
+        },
+        undefined,
+        Object {
+          "fontFamily": "material-community",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Object {},
+      ]
+    }
+  >
+    󰇚
+  </Text>
+  <Text>
+    It looks like you want to import a drill, I am going to fetch it... 🏃
+  </Text>
+</View>
+`;
+
+exports[`<ImporterPage /> when routing on drills renders correctly after download 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#fff",
+      "flex": 1,
+      "justifyContent": "space-around",
+      "padding": 20,
+    }
+  }
+>
+  <Text
+    allowFontScaling={false}
+    style={
+      Array [
+        Object {
+          "color": undefined,
+          "fontSize": 72,
+        },
+        undefined,
+        Object {
+          "fontFamily": "material-community",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Object {},
+      ]
+    }
+  >
+    󰇚
+  </Text>
+  <View>
+    <Text
+      style={
+        Object {
+          "fontSize": 16,
+          "marginBottom": 5,
+        }
+      }
+    >
+      You are about to import and save the drill Title
+    </Text>
+    <Text
+      style={
+        Object {
+          "fontSize": 16,
+          "marginBottom": 5,
+        }
+      }
+    >
+      Are you sure?
+    </Text>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-evenly",
+          "marginTop": 20,
+        }
+      }
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#2a9e91",
+            "borderRadius": 5,
+            "flexDirection": "row",
+            "height": 40,
+            "justifyContent": "center",
+            "opacity": 1,
+            "paddingHorizontal": 20,
+            "paddingVertical": 10,
+            "width": 100,
+          }
+        }
+        testID="button"
+      >
+        <Text
+          style={
+            Object {
+              "color": "#fff",
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
+        >
+          Yes
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderColor": "#2a9e91",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "flexDirection": "row",
+            "height": 40,
+            "justifyContent": "center",
+            "opacity": 1,
+            "paddingHorizontal": 20,
+            "paddingVertical": 10,
+            "width": 100,
+          }
+        }
+        testID="button"
+      >
+        <Text
+          style={
+            Object {
+              "color": "#2a9e91",
+              "fontSize": 16,
+              "fontWeight": "bold",
+            }
+          }
+        >
+          Cancel
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`<ImporterPage /> when routing on drills renders correctly before download 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#fff",
+      "flex": 1,
+      "justifyContent": "space-around",
+      "padding": 20,
+    }
+  }
+>
+  <Text
+    allowFontScaling={false}
+    style={
+      Array [
+        Object {
+          "color": undefined,
+          "fontSize": 72,
+        },
+        undefined,
+        Object {
+          "fontFamily": "material-community",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Object {},
+      ]
+    }
+  >
+    󰇚
+  </Text>
+  <Text>
+    It looks like you want to import a drill, I am going to fetch it... 🏃
+  </Text>
+</View>
+`;
+
+exports[`<ImporterPage /> when routing on old customPlays link renders an error message if the play could not be found 1`] = `
 <View
   style={
     Object {
@@ -38,7 +259,7 @@ exports[`<ImporterPage /> renders an error message if the play could not be foun
 </View>
 `;
 
-exports[`<ImporterPage /> renders correctly after download 1`] = `
+exports[`<ImporterPage /> when routing on old customPlays link renders correctly after download 1`] = `
 <View
   style={
     Object {
@@ -95,7 +316,7 @@ exports[`<ImporterPage /> renders correctly after download 1`] = `
       style={
         Object {
           "flexDirection": "row",
-          "justifyContent": "space-around",
+          "justifyContent": "space-evenly",
           "marginTop": 20,
         }
       }
@@ -121,7 +342,7 @@ exports[`<ImporterPage /> renders correctly after download 1`] = `
             "opacity": 1,
             "paddingHorizontal": 20,
             "paddingVertical": 10,
-            "width": 120,
+            "width": 100,
           }
         }
         testID="button"
@@ -161,7 +382,7 @@ exports[`<ImporterPage /> renders correctly after download 1`] = `
             "opacity": 1,
             "paddingHorizontal": 20,
             "paddingVertical": 10,
-            "width": 120,
+            "width": 100,
           }
         }
         testID="button"
@@ -183,7 +404,7 @@ exports[`<ImporterPage /> renders correctly after download 1`] = `
 </View>
 `;
 
-exports[`<ImporterPage /> renders correctly before download 1`] = `
+exports[`<ImporterPage /> when routing on old customPlays link renders correctly before download 1`] = `
 <View
   style={
     Object {
@@ -196,6 +417,227 @@ exports[`<ImporterPage /> renders correctly before download 1`] = `
   }
 >
   <Text />
+  <Text>
+    It looks like you want to import a play, I am going to fetch it... 🏃
+  </Text>
+</View>
+`;
+
+exports[`<ImporterPage /> when routing on plays renders an error message if the play could not be found 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#fff",
+      "flex": 1,
+      "justifyContent": "space-around",
+      "padding": 20,
+    }
+  }
+>
+  <Text
+    allowFontScaling={false}
+    style={
+      Array [
+        Object {
+          "color": undefined,
+          "fontSize": 72,
+        },
+        undefined,
+        Object {
+          "fontFamily": "material-community",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Object {},
+      ]
+    }
+  >
+    󰇚
+  </Text>
+  <Text>
+    It looks like you want to import a play, I am going to fetch it... 🏃
+  </Text>
+</View>
+`;
+
+exports[`<ImporterPage /> when routing on plays renders correctly after download 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#fff",
+      "flex": 1,
+      "justifyContent": "space-around",
+      "padding": 20,
+    }
+  }
+>
+  <Text
+    allowFontScaling={false}
+    style={
+      Array [
+        Object {
+          "color": undefined,
+          "fontSize": 72,
+        },
+        undefined,
+        Object {
+          "fontFamily": "material-community",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Object {},
+      ]
+    }
+  >
+    󰇚
+  </Text>
+  <View>
+    <Text
+      style={
+        Object {
+          "fontSize": 16,
+          "marginBottom": 5,
+        }
+      }
+    >
+      You are about to import and save the play Title
+    </Text>
+    <Text
+      style={
+        Object {
+          "fontSize": 16,
+          "marginBottom": 5,
+        }
+      }
+    >
+      Are you sure?
+    </Text>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-evenly",
+          "marginTop": 20,
+        }
+      }
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#2a9e91",
+            "borderRadius": 5,
+            "flexDirection": "row",
+            "height": 40,
+            "justifyContent": "center",
+            "opacity": 1,
+            "paddingHorizontal": 20,
+            "paddingVertical": 10,
+            "width": 100,
+          }
+        }
+        testID="button"
+      >
+        <Text
+          style={
+            Object {
+              "color": "#fff",
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
+        >
+          Yes
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderColor": "#2a9e91",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "flexDirection": "row",
+            "height": 40,
+            "justifyContent": "center",
+            "opacity": 1,
+            "paddingHorizontal": 20,
+            "paddingVertical": 10,
+            "width": 100,
+          }
+        }
+        testID="button"
+      >
+        <Text
+          style={
+            Object {
+              "color": "#2a9e91",
+              "fontSize": 16,
+              "fontWeight": "bold",
+            }
+          }
+        >
+          Cancel
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`<ImporterPage /> when routing on plays renders correctly before download 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#fff",
+      "flex": 1,
+      "justifyContent": "space-around",
+      "padding": 20,
+    }
+  }
+>
+  <Text
+    allowFontScaling={false}
+    style={
+      Array [
+        Object {
+          "color": undefined,
+          "fontSize": 72,
+        },
+        undefined,
+        Object {
+          "fontFamily": "material-community",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Object {},
+      ]
+    }
+  >
+    󰇚
+  </Text>
   <Text>
     It looks like you want to import a play, I am going to fetch it... 🏃
   </Text>

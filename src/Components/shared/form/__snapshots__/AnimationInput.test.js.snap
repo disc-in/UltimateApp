@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AnimationInput renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "marginBottom": 5,
+      }
+    }
+  >
+    <Text>
+      Title
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "flex-start",
+          "backgroundColor": "#fff",
+          "borderColor": "#2a9e91",
+          "borderRadius": 5,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "height": 30,
+          "justifyContent": "center",
+          "marginRight": 10,
+          "opacity": 1,
+          "paddingHorizontal": 10,
+          "paddingVertical": 0,
+          "width": "auto",
+        }
+      }
+      testID="button"
+    >
+      <Text
+        style={
+          Object {
+            "color": "#2a9e91",
+            "fontSize": 16,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Edit
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "flex-start",
+          "backgroundColor": "#fff",
+          "borderColor": "#2a9e91",
+          "borderRadius": 5,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "height": 30,
+          "justifyContent": "center",
+          "marginRight": 10,
+          "opacity": 1,
+          "paddingHorizontal": 10,
+          "paddingVertical": 0,
+          "width": "auto",
+        }
+      }
+      testID="button"
+    >
+      <Text
+        style={
+          Object {
+            "color": "#2a9e91",
+            "fontSize": 16,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Remove
+      </Text>
+    </View>
+  </View>
+</View>
+`;

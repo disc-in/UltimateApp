@@ -10,7 +10,7 @@ import { deleteDrill } from '../../Store/Actions/drillAction';
 import { DrillTypes } from '../../Fixtures/config';
 import customDrillsImage from '../../../assets/customDrills.jpg';
 
-const DrillList = (props) => {
+export const DrillList = (props) => {
   const { navigation, drillsToDisplay } = props;
   const onDrillPress = props.onDrillPress || ((item) => navigation.navigate('DrillPage', { id: item.id }));
 

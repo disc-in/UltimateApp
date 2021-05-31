@@ -1,0 +1,218 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RadioButton renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 10,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "marginBottom": 5,
+      }
+    }
+  >
+    Title
+  </Text>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "borderColor": "#e5e5e5",
+          "borderRadius": 5,
+          "borderWidth": 0.5,
+          "flexBasis": "30%",
+          "flexGrow": 1,
+          "marginRight": 5,
+          "opacity": 1,
+          "paddingVertical": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "textAlign": "center",
+          }
+        }
+      >
+        I prefer red
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "borderColor": "#e5e5e5",
+          "borderRadius": 5,
+          "borderWidth": 0.5,
+          "flexBasis": "30%",
+          "flexGrow": 1,
+          "marginRight": 5,
+          "opacity": 1,
+          "paddingVertical": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "textAlign": "center",
+          }
+        }
+      >
+        I prefer blue
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`RadioButton renders correctly when there is an error 1`] = `
+Array [
+  <View
+    style={
+      Object {
+        "marginBottom": 10,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "marginBottom": 5,
+        }
+      }
+    >
+      Title
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "red",
+          "fontStyle": "italic",
+        }
+      }
+    >
+      Invalid title
+    </Text>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "borderColor": "#2a9e91",
+            "borderRadius": 5,
+            "borderWidth": 0.5,
+            "flexBasis": "30%",
+            "flexGrow": 1,
+            "marginRight": 5,
+            "opacity": 1,
+            "paddingVertical": 10,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "textAlign": "center",
+            }
+          }
+        >
+          I prefer red
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "borderColor": "#e5e5e5",
+            "borderRadius": 5,
+            "borderWidth": 0.5,
+            "flexBasis": "30%",
+            "flexGrow": 1,
+            "marginRight": 5,
+            "opacity": 1,
+            "paddingVertical": 10,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "textAlign": "center",
+            }
+          }
+        >
+          I prefer blue
+        </Text>
+      </View>
+    </View>
+  </View>,
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+    testID="submit"
+  />,
+]
+`;

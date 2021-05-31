@@ -1,0 +1,354 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 10,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "marginBottom": 5,
+      }
+    }
+  >
+    Title
+  </Text>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+      }
+    }
+  >
+    <View
+      accessibilityRole="checkbox"
+      accessibilityState={
+        Object {
+          "checked": false,
+        }
+      }
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#fff",
+          "borderColor": "#ededed",
+          "borderRadius": 3,
+          "borderWidth": 0,
+          "flexBasis": "40%",
+          "margin": 5,
+          "marginLeft": 10,
+          "marginRight": 10,
+          "opacity": 1,
+          "padding": 0,
+        }
+      }
+      testID="checkbox"
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text />
+        <Text
+          style={
+            Object {
+              "color": "#43484d",
+              "fontWeight": "normal",
+              "marginLeft": 10,
+              "marginRight": 10,
+            }
+          }
+          testID="checkboxTitle"
+        >
+          I prefer red
+        </Text>
+      </View>
+    </View>
+    <View
+      accessibilityRole="checkbox"
+      accessibilityState={
+        Object {
+          "checked": false,
+        }
+      }
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#fff",
+          "borderColor": "#ededed",
+          "borderRadius": 3,
+          "borderWidth": 0,
+          "flexBasis": "40%",
+          "margin": 5,
+          "marginLeft": 10,
+          "marginRight": 10,
+          "opacity": 1,
+          "padding": 0,
+        }
+      }
+      testID="checkbox"
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text />
+        <Text
+          style={
+            Object {
+              "color": "#43484d",
+              "fontWeight": "normal",
+              "marginLeft": 10,
+              "marginRight": 10,
+            }
+          }
+          testID="checkboxTitle"
+        >
+          I prefer blue
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Checkbox renders correctly when there is an error 1`] = `
+Array [
+  <View
+    style={
+      Object {
+        "marginBottom": 10,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "marginBottom": 5,
+        }
+      }
+    >
+      Title
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "red",
+          "fontStyle": "italic",
+        }
+      }
+    >
+      Invalid title
+    </Text>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "flexWrap": "wrap",
+        }
+      }
+    >
+      <View
+        accessibilityRole="checkbox"
+        accessibilityState={
+          Object {
+            "checked": true,
+          }
+        }
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "borderColor": "#ededed",
+            "borderRadius": 3,
+            "borderWidth": 0,
+            "flexBasis": "40%",
+            "margin": 5,
+            "marginLeft": 10,
+            "marginRight": 10,
+            "opacity": 1,
+            "padding": 0,
+          }
+        }
+        testID="checkbox"
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Text
+            allowFontScaling={false}
+            style={
+              Array [
+                Object {
+                  "color": "#2a9e91",
+                  "fontSize": 24,
+                },
+                Object {
+                  "minWidth": 24,
+                },
+                Object {
+                  "fontFamily": "FontAwesome",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            style={
+              Object {
+                "color": "#43484d",
+                "fontWeight": "normal",
+                "marginLeft": 10,
+                "marginRight": 10,
+              }
+            }
+            testID="checkboxTitle"
+          >
+            I prefer red
+          </Text>
+        </View>
+      </View>
+      <View
+        accessibilityRole="checkbox"
+        accessibilityState={
+          Object {
+            "checked": true,
+          }
+        }
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "borderColor": "#ededed",
+            "borderRadius": 3,
+            "borderWidth": 0,
+            "flexBasis": "40%",
+            "margin": 5,
+            "marginLeft": 10,
+            "marginRight": 10,
+            "opacity": 1,
+            "padding": 0,
+          }
+        }
+        testID="checkbox"
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Text
+            allowFontScaling={false}
+            style={
+              Array [
+                Object {
+                  "color": "#2a9e91",
+                  "fontSize": 24,
+                },
+                Object {
+                  "minWidth": 24,
+                },
+                Object {
+                  "fontFamily": "FontAwesome",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            style={
+              Object {
+                "color": "#43484d",
+                "fontWeight": "normal",
+                "marginLeft": 10,
+                "marginRight": 10,
+              }
+            }
+            testID="checkboxTitle"
+          >
+            I prefer blue
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>,
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+    testID="submit"
+  />,
+]
+`;

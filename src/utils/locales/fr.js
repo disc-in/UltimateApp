@@ -223,7 +223,7 @@ export default {
       description: 'Description',
       minimalPlayersNumber: 'Nombre minimal de joueurs',
       inGame: 'Utilité en match',
-      equipement: 'Équipement',
+      equipment: 'Équipement',
       durationInMinutes: 'Durée (minutes)',
       intensity: 'Intensité',
       goals: 'Thèmes',
@@ -236,6 +236,18 @@ export default {
         animation: 'Animation',
         vimeoId: 'Identifiant Vimeo',
         youtube: 'Lien vidéo Youtube',
+      },
+    },
+    errors: {
+      title: {
+        empty: 'Le titre ne peut pas être vide',
+        alreadyExists: 'Ce titre est déjà pris',
+      },
+      goals: {
+        empty: 'Choisissez au moins 1 thème',
+      },
+      steps: {
+        empty: 'Votre exercice doit contenir au moins 1 variante',
       },
     },
     cta: 'Enregistrer',

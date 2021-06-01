@@ -224,7 +224,7 @@ export default {
       description: 'Description',
       minimalPlayersNumber: 'Minimal number of players',
       inGame: 'In game',
-      equipement: 'Equipment',
+      equipment: 'Equipment',
       durationInMinutes: 'Duration (minutes)',
       intensity: 'Intensity',
       goals: 'Goals',
@@ -237,6 +237,18 @@ export default {
         animation: 'Animation',
         vimeoId: 'Vimeo Identifier',
         youtube: 'Youtube link',
+      },
+    },
+    errors: {
+      title: {
+        empty: 'The title cannot be blank',
+        alreadyExists: 'This title is already taken',
+      },
+      goals: {
+        empty: 'Choose at least 1 goal',
+      },
+      steps: {
+        empty: 'Your drill must contain at least 1 variant',
       },
     },
     cta: 'Save',

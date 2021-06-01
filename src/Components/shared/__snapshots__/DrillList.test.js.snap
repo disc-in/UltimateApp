@@ -316,7 +316,7 @@ exports[`<DrillList /> renders correctly 1`] = `
         onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "backgroundColor": "#2a9e9133",
+            "backgroundColor": "#2a9e9122",
             "borderRadius": 5,
             "flexDirection": "row",
             "height": 80,

@@ -13,7 +13,12 @@ const RadioButton = ({ fieldName, label, values, labels, ...props }) => {
       field.onChange(fieldName)(possibleValue);
     };
     return (
-      <TouchableOpacity style={[styles.button, selectedStyle]} key={index} onPress={onPress}>
+      <TouchableOpacity
+        style={[styles.button, selectedStyle]}
+        key={index}
+        onPress={onPress}
+        testID={`input-${fieldName}-${possibleValue}`}
+      >
         <Text style={styles.buttonText}>{labels[index]}</Text>
       </TouchableOpacity>
     );

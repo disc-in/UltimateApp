@@ -6,10 +6,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
   style={
     Array [
       Object {
-        "backgroundColor": "#fff",
         "flex": 1,
-        "padding": 10,
-        "paddingRight": 20,
       },
       Object {
         "paddingBottom": 0,
@@ -17,7 +14,15 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
     ]
   }
 >
-  <RCTScrollView>
+  <RCTScrollView
+    style={
+      Object {
+        "backgroundColor": "#fff",
+        "padding": 10,
+        "paddingRight": 20,
+      }
+    }
+  >
     <View>
       <View>
         <View
@@ -27,15 +32,18 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
             }
           }
         >
-          <Text
+          <View
             style={
               Object {
+                "flexDirection": "row",
                 "marginBottom": 5,
               }
             }
           >
-            Author
-          </Text>
+            <Text>
+              Author
+            </Text>
+          </View>
           <View
             style={
               Array [
@@ -55,6 +63,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               onChangeText={[Function]}
               onFocus={[Function]}
               rejectResponderTermination={true}
+              testID="input-author"
               underlineColorAndroid="transparent"
               value=""
             />
@@ -67,15 +76,28 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
             }
           }
         >
-          <Text
+          <View
             style={
               Object {
+                "flexDirection": "row",
                 "marginBottom": 5,
               }
             }
           >
-            Title
-          </Text>
+            <Text
+              style={
+                Object {
+                  "color": "red",
+                  "fontStyle": "italic",
+                }
+              }
+            >
+              * 
+            </Text>
+            <Text>
+              Title
+            </Text>
+          </View>
           <View
             style={
               Array [
@@ -95,6 +117,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               onChangeText={[Function]}
               onFocus={[Function]}
               rejectResponderTermination={true}
+              testID="input-title"
               underlineColorAndroid="transparent"
               value=""
             />
@@ -107,15 +130,18 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
             }
           }
         >
-          <Text
+          <View
             style={
               Object {
+                "flexDirection": "row",
                 "marginBottom": 5,
               }
             }
           >
-            Image URL
-          </Text>
+            <Text>
+              Image URL
+            </Text>
+          </View>
           <View
             style={
               Array [
@@ -135,6 +161,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               onChangeText={[Function]}
               onFocus={[Function]}
               rejectResponderTermination={true}
+              testID="input-image"
               underlineColorAndroid="transparent"
             />
           </View>
@@ -146,15 +173,18 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
             }
           }
         >
-          <Text
+          <View
             style={
               Object {
+                "flexDirection": "row",
                 "marginBottom": 5,
               }
             }
           >
-            Description
-          </Text>
+            <Text>
+              Description
+            </Text>
+          </View>
           <View
             style={
               Array [
@@ -170,10 +200,14 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
           >
             <TextInput
               allowFontScaling={true}
+              multiline={true}
+              numberOfLines={3}
               onBlur={[Function]}
               onChangeText={[Function]}
               onFocus={[Function]}
               rejectResponderTermination={true}
+              testID="input-description"
+              textAlignVertical="top"
               underlineColorAndroid="transparent"
             />
           </View>
@@ -185,15 +219,18 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
             }
           }
         >
-          <Text
+          <View
             style={
               Object {
+                "flexDirection": "row",
                 "marginBottom": 5,
               }
             }
           >
-            Minimal number of players
-          </Text>
+            <Text>
+              Minimal number of players
+            </Text>
+          </View>
           <View
             style={
               Array [
@@ -214,6 +251,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               onChangeText={[Function]}
               onFocus={[Function]}
               rejectResponderTermination={true}
+              testID="input-minimalPlayersNumber"
               underlineColorAndroid="transparent"
               value="2"
             />
@@ -226,15 +264,64 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
             }
           }
         >
-          <Text
+          <View
             style={
               Object {
+                "flexDirection": "row",
                 "marginBottom": 5,
               }
             }
           >
-            In game
-          </Text>
+            <Text>
+              In game
+            </Text>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "borderColor": "#e5e5e5",
+                  "borderRadius": 5,
+                  "borderWidth": 0.5,
+                  "padding": 5,
+                },
+                undefined,
+              ]
+            }
+          >
+            <TextInput
+              allowFontScaling={true}
+              multiline={true}
+              numberOfLines={3}
+              onBlur={[Function]}
+              onChangeText={[Function]}
+              onFocus={[Function]}
+              rejectResponderTermination={true}
+              testID="input-inGame"
+              textAlignVertical="top"
+              underlineColorAndroid="transparent"
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "marginBottom": 10,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "marginBottom": 5,
+              }
+            }
+          >
+            <Text>
+              Equipment
+            </Text>
+          </View>
           <View
             style={
               Array [
@@ -254,6 +341,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               onChangeText={[Function]}
               onFocus={[Function]}
               rejectResponderTermination={true}
+              testID="input-equipment"
               underlineColorAndroid="transparent"
             />
           </View>
@@ -265,54 +353,18 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
             }
           }
         >
-          <Text
-            style={
-              Object {
-                "marginBottom": 5,
-              }
-            }
-          >
-            Equipment
-          </Text>
           <View
             style={
-              Array [
-                Object {
-                  "borderColor": "#e5e5e5",
-                  "borderRadius": 5,
-                  "borderWidth": 0.5,
-                  "padding": 5,
-                },
-                undefined,
-              ]
-            }
-          >
-            <TextInput
-              allowFontScaling={true}
-              onBlur={[Function]}
-              onChangeText={[Function]}
-              onFocus={[Function]}
-              rejectResponderTermination={true}
-              underlineColorAndroid="transparent"
-            />
-          </View>
-        </View>
-        <View
-          style={
-            Object {
-              "marginBottom": 10,
-            }
-          }
-        >
-          <Text
-            style={
               Object {
+                "flexDirection": "row",
                 "marginBottom": 5,
               }
             }
           >
-            Duration (min.)
-          </Text>
+            <Text>
+              Duration (minutes)
+            </Text>
+          </View>
           <View
             style={
               Array [
@@ -333,6 +385,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               onChangeText={[Function]}
               onFocus={[Function]}
               rejectResponderTermination={true}
+              testID="input-durationInMinutes"
               underlineColorAndroid="transparent"
             />
           </View>
@@ -382,6 +435,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                   "paddingVertical": 10,
                 }
               }
+              testID="input-intensity-Low"
             >
               <Text
                 style={
@@ -415,6 +469,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                   "paddingVertical": 10,
                 }
               }
+              testID="input-intensity-Moderate"
             >
               <Text
                 style={
@@ -448,6 +503,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                   "paddingVertical": 10,
                 }
               }
+              testID="input-intensity-High"
             >
               <Text
                 style={
@@ -515,7 +571,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                   "padding": 0,
                 }
               }
-              testID="checkbox"
+              testID="input-goals-Defense"
             >
               <View
                 style={
@@ -571,7 +627,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                   "padding": 0,
                 }
               }
-              testID="checkbox"
+              testID="input-goals-Warm Up"
             >
               <View
                 style={
@@ -627,7 +683,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                   "padding": 0,
                 }
               }
-              testID="checkbox"
+              testID="input-goals-Handling"
             >
               <View
                 style={
@@ -683,7 +739,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                   "padding": 0,
                 }
               }
-              testID="checkbox"
+              testID="input-goals-Cutting"
             >
               <View
                 style={
@@ -739,7 +795,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                   "padding": 0,
                 }
               }
-              testID="checkbox"
+              testID="input-goals-Throwing"
             >
               <View
                 style={
@@ -795,7 +851,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                   "padding": 0,
                 }
               }
-              testID="checkbox"
+              testID="input-goals-Catching"
             >
               <View
                 style={
@@ -851,7 +907,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                   "padding": 0,
                 }
               }
-              testID="checkbox"
+              testID="input-goals-Games"
             >
               <View
                 style={
@@ -907,7 +963,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                   "padding": 0,
                 }
               }
-              testID="checkbox"
+              testID="input-goals-Junior"
             >
               <View
                 style={
@@ -980,6 +1036,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                   "paddingVertical": 10,
                 }
               }
+              testID="input-level-Beginner"
             >
               <Text
                 style={
@@ -1013,6 +1070,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                   "paddingVertical": 10,
                 }
               }
+              testID="input-level-Intermediate"
             >
               <Text
                 style={
@@ -1046,6 +1104,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                   "paddingVertical": 10,
                 }
               }
+              testID="input-level-Advanced"
             >
               <Text
                 style={
@@ -1105,7 +1164,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                   "width": "auto",
                 }
               }
-              testID="button"
+              testID="addStep"
             >
               <Text
                 style={
@@ -1120,6 +1179,14 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               </Text>
             </View>
           </View>
+          <Text
+            style={
+              Object {
+                "color": "red",
+                "fontStyle": "italic",
+              }
+            }
+          />
           <View
             style={
               Object {
@@ -1167,7 +1234,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                     "width": "auto",
                   }
                 }
-                testID="button"
+                testID="removeStep"
               >
                 <Text
                   style={
@@ -1189,8 +1256,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                   }
                 }
               >
-                Step 
-                1
+                Variant 1
               </Text>
             </View>
             <View
@@ -1200,15 +1266,18 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                 }
               }
             >
-              <Text
+              <View
                 style={
                   Object {
+                    "flexDirection": "row",
                     "marginBottom": 5,
                   }
                 }
               >
-                Title
-              </Text>
+                <Text>
+                  Title
+                </Text>
+              </View>
               <View
                 style={
                   Array [
@@ -1228,6 +1297,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                   onChangeText={[Function]}
                   onFocus={[Function]}
                   rejectResponderTermination={true}
+                  testID="input-steps[0].title"
                   underlineColorAndroid="transparent"
                   value=""
                 />
@@ -1240,15 +1310,18 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                 }
               }
             >
-              <Text
+              <View
                 style={
                   Object {
+                    "flexDirection": "row",
                     "marginBottom": 5,
                   }
                 }
               >
-                Instructions
-              </Text>
+                <Text>
+                  Instructions
+                </Text>
+              </View>
               <View
                 style={
                   Array [
@@ -1264,10 +1337,14 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               >
                 <TextInput
                   allowFontScaling={true}
+                  multiline={true}
+                  numberOfLines={3}
                   onBlur={[Function]}
                   onChangeText={[Function]}
                   onFocus={[Function]}
                   rejectResponderTermination={true}
+                  testID="input-steps[0].instruction"
+                  textAlignVertical="top"
                   underlineColorAndroid="transparent"
                 />
               </View>
@@ -1279,21 +1356,22 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                 }
               }
             >
-              <Text
+              <View
                 style={
                   Object {
+                    "flexDirection": "row",
                     "marginBottom": 5,
                   }
                 }
               >
-                Animation
-              </Text>
+                <Text>
+                  Animation
+                </Text>
+              </View>
               <View
                 style={
                   Object {
-                    "borderRadius": 5,
                     "flexDirection": "row",
-                    "padding": 5,
                   }
                 }
               >
@@ -1325,7 +1403,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                       "width": "auto",
                     }
                   }
-                  testID="button"
+                  testID="editAnimation"
                 >
                   <Text
                     style={
@@ -1348,15 +1426,18 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                 }
               }
             >
-              <Text
+              <View
                 style={
                   Object {
+                    "flexDirection": "row",
                     "marginBottom": 5,
                   }
                 }
               >
-                Vimeo Identifier
-              </Text>
+                <Text>
+                  Vimeo Identifier
+                </Text>
+              </View>
               <View
                 style={
                   Array [
@@ -1376,6 +1457,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                   onChangeText={[Function]}
                   onFocus={[Function]}
                   rejectResponderTermination={true}
+                  testID="input-steps[0].vimeoId"
                   underlineColorAndroid="transparent"
                 />
               </View>
@@ -1387,15 +1469,18 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                 }
               }
             >
-              <Text
+              <View
                 style={
                   Object {
+                    "flexDirection": "row",
                     "marginBottom": 5,
                   }
                 }
               >
-                Youtube link
-              </Text>
+                <Text>
+                  Youtube link
+                </Text>
+              </View>
               <View
                 style={
                   Array [
@@ -1415,6 +1500,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                   onChangeText={[Function]}
                   onFocus={[Function]}
                   rejectResponderTermination={true}
+                  testID="input-steps[0].youtube"
                   underlineColorAndroid="transparent"
                 />
               </View>
@@ -1446,7 +1532,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               "width": "auto",
             }
           }
-          testID="button"
+          testID="submitButton"
         >
           <Text
             style={
@@ -1472,10 +1558,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
   style={
     Array [
       Object {
-        "backgroundColor": "#fff",
         "flex": 1,
-        "padding": 10,
-        "paddingRight": 20,
       },
       Object {
         "paddingBottom": 0,
@@ -1483,7 +1566,15 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
     ]
   }
 >
-  <RCTScrollView>
+  <RCTScrollView
+    style={
+      Object {
+        "backgroundColor": "#fff",
+        "padding": 10,
+        "paddingRight": 20,
+      }
+    }
+  >
     <View>
       <View>
         <View
@@ -1493,15 +1584,18 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             }
           }
         >
-          <Text
+          <View
             style={
               Object {
+                "flexDirection": "row",
                 "marginBottom": 5,
               }
             }
           >
-            Author
-          </Text>
+            <Text>
+              Author
+            </Text>
+          </View>
           <View
             style={
               Array [
@@ -1521,6 +1615,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               onChangeText={[Function]}
               onFocus={[Function]}
               rejectResponderTermination={true}
+              testID="input-author"
               underlineColorAndroid="transparent"
               value="Author"
             />
@@ -1533,15 +1628,28 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             }
           }
         >
-          <Text
+          <View
             style={
               Object {
+                "flexDirection": "row",
                 "marginBottom": 5,
               }
             }
           >
-            Title
-          </Text>
+            <Text
+              style={
+                Object {
+                  "color": "red",
+                  "fontStyle": "italic",
+                }
+              }
+            >
+              * 
+            </Text>
+            <Text>
+              Title
+            </Text>
+          </View>
           <View
             style={
               Array [
@@ -1561,6 +1669,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               onChangeText={[Function]}
               onFocus={[Function]}
               rejectResponderTermination={true}
+              testID="input-title"
               underlineColorAndroid="transparent"
               value="Fitness Drill Title"
             />
@@ -1573,15 +1682,18 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             }
           }
         >
-          <Text
+          <View
             style={
               Object {
+                "flexDirection": "row",
                 "marginBottom": 5,
               }
             }
           >
-            Image URL
-          </Text>
+            <Text>
+              Image URL
+            </Text>
+          </View>
           <View
             style={
               Array [
@@ -1601,6 +1713,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               onChangeText={[Function]}
               onFocus={[Function]}
               rejectResponderTermination={true}
+              testID="input-image"
               underlineColorAndroid="transparent"
               value="https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg"
             />
@@ -1613,15 +1726,18 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             }
           }
         >
-          <Text
+          <View
             style={
               Object {
+                "flexDirection": "row",
                 "marginBottom": 5,
               }
             }
           >
-            Description
-          </Text>
+            <Text>
+              Description
+            </Text>
+          </View>
           <View
             style={
               Array [
@@ -1637,10 +1753,14 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
           >
             <TextInput
               allowFontScaling={true}
+              multiline={true}
+              numberOfLines={3}
               onBlur={[Function]}
               onChangeText={[Function]}
               onFocus={[Function]}
               rejectResponderTermination={true}
+              testID="input-description"
+              textAlignVertical="top"
               underlineColorAndroid="transparent"
               value="Description of the drill"
             />
@@ -1653,15 +1773,18 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             }
           }
         >
-          <Text
+          <View
             style={
               Object {
+                "flexDirection": "row",
                 "marginBottom": 5,
               }
             }
           >
-            Minimal number of players
-          </Text>
+            <Text>
+              Minimal number of players
+            </Text>
+          </View>
           <View
             style={
               Array [
@@ -1682,6 +1805,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               onChangeText={[Function]}
               onFocus={[Function]}
               rejectResponderTermination={true}
+              testID="input-minimalPlayersNumber"
               underlineColorAndroid="transparent"
               value="1"
             />
@@ -1694,15 +1818,64 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             }
           }
         >
-          <Text
+          <View
             style={
               Object {
+                "flexDirection": "row",
                 "marginBottom": 5,
               }
             }
           >
-            In game
-          </Text>
+            <Text>
+              In game
+            </Text>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "borderColor": "#e5e5e5",
+                  "borderRadius": 5,
+                  "borderWidth": 0.5,
+                  "padding": 5,
+                },
+                undefined,
+              ]
+            }
+          >
+            <TextInput
+              allowFontScaling={true}
+              multiline={true}
+              numberOfLines={3}
+              onBlur={[Function]}
+              onChangeText={[Function]}
+              onFocus={[Function]}
+              rejectResponderTermination={true}
+              testID="input-inGame"
+              textAlignVertical="top"
+              underlineColorAndroid="transparent"
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "marginBottom": 10,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "marginBottom": 5,
+              }
+            }
+          >
+            <Text>
+              Equipment
+            </Text>
+          </View>
           <View
             style={
               Array [
@@ -1722,7 +1895,9 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               onChangeText={[Function]}
               onFocus={[Function]}
               rejectResponderTermination={true}
+              testID="input-equipment"
               underlineColorAndroid="transparent"
+              value="Equipment needs for the drill"
             />
           </View>
         </View>
@@ -1733,54 +1908,18 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             }
           }
         >
-          <Text
-            style={
-              Object {
-                "marginBottom": 5,
-              }
-            }
-          >
-            Equipment
-          </Text>
           <View
             style={
-              Array [
-                Object {
-                  "borderColor": "#e5e5e5",
-                  "borderRadius": 5,
-                  "borderWidth": 0.5,
-                  "padding": 5,
-                },
-                undefined,
-              ]
-            }
-          >
-            <TextInput
-              allowFontScaling={true}
-              onBlur={[Function]}
-              onChangeText={[Function]}
-              onFocus={[Function]}
-              rejectResponderTermination={true}
-              underlineColorAndroid="transparent"
-            />
-          </View>
-        </View>
-        <View
-          style={
-            Object {
-              "marginBottom": 10,
-            }
-          }
-        >
-          <Text
-            style={
               Object {
+                "flexDirection": "row",
                 "marginBottom": 5,
               }
             }
           >
-            Duration (min.)
-          </Text>
+            <Text>
+              Duration (minutes)
+            </Text>
+          </View>
           <View
             style={
               Array [
@@ -1801,6 +1940,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               onChangeText={[Function]}
               onFocus={[Function]}
               rejectResponderTermination={true}
+              testID="input-durationInMinutes"
               underlineColorAndroid="transparent"
               value="10"
             />
@@ -1851,6 +1991,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                   "paddingVertical": 10,
                 }
               }
+              testID="input-intensity-Low"
             >
               <Text
                 style={
@@ -1884,6 +2025,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                   "paddingVertical": 10,
                 }
               }
+              testID="input-intensity-Moderate"
             >
               <Text
                 style={
@@ -1917,6 +2059,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                   "paddingVertical": 10,
                 }
               }
+              testID="input-intensity-High"
             >
               <Text
                 style={
@@ -1984,7 +2127,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                   "padding": 0,
                 }
               }
-              testID="checkbox"
+              testID="input-goals-Defense"
             >
               <View
                 style={
@@ -2061,7 +2204,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                   "padding": 0,
                 }
               }
-              testID="checkbox"
+              testID="input-goals-Warm Up"
             >
               <View
                 style={
@@ -2138,7 +2281,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                   "padding": 0,
                 }
               }
-              testID="checkbox"
+              testID="input-goals-Handling"
             >
               <View
                 style={
@@ -2215,7 +2358,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                   "padding": 0,
                 }
               }
-              testID="checkbox"
+              testID="input-goals-Cutting"
             >
               <View
                 style={
@@ -2292,7 +2435,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                   "padding": 0,
                 }
               }
-              testID="checkbox"
+              testID="input-goals-Throwing"
             >
               <View
                 style={
@@ -2369,7 +2512,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                   "padding": 0,
                 }
               }
-              testID="checkbox"
+              testID="input-goals-Catching"
             >
               <View
                 style={
@@ -2446,7 +2589,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                   "padding": 0,
                 }
               }
-              testID="checkbox"
+              testID="input-goals-Games"
             >
               <View
                 style={
@@ -2523,7 +2666,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                   "padding": 0,
                 }
               }
-              testID="checkbox"
+              testID="input-goals-Junior"
             >
               <View
                 style={
@@ -2617,6 +2760,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                   "paddingVertical": 10,
                 }
               }
+              testID="input-level-Beginner"
             >
               <Text
                 style={
@@ -2650,6 +2794,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                   "paddingVertical": 10,
                 }
               }
+              testID="input-level-Intermediate"
             >
               <Text
                 style={
@@ -2683,6 +2828,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                   "paddingVertical": 10,
                 }
               }
+              testID="input-level-Advanced"
             >
               <Text
                 style={
@@ -2742,7 +2888,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                   "width": "auto",
                 }
               }
-              testID="button"
+              testID="addStep"
             >
               <Text
                 style={
@@ -2757,6 +2903,14 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               </Text>
             </View>
           </View>
+          <Text
+            style={
+              Object {
+                "color": "red",
+                "fontStyle": "italic",
+              }
+            }
+          />
           <View
             style={
               Object {
@@ -2804,7 +2958,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                     "width": "auto",
                   }
                 }
-                testID="button"
+                testID="removeStep"
               >
                 <Text
                   style={
@@ -2826,8 +2980,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                   }
                 }
               >
-                Step 
-                1
+                Variant 1
               </Text>
             </View>
             <View
@@ -2837,15 +2990,18 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                 }
               }
             >
-              <Text
+              <View
                 style={
                   Object {
+                    "flexDirection": "row",
                     "marginBottom": 5,
                   }
                 }
               >
-                Title
-              </Text>
+                <Text>
+                  Title
+                </Text>
+              </View>
               <View
                 style={
                   Array [
@@ -2865,6 +3021,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                   onChangeText={[Function]}
                   onFocus={[Function]}
                   rejectResponderTermination={true}
+                  testID="input-steps[0].title"
                   underlineColorAndroid="transparent"
                   value="Warmup"
                 />
@@ -2877,15 +3034,18 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                 }
               }
             >
-              <Text
+              <View
                 style={
                   Object {
+                    "flexDirection": "row",
                     "marginBottom": 5,
                   }
                 }
               >
-                Instructions
-              </Text>
+                <Text>
+                  Instructions
+                </Text>
+              </View>
               <View
                 style={
                   Array [
@@ -2901,10 +3061,14 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               >
                 <TextInput
                   allowFontScaling={true}
+                  multiline={true}
+                  numberOfLines={3}
                   onBlur={[Function]}
                   onChangeText={[Function]}
                   onFocus={[Function]}
                   rejectResponderTermination={true}
+                  testID="input-steps[0].instruction"
+                  textAlignVertical="top"
                   underlineColorAndroid="transparent"
                 />
               </View>
@@ -2916,21 +3080,22 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                 }
               }
             >
-              <Text
+              <View
                 style={
                   Object {
+                    "flexDirection": "row",
                     "marginBottom": 5,
                   }
                 }
               >
-                Animation
-              </Text>
+                <Text>
+                  Animation
+                </Text>
+              </View>
               <View
                 style={
                   Object {
-                    "borderRadius": 5,
                     "flexDirection": "row",
-                    "padding": 5,
                   }
                 }
               >
@@ -2962,7 +3127,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                       "width": "auto",
                     }
                   }
-                  testID="button"
+                  testID="editAnimation"
                 >
                   <Text
                     style={
@@ -2985,15 +3150,18 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                 }
               }
             >
-              <Text
+              <View
                 style={
                   Object {
+                    "flexDirection": "row",
                     "marginBottom": 5,
                   }
                 }
               >
-                Vimeo Identifier
-              </Text>
+                <Text>
+                  Vimeo Identifier
+                </Text>
+              </View>
               <View
                 style={
                   Array [
@@ -3013,6 +3181,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                   onChangeText={[Function]}
                   onFocus={[Function]}
                   rejectResponderTermination={true}
+                  testID="input-steps[0].vimeoId"
                   underlineColorAndroid="transparent"
                   value="462695757"
                 />
@@ -3025,15 +3194,18 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                 }
               }
             >
-              <Text
+              <View
                 style={
                   Object {
+                    "flexDirection": "row",
                     "marginBottom": 5,
                   }
                 }
               >
-                Youtube link
-              </Text>
+                <Text>
+                  Youtube link
+                </Text>
+              </View>
               <View
                 style={
                   Array [
@@ -3053,6 +3225,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                   onChangeText={[Function]}
                   onFocus={[Function]}
                   rejectResponderTermination={true}
+                  testID="input-steps[0].youtube"
                   underlineColorAndroid="transparent"
                 />
               </View>
@@ -3105,7 +3278,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                     "width": "auto",
                   }
                 }
-                testID="button"
+                testID="removeStep"
               >
                 <Text
                   style={
@@ -3127,8 +3300,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                   }
                 }
               >
-                Step 
-                2
+                Variant 2
               </Text>
             </View>
             <View
@@ -3138,15 +3310,18 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                 }
               }
             >
-              <Text
+              <View
                 style={
                   Object {
+                    "flexDirection": "row",
                     "marginBottom": 5,
                   }
                 }
               >
-                Title
-              </Text>
+                <Text>
+                  Title
+                </Text>
+              </View>
               <View
                 style={
                   Array [
@@ -3166,6 +3341,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                   onChangeText={[Function]}
                   onFocus={[Function]}
                   rejectResponderTermination={true}
+                  testID="input-steps[1].title"
                   underlineColorAndroid="transparent"
                   value="Run !"
                 />
@@ -3178,15 +3354,18 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                 }
               }
             >
-              <Text
+              <View
                 style={
                   Object {
+                    "flexDirection": "row",
                     "marginBottom": 5,
                   }
                 }
               >
-                Instructions
-              </Text>
+                <Text>
+                  Instructions
+                </Text>
+              </View>
               <View
                 style={
                   Array [
@@ -3202,10 +3381,14 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               >
                 <TextInput
                   allowFontScaling={true}
+                  multiline={true}
+                  numberOfLines={3}
                   onBlur={[Function]}
                   onChangeText={[Function]}
                   onFocus={[Function]}
                   rejectResponderTermination={true}
+                  testID="input-steps[1].instruction"
+                  textAlignVertical="top"
                   underlineColorAndroid="transparent"
                 />
               </View>
@@ -3217,21 +3400,22 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                 }
               }
             >
-              <Text
+              <View
                 style={
                   Object {
+                    "flexDirection": "row",
                     "marginBottom": 5,
                   }
                 }
               >
-                Animation
-              </Text>
+                <Text>
+                  Animation
+                </Text>
+              </View>
               <View
                 style={
                   Object {
-                    "borderRadius": 5,
                     "flexDirection": "row",
-                    "padding": 5,
                   }
                 }
               >
@@ -3263,7 +3447,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                       "width": "auto",
                     }
                   }
-                  testID="button"
+                  testID="editAnimation"
                 >
                   <Text
                     style={
@@ -3286,15 +3470,18 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                 }
               }
             >
-              <Text
+              <View
                 style={
                   Object {
+                    "flexDirection": "row",
                     "marginBottom": 5,
                   }
                 }
               >
-                Vimeo Identifier
-              </Text>
+                <Text>
+                  Vimeo Identifier
+                </Text>
+              </View>
               <View
                 style={
                   Array [
@@ -3314,6 +3501,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                   onChangeText={[Function]}
                   onFocus={[Function]}
                   rejectResponderTermination={true}
+                  testID="input-steps[1].vimeoId"
                   underlineColorAndroid="transparent"
                   value="462695757"
                 />
@@ -3326,15 +3514,18 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                 }
               }
             >
-              <Text
+              <View
                 style={
                   Object {
+                    "flexDirection": "row",
                     "marginBottom": 5,
                   }
                 }
               >
-                Youtube link
-              </Text>
+                <Text>
+                  Youtube link
+                </Text>
+              </View>
               <View
                 style={
                   Array [
@@ -3354,6 +3545,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                   onChangeText={[Function]}
                   onFocus={[Function]}
                   rejectResponderTermination={true}
+                  testID="input-steps[1].youtube"
                   underlineColorAndroid="transparent"
                 />
               </View>
@@ -3385,7 +3577,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               "width": "auto",
             }
           }
-          testID="button"
+          testID="submitButton"
         >
           <Text
             style={

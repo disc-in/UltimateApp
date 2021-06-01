@@ -1,9 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { render, fireEvent, waitFor } from '@testing-library/react-native';
 import { Formik } from 'formik';
-import * as Yup from 'yup';
-import { TouchableOpacity } from 'react-native';
 import { NavigationContext } from '@react-navigation/native';
 
 import AnimationInput from './AnimationInput';

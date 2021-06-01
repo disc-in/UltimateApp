@@ -20,7 +20,7 @@ const Input = ({ fieldName, label, required, multiline, ...props }) => {
       <View style={[styles.input, borderColor]}>
         {meta.error && meta.touched && <Text style={styles.error}>{meta.error}</Text>}
         <TextInput
-          testID="input"
+          testID={`input-${fieldName}`}
           onChangeText={field.onChange(fieldName)}
           value={field.value?.toString()}
           onFocus={() => setIsFocused(true)}

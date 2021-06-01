@@ -39,7 +39,7 @@ exports[`Input renders correctly 1`] = `
       onChangeText={[Function]}
       onFocus={[Function]}
       rejectResponderTermination={true}
-      testID="input"
+      testID="input-title"
       underlineColorAndroid="transparent"
       value="My title"
     />
@@ -88,7 +88,7 @@ exports[`Input renders correctly when multiline 1`] = `
       onChangeText={[Function]}
       onFocus={[Function]}
       rejectResponderTermination={true}
-      testID="input"
+      testID="input-title"
       textAlignVertical="top"
       underlineColorAndroid="transparent"
       value="My title"
@@ -146,7 +146,7 @@ exports[`Input renders correctly when required 1`] = `
       onChangeText={[Function]}
       onFocus={[Function]}
       rejectResponderTermination={true}
-      testID="input"
+      testID="input-title"
       underlineColorAndroid="transparent"
       value="My title"
     />
@@ -206,7 +206,7 @@ Array [
         onChangeText={[Function]}
         onFocus={[Function]}
         rejectResponderTermination={true}
-        testID="input"
+        testID="input-title"
         underlineColorAndroid="transparent"
         value="new title"
       />

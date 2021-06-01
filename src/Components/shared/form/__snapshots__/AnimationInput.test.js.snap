@@ -55,7 +55,7 @@ exports[`AnimationInput renders correctly 1`] = `
           "width": "auto",
         }
       }
-      testID="button"
+      testID="editAnimation"
     >
       <Text
         style={
@@ -97,7 +97,7 @@ exports[`AnimationInput renders correctly 1`] = `
           "width": "auto",
         }
       }
-      testID="button"
+      testID="deleteAnimation"
     >
       <Text
         style={

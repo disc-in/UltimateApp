@@ -55,7 +55,7 @@ exports[`Checkbox renders correctly 1`] = `
           "padding": 0,
         }
       }
-      testID="checkbox"
+      testID="input-title-red"
     >
       <View
         style={
@@ -111,7 +111,7 @@ exports[`Checkbox renders correctly 1`] = `
           "padding": 0,
         }
       }
-      testID="checkbox"
+      testID="input-title-blue"
     >
       <View
         style={
@@ -207,7 +207,7 @@ Array [
             "padding": 0,
           }
         }
-        testID="checkbox"
+        testID="input-title-red"
       >
         <View
           style={
@@ -284,7 +284,7 @@ Array [
             "padding": 0,
           }
         }
-        testID="checkbox"
+        testID="input-title-blue"
       >
         <View
           style={

@@ -26,6 +26,7 @@ const Checkbox = ({ fieldName, label, values, labels, ...props }) => {
         checked={field.value.includes(possibleValue)}
         onPress={onPress}
         key={index}
+        testID={`input-${fieldName}-${possibleValue}`}
         title={labels[index]}
         containerStyle={styles.checkbox}
         textStyle={styles.checkboxText}

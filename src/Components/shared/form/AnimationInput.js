@@ -36,6 +36,7 @@ const Input = ({ fieldName, label, required, ...props }) => {
           small
           light
           style={styles.button}
+          testID="editAnimation"
         />
         {field.value && (
           <Button
@@ -43,6 +44,7 @@ const Input = ({ fieldName, label, required, ...props }) => {
             text={I18n.t('shared.form.animationInput.clear')}
             small
             light
+            testID="deleteAnimation"
             style={styles.button}
           />
         )}

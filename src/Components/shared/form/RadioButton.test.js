@@ -37,9 +37,7 @@ describe('RadioButton', () => {
       </Formik>,
     );
 
-    await waitFor(() => {
-      fireEvent.press(getByText('I prefer red'));
-    });
+    fireEvent.press(getByText('I prefer red'));
 
     await waitFor(() => {
       fireEvent.press(getByTestId('submit'));

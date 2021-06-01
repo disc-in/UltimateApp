@@ -46,6 +46,7 @@ exports[`RadioButton renders correctly 1`] = `
           "paddingVertical": 10,
         }
       }
+      testID="input-title-red"
     >
       <Text
         style={
@@ -79,6 +80,7 @@ exports[`RadioButton renders correctly 1`] = `
           "paddingVertical": 10,
         }
       }
+      testID="input-title-blue"
     >
       <Text
         style={
@@ -151,6 +153,7 @@ Array [
             "paddingVertical": 10,
           }
         }
+        testID="input-title-red"
       >
         <Text
           style={
@@ -184,6 +187,7 @@ Array [
             "paddingVertical": 10,
           }
         }
+        testID="input-title-blue"
       >
         <Text
           style={

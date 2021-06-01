@@ -51,10 +51,10 @@ export const DrillEditorPage = (props) => {
     author: Yup.string().trim(),
     title: Yup.string()
       .trim()
-      .required(I18n.t('editor.playTitle.empty'))
+      .required(I18n.t('drillEditorPage.errors.title.empty'))
       .notOneOf(
         props.customDrills.filter((existingDrill) => existingDrill.id !== currentDrill.id).map((drill) => drill.title),
-        I18n.t('editor.playTitle.alreadyExists'),
+        I18n.t('drillEditorPage.errors.title.alreadyExists'),
       ),
     image: Yup.string().trim().min(1),
     description: Yup.string().trim(),
@@ -63,7 +63,10 @@ export const DrillEditorPage = (props) => {
     equipment: Yup.string().trim(),
     durationInMinutes: Yup.number().positive(),
     intensity: Yup.string().trim().oneOf(Object.values(Intensities)),
-    goals: Yup.array(Yup.string().oneOf(Object.values(FrisbeeGoals))),
+    goals: Yup.array(Yup.string().oneOf(Object.values(FrisbeeGoals))).min(
+      1,
+      I18n.t('drillEditorPage.errors.goals.empty'),
+    ),
     level: Yup.string().trim().oneOf(Object.values(Levels)),
     steps: Yup.array(
       Yup.object({
@@ -74,7 +77,9 @@ export const DrillEditorPage = (props) => {
         youtube: Yup.string().trim().min(1),
         instruction: Yup.string().trim(),
       }),
-    ).required(),
+    )
+      .required()
+      .min(1, I18n.t('drillEditorPage.errors.steps.empty')),
   });
 
   const behavior = Platform.select({
@@ -106,7 +111,7 @@ export const DrillEditorPage = (props) => {
                 label={I18n.t('drillEditorPage.labels.minimalPlayersNumber')}
               />
               <Input fieldName="inGame" label={I18n.t('drillEditorPage.labels.inGame')} multiline />
-              <Input fieldName="equipement" label={I18n.t('drillEditorPage.labels.equipement')} />
+              <Input fieldName="equipment" label={I18n.t('drillEditorPage.labels.equipment')} />
               <Input
                 fieldName="durationInMinutes"
                 keyboardType="number-pad"
@@ -136,12 +141,26 @@ export const DrillEditorPage = (props) => {
                   <View>
                     <View style={styles.stepHeader}>
                       <Text style={styles.stepHeadertext}>{I18n.t('drillEditorPage.labels.stepsHeader')}</Text>
-                      <Button onPress={() => push({ ...newStep, id: values.steps.length })} text="+" small light />
+                      <Button
+                        onPress={() => push({ ...newStep, id: values.steps.length })}
+                        text="+"
+                        small
+                        light
+                        testID="addStep"
+                      />
                     </View>
+                    <Text style={styles.error}>{errors.steps}</Text>
                     {values.steps.map((step, index) => (
                       <View key={index} style={styles.step}>
                         <View style={styles.stepHeader}>
-                          <Button onPress={() => remove(index)} text="-" small light style={styles.button} />
+                          <Button
+                            onPress={() => remove(index)}
+                            text="-"
+                            small
+                            light
+                            style={styles.button}
+                            testID="removeStep"
+                          />
                           <Text style={styles.stepHeadertext}>
                             {I18n.t('drillEditorPage.labels.steps.header', { count: index + 1 })}
                           </Text>
@@ -172,7 +191,12 @@ export const DrillEditorPage = (props) => {
                   </View>
                 )}
               />
-              <Button onPress={handleSubmit} text={I18n.t('drillEditorPage.cta')} style={styles.cta} />
+              <Button
+                onPress={handleSubmit}
+                text={I18n.t('drillEditorPage.cta')}
+                style={styles.cta}
+                testID="submitButton"
+              />
             </View>
           )}
         </Formik>
@@ -211,6 +235,10 @@ const styles = StyleSheet.create({
   stepHeadertext: {
     fontSize: theme.FONT_SIZE_LARGE,
     marginRight: 10,
+  },
+  error: {
+    fontStyle: 'italic',
+    color: 'red',
   },
   button: {
     alignSelf: 'flex-start',

@@ -58,9 +58,7 @@ describe('Input', () => {
 
     expect(getByDisplayValue('My title')).toBeDefined();
 
-    await waitFor(() => {
-      fireEvent.changeText(getByTestId('input'), 'new title');
-    });
+    fireEvent.changeText(getByTestId('input-title'), 'new title');
 
     expect(getByDisplayValue('new title')).toBeDefined();
 

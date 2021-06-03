@@ -18,7 +18,7 @@ const migrations = {
     return {
       ...state,
       customPlays,
-      customDrills: undefined,
+      customDrills: [],
     };
   },
   2: (state) => {
@@ -45,7 +45,7 @@ const persistConfig = {
   key: 'root',
   version: 3,
   storage: AsyncStorage,
-  whitelist: ['completeTrainings', 'favoriteDrills', 'customPlays'],
+  whitelist: ['completeTrainings', 'favoriteDrills', 'customPlays', 'customDrills'],
   blacklist: ['drills', 'programs', 'theory'],
   migrate: createMigrate(migrations, { debug: false }),
 };

@@ -1,6 +1,9 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { Provider } from 'react-redux';
 import { render, fireEvent } from '@testing-library/react-native';
+
+import store from '../Store/testStore';
 import fixtures from '../Fixtures/TestFixtures';
 
 import TrainingPage from './TrainingPage';
@@ -29,7 +32,13 @@ describe('<TrainingPage />', () => {
     };
 
     it('renders correctly a fitness training', () => {
-      const tree = renderer.create(<TrainingPage route={route} />).toJSON();
+      const tree = renderer
+        .create(
+          <Provider store={store}>
+            <TrainingPage route={route} />
+          </Provider>,
+        )
+        .toJSON();
       expect(tree).toMatchSnapshot();
     });
 
@@ -41,7 +50,11 @@ describe('<TrainingPage />', () => {
         },
       };
 
-      const { queryByTestId } = render(<TrainingPage navigation={navigation} route={route} />);
+      const { queryByTestId } = render(
+        <Provider store={store}>
+          <TrainingPage navigation={navigation} route={route} />
+        </Provider>,
+      );
 
       expect(queryByTestId('goToPrev1')).toBeDefined();
       expect(queryByTestId('goToNext1')).toBeNull(); // Not displayed on last training
@@ -59,7 +72,11 @@ describe('<TrainingPage />', () => {
         },
       };
 
-      const { queryByTestId } = render(<TrainingPage navigation={navigation} route={route} />);
+      const { queryByTestId } = render(
+        <Provider store={store}>
+          <TrainingPage navigation={navigation} route={route} />
+        </Provider>,
+      );
 
       expect(queryByTestId('goToPrev0')).toBeNull();
       expect(queryByTestId('goToNext0')).toBeDefined();
@@ -72,7 +89,11 @@ describe('<TrainingPage />', () => {
     it('links to drill page for fitness', async () => {
       const trainingFirstDrill = training.drills[0];
 
-      const { queryByText } = render(<TrainingPage navigation={navigation} route={route} />);
+      const { queryByText } = render(
+        <Provider store={store}>
+          <TrainingPage navigation={navigation} route={route} />
+        </Provider>,
+      );
 
       await fireEvent.press(queryByText(trainingFirstDrill.title));
 
@@ -91,14 +112,24 @@ describe('<TrainingPage />', () => {
     };
 
     it('renders correctly a frisbee training', () => {
-      const tree = renderer.create(<TrainingPage route={route} />).toJSON();
+      const tree = renderer
+        .create(
+          <Provider store={store}>
+            <TrainingPage route={route} />
+          </Provider>,
+        )
+        .toJSON();
       expect(tree).toMatchSnapshot();
     });
 
     it('links to minimal drill page for frisbee', async () => {
       const trainingFirstDrill = training.drills[0];
 
-      const { queryByText } = render(<TrainingPage navigation={navigation} route={route} />);
+      const { queryByText } = render(
+        <Provider store={store}>
+          <TrainingPage navigation={navigation} route={route} />
+        </Provider>,
+      );
 
       await fireEvent.press(queryByText(trainingFirstDrill.title));
 
@@ -106,7 +137,11 @@ describe('<TrainingPage />', () => {
     });
 
     it('starts training links to first drill for frisbee', async () => {
-      const { queryByTestId } = render(<TrainingPage navigation={navigation} route={route} />);
+      const { queryByTestId } = render(
+        <Provider store={store}>
+          <TrainingPage navigation={navigation} route={route} />
+        </Provider>,
+      );
 
       await fireEvent.press(queryByTestId('start0'));
 

@@ -28,6 +28,7 @@
     "expo-mail-composer": "~10.1.2",
     "expo-screen-orientation": "~3.1.0",
     "firebase": "8.2.3",
+    "formik": "^2.2.8",
     "i18n-js": "^3.8.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
@@ -48,7 +49,8 @@
     "redux": "^4.1.0",
     "redux-persist": "^6.0.0",
     "uuid": "^8.3.2",
-    "watchman": "^1.0.0"
+    "watchman": "^1.0.0",
+    "yup": "^0.32.9"
   },
   "devDependencies": {
     "@babel/core": "~7.14.0",

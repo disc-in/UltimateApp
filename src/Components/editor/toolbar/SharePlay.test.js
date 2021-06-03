@@ -23,7 +23,7 @@ describe('<SharePlay />', () => {
   });
 
   it('triggers share action', async () => {
-    jest.spyOn(firebase, 'upload').mockImplementation(() => {});
+    jest.spyOn(firebase, 'upload').mockImplementation(() => 'uuid');
     jest.spyOn(firebase, 'createLink').mockImplementation(() => '');
 
     const share = jest.fn();
@@ -32,8 +32,8 @@ describe('<SharePlay />', () => {
     const { getByTestId } = await waitFor(() => render(<SharePlay currentPlay={currentPlay} />));
     fireEvent.press(getByTestId('shareButton'));
 
-    await expect(firebase.upload).toHaveBeenCalled();
-    await expect(firebase.createLink).toHaveBeenCalled();
+    await expect(firebase.upload).toHaveBeenCalledWith('customPlays', currentPlay);
+    await expect(firebase.createLink).toHaveBeenCalledWith('custom/plays/uuid', currentPlay.title);
     expect(share).toHaveBeenCalled();
   });
 });

@@ -14,6 +14,7 @@ export default {
       [Levels.BEGINNER]: 'Débutant',
       [Levels.INTERMEDIATE]: 'Intermédiaire',
       [Levels.ADVANCED]: 'Avancé',
+      undefined: 'Inconnu',
     },
     frisbeeGoals: {
       [FrisbeeGoals.DEFENSE]: 'Défense',
@@ -37,7 +38,7 @@ export default {
       [SeasonTimings.OFF_SEASON]: 'Hors saison',
       [SeasonTimings.PRE_SEASON]: 'Pré saison',
       [SeasonTimings.IN_SEASON]: 'En saison',
-      [SeasonTimings.ANYTIME]: "N'importe",
+      [SeasonTimings.ANYTIME]: 'Peu importe',
     },
     equipmentLabels: {
       [EquipmentLabels.NONE]: 'Aucun',
@@ -60,6 +61,8 @@ export default {
     homePage: 'Disc In',
     aboutPage: 'À propos de Disc In',
     drillListPage: 'Exercices de {{type}}',
+    drillEditorPage: 'Nouvel Exercice',
+    drillEditorAnimationPage: 'Animation',
     drillPage: 'Exercice',
     fitnessPage: 'Fitness',
     filters: 'Filtres',
@@ -70,7 +73,8 @@ export default {
     },
     playbookPage: 'Mon Playbook',
     playEditorPage: 'Nouvelle tactique',
-    importerPage: 'Importer une tactique',
+    drillImporterPage: 'Importer un exercice',
+    playImporterPage: 'Importer une tactique',
     dictionaryPage: 'Lexique',
     essentialPage: 'Les bases du jeu',
     tacticsPage: 'Tactiques',
@@ -80,6 +84,13 @@ export default {
     cancel: 'Annuler',
     yes: 'Oui',
     no: 'Non',
+    form: {
+      animationInput: {
+        add: 'Ajouter',
+        edit: 'Modifier',
+        clear: 'Supprimer',
+      },
+    },
   },
   utils: {
     snackbar: {
@@ -111,10 +122,18 @@ export default {
     untitledPlay: 'Play sans titre',
   },
   importerPage: {
-    loading: 'On dirait que vous voulez importer un play, je vais le chercher... 🏃',
-    incentive: 'Vous allez enregistrer le play "{{title}}"',
-    question: 'Êtes-vous sûr.e ?',
-    downloadError: "Je n'ai pas pu retrouver ce play...",
+    customPlays: {
+      loading: 'On dirait que vous voulez importer un play, je vais le chercher... 🏃',
+      incentive: 'Vous allez enregistrer le play "{{title}}"',
+      question: 'Êtes-vous sûr.e ?',
+      downloadError: "Je n'ai pas pu retrouver ce play...",
+    },
+    customDrills: {
+      loading: 'On dirait que vous voulez importer un exercice, je vais le chercher... 🏃',
+      incentive: 'Vous allez enregistrer l\'exercice "{{title}}"',
+      question: 'Êtes-vous sûr.e ?',
+      downloadError: "Je n'ai pas pu retrouver cet exercice...",
+    },
   },
   editor: {
     playTitle: {
@@ -137,6 +156,9 @@ export default {
       equipment: 'Matériel',
       description: 'Description',
       inGame: 'En Match',
+    },
+    drillList: {
+      deleteSuccess: 'L\'exercice "{{title}}" a été supprimé.',
     },
     fitnessDrillIllustration: {
       start: 'Start',
@@ -189,6 +211,48 @@ export default {
     },
     filter: 'Filtrer',
   },
+  drillEditorPage: {
+    validations: {
+      alreadyExists: 'Existe déjà',
+      empty: 'Ne peut pas être vide',
+    },
+    labels: {
+      author: 'Auteur',
+      title: 'Titre',
+      image: "URL de l'image",
+      description: 'Description',
+      minimalPlayersNumber: 'Nombre minimal de joueurs',
+      inGame: 'Utilité en match',
+      equipment: 'Équipement',
+      durationInMinutes: 'Durée (minutes)',
+      intensity: 'Intensité',
+      goals: 'Thèmes',
+      level: 'Niveau',
+      stepsHeader: 'Variantes',
+      steps: {
+        header: 'Variante {{count}}',
+        title: 'Titre',
+        instruction: 'Instructions',
+        animation: 'Animation',
+        vimeoId: 'Identifiant Vimeo',
+        youtube: 'Lien vidéo Youtube',
+      },
+    },
+    errors: {
+      title: {
+        empty: 'Le titre ne peut pas être vide',
+        alreadyExists: 'Ce titre est déjà pris',
+      },
+      goals: {
+        empty: 'Choisissez au moins 1 thème',
+      },
+      steps: {
+        empty: 'Votre exercice doit contenir au moins 1 variante',
+      },
+    },
+    cta: 'Enregistrer',
+    saveSuccess: 'L\'exercice "{{title}}" a été enregistré.',
+  },
   drillPage: {
     minutes: 'minutes',
     players: 'joueurs',
@@ -204,6 +268,7 @@ export default {
   },
   fitnessFilters: {
     favorites: 'Seulement mes favoris',
+    custom: 'Seulement mes exos',
     level: 'Niveau',
     intensity: 'Intensité',
     equipment: 'Matériel',
@@ -212,7 +277,7 @@ export default {
     duration: 'durée',
     durationLabel: 'Combien de temps as-tu ?   {{duration}} mins',
     cta: {
-      zero: 'Aucun exercice correspondant',
+      zero: 'Aucun exercice',
       one: 'Voir {{count}} exercice',
       other: 'Voir {{count}} exercices',
     },

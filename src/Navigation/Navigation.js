@@ -12,6 +12,8 @@ import FitnessFilters from '../Components/FitnessFilters';
 import TrainingPage from '../Components/TrainingPage';
 import ProgramListPage from '../Components/ProgramListPage';
 
+import DrillEditorPage from '../Components/DrillEditorPage';
+import DrillEditorAnimationPage from '../Components/DrillEditorAnimationPage';
 import PlaybookPage from '../Components/PlaybookPage';
 import PlayEditorPage from '../Components/PlayEditorPage';
 import ImporterPage from '../Components/ImporterPage';
@@ -38,6 +40,16 @@ export const Navigation = () => (
           type: route.params.type.substr(0, 1).toUpperCase() + route.params.type.substr(1),
         }),
       })}
+    />
+    <Stack.Screen
+      name="DrillEditorPage"
+      component={DrillEditorPage}
+      options={{ title: I18n.t('navigation.drillEditorPage') }}
+    />
+    <Stack.Screen
+      name="DrillEditorAnimationPage"
+      component={DrillEditorAnimationPage}
+      options={{ title: I18n.t('navigation.drillEditorAnimationPage') }}
     />
     <Stack.Screen name="FrisbeeFilters" component={FrisbeeFilters} options={{ title: I18n.t('navigation.filters') }} />
     <Stack.Screen name="FitnessFilters" component={FitnessFilters} options={{ title: I18n.t('navigation.filters') }} />
@@ -70,7 +82,16 @@ export const Navigation = () => (
       component={PlayEditorPage}
       options={{ title: I18n.t('navigation.playEditorPage') }}
     />
-    <Stack.Screen name="ImporterPage" component={ImporterPage} options={{ title: I18n.t('navigation.importerPage') }} />
+    <Stack.Screen
+      name="DrillImporterPage"
+      component={ImporterPage}
+      options={{ title: I18n.t('navigation.drillImporterPage') }}
+    />
+    <Stack.Screen
+      name="PlayImporterPage"
+      component={ImporterPage}
+      options={{ title: I18n.t('navigation.playImporterPage') }}
+    />
     <Stack.Screen
       name="DictionaryPage"
       component={DictionaryPage}

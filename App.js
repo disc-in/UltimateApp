@@ -19,7 +19,8 @@ const App = (props) => {
     config: {
       initialRouteName: 'HomePage',
       screens: {
-        ImporterPage: 'customPlays/:uuid',
+        PlayImporterPage: 'customPlays/:uuid', // Legacy, keeping it because there are generated URL out there
+        DrillImporterPage: 'custom/:source/:uuid', // source can be drill or play
         DrillPage: 'drills/:id',
       },
     },

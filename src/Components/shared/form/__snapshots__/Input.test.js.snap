@@ -1,0 +1,233 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "marginBottom": 5,
+      }
+    }
+  >
+    <Text>
+      Title
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "borderColor": "#e5e5e5",
+          "borderRadius": 5,
+          "borderWidth": 0.5,
+          "padding": 5,
+        },
+        undefined,
+      ]
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      rejectResponderTermination={true}
+      testID="input-title"
+      underlineColorAndroid="transparent"
+      value="My title"
+    />
+  </View>
+</View>
+`;
+
+exports[`Input renders correctly when multiline 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "marginBottom": 5,
+      }
+    }
+  >
+    <Text>
+      Title
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "borderColor": "#e5e5e5",
+          "borderRadius": 5,
+          "borderWidth": 0.5,
+          "padding": 5,
+        },
+        undefined,
+      ]
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      multiline={true}
+      numberOfLines={3}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      rejectResponderTermination={true}
+      testID="input-title"
+      textAlignVertical="top"
+      underlineColorAndroid="transparent"
+      value="My title"
+    />
+  </View>
+</View>
+`;
+
+exports[`Input renders correctly when required 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "marginBottom": 5,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "red",
+          "fontStyle": "italic",
+        }
+      }
+    >
+      * 
+    </Text>
+    <Text>
+      Title
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "borderColor": "#e5e5e5",
+          "borderRadius": 5,
+          "borderWidth": 0.5,
+          "padding": 5,
+        },
+        undefined,
+      ]
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      rejectResponderTermination={true}
+      testID="input-title"
+      underlineColorAndroid="transparent"
+      value="My title"
+    />
+  </View>
+</View>
+`;
+
+exports[`Input renders correctly when there is an error 1`] = `
+Array [
+  <View
+    style={
+      Object {
+        "marginBottom": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "marginBottom": 5,
+        }
+      }
+    >
+      <Text>
+        Title
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "borderColor": "#e5e5e5",
+            "borderRadius": 5,
+            "borderWidth": 0.5,
+            "padding": 5,
+          },
+          Object {
+            "borderColor": "red",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "red",
+            "fontStyle": "italic",
+          }
+        }
+      >
+        Invalid title
+      </Text>
+      <TextInput
+        allowFontScaling={true}
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        rejectResponderTermination={true}
+        testID="input-title"
+        underlineColorAndroid="transparent"
+        value="new title"
+      />
+    </View>
+  </View>,
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+    testID="submit"
+  />,
+]
+`;

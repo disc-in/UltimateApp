@@ -20,7 +20,7 @@ import { AgeCategory, DrillTypes, EquipmentLabels } from '../Fixtures/config';
 
 const Tab = createMaterialBottomTabNavigator();
 
-const HomeScreen = (props) => {
+const Frisbee = (props) => {
   return (
     <View style={styles.mainContainer}>
       <TouchableHighlight
@@ -179,7 +179,7 @@ export default HomePage = (props) => {
     >
       <Tab.Screen
         name="Frisbee"
-        component={HomeScreen}
+        component={Frisbee}
         options={{
           tabBarLabel: I18n.t('homePage.frisbeeTab'),
           tabBarIcon: ({ color }) => <Ionicons name="ios-disc" color={color} size={22} />,

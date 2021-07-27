@@ -5358,6 +5358,8 @@ const goToTenDrill = {
       id: 1,
       title: 'Go to 10',
       animation: animationGoToTen,
+      vimeoId: '579310938',
+      youtube: 'https://youtu.be/LVM25aOHVuw',
       repetition: '',
       rest: '',
       instruction:
@@ -7144,7 +7146,7 @@ const bull = {
       repetition: '',
       rest: '',
       instruction:
-        '2 teams of 3 players compete against each other. One player plays the role of poppers during the drill. The objective of the attacking team is to succeed in making a pass to the popper. They can make up to 3 passes to their other partners before succeeding in reaching the popper. The other attackers can only run on straight lines delimiting the field. If there is a turn-over, the attackers pass to defence and vice versa.',
+        '2 teams of 3 players compete against each other. One player plays the role of poppers during the drill. The objective of the attacking team is to succeed in making a pass to the popper. They can make up to 3 passes to their other partners before succeeding in reaching the popper. The other attackers can only run on straight lines delimiting the field. If there is a turn-over, the attackers pass to defence and vice versa',
     },
     {
       id: 4,
@@ -7675,6 +7677,210 @@ const longShotAnalyse = {
       rest: '',
       instruction:
         'A thrower makes 4 up-line cuts to throw long passes. The last cutter of the stack goes long towards one of the two zones with the best possible timing. If the marker jumps to prevent the long throw, the thrower must make a fake before throwing',
+    },
+  ],
+};
+
+const blockWithYourBody = {
+  id: 1065,
+  type: DrillTypes.FRISBEE,
+  visibleInList: true,
+  author: 'Davide Morri',
+  title: 'Use your body - Defense',
+  image: 'https://zupimages.net/up/21/30/en6i.jpg',
+  description: 'Learn to use your body to direct the attacker you are defending against',
+  minimalPlayersNumber: 4,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '11 cones - 4 discs',
+  durationInMinutes: 15,
+  intensity: Intensities.HIGH,
+  goals: [FrisbeeGoals.CUTTING, FrisbeeGoals.DEFENSE],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.ADVANCED,
+  steps: [
+    {
+      id: 1,
+      title: 'Control your attacker',
+      animation: undefined,
+      vimeoId: '518051834',
+      youtube: 'https://youtu.be/nX-5xxfzIio',
+      repetition: '',
+      rest: '',
+      instruction:
+        'An attacker runs to a block 15 meters in front of him. Once he has reached the pin, the attacker can move in 3 different directions. His objective is to catch the disc in one of the two squares./n He can go directly there or continue his run straight ahead before changing direction.The objective of the defender is to put his body in opposition to direct the attacker and prevent him from catching the disc',
+    },
+  ],
+};
+
+const perfectBreak = {
+  id: 1066,
+  type: DrillTypes.FRISBEE,
+  visibleInList: true,
+  author: 'Davide Morri',
+  title: 'The Perfect Break',
+  image: 'https://zupimages.net/up/21/30/s64v.jpg',
+  description:
+    'The objective is to learn how to make a break that will allow to obtain a very advantageous position for the receiver',
+  minimalPlayersNumber: 4,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '11 cones - 4 discs',
+  durationInMinutes: 15,
+  intensity: Intensities.HIGH,
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.DEFENSE],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'The Right position',
+      animation: undefined,
+      vimeoId: '579757078',
+      youtube: 'https://youtu.be/83LBFCP8uWo',
+      repetition: '',
+      rest: '',
+      instruction:
+        'A thrower is about to throw the disc and a defender marks him. The objective of the cutter is to catch the disc between the cones./nIf the attacker catches the Frisbee between the 2 central cones, the pass is considered very successful',
+    },
+  ],
+};
+
+const adaptationDefense = {
+  id: 1067,
+  type: DrillTypes.FRISBEE,
+  visibleInList: true,
+  author: 'Lāsma Kublica',
+  title: 'Reactivity in Defense',
+  image: 'https://zupimages.net/up/21/30/d3t6.jpg',
+  description: "The defender tries to adapt his defensive position to the attacker's movement",
+  minimalPlayersNumber: 4,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '5 cones - 1 disc',
+  durationInMinutes: 15,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.DEFENSE],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'The ideal position',
+      animation: undefined,
+      vimeoId: '579310054',
+      youtube: 'https://youtu.be/kD5P97mn5QM',
+      repetition: '',
+      rest: '',
+      instruction:
+        'An attacker and a defender follow a course established with markers. The defender must always succeed in placing himself between the thrower and his attacker. He must pay attention to the position of his feet and hips./nOnce the slalom is completed, the attacker must make a final change of direction to get the disc. The defender must stop this pass',
+    },
+  ],
+};
+
+const breakInSpace = {
+  id: 1068,
+  type: DrillTypes.FRISBEE,
+  visibleInList: true,
+  author: '',
+  title: 'Throwing into space',
+  image: 'https://zupimages.net/up/21/30/9qi0.jpg',
+  description: 'The thrower must try to get the disc into an ideal position for the attacker',
+  minimalPlayersNumber: 4,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '5 cones - 1 disc',
+  durationInMinutes: 15,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.DEFENSE],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'La ideal position',
+      animation: undefined,
+      vimeoId: '579309904',
+      youtube: 'https://youtu.be/G8vrH3XooYQ',
+      repetition: '',
+      rest: '',
+      instruction:
+        'An attacker is looking to break a mark. The attacker is only allowed to make a maximum of 2 fakes to break his mark and succeed in making a pass to the first of the stack./nFor the break to be considered successful, the receiver must wait for the pass to be thrown to start moving and must perform a long fake before the defender can make a mark',
+    },
+  ],
+};
+
+const adaptYourGame = {
+  id: 1069,
+  type: DrillTypes.FRISBEE,
+  visibleInList: true,
+  author: '',
+  title: 'Observe and Adapt',
+  image: 'https://zupimages.net/up/21/30/yjhv.jpg',
+  description: 'The objective is to improve information gathering and communication between players',
+  minimalPlayersNumber: 12,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '8 cones - 1 disc',
+  durationInMinutes: 15,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.GAMES],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'Adapt!',
+      animation: undefined,
+      vimeoId: '579309932',
+      youtube: 'https://youtu.be/OFEevUJrRMg',
+      repetition: '',
+      rest: '',
+      instruction:
+        'Two teams of 7 players are in opposition. Each of the players positions themselves randomly on one of the poles placed in the center of the field. The coach gives the disc to one of the players and indicates a direction for the attack. The team of the player who receives the Frisbee is on the attack and seeks to score towards the indicated end zone. The two teams must communicate as effectively as possible in order to structure themselves as quickly as possible./nIf a mistake is made by the defense, the attackers must identify it and punish it as soon as possible',
+    },
+  ],
+};
+
+const middleDeep = {
+  id: 1070,
+  type: DrillTypes.FRISBEE,
+  visibleInList: true,
+  author: 'Ráchel Tošnerová',
+  title: 'Deep throw from the middle',
+  image: 'https://zupimages.net/up/21/30/cgvy.jpg',
+  description: 'These 2 exercises will allow the middles to throw deep passes',
+  minimalPlayersNumber: 10,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '4 cones - 6 discs',
+  durationInMinutes: 15,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'Cut & Longs',
+      animation: undefined,
+      vimeoId: '579310012',
+      youtube: 'https://youtu.be/LVM25aOHVuw',
+      repetition: '',
+      rest: '',
+      instruction:
+        'The purpose of this drill is to train the middles to find their continuity in long. The cutter makes a two-step cut and when he catches the Frisbee, tries to throw a deep pass',
+    },
+    {
+      id: 2,
+      title: 'Deep passes',
+      animation: undefined,
+      vimeoId: '579309975',
+      youtube: 'https://youtu.be/zv2gOBikhbA',
+      repetition: '',
+      rest: '',
+      instruction:
+        'The players form 4 columns. The objective is to throw the disc into the depth in front of the cutter./nIf the thrower is experienced, the cutter must start a little earlier. The cutter must start straight and adapt his run according to the trajectory of the disc',
     },
   ],
 };
@@ -8914,6 +9120,12 @@ export const drills = [
   triangleWarmUp,
   breakLong,
   longShotAnalyse,
+  blockWithYourBody,
+  perfectBreak,
+  adaptationDefense,
+  breakInSpace,
+  adaptYourGame,
+  middleDeep,
 
   // warmup
   warmupDrill,

@@ -5456,6 +5456,8 @@ const goToTenDrill = {
       id: 1,
       title: 'Passe à 10',
       animation: animationGoToTen,
+      vimeoId: '579310938',
+      youtube: 'https://youtu.be/LVM25aOHVuw',
       repetition: '',
       rest: '',
       instruction:
@@ -6949,7 +6951,7 @@ const splitToVertical = {
       animation: splitWindmill,
       repetition: '',
       rest: '',
-      instruction: "Même situation, mais maintenant les cutters dans l'ouvert libèrent l'espace pour les autres.",
+      instruction: "Même situation, mais maintenant les cutters dans l'ouvert libèrent l'espace pour les autres",
     },
   ],
 };
@@ -7790,6 +7792,210 @@ const longShotAnalyse = {
   ],
 };
 
+const blockWithYourBody = {
+  id: 1065,
+  type: DrillTypes.FRISBEE,
+  visibleInList: true,
+  author: 'Davide Morri',
+  title: 'Utilise ton Corps - Défense',
+  image: 'https://zupimages.net/up/21/30/en6i.jpg',
+  description: "Apprendre à utiliser son corps pour diriger l'attaquant sur lequel on défend",
+  minimalPlayersNumber: 4,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '11 plots - 4 disques',
+  durationInMinutes: 15,
+  intensity: Intensities.HIGH,
+  goals: [FrisbeeGoals.CUTTING, FrisbeeGoals.DEFENSE],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.ADVANCED,
+  steps: [
+    {
+      id: 1,
+      title: 'Contrôle ton attaquant',
+      animation: undefined,
+      vimeoId: '518051834',
+      youtube: 'https://youtu.be/nX-5xxfzIio',
+      repetition: '',
+      rest: '',
+      instruction:
+        "Un attaquant va en courant à un plot situé à 15 mètre devant lui. Une fois le plot atteint, l'attaquant peut se déplacer vers 3 directions différentes. Son objectif est d'attraper le disque dans l'un des deux carrés délimités. Il peut s'y rendre directement ou continuer sa course tout droit avant de changer de direction./nL'objectif du défenseur est de mettre son corps en opposition pour diriger l'attaquant et l'empêcher d'attraper le disque",
+    },
+  ],
+};
+
+const perfectBreak = {
+  id: 1066,
+  type: DrillTypes.FRISBEE,
+  visibleInList: true,
+  author: 'Davide Morri',
+  title: 'Le Break Parfait',
+  image: 'https://zupimages.net/up/21/30/s64v.jpg',
+  description:
+    "L'objectif est d'apprendre à réaliser un break qui permettra d'obtenir une position très avantageuse pour le réceptionneur",
+  minimalPlayersNumber: 4,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '11 plots - 4 disques',
+  durationInMinutes: 15,
+  intensity: Intensities.HIGH,
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.DEFENSE],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'La position idéale',
+      animation: undefined,
+      vimeoId: '579757078',
+      youtube: 'https://youtu.be/83LBFCP8uWo',
+      repetition: '',
+      rest: '',
+      instruction:
+        "Un lanceur s'apprête à lancer le disque et un défenseur lui oppose une marque. L'objectif du cutter est de réceptionner le disque entre les plots./nSi l'attaquant attrape le frisbee entre les 2 plots centraux, la passe est considérée comme très réussie",
+    },
+  ],
+};
+
+const adaptationDefense = {
+  id: 1067,
+  type: DrillTypes.FRISBEE,
+  visibleInList: true,
+  author: 'Lāsma Kublica',
+  title: 'Réactivité en Défense',
+  image: 'https://zupimages.net/up/21/30/d3t6.jpg',
+  description: "Le défenseur cherche à adapter sa position défensive au déplacement de l'attaquant",
+  minimalPlayersNumber: 4,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '5 plots - 1 disque',
+  durationInMinutes: 15,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.DEFENSE],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'La position idéale',
+      animation: undefined,
+      vimeoId: '579310054',
+      youtube: 'https://youtu.be/kD5P97mn5QM',
+      repetition: '',
+      rest: '',
+      instruction:
+        "Un attaquant et un défenseur suivent un parcours établi avec des plots. Le défenseur doit toujours réussir se placer entre le lanceur et son attaquant./n Il doit bien faire attention aux positions de ses pieds ainsi que ses hanches. Une fois le slalom terminé, l'attaquant doit effectuer un ultime changement de direction pour obtenir le disque. Le défenseur doit stopper cette passe",
+    },
+  ],
+};
+
+const breakInSpace = {
+  id: 1068,
+  type: DrillTypes.FRISBEE,
+  visibleInList: true,
+  author: '',
+  title: "Lancer dans l'espace",
+  image: 'https://zupimages.net/up/21/30/9qi0.jpg',
+  description: 'Le lanceur doit chercher à faire parvenir le disque dans une position idéale pour son attaquant',
+  minimalPlayersNumber: 4,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '5 plots - 1 disque',
+  durationInMinutes: 15,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.DEFENSE],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'La position idéale',
+      animation: undefined,
+      vimeoId: '579309904',
+      youtube: 'https://youtu.be/G8vrH3XooYQ',
+      repetition: '',
+      rest: '',
+      instruction:
+        "Un attaquant cherche à breaker une marque. L'attaquant n'a le droit d'effectuer que 2 feintes maximum pour breaker sa marque et parvenir à faire une passe au premier du stack./nPour que le break soit considérer comme réussi, il faut que le réceptionneur attendent que la passe soit lancée pour partir et qu'il est le temps d'effectuer une feinte de longue avant que son défenseur puisse effectuer une marque",
+    },
+  ],
+};
+
+const adaptYourGame = {
+  id: 1069,
+  type: DrillTypes.FRISBEE,
+  visibleInList: true,
+  author: '',
+  title: "Observer et s'Adapter",
+  image: 'https://zupimages.net/up/21/30/yjhv.jpg',
+  description: "L'objectif est d'améliorer la prise d'information et la communication entre les joueurs",
+  minimalPlayersNumber: 12,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '8 plots - 1 disque',
+  durationInMinutes: 15,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.GAMES],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'Adaptez-vous !',
+      animation: undefined,
+      vimeoId: '579309932',
+      youtube: 'https://youtu.be/OFEevUJrRMg',
+      repetition: '',
+      rest: '',
+      instruction:
+        "Deux équipes de 7 joueurs sont en opposition. Chacun des joueurs se positionne aléatoirement sur l'un des plots disposés au centre du terrain. L'entraineur donne le disque à l'un des joueurs et indique un sens pour l'attaque./nL'équipe du joueur qui reçoit le frisbee est en attaque et cherche à marquer vers la endzone indiquée. Les deux équipes doivent communiquer le plus efficacement possible pour se structurer le plus vite possible. Si une erreur est faite par la défense, les attaquants doivent l'identifier et la sanctionner au plus vite",
+    },
+  ],
+};
+
+const middleDeep = {
+  id: 1070,
+  type: DrillTypes.FRISBEE,
+  visibleInList: true,
+  author: 'Ráchel Tošnerová',
+  title: 'Des Longues de Middle',
+  image: 'https://zupimages.net/up/21/30/cgvy.jpg',
+  description: 'Ces 2 exercices vont permettre aux middles de lancers des passes en profondeur',
+  minimalPlayersNumber: 10,
+  inGame: undefined,
+  equipmentLabel: EquipmentLabels.BASIC,
+  equipment: '4 plots - 6 disques',
+  durationInMinutes: 15,
+  intensity: Intensities.MODERATE,
+  goals: [FrisbeeGoals.THROWING, FrisbeeGoals.CUTTING],
+  seasonTiming: SeasonTimings.ANYTIME,
+  level: Levels.INTERMEDIATE,
+  steps: [
+    {
+      id: 1,
+      title: 'Cut & Longues',
+      animation: undefined,
+      vimeoId: '579310012',
+      youtube: 'https://youtu.be/LVM25aOHVuw',
+      repetition: '',
+      rest: '',
+      instruction:
+        "L'objectif est d'entrainer les middles à trouver leur continuité en longue. Le cutter fait un cut en 2 temps et lorsqu'il attrape le frisbee cherche à lancer en passe en profondeur",
+    },
+    {
+      id: 2,
+      title: 'Passes en profondeur',
+      animation: undefined,
+      vimeoId: '579309975',
+      youtube: 'https://youtu.be/zv2gOBikhbA',
+      repetition: '',
+      rest: '',
+      instruction:
+        "Les joueurs forment 4 colonnes. L'objectif est de lancer le disque dans la profondeur devant le cutter. Si le lanceur est expérimenté, le cutter doit partir un peu plus tôt./nLe cutteur doit partir droit et adapte sa course en fonction de la trajectoire du disque",
+    },
+  ],
+};
+
 const normalGame = {
   id: 2001,
   type: DrillTypes.FRISBEE,
@@ -7990,7 +8196,7 @@ const helpGame = {
       repetition: '',
       rest: '',
       instruction:
-        "Un coach ou joueur expériementé joue toujours avec l'attaque. Il doit faire en sorte que tous les joueurs, même les plus débutants, puissent toucher le disque. Le caméléon ne peut pas marquer",
+        "Un coach ou joueur expérimenté joue toujours avec l'attaque. Il doit faire en sorte que tous les joueurs, même les plus débutants, puissent toucher le disque. Le caméléon ne peut pas marquer",
     },
     {
       id: 2,
@@ -9031,6 +9237,12 @@ export const drills = [
   triangleWarmUp,
   breakLong,
   longShotAnalyse,
+  blockWithYourBody,
+  perfectBreak,
+  adaptationDefense,
+  breakInSpace,
+  adaptYourGame,
+  middleDeep,
 
   // warmup
   warmupDrill,

@@ -7819,7 +7819,7 @@ const blockWithYourBody = {
       repetition: '',
       rest: '',
       instruction:
-        "Un attaquant va en courant à un plot situé à 15 mètre devant lui. Une fois le plot atteint, l'attaquant peut se déplacer vers 3 directions différentes. Son objectif est d'attraper le disque dans l'un des deux carrés délimités. Il peut s'y rendre directement ou continuer sa course tout droit avant de changer de direction./nL'objectif du défenseur est de mettre son corps en opposition pour diriger l'attaquant et l'empêcher d'attraper le disque",
+        "Un attaquant court vers un plot situé à 15 mètre devant lui. Une fois le plot atteint, l'attaquant peut se déplacer vers 3 directions différentes. Son objectif est d'attraper le disque dans l'un des deux carrés délimités. Il peut s'y rendre directement ou continuer sa course tout droit avant de changer de direction.\nL'objectif du défenseur est de mettre son corps en opposition pour diriger l'attaquant et l'empêcher d'attraper le disque",
     },
   ],
 };
@@ -7852,7 +7852,7 @@ const perfectBreak = {
       repetition: '',
       rest: '',
       instruction:
-        "Un lanceur s'apprête à lancer le disque et un défenseur lui oppose une marque. L'objectif du cutter est de réceptionner le disque entre les plots./nSi l'attaquant attrape le frisbee entre les 2 plots centraux, la passe est considérée comme très réussie",
+        "Un lanceur s'apprête à lancer le disque et un défenseur lui oppose une marque. L'objectif du cutter est de réceptionner le disque entre les plots.\nSi l'attaquant attrape le frisbee entre les 2 plots centraux, la passe est considérée comme très réussie",
     },
   ],
 };
@@ -7884,7 +7884,7 @@ const adaptationDefense = {
       repetition: '',
       rest: '',
       instruction:
-        "Un attaquant et un défenseur suivent un parcours établi avec des plots. Le défenseur doit toujours réussir se placer entre le lanceur et son attaquant./n Il doit bien faire attention aux positions de ses pieds ainsi que ses hanches. Une fois le slalom terminé, l'attaquant doit effectuer un ultime changement de direction pour obtenir le disque. Le défenseur doit stopper cette passe",
+        "Un attaquant et un défenseur suivent un parcours établi avec des plots. Le défenseur doit toujours réussir se placer entre le lanceur et son attaquant.\n Il doit bien faire attention aux positions de ses pieds ainsi que ses hanches. Une fois le slalom terminé, l'attaquant doit effectuer un ultime changement de direction pour obtenir le disque. Le défenseur doit bloquer cette passe",
     },
   ],
 };
@@ -7903,7 +7903,7 @@ const breakInSpace = {
   equipment: '5 plots - 1 disque',
   durationInMinutes: 15,
   intensity: Intensities.MODERATE,
-  goals: [FrisbeeGoals.DEFENSE],
+  goals: [FrisbeeGoals.THROWING],
   seasonTiming: SeasonTimings.ANYTIME,
   level: Levels.INTERMEDIATE,
   steps: [
@@ -7916,7 +7916,7 @@ const breakInSpace = {
       repetition: '',
       rest: '',
       instruction:
-        "Un attaquant cherche à breaker une marque. L'attaquant n'a le droit d'effectuer que 2 feintes maximum pour breaker sa marque et parvenir à faire une passe au premier du stack./nPour que le break soit considérer comme réussi, il faut que le réceptionneur attendent que la passe soit lancée pour partir et qu'il est le temps d'effectuer une feinte de longue avant que son défenseur puisse effectuer une marque",
+        "Un attaquant cherche à breaker sa marque. L'attaquant n'a le droit d'effectuer que 2 feintes maximum pour breaker sa marque et parvenir à faire une passe au premier du stack.\nPour que le break soit considéré comme réussi, il faut que le réceptionneur attende que la passe soit lancée pour démarre et qu'il ait le temps d'effectuer une feinte de longue avant que son défenseur ne puisse mettre une marque",
     },
   ],
 };
@@ -7926,7 +7926,7 @@ const adaptYourGame = {
   type: DrillTypes.FRISBEE,
   visibleInList: true,
   author: '',
-  title: "Observer et s'Adapter",
+  title: "Observer et s'adapter",
   image: 'https://zupimages.net/up/21/30/yjhv.jpg',
   description: "L'objectif est d'améliorer la prise d'information et la communication entre les joueurs",
   minimalPlayersNumber: 12,
@@ -7948,7 +7948,7 @@ const adaptYourGame = {
       repetition: '',
       rest: '',
       instruction:
-        "Deux équipes de 7 joueurs sont en opposition. Chacun des joueurs se positionne aléatoirement sur l'un des plots disposés au centre du terrain. L'entraineur donne le disque à l'un des joueurs et indique un sens pour l'attaque./nL'équipe du joueur qui reçoit le frisbee est en attaque et cherche à marquer vers la endzone indiquée. Les deux équipes doivent communiquer le plus efficacement possible pour se structurer le plus vite possible. Si une erreur est faite par la défense, les attaquants doivent l'identifier et la sanctionner au plus vite",
+        "Deux équipes de 7 joueurs sont en opposition. Chacun des joueurs se positionne aléatoirement sur l'un des plots disposés au centre du terrain. L'entraineur donne le disque à l'un des joueurs et indique un sens pour l'attaque.\nL'équipe du joueur qui reçoit le frisbee est en attaque et cherche à marquer vers la endzone indiquée. Les deux équipes doivent communiquer le plus efficacement possible pour se structurer le plus vite possible. Si une erreur est faite par la défense, les attaquants doivent l'identifier et l'exploiter au plus vite",
     },
   ],
 };
@@ -7980,7 +7980,7 @@ const middleDeep = {
       repetition: '',
       rest: '',
       instruction:
-        "L'objectif est d'entrainer les middles à trouver leur continuité en longue. Le cutter fait un cut en 2 temps et lorsqu'il attrape le frisbee cherche à lancer en passe en profondeur",
+        "L'objectif est d'entrainer les middles à trouver leur continuité en longue. Le cutter fait un cut en 2 temps et lorsqu'il attrape le frisbee cherche à lancer une passe en profondeur",
     },
     {
       id: 2,
@@ -7991,7 +7991,7 @@ const middleDeep = {
       repetition: '',
       rest: '',
       instruction:
-        "Les joueurs forment 4 colonnes. L'objectif est de lancer le disque dans la profondeur devant le cutter. Si le lanceur est expérimenté, le cutter doit partir un peu plus tôt./nLe cutteur doit partir droit et adapte sa course en fonction de la trajectoire du disque",
+        "Les joueurs forment 4 colonnes. L'objectif est de lancer le disque dans la profondeur devant le cutter. Si le lanceur est expérimenté, le cutter doit partir un peu plus tôt.\nLe cutteur doit partir droit et adapte sa course en fonction de la trajectoire du disque",
     },
   ],
 };

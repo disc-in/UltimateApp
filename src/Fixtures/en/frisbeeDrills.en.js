@@ -5359,7 +5359,7 @@ const goToTenDrill = {
       title: 'Go to 10',
       animation: animationGoToTen,
       vimeoId: '579310938',
-      youtube: 'https://youtu.be/LVM25aOHVuw',
+      youtube: 'https://youtu.be/0RM9KCCbrV8',
       repetition: '',
       rest: '',
       instruction:

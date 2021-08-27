@@ -7703,7 +7703,7 @@ const blockWithYourBody = {
       id: 1,
       title: 'Control your opponent',
       animation: undefined,
-      vimeoId: '518051834',
+      vimeoId: '579309538',
       youtube: 'https://youtu.be/nX-5xxfzIio',
       repetition: '',
       rest: '',

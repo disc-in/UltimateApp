@@ -5456,7 +5456,6 @@ const goToTenDrill = {
       id: 1,
       title: 'Passe à 10',
       animation: animationGoToTen,
-      vimeoId: '579310938',
       youtube: 'https://youtu.be/0RM9KCCbrV8',
       repetition: '',
       rest: '',

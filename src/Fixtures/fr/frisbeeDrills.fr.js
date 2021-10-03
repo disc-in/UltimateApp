@@ -597,7 +597,7 @@ const warmupGameDrill = {
   author: '',
   title: 'Échauffement pour un match',
   image: 'https://zupimages.net/up/20/19/f2bd.jpg',
-  description: 'Suivez les exercices de la vidéo pour préparer les organismes à une sénce à intensité de match',
+  description: 'Suivez les exercices de la vidéo pour préparer les organismes à une séance à intensité de match',
   minimalPlayersNumber: 1,
   equipmentLabel: EquipmentLabels.NONE,
   equipment: 'Aucun',

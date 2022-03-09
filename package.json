@@ -54,7 +54,6 @@
   },
   "devDependencies": {
     "@babel/core": "~7.14.0",
-    "@babel/eslint-plugin": "^7.13.16",
     "@testing-library/react-native": "7.1.0",
     "babel-preset-expo": "8.3.0",
     "eslint": "^7.25.0",

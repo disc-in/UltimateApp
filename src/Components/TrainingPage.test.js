@@ -9,12 +9,16 @@ import fixtures from '../Fixtures/TestFixtures';
 import TrainingPage from './TrainingPage';
 
 const mockedSetPage = jest.fn();
-jest.mock('@react-native-community/viewpager', () => {
-  const RealComponent = jest.requireActual('@react-native-community/viewpager');
+jest.mock('react-native-pager-view', () => {
+  const RealComponent = jest.requireActual('react-native-pager-view');
   const React = require('react');
 
-  return class ViewPager extends RealComponent {
+  return class PagerView extends React.Component {
     setPage = mockedSetPage;
+
+    render() {
+      return <RealComponent.default>{this.props.children}</RealComponent.default>;
+    }
   };
 });
 

@@ -2,18 +2,11 @@
 
 exports[`<TrainingPage /> When fitness program renders correctly a fitness training 1`] = `
 <RNCViewPager
-  initialPage={0}
+  layoutDirection="ltr"
   onMoveShouldSetResponderCapture={[Function]}
   onPageScroll={[Function]}
   onPageScrollStateChanged={[Function]}
   onPageSelected={[Function]}
-  style={
-    Object {
-      "backgroundColor": "#fff",
-      "flex": 1,
-      "height": "100%",
-    }
-  }
 >
   <View
     collapsable={false}
@@ -2427,18 +2420,11 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
 
 exports[`<TrainingPage /> When frisbee program renders correctly a frisbee training 1`] = `
 <RNCViewPager
-  initialPage={0}
+  layoutDirection="ltr"
   onMoveShouldSetResponderCapture={[Function]}
   onPageScroll={[Function]}
   onPageScrollStateChanged={[Function]}
   onPageSelected={[Function]}
-  style={
-    Object {
-      "backgroundColor": "#fff",
-      "flex": 1,
-      "height": "100%",
-    }
-  }
 >
   <View
     collapsable={false}

@@ -658,7 +658,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
         Duration
       </Text>
       <Text>
-        How much time do you have?   - mins
+        How much time do you have? - mins
       </Text>
       <View
         style={

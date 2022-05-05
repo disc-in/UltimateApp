@@ -442,12 +442,12 @@ describe('<FitnessFilters />', () => {
         ),
       );
 
-      expect(getByText('How much time do you have?   - mins')).toBeDefined();
+      expect(getByText('How much time do you have? - mins')).toBeDefined();
       expect(getByText('See 3 drills')).toBeDefined();
 
       await fireEvent(getByTestId('durationSlider'), 'valueChange', 5);
 
-      expect(getByText('How much time do you have?   5 mins')).toBeDefined();
+      expect(getByText('How much time do you have? 5 mins')).toBeDefined();
       expect(getByText('See 2 drills')).toBeDefined();
 
       await fireEvent.press(getByText('See 2 drills'));
@@ -568,17 +568,17 @@ describe('<FitnessFilters />', () => {
         ),
       );
 
-      expect(getByText('How much time do you have?   - mins')).toBeDefined();
+      expect(getByText('How much time do you have? - mins')).toBeDefined();
       expect(getByText('See 3 drills')).toBeDefined();
 
       await fireEvent(getByTestId('durationSlider'), 'valueChange', 5);
 
-      expect(getByText('How much time do you have?   5 mins')).toBeDefined();
+      expect(getByText('How much time do you have? 5 mins')).toBeDefined();
       expect(getByText('See 2 drills')).toBeDefined();
 
       await fireEvent.press(getByTestId('resetButton'));
 
-      expect(getByText('How much time do you have?   - mins')).toBeDefined();
+      expect(getByText('How much time do you have? - mins')).toBeDefined();
       expect(getByText('See 3 drills')).toBeDefined();
 
       await fireEvent.press(getByText('See 3 drills'));

@@ -1,5 +1,4 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
@@ -12,14 +11,12 @@ describe('Checkbox', () => {
   const labels = ['I prefer red', 'I prefer blue'];
 
   it('renders correctly', () => {
-    const tree = renderer
-      .create(
-        <Formik initialValues={{ title: ['My title'] }}>
-          <Checkbox fieldName="title" label="Title" labels={labels} values={values} />
-        </Formik>,
-      )
-      .toJSON();
-    expect(tree).toMatchSnapshot();
+    const { toJSON } = render(
+      <Formik initialValues={{ title: ['My title'] }}>
+        <Checkbox fieldName="title" label="Title" labels={labels} values={values} />
+      </Formik>,
+    );
+    expect(toJSON()).toMatchSnapshot();
   });
 
   it('renders correctly when there is an error', async () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react-native';
 import { Formik } from 'formik';
 import { NavigationContext } from '@react-navigation/native';
 
@@ -14,15 +14,13 @@ describe('AnimationInput', () => {
   };
 
   it('renders correctly', () => {
-    const tree = renderer
-      .create(
-        <NavigationContext.Provider value={navContext}>
-          <Formik initialValues={{ title: 'My title' }}>
-            <AnimationInput fieldName="title" label="Title" />
-          </Formik>
-        </NavigationContext.Provider>,
-      )
-      .toJSON();
-    expect(tree).toMatchSnapshot();
+    const { toJSON } = render(
+      <NavigationContext.Provider value={navContext}>
+        <Formik initialValues={{ title: 'My title' }}>
+          <AnimationInput fieldName="title" label="Title" />
+        </Formik>
+      </NavigationContext.Provider>,
+    );
+    expect(toJSON()).toMatchSnapshot();
   });
 });

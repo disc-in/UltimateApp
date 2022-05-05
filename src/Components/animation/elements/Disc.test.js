@@ -1,11 +1,11 @@
 import React from 'react';
-import { create, act } from 'react-test-renderer';
+import { render } from '@testing-library/react-native';
 
 import Disc from './Disc';
 
 describe('<Disc />', () => {
-  it('renders correctly', async () => {
-    const tree = create(<Disc baseWidth={10} number={1} />).toJSON();
-    await act(async () => expect(tree).toMatchSnapshot());
+  it('renders correctly', () => {
+    const { toJSON } = render(<Disc baseWidth={10} number={1} />);
+    expect(toJSON()).toMatchSnapshot();
   });
 });

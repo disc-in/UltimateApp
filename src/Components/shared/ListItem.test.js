@@ -1,18 +1,16 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react-native';
 import { Text } from 'react-native';
 
 import ListItem from './ListItem';
 
 describe('<ListItem />', () => {
   it('renders correctly', () => {
-    const tree = renderer
-      .create(
-        <ListItem>
-          <Text>Hello world</Text>
-        </ListItem>,
-      )
-      .toJSON();
-    expect(tree).toMatchSnapshot();
+    const { toJSON } = render(
+      <ListItem>
+        <Text>Hello world</Text>
+      </ListItem>,
+    );
+    expect(toJSON()).toMatchSnapshot();
   });
 });

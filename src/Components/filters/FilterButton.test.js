@@ -1,18 +1,17 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { render, fireEvent } from '@testing-library/react-native';
 
 import FilterButton from './FilterButton';
 
 describe('<FilterButton />', () => {
   it('renders correctly', () => {
-    const tree = renderer.create(<FilterButton title="OK" />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { toJSON } = render(<FilterButton title="OK" />);
+    expect(toJSON()).toMatchSnapshot();
   });
 
   it('renders correctly when active', () => {
-    const tree = renderer.create(<FilterButton title="OK" active />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { toJSON } = render(<FilterButton title="OK" active />);
+    expect(toJSON()).toMatchSnapshot();
   });
 
   it('calls delegates onPress prop', async () => {

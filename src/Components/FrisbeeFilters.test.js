@@ -1,5 +1,4 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
 import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
@@ -50,8 +49,8 @@ describe('<FrisbeeFilters />', () => {
       },
     };
     const navigation = { setOptions: jest.fn(), navigate: jest.fn() };
-    const tree = renderer.create(<FrisbeeFilters route={route} navigation={navigation} favoriteDrills={[]} />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { toJSON } = render(<FrisbeeFilters route={route} navigation={navigation} favoriteDrills={[]} />);
+    expect(toJSON()).toMatchSnapshot();
   });
 
   describe('filtering', () => {

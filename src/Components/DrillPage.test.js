@@ -1,5 +1,4 @@
 import React from 'react';
-import { create, act } from 'react-test-renderer';
 import { connect, Provider } from 'react-redux';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
 import { NavigationContainer } from '@react-navigation/native';
@@ -24,7 +23,7 @@ describe('<DrillPage />', () => {
 
   it('renders correctly', async () => {
     const Stack = createStackNavigator();
-    const tree = create(
+    const { toJSON } = render(
       <Provider store={store}>
         <NavigationContainer>
           <Stack.Navigator>
@@ -32,8 +31,8 @@ describe('<DrillPage />', () => {
           </Stack.Navigator>
         </NavigationContainer>
       </Provider>,
-    ).toJSON();
-    await act(async () => expect(tree).toMatchSnapshot());
+    );
+    await waitFor(async () => expect(toJSON()).toMatchSnapshot());
   });
 
   it('renders correctly a favorite drill', async () => {
@@ -42,7 +41,7 @@ describe('<DrillPage />', () => {
       () => ({ toggleFavorite }),
     )(DrillPage);
     const Stack = createStackNavigator();
-    const tree = create(
+    const { toJSON } = render(
       <Provider store={store}>
         <NavigationContainer>
           <Stack.Navigator>
@@ -51,7 +50,7 @@ describe('<DrillPage />', () => {
         </NavigationContainer>
       </Provider>,
     );
-    await act(async () => expect(tree).toMatchSnapshot());
+    await waitFor(async () => expect(toJSON()).toMatchSnapshot());
   });
 
   it('toggles favorite drill', async () => {

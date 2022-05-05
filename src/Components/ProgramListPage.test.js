@@ -1,5 +1,4 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
 
@@ -17,14 +16,12 @@ describe('<ProgramListPage />', () => {
     },
   };
   it('renders correctly when connected', () => {
-    const tree = renderer
-      .create(
-        <Provider store={store}>
-          <ConnectedProgramListPage route={route} />
-        </Provider>,
-      )
-      .toJSON();
-    expect(tree).toMatchSnapshot();
+    const { toJSON } = render(
+      <Provider store={store}>
+        <ConnectedProgramListPage route={route} />
+      </Provider>,
+    );
+    expect(toJSON()).toMatchSnapshot();
   });
 
   it('links to training', async () => {

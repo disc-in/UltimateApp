@@ -1,5 +1,5 @@
 import React from 'react';
-import { create, act } from 'react-test-renderer';
+import { render } from '@testing-library/react-native';
 import { Provider } from 'react-redux';
 
 import { createProgram, createTraining } from '../../Fixtures/TestFixtures';
@@ -8,7 +8,7 @@ import store from '../../Store/testStore';
 import ProgramList from './ProgramList';
 
 describe('<ProgramList />', () => {
-  it('renders correctly', async () => {
+  it('renders correctly', () => {
     const navigation = { navigate: jest.fn() };
 
     const program1 = createProgram({ title: 'Program 1' });
@@ -17,11 +17,11 @@ describe('<ProgramList />', () => {
     const program2 = createProgram({ title: 'Program 2', trainings: [firstTraining, secondTraining] });
     const programs = [program1, program2];
 
-    const tree = create(
+    const { toJSON } = render(
       <Provider store={store}>
         <ProgramList displayedPrograms={programs} navigation={navigation} completeTrainings={[]} />
       </Provider>,
-    ).toJSON();
-    await act(async () => expect(tree).toMatchSnapshot());
+    );
+    expect(toJSON()).toMatchSnapshot();
   });
 });

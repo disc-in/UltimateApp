@@ -1,5 +1,4 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import { render, fireEvent } from '@testing-library/react-native';
 
@@ -36,14 +35,12 @@ describe('<TrainingPage />', () => {
     };
 
     it('renders correctly a fitness training', () => {
-      const tree = renderer
-        .create(
-          <Provider store={store}>
-            <TrainingPage route={route} />
-          </Provider>,
-        )
-        .toJSON();
-      expect(tree).toMatchSnapshot();
+      const { toJSON } = render(
+        <Provider store={store}>
+          <TrainingPage route={route} />
+        </Provider>,
+      );
+      expect(toJSON()).toMatchSnapshot();
     });
 
     it('links to previous training within program', async () => {
@@ -116,14 +113,12 @@ describe('<TrainingPage />', () => {
     };
 
     it('renders correctly a frisbee training', () => {
-      const tree = renderer
-        .create(
-          <Provider store={store}>
-            <TrainingPage route={route} />
-          </Provider>,
-        )
-        .toJSON();
-      expect(tree).toMatchSnapshot();
+      const { toJSON } = render(
+        <Provider store={store}>
+          <TrainingPage route={route} />
+        </Provider>,
+      );
+      expect(toJSON()).toMatchSnapshot();
     });
 
     it('links to minimal drill page for frisbee', async () => {

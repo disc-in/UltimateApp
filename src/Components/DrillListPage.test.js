@@ -1,5 +1,4 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
 import { NavigationContainer } from '@react-navigation/native';
@@ -22,14 +21,12 @@ describe('<DrillListPage />', () => {
         type: DrillTypes.FRISBEE,
       },
     };
-    const tree = renderer
-      .create(
-        <Provider store={store}>
-          <ConnectedDrillListPage route={route} navigation={navigation} />
-        </Provider>,
-      )
-      .toJSON();
-    expect(tree).toMatchSnapshot();
+    const { toJSON } = render(
+      <Provider store={store}>
+        <ConnectedDrillListPage route={route} navigation={navigation} />
+      </Provider>,
+    );
+    expect(toJSON()).toMatchSnapshot();
   });
 
   it('renders frisbee drills sorted by number of players', () => {
@@ -42,14 +39,12 @@ describe('<DrillListPage />', () => {
     const lessPlayersDrill = createDrill({ id: 2, type: DrillTypes.FRISBEE, minimalPlayersNumber: 6 });
     const evenMorePlayersDrill = createDrill({ id: 3, type: DrillTypes.FRISBEE, minimalPlayersNumber: 20 });
     const drills = [morePlayersDrill, evenMorePlayersDrill, lessPlayersDrill];
-    const tree = renderer
-      .create(
-        <Provider store={store}>
-          <DrillListPage route={route} navigation={navigation} storeDrills={drills} />
-        </Provider>,
-      )
-      .toJSON();
-    expect(tree).toMatchSnapshot();
+    const { toJSON } = render(
+      <Provider store={store}>
+        <DrillListPage route={route} navigation={navigation} storeDrills={drills} />
+      </Provider>,
+    );
+    expect(toJSON()).toMatchSnapshot();
   });
 
   it('renders fitness drills sorted by duration', () => {
@@ -62,14 +57,12 @@ describe('<DrillListPage />', () => {
     const longDrill = createDrill({ id: 2, type: DrillTypes.FITNESS, durationInMinutes: 20 });
     const evenLongerDrill = createDrill({ id: 3, type: DrillTypes.FITNESS, durationInMinutes: 30 });
     const drills = [longDrill, evenLongerDrill, shortDrill];
-    const tree = renderer
-      .create(
-        <Provider store={store}>
-          <DrillListPage route={route} navigation={navigation} storeDrills={drills} />
-        </Provider>,
-      )
-      .toJSON();
-    expect(tree).toMatchSnapshot();
+    const { toJSON } = render(
+      <Provider store={store}>
+        <DrillListPage route={route} navigation={navigation} storeDrills={drills} />
+      </Provider>,
+    );
+    expect(toJSON()).toMatchSnapshot();
   });
 
   it('links to drill page', async () => {

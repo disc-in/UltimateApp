@@ -1,13 +1,12 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { render, fireEvent } from '@testing-library/react-native';
 
 import StartButton from './StartButton';
 
 describe('<StartButton />', () => {
   it('renders correctly', () => {
-    const tree = renderer.create(<StartButton text="OK" />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { toJSON } = render(<StartButton text="OK" />);
+    expect(toJSON()).toMatchSnapshot();
   });
 
   it('calls delegates onPress prop', async () => {

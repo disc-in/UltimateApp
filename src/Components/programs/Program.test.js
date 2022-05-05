@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react-native';
 import { Provider } from 'react-redux';
 
 import { createProgram, createTraining } from '../../Fixtures/TestFixtures';
@@ -11,14 +11,12 @@ describe('<Program />', () => {
   let program = createProgram();
 
   it('renders correctly', () => {
-    const tree = renderer
-      .create(
-        <Provider store={store}>
-          <ConnectedProgram program={program} />
-        </Provider>,
-      )
-      .toJSON();
-    expect(tree).toMatchSnapshot();
+    const { toJSON } = render(
+      <Provider store={store}>
+        <ConnectedProgram program={program} />
+      </Provider>,
+    );
+    expect(toJSON()).toMatchSnapshot();
   });
 
   it('renders correctly when finished', () => {
@@ -26,17 +24,15 @@ describe('<Program />', () => {
     const secondTraining = createTraining({ id: 2 });
     program = createProgram({ trainings: [firstTraining, secondTraining] });
 
-    const tree = renderer
-      .create(
-        <Program
-          program={program}
-          completeTrainings={[
-            { training: firstTraining, program },
-            { training: secondTraining, program },
-          ]}
-        />,
-      )
-      .toJSON();
-    expect(tree).toMatchSnapshot();
+    const { toJSON } = render(
+      <Program
+        program={program}
+        completeTrainings={[
+          { training: firstTraining, program },
+          { training: secondTraining, program },
+        ]}
+      />,
+    );
+    expect(toJSON()).toMatchSnapshot();
   });
 });

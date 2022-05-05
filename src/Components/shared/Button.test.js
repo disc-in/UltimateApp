@@ -1,28 +1,27 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { render, fireEvent } from '@testing-library/react-native';
 
 import Button from './Button';
 
 describe('<Button />', () => {
   it('renders correctly', () => {
-    const tree = renderer.create(<Button text="OK" />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { toJSON } = render(<Button text="OK" />);
+    expect(toJSON()).toMatchSnapshot();
   });
 
   it('renders correctly when small', () => {
-    const tree = renderer.create(<Button text="OK" small />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { toJSON } = render(<Button text="OK" small />);
+    expect(toJSON()).toMatchSnapshot();
   });
 
   it('renders correctly with an icon', () => {
-    const tree = renderer.create(<Button text="OK" icon="share" />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { toJSON } = render(<Button text="OK" icon="share" />);
+    expect(toJSON()).toMatchSnapshot();
   });
 
   it('renders correctly when light', () => {
-    const tree = renderer.create(<Button text="OK" light />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { toJSON } = render(<Button text="OK" light />);
+    expect(toJSON()).toMatchSnapshot();
   });
 
   it('calls delegates onPress prop', async () => {

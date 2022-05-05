@@ -1,5 +1,4 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { render, fireEvent } from '@testing-library/react-native';
 import { NavigationContext } from '@react-navigation/native';
 
@@ -35,8 +34,8 @@ describe('<FitnessDrillIllustration />', () => {
   const drill = createDrill({ type: DrillTypes.FITNESS, title: 'Hot Box', steps });
 
   it('renders correctly with several steps', () => {
-    const tree = renderer.create(<FitnessDrillIllustration drill={drill} startFitness={startFitness} />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { toJSON } = render(<FitnessDrillIllustration drill={drill} startFitness={startFitness} />);
+    expect(toJSON()).toMatchSnapshot();
   });
 
   it('renders correctly with one step', () => {
@@ -57,14 +56,12 @@ describe('<FitnessDrillIllustration />', () => {
       addListener: jest.fn(() => jest.fn()),
     };
 
-    const tree = renderer
-      .create(
-        <NavigationContext.Provider value={navContext}>
-          <FitnessDrillIllustration drill={drill} startFitness={startFitness} />
-        </NavigationContext.Provider>,
-      )
-      .toJSON();
-    expect(tree).toMatchSnapshot();
+    const { toJSON } = render(
+      <NavigationContext.Provider value={navContext}>
+        <FitnessDrillIllustration drill={drill} startFitness={startFitness} />
+      </NavigationContext.Provider>,
+    );
+    expect(toJSON()).toMatchSnapshot();
   });
 
   it('triggers startFitness', async () => {

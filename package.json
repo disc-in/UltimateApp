@@ -7,10 +7,7 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "lint": "eslint src --max-warnings=0 --ext .js,.jsx",
-    "lint-fix": "eslint src --fix --ext .js,.jsx",
-    "prettier": "prettier 'src/**/*.{ts,tsx,js,jsx}' --list-different",
-    "prettier-fix": "prettier 'src/**/*.{ts,tsx,js,jsx}' --write"
+    "prepare": "husky install"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "~1.15.0",
@@ -29,8 +26,8 @@
     "expo-screen-orientation": "~4.1.1",
     "expo-splash-screen": "~0.14.1",
     "firebase": "8.2.3",
-    "formik": "^2.2.8",
-    "i18n-js": "^3.8.0",
+    "formik": "^2.2.9",
+    "i18n-js": "^3.9.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-native": "0.64.3",
@@ -52,36 +49,29 @@
     "redux-persist": "^6.0.0",
     "uuid": "^8.3.2",
     "watchman": "^1.0.0",
-    "yup": "^0.32.9"
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@testing-library/react-native": "^9.1.0",
     "babel-preset-expo": "9.0.2",
-    "eslint": "^7.25.0",
-    "eslint-config-universe": "^7.0.1",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-plugin-react-native": "^3.10.0",
-    "husky": "^4.3.7",
+    "eslint": "^8.14.0",
+    "eslint-config-universe": "^11.0.0",
+    "eslint-plugin-react-hooks": "^4.4.0",
+    "eslint-plugin-react-native": "^4.0.0",
+    "husky": "^7.0.0",
     "jest": "^26.6.3",
     "jest-expo": "^44.0.0",
-    "lint-staged": "^10.5.4",
-    "nock": "^13.0.11",
+    "lint-staged": "^12.4.1",
+    "nock": "^13.2.4",
     "node-fetch": "^2.6.1",
-    "prettier": "^2.2.1",
+    "prettier": "^2.6.2",
     "redux-mock-store": "^1.5.4",
     "typescript": "~4.3.5"
   },
   "lint-staged": {
-    "**/*.{js,jsx,css}": [
-      "npm run lint-fix",
-      "npm run prettier-fix"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   },
   "jest": {
     "preset": "jest-expo",

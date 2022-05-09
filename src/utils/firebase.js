@@ -1,5 +1,9 @@
-import firebase from 'firebase/app';
-import 'firebase/database';
+import firebase from 'firebase/compat/app';
+import { initializeApp, setLogLevel } from 'firebase/app';
+
+import 'firebase/compat/database';
+import { getDatabase, ref, set, onValue } from 'firebase/database';
+
 import { Platform, InteractionManager } from 'react-native';
 import * as Linking from 'expo-linking';
 
@@ -60,26 +64,25 @@ const firebaseConfig = {
   databaseURL: EXPO_FIREBASE_DATABASE_URL,
 };
 
+let app;
 if (firebase.apps.length === 0) {
-  firebase.initializeApp(firebaseConfig);
-  firebase.setLogLevel('silent');
+  app = initializeApp(firebaseConfig);
+  setLogLevel('silent');
 }
 
 const reference = (namespace, uuid) => {
-  return firebase.database().ref(`${namespace}/${uuid}`);
+  return ref(getDatabase(app), `${namespace}/${uuid}`);
 };
 
 export const upload = async (namespace, record) => {
   const withoutUndefineds = JSON.parse(JSON.stringify(record));
   const shareUuid = generateUuid();
-  await reference(namespace, shareUuid).set(withoutUndefineds);
+  await set(reference(namespace, shareUuid), withoutUndefineds);
   return shareUuid;
 };
 
 export const download = (namespace, uuid) => {
-  return reference(namespace, uuid)
-    .once('value')
-    .then((snapshot) => snapshot.val());
+  return onValue(eference(namespace, uuid), (snapshot) => snapshot.val());
 };
 
 export const createLink = (path, title, description) => {

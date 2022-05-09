@@ -10,7 +10,7 @@ import { Levels, Intensities, EquipmentLabels, SeasonTimings, FitnessGoals, Dril
 
 import ConnectedFitnessFilters, { FitnessFilters } from './FitnessFilters';
 
-jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
+jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
 
 describe('<FitnessFilters />', () => {
   const beginnerDrill = createDrill({ id: 1, level: Levels.BEGINNER });

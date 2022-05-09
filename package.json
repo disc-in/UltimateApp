@@ -11,12 +11,12 @@
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "~1.15.0",
-    "@react-native-community/masked-view": "0.1.11",
+    "@react-native-masked-view/masked-view": "0.2.6",
     "@react-native-picker/picker": "2.2.1",
-    "@react-navigation/material-bottom-tabs": "^5.3.15",
-    "@react-navigation/native": "^5.9.4",
-    "@react-navigation/routers": "^5.7.2",
-    "@react-navigation/stack": "^5.14.4",
+    "@react-navigation/material-bottom-tabs": "^6.2.1",
+    "@react-navigation/native": "^6.0.10",
+    "@react-navigation/routers": "^6.1.0",
+    "@react-navigation/stack": "^6.2.1",
     "expo": "^44.0.0",
     "expo-av": "~10.2.0",
     "expo-constants": "~13.0.1",
@@ -35,11 +35,11 @@
     "react-native-dotenv": "^2.5.5",
     "react-native-elements": "^3.4.1",
     "react-native-flash-message": "^0.1.23",
-    "react-native-gesture-handler": "~2.1.0",
+    "react-native-gesture-handler": "~2.4.2",
     "react-native-get-random-values": "~1.7.0",
     "react-native-pager-view": "5.4.9",
     "react-native-paper": "^4.8.1",
-    "react-native-reanimated": "~2.3.1",
+    "react-native-reanimated": "~2.8.0",
     "react-native-safe-area-context": "3.3.2",
     "react-native-screens": "~3.10.1",
     "react-native-snap-carousel": "^3.9.1",
@@ -79,7 +79,7 @@
       "./setupJest.js"
     ],
     "transformIgnorePatterns": [
-      "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|@sentry/.*|@react-native-picker)"
+      "node_modules/(?!(jest-)?@?react-native|@react-native-community|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|@sentry/.*|@react-native-picker)"
     ]
   },
   "engines": {

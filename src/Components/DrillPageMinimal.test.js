@@ -7,7 +7,7 @@ import fixtures from '../Fixtures/TestFixtures';
 import { DrillPageMinimal } from './DrillPageMinimal';
 
 beforeEach(() => jest.useFakeTimers()); // for Animated
-jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
+jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
 
 jest.mock('./shared/VimeoVideo');
 

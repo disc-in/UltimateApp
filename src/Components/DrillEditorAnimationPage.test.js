@@ -7,7 +7,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import DrillEditorAnimationPage from './DrillEditorAnimationPage';
 
 jest.mock('react-native-reanimated', () => require('react-native-reanimated/mock'));
-jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
+jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
 
 describe('<DrillEditorAnimationPage />', () => {
   const route = {

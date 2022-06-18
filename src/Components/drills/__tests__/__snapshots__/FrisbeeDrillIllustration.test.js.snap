@@ -20,6 +20,7 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
     autoplayDelay={1000}
     autoplayInterval={3000}
     callbackOffsetMargin={5}
+    collapsable={false}
     containerCustomStyle={Object {}}
     contentContainerCustomStyle={Object {}}
     contentContainerStyle={
@@ -41,7 +42,6 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
     }
     decelerationRate="fast"
     directionalLockEnabled={true}
-    disableVirtualization={false}
     enableMomentum={false}
     enableSnap={true}
     firstItem={0}
@@ -65,8 +65,8 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
     loopClonesPerSide={3}
     maxToRenderPerBatch={13}
     onContentSizeChange={[Function]}
-    onEndReachedThreshold={2}
     onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
     onMomentumScrollEnd={[Function]}
     onResponderRelease={[Function]}
     onScroll={[Function]}
@@ -96,7 +96,6 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
       }
     }
     swipeThreshold={20}
-    updateCellsBatchingPeriod={50}
     useScrollView={false}
     vertical={false}
     viewabilityConfigCallbackPairs={Array []}
@@ -115,6 +114,7 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
         }
       >
         <View
+          collapsable={false}
           pointerEvents="box-none"
           style={
             Object {

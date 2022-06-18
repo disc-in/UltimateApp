@@ -53,6 +53,7 @@ exports[`<HomePage /> renders correctly 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
             Object {
               "flex": 1,
@@ -401,6 +402,7 @@ exports[`<HomePage /> renders correctly 1`] = `
       </View>
     </View>
     <View
+      collapsable={false}
       onLayout={[Function]}
       pointerEvents="none"
       style={
@@ -427,6 +429,7 @@ exports[`<HomePage /> renders correctly 1`] = `
       }
     >
       <View
+        collapsable={false}
         style={
           Object {
             "alignItems": "center",
@@ -476,6 +479,7 @@ exports[`<HomePage /> renders correctly 1`] = `
               pointerEvents="none"
             >
               <View
+                collapsable={false}
                 style={
                   Object {
                     "alignSelf": "center",
@@ -492,6 +496,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                 }
               >
                 <View
+                  collapsable={false}
                   style={
                     Object {
                       "alignItems": "center",
@@ -506,6 +511,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                 >
                   <Text
                     allowFontScaling={false}
+                    selectable={false}
                     style={
                       Array [
                         Object {
@@ -526,6 +532,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                   </Text>
                 </View>
                 <View
+                  collapsable={false}
                   style={
                     Object {
                       "alignItems": "center",
@@ -540,6 +547,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                 >
                   <Text
                     allowFontScaling={false}
+                    selectable={false}
                     style={
                       Array [
                         Object {
@@ -574,6 +582,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                   }
                 >
                   <Text
+                    collapsable={false}
                     numberOfLines={1}
                     style={
                       Object {
@@ -598,6 +607,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                 </View>
               </View>
               <View
+                collapsable={false}
                 style={
                   Object {
                     "height": 16,
@@ -611,6 +621,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                 }
               >
                 <View
+                  collapsable={false}
                   style={
                     Object {
                       "bottom": 0,
@@ -650,6 +661,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                   </Text>
                 </View>
                 <View
+                  collapsable={false}
                   style={
                     Object {
                       "bottom": 0,
@@ -719,6 +731,7 @@ exports[`<HomePage /> renders correctly 1`] = `
               pointerEvents="none"
             >
               <View
+                collapsable={false}
                 style={
                   Object {
                     "alignSelf": "center",
@@ -735,6 +748,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                 }
               >
                 <View
+                  collapsable={false}
                   style={
                     Object {
                       "alignItems": "center",
@@ -749,6 +763,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                 >
                   <Text
                     allowFontScaling={false}
+                    selectable={false}
                     style={
                       Array [
                         Object {
@@ -769,6 +784,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                   </Text>
                 </View>
                 <View
+                  collapsable={false}
                   style={
                     Object {
                       "alignItems": "center",
@@ -783,6 +799,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                 >
                   <Text
                     allowFontScaling={false}
+                    selectable={false}
                     style={
                       Array [
                         Object {
@@ -817,6 +834,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                   }
                 >
                   <Text
+                    collapsable={false}
                     numberOfLines={1}
                     style={
                       Object {
@@ -841,6 +859,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                 </View>
               </View>
               <View
+                collapsable={false}
                 style={
                   Object {
                     "height": 16,
@@ -854,6 +873,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                 }
               >
                 <View
+                  collapsable={false}
                   style={
                     Object {
                       "bottom": 0,
@@ -893,6 +913,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                   </Text>
                 </View>
                 <View
+                  collapsable={false}
                   style={
                     Object {
                       "bottom": 0,
@@ -962,6 +983,7 @@ exports[`<HomePage /> renders correctly 1`] = `
               pointerEvents="none"
             >
               <View
+                collapsable={false}
                 style={
                   Object {
                     "alignSelf": "center",
@@ -978,6 +1000,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                 }
               >
                 <View
+                  collapsable={false}
                   style={
                     Object {
                       "alignItems": "center",
@@ -992,6 +1015,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                 >
                   <Text
                     allowFontScaling={false}
+                    selectable={false}
                     style={
                       Array [
                         Object {
@@ -1012,6 +1036,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                   </Text>
                 </View>
                 <View
+                  collapsable={false}
                   style={
                     Object {
                       "alignItems": "center",
@@ -1026,6 +1051,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                 >
                   <Text
                     allowFontScaling={false}
+                    selectable={false}
                     style={
                       Array [
                         Object {
@@ -1060,6 +1086,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                   }
                 >
                   <Text
+                    collapsable={false}
                     numberOfLines={1}
                     style={
                       Object {
@@ -1084,6 +1111,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                 </View>
               </View>
               <View
+                collapsable={false}
                 style={
                   Object {
                     "height": 16,
@@ -1097,6 +1125,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                 }
               >
                 <View
+                  collapsable={false}
                   style={
                     Object {
                       "bottom": 0,
@@ -1136,6 +1165,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                   </Text>
                 </View>
                 <View
+                  collapsable={false}
                   style={
                     Object {
                       "bottom": 0,

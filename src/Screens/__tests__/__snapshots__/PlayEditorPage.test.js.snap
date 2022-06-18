@@ -130,6 +130,7 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
           >
             <View
               accessible={true}
+              collapsable={false}
               focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
@@ -171,6 +172,7 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
                 }
               />
               <View
+                collapsable={false}
                 style={
                   Object {
                     "backgroundColor": "black",
@@ -216,6 +218,7 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
                 }
               />
               <View
+                collapsable={false}
                 style={
                   Object {
                     "backgroundColor": "black",
@@ -230,6 +233,7 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
                 }
               />
               <View
+                collapsable={false}
                 style={
                   Object {
                     "backgroundColor": "black",
@@ -275,6 +279,7 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
               </Text>
               <View
                 accessible={true}
+                collapsable={false}
                 focusable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
@@ -295,6 +300,7 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
               />
               <View
                 accessible={true}
+                collapsable={false}
                 focusable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
@@ -323,6 +329,7 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
             >
               <View
                 accessible={true}
+                collapsable={false}
                 focusable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
@@ -341,6 +348,7 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
               </View>
               <View
                 accessible={true}
+                collapsable={false}
                 focusable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
@@ -460,6 +468,7 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
               }
             >
               <View
+                collapsable={false}
                 onMoveShouldSetResponder={[Function]}
                 onMoveShouldSetResponderCapture={[Function]}
                 onResponderEnd={[Function]}
@@ -525,6 +534,7 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
                 </View>
               </View>
               <View
+                collapsable={false}
                 onMoveShouldSetResponder={[Function]}
                 onMoveShouldSetResponderCapture={[Function]}
                 onResponderEnd={[Function]}
@@ -590,6 +600,7 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
                 </View>
               </View>
               <View
+                collapsable={false}
                 onMoveShouldSetResponder={[Function]}
                 onMoveShouldSetResponderCapture={[Function]}
                 onResponderEnd={[Function]}
@@ -644,6 +655,7 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
                 />
               </View>
               <View
+                collapsable={false}
                 onMoveShouldSetResponder={[Function]}
                 onMoveShouldSetResponderCapture={[Function]}
                 onResponderEnd={[Function]}
@@ -748,7 +760,13 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
         }
       >
         <View
+          accessibilityState={
+            Object {
+              "disabled": true,
+            }
+          }
           accessible={true}
+          collapsable={false}
           focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
@@ -769,7 +787,13 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
           <Text />
         </View>
         <View
+          accessibilityState={
+            Object {
+              "disabled": true,
+            }
+          }
           accessible={true}
+          collapsable={false}
           focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
@@ -811,6 +835,7 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
     >
       <View
         accessible={true}
+        collapsable={false}
         focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}

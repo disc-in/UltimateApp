@@ -14,6 +14,7 @@ exports[`<ImporterPage /> when routing on drills renders an error message if the
 >
   <Text
     allowFontScaling={false}
+    selectable={false}
     style={
       Array [
         Object {
@@ -52,6 +53,7 @@ exports[`<ImporterPage /> when routing on drills renders correctly after downloa
 >
   <Text
     allowFontScaling={false}
+    selectable={false}
     style={
       Array [
         Object {
@@ -102,6 +104,7 @@ exports[`<ImporterPage /> when routing on drills renders correctly after downloa
     >
       <View
         accessible={true}
+        collapsable={false}
         focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
@@ -140,6 +143,7 @@ exports[`<ImporterPage /> when routing on drills renders correctly after downloa
       </View>
       <View
         accessible={true}
+        collapsable={false}
         focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
@@ -197,6 +201,7 @@ exports[`<ImporterPage /> when routing on drills renders correctly before downlo
 >
   <Text
     allowFontScaling={false}
+    selectable={false}
     style={
       Array [
         Object {
@@ -235,6 +240,7 @@ exports[`<ImporterPage /> when routing on old customPlays link renders an error 
 >
   <Text
     allowFontScaling={false}
+    selectable={false}
     style={
       Array [
         Object {
@@ -273,6 +279,7 @@ exports[`<ImporterPage /> when routing on old customPlays link renders correctly
 >
   <Text
     allowFontScaling={false}
+    selectable={false}
     style={
       Array [
         Object {
@@ -323,6 +330,7 @@ exports[`<ImporterPage /> when routing on old customPlays link renders correctly
     >
       <View
         accessible={true}
+        collapsable={false}
         focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
@@ -361,6 +369,7 @@ exports[`<ImporterPage /> when routing on old customPlays link renders correctly
       </View>
       <View
         accessible={true}
+        collapsable={false}
         focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
@@ -437,6 +446,7 @@ exports[`<ImporterPage /> when routing on plays renders an error message if the 
 >
   <Text
     allowFontScaling={false}
+    selectable={false}
     style={
       Array [
         Object {
@@ -475,6 +485,7 @@ exports[`<ImporterPage /> when routing on plays renders correctly after download
 >
   <Text
     allowFontScaling={false}
+    selectable={false}
     style={
       Array [
         Object {
@@ -525,6 +536,7 @@ exports[`<ImporterPage /> when routing on plays renders correctly after download
     >
       <View
         accessible={true}
+        collapsable={false}
         focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
@@ -563,6 +575,7 @@ exports[`<ImporterPage /> when routing on plays renders correctly after download
       </View>
       <View
         accessible={true}
+        collapsable={false}
         focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
@@ -620,6 +633,7 @@ exports[`<ImporterPage /> when routing on plays renders correctly before downloa
 >
   <Text
     allowFontScaling={false}
+    selectable={false}
     style={
       Array [
         Object {

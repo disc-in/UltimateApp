@@ -39,6 +39,7 @@ Array [
             autoplayDelay={1000}
             autoplayInterval={3000}
             callbackOffsetMargin={5}
+            collapsable={false}
             containerCustomStyle={Object {}}
             contentContainerCustomStyle={Object {}}
             contentContainerStyle={
@@ -326,7 +327,6 @@ Array [
             }
             decelerationRate="fast"
             directionalLockEnabled={true}
-            disableVirtualization={false}
             enableMomentum={false}
             enableSnap={true}
             firstItem={0}
@@ -350,8 +350,8 @@ Array [
             loopClonesPerSide={3}
             maxToRenderPerBatch={13}
             onContentSizeChange={[Function]}
-            onEndReachedThreshold={2}
             onLayout={[Function]}
+            onMomentumScrollBegin={[Function]}
             onMomentumScrollEnd={[Function]}
             onResponderRelease={[Function]}
             onScroll={[Function]}
@@ -381,7 +381,6 @@ Array [
               }
             }
             swipeThreshold={20}
-            updateCellsBatchingPeriod={50}
             useScrollView={false}
             vertical={false}
             viewabilityConfigCallbackPairs={Array []}
@@ -400,6 +399,7 @@ Array [
                 }
               >
                 <View
+                  collapsable={false}
                   pointerEvents="box-none"
                   style={
                     Object {
@@ -535,6 +535,7 @@ Array [
                               <Text />
                             </View>
                             <View
+                              collapsable={false}
                               onMoveShouldSetResponder={[Function]}
                               onMoveShouldSetResponderCapture={[Function]}
                               onResponderEnd={[Function]}
@@ -597,6 +598,7 @@ Array [
                               </View>
                             </View>
                             <View
+                              collapsable={false}
                               onMoveShouldSetResponder={[Function]}
                               onMoveShouldSetResponderCapture={[Function]}
                               onResponderEnd={[Function]}
@@ -659,6 +661,7 @@ Array [
                               </View>
                             </View>
                             <View
+                              collapsable={false}
                               onMoveShouldSetResponder={[Function]}
                               onMoveShouldSetResponderCapture={[Function]}
                               onResponderEnd={[Function]}
@@ -721,6 +724,7 @@ Array [
                               </View>
                             </View>
                             <View
+                              collapsable={false}
                               onMoveShouldSetResponder={[Function]}
                               onMoveShouldSetResponderCapture={[Function]}
                               onResponderEnd={[Function]}
@@ -783,6 +787,7 @@ Array [
                               </View>
                             </View>
                             <View
+                              collapsable={false}
                               onMoveShouldSetResponder={[Function]}
                               onMoveShouldSetResponderCapture={[Function]}
                               onResponderEnd={[Function]}
@@ -845,6 +850,7 @@ Array [
                               </View>
                             </View>
                             <View
+                              collapsable={false}
                               onMoveShouldSetResponder={[Function]}
                               onMoveShouldSetResponderCapture={[Function]}
                               onResponderEnd={[Function]}
@@ -907,6 +913,7 @@ Array [
                               </View>
                             </View>
                             <View
+                              collapsable={false}
                               onMoveShouldSetResponder={[Function]}
                               onMoveShouldSetResponderCapture={[Function]}
                               onResponderEnd={[Function]}
@@ -969,6 +976,7 @@ Array [
                               </View>
                             </View>
                             <View
+                              collapsable={false}
                               onMoveShouldSetResponder={[Function]}
                               onMoveShouldSetResponderCapture={[Function]}
                               onResponderEnd={[Function]}
@@ -1031,6 +1039,7 @@ Array [
                               </View>
                             </View>
                             <View
+                              collapsable={false}
                               onMoveShouldSetResponder={[Function]}
                               onMoveShouldSetResponderCapture={[Function]}
                               onResponderEnd={[Function]}
@@ -1092,6 +1101,7 @@ Array [
                               </View>
                             </View>
                             <View
+                              collapsable={false}
                               onMoveShouldSetResponder={[Function]}
                               onMoveShouldSetResponderCapture={[Function]}
                               onResponderEnd={[Function]}
@@ -1153,6 +1163,7 @@ Array [
                               </View>
                             </View>
                             <View
+                              collapsable={false}
                               onMoveShouldSetResponder={[Function]}
                               onMoveShouldSetResponderCapture={[Function]}
                               onResponderEnd={[Function]}
@@ -1214,6 +1225,7 @@ Array [
                               </View>
                             </View>
                             <View
+                              collapsable={false}
                               onMoveShouldSetResponder={[Function]}
                               onMoveShouldSetResponderCapture={[Function]}
                               onResponderEnd={[Function]}
@@ -1275,6 +1287,7 @@ Array [
                               </View>
                             </View>
                             <View
+                              collapsable={false}
                               onMoveShouldSetResponder={[Function]}
                               onMoveShouldSetResponderCapture={[Function]}
                               onResponderEnd={[Function]}
@@ -1336,6 +1349,7 @@ Array [
                               </View>
                             </View>
                             <View
+                              collapsable={false}
                               onMoveShouldSetResponder={[Function]}
                               onMoveShouldSetResponderCapture={[Function]}
                               onResponderEnd={[Function]}
@@ -1397,6 +1411,7 @@ Array [
                             >
                               <View
                                 accessible={true}
+                                collapsable={false}
                                 focusable={true}
                                 onClick={[Function]}
                                 onResponderGrant={[Function]}
@@ -1438,6 +1453,7 @@ Array [
                                   }
                                 />
                                 <View
+                                  collapsable={false}
                                   style={
                                     Object {
                                       "backgroundColor": "black",
@@ -1449,6 +1465,7 @@ Array [
                                   }
                                 />
                                 <View
+                                  collapsable={false}
                                   left={0}
                                   style={
                                     Object {
@@ -1461,6 +1478,7 @@ Array [
                                   }
                                 />
                                 <View
+                                  collapsable={false}
                                   left={2.5}
                                   style={
                                     Object {
@@ -1473,6 +1491,7 @@ Array [
                                   }
                                 />
                                 <View
+                                  collapsable={false}
                                   left={5}
                                   style={
                                     Object {
@@ -1485,6 +1504,7 @@ Array [
                                   }
                                 />
                                 <View
+                                  collapsable={false}
                                   left={7.5}
                                   style={
                                     Object {
@@ -1497,6 +1517,7 @@ Array [
                                   }
                                 />
                                 <View
+                                  collapsable={false}
                                   left={10}
                                   style={
                                     Object {
@@ -1509,6 +1530,7 @@ Array [
                                   }
                                 />
                                 <View
+                                  collapsable={false}
                                   left={12.5}
                                   style={
                                     Object {
@@ -1522,6 +1544,7 @@ Array [
                                 />
                                 <View
                                   accessible={true}
+                                  collapsable={false}
                                   focusable={true}
                                   onClick={[Function]}
                                   onResponderGrant={[Function]}
@@ -1542,6 +1565,7 @@ Array [
                                 />
                                 <View
                                   accessible={true}
+                                  collapsable={false}
                                   focusable={true}
                                   onClick={[Function]}
                                   onResponderGrant={[Function]}
@@ -1562,6 +1586,7 @@ Array [
                                 />
                                 <View
                                   accessible={true}
+                                  collapsable={false}
                                   focusable={true}
                                   onClick={[Function]}
                                   onResponderGrant={[Function]}
@@ -1582,6 +1607,7 @@ Array [
                                 />
                                 <View
                                   accessible={true}
+                                  collapsable={false}
                                   focusable={true}
                                   onClick={[Function]}
                                   onResponderGrant={[Function]}
@@ -1602,6 +1628,7 @@ Array [
                                 />
                                 <View
                                   accessible={true}
+                                  collapsable={false}
                                   focusable={true}
                                   onClick={[Function]}
                                   onResponderGrant={[Function]}
@@ -1622,6 +1649,7 @@ Array [
                                 />
                                 <View
                                   accessible={true}
+                                  collapsable={false}
                                   focusable={true}
                                   onClick={[Function]}
                                   onResponderGrant={[Function]}
@@ -1795,6 +1823,7 @@ Array [
   >
     <View
       accessible={true}
+      collapsable={false}
       focusable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}

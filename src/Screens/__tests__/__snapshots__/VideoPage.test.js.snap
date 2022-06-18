@@ -67,6 +67,7 @@ exports[`<VideoPage /> renders correctly 1`] = `
   >
     <View
       accessible={true}
+      collapsable={false}
       focusable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}

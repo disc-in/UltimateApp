@@ -112,6 +112,7 @@ exports[`<Slider /> renders correctly 1`] = `
       }
     />
     <View
+      collapsable={false}
       style={
         Object {
           "backgroundColor": "#2a9e91",
@@ -124,6 +125,7 @@ exports[`<Slider /> renders correctly 1`] = `
       }
     />
     <View
+      collapsable={false}
       onLayout={[Function]}
       style={
         Object {

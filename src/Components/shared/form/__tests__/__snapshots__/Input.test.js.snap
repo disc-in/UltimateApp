@@ -34,13 +34,10 @@ exports[`Input renders correctly 1`] = `
     }
   >
     <TextInput
-      allowFontScaling={true}
       onBlur={[Function]}
       onChangeText={[Function]}
       onFocus={[Function]}
-      rejectResponderTermination={true}
       testID="input-title"
-      underlineColorAndroid="transparent"
       value="My title"
     />
   </View>
@@ -81,16 +78,13 @@ exports[`Input renders correctly when multiline 1`] = `
     }
   >
     <TextInput
-      allowFontScaling={true}
       multiline={true}
       numberOfLines={3}
       onBlur={[Function]}
       onChangeText={[Function]}
       onFocus={[Function]}
-      rejectResponderTermination={true}
       testID="input-title"
       textAlignVertical="top"
-      underlineColorAndroid="transparent"
       value="My title"
     />
   </View>
@@ -141,13 +135,10 @@ exports[`Input renders correctly when required 1`] = `
     }
   >
     <TextInput
-      allowFontScaling={true}
       onBlur={[Function]}
       onChangeText={[Function]}
       onFocus={[Function]}
-      rejectResponderTermination={true}
       testID="input-title"
-      underlineColorAndroid="transparent"
       value="My title"
     />
   </View>
@@ -201,19 +192,17 @@ Array [
         Invalid title
       </Text>
       <TextInput
-        allowFontScaling={true}
         onBlur={[Function]}
         onChangeText={[Function]}
         onFocus={[Function]}
-        rejectResponderTermination={true}
         testID="input-title"
-        underlineColorAndroid="transparent"
         value="new title"
       />
     </View>
   </View>,
   <View
     accessible={true}
+    collapsable={false}
     focusable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}

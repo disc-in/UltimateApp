@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { View, ActivityIndicator, StyleSheet, Text } from 'react-native';
-import { Video, Audio } from 'expo-av';
+import { Video, Audio, VideoFullscreenUpdate, ResizeMode } from 'expo-av';
 import * as ScreenOrientation from 'expo-screen-orientation';
 import { useFocusEffect } from '@react-navigation/native';
 
@@ -58,7 +58,7 @@ const VimeoVideo = ({ vimeoId, sounds, shouldPlay }) => {
     videoElem.current.setStatusAsync({
       rate: 1.0,
       isMuted: !sounds,
-      resizeMode: Video.RESIZE_MODE_CONTAIN,
+      resizeMode: ResizeMode.CONTAIN,
       shouldPlay: shouldPlay || false,
       isLooping: true,
     });
@@ -89,16 +89,16 @@ const VimeoVideo = ({ vimeoId, sounds, shouldPlay }) => {
       {isBuffering && renderBufferIcon()}
       <Video
         ref={videoElem}
-        resizeMode={Video.RESIZE_MODE_CONTAIN}
+        resizeMode={ResizeMode.CONTAIN}
         useNativeControls
         style={{ width: '100%', height: 250 }}
         onLoadStart={() => setBuffer(true)}
         onLoad={playVideoLoaded}
         onFullscreenUpdate={async ({ fullscreenUpdate }) => {
-          if (fullscreenUpdate === Video.FULLSCREEN_UPDATE_PLAYER_WILL_PRESENT) {
+          if (fullscreenUpdate === VideoFullscreenUpdate.PLAYER_WILL_PRESENT) {
             await ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
           }
-          if (fullscreenUpdate === Video.FULLSCREEN_UPDATE_PLAYER_WILL_DISMISS) {
+          if (fullscreenUpdate === VideoFullscreenUpdate.PLAYER_WILL_DISMISS) {
             await ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT);
           }
         }}

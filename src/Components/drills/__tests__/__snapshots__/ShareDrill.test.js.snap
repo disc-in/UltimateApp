@@ -3,6 +3,7 @@
 exports[`<ShareDrill /> renders correctly 1`] = `
 <View
   accessible={true}
+  collapsable={false}
   focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
@@ -20,6 +21,7 @@ exports[`<ShareDrill /> renders correctly 1`] = `
 >
   <Text
     allowFontScaling={false}
+    selectable={false}
     style={
       Array [
         Object {
@@ -50,6 +52,7 @@ exports[`<ShareDrill /> renders correctly 1`] = `
 exports[`<ShareDrill /> renders correctly when light 1`] = `
 <View
   accessible={true}
+  collapsable={false}
   focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
@@ -67,6 +70,7 @@ exports[`<ShareDrill /> renders correctly when light 1`] = `
 >
   <Text
     allowFontScaling={false}
+    selectable={false}
     style={
       Array [
         Object {

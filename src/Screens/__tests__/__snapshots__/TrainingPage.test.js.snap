@@ -97,7 +97,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                  
               </Text>
             </View>
-            <ForwardRef
+            <TouchableOpacity
               onPress={[Function]}
               style={
                 Array [
@@ -124,7 +124,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                   }
                 }
               />
-            </ForwardRef>
+            </TouchableOpacity>
           </View>
           <Text
             style={
@@ -478,7 +478,6 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
         ]
       }
       deleteDrill={[Function]}
-      disableVirtualization={false}
       drillsToDisplay={
         Array [
           Object {
@@ -815,14 +814,11 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
       }
       getItem={[Function]}
       getItemCount={[Function]}
-      horizontal={false}
-      initialNumToRender={10}
       keyExtractor={[Function]}
-      maxToRenderPerBatch={10}
       onContentSizeChange={[Function]}
       onDrillPress={[Function]}
-      onEndReachedThreshold={2}
       onLayout={[Function]}
+      onMomentumScrollBegin={[Function]}
       onMomentumScrollEnd={[Function]}
       onScroll={[Function]}
       onScrollBeginDrag={[Function]}
@@ -831,9 +827,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
       renderItem={[Function]}
       scrollEventThrottle={50}
       stickyHeaderIndices={Array []}
-      updateCellsBatchingPeriod={50}
       viewabilityConfigCallbackPairs={Array []}
-      windowSize={21}
     >
       <View>
         <View
@@ -897,6 +891,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               </View>
               <View
                 accessible={true}
+                collapsable={false}
                 focusable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
@@ -936,6 +931,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
         >
           <View
             accessible={true}
+            collapsable={false}
             focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
@@ -1072,6 +1068,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
         >
           <View
             accessible={true}
+            collapsable={false}
             focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
@@ -1282,7 +1279,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               }
             }
           >
-            <ForwardRef
+            <TouchableOpacity
               onPress={[Function]}
               style={
                 Object {
@@ -1303,7 +1300,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                   }
                 }
               />
-            </ForwardRef>
+            </TouchableOpacity>
             <View
               style={
                 Object {
@@ -1679,7 +1676,6 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
         ]
       }
       deleteDrill={[Function]}
-      disableVirtualization={false}
       drillsToDisplay={
         Array [
           Object {
@@ -2002,14 +1998,11 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
       }
       getItem={[Function]}
       getItemCount={[Function]}
-      horizontal={false}
-      initialNumToRender={10}
       keyExtractor={[Function]}
-      maxToRenderPerBatch={10}
       onContentSizeChange={[Function]}
       onDrillPress={[Function]}
-      onEndReachedThreshold={2}
       onLayout={[Function]}
+      onMomentumScrollBegin={[Function]}
       onMomentumScrollEnd={[Function]}
       onScroll={[Function]}
       onScrollBeginDrag={[Function]}
@@ -2018,9 +2011,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
       renderItem={[Function]}
       scrollEventThrottle={50}
       stickyHeaderIndices={Array []}
-      updateCellsBatchingPeriod={50}
       viewabilityConfigCallbackPairs={Array []}
-      windowSize={21}
     >
       <View>
         <View
@@ -2048,6 +2039,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
             >
               <View
                 accessible={true}
+                collapsable={false}
                 focusable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
@@ -2122,6 +2114,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
         >
           <View
             accessible={true}
+            collapsable={false}
             focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
@@ -2258,6 +2251,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
         >
           <View
             accessible={true}
+            collapsable={false}
             focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
@@ -2515,7 +2509,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                  
               </Text>
             </View>
-            <ForwardRef
+            <TouchableOpacity
               onPress={[Function]}
               style={
                 Array [
@@ -2542,7 +2536,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                   }
                 }
               />
-            </ForwardRef>
+            </TouchableOpacity>
           </View>
           <View
             style={
@@ -2955,7 +2949,6 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
         ]
       }
       deleteDrill={[Function]}
-      disableVirtualization={false}
       drillsToDisplay={
         Array [
           Object {
@@ -3292,14 +3285,11 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
       }
       getItem={[Function]}
       getItemCount={[Function]}
-      horizontal={false}
-      initialNumToRender={10}
       keyExtractor={[Function]}
-      maxToRenderPerBatch={10}
       onContentSizeChange={[Function]}
       onDrillPress={[Function]}
-      onEndReachedThreshold={2}
       onLayout={[Function]}
+      onMomentumScrollBegin={[Function]}
       onMomentumScrollEnd={[Function]}
       onScroll={[Function]}
       onScrollBeginDrag={[Function]}
@@ -3308,9 +3298,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
       renderItem={[Function]}
       scrollEventThrottle={50}
       stickyHeaderIndices={Array []}
-      updateCellsBatchingPeriod={50}
       viewabilityConfigCallbackPairs={Array []}
-      windowSize={21}
     >
       <View>
         <View
@@ -3374,6 +3362,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               </View>
               <View
                 accessible={true}
+                collapsable={false}
                 focusable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
@@ -3394,6 +3383,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               >
                 <Text
                   allowFontScaling={false}
+                  selectable={false}
                   style={
                     Array [
                       Object {
@@ -3435,6 +3425,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               >
                 <Text
                   allowFontScaling={false}
+                  selectable={false}
                   style={
                     Array [
                       Object {
@@ -3474,6 +3465,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               >
                 <Text
                   allowFontScaling={false}
+                  selectable={false}
                   style={
                     Array [
                       Object {
@@ -3522,6 +3514,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
         >
           <View
             accessible={true}
+            collapsable={false}
             focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
@@ -3658,6 +3651,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
         >
           <View
             accessible={true}
+            collapsable={false}
             focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
@@ -3816,6 +3810,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
     >
       <View
         accessible={true}
+        collapsable={false}
         focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
@@ -3907,7 +3902,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               }
             }
           >
-            <ForwardRef
+            <TouchableOpacity
               onPress={[Function]}
               style={
                 Object {
@@ -3928,7 +3923,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                   }
                 }
               />
-            </ForwardRef>
+            </TouchableOpacity>
             <View
               style={
                 Object {
@@ -4363,7 +4358,6 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
         ]
       }
       deleteDrill={[Function]}
-      disableVirtualization={false}
       drillsToDisplay={
         Array [
           Object {
@@ -4686,14 +4680,11 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
       }
       getItem={[Function]}
       getItemCount={[Function]}
-      horizontal={false}
-      initialNumToRender={10}
       keyExtractor={[Function]}
-      maxToRenderPerBatch={10}
       onContentSizeChange={[Function]}
       onDrillPress={[Function]}
-      onEndReachedThreshold={2}
       onLayout={[Function]}
+      onMomentumScrollBegin={[Function]}
       onMomentumScrollEnd={[Function]}
       onScroll={[Function]}
       onScrollBeginDrag={[Function]}
@@ -4702,9 +4693,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
       renderItem={[Function]}
       scrollEventThrottle={50}
       stickyHeaderIndices={Array []}
-      updateCellsBatchingPeriod={50}
       viewabilityConfigCallbackPairs={Array []}
-      windowSize={21}
     >
       <View>
         <View
@@ -4732,6 +4721,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
             >
               <View
                 accessible={true}
+                collapsable={false}
                 focusable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
@@ -4751,6 +4741,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               >
                 <Text
                   allowFontScaling={false}
+                  selectable={false}
                   style={
                     Array [
                       Object {
@@ -4828,6 +4819,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               >
                 <Text
                   allowFontScaling={false}
+                  selectable={false}
                   style={
                     Array [
                       Object {
@@ -4867,6 +4859,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               >
                 <Text
                   allowFontScaling={false}
+                  selectable={false}
                   style={
                     Array [
                       Object {
@@ -4915,6 +4908,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
         >
           <View
             accessible={true}
+            collapsable={false}
             focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
@@ -5051,6 +5045,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
         >
           <View
             accessible={true}
+            collapsable={false}
             focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
@@ -5209,6 +5204,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
     >
       <View
         accessible={true}
+        collapsable={false}
         focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}

@@ -118,6 +118,7 @@ exports[`<AboutPage /> renders correctly 1`] = `
     </Text>
     <View
       accessible={true}
+      collapsable={false}
       focusable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
@@ -189,6 +190,7 @@ exports[`<AboutPage /> renders correctly 1`] = `
     </Text>
     <View
       accessible={true}
+      collapsable={false}
       focusable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}

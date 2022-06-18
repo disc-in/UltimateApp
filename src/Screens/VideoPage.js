@@ -2,9 +2,9 @@ import React from 'react';
 import { Platform, StyleSheet, View, Text, Share } from 'react-native';
 
 import theme from '../styles/theme.style';
-import VimeoVideo from './shared/VimeoVideo';
 import I18n from '../utils/i18n';
-import Button from './shared/Button';
+import VimeoVideo from '../Components/shared/VimeoVideo';
+import Button from '../Components/shared/Button';
 import { showError } from '../utils/flashMessage';
 
 const VideoPage = (props) => {

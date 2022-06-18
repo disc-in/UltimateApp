@@ -10,11 +10,11 @@ import I18n from '../utils/i18n';
 import { showSuccess } from '../utils/flashMessage';
 import { generateUuid } from '../utils/uuid';
 import { saveDrill } from '../Store/Actions/drillAction';
-import Button from './shared/Button';
-import Input from './shared/form/Input';
-import RadioButton from './shared/form/RadioButton';
-import Checkbox from './shared/form/Checkbox';
-import AnimationInput from './shared/form/AnimationInput';
+import Button from '../Components/shared/Button';
+import Input from '../Components/shared/form/Input';
+import RadioButton from '../Components/shared/form/RadioButton';
+import Checkbox from '../Components/shared/form/Checkbox';
+import AnimationInput from '../Components/shared/form/AnimationInput';
 
 const newStep = {
   id: 0,

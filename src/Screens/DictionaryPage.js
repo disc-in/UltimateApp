@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
-import Modal from './shared/Modal';
+import Modal from '../Components/shared/Modal';
 
 const DictionaryPage = ({ dictionary }) => {
   const [modalVisible, setModalVisible] = useState(false);

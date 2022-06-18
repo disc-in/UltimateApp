@@ -5,9 +5,9 @@ import { connect } from 'react-redux';
 import { DrillTypes } from '../Fixtures/config';
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
-import DrillList from './shared/DrillList';
-import Button from './shared/Button';
-import HeaderButton from './shared/HeaderButton';
+import DrillList from '../Components/shared/DrillList';
+import Button from '../Components/shared/Button';
+import HeaderButton from '../Components/shared/HeaderButton';
 
 export const DrillListPage = (props) => {
   const { navigation, route, storeDrills } = props;

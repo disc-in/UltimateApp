@@ -15,7 +15,7 @@ import ourPlays from '../../assets/HomePage/ourplays.jpg';
 import essential from '../../assets/HomePage/essential.jpg';
 import adultPrograms from '../../assets/HomePage/adultPrograms.png';
 import juniorPrograms from '../../assets/HomePage/juniorPrograms.png';
-import HeaderButton from './shared/HeaderButton';
+import HeaderButton from '../Components/shared/HeaderButton';
 import { AgeCategory, DrillTypes, EquipmentLabels } from '../Fixtures/config';
 
 const Tab = createMaterialBottomTabNavigator();

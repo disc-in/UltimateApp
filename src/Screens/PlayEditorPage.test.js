@@ -3,7 +3,7 @@ import { render } from '@testing-library/react-native';
 import { Provider } from 'react-redux';
 
 import store from '../Store/testStore';
-import Drill from './animation/Drill';
+import Drill from '../Components/animation/Drill';
 
 import PlayEditorPage from './PlayEditorPage';
 

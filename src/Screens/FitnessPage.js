@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef, useLayoutEffect } from 'react';
 import { View, StyleSheet, Platform, Text, TouchableOpacity, FlatList } from 'react-native';
 
-import VimeoVideo from './shared/VimeoVideo';
-import ShareDrill from './drills/ShareDrill';
+import VimeoVideo from '../Components/shared/VimeoVideo';
+import ShareDrill from '../Components/drills/ShareDrill';
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
 

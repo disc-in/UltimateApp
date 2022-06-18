@@ -3,14 +3,14 @@ import { StyleSheet, View, Platform } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { connect } from 'react-redux';
 
-import Drill from './animation/Drill';
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
 import { savePlay } from '../Store/Actions/playAction';
-import PlayTitle from './editor/PlayTitle';
-import AnimationEditor from './editor/AnimationEditor';
-import AnimationHistory from './editor/toolbar/AnimationHistory';
-import SharePlay from './editor/toolbar/SharePlay';
+import Drill from '../Components/animation/Drill';
+import PlayTitle from '../Components/editor/PlayTitle';
+import AnimationEditor from '../Components/editor/AnimationEditor';
+import AnimationHistory from '../Components/editor/toolbar/AnimationHistory';
+import SharePlay from '../Components/editor/toolbar/SharePlay';
 
 export const PlayEditorPage = (props) => {
   const { navigation, route } = props;

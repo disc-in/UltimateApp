@@ -9,7 +9,7 @@ import { DrillPageMinimal } from './DrillPageMinimal';
 beforeEach(() => jest.useFakeTimers()); // for Animated
 jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
 
-jest.mock('./shared/VimeoVideo');
+jest.mock('../Components/shared/VimeoVideo');
 
 describe('<DrillPageMinimal />', () => {
   const navigation = { navigate: jest.fn(), setOptions: jest.fn() };

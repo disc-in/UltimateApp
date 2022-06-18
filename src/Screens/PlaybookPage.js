@@ -7,8 +7,8 @@ import theme from '../styles/theme.style';
 import I18n from '../utils/i18n';
 import { generateUuid } from '../utils/uuid';
 import { savePlay } from '../Store/Actions/playAction';
-import Drill from './animation/Drill';
-import PlayTitle from './editor/PlayTitle';
+import Drill from '../Components/animation/Drill';
+import PlayTitle from '../Components/editor/PlayTitle';
 
 export const PlaybookPage = (props) => {
   const isEmpty = props.customPlays.length === 0;

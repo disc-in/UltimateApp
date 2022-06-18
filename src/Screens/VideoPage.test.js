@@ -7,7 +7,7 @@ import store from '../Store/testStore';
 
 import VideoPage from './VideoPage';
 
-jest.mock('./shared/VimeoVideo');
+jest.mock('../Components/shared/VimeoVideo');
 
 describe('<VideoPage />', () => {
   const route = {

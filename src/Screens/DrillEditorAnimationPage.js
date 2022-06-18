@@ -1,12 +1,12 @@
 import React, { useState, useLayoutEffect } from 'react';
 import { StyleSheet, View } from 'react-native';
 
-import Drill from './animation/Drill';
 import { DrillTypes } from '../Fixtures/config';
 import theme from '../styles/theme.style';
-import AnimationEditor from './editor/AnimationEditor';
-import AnimationHistory from './editor/toolbar/AnimationHistory';
-import HeaderButton from './shared/HeaderButton';
+import Drill from '../Components/animation/Drill';
+import AnimationEditor from '../Components/editor/AnimationEditor';
+import AnimationHistory from '../Components/editor/toolbar/AnimationHistory';
+import HeaderButton from '../Components/shared/HeaderButton';
 
 export const PlayEditorPage = ({ navigation, route }) => {
   const [currentAnimation, setCurrentAnimation] = useState(new Drill(route.params.animation));

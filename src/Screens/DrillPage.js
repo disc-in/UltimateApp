@@ -18,13 +18,13 @@ import I18n from '../utils/i18n';
 import { toggleFavorite } from '../Store/Actions/favoriteAction';
 import { DrillTypes } from '../Fixtures/config';
 import theme from '../styles/theme.style';
-
-import ShareDrill from './drills/ShareDrill';
-import Description from './drills/Description';
-import FitnessDrillIllustration from './drills/FitnessDrillIllustration';
-import FrisbeeDrillIllustration from './drills/FrisbeeDrillIllustration';
-import StartButton from './drills/StartButton';
 import customDrillsImage from '../../assets/customDrills.jpg';
+
+import ShareDrill from '../Components/drills/ShareDrill';
+import Description from '../Components/drills/Description';
+import FitnessDrillIllustration from '../Components/drills/FitnessDrillIllustration';
+import FrisbeeDrillIllustration from '../Components/drills/FrisbeeDrillIllustration';
+import StartButton from '../Components/drills/StartButton';
 
 export const DrillPage = (props) => {
   const { route, navigation } = props;

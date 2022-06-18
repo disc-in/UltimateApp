@@ -9,7 +9,7 @@ import { download } from '../utils/firebase';
 import { showError } from '../utils/flashMessage';
 import { savePlay } from '../Store/Actions/playAction';
 import { saveDrill } from '../Store/Actions/drillAction';
-import Button from './shared/Button';
+import Button from '../Components/shared/Button';
 
 export const ImporterPage = (props) => {
   const { navigation, route } = props;

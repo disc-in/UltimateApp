@@ -4,11 +4,11 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import PagerView from 'react-native-pager-view';
 
 import I18n from '../utils/i18n';
-import { DrillTypes } from '../Fixtures/config';
-import DrillList from './shared/DrillList';
-import Button from './shared/Button';
-import theme from '../styles/theme.style';
 import { convertMinsToTime } from '../utils/time';
+import { DrillTypes } from '../Fixtures/config';
+import theme from '../styles/theme.style';
+import DrillList from '../Components/shared/DrillList';
+import Button from '../Components/shared/Button';
 
 export function getTrainingDuration(training) {
   return training.drills.reduce((total, drill) => total + drill.durationInMinutes, 0);

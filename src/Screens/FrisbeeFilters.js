@@ -5,11 +5,11 @@ import { connect } from 'react-redux';
 import I18n from '../utils/i18n';
 import filterStyle from '../styles/filters.style';
 import { Levels } from '../Fixtures/config';
-import Button from './filters/FilterButton';
-import Checkbox from './filters/Checkbox';
-import Slider from './filters/Slider';
-import HeaderButton from './shared/HeaderButton';
-import CtaButton from './shared/Button';
+import Button from '../Components/filters/FilterButton';
+import Checkbox from '../Components/filters/Checkbox';
+import Slider from '../Components/filters/Slider';
+import HeaderButton from '../Components/shared/HeaderButton';
+import CtaButton from '../Components/shared/Button';
 
 export class FrisbeeFilters extends React.Component {
   constructor(props) {

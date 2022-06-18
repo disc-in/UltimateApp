@@ -5,11 +5,11 @@ import { connect } from 'react-redux';
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
 
-import Description from './drills/Description';
-import FitnessDrillIllustration from './drills/FitnessDrillIllustration';
-import FrisbeeDrillIllustration from './drills/FrisbeeDrillIllustration';
-import ButtonNext from './shared/Button';
-import ProgressBar from './drills/ProgressBar';
+import Description from '../Components/drills/Description';
+import FitnessDrillIllustration from '../Components/drills/FitnessDrillIllustration';
+import FrisbeeDrillIllustration from '../Components/drills/FrisbeeDrillIllustration';
+import ButtonNext from '../Components/shared/Button';
+import ProgressBar from '../Components/drills/ProgressBar';
 import { completeTraining } from '../Store/Actions/programAction';
 import { DrillTypes } from '../Fixtures/config';
 

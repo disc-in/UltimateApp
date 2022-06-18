@@ -7,7 +7,7 @@ import store from '../Store/testStore';
 
 import FitnessPage from './FitnessPage';
 
-jest.mock('./shared/VimeoVideo');
+jest.mock('../Components/shared/VimeoVideo');
 jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
 jest.mock('react-native-get-random-values', () => ({
   getRandomBase64: jest.fn(),

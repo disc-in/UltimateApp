@@ -8,7 +8,7 @@ import { EXPO_ENV_FLAG } from '@env';
 import theme from '../styles/theme.style';
 import I18n from '../utils/i18n';
 import icon from '../../assets/icon.png';
-import Button from './shared/Button';
+import Button from '../Components/shared/Button';
 
 const AboutPage = (props) => {
   const sendEmailAsync = () => {

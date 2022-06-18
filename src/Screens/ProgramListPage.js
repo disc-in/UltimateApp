@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { DrillTypes } from '../Fixtures/config';
-import ProgramList from './programs/ProgramList';
+import ProgramList from '../Components/programs/ProgramList';
 
 export const ProgramListPage = (props) => {
   const { navigation, programs, completeTrainings, route } = props;

@@ -3,7 +3,7 @@ import { connect, Provider } from 'react-redux';
 import { render, fireEvent } from '@testing-library/react-native';
 
 import store from '../Store/testStore';
-import Drill from './animation/Drill';
+import Drill from '../Components/animation/Drill';
 import * as uuid from '../utils/uuid';
 
 import ConnectedPlaybookPage, { PlaybookPage } from './PlaybookPage';

@@ -1,27 +1,27 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import HomePage from '../Components/HomePage';
-import AboutPage from '../Components/AboutPage';
-import DrillListPage from '../Components/DrillListPage';
-import DrillPage from '../Components/DrillPage';
-import DrillPageMinimal from '../Components/DrillPageMinimal';
-import FitnessPage from '../Components/FitnessPage';
-import FrisbeeFilters from '../Components/FrisbeeFilters';
-import FitnessFilters from '../Components/FitnessFilters';
-import TrainingPage from '../Components/TrainingPage';
-import ProgramListPage from '../Components/ProgramListPage';
+import HomePage from '../Screens/HomePage';
+import AboutPage from '../Screens/AboutPage';
+import DrillListPage from '../Screens/DrillListPage';
+import DrillPage from '../Screens/DrillPage';
+import DrillPageMinimal from '../Screens/DrillPageMinimal';
+import FitnessPage from '../Screens/FitnessPage';
+import FrisbeeFilters from '../Screens/FrisbeeFilters';
+import FitnessFilters from '../Screens/FitnessFilters';
+import TrainingPage from '../Screens/TrainingPage';
+import ProgramListPage from '../Screens/ProgramListPage';
 
-import DrillEditorPage from '../Components/DrillEditorPage';
-import DrillEditorAnimationPage from '../Components/DrillEditorAnimationPage';
-import PlaybookPage from '../Components/PlaybookPage';
-import PlayEditorPage from '../Components/PlayEditorPage';
-import ImporterPage from '../Components/ImporterPage';
+import DrillEditorPage from '../Screens/DrillEditorPage';
+import DrillEditorAnimationPage from '../Screens/DrillEditorAnimationPage';
+import PlaybookPage from '../Screens/PlaybookPage';
+import PlayEditorPage from '../Screens/PlayEditorPage';
+import ImporterPage from '../Screens/ImporterPage';
 
-import EssentialPage from '../Components/EssentialPage';
-import DictionaryPage from '../Components/DictionaryPage';
-import TacticsPage from '../Components/TacticsPage';
-import VideoPage from '../Components/VideoPage';
+import EssentialPage from '../Screens/EssentialPage';
+import DictionaryPage from '../Screens/DictionaryPage';
+import TacticsPage from '../Screens/TacticsPage';
+import VideoPage from '../Screens/VideoPage';
 
 import I18n from '../utils/i18n';
 import { DrillTypes, EquipmentLabels } from '../Fixtures/config';

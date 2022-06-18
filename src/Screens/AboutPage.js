@@ -12,12 +12,11 @@ import Button from '../Components/shared/Button';
 
 const AboutPage = (props) => {
   const sendEmailAsync = () => {
-    const result = MailComposer.composeAsync({
+    MailComposer.composeAsync({
       recipients: ['ultimate.discin@gmail.com'],
       subject: I18n.t('aboutPage.feedback.subject'),
       body: '',
     });
-    alert(result.status);
   };
 
   const { releaseChannel, version } = Constants.manifest;

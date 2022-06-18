@@ -42,15 +42,21 @@ exports[`<HomePage /> renders correctly 1`] = `
         pointerEvents="auto"
         removeClippedSubviews={false}
         style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "opacity": 1,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
+          Array [
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "opacity": 1,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+            Object {
+              "display": "flex",
+            },
+          ]
         }
+        testID="RouteScreen: 0"
       >
         <View
           collapsable={false}
@@ -439,14 +445,15 @@ exports[`<HomePage /> renders correctly 1`] = `
         }
       >
         <View
+          accessibilityRole="tablist"
           style={
             Array [
               Object {
                 "flexDirection": "row",
-                "width": "100%",
               },
               Object {
                 "marginBottom": 0,
+                "marginHorizontal": 0,
                 "maxWidth": 504,
               },
             ]
@@ -634,6 +641,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                   }
                 >
                   <Text
+                    maxFontSizeMultiplier={1}
                     style={
                       Array [
                         Object {
@@ -648,6 +656,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                           Object {
                             "backgroundColor": "transparent",
                             "fontSize": 12,
+                            "height": 56,
                             "textAlign": "center",
                           },
                           Object {
@@ -674,6 +683,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                   }
                 >
                   <Text
+                    maxFontSizeMultiplier={1}
                     selectable={false}
                     style={
                       Array [
@@ -689,6 +699,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                           Object {
                             "backgroundColor": "transparent",
                             "fontSize": 12,
+                            "height": 56,
                             "textAlign": "center",
                           },
                           Object {
@@ -886,6 +897,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                   }
                 >
                   <Text
+                    maxFontSizeMultiplier={1}
                     style={
                       Array [
                         Object {
@@ -900,6 +912,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                           Object {
                             "backgroundColor": "transparent",
                             "fontSize": 12,
+                            "height": 56,
                             "textAlign": "center",
                           },
                           Object {
@@ -926,6 +939,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                   }
                 >
                   <Text
+                    maxFontSizeMultiplier={1}
                     selectable={false}
                     style={
                       Array [
@@ -941,6 +955,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                           Object {
                             "backgroundColor": "transparent",
                             "fontSize": 12,
+                            "height": 56,
                             "textAlign": "center",
                           },
                           Object {
@@ -1138,6 +1153,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                   }
                 >
                   <Text
+                    maxFontSizeMultiplier={1}
                     style={
                       Array [
                         Object {
@@ -1152,6 +1168,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                           Object {
                             "backgroundColor": "transparent",
                             "fontSize": 12,
+                            "height": 56,
                             "textAlign": "center",
                           },
                           Object {
@@ -1178,6 +1195,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                   }
                 >
                   <Text
+                    maxFontSizeMultiplier={1}
                     selectable={false}
                     style={
                       Array [
@@ -1193,6 +1211,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                           Object {
                             "backgroundColor": "transparent",
                             "fontSize": 12,
+                            "height": 56,
                             "textAlign": "center",
                           },
                           Object {

@@ -694,6 +694,14 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           5
         </Text>
         <View
+          accessibilityRole="adjustable"
+          accessibilityValue={
+            Object {
+              "max": 60,
+              "min": 5,
+              "now": 0,
+            }
+          }
           allowTouchTrack={false}
           animationType="timing"
           onLayout={[Function]}

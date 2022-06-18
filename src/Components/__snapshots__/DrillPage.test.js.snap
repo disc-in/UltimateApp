@@ -279,8 +279,6 @@ exports[`<DrillPage /> renders correctly 1`] = `
               <View
                 collapsable={false}
                 forwardedRef={[Function]}
-                handlerTag={1}
-                handlerType="PanGestureHandler"
                 needsOffscreenAlphaCompositing={false}
                 onGestureHandlerEvent={[Function]}
                 onGestureHandlerStateChange={[Function]}
@@ -1211,8 +1209,6 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
               <View
                 collapsable={false}
                 forwardedRef={[Function]}
-                handlerTag={2}
-                handlerType="PanGestureHandler"
                 needsOffscreenAlphaCompositing={false}
                 onGestureHandlerEvent={[Function]}
                 onGestureHandlerStateChange={[Function]}

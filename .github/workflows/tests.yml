@@ -24,6 +24,12 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
+      - name: Create env file
+        run: |
+          touch .env
+          echo EXPO_FIREBASE_URL_PREFIX=${{ secrets.EXPO_FIREBASE_URL_PREFIX }} >> .env
+          cat .env
+
       - name: Run test command
         env:
           EXPO_ENV_FLAG: development

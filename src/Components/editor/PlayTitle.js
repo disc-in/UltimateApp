@@ -119,6 +119,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexShrink: 1,
     flexGrow: 1,
+    flexBasis: '100%',
     justifyContent: 'center',
   },
   title: {

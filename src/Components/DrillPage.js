@@ -11,7 +11,7 @@ import {
   Platform,
 } from 'react-native';
 import { connect } from 'react-redux';
-import { useHeaderHeight } from '@react-navigation/stack';
+import { useHeaderHeight } from '@react-navigation/elements';
 import { Ionicons } from '@expo/vector-icons';
 
 import I18n from '../utils/i18n';

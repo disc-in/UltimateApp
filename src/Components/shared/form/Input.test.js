@@ -1,5 +1,4 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
@@ -9,36 +8,30 @@ import Input from './Input';
 
 describe('Input', () => {
   it('renders correctly', () => {
-    const tree = renderer
-      .create(
-        <Formik initialValues={{ title: 'My title' }}>
-          <Input fieldName="title" label="Title" />
-        </Formik>,
-      )
-      .toJSON();
-    expect(tree).toMatchSnapshot();
+    const { toJSON } = render(
+      <Formik initialValues={{ title: 'My title' }}>
+        <Input fieldName="title" label="Title" />
+      </Formik>,
+    );
+    expect(toJSON()).toMatchSnapshot();
   });
 
   it('renders correctly when required', () => {
-    const tree = renderer
-      .create(
-        <Formik initialValues={{ title: 'My title' }}>
-          <Input fieldName="title" label="Title" required />
-        </Formik>,
-      )
-      .toJSON();
-    expect(tree).toMatchSnapshot();
+    const { toJSON } = render(
+      <Formik initialValues={{ title: 'My title' }}>
+        <Input fieldName="title" label="Title" required />
+      </Formik>,
+    );
+    expect(toJSON()).toMatchSnapshot();
   });
 
   it('renders correctly when multiline', () => {
-    const tree = renderer
-      .create(
-        <Formik initialValues={{ title: 'My title' }}>
-          <Input fieldName="title" label="Title" multiline />
-        </Formik>,
-      )
-      .toJSON();
-    expect(tree).toMatchSnapshot();
+    const { toJSON } = render(
+      <Formik initialValues={{ title: 'My title' }}>
+        <Input fieldName="title" label="Title" multiline />
+      </Formik>,
+    );
+    expect(toJSON()).toMatchSnapshot();
   });
 
   it('renders correctly when there is an error', async () => {

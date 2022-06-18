@@ -1,5 +1,4 @@
 import React from 'react';
-import { create, act } from 'react-test-renderer';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
 import { Provider } from 'react-redux';
 import { NavigationContext } from '@react-navigation/native';
@@ -22,14 +21,14 @@ describe('<DrillEditorPage />', () => {
   };
 
   it('renders correctly when creating a new drill', async () => {
-    const tree = create(
+    const { toJSON } = render(
       <Provider store={store}>
         <NavigationContext.Provider value={navContext}>
           <ConnectedDrillEditorPage route={{}} />
         </NavigationContext.Provider>
       </Provider>,
-    ).toJSON();
-    await act(async () => expect(tree).toMatchSnapshot());
+    );
+    expect(toJSON()).toMatchSnapshot();
   });
 
   it('renders correctly when creating an existing drill', async () => {
@@ -38,14 +37,14 @@ describe('<DrillEditorPage />', () => {
         currentDrill: createDrill(),
       },
     };
-    const tree = create(
+    const { toJSON } = render(
       <Provider store={store}>
         <NavigationContext.Provider value={navContext}>
           <ConnectedDrillEditorPage route={route} />
         </NavigationContext.Provider>
       </Provider>,
-    ).toJSON();
-    await act(async () => expect(tree).toMatchSnapshot());
+    );
+    expect(toJSON()).toMatchSnapshot();
   });
 
   it('can fill the form and create the drill', async () => {

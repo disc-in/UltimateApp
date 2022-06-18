@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import PagerView from '@react-native-community/viewpager';
+import PagerView from 'react-native-pager-view';
 
 import I18n from '../utils/i18n';
 import { DrillTypes } from '../Fixtures/config';

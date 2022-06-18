@@ -276,7 +276,7 @@ export default {
     seasonTiming: 'Season Timing',
     goals: 'Goals',
     duration: 'Duration',
-    durationLabel: 'How much time do you have?   {{duration}} mins',
+    durationLabel: 'How much time do you have? {{duration}} mins',
     cta: {
       zero: '{{count}} available drills',
       one: 'See {{count}} drill',

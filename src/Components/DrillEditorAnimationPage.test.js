@@ -1,5 +1,4 @@
 import React from 'react';
-import { create, act } from 'react-test-renderer';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
 import { Provider } from 'react-redux';
 import { NavigationContainer } from '@react-navigation/native';
@@ -8,7 +7,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import DrillEditorAnimationPage from './DrillEditorAnimationPage';
 
 jest.mock('react-native-reanimated', () => require('react-native-reanimated/mock'));
-jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
+jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
 
 describe('<DrillEditorAnimationPage />', () => {
   const route = {
@@ -21,8 +20,8 @@ describe('<DrillEditorAnimationPage />', () => {
   it('renders correctly', async () => {
     const navigation = { navigate: jest.fn(), setOptions: jest.fn() };
 
-    const tree = create(<DrillEditorAnimationPage route={route} navigation={navigation} />).toJSON();
-    await act(async () => expect(tree).toMatchSnapshot());
+    const { toJSON } = render(<DrillEditorAnimationPage route={route} navigation={navigation} />);
+    expect(toJSON()).toMatchSnapshot();
   });
 
   it('goes back to the drill editor', async () => {

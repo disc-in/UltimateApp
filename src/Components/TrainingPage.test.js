@@ -1,5 +1,4 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import { render, fireEvent } from '@testing-library/react-native';
 
@@ -9,12 +8,16 @@ import fixtures from '../Fixtures/TestFixtures';
 import TrainingPage from './TrainingPage';
 
 const mockedSetPage = jest.fn();
-jest.mock('@react-native-community/viewpager', () => {
-  const RealComponent = jest.requireActual('@react-native-community/viewpager');
+jest.mock('react-native-pager-view', () => {
+  const RealComponent = jest.requireActual('react-native-pager-view');
   const React = require('react');
 
-  return class ViewPager extends RealComponent {
+  return class PagerView extends React.Component {
     setPage = mockedSetPage;
+
+    render() {
+      return <RealComponent.default>{this.props.children}</RealComponent.default>;
+    }
   };
 });
 
@@ -32,14 +35,12 @@ describe('<TrainingPage />', () => {
     };
 
     it('renders correctly a fitness training', () => {
-      const tree = renderer
-        .create(
-          <Provider store={store}>
-            <TrainingPage route={route} />
-          </Provider>,
-        )
-        .toJSON();
-      expect(tree).toMatchSnapshot();
+      const { toJSON } = render(
+        <Provider store={store}>
+          <TrainingPage route={route} />
+        </Provider>,
+      );
+      expect(toJSON()).toMatchSnapshot();
     });
 
     it('links to previous training within program', async () => {
@@ -112,14 +113,12 @@ describe('<TrainingPage />', () => {
     };
 
     it('renders correctly a frisbee training', () => {
-      const tree = renderer
-        .create(
-          <Provider store={store}>
-            <TrainingPage route={route} />
-          </Provider>,
-        )
-        .toJSON();
-      expect(tree).toMatchSnapshot();
+      const { toJSON } = render(
+        <Provider store={store}>
+          <TrainingPage route={route} />
+        </Provider>,
+      );
+      expect(toJSON()).toMatchSnapshot();
     });
 
     it('links to minimal drill page for frisbee', async () => {

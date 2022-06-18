@@ -1,11 +1,11 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react-native';
 
 import Slider from './Slider';
 
 describe('<Slider />', () => {
   it('renders correctly', () => {
-    const tree = renderer.create(<Slider value={15} />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { toJSON } = render(<Slider value={15} />);
+    expect(toJSON()).toMatchSnapshot();
   });
 });

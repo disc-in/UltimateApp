@@ -275,7 +275,7 @@ export default {
     seasonTiming: 'Temporalité',
     goals: 'Thèmes',
     duration: 'durée',
-    durationLabel: 'Combien de temps as-tu ?   {{duration}} mins',
+    durationLabel: 'Combien de temps as-tu ? {{duration}} mins',
     cta: {
       zero: 'Aucun exercice',
       one: 'Voir {{count}} exercice',

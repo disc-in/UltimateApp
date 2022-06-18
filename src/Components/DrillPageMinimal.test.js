@@ -1,5 +1,4 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { render, fireEvent } from '@testing-library/react-native';
 import { NavigationContext } from '@react-navigation/native';
 
@@ -8,7 +7,7 @@ import fixtures from '../Fixtures/TestFixtures';
 import { DrillPageMinimal } from './DrillPageMinimal';
 
 beforeEach(() => jest.useFakeTimers()); // for Animated
-jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
+jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
 
 jest.mock('./shared/VimeoVideo');
 
@@ -32,8 +31,8 @@ describe('<DrillPageMinimal />', () => {
   };
 
   it('renders correctly with a training and a drill', () => {
-    const tree = renderer.create(<DrillPageMinimal navigation={navigation} route={route} />);
-    expect(tree).toMatchSnapshot();
+    const { toJSON } = render(<DrillPageMinimal navigation={navigation} route={route} />);
+    expect(toJSON()).toMatchSnapshot();
   });
 
   it('links to next drill within training when finished', async () => {
@@ -64,6 +63,6 @@ describe('<DrillPageMinimal />', () => {
     await fireEvent.press(getByText('Finish Training!'));
 
     expect(completeTraining).toBeCalledWith({ training, program });
-    expect(navigation.navigate).toBeCalledWith('ProgramListPage', { activeProgram: program.id });
+    expect(navigation.navigate).toBeCalledWith('ProgramListPage', { activeProgramId: program.id, type: program.type });
   });
 });

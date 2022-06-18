@@ -5,7 +5,7 @@ import Drill from '../../animation/Drill';
 
 import AnimationHistory from './AnimationHistory';
 
-jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
+jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
 
 describe('<AnimationHistory />', () => {
   afterEach(() => jest.clearAllMocks());

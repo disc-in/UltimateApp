@@ -1,5 +1,4 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
 import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
@@ -11,7 +10,7 @@ import { Levels, Intensities, EquipmentLabels, SeasonTimings, FitnessGoals, Dril
 
 import ConnectedFitnessFilters, { FitnessFilters } from './FitnessFilters';
 
-jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
+jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
 
 describe('<FitnessFilters />', () => {
   const beginnerDrill = createDrill({ id: 1, level: Levels.BEGINNER });
@@ -28,8 +27,8 @@ describe('<FitnessFilters />', () => {
       },
     };
     const navigation = { setOptions: jest.fn(), navigate: jest.fn() };
-    const tree = renderer.create(<FitnessFilters route={route} navigation={navigation} favoriteDrills={[]} />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { toJSON } = render(<FitnessFilters route={route} navigation={navigation} favoriteDrills={[]} />);
+    expect(toJSON()).toMatchSnapshot();
   });
 
   describe('filtering', () => {
@@ -442,12 +441,12 @@ describe('<FitnessFilters />', () => {
         ),
       );
 
-      expect(getByText('How much time do you have?   - mins')).toBeDefined();
+      expect(getByText('How much time do you have? - mins')).toBeDefined();
       expect(getByText('See 3 drills')).toBeDefined();
 
       await fireEvent(getByTestId('durationSlider'), 'valueChange', 5);
 
-      expect(getByText('How much time do you have?   5 mins')).toBeDefined();
+      expect(getByText('How much time do you have? 5 mins')).toBeDefined();
       expect(getByText('See 2 drills')).toBeDefined();
 
       await fireEvent.press(getByText('See 2 drills'));
@@ -568,17 +567,17 @@ describe('<FitnessFilters />', () => {
         ),
       );
 
-      expect(getByText('How much time do you have?   - mins')).toBeDefined();
+      expect(getByText('How much time do you have? - mins')).toBeDefined();
       expect(getByText('See 3 drills')).toBeDefined();
 
       await fireEvent(getByTestId('durationSlider'), 'valueChange', 5);
 
-      expect(getByText('How much time do you have?   5 mins')).toBeDefined();
+      expect(getByText('How much time do you have? 5 mins')).toBeDefined();
       expect(getByText('See 2 drills')).toBeDefined();
 
       await fireEvent.press(getByTestId('resetButton'));
 
-      expect(getByText('How much time do you have?   - mins')).toBeDefined();
+      expect(getByText('How much time do you have? - mins')).toBeDefined();
       expect(getByText('See 3 drills')).toBeDefined();
 
       await fireEvent.press(getByText('See 3 drills'));

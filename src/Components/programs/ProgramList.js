@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, FlatList } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, TouchableOpacity } from 'react-native';
 import Accordion from 'react-native-collapsible/Accordion';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
@@ -7,10 +7,10 @@ import theme from '../../styles/theme.style';
 import Program from './Program';
 
 const ProgramList = (props) => {
-  const { navigation, displayedPrograms, activeProgram, completeTrainings } = props;
+  const { navigation, displayedPrograms, activeProgramId, completeTrainings } = props;
 
-  const activeProgramId = displayedPrograms.findIndex((program) => program.id === activeProgram);
-  const [activeSections, setActiveSections] = useState([activeProgramId]);
+  const activeProgramIndex = displayedPrograms.findIndex((program) => program.id === activeProgramId);
+  const [activeSections, setActiveSections] = useState([activeProgramIndex]);
 
   const setSections = (sections) => {
     setActiveSections(sections);
@@ -20,8 +20,7 @@ const ProgramList = (props) => {
     return <Program program={section} />;
   };
 
-  const renderTraining = ({ item, index }) => {
-    const training = item;
+  const renderTraining = (training, index) => {
     const program = displayedPrograms[activeSections];
     const onTrainingPress = () => navigation.navigate('TrainingPage', { training, program });
 
@@ -32,7 +31,11 @@ const ProgramList = (props) => {
       : false;
 
     return (
-      <TouchableOpacity style={[styles.training, isDone ? styles.trainingDone : null]} onPress={onTrainingPress}>
+      <TouchableOpacity
+        key={training.id.toString()}
+        style={[styles.training, isDone ? styles.trainingDone : null]}
+        onPress={onTrainingPress}
+      >
         <View style={styles.descriptionContainer}>
           <Text style={styles.trainingTitle}>
             {index + 1} - {training.title}
@@ -48,13 +51,13 @@ const ProgramList = (props) => {
   };
 
   const renderContent = (section, _, isActive) => {
-    return (
-      <FlatList data={section.trainings} keyExtractor={(item) => item.id.toString()} renderItem={renderTraining} />
-    );
+    return section.trainings.map((training, index) => {
+      return renderTraining(training, index);
+    });
   };
 
   return (
-    <View style={styles.programList}>
+    <ScrollView style={styles.programList}>
       <Accordion
         activeSections={activeSections}
         sections={displayedPrograms}
@@ -66,7 +69,7 @@ const ProgramList = (props) => {
         onChange={setSections}
         containerStyle={styles.accordionContainerStyle}
       />
-    </View>
+    </ScrollView>
   );
 };
 

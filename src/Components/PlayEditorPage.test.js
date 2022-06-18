@@ -1,5 +1,5 @@
 import React from 'react';
-import { create, act } from 'react-test-renderer';
+import { render } from '@testing-library/react-native';
 import { Provider } from 'react-redux';
 
 import store from '../Store/testStore';
@@ -26,11 +26,11 @@ describe('<PlayEditorPage />', () => {
       },
     };
 
-    const tree = create(
+    const { toJSON } = render(
       <Provider store={store}>
         <PlayEditorPage navigation={navigation} route={route} />
       </Provider>,
-    ).toJSON();
-    await act(async () => expect(tree).toMatchSnapshot());
+    );
+    expect(toJSON()).toMatchSnapshot();
   });
 });

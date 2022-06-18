@@ -5,12 +5,14 @@ import { DrillTypes } from '../Fixtures/config';
 import ProgramList from './programs/ProgramList';
 
 export const ProgramListPage = (props) => {
-  const { navigation, programs, activeProgram, completeTrainings, route } = props;
+  const { navigation, programs, completeTrainings, route } = props;
+  const { activeProgramId } = route.params;
 
   let displayedPrograms;
 
   // Try to find programs from activeProgram
-  if (activeProgram) {
+  if (activeProgramId) {
+    const activeProgram = programs.find((program) => program.id === activeProgramId);
     displayedPrograms = programs.filter((program) => program.type === activeProgram.type);
     if (activeProgram.type === DrillTypes.FITNESS)
       displayedPrograms = displayedPrograms.filter(
@@ -32,7 +34,7 @@ export const ProgramListPage = (props) => {
     <ProgramList
       navigation={navigation}
       displayedPrograms={displayedPrograms}
-      activeProgram={activeProgram}
+      activeProgram={activeProgramId}
       completeTrainings={completeTrainings}
     />
   );

@@ -1,5 +1,4 @@
 import React from 'react';
-import { create } from 'react-test-renderer';
 import { connect, Provider } from 'react-redux';
 import { render, fireEvent } from '@testing-library/react-native';
 
@@ -21,23 +20,23 @@ describe('<PlaybookPage />', () => {
   };
 
   it('renders correctly when empty', () => {
-    const tree = create(
+    const { toJSON } = render(
       <Provider store={store}>
         <ConnectedPlaybookPage />
       </Provider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    );
+    expect(toJSON()).toMatchSnapshot();
   });
 
   it('renders correctly with plays', () => {
     const MockedConnectedPlaybookPage = connect(() => ({ customPlays: [play] }))(PlaybookPage);
 
-    const tree = create(
+    const { toJSON } = render(
       <Provider store={store}>
         <MockedConnectedPlaybookPage />
       </Provider>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    );
+    expect(toJSON()).toMatchSnapshot();
   });
 
   it('links to drill page', async () => {

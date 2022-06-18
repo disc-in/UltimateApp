@@ -12,17 +12,19 @@ Clone the project and install all its dependancies:
 git clone git@github.com:disc-in/UltimateApp.git
 cd UltimateApp
 npm install -g expo-cli
-npm install
+yarn install
 ```
 
 Copy the environment file and fill the blanks:
+
 ```
 $ cp .env.example .env
 ```
 
 And finally, start the project:
+
 ```
-npm run start
+yarn start
 ```
 
 ## 👏 Contributing

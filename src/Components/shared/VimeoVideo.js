@@ -46,7 +46,7 @@ const VimeoVideo = ({ vimeoId, sounds, shouldPlay }) => {
   useFocusEffect(
     React.useCallback(() => {
       return () => {
-        videoElem.current.pauseAsync();
+        videoElem.current?.pauseAsync();
       };
     }, []),
   );

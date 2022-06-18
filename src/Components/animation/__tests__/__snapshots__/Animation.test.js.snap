@@ -90,6 +90,7 @@ exports[`<Animation /> renders correctly 1`] = `
       <Text />
     </View>
     <View
+      collapsable={false}
       onMoveShouldSetResponder={[Function]}
       onMoveShouldSetResponderCapture={[Function]}
       onResponderEnd={[Function]}
@@ -152,6 +153,7 @@ exports[`<Animation /> renders correctly 1`] = `
       </View>
     </View>
     <View
+      collapsable={false}
       onMoveShouldSetResponder={[Function]}
       onMoveShouldSetResponderCapture={[Function]}
       onResponderEnd={[Function]}
@@ -214,6 +216,7 @@ exports[`<Animation /> renders correctly 1`] = `
       </View>
     </View>
     <View
+      collapsable={false}
       onMoveShouldSetResponder={[Function]}
       onMoveShouldSetResponderCapture={[Function]}
       onResponderEnd={[Function]}
@@ -276,6 +279,7 @@ exports[`<Animation /> renders correctly 1`] = `
       </View>
     </View>
     <View
+      collapsable={false}
       onMoveShouldSetResponder={[Function]}
       onMoveShouldSetResponderCapture={[Function]}
       onResponderEnd={[Function]}
@@ -338,6 +342,7 @@ exports[`<Animation /> renders correctly 1`] = `
       </View>
     </View>
     <View
+      collapsable={false}
       onMoveShouldSetResponder={[Function]}
       onMoveShouldSetResponderCapture={[Function]}
       onResponderEnd={[Function]}
@@ -400,6 +405,7 @@ exports[`<Animation /> renders correctly 1`] = `
       </View>
     </View>
     <View
+      collapsable={false}
       onMoveShouldSetResponder={[Function]}
       onMoveShouldSetResponderCapture={[Function]}
       onResponderEnd={[Function]}
@@ -462,6 +468,7 @@ exports[`<Animation /> renders correctly 1`] = `
       </View>
     </View>
     <View
+      collapsable={false}
       onMoveShouldSetResponder={[Function]}
       onMoveShouldSetResponderCapture={[Function]}
       onResponderEnd={[Function]}
@@ -524,6 +531,7 @@ exports[`<Animation /> renders correctly 1`] = `
       </View>
     </View>
     <View
+      collapsable={false}
       onMoveShouldSetResponder={[Function]}
       onMoveShouldSetResponderCapture={[Function]}
       onResponderEnd={[Function]}
@@ -586,6 +594,7 @@ exports[`<Animation /> renders correctly 1`] = `
       </View>
     </View>
     <View
+      collapsable={false}
       onMoveShouldSetResponder={[Function]}
       onMoveShouldSetResponderCapture={[Function]}
       onResponderEnd={[Function]}
@@ -647,6 +656,7 @@ exports[`<Animation /> renders correctly 1`] = `
       </View>
     </View>
     <View
+      collapsable={false}
       onMoveShouldSetResponder={[Function]}
       onMoveShouldSetResponderCapture={[Function]}
       onResponderEnd={[Function]}
@@ -708,6 +718,7 @@ exports[`<Animation /> renders correctly 1`] = `
       </View>
     </View>
     <View
+      collapsable={false}
       onMoveShouldSetResponder={[Function]}
       onMoveShouldSetResponderCapture={[Function]}
       onResponderEnd={[Function]}
@@ -769,6 +780,7 @@ exports[`<Animation /> renders correctly 1`] = `
       </View>
     </View>
     <View
+      collapsable={false}
       onMoveShouldSetResponder={[Function]}
       onMoveShouldSetResponderCapture={[Function]}
       onResponderEnd={[Function]}
@@ -830,6 +842,7 @@ exports[`<Animation /> renders correctly 1`] = `
       </View>
     </View>
     <View
+      collapsable={false}
       onMoveShouldSetResponder={[Function]}
       onMoveShouldSetResponderCapture={[Function]}
       onResponderEnd={[Function]}
@@ -891,6 +904,7 @@ exports[`<Animation /> renders correctly 1`] = `
       </View>
     </View>
     <View
+      collapsable={false}
       onMoveShouldSetResponder={[Function]}
       onMoveShouldSetResponderCapture={[Function]}
       onResponderEnd={[Function]}
@@ -952,6 +966,7 @@ exports[`<Animation /> renders correctly 1`] = `
     >
       <View
         accessible={true}
+        collapsable={false}
         focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
@@ -993,6 +1008,7 @@ exports[`<Animation /> renders correctly 1`] = `
           }
         />
         <View
+          collapsable={false}
           style={
             Object {
               "backgroundColor": "black",
@@ -1004,6 +1020,7 @@ exports[`<Animation /> renders correctly 1`] = `
           }
         />
         <View
+          collapsable={false}
           left={0}
           style={
             Object {
@@ -1016,6 +1033,7 @@ exports[`<Animation /> renders correctly 1`] = `
           }
         />
         <View
+          collapsable={false}
           left={2.5}
           style={
             Object {
@@ -1028,6 +1046,7 @@ exports[`<Animation /> renders correctly 1`] = `
           }
         />
         <View
+          collapsable={false}
           left={5}
           style={
             Object {
@@ -1040,6 +1059,7 @@ exports[`<Animation /> renders correctly 1`] = `
           }
         />
         <View
+          collapsable={false}
           left={7.5}
           style={
             Object {
@@ -1052,6 +1072,7 @@ exports[`<Animation /> renders correctly 1`] = `
           }
         />
         <View
+          collapsable={false}
           left={10}
           style={
             Object {
@@ -1064,6 +1085,7 @@ exports[`<Animation /> renders correctly 1`] = `
           }
         />
         <View
+          collapsable={false}
           left={12.5}
           style={
             Object {
@@ -1077,6 +1099,7 @@ exports[`<Animation /> renders correctly 1`] = `
         />
         <View
           accessible={true}
+          collapsable={false}
           focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
@@ -1097,6 +1120,7 @@ exports[`<Animation /> renders correctly 1`] = `
         />
         <View
           accessible={true}
+          collapsable={false}
           focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
@@ -1117,6 +1141,7 @@ exports[`<Animation /> renders correctly 1`] = `
         />
         <View
           accessible={true}
+          collapsable={false}
           focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
@@ -1137,6 +1162,7 @@ exports[`<Animation /> renders correctly 1`] = `
         />
         <View
           accessible={true}
+          collapsable={false}
           focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
@@ -1157,6 +1183,7 @@ exports[`<Animation /> renders correctly 1`] = `
         />
         <View
           accessible={true}
+          collapsable={false}
           focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
@@ -1177,6 +1204,7 @@ exports[`<Animation /> renders correctly 1`] = `
         />
         <View
           accessible={true}
+          collapsable={false}
           focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}

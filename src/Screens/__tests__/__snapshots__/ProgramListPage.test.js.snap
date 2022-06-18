@@ -26,6 +26,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
             }
           }
           accessible={true}
+          collapsable={false}
           focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
@@ -139,6 +140,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
           </View>
         </View>
         <View
+          collapsable={false}
           pointerEvents="none"
           style={
             Object {
@@ -148,12 +150,14 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
           }
         >
           <View
+            collapsable={false}
             forwardedRef={[Function]}
             onLayout={[Function]}
             style={Object {}}
           >
             <View
               accessible={true}
+              collapsable={false}
               focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
@@ -222,6 +226,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
             </View>
             <View
               accessible={true}
+              collapsable={false}
               focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}

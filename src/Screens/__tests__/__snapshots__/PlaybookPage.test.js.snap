@@ -37,6 +37,7 @@ exports[`<PlaybookPage /> renders correctly when empty 1`] = `
   </View>
   <View
     accessible={true}
+    collapsable={false}
     focusable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
@@ -108,6 +109,7 @@ exports[`<PlaybookPage /> renders correctly with plays 1`] = `
       >
         <View
           accessible={true}
+          collapsable={false}
           focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
@@ -142,6 +144,7 @@ exports[`<PlaybookPage /> renders correctly with plays 1`] = `
         </View>
         <View
           accessible={true}
+          collapsable={false}
           focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
@@ -162,6 +165,7 @@ exports[`<PlaybookPage /> renders correctly with plays 1`] = `
         >
           <Text
             allowFontScaling={false}
+            selectable={false}
             style={
               Array [
                 Object {
@@ -186,6 +190,7 @@ exports[`<PlaybookPage /> renders correctly with plays 1`] = `
         </View>
         <View
           accessible={true}
+          collapsable={false}
           focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
@@ -206,6 +211,7 @@ exports[`<PlaybookPage /> renders correctly with plays 1`] = `
         >
           <Text
             allowFontScaling={false}
+            selectable={false}
             style={
               Array [
                 Object {
@@ -233,6 +239,7 @@ exports[`<PlaybookPage /> renders correctly with plays 1`] = `
   </RCTScrollView>
   <View
     accessible={true}
+    collapsable={false}
     focusable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
@@ -267,6 +274,7 @@ exports[`<PlaybookPage /> renders correctly with plays 1`] = `
     >
       <Text
         allowFontScaling={false}
+        selectable={false}
         style={
           Array [
             Object {

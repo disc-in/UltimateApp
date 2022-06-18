@@ -24,6 +24,7 @@ exports[`<ProgressBar /> renders correctly 1`] = `
     }
   >
     <View
+      collapsable={false}
       style={
         Object {
           "backgroundColor": "rgb(150, 150, 150)",
@@ -36,6 +37,7 @@ exports[`<ProgressBar /> renders correctly 1`] = `
       }
     />
     <View
+      collapsable={false}
       style={
         Object {
           "backgroundColor": "rgb(0, 0, 0)",
@@ -49,6 +51,7 @@ exports[`<ProgressBar /> renders correctly 1`] = `
     />
     <View
       accessible={true}
+      collapsable={false}
       focusable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
@@ -71,6 +74,7 @@ exports[`<ProgressBar /> renders correctly 1`] = `
     />
     <View
       accessible={true}
+      collapsable={false}
       focusable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
@@ -93,6 +97,7 @@ exports[`<ProgressBar /> renders correctly 1`] = `
     />
     <View
       accessible={true}
+      collapsable={false}
       focusable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
@@ -115,6 +120,7 @@ exports[`<ProgressBar /> renders correctly 1`] = `
     />
     <View
       accessible={true}
+      collapsable={false}
       focusable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
@@ -137,6 +143,7 @@ exports[`<ProgressBar /> renders correctly 1`] = `
     />
     <View
       accessible={true}
+      collapsable={false}
       focusable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
@@ -159,6 +166,7 @@ exports[`<ProgressBar /> renders correctly 1`] = `
     />
     <View
       accessible={true}
+      collapsable={false}
       focusable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}

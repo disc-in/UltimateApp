@@ -16,6 +16,7 @@ exports[`<Checkbox /> renders correctly 1`] = `
       }
     }
     accessible={true}
+    collapsable={false}
     focusable={false}
     onClick={[Function]}
     onResponderGrant={[Function]}
@@ -83,6 +84,7 @@ exports[`<Checkbox /> renders correctly when active 1`] = `
       }
     }
     accessible={true}
+    collapsable={false}
     focusable={false}
     onClick={[Function]}
     onResponderGrant={[Function]}
@@ -116,6 +118,7 @@ exports[`<Checkbox /> renders correctly when active 1`] = `
     >
       <Text
         allowFontScaling={false}
+        selectable={false}
         style={
           Array [
             Object {

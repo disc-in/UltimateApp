@@ -14,6 +14,7 @@ exports[`<PlayTitle /> renders correctly 1`] = `
 >
   <View
     accessible={true}
+    collapsable={false}
     focusable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
@@ -48,6 +49,7 @@ exports[`<PlayTitle /> renders correctly 1`] = `
   </View>
   <View
     accessible={true}
+    collapsable={false}
     focusable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
@@ -70,6 +72,7 @@ exports[`<PlayTitle /> renders correctly 1`] = `
   </View>
   <View
     accessible={true}
+    collapsable={false}
     focusable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
@@ -107,6 +110,7 @@ exports[`<PlayTitle /> renders correctly when safe mode 1`] = `
 >
   <View
     accessible={true}
+    collapsable={false}
     focusable={false}
     onClick={[Function]}
     onResponderGrant={[Function]}
@@ -141,6 +145,7 @@ exports[`<PlayTitle /> renders correctly when safe mode 1`] = `
   </View>
   <View
     accessible={true}
+    collapsable={false}
     focusable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
@@ -161,6 +166,7 @@ exports[`<PlayTitle /> renders correctly when safe mode 1`] = `
   >
     <Text
       allowFontScaling={false}
+      selectable={false}
       style={
         Array [
           Object {
@@ -200,6 +206,7 @@ exports[`<PlayTitle /> renders correctly when unsaved 1`] = `
 >
   <View
     accessible={true}
+    collapsable={false}
     focusable={false}
     onClick={[Function]}
     onResponderGrant={[Function]}
@@ -234,6 +241,7 @@ exports[`<PlayTitle /> renders correctly when unsaved 1`] = `
   </View>
   <View
     accessible={true}
+    collapsable={false}
     focusable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
@@ -254,6 +262,7 @@ exports[`<PlayTitle /> renders correctly when unsaved 1`] = `
   >
     <Text
       allowFontScaling={false}
+      selectable={false}
       style={
         Array [
           Object {
@@ -278,6 +287,7 @@ exports[`<PlayTitle /> renders correctly when unsaved 1`] = `
   </View>
   <View
     accessible={true}
+    collapsable={false}
     focusable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
@@ -298,6 +308,7 @@ exports[`<PlayTitle /> renders correctly when unsaved 1`] = `
   >
     <Text
       allowFontScaling={false}
+      selectable={false}
       style={
         Array [
           Object {
@@ -339,6 +350,7 @@ exports[`<PlayTitle /> renders correctly with custom style 1`] = `
 >
   <View
     accessible={true}
+    collapsable={false}
     focusable={false}
     onClick={[Function]}
     onResponderGrant={[Function]}
@@ -373,6 +385,7 @@ exports[`<PlayTitle /> renders correctly with custom style 1`] = `
   </View>
   <View
     accessible={true}
+    collapsable={false}
     focusable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
@@ -393,6 +406,7 @@ exports[`<PlayTitle /> renders correctly with custom style 1`] = `
   >
     <Text
       allowFontScaling={false}
+      selectable={false}
       style={
         Array [
           Object {
@@ -417,6 +431,7 @@ exports[`<PlayTitle /> renders correctly with custom style 1`] = `
   </View>
   <View
     accessible={true}
+    collapsable={false}
     focusable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
@@ -437,6 +452,7 @@ exports[`<PlayTitle /> renders correctly with custom style 1`] = `
   >
     <Text
       allowFontScaling={false}
+      selectable={false}
       style={
         Array [
           Object {

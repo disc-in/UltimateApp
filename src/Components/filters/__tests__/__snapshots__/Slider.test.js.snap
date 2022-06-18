@@ -19,6 +19,14 @@ exports[`<Slider /> renders correctly 1`] = `
     }
   />
   <View
+    accessibilityRole="adjustable"
+    accessibilityValue={
+      Object {
+        "max": 1,
+        "min": 0,
+        "now": 15,
+      }
+    }
     allowTouchTrack={false}
     animationType="timing"
     onLayout={[Function]}
@@ -112,6 +120,7 @@ exports[`<Slider /> renders correctly 1`] = `
       }
     />
     <View
+      collapsable={false}
       style={
         Object {
           "backgroundColor": "#2a9e91",
@@ -124,6 +133,7 @@ exports[`<Slider /> renders correctly 1`] = `
       }
     />
     <View
+      collapsable={false}
       onLayout={[Function]}
       style={
         Object {

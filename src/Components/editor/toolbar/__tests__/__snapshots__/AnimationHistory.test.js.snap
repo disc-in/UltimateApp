@@ -10,7 +10,13 @@ exports[`<AnimationHistory /> renders correctly 1`] = `
   }
 >
   <View
+    accessibilityState={
+      Object {
+        "disabled": true,
+      }
+    }
     accessible={true}
+    collapsable={false}
     focusable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
@@ -30,6 +36,7 @@ exports[`<AnimationHistory /> renders correctly 1`] = `
   >
     <Text
       allowFontScaling={false}
+      selectable={false}
       style={
         Array [
           Object {
@@ -51,7 +58,13 @@ exports[`<AnimationHistory /> renders correctly 1`] = `
     </Text>
   </View>
   <View
+    accessibilityState={
+      Object {
+        "disabled": true,
+      }
+    }
     accessible={true}
+    collapsable={false}
     focusable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
@@ -71,6 +84,7 @@ exports[`<AnimationHistory /> renders correctly 1`] = `
   >
     <Text
       allowFontScaling={false}
+      selectable={false}
       style={
         Array [
           Object {

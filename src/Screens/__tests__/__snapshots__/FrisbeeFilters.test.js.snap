@@ -31,6 +31,7 @@ exports[`<FrisbeeFilters /> renders correctly 1`] = `
       >
         <View
           accessible={true}
+          collapsable={false}
           focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
@@ -76,6 +77,7 @@ exports[`<FrisbeeFilters /> renders correctly 1`] = `
       >
         <View
           accessible={true}
+          collapsable={false}
           focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
@@ -132,6 +134,7 @@ exports[`<FrisbeeFilters /> renders correctly 1`] = `
       >
         <View
           accessible={true}
+          collapsable={false}
           focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
@@ -166,6 +169,7 @@ exports[`<FrisbeeFilters /> renders correctly 1`] = `
         </View>
         <View
           accessible={true}
+          collapsable={false}
           focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
@@ -200,6 +204,7 @@ exports[`<FrisbeeFilters /> renders correctly 1`] = `
         </View>
         <View
           accessible={true}
+          collapsable={false}
           focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
@@ -269,6 +274,7 @@ exports[`<FrisbeeFilters /> renders correctly 1`] = `
               }
             }
             accessible={true}
+            collapsable={false}
             focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
@@ -350,6 +356,14 @@ exports[`<FrisbeeFilters /> renders correctly 1`] = `
           1
         </Text>
         <View
+          accessibilityRole="adjustable"
+          accessibilityValue={
+            Object {
+              "max": 30,
+              "min": 1,
+              "now": 0,
+            }
+          }
           allowTouchTrack={false}
           animationType="timing"
           onLayout={[Function]}
@@ -445,6 +459,7 @@ exports[`<FrisbeeFilters /> renders correctly 1`] = `
             }
           />
           <View
+            collapsable={false}
             style={
               Object {
                 "backgroundColor": "#2a9e91",
@@ -457,6 +472,7 @@ exports[`<FrisbeeFilters /> renders correctly 1`] = `
             }
           />
           <View
+            collapsable={false}
             onLayout={[Function]}
             style={
               Object {
@@ -527,6 +543,7 @@ exports[`<FrisbeeFilters /> renders correctly 1`] = `
   >
     <View
       accessible={true}
+      collapsable={false}
       focusable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}

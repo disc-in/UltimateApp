@@ -26,6 +26,7 @@ exports[`<ProgramList /> renders correctly 1`] = `
             }
           }
           accessible={true}
+          collapsable={false}
           focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
@@ -139,6 +140,7 @@ exports[`<ProgramList /> renders correctly 1`] = `
           </View>
         </View>
         <View
+          collapsable={false}
           pointerEvents="none"
           style={
             Object {
@@ -148,12 +150,14 @@ exports[`<ProgramList /> renders correctly 1`] = `
           }
         >
           <View
+            collapsable={false}
             forwardedRef={[Function]}
             onLayout={[Function]}
             style={Object {}}
           >
             <View
               accessible={true}
+              collapsable={false}
               focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
@@ -233,6 +237,7 @@ exports[`<ProgramList /> renders correctly 1`] = `
             }
           }
           accessible={true}
+          collapsable={false}
           focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
@@ -346,6 +351,7 @@ exports[`<ProgramList /> renders correctly 1`] = `
           </View>
         </View>
         <View
+          collapsable={false}
           pointerEvents="none"
           style={
             Object {
@@ -355,12 +361,14 @@ exports[`<ProgramList /> renders correctly 1`] = `
           }
         >
           <View
+            collapsable={false}
             forwardedRef={[Function]}
             onLayout={[Function]}
             style={Object {}}
           >
             <View
               accessible={true}
+              collapsable={false}
               focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
@@ -429,6 +437,7 @@ exports[`<ProgramList /> renders correctly 1`] = `
             </View>
             <View
               accessible={true}
+              collapsable={false}
               focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}

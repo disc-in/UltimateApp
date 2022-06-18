@@ -75,7 +75,6 @@ exports[`<DrillList /> renders correctly 1`] = `
     ]
   }
   deleteDrill={[Function]}
-  disableVirtualization={false}
   drillsToDisplay={
     Array [
       Object {
@@ -145,13 +144,10 @@ exports[`<DrillList /> renders correctly 1`] = `
   }
   getItem={[Function]}
   getItemCount={[Function]}
-  horizontal={false}
-  initialNumToRender={10}
   keyExtractor={[Function]}
-  maxToRenderPerBatch={10}
   onContentSizeChange={[Function]}
-  onEndReachedThreshold={2}
   onLayout={[Function]}
+  onMomentumScrollBegin={[Function]}
   onMomentumScrollEnd={[Function]}
   onScroll={[Function]}
   onScrollBeginDrag={[Function]}
@@ -160,9 +156,7 @@ exports[`<DrillList /> renders correctly 1`] = `
   renderItem={[Function]}
   scrollEventThrottle={50}
   stickyHeaderIndices={Array []}
-  updateCellsBatchingPeriod={50}
   viewabilityConfigCallbackPairs={Array []}
-  windowSize={21}
 >
   <View>
     <View
@@ -171,6 +165,7 @@ exports[`<DrillList /> renders correctly 1`] = `
     >
       <View
         accessible={true}
+        collapsable={false}
         focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
@@ -306,6 +301,7 @@ exports[`<DrillList /> renders correctly 1`] = `
     >
       <View
         accessible={true}
+        collapsable={false}
         focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
@@ -444,6 +440,7 @@ exports[`<DrillList /> renders correctly 1`] = `
         >
           <View
             accessible={true}
+            collapsable={false}
             focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
@@ -462,6 +459,7 @@ exports[`<DrillList /> renders correctly 1`] = `
           >
             <Text
               allowFontScaling={false}
+              selectable={false}
               style={
                 Array [
                   Object {
@@ -483,6 +481,7 @@ exports[`<DrillList /> renders correctly 1`] = `
           </View>
           <View
             accessible={true}
+            collapsable={false}
             focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
@@ -501,6 +500,7 @@ exports[`<DrillList /> renders correctly 1`] = `
           >
             <Text
               allowFontScaling={false}
+              selectable={false}
               style={
                 Array [
                   Object {

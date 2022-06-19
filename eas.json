@@ -1,0 +1,26 @@
+{
+  "cli": {
+    "version": ">= 0.54.1",
+    "requireCommit": true,
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "releaseChannel": "development",
+      "distribution": "internal"
+    },
+    "preview": {
+      "releaseChannel": "staging",
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "production": {
+      "releaseChannel": "production"
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}

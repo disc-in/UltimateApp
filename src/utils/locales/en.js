@@ -176,11 +176,9 @@ export default {
   },
   aboutPage: {
     copyright: '2020 - {{endYear}}',
-    version: 'version {{version}}, release-channel {{channel}}',
     about: {
       header: 'About',
-      text:
-        "'Disc In' is an application made by ultimate coaches for ultimate coaches. It is free and shall remain this way.",
+      text: "'Disc In' is an application made by ultimate coaches for ultimate coaches. It is free and shall remain this way.",
     },
     acknowledgements: {
       header: 'Acknowledgements',
@@ -190,13 +188,11 @@ export default {
     },
     contributing: {
       header: 'Contributions',
-      text:
-        'You can contribute by adding drills and programs, new videos, translating to other languages, etc. There are dozens of ways to improve the app. Feel free to contact us!',
+      text: 'You can contribute by adding drills and programs, new videos, translating to other languages, etc. There are dozens of ways to improve the app. Feel free to contact us!',
     },
     feedback: {
       header: 'Feedback',
-      text:
-        "If you perhaps don't have time to contribute, but you have ideas or feedback to improve the app, please send us a message!",
+      text: "If you perhaps don't have time to contribute, but you have ideas or feedback to improve the app, please send us a message!",
       cta: 'Send feedback',
       subject: 'Feedback concerning Disc In',
     },

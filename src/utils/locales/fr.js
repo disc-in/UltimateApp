@@ -176,11 +176,9 @@ export default {
   },
   aboutPage: {
     copyright: '2020 - {{endYear}}',
-    version: 'version {{version}}, release-channel {{channel}}',
     about: {
       header: 'À propos',
-      text:
-        "'Disc In' est une application conçue par des entraîneurs d'ultimate et pour des entraîneurs d'ultimate. Elle est et restera gratuite.",
+      text: "'Disc In' est une application conçue par des entraîneurs d'ultimate et pour des entraîneurs d'ultimate. Elle est et restera gratuite.",
     },
     acknowledgements: {
       header: 'Remerciements',
@@ -190,13 +188,11 @@ export default {
     },
     contributing: {
       header: 'Contribuer',
-      text:
-        "Ajouts d'exercices et de programmes, nouvelles vidéos, traductions, etc. Il y a des dizaines de manières d'améliorer Disc In. Contactez-nous !",
+      text: "Ajouts d'exercices et de programmes, nouvelles vidéos, traductions, etc. Il y a des dizaines de manières d'améliorer Disc In. Contactez-nous !",
     },
     feedback: {
       header: 'Feedback',
-      text:
-        "Nous serions ravis de connaitre vos idées pour améliorer l'application.\n\nVoulez-vous nous envoyer un message ?",
+      text: "Nous serions ravis de connaitre vos idées pour améliorer l'application.\n\nVoulez-vous nous envoyer un message ?",
       cta: 'Nous contacter',
       subject: 'A propos de Disc In',
     },

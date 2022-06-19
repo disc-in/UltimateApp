@@ -57,7 +57,9 @@ exports[`<AboutPage /> renders correctly 1`] = `
             }
           }
         >
-          version [missing {{version}} value], release-channel DEV
+          version 
+          , release-channel 
+          mock
         </Text>
         <Text
           style={

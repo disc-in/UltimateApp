@@ -19,15 +19,15 @@ const AboutPage = (props) => {
     });
   };
 
-  const { version } = Constants.manifest;
-  const { releaseChannel } = Updates;
   return (
     <ScrollView style={styles.aboutPage} contentContainerStyle={styles.aboutPageContainer}>
       <View style={styles.iconArea}>
         <Image source={icon} style={styles.icon} />
         <View>
           <Text style={styles.info}>{I18n.t('aboutPage.copyright', { endYear: new Date().getFullYear() })}</Text>
-          <Text style={styles.info}>{I18n.t('aboutPage.version', { version, channel: releaseChannel })}</Text>
+          <Text style={styles.info}>
+            version {Constants.manifest.version}, release-channel {Updates.releaseChannel}
+          </Text>
           <Text style={styles.info}>{Constants.manifest.extra.env}</Text>
         </View>
       </View>

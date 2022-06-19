@@ -10,6 +10,8 @@ npm-debug.*
 web-build/
 web-report/
 
+.eslintcache
+
 # macOS
 .DS_Store
 *.js~

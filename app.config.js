@@ -42,7 +42,7 @@ export default {
       infoPlist: {
         CFBundleAllowMixedLocalizations: true,
       },
-      associatedDomains: [`applinks:${Config.firebaseUrlPrefix.replace('https://', '').replace(/\/$/, '')}`],
+      associatedDomains: [`applinks:${Config.firebaseUrlPrefix?.replace('https://', '').replace(/\/$/, '')}`],
     },
     android: {
       package: 'com.discin.discin',
@@ -55,7 +55,7 @@ export default {
           data: [
             {
               scheme: 'https',
-              host: Config.firebaseUrlPrefix.replace('https://', '').replace(/\/$/, ''),
+              host: Config.firebaseUrlPrefix?.replace('https://', '').replace(/\/$/, ''),
               pathPrefix: '/',
             },
           ],

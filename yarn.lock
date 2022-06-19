@@ -4224,10 +4224,10 @@ domexception@^2.0.1:
   dependencies:
     webidl-conversions "^5.0.0"
 
-dotenv@^10.0.0:
-  version "10.0.0"
-  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-10.0.0.tgz#3d4227b8fb95f81096cdd2b66653fb2c7085ba81"
-  integrity sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q==
+dotenv@^16.0.1:
+  version "16.0.1"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.0.1.tgz#8f8f9d94876c35dac989876a5d3a82a267fdce1d"
+  integrity sha512-1K6hR6wtk2FviQ4kEiSjFiH5rpzEVi8WW0x96aztHVMhEspNpc4DVOUTEHtEva5VThQ8IaBX1Pe4gSzpVVUsKQ==
 
 eastasianwidth@^0.2.0:
   version "0.2.0"
@@ -8612,13 +8612,6 @@ react-native-collapsible@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/react-native-collapsible/-/react-native-collapsible-1.6.0.tgz#ca261ffff16914f872059bb0972e3a78c4b37f9c"
   integrity sha512-beZjdgbT9Y/Pg591Xy5XkKG20HffJiVad4n9bfcUF/f783A+tvOVXnqvbS58Lkaym93mi4jcDPMuW9Vc1t6rqg==
-
-react-native-dotenv@^2.5.5:
-  version "2.6.2"
-  resolved "https://registry.yarnpkg.com/react-native-dotenv/-/react-native-dotenv-2.6.2.tgz#b63fc5f60d8dc86fcb4ba02e9626652e8f6c187f"
-  integrity sha512-yGVEYjhXTpHFEpeaJS6qdnI1TyFFHj3E2k9X3HgkIsOh7c86t+JkBRfHP7zeOOyquE5ewN7+OcLEARgkFhDuRA==
-  dependencies:
-    dotenv "^10.0.0"
 
 react-native-elements@^3.4.1:
   version "3.4.2"

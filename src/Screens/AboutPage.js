@@ -28,8 +28,8 @@ const AboutPage = (props) => {
         <Image source={icon} style={styles.icon} />
         <View>
           <Text style={styles.info}>{I18n.t('aboutPage.copyright', { endYear: new Date().getFullYear() })}</Text>
-          <Text style={styles.info}>{I18n.t('aboutPage.version', { version, channel })}</Text>
-          <Text style={styles.info}>{EXPO_ENV_FLAG}</Text>
+          <Text style={styles.info}>{I18n.t('aboutPage.version', { version, channel: releaseChannel })}</Text>
+          <Text style={styles.info}>{Constants.manifest.extra.env}</Text>
         </View>
       </View>
       <Text style={styles.header}>{I18n.t('aboutPage.about.header')}</Text>

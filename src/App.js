@@ -5,17 +5,17 @@ import { Platform, ActivityIndicator } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { Provider as ReduxProvider } from 'react-redux';
 import { Provider as PaperProvider } from 'react-native-paper';
+import Constants from 'expo-constants';
 import * as Linking from 'expo-linking';
 
 import { Navigation } from './Navigation';
 import { store, persistor } from './Store/configureStore';
 import FlashMessage from './utils/flashMessage';
-import { EXPO_FIREBASE_URL_PREFIX, EXPO_FIREBASE_DOMAIN_URI } from '@env';
 import theme from './styles/theme.style';
 
 const App = (props) => {
   const linking = {
-    prefixes: [Linking.makeUrl('/'), EXPO_FIREBASE_URL_PREFIX],
+    prefixes: [Linking.makeUrl('/'), Constants.manifest.extra.firebaseUrlPrefix],
     config: {
       initialRouteName: 'HomePage',
       screens: {

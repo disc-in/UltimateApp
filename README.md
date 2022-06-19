@@ -21,6 +21,8 @@ Copy the environment file and fill the blanks:
 $ cp .env.example .env
 ```
 
+(Firebase env variables are only used if you share custom plays or drills)
+
 And finally, start the project:
 
 ```
@@ -56,13 +58,26 @@ To get the expected return from Nock, you can run your tests without mocking and
 
 ## Release
 
+Note: You need to understand how environment variables are managed in an expo app. It is completely different from a web application because the app bundle is sent to every user. There is no such place as a safe server environment config.
+
+- Environment variables in Expo https://docs.expo.dev/guides/environment-variables/
+- Environment variables and secrets in the build process (EAS Build): https://docs.expo.dev/build-reference/variables/
+
+Most of our environment variables are set directly in app.config.js. Our secrets (eg. API tokens) are set in the environment and on our Expo Account (so that EAS Build can access them).
+
 To release a new version of the app :
 
-1. Send a pull request updating the version in `app.json`, as well as buildNumber (ios) and versionCode (android) if you need to build new binaries
+1. Send a pull request updating the version in `app.config.js`. If new binaries must be built, this is a major version update and you must also update the buildNumber (ios) and versionCode (android)
 2. When it is merged, create a release on Github
-3. Make sure your `.env` file contains the production environment variables up-to-date
-4. `expo publish --release-channel production`
-5. If needed, republish to the stores using `expo build:X --release-channel production`
+3. Make sure your `.env` file contains the production environment variables up-to-date (especially APP_ENV)
+4. Make sure the secrets on our expo account are set
+5. Use `expo start --clear` to make sure the new env vars have been taken into account
+6. Then
+
+- If publishing an update, run `expo publish --release-channel production`
+- If building a new major version, rebuild for the stores using `eas build --platform <ios|android|all> --profile <profile-name>` and and `eas submit`
+
+7. Set back your development env vars in `.env` and run `expo start --clear`
 
 ## 🙏 Thanks
 

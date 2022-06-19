@@ -28,10 +28,10 @@ jobs:
       - name: Create env file
         run: |
           touch .env
-          echo EXPO_FIREBASE_URL_PREFIX=${{ secrets.EXPO_FIREBASE_URL_PREFIX }} >> .env
+          echo DEV_FIREBASE_URL_PREFIX=${{ secrets.DEV_FIREBASE_URL_PREFIX }} >> .env
           cat .env
 
       - name: Run test command
         env:
-          EXPO_ENV_FLAG: development
+          APP_ENV: development
         run: yarn run test-ci

@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, ScrollView, View, Text, Image, TouchableOpacity } from 'react-native';
 import Constants from 'expo-constants';
+import * as Updates from 'expo-updates';
 import * as MailComposer from 'expo-mail-composer';
 import * as Linking from 'expo-linking';
-import { EXPO_ENV_FLAG } from '@env';
 
 import theme from '../styles/theme.style';
 import I18n from '../utils/i18n';
@@ -19,16 +19,16 @@ const AboutPage = (props) => {
     });
   };
 
-  const { releaseChannel, version } = Constants.manifest;
-  const channel = releaseChannel === undefined ? 'DEV' : releaseChannel;
   return (
     <ScrollView style={styles.aboutPage} contentContainerStyle={styles.aboutPageContainer}>
       <View style={styles.iconArea}>
         <Image source={icon} style={styles.icon} />
         <View>
           <Text style={styles.info}>{I18n.t('aboutPage.copyright', { endYear: new Date().getFullYear() })}</Text>
-          <Text style={styles.info}>{I18n.t('aboutPage.version', { version, channel })}</Text>
-          <Text style={styles.info}>{EXPO_ENV_FLAG}</Text>
+          <Text style={styles.info}>
+            version {Constants.manifest.version}, release-channel {Updates.releaseChannel}
+          </Text>
+          <Text style={styles.info}>{Constants.manifest.extra.env}</Text>
         </View>
       </View>
       <Text style={styles.header}>{I18n.t('aboutPage.about.header')}</Text>

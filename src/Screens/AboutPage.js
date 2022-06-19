@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, ScrollView, View, Text, Image, TouchableOpacity } from 'react-native';
 import Constants from 'expo-constants';
+import * as Updates from 'expo-updates';
 import * as MailComposer from 'expo-mail-composer';
 import * as Linking from 'expo-linking';
 import { EXPO_ENV_FLAG } from '@env';
@@ -19,8 +20,8 @@ const AboutPage = (props) => {
     });
   };
 
-  const { releaseChannel, version } = Constants.manifest;
-  const channel = releaseChannel === undefined ? 'DEV' : releaseChannel;
+  const { version } = Constants.manifest;
+  const { releaseChannel } = Updates;
   return (
     <ScrollView style={styles.aboutPage} contentContainerStyle={styles.aboutPageContainer}>
       <View style={styles.iconArea}>

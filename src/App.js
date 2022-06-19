@@ -7,11 +7,11 @@ import { Provider as ReduxProvider } from 'react-redux';
 import { Provider as PaperProvider } from 'react-native-paper';
 import * as Linking from 'expo-linking';
 
-import { Navigation } from './src/Navigation';
-import { store, persistor } from './src/Store/configureStore';
-import FlashMessage from './src/utils/flashMessage';
+import { Navigation } from './Navigation';
+import { store, persistor } from './Store/configureStore';
+import FlashMessage from './utils/flashMessage';
 import { EXPO_FIREBASE_URL_PREFIX, EXPO_FIREBASE_DOMAIN_URI } from '@env';
-import theme from './src/styles/theme.style';
+import theme from './styles/theme.style';
 
 const App = (props) => {
   const linking = {

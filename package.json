@@ -1,5 +1,4 @@
 {
-  "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "test": "jest --watch --coverage=false --changedSince=master",
     "test-ci": "jest --coverage=true",
@@ -25,6 +24,7 @@
     "expo-mail-composer": "~11.2.0",
     "expo-screen-orientation": "~4.2.0",
     "expo-splash-screen": "~0.15.1",
+    "expo-updates": "~0.13.2",
     "firebase": "9.8.0",
     "formik": "^2.2.9",
     "i18n-js": "^3.9.2",

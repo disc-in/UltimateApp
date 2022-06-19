@@ -4,7 +4,6 @@ import Constants from 'expo-constants';
 import * as Updates from 'expo-updates';
 import * as MailComposer from 'expo-mail-composer';
 import * as Linking from 'expo-linking';
-import { EXPO_ENV_FLAG } from '@env';
 
 import theme from '../styles/theme.style';
 import I18n from '../utils/i18n';

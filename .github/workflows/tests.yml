@@ -33,5 +33,5 @@ jobs:
 
       - name: Run test command
         env:
-          EXPO_ENV_FLAG: development
+          APP_ENV: development
         run: yarn run test-ci

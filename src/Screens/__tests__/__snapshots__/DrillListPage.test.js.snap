@@ -1097,39 +1097,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
       }
       testID="filterButton"
     >
-      <Text
-        allowFontScaling={false}
-        selectable={false}
-        style={
-          Array [
-            Object {
-              "color": undefined,
-              "fontSize": 12,
-            },
-            Array [
-              Object {
-                "marginRight": 20,
-              },
-              Object {
-                "color": "#2a9e91",
-                "fontSize": 16,
-                "fontWeight": "bold",
-              },
-              Object {
-                "marginRight": 5,
-              },
-            ],
-            Object {
-              "fontFamily": "ionicons",
-              "fontStyle": "normal",
-              "fontWeight": "normal",
-            },
-            Object {},
-          ]
-        }
-      >
-        
-      </Text>
+      <Text />
       <Text
         style={
           Object {
@@ -1864,39 +1832,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
       }
       testID="filterButton"
     >
-      <Text
-        allowFontScaling={false}
-        selectable={false}
-        style={
-          Array [
-            Object {
-              "color": undefined,
-              "fontSize": 12,
-            },
-            Array [
-              Object {
-                "marginRight": 20,
-              },
-              Object {
-                "color": "#2a9e91",
-                "fontSize": 16,
-                "fontWeight": "bold",
-              },
-              Object {
-                "marginRight": 5,
-              },
-            ],
-            Object {
-              "fontFamily": "ionicons",
-              "fontStyle": "normal",
-              "fontWeight": "normal",
-            },
-            Object {},
-          ]
-        }
-      >
-        
-      </Text>
+      <Text />
       <Text
         style={
           Object {

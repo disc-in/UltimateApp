@@ -56,6 +56,7 @@ exports[`<PlaybookPage /> renders correctly when empty 1`] = `
         "paddingTop": 10,
       }
     }
+    testID="createPlay"
   >
     <View
       style={
@@ -138,7 +139,6 @@ exports[`<PlaybookPage /> renders correctly with plays 1`] = `
               }
             }
           >
-            
             title
           </Text>
         </View>
@@ -163,30 +163,7 @@ exports[`<PlaybookPage /> renders correctly with plays 1`] = `
           }
           testID="edit"
         >
-          <Text
-            allowFontScaling={false}
-            selectable={false}
-            style={
-              Array [
-                Object {
-                  "color": undefined,
-                  "fontSize": 12,
-                },
-                Object {
-                  "color": "#232b2b",
-                  "fontSize": 20,
-                },
-                Object {
-                  "fontFamily": "material-community",
-                  "fontStyle": "normal",
-                  "fontWeight": "normal",
-                },
-                Object {},
-              ]
-            }
-          >
-            󰏫
-          </Text>
+          <Text />
         </View>
         <View
           accessible={true}
@@ -209,30 +186,7 @@ exports[`<PlaybookPage /> renders correctly with plays 1`] = `
           }
           testID="delete"
         >
-          <Text
-            allowFontScaling={false}
-            selectable={false}
-            style={
-              Array [
-                Object {
-                  "color": undefined,
-                  "fontSize": 12,
-                },
-                Object {
-                  "color": "#232b2b",
-                  "fontSize": 20,
-                },
-                Object {
-                  "fontFamily": "material-community",
-                  "fontStyle": "normal",
-                  "fontWeight": "normal",
-                },
-                Object {},
-              ]
-            }
-          >
-            󰩹
-          </Text>
+          <Text />
         </View>
       </View>
     </View>
@@ -258,6 +212,7 @@ exports[`<PlaybookPage /> renders correctly with plays 1`] = `
         "paddingTop": 10,
       }
     }
+    testID="createPlay"
   >
     <View
       style={
@@ -272,32 +227,7 @@ exports[`<PlaybookPage /> renders correctly with plays 1`] = `
         }
       }
     >
-      <Text
-        allowFontScaling={false}
-        selectable={false}
-        style={
-          Array [
-            Object {
-              "color": undefined,
-              "fontSize": 12,
-            },
-            Object {
-              "color": "#2a9e91",
-              "fontSize": 40,
-              "fontWeight": "bold",
-            },
-            Object {
-              "fontFamily": "material-community",
-              "fontStyle": "normal",
-              "fontWeight": "normal",
-            },
-            Object {},
-          ]
-        }
-        testID="createPlay"
-      >
-        󰐕
-      </Text>
+      <Text />
     </View>
   </View>
 </View>

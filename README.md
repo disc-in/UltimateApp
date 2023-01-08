@@ -11,7 +11,6 @@ Clone the project and install all its dependancies:
 ```
 git clone git@github.com:disc-in/UltimateApp.git
 cd UltimateApp
-npm install -g expo-cli
 yarn install
 ```
 

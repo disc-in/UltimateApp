@@ -12,27 +12,7 @@ exports[`<ImporterPage /> when routing on drills renders an error message if the
     }
   }
 >
-  <Text
-    allowFontScaling={false}
-    selectable={false}
-    style={
-      Array [
-        Object {
-          "color": undefined,
-          "fontSize": 72,
-        },
-        undefined,
-        Object {
-          "fontFamily": "material-community",
-          "fontStyle": "normal",
-          "fontWeight": "normal",
-        },
-        Object {},
-      ]
-    }
-  >
-    󰇚
-  </Text>
+  <Text />
   <Text>
     It looks like you want to import a drill, I am going to fetch it... 🏃
   </Text>
@@ -51,27 +31,7 @@ exports[`<ImporterPage /> when routing on drills renders correctly after downloa
     }
   }
 >
-  <Text
-    allowFontScaling={false}
-    selectable={false}
-    style={
-      Array [
-        Object {
-          "color": undefined,
-          "fontSize": 72,
-        },
-        undefined,
-        Object {
-          "fontFamily": "material-community",
-          "fontStyle": "normal",
-          "fontWeight": "normal",
-        },
-        Object {},
-      ]
-    }
-  >
-    󰇚
-  </Text>
+  <Text />
   <View>
     <Text
       style={
@@ -199,27 +159,7 @@ exports[`<ImporterPage /> when routing on drills renders correctly before downlo
     }
   }
 >
-  <Text
-    allowFontScaling={false}
-    selectable={false}
-    style={
-      Array [
-        Object {
-          "color": undefined,
-          "fontSize": 72,
-        },
-        undefined,
-        Object {
-          "fontFamily": "material-community",
-          "fontStyle": "normal",
-          "fontWeight": "normal",
-        },
-        Object {},
-      ]
-    }
-  >
-    󰇚
-  </Text>
+  <Text />
   <Text>
     It looks like you want to import a drill, I am going to fetch it... 🏃
   </Text>
@@ -238,27 +178,7 @@ exports[`<ImporterPage /> when routing on old customPlays link renders an error 
     }
   }
 >
-  <Text
-    allowFontScaling={false}
-    selectable={false}
-    style={
-      Array [
-        Object {
-          "color": undefined,
-          "fontSize": 72,
-        },
-        undefined,
-        Object {
-          "fontFamily": "material-community",
-          "fontStyle": "normal",
-          "fontWeight": "normal",
-        },
-        Object {},
-      ]
-    }
-  >
-    󰇚
-  </Text>
+  <Text />
   <Text>
     It looks like you want to import a play, I am going to fetch it... 🏃
   </Text>
@@ -277,27 +197,7 @@ exports[`<ImporterPage /> when routing on old customPlays link renders correctly
     }
   }
 >
-  <Text
-    allowFontScaling={false}
-    selectable={false}
-    style={
-      Array [
-        Object {
-          "color": undefined,
-          "fontSize": 72,
-        },
-        undefined,
-        Object {
-          "fontFamily": "material-community",
-          "fontStyle": "normal",
-          "fontWeight": "normal",
-        },
-        Object {},
-      ]
-    }
-  >
-    󰇚
-  </Text>
+  <Text />
   <View>
     <Text
       style={
@@ -444,27 +344,7 @@ exports[`<ImporterPage /> when routing on plays renders an error message if the 
     }
   }
 >
-  <Text
-    allowFontScaling={false}
-    selectable={false}
-    style={
-      Array [
-        Object {
-          "color": undefined,
-          "fontSize": 72,
-        },
-        undefined,
-        Object {
-          "fontFamily": "material-community",
-          "fontStyle": "normal",
-          "fontWeight": "normal",
-        },
-        Object {},
-      ]
-    }
-  >
-    󰇚
-  </Text>
+  <Text />
   <Text>
     It looks like you want to import a play, I am going to fetch it... 🏃
   </Text>
@@ -483,27 +363,7 @@ exports[`<ImporterPage /> when routing on plays renders correctly after download
     }
   }
 >
-  <Text
-    allowFontScaling={false}
-    selectable={false}
-    style={
-      Array [
-        Object {
-          "color": undefined,
-          "fontSize": 72,
-        },
-        undefined,
-        Object {
-          "fontFamily": "material-community",
-          "fontStyle": "normal",
-          "fontWeight": "normal",
-        },
-        Object {},
-      ]
-    }
-  >
-    󰇚
-  </Text>
+  <Text />
   <View>
     <Text
       style={
@@ -631,27 +491,7 @@ exports[`<ImporterPage /> when routing on plays renders correctly before downloa
     }
   }
 >
-  <Text
-    allowFontScaling={false}
-    selectable={false}
-    style={
-      Array [
-        Object {
-          "color": undefined,
-          "fontSize": 72,
-        },
-        undefined,
-        Object {
-          "fontFamily": "material-community",
-          "fontStyle": "normal",
-          "fontWeight": "normal",
-        },
-        Object {},
-      ]
-    }
-  >
-    󰇚
-  </Text>
+  <Text />
   <Text>
     It looks like you want to import a play, I am going to fetch it... 🏃
   </Text>

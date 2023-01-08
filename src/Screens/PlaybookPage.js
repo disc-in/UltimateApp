@@ -59,9 +59,10 @@ export const PlaybookPage = (props) => {
         onPress={() => {
           props.navigation.navigate('PlayEditorPage', { currentPlay: newPlay() });
         }}
+        testID="createPlay"
       >
         <View style={styles.createContainer}>
-          <MaterialCommunityIcons style={styles.createIcon} name="plus" testID="createPlay" />
+          <MaterialCommunityIcons style={styles.createIcon} name="plus" />
         </View>
       </TouchableOpacity>
     </KeyboardAvoidingView>

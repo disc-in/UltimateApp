@@ -48,20 +48,18 @@ function AnimationHistory({ animation, onAnimationHistoryChange }) {
   const canRedo = currentId !== stack.length - 1;
   return (
     <View style={styles.history}>
-      <TouchableOpacity onPress={undo} disabled={!canUndo} style={styles.touchable}>
+      <TouchableOpacity onPress={undo} disabled={!canUndo} style={styles.touchable} testID="undoButton">
         <MaterialCommunityIcons
           name="undo-variant"
           color={canUndo ? theme.COLOR_PRIMARY_LIGHT : theme.COLOR_SECONDARY}
           size={30}
-          testID="undoButton"
         />
       </TouchableOpacity>
-      <TouchableOpacity onPress={redo} disabled={!canRedo} style={styles.touchable}>
+      <TouchableOpacity onPress={redo} disabled={!canRedo} style={styles.touchable} testID="redoButton">
         <MaterialCommunityIcons
           name="redo-variant"
           color={canRedo ? theme.COLOR_PRIMARY_LIGHT : theme.COLOR_SECONDARY}
           size={30}
-          testID="redoButton"
         />
       </TouchableOpacity>
     </View>

@@ -2099,29 +2099,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                   }
                 }
               >
-                <Text
-                  allowFontScaling={false}
-                  selectable={false}
-                  style={
-                    Array [
-                      Object {
-                        "color": "#bfbfbf",
-                        "fontSize": 24,
-                      },
-                      Object {
-                        "minWidth": 24,
-                      },
-                      Object {
-                        "fontFamily": "FontAwesome",
-                        "fontStyle": "normal",
-                        "fontWeight": "normal",
-                      },
-                      Object {},
-                    ]
-                  }
-                >
-                  
-                </Text>
+                <Text />
                 <Text
                   style={
                     Object {
@@ -2178,29 +2156,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                   }
                 }
               >
-                <Text
-                  allowFontScaling={false}
-                  selectable={false}
-                  style={
-                    Array [
-                      Object {
-                        "color": "#bfbfbf",
-                        "fontSize": 24,
-                      },
-                      Object {
-                        "minWidth": 24,
-                      },
-                      Object {
-                        "fontFamily": "FontAwesome",
-                        "fontStyle": "normal",
-                        "fontWeight": "normal",
-                      },
-                      Object {},
-                    ]
-                  }
-                >
-                  
-                </Text>
+                <Text />
                 <Text
                   style={
                     Object {
@@ -2257,29 +2213,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                   }
                 }
               >
-                <Text
-                  allowFontScaling={false}
-                  selectable={false}
-                  style={
-                    Array [
-                      Object {
-                        "color": "#bfbfbf",
-                        "fontSize": 24,
-                      },
-                      Object {
-                        "minWidth": 24,
-                      },
-                      Object {
-                        "fontFamily": "FontAwesome",
-                        "fontStyle": "normal",
-                        "fontWeight": "normal",
-                      },
-                      Object {},
-                    ]
-                  }
-                >
-                  
-                </Text>
+                <Text />
                 <Text
                   style={
                     Object {
@@ -2336,29 +2270,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                   }
                 }
               >
-                <Text
-                  allowFontScaling={false}
-                  selectable={false}
-                  style={
-                    Array [
-                      Object {
-                        "color": "#bfbfbf",
-                        "fontSize": 24,
-                      },
-                      Object {
-                        "minWidth": 24,
-                      },
-                      Object {
-                        "fontFamily": "FontAwesome",
-                        "fontStyle": "normal",
-                        "fontWeight": "normal",
-                      },
-                      Object {},
-                    ]
-                  }
-                >
-                  
-                </Text>
+                <Text />
                 <Text
                   style={
                     Object {
@@ -2415,29 +2327,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                   }
                 }
               >
-                <Text
-                  allowFontScaling={false}
-                  selectable={false}
-                  style={
-                    Array [
-                      Object {
-                        "color": "#bfbfbf",
-                        "fontSize": 24,
-                      },
-                      Object {
-                        "minWidth": 24,
-                      },
-                      Object {
-                        "fontFamily": "FontAwesome",
-                        "fontStyle": "normal",
-                        "fontWeight": "normal",
-                      },
-                      Object {},
-                    ]
-                  }
-                >
-                  
-                </Text>
+                <Text />
                 <Text
                   style={
                     Object {
@@ -2494,29 +2384,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                   }
                 }
               >
-                <Text
-                  allowFontScaling={false}
-                  selectable={false}
-                  style={
-                    Array [
-                      Object {
-                        "color": "#bfbfbf",
-                        "fontSize": 24,
-                      },
-                      Object {
-                        "minWidth": 24,
-                      },
-                      Object {
-                        "fontFamily": "FontAwesome",
-                        "fontStyle": "normal",
-                        "fontWeight": "normal",
-                      },
-                      Object {},
-                    ]
-                  }
-                >
-                  
-                </Text>
+                <Text />
                 <Text
                   style={
                     Object {
@@ -2573,29 +2441,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                   }
                 }
               >
-                <Text
-                  allowFontScaling={false}
-                  selectable={false}
-                  style={
-                    Array [
-                      Object {
-                        "color": "#bfbfbf",
-                        "fontSize": 24,
-                      },
-                      Object {
-                        "minWidth": 24,
-                      },
-                      Object {
-                        "fontFamily": "FontAwesome",
-                        "fontStyle": "normal",
-                        "fontWeight": "normal",
-                      },
-                      Object {},
-                    ]
-                  }
-                >
-                  
-                </Text>
+                <Text />
                 <Text
                   style={
                     Object {
@@ -2652,29 +2498,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                   }
                 }
               >
-                <Text
-                  allowFontScaling={false}
-                  selectable={false}
-                  style={
-                    Array [
-                      Object {
-                        "color": "#bfbfbf",
-                        "fontSize": 24,
-                      },
-                      Object {
-                        "minWidth": 24,
-                      },
-                      Object {
-                        "fontFamily": "FontAwesome",
-                        "fontStyle": "normal",
-                        "fontWeight": "normal",
-                      },
-                      Object {},
-                    ]
-                  }
-                >
-                  
-                </Text>
+                <Text />
                 <Text
                   style={
                     Object {

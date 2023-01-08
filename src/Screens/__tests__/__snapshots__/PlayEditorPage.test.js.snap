@@ -783,6 +783,7 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
               "opacity": 1,
             }
           }
+          testID="undoButton"
         >
           <Text />
         </View>
@@ -810,6 +811,7 @@ exports[`<PlayEditorPage /> renders correctly 1`] = `
               "opacity": 1,
             }
           }
+          testID="redoButton"
         >
           <Text />
         </View>

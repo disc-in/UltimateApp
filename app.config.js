@@ -22,7 +22,7 @@ export default {
     description: 'Empowering Ultimate coaches to prepare appropriate trainings for their teams',
     slug: 'ultimate-app',
     privacy: 'public',
-    platforms: ['ios', 'android', 'web'],
+    platforms: ['ios', 'android'],
     version: '1.4.0',
     githubUrl: 'https://github.com/disc-in/UltimateApp',
     orientation: 'portrait',

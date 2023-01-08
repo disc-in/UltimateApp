@@ -318,6 +318,7 @@ exports[`<FitnessPage /> renders correctly 1`] = `
                 }
               >
                 <View
+                  pointerEvents="box-none"
                   style={
                     Array [
                       Object {

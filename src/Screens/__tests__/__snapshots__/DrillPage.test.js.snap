@@ -318,6 +318,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                 }
               >
                 <View
+                  pointerEvents="box-none"
                   style={
                     Array [
                       Object {
@@ -1247,6 +1248,7 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                 }
               >
                 <View
+                  pointerEvents="box-none"
                   style={
                     Array [
                       Object {

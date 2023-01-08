@@ -171,12 +171,7 @@ export default HomePage = (props) => {
   );
 
   return (
-    <Tab.Navigator
-      initialRouteName="Frisbee"
-      activeColor={theme.COLOR_PRIMARY_LIGHT}
-      inactiveColor={theme.COLOR_SECONDARY}
-      barStyle={{ backgroundColor: theme.COLOR_PRIMARY }}
-    >
+    <Tab.Navigator initialRouteName="Frisbee">
       <Tab.Screen
         name="Frisbee"
         component={Frisbee}

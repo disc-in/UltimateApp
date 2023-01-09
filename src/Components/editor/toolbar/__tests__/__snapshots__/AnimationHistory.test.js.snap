@@ -33,29 +33,9 @@ exports[`<AnimationHistory /> renders correctly 1`] = `
         "opacity": 1,
       }
     }
+    testID="undoButton"
   >
-    <Text
-      allowFontScaling={false}
-      selectable={false}
-      style={
-        Array [
-          Object {
-            "color": "#A6A6A6",
-            "fontSize": 30,
-          },
-          undefined,
-          Object {
-            "fontFamily": "material-community",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-          },
-          Object {},
-        ]
-      }
-      testID="undoButton"
-    >
-      󰕍
-    </Text>
+    <Text />
   </View>
   <View
     accessibilityState={
@@ -81,29 +61,9 @@ exports[`<AnimationHistory /> renders correctly 1`] = `
         "opacity": 1,
       }
     }
+    testID="redoButton"
   >
-    <Text
-      allowFontScaling={false}
-      selectable={false}
-      style={
-        Array [
-          Object {
-            "color": "#A6A6A6",
-            "fontSize": 30,
-          },
-          undefined,
-          Object {
-            "fontFamily": "material-community",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-          },
-          Object {},
-        ]
-      }
-      testID="redoButton"
-    >
-      󰑏
-    </Text>
+    <Text />
   </View>
 </View>
 `;

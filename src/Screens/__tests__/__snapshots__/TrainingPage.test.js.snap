@@ -3381,30 +3381,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                 }
                 testID="goToNext0"
               >
-                <Text
-                  allowFontScaling={false}
-                  selectable={false}
-                  style={
-                    Array [
-                      Object {
-                        "color": undefined,
-                        "fontSize": 12,
-                      },
-                      Object {
-                        "color": "#232b2b",
-                        "fontSize": 42,
-                      },
-                      Object {
-                        "fontFamily": "material-community",
-                        "fontStyle": "normal",
-                        "fontWeight": "normal",
-                      },
-                      Object {},
-                    ]
-                  }
-                >
-                  󰅂
-                </Text>
+                <Text />
               </View>
             </View>
             <View
@@ -3423,27 +3400,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                   }
                 }
               >
-                <Text
-                  allowFontScaling={false}
-                  selectable={false}
-                  style={
-                    Array [
-                      Object {
-                        "color": "#232b2b",
-                        "fontSize": 22,
-                      },
-                      undefined,
-                      Object {
-                        "fontFamily": "material-community",
-                        "fontStyle": "normal",
-                        "fontWeight": "normal",
-                      },
-                      Object {},
-                    ]
-                  }
-                >
-                  󰀎
-                </Text>
+                <Text />
                 <Text
                   style={
                     Object {
@@ -3463,27 +3420,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                   }
                 }
               >
-                <Text
-                  allowFontScaling={false}
-                  selectable={false}
-                  style={
-                    Array [
-                      Object {
-                        "color": "#232b2b",
-                        "fontSize": 22,
-                      },
-                      undefined,
-                      Object {
-                        "fontFamily": "material-community",
-                        "fontStyle": "normal",
-                        "fontWeight": "normal",
-                      },
-                      Object {},
-                    ]
-                  }
-                >
-                  󰅐
-                </Text>
+                <Text />
                 <Text
                   style={
                     Object {
@@ -4739,30 +4676,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                 }
                 testID="goToPrev1"
               >
-                <Text
-                  allowFontScaling={false}
-                  selectable={false}
-                  style={
-                    Array [
-                      Object {
-                        "color": undefined,
-                        "fontSize": 12,
-                      },
-                      Object {
-                        "color": "#232b2b",
-                        "fontSize": 42,
-                      },
-                      Object {
-                        "fontFamily": "material-community",
-                        "fontStyle": "normal",
-                        "fontWeight": "normal",
-                      },
-                      Object {},
-                    ]
-                  }
-                >
-                  󰅁
-                </Text>
+                <Text />
               </View>
               <View
                 style={
@@ -4817,27 +4731,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                   }
                 }
               >
-                <Text
-                  allowFontScaling={false}
-                  selectable={false}
-                  style={
-                    Array [
-                      Object {
-                        "color": "#232b2b",
-                        "fontSize": 22,
-                      },
-                      undefined,
-                      Object {
-                        "fontFamily": "material-community",
-                        "fontStyle": "normal",
-                        "fontWeight": "normal",
-                      },
-                      Object {},
-                    ]
-                  }
-                >
-                  󰀎
-                </Text>
+                <Text />
                 <Text
                   style={
                     Object {
@@ -4857,27 +4751,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                   }
                 }
               >
-                <Text
-                  allowFontScaling={false}
-                  selectable={false}
-                  style={
-                    Array [
-                      Object {
-                        "color": "#232b2b",
-                        "fontSize": 22,
-                      },
-                      undefined,
-                      Object {
-                        "fontFamily": "material-community",
-                        "fontStyle": "normal",
-                        "fontWeight": "normal",
-                      },
-                      Object {},
-                    ]
-                  }
-                >
-                  󰅐
-                </Text>
+                <Text />
                 <Text
                   style={
                     Object {

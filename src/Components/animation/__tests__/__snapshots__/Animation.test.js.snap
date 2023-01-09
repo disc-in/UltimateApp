@@ -147,9 +147,7 @@ exports[`<Animation /> renders correctly 1`] = `
               "width": 0,
             }
           }
-        >
-          
-        </Text>
+        />
       </View>
     </View>
     <View
@@ -210,9 +208,7 @@ exports[`<Animation /> renders correctly 1`] = `
               "width": 0,
             }
           }
-        >
-          
-        </Text>
+        />
       </View>
     </View>
     <View
@@ -273,9 +269,7 @@ exports[`<Animation /> renders correctly 1`] = `
               "width": 0,
             }
           }
-        >
-          
-        </Text>
+        />
       </View>
     </View>
     <View
@@ -336,9 +330,7 @@ exports[`<Animation /> renders correctly 1`] = `
               "width": 0,
             }
           }
-        >
-          
-        </Text>
+        />
       </View>
     </View>
     <View
@@ -399,9 +391,7 @@ exports[`<Animation /> renders correctly 1`] = `
               "width": 0,
             }
           }
-        >
-          
-        </Text>
+        />
       </View>
     </View>
     <View
@@ -462,9 +452,7 @@ exports[`<Animation /> renders correctly 1`] = `
               "width": 0,
             }
           }
-        >
-          
-        </Text>
+        />
       </View>
     </View>
     <View
@@ -525,9 +513,7 @@ exports[`<Animation /> renders correctly 1`] = `
               "width": 0,
             }
           }
-        >
-          
-        </Text>
+        />
       </View>
     </View>
     <View
@@ -588,9 +574,7 @@ exports[`<Animation /> renders correctly 1`] = `
               "width": 0,
             }
           }
-        >
-          
-        </Text>
+        />
       </View>
     </View>
     <View

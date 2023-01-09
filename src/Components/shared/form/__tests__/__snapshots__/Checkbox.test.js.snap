@@ -220,29 +220,7 @@ Array [
             }
           }
         >
-          <Text
-            allowFontScaling={false}
-            selectable={false}
-            style={
-              Array [
-                Object {
-                  "color": "#2a9e91",
-                  "fontSize": 24,
-                },
-                Object {
-                  "minWidth": 24,
-                },
-                Object {
-                  "fontFamily": "FontAwesome",
-                  "fontStyle": "normal",
-                  "fontWeight": "normal",
-                },
-                Object {},
-              ]
-            }
-          >
-            
-          </Text>
+          <Text />
           <Text
             style={
               Object {
@@ -299,29 +277,7 @@ Array [
             }
           }
         >
-          <Text
-            allowFontScaling={false}
-            selectable={false}
-            style={
-              Array [
-                Object {
-                  "color": "#2a9e91",
-                  "fontSize": 24,
-                },
-                Object {
-                  "minWidth": 24,
-                },
-                Object {
-                  "fontFamily": "FontAwesome",
-                  "fontStyle": "normal",
-                  "fontWeight": "normal",
-                },
-                Object {},
-              ]
-            }
-          >
-            
-          </Text>
+          <Text />
           <Text
             style={
               Object {

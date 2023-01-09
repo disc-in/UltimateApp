@@ -43,7 +43,6 @@ exports[`<PlayTitle /> renders correctly 1`] = `
         }
       }
     >
-      
       Square
     </Text>
   </View>
@@ -139,7 +138,6 @@ exports[`<PlayTitle /> renders correctly when safe mode 1`] = `
         }
       }
     >
-      
       Square
     </Text>
   </View>
@@ -164,30 +162,7 @@ exports[`<PlayTitle /> renders correctly when safe mode 1`] = `
     }
     testID="edit"
   >
-    <Text
-      allowFontScaling={false}
-      selectable={false}
-      style={
-        Array [
-          Object {
-            "color": undefined,
-            "fontSize": 12,
-          },
-          Object {
-            "color": "#232b2b",
-            "fontSize": 20,
-          },
-          Object {
-            "fontFamily": "material-community",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-          },
-          Object {},
-        ]
-      }
-    >
-      󰏫
-    </Text>
+    <Text />
   </View>
 </View>
 `;
@@ -260,30 +235,7 @@ exports[`<PlayTitle /> renders correctly when unsaved 1`] = `
     }
     testID="edit"
   >
-    <Text
-      allowFontScaling={false}
-      selectable={false}
-      style={
-        Array [
-          Object {
-            "color": undefined,
-            "fontSize": 12,
-          },
-          Object {
-            "color": "#232b2b",
-            "fontSize": 20,
-          },
-          Object {
-            "fontFamily": "material-community",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-          },
-          Object {},
-        ]
-      }
-    >
-      󰏫
-    </Text>
+    <Text />
   </View>
   <View
     accessible={true}
@@ -306,30 +258,7 @@ exports[`<PlayTitle /> renders correctly when unsaved 1`] = `
     }
     testID="delete"
   >
-    <Text
-      allowFontScaling={false}
-      selectable={false}
-      style={
-        Array [
-          Object {
-            "color": undefined,
-            "fontSize": 12,
-          },
-          Object {
-            "color": "#232b2b",
-            "fontSize": 20,
-          },
-          Object {
-            "fontFamily": "material-community",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-          },
-          Object {},
-        ]
-      }
-    >
-      󰩹
-    </Text>
+    <Text />
   </View>
 </View>
 `;
@@ -379,7 +308,6 @@ exports[`<PlayTitle /> renders correctly with custom style 1`] = `
         }
       }
     >
-      
       Square
     </Text>
   </View>
@@ -404,30 +332,7 @@ exports[`<PlayTitle /> renders correctly with custom style 1`] = `
     }
     testID="edit"
   >
-    <Text
-      allowFontScaling={false}
-      selectable={false}
-      style={
-        Array [
-          Object {
-            "color": undefined,
-            "fontSize": 12,
-          },
-          Object {
-            "color": "#232b2b",
-            "fontSize": 20,
-          },
-          Object {
-            "fontFamily": "material-community",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-          },
-          Object {},
-        ]
-      }
-    >
-      󰏫
-    </Text>
+    <Text />
   </View>
   <View
     accessible={true}
@@ -450,30 +355,7 @@ exports[`<PlayTitle /> renders correctly with custom style 1`] = `
     }
     testID="delete"
   >
-    <Text
-      allowFontScaling={false}
-      selectable={false}
-      style={
-        Array [
-          Object {
-            "color": undefined,
-            "fontSize": 12,
-          },
-          Object {
-            "color": "#232b2b",
-            "fontSize": 20,
-          },
-          Object {
-            "fontFamily": "material-community",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-          },
-          Object {},
-        ]
-      }
-    >
-      󰩹
-    </Text>
+    <Text />
   </View>
 </View>
 `;

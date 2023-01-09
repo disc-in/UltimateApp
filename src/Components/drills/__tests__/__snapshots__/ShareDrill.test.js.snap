@@ -19,33 +19,7 @@ exports[`<ShareDrill /> renders correctly 1`] = `
   }
   testID="shareButton"
 >
-  <Text
-    allowFontScaling={false}
-    selectable={false}
-    style={
-      Array [
-        Object {
-          "color": undefined,
-          "fontSize": 12,
-        },
-        Array [
-          Object {
-            "fontSize": 28,
-            "marginRight": 20,
-          },
-          undefined,
-        ],
-        Object {
-          "fontFamily": "ionicons",
-          "fontStyle": "normal",
-          "fontWeight": "normal",
-        },
-        Object {},
-      ]
-    }
-  >
-    
-  </Text>
+  <Text />
 </View>
 `;
 
@@ -68,34 +42,6 @@ exports[`<ShareDrill /> renders correctly when light 1`] = `
   }
   testID="shareButton"
 >
-  <Text
-    allowFontScaling={false}
-    selectable={false}
-    style={
-      Array [
-        Object {
-          "color": undefined,
-          "fontSize": 12,
-        },
-        Array [
-          Object {
-            "fontSize": 28,
-            "marginRight": 20,
-          },
-          Object {
-            "color": "#fff",
-          },
-        ],
-        Object {
-          "fontFamily": "ionicons",
-          "fontStyle": "normal",
-          "fontWeight": "normal",
-        },
-        Object {},
-      ]
-    }
-  >
-    
-  </Text>
+  <Text />
 </View>
 `;

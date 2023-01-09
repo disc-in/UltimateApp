@@ -457,27 +457,7 @@ exports[`<DrillList /> renders correctly 1`] = `
             }
             testID="editButton"
           >
-            <Text
-              allowFontScaling={false}
-              selectable={false}
-              style={
-                Array [
-                  Object {
-                    "color": "#2a9e91",
-                    "fontSize": 22,
-                  },
-                  undefined,
-                  Object {
-                    "fontFamily": "ionicons",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                  Object {},
-                ]
-              }
-            >
-              
-            </Text>
+            <Text />
           </View>
           <View
             accessible={true}
@@ -498,27 +478,7 @@ exports[`<DrillList /> renders correctly 1`] = `
             }
             testID="deleteButton"
           >
-            <Text
-              allowFontScaling={false}
-              selectable={false}
-              style={
-                Array [
-                  Object {
-                    "color": "#2a9e91",
-                    "fontSize": 22,
-                  },
-                  undefined,
-                  Object {
-                    "fontFamily": "ionicons",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                  Object {},
-                ]
-              }
-            >
-              
-            </Text>
+            <Text />
           </View>
         </View>
       </View>

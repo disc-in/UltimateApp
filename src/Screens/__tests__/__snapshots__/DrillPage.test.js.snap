@@ -205,6 +205,14 @@ exports[`<DrillPage /> renders correctly 1`] = `
           activityState={2}
           collapsable={false}
           forwardedRef={[Function]}
+          gestureResponseDistance={
+            Object {
+              "bottom": -1,
+              "end": -1,
+              "start": -1,
+              "top": -1,
+            }
+          }
           pointerEvents="box-none"
           style={
             Object {
@@ -290,6 +298,8 @@ exports[`<DrillPage /> renders correctly 1`] = `
               <View
                 collapsable={false}
                 forwardedRef={[Function]}
+                handlerTag={1}
+                handlerType="PanGestureHandler"
                 needsOffscreenAlphaCompositing={false}
                 onGestureHandlerEvent={[Function]}
                 onGestureHandlerStateChange={[Function]}
@@ -308,6 +318,7 @@ exports[`<DrillPage /> renders correctly 1`] = `
                 }
               >
                 <View
+                  pointerEvents="box-none"
                   style={
                     Array [
                       Object {
@@ -1105,33 +1116,7 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                   }
                   testID="shareButton"
                 >
-                  <Text
-                    allowFontScaling={false}
-                    selectable={false}
-                    style={
-                      Array [
-                        Object {
-                          "color": undefined,
-                          "fontSize": 12,
-                        },
-                        Array [
-                          Object {
-                            "fontSize": 28,
-                            "marginRight": 20,
-                          },
-                          undefined,
-                        ],
-                        Object {
-                          "fontFamily": "ionicons",
-                          "fontStyle": "normal",
-                          "fontWeight": "normal",
-                        },
-                        Object {},
-                      ]
-                    }
-                  >
-                    
-                  </Text>
+                  <Text />
                 </View>
               </View>
             </View>
@@ -1150,6 +1135,14 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
           activityState={2}
           collapsable={false}
           forwardedRef={[Function]}
+          gestureResponseDistance={
+            Object {
+              "bottom": -1,
+              "end": -1,
+              "start": -1,
+              "top": -1,
+            }
+          }
           pointerEvents="box-none"
           style={
             Object {
@@ -1235,6 +1228,8 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
               <View
                 collapsable={false}
                 forwardedRef={[Function]}
+                handlerTag={2}
+                handlerType="PanGestureHandler"
                 needsOffscreenAlphaCompositing={false}
                 onGestureHandlerEvent={[Function]}
                 onGestureHandlerStateChange={[Function]}
@@ -1253,6 +1248,7 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                 }
               >
                 <View
+                  pointerEvents="box-none"
                   style={
                     Array [
                       Object {
@@ -1557,27 +1553,7 @@ exports[`<DrillPage /> renders correctly a favorite drill 1`] = `
                                   }
                                   testID="favoriteButton"
                                 >
-                                  <Text
-                                    allowFontScaling={false}
-                                    selectable={false}
-                                    style={
-                                      Array [
-                                        Object {
-                                          "color": "#fff",
-                                          "fontSize": 30,
-                                        },
-                                        undefined,
-                                        Object {
-                                          "fontFamily": "ionicons",
-                                          "fontStyle": "normal",
-                                          "fontWeight": "normal",
-                                        },
-                                        Object {},
-                                      ]
-                                    }
-                                  >
-                                    
-                                  </Text>
+                                  <Text />
                                 </View>
                               </View>
                             </View>

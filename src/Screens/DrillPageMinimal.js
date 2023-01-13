@@ -33,7 +33,7 @@ export const DrillPageMinimal = (props) => {
 
   useLayoutEffect(() => {
     const onProgressDotPress = (index) => {
-      navigation.navigate('DrillPageMinimal', { training, drill: training.drills[index] });
+      navigation.navigate('DrillPageMinimal', { program, training, drill: training.drills[index] });
     };
 
     const headerTitle = () => (

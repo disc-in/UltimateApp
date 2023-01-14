@@ -21,7 +21,6 @@ Array [
     >
       <View>
         <RCTSafeAreaView
-          emulateUnlessSupported={true}
           style={
             Object {
               "flex": 1,

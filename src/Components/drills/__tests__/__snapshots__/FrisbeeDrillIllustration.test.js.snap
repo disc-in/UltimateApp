@@ -2,7 +2,6 @@
 
 exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
 <RCTSafeAreaView
-  emulateUnlessSupported={true}
   style={
     Object {
       "flex": 1,

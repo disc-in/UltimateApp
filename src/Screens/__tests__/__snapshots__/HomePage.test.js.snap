@@ -423,6 +423,7 @@ exports[`<HomePage /> renders correctly 1`] = `
         Object {
           "alignSelf": undefined,
           "bottom": 0,
+          "end": undefined,
           "left": 0,
           "position": undefined,
           "right": 0,
@@ -433,6 +434,7 @@ exports[`<HomePage /> renders correctly 1`] = `
           },
           "shadowOpacity": 0,
           "shadowRadius": 0,
+          "start": undefined,
           "top": undefined,
         }
       }

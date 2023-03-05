@@ -63,6 +63,7 @@ export default {
         },
       ],
     },
+    plugins: ['expo-localization'],
     extra: {
       ...Config,
     },

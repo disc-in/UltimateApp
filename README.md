@@ -30,7 +30,7 @@ yarn start
 
 ## 👏 Contributing
 
-If you want to contribute to the projet, just pick up an issue from the [list](https://github.com/disc-in/UltimateApp/issues) and start fixing it. You can then open a pull-request so that your contribution can be merged into the master branch.
+If you want to contribute to the projet, just pick up an issue from the [list](https://github.com/disc-in/UltimateApp/issues) and start fixing it. You can then open a pull-request so that your contribution can be merged into the main branch.
 
 Found a bug? Take 5 minutes to [report it](https://github.com/disc-in/UltimateApp/issues/new?assignees=&labels=bug&template=bug_report.md&title=)
 
@@ -47,11 +47,11 @@ Feel free to contact us on [facebook](https://www.facebook.com/DiscInApp) or by 
 ### Tests
 
 We expect every code introduced via a pull-request to be tested.
-We use [jest](https://jestjs.io/docs/en/tutorial-react-native) and [React Native Testing Library](https://callstack.github.io/react-native-testing-library/) as testing frameworks. Please refer to the documentation, look at [existing tests](https://github.com/disc-in/UltimateApp/blob/master/src/Components/DrillListPage.test.js) or ask questions if needed.
+We use [jest](https://jestjs.io/docs/en/tutorial-react-native) and [React Native Testing Library](https://callstack.github.io/react-native-testing-library/) as testing frameworks. Please refer to the documentation, look at [existing tests](https://github.com/disc-in/UltimateApp/blob/main/src/Components/DrillListPage.test.js) or ask questions if needed.
 
 ### Mock http records
 
-We use [nock](https://github.com/nock/nock) to mock HTTP calls. Have look at an example [here](https://github.com/disc-in/UltimateApp/blob/master/src/Components/shared/VimeoVideo.test.js).
+We use [nock](https://github.com/nock/nock) to mock HTTP calls. Have look at an example [here](https://github.com/disc-in/UltimateApp/blob/main/src/Components/shared/VimeoVideo.test.js).
 
 To get the expected return from Nock, you can run your tests without mocking and record the http calls. The documentation is [there](https://github.com/nock/nock#recording).
 

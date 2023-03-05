@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "test": "jest --watch --coverage=false --changedSince=master",
+    "test": "jest --watch --coverage=false --changedSince=main",
     "test-ci": "jest --coverage=true",
     "start": "expo start",
     "android": "expo start --android",

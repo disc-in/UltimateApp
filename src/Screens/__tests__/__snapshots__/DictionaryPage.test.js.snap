@@ -3,22 +3,22 @@
 exports[`<DictionaryPage /> renders correctly 1`] = `
 <View
   style={
-    Object {
+    {
       "backgroundColor": "#fff",
     }
   }
 >
   <RCTScrollView
     data={
-      Array [
-        Object {
-          "data": Array [
-            Object {
+      [
+        {
+          "data": [
+            {
               "definition": "When Forcing you are making the player holding the disc throw a certain direction. A break is when your attempt fails and they throw the direction you are guarding against. A teammate may yell “no break!” if there is an opposing player wide open on the guarded side, this means try extra hard to guard that side.",
               "id": 0,
               "text": "Break",
             },
-            Object {
+            {
               "definition": "Happens when a freshly pulled disc goes out-of-bounds. The receiving team take the disc to the brick-mark which is centrally located and 20 yards in-field from the first end zone line. A brick is signified by clapping hands once over head or by calling “Brick.”",
               "id": 1,
               "text": "Brick",
@@ -42,19 +42,20 @@ exports[`<DictionaryPage /> renders correctly 1`] = `
     renderItem={[Function]}
     scrollEventThrottle={50}
     stickyHeaderIndices={
-      Array [
+      [
         0,
       ]
     }
   >
     <View>
       <View
+        onFocusCapture={[Function]}
         onLayout={[Function]}
         style={null}
       >
         <Text
           style={
-            Object {
+            {
               "backgroundColor": "#2a9e91",
               "color": "white",
               "fontWeight": "bold",
@@ -67,10 +68,28 @@ exports[`<DictionaryPage /> renders correctly 1`] = `
         </Text>
       </View>
       <View
+        onFocusCapture={[Function]}
         onLayout={[Function]}
         style={null}
       >
         <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
           accessible={true}
           collapsable={false}
           focusable={true}
@@ -82,14 +101,14 @@ exports[`<DictionaryPage /> renders correctly 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
+            {
               "opacity": 1,
             }
           }
         >
           <Text
             style={
-              Object {
+              {
                 "borderBottomColor": "#e5e5e5",
                 "borderBottomWidth": 1,
                 "padding": 15,
@@ -101,10 +120,28 @@ exports[`<DictionaryPage /> renders correctly 1`] = `
         </View>
       </View>
       <View
+        onFocusCapture={[Function]}
         onLayout={[Function]}
         style={null}
       >
         <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
           accessible={true}
           collapsable={false}
           focusable={true}
@@ -116,14 +153,14 @@ exports[`<DictionaryPage /> renders correctly 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
+            {
               "opacity": 1,
             }
           }
         >
           <Text
             style={
-              Object {
+              {
                 "borderBottomColor": "#e5e5e5",
                 "borderBottomWidth": 1,
                 "padding": 15,
@@ -135,6 +172,7 @@ exports[`<DictionaryPage /> renders correctly 1`] = `
         </View>
       </View>
       <View
+        onFocusCapture={[Function]}
         onLayout={[Function]}
         style={null}
       />

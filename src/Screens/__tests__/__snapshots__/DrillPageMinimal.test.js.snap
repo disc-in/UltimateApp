@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<DrillPageMinimal /> renders correctly with a training and a drill 1`] = `
-Array [
+[
   <View
     style={
-      Object {
+      {
         "backgroundColor": "#fff",
         "flex": 1,
         "marginBottom": 50,
@@ -13,7 +13,7 @@ Array [
   >
     <RCTScrollView
       style={
-        Object {
+        {
           "flexGrow": 1,
           "flexShrink": 0,
         }
@@ -22,7 +22,7 @@ Array [
       <View>
         <RCTSafeAreaView
           style={
-            Object {
+            {
               "flex": 1,
             }
           }
@@ -39,22 +39,22 @@ Array [
             autoplayInterval={3000}
             callbackOffsetMargin={5}
             collapsable={false}
-            containerCustomStyle={Object {}}
-            contentContainerCustomStyle={Object {}}
+            containerCustomStyle={{}}
+            contentContainerCustomStyle={{}}
             contentContainerStyle={
-              Array [
-                Object {
+              [
+                {
                   "paddingLeft": 0,
                   "paddingRight": 0,
                 },
-                Object {},
+                {},
               ]
             }
             data={
-              Array [
-                Object {
-                  "animation": Object {
-                    "ids": Array [
+              [
+                {
+                  "animation": {
+                    "ids": [
                       "triangle",
                       "triangle",
                       "triangle",
@@ -70,240 +70,240 @@ Array [
                       "offense",
                       "disc",
                     ],
-                    "positions": Array [
-                      Array [
-                        Array [
-                          Array [
+                    "positions": [
+                      [
+                        [
+                          [
                             0.3,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.3,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.45,
                             0.2,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.2,
                             0.45,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.45,
                             0.7,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.7,
                             0.45,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.3,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.16,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.3,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.36,
                             0.36,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.45,
                             0.2,
                           ],
                         ],
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
+                        ,
+                        ,
+                        ,
+                        ,
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.6,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.7,
                             0.45,
                           ],
                         ],
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                        ,
+                        ,
+                        [
+                          [
                             0.58,
                             0.36,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.6,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.45,
                             0.7,
                           ],
                         ],
-                        undefined,
-                        Array [
-                          Array [
+                        ,
+                        [
+                          [
                             0.58,
                             0.58,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.3,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.2,
                             0.45,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.36,
                             0.58,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.45,
                             0.2,
                           ],
                         ],
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.3,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.36,
                             0.36,
                           ],
                         ],
                       ],
                     ],
-                    "texts": Array [
+                    "texts": [
                       "",
                       "",
                       "",
@@ -369,11 +369,11 @@ Array [
             shouldOptimizeUpdates={true}
             showsHorizontalScrollIndicator={false}
             showsVerticalScrollIndicator={false}
-            slideStyle={Object {}}
+            slideStyle={{}}
             sliderWidth={750}
-            stickyHeaderIndices={Array []}
+            stickyHeaderIndices={[]}
             style={
-              Object {
+              {
                 "flexDirection": "row",
                 "opacity": 0,
                 "width": 750,
@@ -382,15 +382,16 @@ Array [
             swipeThreshold={20}
             useScrollView={false}
             vertical={false}
-            viewabilityConfigCallbackPairs={Array []}
+            viewabilityConfigCallbackPairs={[]}
             windowSize={13}
           >
             <View>
               <View
+                onFocusCapture={[Function]}
                 onLayout={[Function]}
                 style={
-                  Array [
-                    Object {
+                  [
+                    {
                       "flexDirection": "row",
                     },
                     null,
@@ -401,10 +402,10 @@ Array [
                   collapsable={false}
                   pointerEvents="box-none"
                   style={
-                    Object {
+                    {
                       "opacity": 1,
-                      "transform": Array [
-                        Object {
+                      "transform": [
+                        {
                           "scale": 1,
                         },
                       ],
@@ -415,7 +416,7 @@ Array [
                   <View>
                     <View
                       style={
-                        Object {
+                        {
                           "alignItems": "center",
                           "flexDirection": "row",
                           "height": 40,
@@ -427,7 +428,7 @@ Array [
                       <View />
                       <Text
                         style={
-                          Object {
+                          {
                             "color": "#232b2b",
                             "fontSize": 16,
                             "textAlign": "center",
@@ -439,7 +440,7 @@ Array [
                     <View>
                       <View
                         style={
-                          Object {
+                          {
                             "marginTop": 10,
                             "minHeight": 375,
                           }
@@ -449,7 +450,7 @@ Array [
                           <View
                             onLayout={[Function]}
                             style={
-                              Object {
+                              {
                                 "height": 100,
                                 "width": 100,
                               }
@@ -457,7 +458,7 @@ Array [
                           >
                             <View
                               style={
-                                Object {
+                                {
                                   "height": 100,
                                   "width": 100,
                                 }
@@ -465,13 +466,13 @@ Array [
                             >
                               <View
                                 style={
-                                  Array [
-                                    Object {
+                                  [
+                                    {
                                       "backgroundColor": "#232b2b",
                                       "borderWidth": 1,
                                       "position": "absolute",
                                     },
-                                    Object {
+                                    {
                                       "height": 85,
                                       "left": 95,
                                       "top": 5,
@@ -482,13 +483,13 @@ Array [
                               />
                               <View
                                 style={
-                                  Array [
-                                    Object {
+                                  [
+                                    {
                                       "backgroundColor": "#232b2b",
                                       "borderWidth": 1,
                                       "position": "absolute",
                                     },
-                                    Object {
+                                    {
                                       "height": 85,
                                       "left": 5,
                                       "top": 5,
@@ -499,13 +500,13 @@ Array [
                               />
                               <View
                                 style={
-                                  Array [
-                                    Object {
+                                  [
+                                    {
                                       "backgroundColor": "#232b2b",
                                       "borderWidth": 1,
                                       "position": "absolute",
                                     },
-                                    Object {
+                                    {
                                       "height": 0.425,
                                       "left": 5,
                                       "top": 5,
@@ -516,13 +517,13 @@ Array [
                               />
                               <View
                                 style={
-                                  Array [
-                                    Object {
+                                  [
+                                    {
                                       "backgroundColor": "#232b2b",
                                       "borderWidth": 1,
                                       "position": "absolute",
                                     },
-                                    Object {
+                                    {
                                       "height": 0.425,
                                       "left": 5,
                                       "top": 39,
@@ -548,15 +549,15 @@ Array [
                               onStartShouldSetResponder={[Function]}
                               onStartShouldSetResponderCapture={[Function]}
                               style={
-                                Object {
+                                {
                                   "left": 0,
                                   "position": "absolute",
                                   "top": 0,
-                                  "transform": Array [
-                                    Object {
+                                  "transform": [
+                                    {
                                       "translateX": 28.958333333333332,
                                     },
-                                    Object {
+                                    {
                                       "translateY": 28.958333333333332,
                                     },
                                   ],
@@ -565,8 +566,8 @@ Array [
                             >
                               <View
                                 style={
-                                  Array [
-                                    Object {
+                                  [
+                                    {
                                       "alignItems": "center",
                                       "backgroundColor": "transparent",
                                       "borderBottomColor": "#feae19",
@@ -576,7 +577,7 @@ Array [
                                       "textAlign": "center",
                                       "textAlignVertical": "center",
                                     },
-                                    Object {
+                                    {
                                       "borderBottomWidth": 4.166666666666667,
                                       "borderLeftWidth": 2.0833333333333335,
                                       "borderRightWidth": 2.0833333333333335,
@@ -586,7 +587,7 @@ Array [
                               >
                                 <Text
                                   style={
-                                    Object {
+                                    {
                                       "height": 0,
                                       "width": 0,
                                     }
@@ -609,15 +610,15 @@ Array [
                               onStartShouldSetResponder={[Function]}
                               onStartShouldSetResponderCapture={[Function]}
                               style={
-                                Object {
+                                {
                                   "left": 0,
                                   "position": "absolute",
                                   "top": 0,
-                                  "transform": Array [
-                                    Object {
+                                  "transform": [
+                                    {
                                       "translateX": 28.958333333333332,
                                     },
-                                    Object {
+                                    {
                                       "translateY": 58.958333333333336,
                                     },
                                   ],
@@ -626,8 +627,8 @@ Array [
                             >
                               <View
                                 style={
-                                  Array [
-                                    Object {
+                                  [
+                                    {
                                       "alignItems": "center",
                                       "backgroundColor": "transparent",
                                       "borderBottomColor": "#feae19",
@@ -637,7 +638,7 @@ Array [
                                       "textAlign": "center",
                                       "textAlignVertical": "center",
                                     },
-                                    Object {
+                                    {
                                       "borderBottomWidth": 4.166666666666667,
                                       "borderLeftWidth": 2.0833333333333335,
                                       "borderRightWidth": 2.0833333333333335,
@@ -647,7 +648,7 @@ Array [
                               >
                                 <Text
                                   style={
-                                    Object {
+                                    {
                                       "height": 0,
                                       "width": 0,
                                     }
@@ -670,15 +671,15 @@ Array [
                               onStartShouldSetResponder={[Function]}
                               onStartShouldSetResponderCapture={[Function]}
                               style={
-                                Object {
+                                {
                                   "left": 0,
                                   "position": "absolute",
                                   "top": 0,
-                                  "transform": Array [
-                                    Object {
+                                  "transform": [
+                                    {
                                       "translateX": 58.958333333333336,
                                     },
-                                    Object {
+                                    {
                                       "translateY": 28.958333333333332,
                                     },
                                   ],
@@ -687,8 +688,8 @@ Array [
                             >
                               <View
                                 style={
-                                  Array [
-                                    Object {
+                                  [
+                                    {
                                       "alignItems": "center",
                                       "backgroundColor": "transparent",
                                       "borderBottomColor": "#feae19",
@@ -698,7 +699,7 @@ Array [
                                       "textAlign": "center",
                                       "textAlignVertical": "center",
                                     },
-                                    Object {
+                                    {
                                       "borderBottomWidth": 4.166666666666667,
                                       "borderLeftWidth": 2.0833333333333335,
                                       "borderRightWidth": 2.0833333333333335,
@@ -708,7 +709,7 @@ Array [
                               >
                                 <Text
                                   style={
-                                    Object {
+                                    {
                                       "height": 0,
                                       "width": 0,
                                     }
@@ -731,15 +732,15 @@ Array [
                               onStartShouldSetResponder={[Function]}
                               onStartShouldSetResponderCapture={[Function]}
                               style={
-                                Object {
+                                {
                                   "left": 0,
                                   "position": "absolute",
                                   "top": 0,
-                                  "transform": Array [
-                                    Object {
+                                  "transform": [
+                                    {
                                       "translateX": 58.958333333333336,
                                     },
-                                    Object {
+                                    {
                                       "translateY": 58.958333333333336,
                                     },
                                   ],
@@ -748,8 +749,8 @@ Array [
                             >
                               <View
                                 style={
-                                  Array [
-                                    Object {
+                                  [
+                                    {
                                       "alignItems": "center",
                                       "backgroundColor": "transparent",
                                       "borderBottomColor": "#feae19",
@@ -759,7 +760,7 @@ Array [
                                       "textAlign": "center",
                                       "textAlignVertical": "center",
                                     },
-                                    Object {
+                                    {
                                       "borderBottomWidth": 4.166666666666667,
                                       "borderLeftWidth": 2.0833333333333335,
                                       "borderRightWidth": 2.0833333333333335,
@@ -769,7 +770,7 @@ Array [
                               >
                                 <Text
                                   style={
-                                    Object {
+                                    {
                                       "height": 0,
                                       "width": 0,
                                     }
@@ -792,15 +793,15 @@ Array [
                               onStartShouldSetResponder={[Function]}
                               onStartShouldSetResponderCapture={[Function]}
                               style={
-                                Object {
+                                {
                                   "left": 0,
                                   "position": "absolute",
                                   "top": 0,
-                                  "transform": Array [
-                                    Object {
+                                  "transform": [
+                                    {
                                       "translateX": 43.958333333333336,
                                     },
-                                    Object {
+                                    {
                                       "translateY": 18.958333333333332,
                                     },
                                   ],
@@ -809,8 +810,8 @@ Array [
                             >
                               <View
                                 style={
-                                  Array [
-                                    Object {
+                                  [
+                                    {
                                       "alignItems": "center",
                                       "backgroundColor": "transparent",
                                       "borderBottomColor": "#feae19",
@@ -820,7 +821,7 @@ Array [
                                       "textAlign": "center",
                                       "textAlignVertical": "center",
                                     },
-                                    Object {
+                                    {
                                       "borderBottomWidth": 4.166666666666667,
                                       "borderLeftWidth": 2.0833333333333335,
                                       "borderRightWidth": 2.0833333333333335,
@@ -830,7 +831,7 @@ Array [
                               >
                                 <Text
                                   style={
-                                    Object {
+                                    {
                                       "height": 0,
                                       "width": 0,
                                     }
@@ -853,15 +854,15 @@ Array [
                               onStartShouldSetResponder={[Function]}
                               onStartShouldSetResponderCapture={[Function]}
                               style={
-                                Object {
+                                {
                                   "left": 0,
                                   "position": "absolute",
                                   "top": 0,
-                                  "transform": Array [
-                                    Object {
+                                  "transform": [
+                                    {
                                       "translateX": 18.958333333333332,
                                     },
-                                    Object {
+                                    {
                                       "translateY": 43.958333333333336,
                                     },
                                   ],
@@ -870,8 +871,8 @@ Array [
                             >
                               <View
                                 style={
-                                  Array [
-                                    Object {
+                                  [
+                                    {
                                       "alignItems": "center",
                                       "backgroundColor": "transparent",
                                       "borderBottomColor": "#feae19",
@@ -881,7 +882,7 @@ Array [
                                       "textAlign": "center",
                                       "textAlignVertical": "center",
                                     },
-                                    Object {
+                                    {
                                       "borderBottomWidth": 4.166666666666667,
                                       "borderLeftWidth": 2.0833333333333335,
                                       "borderRightWidth": 2.0833333333333335,
@@ -891,7 +892,7 @@ Array [
                               >
                                 <Text
                                   style={
-                                    Object {
+                                    {
                                       "height": 0,
                                       "width": 0,
                                     }
@@ -914,15 +915,15 @@ Array [
                               onStartShouldSetResponder={[Function]}
                               onStartShouldSetResponderCapture={[Function]}
                               style={
-                                Object {
+                                {
                                   "left": 0,
                                   "position": "absolute",
                                   "top": 0,
-                                  "transform": Array [
-                                    Object {
+                                  "transform": [
+                                    {
                                       "translateX": 43.958333333333336,
                                     },
-                                    Object {
+                                    {
                                       "translateY": 68.95833333333333,
                                     },
                                   ],
@@ -931,8 +932,8 @@ Array [
                             >
                               <View
                                 style={
-                                  Array [
-                                    Object {
+                                  [
+                                    {
                                       "alignItems": "center",
                                       "backgroundColor": "transparent",
                                       "borderBottomColor": "#feae19",
@@ -942,7 +943,7 @@ Array [
                                       "textAlign": "center",
                                       "textAlignVertical": "center",
                                     },
-                                    Object {
+                                    {
                                       "borderBottomWidth": 4.166666666666667,
                                       "borderLeftWidth": 2.0833333333333335,
                                       "borderRightWidth": 2.0833333333333335,
@@ -952,7 +953,7 @@ Array [
                               >
                                 <Text
                                   style={
-                                    Object {
+                                    {
                                       "height": 0,
                                       "width": 0,
                                     }
@@ -975,15 +976,15 @@ Array [
                               onStartShouldSetResponder={[Function]}
                               onStartShouldSetResponderCapture={[Function]}
                               style={
-                                Object {
+                                {
                                   "left": 0,
                                   "position": "absolute",
                                   "top": 0,
-                                  "transform": Array [
-                                    Object {
+                                  "transform": [
+                                    {
                                       "translateX": 68.95833333333333,
                                     },
-                                    Object {
+                                    {
                                       "translateY": 43.958333333333336,
                                     },
                                   ],
@@ -992,8 +993,8 @@ Array [
                             >
                               <View
                                 style={
-                                  Array [
-                                    Object {
+                                  [
+                                    {
                                       "alignItems": "center",
                                       "backgroundColor": "transparent",
                                       "borderBottomColor": "#feae19",
@@ -1003,7 +1004,7 @@ Array [
                                       "textAlign": "center",
                                       "textAlignVertical": "center",
                                     },
-                                    Object {
+                                    {
                                       "borderBottomWidth": 4.166666666666667,
                                       "borderLeftWidth": 2.0833333333333335,
                                       "borderRightWidth": 2.0833333333333335,
@@ -1013,7 +1014,7 @@ Array [
                               >
                                 <Text
                                   style={
-                                    Object {
+                                    {
                                       "height": 0,
                                       "width": 0,
                                     }
@@ -1036,15 +1037,15 @@ Array [
                               onStartShouldSetResponder={[Function]}
                               onStartShouldSetResponderCapture={[Function]}
                               style={
-                                Object {
+                                {
                                   "left": 0,
                                   "position": "absolute",
                                   "top": 0,
-                                  "transform": Array [
-                                    Object {
+                                  "transform": [
+                                    {
                                       "translateX": 25.833333333333332,
                                     },
-                                    Object {
+                                    {
                                       "translateY": 25.833333333333332,
                                     },
                                   ],
@@ -1053,17 +1054,17 @@ Array [
                             >
                               <View
                                 style={
-                                  Array [
-                                    Object {
+                                  [
+                                    {
                                       "alignItems": "center",
                                       "justifyContent": "center",
                                       "textAlign": "center",
                                       "textAlignVertical": "center",
                                     },
-                                    Object {
+                                    {
                                       "backgroundColor": "#2a9e91",
                                     },
-                                    Object {
+                                    {
                                       "borderRadius": 8.333333333333334,
                                       "height": 8.333333333333334,
                                       "width": 8.333333333333334,
@@ -1073,7 +1074,7 @@ Array [
                               >
                                 <Text
                                   style={
-                                    Object {
+                                    {
                                       "color": "#fff",
                                       "fontWeight": "bold",
                                     }
@@ -1098,15 +1099,15 @@ Array [
                               onStartShouldSetResponder={[Function]}
                               onStartShouldSetResponderCapture={[Function]}
                               style={
-                                Object {
+                                {
                                   "left": 0,
                                   "position": "absolute",
                                   "top": 0,
-                                  "transform": Array [
-                                    Object {
+                                  "transform": [
+                                    {
                                       "translateX": 11.833333333333332,
                                     },
-                                    Object {
+                                    {
                                       "translateY": 25.833333333333332,
                                     },
                                   ],
@@ -1115,17 +1116,17 @@ Array [
                             >
                               <View
                                 style={
-                                  Array [
-                                    Object {
+                                  [
+                                    {
                                       "alignItems": "center",
                                       "justifyContent": "center",
                                       "textAlign": "center",
                                       "textAlignVertical": "center",
                                     },
-                                    Object {
+                                    {
                                       "backgroundColor": "#2a9e91",
                                     },
-                                    Object {
+                                    {
                                       "borderRadius": 8.333333333333334,
                                       "height": 8.333333333333334,
                                       "width": 8.333333333333334,
@@ -1135,7 +1136,7 @@ Array [
                               >
                                 <Text
                                   style={
-                                    Object {
+                                    {
                                       "color": "#fff",
                                       "fontWeight": "bold",
                                     }
@@ -1160,15 +1161,15 @@ Array [
                               onStartShouldSetResponder={[Function]}
                               onStartShouldSetResponderCapture={[Function]}
                               style={
-                                Object {
+                                {
                                   "left": 0,
                                   "position": "absolute",
                                   "top": 0,
-                                  "transform": Array [
-                                    Object {
+                                  "transform": [
+                                    {
                                       "translateX": 55.833333333333336,
                                     },
-                                    Object {
+                                    {
                                       "translateY": 25.833333333333332,
                                     },
                                   ],
@@ -1177,17 +1178,17 @@ Array [
                             >
                               <View
                                 style={
-                                  Array [
-                                    Object {
+                                  [
+                                    {
                                       "alignItems": "center",
                                       "justifyContent": "center",
                                       "textAlign": "center",
                                       "textAlignVertical": "center",
                                     },
-                                    Object {
+                                    {
                                       "backgroundColor": "#2a9e91",
                                     },
-                                    Object {
+                                    {
                                       "borderRadius": 8.333333333333334,
                                       "height": 8.333333333333334,
                                       "width": 8.333333333333334,
@@ -1197,7 +1198,7 @@ Array [
                               >
                                 <Text
                                   style={
-                                    Object {
+                                    {
                                       "color": "#fff",
                                       "fontWeight": "bold",
                                     }
@@ -1222,15 +1223,15 @@ Array [
                               onStartShouldSetResponder={[Function]}
                               onStartShouldSetResponderCapture={[Function]}
                               style={
-                                Object {
+                                {
                                   "left": 0,
                                   "position": "absolute",
                                   "top": 0,
-                                  "transform": Array [
-                                    Object {
+                                  "transform": [
+                                    {
                                       "translateX": 55.833333333333336,
                                     },
-                                    Object {
+                                    {
                                       "translateY": 55.833333333333336,
                                     },
                                   ],
@@ -1239,17 +1240,17 @@ Array [
                             >
                               <View
                                 style={
-                                  Array [
-                                    Object {
+                                  [
+                                    {
                                       "alignItems": "center",
                                       "justifyContent": "center",
                                       "textAlign": "center",
                                       "textAlignVertical": "center",
                                     },
-                                    Object {
+                                    {
                                       "backgroundColor": "#2a9e91",
                                     },
-                                    Object {
+                                    {
                                       "borderRadius": 8.333333333333334,
                                       "height": 8.333333333333334,
                                       "width": 8.333333333333334,
@@ -1259,7 +1260,7 @@ Array [
                               >
                                 <Text
                                   style={
-                                    Object {
+                                    {
                                       "color": "#fff",
                                       "fontWeight": "bold",
                                     }
@@ -1284,15 +1285,15 @@ Array [
                               onStartShouldSetResponder={[Function]}
                               onStartShouldSetResponderCapture={[Function]}
                               style={
-                                Object {
+                                {
                                   "left": 0,
                                   "position": "absolute",
                                   "top": 0,
-                                  "transform": Array [
-                                    Object {
+                                  "transform": [
+                                    {
                                       "translateX": 25.833333333333332,
                                     },
-                                    Object {
+                                    {
                                       "translateY": 55.833333333333336,
                                     },
                                   ],
@@ -1301,17 +1302,17 @@ Array [
                             >
                               <View
                                 style={
-                                  Array [
-                                    Object {
+                                  [
+                                    {
                                       "alignItems": "center",
                                       "justifyContent": "center",
                                       "textAlign": "center",
                                       "textAlignVertical": "center",
                                     },
-                                    Object {
+                                    {
                                       "backgroundColor": "#2a9e91",
                                     },
-                                    Object {
+                                    {
                                       "borderRadius": 8.333333333333334,
                                       "height": 8.333333333333334,
                                       "width": 8.333333333333334,
@@ -1321,7 +1322,7 @@ Array [
                               >
                                 <Text
                                   style={
-                                    Object {
+                                    {
                                       "color": "#fff",
                                       "fontWeight": "bold",
                                     }
@@ -1346,15 +1347,15 @@ Array [
                               onStartShouldSetResponder={[Function]}
                               onStartShouldSetResponderCapture={[Function]}
                               style={
-                                Object {
+                                {
                                   "left": 0,
                                   "position": "absolute",
                                   "top": 0,
-                                  "transform": Array [
-                                    Object {
+                                  "transform": [
+                                    {
                                       "translateX": 33.22222222222222,
                                     },
-                                    Object {
+                                    {
                                       "translateY": 33.22222222222222,
                                     },
                                   ],
@@ -1363,8 +1364,8 @@ Array [
                             >
                               <View
                                 style={
-                                  Array [
-                                    Object {
+                                  [
+                                    {
                                       "alignItems": "center",
                                       "backgroundColor": "white",
                                       "borderColor": "black",
@@ -1372,7 +1373,7 @@ Array [
                                       "textAlign": "center",
                                       "textAlignVertical": "center",
                                     },
-                                    Object {
+                                    {
                                       "borderRadius": 5.555555555555556,
                                       "borderWidth": 0.5555555555555556,
                                       "height": 5.555555555555556,
@@ -1386,13 +1387,30 @@ Array [
                           <View>
                             <View
                               style={
-                                Object {
+                                {
                                   "flexDirection": "row",
                                   "paddingHorizontal": 10,
                                 }
                               }
                             >
                               <View
+                                accessibilityState={
+                                  {
+                                    "busy": undefined,
+                                    "checked": undefined,
+                                    "disabled": undefined,
+                                    "expanded": undefined,
+                                    "selected": undefined,
+                                  }
+                                }
+                                accessibilityValue={
+                                  {
+                                    "max": undefined,
+                                    "min": undefined,
+                                    "now": undefined,
+                                    "text": undefined,
+                                  }
+                                }
                                 accessible={true}
                                 collapsable={false}
                                 focusable={true}
@@ -1404,7 +1422,7 @@ Array [
                                 onResponderTerminationRequest={[Function]}
                                 onStartShouldSetResponder={[Function]}
                                 style={
-                                  Object {
+                                  {
                                     "marginHorizontal": 10,
                                     "opacity": 1,
                                   }
@@ -1414,7 +1432,7 @@ Array [
                               </View>
                               <View
                                 style={
-                                  Object {
+                                  {
                                     "flex": 1,
                                     "marginVertical": 10,
                                   }
@@ -1422,14 +1440,14 @@ Array [
                               >
                                 <View
                                   style={
-                                    Array [
-                                      Object {
+                                    [
+                                      {
                                         "backgroundColor": "gray",
                                         "height": 5,
                                         "position": "absolute",
                                         "top": 10,
                                       },
-                                      Object {
+                                      {
                                         "width": 12.5,
                                       },
                                     ]
@@ -1438,7 +1456,7 @@ Array [
                                 <View
                                   collapsable={false}
                                   style={
-                                    Object {
+                                    {
                                       "backgroundColor": "black",
                                       "height": 5,
                                       "position": "absolute",
@@ -1451,7 +1469,7 @@ Array [
                                   collapsable={false}
                                   left={0}
                                   style={
-                                    Object {
+                                    {
                                       "backgroundColor": "white",
                                       "height": 5,
                                       "position": "absolute",
@@ -1464,7 +1482,7 @@ Array [
                                   collapsable={false}
                                   left={2.5}
                                   style={
-                                    Object {
+                                    {
                                       "backgroundColor": "white",
                                       "height": 5,
                                       "position": "absolute",
@@ -1477,7 +1495,7 @@ Array [
                                   collapsable={false}
                                   left={5}
                                   style={
-                                    Object {
+                                    {
                                       "backgroundColor": "white",
                                       "height": 5,
                                       "position": "absolute",
@@ -1490,7 +1508,7 @@ Array [
                                   collapsable={false}
                                   left={7.5}
                                   style={
-                                    Object {
+                                    {
                                       "backgroundColor": "white",
                                       "height": 5,
                                       "position": "absolute",
@@ -1503,7 +1521,7 @@ Array [
                                   collapsable={false}
                                   left={10}
                                   style={
-                                    Object {
+                                    {
                                       "backgroundColor": "white",
                                       "height": 5,
                                       "position": "absolute",
@@ -1516,7 +1534,7 @@ Array [
                                   collapsable={false}
                                   left={12.5}
                                   style={
-                                    Object {
+                                    {
                                       "backgroundColor": "white",
                                       "height": 5,
                                       "position": "absolute",
@@ -1526,6 +1544,23 @@ Array [
                                   }
                                 />
                                 <View
+                                  accessibilityState={
+                                    {
+                                      "busy": undefined,
+                                      "checked": undefined,
+                                      "disabled": undefined,
+                                      "expanded": undefined,
+                                      "selected": undefined,
+                                    }
+                                  }
+                                  accessibilityValue={
+                                    {
+                                      "max": undefined,
+                                      "min": undefined,
+                                      "now": undefined,
+                                      "text": undefined,
+                                    }
+                                  }
                                   accessible={true}
                                   collapsable={false}
                                   focusable={true}
@@ -1537,7 +1572,7 @@ Array [
                                   onResponderTerminationRequest={[Function]}
                                   onStartShouldSetResponder={[Function]}
                                   style={
-                                    Object {
+                                    {
                                       "height": "100%",
                                       "left": 0,
                                       "opacity": 1,
@@ -1547,6 +1582,23 @@ Array [
                                   }
                                 />
                                 <View
+                                  accessibilityState={
+                                    {
+                                      "busy": undefined,
+                                      "checked": undefined,
+                                      "disabled": undefined,
+                                      "expanded": undefined,
+                                      "selected": undefined,
+                                    }
+                                  }
+                                  accessibilityValue={
+                                    {
+                                      "max": undefined,
+                                      "min": undefined,
+                                      "now": undefined,
+                                      "text": undefined,
+                                    }
+                                  }
                                   accessible={true}
                                   collapsable={false}
                                   focusable={true}
@@ -1558,7 +1610,7 @@ Array [
                                   onResponderTerminationRequest={[Function]}
                                   onStartShouldSetResponder={[Function]}
                                   style={
-                                    Object {
+                                    {
                                       "height": "100%",
                                       "left": 0,
                                       "opacity": 1,
@@ -1568,6 +1620,23 @@ Array [
                                   }
                                 />
                                 <View
+                                  accessibilityState={
+                                    {
+                                      "busy": undefined,
+                                      "checked": undefined,
+                                      "disabled": undefined,
+                                      "expanded": undefined,
+                                      "selected": undefined,
+                                    }
+                                  }
+                                  accessibilityValue={
+                                    {
+                                      "max": undefined,
+                                      "min": undefined,
+                                      "now": undefined,
+                                      "text": undefined,
+                                    }
+                                  }
                                   accessible={true}
                                   collapsable={false}
                                   focusable={true}
@@ -1579,7 +1648,7 @@ Array [
                                   onResponderTerminationRequest={[Function]}
                                   onStartShouldSetResponder={[Function]}
                                   style={
-                                    Object {
+                                    {
                                       "height": "100%",
                                       "left": 2.5,
                                       "opacity": 1,
@@ -1589,6 +1658,23 @@ Array [
                                   }
                                 />
                                 <View
+                                  accessibilityState={
+                                    {
+                                      "busy": undefined,
+                                      "checked": undefined,
+                                      "disabled": undefined,
+                                      "expanded": undefined,
+                                      "selected": undefined,
+                                    }
+                                  }
+                                  accessibilityValue={
+                                    {
+                                      "max": undefined,
+                                      "min": undefined,
+                                      "now": undefined,
+                                      "text": undefined,
+                                    }
+                                  }
                                   accessible={true}
                                   collapsable={false}
                                   focusable={true}
@@ -1600,7 +1686,7 @@ Array [
                                   onResponderTerminationRequest={[Function]}
                                   onStartShouldSetResponder={[Function]}
                                   style={
-                                    Object {
+                                    {
                                       "height": "100%",
                                       "left": 5,
                                       "opacity": 1,
@@ -1610,6 +1696,23 @@ Array [
                                   }
                                 />
                                 <View
+                                  accessibilityState={
+                                    {
+                                      "busy": undefined,
+                                      "checked": undefined,
+                                      "disabled": undefined,
+                                      "expanded": undefined,
+                                      "selected": undefined,
+                                    }
+                                  }
+                                  accessibilityValue={
+                                    {
+                                      "max": undefined,
+                                      "min": undefined,
+                                      "now": undefined,
+                                      "text": undefined,
+                                    }
+                                  }
                                   accessible={true}
                                   collapsable={false}
                                   focusable={true}
@@ -1621,7 +1724,7 @@ Array [
                                   onResponderTerminationRequest={[Function]}
                                   onStartShouldSetResponder={[Function]}
                                   style={
-                                    Object {
+                                    {
                                       "height": "100%",
                                       "left": 7.5,
                                       "opacity": 1,
@@ -1631,6 +1734,23 @@ Array [
                                   }
                                 />
                                 <View
+                                  accessibilityState={
+                                    {
+                                      "busy": undefined,
+                                      "checked": undefined,
+                                      "disabled": undefined,
+                                      "expanded": undefined,
+                                      "selected": undefined,
+                                    }
+                                  }
+                                  accessibilityValue={
+                                    {
+                                      "max": undefined,
+                                      "min": undefined,
+                                      "now": undefined,
+                                      "text": undefined,
+                                    }
+                                  }
                                   accessible={true}
                                   collapsable={false}
                                   focusable={true}
@@ -1642,7 +1762,7 @@ Array [
                                   onResponderTerminationRequest={[Function]}
                                   onStartShouldSetResponder={[Function]}
                                   style={
-                                    Object {
+                                    {
                                       "height": "100%",
                                       "left": 10,
                                       "opacity": 1,
@@ -1658,7 +1778,7 @@ Array [
                       </View>
                       <Text
                         style={
-                          Object {
+                          {
                             "color": "#232b2b",
                             "fontSize": 16,
                             "margin": 10,
@@ -1674,14 +1794,14 @@ Array [
         </RCTSafeAreaView>
         <View
           style={
-            Object {
+            {
               "paddingBottom": 10,
             }
           }
         >
           <View
             style={
-              Object {
+              {
                 "borderBottomColor": "#e5e5e5",
                 "borderBottomWidth": 1,
               }
@@ -1689,22 +1809,22 @@ Array [
           />
           <View
             style={
-              Object {
+              {
                 "padding": 10,
               }
             }
           >
             <Text
               style={
-                Array [
-                  Object {
+                [
+                  {
                     "color": "#232b2b",
                     "fontSize": 20,
                     "fontWeight": "bold",
                     "marginBottom": 5,
                     "textAlign": "center",
                   },
-                  Object {
+                  {
                     "textAlign": "left",
                   },
                 ]
@@ -1714,13 +1834,13 @@ Array [
             </Text>
             <Text
               style={
-                Array [
-                  Object {
+                [
+                  {
                     "color": "#A6A6A6",
                     "fontSize": 16,
                     "textAlign": "center",
                   },
-                  Object {
+                  {
                     "textAlign": "left",
                   },
                 ]
@@ -1731,7 +1851,7 @@ Array [
           </View>
           <View
             style={
-              Object {
+              {
                 "borderBottomColor": "#e5e5e5",
                 "borderBottomWidth": 1,
               }
@@ -1739,22 +1859,22 @@ Array [
           />
           <View
             style={
-              Object {
+              {
                 "padding": 10,
               }
             }
           >
             <Text
               style={
-                Array [
-                  Object {
+                [
+                  {
                     "color": "#232b2b",
                     "fontSize": 20,
                     "fontWeight": "bold",
                     "marginBottom": 5,
                     "textAlign": "center",
                   },
-                  Object {
+                  {
                     "textAlign": "left",
                   },
                 ]
@@ -1764,13 +1884,13 @@ Array [
             </Text>
             <Text
               style={
-                Array [
-                  Object {
+                [
+                  {
                     "color": "#A6A6A6",
                     "fontSize": 16,
                     "textAlign": "center",
                   },
-                  Object {
+                  {
                     "textAlign": "left",
                   },
                 ]
@@ -1781,7 +1901,7 @@ Array [
           </View>
           <View
             style={
-              Object {
+              {
                 "borderBottomColor": "#e5e5e5",
                 "borderBottomWidth": 1,
               }
@@ -1793,7 +1913,7 @@ Array [
   </View>,
   <View
     style={
-      Object {
+      {
         "alignItems": "center",
         "backgroundColor": "#fff",
         "bottom": 0,
@@ -1805,6 +1925,23 @@ Array [
     }
   >
     <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
       accessible={true}
       collapsable={false}
       focusable={true}
@@ -1816,7 +1953,7 @@ Array [
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "alignItems": "center",
           "backgroundColor": "#2a9e91",
           "borderRadius": 5,
@@ -1833,7 +1970,7 @@ Array [
     >
       <Text
         style={
-          Object {
+          {
             "color": "#fff",
             "fontSize": 16,
             "textAlign": "center",

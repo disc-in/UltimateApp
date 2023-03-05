@@ -4,8 +4,8 @@ exports[`<HomePage /> renders correctly 1`] = `
 <RNCSafeAreaProvider
   onInsetsChange={[Function]}
   style={
-    Array [
-      Object {
+    [
+      {
         "flex": 1,
       },
       undefined,
@@ -14,8 +14,8 @@ exports[`<HomePage /> renders correctly 1`] = `
 >
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "flex": 1,
           "overflow": "hidden",
         },
@@ -26,11 +26,11 @@ exports[`<HomePage /> renders correctly 1`] = `
   >
     <View
       style={
-        Array [
-          Object {
+        [
+          {
             "flex": 1,
           },
-          Object {
+          {
             "backgroundColor": "rgb(242, 242, 242)",
           },
         ]
@@ -43,8 +43,8 @@ exports[`<HomePage /> renders correctly 1`] = `
         pointerEvents="auto"
         removeClippedSubviews={false}
         style={
-          Array [
-            Object {
+          [
+            {
               "bottom": 0,
               "left": 0,
               "position": "absolute",
@@ -52,7 +52,7 @@ exports[`<HomePage /> renders correctly 1`] = `
               "top": 0,
               "zIndex": 1,
             },
-            Object {
+            {
               "display": undefined,
             },
           ]
@@ -63,14 +63,14 @@ exports[`<HomePage /> renders correctly 1`] = `
           collapsable={false}
           renderToHardwareTextureAndroid={false}
           style={
-            Object {
+            {
               "flex": 1,
               "opacity": 1,
-              "transform": Array [
-                Object {
+              "transform": [
+                {
                   "translateX": 0,
                 },
-                Object {
+                {
                   "translateY": 0,
                 },
               ],
@@ -79,13 +79,21 @@ exports[`<HomePage /> renders correctly 1`] = `
         >
           <View
             style={
-              Object {
+              {
                 "backgroundColor": "#fff",
                 "height": "100%",
               }
             }
           >
             <View
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
               accessible={true}
               focusable={true}
               onClick={[Function]}
@@ -96,7 +104,7 @@ exports[`<HomePage /> renders correctly 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "flexBasis": "25%",
                   "flexGrow": 1,
                   "marginBottom": 5,
@@ -106,7 +114,7 @@ exports[`<HomePage /> renders correctly 1`] = `
               <View
                 accessibilityIgnoresInvertColors={true}
                 style={
-                  Object {
+                  {
                     "height": "100%",
                   }
                 }
@@ -114,15 +122,15 @@ exports[`<HomePage /> renders correctly 1`] = `
                 <Image
                   source={1}
                   style={
-                    Array [
-                      Object {
+                    [
+                      {
                         "bottom": 0,
                         "left": 0,
                         "position": "absolute",
                         "right": 0,
                         "top": 0,
                       },
-                      Object {
+                      {
                         "height": "100%",
                         "width": undefined,
                       },
@@ -132,7 +140,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                 />
                 <View
                   style={
-                    Object {
+                    {
                       "alignItems": "flex-start",
                       "bottom": 0,
                       "justifyContent": "center",
@@ -146,7 +154,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                 >
                   <Text
                     style={
-                      Object {
+                      {
                         "color": "#fff",
                         "fontSize": 28,
                         "fontWeight": "bold",
@@ -160,7 +168,7 @@ exports[`<HomePage /> renders correctly 1`] = `
             </View>
             <View
               style={
-                Object {
+                {
                   "flex": 1,
                   "flexBasis": "25%",
                   "flexDirection": "row",
@@ -169,6 +177,14 @@ exports[`<HomePage /> renders correctly 1`] = `
               }
             >
               <View
+                accessibilityValue={
+                  {
+                    "max": undefined,
+                    "min": undefined,
+                    "now": undefined,
+                    "text": undefined,
+                  }
+                }
                 accessible={true}
                 focusable={true}
                 onClick={[Function]}
@@ -179,7 +195,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                 onResponderTerminationRequest={[Function]}
                 onStartShouldSetResponder={[Function]}
                 style={
-                  Object {
+                  {
                     "flexBasis": "25%",
                     "flexGrow": 1,
                     "marginBottom": 5,
@@ -191,7 +207,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                 <View
                   accessibilityIgnoresInvertColors={true}
                   style={
-                    Object {
+                    {
                       "height": "100%",
                     }
                   }
@@ -199,15 +215,15 @@ exports[`<HomePage /> renders correctly 1`] = `
                   <Image
                     source={1}
                     style={
-                      Array [
-                        Object {
+                      [
+                        {
                           "bottom": 0,
                           "left": 0,
                           "position": "absolute",
                           "right": 0,
                           "top": 0,
                         },
-                        Object {
+                        {
                           "height": "100%",
                           "width": undefined,
                         },
@@ -217,7 +233,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                   />
                   <View
                     style={
-                      Object {
+                      {
                         "alignItems": "flex-start",
                         "bottom": 0,
                         "justifyContent": "center",
@@ -231,7 +247,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                   >
                     <Text
                       style={
-                        Object {
+                        {
                           "color": "#fff",
                           "fontSize": 28,
                           "fontWeight": "bold",
@@ -242,7 +258,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                     </Text>
                     <Text
                       style={
-                        Object {
+                        {
                           "color": "#fff",
                           "fontSize": 16,
                         }
@@ -254,6 +270,14 @@ exports[`<HomePage /> renders correctly 1`] = `
                 </View>
               </View>
               <View
+                accessibilityValue={
+                  {
+                    "max": undefined,
+                    "min": undefined,
+                    "now": undefined,
+                    "text": undefined,
+                  }
+                }
                 accessible={true}
                 focusable={true}
                 onClick={[Function]}
@@ -264,7 +288,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                 onResponderTerminationRequest={[Function]}
                 onStartShouldSetResponder={[Function]}
                 style={
-                  Object {
+                  {
                     "flexBasis": "25%",
                     "flexGrow": 1,
                     "marginBottom": 5,
@@ -275,7 +299,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                 <View
                   accessibilityIgnoresInvertColors={true}
                   style={
-                    Object {
+                    {
                       "height": "100%",
                     }
                   }
@@ -283,15 +307,15 @@ exports[`<HomePage /> renders correctly 1`] = `
                   <Image
                     source={1}
                     style={
-                      Array [
-                        Object {
+                      [
+                        {
                           "bottom": 0,
                           "left": 0,
                           "position": "absolute",
                           "right": 0,
                           "top": 0,
                         },
-                        Object {
+                        {
                           "height": "100%",
                           "width": undefined,
                         },
@@ -301,7 +325,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                   />
                   <View
                     style={
-                      Object {
+                      {
                         "alignItems": "flex-end",
                         "bottom": 0,
                         "justifyContent": "center",
@@ -315,7 +339,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                   >
                     <Text
                       style={
-                        Object {
+                        {
                           "color": "#fff",
                           "fontSize": 28,
                           "fontWeight": "bold",
@@ -327,7 +351,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                     </Text>
                     <Text
                       style={
-                        Object {
+                        {
                           "color": "#fff",
                           "fontSize": 16,
                           "textAlign": "right",
@@ -341,6 +365,14 @@ exports[`<HomePage /> renders correctly 1`] = `
               </View>
             </View>
             <View
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
               accessible={true}
               focusable={true}
               onClick={[Function]}
@@ -351,7 +383,7 @@ exports[`<HomePage /> renders correctly 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "flexBasis": "25%",
                   "flexGrow": 1,
                   "marginBottom": 5,
@@ -361,7 +393,7 @@ exports[`<HomePage /> renders correctly 1`] = `
               <View
                 accessibilityIgnoresInvertColors={true}
                 style={
-                  Object {
+                  {
                     "height": "100%",
                   }
                 }
@@ -369,15 +401,15 @@ exports[`<HomePage /> renders correctly 1`] = `
                 <Image
                   source={1}
                   style={
-                    Array [
-                      Object {
+                    [
+                      {
                         "bottom": 0,
                         "left": 0,
                         "position": "absolute",
                         "right": 0,
                         "top": 0,
                       },
-                      Object {
+                      {
                         "height": "100%",
                         "width": undefined,
                       },
@@ -387,7 +419,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                 />
                 <View
                   style={
-                    Object {
+                    {
                       "alignItems": "flex-start",
                       "bottom": 0,
                       "justifyContent": "center",
@@ -401,7 +433,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                 >
                   <Text
                     style={
-                      Object {
+                      {
                         "color": "#fff",
                         "fontSize": 28,
                         "fontWeight": "bold",
@@ -420,7 +452,7 @@ exports[`<HomePage /> renders correctly 1`] = `
     <View
       collapsable={false}
       style={
-        Object {
+        {
           "alignSelf": undefined,
           "bottom": 0,
           "end": undefined,
@@ -428,7 +460,7 @@ exports[`<HomePage /> renders correctly 1`] = `
           "position": undefined,
           "right": 0,
           "shadowColor": "#000",
-          "shadowOffset": Object {
+          "shadowOffset": {
             "height": 0,
             "width": 0,
           },
@@ -442,9 +474,9 @@ exports[`<HomePage /> renders correctly 1`] = `
       <View
         collapsable={false}
         style={
-          Object {
+          {
             "shadowColor": "#000",
-            "shadowOffset": Object {
+            "shadowOffset": {
               "height": 0,
               "width": 0,
             },
@@ -458,7 +490,7 @@ exports[`<HomePage /> renders correctly 1`] = `
           onLayout={[Function]}
           pointerEvents="none"
           style={
-            Object {
+            {
               "backgroundColor": "transparent",
             }
           }
@@ -466,7 +498,7 @@ exports[`<HomePage /> renders correctly 1`] = `
           <View
             collapsable={false}
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "backgroundColor": "rgb(243, 237, 246)",
                 "overflow": "hidden",
@@ -477,11 +509,11 @@ exports[`<HomePage /> renders correctly 1`] = `
             <View
               accessibilityRole="tablist"
               style={
-                Array [
-                  Object {
+                [
+                  {
                     "flexDirection": "row",
                   },
-                  Object {
+                  {
                     "marginBottom": 0,
                     "marginHorizontal": 0,
                   },
@@ -492,7 +524,11 @@ exports[`<HomePage /> renders correctly 1`] = `
               <View
                 accessibilityRole="button"
                 accessibilityState={
-                  Object {
+                  {
+                    "busy": undefined,
+                    "checked": undefined,
+                    "disabled": undefined,
+                    "expanded": undefined,
                     "selected": true,
                   }
                 }
@@ -506,12 +542,12 @@ exports[`<HomePage /> renders correctly 1`] = `
                 onResponderTerminationRequest={[Function]}
                 onStartShouldSetResponder={[Function]}
                 style={
-                  Array [
-                    Object {
+                  [
+                    {
                       "flex": 1,
                       "paddingVertical": 6,
                     },
-                    Object {
+                    {
                       "paddingVertical": 0,
                     },
                   ]
@@ -520,7 +556,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                 <View
                   pointerEvents="none"
                   style={
-                    Object {
+                    {
                       "paddingBottom": 16,
                       "paddingTop": 12,
                     }
@@ -529,7 +565,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                   <View
                     collapsable={false}
                     style={
-                      Object {
+                      {
                         "alignSelf": "center",
                         "height": 32,
                         "justifyContent": "center",
@@ -543,13 +579,13 @@ exports[`<HomePage /> renders correctly 1`] = `
                     <View
                       collapsable={false}
                       style={
-                        Object {
+                        {
                           "alignSelf": "center",
                           "backgroundColor": "rgba(232, 222, 248, 1)",
                           "borderRadius": 16,
                           "height": 32,
-                          "transform": Array [
-                            Object {
+                          "transform": [
+                            {
                               "scaleX": 1,
                             },
                           ],
@@ -560,7 +596,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                     <View
                       collapsable={false}
                       style={
-                        Object {
+                        {
                           "alignItems": "center",
                           "bottom": 0,
                           "left": 0,
@@ -571,12 +607,32 @@ exports[`<HomePage /> renders correctly 1`] = `
                         }
                       }
                     >
-                      <Text />
+                      <Text
+                        allowFontScaling={false}
+                        selectable={false}
+                        style={
+                          [
+                            {
+                              "color": "rgba(29, 25, 43, 1)",
+                              "fontSize": 22,
+                            },
+                            undefined,
+                            {
+                              "fontFamily": "ionicons",
+                              "fontStyle": "normal",
+                              "fontWeight": "normal",
+                            },
+                            {},
+                          ]
+                        }
+                      >
+                        
+                      </Text>
                     </View>
                     <View
                       collapsable={false}
                       style={
-                        Object {
+                        {
                           "alignItems": "center",
                           "bottom": 0,
                           "left": 0,
@@ -587,16 +643,36 @@ exports[`<HomePage /> renders correctly 1`] = `
                         }
                       }
                     >
-                      <Text />
+                      <Text
+                        allowFontScaling={false}
+                        selectable={false}
+                        style={
+                          [
+                            {
+                              "color": "rgba(73, 69, 79, 1)",
+                              "fontSize": 22,
+                            },
+                            undefined,
+                            {
+                              "fontFamily": "ionicons",
+                              "fontStyle": "normal",
+                              "fontWeight": "normal",
+                            },
+                            {},
+                          ]
+                        }
+                      >
+                        
+                      </Text>
                     </View>
                     <View
                       style={
-                        Array [
-                          Object {
+                        [
+                          {
                             "left": 0,
                             "position": "absolute",
                           },
-                          Object {
+                          {
                             "right": 0,
                             "top": 2,
                           },
@@ -607,7 +683,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                         collapsable={false}
                         numberOfLines={1}
                         style={
-                          Object {
+                          {
                             "alignSelf": "flex-end",
                             "backgroundColor": "rgba(179, 38, 30, 1)",
                             "borderRadius": 8,
@@ -629,7 +705,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                   <View
                     collapsable={false}
                     style={
-                      Object {
+                      {
                         "height": 16,
                         "paddingBottom": 2,
                       }
@@ -638,7 +714,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                     <View
                       collapsable={false}
                       style={
-                        Object {
+                        {
                           "bottom": 0,
                           "left": 0,
                           "position": "absolute",
@@ -650,8 +726,8 @@ exports[`<HomePage /> renders correctly 1`] = `
                       <Text
                         maxFontSizeMultiplier={1}
                         style={
-                          Array [
-                            Object {
+                          [
+                            {
                               "color": "rgba(28, 27, 31, 1)",
                               "fontFamily": "System",
                               "fontSize": 12,
@@ -659,20 +735,20 @@ exports[`<HomePage /> renders correctly 1`] = `
                               "letterSpacing": 0.5,
                               "lineHeight": 16,
                             },
-                            Object {
+                            {
                               "textAlign": "left",
                             },
-                            Object {
+                            {
                               "writingDirection": "ltr",
                             },
-                            Array [
-                              Object {
+                            [
+                              {
                                 "backgroundColor": "transparent",
                                 "fontSize": 12,
                                 "height": 56,
                                 "textAlign": "center",
                               },
-                              Object {
+                              {
                                 "color": "rgba(28, 27, 31, 1)",
                                 "fontFamily": "System",
                                 "fontSize": 12,
@@ -690,7 +766,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                     <View
                       collapsable={false}
                       style={
-                        Object {
+                        {
                           "bottom": 0,
                           "left": 0,
                           "opacity": 0,
@@ -704,8 +780,8 @@ exports[`<HomePage /> renders correctly 1`] = `
                         maxFontSizeMultiplier={1}
                         selectable={false}
                         style={
-                          Array [
-                            Object {
+                          [
+                            {
                               "color": "rgba(28, 27, 31, 1)",
                               "fontFamily": "System",
                               "fontSize": 12,
@@ -713,20 +789,20 @@ exports[`<HomePage /> renders correctly 1`] = `
                               "letterSpacing": 0.5,
                               "lineHeight": 16,
                             },
-                            Object {
+                            {
                               "textAlign": "left",
                             },
-                            Object {
+                            {
                               "writingDirection": "ltr",
                             },
-                            Array [
-                              Object {
+                            [
+                              {
                                 "backgroundColor": "transparent",
                                 "fontSize": 12,
                                 "height": 56,
                                 "textAlign": "center",
                               },
-                              Object {
+                              {
                                 "color": "rgba(28, 27, 31, 1)",
                                 "fontFamily": "System",
                                 "fontSize": 12,
@@ -747,7 +823,11 @@ exports[`<HomePage /> renders correctly 1`] = `
               <View
                 accessibilityRole="button"
                 accessibilityState={
-                  Object {
+                  {
+                    "busy": undefined,
+                    "checked": undefined,
+                    "disabled": undefined,
+                    "expanded": undefined,
                     "selected": false,
                   }
                 }
@@ -761,12 +841,12 @@ exports[`<HomePage /> renders correctly 1`] = `
                 onResponderTerminationRequest={[Function]}
                 onStartShouldSetResponder={[Function]}
                 style={
-                  Array [
-                    Object {
+                  [
+                    {
                       "flex": 1,
                       "paddingVertical": 6,
                     },
-                    Object {
+                    {
                       "paddingVertical": 0,
                     },
                   ]
@@ -775,7 +855,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                 <View
                   pointerEvents="none"
                   style={
-                    Object {
+                    {
                       "paddingBottom": 16,
                       "paddingTop": 12,
                     }
@@ -784,7 +864,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                   <View
                     collapsable={false}
                     style={
-                      Object {
+                      {
                         "alignSelf": "center",
                         "height": 32,
                         "justifyContent": "center",
@@ -798,7 +878,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                     <View
                       collapsable={false}
                       style={
-                        Object {
+                        {
                           "alignItems": "center",
                           "bottom": 0,
                           "left": 0,
@@ -809,12 +889,32 @@ exports[`<HomePage /> renders correctly 1`] = `
                         }
                       }
                     >
-                      <Text />
+                      <Text
+                        allowFontScaling={false}
+                        selectable={false}
+                        style={
+                          [
+                            {
+                              "color": "rgba(29, 25, 43, 1)",
+                              "fontSize": 22,
+                            },
+                            undefined,
+                            {
+                              "fontFamily": "ionicons",
+                              "fontStyle": "normal",
+                              "fontWeight": "normal",
+                            },
+                            {},
+                          ]
+                        }
+                      >
+                        
+                      </Text>
                     </View>
                     <View
                       collapsable={false}
                       style={
-                        Object {
+                        {
                           "alignItems": "center",
                           "bottom": 0,
                           "left": 0,
@@ -825,16 +925,36 @@ exports[`<HomePage /> renders correctly 1`] = `
                         }
                       }
                     >
-                      <Text />
+                      <Text
+                        allowFontScaling={false}
+                        selectable={false}
+                        style={
+                          [
+                            {
+                              "color": "rgba(73, 69, 79, 1)",
+                              "fontSize": 22,
+                            },
+                            undefined,
+                            {
+                              "fontFamily": "ionicons",
+                              "fontStyle": "normal",
+                              "fontWeight": "normal",
+                            },
+                            {},
+                          ]
+                        }
+                      >
+                        
+                      </Text>
                     </View>
                     <View
                       style={
-                        Array [
-                          Object {
+                        [
+                          {
                             "left": 0,
                             "position": "absolute",
                           },
-                          Object {
+                          {
                             "right": 0,
                             "top": 2,
                           },
@@ -845,7 +965,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                         collapsable={false}
                         numberOfLines={1}
                         style={
-                          Object {
+                          {
                             "alignSelf": "flex-end",
                             "backgroundColor": "rgba(179, 38, 30, 1)",
                             "borderRadius": 8,
@@ -867,7 +987,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                   <View
                     collapsable={false}
                     style={
-                      Object {
+                      {
                         "height": 16,
                         "paddingBottom": 2,
                       }
@@ -876,7 +996,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                     <View
                       collapsable={false}
                       style={
-                        Object {
+                        {
                           "bottom": 0,
                           "left": 0,
                           "position": "absolute",
@@ -888,8 +1008,8 @@ exports[`<HomePage /> renders correctly 1`] = `
                       <Text
                         maxFontSizeMultiplier={1}
                         style={
-                          Array [
-                            Object {
+                          [
+                            {
                               "color": "rgba(28, 27, 31, 1)",
                               "fontFamily": "System",
                               "fontSize": 12,
@@ -897,20 +1017,20 @@ exports[`<HomePage /> renders correctly 1`] = `
                               "letterSpacing": 0.5,
                               "lineHeight": 16,
                             },
-                            Object {
+                            {
                               "textAlign": "left",
                             },
-                            Object {
+                            {
                               "writingDirection": "ltr",
                             },
-                            Array [
-                              Object {
+                            [
+                              {
                                 "backgroundColor": "transparent",
                                 "fontSize": 12,
                                 "height": 56,
                                 "textAlign": "center",
                               },
-                              Object {
+                              {
                                 "color": "rgba(73, 69, 79, 1)",
                                 "fontFamily": "System",
                                 "fontSize": 12,
@@ -928,7 +1048,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                     <View
                       collapsable={false}
                       style={
-                        Object {
+                        {
                           "bottom": 0,
                           "left": 0,
                           "opacity": 1,
@@ -942,8 +1062,8 @@ exports[`<HomePage /> renders correctly 1`] = `
                         maxFontSizeMultiplier={1}
                         selectable={false}
                         style={
-                          Array [
-                            Object {
+                          [
+                            {
                               "color": "rgba(28, 27, 31, 1)",
                               "fontFamily": "System",
                               "fontSize": 12,
@@ -951,20 +1071,20 @@ exports[`<HomePage /> renders correctly 1`] = `
                               "letterSpacing": 0.5,
                               "lineHeight": 16,
                             },
-                            Object {
+                            {
                               "textAlign": "left",
                             },
-                            Object {
+                            {
                               "writingDirection": "ltr",
                             },
-                            Array [
-                              Object {
+                            [
+                              {
                                 "backgroundColor": "transparent",
                                 "fontSize": 12,
                                 "height": 56,
                                 "textAlign": "center",
                               },
-                              Object {
+                              {
                                 "color": "rgba(73, 69, 79, 1)",
                                 "fontFamily": "System",
                                 "fontSize": 12,
@@ -985,7 +1105,11 @@ exports[`<HomePage /> renders correctly 1`] = `
               <View
                 accessibilityRole="button"
                 accessibilityState={
-                  Object {
+                  {
+                    "busy": undefined,
+                    "checked": undefined,
+                    "disabled": undefined,
+                    "expanded": undefined,
                     "selected": false,
                   }
                 }
@@ -999,12 +1123,12 @@ exports[`<HomePage /> renders correctly 1`] = `
                 onResponderTerminationRequest={[Function]}
                 onStartShouldSetResponder={[Function]}
                 style={
-                  Array [
-                    Object {
+                  [
+                    {
                       "flex": 1,
                       "paddingVertical": 6,
                     },
-                    Object {
+                    {
                       "paddingVertical": 0,
                     },
                   ]
@@ -1013,7 +1137,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                 <View
                   pointerEvents="none"
                   style={
-                    Object {
+                    {
                       "paddingBottom": 16,
                       "paddingTop": 12,
                     }
@@ -1022,7 +1146,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                   <View
                     collapsable={false}
                     style={
-                      Object {
+                      {
                         "alignSelf": "center",
                         "height": 32,
                         "justifyContent": "center",
@@ -1036,7 +1160,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                     <View
                       collapsable={false}
                       style={
-                        Object {
+                        {
                           "alignItems": "center",
                           "bottom": 0,
                           "left": 0,
@@ -1047,12 +1171,32 @@ exports[`<HomePage /> renders correctly 1`] = `
                         }
                       }
                     >
-                      <Text />
+                      <Text
+                        allowFontScaling={false}
+                        selectable={false}
+                        style={
+                          [
+                            {
+                              "color": "rgba(29, 25, 43, 1)",
+                              "fontSize": 22,
+                            },
+                            undefined,
+                            {
+                              "fontFamily": "material-community",
+                              "fontStyle": "normal",
+                              "fontWeight": "normal",
+                            },
+                            {},
+                          ]
+                        }
+                      >
+                        󱉟
+                      </Text>
                     </View>
                     <View
                       collapsable={false}
                       style={
-                        Object {
+                        {
                           "alignItems": "center",
                           "bottom": 0,
                           "left": 0,
@@ -1063,16 +1207,36 @@ exports[`<HomePage /> renders correctly 1`] = `
                         }
                       }
                     >
-                      <Text />
+                      <Text
+                        allowFontScaling={false}
+                        selectable={false}
+                        style={
+                          [
+                            {
+                              "color": "rgba(73, 69, 79, 1)",
+                              "fontSize": 22,
+                            },
+                            undefined,
+                            {
+                              "fontFamily": "material-community",
+                              "fontStyle": "normal",
+                              "fontWeight": "normal",
+                            },
+                            {},
+                          ]
+                        }
+                      >
+                        󱉟
+                      </Text>
                     </View>
                     <View
                       style={
-                        Array [
-                          Object {
+                        [
+                          {
                             "left": 0,
                             "position": "absolute",
                           },
-                          Object {
+                          {
                             "right": 0,
                             "top": 2,
                           },
@@ -1083,7 +1247,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                         collapsable={false}
                         numberOfLines={1}
                         style={
-                          Object {
+                          {
                             "alignSelf": "flex-end",
                             "backgroundColor": "rgba(179, 38, 30, 1)",
                             "borderRadius": 8,
@@ -1105,7 +1269,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                   <View
                     collapsable={false}
                     style={
-                      Object {
+                      {
                         "height": 16,
                         "paddingBottom": 2,
                       }
@@ -1114,7 +1278,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                     <View
                       collapsable={false}
                       style={
-                        Object {
+                        {
                           "bottom": 0,
                           "left": 0,
                           "position": "absolute",
@@ -1126,8 +1290,8 @@ exports[`<HomePage /> renders correctly 1`] = `
                       <Text
                         maxFontSizeMultiplier={1}
                         style={
-                          Array [
-                            Object {
+                          [
+                            {
                               "color": "rgba(28, 27, 31, 1)",
                               "fontFamily": "System",
                               "fontSize": 12,
@@ -1135,20 +1299,20 @@ exports[`<HomePage /> renders correctly 1`] = `
                               "letterSpacing": 0.5,
                               "lineHeight": 16,
                             },
-                            Object {
+                            {
                               "textAlign": "left",
                             },
-                            Object {
+                            {
                               "writingDirection": "ltr",
                             },
-                            Array [
-                              Object {
+                            [
+                              {
                                 "backgroundColor": "transparent",
                                 "fontSize": 12,
                                 "height": 56,
                                 "textAlign": "center",
                               },
-                              Object {
+                              {
                                 "color": "rgba(73, 69, 79, 1)",
                                 "fontFamily": "System",
                                 "fontSize": 12,
@@ -1166,7 +1330,7 @@ exports[`<HomePage /> renders correctly 1`] = `
                     <View
                       collapsable={false}
                       style={
-                        Object {
+                        {
                           "bottom": 0,
                           "left": 0,
                           "opacity": 1,
@@ -1180,8 +1344,8 @@ exports[`<HomePage /> renders correctly 1`] = `
                         maxFontSizeMultiplier={1}
                         selectable={false}
                         style={
-                          Array [
-                            Object {
+                          [
+                            {
                               "color": "rgba(28, 27, 31, 1)",
                               "fontFamily": "System",
                               "fontSize": 12,
@@ -1189,20 +1353,20 @@ exports[`<HomePage /> renders correctly 1`] = `
                               "letterSpacing": 0.5,
                               "lineHeight": 16,
                             },
-                            Object {
+                            {
                               "textAlign": "left",
                             },
-                            Object {
+                            {
                               "writingDirection": "ltr",
                             },
-                            Array [
-                              Object {
+                            [
+                              {
                                 "backgroundColor": "transparent",
                                 "fontSize": 12,
                                 "height": 56,
                                 "textAlign": "center",
                               },
-                              Object {
+                              {
                                 "color": "rgba(73, 69, 79, 1)",
                                 "fontFamily": "System",
                                 "fontSize": 12,

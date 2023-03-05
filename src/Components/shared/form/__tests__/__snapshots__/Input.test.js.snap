@@ -3,14 +3,14 @@
 exports[`Input renders correctly 1`] = `
 <View
   style={
-    Object {
+    {
       "marginBottom": 10,
     }
   }
 >
   <View
     style={
-      Object {
+      {
         "flexDirection": "row",
         "marginBottom": 5,
       }
@@ -22,8 +22,8 @@ exports[`Input renders correctly 1`] = `
   </View>
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "borderColor": "#e5e5e5",
           "borderRadius": 5,
           "borderWidth": 0.5,
@@ -47,14 +47,14 @@ exports[`Input renders correctly 1`] = `
 exports[`Input renders correctly when multiline 1`] = `
 <View
   style={
-    Object {
+    {
       "marginBottom": 10,
     }
   }
 >
   <View
     style={
-      Object {
+      {
         "flexDirection": "row",
         "marginBottom": 5,
       }
@@ -66,8 +66,8 @@ exports[`Input renders correctly when multiline 1`] = `
   </View>
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "borderColor": "#e5e5e5",
           "borderRadius": 5,
           "borderWidth": 0.5,
@@ -94,14 +94,14 @@ exports[`Input renders correctly when multiline 1`] = `
 exports[`Input renders correctly when required 1`] = `
 <View
   style={
-    Object {
+    {
       "marginBottom": 10,
     }
   }
 >
   <View
     style={
-      Object {
+      {
         "flexDirection": "row",
         "marginBottom": 5,
       }
@@ -109,7 +109,7 @@ exports[`Input renders correctly when required 1`] = `
   >
     <Text
       style={
-        Object {
+        {
           "color": "red",
           "fontStyle": "italic",
         }
@@ -123,8 +123,8 @@ exports[`Input renders correctly when required 1`] = `
   </View>
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "borderColor": "#e5e5e5",
           "borderRadius": 5,
           "borderWidth": 0.5,

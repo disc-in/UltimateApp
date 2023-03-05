@@ -3,13 +3,13 @@
 exports[`<AboutPage /> renders correctly 1`] = `
 <RCTScrollView
   contentContainerStyle={
-    Object {
+    {
       "padding": 20,
       "paddingBottom": 50,
     }
   }
   style={
-    Object {
+    {
       "backgroundColor": "#fff",
       "flex": 1,
     }
@@ -18,7 +18,7 @@ exports[`<AboutPage /> renders correctly 1`] = `
   <View>
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "flex-start",
@@ -29,7 +29,7 @@ exports[`<AboutPage /> renders correctly 1`] = `
       <Image
         source={1}
         style={
-          Object {
+          {
             "borderRadius": 5,
             "height": 50,
             "width": 50,
@@ -39,7 +39,7 @@ exports[`<AboutPage /> renders correctly 1`] = `
       <View>
         <Text
           style={
-            Object {
+            {
               "color": "#A6A6A6",
               "fontSize": 14,
               "marginLeft": 10,
@@ -50,7 +50,7 @@ exports[`<AboutPage /> renders correctly 1`] = `
         </Text>
         <Text
           style={
-            Object {
+            {
               "color": "#A6A6A6",
               "fontSize": 14,
               "marginLeft": 10,
@@ -63,7 +63,7 @@ exports[`<AboutPage /> renders correctly 1`] = `
         </Text>
         <Text
           style={
-            Object {
+            {
               "color": "#A6A6A6",
               "fontSize": 14,
               "marginLeft": 10,
@@ -76,7 +76,7 @@ exports[`<AboutPage /> renders correctly 1`] = `
     </View>
     <Text
       style={
-        Object {
+        {
           "color": "#232b2b",
           "fontSize": 20,
           "marginTop": 10,
@@ -87,7 +87,7 @@ exports[`<AboutPage /> renders correctly 1`] = `
     </Text>
     <Text
       style={
-        Object {
+        {
           "color": "#A6A6A6",
           "fontSize": 16,
           "marginTop": 5,
@@ -98,7 +98,7 @@ exports[`<AboutPage /> renders correctly 1`] = `
     </Text>
     <Text
       style={
-        Object {
+        {
           "color": "#232b2b",
           "fontSize": 20,
           "marginTop": 10,
@@ -109,7 +109,7 @@ exports[`<AboutPage /> renders correctly 1`] = `
     </Text>
     <Text
       style={
-        Object {
+        {
           "color": "#A6A6A6",
           "fontSize": 16,
           "marginTop": 5,
@@ -119,6 +119,23 @@ exports[`<AboutPage /> renders correctly 1`] = `
       A big thanks to everybody who helps make 'Disc In' great!
     </Text>
     <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
       accessible={true}
       collapsable={false}
       focusable={true}
@@ -130,14 +147,14 @@ exports[`<AboutPage /> renders correctly 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "opacity": 1,
         }
       }
     >
       <Text
         style={
-          Object {
+          {
             "color": "#2a9e91",
             "fontSize": 16,
           }
@@ -148,7 +165,7 @@ exports[`<AboutPage /> renders correctly 1`] = `
     </View>
     <Text
       style={
-        Object {
+        {
           "color": "#232b2b",
           "fontSize": 20,
           "marginTop": 10,
@@ -159,7 +176,7 @@ exports[`<AboutPage /> renders correctly 1`] = `
     </Text>
     <Text
       style={
-        Object {
+        {
           "color": "#A6A6A6",
           "fontSize": 16,
           "marginTop": 5,
@@ -170,7 +187,7 @@ exports[`<AboutPage /> renders correctly 1`] = `
     </Text>
     <Text
       style={
-        Object {
+        {
           "color": "#232b2b",
           "fontSize": 20,
           "marginTop": 10,
@@ -181,7 +198,7 @@ exports[`<AboutPage /> renders correctly 1`] = `
     </Text>
     <Text
       style={
-        Object {
+        {
           "color": "#A6A6A6",
           "fontSize": 16,
           "marginTop": 5,
@@ -191,6 +208,23 @@ exports[`<AboutPage /> renders correctly 1`] = `
       If you perhaps don't have time to contribute, but you have ideas or feedback to improve the app, please send us a message!
     </Text>
     <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
       accessible={true}
       collapsable={false}
       focusable={true}
@@ -202,7 +236,7 @@ exports[`<AboutPage /> renders correctly 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "alignItems": "center",
           "alignSelf": "center",
           "backgroundColor": "#2a9e91",
@@ -222,7 +256,7 @@ exports[`<AboutPage /> renders correctly 1`] = `
       <Text />
       <Text
         style={
-          Object {
+          {
             "color": "#fff",
             "fontSize": 16,
             "textAlign": "center",

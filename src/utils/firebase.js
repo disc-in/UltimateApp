@@ -1,9 +1,7 @@
-import firebase from 'firebase/compat/app';
 import { Platform, InteractionManager } from 'react-native';
 import Constants from 'expo-constants';
 import * as Linking from 'expo-linking';
 import { initializeApp, setLogLevel } from 'firebase/app';
-import 'firebase/compat/database';
 import { getDatabase, ref, set, onValue } from 'firebase/database';
 
 import { generateUuid } from './uuid';
@@ -57,11 +55,8 @@ const firebaseConfig = {
   databaseURL: Constants.manifest.extra.firebaseDatabaseUrl,
 };
 
-let app;
-if (firebase.apps.length === 0) {
-  app = initializeApp(firebaseConfig);
-  setLogLevel('silent');
-}
+const app = initializeApp(firebaseConfig);
+setLogLevel('silent');
 
 const reference = (namespace, uuid) => {
   return ref(getDatabase(app), `${namespace}/${uuid}`);

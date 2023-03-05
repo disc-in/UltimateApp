@@ -11,7 +11,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
   <View
     collapsable={false}
     style={
-      Object {
+      {
         "bottom": 0,
         "left": 0,
         "position": "absolute",
@@ -22,9 +22,9 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
   >
     <View
       style={
-        Array [
+        [
           undefined,
-          Object {
+          {
             "bottom": 0,
             "left": 0,
             "position": "absolute",
@@ -36,14 +36,14 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
     >
       <RCTScrollView
         ItemComponentStyle={
-          Object {
+          {
             "paddingLeft": 20,
           }
         }
         ListFooterComponent={
           <View
             style={
-              Object {
+              {
                 "paddingBottom": 30,
               }
             }
@@ -52,7 +52,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
         ListHeaderComponent={
           <View
             style={
-              Object {
+              {
                 "borderBottomColor": "#e5e5e5",
                 "borderBottomWidth": 1,
                 "marginVertical": 10,
@@ -63,7 +63,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
           >
             <View
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flexDirection": "row",
                   "justifyContent": "center",
@@ -72,7 +72,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
             >
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "justifyContent": "center",
                     "marginHorizontal": 40,
@@ -82,7 +82,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                 <Text
                   numberOfLines={1}
                   style={
-                    Object {
+                    {
                       "fontSize": 20,
                       "fontWeight": "bold",
                     }
@@ -92,7 +92,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                 </Text>
                 <Text
                   style={
-                    Object {
+                    {
                       "fontSize": 20,
                     }
                   }
@@ -109,12 +109,12 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               <TouchableOpacity
                 onPress={[Function]}
                 style={
-                  Array [
-                    Object {
+                  [
+                    {
                       "left": 0,
                       "position": "absolute",
                     },
-                    Object {
+                    {
                       "left": "auto",
                       "right": 0,
                     },
@@ -127,7 +127,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                   name="chevron-right"
                   size={12}
                   style={
-                    Object {
+                    {
                       "color": "#232b2b",
                       "fontSize": 42,
                     }
@@ -137,7 +137,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
             </View>
             <Text
               style={
-                Object {
+                {
                   "color": "#A6A6A6",
                   "fontSize": 16,
                 }
@@ -148,19 +148,19 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
           </View>
         }
         contentContainerStyle={
-          Object {
+          {
             "paddingBottom": 40,
           }
         }
         data={
-          Array [
-            Object {
+          [
+            {
               "author": "Author",
               "description": "Description of the drill",
               "durationInMinutes": 10,
               "equipment": "Equipment needs for the drill",
               "equipmentLabel": "Full",
-              "goals": Array [
+              "goals": [
                 "Legs",
               ],
               "id": 2,
@@ -169,20 +169,20 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               "level": "Intermediate",
               "minimalPlayersNumber": 1,
               "seasonTiming": "In-season",
-              "steps": Array [
-                Object {
+              "steps": [
+                {
                   "id": 0,
                   "subtitle": "This is a subtitle",
                   "title": "Warmup",
                   "vimeoId": "462695757",
                 },
-                Object {
+                {
                   "id": 1,
                   "subtitle": "This is a subtitle",
                   "title": "Do the drill",
                   "vimeoId": "462695757",
                 },
-                Object {
+                {
                   "id": 2,
                   "subtitle": "This is a subtitle",
                   "title": "Last step",
@@ -193,13 +193,13 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               "type": "fitness",
               "visibleInList": true,
             },
-            Object {
+            {
               "author": "Author",
               "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
               "durationInMinutes": 30,
               "equipment": "Equipment needs for the drill",
               "equipmentLabel": "",
-              "goals": Array [
+              "goals": [
                 "Defense",
               ],
               "id": 3,
@@ -208,10 +208,10 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               "level": "Beginner",
               "minimalPlayersNumber": 2,
               "seasonTiming": "",
-              "steps": Array [
-                Object {
-                  "animation": Object {
-                    "ids": Array [
+              "steps": [
+                {
+                  "animation": {
+                    "ids": [
                       "triangle",
                       "triangle",
                       "triangle",
@@ -227,240 +227,240 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                       "offense",
                       "disc",
                     ],
-                    "positions": Array [
-                      Array [
-                        Array [
-                          Array [
+                    "positions": [
+                      [
+                        [
+                          [
                             0.3,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.3,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.45,
                             0.2,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.2,
                             0.45,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.45,
                             0.7,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.7,
                             0.45,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.3,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.16,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.3,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.36,
                             0.36,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.45,
                             0.2,
                           ],
                         ],
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
+                        ,
+                        ,
+                        ,
+                        ,
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.6,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.7,
                             0.45,
                           ],
                         ],
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                        ,
+                        ,
+                        [
+                          [
                             0.58,
                             0.36,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.6,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.45,
                             0.7,
                           ],
                         ],
-                        undefined,
-                        Array [
-                          Array [
+                        ,
+                        [
+                          [
                             0.58,
                             0.58,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.3,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.2,
                             0.45,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.36,
                             0.58,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.45,
                             0.2,
                           ],
                         ],
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.3,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.36,
                             0.36,
                           ],
                         ],
                       ],
                     ],
-                    "texts": Array [
+                    "texts": [
                       "",
                       "",
                       "",
@@ -488,14 +488,14 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
         }
         deleteDrill={[Function]}
         drillsToDisplay={
-          Array [
-            Object {
+          [
+            {
               "author": "Author",
               "description": "Description of the drill",
               "durationInMinutes": 10,
               "equipment": "Equipment needs for the drill",
               "equipmentLabel": "Full",
-              "goals": Array [
+              "goals": [
                 "Legs",
               ],
               "id": 2,
@@ -504,20 +504,20 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               "level": "Intermediate",
               "minimalPlayersNumber": 1,
               "seasonTiming": "In-season",
-              "steps": Array [
-                Object {
+              "steps": [
+                {
                   "id": 0,
                   "subtitle": "This is a subtitle",
                   "title": "Warmup",
                   "vimeoId": "462695757",
                 },
-                Object {
+                {
                   "id": 1,
                   "subtitle": "This is a subtitle",
                   "title": "Do the drill",
                   "vimeoId": "462695757",
                 },
-                Object {
+                {
                   "id": 2,
                   "subtitle": "This is a subtitle",
                   "title": "Last step",
@@ -528,13 +528,13 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               "type": "fitness",
               "visibleInList": true,
             },
-            Object {
+            {
               "author": "Author",
               "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
               "durationInMinutes": 30,
               "equipment": "Equipment needs for the drill",
               "equipmentLabel": "",
-              "goals": Array [
+              "goals": [
                 "Defense",
               ],
               "id": 3,
@@ -543,10 +543,10 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               "level": "Beginner",
               "minimalPlayersNumber": 2,
               "seasonTiming": "",
-              "steps": Array [
-                Object {
-                  "animation": Object {
-                    "ids": Array [
+              "steps": [
+                {
+                  "animation": {
+                    "ids": [
                       "triangle",
                       "triangle",
                       "triangle",
@@ -562,240 +562,240 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                       "offense",
                       "disc",
                     ],
-                    "positions": Array [
-                      Array [
-                        Array [
-                          Array [
+                    "positions": [
+                      [
+                        [
+                          [
                             0.3,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.3,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.45,
                             0.2,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.2,
                             0.45,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.45,
                             0.7,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.7,
                             0.45,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.3,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.16,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.3,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.36,
                             0.36,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.45,
                             0.2,
                           ],
                         ],
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
+                        ,
+                        ,
+                        ,
+                        ,
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.6,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.7,
                             0.45,
                           ],
                         ],
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                        ,
+                        ,
+                        [
+                          [
                             0.58,
                             0.36,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.6,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.45,
                             0.7,
                           ],
                         ],
-                        undefined,
-                        Array [
-                          Array [
+                        ,
+                        [
+                          [
                             0.58,
                             0.58,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.3,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.2,
                             0.45,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.36,
                             0.58,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.45,
                             0.2,
                           ],
                         ],
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.3,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.36,
                             0.36,
                           ],
                         ],
                       ],
                     ],
-                    "texts": Array [
+                    "texts": [
                       "",
                       "",
                       "",
@@ -835,8 +835,8 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
         removeClippedSubviews={false}
         renderItem={[Function]}
         scrollEventThrottle={50}
-        stickyHeaderIndices={Array []}
-        viewabilityConfigCallbackPairs={Array []}
+        stickyHeaderIndices={[]}
+        viewabilityConfigCallbackPairs={[]}
       >
         <View>
           <View
@@ -844,7 +844,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
           >
             <View
               style={
-                Object {
+                {
                   "borderBottomColor": "#e5e5e5",
                   "borderBottomWidth": 1,
                   "marginVertical": 10,
@@ -855,7 +855,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
             >
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "flexDirection": "row",
                     "justifyContent": "center",
@@ -864,7 +864,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               >
                 <View
                   style={
-                    Object {
+                    {
                       "alignItems": "center",
                       "justifyContent": "center",
                       "marginHorizontal": 40,
@@ -874,7 +874,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                   <Text
                     numberOfLines={1}
                     style={
-                      Object {
+                      {
                         "fontSize": 20,
                         "fontWeight": "bold",
                       }
@@ -884,7 +884,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                   </Text>
                   <Text
                     style={
-                      Object {
+                      {
                         "fontSize": 20,
                       }
                     }
@@ -899,6 +899,23 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                   </Text>
                 </View>
                 <View
+                  accessibilityState={
+                    {
+                      "busy": undefined,
+                      "checked": undefined,
+                      "disabled": undefined,
+                      "expanded": undefined,
+                      "selected": undefined,
+                    }
+                  }
+                  accessibilityValue={
+                    {
+                      "max": undefined,
+                      "min": undefined,
+                      "now": undefined,
+                      "text": undefined,
+                    }
+                  }
                   accessible={true}
                   collapsable={false}
                   focusable={true}
@@ -910,7 +927,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                   onResponderTerminationRequest={[Function]}
                   onStartShouldSetResponder={[Function]}
                   style={
-                    Object {
+                    {
                       "left": "auto",
                       "opacity": 1,
                       "position": "absolute",
@@ -924,7 +941,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               </View>
               <Text
                 style={
-                  Object {
+                  {
                     "color": "#A6A6A6",
                     "fontSize": 16,
                   }
@@ -935,10 +952,28 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
             </View>
           </View>
           <View
+            onFocusCapture={[Function]}
             onLayout={[Function]}
             style={null}
           >
             <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
               accessible={true}
               collapsable={false}
               focusable={true}
@@ -950,7 +985,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "flexDirection": "row",
                   "height": 80,
                   "marginBottom": 20,
@@ -962,7 +997,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               <View
                 accessibilityIgnoresInvertColors={true}
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "backgroundColor": "rgb(0,0,0)",
                     "borderRadius": 5,
@@ -976,24 +1011,24 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               >
                 <Image
                   source={
-                    Object {
+                    {
                       "uri": "http://www.liberte-fitness.fr/sites/default/files/styles/slider/public/news/tone.jpg?itok=505bme2a",
                     }
                   }
                   style={
-                    Array [
-                      Object {
+                    [
+                      {
                         "bottom": 0,
                         "left": 0,
                         "position": "absolute",
                         "right": 0,
                         "top": 0,
                       },
-                      Object {
+                      {
                         "height": 80,
                         "width": 80,
                       },
-                      Object {
+                      {
                         "borderRadius": 5,
                         "opacity": 0.5,
                       },
@@ -1002,7 +1037,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                 />
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#e5e5e5",
                       "fontSize": 16,
                       "textAlign": "center",
@@ -1013,7 +1048,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                 </Text>
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#e5e5e5",
                       "fontSize": 14,
                       "textAlign": "center",
@@ -1025,7 +1060,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               </View>
               <View
                 style={
-                  Object {
+                  {
                     "flex": 1,
                     "padding": 5,
                     "paddingBottom": 10,
@@ -1035,7 +1070,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               >
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#A6A6A6",
                       "flex": 2,
                       "fontSize": 14,
@@ -1047,7 +1082,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                 <Text
                   numberOfLines={1}
                   style={
-                    Object {
+                    {
                       "flex": 3,
                       "flexWrap": "wrap",
                       "fontSize": 16,
@@ -1059,7 +1094,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                 </Text>
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#A6A6A6",
                       "flex": 2,
                       "fontSize": 14,
@@ -1072,10 +1107,28 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
             </View>
           </View>
           <View
+            onFocusCapture={[Function]}
             onLayout={[Function]}
             style={null}
           >
             <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
               accessible={true}
               collapsable={false}
               focusable={true}
@@ -1087,7 +1140,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "flexDirection": "row",
                   "height": 80,
                   "marginBottom": 20,
@@ -1099,7 +1152,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               <View
                 accessibilityIgnoresInvertColors={true}
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "backgroundColor": "rgb(0,0,0)",
                     "borderRadius": 5,
@@ -1113,24 +1166,24 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               >
                 <Image
                   source={
-                    Object {
+                    {
                       "uri": "https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1",
                     }
                   }
                   style={
-                    Array [
-                      Object {
+                    [
+                      {
                         "bottom": 0,
                         "left": 0,
                         "position": "absolute",
                         "right": 0,
                         "top": 0,
                       },
-                      Object {
+                      {
                         "height": 80,
                         "width": 80,
                       },
-                      Object {
+                      {
                         "borderRadius": 5,
                         "opacity": 0.5,
                       },
@@ -1139,7 +1192,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                 />
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#e5e5e5",
                       "fontSize": 16,
                       "textAlign": "center",
@@ -1150,7 +1203,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                 </Text>
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#e5e5e5",
                       "fontSize": 14,
                       "textAlign": "center",
@@ -1162,7 +1215,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               </View>
               <View
                 style={
-                  Object {
+                  {
                     "flex": 1,
                     "padding": 5,
                     "paddingBottom": 10,
@@ -1172,7 +1225,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               >
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#A6A6A6",
                       "flex": 2,
                       "fontSize": 14,
@@ -1184,7 +1237,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                 <Text
                   numberOfLines={1}
                   style={
-                    Object {
+                    {
                       "flex": 3,
                       "flexWrap": "wrap",
                       "fontSize": 16,
@@ -1196,7 +1249,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                 </Text>
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#A6A6A6",
                       "flex": 2,
                       "fontSize": 14,
@@ -1213,7 +1266,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
           >
             <View
               style={
-                Object {
+                {
                   "paddingBottom": 30,
                 }
               }
@@ -1223,7 +1276,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
       </RCTScrollView>
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "#fff",
             "bottom": 0,
@@ -1239,7 +1292,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
   <View
     collapsable={false}
     style={
-      Object {
+      {
         "bottom": 0,
         "left": 0,
         "position": "absolute",
@@ -1250,9 +1303,9 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
   >
     <View
       style={
-        Array [
+        [
           undefined,
-          Object {
+          {
             "bottom": 0,
             "left": 0,
             "position": "absolute",
@@ -1264,14 +1317,14 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
     >
       <RCTScrollView
         ItemComponentStyle={
-          Object {
+          {
             "paddingLeft": 20,
           }
         }
         ListFooterComponent={
           <View
             style={
-              Object {
+              {
                 "paddingBottom": 30,
               }
             }
@@ -1280,7 +1333,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
         ListHeaderComponent={
           <View
             style={
-              Object {
+              {
                 "borderBottomColor": "#e5e5e5",
                 "borderBottomWidth": 1,
                 "marginVertical": 10,
@@ -1291,7 +1344,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
           >
             <View
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flexDirection": "row",
                   "justifyContent": "center",
@@ -1301,7 +1354,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               <TouchableOpacity
                 onPress={[Function]}
                 style={
-                  Object {
+                  {
                     "left": 0,
                     "position": "absolute",
                   }
@@ -1313,7 +1366,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                   name="chevron-left"
                   size={12}
                   style={
-                    Object {
+                    {
                       "color": "#232b2b",
                       "fontSize": 42,
                     }
@@ -1322,7 +1375,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               </TouchableOpacity>
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "justifyContent": "center",
                     "marginHorizontal": 40,
@@ -1332,7 +1385,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                 <Text
                   numberOfLines={1}
                   style={
-                    Object {
+                    {
                       "fontSize": 20,
                       "fontWeight": "bold",
                     }
@@ -1342,7 +1395,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                 </Text>
                 <Text
                   style={
-                    Object {
+                    {
                       "fontSize": 20,
                     }
                   }
@@ -1359,7 +1412,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
             </View>
             <Text
               style={
-                Object {
+                {
                   "color": "#A6A6A6",
                   "fontSize": 16,
                 }
@@ -1370,19 +1423,19 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
           </View>
         }
         contentContainerStyle={
-          Object {
+          {
             "paddingBottom": 40,
           }
         }
         data={
-          Array [
-            Object {
+          [
+            {
               "author": "Author",
               "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
               "durationInMinutes": 30,
               "equipment": "Equipment needs for the drill",
               "equipmentLabel": "",
-              "goals": Array [
+              "goals": [
                 "Defense",
               ],
               "id": 3,
@@ -1391,10 +1444,10 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               "level": "Beginner",
               "minimalPlayersNumber": 2,
               "seasonTiming": "",
-              "steps": Array [
-                Object {
-                  "animation": Object {
-                    "ids": Array [
+              "steps": [
+                {
+                  "animation": {
+                    "ids": [
                       "triangle",
                       "triangle",
                       "triangle",
@@ -1410,240 +1463,240 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                       "offense",
                       "disc",
                     ],
-                    "positions": Array [
-                      Array [
-                        Array [
-                          Array [
+                    "positions": [
+                      [
+                        [
+                          [
                             0.3,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.3,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.45,
                             0.2,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.2,
                             0.45,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.45,
                             0.7,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.7,
                             0.45,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.3,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.16,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.3,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.36,
                             0.36,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.45,
                             0.2,
                           ],
                         ],
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
+                        ,
+                        ,
+                        ,
+                        ,
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.6,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.7,
                             0.45,
                           ],
                         ],
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                        ,
+                        ,
+                        [
+                          [
                             0.58,
                             0.36,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.6,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.45,
                             0.7,
                           ],
                         ],
-                        undefined,
-                        Array [
-                          Array [
+                        ,
+                        [
+                          [
                             0.58,
                             0.58,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.3,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.2,
                             0.45,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.36,
                             0.58,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.45,
                             0.2,
                           ],
                         ],
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.3,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.36,
                             0.36,
                           ],
                         ],
                       ],
                     ],
-                    "texts": Array [
+                    "texts": [
                       "",
                       "",
                       "",
@@ -1667,13 +1720,13 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               "type": "frisbee",
               "visibleInList": true,
             },
-            Object {
+            {
               "author": "Author",
               "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
               "durationInMinutes": 30,
               "equipment": "Equipment needs for the drill",
               "equipmentLabel": "",
-              "goals": Array [
+              "goals": [
                 "Defense",
               ],
               "id": 4,
@@ -1682,8 +1735,8 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               "level": "Beginner",
               "minimalPlayersNumber": 2,
               "seasonTiming": "",
-              "steps": Array [
-                Object {
+              "steps": [
+                {
                   "id": 0,
                   "vimeoId": "462695757",
                 },
@@ -1696,14 +1749,14 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
         }
         deleteDrill={[Function]}
         drillsToDisplay={
-          Array [
-            Object {
+          [
+            {
               "author": "Author",
               "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
               "durationInMinutes": 30,
               "equipment": "Equipment needs for the drill",
               "equipmentLabel": "",
-              "goals": Array [
+              "goals": [
                 "Defense",
               ],
               "id": 3,
@@ -1712,10 +1765,10 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               "level": "Beginner",
               "minimalPlayersNumber": 2,
               "seasonTiming": "",
-              "steps": Array [
-                Object {
-                  "animation": Object {
-                    "ids": Array [
+              "steps": [
+                {
+                  "animation": {
+                    "ids": [
                       "triangle",
                       "triangle",
                       "triangle",
@@ -1731,240 +1784,240 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                       "offense",
                       "disc",
                     ],
-                    "positions": Array [
-                      Array [
-                        Array [
-                          Array [
+                    "positions": [
+                      [
+                        [
+                          [
                             0.3,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.3,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.45,
                             0.2,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.2,
                             0.45,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.45,
                             0.7,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.7,
                             0.45,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.3,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.16,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.3,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.36,
                             0.36,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.45,
                             0.2,
                           ],
                         ],
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
+                        ,
+                        ,
+                        ,
+                        ,
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.6,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.7,
                             0.45,
                           ],
                         ],
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                        ,
+                        ,
+                        [
+                          [
                             0.58,
                             0.36,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.6,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.45,
                             0.7,
                           ],
                         ],
-                        undefined,
-                        Array [
-                          Array [
+                        ,
+                        [
+                          [
                             0.58,
                             0.58,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.3,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.2,
                             0.45,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.36,
                             0.58,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.45,
                             0.2,
                           ],
                         ],
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.3,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.36,
                             0.36,
                           ],
                         ],
                       ],
                     ],
-                    "texts": Array [
+                    "texts": [
                       "",
                       "",
                       "",
@@ -1988,13 +2041,13 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               "type": "frisbee",
               "visibleInList": true,
             },
-            Object {
+            {
               "author": "Author",
               "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
               "durationInMinutes": 30,
               "equipment": "Equipment needs for the drill",
               "equipmentLabel": "",
-              "goals": Array [
+              "goals": [
                 "Defense",
               ],
               "id": 4,
@@ -2003,8 +2056,8 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               "level": "Beginner",
               "minimalPlayersNumber": 2,
               "seasonTiming": "",
-              "steps": Array [
-                Object {
+              "steps": [
+                {
                   "id": 0,
                   "vimeoId": "462695757",
                 },
@@ -2029,8 +2082,8 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
         removeClippedSubviews={false}
         renderItem={[Function]}
         scrollEventThrottle={50}
-        stickyHeaderIndices={Array []}
-        viewabilityConfigCallbackPairs={Array []}
+        stickyHeaderIndices={[]}
+        viewabilityConfigCallbackPairs={[]}
       >
         <View>
           <View
@@ -2038,7 +2091,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
           >
             <View
               style={
-                Object {
+                {
                   "borderBottomColor": "#e5e5e5",
                   "borderBottomWidth": 1,
                   "marginVertical": 10,
@@ -2049,7 +2102,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
             >
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "flexDirection": "row",
                     "justifyContent": "center",
@@ -2057,6 +2110,23 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                 }
               >
                 <View
+                  accessibilityState={
+                    {
+                      "busy": undefined,
+                      "checked": undefined,
+                      "disabled": undefined,
+                      "expanded": undefined,
+                      "selected": undefined,
+                    }
+                  }
+                  accessibilityValue={
+                    {
+                      "max": undefined,
+                      "min": undefined,
+                      "now": undefined,
+                      "text": undefined,
+                    }
+                  }
                   accessible={true}
                   collapsable={false}
                   focusable={true}
@@ -2068,7 +2138,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                   onResponderTerminationRequest={[Function]}
                   onStartShouldSetResponder={[Function]}
                   style={
-                    Object {
+                    {
                       "left": 0,
                       "opacity": 1,
                       "position": "absolute",
@@ -2080,7 +2150,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                 </View>
                 <View
                   style={
-                    Object {
+                    {
                       "alignItems": "center",
                       "justifyContent": "center",
                       "marginHorizontal": 40,
@@ -2090,7 +2160,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                   <Text
                     numberOfLines={1}
                     style={
-                      Object {
+                      {
                         "fontSize": 20,
                         "fontWeight": "bold",
                       }
@@ -2100,7 +2170,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                   </Text>
                   <Text
                     style={
-                      Object {
+                      {
                         "fontSize": 20,
                       }
                     }
@@ -2117,7 +2187,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               </View>
               <Text
                 style={
-                  Object {
+                  {
                     "color": "#A6A6A6",
                     "fontSize": 16,
                   }
@@ -2128,10 +2198,28 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
             </View>
           </View>
           <View
+            onFocusCapture={[Function]}
             onLayout={[Function]}
             style={null}
           >
             <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
               accessible={true}
               collapsable={false}
               focusable={true}
@@ -2143,7 +2231,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "flexDirection": "row",
                   "height": 80,
                   "marginBottom": 20,
@@ -2155,7 +2243,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               <View
                 accessibilityIgnoresInvertColors={true}
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "backgroundColor": "rgb(0,0,0)",
                     "borderRadius": 5,
@@ -2169,24 +2257,24 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               >
                 <Image
                   source={
-                    Object {
+                    {
                       "uri": "https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1",
                     }
                   }
                   style={
-                    Array [
-                      Object {
+                    [
+                      {
                         "bottom": 0,
                         "left": 0,
                         "position": "absolute",
                         "right": 0,
                         "top": 0,
                       },
-                      Object {
+                      {
                         "height": 80,
                         "width": 80,
                       },
-                      Object {
+                      {
                         "borderRadius": 5,
                         "opacity": 0.5,
                       },
@@ -2195,7 +2283,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                 />
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#e5e5e5",
                       "fontSize": 16,
                       "textAlign": "center",
@@ -2206,7 +2294,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                 </Text>
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#e5e5e5",
                       "fontSize": 14,
                       "textAlign": "center",
@@ -2218,7 +2306,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               </View>
               <View
                 style={
-                  Object {
+                  {
                     "flex": 1,
                     "padding": 5,
                     "paddingBottom": 10,
@@ -2228,7 +2316,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               >
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#A6A6A6",
                       "flex": 2,
                       "fontSize": 14,
@@ -2240,7 +2328,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                 <Text
                   numberOfLines={1}
                   style={
-                    Object {
+                    {
                       "flex": 3,
                       "flexWrap": "wrap",
                       "fontSize": 16,
@@ -2252,7 +2340,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                 </Text>
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#A6A6A6",
                       "flex": 2,
                       "fontSize": 14,
@@ -2265,10 +2353,28 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
             </View>
           </View>
           <View
+            onFocusCapture={[Function]}
             onLayout={[Function]}
             style={null}
           >
             <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
               accessible={true}
               collapsable={false}
               focusable={true}
@@ -2280,7 +2386,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "flexDirection": "row",
                   "height": 80,
                   "marginBottom": 20,
@@ -2292,7 +2398,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               <View
                 accessibilityIgnoresInvertColors={true}
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "backgroundColor": "rgb(0,0,0)",
                     "borderRadius": 5,
@@ -2306,24 +2412,24 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               >
                 <Image
                   source={
-                    Object {
+                    {
                       "uri": "https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg",
                     }
                   }
                   style={
-                    Array [
-                      Object {
+                    [
+                      {
                         "bottom": 0,
                         "left": 0,
                         "position": "absolute",
                         "right": 0,
                         "top": 0,
                       },
-                      Object {
+                      {
                         "height": 80,
                         "width": 80,
                       },
-                      Object {
+                      {
                         "borderRadius": 5,
                         "opacity": 0.5,
                       },
@@ -2332,7 +2438,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                 />
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#e5e5e5",
                       "fontSize": 16,
                       "textAlign": "center",
@@ -2343,7 +2449,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                 </Text>
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#e5e5e5",
                       "fontSize": 14,
                       "textAlign": "center",
@@ -2355,7 +2461,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               </View>
               <View
                 style={
-                  Object {
+                  {
                     "flex": 1,
                     "padding": 5,
                     "paddingBottom": 10,
@@ -2365,7 +2471,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
               >
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#A6A6A6",
                       "flex": 2,
                       "fontSize": 14,
@@ -2377,7 +2483,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                 <Text
                   numberOfLines={1}
                   style={
-                    Object {
+                    {
                       "flex": 3,
                       "flexWrap": "wrap",
                       "fontSize": 16,
@@ -2389,7 +2495,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
                 </Text>
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#A6A6A6",
                       "flex": 2,
                       "fontSize": 14,
@@ -2406,7 +2512,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
           >
             <View
               style={
-                Object {
+                {
                   "paddingBottom": 30,
                 }
               }
@@ -2416,7 +2522,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
       </RCTScrollView>
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "#fff",
             "bottom": 0,
@@ -2443,7 +2549,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
   <View
     collapsable={false}
     style={
-      Object {
+      {
         "bottom": 0,
         "left": 0,
         "position": "absolute",
@@ -2454,9 +2560,9 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
   >
     <View
       style={
-        Array [
+        [
           undefined,
-          Object {
+          {
             "bottom": 0,
             "left": 0,
             "position": "absolute",
@@ -2468,14 +2574,14 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
     >
       <RCTScrollView
         ItemComponentStyle={
-          Object {
+          {
             "paddingLeft": 20,
           }
         }
         ListFooterComponent={
           <View
             style={
-              Object {
+              {
                 "paddingBottom": 30,
               }
             }
@@ -2484,7 +2590,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
         ListHeaderComponent={
           <View
             style={
-              Object {
+              {
                 "borderBottomColor": "#e5e5e5",
                 "borderBottomWidth": 1,
                 "marginVertical": 10,
@@ -2495,7 +2601,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
           >
             <View
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flexDirection": "row",
                   "justifyContent": "center",
@@ -2504,7 +2610,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
             >
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "justifyContent": "center",
                     "marginHorizontal": 40,
@@ -2514,7 +2620,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                 <Text
                   numberOfLines={1}
                   style={
-                    Object {
+                    {
                       "fontSize": 20,
                       "fontWeight": "bold",
                     }
@@ -2524,7 +2630,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                 </Text>
                 <Text
                   style={
-                    Object {
+                    {
                       "fontSize": 20,
                     }
                   }
@@ -2541,12 +2647,12 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               <TouchableOpacity
                 onPress={[Function]}
                 style={
-                  Array [
-                    Object {
+                  [
+                    {
                       "left": 0,
                       "position": "absolute",
                     },
-                    Object {
+                    {
                       "left": "auto",
                       "right": 0,
                     },
@@ -2559,7 +2665,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                   name="chevron-right"
                   size={12}
                   style={
-                    Object {
+                    {
                       "color": "#232b2b",
                       "fontSize": 42,
                     }
@@ -2569,7 +2675,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
             </View>
             <View
               style={
-                Object {
+                {
                   "flexDirection": "row",
                   "justifyContent": "space-evenly",
                   "padding": 5,
@@ -2578,7 +2684,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
             >
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                   }
                 }
@@ -2591,7 +2697,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                 />
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#A6A6A6",
                       "fontSize": 16,
                     }
@@ -2603,7 +2709,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               </View>
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                   }
                 }
@@ -2616,7 +2722,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                 />
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#A6A6A6",
                       "fontSize": 16,
                     }
@@ -2628,7 +2734,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
             </View>
             <Text
               style={
-                Object {
+                {
                   "color": "#A6A6A6",
                   "fontSize": 16,
                 }
@@ -2639,19 +2745,19 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
           </View>
         }
         contentContainerStyle={
-          Object {
+          {
             "paddingBottom": 40,
           }
         }
         data={
-          Array [
-            Object {
+          [
+            {
               "author": "Author",
               "description": "Description of the drill",
               "durationInMinutes": 10,
               "equipment": "Equipment needs for the drill",
               "equipmentLabel": "Full",
-              "goals": Array [
+              "goals": [
                 "Legs",
               ],
               "id": 2,
@@ -2660,20 +2766,20 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               "level": "Intermediate",
               "minimalPlayersNumber": 1,
               "seasonTiming": "In-season",
-              "steps": Array [
-                Object {
+              "steps": [
+                {
                   "id": 0,
                   "subtitle": "This is a subtitle",
                   "title": "Warmup",
                   "vimeoId": "462695757",
                 },
-                Object {
+                {
                   "id": 1,
                   "subtitle": "This is a subtitle",
                   "title": "Do the drill",
                   "vimeoId": "462695757",
                 },
-                Object {
+                {
                   "id": 2,
                   "subtitle": "This is a subtitle",
                   "title": "Last step",
@@ -2684,13 +2790,13 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               "type": "fitness",
               "visibleInList": true,
             },
-            Object {
+            {
               "author": "Author",
               "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
               "durationInMinutes": 30,
               "equipment": "Equipment needs for the drill",
               "equipmentLabel": "",
-              "goals": Array [
+              "goals": [
                 "Defense",
               ],
               "id": 3,
@@ -2699,10 +2805,10 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               "level": "Beginner",
               "minimalPlayersNumber": 2,
               "seasonTiming": "",
-              "steps": Array [
-                Object {
-                  "animation": Object {
-                    "ids": Array [
+              "steps": [
+                {
+                  "animation": {
+                    "ids": [
                       "triangle",
                       "triangle",
                       "triangle",
@@ -2718,240 +2824,240 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                       "offense",
                       "disc",
                     ],
-                    "positions": Array [
-                      Array [
-                        Array [
-                          Array [
+                    "positions": [
+                      [
+                        [
+                          [
                             0.3,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.3,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.45,
                             0.2,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.2,
                             0.45,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.45,
                             0.7,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.7,
                             0.45,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.3,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.16,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.3,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.36,
                             0.36,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.45,
                             0.2,
                           ],
                         ],
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
+                        ,
+                        ,
+                        ,
+                        ,
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.6,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.7,
                             0.45,
                           ],
                         ],
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                        ,
+                        ,
+                        [
+                          [
                             0.58,
                             0.36,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.6,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.45,
                             0.7,
                           ],
                         ],
-                        undefined,
-                        Array [
-                          Array [
+                        ,
+                        [
+                          [
                             0.58,
                             0.58,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.3,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.2,
                             0.45,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.36,
                             0.58,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.45,
                             0.2,
                           ],
                         ],
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.3,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.36,
                             0.36,
                           ],
                         ],
                       ],
                     ],
-                    "texts": Array [
+                    "texts": [
                       "",
                       "",
                       "",
@@ -2979,14 +3085,14 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
         }
         deleteDrill={[Function]}
         drillsToDisplay={
-          Array [
-            Object {
+          [
+            {
               "author": "Author",
               "description": "Description of the drill",
               "durationInMinutes": 10,
               "equipment": "Equipment needs for the drill",
               "equipmentLabel": "Full",
-              "goals": Array [
+              "goals": [
                 "Legs",
               ],
               "id": 2,
@@ -2995,20 +3101,20 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               "level": "Intermediate",
               "minimalPlayersNumber": 1,
               "seasonTiming": "In-season",
-              "steps": Array [
-                Object {
+              "steps": [
+                {
                   "id": 0,
                   "subtitle": "This is a subtitle",
                   "title": "Warmup",
                   "vimeoId": "462695757",
                 },
-                Object {
+                {
                   "id": 1,
                   "subtitle": "This is a subtitle",
                   "title": "Do the drill",
                   "vimeoId": "462695757",
                 },
-                Object {
+                {
                   "id": 2,
                   "subtitle": "This is a subtitle",
                   "title": "Last step",
@@ -3019,13 +3125,13 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               "type": "fitness",
               "visibleInList": true,
             },
-            Object {
+            {
               "author": "Author",
               "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
               "durationInMinutes": 30,
               "equipment": "Equipment needs for the drill",
               "equipmentLabel": "",
-              "goals": Array [
+              "goals": [
                 "Defense",
               ],
               "id": 3,
@@ -3034,10 +3140,10 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               "level": "Beginner",
               "minimalPlayersNumber": 2,
               "seasonTiming": "",
-              "steps": Array [
-                Object {
-                  "animation": Object {
-                    "ids": Array [
+              "steps": [
+                {
+                  "animation": {
+                    "ids": [
                       "triangle",
                       "triangle",
                       "triangle",
@@ -3053,240 +3159,240 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                       "offense",
                       "disc",
                     ],
-                    "positions": Array [
-                      Array [
-                        Array [
-                          Array [
+                    "positions": [
+                      [
+                        [
+                          [
                             0.3,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.3,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.45,
                             0.2,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.2,
                             0.45,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.45,
                             0.7,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.7,
                             0.45,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.3,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.16,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.3,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.36,
                             0.36,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.45,
                             0.2,
                           ],
                         ],
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
+                        ,
+                        ,
+                        ,
+                        ,
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.6,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.7,
                             0.45,
                           ],
                         ],
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                        ,
+                        ,
+                        [
+                          [
                             0.58,
                             0.36,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.6,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.45,
                             0.7,
                           ],
                         ],
-                        undefined,
-                        Array [
-                          Array [
+                        ,
+                        [
+                          [
                             0.58,
                             0.58,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.3,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.2,
                             0.45,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.36,
                             0.58,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.45,
                             0.2,
                           ],
                         ],
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.3,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.36,
                             0.36,
                           ],
                         ],
                       ],
                     ],
-                    "texts": Array [
+                    "texts": [
                       "",
                       "",
                       "",
@@ -3326,8 +3432,8 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
         removeClippedSubviews={false}
         renderItem={[Function]}
         scrollEventThrottle={50}
-        stickyHeaderIndices={Array []}
-        viewabilityConfigCallbackPairs={Array []}
+        stickyHeaderIndices={[]}
+        viewabilityConfigCallbackPairs={[]}
       >
         <View>
           <View
@@ -3335,7 +3441,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
           >
             <View
               style={
-                Object {
+                {
                   "borderBottomColor": "#e5e5e5",
                   "borderBottomWidth": 1,
                   "marginVertical": 10,
@@ -3346,7 +3452,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
             >
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "flexDirection": "row",
                     "justifyContent": "center",
@@ -3355,7 +3461,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               >
                 <View
                   style={
-                    Object {
+                    {
                       "alignItems": "center",
                       "justifyContent": "center",
                       "marginHorizontal": 40,
@@ -3365,7 +3471,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                   <Text
                     numberOfLines={1}
                     style={
-                      Object {
+                      {
                         "fontSize": 20,
                         "fontWeight": "bold",
                       }
@@ -3375,7 +3481,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                   </Text>
                   <Text
                     style={
-                      Object {
+                      {
                         "fontSize": 20,
                       }
                     }
@@ -3390,6 +3496,23 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                   </Text>
                 </View>
                 <View
+                  accessibilityState={
+                    {
+                      "busy": undefined,
+                      "checked": undefined,
+                      "disabled": undefined,
+                      "expanded": undefined,
+                      "selected": undefined,
+                    }
+                  }
+                  accessibilityValue={
+                    {
+                      "max": undefined,
+                      "min": undefined,
+                      "now": undefined,
+                      "text": undefined,
+                    }
+                  }
                   accessible={true}
                   collapsable={false}
                   focusable={true}
@@ -3401,7 +3524,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                   onResponderTerminationRequest={[Function]}
                   onStartShouldSetResponder={[Function]}
                   style={
-                    Object {
+                    {
                       "left": "auto",
                       "opacity": 1,
                       "position": "absolute",
@@ -3415,7 +3538,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               </View>
               <View
                 style={
-                  Object {
+                  {
                     "flexDirection": "row",
                     "justifyContent": "space-evenly",
                     "padding": 5,
@@ -3424,7 +3547,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               >
                 <View
                   style={
-                    Object {
+                    {
                       "alignItems": "center",
                     }
                   }
@@ -3432,7 +3555,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                   <Text />
                   <Text
                     style={
-                      Object {
+                      {
                         "color": "#A6A6A6",
                         "fontSize": 16,
                       }
@@ -3444,7 +3567,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                 </View>
                 <View
                   style={
-                    Object {
+                    {
                       "alignItems": "center",
                     }
                   }
@@ -3452,7 +3575,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                   <Text />
                   <Text
                     style={
-                      Object {
+                      {
                         "color": "#A6A6A6",
                         "fontSize": 16,
                       }
@@ -3464,7 +3587,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               </View>
               <Text
                 style={
-                  Object {
+                  {
                     "color": "#A6A6A6",
                     "fontSize": 16,
                   }
@@ -3475,10 +3598,28 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
             </View>
           </View>
           <View
+            onFocusCapture={[Function]}
             onLayout={[Function]}
             style={null}
           >
             <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
               accessible={true}
               collapsable={false}
               focusable={true}
@@ -3490,7 +3631,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "flexDirection": "row",
                   "height": 80,
                   "marginBottom": 20,
@@ -3502,7 +3643,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               <View
                 accessibilityIgnoresInvertColors={true}
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "backgroundColor": "rgb(0,0,0)",
                     "borderRadius": 5,
@@ -3516,24 +3657,24 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               >
                 <Image
                   source={
-                    Object {
+                    {
                       "uri": "http://www.liberte-fitness.fr/sites/default/files/styles/slider/public/news/tone.jpg?itok=505bme2a",
                     }
                   }
                   style={
-                    Array [
-                      Object {
+                    [
+                      {
                         "bottom": 0,
                         "left": 0,
                         "position": "absolute",
                         "right": 0,
                         "top": 0,
                       },
-                      Object {
+                      {
                         "height": 80,
                         "width": 80,
                       },
-                      Object {
+                      {
                         "borderRadius": 5,
                         "opacity": 0.5,
                       },
@@ -3542,7 +3683,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                 />
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#e5e5e5",
                       "fontSize": 16,
                       "textAlign": "center",
@@ -3553,7 +3694,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                 </Text>
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#e5e5e5",
                       "fontSize": 14,
                       "textAlign": "center",
@@ -3565,7 +3706,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               </View>
               <View
                 style={
-                  Object {
+                  {
                     "flex": 1,
                     "padding": 5,
                     "paddingBottom": 10,
@@ -3575,7 +3716,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               >
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#A6A6A6",
                       "flex": 2,
                       "fontSize": 14,
@@ -3587,7 +3728,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                 <Text
                   numberOfLines={1}
                   style={
-                    Object {
+                    {
                       "flex": 3,
                       "flexWrap": "wrap",
                       "fontSize": 16,
@@ -3599,7 +3740,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                 </Text>
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#A6A6A6",
                       "flex": 2,
                       "fontSize": 14,
@@ -3612,10 +3753,28 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
             </View>
           </View>
           <View
+            onFocusCapture={[Function]}
             onLayout={[Function]}
             style={null}
           >
             <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
               accessible={true}
               collapsable={false}
               focusable={true}
@@ -3627,7 +3786,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "flexDirection": "row",
                   "height": 80,
                   "marginBottom": 20,
@@ -3639,7 +3798,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               <View
                 accessibilityIgnoresInvertColors={true}
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "backgroundColor": "rgb(0,0,0)",
                     "borderRadius": 5,
@@ -3653,24 +3812,24 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               >
                 <Image
                   source={
-                    Object {
+                    {
                       "uri": "https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1",
                     }
                   }
                   style={
-                    Array [
-                      Object {
+                    [
+                      {
                         "bottom": 0,
                         "left": 0,
                         "position": "absolute",
                         "right": 0,
                         "top": 0,
                       },
-                      Object {
+                      {
                         "height": 80,
                         "width": 80,
                       },
-                      Object {
+                      {
                         "borderRadius": 5,
                         "opacity": 0.5,
                       },
@@ -3679,7 +3838,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                 />
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#e5e5e5",
                       "fontSize": 16,
                       "textAlign": "center",
@@ -3690,7 +3849,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                 </Text>
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#e5e5e5",
                       "fontSize": 14,
                       "textAlign": "center",
@@ -3702,7 +3861,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               </View>
               <View
                 style={
-                  Object {
+                  {
                     "flex": 1,
                     "padding": 5,
                     "paddingBottom": 10,
@@ -3712,7 +3871,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               >
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#A6A6A6",
                       "flex": 2,
                       "fontSize": 14,
@@ -3724,7 +3883,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                 <Text
                   numberOfLines={1}
                   style={
-                    Object {
+                    {
                       "flex": 3,
                       "flexWrap": "wrap",
                       "fontSize": 16,
@@ -3736,7 +3895,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                 </Text>
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#A6A6A6",
                       "flex": 2,
                       "fontSize": 14,
@@ -3753,7 +3912,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
           >
             <View
               style={
-                Object {
+                {
                   "paddingBottom": 30,
                 }
               }
@@ -3763,7 +3922,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
       </RCTScrollView>
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "#fff",
             "bottom": 0,
@@ -3775,6 +3934,23 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
         }
       >
         <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
           accessible={true}
           collapsable={false}
           focusable={true}
@@ -3786,7 +3962,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
+            {
               "alignItems": "center",
               "backgroundColor": "#2a9e91",
               "borderRadius": 5,
@@ -3803,7 +3979,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
         >
           <Text
             style={
-              Object {
+              {
                 "color": "#fff",
                 "fontSize": 16,
                 "textAlign": "center",
@@ -3819,7 +3995,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
   <View
     collapsable={false}
     style={
-      Object {
+      {
         "bottom": 0,
         "left": 0,
         "position": "absolute",
@@ -3830,9 +4006,9 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
   >
     <View
       style={
-        Array [
+        [
           undefined,
-          Object {
+          {
             "bottom": 0,
             "left": 0,
             "position": "absolute",
@@ -3844,14 +4020,14 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
     >
       <RCTScrollView
         ItemComponentStyle={
-          Object {
+          {
             "paddingLeft": 20,
           }
         }
         ListFooterComponent={
           <View
             style={
-              Object {
+              {
                 "paddingBottom": 30,
               }
             }
@@ -3860,7 +4036,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
         ListHeaderComponent={
           <View
             style={
-              Object {
+              {
                 "borderBottomColor": "#e5e5e5",
                 "borderBottomWidth": 1,
                 "marginVertical": 10,
@@ -3871,7 +4047,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
           >
             <View
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flexDirection": "row",
                   "justifyContent": "center",
@@ -3881,7 +4057,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               <TouchableOpacity
                 onPress={[Function]}
                 style={
-                  Object {
+                  {
                     "left": 0,
                     "position": "absolute",
                   }
@@ -3893,7 +4069,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                   name="chevron-left"
                   size={12}
                   style={
-                    Object {
+                    {
                       "color": "#232b2b",
                       "fontSize": 42,
                     }
@@ -3902,7 +4078,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               </TouchableOpacity>
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "justifyContent": "center",
                     "marginHorizontal": 40,
@@ -3912,7 +4088,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                 <Text
                   numberOfLines={1}
                   style={
-                    Object {
+                    {
                       "fontSize": 20,
                       "fontWeight": "bold",
                     }
@@ -3922,7 +4098,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                 </Text>
                 <Text
                   style={
-                    Object {
+                    {
                       "fontSize": 20,
                     }
                   }
@@ -3939,7 +4115,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
             </View>
             <View
               style={
-                Object {
+                {
                   "flexDirection": "row",
                   "justifyContent": "space-evenly",
                   "padding": 5,
@@ -3948,7 +4124,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
             >
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                   }
                 }
@@ -3961,7 +4137,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                 />
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#A6A6A6",
                       "fontSize": 16,
                     }
@@ -3973,7 +4149,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               </View>
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                   }
                 }
@@ -3986,7 +4162,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                 />
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#A6A6A6",
                       "fontSize": 16,
                     }
@@ -3998,7 +4174,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
             </View>
             <Text
               style={
-                Object {
+                {
                   "color": "#A6A6A6",
                   "fontSize": 16,
                 }
@@ -4009,19 +4185,19 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
           </View>
         }
         contentContainerStyle={
-          Object {
+          {
             "paddingBottom": 40,
           }
         }
         data={
-          Array [
-            Object {
+          [
+            {
               "author": "Author",
               "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
               "durationInMinutes": 30,
               "equipment": "Equipment needs for the drill",
               "equipmentLabel": "",
-              "goals": Array [
+              "goals": [
                 "Defense",
               ],
               "id": 3,
@@ -4030,10 +4206,10 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               "level": "Beginner",
               "minimalPlayersNumber": 2,
               "seasonTiming": "",
-              "steps": Array [
-                Object {
-                  "animation": Object {
-                    "ids": Array [
+              "steps": [
+                {
+                  "animation": {
+                    "ids": [
                       "triangle",
                       "triangle",
                       "triangle",
@@ -4049,240 +4225,240 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                       "offense",
                       "disc",
                     ],
-                    "positions": Array [
-                      Array [
-                        Array [
-                          Array [
+                    "positions": [
+                      [
+                        [
+                          [
                             0.3,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.3,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.45,
                             0.2,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.2,
                             0.45,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.45,
                             0.7,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.7,
                             0.45,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.3,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.16,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.3,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.36,
                             0.36,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.45,
                             0.2,
                           ],
                         ],
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
+                        ,
+                        ,
+                        ,
+                        ,
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.6,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.7,
                             0.45,
                           ],
                         ],
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                        ,
+                        ,
+                        [
+                          [
                             0.58,
                             0.36,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.6,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.45,
                             0.7,
                           ],
                         ],
-                        undefined,
-                        Array [
-                          Array [
+                        ,
+                        [
+                          [
                             0.58,
                             0.58,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.3,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.2,
                             0.45,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.36,
                             0.58,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.45,
                             0.2,
                           ],
                         ],
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.3,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.36,
                             0.36,
                           ],
                         ],
                       ],
                     ],
-                    "texts": Array [
+                    "texts": [
                       "",
                       "",
                       "",
@@ -4306,13 +4482,13 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               "type": "frisbee",
               "visibleInList": true,
             },
-            Object {
+            {
               "author": "Author",
               "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
               "durationInMinutes": 30,
               "equipment": "Equipment needs for the drill",
               "equipmentLabel": "",
-              "goals": Array [
+              "goals": [
                 "Defense",
               ],
               "id": 4,
@@ -4321,8 +4497,8 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               "level": "Beginner",
               "minimalPlayersNumber": 2,
               "seasonTiming": "",
-              "steps": Array [
-                Object {
+              "steps": [
+                {
                   "id": 0,
                   "vimeoId": "462695757",
                 },
@@ -4335,14 +4511,14 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
         }
         deleteDrill={[Function]}
         drillsToDisplay={
-          Array [
-            Object {
+          [
+            {
               "author": "Author",
               "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
               "durationInMinutes": 30,
               "equipment": "Equipment needs for the drill",
               "equipmentLabel": "",
-              "goals": Array [
+              "goals": [
                 "Defense",
               ],
               "id": 3,
@@ -4351,10 +4527,10 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               "level": "Beginner",
               "minimalPlayersNumber": 2,
               "seasonTiming": "",
-              "steps": Array [
-                Object {
-                  "animation": Object {
-                    "ids": Array [
+              "steps": [
+                {
+                  "animation": {
+                    "ids": [
                       "triangle",
                       "triangle",
                       "triangle",
@@ -4370,240 +4546,240 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                       "offense",
                       "disc",
                     ],
-                    "positions": Array [
-                      Array [
-                        Array [
-                          Array [
+                    "positions": [
+                      [
+                        [
+                          [
                             0.3,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.3,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.45,
                             0.2,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.2,
                             0.45,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.45,
                             0.7,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.7,
                             0.45,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.3,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.16,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.6,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.3,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.36,
                             0.36,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.45,
                             0.2,
                           ],
                         ],
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
+                        ,
+                        ,
+                        ,
+                        ,
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.6,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.7,
                             0.45,
                           ],
                         ],
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                        ,
+                        ,
+                        [
+                          [
                             0.58,
                             0.36,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.6,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.45,
                             0.7,
                           ],
                         ],
-                        undefined,
-                        Array [
-                          Array [
+                        ,
+                        [
+                          [
                             0.58,
                             0.58,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.3,
                             0.6,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.2,
                             0.45,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.36,
                             0.58,
                           ],
                         ],
                       ],
-                      Array [
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                      [
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.45,
                             0.2,
                           ],
                         ],
-                        undefined,
-                        undefined,
-                        undefined,
-                        Array [
-                          Array [
+                        ,
+                        ,
+                        ,
+                        [
+                          [
                             0.3,
                             0.3,
                           ],
                         ],
-                        Array [
-                          Array [
+                        [
+                          [
                             0.36,
                             0.36,
                           ],
                         ],
                       ],
                     ],
-                    "texts": Array [
+                    "texts": [
                       "",
                       "",
                       "",
@@ -4627,13 +4803,13 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               "type": "frisbee",
               "visibleInList": true,
             },
-            Object {
+            {
               "author": "Author",
               "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
               "durationInMinutes": 30,
               "equipment": "Equipment needs for the drill",
               "equipmentLabel": "",
-              "goals": Array [
+              "goals": [
                 "Defense",
               ],
               "id": 4,
@@ -4642,8 +4818,8 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               "level": "Beginner",
               "minimalPlayersNumber": 2,
               "seasonTiming": "",
-              "steps": Array [
-                Object {
+              "steps": [
+                {
                   "id": 0,
                   "vimeoId": "462695757",
                 },
@@ -4668,8 +4844,8 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
         removeClippedSubviews={false}
         renderItem={[Function]}
         scrollEventThrottle={50}
-        stickyHeaderIndices={Array []}
-        viewabilityConfigCallbackPairs={Array []}
+        stickyHeaderIndices={[]}
+        viewabilityConfigCallbackPairs={[]}
       >
         <View>
           <View
@@ -4677,7 +4853,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
           >
             <View
               style={
-                Object {
+                {
                   "borderBottomColor": "#e5e5e5",
                   "borderBottomWidth": 1,
                   "marginVertical": 10,
@@ -4688,7 +4864,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
             >
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "flexDirection": "row",
                     "justifyContent": "center",
@@ -4696,6 +4872,23 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                 }
               >
                 <View
+                  accessibilityState={
+                    {
+                      "busy": undefined,
+                      "checked": undefined,
+                      "disabled": undefined,
+                      "expanded": undefined,
+                      "selected": undefined,
+                    }
+                  }
+                  accessibilityValue={
+                    {
+                      "max": undefined,
+                      "min": undefined,
+                      "now": undefined,
+                      "text": undefined,
+                    }
+                  }
                   accessible={true}
                   collapsable={false}
                   focusable={true}
@@ -4707,7 +4900,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                   onResponderTerminationRequest={[Function]}
                   onStartShouldSetResponder={[Function]}
                   style={
-                    Object {
+                    {
                       "left": 0,
                       "opacity": 1,
                       "position": "absolute",
@@ -4719,7 +4912,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                 </View>
                 <View
                   style={
-                    Object {
+                    {
                       "alignItems": "center",
                       "justifyContent": "center",
                       "marginHorizontal": 40,
@@ -4729,7 +4922,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                   <Text
                     numberOfLines={1}
                     style={
-                      Object {
+                      {
                         "fontSize": 20,
                         "fontWeight": "bold",
                       }
@@ -4739,7 +4932,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                   </Text>
                   <Text
                     style={
-                      Object {
+                      {
                         "fontSize": 20,
                       }
                     }
@@ -4756,7 +4949,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               </View>
               <View
                 style={
-                  Object {
+                  {
                     "flexDirection": "row",
                     "justifyContent": "space-evenly",
                     "padding": 5,
@@ -4765,7 +4958,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               >
                 <View
                   style={
-                    Object {
+                    {
                       "alignItems": "center",
                     }
                   }
@@ -4773,7 +4966,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                   <Text />
                   <Text
                     style={
-                      Object {
+                      {
                         "color": "#A6A6A6",
                         "fontSize": 16,
                       }
@@ -4785,7 +4978,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                 </View>
                 <View
                   style={
-                    Object {
+                    {
                       "alignItems": "center",
                     }
                   }
@@ -4793,7 +4986,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                   <Text />
                   <Text
                     style={
-                      Object {
+                      {
                         "color": "#A6A6A6",
                         "fontSize": 16,
                       }
@@ -4805,7 +4998,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               </View>
               <Text
                 style={
-                  Object {
+                  {
                     "color": "#A6A6A6",
                     "fontSize": 16,
                   }
@@ -4816,10 +5009,28 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
             </View>
           </View>
           <View
+            onFocusCapture={[Function]}
             onLayout={[Function]}
             style={null}
           >
             <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
               accessible={true}
               collapsable={false}
               focusable={true}
@@ -4831,7 +5042,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "flexDirection": "row",
                   "height": 80,
                   "marginBottom": 20,
@@ -4843,7 +5054,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               <View
                 accessibilityIgnoresInvertColors={true}
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "backgroundColor": "rgb(0,0,0)",
                     "borderRadius": 5,
@@ -4857,24 +5068,24 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               >
                 <Image
                   source={
-                    Object {
+                    {
                       "uri": "https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1",
                     }
                   }
                   style={
-                    Array [
-                      Object {
+                    [
+                      {
                         "bottom": 0,
                         "left": 0,
                         "position": "absolute",
                         "right": 0,
                         "top": 0,
                       },
-                      Object {
+                      {
                         "height": 80,
                         "width": 80,
                       },
-                      Object {
+                      {
                         "borderRadius": 5,
                         "opacity": 0.5,
                       },
@@ -4883,7 +5094,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                 />
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#e5e5e5",
                       "fontSize": 16,
                       "textAlign": "center",
@@ -4894,7 +5105,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                 </Text>
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#e5e5e5",
                       "fontSize": 14,
                       "textAlign": "center",
@@ -4906,7 +5117,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               </View>
               <View
                 style={
-                  Object {
+                  {
                     "flex": 1,
                     "padding": 5,
                     "paddingBottom": 10,
@@ -4916,7 +5127,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               >
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#A6A6A6",
                       "flex": 2,
                       "fontSize": 14,
@@ -4928,7 +5139,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                 <Text
                   numberOfLines={1}
                   style={
-                    Object {
+                    {
                       "flex": 3,
                       "flexWrap": "wrap",
                       "fontSize": 16,
@@ -4940,7 +5151,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                 </Text>
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#A6A6A6",
                       "flex": 2,
                       "fontSize": 14,
@@ -4953,10 +5164,28 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
             </View>
           </View>
           <View
+            onFocusCapture={[Function]}
             onLayout={[Function]}
             style={null}
           >
             <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
               accessible={true}
               collapsable={false}
               focusable={true}
@@ -4968,7 +5197,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "flexDirection": "row",
                   "height": 80,
                   "marginBottom": 20,
@@ -4980,7 +5209,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               <View
                 accessibilityIgnoresInvertColors={true}
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "backgroundColor": "rgb(0,0,0)",
                     "borderRadius": 5,
@@ -4994,24 +5223,24 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               >
                 <Image
                   source={
-                    Object {
+                    {
                       "uri": "https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg",
                     }
                   }
                   style={
-                    Array [
-                      Object {
+                    [
+                      {
                         "bottom": 0,
                         "left": 0,
                         "position": "absolute",
                         "right": 0,
                         "top": 0,
                       },
-                      Object {
+                      {
                         "height": 80,
                         "width": 80,
                       },
-                      Object {
+                      {
                         "borderRadius": 5,
                         "opacity": 0.5,
                       },
@@ -5020,7 +5249,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                 />
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#e5e5e5",
                       "fontSize": 16,
                       "textAlign": "center",
@@ -5031,7 +5260,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                 </Text>
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#e5e5e5",
                       "fontSize": 14,
                       "textAlign": "center",
@@ -5043,7 +5272,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               </View>
               <View
                 style={
-                  Object {
+                  {
                     "flex": 1,
                     "padding": 5,
                     "paddingBottom": 10,
@@ -5053,7 +5282,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
               >
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#A6A6A6",
                       "flex": 2,
                       "fontSize": 14,
@@ -5065,7 +5294,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                 <Text
                   numberOfLines={1}
                   style={
-                    Object {
+                    {
                       "flex": 3,
                       "flexWrap": "wrap",
                       "fontSize": 16,
@@ -5077,7 +5306,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
                 </Text>
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#A6A6A6",
                       "flex": 2,
                       "fontSize": 14,
@@ -5094,7 +5323,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
           >
             <View
               style={
-                Object {
+                {
                   "paddingBottom": 30,
                 }
               }
@@ -5104,7 +5333,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
       </RCTScrollView>
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "#fff",
             "bottom": 0,
@@ -5116,6 +5345,23 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
         }
       >
         <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
           accessible={true}
           collapsable={false}
           focusable={true}
@@ -5127,7 +5373,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
+            {
               "alignItems": "center",
               "backgroundColor": "#2a9e91",
               "borderRadius": 5,
@@ -5144,7 +5390,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
         >
           <Text
             style={
-              Object {
+              {
                 "color": "#fff",
                 "fontSize": 16,
                 "textAlign": "center",

@@ -3,7 +3,7 @@
 exports[`<BackgroundPicker /> renders correctly 1`] = `
 <View
   style={
-    Object {
+    {
       "height": 80,
       "width": "45%",
     }
@@ -11,26 +11,26 @@ exports[`<BackgroundPicker /> renders correctly 1`] = `
 >
   <RNCPicker
     items={
-      Array [
-        Object {
+      [
+        {
           "label": "Rectangle",
           "testID": undefined,
           "textColor": undefined,
           "value": "rectangle",
         },
-        Object {
+        {
           "label": "Endzone",
           "testID": undefined,
           "textColor": undefined,
           "value": "endzone",
         },
-        Object {
+        {
           "label": "3/4 field",
           "testID": undefined,
           "textColor": undefined,
           "value": "three quarters field",
         },
-        Object {
+        {
           "label": "Empty",
           "testID": undefined,
           "textColor": undefined,
@@ -42,11 +42,11 @@ exports[`<BackgroundPicker /> renders correctly 1`] = `
     onChange={[Function]}
     selectedIndex={1}
     style={
-      Array [
-        Object {
+      [
+        {
           "height": 216,
         },
-        Object {
+        {
           "fontSize": 14,
           "height": 80,
         },

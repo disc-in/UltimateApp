@@ -3,7 +3,7 @@
 exports[`<Slider /> renders correctly 1`] = `
 <View
   style={
-    Object {
+    {
       "alignItems": "center",
       "flexDirection": "row",
       "paddingHorizontal": 10,
@@ -12,7 +12,7 @@ exports[`<Slider /> renders correctly 1`] = `
 >
   <Text
     style={
-      Object {
+      {
         "flexGrow": 1,
         "textAlign": "center",
       }
@@ -21,7 +21,7 @@ exports[`<Slider /> renders correctly 1`] = `
   <View
     accessibilityRole="adjustable"
     accessibilityValue={
-      Object {
+      {
         "max": 1,
         "min": 0,
         "now": 15,
@@ -33,7 +33,7 @@ exports[`<Slider /> renders correctly 1`] = `
     orientation="horizontal"
     step={0}
     style={
-      Object {
+      {
         "flexGrow": 10,
         "height": 40,
         "justifyContent": "center",
@@ -41,8 +41,8 @@ exports[`<Slider /> renders correctly 1`] = `
       }
     }
     theme={
-      Object {
-        "colors": Object {
+      {
+        "colors": {
           "black": "#242424",
           "disabled": "hsl(208, 8%, 90%)",
           "divider": "#bcbbc1",
@@ -54,8 +54,8 @@ exports[`<Slider /> renders correctly 1`] = `
           "grey4": "#bdc6cf",
           "grey5": "#e1e8ee",
           "greyOutline": "#bbb",
-          "platform": Object {
-            "android": Object {
+          "platform": {
+            "android": {
               "error": "#f44336",
               "grey": "rgba(0, 0, 0, 0.54)",
               "primary": "#2196f3",
@@ -64,7 +64,7 @@ exports[`<Slider /> renders correctly 1`] = `
               "success": "#4caf50",
               "warning": "#ffeb3b",
             },
-            "default": Object {
+            "default": {
               "error": "#ff3b30",
               "grey": "#7d7d7d",
               "primary": "#007aff",
@@ -73,7 +73,7 @@ exports[`<Slider /> renders correctly 1`] = `
               "success": "#4cd964",
               "warning": "#ffcc00",
             },
-            "ios": Object {
+            "ios": {
               "error": "#ff3b30",
               "grey": "#7d7d7d",
               "primary": "#007aff",
@@ -82,7 +82,7 @@ exports[`<Slider /> renders correctly 1`] = `
               "success": "#4cd964",
               "warning": "#ffcc00",
             },
-            "web": Object {
+            "web": {
               "error": "#ff190c",
               "grey": "#393e42",
               "primary": "#2089dc",
@@ -102,7 +102,7 @@ exports[`<Slider /> renders correctly 1`] = `
       }
     }
     thumbTouchSize={
-      Object {
+      {
         "height": 40,
         "width": 40,
       }
@@ -112,7 +112,7 @@ exports[`<Slider /> renders correctly 1`] = `
     <View
       onLayout={[Function]}
       style={
-        Object {
+        {
           "backgroundColor": "#b3b3b3",
           "borderRadius": 2,
           "height": 2,
@@ -122,7 +122,7 @@ exports[`<Slider /> renders correctly 1`] = `
     <View
       collapsable={false}
       style={
-        Object {
+        {
           "backgroundColor": "#2a9e91",
           "borderRadius": 2,
           "height": 0,
@@ -136,13 +136,13 @@ exports[`<Slider /> renders correctly 1`] = `
       collapsable={false}
       onLayout={[Function]}
       style={
-        Object {
+        {
           "backgroundColor": "#2a9e91",
           "borderRadius": 20,
           "height": 20,
           "position": "absolute",
-          "transform": Array [
-            Object {
+          "transform": [
+            {
               "translateX": 0,
             },
           ],
@@ -165,7 +165,7 @@ exports[`<Slider /> renders correctly 1`] = `
       onStartShouldSetResponder={[Function]}
       onStartShouldSetResponderCapture={[Function]}
       style={
-        Object {
+        {
           "backgroundColor": "transparent",
           "bottom": 0,
           "left": 0,
@@ -178,7 +178,7 @@ exports[`<Slider /> renders correctly 1`] = `
   </View>
   <Text
     style={
-      Object {
+      {
         "flexGrow": 1,
         "textAlign": "center",
       }

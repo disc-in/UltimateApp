@@ -2,6 +2,23 @@
 
 exports[`<Button /> renders correctly 1`] = `
 <View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
   accessible={true}
   collapsable={false}
   focusable={false}
@@ -13,7 +30,7 @@ exports[`<Button /> renders correctly 1`] = `
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
   style={
-    Object {
+    {
       "alignItems": "center",
       "backgroundColor": "#2a9e91",
       "borderRadius": 5,
@@ -30,7 +47,7 @@ exports[`<Button /> renders correctly 1`] = `
 >
   <Text
     style={
-      Object {
+      {
         "color": "#fff",
         "fontSize": 16,
         "textAlign": "center",
@@ -44,6 +61,23 @@ exports[`<Button /> renders correctly 1`] = `
 
 exports[`<Button /> renders correctly when light 1`] = `
 <View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
   accessible={true}
   collapsable={false}
   focusable={false}
@@ -55,7 +89,7 @@ exports[`<Button /> renders correctly when light 1`] = `
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
   style={
-    Object {
+    {
       "alignItems": "center",
       "backgroundColor": "#fff",
       "borderColor": "#2a9e91",
@@ -74,7 +108,7 @@ exports[`<Button /> renders correctly when light 1`] = `
 >
   <Text
     style={
-      Object {
+      {
         "color": "#2a9e91",
         "fontSize": 16,
         "fontWeight": "bold",
@@ -88,6 +122,23 @@ exports[`<Button /> renders correctly when light 1`] = `
 
 exports[`<Button /> renders correctly when small 1`] = `
 <View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
   accessible={true}
   collapsable={false}
   focusable={false}
@@ -99,7 +150,7 @@ exports[`<Button /> renders correctly when small 1`] = `
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
   style={
-    Object {
+    {
       "alignItems": "center",
       "alignSelf": "center",
       "backgroundColor": "#2a9e91",
@@ -117,7 +168,7 @@ exports[`<Button /> renders correctly when small 1`] = `
 >
   <Text
     style={
-      Object {
+      {
         "color": "#fff",
         "fontSize": 16,
         "textAlign": "center",
@@ -131,6 +182,23 @@ exports[`<Button /> renders correctly when small 1`] = `
 
 exports[`<Button /> renders correctly with an icon 1`] = `
 <View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
   accessible={true}
   collapsable={false}
   focusable={false}
@@ -142,7 +210,7 @@ exports[`<Button /> renders correctly with an icon 1`] = `
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
   style={
-    Object {
+    {
       "alignItems": "center",
       "backgroundColor": "#2a9e91",
       "borderRadius": 5,
@@ -160,7 +228,7 @@ exports[`<Button /> renders correctly with an icon 1`] = `
   <Text />
   <Text
     style={
-      Object {
+      {
         "color": "#fff",
         "fontSize": 16,
         "textAlign": "center",

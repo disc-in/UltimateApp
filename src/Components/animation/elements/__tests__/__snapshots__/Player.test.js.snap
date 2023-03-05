@@ -3,17 +3,17 @@
 exports[`<Player /> renders defense correctly 1`] = `
 <View
   style={
-    Array [
-      Object {
+    [
+      {
         "alignItems": "center",
         "justifyContent": "center",
         "textAlign": "center",
         "textAlignVertical": "center",
       },
-      Object {
+      {
         "backgroundColor": "#000000",
       },
-      Object {
+      {
         "borderRadius": 10,
         "height": 10,
         "width": 10,
@@ -23,7 +23,7 @@ exports[`<Player /> renders defense correctly 1`] = `
 >
   <Text
     style={
-      Object {
+      {
         "color": "#fff",
         "fontWeight": "bold",
       }
@@ -37,17 +37,17 @@ exports[`<Player /> renders defense correctly 1`] = `
 exports[`<Player /> renders offense correctly 1`] = `
 <View
   style={
-    Array [
-      Object {
+    [
+      {
         "alignItems": "center",
         "justifyContent": "center",
         "textAlign": "center",
         "textAlignVertical": "center",
       },
-      Object {
+      {
         "backgroundColor": "#2a9e91",
       },
-      Object {
+      {
         "borderRadius": 10,
         "height": 10,
         "width": 10,
@@ -57,7 +57,7 @@ exports[`<Player /> renders offense correctly 1`] = `
 >
   <Text
     style={
-      Object {
+      {
         "color": "#fff",
         "fontWeight": "bold",
       }

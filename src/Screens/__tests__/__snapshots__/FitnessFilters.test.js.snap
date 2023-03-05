@@ -3,7 +3,7 @@
 exports[`<FitnessFilters /> renders correctly 1`] = `
 <View
   style={
-    Object {
+    {
       "backgroundColor": "#fff",
       "height": "100%",
       "paddingTop": 20,
@@ -12,7 +12,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
 >
   <RCTScrollView
     contentContainerStyle={
-      Object {
+      {
         "paddingBottom": 50,
         "paddingHorizontal": 10,
       }
@@ -21,7 +21,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
     <View>
       <View
         style={
-          Object {
+          {
             "flexDirection": "row",
             "flexWrap": "wrap",
             "justifyContent": "space-between",
@@ -30,6 +30,23 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
         }
       >
         <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
           accessible={true}
           collapsable={false}
           focusable={true}
@@ -41,7 +58,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
+            {
               "backgroundColor": "#fff",
               "borderColor": "#e5e5e5",
               "borderWidth": 1,
@@ -55,7 +72,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
         >
           <Text
             style={
-              Object {
+              {
                 "textAlign": "center",
                 "textTransform": "capitalize",
               }
@@ -67,7 +84,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
       </View>
       <Text
         style={
-          Object {
+          {
             "fontWeight": "bold",
             "marginBottom": 10,
             "textTransform": "uppercase",
@@ -78,7 +95,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
       </Text>
       <View
         style={
-          Object {
+          {
             "flexDirection": "row",
             "flexWrap": "wrap",
             "justifyContent": "space-between",
@@ -87,6 +104,23 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
         }
       >
         <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
           accessible={true}
           collapsable={false}
           focusable={true}
@@ -98,7 +132,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
+            {
               "backgroundColor": "#fff",
               "borderColor": "#e5e5e5",
               "borderWidth": 1,
@@ -112,7 +146,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
         >
           <Text
             style={
-              Object {
+              {
                 "textAlign": "center",
                 "textTransform": "capitalize",
               }
@@ -122,6 +156,23 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           </Text>
         </View>
         <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
           accessible={true}
           collapsable={false}
           focusable={true}
@@ -133,7 +184,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
+            {
               "backgroundColor": "#fff",
               "borderColor": "#e5e5e5",
               "borderWidth": 1,
@@ -147,7 +198,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
         >
           <Text
             style={
-              Object {
+              {
                 "textAlign": "center",
                 "textTransform": "capitalize",
               }
@@ -157,6 +208,23 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           </Text>
         </View>
         <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
           accessible={true}
           collapsable={false}
           focusable={true}
@@ -168,7 +236,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
+            {
               "backgroundColor": "#fff",
               "borderColor": "#e5e5e5",
               "borderWidth": 1,
@@ -182,7 +250,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
         >
           <Text
             style={
-              Object {
+              {
                 "textAlign": "center",
                 "textTransform": "capitalize",
               }
@@ -194,7 +262,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
       </View>
       <Text
         style={
-          Object {
+          {
             "fontWeight": "bold",
             "marginBottom": 10,
             "textTransform": "uppercase",
@@ -205,7 +273,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
       </Text>
       <View
         style={
-          Object {
+          {
             "flexDirection": "row",
             "flexWrap": "wrap",
             "justifyContent": "space-between",
@@ -214,6 +282,23 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
         }
       >
         <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
           accessible={true}
           collapsable={false}
           focusable={true}
@@ -225,7 +310,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
+            {
               "backgroundColor": "#fff",
               "borderColor": "#e5e5e5",
               "borderWidth": 1,
@@ -239,7 +324,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
         >
           <Text
             style={
-              Object {
+              {
                 "textAlign": "center",
                 "textTransform": "capitalize",
               }
@@ -249,6 +334,23 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           </Text>
         </View>
         <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
           accessible={true}
           collapsable={false}
           focusable={true}
@@ -260,7 +362,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
+            {
               "backgroundColor": "#fff",
               "borderColor": "#e5e5e5",
               "borderWidth": 1,
@@ -274,7 +376,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
         >
           <Text
             style={
-              Object {
+              {
                 "textAlign": "center",
                 "textTransform": "capitalize",
               }
@@ -284,6 +386,23 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           </Text>
         </View>
         <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
           accessible={true}
           collapsable={false}
           focusable={true}
@@ -295,7 +414,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
+            {
               "backgroundColor": "#fff",
               "borderColor": "#e5e5e5",
               "borderWidth": 1,
@@ -309,7 +428,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
         >
           <Text
             style={
-              Object {
+              {
                 "textAlign": "center",
                 "textTransform": "capitalize",
               }
@@ -321,7 +440,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
       </View>
       <Text
         style={
-          Object {
+          {
             "fontWeight": "bold",
             "marginBottom": 10,
             "textTransform": "uppercase",
@@ -332,7 +451,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
       </Text>
       <View
         style={
-          Object {
+          {
             "flexDirection": "row",
             "flexWrap": "wrap",
             "justifyContent": "space-between",
@@ -341,6 +460,23 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
         }
       >
         <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
           accessible={true}
           collapsable={false}
           focusable={true}
@@ -352,7 +488,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
+            {
               "backgroundColor": "#fff",
               "borderColor": "#e5e5e5",
               "borderWidth": 1,
@@ -366,7 +502,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
         >
           <Text
             style={
-              Object {
+              {
                 "textAlign": "center",
                 "textTransform": "capitalize",
               }
@@ -376,6 +512,23 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           </Text>
         </View>
         <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
           accessible={true}
           collapsable={false}
           focusable={true}
@@ -387,7 +540,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
+            {
               "backgroundColor": "#fff",
               "borderColor": "#e5e5e5",
               "borderWidth": 1,
@@ -401,7 +554,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
         >
           <Text
             style={
-              Object {
+              {
                 "textAlign": "center",
                 "textTransform": "capitalize",
               }
@@ -411,6 +564,23 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           </Text>
         </View>
         <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
           accessible={true}
           collapsable={false}
           focusable={true}
@@ -422,7 +592,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
+            {
               "backgroundColor": "#fff",
               "borderColor": "#e5e5e5",
               "borderWidth": 1,
@@ -436,7 +606,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
         >
           <Text
             style={
-              Object {
+              {
                 "textAlign": "center",
                 "textTransform": "capitalize",
               }
@@ -448,7 +618,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
       </View>
       <Text
         style={
-          Object {
+          {
             "fontWeight": "bold",
             "marginBottom": 10,
             "textTransform": "uppercase",
@@ -459,7 +629,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
       </Text>
       <View
         style={
-          Object {
+          {
             "flexDirection": "row",
             "flexWrap": "wrap",
             "justifyContent": "space-between",
@@ -468,6 +638,23 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
         }
       >
         <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
           accessible={true}
           collapsable={false}
           focusable={true}
@@ -479,7 +666,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
+            {
               "backgroundColor": "#fff",
               "borderColor": "#e5e5e5",
               "borderWidth": 1,
@@ -493,7 +680,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
         >
           <Text
             style={
-              Object {
+              {
                 "textAlign": "center",
                 "textTransform": "capitalize",
               }
@@ -503,6 +690,23 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           </Text>
         </View>
         <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
           accessible={true}
           collapsable={false}
           focusable={true}
@@ -514,7 +718,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
+            {
               "backgroundColor": "#fff",
               "borderColor": "#e5e5e5",
               "borderWidth": 1,
@@ -528,7 +732,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
         >
           <Text
             style={
-              Object {
+              {
                 "textAlign": "center",
                 "textTransform": "capitalize",
               }
@@ -538,6 +742,23 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           </Text>
         </View>
         <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
           accessible={true}
           collapsable={false}
           focusable={true}
@@ -549,7 +770,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
+            {
               "backgroundColor": "#fff",
               "borderColor": "#e5e5e5",
               "borderWidth": 1,
@@ -563,7 +784,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
         >
           <Text
             style={
-              Object {
+              {
                 "textAlign": "center",
                 "textTransform": "capitalize",
               }
@@ -575,7 +796,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
       </View>
       <Text
         style={
-          Object {
+          {
             "fontWeight": "bold",
             "marginBottom": 10,
             "textTransform": "uppercase",
@@ -586,7 +807,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
       </Text>
       <View
         style={
-          Object {
+          {
             "flexDirection": "row",
             "flexWrap": "wrap",
             "justifyContent": "space-between",
@@ -596,7 +817,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
       >
         <View
           style={
-            Object {
+            {
               "flexBasis": "50%",
             }
           }
@@ -604,8 +825,20 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           <View
             accessibilityRole="checkbox"
             accessibilityState={
-              Object {
+              {
+                "busy": undefined,
                 "checked": false,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
               }
             }
             accessible={true}
@@ -619,7 +852,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
+              {
                 "backgroundColor": "#fff",
                 "borderColor": "#ededed",
                 "borderRadius": 3,
@@ -635,7 +868,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           >
             <View
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flexDirection": "row",
                 }
@@ -644,7 +877,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
               <Text />
               <Text
                 style={
-                  Object {
+                  {
                     "color": "#43484d",
                     "fontWeight": "normal",
                     "marginLeft": 10,
@@ -662,7 +895,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
       </View>
       <Text
         style={
-          Object {
+          {
             "fontWeight": "bold",
             "marginBottom": 10,
             "textTransform": "uppercase",
@@ -676,7 +909,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
       </Text>
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "flexDirection": "row",
             "paddingHorizontal": 10,
@@ -685,7 +918,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
       >
         <Text
           style={
-            Object {
+            {
               "flexGrow": 1,
               "textAlign": "center",
             }
@@ -696,7 +929,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
         <View
           accessibilityRole="adjustable"
           accessibilityValue={
-            Object {
+            {
               "max": 60,
               "min": 5,
               "now": 0,
@@ -709,7 +942,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           orientation="horizontal"
           step={1}
           style={
-            Object {
+            {
               "flexGrow": 10,
               "height": 40,
               "justifyContent": "center",
@@ -718,8 +951,8 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           }
           testID="durationSlider"
           theme={
-            Object {
-              "colors": Object {
+            {
+              "colors": {
                 "black": "#242424",
                 "disabled": "hsl(208, 8%, 90%)",
                 "divider": "#bcbbc1",
@@ -731,8 +964,8 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
                 "grey4": "#bdc6cf",
                 "grey5": "#e1e8ee",
                 "greyOutline": "#bbb",
-                "platform": Object {
-                  "android": Object {
+                "platform": {
+                  "android": {
                     "error": "#f44336",
                     "grey": "rgba(0, 0, 0, 0.54)",
                     "primary": "#2196f3",
@@ -741,7 +974,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
                     "success": "#4caf50",
                     "warning": "#ffeb3b",
                   },
-                  "default": Object {
+                  "default": {
                     "error": "#ff3b30",
                     "grey": "#7d7d7d",
                     "primary": "#007aff",
@@ -750,7 +983,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
                     "success": "#4cd964",
                     "warning": "#ffcc00",
                   },
-                  "ios": Object {
+                  "ios": {
                     "error": "#ff3b30",
                     "grey": "#7d7d7d",
                     "primary": "#007aff",
@@ -759,7 +992,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
                     "success": "#4cd964",
                     "warning": "#ffcc00",
                   },
-                  "web": Object {
+                  "web": {
                     "error": "#ff190c",
                     "grey": "#393e42",
                     "primary": "#2089dc",
@@ -779,7 +1012,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
             }
           }
           thumbTouchSize={
-            Object {
+            {
               "height": 40,
               "width": 40,
             }
@@ -789,7 +1022,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           <View
             onLayout={[Function]}
             style={
-              Object {
+              {
                 "backgroundColor": "#b3b3b3",
                 "borderRadius": 2,
                 "height": 2,
@@ -799,7 +1032,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
           <View
             collapsable={false}
             style={
-              Object {
+              {
                 "backgroundColor": "#2a9e91",
                 "borderRadius": 2,
                 "height": 0,
@@ -813,13 +1046,13 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
             collapsable={false}
             onLayout={[Function]}
             style={
-              Object {
+              {
                 "backgroundColor": "#2a9e91",
                 "borderRadius": 20,
                 "height": 20,
                 "position": "absolute",
-                "transform": Array [
-                  Object {
+                "transform": [
+                  {
                     "translateX": 0,
                   },
                 ],
@@ -842,7 +1075,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
             onStartShouldSetResponder={[Function]}
             onStartShouldSetResponderCapture={[Function]}
             style={
-              Object {
+              {
                 "backgroundColor": "transparent",
                 "bottom": 0,
                 "left": 0,
@@ -855,7 +1088,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
         </View>
         <Text
           style={
-            Object {
+            {
               "flexGrow": 1,
               "textAlign": "center",
             }
@@ -868,7 +1101,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
   </RCTScrollView>
   <View
     style={
-      Object {
+      {
         "alignItems": "center",
         "backgroundColor": "#fff",
         "bottom": 0,
@@ -880,6 +1113,23 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
     }
   >
     <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
       accessible={true}
       collapsable={false}
       focusable={true}
@@ -891,7 +1141,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "alignItems": "center",
           "backgroundColor": "#2a9e91",
           "borderRadius": 5,
@@ -908,7 +1158,7 @@ exports[`<FitnessFilters /> renders correctly 1`] = `
     >
       <Text
         style={
-          Object {
+          {
             "color": "#fff",
             "fontSize": 16,
             "textAlign": "center",

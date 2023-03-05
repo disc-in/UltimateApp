@@ -3,7 +3,7 @@
 exports[`<ProgramListPage /> renders correctly when connected 1`] = `
 <RCTScrollView
   style={
-    Object {
+    {
       "height": "100%",
     }
   }
@@ -11,18 +11,30 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
   <View>
     <View
       style={
-        Object {
+        {
           "marginBottom": 10,
         }
       }
     >
       <View
-        style={Object {}}
+        style={{}}
       >
         <View
           accessibilityState={
-            Object {
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
               "expanded": false,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
             }
           }
           accessible={true}
@@ -36,19 +48,19 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
+            {
               "opacity": 1,
             }
           }
         >
           <View
             style={
-              Object {
+              {
                 "backgroundColor": "#fff",
                 "elevation": 3,
                 "marginTop": 10,
                 "padding": 10,
-                "shadowOffset": Object {
+                "shadowOffset": {
                   "height": 1,
                   "width": 0,
                 },
@@ -59,7 +71,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
           >
             <View
               style={
-                Object {
+                {
                   "alignItems": "flex-start",
                   "backgroundColor": "#fff",
                   "minHeight": 40,
@@ -71,7 +83,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
             >
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "flex": 1,
                     "flexDirection": "row",
@@ -82,7 +94,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
               >
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#232b2b",
                       "fontSize": 20,
                       "fontWeight": "bold",
@@ -93,7 +105,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
                 </Text>
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#232b2b",
                       "fontSize": 14,
                       "textAlign": "right",
@@ -105,7 +117,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
               </View>
               <View
                 style={
-                  Object {
+                  {
                     "backgroundColor": "#f1f1f1",
                     "borderRadius": 2,
                     "height": 3,
@@ -116,20 +128,20 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
               >
                 <View
                   style={
-                    Array [
-                      Object {
+                    [
+                      {
                         "bottom": 0,
                         "left": 0,
                         "position": "absolute",
                         "right": 0,
                         "top": 0,
                       },
-                      Object {
+                      {
                         "backgroundColor": "#2a9e91",
                         "borderRadius": 5,
                         "width": "50%",
                       },
-                      Object {
+                      {
                         "width": "0%",
                       },
                     ]
@@ -143,7 +155,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
           collapsable={false}
           pointerEvents="none"
           style={
-            Object {
+            {
               "height": 0,
               "overflow": "hidden",
             }
@@ -153,9 +165,26 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
             collapsable={false}
             forwardedRef={[Function]}
             onLayout={[Function]}
-            style={Object {}}
+            style={{}}
           >
             <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
               accessible={true}
               collapsable={false}
               focusable={true}
@@ -167,7 +196,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "backgroundColor": "#fff",
                   "borderBottomColor": "#e5e5e5",
@@ -182,14 +211,14 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
             >
               <View
                 style={
-                  Object {
+                  {
                     "flexBasis": "80%",
                   }
                 }
               >
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#232b2b",
                       "fontSize": 16,
                       "fontWeight": "bold",
@@ -202,7 +231,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
                 </Text>
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#232b2b",
                       "fontSize": 14,
                     }
@@ -213,7 +242,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
               </View>
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "flexBasis": "20%",
                     "flexDirection": "row",
@@ -225,6 +254,23 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
               </View>
             </View>
             <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
               accessible={true}
               collapsable={false}
               focusable={true}
@@ -236,7 +282,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "backgroundColor": "#fff",
                   "borderBottomColor": "#e5e5e5",
@@ -251,14 +297,14 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
             >
               <View
                 style={
-                  Object {
+                  {
                     "flexBasis": "80%",
                   }
                 }
               >
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#232b2b",
                       "fontSize": 16,
                       "fontWeight": "bold",
@@ -271,7 +317,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
                 </Text>
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#232b2b",
                       "fontSize": 14,
                     }
@@ -282,7 +328,7 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
               </View>
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "flexBasis": "20%",
                     "flexDirection": "row",

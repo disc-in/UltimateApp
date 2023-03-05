@@ -18,3 +18,7 @@ jest.mock('expo-constants', () => {
     },
   };
 });
+
+// Font issue with expo 48: https://github.com/expo/expo/issues/21434
+jest.mock('expo-font');
+jest.mock('expo-asset');

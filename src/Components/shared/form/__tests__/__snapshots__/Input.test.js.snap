@@ -146,17 +146,17 @@ exports[`Input renders correctly when required 1`] = `
 `;
 
 exports[`Input renders correctly when there is an error 1`] = `
-Array [
+[
   <View
     style={
-      Object {
+      {
         "marginBottom": 10,
       }
     }
   >
     <View
       style={
-        Object {
+        {
           "flexDirection": "row",
           "marginBottom": 5,
         }
@@ -168,14 +168,14 @@ Array [
     </View>
     <View
       style={
-        Array [
-          Object {
+        [
+          {
             "borderColor": "#e5e5e5",
             "borderRadius": 5,
             "borderWidth": 0.5,
             "padding": 5,
           },
-          Object {
+          {
             "borderColor": "red",
           },
         ]
@@ -183,7 +183,7 @@ Array [
     >
       <Text
         style={
-          Object {
+          {
             "color": "red",
             "fontStyle": "italic",
           }
@@ -201,6 +201,23 @@ Array [
     </View>
   </View>,
   <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
     accessible={true}
     collapsable={false}
     focusable={true}
@@ -212,7 +229,7 @@ Array [
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "opacity": 1,
       }
     }

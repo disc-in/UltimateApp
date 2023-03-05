@@ -49,17 +49,17 @@ describe('Input', () => {
       </Formik>,
     );
 
-    expect(getByDisplayValue('My title')).toBeDefined();
+    await waitFor(() => expect(getByDisplayValue('My title')).toBeDefined());
 
     fireEvent.changeText(getByTestId('input-title'), 'new title');
 
-    expect(getByDisplayValue('new title')).toBeDefined();
+    await waitFor(() => expect(getByDisplayValue('new title')).toBeDefined());
 
     await waitFor(() => {
       fireEvent.press(getByTestId('submit'));
     });
 
-    expect(getByText('Invalid title')).not.toBeNull();
-    expect(toJSON()).toMatchSnapshot();
+    await waitFor(() => expect(getByText('Invalid title')).not.toBeNull());
+    await waitFor(() => expect(toJSON()).toMatchSnapshot());
   });
 });

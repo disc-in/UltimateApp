@@ -40,7 +40,7 @@ describe('Checkbox', () => {
       fireEvent.press(getByTestId('submit'));
     });
 
-    expect(getByText('Invalid title')).not.toBeNull();
-    expect(toJSON()).toMatchSnapshot();
+    await waitFor(() => expect(getByText('Invalid title')).not.toBeNull());
+    await waitFor(() => expect(toJSON()).toMatchSnapshot());
   });
 });

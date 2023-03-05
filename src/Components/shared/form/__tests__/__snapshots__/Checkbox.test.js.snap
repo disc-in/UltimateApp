@@ -168,17 +168,17 @@ exports[`Checkbox renders correctly 1`] = `
 `;
 
 exports[`Checkbox renders correctly when there is an error 1`] = `
-Array [
+[
   <View
     style={
-      Object {
+      {
         "marginBottom": 10,
       }
     }
   >
     <Text
       style={
-        Object {
+        {
           "marginBottom": 5,
         }
       }
@@ -187,7 +187,7 @@ Array [
     </Text>
     <Text
       style={
-        Object {
+        {
           "color": "red",
           "fontStyle": "italic",
         }
@@ -197,7 +197,7 @@ Array [
     </Text>
     <View
       style={
-        Object {
+        {
           "flexDirection": "row",
           "flexWrap": "wrap",
         }
@@ -206,8 +206,20 @@ Array [
       <View
         accessibilityRole="checkbox"
         accessibilityState={
-          Object {
+          {
+            "busy": undefined,
             "checked": true,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
           }
         }
         accessible={true}
@@ -221,7 +233,7 @@ Array [
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
         style={
-          Object {
+          {
             "backgroundColor": "#fff",
             "borderColor": "#ededed",
             "borderRadius": 3,
@@ -238,16 +250,38 @@ Array [
       >
         <View
           style={
-            Object {
+            {
               "alignItems": "center",
               "flexDirection": "row",
             }
           }
         >
-          <Text />
+          <Text
+            allowFontScaling={false}
+            selectable={false}
+            style={
+              [
+                {
+                  "color": "#2a9e91",
+                  "fontSize": 24,
+                },
+                {
+                  "minWidth": 24,
+                },
+                {
+                  "fontFamily": "FontAwesome",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                {},
+              ]
+            }
+          >
+            
+          </Text>
           <Text
             style={
-              Object {
+              {
                 "color": "#43484d",
                 "fontWeight": "normal",
                 "marginLeft": 10,
@@ -263,8 +297,20 @@ Array [
       <View
         accessibilityRole="checkbox"
         accessibilityState={
-          Object {
+          {
+            "busy": undefined,
             "checked": true,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
           }
         }
         accessible={true}
@@ -278,7 +324,7 @@ Array [
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
         style={
-          Object {
+          {
             "backgroundColor": "#fff",
             "borderColor": "#ededed",
             "borderRadius": 3,
@@ -295,16 +341,38 @@ Array [
       >
         <View
           style={
-            Object {
+            {
               "alignItems": "center",
               "flexDirection": "row",
             }
           }
         >
-          <Text />
+          <Text
+            allowFontScaling={false}
+            selectable={false}
+            style={
+              [
+                {
+                  "color": "#2a9e91",
+                  "fontSize": 24,
+                },
+                {
+                  "minWidth": 24,
+                },
+                {
+                  "fontFamily": "FontAwesome",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                {},
+              ]
+            }
+          >
+            
+          </Text>
           <Text
             style={
-              Object {
+              {
                 "color": "#43484d",
                 "fontWeight": "normal",
                 "marginLeft": 10,
@@ -320,6 +388,23 @@ Array [
     </View>
   </View>,
   <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
     accessible={true}
     collapsable={false}
     focusable={true}
@@ -331,7 +416,7 @@ Array [
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "opacity": 1,
       }
     }

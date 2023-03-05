@@ -77,7 +77,8 @@
     ],
     "transformIgnorePatterns": [
       "node_modules/(?!(jest-)?@?react-native|@react-native-community|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|@sentry/.*|@react-native-picker)"
-    ]
+    ],
+    "resolver": "<rootDir>/jest.resolver.js"
   },
   "engines": {
     "node": ">=0.16"

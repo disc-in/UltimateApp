@@ -109,7 +109,7 @@ export const createLink = (path, title, description) => {
             socialMetaTagInfo: {
               socialTitle: `Disc In - ${title}`,
               socialDescription: description,
-              socialImageLink: 'https://raw.githubusercontent.com/disc-in/UltimateApp/master/assets/icon.png',
+              socialImageLink: 'https://raw.githubusercontent.com/disc-in/UltimateApp/main/assets/icon.png',
             },
           },
         }),

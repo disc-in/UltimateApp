@@ -4,11 +4,11 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
 <View
   onLayout={[Function]}
   style={
-    Array [
-      Object {
+    [
+      {
         "flex": 1,
       },
-      Object {
+      {
         "paddingBottom": 0,
       },
     ]
@@ -16,7 +16,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
 >
   <RCTScrollView
     style={
-      Object {
+      {
         "backgroundColor": "#fff",
         "padding": 10,
         "paddingRight": 20,
@@ -27,14 +27,14 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
       <View>
         <View
           style={
-            Object {
+            {
               "marginBottom": 10,
             }
           }
         >
           <View
             style={
-              Object {
+              {
                 "flexDirection": "row",
                 "marginBottom": 5,
               }
@@ -46,8 +46,8 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
           </View>
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "borderColor": "#e5e5e5",
                   "borderRadius": 5,
                   "borderWidth": 0.5,
@@ -68,14 +68,14 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "marginBottom": 10,
             }
           }
         >
           <View
             style={
-              Object {
+              {
                 "flexDirection": "row",
                 "marginBottom": 5,
               }
@@ -83,7 +83,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
           >
             <Text
               style={
-                Object {
+                {
                   "color": "red",
                   "fontStyle": "italic",
                 }
@@ -97,8 +97,8 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
           </View>
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "borderColor": "#e5e5e5",
                   "borderRadius": 5,
                   "borderWidth": 0.5,
@@ -119,14 +119,14 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "marginBottom": 10,
             }
           }
         >
           <View
             style={
-              Object {
+              {
                 "flexDirection": "row",
                 "marginBottom": 5,
               }
@@ -138,8 +138,8 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
           </View>
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "borderColor": "#e5e5e5",
                   "borderRadius": 5,
                   "borderWidth": 0.5,
@@ -159,14 +159,14 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "marginBottom": 10,
             }
           }
         >
           <View
             style={
-              Object {
+              {
                 "flexDirection": "row",
                 "marginBottom": 5,
               }
@@ -178,8 +178,8 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
           </View>
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "borderColor": "#e5e5e5",
                   "borderRadius": 5,
                   "borderWidth": 0.5,
@@ -202,14 +202,14 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "marginBottom": 10,
             }
           }
         >
           <View
             style={
-              Object {
+              {
                 "flexDirection": "row",
                 "marginBottom": 5,
               }
@@ -221,8 +221,8 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
           </View>
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "borderColor": "#e5e5e5",
                   "borderRadius": 5,
                   "borderWidth": 0.5,
@@ -244,14 +244,14 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "marginBottom": 10,
             }
           }
         >
           <View
             style={
-              Object {
+              {
                 "flexDirection": "row",
                 "marginBottom": 5,
               }
@@ -263,8 +263,8 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
           </View>
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "borderColor": "#e5e5e5",
                   "borderRadius": 5,
                   "borderWidth": 0.5,
@@ -287,14 +287,14 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "marginBottom": 10,
             }
           }
         >
           <View
             style={
-              Object {
+              {
                 "flexDirection": "row",
                 "marginBottom": 5,
               }
@@ -306,8 +306,8 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
           </View>
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "borderColor": "#e5e5e5",
                   "borderRadius": 5,
                   "borderWidth": 0.5,
@@ -327,14 +327,14 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "marginBottom": 10,
             }
           }
         >
           <View
             style={
-              Object {
+              {
                 "flexDirection": "row",
                 "marginBottom": 5,
               }
@@ -346,8 +346,8 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
           </View>
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "borderColor": "#e5e5e5",
                   "borderRadius": 5,
                   "borderWidth": 0.5,
@@ -368,14 +368,14 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "marginBottom": 10,
             }
           }
         >
           <Text
             style={
-              Object {
+              {
                 "marginBottom": 5,
               }
             }
@@ -384,12 +384,29 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
           </Text>
           <View
             style={
-              Object {
+              {
                 "flexDirection": "row",
               }
             }
           >
             <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
               accessible={true}
               collapsable={false}
               focusable={true}
@@ -401,7 +418,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "borderColor": "#e5e5e5",
                   "borderRadius": 5,
                   "borderWidth": 0.5,
@@ -416,7 +433,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
             >
               <Text
                 style={
-                  Object {
+                  {
                     "textAlign": "center",
                   }
                 }
@@ -425,6 +442,23 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               </Text>
             </View>
             <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
               accessible={true}
               collapsable={false}
               focusable={true}
@@ -436,7 +470,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "borderColor": "#e5e5e5",
                   "borderRadius": 5,
                   "borderWidth": 0.5,
@@ -451,7 +485,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
             >
               <Text
                 style={
-                  Object {
+                  {
                     "textAlign": "center",
                   }
                 }
@@ -460,6 +494,23 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               </Text>
             </View>
             <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
               accessible={true}
               collapsable={false}
               focusable={true}
@@ -471,7 +522,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "borderColor": "#e5e5e5",
                   "borderRadius": 5,
                   "borderWidth": 0.5,
@@ -486,7 +537,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
             >
               <Text
                 style={
-                  Object {
+                  {
                     "textAlign": "center",
                   }
                 }
@@ -498,14 +549,14 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "marginBottom": 10,
             }
           }
         >
           <Text
             style={
-              Object {
+              {
                 "marginBottom": 5,
               }
             }
@@ -514,7 +565,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
           </Text>
           <View
             style={
-              Object {
+              {
                 "flexDirection": "row",
                 "flexWrap": "wrap",
               }
@@ -523,8 +574,20 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
             <View
               accessibilityRole="checkbox"
               accessibilityState={
-                Object {
+                {
+                  "busy": undefined,
                   "checked": false,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
                 }
               }
               accessible={true}
@@ -538,7 +601,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "backgroundColor": "#fff",
                   "borderColor": "#ededed",
                   "borderRadius": 3,
@@ -555,7 +618,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
             >
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "flexDirection": "row",
                   }
@@ -564,7 +627,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                 <Text />
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#43484d",
                       "fontWeight": "normal",
                       "marginLeft": 10,
@@ -580,8 +643,20 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
             <View
               accessibilityRole="checkbox"
               accessibilityState={
-                Object {
+                {
+                  "busy": undefined,
                   "checked": false,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
                 }
               }
               accessible={true}
@@ -595,7 +670,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "backgroundColor": "#fff",
                   "borderColor": "#ededed",
                   "borderRadius": 3,
@@ -612,7 +687,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
             >
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "flexDirection": "row",
                   }
@@ -621,7 +696,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                 <Text />
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#43484d",
                       "fontWeight": "normal",
                       "marginLeft": 10,
@@ -637,8 +712,20 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
             <View
               accessibilityRole="checkbox"
               accessibilityState={
-                Object {
+                {
+                  "busy": undefined,
                   "checked": false,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
                 }
               }
               accessible={true}
@@ -652,7 +739,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "backgroundColor": "#fff",
                   "borderColor": "#ededed",
                   "borderRadius": 3,
@@ -669,7 +756,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
             >
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "flexDirection": "row",
                   }
@@ -678,7 +765,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                 <Text />
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#43484d",
                       "fontWeight": "normal",
                       "marginLeft": 10,
@@ -694,8 +781,20 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
             <View
               accessibilityRole="checkbox"
               accessibilityState={
-                Object {
+                {
+                  "busy": undefined,
                   "checked": false,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
                 }
               }
               accessible={true}
@@ -709,7 +808,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "backgroundColor": "#fff",
                   "borderColor": "#ededed",
                   "borderRadius": 3,
@@ -726,7 +825,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
             >
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "flexDirection": "row",
                   }
@@ -735,7 +834,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                 <Text />
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#43484d",
                       "fontWeight": "normal",
                       "marginLeft": 10,
@@ -751,8 +850,20 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
             <View
               accessibilityRole="checkbox"
               accessibilityState={
-                Object {
+                {
+                  "busy": undefined,
                   "checked": false,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
                 }
               }
               accessible={true}
@@ -766,7 +877,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "backgroundColor": "#fff",
                   "borderColor": "#ededed",
                   "borderRadius": 3,
@@ -783,7 +894,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
             >
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "flexDirection": "row",
                   }
@@ -792,7 +903,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                 <Text />
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#43484d",
                       "fontWeight": "normal",
                       "marginLeft": 10,
@@ -808,8 +919,20 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
             <View
               accessibilityRole="checkbox"
               accessibilityState={
-                Object {
+                {
+                  "busy": undefined,
                   "checked": false,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
                 }
               }
               accessible={true}
@@ -823,7 +946,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "backgroundColor": "#fff",
                   "borderColor": "#ededed",
                   "borderRadius": 3,
@@ -840,7 +963,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
             >
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "flexDirection": "row",
                   }
@@ -849,7 +972,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                 <Text />
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#43484d",
                       "fontWeight": "normal",
                       "marginLeft": 10,
@@ -865,8 +988,20 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
             <View
               accessibilityRole="checkbox"
               accessibilityState={
-                Object {
+                {
+                  "busy": undefined,
                   "checked": false,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
                 }
               }
               accessible={true}
@@ -880,7 +1015,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "backgroundColor": "#fff",
                   "borderColor": "#ededed",
                   "borderRadius": 3,
@@ -897,7 +1032,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
             >
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "flexDirection": "row",
                   }
@@ -906,7 +1041,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                 <Text />
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#43484d",
                       "fontWeight": "normal",
                       "marginLeft": 10,
@@ -922,8 +1057,20 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
             <View
               accessibilityRole="checkbox"
               accessibilityState={
-                Object {
+                {
+                  "busy": undefined,
                   "checked": false,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
                 }
               }
               accessible={true}
@@ -937,7 +1084,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "backgroundColor": "#fff",
                   "borderColor": "#ededed",
                   "borderRadius": 3,
@@ -954,7 +1101,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
             >
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "flexDirection": "row",
                   }
@@ -963,7 +1110,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                 <Text />
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#43484d",
                       "fontWeight": "normal",
                       "marginLeft": 10,
@@ -980,14 +1127,14 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "marginBottom": 10,
             }
           }
         >
           <Text
             style={
-              Object {
+              {
                 "marginBottom": 5,
               }
             }
@@ -996,12 +1143,29 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
           </Text>
           <View
             style={
-              Object {
+              {
                 "flexDirection": "row",
               }
             }
           >
             <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
               accessible={true}
               collapsable={false}
               focusable={true}
@@ -1013,7 +1177,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "borderColor": "#e5e5e5",
                   "borderRadius": 5,
                   "borderWidth": 0.5,
@@ -1028,7 +1192,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
             >
               <Text
                 style={
-                  Object {
+                  {
                     "textAlign": "center",
                   }
                 }
@@ -1037,6 +1201,23 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               </Text>
             </View>
             <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
               accessible={true}
               collapsable={false}
               focusable={true}
@@ -1048,7 +1229,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "borderColor": "#e5e5e5",
                   "borderRadius": 5,
                   "borderWidth": 0.5,
@@ -1063,7 +1244,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
             >
               <Text
                 style={
-                  Object {
+                  {
                     "textAlign": "center",
                   }
                 }
@@ -1072,6 +1253,23 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               </Text>
             </View>
             <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
               accessible={true}
               collapsable={false}
               focusable={true}
@@ -1083,7 +1281,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "borderColor": "#e5e5e5",
                   "borderRadius": 5,
                   "borderWidth": 0.5,
@@ -1098,7 +1296,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
             >
               <Text
                 style={
-                  Object {
+                  {
                     "textAlign": "center",
                   }
                 }
@@ -1111,7 +1309,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
         <View>
           <View
             style={
-              Object {
+              {
                 "flexDirection": "row",
                 "marginBottom": 5,
               }
@@ -1119,7 +1317,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
           >
             <Text
               style={
-                Object {
+                {
                   "fontSize": 20,
                   "marginRight": 10,
                 }
@@ -1128,6 +1326,23 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               Variants
             </Text>
             <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
               accessible={true}
               collapsable={false}
               focusable={true}
@@ -1139,7 +1354,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "alignSelf": "center",
                   "backgroundColor": "#fff",
@@ -1159,7 +1374,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
             >
               <Text
                 style={
-                  Object {
+                  {
                     "color": "#2a9e91",
                     "fontSize": 16,
                     "fontWeight": "bold",
@@ -1172,7 +1387,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
           </View>
           <Text
             style={
-              Object {
+              {
                 "color": "red",
                 "fontStyle": "italic",
               }
@@ -1180,7 +1395,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
           />
           <View
             style={
-              Object {
+              {
                 "borderBottomColor": "#e5e5e5",
                 "borderBottomWidth": 0.5,
                 "marginBottom": 10,
@@ -1191,13 +1406,30 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
           >
             <View
               style={
-                Object {
+                {
                   "flexDirection": "row",
                   "marginBottom": 5,
                 }
               }
             >
               <View
+                accessibilityState={
+                  {
+                    "busy": undefined,
+                    "checked": undefined,
+                    "disabled": undefined,
+                    "expanded": undefined,
+                    "selected": undefined,
+                  }
+                }
+                accessibilityValue={
+                  {
+                    "max": undefined,
+                    "min": undefined,
+                    "now": undefined,
+                    "text": undefined,
+                  }
+                }
                 accessible={true}
                 collapsable={false}
                 focusable={true}
@@ -1209,7 +1441,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                 onResponderTerminationRequest={[Function]}
                 onStartShouldSetResponder={[Function]}
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "alignSelf": "flex-start",
                     "backgroundColor": "#fff",
@@ -1230,7 +1462,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               >
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#2a9e91",
                       "fontSize": 16,
                       "fontWeight": "bold",
@@ -1242,7 +1474,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               </View>
               <Text
                 style={
-                  Object {
+                  {
                     "fontSize": 20,
                     "marginRight": 10,
                   }
@@ -1253,14 +1485,14 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
             </View>
             <View
               style={
-                Object {
+                {
                   "marginBottom": 10,
                 }
               }
             >
               <View
                 style={
-                  Object {
+                  {
                     "flexDirection": "row",
                     "marginBottom": 5,
                   }
@@ -1272,8 +1504,8 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               </View>
               <View
                 style={
-                  Array [
-                    Object {
+                  [
+                    {
                       "borderColor": "#e5e5e5",
                       "borderRadius": 5,
                       "borderWidth": 0.5,
@@ -1294,14 +1526,14 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
             </View>
             <View
               style={
-                Object {
+                {
                   "marginBottom": 10,
                 }
               }
             >
               <View
                 style={
-                  Object {
+                  {
                     "flexDirection": "row",
                     "marginBottom": 5,
                   }
@@ -1313,8 +1545,8 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               </View>
               <View
                 style={
-                  Array [
-                    Object {
+                  [
+                    {
                       "borderColor": "#e5e5e5",
                       "borderRadius": 5,
                       "borderWidth": 0.5,
@@ -1337,14 +1569,14 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
             </View>
             <View
               style={
-                Object {
+                {
                   "marginBottom": 10,
                 }
               }
             >
               <View
                 style={
-                  Object {
+                  {
                     "flexDirection": "row",
                     "marginBottom": 5,
                   }
@@ -1356,12 +1588,29 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               </View>
               <View
                 style={
-                  Object {
+                  {
                     "flexDirection": "row",
                   }
                 }
               >
                 <View
+                  accessibilityState={
+                    {
+                      "busy": undefined,
+                      "checked": undefined,
+                      "disabled": undefined,
+                      "expanded": undefined,
+                      "selected": undefined,
+                    }
+                  }
+                  accessibilityValue={
+                    {
+                      "max": undefined,
+                      "min": undefined,
+                      "now": undefined,
+                      "text": undefined,
+                    }
+                  }
                   accessible={true}
                   collapsable={false}
                   focusable={true}
@@ -1373,7 +1622,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                   onResponderTerminationRequest={[Function]}
                   onStartShouldSetResponder={[Function]}
                   style={
-                    Object {
+                    {
                       "alignItems": "center",
                       "alignSelf": "flex-start",
                       "backgroundColor": "#fff",
@@ -1394,7 +1643,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
                 >
                   <Text
                     style={
-                      Object {
+                      {
                         "color": "#2a9e91",
                         "fontSize": 16,
                         "fontWeight": "bold",
@@ -1408,14 +1657,14 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
             </View>
             <View
               style={
-                Object {
+                {
                   "marginBottom": 10,
                 }
               }
             >
               <View
                 style={
-                  Object {
+                  {
                     "flexDirection": "row",
                     "marginBottom": 5,
                   }
@@ -1427,8 +1676,8 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               </View>
               <View
                 style={
-                  Array [
-                    Object {
+                  [
+                    {
                       "borderColor": "#e5e5e5",
                       "borderRadius": 5,
                       "borderWidth": 0.5,
@@ -1448,14 +1697,14 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
             </View>
             <View
               style={
-                Object {
+                {
                   "marginBottom": 10,
                 }
               }
             >
               <View
                 style={
-                  Object {
+                  {
                     "flexDirection": "row",
                     "marginBottom": 5,
                   }
@@ -1467,8 +1716,8 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
               </View>
               <View
                 style={
-                  Array [
-                    Object {
+                  [
+                    {
                       "borderColor": "#e5e5e5",
                       "borderRadius": 5,
                       "borderWidth": 0.5,
@@ -1489,6 +1738,23 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
           </View>
         </View>
         <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
           accessible={true}
           collapsable={false}
           focusable={true}
@@ -1500,7 +1766,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
+            {
               "alignItems": "center",
               "backgroundColor": "#2a9e91",
               "borderRadius": 5,
@@ -1518,7 +1784,7 @@ exports[`<DrillEditorPage /> renders correctly when creating a new drill 1`] = `
         >
           <Text
             style={
-              Object {
+              {
                 "color": "#fff",
                 "fontSize": 16,
                 "textAlign": "center",
@@ -1538,11 +1804,11 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
 <View
   onLayout={[Function]}
   style={
-    Array [
-      Object {
+    [
+      {
         "flex": 1,
       },
-      Object {
+      {
         "paddingBottom": 0,
       },
     ]
@@ -1550,7 +1816,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
 >
   <RCTScrollView
     style={
-      Object {
+      {
         "backgroundColor": "#fff",
         "padding": 10,
         "paddingRight": 20,
@@ -1561,14 +1827,14 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
       <View>
         <View
           style={
-            Object {
+            {
               "marginBottom": 10,
             }
           }
         >
           <View
             style={
-              Object {
+              {
                 "flexDirection": "row",
                 "marginBottom": 5,
               }
@@ -1580,8 +1846,8 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
           </View>
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "borderColor": "#e5e5e5",
                   "borderRadius": 5,
                   "borderWidth": 0.5,
@@ -1602,14 +1868,14 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
         </View>
         <View
           style={
-            Object {
+            {
               "marginBottom": 10,
             }
           }
         >
           <View
             style={
-              Object {
+              {
                 "flexDirection": "row",
                 "marginBottom": 5,
               }
@@ -1617,7 +1883,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
           >
             <Text
               style={
-                Object {
+                {
                   "color": "red",
                   "fontStyle": "italic",
                 }
@@ -1631,8 +1897,8 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
           </View>
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "borderColor": "#e5e5e5",
                   "borderRadius": 5,
                   "borderWidth": 0.5,
@@ -1653,14 +1919,14 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
         </View>
         <View
           style={
-            Object {
+            {
               "marginBottom": 10,
             }
           }
         >
           <View
             style={
-              Object {
+              {
                 "flexDirection": "row",
                 "marginBottom": 5,
               }
@@ -1672,8 +1938,8 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
           </View>
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "borderColor": "#e5e5e5",
                   "borderRadius": 5,
                   "borderWidth": 0.5,
@@ -1694,14 +1960,14 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
         </View>
         <View
           style={
-            Object {
+            {
               "marginBottom": 10,
             }
           }
         >
           <View
             style={
-              Object {
+              {
                 "flexDirection": "row",
                 "marginBottom": 5,
               }
@@ -1713,8 +1979,8 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
           </View>
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "borderColor": "#e5e5e5",
                   "borderRadius": 5,
                   "borderWidth": 0.5,
@@ -1738,14 +2004,14 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
         </View>
         <View
           style={
-            Object {
+            {
               "marginBottom": 10,
             }
           }
         >
           <View
             style={
-              Object {
+              {
                 "flexDirection": "row",
                 "marginBottom": 5,
               }
@@ -1757,8 +2023,8 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
           </View>
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "borderColor": "#e5e5e5",
                   "borderRadius": 5,
                   "borderWidth": 0.5,
@@ -1780,14 +2046,14 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
         </View>
         <View
           style={
-            Object {
+            {
               "marginBottom": 10,
             }
           }
         >
           <View
             style={
-              Object {
+              {
                 "flexDirection": "row",
                 "marginBottom": 5,
               }
@@ -1799,8 +2065,8 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
           </View>
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "borderColor": "#e5e5e5",
                   "borderRadius": 5,
                   "borderWidth": 0.5,
@@ -1823,14 +2089,14 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
         </View>
         <View
           style={
-            Object {
+            {
               "marginBottom": 10,
             }
           }
         >
           <View
             style={
-              Object {
+              {
                 "flexDirection": "row",
                 "marginBottom": 5,
               }
@@ -1842,8 +2108,8 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
           </View>
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "borderColor": "#e5e5e5",
                   "borderRadius": 5,
                   "borderWidth": 0.5,
@@ -1864,14 +2130,14 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
         </View>
         <View
           style={
-            Object {
+            {
               "marginBottom": 10,
             }
           }
         >
           <View
             style={
-              Object {
+              {
                 "flexDirection": "row",
                 "marginBottom": 5,
               }
@@ -1883,8 +2149,8 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
           </View>
           <View
             style={
-              Array [
-                Object {
+              [
+                {
                   "borderColor": "#e5e5e5",
                   "borderRadius": 5,
                   "borderWidth": 0.5,
@@ -1906,14 +2172,14 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
         </View>
         <View
           style={
-            Object {
+            {
               "marginBottom": 10,
             }
           }
         >
           <Text
             style={
-              Object {
+              {
                 "marginBottom": 5,
               }
             }
@@ -1922,12 +2188,29 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
           </Text>
           <View
             style={
-              Object {
+              {
                 "flexDirection": "row",
               }
             }
           >
             <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
               accessible={true}
               collapsable={false}
               focusable={true}
@@ -1939,7 +2222,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "borderColor": "#2a9e91",
                   "borderRadius": 5,
                   "borderWidth": 0.5,
@@ -1954,7 +2237,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             >
               <Text
                 style={
-                  Object {
+                  {
                     "textAlign": "center",
                   }
                 }
@@ -1963,6 +2246,23 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               </Text>
             </View>
             <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
               accessible={true}
               collapsable={false}
               focusable={true}
@@ -1974,7 +2274,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "borderColor": "#e5e5e5",
                   "borderRadius": 5,
                   "borderWidth": 0.5,
@@ -1989,7 +2289,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             >
               <Text
                 style={
-                  Object {
+                  {
                     "textAlign": "center",
                   }
                 }
@@ -1998,6 +2298,23 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               </Text>
             </View>
             <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
               accessible={true}
               collapsable={false}
               focusable={true}
@@ -2009,7 +2326,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "borderColor": "#e5e5e5",
                   "borderRadius": 5,
                   "borderWidth": 0.5,
@@ -2024,7 +2341,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             >
               <Text
                 style={
-                  Object {
+                  {
                     "textAlign": "center",
                   }
                 }
@@ -2036,14 +2353,14 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
         </View>
         <View
           style={
-            Object {
+            {
               "marginBottom": 10,
             }
           }
         >
           <Text
             style={
-              Object {
+              {
                 "marginBottom": 5,
               }
             }
@@ -2052,7 +2369,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
           </Text>
           <View
             style={
-              Object {
+              {
                 "flexDirection": "row",
                 "flexWrap": "wrap",
               }
@@ -2061,8 +2378,20 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             <View
               accessibilityRole="checkbox"
               accessibilityState={
-                Object {
+                {
+                  "busy": undefined,
                   "checked": false,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
                 }
               }
               accessible={true}
@@ -2076,7 +2405,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "backgroundColor": "#fff",
                   "borderColor": "#ededed",
                   "borderRadius": 3,
@@ -2093,7 +2422,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             >
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "flexDirection": "row",
                   }
@@ -2102,7 +2431,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                 <Text />
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#43484d",
                       "fontWeight": "normal",
                       "marginLeft": 10,
@@ -2118,8 +2447,20 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             <View
               accessibilityRole="checkbox"
               accessibilityState={
-                Object {
+                {
+                  "busy": undefined,
                   "checked": false,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
                 }
               }
               accessible={true}
@@ -2133,7 +2474,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "backgroundColor": "#fff",
                   "borderColor": "#ededed",
                   "borderRadius": 3,
@@ -2150,7 +2491,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             >
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "flexDirection": "row",
                   }
@@ -2159,7 +2500,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                 <Text />
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#43484d",
                       "fontWeight": "normal",
                       "marginLeft": 10,
@@ -2175,8 +2516,20 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             <View
               accessibilityRole="checkbox"
               accessibilityState={
-                Object {
+                {
+                  "busy": undefined,
                   "checked": false,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
                 }
               }
               accessible={true}
@@ -2190,7 +2543,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "backgroundColor": "#fff",
                   "borderColor": "#ededed",
                   "borderRadius": 3,
@@ -2207,7 +2560,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             >
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "flexDirection": "row",
                   }
@@ -2216,7 +2569,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                 <Text />
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#43484d",
                       "fontWeight": "normal",
                       "marginLeft": 10,
@@ -2232,8 +2585,20 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             <View
               accessibilityRole="checkbox"
               accessibilityState={
-                Object {
+                {
+                  "busy": undefined,
                   "checked": false,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
                 }
               }
               accessible={true}
@@ -2247,7 +2612,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "backgroundColor": "#fff",
                   "borderColor": "#ededed",
                   "borderRadius": 3,
@@ -2264,7 +2629,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             >
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "flexDirection": "row",
                   }
@@ -2273,7 +2638,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                 <Text />
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#43484d",
                       "fontWeight": "normal",
                       "marginLeft": 10,
@@ -2289,8 +2654,20 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             <View
               accessibilityRole="checkbox"
               accessibilityState={
-                Object {
+                {
+                  "busy": undefined,
                   "checked": false,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
                 }
               }
               accessible={true}
@@ -2304,7 +2681,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "backgroundColor": "#fff",
                   "borderColor": "#ededed",
                   "borderRadius": 3,
@@ -2321,7 +2698,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             >
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "flexDirection": "row",
                   }
@@ -2330,7 +2707,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                 <Text />
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#43484d",
                       "fontWeight": "normal",
                       "marginLeft": 10,
@@ -2346,8 +2723,20 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             <View
               accessibilityRole="checkbox"
               accessibilityState={
-                Object {
+                {
+                  "busy": undefined,
                   "checked": false,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
                 }
               }
               accessible={true}
@@ -2361,7 +2750,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "backgroundColor": "#fff",
                   "borderColor": "#ededed",
                   "borderRadius": 3,
@@ -2378,7 +2767,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             >
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "flexDirection": "row",
                   }
@@ -2387,7 +2776,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                 <Text />
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#43484d",
                       "fontWeight": "normal",
                       "marginLeft": 10,
@@ -2403,8 +2792,20 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             <View
               accessibilityRole="checkbox"
               accessibilityState={
-                Object {
+                {
+                  "busy": undefined,
                   "checked": false,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
                 }
               }
               accessible={true}
@@ -2418,7 +2819,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "backgroundColor": "#fff",
                   "borderColor": "#ededed",
                   "borderRadius": 3,
@@ -2435,7 +2836,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             >
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "flexDirection": "row",
                   }
@@ -2444,7 +2845,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                 <Text />
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#43484d",
                       "fontWeight": "normal",
                       "marginLeft": 10,
@@ -2460,8 +2861,20 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             <View
               accessibilityRole="checkbox"
               accessibilityState={
-                Object {
+                {
+                  "busy": undefined,
                   "checked": false,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
                 }
               }
               accessible={true}
@@ -2475,7 +2888,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "backgroundColor": "#fff",
                   "borderColor": "#ededed",
                   "borderRadius": 3,
@@ -2492,7 +2905,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             >
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "flexDirection": "row",
                   }
@@ -2501,7 +2914,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                 <Text />
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#43484d",
                       "fontWeight": "normal",
                       "marginLeft": 10,
@@ -2518,14 +2931,14 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
         </View>
         <View
           style={
-            Object {
+            {
               "marginBottom": 10,
             }
           }
         >
           <Text
             style={
-              Object {
+              {
                 "marginBottom": 5,
               }
             }
@@ -2534,12 +2947,29 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
           </Text>
           <View
             style={
-              Object {
+              {
                 "flexDirection": "row",
               }
             }
           >
             <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
               accessible={true}
               collapsable={false}
               focusable={true}
@@ -2551,7 +2981,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "borderColor": "#2a9e91",
                   "borderRadius": 5,
                   "borderWidth": 0.5,
@@ -2566,7 +2996,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             >
               <Text
                 style={
-                  Object {
+                  {
                     "textAlign": "center",
                   }
                 }
@@ -2575,6 +3005,23 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               </Text>
             </View>
             <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
               accessible={true}
               collapsable={false}
               focusable={true}
@@ -2586,7 +3033,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "borderColor": "#e5e5e5",
                   "borderRadius": 5,
                   "borderWidth": 0.5,
@@ -2601,7 +3048,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             >
               <Text
                 style={
-                  Object {
+                  {
                     "textAlign": "center",
                   }
                 }
@@ -2610,6 +3057,23 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               </Text>
             </View>
             <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
               accessible={true}
               collapsable={false}
               focusable={true}
@@ -2621,7 +3085,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "borderColor": "#e5e5e5",
                   "borderRadius": 5,
                   "borderWidth": 0.5,
@@ -2636,7 +3100,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             >
               <Text
                 style={
-                  Object {
+                  {
                     "textAlign": "center",
                   }
                 }
@@ -2649,7 +3113,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
         <View>
           <View
             style={
-              Object {
+              {
                 "flexDirection": "row",
                 "marginBottom": 5,
               }
@@ -2657,7 +3121,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
           >
             <Text
               style={
-                Object {
+                {
                   "fontSize": 20,
                   "marginRight": 10,
                 }
@@ -2666,6 +3130,23 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               Variants
             </Text>
             <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
               accessible={true}
               collapsable={false}
               focusable={true}
@@ -2677,7 +3158,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "alignSelf": "center",
                   "backgroundColor": "#fff",
@@ -2697,7 +3178,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             >
               <Text
                 style={
-                  Object {
+                  {
                     "color": "#2a9e91",
                     "fontSize": 16,
                     "fontWeight": "bold",
@@ -2710,7 +3191,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
           </View>
           <Text
             style={
-              Object {
+              {
                 "color": "red",
                 "fontStyle": "italic",
               }
@@ -2718,7 +3199,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
           />
           <View
             style={
-              Object {
+              {
                 "borderBottomColor": "#e5e5e5",
                 "borderBottomWidth": 0.5,
                 "marginBottom": 10,
@@ -2729,13 +3210,30 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
           >
             <View
               style={
-                Object {
+                {
                   "flexDirection": "row",
                   "marginBottom": 5,
                 }
               }
             >
               <View
+                accessibilityState={
+                  {
+                    "busy": undefined,
+                    "checked": undefined,
+                    "disabled": undefined,
+                    "expanded": undefined,
+                    "selected": undefined,
+                  }
+                }
+                accessibilityValue={
+                  {
+                    "max": undefined,
+                    "min": undefined,
+                    "now": undefined,
+                    "text": undefined,
+                  }
+                }
                 accessible={true}
                 collapsable={false}
                 focusable={true}
@@ -2747,7 +3245,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                 onResponderTerminationRequest={[Function]}
                 onStartShouldSetResponder={[Function]}
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "alignSelf": "flex-start",
                     "backgroundColor": "#fff",
@@ -2768,7 +3266,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               >
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#2a9e91",
                       "fontSize": 16,
                       "fontWeight": "bold",
@@ -2780,7 +3278,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               </View>
               <Text
                 style={
-                  Object {
+                  {
                     "fontSize": 20,
                     "marginRight": 10,
                   }
@@ -2791,14 +3289,14 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             </View>
             <View
               style={
-                Object {
+                {
                   "marginBottom": 10,
                 }
               }
             >
               <View
                 style={
-                  Object {
+                  {
                     "flexDirection": "row",
                     "marginBottom": 5,
                   }
@@ -2810,8 +3308,8 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               </View>
               <View
                 style={
-                  Array [
-                    Object {
+                  [
+                    {
                       "borderColor": "#e5e5e5",
                       "borderRadius": 5,
                       "borderWidth": 0.5,
@@ -2832,14 +3330,14 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             </View>
             <View
               style={
-                Object {
+                {
                   "marginBottom": 10,
                 }
               }
             >
               <View
                 style={
-                  Object {
+                  {
                     "flexDirection": "row",
                     "marginBottom": 5,
                   }
@@ -2851,8 +3349,8 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               </View>
               <View
                 style={
-                  Array [
-                    Object {
+                  [
+                    {
                       "borderColor": "#e5e5e5",
                       "borderRadius": 5,
                       "borderWidth": 0.5,
@@ -2875,14 +3373,14 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             </View>
             <View
               style={
-                Object {
+                {
                   "marginBottom": 10,
                 }
               }
             >
               <View
                 style={
-                  Object {
+                  {
                     "flexDirection": "row",
                     "marginBottom": 5,
                   }
@@ -2894,12 +3392,29 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               </View>
               <View
                 style={
-                  Object {
+                  {
                     "flexDirection": "row",
                   }
                 }
               >
                 <View
+                  accessibilityState={
+                    {
+                      "busy": undefined,
+                      "checked": undefined,
+                      "disabled": undefined,
+                      "expanded": undefined,
+                      "selected": undefined,
+                    }
+                  }
+                  accessibilityValue={
+                    {
+                      "max": undefined,
+                      "min": undefined,
+                      "now": undefined,
+                      "text": undefined,
+                    }
+                  }
                   accessible={true}
                   collapsable={false}
                   focusable={true}
@@ -2911,7 +3426,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                   onResponderTerminationRequest={[Function]}
                   onStartShouldSetResponder={[Function]}
                   style={
-                    Object {
+                    {
                       "alignItems": "center",
                       "alignSelf": "flex-start",
                       "backgroundColor": "#fff",
@@ -2932,7 +3447,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                 >
                   <Text
                     style={
-                      Object {
+                      {
                         "color": "#2a9e91",
                         "fontSize": 16,
                         "fontWeight": "bold",
@@ -2946,14 +3461,14 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             </View>
             <View
               style={
-                Object {
+                {
                   "marginBottom": 10,
                 }
               }
             >
               <View
                 style={
-                  Object {
+                  {
                     "flexDirection": "row",
                     "marginBottom": 5,
                   }
@@ -2965,8 +3480,8 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               </View>
               <View
                 style={
-                  Array [
-                    Object {
+                  [
+                    {
                       "borderColor": "#e5e5e5",
                       "borderRadius": 5,
                       "borderWidth": 0.5,
@@ -2987,14 +3502,14 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             </View>
             <View
               style={
-                Object {
+                {
                   "marginBottom": 10,
                 }
               }
             >
               <View
                 style={
-                  Object {
+                  {
                     "flexDirection": "row",
                     "marginBottom": 5,
                   }
@@ -3006,8 +3521,8 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               </View>
               <View
                 style={
-                  Array [
-                    Object {
+                  [
+                    {
                       "borderColor": "#e5e5e5",
                       "borderRadius": 5,
                       "borderWidth": 0.5,
@@ -3028,7 +3543,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
           </View>
           <View
             style={
-              Object {
+              {
                 "borderBottomColor": "#e5e5e5",
                 "borderBottomWidth": 0.5,
                 "marginBottom": 10,
@@ -3039,13 +3554,30 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
           >
             <View
               style={
-                Object {
+                {
                   "flexDirection": "row",
                   "marginBottom": 5,
                 }
               }
             >
               <View
+                accessibilityState={
+                  {
+                    "busy": undefined,
+                    "checked": undefined,
+                    "disabled": undefined,
+                    "expanded": undefined,
+                    "selected": undefined,
+                  }
+                }
+                accessibilityValue={
+                  {
+                    "max": undefined,
+                    "min": undefined,
+                    "now": undefined,
+                    "text": undefined,
+                  }
+                }
                 accessible={true}
                 collapsable={false}
                 focusable={true}
@@ -3057,7 +3589,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                 onResponderTerminationRequest={[Function]}
                 onStartShouldSetResponder={[Function]}
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "alignSelf": "flex-start",
                     "backgroundColor": "#fff",
@@ -3078,7 +3610,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               >
                 <Text
                   style={
-                    Object {
+                    {
                       "color": "#2a9e91",
                       "fontSize": 16,
                       "fontWeight": "bold",
@@ -3090,7 +3622,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               </View>
               <Text
                 style={
-                  Object {
+                  {
                     "fontSize": 20,
                     "marginRight": 10,
                   }
@@ -3101,14 +3633,14 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             </View>
             <View
               style={
-                Object {
+                {
                   "marginBottom": 10,
                 }
               }
             >
               <View
                 style={
-                  Object {
+                  {
                     "flexDirection": "row",
                     "marginBottom": 5,
                   }
@@ -3120,8 +3652,8 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               </View>
               <View
                 style={
-                  Array [
-                    Object {
+                  [
+                    {
                       "borderColor": "#e5e5e5",
                       "borderRadius": 5,
                       "borderWidth": 0.5,
@@ -3142,14 +3674,14 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             </View>
             <View
               style={
-                Object {
+                {
                   "marginBottom": 10,
                 }
               }
             >
               <View
                 style={
-                  Object {
+                  {
                     "flexDirection": "row",
                     "marginBottom": 5,
                   }
@@ -3161,8 +3693,8 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               </View>
               <View
                 style={
-                  Array [
-                    Object {
+                  [
+                    {
                       "borderColor": "#e5e5e5",
                       "borderRadius": 5,
                       "borderWidth": 0.5,
@@ -3185,14 +3717,14 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             </View>
             <View
               style={
-                Object {
+                {
                   "marginBottom": 10,
                 }
               }
             >
               <View
                 style={
-                  Object {
+                  {
                     "flexDirection": "row",
                     "marginBottom": 5,
                   }
@@ -3204,12 +3736,29 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               </View>
               <View
                 style={
-                  Object {
+                  {
                     "flexDirection": "row",
                   }
                 }
               >
                 <View
+                  accessibilityState={
+                    {
+                      "busy": undefined,
+                      "checked": undefined,
+                      "disabled": undefined,
+                      "expanded": undefined,
+                      "selected": undefined,
+                    }
+                  }
+                  accessibilityValue={
+                    {
+                      "max": undefined,
+                      "min": undefined,
+                      "now": undefined,
+                      "text": undefined,
+                    }
+                  }
                   accessible={true}
                   collapsable={false}
                   focusable={true}
@@ -3221,7 +3770,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                   onResponderTerminationRequest={[Function]}
                   onStartShouldSetResponder={[Function]}
                   style={
-                    Object {
+                    {
                       "alignItems": "center",
                       "alignSelf": "flex-start",
                       "backgroundColor": "#fff",
@@ -3242,7 +3791,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
                 >
                   <Text
                     style={
-                      Object {
+                      {
                         "color": "#2a9e91",
                         "fontSize": 16,
                         "fontWeight": "bold",
@@ -3256,14 +3805,14 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             </View>
             <View
               style={
-                Object {
+                {
                   "marginBottom": 10,
                 }
               }
             >
               <View
                 style={
-                  Object {
+                  {
                     "flexDirection": "row",
                     "marginBottom": 5,
                   }
@@ -3275,8 +3824,8 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               </View>
               <View
                 style={
-                  Array [
-                    Object {
+                  [
+                    {
                       "borderColor": "#e5e5e5",
                       "borderRadius": 5,
                       "borderWidth": 0.5,
@@ -3297,14 +3846,14 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
             </View>
             <View
               style={
-                Object {
+                {
                   "marginBottom": 10,
                 }
               }
             >
               <View
                 style={
-                  Object {
+                  {
                     "flexDirection": "row",
                     "marginBottom": 5,
                   }
@@ -3316,8 +3865,8 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
               </View>
               <View
                 style={
-                  Array [
-                    Object {
+                  [
+                    {
                       "borderColor": "#e5e5e5",
                       "borderRadius": 5,
                       "borderWidth": 0.5,
@@ -3338,6 +3887,23 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
           </View>
         </View>
         <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
           accessible={true}
           collapsable={false}
           focusable={true}
@@ -3349,7 +3915,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
+            {
               "alignItems": "center",
               "backgroundColor": "#2a9e91",
               "borderRadius": 5,
@@ -3367,7 +3933,7 @@ exports[`<DrillEditorPage /> renders correctly when creating an existing drill 1
         >
           <Text
             style={
-              Object {
+              {
                 "color": "#fff",
                 "fontSize": 16,
                 "textAlign": "center",

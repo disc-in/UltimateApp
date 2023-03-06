@@ -3,7 +3,7 @@
 exports[`<DrillListPage /> renders correctly when connected 1`] = `
 <View
   style={
-    Object {
+    {
       "backgroundColor": "#fff",
       "height": "100%",
       "paddingLeft": 20,
@@ -14,7 +14,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
 >
   <View
     style={
-      Object {
+      {
         "alignItems": "center",
         "flexDirection": "row",
         "justifyContent": "space-between",
@@ -24,7 +24,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
   >
     <Text
       style={
-        Object {
+        {
           "color": "#A6A6A6",
         }
       }
@@ -32,6 +32,23 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
       2 drills available
     </Text>
     <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
       accessible={true}
       collapsable={false}
       focusable={true}
@@ -43,7 +60,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "alignItems": "center",
           "alignSelf": "center",
           "backgroundColor": "#fff",
@@ -64,7 +81,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
       <Text />
       <Text
         style={
-          Object {
+          {
             "color": "#2a9e91",
             "fontSize": 16,
             "fontWeight": "bold",
@@ -77,19 +94,19 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
   </View>
   <RCTScrollView
     contentContainerStyle={
-      Object {
+      {
         "paddingBottom": 40,
       }
     }
     data={
-      Array [
-        Object {
+      [
+        {
           "author": "Author",
           "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
           "durationInMinutes": 30,
           "equipment": "Equipment needs for the drill",
           "equipmentLabel": "",
-          "goals": Array [
+          "goals": [
             "Defense",
           ],
           "id": 3,
@@ -98,10 +115,10 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           "level": "Beginner",
           "minimalPlayersNumber": 2,
           "seasonTiming": "",
-          "steps": Array [
-            Object {
-              "animation": Object {
-                "ids": Array [
+          "steps": [
+            {
+              "animation": {
+                "ids": [
                   "triangle",
                   "triangle",
                   "triangle",
@@ -117,240 +134,240 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
                   "offense",
                   "disc",
                 ],
-                "positions": Array [
-                  Array [
-                    Array [
-                      Array [
+                "positions": [
+                  [
+                    [
+                      [
                         0.3,
                         0.3,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.3,
                         0.6,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.6,
                         0.3,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.6,
                         0.6,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.45,
                         0.2,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.2,
                         0.45,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.45,
                         0.7,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.7,
                         0.45,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.3,
                         0.3,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.16,
                         0.3,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.6,
                         0.3,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.6,
                         0.6,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.3,
                         0.6,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.36,
                         0.36,
                       ],
                     ],
                   ],
-                  Array [
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    Array [
-                      Array [
+                  [
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    [
+                      [
                         0.45,
                         0.2,
                       ],
                     ],
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
+                    ,
+                    ,
+                    ,
+                    ,
                   ],
-                  Array [
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    Array [
-                      Array [
+                  [
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    [
+                      [
                         0.6,
                         0.3,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.7,
                         0.45,
                       ],
                     ],
-                    undefined,
-                    undefined,
-                    Array [
-                      Array [
+                    ,
+                    ,
+                    [
+                      [
                         0.58,
                         0.36,
                       ],
                     ],
                   ],
-                  Array [
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    Array [
-                      Array [
+                  [
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    [
+                      [
                         0.6,
                         0.6,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.45,
                         0.7,
                       ],
                     ],
-                    undefined,
-                    Array [
-                      Array [
+                    ,
+                    [
+                      [
                         0.58,
                         0.58,
                       ],
                     ],
                   ],
-                  Array [
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    Array [
-                      Array [
+                  [
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    [
+                      [
                         0.3,
                         0.6,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.2,
                         0.45,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.36,
                         0.58,
                       ],
                     ],
                   ],
-                  Array [
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    Array [
-                      Array [
+                  [
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    [
+                      [
                         0.45,
                         0.2,
                       ],
                     ],
-                    undefined,
-                    undefined,
-                    undefined,
-                    Array [
-                      Array [
+                    ,
+                    ,
+                    ,
+                    [
+                      [
                         0.3,
                         0.3,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.36,
                         0.36,
                       ],
                     ],
                   ],
                 ],
-                "texts": Array [
+                "texts": [
                   "",
                   "",
                   "",
@@ -374,13 +391,13 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           "type": "frisbee",
           "visibleInList": true,
         },
-        Object {
+        {
           "author": "Author",
           "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
           "durationInMinutes": 30,
           "equipment": "Equipment needs for the drill",
           "equipmentLabel": "",
-          "goals": Array [
+          "goals": [
             "Defense",
           ],
           "id": 4,
@@ -389,8 +406,8 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           "level": "Beginner",
           "minimalPlayersNumber": 2,
           "seasonTiming": "",
-          "steps": Array [
-            Object {
+          "steps": [
+            {
               "id": 0,
               "vimeoId": "462695757",
             },
@@ -403,14 +420,14 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
     }
     deleteDrill={[Function]}
     drillsToDisplay={
-      Array [
-        Object {
+      [
+        {
           "author": "Author",
           "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
           "durationInMinutes": 30,
           "equipment": "Equipment needs for the drill",
           "equipmentLabel": "",
-          "goals": Array [
+          "goals": [
             "Defense",
           ],
           "id": 3,
@@ -419,10 +436,10 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           "level": "Beginner",
           "minimalPlayersNumber": 2,
           "seasonTiming": "",
-          "steps": Array [
-            Object {
-              "animation": Object {
-                "ids": Array [
+          "steps": [
+            {
+              "animation": {
+                "ids": [
                   "triangle",
                   "triangle",
                   "triangle",
@@ -438,240 +455,240 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
                   "offense",
                   "disc",
                 ],
-                "positions": Array [
-                  Array [
-                    Array [
-                      Array [
+                "positions": [
+                  [
+                    [
+                      [
                         0.3,
                         0.3,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.3,
                         0.6,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.6,
                         0.3,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.6,
                         0.6,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.45,
                         0.2,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.2,
                         0.45,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.45,
                         0.7,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.7,
                         0.45,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.3,
                         0.3,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.16,
                         0.3,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.6,
                         0.3,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.6,
                         0.6,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.3,
                         0.6,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.36,
                         0.36,
                       ],
                     ],
                   ],
-                  Array [
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    Array [
-                      Array [
+                  [
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    [
+                      [
                         0.45,
                         0.2,
                       ],
                     ],
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
+                    ,
+                    ,
+                    ,
+                    ,
                   ],
-                  Array [
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    Array [
-                      Array [
+                  [
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    [
+                      [
                         0.6,
                         0.3,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.7,
                         0.45,
                       ],
                     ],
-                    undefined,
-                    undefined,
-                    Array [
-                      Array [
+                    ,
+                    ,
+                    [
+                      [
                         0.58,
                         0.36,
                       ],
                     ],
                   ],
-                  Array [
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    Array [
-                      Array [
+                  [
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    [
+                      [
                         0.6,
                         0.6,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.45,
                         0.7,
                       ],
                     ],
-                    undefined,
-                    Array [
-                      Array [
+                    ,
+                    [
+                      [
                         0.58,
                         0.58,
                       ],
                     ],
                   ],
-                  Array [
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    Array [
-                      Array [
+                  [
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    [
+                      [
                         0.3,
                         0.6,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.2,
                         0.45,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.36,
                         0.58,
                       ],
                     ],
                   ],
-                  Array [
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    Array [
-                      Array [
+                  [
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    [
+                      [
                         0.45,
                         0.2,
                       ],
                     ],
-                    undefined,
-                    undefined,
-                    undefined,
-                    Array [
-                      Array [
+                    ,
+                    ,
+                    ,
+                    [
+                      [
                         0.3,
                         0.3,
                       ],
                     ],
-                    Array [
-                      Array [
+                    [
+                      [
                         0.36,
                         0.36,
                       ],
                     ],
                   ],
                 ],
-                "texts": Array [
+                "texts": [
                   "",
                   "",
                   "",
@@ -695,13 +712,13 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           "type": "frisbee",
           "visibleInList": true,
         },
-        Object {
+        {
           "author": "Author",
           "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dignissim felis, at tristique mi efficitur a. Nulla pellentesque odio nunc, ut sodales ex pulvinar at. In hac habitasse platea dictumst. Pellentesque sodales nisl lorem, ac lacinia nisl lacinia eu. Proin lacinia viverra mauris, et pharetra ipsum tempus eget. Ut maximus sapien in hendrerit ultricies. Maecenas vel diam tincidunt, consequat nunc a, mattis eros. Curabitur a eros a nulla malesuada gravida. Donec massa quam, suscipit eget efficitur et, euismod sed nulla. Morbi mattis et magna a aliquam. Fusce pellentesque vel erat eget",
           "durationInMinutes": 30,
           "equipment": "Equipment needs for the drill",
           "equipmentLabel": "",
-          "goals": Array [
+          "goals": [
             "Defense",
           ],
           "id": 4,
@@ -710,8 +727,8 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           "level": "Beginner",
           "minimalPlayersNumber": 2,
           "seasonTiming": "",
-          "steps": Array [
-            Object {
+          "steps": [
+            {
               "id": 0,
               "vimeoId": "462695757",
             },
@@ -726,18 +743,18 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
     getItemCount={[Function]}
     keyExtractor={[Function]}
     navigation={
-      Object {
+      {
         "navigate": [MockFunction],
         "setOptions": [MockFunction] {
-          "calls": Array [
-            Array [
-              Object {
+          "calls": [
+            [
+              {
                 "headerRight": [Function],
               },
             ],
           ],
-          "results": Array [
-            Object {
+          "results": [
+            {
               "type": "return",
               "value": undefined,
             },
@@ -755,15 +772,33 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
     removeClippedSubviews={false}
     renderItem={[Function]}
     scrollEventThrottle={50}
-    stickyHeaderIndices={Array []}
-    viewabilityConfigCallbackPairs={Array []}
+    stickyHeaderIndices={[]}
+    viewabilityConfigCallbackPairs={[]}
   >
     <View>
       <View
+        onFocusCapture={[Function]}
         onLayout={[Function]}
         style={null}
       >
         <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
           accessible={true}
           collapsable={false}
           focusable={true}
@@ -775,7 +810,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
+            {
               "flexDirection": "row",
               "height": 80,
               "marginBottom": 20,
@@ -786,7 +821,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           <View
             accessibilityIgnoresInvertColors={true}
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "backgroundColor": "rgb(0,0,0)",
                 "borderRadius": 5,
@@ -800,24 +835,24 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           >
             <Image
               source={
-                Object {
+                {
                   "uri": "https://i1.wp.com/www.newdelhitimes.com/wp-content/uploads/2019/07/AP19204604544330.jpg?w=1024&ssl=1",
                 }
               }
               style={
-                Array [
-                  Object {
+                [
+                  {
                     "bottom": 0,
                     "left": 0,
                     "position": "absolute",
                     "right": 0,
                     "top": 0,
                   },
-                  Object {
+                  {
                     "height": 80,
                     "width": 80,
                   },
-                  Object {
+                  {
                     "borderRadius": 5,
                     "opacity": 0.5,
                   },
@@ -826,7 +861,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
             />
             <Text
               style={
-                Object {
+                {
                   "color": "#e5e5e5",
                   "fontSize": 16,
                   "textAlign": "center",
@@ -837,7 +872,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
             </Text>
             <Text
               style={
-                Object {
+                {
                   "color": "#e5e5e5",
                   "fontSize": 14,
                   "textAlign": "center",
@@ -849,7 +884,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           </View>
           <View
             style={
-              Object {
+              {
                 "flex": 1,
                 "padding": 5,
                 "paddingBottom": 10,
@@ -859,7 +894,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           >
             <Text
               style={
-                Object {
+                {
                   "color": "#A6A6A6",
                   "flex": 2,
                   "fontSize": 14,
@@ -871,7 +906,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
             <Text
               numberOfLines={1}
               style={
-                Object {
+                {
                   "flex": 3,
                   "flexWrap": "wrap",
                   "fontSize": 16,
@@ -883,7 +918,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
             </Text>
             <Text
               style={
-                Object {
+                {
                   "color": "#A6A6A6",
                   "flex": 2,
                   "fontSize": 14,
@@ -896,10 +931,28 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
         </View>
       </View>
       <View
+        onFocusCapture={[Function]}
         onLayout={[Function]}
         style={null}
       >
         <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
           accessible={true}
           collapsable={false}
           focusable={true}
@@ -911,7 +964,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
+            {
               "flexDirection": "row",
               "height": 80,
               "marginBottom": 20,
@@ -922,7 +975,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           <View
             accessibilityIgnoresInvertColors={true}
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "backgroundColor": "rgb(0,0,0)",
                 "borderRadius": 5,
@@ -936,24 +989,24 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           >
             <Image
               source={
-                Object {
+                {
                   "uri": "https://www.plu.edu/recreations/wp-content/uploads/sites/197/2019/04/ultimate-frisbee-3-2-19-1122-scaled-1536x1163.jpg",
                 }
               }
               style={
-                Array [
-                  Object {
+                [
+                  {
                     "bottom": 0,
                     "left": 0,
                     "position": "absolute",
                     "right": 0,
                     "top": 0,
                   },
-                  Object {
+                  {
                     "height": 80,
                     "width": 80,
                   },
-                  Object {
+                  {
                     "borderRadius": 5,
                     "opacity": 0.5,
                   },
@@ -962,7 +1015,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
             />
             <Text
               style={
-                Object {
+                {
                   "color": "#e5e5e5",
                   "fontSize": 16,
                   "textAlign": "center",
@@ -973,7 +1026,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
             </Text>
             <Text
               style={
-                Object {
+                {
                   "color": "#e5e5e5",
                   "fontSize": 14,
                   "textAlign": "center",
@@ -985,7 +1038,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           </View>
           <View
             style={
-              Object {
+              {
                 "flex": 1,
                 "padding": 5,
                 "paddingBottom": 10,
@@ -995,7 +1048,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
           >
             <Text
               style={
-                Object {
+                {
                   "color": "#A6A6A6",
                   "flex": 2,
                   "fontSize": 14,
@@ -1007,7 +1060,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
             <Text
               numberOfLines={1}
               style={
-                Object {
+                {
                   "flex": 3,
                   "flexWrap": "wrap",
                   "fontSize": 16,
@@ -1019,7 +1072,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
             </Text>
             <Text
               style={
-                Object {
+                {
                   "color": "#A6A6A6",
                   "flex": 2,
                   "fontSize": 14,
@@ -1039,7 +1092,7 @@ exports[`<DrillListPage /> renders correctly when connected 1`] = `
 exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
 <View
   style={
-    Object {
+    {
       "backgroundColor": "#fff",
       "height": "100%",
       "paddingLeft": 20,
@@ -1050,7 +1103,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
 >
   <View
     style={
-      Object {
+      {
         "alignItems": "center",
         "flexDirection": "row",
         "justifyContent": "space-between",
@@ -1060,7 +1113,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
   >
     <Text
       style={
-        Object {
+        {
           "color": "#A6A6A6",
         }
       }
@@ -1068,6 +1121,23 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
       3 drills available
     </Text>
     <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
       accessible={true}
       collapsable={false}
       focusable={true}
@@ -1079,7 +1149,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "alignItems": "center",
           "alignSelf": "center",
           "backgroundColor": "#fff",
@@ -1100,7 +1170,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
       <Text />
       <Text
         style={
-          Object {
+          {
             "color": "#2a9e91",
             "fontSize": 16,
             "fontWeight": "bold",
@@ -1113,19 +1183,19 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
   </View>
   <RCTScrollView
     contentContainerStyle={
-      Object {
+      {
         "paddingBottom": 40,
       }
     }
     data={
-      Array [
-        Object {
+      [
+        {
           "author": "Author",
           "description": "Description of the drill",
           "durationInMinutes": 10,
           "equipment": "Equipment needs for the drill",
           "equipmentLabel": "None",
-          "goals": Array [
+          "goals": [
             "Full body",
           ],
           "id": 1,
@@ -1134,13 +1204,13 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           "level": "Beginner",
           "minimalPlayersNumber": 1,
           "seasonTiming": "Off-season",
-          "steps": Array [
-            Object {
+          "steps": [
+            {
               "subtitle": "This is a subtitle",
               "title": "Warmup",
               "vimeoId": "462695757",
             },
-            Object {
+            {
               "subtitle": "This is a subtitle",
               "title": "Run !",
               "vimeoId": "462695757",
@@ -1150,13 +1220,13 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           "type": "fitness",
           "visibleInList": true,
         },
-        Object {
+        {
           "author": "Author",
           "description": "Description of the drill",
           "durationInMinutes": 20,
           "equipment": "Equipment needs for the drill",
           "equipmentLabel": "None",
-          "goals": Array [
+          "goals": [
             "Full body",
           ],
           "id": 2,
@@ -1165,13 +1235,13 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           "level": "Beginner",
           "minimalPlayersNumber": 1,
           "seasonTiming": "Off-season",
-          "steps": Array [
-            Object {
+          "steps": [
+            {
               "subtitle": "This is a subtitle",
               "title": "Warmup",
               "vimeoId": "462695757",
             },
-            Object {
+            {
               "subtitle": "This is a subtitle",
               "title": "Run !",
               "vimeoId": "462695757",
@@ -1181,13 +1251,13 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           "type": "fitness",
           "visibleInList": true,
         },
-        Object {
+        {
           "author": "Author",
           "description": "Description of the drill",
           "durationInMinutes": 30,
           "equipment": "Equipment needs for the drill",
           "equipmentLabel": "None",
-          "goals": Array [
+          "goals": [
             "Full body",
           ],
           "id": 3,
@@ -1196,13 +1266,13 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           "level": "Beginner",
           "minimalPlayersNumber": 1,
           "seasonTiming": "Off-season",
-          "steps": Array [
-            Object {
+          "steps": [
+            {
               "subtitle": "This is a subtitle",
               "title": "Warmup",
               "vimeoId": "462695757",
             },
-            Object {
+            {
               "subtitle": "This is a subtitle",
               "title": "Run !",
               "vimeoId": "462695757",
@@ -1216,14 +1286,14 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
     }
     deleteDrill={[Function]}
     drillsToDisplay={
-      Array [
-        Object {
+      [
+        {
           "author": "Author",
           "description": "Description of the drill",
           "durationInMinutes": 10,
           "equipment": "Equipment needs for the drill",
           "equipmentLabel": "None",
-          "goals": Array [
+          "goals": [
             "Full body",
           ],
           "id": 1,
@@ -1232,13 +1302,13 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           "level": "Beginner",
           "minimalPlayersNumber": 1,
           "seasonTiming": "Off-season",
-          "steps": Array [
-            Object {
+          "steps": [
+            {
               "subtitle": "This is a subtitle",
               "title": "Warmup",
               "vimeoId": "462695757",
             },
-            Object {
+            {
               "subtitle": "This is a subtitle",
               "title": "Run !",
               "vimeoId": "462695757",
@@ -1248,13 +1318,13 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           "type": "fitness",
           "visibleInList": true,
         },
-        Object {
+        {
           "author": "Author",
           "description": "Description of the drill",
           "durationInMinutes": 20,
           "equipment": "Equipment needs for the drill",
           "equipmentLabel": "None",
-          "goals": Array [
+          "goals": [
             "Full body",
           ],
           "id": 2,
@@ -1263,13 +1333,13 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           "level": "Beginner",
           "minimalPlayersNumber": 1,
           "seasonTiming": "Off-season",
-          "steps": Array [
-            Object {
+          "steps": [
+            {
               "subtitle": "This is a subtitle",
               "title": "Warmup",
               "vimeoId": "462695757",
             },
-            Object {
+            {
               "subtitle": "This is a subtitle",
               "title": "Run !",
               "vimeoId": "462695757",
@@ -1279,13 +1349,13 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           "type": "fitness",
           "visibleInList": true,
         },
-        Object {
+        {
           "author": "Author",
           "description": "Description of the drill",
           "durationInMinutes": 30,
           "equipment": "Equipment needs for the drill",
           "equipmentLabel": "None",
-          "goals": Array [
+          "goals": [
             "Full body",
           ],
           "id": 3,
@@ -1294,13 +1364,13 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           "level": "Beginner",
           "minimalPlayersNumber": 1,
           "seasonTiming": "Off-season",
-          "steps": Array [
-            Object {
+          "steps": [
+            {
               "subtitle": "This is a subtitle",
               "title": "Warmup",
               "vimeoId": "462695757",
             },
-            Object {
+            {
               "subtitle": "This is a subtitle",
               "title": "Run !",
               "vimeoId": "462695757",
@@ -1316,27 +1386,27 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
     getItemCount={[Function]}
     keyExtractor={[Function]}
     navigation={
-      Object {
+      {
         "navigate": [MockFunction],
         "setOptions": [MockFunction] {
-          "calls": Array [
-            Array [
-              Object {
+          "calls": [
+            [
+              {
                 "headerRight": [Function],
               },
             ],
-            Array [
-              Object {
+            [
+              {
                 "headerRight": [Function],
               },
             ],
           ],
-          "results": Array [
-            Object {
+          "results": [
+            {
               "type": "return",
               "value": undefined,
             },
-            Object {
+            {
               "type": "return",
               "value": undefined,
             },
@@ -1354,15 +1424,33 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
     removeClippedSubviews={false}
     renderItem={[Function]}
     scrollEventThrottle={50}
-    stickyHeaderIndices={Array []}
-    viewabilityConfigCallbackPairs={Array []}
+    stickyHeaderIndices={[]}
+    viewabilityConfigCallbackPairs={[]}
   >
     <View>
       <View
+        onFocusCapture={[Function]}
         onLayout={[Function]}
         style={null}
       >
         <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
           accessible={true}
           collapsable={false}
           focusable={true}
@@ -1374,7 +1462,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
+            {
               "flexDirection": "row",
               "height": 80,
               "marginBottom": 20,
@@ -1385,7 +1473,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           <View
             accessibilityIgnoresInvertColors={true}
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "backgroundColor": "rgb(0,0,0)",
                 "borderRadius": 5,
@@ -1399,24 +1487,24 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           >
             <Image
               source={
-                Object {
+                {
                   "uri": "https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg",
                 }
               }
               style={
-                Array [
-                  Object {
+                [
+                  {
                     "bottom": 0,
                     "left": 0,
                     "position": "absolute",
                     "right": 0,
                     "top": 0,
                   },
-                  Object {
+                  {
                     "height": 80,
                     "width": 80,
                   },
-                  Object {
+                  {
                     "borderRadius": 5,
                     "opacity": 0.5,
                   },
@@ -1425,7 +1513,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
             />
             <Text
               style={
-                Object {
+                {
                   "color": "#e5e5e5",
                   "fontSize": 16,
                   "textAlign": "center",
@@ -1436,7 +1524,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
             </Text>
             <Text
               style={
-                Object {
+                {
                   "color": "#e5e5e5",
                   "fontSize": 14,
                   "textAlign": "center",
@@ -1448,7 +1536,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           </View>
           <View
             style={
-              Object {
+              {
                 "flex": 1,
                 "padding": 5,
                 "paddingBottom": 10,
@@ -1458,7 +1546,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           >
             <Text
               style={
-                Object {
+                {
                   "color": "#A6A6A6",
                   "flex": 2,
                   "fontSize": 14,
@@ -1470,7 +1558,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
             <Text
               numberOfLines={1}
               style={
-                Object {
+                {
                   "flex": 3,
                   "flexWrap": "wrap",
                   "fontSize": 16,
@@ -1482,7 +1570,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
             </Text>
             <Text
               style={
-                Object {
+                {
                   "color": "#A6A6A6",
                   "flex": 2,
                   "fontSize": 14,
@@ -1495,10 +1583,28 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
         </View>
       </View>
       <View
+        onFocusCapture={[Function]}
         onLayout={[Function]}
         style={null}
       >
         <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
           accessible={true}
           collapsable={false}
           focusable={true}
@@ -1510,7 +1616,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
+            {
               "flexDirection": "row",
               "height": 80,
               "marginBottom": 20,
@@ -1521,7 +1627,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           <View
             accessibilityIgnoresInvertColors={true}
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "backgroundColor": "rgb(0,0,0)",
                 "borderRadius": 5,
@@ -1535,24 +1641,24 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           >
             <Image
               source={
-                Object {
+                {
                   "uri": "https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg",
                 }
               }
               style={
-                Array [
-                  Object {
+                [
+                  {
                     "bottom": 0,
                     "left": 0,
                     "position": "absolute",
                     "right": 0,
                     "top": 0,
                   },
-                  Object {
+                  {
                     "height": 80,
                     "width": 80,
                   },
-                  Object {
+                  {
                     "borderRadius": 5,
                     "opacity": 0.5,
                   },
@@ -1561,7 +1667,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
             />
             <Text
               style={
-                Object {
+                {
                   "color": "#e5e5e5",
                   "fontSize": 16,
                   "textAlign": "center",
@@ -1572,7 +1678,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
             </Text>
             <Text
               style={
-                Object {
+                {
                   "color": "#e5e5e5",
                   "fontSize": 14,
                   "textAlign": "center",
@@ -1584,7 +1690,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           </View>
           <View
             style={
-              Object {
+              {
                 "flex": 1,
                 "padding": 5,
                 "paddingBottom": 10,
@@ -1594,7 +1700,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           >
             <Text
               style={
-                Object {
+                {
                   "color": "#A6A6A6",
                   "flex": 2,
                   "fontSize": 14,
@@ -1606,7 +1712,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
             <Text
               numberOfLines={1}
               style={
-                Object {
+                {
                   "flex": 3,
                   "flexWrap": "wrap",
                   "fontSize": 16,
@@ -1618,7 +1724,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
             </Text>
             <Text
               style={
-                Object {
+                {
                   "color": "#A6A6A6",
                   "flex": 2,
                   "fontSize": 14,
@@ -1631,10 +1737,28 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
         </View>
       </View>
       <View
+        onFocusCapture={[Function]}
         onLayout={[Function]}
         style={null}
       >
         <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
           accessible={true}
           collapsable={false}
           focusable={true}
@@ -1646,7 +1770,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
+            {
               "flexDirection": "row",
               "height": 80,
               "marginBottom": 20,
@@ -1657,7 +1781,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           <View
             accessibilityIgnoresInvertColors={true}
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "backgroundColor": "rgb(0,0,0)",
                 "borderRadius": 5,
@@ -1671,24 +1795,24 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           >
             <Image
               source={
-                Object {
+                {
                   "uri": "https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg",
                 }
               }
               style={
-                Array [
-                  Object {
+                [
+                  {
                     "bottom": 0,
                     "left": 0,
                     "position": "absolute",
                     "right": 0,
                     "top": 0,
                   },
-                  Object {
+                  {
                     "height": 80,
                     "width": 80,
                   },
-                  Object {
+                  {
                     "borderRadius": 5,
                     "opacity": 0.5,
                   },
@@ -1697,7 +1821,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
             />
             <Text
               style={
-                Object {
+                {
                   "color": "#e5e5e5",
                   "fontSize": 16,
                   "textAlign": "center",
@@ -1708,7 +1832,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
             </Text>
             <Text
               style={
-                Object {
+                {
                   "color": "#e5e5e5",
                   "fontSize": 14,
                   "textAlign": "center",
@@ -1720,7 +1844,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           </View>
           <View
             style={
-              Object {
+              {
                 "flex": 1,
                 "padding": 5,
                 "paddingBottom": 10,
@@ -1730,7 +1854,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
           >
             <Text
               style={
-                Object {
+                {
                   "color": "#A6A6A6",
                   "flex": 2,
                   "fontSize": 14,
@@ -1742,7 +1866,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
             <Text
               numberOfLines={1}
               style={
-                Object {
+                {
                   "flex": 3,
                   "flexWrap": "wrap",
                   "fontSize": 16,
@@ -1754,7 +1878,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
             </Text>
             <Text
               style={
-                Object {
+                {
                   "color": "#A6A6A6",
                   "flex": 2,
                   "fontSize": 14,
@@ -1774,7 +1898,7 @@ exports[`<DrillListPage /> renders fitness drills sorted by duration 1`] = `
 exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`] = `
 <View
   style={
-    Object {
+    {
       "backgroundColor": "#fff",
       "height": "100%",
       "paddingLeft": 20,
@@ -1785,7 +1909,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
 >
   <View
     style={
-      Object {
+      {
         "alignItems": "center",
         "flexDirection": "row",
         "justifyContent": "space-between",
@@ -1795,7 +1919,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
   >
     <Text
       style={
-        Object {
+        {
           "color": "#A6A6A6",
         }
       }
@@ -1803,6 +1927,23 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
       3 drills available
     </Text>
     <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
       accessible={true}
       collapsable={false}
       focusable={true}
@@ -1814,7 +1955,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "alignItems": "center",
           "alignSelf": "center",
           "backgroundColor": "#fff",
@@ -1835,7 +1976,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
       <Text />
       <Text
         style={
-          Object {
+          {
             "color": "#2a9e91",
             "fontSize": 16,
             "fontWeight": "bold",
@@ -1848,19 +1989,19 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
   </View>
   <RCTScrollView
     contentContainerStyle={
-      Object {
+      {
         "paddingBottom": 40,
       }
     }
     data={
-      Array [
-        Object {
+      [
+        {
           "author": "Author",
           "description": "Description of the drill",
           "durationInMinutes": 10,
           "equipment": "Equipment needs for the drill",
           "equipmentLabel": "None",
-          "goals": Array [
+          "goals": [
             "Full body",
           ],
           "id": 2,
@@ -1869,13 +2010,13 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           "level": "Beginner",
           "minimalPlayersNumber": 6,
           "seasonTiming": "Off-season",
-          "steps": Array [
-            Object {
+          "steps": [
+            {
               "subtitle": "This is a subtitle",
               "title": "Warmup",
               "vimeoId": "462695757",
             },
-            Object {
+            {
               "subtitle": "This is a subtitle",
               "title": "Run !",
               "vimeoId": "462695757",
@@ -1885,13 +2026,13 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           "type": "frisbee",
           "visibleInList": true,
         },
-        Object {
+        {
           "author": "Author",
           "description": "Description of the drill",
           "durationInMinutes": 10,
           "equipment": "Equipment needs for the drill",
           "equipmentLabel": "None",
-          "goals": Array [
+          "goals": [
             "Full body",
           ],
           "id": 1,
@@ -1900,13 +2041,13 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           "level": "Beginner",
           "minimalPlayersNumber": 14,
           "seasonTiming": "Off-season",
-          "steps": Array [
-            Object {
+          "steps": [
+            {
               "subtitle": "This is a subtitle",
               "title": "Warmup",
               "vimeoId": "462695757",
             },
-            Object {
+            {
               "subtitle": "This is a subtitle",
               "title": "Run !",
               "vimeoId": "462695757",
@@ -1916,13 +2057,13 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           "type": "frisbee",
           "visibleInList": true,
         },
-        Object {
+        {
           "author": "Author",
           "description": "Description of the drill",
           "durationInMinutes": 10,
           "equipment": "Equipment needs for the drill",
           "equipmentLabel": "None",
-          "goals": Array [
+          "goals": [
             "Full body",
           ],
           "id": 3,
@@ -1931,13 +2072,13 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           "level": "Beginner",
           "minimalPlayersNumber": 20,
           "seasonTiming": "Off-season",
-          "steps": Array [
-            Object {
+          "steps": [
+            {
               "subtitle": "This is a subtitle",
               "title": "Warmup",
               "vimeoId": "462695757",
             },
-            Object {
+            {
               "subtitle": "This is a subtitle",
               "title": "Run !",
               "vimeoId": "462695757",
@@ -1951,14 +2092,14 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
     }
     deleteDrill={[Function]}
     drillsToDisplay={
-      Array [
-        Object {
+      [
+        {
           "author": "Author",
           "description": "Description of the drill",
           "durationInMinutes": 10,
           "equipment": "Equipment needs for the drill",
           "equipmentLabel": "None",
-          "goals": Array [
+          "goals": [
             "Full body",
           ],
           "id": 2,
@@ -1967,13 +2108,13 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           "level": "Beginner",
           "minimalPlayersNumber": 6,
           "seasonTiming": "Off-season",
-          "steps": Array [
-            Object {
+          "steps": [
+            {
               "subtitle": "This is a subtitle",
               "title": "Warmup",
               "vimeoId": "462695757",
             },
-            Object {
+            {
               "subtitle": "This is a subtitle",
               "title": "Run !",
               "vimeoId": "462695757",
@@ -1983,13 +2124,13 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           "type": "frisbee",
           "visibleInList": true,
         },
-        Object {
+        {
           "author": "Author",
           "description": "Description of the drill",
           "durationInMinutes": 10,
           "equipment": "Equipment needs for the drill",
           "equipmentLabel": "None",
-          "goals": Array [
+          "goals": [
             "Full body",
           ],
           "id": 1,
@@ -1998,13 +2139,13 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           "level": "Beginner",
           "minimalPlayersNumber": 14,
           "seasonTiming": "Off-season",
-          "steps": Array [
-            Object {
+          "steps": [
+            {
               "subtitle": "This is a subtitle",
               "title": "Warmup",
               "vimeoId": "462695757",
             },
-            Object {
+            {
               "subtitle": "This is a subtitle",
               "title": "Run !",
               "vimeoId": "462695757",
@@ -2014,13 +2155,13 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           "type": "frisbee",
           "visibleInList": true,
         },
-        Object {
+        {
           "author": "Author",
           "description": "Description of the drill",
           "durationInMinutes": 10,
           "equipment": "Equipment needs for the drill",
           "equipmentLabel": "None",
-          "goals": Array [
+          "goals": [
             "Full body",
           ],
           "id": 3,
@@ -2029,13 +2170,13 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           "level": "Beginner",
           "minimalPlayersNumber": 20,
           "seasonTiming": "Off-season",
-          "steps": Array [
-            Object {
+          "steps": [
+            {
               "subtitle": "This is a subtitle",
               "title": "Warmup",
               "vimeoId": "462695757",
             },
-            Object {
+            {
               "subtitle": "This is a subtitle",
               "title": "Run !",
               "vimeoId": "462695757",
@@ -2051,27 +2192,27 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
     getItemCount={[Function]}
     keyExtractor={[Function]}
     navigation={
-      Object {
+      {
         "navigate": [MockFunction],
         "setOptions": [MockFunction] {
-          "calls": Array [
-            Array [
-              Object {
+          "calls": [
+            [
+              {
                 "headerRight": [Function],
               },
             ],
-            Array [
-              Object {
+            [
+              {
                 "headerRight": [Function],
               },
             ],
           ],
-          "results": Array [
-            Object {
+          "results": [
+            {
               "type": "return",
               "value": undefined,
             },
-            Object {
+            {
               "type": "return",
               "value": undefined,
             },
@@ -2089,15 +2230,33 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
     removeClippedSubviews={false}
     renderItem={[Function]}
     scrollEventThrottle={50}
-    stickyHeaderIndices={Array []}
-    viewabilityConfigCallbackPairs={Array []}
+    stickyHeaderIndices={[]}
+    viewabilityConfigCallbackPairs={[]}
   >
     <View>
       <View
+        onFocusCapture={[Function]}
         onLayout={[Function]}
         style={null}
       >
         <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
           accessible={true}
           collapsable={false}
           focusable={true}
@@ -2109,7 +2268,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
+            {
               "flexDirection": "row",
               "height": 80,
               "marginBottom": 20,
@@ -2120,7 +2279,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           <View
             accessibilityIgnoresInvertColors={true}
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "backgroundColor": "rgb(0,0,0)",
                 "borderRadius": 5,
@@ -2134,24 +2293,24 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           >
             <Image
               source={
-                Object {
+                {
                   "uri": "https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg",
                 }
               }
               style={
-                Array [
-                  Object {
+                [
+                  {
                     "bottom": 0,
                     "left": 0,
                     "position": "absolute",
                     "right": 0,
                     "top": 0,
                   },
-                  Object {
+                  {
                     "height": 80,
                     "width": 80,
                   },
-                  Object {
+                  {
                     "borderRadius": 5,
                     "opacity": 0.5,
                   },
@@ -2160,7 +2319,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
             />
             <Text
               style={
-                Object {
+                {
                   "color": "#e5e5e5",
                   "fontSize": 16,
                   "textAlign": "center",
@@ -2171,7 +2330,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
             </Text>
             <Text
               style={
-                Object {
+                {
                   "color": "#e5e5e5",
                   "fontSize": 14,
                   "textAlign": "center",
@@ -2183,7 +2342,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           </View>
           <View
             style={
-              Object {
+              {
                 "flex": 1,
                 "padding": 5,
                 "paddingBottom": 10,
@@ -2193,7 +2352,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           >
             <Text
               style={
-                Object {
+                {
                   "color": "#A6A6A6",
                   "flex": 2,
                   "fontSize": 14,
@@ -2205,7 +2364,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
             <Text
               numberOfLines={1}
               style={
-                Object {
+                {
                   "flex": 3,
                   "flexWrap": "wrap",
                   "fontSize": 16,
@@ -2217,7 +2376,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
             </Text>
             <Text
               style={
-                Object {
+                {
                   "color": "#A6A6A6",
                   "flex": 2,
                   "fontSize": 14,
@@ -2230,10 +2389,28 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
         </View>
       </View>
       <View
+        onFocusCapture={[Function]}
         onLayout={[Function]}
         style={null}
       >
         <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
           accessible={true}
           collapsable={false}
           focusable={true}
@@ -2245,7 +2422,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
+            {
               "flexDirection": "row",
               "height": 80,
               "marginBottom": 20,
@@ -2256,7 +2433,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           <View
             accessibilityIgnoresInvertColors={true}
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "backgroundColor": "rgb(0,0,0)",
                 "borderRadius": 5,
@@ -2270,24 +2447,24 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           >
             <Image
               source={
-                Object {
+                {
                   "uri": "https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg",
                 }
               }
               style={
-                Array [
-                  Object {
+                [
+                  {
                     "bottom": 0,
                     "left": 0,
                     "position": "absolute",
                     "right": 0,
                     "top": 0,
                   },
-                  Object {
+                  {
                     "height": 80,
                     "width": 80,
                   },
-                  Object {
+                  {
                     "borderRadius": 5,
                     "opacity": 0.5,
                   },
@@ -2296,7 +2473,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
             />
             <Text
               style={
-                Object {
+                {
                   "color": "#e5e5e5",
                   "fontSize": 16,
                   "textAlign": "center",
@@ -2307,7 +2484,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
             </Text>
             <Text
               style={
-                Object {
+                {
                   "color": "#e5e5e5",
                   "fontSize": 14,
                   "textAlign": "center",
@@ -2319,7 +2496,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           </View>
           <View
             style={
-              Object {
+              {
                 "flex": 1,
                 "padding": 5,
                 "paddingBottom": 10,
@@ -2329,7 +2506,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           >
             <Text
               style={
-                Object {
+                {
                   "color": "#A6A6A6",
                   "flex": 2,
                   "fontSize": 14,
@@ -2341,7 +2518,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
             <Text
               numberOfLines={1}
               style={
-                Object {
+                {
                   "flex": 3,
                   "flexWrap": "wrap",
                   "fontSize": 16,
@@ -2353,7 +2530,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
             </Text>
             <Text
               style={
-                Object {
+                {
                   "color": "#A6A6A6",
                   "flex": 2,
                   "fontSize": 14,
@@ -2366,10 +2543,28 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
         </View>
       </View>
       <View
+        onFocusCapture={[Function]}
         onLayout={[Function]}
         style={null}
       >
         <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
           accessible={true}
           collapsable={false}
           focusable={true}
@@ -2381,7 +2576,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
+            {
               "flexDirection": "row",
               "height": 80,
               "marginBottom": 20,
@@ -2392,7 +2587,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           <View
             accessibilityIgnoresInvertColors={true}
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "backgroundColor": "rgb(0,0,0)",
                 "borderRadius": 5,
@@ -2406,24 +2601,24 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           >
             <Image
               source={
-                Object {
+                {
                   "uri": "https://www.dialysistech.org/wp-content/uploads/2019/06/fitness.jpg",
                 }
               }
               style={
-                Array [
-                  Object {
+                [
+                  {
                     "bottom": 0,
                     "left": 0,
                     "position": "absolute",
                     "right": 0,
                     "top": 0,
                   },
-                  Object {
+                  {
                     "height": 80,
                     "width": 80,
                   },
-                  Object {
+                  {
                     "borderRadius": 5,
                     "opacity": 0.5,
                   },
@@ -2432,7 +2627,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
             />
             <Text
               style={
-                Object {
+                {
                   "color": "#e5e5e5",
                   "fontSize": 16,
                   "textAlign": "center",
@@ -2443,7 +2638,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
             </Text>
             <Text
               style={
-                Object {
+                {
                   "color": "#e5e5e5",
                   "fontSize": 14,
                   "textAlign": "center",
@@ -2455,7 +2650,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           </View>
           <View
             style={
-              Object {
+              {
                 "flex": 1,
                 "padding": 5,
                 "paddingBottom": 10,
@@ -2465,7 +2660,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
           >
             <Text
               style={
-                Object {
+                {
                   "color": "#A6A6A6",
                   "flex": 2,
                   "fontSize": 14,
@@ -2477,7 +2672,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
             <Text
               numberOfLines={1}
               style={
-                Object {
+                {
                   "flex": 3,
                   "flexWrap": "wrap",
                   "fontSize": 16,
@@ -2489,7 +2684,7 @@ exports[`<DrillListPage /> renders frisbee drills sorted by number of players 1`
             </Text>
             <Text
               style={
-                Object {
+                {
                   "color": "#A6A6A6",
                   "flex": 2,
                   "fontSize": 14,

@@ -3,7 +3,7 @@
 exports[`<ImporterPage /> when routing on drills renders an error message if the play could not be found 1`] = `
 <View
   style={
-    Object {
+    {
       "alignItems": "center",
       "backgroundColor": "#fff",
       "flex": 1,
@@ -12,7 +12,27 @@ exports[`<ImporterPage /> when routing on drills renders an error message if the
     }
   }
 >
-  <Text />
+  <Text
+    allowFontScaling={false}
+    selectable={false}
+    style={
+      [
+        {
+          "color": undefined,
+          "fontSize": 72,
+        },
+        undefined,
+        {
+          "fontFamily": "material-community",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        {},
+      ]
+    }
+  >
+    󰇚
+  </Text>
   <Text>
     It looks like you want to import a drill, I am going to fetch it... 🏃
   </Text>
@@ -22,7 +42,7 @@ exports[`<ImporterPage /> when routing on drills renders an error message if the
 exports[`<ImporterPage /> when routing on drills renders correctly after download 1`] = `
 <View
   style={
-    Object {
+    {
       "alignItems": "center",
       "backgroundColor": "#fff",
       "flex": 1,
@@ -31,11 +51,31 @@ exports[`<ImporterPage /> when routing on drills renders correctly after downloa
     }
   }
 >
-  <Text />
+  <Text
+    allowFontScaling={false}
+    selectable={false}
+    style={
+      [
+        {
+          "color": undefined,
+          "fontSize": 72,
+        },
+        undefined,
+        {
+          "fontFamily": "material-community",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        {},
+      ]
+    }
+  >
+    󰇚
+  </Text>
   <View>
     <Text
       style={
-        Object {
+        {
           "fontSize": 16,
           "marginBottom": 5,
         }
@@ -45,7 +85,7 @@ exports[`<ImporterPage /> when routing on drills renders correctly after downloa
     </Text>
     <Text
       style={
-        Object {
+        {
           "fontSize": 16,
           "marginBottom": 5,
         }
@@ -55,7 +95,7 @@ exports[`<ImporterPage /> when routing on drills renders correctly after downloa
     </Text>
     <View
       style={
-        Object {
+        {
           "flexDirection": "row",
           "justifyContent": "space-evenly",
           "marginTop": 20,
@@ -63,6 +103,23 @@ exports[`<ImporterPage /> when routing on drills renders correctly after downloa
       }
     >
       <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
         accessible={true}
         collapsable={false}
         focusable={true}
@@ -74,7 +131,7 @@ exports[`<ImporterPage /> when routing on drills renders correctly after downloa
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "#2a9e91",
             "borderRadius": 5,
@@ -91,7 +148,7 @@ exports[`<ImporterPage /> when routing on drills renders correctly after downloa
       >
         <Text
           style={
-            Object {
+            {
               "color": "#fff",
               "fontSize": 16,
               "textAlign": "center",
@@ -102,6 +159,23 @@ exports[`<ImporterPage /> when routing on drills renders correctly after downloa
         </Text>
       </View>
       <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
         accessible={true}
         collapsable={false}
         focusable={true}
@@ -113,7 +187,7 @@ exports[`<ImporterPage /> when routing on drills renders correctly after downloa
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "#fff",
             "borderColor": "#2a9e91",
@@ -132,7 +206,7 @@ exports[`<ImporterPage /> when routing on drills renders correctly after downloa
       >
         <Text
           style={
-            Object {
+            {
               "color": "#2a9e91",
               "fontSize": 16,
               "fontWeight": "bold",
@@ -150,7 +224,7 @@ exports[`<ImporterPage /> when routing on drills renders correctly after downloa
 exports[`<ImporterPage /> when routing on drills renders correctly before download 1`] = `
 <View
   style={
-    Object {
+    {
       "alignItems": "center",
       "backgroundColor": "#fff",
       "flex": 1,
@@ -169,7 +243,7 @@ exports[`<ImporterPage /> when routing on drills renders correctly before downlo
 exports[`<ImporterPage /> when routing on old customPlays link renders an error message if the play could not be found 1`] = `
 <View
   style={
-    Object {
+    {
       "alignItems": "center",
       "backgroundColor": "#fff",
       "flex": 1,
@@ -178,7 +252,27 @@ exports[`<ImporterPage /> when routing on old customPlays link renders an error 
     }
   }
 >
-  <Text />
+  <Text
+    allowFontScaling={false}
+    selectable={false}
+    style={
+      [
+        {
+          "color": undefined,
+          "fontSize": 72,
+        },
+        undefined,
+        {
+          "fontFamily": "material-community",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        {},
+      ]
+    }
+  >
+    󰇚
+  </Text>
   <Text>
     It looks like you want to import a play, I am going to fetch it... 🏃
   </Text>
@@ -188,7 +282,7 @@ exports[`<ImporterPage /> when routing on old customPlays link renders an error 
 exports[`<ImporterPage /> when routing on old customPlays link renders correctly after download 1`] = `
 <View
   style={
-    Object {
+    {
       "alignItems": "center",
       "backgroundColor": "#fff",
       "flex": 1,
@@ -197,11 +291,31 @@ exports[`<ImporterPage /> when routing on old customPlays link renders correctly
     }
   }
 >
-  <Text />
+  <Text
+    allowFontScaling={false}
+    selectable={false}
+    style={
+      [
+        {
+          "color": undefined,
+          "fontSize": 72,
+        },
+        undefined,
+        {
+          "fontFamily": "material-community",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        {},
+      ]
+    }
+  >
+    󰇚
+  </Text>
   <View>
     <Text
       style={
-        Object {
+        {
           "fontSize": 16,
           "marginBottom": 5,
         }
@@ -211,7 +325,7 @@ exports[`<ImporterPage /> when routing on old customPlays link renders correctly
     </Text>
     <Text
       style={
-        Object {
+        {
           "fontSize": 16,
           "marginBottom": 5,
         }
@@ -221,7 +335,7 @@ exports[`<ImporterPage /> when routing on old customPlays link renders correctly
     </Text>
     <View
       style={
-        Object {
+        {
           "flexDirection": "row",
           "justifyContent": "space-evenly",
           "marginTop": 20,
@@ -229,6 +343,23 @@ exports[`<ImporterPage /> when routing on old customPlays link renders correctly
       }
     >
       <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
         accessible={true}
         collapsable={false}
         focusable={true}
@@ -240,7 +371,7 @@ exports[`<ImporterPage /> when routing on old customPlays link renders correctly
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "#2a9e91",
             "borderRadius": 5,
@@ -257,7 +388,7 @@ exports[`<ImporterPage /> when routing on old customPlays link renders correctly
       >
         <Text
           style={
-            Object {
+            {
               "color": "#fff",
               "fontSize": 16,
               "textAlign": "center",
@@ -268,6 +399,23 @@ exports[`<ImporterPage /> when routing on old customPlays link renders correctly
         </Text>
       </View>
       <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
         accessible={true}
         collapsable={false}
         focusable={true}
@@ -279,7 +427,7 @@ exports[`<ImporterPage /> when routing on old customPlays link renders correctly
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "#fff",
             "borderColor": "#2a9e91",
@@ -298,7 +446,7 @@ exports[`<ImporterPage /> when routing on old customPlays link renders correctly
       >
         <Text
           style={
-            Object {
+            {
               "color": "#2a9e91",
               "fontSize": 16,
               "fontWeight": "bold",
@@ -316,7 +464,7 @@ exports[`<ImporterPage /> when routing on old customPlays link renders correctly
 exports[`<ImporterPage /> when routing on old customPlays link renders correctly before download 1`] = `
 <View
   style={
-    Object {
+    {
       "alignItems": "center",
       "backgroundColor": "#fff",
       "flex": 1,
@@ -335,7 +483,7 @@ exports[`<ImporterPage /> when routing on old customPlays link renders correctly
 exports[`<ImporterPage /> when routing on plays renders an error message if the play could not be found 1`] = `
 <View
   style={
-    Object {
+    {
       "alignItems": "center",
       "backgroundColor": "#fff",
       "flex": 1,
@@ -344,7 +492,27 @@ exports[`<ImporterPage /> when routing on plays renders an error message if the 
     }
   }
 >
-  <Text />
+  <Text
+    allowFontScaling={false}
+    selectable={false}
+    style={
+      [
+        {
+          "color": undefined,
+          "fontSize": 72,
+        },
+        undefined,
+        {
+          "fontFamily": "material-community",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        {},
+      ]
+    }
+  >
+    󰇚
+  </Text>
   <Text>
     It looks like you want to import a play, I am going to fetch it... 🏃
   </Text>
@@ -354,7 +522,7 @@ exports[`<ImporterPage /> when routing on plays renders an error message if the 
 exports[`<ImporterPage /> when routing on plays renders correctly after download 1`] = `
 <View
   style={
-    Object {
+    {
       "alignItems": "center",
       "backgroundColor": "#fff",
       "flex": 1,
@@ -363,11 +531,31 @@ exports[`<ImporterPage /> when routing on plays renders correctly after download
     }
   }
 >
-  <Text />
+  <Text
+    allowFontScaling={false}
+    selectable={false}
+    style={
+      [
+        {
+          "color": undefined,
+          "fontSize": 72,
+        },
+        undefined,
+        {
+          "fontFamily": "material-community",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        {},
+      ]
+    }
+  >
+    󰇚
+  </Text>
   <View>
     <Text
       style={
-        Object {
+        {
           "fontSize": 16,
           "marginBottom": 5,
         }
@@ -377,7 +565,7 @@ exports[`<ImporterPage /> when routing on plays renders correctly after download
     </Text>
     <Text
       style={
-        Object {
+        {
           "fontSize": 16,
           "marginBottom": 5,
         }
@@ -387,7 +575,7 @@ exports[`<ImporterPage /> when routing on plays renders correctly after download
     </Text>
     <View
       style={
-        Object {
+        {
           "flexDirection": "row",
           "justifyContent": "space-evenly",
           "marginTop": 20,
@@ -395,6 +583,23 @@ exports[`<ImporterPage /> when routing on plays renders correctly after download
       }
     >
       <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
         accessible={true}
         collapsable={false}
         focusable={true}
@@ -406,7 +611,7 @@ exports[`<ImporterPage /> when routing on plays renders correctly after download
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "#2a9e91",
             "borderRadius": 5,
@@ -423,7 +628,7 @@ exports[`<ImporterPage /> when routing on plays renders correctly after download
       >
         <Text
           style={
-            Object {
+            {
               "color": "#fff",
               "fontSize": 16,
               "textAlign": "center",
@@ -434,6 +639,23 @@ exports[`<ImporterPage /> when routing on plays renders correctly after download
         </Text>
       </View>
       <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
         accessible={true}
         collapsable={false}
         focusable={true}
@@ -445,7 +667,7 @@ exports[`<ImporterPage /> when routing on plays renders correctly after download
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "#fff",
             "borderColor": "#2a9e91",
@@ -464,7 +686,7 @@ exports[`<ImporterPage /> when routing on plays renders correctly after download
       >
         <Text
           style={
-            Object {
+            {
               "color": "#2a9e91",
               "fontSize": 16,
               "fontWeight": "bold",
@@ -482,7 +704,7 @@ exports[`<ImporterPage /> when routing on plays renders correctly after download
 exports[`<ImporterPage /> when routing on plays renders correctly before download 1`] = `
 <View
   style={
-    Object {
+    {
       "alignItems": "center",
       "backgroundColor": "#fff",
       "flex": 1,

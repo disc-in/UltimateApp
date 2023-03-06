@@ -3,7 +3,7 @@
 exports[`<ProgressBar /> renders correctly 1`] = `
 <View
   style={
-    Object {
+    {
       "alignItems": "center",
       "display": "flex",
       "flexDirection": "row",
@@ -14,7 +14,7 @@ exports[`<ProgressBar /> renders correctly 1`] = `
 >
   <View
     style={
-      Object {
+      {
         "alignItems": "center",
         "display": "flex",
         "flexDirection": "row",
@@ -26,7 +26,7 @@ exports[`<ProgressBar /> renders correctly 1`] = `
     <View
       collapsable={false}
       style={
-        Object {
+        {
           "backgroundColor": "rgb(150, 150, 150)",
           "height": 5,
           "left": 0,
@@ -39,7 +39,7 @@ exports[`<ProgressBar /> renders correctly 1`] = `
     <View
       collapsable={false}
       style={
-        Object {
+        {
           "backgroundColor": "rgb(0, 0, 0)",
           "height": 5,
           "left": 0,
@@ -50,6 +50,23 @@ exports[`<ProgressBar /> renders correctly 1`] = `
       }
     />
     <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
       accessible={true}
       collapsable={false}
       focusable={true}
@@ -61,7 +78,7 @@ exports[`<ProgressBar /> renders correctly 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "backgroundColor": "rgb(0, 0, 0)",
           "borderRadius": 10,
           "borderWidth": 0,
@@ -73,6 +90,23 @@ exports[`<ProgressBar /> renders correctly 1`] = `
       testID="progress-bar-dot"
     />
     <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
       accessible={true}
       collapsable={false}
       focusable={true}
@@ -84,7 +118,7 @@ exports[`<ProgressBar /> renders correctly 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "backgroundColor": "rgb(0, 0, 0)",
           "borderRadius": 10,
           "borderWidth": 0,
@@ -96,6 +130,23 @@ exports[`<ProgressBar /> renders correctly 1`] = `
       testID="progress-bar-dot"
     />
     <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
       accessible={true}
       collapsable={false}
       focusable={true}
@@ -107,7 +158,7 @@ exports[`<ProgressBar /> renders correctly 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "backgroundColor": "rgb(150, 150, 150)",
           "borderRadius": 10,
           "borderWidth": 0,
@@ -119,6 +170,23 @@ exports[`<ProgressBar /> renders correctly 1`] = `
       testID="progress-bar-dot"
     />
     <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
       accessible={true}
       collapsable={false}
       focusable={true}
@@ -130,7 +198,7 @@ exports[`<ProgressBar /> renders correctly 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "backgroundColor": "rgb(150, 150, 150)",
           "borderRadius": 10,
           "borderWidth": 0,
@@ -142,6 +210,23 @@ exports[`<ProgressBar /> renders correctly 1`] = `
       testID="progress-bar-dot"
     />
     <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
       accessible={true}
       collapsable={false}
       focusable={true}
@@ -153,7 +238,7 @@ exports[`<ProgressBar /> renders correctly 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "backgroundColor": "rgb(150, 150, 150)",
           "borderRadius": 10,
           "borderWidth": 0,
@@ -165,6 +250,23 @@ exports[`<ProgressBar /> renders correctly 1`] = `
       testID="progress-bar-dot"
     />
     <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
       accessible={true}
       collapsable={false}
       focusable={true}
@@ -176,7 +278,7 @@ exports[`<ProgressBar /> renders correctly 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "backgroundColor": "rgb(150, 150, 150)",
           "borderRadius": 10,
           "borderWidth": 0,

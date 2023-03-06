@@ -10,6 +10,23 @@ exports[`<Modal /> renders correctly 1`] = `
   visible={true}
 >
   <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
     accessible={true}
     collapsable={false}
     focusable={true}
@@ -21,7 +38,7 @@ exports[`<Modal /> renders correctly 1`] = `
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "backgroundColor": "rgba(0,0,0,0.5)",
         "bottom": 0,
         "left": 0,
@@ -34,7 +51,7 @@ exports[`<Modal /> renders correctly 1`] = `
   />
   <View
     style={
-      Object {
+      {
         "alignItems": "center",
         "flex": 1,
         "justifyContent": "flex-start",
@@ -44,7 +61,7 @@ exports[`<Modal /> renders correctly 1`] = `
   >
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "backgroundColor": "white",
           "borderRadius": 10,
@@ -54,7 +71,7 @@ exports[`<Modal /> renders correctly 1`] = `
           "minWidth": "60%",
           "padding": 20,
           "shadowColor": "#000",
-          "shadowOffset": Object {
+          "shadowOffset": {
             "height": 2,
             "width": 0,
           },
@@ -65,7 +82,7 @@ exports[`<Modal /> renders correctly 1`] = `
     >
       <Text
         style={
-          Object {
+          {
             "fontSize": 20,
             "fontWeight": "bold",
             "marginBottom": 20,
@@ -79,6 +96,23 @@ exports[`<Modal /> renders correctly 1`] = `
         Hello
       </Text>
       <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
         accessible={true}
         collapsable={false}
         focusable={true}
@@ -90,7 +124,7 @@ exports[`<Modal /> renders correctly 1`] = `
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "#fff",
             "borderColor": "#2a9e91",
@@ -110,7 +144,7 @@ exports[`<Modal /> renders correctly 1`] = `
       >
         <Text
           style={
-            Object {
+            {
               "color": "#2a9e91",
               "fontSize": 16,
               "fontWeight": "bold",

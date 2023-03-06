@@ -3,7 +3,7 @@
 exports[`<VideoPage /> renders correctly 1`] = `
 <View
   style={
-    Object {
+    {
       "backgroundColor": "#fff",
       "flex": 1,
     }
@@ -11,7 +11,7 @@ exports[`<VideoPage /> renders correctly 1`] = `
 >
   <View
     style={
-      Object {
+      {
         "height": 250,
       }
     }
@@ -25,7 +25,7 @@ exports[`<VideoPage /> renders correctly 1`] = `
   </View>
   <View
     style={
-      Object {
+      {
         "marginLeft": 10,
         "marginVertical": 20,
       }
@@ -33,7 +33,7 @@ exports[`<VideoPage /> renders correctly 1`] = `
   >
     <Text
       style={
-        Object {
+        {
           "color": "#232b2b",
           "fontSize": 16,
           "fontWeight": "bold",
@@ -44,7 +44,7 @@ exports[`<VideoPage /> renders correctly 1`] = `
     </Text>
     <Text
       style={
-        Object {
+        {
           "color": "#A6A6A6",
           "fontSize": 14,
         }
@@ -55,7 +55,7 @@ exports[`<VideoPage /> renders correctly 1`] = `
   </View>
   <View
     style={
-      Object {
+      {
         "alignItems": "center",
         "bottom": 0,
         "paddingBottom": 20,
@@ -66,6 +66,23 @@ exports[`<VideoPage /> renders correctly 1`] = `
     }
   >
     <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
       accessible={true}
       collapsable={false}
       focusable={true}
@@ -77,7 +94,7 @@ exports[`<VideoPage /> renders correctly 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "alignItems": "center",
           "alignSelf": "center",
           "backgroundColor": "#fff",
@@ -98,7 +115,7 @@ exports[`<VideoPage /> renders correctly 1`] = `
       <Text />
       <Text
         style={
-          Object {
+          {
             "color": "#2a9e91",
             "fontSize": 16,
             "fontWeight": "bold",

@@ -8,7 +8,7 @@ import AnimationEditor from '../Components/editor/AnimationEditor';
 import AnimationHistory from '../Components/editor/toolbar/AnimationHistory';
 import HeaderButton from '../Components/shared/HeaderButton';
 
-export const PlayEditorPage = ({ navigation, route }) => {
+export const DrillEditorAnimationPage = ({ navigation, route }) => {
   const [currentAnimation, setCurrentAnimation] = useState(new Drill(route.params.animation));
 
   const onAnimationChange = (animation) => {
@@ -40,7 +40,7 @@ export const PlayEditorPage = ({ navigation, route }) => {
   );
 };
 
-export default PlayEditorPage;
+export default DrillEditorAnimationPage;
 
 const styles = StyleSheet.create({
   drillEditorPage: {

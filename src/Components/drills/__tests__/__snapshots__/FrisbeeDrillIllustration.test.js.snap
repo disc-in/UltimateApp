@@ -3,7 +3,7 @@
 exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
 <RCTSafeAreaView
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
@@ -20,20 +20,20 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
     autoplayInterval={3000}
     callbackOffsetMargin={5}
     collapsable={false}
-    containerCustomStyle={Object {}}
-    contentContainerCustomStyle={Object {}}
+    containerCustomStyle={{}}
+    contentContainerCustomStyle={{}}
     contentContainerStyle={
-      Array [
-        Object {
+      [
+        {
           "paddingLeft": 0,
           "paddingRight": 0,
         },
-        Object {},
+        {},
       ]
     }
     data={
-      Array [
-        Object {
+      [
+        {
           "id": 0,
           "vimeoId": "462695757",
         },
@@ -84,11 +84,11 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
     shouldOptimizeUpdates={true}
     showsHorizontalScrollIndicator={false}
     showsVerticalScrollIndicator={false}
-    slideStyle={Object {}}
+    slideStyle={{}}
     sliderWidth={750}
-    stickyHeaderIndices={Array []}
+    stickyHeaderIndices={[]}
     style={
-      Object {
+      {
         "flexDirection": "row",
         "opacity": 0,
         "width": 750,
@@ -97,15 +97,16 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
     swipeThreshold={20}
     useScrollView={false}
     vertical={false}
-    viewabilityConfigCallbackPairs={Array []}
+    viewabilityConfigCallbackPairs={[]}
     windowSize={13}
   >
     <View>
       <View
+        onFocusCapture={[Function]}
         onLayout={[Function]}
         style={
-          Array [
-            Object {
+          [
+            {
               "flexDirection": "row",
             },
             null,
@@ -116,10 +117,10 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
           collapsable={false}
           pointerEvents="box-none"
           style={
-            Object {
+            {
               "opacity": 1,
-              "transform": Array [
-                Object {
+              "transform": [
+                {
                   "scale": 1,
                 },
               ],
@@ -130,7 +131,7 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
           <View>
             <View
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flexDirection": "row",
                   "height": 40,
@@ -142,7 +143,7 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
               <View />
               <Text
                 style={
-                  Object {
+                  {
                     "color": "#232b2b",
                     "fontSize": 16,
                     "textAlign": "center",
@@ -154,7 +155,7 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
             <View>
               <View
                 style={
-                  Object {
+                  {
                     "height": 250,
                   }
                 }
@@ -166,7 +167,7 @@ exports[`<FrisbeeDrillIllustration /> renders correctly 1`] = `
               </View>
               <Text
                 style={
-                  Object {
+                  {
                     "color": "#232b2b",
                     "fontSize": 16,
                     "margin": 10,

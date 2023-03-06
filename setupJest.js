@@ -1,9 +1,3 @@
-const fetch = require('node-fetch');
-
-if (!global.fetch) {
-  global.fetch = fetch;
-}
-
 global.__reanimatedWorkletInit = jest.fn();
 jest.mock('react-native-reanimated', () => require('react-native-reanimated/mock'));
 
@@ -18,3 +12,7 @@ jest.mock('expo-constants', () => {
     },
   };
 });
+
+// Font issue with expo 48: https://github.com/expo/expo/issues/21434
+jest.mock('expo-font');
+jest.mock('expo-asset');

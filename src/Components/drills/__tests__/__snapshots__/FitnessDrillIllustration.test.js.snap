@@ -3,7 +3,7 @@
 exports[`<FitnessDrillIllustration /> renders correctly with one step 1`] = `
 <View
   style={
-    Object {
+    {
       "height": 250,
       "marginBottom": 20,
     }
@@ -19,7 +19,7 @@ exports[`<FitnessDrillIllustration /> renders correctly with one step 1`] = `
 exports[`<FitnessDrillIllustration /> renders correctly with several steps 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
       "paddingLeft": 10,
     }
@@ -27,7 +27,7 @@ exports[`<FitnessDrillIllustration /> renders correctly with several steps 1`] =
 >
   <View
     style={
-      Object {
+      {
         "flex": 1,
         "flexDirection": "row",
         "padding": 10,
@@ -36,7 +36,7 @@ exports[`<FitnessDrillIllustration /> renders correctly with several steps 1`] =
   >
     <Text
       style={
-        Object {
+        {
           "color": "#232b2b",
           "fontSize": 16,
         }
@@ -50,7 +50,7 @@ exports[`<FitnessDrillIllustration /> renders correctly with several steps 1`] =
   </View>
   <View
     style={
-      Object {
+      {
         "flex": 1,
         "flexDirection": "row",
         "padding": 10,
@@ -59,7 +59,7 @@ exports[`<FitnessDrillIllustration /> renders correctly with several steps 1`] =
   >
     <Text
       style={
-        Object {
+        {
           "color": "#232b2b",
           "fontSize": 16,
         }
@@ -73,7 +73,7 @@ exports[`<FitnessDrillIllustration /> renders correctly with several steps 1`] =
   </View>
   <View
     style={
-      Object {
+      {
         "flex": 1,
         "flexDirection": "row",
         "padding": 10,
@@ -82,7 +82,7 @@ exports[`<FitnessDrillIllustration /> renders correctly with several steps 1`] =
   >
     <Text
       style={
-        Object {
+        {
           "color": "#232b2b",
           "fontSize": 16,
         }
@@ -96,13 +96,30 @@ exports[`<FitnessDrillIllustration /> renders correctly with several steps 1`] =
   </View>
   <View
     style={
-      Object {
+      {
         "alignItems": "center",
         "marginVertical": 10,
       }
     }
   >
     <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
       accessible={true}
       collapsable={false}
       focusable={true}
@@ -114,7 +131,7 @@ exports[`<FitnessDrillIllustration /> renders correctly with several steps 1`] =
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "alignItems": "center",
           "backgroundColor": "#2a9e91",
           "borderRadius": 5,
@@ -131,7 +148,7 @@ exports[`<FitnessDrillIllustration /> renders correctly with several steps 1`] =
     >
       <Text
         style={
-          Object {
+          {
             "color": "#fff",
             "fontSize": 16,
             "textAlign": "center",

@@ -3,14 +3,14 @@
 exports[`RadioButton renders correctly 1`] = `
 <View
   style={
-    Object {
+    {
       "marginBottom": 10,
     }
   }
 >
   <Text
     style={
-      Object {
+      {
         "marginBottom": 5,
       }
     }
@@ -19,12 +19,29 @@ exports[`RadioButton renders correctly 1`] = `
   </Text>
   <View
     style={
-      Object {
+      {
         "flexDirection": "row",
       }
     }
   >
     <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
       accessible={true}
       collapsable={false}
       focusable={true}
@@ -36,7 +53,7 @@ exports[`RadioButton renders correctly 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "borderColor": "#e5e5e5",
           "borderRadius": 5,
           "borderWidth": 0.5,
@@ -51,7 +68,7 @@ exports[`RadioButton renders correctly 1`] = `
     >
       <Text
         style={
-          Object {
+          {
             "textAlign": "center",
           }
         }
@@ -60,6 +77,23 @@ exports[`RadioButton renders correctly 1`] = `
       </Text>
     </View>
     <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
       accessible={true}
       collapsable={false}
       focusable={true}
@@ -71,7 +105,7 @@ exports[`RadioButton renders correctly 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "borderColor": "#e5e5e5",
           "borderRadius": 5,
           "borderWidth": 0.5,
@@ -86,7 +120,7 @@ exports[`RadioButton renders correctly 1`] = `
     >
       <Text
         style={
-          Object {
+          {
             "textAlign": "center",
           }
         }
@@ -99,17 +133,17 @@ exports[`RadioButton renders correctly 1`] = `
 `;
 
 exports[`RadioButton renders correctly when there is an error 1`] = `
-Array [
+[
   <View
     style={
-      Object {
+      {
         "marginBottom": 10,
       }
     }
   >
     <Text
       style={
-        Object {
+        {
           "marginBottom": 5,
         }
       }
@@ -118,7 +152,7 @@ Array [
     </Text>
     <Text
       style={
-        Object {
+        {
           "color": "red",
           "fontStyle": "italic",
         }
@@ -128,12 +162,29 @@ Array [
     </Text>
     <View
       style={
-        Object {
+        {
           "flexDirection": "row",
         }
       }
     >
       <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
         accessible={true}
         collapsable={false}
         focusable={true}
@@ -145,7 +196,7 @@ Array [
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
         style={
-          Object {
+          {
             "borderColor": "#2a9e91",
             "borderRadius": 5,
             "borderWidth": 0.5,
@@ -160,7 +211,7 @@ Array [
       >
         <Text
           style={
-            Object {
+            {
               "textAlign": "center",
             }
           }
@@ -169,6 +220,23 @@ Array [
         </Text>
       </View>
       <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
         accessible={true}
         collapsable={false}
         focusable={true}
@@ -180,7 +248,7 @@ Array [
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
         style={
-          Object {
+          {
             "borderColor": "#e5e5e5",
             "borderRadius": 5,
             "borderWidth": 0.5,
@@ -195,7 +263,7 @@ Array [
       >
         <Text
           style={
-            Object {
+            {
               "textAlign": "center",
             }
           }
@@ -206,6 +274,23 @@ Array [
     </View>
   </View>,
   <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
     accessible={true}
     collapsable={false}
     focusable={true}
@@ -217,7 +302,7 @@ Array [
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "opacity": 1,
       }
     }

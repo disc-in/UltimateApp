@@ -3,7 +3,7 @@
 exports[`<VimeoVideo /> displays a message on error 1`] = `
 <View
   style={
-    Object {
+    {
       "alignItems": "center",
       "flex": 1,
       "height": 250,
@@ -13,7 +13,7 @@ exports[`<VimeoVideo /> displays a message on error 1`] = `
 >
   <View
     style={
-      Object {
+      {
         "position": "absolute",
       }
     }
@@ -25,7 +25,7 @@ exports[`<VimeoVideo /> displays a message on error 1`] = `
   <View
     pointerEvents="box-none"
     style={
-      Object {
+      {
         "height": 250,
         "overflow": "hidden",
         "width": "100%",
@@ -40,15 +40,15 @@ exports[`<VimeoVideo /> displays a message on error 1`] = `
       onReadyForDisplay={[Function]}
       onStatusUpdate={[Function]}
       proxiedProperties={
-        Object {
+        {
           "resizeMode": "mock",
           "source": undefined,
-          "status": Object {},
+          "status": {},
           "useNativeControls": true,
         }
       }
       style={
-        Object {
+        {
           "bottom": 0,
           "left": 0,
           "position": "absolute",
@@ -57,7 +57,7 @@ exports[`<VimeoVideo /> displays a message on error 1`] = `
         }
       }
       videoStyle={
-        Object {
+        {
           "bottom": 0,
           "left": 0,
           "position": "absolute",

@@ -49,12 +49,6 @@ Feel free to contact us on [facebook](https://www.facebook.com/DiscInApp) or by 
 We expect every code introduced via a pull-request to be tested.
 We use [jest](https://jestjs.io/docs/en/tutorial-react-native) and [React Native Testing Library](https://callstack.github.io/react-native-testing-library/) as testing frameworks. Please refer to the documentation, look at [existing tests](https://github.com/disc-in/UltimateApp/blob/main/src/Components/DrillListPage.test.js) or ask questions if needed.
 
-### Mock http records
-
-We use [nock](https://github.com/nock/nock) to mock HTTP calls. Have look at an example [here](https://github.com/disc-in/UltimateApp/blob/main/src/Components/shared/VimeoVideo.test.js).
-
-To get the expected return from Nock, you can run your tests without mocking and record the http calls. The documentation is [there](https://github.com/nock/nock#recording).
-
 ## Release
 
 Note: You need to understand how environment variables are managed in an expo app. It is completely different from a web application because the app bundle is sent to every user. There is no such place as a safe server environment config.

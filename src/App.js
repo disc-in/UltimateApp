@@ -30,7 +30,7 @@ const paperTheme = {
 
 const App = (props) => {
   const linking = {
-    prefixes: [Linking.makeUrl('/'), Constants.manifest.extra.firebaseUrlPrefix],
+    prefixes: [Linking.makeUrl('/'), Constants.expoConfig.extra.firebaseUrlPrefix],
     config: {
       initialRouteName: 'HomePage',
       screens: {

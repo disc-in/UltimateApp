@@ -35,6 +35,12 @@ export default {
       backgroundColor: '#ffffff',
     },
     assetBundlePatterns: ['assets/**/*'],
+    updates: {
+      url: 'https://u.expo.dev/e2242930-ad3a-4007-afc1-f9c47c174979',
+    },
+    runtimeVersion: {
+      policy: 'sdkVersion',
+    },
     ios: {
       bundleIdentifier: 'com.discin.discin',
       buildNumber: '1.4.0',
@@ -65,6 +71,9 @@ export default {
     },
     plugins: ['expo-localization'],
     extra: {
+      eas: {
+        projectId: 'e2242930-ad3a-4007-afc1-f9c47c174979',
+      },
       ...Config,
     },
   },

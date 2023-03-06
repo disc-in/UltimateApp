@@ -6,9 +6,9 @@ jest.mock('expo-constants', () => {
   const appConfig = jest.requireActual('./app.config.js');
   return {
     ...Constants,
-    manifest: {
-      ...Constants.manifest,
-      extra: { ...Constants.manifest?.extra, ...appConfig.default.expo.extra },
+    expoConfig: {
+      ...Constants.expoConfig,
+      extra: { ...Constants.expoConfig?.extra, ...appConfig.default.expo.extra },
     },
   };
 });

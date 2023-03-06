@@ -26,9 +26,9 @@ const AboutPage = (props) => {
         <View>
           <Text style={styles.info}>{I18n.t('aboutPage.copyright', { endYear: new Date().getFullYear() })}</Text>
           <Text style={styles.info}>
-            version {Constants.manifest.version}, release-channel {Updates.releaseChannel}
+            version {Constants.expoConfig.version}, release-channel {Updates.channel}
           </Text>
-          <Text style={styles.info}>{Constants.manifest.extra.env}</Text>
+          <Text style={styles.info}>{Constants.expoConfig.extra.env}</Text>
         </View>
       </View>
       <Text style={styles.header}>{I18n.t('aboutPage.about.header')}</Text>

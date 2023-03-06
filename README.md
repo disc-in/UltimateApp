@@ -67,7 +67,7 @@ To release a new version of the app :
 5. Use `expo start --clear` to make sure the new env vars have been taken into account
 6. Then
 
-- If publishing an update, run `expo publish --release-channel production`
+- If publishing an update, run `eas update --channel production`
 - If building a new major version, rebuild for the stores using `eas build --platform <ios|android|all> --profile <profile-name>` and and `eas submit`
 
 7. Set back your development env vars in `.env` and run `expo start --clear`

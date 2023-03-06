@@ -52,7 +52,7 @@ if (Platform.OS === 'android') {
 // End of workaround
 
 const firebaseConfig = {
-  databaseURL: Constants.manifest.extra.firebaseDatabaseUrl,
+  databaseURL: Constants.expoConfig.extra.firebaseDatabaseUrl,
 };
 
 const app = initializeApp(firebaseConfig);
@@ -78,7 +78,7 @@ export const createLink = (path, title, description) => {
     return Linking.makeUrl(path);
   } else {
     return fetch(
-      `https://firebasedynamiclinks.googleapis.com/v1/shortLinks?key=${Constants.manifest.extra.firebaseApiKey}`,
+      `https://firebasedynamiclinks.googleapis.com/v1/shortLinks?key=${Constants.expoConfig.extra.firebaseApiKey}`,
       {
         method: 'POST',
         headers: {
@@ -87,8 +87,8 @@ export const createLink = (path, title, description) => {
         },
         body: JSON.stringify({
           dynamicLinkInfo: {
-            domainUriPrefix: Constants.manifest.extra.firebaseDomainUri,
-            link: `${Constants.manifest.extra.firebaseUrlPrefix}${path}`,
+            domainUriPrefix: Constants.expoConfig.extra.firebaseDomainUri,
+            link: `${Constants.expoConfig.extra.firebaseUrlPrefix}${path}`,
             androidInfo: {
               androidPackageName: 'com.discin.discin',
               androidMinPackageVersionCode: '5',

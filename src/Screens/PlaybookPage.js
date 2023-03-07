@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 import { connect } from 'react-redux';
 import { StyleSheet, KeyboardAvoidingView, Platform, ScrollView, View, Text, TouchableOpacity } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -9,8 +9,10 @@ import { generateUuid } from '../utils/uuid';
 import { savePlay } from '../Store/Actions/playAction';
 import Drill from '../Components/animation/Drill';
 import PlayTitle from '../Components/editor/PlayTitle';
+import HeaderButton from '../Components/shared/HeaderButton';
 
 export const PlaybookPage = (props) => {
+  const { navigation } = props;
   const isEmpty = props.customPlays.length === 0;
 
   const newPlay = () => {
@@ -30,6 +32,17 @@ export const PlaybookPage = (props) => {
     return play;
   };
 
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      headerRight: () => (
+        <HeaderButton
+          icon="download"
+          onPress={() => navigation.navigate('PlayImporterPage', { source: 'customPlays' })}
+        />
+      ),
+    });
+  });
+
   const behavior = Platform.select({
     ios: 'padding',
     android: 'height',
@@ -48,7 +61,7 @@ export const PlaybookPage = (props) => {
               key={play.title}
               style={styles.customPlay}
               onPress={() => {
-                props.navigation.navigate('PlayEditorPage', { currentPlay: play });
+                navigation.navigate('PlayEditorPage', { currentPlay: play });
               }}
             />
           ))}
@@ -57,7 +70,7 @@ export const PlaybookPage = (props) => {
       <TouchableOpacity
         style={styles.footer}
         onPress={() => {
-          props.navigation.navigate('PlayEditorPage', { currentPlay: newPlay() });
+          navigation.navigate('PlayEditorPage', { currentPlay: newPlay() });
         }}
         testID="createPlay"
       >

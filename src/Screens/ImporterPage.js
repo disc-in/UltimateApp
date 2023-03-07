@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import { connect } from 'react-redux';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Input } from 'react-native-elements';
 
 import theme from '../styles/theme.style';
 import I18n from '../utils/i18n';
@@ -15,23 +16,22 @@ export const ImporterPage = (props) => {
   const { navigation, route } = props;
   const namespace = route.params.source === 'drills' ? 'customDrills' : 'customPlays';
 
+  const [uuid, setUuid] = useState();
+  const [loading, setLoading] = useState(false);
   const [importedRecord, setImportedRecord] = useState();
 
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const record = await download(namespace, route.params.uuid);
-        if (record === null) {
-          showError(I18n.t(`importerPage.${namespace}.downloadError`));
-        } else {
-          setImportedRecord(record);
-        }
-      } catch (error) {
+  fetchData = async () => {
+    try {
+      const record = await download(namespace, uuid);
+      if (record === null) {
         showError(I18n.t(`importerPage.${namespace}.downloadError`));
+      } else {
+        setImportedRecord(record);
       }
+    } catch (error) {
+      showError(I18n.t(`importerPage.${namespace}.downloadError`));
     }
-    fetchData();
-  }, []);
+  };
 
   const save = () => {
     if (namespace === 'customPlays') {
@@ -44,12 +44,13 @@ export const ImporterPage = (props) => {
   };
 
   const cancel = () => {
-    navigation.navigate('HomePage');
+    setUuid();
+    setLoading(false);
+    setImportedRecord();
   };
 
   return (
     <View style={styles.importerPage}>
-      <MaterialCommunityIcons name="download" size={72} />
       {importedRecord ? (
         <View>
           <Text style={styles.text}>
@@ -61,8 +62,27 @@ export const ImporterPage = (props) => {
             <Button style={styles.cta} text={I18n.t('shared.cancel')} onPress={cancel} light />
           </View>
         </View>
+      ) : loading ? (
+        <>
+          <MaterialCommunityIcons name="download" size={72} />
+          <Text>{I18n.t(`importerPage.${namespace}.loading`)}</Text>
+        </>
       ) : (
-        <Text>{I18n.t(`importerPage.${namespace}.loading`)}</Text>
+        <Input
+          autoFocus
+          value={uuid}
+          onChangeText={setUuid}
+          placeholder={I18n.t('importerPage.uuidPlaceholder')}
+          testID="uuidInput"
+          rightIcon={{
+            type: 'material-community',
+            name: 'check',
+            onPress: () => {
+              setLoading(true);
+              fetchData();
+            },
+          }}
+        />
       )}
     </View>
   );
@@ -77,7 +97,6 @@ const styles = StyleSheet.create({
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'space-around',
     padding: 20,
   },
   text: {

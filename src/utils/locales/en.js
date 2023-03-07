@@ -122,17 +122,18 @@ export default {
     untitledPlay: 'Unnamed play',
   },
   importerPage: {
+    uuidPlaceholder: 'Use an identifier…',
     customPlays: {
-      loading: 'It looks like you want to import a play, I am going to fetch it... 🏃',
+      loading: 'I am fetching the play you want to import it… 🏃',
       incentive: 'You are about to import and save the play {{title}}',
       question: 'Are you sure?',
-      downloadError: 'I could not find the play you are looking for',
+      downloadError: 'I could not find the play you are looking for.',
     },
     customDrills: {
-      loading: 'It looks like you want to import a drill, I am going to fetch it... 🏃',
+      loading: 'I am fetching the drill you want to import it… 🏃',
       incentive: 'You are about to import and save the drill {{title}}',
       question: 'Are you sure?',
-      downloadError: 'I could not find the drill you are looking for',
+      downloadError: 'I could not find the drill you are looking for.',
     },
   },
   editor: {

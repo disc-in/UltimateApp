@@ -122,17 +122,18 @@ export default {
     untitledPlay: 'Play sans titre',
   },
   importerPage: {
+    uuidPlaceholder: 'Entrez un identifiant…',
     customPlays: {
-      loading: 'On dirait que vous voulez importer un play, je vais le chercher... 🏃',
+      loading: 'Je suis en train de chercher le play que vous souhaitez importer… 🏃',
       incentive: 'Vous allez enregistrer le play "{{title}}"',
       question: 'Êtes-vous sûr.e ?',
-      downloadError: "Je n'ai pas pu retrouver ce play...",
+      downloadError: "Je n'ai pas pu retrouver ce play.",
     },
     customDrills: {
-      loading: 'On dirait que vous voulez importer un exercice, je vais le chercher... 🏃',
+      loading: "Je suis en train de chercher l'exercice que vous souhaitez importer… 🏃",
       incentive: 'Vous allez enregistrer l\'exercice "{{title}}"',
       question: 'Êtes-vous sûr.e ?',
-      downloadError: "Je n'ai pas pu retrouver cet exercice...",
+      downloadError: "Je n'ai pas pu retrouver cet exercice.",
     },
   },
   editor: {

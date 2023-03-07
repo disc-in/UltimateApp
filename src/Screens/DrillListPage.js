@@ -78,6 +78,7 @@ export const DrillListPage = (props) => {
           value={searchText}
           onChangeText={setSearchText}
           placeholder={I18n.t('drillListPage.searchPlaceholder')}
+          testID="searchInput"
           rightIcon={{
             type: 'ionicon',
             name: 'close-circle',

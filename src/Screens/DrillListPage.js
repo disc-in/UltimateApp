@@ -1,6 +1,7 @@
-import React, { useLayoutEffect } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import { connect } from 'react-redux';
+import { Input } from 'react-native-elements';
 
 import { DrillTypes } from '../Fixtures/config';
 import I18n from '../utils/i18n';
@@ -14,7 +15,7 @@ export const DrillListPage = (props) => {
   const { type, currentFilters } = route.params;
 
   const storeDrillsForType = storeDrills.filter((drill) => drill.type === type && drill.visibleInList);
-  const displayedDrills = currentFilters?.displayedDrills || storeDrillsForType;
+  let displayedDrills = currentFilters?.displayedDrills || storeDrillsForType;
 
   const filterIsOn =
     currentFilters?.selectedGoals.length > 0 ||
@@ -25,6 +26,13 @@ export const DrillListPage = (props) => {
     currentFilters?.selectedSeasonTimings ||
     currentFilters?.durationInMinutes ||
     currentFilters?.numberOfPlayers;
+
+  const [isSearchVisible, setIsSearchVisible] = useState(false);
+  const [searchText, setSearchText] = useState('');
+
+  if (searchText.length > 0) {
+    displayedDrills = displayedDrills.filter((drill) => drill.title.search(new RegExp(searchText, 'gi')) !== -1);
+  }
 
   const sortingProperty = type === DrillTypes.FRISBEE ? 'minimalPlayersNumber' : 'durationInMinutes';
   displayedDrills.sort((a, b) => a[sortingProperty] - b[sortingProperty]);
@@ -53,15 +61,34 @@ export const DrillListPage = (props) => {
     <View style={styles.drillListPage}>
       <View style={styles.filtersArea}>
         <Text style={styles.counter}>{I18n.t('drillListPage.availableDrills', { count: displayedDrills.length })}</Text>
-        <Button
-          onPress={openFilters}
-          icon="filter"
-          text={I18n.t('drillListPage.filter')}
-          testID="filterButton"
-          small
-          light={!filterIsOn}
-        />
+        <View style={styles.filtersAreaActions}>
+          <Button
+            onPress={() => setIsSearchVisible(!isSearchVisible)}
+            icon="search"
+            testID="searchButton"
+            small
+            light
+          />
+          <Button onPress={openFilters} icon="filter" testID="filterButton" small light={!filterIsOn} />
+        </View>
       </View>
+      {isSearchVisible && (
+        <Input
+          autoFocus
+          value={searchText}
+          onChangeText={setSearchText}
+          placeholder={I18n.t('drillListPage.searchPlaceholder')}
+          testID="searchInput"
+          rightIcon={{
+            type: 'ionicon',
+            name: 'close-circle',
+            onPress: () => {
+              setSearchText('');
+              setIsSearchVisible(false);
+            },
+          }}
+        />
+      )}
       <DrillList navigation={navigation} drillsToDisplay={displayedDrills} />
     </View>
   );
@@ -88,6 +115,10 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: 5,
+  },
+  filtersAreaActions: {
+    flexDirection: 'row',
+    gap: 10,
   },
   counter: {
     color: theme.COLOR_SECONDARY,

@@ -16,7 +16,12 @@ const Button = ({ onPress, icon, text, light, small, style, testID }) => {
       onPress={onPress}
       testID={testID || 'button'}
     >
-      {icon && <Ionicons name={icon} style={[styles.icon, textLight, smallIcon]} />}
+      {icon && (
+        <Ionicons
+          name={icon}
+          style={[styles.icon, textLight, smallIcon, text === undefined ? styles.noTextIcon : null]}
+        />
+      )}
       {text && <Text style={textLight}>{text}</Text>}
     </TouchableOpacity>
   );
@@ -51,6 +56,9 @@ const styles = StyleSheet.create({
   },
   smallIcon: {
     marginRight: 5,
+  },
+  noTextIcon: {
+    marginRight: 0,
   },
   text: {
     textAlign: 'center',

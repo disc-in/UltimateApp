@@ -201,6 +201,7 @@ export default {
     translation: 'Translation: ',
   },
   drillListPage: {
+    searchPlaceholder: 'Search for a drill…',
     availableDrills: {
       zero: '{{count}} drill available',
       one: '{{count}} drill available',

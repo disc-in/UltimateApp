@@ -117,4 +117,32 @@ describe('<DrillListPage />', () => {
       previousType: DrillTypes.FRISBEE,
     });
   });
+
+  it('filters the list with searched text', async () => {
+    const route = {
+      params: {
+        type: DrillTypes.FRISBEE,
+      },
+    };
+    const morePlayersDrill = createDrill({ id: 1, type: DrillTypes.FRISBEE, title: 'Disc-golf' });
+    const lessPlayersDrill = createDrill({ id: 2, type: DrillTypes.FRISBEE, title: 'triangle of death' });
+    const evenMorePlayersDrill = createDrill({ id: 3, type: DrillTypes.FRISBEE, title: 'Redemption' });
+    const drills = [morePlayersDrill, evenMorePlayersDrill, lessPlayersDrill];
+
+    const { getByTestId, toJSON } = render(
+      <Provider store={store}>
+        <DrillListPage route={route} navigation={navigation} storeDrills={drills} />
+      </Provider>,
+    );
+
+    expect(toJSON()).toMatchSnapshot();
+
+    await fireEvent.press(getByTestId('searchButton'));
+
+    fireEvent.changeText(getByTestId('searchInput'), 'Dis');
+    expect(toJSON()).toMatchSnapshot();
+
+    fireEvent.changeText(getByTestId('searchInput'), 'Wrong title');
+    expect(toJSON()).toMatchSnapshot();
+  });
 });

@@ -201,6 +201,7 @@ export default {
     translation: 'Traduction : ',
   },
   drillListPage: {
+    searchPlaceholder: 'Rechercher un exo…',
     availableDrills: {
       one: '1 exercice disponible',
       other: '{{count}} exercices disponibles',

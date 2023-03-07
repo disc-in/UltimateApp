@@ -146,7 +146,7 @@ export default {
     },
     sharePlay: {
       shareTitle: 'Partager {{title}}',
-      shareMessage: 'Utilise ce lien pour télécharger mon super play dans Disc In : {{url}}',
+      shareMessage: 'Utilise cet identifiant pour télécharger mon super play dans Disc In : {{uuid}}',
       shareError: 'Une erreur est survenue',
     },
   },

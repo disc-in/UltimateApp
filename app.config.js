@@ -6,14 +6,10 @@ const Config = {
 
 if (process.env.APP_ENV === 'development') {
   Config.firebaseDatabaseUrl = process.env.DEV_FIREBASE_DATABASE_URL;
-  Config.firebaseApiKey = process.env.DEV_FIREBASE_API_KEY;
   Config.firebaseUrlPrefix = process.env.DEV_FIREBASE_URL_PREFIX;
-  Config.firebaseDomainUri = process.env.DEV_FIREBASE_DOMAIN_URI;
 } else if (process.env.APP_ENV === 'production') {
   Config.firebaseDatabaseUrl = process.env.PRODUCTION_FIREBASE_DATABASE_URL;
-  Config.firebaseApiKey = process.env.PRODUCTION_FIREBASE_API_KEY;
   Config.firebaseUrlPrefix = process.env.PRODUCTION_FIREBASE_URL_PREFIX;
-  Config.firebaseDomainUri = process.env.PRODUCTION_FIREBASE_DOMAIN_URI;
 }
 
 export default {

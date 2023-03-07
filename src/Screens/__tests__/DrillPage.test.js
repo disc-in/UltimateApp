@@ -75,7 +75,6 @@ describe('<DrillPage />', () => {
   });
 
   it('triggers share', async () => {
-    jest.spyOn(firebase, 'createLink').mockImplementation(() => '');
     const share = jest.fn();
     Share.share = () => new Promise((resolve, reject) => share());
 
@@ -94,7 +93,6 @@ describe('<DrillPage />', () => {
 
     fireEvent.press(getByTestId('shareButton'));
 
-    await expect(firebase.createLink).toHaveBeenCalled();
     expect(share).toHaveBeenCalled();
   });
 

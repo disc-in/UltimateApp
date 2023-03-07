@@ -5,7 +5,7 @@ import { Ionicons } from '@expo/vector-icons';
 import theme from '../../styles/theme.style';
 import I18n from '../../utils/i18n';
 import { showError } from '../../utils/flashMessage';
-import { upload, createLink } from '../../utils/firebase';
+import { upload } from '../../utils/firebase';
 
 const ShareDrill = ({ drill, light }) => {
   if (!drill.custom) return null;

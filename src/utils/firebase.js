@@ -1,6 +1,5 @@
 import { Platform, InteractionManager } from 'react-native';
 import Constants from 'expo-constants';
-import * as Linking from 'expo-linking';
 import { initializeApp, setLogLevel } from 'firebase/app';
 import { getDatabase, ref, set, onValue } from 'firebase/database';
 
@@ -70,47 +69,5 @@ export const upload = async (namespace, record) => {
 };
 
 export const download = (namespace, uuid) => {
-  return onValue(eference(namespace, uuid), (snapshot) => snapshot.val());
-};
-
-export const createLink = (path, title, description) => {
-  if (__DEV__) {
-    return Linking.makeUrl(path);
-  } else {
-    return fetch(
-      `https://firebasedynamiclinks.googleapis.com/v1/shortLinks?key=${Constants.expoConfig.extra.firebaseApiKey}`,
-      {
-        method: 'POST',
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          dynamicLinkInfo: {
-            domainUriPrefix: Constants.expoConfig.extra.firebaseDomainUri,
-            link: `${Constants.expoConfig.extra.firebaseUrlPrefix}${path}`,
-            androidInfo: {
-              androidPackageName: 'com.discin.discin',
-              androidMinPackageVersionCode: '5',
-            },
-            iosInfo: {
-              iosBundleId: 'com.discin.discin',
-              iosCustomScheme: 'discin',
-              iosAppStoreId: '1537387830',
-            },
-            desktopInfo: {
-              desktopFallbackLink: 'https://play.google.com/store/apps/details?id=com.discin.discin',
-            },
-            socialMetaTagInfo: {
-              socialTitle: `Disc In - ${title}`,
-              socialDescription: description,
-              socialImageLink: 'https://raw.githubusercontent.com/disc-in/UltimateApp/main/assets/icon.png',
-            },
-          },
-        }),
-      },
-    )
-      .then((response) => response.json())
-      .then((responseJson) => responseJson.shortLink);
-  }
+  return onValue(reference(namespace, uuid), (snapshot) => snapshot.val());
 };

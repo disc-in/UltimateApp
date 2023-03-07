@@ -5,17 +5,15 @@ import { Ionicons } from '@expo/vector-icons';
 import theme from '../../../styles/theme.style';
 import I18n from '../../../utils/i18n';
 import { showError } from '../../../utils/flashMessage';
-import { upload, createLink } from '../../../utils/firebase';
+import { upload } from '../../../utils/firebase';
 
 const SharePlay = ({ currentPlay }) => {
   const share = async () => {
     try {
-      const shareUuid = await upload('customPlays', currentPlay);
-      const url = await createLink('custom/plays/' + shareUuid, currentPlay.title);
+      const uuid = await upload('customPlays', currentPlay);
       await Share.share({
         title: I18n.t('editor.sharePlay.shareTitle', { title: currentPlay.title }),
-        message: I18n.t('editor.sharePlay.shareMessage', { url }),
-        url,
+        message: I18n.t('editor.sharePlay.shareMessage', { uuid }),
       });
     } catch (error) {
       showError(I18n.t('editor.sharePlay.shareError'));

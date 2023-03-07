@@ -146,7 +146,7 @@ export default {
     },
     sharePlay: {
       shareTitle: 'Sharing {{title}}',
-      shareMessage: 'Use the following link to import my awesome play in Disc In: {{url}}',
+      shareMessage: 'Use the following identifier to import my awesome play in Disc In: {{uuid}}',
       shareError: 'It looks like there was an error sharing your play',
     },
   },

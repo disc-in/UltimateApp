@@ -166,9 +166,7 @@ export default {
     shareDrill: {
       title: 'Partager {{drillTitle}}',
       content: {
-        zero: 'Regarde cet exo sur Disc In : {{url}}',
-        other:
-          "Regarde cet exo sur Disc In : {{url}}\nEt si tu ne peux pas installer l'appli, voici quelques vidéos de l'exercice :\n{{youtubeVideos}}",
+        zero: "Regarde cet exo sur Disc In avec l'identifiant {{uuid}}",
       },
       description: 'Exercice : {{description}}…',
       error: 'Une erreur est survenue',

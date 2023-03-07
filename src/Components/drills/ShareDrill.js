@@ -8,33 +8,14 @@ import { showError } from '../../utils/flashMessage';
 import { upload, createLink } from '../../utils/firebase';
 
 const ShareDrill = ({ drill, light }) => {
+  if (!drill.custom) return null;
+
   const share = async () => {
-    const url = await createLink(
-      'drills/' + drill.id,
-      drill.title,
-      I18n.t('drills.shareDrill.description', { description: drill.description.slice(0, 70) }),
-    );
-
-    const youtubeVideos = drill.steps.reduce((total, step) => {
-      const stepvideo = step.youtube ? `${step.title} - ${step.youtube}\n` : '';
-      return total + stepvideo;
-    }, '');
-
-    Share.share({
-      title: I18n.t('drills.shareDrill.title', { drillTitle: drill.title }),
-      message: I18n.t('drills.shareDrill.content', { url, youtubeVideos, count: youtubeVideos.length }),
-      url,
-    }).catch((error) => showError(I18n.t('drills.shareDrill.error')));
-  };
-
-  const shareCustom = async () => {
     try {
-      const shareUuid = await upload('customDrills', drill);
-      const url = await createLink('custom/drills/' + shareUuid, drill.title);
+      const uuid = await upload('customDrills', drill);
       await Share.share({
         title: I18n.t('drills.shareDrill.title', { title: drill.title }),
-        message: I18n.t('drills.shareDrill.content', { url, count: 0 }),
-        url,
+        message: I18n.t('drills.shareDrill.content', { uuid }),
       });
     } catch (error) {
       showError(I18n.t('drills.shareDrill.error'));
@@ -43,7 +24,7 @@ const ShareDrill = ({ drill, light }) => {
 
   const lightColor = light ? styles.lightColor : undefined;
   return (
-    <TouchableOpacity onPress={drill.custom ? shareCustom : share} testID="shareButton">
+    <TouchableOpacity onPress={share} testID="shareButton">
       <Ionicons
         name={Platform.select({
           ios: 'ios-share-outline',

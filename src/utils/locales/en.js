@@ -166,9 +166,7 @@ export default {
     shareDrill: {
       title: 'Share {{drillTitle}}',
       content: {
-        zero: 'Check this drill on Disc In: {{url}}',
-        other:
-          'Check this drill on Disc In: {{url}}\nAnd in case you cannot install the app, here are some videos of the drill:\n{{youtubeVideos}}',
+        zero: 'Check this drill on Disc In with the identifier: {{url}}',
       },
       description: 'Drill: {{description}}…',
       error: 'It looks like there was an error sharing this drill',

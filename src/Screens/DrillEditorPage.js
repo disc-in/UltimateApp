@@ -8,7 +8,7 @@ import { DrillTypes, Intensities, Levels, FrisbeeGoals } from '../Fixtures/confi
 import theme from '../styles/theme.style';
 import I18n from '../utils/i18n';
 import { showSuccess } from '../utils/flashMessage';
-import { generateUuid } from '../utils/uuid';
+import { generateRandomHex } from '../utils/random';
 import { saveDrill } from '../Store/Actions/drillAction';
 import Button from '../Components/shared/Button';
 import Input from '../Components/shared/form/Input';
@@ -27,7 +27,7 @@ const newStep = {
 };
 
 const newDrill = {
-  id: generateUuid(),
+  id: generateRandomHex(),
   custom: true,
   type: DrillTypes.FRISBEE,
   visibleInList: true,

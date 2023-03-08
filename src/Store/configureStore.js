@@ -4,7 +4,7 @@ import { persistStore, persistReducer, createMigrate } from 'redux-persist';
 
 import rootReducer from './Reducers';
 import fixtures from '../Fixtures';
-import { generateUuid } from '../utils/uuid';
+import { generateRandomHex } from '../utils/random';
 
 const migrations = {
   1: (state) => {
@@ -26,7 +26,7 @@ const migrations = {
     const customPlays = state.customPlays?.map((play) => {
       return {
         ...play,
-        uuid: generateUuid(),
+        uuid: generateRandomHex(),
       };
     });
     return {

@@ -12,10 +12,10 @@ const ShareDrill = ({ drill, light }) => {
 
   const share = async () => {
     try {
-      const uuid = await upload('customDrills', drill);
+      const identifier = await upload('customDrills', drill);
       await Share.share({
         title: I18n.t('drills.shareDrill.title', { title: drill.title }),
-        message: I18n.t('drills.shareDrill.content', { uuid }),
+        message: I18n.t('drills.shareDrill.content', { identifier }),
       });
     } catch (error) {
       showError(I18n.t('drills.shareDrill.error'));

@@ -122,7 +122,7 @@ export default {
     untitledPlay: 'Play sans titre',
   },
   importerPage: {
-    uuidPlaceholder: 'Entrez un identifiant…',
+    identifierPlaceholder: 'Entrez un identifiant…',
     customPlays: {
       loading: 'Je suis en train de chercher le play que vous souhaitez importer… 🏃',
       incentive: 'Vous allez enregistrer le play "{{title}}"',
@@ -147,7 +147,7 @@ export default {
     },
     sharePlay: {
       shareTitle: 'Partager {{title}}',
-      shareMessage: 'Utilise cet identifiant pour télécharger mon super play dans Disc In : {{uuid}}',
+      shareMessage: 'Utilise cet identifiant pour télécharger mon super play dans Disc In : {{identifier}}',
       shareError: 'Une erreur est survenue',
     },
   },
@@ -167,7 +167,7 @@ export default {
     shareDrill: {
       title: 'Partager {{drillTitle}}',
       content: {
-        zero: "Regarde cet exo sur Disc In avec l'identifiant {{uuid}}",
+        zero: "Regarde cet exo sur Disc In avec l'identifiant {{identifier}}",
       },
       description: 'Exercice : {{description}}…',
       error: 'Une erreur est survenue',

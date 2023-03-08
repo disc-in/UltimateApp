@@ -7,10 +7,6 @@ import { createDrill } from '../../Fixtures/TestFixtures';
 
 import { ImporterPage } from '../ImporterPage';
 
-jest.mock('react-native-get-random-values', () => ({
-  getRandomBase64: jest.fn(),
-}));
-
 describe('<ImporterPage />', () => {
   afterEach(() => jest.clearAllMocks());
 

@@ -9,9 +9,6 @@ import * as firebase from '../../../utils/firebase';
 import ShareDrill from '../ShareDrill';
 
 jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
-jest.mock('react-native-get-random-values', () => ({
-  getRandomBase64: jest.fn(),
-}));
 
 describe('<ShareDrill />', () => {
   afterEach(() => jest.clearAllMocks());
@@ -40,7 +37,7 @@ describe('<ShareDrill />', () => {
 
   it('triggers share action for a custom drill', async () => {
     const customDrill = createDrill({ id: 2, custom: true });
-    jest.spyOn(firebase, 'upload').mockImplementation(() => 'uuid');
+    jest.spyOn(firebase, 'upload').mockImplementation(() => 'identifier');
 
     const share = jest.fn();
     Share.share = () => new Promise((resolve, reject) => share());

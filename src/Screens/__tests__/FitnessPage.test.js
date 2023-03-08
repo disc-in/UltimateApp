@@ -9,9 +9,6 @@ import FitnessPage from '../FitnessPage';
 
 jest.mock('../../Components/shared/VimeoVideo');
 jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
-jest.mock('react-native-get-random-values', () => ({
-  getRandomBase64: jest.fn(),
-}));
 
 describe('<FitnessPage />', () => {
   it('renders correctly', async () => {

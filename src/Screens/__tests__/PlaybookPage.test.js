@@ -4,13 +4,9 @@ import { render, fireEvent } from '@testing-library/react-native';
 
 import store from '../../Store/testStore';
 import Drill from '../../Components/animation/Drill';
-import * as uuid from '../../utils/uuid';
+import * as identifier from '../../utils/random';
 
 import ConnectedPlaybookPage, { PlaybookPage } from '../PlaybookPage';
-
-jest.mock('react-native-get-random-values', () => ({
-  getRandomBase64: jest.fn(),
-}));
 
 describe('<PlaybookPage />', () => {
   const play = {
@@ -56,7 +52,7 @@ describe('<PlaybookPage />', () => {
   it('creates a new play and links to drill page', async () => {
     const navigation = { navigate: jest.fn() };
     const savePlay = jest.fn();
-    jest.spyOn(uuid, 'generateUuid').mockImplementation(() => '123-456');
+    jest.spyOn(identifier, 'generateRandomHex').mockImplementation(() => '123456');
 
     const MockedConnectedPlaybookPage = connect(
       () => ({ customPlays: [play] }),

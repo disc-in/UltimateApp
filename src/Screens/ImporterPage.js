@@ -13,16 +13,16 @@ import { saveDrill } from '../Store/Actions/drillAction';
 import Button from '../Components/shared/Button';
 
 export const ImporterPage = (props) => {
-  const { navigation, route } = props;
-  const namespace = route.params.source === 'drills' ? 'customDrills' : 'customPlays';
+  const { navigation } = props;
+  const namespace = props.route.params.source;
 
-  const [uuid, setUuid] = useState();
+  const [identifier, setIdentifier] = useState();
   const [loading, setLoading] = useState(false);
   const [importedRecord, setImportedRecord] = useState();
 
   fetchData = async () => {
     try {
-      const record = await download(namespace, uuid);
+      const record = await download(namespace, identifier);
       if (record === null) {
         showError(I18n.t(`importerPage.${namespace}.downloadError`));
       } else {
@@ -44,7 +44,7 @@ export const ImporterPage = (props) => {
   };
 
   const cancel = () => {
-    setUuid();
+    setIdentifier();
     setLoading(false);
     setImportedRecord();
   };
@@ -70,10 +70,10 @@ export const ImporterPage = (props) => {
       ) : (
         <Input
           autoFocus
-          value={uuid}
-          onChangeText={setUuid}
-          placeholder={I18n.t('importerPage.uuidPlaceholder')}
-          testID="uuidInput"
+          value={identifier}
+          onChangeText={setIdentifier}
+          placeholder={I18n.t('importerPage.identifierPlaceholder')}
+          testID="identifierInput"
           rightIcon={{
             type: 'material-community',
             name: 'check',

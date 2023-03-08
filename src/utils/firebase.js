@@ -1,9 +1,9 @@
 import { Platform, InteractionManager } from 'react-native';
 import Constants from 'expo-constants';
 import { initializeApp, setLogLevel } from 'firebase/app';
-import { getDatabase, ref, set, onValue } from 'firebase/database';
+import { getDatabase, ref, set, onValue, child, get } from 'firebase/database';
 
-import { generateUuid } from './uuid';
+import { generateRandomHex } from './random';
 
 // Work around issue `Setting a timer for long time`
 // see: https://github.com/firebase/firebase-js-sdk/issues/97
@@ -57,17 +57,28 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 setLogLevel('silent');
 
-const reference = (namespace, uuid) => {
-  return ref(getDatabase(app), `${namespace}/${uuid}`);
+const reference = (namespace, identifier) => {
+  return ref(getDatabase(app), `${namespace}/${identifier}`);
 };
 
 export const upload = async (namespace, record) => {
   const withoutUndefineds = JSON.parse(JSON.stringify(record));
-  const shareUuid = generateUuid();
-  await set(reference(namespace, shareUuid), withoutUndefineds);
-  return shareUuid;
+  const identifier = generateRandomHex();
+  await set(reference(namespace, identifier), withoutUndefineds);
+  return identifier;
 };
 
-export const download = (namespace, uuid) => {
-  return onValue(reference(namespace, uuid), (snapshot) => snapshot.val());
+export const download = (namespace, identifier) => {
+  const dbRef = ref(getDatabase(app));
+  return get(child(dbRef, `${namespace}/${identifier}`))
+    .then((snapshot) => {
+      if (snapshot.exists()) {
+        return snapshot.val();
+      } else {
+        console.log('No data available');
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+    });
 };

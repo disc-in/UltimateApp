@@ -8,9 +8,6 @@ import Drill from '../../Components/animation/Drill';
 import PlayEditorPage from '../PlayEditorPage';
 
 jest.mock('react-native-reanimated', () => require('react-native-reanimated/mock'));
-jest.mock('react-native-get-random-values', () => ({
-  getRandomBase64: jest.fn(),
-}));
 
 describe('<PlayEditorPage />', () => {
   it('renders correctly', async () => {

@@ -10,10 +10,10 @@ import { upload } from '../../../utils/firebase';
 const SharePlay = ({ currentPlay }) => {
   const share = async () => {
     try {
-      const uuid = await upload('customPlays', currentPlay);
+      const identifier = await upload('customPlays', currentPlay);
       await Share.share({
         title: I18n.t('editor.sharePlay.shareTitle', { title: currentPlay.title }),
-        message: I18n.t('editor.sharePlay.shareMessage', { uuid }),
+        message: I18n.t('editor.sharePlay.shareMessage', { identifier }),
       });
     } catch (error) {
       showError(I18n.t('editor.sharePlay.shareError'));

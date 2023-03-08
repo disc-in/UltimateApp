@@ -122,7 +122,7 @@ export default {
     untitledPlay: 'Unnamed play',
   },
   importerPage: {
-    uuidPlaceholder: 'Use an identifier…',
+    identifierPlaceholder: 'Use an identifier…',
     customPlays: {
       loading: 'I am fetching the play you want to import it… 🏃',
       incentive: 'You are about to import and save the play {{title}}',
@@ -147,7 +147,7 @@ export default {
     },
     sharePlay: {
       shareTitle: 'Sharing {{title}}',
-      shareMessage: 'Use the following identifier to import my awesome play in Disc In: {{uuid}}',
+      shareMessage: 'Use the following identifier to import my awesome play in Disc In: {{identifier}}',
       shareError: 'It looks like there was an error sharing your play',
     },
   },
@@ -167,7 +167,7 @@ export default {
     shareDrill: {
       title: 'Share {{drillTitle}}',
       content: {
-        zero: 'Check this drill on Disc In with the identifier: {{url}}',
+        zero: 'Check this drill on Disc In with the identifier: {{identifier}}',
       },
       description: 'Drill: {{description}}…',
       error: 'It looks like there was an error sharing this drill',

@@ -16,27 +16,30 @@ describe('<PlaybookPage />', () => {
   };
 
   it('renders correctly when empty', () => {
+    const navigation = { navigate: jest.fn(), setOptions: jest.fn() };
+
     const { toJSON } = render(
       <Provider store={store}>
-        <ConnectedPlaybookPage />
+        <ConnectedPlaybookPage navigation={navigation} />
       </Provider>,
     );
     expect(toJSON()).toMatchSnapshot();
   });
 
   it('renders correctly with plays', () => {
+    const navigation = { navigate: jest.fn(), setOptions: jest.fn() };
     const MockedConnectedPlaybookPage = connect(() => ({ customPlays: [play] }))(PlaybookPage);
 
     const { toJSON } = render(
       <Provider store={store}>
-        <MockedConnectedPlaybookPage />
+        <MockedConnectedPlaybookPage navigation={navigation} />
       </Provider>,
     );
     expect(toJSON()).toMatchSnapshot();
   });
 
   it('links to drill page', async () => {
-    const navigation = { navigate: jest.fn() };
+    const navigation = { navigate: jest.fn(), setOptions: jest.fn() };
 
     const MockedConnectedPlaybookPage = connect(() => ({ customPlays: [play] }))(PlaybookPage);
     const { getByText } = render(
@@ -50,7 +53,7 @@ describe('<PlaybookPage />', () => {
   });
 
   it('creates a new play and links to drill page', async () => {
-    const navigation = { navigate: jest.fn() };
+    const navigation = { navigate: jest.fn(), setOptions: jest.fn() };
     const savePlay = jest.fn();
     jest.spyOn(identifier, 'generateRandomHex').mockImplementation(() => '123456');
 
@@ -68,7 +71,7 @@ describe('<PlaybookPage />', () => {
     const expectedPlay = {
       animation: new Drill(),
       title: 'Unnamed play',
-      uuid: '123-456',
+      uuid: '123456',
     };
     expect(navigation.navigate).toBeCalledWith('PlayEditorPage', { currentPlay: expectedPlay });
     expect(savePlay).toBeCalledWith(expectedPlay);

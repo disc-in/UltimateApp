@@ -25,7 +25,7 @@ describe('<ImporterPage />', () => {
   const savePlay = jest.fn();
   const saveDrill = jest.fn();
 
-  function itHandlesImport(route) {
+  function itHandlesImport(route, identifier) {
     it('renders correctly before download', async () => {
       jest.spyOn(firebase, 'download').mockImplementation(() => new Promise((resolve) => resolve(undefined)));
       const { toJSON } = render(
@@ -38,9 +38,13 @@ describe('<ImporterPage />', () => {
       jest.spyOn(firebase, 'download').mockImplementation(() => new Promise((resolve) => resolve(null)));
       jest.spyOn(flashMessage, 'showError');
 
-      const { getByText, toJSON } = await waitFor(() =>
+      const { getByTestId, toJSON } = await waitFor(() =>
         render(<ImporterPage navigation={navigation} route={route} savePlay={savePlay} saveDrill={saveDrill} />),
       );
+
+      fireEvent.changeText(getByTestId('identifierInput'), identifier);
+      await fireEvent.press(getByTestId('identifierInputSubmit'));
+
       expect(flashMessage.showError).toHaveBeenCalled();
       expect(toJSON()).toMatchSnapshot();
     });
@@ -48,65 +52,50 @@ describe('<ImporterPage />', () => {
     it('renders correctly after download', async () => {
       jest.spyOn(firebase, 'download').mockImplementation(() => new Promise((resolve) => resolve(play)));
 
-      const { getByText, toJSON } = await waitFor(() =>
+      const { getByTestId, toJSON } = await waitFor(() =>
         render(<ImporterPage navigation={navigation} route={route} savePlay={savePlay} saveDrill={saveDrill} />),
       );
-      await fireEvent.press(getByText('Cancel'));
+
+      fireEvent.changeText(getByTestId('identifierInput'), identifier);
+      await waitFor(() => fireEvent.press(getByTestId('identifierInputSubmit')));
+
       expect(toJSON()).toMatchSnapshot();
     });
 
-    it('goes back to home on cancel', async () => {
+    it('goes back to beginning on cancel', async () => {
       jest.spyOn(firebase, 'download').mockImplementation(() => new Promise((resolve) => resolve(play)));
 
-      const { getByText } = await waitFor(() =>
+      const { getByText, getByTestId, toJSON } = await waitFor(() =>
         render(<ImporterPage navigation={navigation} route={route} savePlay={savePlay} saveDrill={saveDrill} />),
       );
+
+      fireEvent.changeText(getByTestId('identifierInput'), identifier);
+      await waitFor(() => fireEvent.press(getByTestId('identifierInputSubmit')));
+
       await fireEvent.press(getByText('Cancel'));
 
-      expect(navigation.navigate).toHaveBeenCalledWith('HomePage');
+      expect(toJSON()).toMatchSnapshot();
     });
   }
-
-  describe('when routing on old customPlays link', () => {
-    const route = {
-      params: {
-        source: undefined,
-        uuid: '123',
-      },
-    };
-
-    itHandlesImport(route);
-
-    it('saves play and opens editor on confirmation', async () => {
-      jest.spyOn(firebase, 'download').mockImplementation(() => new Promise((resolve) => resolve(play)));
-
-      const { getByText } = await waitFor(() =>
-        render(<ImporterPage navigation={navigation} route={route} savePlay={savePlay} saveDrill={saveDrill} />),
-      );
-      await fireEvent.press(getByText('Yes'));
-
-      expect(savePlay).toHaveBeenCalledWith(play);
-      expect(saveDrill).not.toHaveBeenCalled();
-      expect(navigation.navigate).toHaveBeenCalledWith('PlayEditorPage', { currentPlay: play });
-    });
-  });
 
   describe('when routing on plays', () => {
     const route = {
       params: {
-        source: 'plays',
-        uuid: '123',
+        source: 'customPlays',
       },
     };
 
-    itHandlesImport(route);
+    itHandlesImport(route, '123');
 
     it('saves play and opens editor on confirmation', async () => {
       jest.spyOn(firebase, 'download').mockImplementation(() => new Promise((resolve) => resolve(play)));
 
-      const { getByText } = await waitFor(() =>
+      const { getByTestId, getByText } = await waitFor(() =>
         render(<ImporterPage navigation={navigation} route={route} savePlay={savePlay} saveDrill={saveDrill} />),
       );
+
+      fireEvent.changeText(getByTestId('identifierInput'), '123');
+      await waitFor(() => fireEvent.press(getByTestId('identifierInputSubmit')));
       await fireEvent.press(getByText('Yes'));
 
       expect(savePlay).toHaveBeenCalledWith(play);
@@ -118,19 +107,20 @@ describe('<ImporterPage />', () => {
   describe('when routing on drills', () => {
     const route = {
       params: {
-        source: 'drills',
-        uuid: '123',
+        source: 'customDrills',
       },
     };
 
-    itHandlesImport(route);
+    itHandlesImport(route, '123');
 
     it('saves play and opens editor on confirmation', async () => {
       jest.spyOn(firebase, 'download').mockImplementation(() => new Promise((resolve) => resolve(drill)));
 
-      const { getByText } = await waitFor(() =>
+      const { getByTestId, getByText } = await waitFor(() =>
         render(<ImporterPage navigation={navigation} route={route} savePlay={savePlay} saveDrill={saveDrill} />),
       );
+      fireEvent.changeText(getByTestId('identifierInput'), '123');
+      await waitFor(() => fireEvent.press(getByTestId('identifierInputSubmit')));
       await fireEvent.press(getByText('Yes'));
 
       expect(savePlay).not.toHaveBeenCalled();

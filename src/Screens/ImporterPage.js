@@ -77,6 +77,7 @@ export const ImporterPage = (props) => {
           rightIcon={{
             type: 'material-community',
             name: 'check',
+            testID: 'identifierInputSubmit',
             onPress: () => {
               setLoading(true);
               fetchData();

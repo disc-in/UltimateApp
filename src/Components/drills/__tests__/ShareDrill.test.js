@@ -16,23 +16,21 @@ describe('<ShareDrill />', () => {
   const drill = store.getState().drills[0];
 
   it('renders correctly', async () => {
+    drill.custom = true;
     const { toJSON } = await waitFor(() => render(<ShareDrill drill={drill} />));
     expect(toJSON()).toMatchSnapshot();
   });
 
   it('renders correctly when light', async () => {
+    drill.custom = true;
     const { toJSON } = await waitFor(() => render(<ShareDrill drill={drill} light />));
     expect(toJSON()).toMatchSnapshot();
   });
 
-  it('triggers share action for an app drill', async () => {
-    const share = jest.fn();
-    Share.share = () => new Promise((resolve, reject) => share());
-
-    const { getByTestId } = await waitFor(() => render(<ShareDrill drill={drill} />));
-    fireEvent.press(getByTestId('shareButton'));
-
-    expect(share).toHaveBeenCalled();
+  it('does nothing for an app drill', async () => {
+    const appDrill = createDrill({ id: 2 });
+    const { toJSON } = await waitFor(() => render(<ShareDrill drill={appDrill} />));
+    expect(toJSON()).toMatchSnapshot();
   });
 
   it('triggers share action for a custom drill', async () => {

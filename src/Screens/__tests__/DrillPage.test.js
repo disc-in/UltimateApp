@@ -75,6 +75,10 @@ describe('<DrillPage />', () => {
     const share = jest.fn();
     Share.share = () => new Promise((resolve, reject) => share());
 
+    jest.spyOn(firebase, 'upload').mockImplementation(() => 'identifier');
+
+    drill.custom = true;
+
     const Stack = createStackNavigator();
     const { getByTestId } = await waitFor(() =>
       render(
@@ -90,6 +94,7 @@ describe('<DrillPage />', () => {
 
     fireEvent.press(getByTestId('shareButton'));
 
+    await expect(firebase.upload).toHaveBeenCalledWith('customDrills', drill);
     expect(share).toHaveBeenCalled();
   });
 

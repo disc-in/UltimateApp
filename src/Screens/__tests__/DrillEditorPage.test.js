@@ -21,10 +21,11 @@ describe('<DrillEditorPage />', () => {
   };
 
   it('renders correctly when creating a new drill', async () => {
+    const navigation = { setOptions: jest.fn() };
     const { toJSON } = render(
       <Provider store={store}>
         <NavigationContext.Provider value={navContext}>
-          <ConnectedDrillEditorPage route={{}} />
+          <ConnectedDrillEditorPage route={{}} navigation={navigation} />
         </NavigationContext.Provider>
       </Provider>,
     );
@@ -32,6 +33,7 @@ describe('<DrillEditorPage />', () => {
   });
 
   it('renders correctly when creating an existing drill', async () => {
+    const navigation = { setOptions: jest.fn() };
     const route = {
       params: {
         currentDrill: createDrill(),
@@ -40,7 +42,7 @@ describe('<DrillEditorPage />', () => {
     const { toJSON } = render(
       <Provider store={store}>
         <NavigationContext.Provider value={navContext}>
-          <ConnectedDrillEditorPage route={route} />
+          <ConnectedDrillEditorPage route={route} navigation={navigation} />
         </NavigationContext.Provider>
       </Provider>,
     );
@@ -51,10 +53,11 @@ describe('<DrillEditorPage />', () => {
     let createdDrill;
     const saveDrill = jest.fn((drill) => (createdDrill = drill));
     const navigate = jest.fn();
+    const navigation = { navigate, setOptions: jest.fn() };
 
     const { getByTestId, getAllByTestId } = render(
       <NavigationContext.Provider value={navContext}>
-        <DrillEditorPage route={{}} customDrills={[]} saveDrill={saveDrill} navigation={{ navigate }} />
+        <DrillEditorPage route={{}} customDrills={[]} saveDrill={saveDrill} navigation={navigation} />
       </NavigationContext.Provider>,
     );
 
@@ -130,10 +133,11 @@ describe('<DrillEditorPage />', () => {
     let createdDrill;
     const saveDrill = jest.fn((drill) => (createdDrill = drill));
     const navigate = jest.fn();
+    const navigation = { navigate, setOptions: jest.fn() };
 
     const { getByTestId, getByText } = render(
       <NavigationContext.Provider value={navContext}>
-        <DrillEditorPage route={{}} customDrills={[]} saveDrill={saveDrill} navigation={{ navigate }} />
+        <DrillEditorPage route={{}} customDrills={[]} saveDrill={saveDrill} navigation={navigation} />
       </NavigationContext.Provider>,
     );
 

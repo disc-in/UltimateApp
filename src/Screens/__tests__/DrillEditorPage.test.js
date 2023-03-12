@@ -9,6 +9,8 @@ import { DrillTypes, Intensities, Levels, FrisbeeGoals } from '../../Fixtures/co
 
 import ConnectedDrillEditorPage, { DrillEditorPage } from '../DrillEditorPage';
 
+import * as random from '../../utils/random';
+jest.spyOn(random, 'generateUuid').mockImplementation(() => '123456');
 jest.mock('react-native-reanimated', () => require('react-native-reanimated/mock'));
 jest.setTimeout(30000);
 

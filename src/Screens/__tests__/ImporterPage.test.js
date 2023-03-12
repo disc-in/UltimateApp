@@ -4,6 +4,7 @@ import { render, fireEvent, waitFor } from '@testing-library/react-native';
 import * as firebase from '../../utils/firebase';
 import * as flashMessage from '../../utils/flashMessage';
 import { createDrill } from '../../Fixtures/TestFixtures';
+import * as random from '../../utils/random';
 
 import { ImporterPage } from '../ImporterPage';
 
@@ -89,6 +90,7 @@ describe('<ImporterPage />', () => {
 
     it('saves play and opens editor on confirmation', async () => {
       jest.spyOn(firebase, 'download').mockImplementation(() => new Promise((resolve) => resolve(play)));
+      jest.spyOn(random, 'generateUuid').mockImplementation(() => '123456');
 
       const { getByTestId, getByText } = await waitFor(() =>
         render(<ImporterPage navigation={navigation} route={route} savePlay={savePlay} saveDrill={saveDrill} />),
@@ -98,9 +100,10 @@ describe('<ImporterPage />', () => {
       await waitFor(() => fireEvent.press(getByTestId('identifierInputSubmit')));
       await fireEvent.press(getByText('Yes'));
 
-      expect(savePlay).toHaveBeenCalledWith(play);
+      const importedPlay = { ...play, uuid: '123456' };
+      expect(savePlay).toHaveBeenCalledWith(importedPlay);
       expect(saveDrill).not.toHaveBeenCalled();
-      expect(navigation.navigate).toHaveBeenCalledWith('PlayEditorPage', { currentPlay: play });
+      expect(navigation.navigate).toHaveBeenCalledWith('PlayEditorPage', { currentPlay: importedPlay });
     });
   });
 
@@ -115,6 +118,7 @@ describe('<ImporterPage />', () => {
 
     it('saves play and opens editor on confirmation', async () => {
       jest.spyOn(firebase, 'download').mockImplementation(() => new Promise((resolve) => resolve(drill)));
+      jest.spyOn(random, 'generateUuid').mockImplementation(() => '123456');
 
       const { getByTestId, getByText } = await waitFor(() =>
         render(<ImporterPage navigation={navigation} route={route} savePlay={savePlay} saveDrill={saveDrill} />),
@@ -123,9 +127,10 @@ describe('<ImporterPage />', () => {
       await waitFor(() => fireEvent.press(getByTestId('identifierInputSubmit')));
       await fireEvent.press(getByText('Yes'));
 
+      const importedDrill = { ...drill, id: '123456' };
       expect(savePlay).not.toHaveBeenCalled();
-      expect(saveDrill).toHaveBeenCalledWith(drill);
-      expect(navigation.navigate).toHaveBeenCalledWith('DrillPage', { id: drill.id });
+      expect(saveDrill).toHaveBeenCalledWith(importedDrill);
+      expect(navigation.navigate).toHaveBeenCalledWith('DrillPage', { id: '123456' });
     });
   });
 });

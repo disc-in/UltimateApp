@@ -16,15 +16,15 @@ describe('renamePlay', () => {
   it('renders correctly', () => {
     expect(renamePlay('123', 'new title')).toEqual({
       type: 'RENAME_PLAY',
-      value: { identifier: '123', newTitle: 'new title' },
+      value: { uuid: '123', newTitle: 'new title' },
     });
   });
 });
 
 describe('deletePlay', () => {
-  const identifier = '123';
+  const uuid = '123';
 
   it('renders correctly', () => {
-    expect(deletePlay(identifier)).toEqual({ type: 'DELETE_PLAY', value: identifier });
+    expect(deletePlay(uuid)).toEqual({ type: 'DELETE_PLAY', value: uuid });
   });
 });

@@ -8,6 +8,7 @@ import theme from '../styles/theme.style';
 import I18n from '../utils/i18n';
 import { download } from '../utils/firebase';
 import { showError } from '../utils/flashMessage';
+import { generateUuid } from '../utils/random';
 import { savePlay } from '../Store/Actions/playAction';
 import { saveDrill } from '../Store/Actions/drillAction';
 import Button from '../Components/shared/Button';
@@ -34,12 +35,15 @@ export const ImporterPage = (props) => {
   };
 
   const save = () => {
+    // Override id/uuid so that plays/drills are different in your store even if yo download twice the same drill
     if (namespace === 'customPlays') {
-      props.savePlay(importedRecord);
-      navigation.navigate('PlayEditorPage', { currentPlay: importedRecord });
+      const importedPlay = { ...importedRecord, uuid: generateUuid() };
+      props.savePlay(importedPlay);
+      navigation.navigate('PlayEditorPage', { currentPlay: importedPlay });
     } else if (namespace === 'customDrills') {
-      props.saveDrill(importedRecord);
-      navigation.navigate('DrillPage', { id: importedRecord.id });
+      const importedDrill = { ...importedRecord, id: generateUuid() };
+      props.saveDrill(importedDrill);
+      navigation.navigate('DrillPage', { id: importedDrill.id });
     }
   };
 

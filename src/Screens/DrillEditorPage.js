@@ -8,7 +8,7 @@ import { DrillTypes, Intensities, Levels, FrisbeeGoals } from '../Fixtures/confi
 import theme from '../styles/theme.style';
 import I18n from '../utils/i18n';
 import { showSuccess } from '../utils/flashMessage';
-import { generateRandomHex } from '../utils/random';
+import { generateUuid } from '../utils/random';
 import { saveDrill } from '../Store/Actions/drillAction';
 import Button from '../Components/shared/Button';
 import Input from '../Components/shared/form/Input';
@@ -26,8 +26,8 @@ const newStep = {
   instruction: undefined,
 };
 
-const newDrill = {
-  id: generateRandomHex(),
+const newDrill = () => ({
+  id: generateUuid(),
   custom: true,
   type: DrillTypes.FRISBEE,
   visibleInList: true,
@@ -43,10 +43,10 @@ const newDrill = {
   goals: [],
   level: undefined,
   steps: [newStep],
-};
+});
 
 export const DrillEditorPage = (props) => {
-  const [currentDrill, setCurrentDrill] = useState(props.route.params?.currentDrill || newDrill);
+  const [currentDrill, setCurrentDrill] = useState(props.route.params?.currentDrill || newDrill());
 
   useLayoutEffect(() => {
     props.navigation.setOptions({

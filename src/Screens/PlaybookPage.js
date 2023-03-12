@@ -5,7 +5,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import theme from '../styles/theme.style';
 import I18n from '../utils/i18n';
-import { generateRandomHex } from '../utils/random';
+import { generateUuid } from '../utils/random';
 import { savePlay } from '../Store/Actions/playAction';
 import Drill from '../Components/animation/Drill';
 import PlayTitle from '../Components/editor/PlayTitle';
@@ -24,7 +24,7 @@ export const PlaybookPage = (props) => {
       counter += 1;
     }
     const play = {
-      uuid: generateRandomHex(),
+      uuid: generateUuid(),
       animation: new Drill(),
       title: newTitle,
     };

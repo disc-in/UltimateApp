@@ -1,2 +1,2 @@
 export const saveDrill = (drill) => ({ type: 'SAVE_DRILL', value: drill });
-export const deleteDrill = (identifier) => ({ type: 'DELETE_DRILL', value: identifier });
+export const deleteDrill = (id) => ({ type: 'DELETE_DRILL', value: id });

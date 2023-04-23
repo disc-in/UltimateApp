@@ -14,7 +14,7 @@ const ShareDrill = ({ drill, light }) => {
     try {
       const identifier = await upload('customDrills', drill);
       await Share.share({
-        title: I18n.t('drills.shareDrill.title', { title: drill.title }),
+        title: I18n.t('drills.shareDrill.title', { drillTitle: drill.title }),
         message: I18n.t('drills.shareDrill.content', { identifier }),
       });
     } catch (error) {

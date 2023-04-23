@@ -166,9 +166,7 @@ export default {
     },
     shareDrill: {
       title: 'Partager {{drillTitle}}',
-      content: {
-        zero: "Regarde cet exo sur Disc In avec l'identifiant {{identifier}}",
-      },
+      content: "Regarde cet exo sur Disc In avec l'identifiant {{identifier}}",
       description: 'Exercice : {{description}}…',
       error: 'Une erreur est survenue',
     },

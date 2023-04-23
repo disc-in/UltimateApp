@@ -166,9 +166,7 @@ export default {
     },
     shareDrill: {
       title: 'Share {{drillTitle}}',
-      content: {
-        zero: 'Check this drill on Disc In with the identifier: {{identifier}}',
-      },
+      content: 'Check this drill on Disc In with the identifier: {{identifier}}',
       description: 'Drill: {{description}}…',
       error: 'It looks like there was an error sharing this drill',
     },

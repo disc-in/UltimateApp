@@ -10,9 +10,9 @@ describe('saveDrill', () => {
 });
 
 describe('deleteDrill', () => {
-  const uuid = '123';
+  const id = '123';
 
   it('renders correctly', () => {
-    expect(deleteDrill(uuid)).toEqual({ type: 'DELETE_DRILL', value: uuid });
+    expect(deleteDrill(id)).toEqual({ type: 'DELETE_DRILL', value: id });
   });
 });

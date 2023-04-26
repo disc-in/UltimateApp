@@ -6,14 +6,8 @@ const Config = {
 
 if (process.env.APP_ENV === 'development') {
   Config.firebaseDatabaseUrl = process.env.DEV_FIREBASE_DATABASE_URL;
-  Config.firebaseApiKey = process.env.DEV_FIREBASE_API_KEY;
-  Config.firebaseUrlPrefix = process.env.DEV_FIREBASE_URL_PREFIX;
-  Config.firebaseDomainUri = process.env.DEV_FIREBASE_DOMAIN_URI;
 } else if (process.env.APP_ENV === 'production') {
   Config.firebaseDatabaseUrl = process.env.PRODUCTION_FIREBASE_DATABASE_URL;
-  Config.firebaseApiKey = process.env.PRODUCTION_FIREBASE_API_KEY;
-  Config.firebaseUrlPrefix = process.env.PRODUCTION_FIREBASE_URL_PREFIX;
-  Config.firebaseDomainUri = process.env.PRODUCTION_FIREBASE_DOMAIN_URI;
 }
 
 export default {
@@ -48,26 +42,11 @@ export default {
       infoPlist: {
         CFBundleAllowMixedLocalizations: true,
       },
-      associatedDomains: [`applinks:${Config.firebaseUrlPrefix?.replace('https://', '').replace(/\/$/, '')}`],
     },
     android: {
       package: 'com.discin.discin',
       versionCode: 8,
       permissions: [],
-      intentFilters: [
-        {
-          action: 'VIEW',
-          autoVerify: true,
-          data: [
-            {
-              scheme: 'https',
-              host: Config.firebaseUrlPrefix?.replace('https://', '').replace(/\/$/, ''),
-              pathPrefix: '/',
-            },
-          ],
-          category: ['BROWSABLE', 'DEFAULT'],
-        },
-      ],
     },
     plugins: ['expo-localization'],
     extra: {

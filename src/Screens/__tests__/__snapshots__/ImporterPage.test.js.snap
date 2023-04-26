@@ -1,5 +1,151 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<ImporterPage /> when routing on drills goes back to beginning on cancel 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#fff",
+      "flex": 1,
+      "padding": 20,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "paddingHorizontal": 10,
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      collapsable={false}
+      style={
+        {
+          "alignItems": "center",
+          "borderBottomWidth": 1,
+          "borderColor": "#86939e",
+          "flexDirection": "row",
+          "transform": [
+            {
+              "translateX": 0,
+            },
+          ],
+        }
+      }
+    >
+      <TextInput
+        autoFocus={true}
+        editable={true}
+        onChangeText={[Function]}
+        placeholder="Use an identifier…"
+        placeholderTextColor="#86939e"
+        style={
+          {
+            "color": "#242424",
+            "flex": 1,
+            "fontSize": 18,
+            "minHeight": 40,
+          }
+        }
+        testID="identifierInput"
+        underlineColorAndroid="transparent"
+      />
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "height": 40,
+            "justifyContent": "center",
+            "marginVertical": 4,
+            "paddingRight": 4,
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "overflow": "hidden",
+            }
+          }
+        >
+          <View
+            accessibilityState={
+              {
+                "disabled": false,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            testID="identifierInputSubmit"
+          >
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "transparent",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <Text
+                allowFontScaling={false}
+                selectable={false}
+                style={
+                  [
+                    {
+                      "color": "#242424",
+                      "fontSize": 24,
+                    },
+                    {
+                      "backgroundColor": "transparent",
+                    },
+                    {
+                      "fontFamily": "material-community",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    {},
+                  ]
+                }
+                testID="iconIcon"
+              >
+                󰄬
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+    <Text
+      style={
+        {
+          "color": "#ff190c",
+          "fontSize": 12,
+          "margin": 5,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
 exports[`<ImporterPage /> when routing on drills renders an error message if the play could not be found 1`] = `
 <View
   style={
@@ -7,7 +153,6 @@ exports[`<ImporterPage /> when routing on drills renders an error message if the
       "alignItems": "center",
       "backgroundColor": "#fff",
       "flex": 1,
-      "justifyContent": "space-around",
       "padding": 20,
     }
   }
@@ -33,8 +178,24 @@ exports[`<ImporterPage /> when routing on drills renders an error message if the
   >
     󰇚
   </Text>
-  <Text>
-    It looks like you want to import a drill, I am going to fetch it... 🏃
+  <Text
+    style={
+      {
+        "fontSize": 16,
+        "marginBottom": 20,
+      }
+    }
+  >
+    I am fetching the drill you want to import it… 🏃
+  </Text>
+  <Text
+    style={
+      {
+        "color": "red",
+      }
+    }
+  >
+    I could not find the drill you are looking for. Are you sure you're not trying to import a play instead?
   </Text>
 </View>
 `;
@@ -46,38 +207,16 @@ exports[`<ImporterPage /> when routing on drills renders correctly after downloa
       "alignItems": "center",
       "backgroundColor": "#fff",
       "flex": 1,
-      "justifyContent": "space-around",
       "padding": 20,
     }
   }
 >
-  <Text
-    allowFontScaling={false}
-    selectable={false}
-    style={
-      [
-        {
-          "color": undefined,
-          "fontSize": 72,
-        },
-        undefined,
-        {
-          "fontFamily": "material-community",
-          "fontStyle": "normal",
-          "fontWeight": "normal",
-        },
-        {},
-      ]
-    }
-  >
-    󰇚
-  </Text>
   <View>
     <Text
       style={
         {
           "fontSize": 16,
-          "marginBottom": 5,
+          "marginBottom": 20,
         }
       }
     >
@@ -87,7 +226,7 @@ exports[`<ImporterPage /> when routing on drills renders correctly after downloa
       style={
         {
           "fontSize": 16,
-          "marginBottom": 5,
+          "marginBottom": 20,
         }
       }
     >
@@ -228,255 +367,265 @@ exports[`<ImporterPage /> when routing on drills renders correctly before downlo
       "alignItems": "center",
       "backgroundColor": "#fff",
       "flex": 1,
-      "justifyContent": "space-around",
       "padding": 20,
     }
   }
 >
-  <Text />
-  <Text>
-    It looks like you want to import a drill, I am going to fetch it... 🏃
-  </Text>
-</View>
-`;
-
-exports[`<ImporterPage /> when routing on old customPlays link renders an error message if the play could not be found 1`] = `
-<View
-  style={
-    {
-      "alignItems": "center",
-      "backgroundColor": "#fff",
-      "flex": 1,
-      "justifyContent": "space-around",
-      "padding": 20,
-    }
-  }
->
-  <Text
-    allowFontScaling={false}
-    selectable={false}
+  <View
     style={
-      [
-        {
-          "color": undefined,
-          "fontSize": 72,
-        },
-        undefined,
-        {
-          "fontFamily": "material-community",
-          "fontStyle": "normal",
-          "fontWeight": "normal",
-        },
-        {},
-      ]
+      {
+        "paddingHorizontal": 10,
+        "width": "100%",
+      }
     }
   >
-    󰇚
-  </Text>
-  <Text>
-    It looks like you want to import a play, I am going to fetch it... 🏃
-  </Text>
-</View>
-`;
-
-exports[`<ImporterPage /> when routing on old customPlays link renders correctly after download 1`] = `
-<View
-  style={
-    {
-      "alignItems": "center",
-      "backgroundColor": "#fff",
-      "flex": 1,
-      "justifyContent": "space-around",
-      "padding": 20,
-    }
-  }
->
-  <Text
-    allowFontScaling={false}
-    selectable={false}
-    style={
-      [
-        {
-          "color": undefined,
-          "fontSize": 72,
-        },
-        undefined,
-        {
-          "fontFamily": "material-community",
-          "fontStyle": "normal",
-          "fontWeight": "normal",
-        },
-        {},
-      ]
-    }
-  >
-    󰇚
-  </Text>
-  <View>
-    <Text
-      style={
-        {
-          "fontSize": 16,
-          "marginBottom": 5,
-        }
-      }
-    >
-      You are about to import and save the play Title
-    </Text>
-    <Text
-      style={
-        {
-          "fontSize": 16,
-          "marginBottom": 5,
-        }
-      }
-    >
-      Are you sure?
-    </Text>
     <View
+      collapsable={false}
       style={
         {
+          "alignItems": "center",
+          "borderBottomWidth": 1,
+          "borderColor": "#86939e",
           "flexDirection": "row",
-          "justifyContent": "space-evenly",
-          "marginTop": 20,
+          "transform": [
+            {
+              "translateX": 0,
+            },
+          ],
         }
       }
     >
+      <TextInput
+        autoFocus={true}
+        editable={true}
+        onChangeText={[Function]}
+        placeholder="Use an identifier…"
+        placeholderTextColor="#86939e"
+        style={
+          {
+            "color": "#242424",
+            "flex": 1,
+            "fontSize": 18,
+            "minHeight": 40,
+          }
+        }
+        testID="identifierInput"
+        underlineColorAndroid="transparent"
+      />
       <View
-        accessibilityState={
-          {
-            "busy": undefined,
-            "checked": undefined,
-            "disabled": undefined,
-            "expanded": undefined,
-            "selected": undefined,
-          }
-        }
-        accessibilityValue={
-          {
-            "max": undefined,
-            "min": undefined,
-            "now": undefined,
-            "text": undefined,
-          }
-        }
-        accessible={true}
-        collapsable={false}
-        focusable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
         style={
           {
             "alignItems": "center",
-            "backgroundColor": "#2a9e91",
-            "borderRadius": 5,
-            "flexDirection": "row",
             "height": 40,
             "justifyContent": "center",
-            "opacity": 1,
-            "paddingHorizontal": 20,
-            "paddingVertical": 10,
-            "width": 100,
+            "marginVertical": 4,
+            "paddingRight": 4,
           }
         }
-        testID="button"
       >
-        <Text
+        <View
           style={
             {
-              "color": "#fff",
-              "fontSize": 16,
-              "textAlign": "center",
+              "overflow": "hidden",
             }
           }
         >
-          Yes
-        </Text>
-      </View>
-      <View
-        accessibilityState={
-          {
-            "busy": undefined,
-            "checked": undefined,
-            "disabled": undefined,
-            "expanded": undefined,
-            "selected": undefined,
-          }
-        }
-        accessibilityValue={
-          {
-            "max": undefined,
-            "min": undefined,
-            "now": undefined,
-            "text": undefined,
-          }
-        }
-        accessible={true}
-        collapsable={false}
-        focusable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          {
-            "alignItems": "center",
-            "backgroundColor": "#fff",
-            "borderColor": "#2a9e91",
-            "borderRadius": 5,
-            "borderWidth": 1,
-            "flexDirection": "row",
-            "height": 40,
-            "justifyContent": "center",
-            "opacity": 1,
-            "paddingHorizontal": 20,
-            "paddingVertical": 10,
-            "width": 100,
-          }
-        }
-        testID="button"
-      >
-        <Text
-          style={
-            {
-              "color": "#2a9e91",
-              "fontSize": 16,
-              "fontWeight": "bold",
+          <View
+            accessibilityState={
+              {
+                "disabled": false,
+              }
             }
-          }
-        >
-          Cancel
-        </Text>
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            testID="identifierInputSubmit"
+          >
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "transparent",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <Text />
+            </View>
+          </View>
+        </View>
       </View>
     </View>
+    <Text
+      style={
+        {
+          "color": "#ff190c",
+          "fontSize": 12,
+          "margin": 5,
+        }
+      }
+    />
   </View>
 </View>
 `;
 
-exports[`<ImporterPage /> when routing on old customPlays link renders correctly before download 1`] = `
+exports[`<ImporterPage /> when routing on plays goes back to beginning on cancel 1`] = `
 <View
   style={
     {
       "alignItems": "center",
       "backgroundColor": "#fff",
       "flex": 1,
-      "justifyContent": "space-around",
       "padding": 20,
     }
   }
 >
-  <Text />
-  <Text>
-    It looks like you want to import a play, I am going to fetch it... 🏃
-  </Text>
+  <View
+    style={
+      {
+        "paddingHorizontal": 10,
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      collapsable={false}
+      style={
+        {
+          "alignItems": "center",
+          "borderBottomWidth": 1,
+          "borderColor": "#86939e",
+          "flexDirection": "row",
+          "transform": [
+            {
+              "translateX": 0,
+            },
+          ],
+        }
+      }
+    >
+      <TextInput
+        autoFocus={true}
+        editable={true}
+        onChangeText={[Function]}
+        placeholder="Use an identifier…"
+        placeholderTextColor="#86939e"
+        style={
+          {
+            "color": "#242424",
+            "flex": 1,
+            "fontSize": 18,
+            "minHeight": 40,
+          }
+        }
+        testID="identifierInput"
+        underlineColorAndroid="transparent"
+      />
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "height": 40,
+            "justifyContent": "center",
+            "marginVertical": 4,
+            "paddingRight": 4,
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "overflow": "hidden",
+            }
+          }
+        >
+          <View
+            accessibilityState={
+              {
+                "disabled": false,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            testID="identifierInputSubmit"
+          >
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "transparent",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <Text
+                allowFontScaling={false}
+                selectable={false}
+                style={
+                  [
+                    {
+                      "color": "#242424",
+                      "fontSize": 24,
+                    },
+                    {
+                      "backgroundColor": "transparent",
+                    },
+                    {
+                      "fontFamily": "material-community",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    {},
+                  ]
+                }
+                testID="iconIcon"
+              >
+                󰄬
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+    <Text
+      style={
+        {
+          "color": "#ff190c",
+          "fontSize": 12,
+          "margin": 5,
+        }
+      }
+    />
+  </View>
 </View>
 `;
 
@@ -487,7 +636,6 @@ exports[`<ImporterPage /> when routing on plays renders an error message if the 
       "alignItems": "center",
       "backgroundColor": "#fff",
       "flex": 1,
-      "justifyContent": "space-around",
       "padding": 20,
     }
   }
@@ -513,8 +661,24 @@ exports[`<ImporterPage /> when routing on plays renders an error message if the 
   >
     󰇚
   </Text>
-  <Text>
-    It looks like you want to import a play, I am going to fetch it... 🏃
+  <Text
+    style={
+      {
+        "fontSize": 16,
+        "marginBottom": 20,
+      }
+    }
+  >
+    I am fetching the play you want to import it… 🏃
+  </Text>
+  <Text
+    style={
+      {
+        "color": "red",
+      }
+    }
+  >
+    I could not find the play you are looking for. Are you sure you're not trying to import a drill instead?
   </Text>
 </View>
 `;
@@ -526,38 +690,16 @@ exports[`<ImporterPage /> when routing on plays renders correctly after download
       "alignItems": "center",
       "backgroundColor": "#fff",
       "flex": 1,
-      "justifyContent": "space-around",
       "padding": 20,
     }
   }
 >
-  <Text
-    allowFontScaling={false}
-    selectable={false}
-    style={
-      [
-        {
-          "color": undefined,
-          "fontSize": 72,
-        },
-        undefined,
-        {
-          "fontFamily": "material-community",
-          "fontStyle": "normal",
-          "fontWeight": "normal",
-        },
-        {},
-      ]
-    }
-  >
-    󰇚
-  </Text>
   <View>
     <Text
       style={
         {
           "fontSize": 16,
-          "marginBottom": 5,
+          "marginBottom": 20,
         }
       }
     >
@@ -567,7 +709,7 @@ exports[`<ImporterPage /> when routing on plays renders correctly after download
       style={
         {
           "fontSize": 16,
-          "marginBottom": 5,
+          "marginBottom": 20,
         }
       }
     >
@@ -708,14 +850,118 @@ exports[`<ImporterPage /> when routing on plays renders correctly before downloa
       "alignItems": "center",
       "backgroundColor": "#fff",
       "flex": 1,
-      "justifyContent": "space-around",
       "padding": 20,
     }
   }
 >
-  <Text />
-  <Text>
-    It looks like you want to import a play, I am going to fetch it... 🏃
-  </Text>
+  <View
+    style={
+      {
+        "paddingHorizontal": 10,
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      collapsable={false}
+      style={
+        {
+          "alignItems": "center",
+          "borderBottomWidth": 1,
+          "borderColor": "#86939e",
+          "flexDirection": "row",
+          "transform": [
+            {
+              "translateX": 0,
+            },
+          ],
+        }
+      }
+    >
+      <TextInput
+        autoFocus={true}
+        editable={true}
+        onChangeText={[Function]}
+        placeholder="Use an identifier…"
+        placeholderTextColor="#86939e"
+        style={
+          {
+            "color": "#242424",
+            "flex": 1,
+            "fontSize": 18,
+            "minHeight": 40,
+          }
+        }
+        testID="identifierInput"
+        underlineColorAndroid="transparent"
+      />
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "height": 40,
+            "justifyContent": "center",
+            "marginVertical": 4,
+            "paddingRight": 4,
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "overflow": "hidden",
+            }
+          }
+        >
+          <View
+            accessibilityState={
+              {
+                "disabled": false,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            testID="identifierInputSubmit"
+          >
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "transparent",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <Text />
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+    <Text
+      style={
+        {
+          "color": "#ff190c",
+          "fontSize": 12,
+          "margin": 5,
+        }
+      }
+    />
+  </View>
 </View>
 `;

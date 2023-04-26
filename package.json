@@ -19,6 +19,7 @@
     "expo": "^48.0.0",
     "expo-av": "~13.2.1",
     "expo-constants": "~14.2.1",
+    "expo-crypto": "~12.2.1",
     "expo-linking": "~4.0.1",
     "expo-localization": "~14.1.1",
     "expo-mail-composer": "~12.1.1",
@@ -34,7 +35,6 @@
     "react-native-elements": "^3.4.3",
     "react-native-flash-message": "^0.4.0",
     "react-native-gesture-handler": "~2.9.0",
-    "react-native-get-random-values": "~1.8.0",
     "react-native-pager-view": "6.1.2",
     "react-native-paper": "^5.1.2",
     "react-native-reanimated": "~2.14.4",
@@ -44,7 +44,6 @@
     "react-redux": "^8.0.5",
     "redux": "^4.2.0",
     "redux-persist": "^6.0.0",
-    "uuid": "^9.0.0",
     "watchman": "^1.0.0",
     "yup": "^0.32.11"
   },

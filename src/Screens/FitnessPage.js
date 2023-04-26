@@ -17,7 +17,7 @@ const FitnessPage = (props) => {
   useLayoutEffect(() => {
     navigation.setOptions({
       title: drill.title,
-      headerRight: () => <ShareDrill drill={drill} light />,
+      headerRight: () => drill.custom && <ShareDrill drill={drill} light />,
       headerTintColor: theme.COLOR_PRIMARY_LIGHT,
       headerStyle: { backgroundColor: theme.COLOR_PRIMARY },
       headerTitleContainerStyle: {

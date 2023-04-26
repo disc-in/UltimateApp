@@ -5,12 +5,13 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import theme from '../styles/theme.style';
 import I18n from '../utils/i18n';
-import { generateUuid } from '../utils/uuid';
+import { generateUuid } from '../utils/random';
 import { savePlay } from '../Store/Actions/playAction';
 import Drill from '../Components/animation/Drill';
 import PlayTitle from '../Components/editor/PlayTitle';
 
 export const PlaybookPage = (props) => {
+  const { navigation } = props;
   const isEmpty = props.customPlays.length === 0;
 
   const newPlay = () => {
@@ -34,6 +35,7 @@ export const PlaybookPage = (props) => {
     ios: 'padding',
     android: 'height',
   });
+
   return (
     <KeyboardAvoidingView style={styles.playbookPage} behavior={behavior}>
       {isEmpty ? (
@@ -48,7 +50,7 @@ export const PlaybookPage = (props) => {
               key={play.title}
               style={styles.customPlay}
               onPress={() => {
-                props.navigation.navigate('PlayEditorPage', { currentPlay: play });
+                navigation.navigate('PlayEditorPage', { currentPlay: play });
               }}
             />
           ))}
@@ -57,7 +59,7 @@ export const PlaybookPage = (props) => {
       <TouchableOpacity
         style={styles.footer}
         onPress={() => {
-          props.navigation.navigate('PlayEditorPage', { currentPlay: newPlay() });
+          navigation.navigate('PlayEditorPage', { currentPlay: newPlay() });
         }}
         testID="createPlay"
       >

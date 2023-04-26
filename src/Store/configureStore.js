@@ -4,7 +4,7 @@ import { persistStore, persistReducer, createMigrate } from 'redux-persist';
 
 import rootReducer from './Reducers';
 import fixtures from '../Fixtures';
-import { generateUuid } from '../utils/uuid';
+import { generateUuid } from '../utils/random';
 
 const migrations = {
   1: (state) => {

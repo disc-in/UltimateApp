@@ -1,10 +1,9 @@
 import { Platform, InteractionManager } from 'react-native';
 import Constants from 'expo-constants';
-import * as Linking from 'expo-linking';
 import { initializeApp, setLogLevel } from 'firebase/app';
-import { getDatabase, ref, set, onValue } from 'firebase/database';
+import { getDatabase, ref, set, child, get } from 'firebase/database';
 
-import { generateUuid } from './uuid';
+import { generateRandomHex } from './random';
 
 // Work around issue `Setting a timer for long time`
 // see: https://github.com/firebase/firebase-js-sdk/issues/97
@@ -58,59 +57,28 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 setLogLevel('silent');
 
-const reference = (namespace, uuid) => {
-  return ref(getDatabase(app), `${namespace}/${uuid}`);
+const reference = (namespace, identifier) => {
+  return ref(getDatabase(app), `${namespace}/${identifier}`);
 };
 
 export const upload = async (namespace, record) => {
   const withoutUndefineds = JSON.parse(JSON.stringify(record));
-  const shareUuid = generateUuid();
-  await set(reference(namespace, shareUuid), withoutUndefineds);
-  return shareUuid;
+  const identifier = generateRandomHex();
+  await set(reference(namespace, identifier), withoutUndefineds);
+  return identifier;
 };
 
-export const download = (namespace, uuid) => {
-  return onValue(eference(namespace, uuid), (snapshot) => snapshot.val());
-};
-
-export const createLink = (path, title, description) => {
-  if (__DEV__) {
-    return Linking.makeUrl(path);
-  } else {
-    return fetch(
-      `https://firebasedynamiclinks.googleapis.com/v1/shortLinks?key=${Constants.expoConfig.extra.firebaseApiKey}`,
-      {
-        method: 'POST',
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          dynamicLinkInfo: {
-            domainUriPrefix: Constants.expoConfig.extra.firebaseDomainUri,
-            link: `${Constants.expoConfig.extra.firebaseUrlPrefix}${path}`,
-            androidInfo: {
-              androidPackageName: 'com.discin.discin',
-              androidMinPackageVersionCode: '5',
-            },
-            iosInfo: {
-              iosBundleId: 'com.discin.discin',
-              iosCustomScheme: 'discin',
-              iosAppStoreId: '1537387830',
-            },
-            desktopInfo: {
-              desktopFallbackLink: 'https://play.google.com/store/apps/details?id=com.discin.discin',
-            },
-            socialMetaTagInfo: {
-              socialTitle: `Disc In - ${title}`,
-              socialDescription: description,
-              socialImageLink: 'https://raw.githubusercontent.com/disc-in/UltimateApp/main/assets/icon.png',
-            },
-          },
-        }),
-      },
-    )
-      .then((response) => response.json())
-      .then((responseJson) => responseJson.shortLink);
-  }
+export const download = (namespace, identifier) => {
+  const dbRef = ref(getDatabase(app));
+  return get(child(dbRef, `${namespace}/${identifier}`))
+    .then((snapshot) => {
+      if (snapshot.exists()) {
+        return snapshot.val();
+      } else {
+        return null;
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+    });
 };

@@ -59,7 +59,7 @@ export const DrillPage = (props) => {
   useLayoutEffect(() => {
     navigation.setOptions({
       title: drill.title,
-      headerRight: () => <ShareDrill drill={drill} />,
+      headerRight: () => drill.custom && <ShareDrill drill={drill} />,
       headerTitleContainerStyle: {
         ...Platform.select({
           ios: {

@@ -8,9 +8,6 @@ import * as firebase from '../../../../utils/firebase';
 import SharePlay from '../SharePlay';
 
 jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
-jest.mock('react-native-get-random-values', () => ({
-  getRandomBase64: jest.fn(),
-}));
 
 describe('<SharePlay />', () => {
   afterEach(() => jest.clearAllMocks());
@@ -23,8 +20,7 @@ describe('<SharePlay />', () => {
   });
 
   it('triggers share action', async () => {
-    jest.spyOn(firebase, 'upload').mockImplementation(() => 'uuid');
-    jest.spyOn(firebase, 'createLink').mockImplementation(() => '');
+    jest.spyOn(firebase, 'upload').mockImplementation(() => 'identifier');
 
     const share = jest.fn();
     Share.share = () => new Promise((resolve, reject) => share());
@@ -33,7 +29,6 @@ describe('<SharePlay />', () => {
     fireEvent.press(getByTestId('shareButton'));
 
     await expect(firebase.upload).toHaveBeenCalledWith('customPlays', currentPlay);
-    await expect(firebase.createLink).toHaveBeenCalledWith('custom/plays/uuid', currentPlay.title);
     expect(share).toHaveBeenCalled();
   });
 });

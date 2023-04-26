@@ -4,13 +4,9 @@ import { render, fireEvent } from '@testing-library/react-native';
 
 import store from '../../Store/testStore';
 import Drill from '../../Components/animation/Drill';
-import * as uuid from '../../utils/uuid';
+import * as random from '../../utils/random';
 
 import ConnectedPlaybookPage, { PlaybookPage } from '../PlaybookPage';
-
-jest.mock('react-native-get-random-values', () => ({
-  getRandomBase64: jest.fn(),
-}));
 
 describe('<PlaybookPage />', () => {
   const play = {
@@ -20,27 +16,30 @@ describe('<PlaybookPage />', () => {
   };
 
   it('renders correctly when empty', () => {
+    const navigation = { navigate: jest.fn(), setOptions: jest.fn() };
+
     const { toJSON } = render(
       <Provider store={store}>
-        <ConnectedPlaybookPage />
+        <ConnectedPlaybookPage navigation={navigation} />
       </Provider>,
     );
     expect(toJSON()).toMatchSnapshot();
   });
 
   it('renders correctly with plays', () => {
+    const navigation = { navigate: jest.fn(), setOptions: jest.fn() };
     const MockedConnectedPlaybookPage = connect(() => ({ customPlays: [play] }))(PlaybookPage);
 
     const { toJSON } = render(
       <Provider store={store}>
-        <MockedConnectedPlaybookPage />
+        <MockedConnectedPlaybookPage navigation={navigation} />
       </Provider>,
     );
     expect(toJSON()).toMatchSnapshot();
   });
 
   it('links to drill page', async () => {
-    const navigation = { navigate: jest.fn() };
+    const navigation = { navigate: jest.fn(), setOptions: jest.fn() };
 
     const MockedConnectedPlaybookPage = connect(() => ({ customPlays: [play] }))(PlaybookPage);
     const { getByText } = render(
@@ -54,9 +53,9 @@ describe('<PlaybookPage />', () => {
   });
 
   it('creates a new play and links to drill page', async () => {
-    const navigation = { navigate: jest.fn() };
+    const navigation = { navigate: jest.fn(), setOptions: jest.fn() };
     const savePlay = jest.fn();
-    jest.spyOn(uuid, 'generateUuid').mockImplementation(() => '123-456');
+    jest.spyOn(random, 'generateUuid').mockImplementation(() => '123456');
 
     const MockedConnectedPlaybookPage = connect(
       () => ({ customPlays: [play] }),
@@ -72,7 +71,7 @@ describe('<PlaybookPage />', () => {
     const expectedPlay = {
       animation: new Drill(),
       title: 'Unnamed play',
-      uuid: '123-456',
+      uuid: '123456',
     };
     expect(navigation.navigate).toBeCalledWith('PlayEditorPage', { currentPlay: expectedPlay });
     expect(savePlay).toBeCalledWith(expectedPlay);

@@ -122,17 +122,20 @@ export default {
     untitledPlay: 'Unnamed play',
   },
   importerPage: {
+    identifierPlaceholder: 'Use an identifier…',
     customPlays: {
-      loading: 'It looks like you want to import a play, I am going to fetch it... 🏃',
+      loading: 'I am fetching the play you want to import it… 🏃',
       incentive: 'You are about to import and save the play {{title}}',
       question: 'Are you sure?',
-      downloadError: 'I could not find the play you are looking for',
+      downloadError:
+        "I could not find the play you are looking for. Are you sure you're not trying to import a drill instead?",
     },
     customDrills: {
-      loading: 'It looks like you want to import a drill, I am going to fetch it... 🏃',
+      loading: 'I am fetching the drill you want to import it… 🏃',
       incentive: 'You are about to import and save the drill {{title}}',
       question: 'Are you sure?',
-      downloadError: 'I could not find the drill you are looking for',
+      downloadError:
+        "I could not find the drill you are looking for. Are you sure you're not trying to import a play instead?",
     },
   },
   editor: {
@@ -146,7 +149,7 @@ export default {
     },
     sharePlay: {
       shareTitle: 'Sharing {{title}}',
-      shareMessage: 'Use the following link to import my awesome play in Disc In: {{url}}',
+      shareMessage: 'Use the following identifier to import my awesome play in Disc In: {{identifier}}',
       shareError: 'It looks like there was an error sharing your play',
     },
   },
@@ -165,11 +168,7 @@ export default {
     },
     shareDrill: {
       title: 'Share {{drillTitle}}',
-      content: {
-        zero: 'Check this drill on Disc In: {{url}}',
-        other:
-          'Check this drill on Disc In: {{url}}\nAnd in case you cannot install the app, here are some videos of the drill:\n{{youtubeVideos}}',
-      },
+      content: 'Check this drill on Disc In with the identifier: {{identifier}}',
       description: 'Drill: {{description}}…',
       error: 'It looks like there was an error sharing this drill',
     },

@@ -1,55 +1,62 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import { connect } from 'react-redux';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Input } from 'react-native-elements';
 
 import theme from '../styles/theme.style';
 import I18n from '../utils/i18n';
 import { download } from '../utils/firebase';
-import { showError } from '../utils/flashMessage';
+import { generateUuid } from '../utils/random';
 import { savePlay } from '../Store/Actions/playAction';
 import { saveDrill } from '../Store/Actions/drillAction';
 import Button from '../Components/shared/Button';
 
 export const ImporterPage = (props) => {
-  const { navigation, route } = props;
-  const namespace = route.params.source === 'drills' ? 'customDrills' : 'customPlays';
+  const { navigation } = props;
+  const namespace = props.route.params.source;
 
+  const [identifier, setIdentifier] = useState();
+  const [loading, setLoading] = useState(false);
   const [importedRecord, setImportedRecord] = useState();
+  const [error, setError] = useState();
 
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const record = await download(namespace, route.params.uuid);
-        if (record === null) {
-          showError(I18n.t(`importerPage.${namespace}.downloadError`));
-        } else {
-          setImportedRecord(record);
-        }
-      } catch (error) {
-        showError(I18n.t(`importerPage.${namespace}.downloadError`));
+  const fetchData = async () => {
+    try {
+      const record = await download(namespace, identifier);
+
+      if (record === null || record === undefined) {
+        setError(I18n.t(`importerPage.${namespace}.downloadError`));
+      } else {
+        setImportedRecord(record);
       }
+    } catch (error) {
+      setError(I18n.t(`importerPage.${namespace}.downloadError`));
     }
-    fetchData();
-  }, []);
+  };
 
   const save = () => {
+    // Override id/uuid so that plays/drills are different in your store even if yo download twice the same drill
     if (namespace === 'customPlays') {
-      props.savePlay(importedRecord);
-      navigation.navigate('PlayEditorPage', { currentPlay: importedRecord });
+      const importedPlay = { ...importedRecord, uuid: generateUuid() };
+      props.savePlay(importedPlay);
+      navigation.navigate('PlayEditorPage', { currentPlay: importedPlay });
     } else if (namespace === 'customDrills') {
-      props.saveDrill(importedRecord);
-      navigation.navigate('DrillPage', { id: importedRecord.id });
+      const importedDrill = { ...importedRecord, id: generateUuid() };
+      props.saveDrill(importedDrill);
+      navigation.navigate('DrillPage', { id: importedDrill.id });
     }
   };
 
   const cancel = () => {
-    navigation.navigate('HomePage');
+    setIdentifier();
+    setLoading(false);
+    setImportedRecord();
+    setError();
   };
 
   return (
     <View style={styles.importerPage}>
-      <MaterialCommunityIcons name="download" size={72} />
       {importedRecord ? (
         <View>
           <Text style={styles.text}>
@@ -61,8 +68,29 @@ export const ImporterPage = (props) => {
             <Button style={styles.cta} text={I18n.t('shared.cancel')} onPress={cancel} light />
           </View>
         </View>
+      ) : loading ? (
+        <>
+          <MaterialCommunityIcons name="download" size={72} />
+          <Text style={styles.text}>{I18n.t(`importerPage.${namespace}.loading`)}</Text>
+          {error && <Text style={styles.error}>{error}</Text>}
+        </>
       ) : (
-        <Text>{I18n.t(`importerPage.${namespace}.loading`)}</Text>
+        <Input
+          autoFocus
+          value={identifier}
+          onChangeText={setIdentifier}
+          placeholder={I18n.t('importerPage.identifierPlaceholder')}
+          testID="identifierInput"
+          rightIcon={{
+            type: 'material-community',
+            name: 'check',
+            testID: 'identifierInputSubmit',
+            onPress: () => {
+              setLoading(true);
+              fetchData();
+            },
+          }}
+        />
       )}
     </View>
   );
@@ -77,12 +105,14 @@ const styles = StyleSheet.create({
     backgroundColor: theme.BACKGROUND_COLOR_LIGHT,
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'space-around',
     padding: 20,
   },
   text: {
     fontSize: theme.FONT_SIZE_MEDIUM,
-    marginBottom: 5,
+    marginBottom: 20,
+  },
+  error: {
+    color: 'red',
   },
   ctaArea: {
     marginTop: 20,

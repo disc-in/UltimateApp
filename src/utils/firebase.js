@@ -1,7 +1,7 @@
 import { Platform, InteractionManager } from 'react-native';
 import Constants from 'expo-constants';
 import { initializeApp, setLogLevel } from 'firebase/app';
-import { getDatabase, ref, set, onValue, child, get } from 'firebase/database';
+import { getDatabase, ref, set, child, get } from 'firebase/database';
 
 import { generateRandomHex } from './random';
 
@@ -75,7 +75,7 @@ export const download = (namespace, identifier) => {
       if (snapshot.exists()) {
         return snapshot.val();
       } else {
-        console.log('No data available');
+        return null;
       }
     })
     .catch((error) => {

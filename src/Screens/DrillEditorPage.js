@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect } from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, View, Text, ScrollView, KeyboardAvoidingView, Platform } from 'react-native';
 import { connect } from 'react-redux';
 import { Formik, FieldArray } from 'formik';
@@ -15,7 +15,6 @@ import Input from '../Components/shared/form/Input';
 import RadioButton from '../Components/shared/form/RadioButton';
 import Checkbox from '../Components/shared/form/Checkbox';
 import AnimationInput from '../Components/shared/form/AnimationInput';
-import HeaderButton from '../Components/shared/HeaderButton';
 
 const newStep = {
   id: 0,
@@ -47,17 +46,6 @@ const newDrill = () => ({
 
 export const DrillEditorPage = (props) => {
   const [currentDrill, setCurrentDrill] = useState(props.route.params?.currentDrill || newDrill());
-
-  useLayoutEffect(() => {
-    props.navigation.setOptions({
-      headerRight: () => (
-        <HeaderButton
-          icon="download"
-          onPress={() => props.navigation.navigate('DrillImporterPage', { source: 'customDrills' })}
-        />
-      ),
-    });
-  });
 
   const validationSchema = Yup.object({
     author: Yup.string().trim(),

@@ -2,7 +2,6 @@ import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
 
 import * as firebase from '../../utils/firebase';
-import * as flashMessage from '../../utils/flashMessage';
 import { createDrill } from '../../Fixtures/TestFixtures';
 import * as random from '../../utils/random';
 
@@ -37,16 +36,13 @@ describe('<ImporterPage />', () => {
 
     it('renders an error message if the play could not be found', async () => {
       jest.spyOn(firebase, 'download').mockImplementation(() => new Promise((resolve) => resolve(null)));
-      jest.spyOn(flashMessage, 'showError');
 
       const { getByTestId, toJSON } = await waitFor(() =>
         render(<ImporterPage navigation={navigation} route={route} savePlay={savePlay} saveDrill={saveDrill} />),
       );
-
       fireEvent.changeText(getByTestId('identifierInput'), identifier);
       await fireEvent.press(getByTestId('identifierInputSubmit'));
 
-      expect(flashMessage.showError).toHaveBeenCalled();
       expect(toJSON()).toMatchSnapshot();
     });
 

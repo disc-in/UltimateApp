@@ -178,8 +178,24 @@ exports[`<ImporterPage /> when routing on drills renders an error message if the
   >
     󰇚
   </Text>
-  <Text>
+  <Text
+    style={
+      {
+        "fontSize": 16,
+        "marginBottom": 20,
+      }
+    }
+  >
     I am fetching the drill you want to import it… 🏃
+  </Text>
+  <Text
+    style={
+      {
+        "color": "red",
+      }
+    }
+  >
+    I could not find the drill you are looking for. Are you sure you're not trying to import a play instead?
   </Text>
 </View>
 `;
@@ -200,7 +216,7 @@ exports[`<ImporterPage /> when routing on drills renders correctly after downloa
       style={
         {
           "fontSize": 16,
-          "marginBottom": 5,
+          "marginBottom": 20,
         }
       }
     >
@@ -210,7 +226,7 @@ exports[`<ImporterPage /> when routing on drills renders correctly after downloa
       style={
         {
           "fontSize": 16,
-          "marginBottom": 5,
+          "marginBottom": 20,
         }
       }
     >
@@ -645,8 +661,24 @@ exports[`<ImporterPage /> when routing on plays renders an error message if the 
   >
     󰇚
   </Text>
-  <Text>
+  <Text
+    style={
+      {
+        "fontSize": 16,
+        "marginBottom": 20,
+      }
+    }
+  >
     I am fetching the play you want to import it… 🏃
+  </Text>
+  <Text
+    style={
+      {
+        "color": "red",
+      }
+    }
+  >
+    I could not find the play you are looking for. Are you sure you're not trying to import a drill instead?
   </Text>
 </View>
 `;
@@ -667,7 +699,7 @@ exports[`<ImporterPage /> when routing on plays renders correctly after download
       style={
         {
           "fontSize": 16,
-          "marginBottom": 5,
+          "marginBottom": 20,
         }
       }
     >
@@ -677,7 +709,7 @@ exports[`<ImporterPage /> when routing on plays renders correctly after download
       style={
         {
           "fontSize": 16,
-          "marginBottom": 5,
+          "marginBottom": 20,
         }
       }
     >

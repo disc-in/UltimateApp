@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { StyleSheet, KeyboardAvoidingView, Platform, ScrollView, View, Text, TouchableOpacity } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -9,7 +9,6 @@ import { generateUuid } from '../utils/random';
 import { savePlay } from '../Store/Actions/playAction';
 import Drill from '../Components/animation/Drill';
 import PlayTitle from '../Components/editor/PlayTitle';
-import HeaderButton from '../Components/shared/HeaderButton';
 
 export const PlaybookPage = (props) => {
   const { navigation } = props;
@@ -32,21 +31,11 @@ export const PlaybookPage = (props) => {
     return play;
   };
 
-  useLayoutEffect(() => {
-    navigation.setOptions({
-      headerRight: () => (
-        <HeaderButton
-          icon="download"
-          onPress={() => navigation.navigate('PlayImporterPage', { source: 'customPlays' })}
-        />
-      ),
-    });
-  });
-
   const behavior = Platform.select({
     ios: 'padding',
     android: 'height',
   });
+
   return (
     <KeyboardAvoidingView style={styles.playbookPage} behavior={behavior}>
       {isEmpty ? (

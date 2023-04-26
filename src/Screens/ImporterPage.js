@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import { connect } from 'react-redux';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -7,7 +7,6 @@ import { Input } from 'react-native-elements';
 import theme from '../styles/theme.style';
 import I18n from '../utils/i18n';
 import { download } from '../utils/firebase';
-import { showError } from '../utils/flashMessage';
 import { generateUuid } from '../utils/random';
 import { savePlay } from '../Store/Actions/playAction';
 import { saveDrill } from '../Store/Actions/drillAction';
@@ -20,17 +19,19 @@ export const ImporterPage = (props) => {
   const [identifier, setIdentifier] = useState();
   const [loading, setLoading] = useState(false);
   const [importedRecord, setImportedRecord] = useState();
+  const [error, setError] = useState();
 
-  fetchData = async () => {
+  const fetchData = async () => {
     try {
       const record = await download(namespace, identifier);
-      if (record === null) {
-        showError(I18n.t(`importerPage.${namespace}.downloadError`));
+
+      if (record === null || record === undefined) {
+        setError(I18n.t(`importerPage.${namespace}.downloadError`));
       } else {
         setImportedRecord(record);
       }
     } catch (error) {
-      showError(I18n.t(`importerPage.${namespace}.downloadError`));
+      setError(I18n.t(`importerPage.${namespace}.downloadError`));
     }
   };
 
@@ -51,6 +52,7 @@ export const ImporterPage = (props) => {
     setIdentifier();
     setLoading(false);
     setImportedRecord();
+    setError();
   };
 
   return (
@@ -69,7 +71,8 @@ export const ImporterPage = (props) => {
       ) : loading ? (
         <>
           <MaterialCommunityIcons name="download" size={72} />
-          <Text>{I18n.t(`importerPage.${namespace}.loading`)}</Text>
+          <Text style={styles.text}>{I18n.t(`importerPage.${namespace}.loading`)}</Text>
+          {error && <Text style={styles.error}>{error}</Text>}
         </>
       ) : (
         <Input
@@ -106,7 +109,10 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: theme.FONT_SIZE_MEDIUM,
-    marginBottom: 5,
+    marginBottom: 20,
+  },
+  error: {
+    color: 'red',
   },
   ctaArea: {
     marginTop: 20,

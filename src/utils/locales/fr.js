@@ -122,18 +122,20 @@ export default {
     untitledPlay: 'Play sans titre',
   },
   importerPage: {
-    identifierPlaceholder: 'Entrez un identifiant…',
+    identifierPlaceholder: 'Identifiant…',
     customPlays: {
-      loading: 'Je suis en train de chercher le play que vous souhaitez importer… 🏃',
-      incentive: 'Vous allez enregistrer le play "{{title}}"',
-      question: 'Êtes-vous sûr.e ?',
-      downloadError: "Je n'ai pas pu retrouver ce play.",
+      loading: 'Je suis en train de chercher le play que tu souhaites importer… 🏃',
+      incentive: 'Tu es sur le point d\'enregistrer le play "{{title}}"',
+      question: 'Es-tu sûr·e ?',
+      downloadError:
+        "Je n'ai pas pu retrouver ce play. Es-tu sûr·e de ne pas vouloir importer un exercice à la place ?",
     },
     customDrills: {
-      loading: "Je suis en train de chercher l'exercice que vous souhaitez importer… 🏃",
-      incentive: 'Vous allez enregistrer l\'exercice "{{title}}"',
-      question: 'Êtes-vous sûr.e ?',
-      downloadError: "Je n'ai pas pu retrouver cet exercice.",
+      loading: "Je suis en train de chercher l'exercice que tu souhaites importer… 🏃",
+      incentive: 'Tu es sur le point d\'enregistrer l\'exercice "{{title}}"',
+      question: 'Es-tu sûr·e ?',
+      downloadError:
+        "Je n'ai pas pu retrouver cet exercice. Es-tu sûr·e de ne pas vouloir importer un play à la place ?",
     },
   },
   editor: {
@@ -142,7 +144,7 @@ export default {
       alreadyExists: 'Ce nom existe déjà',
       empty: 'Le nom ne peut pas être vide',
       delete: 'Supprimer',
-      deleteConfirmation: 'Voulez-vous vraiment supprimer ce play ?',
+      deleteConfirmation: 'Veux-tu vraiment supprimer ce play ?',
       deleteSuccess: 'Le play "{{title}}" a été supprimé.',
     },
     sharePlay: {
@@ -189,7 +191,7 @@ export default {
     },
     feedback: {
       header: 'Feedback',
-      text: "Nous serions ravis de connaitre vos idées pour améliorer l'application.\n\nVoulez-vous nous envoyer un message ?",
+      text: "Nous serions ravis de connaitre vos idées pour améliorer l'application.\n\nVeux-tu nous envoyer un message ?",
       cta: 'Nous contacter',
       subject: 'A propos de Disc In',
     },

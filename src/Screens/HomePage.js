@@ -1,5 +1,5 @@
 import React, { useLayoutEffect } from 'react';
-import { StyleSheet, View, Text, ImageBackground, TouchableHighlight } from 'react-native';
+import { StyleSheet, View, Text, ImageBackground, TouchableHighlight, TouchableOpacity } from 'react-native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 
@@ -28,8 +28,13 @@ const Frisbee = (props) => {
         style={styles.menuItem}
       >
         <ImageBackground source={frisbeeGlove} style={styles.image}>
-          <View style={styles.wrapper}>
+          <View style={[styles.wrapper, styles.iconWrapper]}>
             <Text style={styles.title}>{I18n.t('homePage.drills')}</Text>
+            <TouchableOpacity
+              onPress={() => props.navigation.navigate('DrillImporterPage', { source: 'customDrills' })}
+            >
+              <MaterialCommunityIcons name="import" style={styles.importIcon} />
+            </TouchableOpacity>
           </View>
         </ImageBackground>
       </TouchableHighlight>
@@ -65,8 +70,11 @@ const Frisbee = (props) => {
 
       <TouchableHighlight onPress={() => props.navigation.navigate('PlaybookPage')} style={styles.menuItem}>
         <ImageBackground source={ourPlays} style={styles.image}>
-          <View style={styles.wrapper}>
+          <View style={[styles.wrapper, styles.iconWrapper]}>
             <Text style={styles.title}>{I18n.t('homePage.playbook')}</Text>
+            <TouchableOpacity onPress={() => props.navigation.navigate('PlayImporterPage', { source: 'customPlays' })}>
+              <MaterialCommunityIcons name="import" style={styles.importIcon} />
+            </TouchableOpacity>
           </View>
         </ImageBackground>
       </TouchableHighlight>
@@ -265,6 +273,11 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
     padding: 20,
   },
+  iconWrapper: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
   titleRight: {
     color: theme.COLOR_PRIMARY_LIGHT,
     fontSize: 28,
@@ -275,5 +288,10 @@ const styles = StyleSheet.create({
     color: theme.COLOR_PRIMARY_LIGHT,
     fontSize: theme.FONT_SIZE_MEDIUM,
     textAlign: 'right',
+  },
+  importIcon: {
+    fontSize: 32,
+    padding: 20,
+    color: theme.COLOR_PRIMARY_LIGHT,
   },
 });

@@ -140,16 +140,23 @@ exports[`<HomePage /> renders correctly 1`] = `
                 />
                 <View
                   style={
-                    {
-                      "alignItems": "flex-start",
-                      "bottom": 0,
-                      "justifyContent": "center",
-                      "left": 0,
-                      "padding": 20,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                    }
+                    [
+                      {
+                        "alignItems": "flex-start",
+                        "bottom": 0,
+                        "justifyContent": "center",
+                        "left": 0,
+                        "padding": 20,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                      {
+                        "alignItems": "center",
+                        "flexDirection": "row",
+                        "justifyContent": "space-between",
+                      },
+                    ]
                   }
                 >
                   <Text
@@ -163,6 +170,66 @@ exports[`<HomePage /> renders correctly 1`] = `
                   >
                     Drills
                   </Text>
+                  <View
+                    accessibilityState={
+                      {
+                        "busy": undefined,
+                        "checked": undefined,
+                        "disabled": undefined,
+                        "expanded": undefined,
+                        "selected": undefined,
+                      }
+                    }
+                    accessibilityValue={
+                      {
+                        "max": undefined,
+                        "min": undefined,
+                        "now": undefined,
+                        "text": undefined,
+                      }
+                    }
+                    accessible={true}
+                    collapsable={false}
+                    focusable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                    style={
+                      {
+                        "opacity": 1,
+                      }
+                    }
+                  >
+                    <Text
+                      allowFontScaling={false}
+                      selectable={false}
+                      style={
+                        [
+                          {
+                            "color": undefined,
+                            "fontSize": 12,
+                          },
+                          {
+                            "color": "#fff",
+                            "fontSize": 32,
+                            "padding": 20,
+                          },
+                          {
+                            "fontFamily": "material-community",
+                            "fontStyle": "normal",
+                            "fontWeight": "normal",
+                          },
+                          {},
+                        ]
+                      }
+                    >
+                      󰋺
+                    </Text>
+                  </View>
                 </View>
               </View>
             </View>
@@ -419,16 +486,23 @@ exports[`<HomePage /> renders correctly 1`] = `
                 />
                 <View
                   style={
-                    {
-                      "alignItems": "flex-start",
-                      "bottom": 0,
-                      "justifyContent": "center",
-                      "left": 0,
-                      "padding": 20,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                    }
+                    [
+                      {
+                        "alignItems": "flex-start",
+                        "bottom": 0,
+                        "justifyContent": "center",
+                        "left": 0,
+                        "padding": 20,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                      {
+                        "alignItems": "center",
+                        "flexDirection": "row",
+                        "justifyContent": "space-between",
+                      },
+                    ]
                   }
                 >
                   <Text
@@ -442,6 +516,66 @@ exports[`<HomePage /> renders correctly 1`] = `
                   >
                     My Playbook
                   </Text>
+                  <View
+                    accessibilityState={
+                      {
+                        "busy": undefined,
+                        "checked": undefined,
+                        "disabled": undefined,
+                        "expanded": undefined,
+                        "selected": undefined,
+                      }
+                    }
+                    accessibilityValue={
+                      {
+                        "max": undefined,
+                        "min": undefined,
+                        "now": undefined,
+                        "text": undefined,
+                      }
+                    }
+                    accessible={true}
+                    collapsable={false}
+                    focusable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                    style={
+                      {
+                        "opacity": 1,
+                      }
+                    }
+                  >
+                    <Text
+                      allowFontScaling={false}
+                      selectable={false}
+                      style={
+                        [
+                          {
+                            "color": undefined,
+                            "fontSize": 12,
+                          },
+                          {
+                            "color": "#fff",
+                            "fontSize": 32,
+                            "padding": 20,
+                          },
+                          {
+                            "fontFamily": "material-community",
+                            "fontStyle": "normal",
+                            "fontWeight": "normal",
+                          },
+                          {},
+                        ]
+                      }
+                    >
+                      󰋺
+                    </Text>
+                  </View>
                 </View>
               </View>
             </View>

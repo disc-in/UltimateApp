@@ -127,13 +127,15 @@ export default {
       loading: 'I am fetching the play you want to import it… 🏃',
       incentive: 'You are about to import and save the play {{title}}',
       question: 'Are you sure?',
-      downloadError: 'I could not find the play you are looking for.',
+      downloadError:
+        "I could not find the play you are looking for. Are you sure you're not trying to import a drill instead?",
     },
     customDrills: {
       loading: 'I am fetching the drill you want to import it… 🏃',
       incentive: 'You are about to import and save the drill {{title}}',
       question: 'Are you sure?',
-      downloadError: 'I could not find the drill you are looking for.',
+      downloadError:
+        "I could not find the drill you are looking for. Are you sure you're not trying to import a play instead?",
     },
   },
   editor: {

@@ -36,7 +36,7 @@ const App = (props) => {
           >
             <Navigation />
           </NavigationContainer>
-          <FlashMessage position="bottom" />
+          <FlashMessage position="bottom" duration={3000} />
         </PaperProvider>
       </PersistGate>
     </ReduxProvider>

@@ -26,7 +26,7 @@ const AboutPage = (props) => {
         <View>
           <Text style={styles.info}>{I18n.t('aboutPage.copyright', { endYear: new Date().getFullYear() })}</Text>
           <Text style={styles.info}>
-            version {Constants.expoConfig.version}, release-channel {Updates.channel}
+            version {Constants.expoConfig.version}, channel {Updates.channel}
           </Text>
           <Text style={styles.info}>{Constants.expoConfig.extra.env}</Text>
         </View>

@@ -14,8 +14,8 @@ import Button from '../Components/shared/Button';
 
 export const ImporterPage = (props) => {
   const { navigation } = props;
-  const namespace = props.route.params.source;
 
+  const [namespace, setNamespace] = useState(props.route.params.source);
   const [identifier, setIdentifier] = useState();
   const [loading, setLoading] = useState(false);
   const [importedRecord, setImportedRecord] = useState();
@@ -23,10 +23,18 @@ export const ImporterPage = (props) => {
 
   const fetchData = async () => {
     try {
-      const record = await download(namespace, identifier);
+      let record = await download(namespace, identifier);
 
       if (record === null || record === undefined) {
-        setError(I18n.t(`importerPage.${namespace}.downloadError`));
+        // Try with the other namespace
+        const fallbackNamespace = namespace == 'customPlays' ? 'customDrills' : 'customPlays';
+        setNamespace(fallbackNamespace);
+        record = await download(fallbackNamespace, identifier);
+        if (record === null || record === undefined) {
+          setError(I18n.t(`importerPage.${namespace}.downloadError`));
+        } else {
+          setImportedRecord(record);
+        }
       } else {
         setImportedRecord(record);
       }

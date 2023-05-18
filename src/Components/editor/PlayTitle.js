@@ -41,7 +41,7 @@ export const PlayTitle = ({ play, onPress, customPlays, renamePlay, deletePlay, 
         onPress: () => {},
       },
       {
-        text: I18n.t('editor.playTitle.delete'),
+        text: I18n.t('shared.delete'),
         style: 'destructive',
         onPress: () => {
           deletePlay(play.uuid);

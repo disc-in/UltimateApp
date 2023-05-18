@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text, ImageBackground, TouchableOpacity, FlatList } from 'react-native';
+import { StyleSheet, View, Text, ImageBackground, TouchableOpacity, FlatList, Alert } from 'react-native';
 import { connect } from 'react-redux';
 import { Ionicons } from '@expo/vector-icons';
 
@@ -18,8 +18,21 @@ export const DrillList = (props) => {
     const { id, title, type, custom, image, goals, author } = item;
 
     const onPressDeleteButton = () => {
-      showSuccess(I18n.t('drills.drillList.deleteSuccess', { title }));
-      props.deleteDrill(id);
+      Alert.alert(title, I18n.t('drills.drillList.deleteConfirmation'), [
+        {
+          text: I18n.t('shared.cancel'),
+          style: 'cancel',
+          onPress: () => {},
+        },
+        {
+          text: I18n.t('shared.delete'),
+          style: 'destructive',
+          onPress: () => {
+            showSuccess(I18n.t('drills.drillList.deleteSuccess', { title }));
+            props.deleteDrill(id);
+          },
+        },
+      ]);
     };
 
     const onPressEditButton = () => {

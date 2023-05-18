@@ -44,10 +44,10 @@ export const PlaybookPage = (props) => {
         </View>
       ) : (
         <ScrollView>
-          {props.customPlays.map((play) => (
+          {props.customPlays.map((play, index) => (
             <PlayTitle
               play={play}
-              key={play.title}
+              key={index}
               style={styles.customPlay}
               onPress={() => {
                 navigation.navigate('PlayEditorPage', { currentPlay: play });

@@ -84,6 +84,7 @@ export default {
     cancel: 'Annuler',
     yes: 'Oui',
     no: 'Non',
+    delete: 'Supprimer',
     form: {
       animationInput: {
         add: 'Ajouter',
@@ -143,7 +144,6 @@ export default {
       placeholder: 'Entrez un nom',
       alreadyExists: 'Ce nom existe déjà',
       empty: 'Le nom ne peut pas être vide',
-      delete: 'Supprimer',
       deleteConfirmation: 'Veux-tu vraiment supprimer ce play ?',
       deleteSuccess: 'Le play "{{title}}" a été supprimé.',
     },
@@ -161,6 +161,7 @@ export default {
       inGame: 'En Match',
     },
     drillList: {
+      deleteConfirmation: 'Veux-tu vraiment supprimer cet exo ?',
       deleteSuccess: 'L\'exercice "{{title}}" a été supprimé.',
     },
     fitnessDrillIllustration: {

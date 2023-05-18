@@ -58,7 +58,7 @@ exports[`<AboutPage /> renders correctly 1`] = `
           }
         >
           version 
-          , release-channel 
+          , channel 
           mock
         </Text>
         <Text

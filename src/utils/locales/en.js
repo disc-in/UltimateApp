@@ -84,6 +84,7 @@ export default {
     cancel: 'Cancel',
     yes: 'Yes',
     no: 'No',
+    delete: 'Delete',
     form: {
       animationInput: {
         add: 'Add',
@@ -143,7 +144,6 @@ export default {
       placeholder: 'Enter new name',
       alreadyExists: 'This name already exists',
       empty: 'You cannot set an empty name',
-      delete: 'Delete',
       deleteConfirmation: 'Do you really want to delete this play?',
       deleteSuccess: "The play '{{title}}' has been deleted.",
     },
@@ -161,6 +161,7 @@ export default {
       inGame: 'In Game',
     },
     drillList: {
+      deleteConfirmation: 'Do you really want to delete this drill?',
       deleteSuccess: 'The drill "{{title}}" has been deleted.',
     },
     fitnessDrillIllustration: {

@@ -186,16 +186,7 @@ exports[`<ImporterPage /> when routing on drills renders an error message if the
       }
     }
   >
-    I am fetching the drill you want to import it… 🏃
-  </Text>
-  <Text
-    style={
-      {
-        "color": "red",
-      }
-    }
-  >
-    I could not find the drill you are looking for. Are you sure you're not trying to import a play instead?
+    I am fetching the play you want to import it… 🏃
   </Text>
 </View>
 `;
@@ -669,16 +660,7 @@ exports[`<ImporterPage /> when routing on plays renders an error message if the 
       }
     }
   >
-    I am fetching the play you want to import it… 🏃
-  </Text>
-  <Text
-    style={
-      {
-        "color": "red",
-      }
-    }
-  >
-    I could not find the play you are looking for. Are you sure you're not trying to import a drill instead?
+    I am fetching the drill you want to import it… 🏃
   </Text>
 </View>
 `;

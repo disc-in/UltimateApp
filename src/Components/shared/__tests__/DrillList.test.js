@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, waitFor, fireEvent } from '@testing-library/react-native';
 import { Provider } from 'react-redux';
+import { Alert } from 'react-native';
 
 import { createDrill } from '../../../Fixtures/TestFixtures';
 import store from '../../../Store/testStore';
@@ -11,6 +12,7 @@ describe('<DrillList />', () => {
   const drill = createDrill({ id: 1 });
   const customDrill = createDrill({ id: 2, custom: true });
   const drills = [drill, customDrill];
+  const deleteDrill = jest.fn();
 
   it('renders correctly', async () => {
     const { toJSON } = await waitFor(() =>
@@ -37,16 +39,43 @@ describe('<DrillList />', () => {
     await waitFor(() => expect(navigate).toBeCalledWith('DrillEditorPage', { currentDrill: customDrill }));
   });
 
-  it('can delete a custom drill', async () => {
-    const deleteDrill = jest.fn();
-
-    const { getByTestId } = render(
+  it('does not trigger delete on cancel', async () => {
+    jest.spyOn(Alert, 'alert');
+    const { getByTestId, getByDisplayValue } = render(
       <Provider store={store}>
         <DrillList drillsToDisplay={drills} deleteDrill={deleteDrill} />
       </Provider>,
     );
 
     fireEvent.press(getByTestId('deleteButton'));
-    await waitFor(() => expect(deleteDrill).toBeCalledWith(customDrill.id));
+
+    // Opens confirmation Alert
+    expect(Alert.alert).toHaveBeenCalled();
+
+    // Press Cancel
+    expect(Alert.alert.mock.calls[0][2][0].text).toEqual('Cancel');
+    Alert.alert.mock.calls[0][2][0].onPress();
+
+    expect(deleteDrill).not.toHaveBeenCalled();
+  });
+
+  it('triggers delete on confirmation', async () => {
+    jest.spyOn(Alert, 'alert');
+    const { getByTestId, getByDisplayValue } = render(
+      <Provider store={store}>
+        <DrillList drillsToDisplay={drills} deleteDrill={deleteDrill} />
+      </Provider>,
+    );
+
+    fireEvent.press(getByTestId('deleteButton'));
+
+    // Opens confirmation Alert
+    expect(Alert.alert).toHaveBeenCalled();
+
+    // Press Cancel
+    expect(Alert.alert.mock.calls[0][2][1].text).toEqual('Delete');
+    Alert.alert.mock.calls[0][2][1].onPress();
+
+    expect(deleteDrill).toHaveBeenCalledWith(customDrill.id);
   });
 });

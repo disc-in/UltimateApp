@@ -66,15 +66,19 @@ To release a new version of the app :
 
 1. Send a pull request updating the version in `app.config.js`. If new binaries must be built, this is a major version update and you must also update the buildNumber (ios) and versionCode (android)
 2. When it is merged, create a release on Github
-3. Make sure your `.env` file contains the production environment variables up-to-date (especially APP_ENV)
-4. Make sure the secrets on our expo account are set
-5. Use `expo start --clear` to make sure the new env vars have been taken into account
-6. Then
+3. If you want to update an existing deployed build:
 
-- If publishing an update, run `eas update --channel production`
-- If building a new major version, rebuild for the stores using `eas build --platform <ios|android|all> --profile <profile-name>` and and `eas submit`
+   1. Make sure your `.env` file contains the production environment variables up-to-date (especially APP_ENV)
+   2. Make sure the secrets on our expo account are set
+   3. Use `expo start --clear` to make sure the new env vars have been taken into account
+   4. Then run `export $(cat .env | xargs) || eas update --branch production` (change the channel if staging). We manually load the .env variables because EAS Update does not use them by default.
+   5. Set back your development env vars in `.env` and run `expo start --clear`
 
-7. Set back your development env vars in `.env` and run `expo start --clear`
+4. If you want to deploy new builds:
+   1. Make sure the secrets on our expo account are set
+   2. Rebuild to the stores using `eas build --platform <ios|android|all> --profile <profile-name>`
+   3. Submit builds to the stores `eas submit -p ios` and `eas submit -p android`
+   4. Follow store-specific instructions to deploy
 
 ## 🙏 Thanks
 

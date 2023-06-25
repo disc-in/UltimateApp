@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 
 import I18n from '../utils/i18n';
 import theme from '../styles/theme.style';
+import TimeoutUltimate from '../Components/theory/TimeoutUltimate';
 
 const EssentialPage = (props) => {
   // Default is second choice so that it is clear we use a picker on iOS
@@ -13,6 +14,9 @@ const EssentialPage = (props) => {
   const onImagePress = (item) => props.navigation.navigate('VideoPage', { video: item });
 
   const renderContent = ({ item }) => {
+    if (Object.keys(item).includes('playStoreUrl') || Object.keys(item).includes('appStoreUrl'))
+      return <TimeoutUltimate item={item} />;
+
     return (
       <TouchableOpacity onPress={() => onImagePress(item)}>
         <View style={styles.itemContainer}>

@@ -148,6 +148,13 @@ export const essentials = [
         illustration: 'https://zupimages.net/up/21/01/gwlw.jpg',
         time: '2:50',
       },
+      {
+        id: 3,
+        playStoreUrl: 'https://play.google.com/store/apps/details?id=com.ultimate.timeout&pli=1',
+        appStoreUrl: 'https://apps.apple.com/mg/app/timeout-ultimate/id1607673533?l=fr',
+        title: 'Timeout Ultimate',
+        text: "Une application gratuite pour apprendre les règles en s'amusant",
+      },
     ],
   },
 ];

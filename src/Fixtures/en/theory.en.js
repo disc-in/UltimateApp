@@ -139,6 +139,13 @@ export const essentials = [
         illustration: 'https://zupimages.net/up/21/01/gwlw.jpg',
         time: '2:50',
       },
+      {
+        id: 3,
+        playStoreUrl: 'https://play.google.com/store/apps/details?id=com.ultimate.timeout&pli=1',
+        appStoreUrl: 'https://apps.apple.com/mg/app/timeout-ultimate/id1607673533?l=en',
+        title: 'Timeout Ultimate',
+        text: 'A free app to learn the rule of Ultimate',
+      },
     ],
   },
 ];

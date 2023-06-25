@@ -1,7 +1,7 @@
 import React from 'react';
 import 'react-native-gesture-handler';
 import { PersistGate } from 'redux-persist/integration/react';
-import { Platform, ActivityIndicator } from 'react-native';
+import { ActivityIndicator } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { Provider as ReduxProvider } from 'react-redux';
 import { MD3LightTheme as DefaultTheme, Provider as PaperProvider } from 'react-native-paper';

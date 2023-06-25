@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, ScrollView, View, Text, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, Platform, ScrollView, View, Text, Image, TouchableOpacity } from 'react-native';
 import Constants from 'expo-constants';
 import * as Updates from 'expo-updates';
 import * as MailComposer from 'expo-mail-composer';
@@ -18,6 +18,11 @@ const AboutPage = (props) => {
       body: '',
     });
   };
+
+  const timeoutUltimateUrl =
+    Platform.OS === 'ios'
+      ? 'https://apps.apple.com/mg/app/timeout-ultimate/id1607673533'
+      : 'https://play.google.com/store/apps/details?id=com.ultimate.timeout&pli=1';
 
   return (
     <ScrollView style={styles.aboutPage} contentContainerStyle={styles.aboutPageContainer}>
@@ -50,6 +55,11 @@ const AboutPage = (props) => {
         testID="feedbackButton"
         style={styles.button}
       />
+      <Text style={styles.header}>{I18n.t('aboutPage.other.header')}</Text>
+      <Text style={styles.text}>{I18n.t('aboutPage.other.text')}</Text>
+      <TouchableOpacity onPress={() => Linking.openURL(timeoutUltimateUrl)}>
+        <Text style={styles.linkText}>{I18n.t('aboutPage.other.linkText')}</Text>
+      </TouchableOpacity>
     </ScrollView>
   );
 };

@@ -196,6 +196,11 @@ export default {
       cta: 'Nous contacter',
       subject: 'A propos de Disc In',
     },
+    other: {
+      header: 'Autres projets',
+      text: "En plus de cette application, nous travaillons aussi sur Timeout Ultimate, qui permet d'apprendre les règles en s'amusant",
+      linkText: 'Timeout Ultimate',
+    },
   },
   dictionaryPage: {
     translation: 'Traduction : ',

@@ -196,6 +196,11 @@ export default {
       cta: 'Send feedback',
       subject: 'Feedback concerning Disc In',
     },
+    other: {
+      header: 'Other projects',
+      text: 'In addition to this application, we also work on the Timeout Ultimate application, which enables you to learn the rules',
+      linkText: 'Timeout Ultimate',
+    },
   },
   dictionaryPage: {
     translation: 'Translation: ',

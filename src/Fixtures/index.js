@@ -3,7 +3,7 @@ import fr from './fr';
 import en from './en';
 
 let fixtures;
-switch (I18n.currentLocale().slice(0, 2)) {
+switch (I18n.locale.slice(0, 2)) {
   case 'fr':
     fixtures = fr;
     break;

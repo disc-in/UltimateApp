@@ -25,11 +25,15 @@ exports[`<VimeoVideo /> displays a message on error 1`] = `
   <View
     pointerEvents="box-none"
     style={
-      {
-        "height": 250,
-        "overflow": "hidden",
-        "width": "100%",
-      }
+      [
+        {
+          "overflow": "hidden",
+        },
+        {
+          "height": 250,
+          "width": "100%",
+        },
+      ]
     }
   >
     <ViewManagerAdapter_ExpoVideoView
@@ -39,31 +43,32 @@ exports[`<VimeoVideo /> displays a message on error 1`] = `
       onLoadStart={[Function]}
       onReadyForDisplay={[Function]}
       onStatusUpdate={[Function]}
-      proxiedProperties={
-        {
-          "resizeMode": "mock",
-          "source": undefined,
-          "status": {},
-          "useNativeControls": true,
-        }
-      }
+      resizeMode="mock"
+      status={{}}
       style={
-        {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        }
+        [
+          {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          undefined,
+        ]
       }
+      useNativeControls={true}
       videoStyle={
-        {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        }
+        [
+          {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          undefined,
+        ]
       }
     />
   </View>
@@ -100,11 +105,15 @@ exports[`<VimeoVideo /> loads the video 1`] = `
   <View
     pointerEvents="box-none"
     style={
-      {
-        "height": 250,
-        "overflow": "hidden",
-        "width": "100%",
-      }
+      [
+        {
+          "overflow": "hidden",
+        },
+        {
+          "height": 250,
+          "width": "100%",
+        },
+      ]
     }
   >
     <ViewManagerAdapter_ExpoVideoView
@@ -114,31 +123,32 @@ exports[`<VimeoVideo /> loads the video 1`] = `
       onLoadStart={[Function]}
       onReadyForDisplay={[Function]}
       onStatusUpdate={[Function]}
-      proxiedProperties={
-        {
-          "resizeMode": "mock",
-          "source": undefined,
-          "status": {},
-          "useNativeControls": true,
-        }
-      }
+      resizeMode="mock"
+      status={{}}
       style={
-        {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        }
+        [
+          {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          undefined,
+        ]
       }
+      useNativeControls={true}
       videoStyle={
-        {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        }
+        [
+          {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          undefined,
+        ]
       }
     />
   </View>

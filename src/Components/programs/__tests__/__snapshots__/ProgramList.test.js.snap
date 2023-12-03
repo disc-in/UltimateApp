@@ -163,7 +163,6 @@ exports[`<ProgramList /> renders correctly 1`] = `
         >
           <View
             collapsable={false}
-            forwardedRef={[Function]}
             onLayout={[Function]}
             style={{}}
           >
@@ -403,7 +402,6 @@ exports[`<ProgramList /> renders correctly 1`] = `
         >
           <View
             collapsable={false}
-            forwardedRef={[Function]}
             onLayout={[Function]}
             style={{}}
           >

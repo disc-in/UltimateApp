@@ -329,7 +329,6 @@ exports[`<DrillPageMinimal /> renders correctly with a training and a drill 1`] 
             enableMomentum={false}
             enableSnap={true}
             firstItem={0}
-            forwardedRef={[Function]}
             getItem={[Function]}
             getItemCount={[Function]}
             hasParallaxImages={false}
@@ -340,6 +339,7 @@ exports[`<DrillPageMinimal /> renders correctly with a training and a drill 1`] 
             initialNumToRender={6}
             invertStickyHeaders={false}
             inverted={false}
+            isInvertedVirtualizedList={false}
             itemWidth={750}
             keyExtractor={[Function]}
             layout="default"

@@ -163,7 +163,6 @@ exports[`<ProgramListPage /> renders correctly when connected 1`] = `
         >
           <View
             collapsable={false}
-            forwardedRef={[Function]}
             onLayout={[Function]}
             style={{}}
           >

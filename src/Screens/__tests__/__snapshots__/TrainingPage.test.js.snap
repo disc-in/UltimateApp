@@ -840,6 +840,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
       >
         <View>
           <View
+            collapsable={false}
             onLayout={[Function]}
           >
             <View
@@ -2087,6 +2088,7 @@ exports[`<TrainingPage /> When fitness program renders correctly a fitness train
       >
         <View>
           <View
+            collapsable={false}
             onLayout={[Function]}
           >
             <View
@@ -3437,6 +3439,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
       >
         <View>
           <View
+            collapsable={false}
             onLayout={[Function]}
           >
             <View
@@ -4849,6 +4852,7 @@ exports[`<TrainingPage /> When frisbee program renders correctly a frisbee train
       >
         <View>
           <View
+            collapsable={false}
             onLayout={[Function]}
           >
             <View

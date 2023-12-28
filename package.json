@@ -77,7 +77,7 @@
     "resolver": "<rootDir>/jest.resolver.js"
   },
   "engines": {
-    "node": ">=0.18"
+    "node": ">=0.20"
   },
   "private": true,
   "license": "MIT"

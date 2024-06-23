@@ -46,7 +46,7 @@ exports[`<AboutPage /> renders correctly 1`] = `
             }
           }
         >
-          2020 - 2023
+          2020 - 2024
         </Text>
         <Text
           style={

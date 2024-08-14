@@ -13,7 +13,7 @@ const VimeoVideo = ({ vimeoId, sounds, shouldPlay }) => {
   const [error, setError] = useState();
 
   useEffect(() => {
-    const vimeoUrlSource = `https://player.vimeo.com/video/${vimeoId}/config`;
+    const vimeoUrlSource = `https://api.vimeo.com/videos/${vimeoId}?fields=play`;
     let aborted = false;
     setBuffer(true);
     setError(null);
@@ -21,10 +21,10 @@ const VimeoVideo = ({ vimeoId, sounds, shouldPlay }) => {
     fetch(vimeoUrlSource)
       .then((res) => res.json())
       .then((res) => {
-        const videoArray = res.request.files.progressive;
-        const videoVimeoQuality = videoArray.find((videoObject) => videoObject.quality === '540p');
+        const videoArray = res.play.progressive;
+        const videoVimeoQuality = videoArray.find((videoObject) => videoObject.rendition === '540p');
         if (videoVimeoQuality) {
-          return videoVimeoQuality.url;
+          return videoVimeoQuality.link;
         }
       })
       .then((url) => {

@@ -1,5 +1,3 @@
-node_modules/**/*
-.expo/*
 npm-debug.*
 *.jks
 *.p8
@@ -21,3 +19,8 @@ web-report/
 .env
 .env.*
 !.env.example
+
+# Device-specific
+/.expo/
+/node_modules/
+

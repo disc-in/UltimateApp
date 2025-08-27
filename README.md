@@ -6,7 +6,7 @@ Developing an app to enhance Ultimate coaching abilities
 
 You need a recent version of nodejs.
 
-Clone the project and install all its dependancies:
+Clone the project and install all its dependencies:
 
 ```
 git clone git@github.com:disc-in/UltimateApp.git
@@ -30,11 +30,11 @@ yarn start
 
 ### External dependencies
 
-The Disc In app relies on **Firebase** for sharing drills and plays. For this reason, each play gets a unique "**share identier**" whoch is a 10 characters long hexadecimal string. It makes sure plays and drills uploaded on Firebase do not override one another. It is different from the **id/uuid** plays and drills have locally, used to manage the redux store and make sure each action is applied to the right record. This is necessary because users may download the same drill several times, or reshare a drill they have downloaded, without impacting other instances of the drill.
+The Disc In app relies on **Firebase** for sharing drills and plays. For this reason, each play gets a unique "**share identifier**" which is a 10 characters long hexadecimal string. It makes sure plays and drills uploaded on Firebase do not override one another. It is different from the **id/uuid** plays and drills have locally, used to manage the redux store and make sure each action is applied to the right record. This is necessary because users may download the same drill several times, or reshare a drill they have downloaded, without impacting other instances of the drill.
 
 ## 👏 Contributing
 
-If you want to contribute to the projet, just pick up an issue from the [list](https://github.com/disc-in/UltimateApp/issues) and start fixing it. You can then open a pull-request so that your contribution can be merged into the main branch.
+If you want to contribute to the project, just pick up an issue from the [list](https://github.com/disc-in/UltimateApp/issues) and start fixing it. You can then open a pull-request so that your contribution can be merged into the main branch.
 
 Found a bug? Take 5 minutes to [report it](https://github.com/disc-in/UltimateApp/issues/new?assignees=&labels=bug&template=bug_report.md&title=)
 

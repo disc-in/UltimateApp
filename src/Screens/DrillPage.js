@@ -31,7 +31,7 @@ export const DrillPage = (props) => {
 
   // Create Component refs
   const drillScrollView = useRef(null);
-  const descriptionRef = useRef(null);
+  const descriptionY = useRef(0);
 
   // Get Header Height
   const headerHeight = useHeaderHeight();
@@ -50,9 +50,7 @@ export const DrillPage = (props) => {
     if (drill.type === DrillTypes.FITNESS) {
       startFitness();
     } else {
-      descriptionRef.current.measureLayout(findNodeHandle(drillScrollView.current), (x, y) => {
-        drillScrollView.current.scrollTo({ x: 0, y, animated: true });
-      });
+      drillScrollView.current.scrollTo({ y: descriptionY.current, animated: true });
     }
   };
 
@@ -108,7 +106,7 @@ export const DrillPage = (props) => {
           </View>
         </View>
       </ImageBackground>
-      <View ref={descriptionRef}>
+      <View onLayout={(event) => (descriptionY.current = event.nativeEvent.layout.y)}>
         <Description drill={drill} />
       </View>
       <View style={styles.animation}>

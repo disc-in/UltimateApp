@@ -185,7 +185,7 @@ export default HomePage = (props) => {
         component={Frisbee}
         options={{
           tabBarLabel: I18n.t('homePage.frisbeeTab'),
-          tabBarIcon: ({ color }) => <Ionicons name="ios-disc" color={color} size={22} />,
+          tabBarIcon: ({ color }) => <Ionicons name="disc" color={color} size={22} />,
         }}
       />
       <Tab.Screen
@@ -193,7 +193,7 @@ export default HomePage = (props) => {
         component={Fitness}
         options={{
           tabBarLabel: I18n.t('homePage.fitnessTab'),
-          tabBarIcon: ({ color }) => <Ionicons name="ios-fitness" color={color} size={22} />,
+          tabBarIcon: ({ color }) => <Ionicons name="fitness" color={color} size={22} />,
         }}
       />
       <Tab.Screen

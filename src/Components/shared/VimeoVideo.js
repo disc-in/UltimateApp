@@ -1,72 +1,33 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { View, ActivityIndicator, StyleSheet, Text } from 'react-native';
-import { Video, Audio, VideoFullscreenUpdate, ResizeMode } from 'expo-av';
-import * as ScreenOrientation from 'expo-screen-orientation';
-import { useFocusEffect } from '@react-navigation/native';
-
+import { Vimeo } from 'react-native-vimeo-iframe';
 import I18n from '../../utils/i18n';
 import theme from '../../styles/theme.style';
 
-const VimeoVideo = ({ vimeoId, sounds, shouldPlay }) => {
-  const videoElem = useRef(null);
-  const [isBuffering, setBuffer] = useState(true);
-  const [error, setError] = useState();
+const VimeoVideo = ({ vimeoId, sounds, shouldPlay = true }) => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(false);
 
-  useEffect(() => {
-    const vimeoUrlSource = `https://player.vimeo.com/video/${vimeoId}/config`;
-    let aborted = false;
-    setBuffer(true);
-    setError(null);
-
-    fetch(vimeoUrlSource)
-      .then((res) => res.json())
-      .then((res) => {
-        const videoArray = res.request.files.progressive;
-        const videoVimeoQuality = videoArray.find((videoObject) => videoObject.quality === '540p');
-        if (videoVimeoQuality) {
-          return videoVimeoQuality.url;
-        }
-      })
-      .then((url) => {
-        if (aborted) return;
-        return videoElem.current.loadAsync({
-          uri: url,
-        });
-      })
-      .catch((e) => {
-        if (aborted) return;
-        setError(e);
-        setBuffer(false);
-      });
-
-    return () => (aborted = true);
-  }, [vimeoId]);
-
-  // Stop playing the video on screen change
-  useFocusEffect(
-    React.useCallback(() => {
-      return () => {
-        videoElem.current?.pauseAsync();
-      };
-    }, []),
-  );
-
-  const playVideoLoaded = () => {
-    Audio.setAudioModeAsync({
-      playsInSilentModeIOS: true,
-    });
-    videoElem.current.setStatusAsync({
-      rate: 1.0,
-      isMuted: !sounds,
-      resizeMode: ResizeMode.CONTAIN,
-      shouldPlay: shouldPlay || false,
-      isLooping: true,
-    });
-
-    setBuffer(false);
+  // Vimeo player options
+  const videoOptions = {
+    autoplay: shouldPlay,
+    loop: true,
+    muted: !sounds, // Invert sounds to get muted
   };
 
-  const renderBufferIcon = () => {
+  const onError = (errorMessage) => {
+    console.error('Vimeo video error:', errorMessage);
+    setError(true);
+    setIsLoading(false);
+  };
+
+  const onReady = () => {
+    setIsLoading(false);
+  };
+
+  const renderLoader = () => {
+    if (!isLoading) return null;
+
     return (
       <View style={styles.spinnerStyle}>
         <ActivityIndicator animating color={theme.COLOR_SECONDARY} size="large" />
@@ -76,6 +37,8 @@ const VimeoVideo = ({ vimeoId, sounds, shouldPlay }) => {
   };
 
   const renderError = () => {
+    if (!error) return null;
+
     return (
       <View style={styles.spinnerStyle}>
         <Text>{I18n.t('vimeoVideo.error')}</Text>
@@ -85,37 +48,31 @@ const VimeoVideo = ({ vimeoId, sounds, shouldPlay }) => {
 
   return (
     <View style={styles.videoContainer}>
-      {error && renderError()}
-      {isBuffering && renderBufferIcon()}
-      <Video
-        ref={videoElem}
-        resizeMode={ResizeMode.CONTAIN}
-        useNativeControls
-        style={{ width: '100%', height: 250 }}
-        onLoadStart={() => setBuffer(true)}
-        onLoad={playVideoLoaded}
-        onFullscreenUpdate={async ({ fullscreenUpdate }) => {
-          if (fullscreenUpdate === VideoFullscreenUpdate.PLAYER_WILL_PRESENT) {
-            await ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
-          }
-          if (fullscreenUpdate === VideoFullscreenUpdate.PLAYER_WILL_DISMISS) {
-            await ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT);
-          }
-        }}
-      />
+      {renderLoader()}
+      {renderError()}
+      <Vimeo videoId={vimeoId} onReady={onReady} onError={onError} style={styles.video} options={videoOptions} />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   videoContainer: {
-    flex: 1,
     height: 250,
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#000',
+  },
+  video: {
+    width: '100%',
+    height: 250,
   },
   spinnerStyle: {
     position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#000',
   },
 });
 
